@@ -13,7 +13,7 @@ assessment_horizon: 2026-09-02
 > 2026-08-13 起，旧短练、skill clinic、input/Shared Writing 拆分 checkbox 已移出 active task pool；已有 Markdown 和 learning log 保留为 `retired` 历史，底部更早的旧序列继续保留 `#student-os/paused`。新 ordinary practice 只有 Paper A / Paper B 端到端 unit；允许跨天，但只能在完整成品与整篇反馈/修订完成后打勾。
 
 > [!danger] 2026-08-25 至 2026-08-31 七天冲刺入口
-> 全部日期、材料、模式路由、记忆剂量、AI 反馈和完成标准只看 [[99_学习情况记录/teach/LN905 7-Day Exam Sprint|LN905 Paper A/B 七天通关流水线]]。正式 Week 5 Practice 与 final 仍由 [[LN905 timed submissions]] 保管，不能在这里复制 checkbox。
+> 全部日期、材料、模式、记忆剂量、AI 反馈和完成标准只看 [[99_学习情况记录/teach/LN905 7-Day Exam Sprint|LN905 Paper A/B 七天单线入口]]。正式 Week 5 Practice 与 final 仍由 [[LN905 timed submissions]] 保管，不能在这里复制 checkbox。
 
 这里是 LN905 Listening / Reading 教学练习与每日词灵训练的唯一 canonical checkbox 来源。正式 timed submissions 继续由 [[LN905 timed submissions]] 管理；Essay 里程碑继续由 [[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Essay]] 管理。
 
@@ -33,6 +33,7 @@ assessment_horizon: 2026-09-02
 
 - **教师校准说明**：Turnitin 中选中的是定性描述档，不会生成总分。Week 2 与 Week 3 Paper A 都是 Listening `60/65`、Writing `55 or below`；两周 Paper B 的 Reading 都是 `60/65`，Writing 从 Week 2 的 `60/65` 到 Week 3 的 `55 or below`。但 Week 2 使用过 AI，Week 3 是独立作答，条件不同，不能据此判定退步。
 - **已经有的能力**：教师在三周反馈中反复确认 main argument、clear thesis/topic sentences、overall argument 与 logical organisation。2026-08-14 Friday Paper B 独立使用全部三份来源，按 ageing → fertility → immigration 推进，并完成约 722 词全文与 conclusion。控制性答案和宏观结构不再作为从零重教的主问题。
+- **2026-08-27 最新独立证据**：Week 5 Paper B 在限时内完成 636 词，立场、三文使用、主体结构和结论都存在；非官方训练估分约 `55/90`（合理区间 `50–60`）。当前决定性风险是 source fidelity 和虚假 source relation，不是篇幅或宏观结构。
 - **最高优先级 1｜跨 Paper A/B 的来源准确性**：先保留 evidence composition、ownership、certainty、scope 与 causality，再评价或综合。具体风险包括：把 mixed evidence 写成只有个人经历；把 fearful-world 的 possible coercion 写成 speaker prediction；把“移民在部分情境有帮助、但不能单独解决”写成普遍无效。
 - **最高优先级 2｜准确评价与跨文关系**：你已经会连接 ideas；现在要修的是连接是否真实。Paper A 的评价要贴住 speaker 实际提出的 longer working lives、human capital、technology、health 等回应；Paper B 要明确来源之间是 support、explain、qualify 还是 challenge，以及这对自己的答案有什么作用。
 - **最高优先级 3｜英文实现**：Paper A/B 的独立 Week 3 成品都落在 Writing `55 or below` 描述档。完整初稿后只批量处理反复出现的 grammar、word form、academic reporting/referencing、collocation 与 paragraph boundary，不另建 grammar clinic。
@@ -76,19 +77,19 @@ Student OS 是导师：每天根据课程总纲、真实输出和 deadline 写�
 
 ### 每日主动提取底座
 
-- [ ] LN905 冲刺 Anki｜2026-08-25：Core 54 首次提取＋Recognition 20 辨义，45–60 分钟 #student-os/task ⏳ 2026-08-25
-- [ ] LN905 冲刺 Anki｜2026-08-26：到期卡＋Extension 前 12，25–30 分钟 #student-os/task ⏳ 2026-08-27
-- [ ] LN905 冲刺 Anki｜2026-08-27：到期卡＋Extension 后 12，25–30 分钟 #student-os/task ⏳ 2026-08-27
-- [ ] LN905 冲刺 Anki｜2026-08-28：全部到期卡与错卡，20–25 分钟 #student-os/task ⏳ 2026-08-28
-- [ ] LN905 冲刺 Anki｜2026-08-29：全部到期卡，20–25 分钟 #student-os/task ⏳ 2026-08-29
-- [ ] LN905 冲刺 Anki｜2026-08-31：只做到期卡，15–20 分钟 #student-os/task ⏳ 2026-08-31
+- [-] LN905 冲刺 Anki｜2026-08-25：过期无完成证据，不集中补做｜[[99_学习情况记录/teach/LN905 7-Day Exam Sprint#Day 1｜Tue 25 Aug｜历史日，不补做|单线入口]] #student-os/cancelled ⏳ 2026-08-25 ❌ 2026-08-27
+- [ ] LN905 冲刺 Anki｜补做 2026-08-26：到期卡＋Extension 前 12，25–30 分钟｜[[99_学习情况记录/teach/LN905 7-Day Exam Sprint#Day 3｜Thu 27 Aug｜官方 Practice Paper B|单线入口]] #student-os/task ⏳ 2026-08-27
+- [ ] LN905 冲刺 Anki｜2026-08-27：到期卡＋Extension 后 12，25–30 分钟｜[[99_学习情况记录/teach/LN905 7-Day Exam Sprint#Day 3｜Thu 27 Aug｜官方 Practice Paper B|单线入口]] #student-os/task ⏳ 2026-08-27
+- [ ] LN905 冲刺 Anki｜2026-08-28：全部到期卡与错卡，20–25 分钟｜[[99_学习情况记录/teach/LN905 7-Day Exam Sprint#Day 4｜Fri 28 Aug｜Paper B guided clean unit|单线入口]] #student-os/task ⏳ 2026-08-28
+- [ ] LN905 冲刺 Anki｜2026-08-29：全部到期卡，20–25 分钟｜[[99_学习情况记录/teach/LN905 7-Day Exam Sprint#Day 5｜Sat 29 Aug｜Paper A independent clean unit|单线入口]] #student-os/task ⏳ 2026-08-29
+- [ ] LN905 冲刺 Anki｜2026-08-31：只做到期卡，15–20 分钟｜[[99_学习情况记录/teach/LN905 7-Day Exam Sprint#Day 7｜Mon 31 Aug｜A+B dress rehearsal|单线入口]] #student-os/task ⏳ 2026-08-31
 
 ### Clean route 与最终彩排
 
-- [ ] LN905 adaptive clean unit 1｜按七天总入口的红灯规则选择较弱 Paper；完成一条 guided 全链、整篇反馈与至多一次 revision｜[[99_学习情况记录/teach/LN905 7-Day Exam Sprint#Day 4｜Fri 28 Aug｜较弱项 guided clean unit|路由入口]] #student-os/task ⏳ 2026-08-28
-- [ ] LN905 adaptive clean unit 2｜使用另一科 clean material 独立限时成文；整篇反馈与至多一次 revision｜[[99_学习情况记录/teach/LN905 7-Day Exam Sprint#Day 5｜Sat 29 Aug｜另一项 independent clean unit|路由入口]] #student-os/task ⏳ 2026-08-29
-- [ ] LN905 Paper A 完整模拟｜未见演讲一次播放＋notes＋40 分钟 200–400 词 critical summary；A/B 都结束前无 AI｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-31-paper-a-dress-rehearsal|sealed record]] #student-os/task ⏳ 2026-08-31
-- [ ] LN905 Paper B 完整模拟｜未见三文＋90 分钟约 600 词 essay；与 A 联合 readiness audit｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-31-paper-b-dress-rehearsal|sealed record]] #student-os/task ⏳ 2026-08-31
+- [ ] LN905 Paper B guided clean unit｜Gender 三文完整链；先 source fidelity，再真实 synthesis；整篇反馈与至多一次 revision｜[[99_学习情况记录/teach/LN905 7-Day Exam Sprint#Day 4｜Fri 28 Aug｜Paper B guided clean unit|单线入口]] #student-os/task ⏳ 2026-08-28
+- [ ] LN905 Paper A independent clean unit｜Climate Change 完整听讲＋40 分钟成文；整篇反馈与至多一次 revision｜[[99_学习情况记录/teach/LN905 7-Day Exam Sprint#Day 5｜Sat 29 Aug｜Paper A independent clean unit|单线入口]] #student-os/task ⏳ 2026-08-29
+- [ ] LN905 Paper A 完整模拟｜未见演讲一次播放＋notes＋40 分钟 200–400 词 critical summary；A/B 都结束前无 AI｜[[99_学习情况记录/teach/LN905 7-Day Exam Sprint#Day 7｜Mon 31 Aug｜A+B dress rehearsal|单线入口]] #student-os/task ⏳ 2026-08-31
+- [ ] LN905 Paper B 完整模拟｜未见三文＋90 分钟约 600 词 essay；与 A 联合 readiness audit｜[[99_学习情况记录/teach/LN905 7-Day Exam Sprint#Day 7｜Mon 31 Aug｜A+B dress rehearsal|单线入口]] #student-os/task ⏳ 2026-08-31
 
 ## 每日词灵｜2026-08-10 至 2026-08-23
 
@@ -117,7 +118,7 @@ Student OS 是导师：每天根据课程总纲、真实输出和 deadline 写�
 ## Climate Change｜端到端训练与测试
 
 - [-] LN905 Paper A guided end-to-end｜Climate Change（本轮结束；保留已有学习记录）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-16-climate-end-to-end|学习记录]] #student-os/cancelled ⏳ 2026-08-25 ❌ 2026-08-26
-- [ ] LN905 Paper B guided end-to-end｜Climate Change：三篇正式量级 extracts → map → thesis/paragraph jobs → 约 600 词 essay → 整篇反馈/修订（可跨天）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-18-climate-end-to-end|学习记录]] #student-os/task ⏳ 2026-08-26
+- [-] LN905 Paper B guided end-to-end｜Climate Change（七天冲刺中止，不集中补做；保留已有学习记录）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-18-climate-end-to-end|学习记录]] #student-os/cancelled ⏳ 2026-08-26 ❌ 2026-08-27
 
 ## 旧序列｜已取消，不执行
 

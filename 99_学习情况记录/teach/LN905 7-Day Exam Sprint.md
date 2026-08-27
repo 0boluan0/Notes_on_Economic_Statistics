@@ -1,6 +1,6 @@
 ---
 student_os: exam-sprint
-title: LN905 Paper A/B 七天通关流水线
+title: LN905 Paper A/B 七天单线入口
 course: LN905
 status: active
 start: 2026-08-25
@@ -13,10 +13,14 @@ topics:
   - Climate Change
 ---
 
-# LN905 Paper A/B 七天通关流水线
+# LN905 Paper A/B 七天单线入口
 
-> [!danger] 明早只从这里开始
-> 不重新搜资料，不重新设计计划，也不从头通读所有课件。先完成下面的「每天固定启动」，再点当天唯一的练习入口。唯一背诵讲义是 [[output/pdf/LN905_Paper_A_B_Hacking_Manual.pdf|LN905 Paper A/B Hacking Manual v1.2]]。
+> [!danger] 唯一入口｜从这里一直走
+> **Today 仍是每天的总首页；点任何 LN905 任务后，都只进入本页。** 不再从 Overall、Workbench、旧记录或材料目录选择训练。
+>
+> **现在（Thu 27 Aug）**：打开 [[99_学习情况记录/teach/reading-into-writing/learning-records/2026-08-27-week5-practice-paper-b#One whole-output revision|今天 Paper B 的一次全文修改]]。完成后依次走：`两次已排定 Anki → Fri Paper B guided → Sat Paper A independent → Sun 休息 → Mon A+B 彩排 → Wed 正式考试`。
+>
+> 不重新搜资料，不重做已经错过的练习，不从头通读课件。唯一背诵讲义是 [[output/pdf/LN905_Paper_A_B_Hacking_Manual.pdf|LN905 Paper A/B Hacking Manual v1.2]]。
 
 ## 已锁死的考试时间
 
@@ -27,7 +31,7 @@ topics:
 
 ## 每天固定启动｜不用做选择
 
-1. 打开 Anki，完成当天写明的剂量。**看提示主动提取**，不要先翻 PDF。
+1. 若当天有早间固定考试，先完成考试；其余日期先做当天 Anki。考试后的 Anki 按 Today 已排顺序完成，不挤占全文修改。**看提示主动提取**，不要先翻 PDF。
 2. 在白纸上用 90 秒写出：`OWNER → STRENGTH → SCOPE → LINK → SLOT`。
 3. 再用 30 秒说出：`A = 20 + 40；B = 30 + 60`。
 4. 点当天的练习入口。计时阶段关闭 AI、transcript、词典和讲义；只有明确写着「guided」时才按助教提示走。
@@ -40,121 +44,58 @@ topics:
 
 | Day | 日期 | 当天唯一主线 | 当天留下的证据 |
 |---|---|---|---|
-| 1 | Tue 25 Aug | 补齐现有 Climate A 与 Climate B 两条完整链 | 两篇完整成文＋整篇反馈/一次修订 |
-| 2 | Wed 26 Aug | 官方 Practice Paper A | 无 AI 的 20+40 成品＋赛后诊断 |
-| 3 | Thu 27 Aug | 官方 Practice Paper B | 无 AI 的 90 分钟成品＋赛后诊断 |
-| 4 | Fri 28 Aug | 用路由规则选择较弱 Paper，做 clean guided full unit | 较弱项完成一条有支架完整链 |
-| 5 | Sat 29 Aug | 用另一份 clean 材料独立完成较强 Paper | 另一项无提示完整成品 |
+| 1 | Tue 25 Aug | 历史日：已结束，不集中补做 | 保留已有记录，不占后续容量 |
+| 2 | Wed 26 Aug | 历史日：Paper A 固定窗口已过且无可核验成品 | 不虚构复盘；由 Day 5 新材料取得证据 |
+| 3 | Thu 27 Aug | 官方 Practice Paper B 原稿已完成；现在只做一次全文修改 | 636 词原稿＋诊断＋一次修订 |
+| 4 | Fri 28 Aug | **Paper B guided clean full unit** | 准确转述与真实综合的一条完整链 |
+| 5 | Sat 29 Aug | **Paper A independent clean full unit** | 无提示 20+40 完整成品 |
 | 6 | Sun 30 Aug | 完全休息 | 不制造疲劳；不安排 Anki 或补课 |
 | 7 | Mon 31 Aug | 按正式顺序完成 A+B dress rehearsal | 两份未见材料、两份限时成品、最终风险表 |
 
-## Day 1｜Tue 25 Aug｜把已开出的两条链闭环
+## Day 1｜Tue 25 Aug｜历史日，不补做
 
-### 先处理硬义务
+当天未闭环的 Climate 练习保留为历史记录，但已退出当前任务队列。现在补做会挤占更接近正式考试的完整输出，所以不再回头。
 
-如果 [[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Essay|Final Assignment]] 仍没有 Moodle 成功状态或回执，先完成保存、导出、上传和核验。它在 Wed 26 Aug 12:00 截止；没有回执就不算完成。控制在 60–90 分钟内，不继续润色无关细节。
+## Day 2｜Wed 26 Aug｜历史日，不虚构复盘
 
-### Anki｜45–60 分钟
-
-- Core：做到所有 54 张都完成一次真实提取。
-- Recognition：20 张全部过一遍，只说核心义和边界。
-- Extension 今天不追新卡。
-
-### Paper A｜本轮结束
-
-[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-16-climate-end-to-end|Climate Paper A 记录]]保留已有听力、map、初稿与反馈；后续 Paper A 训练从新的当前记录开始。
-
-### Paper B｜续做，不换包
-
-打开 [[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-18-climate-end-to-end|Climate Paper B 当前记录]]。从 `degree / conditions / limitations` 三个 thesis 内容槽继续，完成约 600 词全文；第一次 guided essay 可以看到句架和 paragraph jobs，但所有最后 prose 必须自己写。成文后只做一次整篇修订。
-
-### 今天的停止线
-
-两篇都必须有完整结尾；允许少量语言错误。若时间不够，先保 Paper A 完整成文，再保 Paper B 的所有 task parts 和 conclusion，不能把时间花在抛光第一段。
-
-> [!info] 固定事项
-> 15:30–16:00 有 Practice Paper C。它不进入 A/B 训练内容，但不能被冲刺挤掉。
-
-## Day 2｜Wed 26 Aug｜官方 Practice Paper A
-
-### Anki｜25–30 分钟
-
-- 完成到期 Core 和 Recognition。
-- Extension 新学前 12 张；做到 12 张即停。
-
-### 正式练习前
-
-- 只做每天固定启动，不再看 model、transcript 或新演讲。
-- 14:00–15:15 是课堂窗口；你的实质作答计时固定为 **约 20 分钟听＋40 分钟写**。
-- 听时只记 proposition、owner、evidence role、scope；写时先保 central claim 与 key blocks，再放一条具体、有依据的评价。
-
-### 正式练习后
-
-打开 [[99_学习情况记录/teach/listening-into-writing/learning-records/2026-08-26-week5-practice-paper-a|Week 5 Paper A 校准记录]]，保存原始 notes、完整 summary、实际写作时间和词数。不要先自行改句；把原始版本交给 AI 做整篇诊断，然后最多一次 revision。今天不再开新材料。
-
-### Paper B｜一整套
-
-- **16:50–18:20**：使用 [[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-18-climate-end-to-end-source-pack.pdf|Climate Change 三文包]] 完成 90 分钟整套练习。`0–5` 拆题，`5–22` 读三文并做 map，`22–30` 定 thesis、paragraph jobs 和 evidence route，`30–83` 写全文，`83–90` 补 conclusion 并检查含义。
-- **18:20–18:25**：离开屏幕休息。
-- **18:25–19:00**：保留原始 map 和 essay，写上实际用时与词数；做整篇诊断，然后只修订一次。
-- **19:00–19:30**：Anki 到期卡＋Extension 前 12，到点即停。
+官方 Paper A 固定窗口已经过去，当前没有可核验的 notes、录音或成文。该任务关闭为未完成历史，不凭空分析；Paper A 的下一份独立证据固定在 Day 5。
 
 ## Day 3｜Thu 27 Aug｜官方 Practice Paper B
 
-### Anki｜25–30 分钟
+### 已有证据
 
-- 完成全部到期卡。
-- Extension 学完剩余 12 张；到此 78 个主动单元全部至少提取过一次。
+- 90 分钟内完成 **636 词**，有明确立场、三文使用、主体段和结论。
+- 非官方训练估分约 **55/90**，合理区间 **50–60**。这不是因为没有结构，而是多处改变了来源的 certainty、scope、mechanism 或结论。
+- 最高风险：把“长期效果未知”写成“没有长期效果”；把 boosts 的透明度/自主性优势写成对紧急或长期问题“更有效”；把病人亲自填写预约信息写成 inaction；用 `Taken together` 制造原文并不存在的共识。
 
-### 正式练习
+### 现在只做这一件事
 
-- 10:00–12:00 是课堂窗口；实质作答严格 **90 分钟**。
-- 0–5：拆 task parts；5–22：每文做 `claim / evidence / scope / relation / slot`；22–30：thesis、paragraph jobs、evidence route；30–83：全文；83–88：conclusion 与缺失 task part；88–90：意义锁。
-- 计时结束前不找 AI，不看外部材料。所有三篇都要实质使用，但不要求平均分配。
+打开 [[99_学习情况记录/teach/reading-into-writing/learning-records/2026-08-27-week5-practice-paper-b#One whole-output revision|一次全文修改]]。先修来源命题与跨文关系，再检查段落功能，最后只修反复出现的语言问题。完成后按 Today 做两次已经排定的 Anki；今天不再开第二套 Paper B。
 
-### 正式练习后
-
-先参加/记录课程 feedback，再打开 [[99_学习情况记录/teach/reading-into-writing/learning-records/2026-08-27-week5-practice-paper-b|Week 5 Paper B 校准记录]]，保存原始 map、essay、时间和词数并交给 AI。最多一次整篇 revision。今天不再做第二套 Paper B。
-
-## Day 4｜Fri 28 Aug｜较弱项 guided clean unit
+## Day 4｜Fri 28 Aug｜Paper B guided clean unit
 
 ### Anki｜20–25 分钟
 
 只做 Core、Extension、Recognition 的到期卡和昨日错卡；不再扩词。
 
-### 3 分钟路由｜不凭感觉
+### 已锁定入口
 
-按 Day 2/3 的**原始限时稿**计数：
-
-- Paper A 红灯：central claim 错/缺；关键 owner、certainty、scope 或 causality 写反；漏掉超过一个主要 supporting block；评价空泛或没有钉住实际 evidence；40 分钟未完成。
-- Paper B 红灯：漏答 task part；没有实质使用三篇；没有真实跨文关系；关键 owner、certainty、scope 或 causality 写反；没有完整 conclusion 或明显未展开。
-
-哪一项红灯多，哪一项就是今天的较弱项。红灯相同，再比较 source accuracy、synthesis/evaluation、completion 三项；仍相同就选 **Paper B**。
-
-### 路由入口
-
-- 较弱项是 A：打开 [[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-28-paper-a-clean-route|Paper A clean route]]，选择 `guided`。
-- 较弱项是 B：打开 [[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-28-paper-b-clean-route|Paper B clean route]]，选择 `guided`。
+今天不再做路由选择。Day 3 的真实成品已经显示 Paper B 有来源失真与虚假综合，因此直接打开 [[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-28-paper-b-clean-route|Paper B guided clean route]]。
 
 Guided 不等于 AI 代做：你仍亲自完成 notes/map、central answer、paragraph jobs、evidence selection 和全部 prose。AI 只在当前节点给解释、少量句架或 hint，并在完整成文后反馈。
 
 > [!info] 固定事项
 > 12:20–12:40 有个人 tutorial。14:00 后核对 Moodle 上的 final room；只记录，不把它变成训练任务。
 
-## Day 5｜Sat 29 Aug｜另一项 independent clean unit
+## Day 5｜Sat 29 Aug｜Paper A independent clean unit
 
 ### Anki｜20–25 分钟
 
 只做全部到期卡。当天上限到时即停，把精力留给完整输出。
 
-### 练习入口
+### 已锁定入口
 
-打开 Day 4 **没有使用**的 clean route：
-
-- Day 4 做了 A，今天就独立完成 [[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-28-paper-b-clean-route|Paper B clean route]]。
-- Day 4 做了 B，今天就独立完成 [[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-28-paper-a-clean-route|Paper A clean route]]。
-
-今天选择 `independent`：计时结束前无 AI、无 transcript、无讲义。成文后才能反馈和最多一次 revision。完成后停止新增完整练习；星期六不把整天填满。
+打开 [[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-28-paper-a-clean-route|Paper A independent clean route]]。计时结束前无 AI、无 transcript、无讲义。成文后才能反馈和最多一次 revision。完成后停止新增完整练习；星期六不把整天填满。
 
 ## Day 6｜Sun 30 Aug｜完全休息
 
@@ -176,7 +117,7 @@ Guided 不等于 AI 代做：你仍亲自完成 notes/map、central answer、par
 
 ### 14:15 以后｜一次联合 readiness audit
 
-把 A notes＋summary 和 B map＋essay 一次性交给 AI。先判定是否出现硬红灯，再对照 70–75 描述找最接近的一处差距。只修一个最高风险的整篇问题；不再开新 pack，不再扩词。
+把 A notes＋summary 和 B map＋essay 一次性交给 AI。先判定是否出现硬红灯，并确认能否稳定达到 **60–65 描述档**；只有没有来源失真、任务缺失或未完成等硬红灯时，才对照更高档找一处差距。只修一个最高风险的整篇问题；不再开新 pack，不再扩词。
 
 ## 通过能力的证据标准
 

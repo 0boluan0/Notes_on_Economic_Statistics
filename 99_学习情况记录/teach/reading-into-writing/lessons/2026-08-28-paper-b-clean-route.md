@@ -12,13 +12,13 @@ source_status: unseen
 
 # Paper B clean route｜Gender inequality at work
 
-> [!danger] Day 4/5 路由材料
-> 只有总入口把 Paper B 分配给你时才打开。Day 4 选 `guided`；Day 5 选 `independent`。学员区故意不提供 source roles、paragraph jobs 或 model answer。
+> [!danger] Day 4 已锁定｜Guided
+> 七天单线入口已经把今天分配为 Paper B guided。学员区故意不提供 source roles、paragraph jobs 或 model answer；所有最终决定与 prose 仍由你完成。
 
 ## 方向卡
 
 - **这次完整产出**：三文阅读/map、task-matched thesis、paragraph jobs、完整约 600 词 essay、整篇反馈和最多一次 revision。
-- **为什么走完整链**：当前风险是 source relationship 没有推进为 writer inference，以及题目后半部分展开不足。
+- **为什么走完整链**：最新 Nudge 原稿显示，首要风险是改变原文 certainty、scope 或 mechanism，并用连接词制造虚假共识；这些问题必须在完整 map、plan 和 essay 中一起修正。
 - **考试流程**：90 分钟，默认 30 分钟阅读/计划＋60 分钟写作。
 - **完成标准**：回答原因和回应两个 task parts；准确使用三篇；至少两处真实 synthesis；完整 conclusion；无重大意义反转。
 - **你已经会**：使用三篇来源、写 thesis、用 writer-led 宏观结构推进。
@@ -27,7 +27,7 @@ source_status: unseen
 <!-- student-os:mentor-brief:start
 今日 principal: 在完整三文包中先拆清cause和response两个task parts，再让每条来源关系服务自己的答案，不把三篇写成逐篇摘要。
 重点技能 IDs: AW-01-C01, AW-01-C02, AW-02-C07, AW-03-C03, AW-08-C01, AW-15-C02, AW-22-C05, AW-22-C08, PB-02-C03, PB-03-C01
-starting evidence: the learner independently uses all three sources and writes a clear overall argument, but can underdevelop the second task part and leave source connections unexplained.
+starting evidence: the 2026-08-27 timed essay was complete at 636 words and used all three sources, but it changed uncertainty into failure, misclassified active participation as inaction, inferred unsupported effectiveness for boosts, and asserted source agreement that was not present.
 complete output: source map + task-matched thesis + paragraph jobs/evidence route + approximately 600-word essay + whole-output feedback + at most one whole-output revision.
 end-to-end teaching chain: full three-extract pack -> task/source map -> provisional thesis -> paragraph jobs/evidence selection -> full prose -> whole-output feedback -> one revision.
 allowed support: guided mode may explain the current decision in Chinese and offer a small set of frames or a hint ladder; the learner must choose degree, source roles, evidence and all final prose. Independent mode receives no help until the complete 90-minute output exists.
@@ -40,12 +40,11 @@ writeback rule: append all learner input, feedback and continuation decisions to
 stop boundary: stop after the complete output and one prescribed revision; do not open another pack or create a remedial drill.
 student-os:mentor-brief:end -->
 
-## 选择模式
+## 固定模式
 
-- **Guided**：同一助教按 `task → map → thesis → paragraph jobs → evidence route → prose` 逐步推进；每个决定仍由你做。
-- **Independent**：启动 90:00 后不使用 AI、讲义、词典或搜索；完整 essay 存在后才反馈。
+同一助教按 `task → map → thesis → paragraph jobs → evidence route → prose` 逐步推进；每个决定仍由你做。
 
-Mode:
+Mode: guided
 
 ## Essay question
 
@@ -137,3 +136,7 @@ Word count:
 
 <!-- student-os:learning-log:start -->
 <!-- student-os:learning-log:end -->
+
+## 完成后继续
+
+回到 [[99_学习情况记录/teach/LN905 7-Day Exam Sprint#Day 5｜Sat 29 Aug｜Paper A independent clean unit|七天单线入口 Day 5]]。

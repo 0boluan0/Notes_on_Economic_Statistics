@@ -108,19 +108,19 @@
             "name": "gpt-5.4",
             "maxTokens": 1050000,
             "maxOutputTokens": 128000,
-            "supportsTemperature": false
+            "supportsTemperature": true
           },
           {
             "name": "gpt-5.4-mini",
             "maxTokens": 400000,
             "maxOutputTokens": 128000,
-            "supportsTemperature": false
+            "supportsTemperature": true
           },
           {
             "name": "gpt-5.4-nano",
             "maxTokens": 400000,
             "maxOutputTokens": 128000,
-            "supportsTemperature": false
+            "supportsTemperature": true
           },
           {
             "name": "gpt-4.1",
@@ -252,13 +252,13 @@
             "name": "gpt-5.2",
             "maxTokens": 400000,
             "maxOutputTokens": 128000,
-            "supportsTemperature": false
+            "supportsTemperature": true
           },
           {
             "name": "gpt-5.3-codex",
             "maxTokens": 400000,
             "maxOutputTokens": 128000,
-            "supportsTemperature": false
+            "supportsTemperature": true
           },
           {
             "name": "gpt-5-mini",
@@ -282,7 +282,7 @@
             "name": "gpt-5.1",
             "maxTokens": 400000,
             "maxOutputTokens": 128000,
-            "supportsTemperature": false
+            "supportsTemperature": true
           },
           {
             "name": "gpt-4o-2024-08-06",
@@ -308,7 +308,7 @@
         "id": "openai"
       }
     ],
-    "lastModelAutoSyncAt": 1787684898780
+    "lastModelAutoSyncAt": 1787828717506
   },
   "migrations": {
     "migrateToMacroIDFromEmbeddedMacro": true,

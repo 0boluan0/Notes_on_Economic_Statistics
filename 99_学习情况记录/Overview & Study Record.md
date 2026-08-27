@@ -20,10 +20,9 @@ tags:
 - 截止日期：[[deadlines]]
 - 当前项目：[[LN905 Essay]]
 - 计划：[[LN905 Essay]]
-- Timed submissions：[[学习计划/LN905 timed submissions]]
-- Listening into Writing：七天 `hacking` 方法已确认，但尚未分配到具体日期。现有证据显示，应优先补 supporting-detail accuracy、source ownership 和基于具体 evidence 的 evaluation。
-- Reading into Writing：七天 `hacking` 方法已确认，但尚未分配到具体日期。现有证据显示，应优先补全部 task parts 的覆盖、约 600 词完整产出、source fidelity 与明确的 cross-text synthesis。
-- 当前训练：[[学习计划/LN905 Listening and Reading Practice]]；顺序为“最小脚手架并记忆 → 完整材料上的听读提速/提准 → 全真限时模拟与整篇纠错”。暂不新增可选任务或学习日程，只保留校方固定 Practice A/B 与正式考试。
+- Timed submissions：[[学习计划/LN905 timed submissions]]（记录册，不从这里开始训练）
+- 当前唯一训练入口：[[99_学习情况记录/teach/LN905 7-Day Exam Sprint|LN905 Paper A/B 七天单线入口]]。
+- 最新证据：2026-08-27 Paper B 限时完成 636 词；非官方估分约 `55/90`。宏观结构、立场与三文使用已存在，当前顺序固定为 `source fidelity → 真实 source relation / writer inference → 反复语言问题`。
 
 ## 自主成长
 

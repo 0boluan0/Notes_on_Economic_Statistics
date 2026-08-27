@@ -21,21 +21,9 @@
             "id": "3012d6a687c063a0",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Sample Essay.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Sample Essay"
-            }
-          },
-          {
-            "id": "e346d9b58cf9d33a",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2026-08-27——Thu.md",
+                "file": "99_学习情况记录/teach/reading-into-writing/learning-records/2026-08-27-week5-practice-paper-b.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -50,11 +38,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-08-27——Thu"
+              "title": "2026-08-27-week5-practice-paper-b"
+            }
+          },
+          {
+            "id": "e346d9b58cf9d33a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "07_Programme/02_LSE_MSc_Data_Science/01_全球多语种评价检索.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "01_全球多语种评价检索"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -103,7 +115,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 242.02500534057617
+    "width": 311.1187553405762
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -334,17 +346,19 @@
       "bases:Create new base": false
     }
   },
-  "active": "e346d9b58cf9d33a",
+  "active": "3012d6a687c063a0",
   "lastOpenFiles": [
-    "07_Programme/01_LN905_LSE-language-class/00_inbox/PaperB exercise- climate change.md",
+    "99_学习情况记录/teach/LN905 7-Day Exam Sprint.md",
+    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Sample Essay.pdf",
+    "07_Programme/02_LSE_MSc_Data_Science/01_全球多语种评价检索.md",
+    "07_Programme/02_LSE_MSc_Data_Science/00_课程总览.md",
+    "07_Programme/01_LN905_LSE-language-class/00_inbox/LN905-essay.md",
     "99_学习情况记录/2026-08-27——Thu.md",
+    "07_Programme/01_LN905_LSE-language-class/00_inbox/PaperB exercise- climate change.md",
     "07_Programme/01_LN905_LSE-language-class/01_LN905_note/LN905 历年考试内容公开线索汇总.md",
     "04_Fragments/2025 LSE语言班亲历：新制考试结构 - 2026-08-26.md",
     "04_Fragments/25 Fall LSE最全语言班攻略（二）：2024 期末结构 - 2026-08-26.md",
     "04_Fragments/25 Fall LSE最全语言班攻略（一）：2024 周主题 - 2026-08-26.md",
-    "07_Programme/02_LSE_MSc_Data_Science/01_全球多语种评价检索.md",
-    "07_Programme/02_LSE_MSc_Data_Science/00_课程总览.md",
-    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Sample Essay.pdf",
     "tmp/ln905_markitdown/02_Academic-Writing/Week-3-Demographics/Sample Essay - Annotated.md",
     "tmp/ln905_markitdown/02_Academic-Writing/Week-3-Demographics/Sample Essay.md",
     "99_学习情况记录/2026-08-26——Wed.md",
@@ -371,8 +385,6 @@
     "99_学习情况记录/2026-08-25——Tue.md",
     "99_学习情况记录/teach/reading-into-writing/learning-records/2026-08-27-week5-practice-paper-b.md",
     "99_学习情况记录/teach/listening-into-writing/learning-records/2026-08-26-week5-practice-paper-a.md",
-    "99_学习情况记录/teach/reading-into-writing/lessons/2026-08-31-paper-b-dress-rehearsal.md",
-    "99_学习情况记录/teach/reading-into-writing/lessons/2026-08-28-paper-b-clean-route.md",
     "98_attachment/Pasted image 20260823103347.png",
     "98_attachment/Pasted image 20260822145206.png",
     "tmp/pdfs/final-4.png",

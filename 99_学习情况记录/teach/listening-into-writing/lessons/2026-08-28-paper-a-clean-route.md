@@ -6,14 +6,14 @@ paper: A
 topic: Climate Change
 phase: teaching-practice
 status: ready
-date: 2026-08-28
+date: 2026-08-29
 source_status: unseen
 ---
 
 # Paper A clean route｜Climate justice
 
-> [!danger] Day 4/5 路由材料
-> 只有总入口把 Paper A 分配给你时才打开。Day 4 选 `guided`；Day 5 选 `independent`。第一次播放前不要打开 transcript、简介或评论。
+> [!danger] Day 5 已锁定｜Independent
+> 七天单线入口已经把今天分配为 Paper A independent。第一次播放前不要打开 transcript、简介或评论；完整成文前不使用 AI。
 
 ## 方向卡
 
@@ -40,14 +40,11 @@ writeback rule: append every learner turn, feedback decision and next move to th
 stop boundary: stop after the complete output and one prescribed revision; do not open another unit or create a remedial drill.
 student-os:mentor-brief:end -->
 
-## 选择模式
+## 固定模式
 
-- **Guided**：先完整听一次并提交 notes；之后同一助教可以看 transcript，逐步带你做 map、plan 和全文，但不能替你写最终句子。
-- **Independent**：播放开始后直到 40 分钟写作结束，不使用 AI、transcript、讲义或词典；之后才反馈。
+播放开始后直到 40 分钟写作结束，不使用 AI、transcript、讲义或词典；之后才反馈。
 
-在下方写：`Mode: guided` 或 `Mode: independent`。
-
-Mode:
+Mode: independent
 
 ## 完整演讲
 
@@ -105,3 +102,6 @@ Word count:
 
 Robinson, M. (2015). *Why climate change is a threat to human rights*. TEDWomen. [Official TED page](https://www.ted.com/talks/mary_robinson_why_climate_change_is_a_threat_to_human_rights).
 
+## 完成后继续
+
+回到 [[99_学习情况记录/teach/LN905 7-Day Exam Sprint#Day 6｜Sun 30 Aug｜完全休息|七天单线入口 Day 6]]；星期日休息，星期一从同页进入 Day 7。

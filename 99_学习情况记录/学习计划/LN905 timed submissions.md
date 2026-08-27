@@ -8,7 +8,7 @@ kind: scheduled-assessments
 
 # LN905 timed submissions
 
-这里的 checkbox 表示完成 timed attempt；[[deadlines]] 中独立的 hard obligation 只有在 Moodle 状态或回执核验后才关闭。
+这里的 checkbox 按链接记录中写明的完整结束点关闭；Week 5 校准包含赛后诊断和至多一次全文修改，不另建 revision checkbox。[[deadlines]] 中独立的 hard obligation 只有在 Moodle 状态或回执核验后才关闭。本页是记录册，不是学习入口。
 
 ## 提交清单
 
@@ -18,10 +18,10 @@ kind: scheduled-assessments
 - [x] LN905｜Reading into Writing：Demographics timed attempt｜[[99_学习情况记录/teach/reading-into-writing/learning-records/0006-demographics-friday-timed|赛后端到端记录]] #student-os/task ⏳ 2026-08-14 📅 2026-08-14 ✅ 2026-08-14
 - [x] LN905｜Listening into Writing：Climate Change timed attempt #student-os/task ⏳ 2026-08-21 📅 2026-08-21 ✅ 2026-08-21
 - [x] LN905｜Reading into Writing：Climate Change timed attempt #student-os/task ⏳ 2026-08-21 📅 2026-08-21 ✅ 2026-08-21
-- [ ] LN905｜Week 5 Practice Paper A：无 AI 限时作答 → 赛后诊断/至多一次整篇 revision（14:00–15:15；实质口径约 20 分钟听＋40 分钟写）｜[[99_学习情况记录/teach/listening-into-writing/learning-records/2026-08-26-week5-practice-paper-a|校准记录]] #student-os/task ⏳ 2026-08-26 📅 2026-08-26
-- [ ] LN905｜Week 5 Practice Paper B：无 AI 限时作答 → 赛后诊断/至多一次整篇 revision（10:00–12:00；实质作答 90 分钟）｜[[99_学习情况记录/teach/reading-into-writing/learning-records/2026-08-27-week5-practice-paper-b|校准记录]] #student-os/task ⏳ 2026-08-27 📅 2026-08-27
-- [ ] LN905｜Paper A final assessment（10:00–11:30） #student-os/task ⏳ 2026-09-02 📅 2026-09-02
-- [ ] LN905｜Paper B final assessment（12:30–14:30） #student-os/task ⏳ 2026-09-02 📅 2026-09-02
+- [-] LN905｜Week 5 Practice Paper A：固定窗口已过且无可核验材料，不虚构复盘；由 Day 5 独立 clean unit 取得下一份证据｜[[99_学习情况记录/teach/LN905 7-Day Exam Sprint#Day 2｜Wed 26 Aug｜历史日，不虚构复盘|单线入口]] #student-os/cancelled ⏳ 2026-08-26 📅 2026-08-26 ❌ 2026-08-27
+- [ ] LN905｜Week 5 Practice Paper B：636 词原稿与诊断已完成；只余一次全文修改｜[[99_学习情况记录/teach/LN905 7-Day Exam Sprint#Day 3｜Thu 27 Aug｜官方 Practice Paper B|单线入口]] #student-os/task ⏳ 2026-08-27 📅 2026-08-27
+- [ ] LN905｜Paper A final assessment（10:00–11:30）｜[[99_学习情况记录/teach/LN905 7-Day Exam Sprint#Wed 2 Sep｜真正上场|单线入口]] #student-os/task ⏳ 2026-09-02 📅 2026-09-02
+- [ ] LN905｜Paper B final assessment（12:30–14:30）｜[[99_学习情况记录/teach/LN905 7-Day Exam Sprint#Wed 2 Sep｜真正上场|单线入口]] #student-os/task ⏳ 2026-09-02 📅 2026-09-02
 
 ## 已核验时间
 
