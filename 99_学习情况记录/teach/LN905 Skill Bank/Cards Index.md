@@ -1,7 +1,7 @@
 ---
 student_os: ln905-skill-card-index
 title: LN905 Skill Cards Index
-last_rebuilt: 2026-08-27
+last_rebuilt: 2026-08-24
 card_count: 280
 ---
 
@@ -11,21 +11,6 @@ card_count: 280
 > 这里是卡片盒目录，不是第二套技能状态。正面用于主动回忆；反面解释功能、适用条件、意义边界、例子和课件来源。学习与 Recall 证据只追加在原卡。完整课程审计见 [[99_学习情况记录/teach/LN905 Skill Bank/Course Coverage|LN905 Course Coverage]]。
 
 共 **280** 张。课件回溯初始化只表示“课程教过且已入库”，不表示已经掌握。
-
-## 当前练习回收｜下次直接调用
-
-> [!important] 2026-08-27 Week 5 Paper B 后更新
-> 先判断下一句要完成什么工作，再选骨架；不能因为记得某个连接词就倒推来源关系。这里仅提供当前优先入口，完整解释、适用条件、边界、例句和学习记录仍以链接的原子卡为准。Guided practice 会在自然适用处提示；下一次 timed/Friday output 仍保持无提示。
-
-| 句子工作 | 什么时候调用 | 当前骨架 |
-|---|---|---|
-| 给 thesis 加上有证据的条件 | 题目需要条件式立场，而来源不支持普遍结论时 | [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-02-C05 - this-essay-contends-that-x-in-cases-where-y-because-z|AW-02-C05 · This essay contends that X in cases where Y because Z.]] |
-| 给多个政策工具排序 | recommendation 题需要说明主要手段、辅助作用或不同目标时 | [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-02-C06 - governments-should-respond-to-X-through-A-and-B|AW-02-C06 · Governments should respond through A and B, while C plays a supporting role.]] |
-| 报告研究动作和量化结果 | 材料给出干预、比较和百分比，不能只写 `using the data` 时 | [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-10-C04 - using-data-on-X-author-finds-Y|AW-10-C04 · Using data on X, Author found that Y.]] |
-| 用完整句引入具体局限 | 需要说明某政策、研究或论证因哪些理由受限或受批评时 | [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-11-C14 - x-is-limited-due-to-y-questionable-because-y|AW-11-C14 · X is limited due to Y / questionable because Y.]] |
-| 区分两位作者的不同动作 | 一位作者只是报告 critics，另一位作者亲自 argue，或两文重点不同时 | [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-12-C07 - while-source-A-X-source-B-Y|AW-12-C07 · While Source A reports/shows X, Source B argues/shows Y.]]；[[99_学习情况记录/teach/LN905 Skill Bank/Cards/LEX-01-C10 - claim-argue-report|LEX-01-C10 · claim ≠ argue ≠ report]] |
-| 限制证据能够推出的结论 | 从短期效果跳到长期、成本、因果或普遍效果之前 | [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-17-C03 - X-does-not-warrant-Y|AW-17-C03 · X does not warrant Y.]]；[[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-11-R01 - suggesting that X alone does not justify Y|AW-11-R01 · X alone does not justify Y.]] |
-| 综合共同点并保留分歧 | 来源确实共享 X，但对 Y 仍不一致时 | [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-22-C05 - taken-together-these-sources-suggest-x-but-y-remains-contested|AW-22-C05 · Taken together, these sources suggest X, but Y remains contested.]] |
 
 ## Academic Writing
 

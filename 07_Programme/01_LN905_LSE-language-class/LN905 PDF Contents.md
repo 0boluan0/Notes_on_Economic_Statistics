@@ -48,6 +48,10 @@ aliases:
 - [[07_Programme/01_LN905_LSE-language-class/PDF/01_Assessment/Assessment-Information/LSE English Language Assessment - Information.pdf|Assessment information]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/01_Assessment/e-Exams-Guide-for-LSE-students.pdf|e-Exams guide]]
 
+### Final assessment
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/01_Assessment/Final-Assessment/Paper C Speaking & Listening Schedule.pdf|Paper C · Speaking and listening schedule]]
+
 ### Marking criteria
 
 - [[07_Programme/01_LN905_LSE-language-class/PDF/01_Assessment/Marking-Criteria/Assignment Marking Criteria.pdf|Assignment]]
@@ -142,6 +146,11 @@ aliases:
 - [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-5-Review/Listening into Writing - Feedback from Week Four.pdf|Feedback slides]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-5-Review/Paper A Week 4 Feedback.pdf|Detailed class feedback and stronger/weaker examples]]
 
+### Week 5 · Practice assessment
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-5-Practice-Assessment/Listening into Writing - Nudge.pdf|Listening into Writing · Nudge]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-5-Practice-Assessment/Feedback for Practice Paper A.pdf|Practice Paper A feedback]]
+
 ## 04 Paper B · Reading into Writing
 
 - [[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Reading into Writing.pdf|Introduction]]
@@ -170,6 +179,12 @@ aliases:
 
 - [[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-5-Review/Feedback for Week Four.pdf|Feedback, structure, collocations and e-exam guidance]]
 
+### Week 5 · Practice assessment
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-5-Practice-Assessment/Reading into Writing - Nudge.pdf|Reading into Writing · Nudge]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-5-Practice-Assessment/Extracts for Nudge.pdf|Nudge extracts]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-5-Practice-Assessment/Feedback for Practice Paper B.pdf|Practice Paper B feedback]]
+
 ## 05 Paper C · Speaking and Listening
 
 - [[07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/2-minute-presentations/Week One_LN905.pdf|Week 1 · Two-minute presentation]]
@@ -181,6 +196,10 @@ aliases:
 - [[07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Instructions for Examiners.pdf|Instructions for examiners]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Practice.pdf|Practice]]
 - [[07_Programme/01_LN905_LSE-language-class/Media/05_Paper-C-Speaking-and-Listening/Presentation Guide.mp4|Presentation guide video]]
+
+### Week 5 · Practice assessment
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Week-5-Practice-Assessment/Practice Speaking.pdf|Practice speaking · Four course topics]]
 
 ## 06 Academic interaction
 
@@ -196,7 +215,6 @@ aliases:
 
 ### Week 3 · Demographics
 
-- [[07_Programme/01_LN905_LSE-language-class/PDF/06_Academic-Interaction/Week-3-Demographics/Academic Interaction - Demographics.pdf|Slides]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/06_Academic-Interaction/Week-3-Demographics/Demographics Academic Interaction.pdf|Reading]]
 
 ### Week 4 · Climate change
