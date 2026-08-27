@@ -77,7 +77,7 @@ Student OS 是导师：每天根据课程总纲、真实输出和 deadline 写�
 ### 每日主动提取底座
 
 - [ ] LN905 冲刺 Anki｜2026-08-25：Core 54 首次提取＋Recognition 20 辨义，45–60 分钟 #student-os/task ⏳ 2026-08-25
-- [ ] LN905 冲刺 Anki｜2026-08-26：到期卡＋Extension 前 12，25–30 分钟 #student-os/task ⏳ 2026-08-26
+- [ ] LN905 冲刺 Anki｜2026-08-26：到期卡＋Extension 前 12，25–30 分钟 #student-os/task ⏳ 2026-08-27
 - [ ] LN905 冲刺 Anki｜2026-08-27：到期卡＋Extension 后 12，25–30 分钟 #student-os/task ⏳ 2026-08-27
 - [ ] LN905 冲刺 Anki｜2026-08-28：全部到期卡与错卡，20–25 分钟 #student-os/task ⏳ 2026-08-28
 - [ ] LN905 冲刺 Anki｜2026-08-29：全部到期卡，20–25 分钟 #student-os/task ⏳ 2026-08-29

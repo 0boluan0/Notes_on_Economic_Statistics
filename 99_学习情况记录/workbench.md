@@ -39,9 +39,9 @@ hide postpone button
 ## 风险雷达
 
 <!-- student-os:risk-radar:start -->
-- D-6｜2026-09-01｜LN905：Paper C final assessment（个人时段待 08-28 发布）
-- D-7｜2026-09-02 10:00｜LN905：Paper A final assessment
-- D-7｜2026-09-02 12:30｜LN905：Paper B final assessment
+- D-5｜2026-09-01｜LN905：Paper C final assessment（个人时段待 08-28 发布）
+- D-6｜2026-09-02 10:00｜LN905：Paper A final assessment
+- D-6｜2026-09-02 12:30｜LN905：Paper B final assessment
 <!-- student-os:risk-radar:end -->
 
 ## 输入箱
