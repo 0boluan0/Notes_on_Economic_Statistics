@@ -35,7 +35,7 @@ independent-only observation opportunities: every task, source, mapping, plannin
 hint ladder: disabled during the attempt; after it, diagnose against exact extracts and task wording.
 feedback priority: task fulfilment -> source fidelity -> synthesis/writer inference -> paragraph development/conclusion -> recurring language.
 completion evidence: raw timed output plus one revision addressing the highest-risk whole-output issue.
-writeback rule: preserve the original; append source evidence, teacher feedback and AI diagnosis to the learning log.
+writeback rule: preserve the original; append source evidence, teacher feedback and AI diagnosis to the learning log; write naturally observed reusable sentence performance to the canonical Skill Bank cards and link it back to this record.
 stop boundary: after the post-attempt revision; do not open a second Paper B that day.
 student-os:mentor-brief:end -->
 
@@ -99,6 +99,24 @@ To sum up, nudge is useful for changing individuals' behaviours in a silent but 
 | 让病人自己写预约信息是 `inaction` | 该例依赖病人的主动参与 | 改成低成本的参与式设计，不归入 inaction |
 | `does not require more labour and maybe more equipments` | 材料没有提供这一成本判断 | 删除无来源的成本与设备推断 |
 | `Taken together, they all agree...` | 三文立场不同：实例支持、结构性批评、boosts 比较 | 先写各自命题，再标 support / qualify / challenge |
+
+## 这次独立输出回收的句子骨架
+
+> [!important] 不是再背一份新清单
+> 下面七个入口都复用现有原子卡。你这次是在没有提示的限时写作中自然遇到这些句子工作，但成句没有稳定保留来源意思，因此记录为本次独立证据，并优先回到 Daily Recall 和下一份 guided Paper B。绿色改好句是反馈，不算你已经独立掌握。
+
+| 你这次想完成的句子工作 | 下次出现什么情况就调用 | 可直接提取的骨架 |
+|---|---|---|
+| 给全文立场加条件 | 想写“可以使用，但不是所有情况都适用”时，先从来源找出真实条件，不能自己发明 `urgent / not urgent` | [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-02-C05 - this-essay-contends-that-x-in-cases-where-y-because-z|AW-02-C05]]：`This essay contends that X in cases where Y because Z.` |
+| 给政策工具分工 | recommendation 段需要说明主要措施、辅助措施或不同目标时 | [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-02-C06 - governments-should-respond-to-X-through-A-and-B|AW-02-C06]]：`Governments should respond to X through A and B, while C should play only a supporting role.` |
+| 报告一个研究结果 | 材料给了“谁做了什么＋结果改变多少”，而不是只笼统写 `using the data` 时 | [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-10-C04 - using-data-on-X-author-finds-Y|AW-10-C04]]：`In a study reported by A, doing X reduced/increased Y by N per cent.` |
+| 引入具体局限 | 想写 `criticism / disadvantages / lacks`，但需要把批评对象和理由写完整时 | [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-11-C14 - x-is-limited-due-to-y-questionable-because-y|AW-11-C14]]：`X has been criticised for A, B, and C.` |
+| 区分“报告批评”与“作者本人主张” | 两位作者并非都在亲自支持同一句话时 | [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-12-C07 - while-source-A-X-source-B-Y|AW-12-C07]]：`While A reports that critics regard X as Y, B argues that Z.`；同时检查 [[99_学习情况记录/teach/LN905 Skill Bank/Cards/LEX-01-C10 - claim-argue-report|claim ≠ argue ≠ report]] |
+| 写出证据边界 | 想从短期结果推出低成本、长期有效或更强效果之前 | [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-17-C03 - X-does-not-warrant-Y|AW-17-C03]]：`X does not warrant Y.`；较长形式见 [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-11-R01 - suggesting that X alone does not justify Y|AW-11-R01]] |
+| 既综合又保留分歧 | 两篇或三篇真的共享一个命题，但对另一点仍有争议时；若没有真实共同点就不能用 | [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-22-C05 - taken-together-these-sources-suggest-x-but-y-remains-contested|AW-22-C05]]：`Taken together, these sources suggest X, but Y remains contested.` |
+
+> [!tip] 本次最需要记住的选择顺序
+> `我要完成什么句子工作 → 来源允许我写到多强 → 选择骨架 → 填入内容`。不能反过来因为记得 `Taken together` 或 `fails`，就让材料迁就句子。
 
 ## 彩色逐句批改｜删除线＋旁批
 
@@ -214,4 +232,12 @@ To sum up, nudge is useful for changing individuals' behaviours in a silent but 
 - AI feedback：新增五段双栏批改；红色删除线处理语言与表达，黄色标记 source fidelity / synthesis 风险，绿色提供完整改句，蓝色解释修改原因。
 - Feedback priority：来源意思与作者立场优先；随后处理段落功能；最后统一 grammar、word form、collocation 与引用形式。
 - Next action：根据批注在 `One whole-output revision` 下写一篇完整修订稿；原稿和批改层均不覆盖。
+
+### 2026-08-27｜独立造句证据写回句子骨架
+
+- Learner input：指出批改没有充分链接日常要背的句子骨架，也无法从部分骨架判断何时使用；要求根据真实练习及时更新骨架清单。
+- AI teaching / feedback：从本次无提示限时稿中回收七类真实句子工作，链接现有 `AW-02-C05`、`AW-02-C06`、`AW-10-C04`、`AW-11-C14`、`AW-12-C07`、`AW-17-C03`、`AW-22-C05`，并补充使用触发和意义边界；没有为单次拼写或局部语法错误新建卡。
+- Evidence：条件式 thesis、量化结果报告、局限表达、source ownership、claim boundary 与 partial-consensus synthesis 均出现自然机会，但本次成句没有稳定保留来源条件或命题关系；记录为独立输出证据，不把绿色示范句算作学习者掌握。
+- Next action：本地原子卡与 Daily Recall 优先级已经更新，并在下一份 guided Paper B 的自然位置即时提示；下一次 timed/Friday output 仍无提示观察。Anki 当前未连接，本轮没有把卡片变体同步到 Anki，后续可用时再按现有幂等流程同步，不阻塞本地练习。
+- Continuation decision：仍只完成上方一次 whole-output revision，不新增句型 drill 或 checkbox。
 <!-- student-os:learning-log:end -->

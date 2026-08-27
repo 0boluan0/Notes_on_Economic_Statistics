@@ -33,6 +33,5 @@ last_result:
 ## 学习记录
 
 - 2026-08-20｜课件回溯初始化｜已从已上 LN905 课件整理成卡片并加入 Recall 队列；尚未留下主动回忆或独立使用证据，不视为掌握。
-
-
+- 2026-08-27｜[[99_学习情况记录/teach/reading-into-writing/learning-records/2026-08-27-week5-practice-paper-b|Week 5 Paper B timed output]]｜636 词完整稿实质使用了全部三篇 extract，并让不同来源承担效果案例、结构性批评和 alternative-intervention 三种作用；不是仅 name-drop。记为 `independent` evidence。来源命题的准确性与跨文关系另由 AW-15/AW-22 记录，不能因覆盖三文而视为 synthesis 已正确。
 

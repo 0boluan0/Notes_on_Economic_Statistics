@@ -33,6 +33,5 @@ last_result:
 ## 学习记录
 
 - 2026-08-20｜课件回溯初始化｜已从已上 LN905 课件整理成卡片并加入 Recall 队列；尚未留下主动回忆或独立使用证据，不视为掌握。
-
-
+- 2026-08-27｜[[99_学习情况记录/teach/reading-into-writing/learning-records/2026-08-27-week5-practice-paper-b|Week 5 Paper B timed output]]｜三个主体功能分别由 learner 自己的 benefits、limitations 与 policy judgement 开头，而不是按 Author A/B/C 排列。记为 `independent` evidence；writer-led opening 已出现，但 claim 仍须受来源边界约束。
 

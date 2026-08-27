@@ -33,6 +33,5 @@ last_result:
 ## 学习记录
 
 - 2026-08-20｜课件回溯初始化｜已从已上 LN905 课件整理成卡片并加入 Recall 队列；尚未留下主动回忆或独立使用证据，不视为掌握。
-
-
+- 2026-08-27｜[[99_学习情况记录/teach/reading-into-writing/learning-records/2026-08-27-week5-practice-paper-b|Week 5 Paper B timed output]]｜无提示改写中多次改变命题边界：`unknown` 被写成 no evidence/failure；短期效果被扩大为低成本；boost 的透明度/自主性优势被改成更高效果；一位作者报告 critics 被写成作者本人立场。自然机会充分但四项意义保护均不稳定，记为 `incorrect` independent evidence；本次绿色改句不计学习者掌握。
 
