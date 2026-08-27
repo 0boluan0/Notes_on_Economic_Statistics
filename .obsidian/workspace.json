@@ -40,30 +40,6 @@
               "icon": "lucide-file",
               "title": "2026-08-27-week5-practice-paper-b"
             }
-          },
-          {
-            "id": "e346d9b58cf9d33a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "07_Programme/02_LSE_MSc_Data_Science/01_全球多语种评价检索.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "01_全球多语种评价检索"
-            }
           }
         ],
         "currentTab": 1
@@ -349,8 +325,10 @@
   "active": "3012d6a687c063a0",
   "lastOpenFiles": [
     "99_学习情况记录/teach/LN905 7-Day Exam Sprint.md",
-    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Sample Essay.pdf",
+    "99_学习情况记录/teach/reading-into-writing/lessons/2026-08-28-paper-b-clean-route.md",
     "07_Programme/02_LSE_MSc_Data_Science/01_全球多语种评价检索.md",
+    "99_学习情况记录/teach/reading-into-writing/learning-records/2026-08-27-week5-practice-paper-b.md",
+    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Sample Essay.pdf",
     "07_Programme/02_LSE_MSc_Data_Science/00_课程总览.md",
     "07_Programme/01_LN905_LSE-language-class/00_inbox/LN905-essay.md",
     "99_学习情况记录/2026-08-27——Thu.md",
@@ -383,8 +361,6 @@
     "07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-5-Review",
     "07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-5-Review",
     "99_学习情况记录/2026-08-25——Tue.md",
-    "99_学习情况记录/teach/reading-into-writing/learning-records/2026-08-27-week5-practice-paper-b.md",
-    "99_学习情况记录/teach/listening-into-writing/learning-records/2026-08-26-week5-practice-paper-a.md",
     "98_attachment/Pasted image 20260823103347.png",
     "98_attachment/Pasted image 20260822145206.png",
     "tmp/pdfs/final-4.png",
