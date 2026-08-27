@@ -23,8 +23,8 @@ card_count: 280
 - `AW-02-C02` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-02-C02 - while-x-y|While X, Y.]] · `AW-02`
 - `AW-02-C03` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-02-C03 - among-the-many-reasons-for-x-the-most-compelling-are-a-and-b|Among the many reasons for X, the most compelling are A and B.]] · `AW-02`
 - `AW-02-C04` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-02-C04 - a-thesis-must-directly-answer-the-question-and-be-specific-and-f|A thesis must directly answer the question and be specific and focused.]] · `AW-02`
-- `AW-02-C05` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-02-C05 - this-essay-contends-that-x-in-cases-where-y-because-z|This essay contends that X in cases where Y because Z.]] · `AW-02`
-- `AW-02-C06` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-02-C06 - governments-should-respond-to-X-through-A-and-B|Governments should respond to X through A and B, while C should play only a supporting role.]] · `AW-02`
+- `AW-02-C05` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-02-C05 - this-essay-contends-that-x-in-cases-where-y-because-z|Governments should use A when X, B when Y, and C when Z.]] · `AW-02`
+- `AW-02-C06` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-02-C06 - governments-should-respond-to-X-through-A-and-B|Merged into AW-02-C05; kept for history]] · `AW-02`
 - `AW-02-C07` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-02-C07 - X-occurs-mainly-because-A-and-B-addressing-it-requires-C-and-D|X occurs mainly because A and B; addressing it therefore requires C and D.]] · `AW-02`
 - `AW-02-C08` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-02-C08 - in-this-context-X-refers-to-features-it-persists-mainly-because-A-and-B|In this context, X refers to [defining features]; it persists mainly because A and B.]] · `AW-01`, `AW-02`
 - `AW-03-C01` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-03-C01 - justification-claim-reasons-evidence-restatement|Justification: claim → reasons/evidence → restatement.]] · `AW-03`
@@ -55,7 +55,7 @@ card_count: 280
 - `AW-10-C01` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-10-C01 - as-author-points-out|As Author argues / points out, X.]] · `AW-10`
 - `AW-10-C02` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-10-C02 - writer-led-claim-with-citation|[Writer-led claim] (Author, Year).]] · `AW-08`, `AW-10`
 - `AW-10-C03` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-10-C03 - this-finding-supports-previous-research|This finding supports previous research by Author, who found that X.]] · `AW-10`, `AW-13`
-- `AW-10-C04` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-10-C04 - using-data-on-X-author-finds-Y|Using data on X, Author (Year) found that Y.]] · `AW-10`, `AW-17`
+- `AW-10-C04` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-10-C04 - using-data-on-X-author-finds-Y|In a study reported by A, X changed Y by N.]] · `AW-10`, `AW-17`
 - `AW-11-C01` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-11-C01 - convincing-persuasive-rigorous-comprehensive|convincing / persuasive / rigorous / comprehensive]] · `AW-11`
 - `AW-11-C02` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-11-C02 - overlooks-or-fails-to-take-into-account|X overlooks / fails to take into account Y.]] · `AW-11`
 - `AW-11-C03` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-11-C03 - in-claiming-X-author-fails-to-Y|In claiming that X, Author fails to Y.]] · `AW-11`
@@ -69,7 +69,7 @@ card_count: 280
 - `AW-11-C11` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-11-C11 - x-lends-credence-to-y|X lends credence to Y.]] · `AW-11`
 - `AW-11-C12` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-11-C12 - arises-from-derives-from-stems-from-results-from|arises from / derives from / stems from / results from]] · `AW-11`
 - `AW-11-C13` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-11-C13 - illustrates-implies-raises-the-question-highlights-the-need|illustrates / implies / raises the question / highlights the need]] · `AW-11`
-- `AW-11-C14` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-11-C14 - x-is-limited-due-to-y-questionable-because-y|X is limited due to Y / questionable because Y.]] · `AW-11`
+- `AW-11-C14` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-11-C14 - x-is-limited-due-to-y-questionable-because-y|X has been criticised for A, B, and C.]] · `AW-11`
 - `AW-11-R01` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-11-R01 - suggesting that X alone does not justify Y|suggesting that X alone does not justify Y]] · `AW-11`, `AW-17`
 - `AW-12-C01` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-12-C01 - this-these-such-plus-precise-noun|This / These / Such + precise noun]] · `AW-12`
 - `AW-12-C02` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-12-C02 - X-however-Y|X, however, Y.]] · `AW-12`
@@ -77,7 +77,7 @@ card_count: 280
 - `AW-12-C04` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-12-C04 - X-rather-than-Y|X rather than Y]] · `AW-12`, `AW-20`
 - `AW-12-C05` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-12-C05 - taken-together-X-and-Y-suggest-Z|Taken together, X and Y suggest that Z.]] · `AW-12`, `AW-13`
 - `AW-12-C06` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-12-C06 - in-other-words|In other words, X.]] · `AW-12`
-- `AW-12-C07` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-12-C07 - while-source-A-X-source-B-Y|While Source A shows X, Source B shows Y.]] · `AW-12`, `AW-13`, `AW-20`
+- `AW-12-C07` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-12-C07 - while-source-A-X-source-B-Y|While A reports/shows X, B argues/qualifies Y.]] · `AW-12`, `AW-13`, `AW-20`
 - `AW-12-C08` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-12-C08 - consequently-as-a-result-accordingly|Consequently / As a result / Accordingly, X.]] · `AW-12`
 - `AW-12-C09` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-12-C09 - in-contrast-on-the-contrary|in contrast ≠ on the contrary]] · `AW-12`
 - `AW-12-C10` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-12-C10 - however-links-propositions-punctuation-must-show-its-position|However links propositions; punctuation must show its position.]] · `AW-12`
@@ -107,7 +107,7 @@ card_count: 280
 - `AW-16-C03` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-16-C03 - plan-sections-as-topic-sentences-plus-supporting-detail|Plan sections as topic sentences plus supporting detail.]] · `AW-16`
 - `AW-17-C01` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-17-C01 - this-suggests-that-some-X-may-Y|This suggests that some X may Y.]] · `AW-17`
 - `AW-17-C02` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-17-C02 - on-the-basis-of-X-it-may-be-argued-that-Y|On the basis of X, it may / might / could be argued that Y.]] · `AW-17`, `AW-18`
-- `AW-17-C03` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-17-C03 - X-does-not-warrant-Y|X does not warrant Y.]] · `AW-11`, `AW-17`
+- `AW-17-C03` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-17-C03 - X-does-not-warrant-Y|X does not establish Y; it supports only the more limited conclusion that Z.]] · `AW-11`, `AW-17`
 - `AW-17-C04` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-17-C04 - prove-demonstrate-show-indicate-suggest-may-be-argued|prove → demonstrate/show → indicate/suggest → may be argued]] · `AW-17`
 - `AW-17-C05` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-17-C05 - may-might-could-seem-appear-likely-possible|may / might / could / seem / appear / likely / possible]] · `AW-17`
 - `AW-17-C06` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-17-C06 - clearly-substantial-definite-evidently-in-fact|clearly / substantial / definite / evidently / in fact]] · `AW-17`
@@ -140,7 +140,7 @@ card_count: 280
 - `AW-22-C02` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-22-C02 - x-echoes-y-in-arguing-that-z|X echoes Y in arguing that Z.]] · `AW-22`, `PB-03`
 - `AW-22-C03` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-22-C03 - a-key-difference-lies-in-x|A key difference lies in X.]] · `AW-22`, `PB-03`
 - `AW-22-C04` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-22-C04 - x-takes-a-more-qualified-causal-individual-level-view-than-y|X takes a more qualified / causal / individual-level view than Y.]] · `AW-22`, `PB-03`
-- `AW-22-C05` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-22-C05 - taken-together-these-sources-suggest-x-but-y-remains-contested|Taken together, these sources suggest X, but Y remains contested.]] · `AW-22`, `PB-03`
+- `AW-22-C05` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-22-C05 - taken-together-these-sources-suggest-x-but-y-remains-contested|Taken together, A's evidence, B's challenge, and C's distinction suggest Q.]] · `AW-22`, `PB-03`
 - `AW-22-C06` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-22-C06 - use-integral-citations-when-the-author-matters-non-integral-cita|Use integral citations when the author matters; non-integral citations when the proposition matters.]] · `AW-22`, `PB-03`
 - `AW-22-C07` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-22-C07 - group-citations-only-when-the-sources-support-the-same-propositi|Group citations only when the sources support the same proposition.]] · `AW-22`, `PB-03`
 - `AW-22-C08` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-22-C08 - synthesis-explains-how-sources-work-together-in-the-writer-s-arg|Synthesis explains how sources work together in the writer’s argument.]] · `AW-22`, `PB-03`

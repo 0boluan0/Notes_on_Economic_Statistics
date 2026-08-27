@@ -16,33 +16,8 @@
               "icon": "sprout",
               "title": "Learning Progress Dashboard"
             }
-          },
-          {
-            "id": "3012d6a687c063a0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "99_学习情况记录/teach/reading-into-writing/learning-records/2026-08-27-week5-practice-paper-b.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "2026-08-27-week5-practice-paper-b"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -91,7 +66,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 311.1187553405762
+    "width": 298.9687614440918
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -229,7 +204,7 @@
               },
               "pinned": true,
               "icon": "terminal",
-              "title": "zsh"
+              "title": "Academic"
             }
           },
           {
@@ -322,19 +297,23 @@
       "bases:Create new base": false
     }
   },
-  "active": "3012d6a687c063a0",
+  "active": "70c0343f5ae25f5e",
   "lastOpenFiles": [
+    "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-5/Tutorials/Class 2 Week 5 Tutorials.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-5/Tutorials/Class 1 Week 5 Tutorials.pdf",
+    "99_学习情况记录/teach/reading-into-writing/learning-records/2026-08-27-week5-practice-paper-b.md",
+    "tmp/pdfs/paper-b-criteria/page-2.png",
+    "tmp/pdfs/paper-b-criteria/page-1.png",
+    "tmp/pdfs/week5-feedback/page-3.png",
+    "tmp/pdfs/week5-feedback/page-2.png",
+    "tmp/pdfs/paper-b-criteria",
+    "tmp/pdfs/week5-feedback/page-1.png",
+    "tmp/pdfs/week5-feedback",
     "tmp/pdfs/nudge-qa/nudge/page-13.png",
     "tmp/pdfs/nudge-qa/nudge/page-12.png",
     "tmp/pdfs/nudge-qa/nudge/page-11.png",
     "tmp/pdfs/nudge-qa/nudge/page-10.png",
     "tmp/pdfs/nudge-qa/nudge/page-09.png",
-    "tmp/pdfs/nudge-qa/nudge/page-08.png",
-    "tmp/pdfs/nudge-qa/nudge/page-07.png",
-    "tmp/pdfs/nudge-qa/nudge/page-06.png",
-    "tmp/pdfs/nudge_review/extracts-6.png",
-    "tmp/pdfs/nudge-qa/nudge/page-05.png",
-    "tmp/pdfs/nudge_review/extracts-5.png",
     "tmp/pdfs/nudge_review/feedback.txt",
     "tmp/pdfs/nudge_review/extracts.txt",
     "tmp/pdfs/nudge-qa/nudge.txt",
@@ -342,13 +321,9 @@
     "tmp/pdfs/nudge-qa/feedback.txt",
     "tmp/pdfs/nudge-qa/feedback",
     "tmp/pdfs/nudge-qa",
-    "tmp/pdfs/nudge_review",
-    "tmp/pdfs/nudge-feedback-inspect",
-    "tmp/pdfs/teacher-model-locate/render-demo-annotated",
     "99_学习情况记录/teach/LN905 7-Day Exam Sprint.md",
     "99_学习情况记录/teach/reading-into-writing/lessons/2026-08-28-paper-b-clean-route.md",
     "07_Programme/02_LSE_MSc_Data_Science/01_全球多语种评价检索.md",
-    "99_学习情况记录/teach/reading-into-writing/learning-records/2026-08-27-week5-practice-paper-b.md",
     "07_Programme/02_LSE_MSc_Data_Science/00_课程总览.md",
     "07_Programme/01_LN905_LSE-language-class/00_inbox/LN905-essay.md",
     "99_学习情况记录/2026-08-27——Thu.md",
