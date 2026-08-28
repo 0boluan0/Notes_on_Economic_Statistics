@@ -78,8 +78,8 @@ Student OS 是导师：每天根据课程总纲、真实输出和 deadline 写�
 ### 每日主动提取底座
 
 - [-] LN905 冲刺 Anki｜2026-08-25：过期无完成证据，不集中补做｜[[99_学习情况记录/teach/LN905 7-Day Exam Sprint#Day 1｜Tue 25 Aug｜历史日，不补做|单线入口]] #student-os/cancelled ⏳ 2026-08-25 ❌ 2026-08-27
-- [ ] LN905 冲刺 Anki｜补做 2026-08-26：到期卡＋Extension 前 12，25–30 分钟｜[[99_学习情况记录/teach/LN905 7-Day Exam Sprint#Day 3｜Thu 27 Aug｜官方 Practice Paper B|单线入口]] #student-os/task ⏳ 2026-08-27
-- [ ] LN905 冲刺 Anki｜2026-08-27：到期卡＋Extension 后 12，25–30 分钟｜[[99_学习情况记录/teach/LN905 7-Day Exam Sprint#Day 3｜Thu 27 Aug｜官方 Practice Paper B|单线入口]] #student-os/task ⏳ 2026-08-27
+- [ ] LN905 冲刺 Anki｜补做 2026-08-26：到期卡＋Extension 前 12，25–30 分钟｜[[99_学习情况记录/teach/LN905 7-Day Exam Sprint#Day 3｜Thu 27 Aug｜官方 Practice Paper B|单线入口]] #student-os/task ⏳ 2026-08-29
+- [ ] LN905 冲刺 Anki｜2026-08-27：到期卡＋Extension 后 12，25–30 分钟｜[[99_学习情况记录/teach/LN905 7-Day Exam Sprint#Day 3｜Thu 27 Aug｜官方 Practice Paper B|单线入口]] #student-os/task ⏳ 2026-08-29
 - [ ] LN905 冲刺 Anki｜2026-08-28：全部到期卡与错卡，20–25 分钟｜[[99_学习情况记录/teach/LN905 7-Day Exam Sprint#Day 4｜Fri 28 Aug｜Paper B guided clean unit|单线入口]] #student-os/task ⏳ 2026-08-28
 - [ ] LN905 冲刺 Anki｜2026-08-29：全部到期卡，20–25 分钟｜[[99_学习情况记录/teach/LN905 7-Day Exam Sprint#Day 5｜Sat 29 Aug｜Paper A independent clean unit|单线入口]] #student-os/task ⏳ 2026-08-29
 - [ ] LN905 冲刺 Anki｜2026-08-31：只做到期卡，15–20 分钟｜[[99_学习情况记录/teach/LN905 7-Day Exam Sprint#Day 7｜Mon 31 Aug｜A+B dress rehearsal|单线入口]] #student-os/task ⏳ 2026-08-31

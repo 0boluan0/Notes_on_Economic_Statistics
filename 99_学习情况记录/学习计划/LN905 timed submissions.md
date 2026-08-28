@@ -19,7 +19,7 @@ kind: scheduled-assessments
 - [x] LN905｜Listening into Writing：Climate Change timed attempt #student-os/task ⏳ 2026-08-21 📅 2026-08-21 ✅ 2026-08-21
 - [x] LN905｜Reading into Writing：Climate Change timed attempt #student-os/task ⏳ 2026-08-21 📅 2026-08-21 ✅ 2026-08-21
 - [-] LN905｜Week 5 Practice Paper A：固定窗口已过且无可核验材料，不虚构复盘；由 Day 5 独立 clean unit 取得下一份证据｜[[99_学习情况记录/teach/LN905 7-Day Exam Sprint#Day 2｜Wed 26 Aug｜历史日，不虚构复盘|单线入口]] #student-os/cancelled ⏳ 2026-08-26 📅 2026-08-26 ❌ 2026-08-27
-- [ ] LN905｜Week 5 Practice Paper B：636 词原稿与诊断已完成；只余一次全文修改｜[[99_学习情况记录/teach/LN905 7-Day Exam Sprint#Day 3｜Thu 27 Aug｜官方 Practice Paper B|单线入口]] #student-os/task ⏳ 2026-08-27 📅 2026-08-27
+- [ ] LN905｜Week 5 Practice Paper B：636 词原稿与诊断已完成；只余一次全文修改｜[[99_学习情况记录/teach/LN905 7-Day Exam Sprint#Day 3｜Thu 27 Aug｜官方 Practice Paper B|单线入口]] #student-os/task ⏳ 2026-08-28 📅 2026-08-27
 - [ ] LN905｜Paper A final assessment（10:00–11:30）｜[[99_学习情况记录/teach/LN905 7-Day Exam Sprint#Wed 2 Sep｜真正上场|单线入口]] #student-os/task ⏳ 2026-09-02 📅 2026-09-02
 - [ ] LN905｜Paper B final assessment（12:30–14:30）｜[[99_学习情况记录/teach/LN905 7-Day Exam Sprint#Wed 2 Sep｜真正上场|单线入口]] #student-os/task ⏳ 2026-09-02 📅 2026-09-02
 
