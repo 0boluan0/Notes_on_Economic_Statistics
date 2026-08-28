@@ -21,6 +21,7 @@ status: "active"
 ## Implications
 
 - 可以开始把跨文本因果链转换成按主题组织的 paragraph jobs。
+
 - 后续段落必须写清机制之间的箭头，不能只并列术语或作者观点。
 
 ## Related notes
