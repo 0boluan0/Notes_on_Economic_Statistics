@@ -48,7 +48,7 @@ card_count: 280
 - `AW-07-C03` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-07-C03 - i-intend-to-draw-on-x-to-support-challenge-contextualise-y|I intend to draw on X to support / challenge / contextualise Y.]] · `AW-07`
 - `AW-08-C01` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-08-C01 - begin-the-paragraph-with-your-voice|Begin the paragraph with YOUR voice.]] · `AW-08`
 - `AW-08-C02` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-08-C02 - writer-claim-literature-evidence-writer-comment|Writer claim → literature evidence → writer comment.]] · `AW-08`
-- `AW-08-C03` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-08-C03 - this-evidence-illustrates-supports-qualifies-the-claim-that-x|This evidence illustrates / supports / qualifies the claim that X.]] · `AW-08`
+- `AW-08-C03` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-08-C03 - this-evidence-illustrates-supports-qualifies-the-claim-that-x|This evidence therefore supports X, while leaving open whether Y.]] · `AW-08`
 - `AW-09-C01` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-09-C01 - the-suggestion-that-X-is-important-because-Y|The suggestion that X is important / limited because Y.]] · `AW-09`, `AW-11`
 - `AW-09-C02` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-09-C02 - by-suggesting-that-X-author-contributes-Y|By suggesting that X, Author makes / contributes Y.]] · `AW-09`, `AW-11`
 - `AW-09-C03` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-09-C03 - author-s-suggestion-that-x-is-based-on-y-and-may-not-account-for|Author's suggestion that X is based on Y and may not account for Z.]] · `AW-09`, `AW-11`
@@ -107,7 +107,7 @@ card_count: 280
 - `AW-16-C03` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-16-C03 - plan-sections-as-topic-sentences-plus-supporting-detail|Plan sections as topic sentences plus supporting detail.]] · `AW-16`
 - `AW-17-C01` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-17-C01 - this-suggests-that-some-X-may-Y|This suggests that some X may Y.]] · `AW-17`
 - `AW-17-C02` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-17-C02 - on-the-basis-of-X-it-may-be-argued-that-Y|On the basis of X, it may / might / could be argued that Y.]] · `AW-17`, `AW-18`
-- `AW-17-C03` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-17-C03 - X-does-not-warrant-Y|X does not establish Y; it supports only the more limited conclusion that Z.]] · `AW-11`, `AW-17`
+- `AW-17-C03` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-17-C03 - X-does-not-warrant-Y|X shows Z, but does not establish Y.]] · `AW-11`, `AW-17`
 - `AW-17-C04` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-17-C04 - prove-demonstrate-show-indicate-suggest-may-be-argued|prove → demonstrate/show → indicate/suggest → may be argued]] · `AW-17`
 - `AW-17-C05` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-17-C05 - may-might-could-seem-appear-likely-possible|may / might / could / seem / appear / likely / possible]] · `AW-17`
 - `AW-17-C06` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-17-C06 - clearly-substantial-definite-evidently-in-fact|clearly / substantial / definite / evidently / in fact]] · `AW-17`
