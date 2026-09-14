@@ -1,0 +1,482 @@
+{
+  "nodes": [
+    {
+      "id": "0a1b2c3d4e5f6071",
+      "type": "text",
+      "x": -2850,
+      "y": -720,
+      "width": 6000,
+      "height": 260,
+      "text": "# 多元数据与协方差 · 原子图\n\n先分清观察到的数据与概率模型，再沿“总体定义 → 独立性质 → 样本统计量 → 秩、距离与尺度边界”展开。概念入口只回答它是什么；定理和边界各有自己的节点。25 张卡当前均为 \u0060source-checked / unassessed\u0060。",
+      "color": "5"
+    },
+    {
+      "id": "1b2c3d4e5f607182",
+      "type": "text",
+      "x": -2100,
+      "y": 0,
+      "width": 430,
+      "height": 280,
+      "text": "## [[多元数据矩阵]]\n\n一行是观察单位，一列是变量。\n\n**定义：** \u006e × \u0070 只描述数据怎样摆放。",
+      "color": "5"
+    },
+    {
+      "id": "c1d2e3f405162738",
+      "type": "text",
+      "x": -1450,
+      "y": 0,
+      "width": 430,
+      "height": 300,
+      "text": "## [[数据矩阵不推出抽样模型]]\n\n矩阵形状不能推出各行 iid，也不能确定共同总体或行间依赖。",
+      "color": "1"
+    },
+    {
+      "id": "2c3d4e5f60718293",
+      "type": "text",
+      "x": -800,
+      "y": 0,
+      "width": 430,
+      "height": 300,
+      "text": "## [[随机向量]]\n\n同一概率空间上的多个随机变量组成一个向量。\n\n\u0058 是随机对象，\u0078 是一次实现。",
+      "color": "5"
+    },
+    {
+      "id": "d2e3f40516273849",
+      "type": "text",
+      "x": -150,
+      "y": 0,
+      "width": 430,
+      "height": 300,
+      "text": "## [[边际分布不定联合分布]]\n\n每个分量各自服从什么分布，仍不足以知道它们怎样一起变化。",
+      "color": "1"
+    },
+    {
+      "id": "3d4e5f60718293a4",
+      "type": "text",
+      "x": -2750,
+      "y": 520,
+      "width": 430,
+      "height": 340,
+      "text": "## [[多元数据诊断]]\n\n依次核实观察单位、变量语义、边际、成对结构、尺度、缺失和异常来源。\n\n诊断提出调查问题，不自动授权改数据。",
+      "color": "3"
+    },
+    {
+      "id": "4e5f60718293a4b5",
+      "type": "text",
+      "x": -1150,
+      "y": 620,
+      "width": 430,
+      "height": 290,
+      "text": "## [[均值向量]]\n\n\u03bc = \u0045[\u0058] 由各分量期望组成，只描述总体中心。",
+      "color": "5"
+    },
+    {
+      "id": "e3f405162738495a",
+      "type": "text",
+      "x": -650,
+      "y": 620,
+      "width": 430,
+      "height": 260,
+      "text": "## [[均值向量仿射变换]]\n\n\u0045[\u0041\u0058+\u0062] = \u0041\u03bc+\u0062；不要求独立或 Gaussian。",
+      "color": "6"
+    },
+    {
+      "id": "5f60718293a4b5c6",
+      "type": "text",
+      "x": 0,
+      "y": 620,
+      "width": 460,
+      "height": 320,
+      "text": "## [[协方差矩阵]]\n\n\u03a3 = \u0045[(\u0058\u2212\u03bc)(\u0058\u2212\u03bc)\u1d40]。\n\n对角是分量方差，非对角是两两协方差。",
+      "color": "5"
+    },
+    {
+      "id": "f405162738495a6b",
+      "type": "text",
+      "x": -500,
+      "y": 1080,
+      "width": 430,
+      "height": 260,
+      "text": "## [[线性投影方差]]\n\nVar(\u0061\u1d40\u0058) = \u0061\u1d40\u03a3\u0061。\n\n把多元协方差转成任意一维方向的方差。",
+      "color": "6"
+    },
+    {
+      "id": "05162738495a6b7c",
+      "type": "text",
+      "x": 50,
+      "y": 1080,
+      "width": 430,
+      "height": 260,
+      "text": "## [[协方差仿射变换]]\n\nCov(\u0041\u0058+\u0062) = \u0041\u03a3\u0041\u1d40；平移不改变协方差。",
+      "color": "6"
+    },
+    {
+      "id": "8293a4b5c6d7e8f9",
+      "type": "text",
+      "x": 600,
+      "y": 1080,
+      "width": 430,
+      "height": 300,
+      "text": "## [[相关矩阵]]\n\n在各分量方差为正时，用标准差把协方差归一化为无量纲矩阵。",
+      "color": "5"
+    },
+    {
+      "id": "162738495a6b7c8d",
+      "type": "text",
+      "x": 600,
+      "y": 1500,
+      "width": 430,
+      "height": 290,
+      "text": "## [[相关矩阵尺度不变性]]\n\nCorr(Yⱼ,Yₖ) = sgn(bⱼbₖ) Corr(Xⱼ,Xₖ)。\n\n两斜率同号时该对相关不变，异号时翻转。",
+      "color": "6"
+    },
+    {
+      "id": "60718293a4b5c6d7",
+      "type": "text",
+      "x": -1050,
+      "y": 1360,
+      "width": 430,
+      "height": 300,
+      "text": "## [[样本均值向量]]\n\n\u0058\u0304 是重复抽样中的随机统计量；\u0078\u0304 是当前数据算出的观察值。",
+      "color": "5"
+    },
+    {
+      "id": "2738495a6b7c8d9e",
+      "type": "text",
+      "x": -1050,
+      "y": 1840,
+      "width": 430,
+      "height": 280,
+      "text": "## [[样本均值无偏性]]\n\n各行具有共同有限均值即可推出 \u0045[\u0058\u0304]=\u03bc；独立性不是必要条件。",
+      "color": "6"
+    },
+    {
+      "id": "38495a6b7c8d9eaf",
+      "type": "text",
+      "x": -500,
+      "y": 1840,
+      "width": 430,
+      "height": 310,
+      "text": "## [[样本均值协方差]]\n\nCov(\u0058\u0304) 保留全部交叉协方差；各行同协方差且行间不相关时化为 \u03a3/\u006e，iid 是常用充分条件。",
+      "color": "1"
+    },
+    {
+      "id": "718293a4b5c6d7e8",
+      "type": "text",
+      "x": -2100,
+      "y": 1360,
+      "width": 460,
+      "height": 330,
+      "text": "## [[样本协方差矩阵]]\n\n\u0053 是随机统计量，\u0073 是观察值；二者都以样本均值中心化并采用 \u006e\u22121 分母。",
+      "color": "5"
+    },
+    {
+      "id": "495a6b7c8d9eaf01",
+      "type": "text",
+      "x": -2300,
+      "y": 2300,
+      "width": 430,
+      "height": 300,
+      "text": "## [[样本协方差无偏分母]]\n\n iid 有限二阶矩下，\u006e\u22121 分母无偏；\u006e 分母一般向下有偏。",
+      "color": "6"
+    },
+    {
+      "id": "5a6b7c8d9eaf0123",
+      "type": "text",
+      "x": -1750,
+      "y": 2300,
+      "width": 450,
+      "height": 330,
+      "text": "## [[Gaussian协方差MLE边界]]\n\n中心化散布满秩时，\u0043/\u006e 才是正定协方差空间中的有限 Gaussian MLE。",
+      "color": "1"
+    },
+    {
+      "id": "b5c6d7e8f9011223",
+      "type": "text",
+      "x": -1200,
+      "y": 2300,
+      "width": 460,
+      "height": 330,
+      "text": "## [[样本协方差秩边界]]\n\nrank(\u0053) \u2264 min(\u0070,\u006e\u22121)。\n\n\u0070 \u2265 \u006e 时必奇异；\u0070 < \u006e 仍不保证可逆。",
+      "color": "1"
+    },
+    {
+      "id": "93a4b5c6d7e8f901",
+      "type": "text",
+      "x": 1300,
+      "y": 1080,
+      "width": 460,
+      "height": 330,
+      "text": "## [[马氏距离]]\n\n\u0064 = \u221a[(\u0078\u2212\u0079)\u1d40\u03a3\u207b\u00b9(\u0078\u2212\u0079)]。\n\n不开根号的是平方距离。",
+      "color": "5"
+    },
+    {
+      "id": "6b7c8d9eaf012345",
+      "type": "text",
+      "x": 1050,
+      "y": 1600,
+      "width": 430,
+      "height": 300,
+      "text": "## [[马氏距离不要求正态]]\n\n正定尺度足以定义几何；Gaussian 只提供平方距离的概率校准。",
+      "color": "1"
+    },
+    {
+      "id": "7c8d9eaf01234567",
+      "type": "text",
+      "x": 1550,
+      "y": 1600,
+      "width": 430,
+      "height": 310,
+      "text": "## [[奇异尺度马氏伪距离]]\n\n伪逆忽略零空间方向，因此不同点可能得到距离 0。",
+      "color": "1"
+    },
+    {
+      "id": "a4b5c6d7e8f90112",
+      "type": "text",
+      "x": 2200,
+      "y": 1080,
+      "width": 430,
+      "height": 300,
+      "text": "## [[广义方差]]\n\n广义方差是 det(\u03a3)，即所有特征方向方差的乘积。",
+      "color": "5"
+    },
+    {
+      "id": "8d9eaf0123456789",
+      "type": "text",
+      "x": 2100,
+      "y": 1600,
+      "width": 430,
+      "height": 300,
+      "text": "## [[广义方差与椭球体积]]\n\n正定协方差椭球体积与 \u221adet(\u03a3) 成正比。",
+      "color": "6"
+    },
+    {
+      "id": "9eaf0123456789ab",
+      "type": "text",
+      "x": 2630,
+      "y": 1600,
+      "width": 430,
+      "height": 310,
+      "text": "## [[广义方差尺度敏感性]]\n\n单位重标度按 det(\u0041)\u00b2 改变广义方差。",
+      "color": "1"
+    }
+  ],
+  "edges": [
+    {
+      "id": "c6d7e8f901122334",
+      "fromNode": "1b2c3d4e5f607182",
+      "fromSide": "right",
+      "toNode": "c1d2e3f405162738",
+      "toSide": "left",
+      "label": "数据表示不自带概率假设"
+    },
+    {
+      "id": "d7e8f90112233445",
+      "fromNode": "c1d2e3f405162738",
+      "fromSide": "right",
+      "toNode": "2c3d4e5f60718293",
+      "toSide": "left",
+      "label": "明确抽样过程后才把行建模为随机实现"
+    },
+    {
+      "id": "e8f9011223344556",
+      "fromNode": "2c3d4e5f60718293",
+      "fromSide": "right",
+      "toNode": "d2e3f40516273849",
+      "toSide": "left",
+      "label": "联合结构不能由边际清单替代"
+    },
+    {
+      "id": "f901122334455667",
+      "fromNode": "1b2c3d4e5f607182",
+      "fromSide": "bottom",
+      "toNode": "3d4e5f60718293a4",
+      "toSide": "top",
+      "label": "建模前核实语义与数据质量"
+    },
+    {
+      "id": "0112233445566778",
+      "fromNode": "2c3d4e5f60718293",
+      "fromSide": "bottom",
+      "toNode": "4e5f60718293a4b5",
+      "toSide": "top",
+      "label": "有限一阶矩定义总体中心"
+    },
+    {
+      "id": "1223344556677889",
+      "fromNode": "2c3d4e5f60718293",
+      "fromSide": "bottom",
+      "toNode": "5f60718293a4b5c6",
+      "toSide": "top",
+      "label": "有限二阶矩定义协方差"
+    },
+    {
+      "id": "233445566778899a",
+      "fromNode": "4e5f60718293a4b5",
+      "fromSide": "right",
+      "toNode": "e3f405162738495a",
+      "toSide": "left",
+      "label": "仿射变换规则"
+    },
+    {
+      "id": "3445566778899aab",
+      "fromNode": "5f60718293a4b5c6",
+      "fromSide": "bottom",
+      "toNode": "f405162738495a6b",
+      "toSide": "top",
+      "label": "读取任意线性方向的方差"
+    },
+    {
+      "id": "45566778899aabbc",
+      "fromNode": "5f60718293a4b5c6",
+      "fromSide": "bottom",
+      "toNode": "05162738495a6b7c",
+      "toSide": "top",
+      "label": "协方差随线性部分传递"
+    },
+    {
+      "id": "566778899aabbccd",
+      "fromNode": "5f60718293a4b5c6",
+      "fromSide": "bottom",
+      "toNode": "8293a4b5c6d7e8f9",
+      "toSide": "top",
+      "label": "按边际标准差归一化"
+    },
+    {
+      "id": "6778899aabbccdde",
+      "fromNode": "8293a4b5c6d7e8f9",
+      "fromSide": "bottom",
+      "toNode": "162738495a6b7c8d",
+      "toSide": "top",
+      "label": "得到逐坐标尺度不变量"
+    },
+    {
+      "id": "78899aabbccddeef",
+      "fromNode": "1b2c3d4e5f607182",
+      "fromSide": "bottom",
+      "toNode": "60718293a4b5c6d7",
+      "toSide": "top",
+      "label": "逐行平均"
+    },
+    {
+      "id": "899aabbccddeef01",
+      "fromNode": "4e5f60718293a4b5",
+      "fromSide": "bottom",
+      "toNode": "60718293a4b5c6d7",
+      "toSide": "top",
+      "label": "样本统计量估计总体中心"
+    },
+    {
+      "id": "9aabbccddeef0123",
+      "fromNode": "60718293a4b5c6d7",
+      "fromSide": "bottom",
+      "toNode": "2738495a6b7c8d9e",
+      "toSide": "top",
+      "label": "共同均值给无偏性"
+    },
+    {
+      "id": "abbccddeef012345",
+      "fromNode": "60718293a4b5c6d7",
+      "fromSide": "bottom",
+      "toNode": "38495a6b7c8d9eaf",
+      "toSide": "top",
+      "label": "行间依赖决定精度"
+    },
+    {
+      "id": "bccddeef01234567",
+      "fromNode": "1b2c3d4e5f607182",
+      "fromSide": "bottom",
+      "toNode": "718293a4b5c6d7e8",
+      "toSide": "top",
+      "label": "中心化外积汇总样本共同变化"
+    },
+    {
+      "id": "56789abcdef01234",
+      "fromNode": "60718293a4b5c6d7",
+      "fromSide": "left",
+      "toNode": "718293a4b5c6d7e8",
+      "toSide": "right",
+      "label": "以样本均值作为中心"
+    },
+    {
+      "id": "cddeef0123456789",
+      "fromNode": "718293a4b5c6d7e8",
+      "fromSide": "bottom",
+      "toNode": "495a6b7c8d9eaf01",
+      "toSide": "top",
+      "label": "n−1 分母的无偏理由"
+    },
+    {
+      "id": "ddeef0123456789a",
+      "fromNode": "718293a4b5c6d7e8",
+      "fromSide": "bottom",
+      "toNode": "5a6b7c8d9eaf0123",
+      "toSide": "top",
+      "label": "Gaussian likelihood 另有存在性条件"
+    },
+    {
+      "id": "eef0123456789abc",
+      "fromNode": "718293a4b5c6d7e8",
+      "fromSide": "bottom",
+      "toNode": "b5c6d7e8f9011223",
+      "toSide": "top",
+      "label": "中心化限制可达到的秩"
+    },
+    {
+      "id": "ef0123456789abcd",
+      "fromNode": "5f60718293a4b5c6",
+      "fromSide": "right",
+      "toNode": "93a4b5c6d7e8f901",
+      "toSide": "top",
+      "label": "正定逆尺度定义白化距离"
+    },
+    {
+      "id": "f0123456789abcde",
+      "fromNode": "93a4b5c6d7e8f901",
+      "fromSide": "bottom",
+      "toNode": "6b7c8d9eaf012345",
+      "toSide": "top",
+      "label": "几何与概率校准分开"
+    },
+    {
+      "id": "0123456789abcdef",
+      "fromNode": "93a4b5c6d7e8f901",
+      "fromSide": "bottom",
+      "toNode": "7c8d9eaf01234567",
+      "toSide": "top",
+      "label": "奇异尺度只给伪度量"
+    },
+    {
+      "id": "123456789abcdef0",
+      "fromNode": "b5c6d7e8f9011223",
+      "fromSide": "right",
+      "toNode": "7c8d9eaf01234567",
+      "toSide": "bottom",
+      "label": "样本奇异性产生零空间"
+    },
+    {
+      "id": "23456789abcdef01",
+      "fromNode": "5f60718293a4b5c6",
+      "fromSide": "right",
+      "toNode": "a4b5c6d7e8f90112",
+      "toSide": "top",
+      "label": "行列式汇总所有特征方向"
+    },
+    {
+      "id": "3456789abcdef012",
+      "fromNode": "a4b5c6d7e8f90112",
+      "fromSide": "bottom",
+      "toNode": "8d9eaf0123456789",
+      "toSide": "top",
+      "label": "体积使用平方根尺度"
+    },
+    {
+      "id": "456789abcdef0123",
+      "fromNode": "a4b5c6d7e8f90112",
+      "fromSide": "bottom",
+      "toNode": "9eaf0123456789ab",
+      "toSide": "top",
+      "label": "单位重标度改变行列式"
+    }
+  ]
+}

@@ -15,10 +15,10 @@ aliases:
 # Prefix-Tuning: Optimizing Continuous Prompts for Generation
 
 ## 一句话位置
-这篇论文位于 `03 对齐与偏好优化`，第一版用于连接 Instruction Tuning / RLHF, Open Models 路线；此笔记暂作索引，不做精读摘要。
+这篇论文位于 `03 对齐与偏好优化`，核心位置是冻结基座模型，只学习可连续优化的前缀向量来适配生成任务；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-预训练、指令微调与偏好优化, [[开放模型生态]]
+[[LLM 后训练.canvas|LLM 后训练]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/UE4RWHPP)
@@ -30,4 +30,3 @@ aliases:
 ## Canvas
 - [[LLM Big Picture]]
 - [[03 对齐与偏好优化.canvas|03 对齐与偏好优化 Canvas]]
-

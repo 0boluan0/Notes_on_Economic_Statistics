@@ -1,9 +1,0 @@
-{
-  "id": "learning-progress-dashboard",
-  "name": "Learning Progress Dashboard",
-  "version": "0.2.0",
-  "minAppVersion": "1.4.0",
-  "description": "Read-only Student OS growth board with canonical Tasks completion.",
-  "author": "fengyihang",
-  "isDesktopOnly": false
-}

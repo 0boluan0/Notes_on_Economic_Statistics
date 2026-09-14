@@ -9,6 +9,8 @@
 > Discrimination asks how groups differ, while classification asks which group should receive a new observation. This chapter develops two-population classification rules, misclassification costs, Fisher discrimination, and the evaluation of classification performance.
 > <!-- bilingual-en:end -->
 
+![[判别分析.canvas]]
+
 ## 1.1. 引言
 <!-- bilingual-en:start -->
 *1.1. Introduction*
@@ -17,6 +19,11 @@
 判别和分类是多变量技术，用于区分不同对象集合，并把新对象分配到已定义的组。
 <!-- bilingual-en:start -->
 Discrimination and classification are multivariate techniques for distinguishing sets of objects and assigning new objects to pre-defined groups.
+<!-- bilingual-en:end -->
+
+这里讨论的是“类别已经由标签定义”的监督问题；若没有标签、只是按距离探索分组，应转到聚类。两类任务的完整边界见 [[判别分类与聚类]]。
+<!-- bilingual-en:start -->
+This chapter concerns supervised problems whose classes are defined by labels. If labels are absent and the aim is to explore groups through distances, the task is clustering; see [[判别分类与聚类|classification versus clustering]] for the full boundary.
 <!-- bilingual-en:end -->
 
 主要目标：
@@ -78,6 +85,11 @@ Typical examples include:
 ## 1.3. 判别规则设定
 <!-- bilingual-en:start -->
 *1.3. Specifying a Classification Rule*
+<!-- bilingual-en:end -->
+
+这一节的统一原则是 [[Bayes分类规则|最小化后验期望损失]]；[[先验与分类风险]]说明先验、误判成本和评价口径怎样共同改变最优决定。
+<!-- bilingual-en:start -->
+The unifying principle is to [[Bayes分类规则|minimise posterior expected loss]]. [[先验与分类风险|Priors and classification risk]] explains how priors, error costs, and the evaluation target jointly determine the optimal decision.
 <!-- bilingual-en:end -->
 
 ### 1.3.1. 三个输入
@@ -192,9 +204,40 @@ and otherwise assign it to $R_2$.
 | Priors and costs are both equal | Assign to $\pi_1$ when $f_1(x)\geq f_2(x)$ |
 <!-- bilingual-en:end -->
 
+### 1.3.5. Worked example：两类同方差正态
+<!-- bilingual-en:start -->
+*1.3.5. Worked example: two normal classes with equal variance*
+<!-- bilingual-en:end -->
+
+设 $X\mid G=0\sim N(0,1)$、$X\mid G=1\sim N(2,1)$，两种误判成本相同。若两类先验也相等，比较两个密度可得边界 $x^*=1$：$x>1$ 时判为类别 1。
+<!-- bilingual-en:start -->
+Suppose $X\mid G=0\sim N(0,1)$ and $X\mid G=1\sim N(2,1)$, with equal costs for the two errors. Equal priors give the boundary $x^*=1$, so an observation above one is assigned to class 1.
+<!-- bilingual-en:end -->
+
+若先验分别为 $\pi_0$ 与 $\pi_1$，成本仍相等，则边界变为
+
+$$
+x^*=1+\frac12\log\frac{\pi_0}{\pi_1}.
+$$
+
+因此类别 1 越稀有，边界越向右移；它不只会“靠近 2”，也可能超过 2。这个例子把 [[Gaussian判别得分]] 中的中心距离与先验项具体化，也说明部署先验不能由人为配平的训练样本比例机械代替。
+<!-- bilingual-en:start -->
+With priors $\pi_0$ and $\pi_1$ and the same equal costs, the boundary becomes $x^*=1+\tfrac12\log(\pi_0/\pi_1)$. A rarer class 1 therefore moves the boundary to the right; it may pass 2 rather than merely moving “towards” it. This makes the distance and prior terms in the [[Gaussian判别得分|Gaussian discriminant score]] concrete and shows why an artificially balanced training proportion need not be the deployment prior.
+<!-- bilingual-en:end -->
+
+若部署变化确实只有类别先验改变，而每一类内部的 $P(X\mid Y)$ 保持不变，源 posterior 才能按先验比重新加权；公式与失败边界见 [[先验漂移后验修正]]。
+<!-- bilingual-en:start -->
+Only when deployment changes class priors while leaving every $P(X\mid Y)$ unchanged can source posteriors be reweighted by prior ratios; see [[先验漂移后验修正|prior-shift posterior correction]] for the formula and its failure boundary.
+<!-- bilingual-en:end -->
+
 ## 1.4. Fisher 判别方法
 <!-- bilingual-en:start -->
 *1.4. Fisher's Discriminant Method*
+<!-- bilingual-en:end -->
+
+[[Fisher判别]]从“类间分离相对类内变异最大”的投影准则出发。两类共享协方差时，它为何与 LDA 给出成比例的方向、又为何不自动得到同一个完整分类规则，见 [[Fisher与LDA]]。
+<!-- bilingual-en:start -->
+[[Fisher判别|Fisher discrimination]] starts from a projection criterion that maximises between-class separation relative to within-class variation. See [[Fisher与LDA|Fisher versus LDA]] for why the two-class shared-covariance directions are proportional without defining the same complete classification rule.
 <!-- bilingual-en:end -->
 
 Fisher 判别通过线性变换把多变量 $X$ 转为单变量
@@ -217,9 +260,9 @@ $$
 \hat a=S_{\text{pooled}}^{-1}(\bar x_1-\bar x_2).
 $$
 
-若先验和成本相等，分类阈值为两组投影均值的中点：
+在两类 class-conditional Gaussian 且共享同一协方差的 LDA 模型下，若先验和两种误判成本也相等，相应 Bayes 分类阈值是两组 Fisher 投影均值的中点：
 <!-- bilingual-en:start -->
-When priors and costs are equal, the classification threshold is the midpoint of the two projected means:
+Under a two-class LDA model with Gaussian class-conditional distributions and one shared covariance, equal priors and equal error costs make the corresponding Bayes threshold the midpoint of the two Fisher-projected means:
 <!-- bilingual-en:end -->
 $$
 c=\frac12\hat a'(\bar x_1+\bar x_2).
@@ -237,6 +280,16 @@ $$
 assign to $\pi_1$ when the inequality holds, and otherwise to $\pi_2$.
 <!-- bilingual-en:end -->
 
+若只采用 Fisher 分离准则而不承担上述 Gaussian 共享协方差模型，中点只能是另加的分类约定，不能由相等先验和成本单独推出。
+<!-- bilingual-en:start -->
+If only Fisher's separation criterion is adopted without the shared-covariance Gaussian model, the midpoint is an additional classification convention rather than a consequence of equal priors and costs alone.
+<!-- bilingual-en:end -->
+
+样本规则中的 $S_{\mathrm{pooled}}$ 不是全体观测围绕总均值的协方差。[[判别协方差估计]]给出 LDA 合并组内估计与 QDA 逐类估计的定义；[[判别协方差秩边界]]则单独回答这些矩阵何时因维数和样本量必然不可逆。
+<!-- bilingual-en:start -->
+The $S_{\mathrm{pooled}}$ in the sample rule is not the covariance of all observations around the grand mean. [[判别协方差估计|Discriminant covariance estimation]] defines the pooled-within and classwise estimators, while [[判别协方差秩边界|their rank boundary]] states when dimension and sample size force singularity.
+<!-- bilingual-en:end -->
+
 >[!note] 做题重点
 > 核心不是背公式，而是先求 $\hat a$，再把新样本和两个组均值都投影到同一条线上。
 > <!-- bilingual-en:start -->
@@ -246,6 +299,16 @@ assign to $\pi_1$ when the inequality holds, and otherwise to $\pi_2$.
 ## 1.5. 分类性能评估
 <!-- bilingual-en:start -->
 *1.5. Evaluating Classification Performance*
+<!-- bilingual-en:end -->
+
+TPM 与 ECM 的区别见 [[先验与分类风险]]；混淆矩阵中 sensitivity、specificity、precision 与 accuracy 的分母和用途见 [[分类评估口径]]。训练内误差为何不能当作泛化证据，见 [[分类验证与泄漏]]。
+<!-- bilingual-en:start -->
+See [[先验与分类风险|priors and classification risk]] for the distinction between TPM and ECM, [[分类评估口径|classification metrics]] for the denominators and uses of sensitivity, specificity, precision, and accuracy, and [[分类验证与泄漏|validation and leakage]] for why training error is not evidence of generalisation.
+<!-- bilingual-en:end -->
+
+若模型输出概率，还要另问这些数值能否解释为目标总体中的事件频率；这属于 [[分类概率校准]]，不是一张混淆矩阵能够回答的问题。
+<!-- bilingual-en:start -->
+If the model reports probabilities, their interpretation as event frequencies in the target population requires a separate [[分类概率校准|calibration]] check; a confusion matrix cannot answer that question.
 <!-- bilingual-en:end -->
 
 ### 1.5.1. 误分类总概率（TPM）
@@ -279,6 +342,11 @@ AER estimates the true error rate from sample classifications. Training-set AER 
 ## 1.6. 交叉验证方法
 <!-- bilingual-en:start -->
 *1.6. Cross-Validation Methods*
+<!-- bilingual-en:end -->
+
+[[分类验证与泄漏]]把下面的逐一留出算法扩展到完整 pipeline：插补、标准化、变量选择、降维、正则化与调参都必须在每次留下观测后重新拟合。
+<!-- bilingual-en:start -->
+[[分类验证与泄漏|Validation and leakage]] extends the leave-one-out algorithm below to the whole pipeline: imputation, scaling, feature selection, dimension reduction, regularisation, and tuning must all be refitted after the observation is held out.
 <!-- bilingual-en:end -->
 
 ### 1.6.1. Jackknife 方法
@@ -323,6 +391,11 @@ $$
 *1.7. Classification with Several Populations*
 <!-- bilingual-en:end -->
 
+多类情形仍遵循 [[Bayes分类规则]]：对每个可选行动计算后验期望损失，再选择风险最小者；不能把“选最大 posterior”从 0–1 loss 情形无条件外推。
+<!-- bilingual-en:start -->
+The multiclass case still follows the [[Bayes分类规则|Bayes decision rule]]: compute posterior expected loss for each available action and choose the smallest. Selecting the largest posterior is the special case for 0–1 loss, not a universal rule.
+<!-- bilingual-en:end -->
+
 对 $g$ 个总体，若真实属于 $\pi_i$，条件期望误分类成本为
 <!-- bilingual-en:start -->
 With $g$ populations, if the true population is $\pi_i$, the conditional expected misclassification cost is
@@ -339,15 +412,13 @@ $$
 ECM=\sum_{i=1}^g p_iECM(i).
 $$
 
-## 1.8. 关联卡片
+## 1.8. 知识地图与延伸
 <!-- bilingual-en:start -->
-*1.8. Related Cards*
+*1.8. Knowledge Map and Extensions*
 <!-- bilingual-en:end -->
 
-- [[判别分析：Bayes、LDA 与 QDA#Bayes 分类与判别规则|Classification Rule Selection]]
-- [[判别分析：Bayes、LDA 与 QDA#Bayes 分类与判别规则|Expected Cost of Misclassification]]
-- [[判别分析：Bayes、LDA 与 QDA#Bayes 分类与判别规则|Total Probability of Misclassification]]
-- [[判别分析：Bayes、LDA 与 QDA#LDA、QDA 与 Fisher 判别|Fisher Linear Discriminant]]
-- [[判别分析：Bayes、LDA 与 QDA#LDA、QDA 与 Fisher 判别|Fisher Discriminant Procedure]]
-- [[判别分析：Bayes、LDA 与 QDA#分类评估|Actual Error Rate]]
-- [[判别分析：Bayes、LDA 与 QDA#分类评估|Jackknife Classification]]
+- **任务边界：** [[判别分类与聚类]]
+- **决定原则：** [[Bayes分类规则]]、[[先验与分类风险]]
+- **Gaussian 判别族：** [[Gaussian判别得分]]、[[LDA共享协方差]]、[[QDA类别协方差]]、[[Fisher判别]]、[[Fisher与LDA]]
+- **估计与稳定性：** [[判别协方差估计]]、[[判别协方差秩边界]]、[[正则化判别]]
+- **评价与部署：** [[分类评估口径]]、[[分类验证与泄漏]]、[[分类概率校准]]、[[先验漂移后验修正]]、[[判别模型诊断]]

@@ -15,10 +15,10 @@ aliases:
 # Learning Transferable Visual Models From Natural Language Supervision
 
 ## 一句话位置
-这篇论文位于 `01 架构与预训练`，第一版用于连接 Transformer, Pretraining, Multimodal 路线；此笔记暂作索引，不做精读摘要。
+这篇论文位于 `01 架构与预训练`，核心位置是图像—文本对比预训练与跨模态迁移；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[Transformer 与注意力机制]], 预训练、指令微调与偏好优化, [[多模态大模型]]
+[[LLM 预训练.canvas|LLM 预训练]], [[多模态大模型]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/K7PIPQQQ)
@@ -30,4 +30,3 @@ aliases:
 ## Canvas
 - [[LLM Big Picture]]
 - [[01 架构与预训练.canvas|01 架构与预训练 Canvas]]
-

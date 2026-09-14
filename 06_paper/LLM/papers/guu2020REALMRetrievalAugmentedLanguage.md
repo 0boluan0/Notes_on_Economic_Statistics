@@ -15,10 +15,10 @@ aliases:
 # REALM: Retrieval-Augmented Language Model Pre-Training
 
 ## 一句话位置
-这篇论文位于 `05 RAG与知识增强`，第一版用于连接 RAG, Pretraining 路线；此笔记暂作索引，不做精读摘要。
+这篇论文位于 `05 RAG与知识增强`，核心位置是把可微检索器接入语言模型预训练；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-RAG 与长上下文, 预训练、指令微调与偏好优化
+[[RAG（检索增强生成）]], [[LLM 预训练.canvas|LLM 预训练]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/DELDNMA7)
@@ -30,4 +30,3 @@ RAG 与长上下文, 预训练、指令微调与偏好优化
 ## Canvas
 - [[LLM Big Picture]]
 - [[05 RAG与知识增强.canvas|05 RAG与知识增强 Canvas]]
-

@@ -1,0 +1,308 @@
+{
+  "nodes": [
+    {
+      "id": "6d00000000000001",
+      "type": "text",
+      "x": 0,
+      "y": -380,
+      "width": 2050,
+      "height": 250,
+      "text": "# 二分图匹配与 Hall 定理\n\n**它解决什么：** 在只允许某些左右配对、端点不可重复使用时，判断能否完成指定覆盖，并找到或否定这种分配。\n**具体锚点：** 学生—项目图中，边表示资格；增广路负责连锁改配，Hall 缺额集合负责证明无论怎样改配都不够。\n**为什么重要：** assignment、resource allocation、scheduling feasibility 和 matching algorithms 共用这套结构。\n\n从左到右读对象与判据；第二行读增广机制；第三行读 Hall 证书；底行读模型边界。点击标题进入原子。颜色：青=模型/定义，黄=区别/诊断，绿=定理/保证，紫=过程，红=边界。"
+    },
+    {
+      "id": "6d00000000000002",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 430,
+      "height": 180,
+      "text": "## [[二分图配对关系|允许边模型]]\n*Allowed-edge model*\n\n左右两侧表示不同角色；边只表示这对组合可行。",
+      "color": "5"
+    },
+    {
+      "id": "6d00000000000003",
+      "type": "text",
+      "x": 520,
+      "y": 0,
+      "width": 430,
+      "height": 180,
+      "text": "## [[匹配定义|matching]]\n*Matching*\n\n从允许边中选出互不共享端点的一组边。",
+      "color": "5"
+    },
+    {
+      "id": "6d00000000000004",
+      "type": "text",
+      "x": 1040,
+      "y": 0,
+      "width": 430,
+      "height": 180,
+      "text": "## [[左侧覆盖与完美匹配|覆盖与 perfect]]\n*Coverage vs. perfect*\n\n覆盖指定一侧给出单射；只有覆盖全图才是 perfect。",
+      "color": "3"
+    },
+    {
+      "id": "6d00000000000005",
+      "type": "text",
+      "x": 1560,
+      "y": 0,
+      "width": 490,
+      "height": 180,
+      "text": "## [[Hall 定理|Hall 定理]]\n*Hall's theorem*\n\n覆盖 $L$ 当且仅当每个 $S\\subseteq L$ 都有 $|N(S)|\\ge |S|$。",
+      "color": "4"
+    },
+    {
+      "id": "6d00000000000006",
+      "type": "text",
+      "x": 0,
+      "y": 360,
+      "width": 430,
+      "height": 180,
+      "text": "## [[极大与最大匹配|maximal ≠ maximum]]\n*Maximal is not maximum*\n\n不能直接加边，只是局部停住；不保证边数全局最大。",
+      "color": "3"
+    },
+    {
+      "id": "6d00000000000007",
+      "type": "text",
+      "x": 520,
+      "y": 360,
+      "width": 430,
+      "height": 180,
+      "text": "## [[增广路定义|增广路]]\n*Augmenting path*\n\n边型交替，而且两个端点都尚未匹配。",
+      "color": "5"
+    },
+    {
+      "id": "6d00000000000008",
+      "type": "text",
+      "x": 1040,
+      "y": 360,
+      "width": 430,
+      "height": 180,
+      "text": "## [[增广路对称差|增广路翻转]]\n*Augmenting-path flip*\n\n删旧匹配边、加旧非匹配边，净增加一条。",
+      "color": "4"
+    },
+    {
+      "id": "6d00000000000009",
+      "type": "text",
+      "x": 1560,
+      "y": 360,
+      "width": 490,
+      "height": 180,
+      "text": "## [[Berge最大匹配定理|Berge 定理]]\n*Berge's theorem*\n\nmatching 为 maximum，当且仅当不存在增广路。",
+      "color": "4"
+    },
+    {
+      "id": "6d0000000000000a",
+      "type": "text",
+      "x": 1040,
+      "y": 720,
+      "width": 430,
+      "height": 190,
+      "text": "## [[交替搜索的增广与缺额证书|交替搜索二选一]]\n*Alternating-search dichotomy*\n\n从未匹配左点按“非匹配边向右、匹配边向左”搜完：到未匹配右点就增广，否则前沿给出证书。",
+      "color": "6"
+    },
+    {
+      "id": "6d0000000000000b",
+      "type": "text",
+      "x": 1560,
+      "y": 720,
+      "width": 490,
+      "height": 190,
+      "text": "## [[Hall 缺额证书|Hall 缺额证书]]\n*Hall-deficient certificate*\n\n只要一个 $S\\subseteq L$ 满足 $|N(S)|<|S|$，覆盖全部 $L$ 便不可能。",
+      "color": "1"
+    },
+    {
+      "id": "6d0000000000000c",
+      "type": "text",
+      "x": 0,
+      "y": 1080,
+      "width": 430,
+      "height": 210,
+      "text": "## [[匹配建模要素|建模五问]]\n*Five modelling questions*\n\n先定角色、边语义、覆盖对象、容量和成功标准。",
+      "color": "6"
+    },
+    {
+      "id": "6d0000000000000d",
+      "type": "text",
+      "x": 520,
+      "y": 1080,
+      "width": 430,
+      "height": 210,
+      "text": "## [[整数容量的槽化与网络流|容量：slots / flow]]\n*Capacitated assignment*\n\n单位需求与整数容量可拆槽，或写成整数网络流。",
+      "color": "4"
+    },
+    {
+      "id": "6d0000000000000e",
+      "type": "text",
+      "x": 1040,
+      "y": 1080,
+      "width": 430,
+      "height": 210,
+      "text": "## [[Hall 条件与带权最优|权重：可行 ≠ 最优]]\n*Feasible is not weight-optimal*\n\nHall 只看边是否存在，不会比较可行 matchings 的权重。",
+      "color": "1"
+    },
+    {
+      "id": "6d0000000000000f",
+      "type": "text",
+      "x": 1560,
+      "y": 1080,
+      "width": 490,
+      "height": 210,
+      "text": "## [[稳定匹配与普通匹配|偏好：stable matching]]\n*Preference stability*\n\n普通 matching 只用允许边；stable matching 还排除 blocking pair。",
+      "color": "1"
+    }
+  ],
+  "edges": [
+    {
+      "id": "6de0000000000001",
+      "fromNode": "6d00000000000002",
+      "fromSide": "right",
+      "toNode": "6d00000000000003",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "允许边给出候选；matching 选择端点互斥子集"
+    },
+    {
+      "id": "6de0000000000002",
+      "fromNode": "6d00000000000003",
+      "fromSide": "right",
+      "toNode": "6d00000000000004",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "再指定必须覆盖谁"
+    },
+    {
+      "id": "6de0000000000003",
+      "fromNode": "6d00000000000004",
+      "fromSide": "right",
+      "toNode": "6d00000000000005",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "覆盖 L 的存在性由全部邻居集合刻画"
+    },
+    {
+      "id": "6de0000000000004",
+      "fromNode": "6d00000000000003",
+      "fromSide": "bottom",
+      "toNode": "6d00000000000006",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "局部不能加边仍可能需要重配"
+    },
+    {
+      "id": "6de0000000000005",
+      "fromNode": "6d00000000000006",
+      "fromSide": "right",
+      "toNode": "6d00000000000007",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "若 maximal 仍非 maximum，Berge 保证存在增广路"
+    },
+    {
+      "id": "6de0000000000006",
+      "fromNode": "6d00000000000007",
+      "fromSide": "right",
+      "toNode": "6d00000000000008",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "两端未匹配使翻转净增一边"
+    },
+    {
+      "id": "6de0000000000007",
+      "fromNode": "6d00000000000008",
+      "fromSide": "right",
+      "toNode": "6d00000000000009",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "能增广则当前不可能 maximum"
+    },
+    {
+      "id": "6de0000000000008",
+      "fromNode": "6d00000000000009",
+      "fromSide": "bottom",
+      "toNode": "6d0000000000000a",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "若 maximum 仍未覆盖 L，从未匹配左点出发不能到达未匹配右点"
+    },
+    {
+      "id": "6de0000000000009",
+      "fromNode": "6d0000000000000a",
+      "fromSide": "right",
+      "toNode": "6d0000000000000b",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "搜索失败时 reached sets 满足邻居缺额"
+    },
+    {
+      "id": "6de000000000000a",
+      "fromNode": "6d0000000000000b",
+      "fromSide": "top",
+      "toNode": "6d00000000000005",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "任一缺额集合立即否定 Hall condition"
+    },
+    {
+      "id": "6de000000000000b",
+      "fromNode": "6d00000000000005",
+      "fromSide": "bottom",
+      "toNode": "6d0000000000000a",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "Hall condition 成立时，反复增广最终覆盖 L"
+    },
+    {
+      "id": "6de000000000000c",
+      "fromNode": "6d0000000000000c",
+      "fromSide": "top",
+      "toNode": "6d00000000000002",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "第一步先固定两侧与边的资格语义"
+    },
+    {
+      "id": "6de000000000000d",
+      "fromNode": "6d0000000000000c",
+      "fromSide": "right",
+      "toNode": "6d0000000000000d",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "容量大于一时先改写约束"
+    },
+    {
+      "id": "6de000000000000e",
+      "fromNode": "6d0000000000000d",
+      "fromSide": "right",
+      "toNode": "6d0000000000000e",
+      "toSide": "left",
+      "toEnd": "none",
+      "label": "容量与权重是两种不同扩展"
+    },
+    {
+      "id": "6de000000000000f",
+      "fromNode": "6d0000000000000e",
+      "fromSide": "right",
+      "toNode": "6d0000000000000f",
+      "toSide": "left",
+      "toEnd": "none",
+      "label": "权重总和与阻挡对稳定性不是同一目标"
+    },
+    {
+      "id": "6de0000000000010",
+      "fromNode": "6d0000000000000c",
+      "fromSide": "right",
+      "toNode": "6d0000000000000e",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "有成本或收益时必须另定优化顺序"
+    },
+    {
+      "id": "6de0000000000011",
+      "fromNode": "6d00000000000002",
+      "fromSide": "bottom",
+      "toNode": "6d0000000000000f",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "在允许边上加入双方偏好，并另检查 blocking pairs"
+    }
+  ]
+}

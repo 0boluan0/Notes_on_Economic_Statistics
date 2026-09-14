@@ -15,7 +15,7 @@ aliases:
 # LLaMA: Open and Efficient Foundation Language Models
 
 ## 一句话位置
-这篇论文位于 `09 开源模型技术报告`，第一版用于连接 Open Models 路线；此笔记暂作索引，不做精读摘要。
+这篇论文位于 `09 开源模型技术报告`，核心职责是展示较小规模、以公开数据训练的开放权重基础模型如何取得有竞争力的性能，并推动可复现研究；此笔记暂作索引，不做精读摘要。
 
 ## 路线
 [[开放模型生态]]
@@ -30,4 +30,3 @@ aliases:
 ## Canvas
 - [[LLM Big Picture]]
 - [[09 开源模型技术报告.canvas|09 开源模型技术报告 Canvas]]
-

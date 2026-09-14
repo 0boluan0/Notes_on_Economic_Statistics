@@ -63,9 +63,9 @@ Self-consistency works only when erroneous paths are not perfectly correlated. I
 *Verifiers and Reasoning Reinforcement Learning*
 <!-- bilingual-en:end -->
 
-结果奖励只判断最终答案，过程奖励对中间步骤给信号；外部 verifier 可筛选候选。reasoning RL 让模型在可验证任务上学习探索和分配更多计算，但可能过拟合奖励、基准格式或验证器漏洞。
+结果奖励只判断最终答案，过程奖励对中间步骤给信号；外部 verifier 可筛选候选。reasoning RL 让模型在可验证任务上学习探索和分配更多计算，但可能过拟合奖励、基准格式或验证器漏洞；这属于[[奖励代理过优化|代理分数继续上升而目标质量未必改善]]的具体风险。
 <!-- bilingual-en:start -->
-Outcome rewards judge only final answers, process rewards supervise intermediate steps, and an external verifier can filter candidates. Reasoning reinforcement learning can teach exploration and additional compute allocation on verifiable tasks, but may overfit the reward, benchmark format, or verifier loopholes.
+Outcome rewards judge only final answers, process rewards supervise intermediate steps, and an external verifier can filter candidates. Reasoning reinforcement learning can teach exploration and additional compute allocation on verifiable tasks, but may overfit the reward, benchmark format, or verifier loopholes—a concrete instance of [[奖励代理过优化|optimising a proxy beyond the range in which it tracks the target]].
 <!-- bilingual-en:end -->
 
 可执行代码、形式证明检查器或具有唯一答案的数学题提供相对强的自动验证；开放论证和事实问答往往只有不完整代理。验证强度应从“格式可解析”到“局部约束成立”再到“最终语义正确”分层，不要把通过单元测试等同于完全正确。

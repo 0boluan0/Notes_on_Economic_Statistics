@@ -1,0 +1,213 @@
+{
+  "nodes": [
+    {
+      "id": "rec-home",
+      "type": "text",
+      "x": 0,
+      "y": -300,
+      "width": 2060,
+      "height": 210,
+      "text": "# 递归与递归数据\n\n先读定义与终止，再看运行时怎样保存未完成调用；随后沿两条路展开：数据结构与正确性、调用树与性能。最后才决定用记忆化、分治、显式栈或回溯状态。\n\n**阅读顺序：** 定义 → 终止 → frame → 结构/成本 → 具体策略。颜色只区分本图中的语义角色，不表示掌握程度。"
+    },
+    {
+      "id": "rec-spec",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 380,
+      "height": 220,
+      "text": "## 定义骨架\n\n[[递归的基本与递归步骤]]\n\n基本情况直接求解；递归步骤用较小同类实例的结果构造当前答案。",
+      "color": "4"
+    },
+    {
+      "id": "rec-termination",
+      "type": "text",
+      "x": 560,
+      "y": 0,
+      "width": 380,
+      "height": 220,
+      "text": "## 终止义务\n\n[[递归终止]]\n\n检查每一条调用边，而不是只看最显眼的一条分支。",
+      "color": "3"
+    },
+    {
+      "id": "rec-frame",
+      "type": "text",
+      "x": 1120,
+      "y": 0,
+      "width": 380,
+      "height": 220,
+      "text": "## 运行时\n\n[[递归调用栈]]\n\nframe 保存局部绑定与返回位置；绑定独立不等于引用对象独立。",
+      "color": "5"
+    },
+    {
+      "id": "rec-explicit",
+      "type": "text",
+      "x": 1680,
+      "y": 0,
+      "width": 380,
+      "height": 220,
+      "text": "## 深度受限时\n\n[[递归的显式栈改写]]\n\n把节点、阶段与局部结果显式压栈；空间需求不会凭空消失。",
+      "color": "5"
+    },
+    {
+      "id": "rec-struct",
+      "type": "text",
+      "x": 0,
+      "y": 400,
+      "width": 380,
+      "height": 220,
+      "text": "## 数据结构镜像\n\n[[结构递归]]\n\n算法分支应与递归数据的基例和构造器逐一对应。",
+      "color": "4"
+    },
+    {
+      "id": "rec-calltree",
+      "type": "text",
+      "x": 560,
+      "y": 400,
+      "width": 380,
+      "height": 220,
+      "text": "## 成本对象\n\n[[递归调用树成本]]\n\n时间加总全部节点工作；栈空间还要加总活跃路径上各 frame 保留的数据。",
+      "color": "2"
+    },
+    {
+      "id": "rec-divide",
+      "type": "text",
+      "x": 1120,
+      "y": 400,
+      "width": 380,
+      "height": 220,
+      "text": "## 子问题近独立\n\n[[分治成本模型]]\n\n完整递推要写子问题规模、本层分解与组合成本。",
+      "color": "2"
+    },
+    {
+      "id": "rec-backtrack",
+      "type": "text",
+      "x": 1680,
+      "y": 400,
+      "width": 380,
+      "height": 220,
+      "text": "## 分支共享状态\n\n[[回溯状态恢复]]\n\n原地修改走 choose–explore–unchoose；复制状态则以空间换隔离。",
+      "color": "1"
+    },
+    {
+      "id": "rec-proof",
+      "type": "text",
+      "x": 0,
+      "y": 800,
+      "width": 380,
+      "height": 220,
+      "text": "## 正确性证明\n\n[[结构归纳法]]\n\n复用现成证明原子：证明分支镜像结构递归的算法分支。",
+      "color": "3"
+    },
+    {
+      "id": "rec-memo",
+      "type": "text",
+      "x": 560,
+      "y": 800,
+      "width": 380,
+      "height": 220,
+      "text": "## 重复缓存命中\n\n[[记忆化的适用条件]]\n\n命中提供省去重算的机会；键与可复用结果的稳定关系决定正确性。",
+      "color": "2"
+    },
+    {
+      "id": "rec-merge",
+      "type": "text",
+      "x": 1120,
+      "y": 800,
+      "width": 380,
+      "height": 220,
+      "text": "## 分治实例\n\n[[归并排序复杂度]]\n\n复用现成排序原子：每层总工作 Θ(n)，层数 Θ(log n)。",
+      "color": "2"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-spec-termination",
+      "fromNode": "rec-spec",
+      "fromSide": "right",
+      "toNode": "rec-termination",
+      "toSide": "left",
+      "label": "逐分支证明下降"
+    },
+    {
+      "id": "edge-termination-frame",
+      "fromNode": "rec-termination",
+      "fromSide": "right",
+      "toNode": "rec-frame",
+      "toSide": "left",
+      "label": "下降由调用实现"
+    },
+    {
+      "id": "edge-spec-struct",
+      "fromNode": "rec-spec",
+      "fromSide": "bottom",
+      "toNode": "rec-struct",
+      "toSide": "top",
+      "label": "数据由构造器生成"
+    },
+    {
+      "id": "edge-struct-proof",
+      "fromNode": "rec-struct",
+      "fromSide": "bottom",
+      "toNode": "rec-proof",
+      "toSide": "top",
+      "label": "同构造器给出证明分支"
+    },
+    {
+      "id": "edge-frame-calltree",
+      "fromNode": "rec-frame",
+      "fromSide": "left",
+      "toNode": "rec-calltree",
+      "toSide": "right",
+      "label": "调用展开成树"
+    },
+    {
+      "id": "edge-frame-explicit",
+      "fromNode": "rec-frame",
+      "fromSide": "right",
+      "toNode": "rec-explicit",
+      "toSide": "left",
+      "label": "显式保存待办状态"
+    },
+    {
+      "id": "edge-frame-backtrack",
+      "fromNode": "rec-frame",
+      "fromSide": "bottom",
+      "toNode": "rec-backtrack",
+      "toSide": "top",
+      "label": "frame 分离不隔离对象"
+    },
+    {
+      "id": "edge-calltree-memo",
+      "fromNode": "rec-calltree",
+      "fromSide": "bottom",
+      "toNode": "rec-memo",
+      "toSide": "top",
+      "label": "重复有效键可缓存"
+    },
+    {
+      "id": "edge-calltree-divide",
+      "fromNode": "rec-calltree",
+      "fromSide": "right",
+      "toNode": "rec-divide",
+      "toSide": "left",
+      "label": "按规模写递推"
+    },
+    {
+      "id": "edge-divide-merge",
+      "fromNode": "rec-divide",
+      "fromSide": "bottom",
+      "toNode": "rec-merge",
+      "toSide": "top",
+      "label": "对半递归加线性归并"
+    },
+    {
+      "id": "edge-termination-calltree",
+      "fromNode": "rec-termination",
+      "fromSide": "bottom",
+      "toNode": "rec-calltree",
+      "toSide": "top",
+      "label": "逐边检查"
+    }
+  ]
+}

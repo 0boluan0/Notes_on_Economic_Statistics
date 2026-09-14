@@ -1,0 +1,194 @@
+{
+  "nodes": [
+    {
+      "id": "param-header",
+      "type": "text",
+      "x": 0,
+      "y": -360,
+      "width": 2900,
+      "height": 220,
+      "text": "# 参数曲线与极坐标\n\n左支先定义参数曲线，再区分几何轨迹与具体参数化；右支先定义极坐标，再处理表示不唯一与覆盖。这里画的是精选学习路线，不是全部双链的机械展开。\n\n**长度和面积按参数实际扫过的次数累计，不会自动把重复覆盖去重。**",
+      "color": "4"
+    },
+    {
+      "id": "param-definition",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 500,
+      "height": 220,
+      "text": "## [[参数曲线]]\n*Parametric curve*\n\nCALC-PARAM-001 · 从有序参数区间到平面的连续映射。",
+      "color": "5"
+    },
+    {
+      "id": "param-distinction",
+      "type": "text",
+      "x": 0,
+      "y": 350,
+      "width": 500,
+      "height": 220,
+      "text": "## [[同轨迹不等于同参数化]]\n*Same trace, different parametrisation*\n\nCALC-PARAM-008 · 方向、速度与覆盖次数仍可能不同。",
+      "color": "1"
+    },
+    {
+      "id": "param-tangent",
+      "type": "text",
+      "x": 600,
+      "y": 350,
+      "width": 500,
+      "height": 220,
+      "text": "## [[参数曲线切线的速度条件]]\n*Tangent from velocity*\n\nCALC-PARAM-002 · $\\gamma'\\ne0$ 给切向；$y'/x'$ 还要求 $x'\\ne0$。"
+    },
+    {
+      "id": "param-length",
+      "type": "text",
+      "x": 0,
+      "y": 700,
+      "width": 500,
+      "height": 220,
+      "text": "## [[参数曲线弧长与重复描画]]\n*Arc length integrates speed*\n\nCALC-PARAM-003 · $L=\\int\\sqrt{x'^2+y'^2}\\,dt$，走回头路仍增加长度。",
+      "color": "3"
+    },
+    {
+      "id": "param-surface",
+      "type": "text",
+      "x": 600,
+      "y": 700,
+      "width": 500,
+      "height": 220,
+      "text": "## [[旋转曲面面积与重复覆盖]]\n*Surface of revolution*\n\nCALC-PARAM-004 · $dA=2\\pi(\\text{轴距})\\,ds$，半径与覆盖区间都要核对。",
+      "color": "3"
+    },
+    {
+      "id": "polar-definition",
+      "type": "text",
+      "x": 1800,
+      "y": 0,
+      "width": 500,
+      "height": 220,
+      "text": "## [[极坐标]]\n*Polar coordinates*\n\nCALC-PARAM-005 · $x=r\\cos\\theta$、$y=r\\sin\\theta$。",
+      "color": "5"
+    },
+    {
+      "id": "polar-nonunique",
+      "type": "text",
+      "x": 1800,
+      "y": 350,
+      "width": 500,
+      "height": 220,
+      "text": "## [[极坐标表示不唯一]]\n*Non-unique representation*\n\nCALC-PARAM-009 · 周期角、负半径和原点产生多组表示。",
+      "color": "1"
+    },
+    {
+      "id": "polar-trace",
+      "type": "text",
+      "x": 2400,
+      "y": 350,
+      "width": 500,
+      "height": 220,
+      "text": "## [[极坐标曲线的覆盖与重描]]\n*Tracing a polar curve*\n\nCALC-PARAM-006 · 把 $r=f(\\theta)$ 当作参数曲线，追踪符号、周期与覆盖。"
+    },
+    {
+      "id": "polar-area",
+      "type": "text",
+      "x": 2400,
+      "y": 700,
+      "width": 500,
+      "height": 220,
+      "text": "## [[极坐标面积与单次覆盖]]\n*Polar area*\n\nCALC-PARAM-007 · $A=\\frac12\\int r^2d\\theta$，前提是目标区域只扫一次。",
+      "color": "3"
+    }
+  ],
+  "edges": [
+    {
+      "id": "param-edge-header-definition",
+      "fromNode": "param-header",
+      "fromSide": "left",
+      "toNode": "param-definition",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "先定义一般参数曲线"
+    },
+    {
+      "id": "param-edge-header-polar",
+      "fromNode": "param-header",
+      "fromSide": "right",
+      "toNode": "polar-definition",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "再定义另一种平面坐标"
+    },
+    {
+      "id": "param-edge-definition-distinction",
+      "fromNode": "param-definition",
+      "fromSide": "bottom",
+      "toNode": "param-distinction",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "像集会丢失运动信息"
+    },
+    {
+      "id": "param-edge-definition-tangent",
+      "fromNode": "param-definition",
+      "fromSide": "right",
+      "toNode": "param-tangent",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "对参数求导"
+    },
+    {
+      "id": "param-edge-distinction-length",
+      "fromNode": "param-distinction",
+      "fromSide": "bottom",
+      "toNode": "param-length",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "覆盖次数会进入路程"
+    },
+    {
+      "id": "param-edge-length-surface",
+      "fromNode": "param-length",
+      "fromSide": "right",
+      "toNode": "param-surface",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "用 ds 形成旋转带"
+    },
+    {
+      "id": "param-edge-polar-nonunique",
+      "fromNode": "polar-definition",
+      "fromSide": "bottom",
+      "toNode": "polar-nonunique",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "坐标映射不是一一对应"
+    },
+    {
+      "id": "param-edge-polar-trace",
+      "fromNode": "polar-definition",
+      "fromSide": "right",
+      "toNode": "polar-trace",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "让角度充当参数"
+    },
+    {
+      "id": "param-edge-nonunique-trace",
+      "fromNode": "polar-nonunique",
+      "fromSide": "right",
+      "toNode": "polar-trace",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "负半径与周期改变覆盖"
+    },
+    {
+      "id": "param-edge-trace-area",
+      "fromNode": "polar-trace",
+      "fromSide": "bottom",
+      "toNode": "polar-area",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "确认只扫一次后积分扇形"
+    }
+  ]
+}

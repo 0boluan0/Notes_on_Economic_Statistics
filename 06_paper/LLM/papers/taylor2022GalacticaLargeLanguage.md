@@ -15,10 +15,10 @@ aliases:
 # Galactica: A Large Language Model for Science
 
 ## 一句话位置
-这篇论文位于 `02 规模化与模型家族`，第一版用于连接 Scaling Law 路线；此笔记暂作索引，不做精读摘要。
+这篇论文位于 `02 规模化与模型家族`，核心位置是在科学语料混合上检验重复 token 的训练价值，为计算最优分配中的数据重复边界提供实证；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-规模化、MoE 与分布式训练
+[[计算最优分配]], [[预训练分布]], [[数据混合]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/C5WIRFYV)
@@ -30,4 +30,3 @@ aliases:
 ## Canvas
 - [[LLM Big Picture]]
 - [[02 规模化与模型家族.canvas|02 规模化与模型家族 Canvas]]
-

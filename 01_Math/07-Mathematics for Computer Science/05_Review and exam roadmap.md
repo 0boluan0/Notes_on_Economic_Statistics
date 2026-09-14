@@ -25,17 +25,17 @@ tags:
 
 - 课程总览：[[01_Math/07-Mathematics for Computer Science/00_课程总览|MIT 6.042J course map]]
 - 原题：[[MIT_OCW_6.042J_Materials/07_Exams/MIT6_042JS15_finalexam.pdf#page=1|Final Exam p.1]]
-- Unit 1：[[数学证明方法]]
-- Unit 2：[[模运算、欧几里得算法与 RSA|数论、RSA]] 与 [[图的基本结构、路径与遍历|图结构]]
-- Unit 3：[[组合计数原理|计数]]、[[渐近记号与算法复杂度|渐近]]与[[组合计数原理|组合原理]]
-- Unit 4：[[概率空间、条件概率与 Bayes 法则|离散概率]]
+- Unit 1：[[数学证明方法.canvas|数学证明方法总图]]
+- Unit 2：[[02_数论与RSA|数论、RSA 连续阅读]]、[[数论与RSA.canvas|关系总图]]与 [[图的基本结构、路径与遍历.canvas|图结构]]
+- Unit 3：[[组合计数原理.canvas|组合计数总图]]与[[03_渐近比较|渐近]]
+- Unit 4：[[概率空间、条件概率与 Bayes 法则.canvas|离散概率]]
 <!-- bilingual-en:start -->
 - Course overview: [[01_Math/07-Mathematics for Computer Science/00_课程总览|MIT 6.042J course map]]
 - Original exam: [[MIT_OCW_6.042J_Materials/07_Exams/MIT6_042JS15_finalexam.pdf#page=1|Final Exam p.1]]
-- Unit 1: [[数学证明方法|Methods of mathematical proof]]
-- Unit 2: [[模运算、欧几里得算法与 RSA|Number theory and RSA]], and [[图的基本结构、路径与遍历|graph structures]]
-- Unit 3: [[组合计数原理|Counting and combinatorial principles]], with [[渐近记号与算法复杂度|asymptotic notation]]
-- Unit 4: [[概率空间、条件概率与 Bayes 法则|Discrete probability]]
+- Unit 1: [[数学证明方法.canvas|Methods of mathematical proof]]
+- Unit 2: [[02_数论与RSA|Number theory and RSA reading path]], [[数论与RSA.canvas|relationship map]], and [[图的基本结构、路径与遍历.canvas|graph structures]]
+- Unit 3: the [[组合计数原理.canvas|counting and combinatorial-principles map]], with [[03_渐近比较|asymptotic notation]]
+- Unit 4: [[概率空间、条件概率与 Bayes 法则.canvas|Discrete probability]]
 <!-- bilingual-en:end -->
 
 > [!warning] 答案来源
@@ -88,17 +88,17 @@ If the object is defined incorrectly, later calculations are meaningless even wh
 <!-- bilingual-en:end -->
 
 - “对所有 $n$”不是自动用归纳；先看 $n+1$ 情形是否可由更小规模构造。
-- “不可能到达”通常寻找 [[数学证明方法|不变量]]。
+- “不可能到达”通常寻找 [[不变量原理|不变量]]。
 - “至少有一个碰撞”通常寻找对象到盒子的映射。
-- “平均有多少个”优先尝试 [[指示变量与随机计数#从事件到 0/1 随机变量|指示变量]]与[[指示变量与随机计数#把“数量”写成 indicators 的和|期望线性性]]。
-- “最大偏离概率”先检查变量是否非负、是否已知方差，再选 [[概率不等式与集中界#Markov：把均值当作尾部质量预算|离散概率]] 或 [[概率不等式与集中界#Chebyshev：用 variance 控制双侧偏离|离散概率]]。
+- “平均有多少个”优先尝试 [[事件指示变量|事件 indicator]] → [[指示变量期望|指标期望等于概率]] → [[随机计数的指标和|indicator-sum 计数]]；期望相加本身不要求独立。
+- “最大偏离概率”先检查变量是否非负、是否已知方差，再选 [[Markov不等式|Markov]] 或 [[Chebyshev不等式|Chebyshev]]；若还涉及独立有界和，再进入 [[概率不等式与集中界.canvas|完整选界图]]。
 - “长期分布”先把平稳方程与从初始分布收敛分开；唯一性不等于收敛。
 <!-- bilingual-en:start -->
 - “For every $n$” does not automatically call for induction; first ask whether the $n+1$ case can be constructed from smaller instances.
-- “Cannot be reached” often suggests an [[数学证明方法|invariant]].
+- “Cannot be reached” often suggests an [[不变量原理|invariant]].
 - “At least one collision” often suggests mapping objects into boxes.
-- “How many on average?” suggests [[指示变量与随机计数#从事件到 0/1 随机变量|indicator variables]] and [[指示变量与随机计数#把“数量”写成 indicators 的和|linearity of expectation]].
-- For a “probability of a large deviation,” first check whether the variable is nonnegative and whether its variance is known, then choose [[概率不等式与集中界|the appropriate concentration bound]].
+- “How many on average?” suggests [[事件指示变量|event indicators]] → [[指示变量期望|indicator expectation]] → [[随机计数的指标和|indicator-sum counting]]; additivity of expectation itself does not require independence.
+- For a “probability of a large deviation,” first check whether the variable is non-negative and whether its variance is known, then choose [[Markov不等式|Markov]] or [[Chebyshev不等式|Chebyshev]] as appropriate. For an independent bounded sum, continue to [[概率不等式与集中界.canvas|the full concentration-bound map]].
 - For a “long-run distribution,” separate solving the stationary equation from convergence from an initial distribution; uniqueness does not imply convergence.
 <!-- bilingual-en:end -->
 

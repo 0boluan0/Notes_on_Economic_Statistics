@@ -1,0 +1,345 @@
+{
+  "nodes": [
+    {
+      "id": "d610000000000000",
+      "type": "text",
+      "x": 0,
+      "y": -360,
+      "width": 2480,
+      "height": 240,
+      "text": "# Mixture of Experts（MoE）\n\n沿有标签的箭头按四层读：**稀疏容量原理 → 路由与学习 → 容量和稳定性 → 分布式执行与公平比较**。每张卡是一条可独立判断的知识原子；箭头说明为什么相连。\n\n颜色只表示本图中的语义角色，不表示掌握度；来源与掌握状态在 [[知识原子.base|知识原子 Base]] 中查询。"
+    },
+    {
+      "id": "d610000000000001",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 470,
+      "height": 220,
+      "text": "## [[MoE 参数与计算解耦|容量—计算解耦]]\n*Sparse capacity*\n\n总 expert 参数随 expert 数增长；每 token 只执行少数路径，但共享层与系统开销仍在。",
+      "color": "4"
+    },
+    {
+      "id": "d610000000000002",
+      "type": "text",
+      "x": 540,
+      "y": 0,
+      "width": 470,
+      "height": 220,
+      "text": "## [[MoE 专家路由|token-choice router]]\n*Learned routing*\n\n常见 Transformer MoE 用当前 hidden state 选择少数 FFN expert；它不是所有 MoE 的唯一形式。",
+      "color": "4"
+    },
+    {
+      "id": "d610000000000003",
+      "type": "text",
+      "x": 1080,
+      "y": 0,
+      "width": 470,
+      "height": 220,
+      "text": "## [[Top-k 门控组合|top-k 输出]]\n*Selected weighted paths*\n\n先选离散 expert 集合，再按 gate 值组合其输出；归一化与梯度细节看具体实现。",
+      "color": "4"
+    },
+    {
+      "id": "d610000000000004",
+      "type": "text",
+      "x": 1620,
+      "y": 0,
+      "width": 500,
+      "height": 220,
+      "text": "## [[Top-1 与 Top-2 路由|top-1 与 top-2]]\n*Choosing k*\n\n增大 $k$ 通常增加 expert 调用与通信；质量收益依赖模型、训练配方和硬件。",
+      "color": "2"
+    },
+    {
+      "id": "d610000000000005",
+      "type": "text",
+      "x": 2160,
+      "y": 0,
+      "width": 500,
+      "height": 240,
+      "text": "## [[MoE 专家分工涌现|专门化并非必然]]\n*Emergent, not guaranteed*\n\n分工可能随联合训练出现，却不等于预设学科标签，也不是 MoE 有效的必要解释。",
+      "color": "6"
+    },
+    {
+      "id": "d610000000000006",
+      "type": "text",
+      "x": 0,
+      "y": 430,
+      "width": 500,
+      "height": 240,
+      "text": "## [[Token-choice 负载失衡|负载不均]]\n*Self-reinforcing imbalance*\n\n相似 token 可集中到少数 expert；更多更新又可能强化原有选择。长期平均会掩盖 batch 热点。",
+      "color": "1"
+    },
+    {
+      "id": "d610000000000007",
+      "type": "text",
+      "x": 560,
+      "y": 430,
+      "width": 500,
+      "height": 240,
+      "text": "## [[MoE 专家容量因子|capacity factor]]\n*Fixed expert budget*\n\n固定容量先按实现规定的均匀基数设槽位：Switch top-1 用 $cT/E$；top-$k$ 与 group 公式可能不同。",
+      "color": "1"
+    },
+    {
+      "id": "d610000000000008",
+      "type": "text",
+      "x": 1120,
+      "y": 430,
+      "width": 500,
+      "height": 240,
+      "text": "## [[MoE 溢出 token 处理|overflow policy]]\n*Implementation choice*\n\nSwitch/GShard 可把超容量 expert contribution 置零并保留 residual；显式重路由与 dropless 属于其他政策。",
+      "color": "1"
+    },
+    {
+      "id": "d610000000000009",
+      "type": "text",
+      "x": 1680,
+      "y": 430,
+      "width": 500,
+      "height": 240,
+      "text": "## [[MoE 负载均衡损失|负载辅助损失]]\n*Balancing proxy*\n\n辅助项推动使用分散，却不保证逐 batch 均衡、零 overflow 或有意义的语义分工。",
+      "color": "6"
+    },
+    {
+      "id": "d61000000000000a",
+      "type": "text",
+      "x": 2240,
+      "y": 430,
+      "width": 500,
+      "height": 240,
+      "text": "## [[MoE 路由稳定性|路由稳定性]]\n*Routing stability*\n\n路径切换与过大 logits 会增加风险；selective float32 和 z-loss 是具体设计中的补救。",
+      "color": "6"
+    },
+    {
+      "id": "d61000000000000b",
+      "type": "text",
+      "x": 0,
+      "y": 900,
+      "width": 540,
+      "height": 240,
+      "text": "## [[MoE 专家并行|expert parallel]]\n*Dispatch and return*\n\nexpert 权重分片驻留；常见 all-to-all 交换 token activation 与结果，而不是每 token 搬全部权重。",
+      "color": "3"
+    },
+    {
+      "id": "d61000000000000c",
+      "type": "text",
+      "x": 610,
+      "y": 900,
+      "width": 540,
+      "height": 240,
+      "text": "## [[MoE 吞吐与延迟|FLOPs 不等于速度]]\n*Arithmetic versus wall-clock*\n\n通信、重排、padding、小 kernel、内存和 straggler 会决定真实吞吐与延迟。",
+      "color": "3"
+    },
+    {
+      "id": "d61000000000000d",
+      "type": "text",
+      "x": 1220,
+      "y": 900,
+      "width": 540,
+      "height": 240,
+      "text": "## [[MoE 比较口径|指标分账]]\n*Separate metrics*\n\n总参数、active path、算术、驻留内存、实际速度和任务质量回答不同问题。",
+      "color": "5"
+    },
+    {
+      "id": "d61000000000000e",
+      "type": "text",
+      "x": 1830,
+      "y": 900,
+      "width": 540,
+      "height": 240,
+      "text": "## [[MoE 全量权重驻留|完整权重仍须可访问]]\n*System-wide residency*\n\ncheckpoint 与集群总权重跟 total parameters 走；分片只改变单设备驻留与 token 通信。",
+      "color": "5"
+    },
+    {
+      "id": "d61000000000000f",
+      "type": "text",
+      "x": 2440,
+      "y": 900,
+      "width": 560,
+      "height": 260,
+      "text": "## [[Dense 与 MoE 公平比较|公平比较]]\n*Match the decision*\n\n样本效率固定数据与 token；计算效率固定总 FLOPs；墙钟和部署比较各自固定硬件或 serving 约束。",
+      "color": "2"
+    }
+  ],
+  "edges": [
+    {
+      "id": "d6e0000000000001",
+      "fromNode": "d610000000000001",
+      "fromSide": "right",
+      "toNode": "d610000000000002",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "稀疏容量通过条件选择少数参数路径实现"
+    },
+    {
+      "id": "d6e0000000000002",
+      "fromNode": "d610000000000002",
+      "fromSide": "right",
+      "toNode": "d610000000000003",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "router 的选择还要转成可组合的 expert 输出"
+    },
+    {
+      "id": "d6e0000000000003",
+      "fromNode": "d610000000000003",
+      "fromSide": "right",
+      "toNode": "d610000000000004",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "k 决定每个 token 实际组合多少条 expert 路径"
+    },
+    {
+      "id": "d6e0000000000004",
+      "fromNode": "d610000000000002",
+      "fromSide": "right",
+      "toNode": "d610000000000005",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "learned router 与 expert 联合更新时可能出现分工"
+    },
+    {
+      "id": "d6e0000000000005",
+      "fromNode": "d610000000000002",
+      "fromSide": "bottom",
+      "toNode": "d610000000000006",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "token 独立择优没有天然的全局负载约束"
+    },
+    {
+      "id": "d6e0000000000006",
+      "fromNode": "d610000000000006",
+      "fromSide": "right",
+      "toNode": "d610000000000007",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "固定容量把负载热点变成可计算的槽位超额"
+    },
+    {
+      "id": "d6e0000000000007",
+      "fromNode": "d610000000000007",
+      "fromSide": "right",
+      "toNode": "d610000000000008",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "只有超过所选容量政策，才需要 overflow 处理"
+    },
+    {
+      "id": "d6e0000000000008",
+      "fromNode": "d610000000000006",
+      "fromSide": "right",
+      "toNode": "d610000000000009",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "辅助损失给集中路由施加可微的反向压力"
+    },
+    {
+      "id": "d6e0000000000009",
+      "fromNode": "d610000000000009",
+      "fromSide": "top",
+      "toNode": "d610000000000005",
+      "toSide": "bottom",
+      "toEnd": "none",
+      "label": "使用量均衡既不创造也不证明语义专门化"
+    },
+    {
+      "id": "d6e000000000000a",
+      "fromNode": "d610000000000002",
+      "fromSide": "bottom",
+      "toNode": "d61000000000000a",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "离散排名切换与 softmax 数值范围引入额外风险"
+    },
+    {
+      "id": "d6e000000000000b",
+      "fromNode": "d610000000000009",
+      "fromSide": "right",
+      "toNode": "d61000000000000a",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "辅助目标系数与主任务共同决定优化稳定性"
+    },
+    {
+      "id": "d6e000000000000c",
+      "fromNode": "d610000000000002",
+      "fromSide": "bottom",
+      "toNode": "d61000000000000b",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "分布式执行要把选择转成 token 派发与回收"
+    },
+    {
+      "id": "d6e000000000000d",
+      "fromNode": "d61000000000000b",
+      "fromSide": "right",
+      "toNode": "d61000000000000c",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "通信、重排和尾部等待进入实际墙钟时间"
+    },
+    {
+      "id": "d6e000000000000e",
+      "fromNode": "d610000000000007",
+      "fromSide": "bottom",
+      "toNode": "d61000000000000c",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "padding、drop 与不规则 batch 改变系统效率"
+    },
+    {
+      "id": "d6e000000000000f",
+      "fromNode": "d610000000000001",
+      "fromSide": "bottom",
+      "toNode": "d61000000000000d",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "容量—计算分离后必须把规模指标分开报告"
+    },
+    {
+      "id": "d6e0000000000010",
+      "fromNode": "d61000000000000b",
+      "fromSide": "right",
+      "toNode": "d61000000000000e",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "expert 权重分片改变单卡驻留但不删除逻辑权重"
+    },
+    {
+      "id": "d6e0000000000011",
+      "fromNode": "d61000000000000d",
+      "fromSide": "right",
+      "toNode": "d61000000000000f",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "先分清指标，才能选择与决策目标一致的固定条件"
+    },
+    {
+      "id": "d6e0000000000012",
+      "fromNode": "d61000000000000c",
+      "fromSide": "right",
+      "toNode": "d61000000000000f",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "硬件、batch 与通信必须进入 wall-clock 比较"
+    },
+    {
+      "id": "d6e0000000000013",
+      "fromNode": "d61000000000000e",
+      "fromSide": "right",
+      "toNode": "d61000000000000f",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "部署比较还要对齐系统总权重和单设备显存"
+    },
+    {
+      "id": "d6e0000000000014",
+      "fromNode": "d610000000000004",
+      "fromSide": "bottom",
+      "toNode": "d61000000000000f",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "k、capacity 与路由实现都是比较条件的一部分"
+    }
+  ]
+}

@@ -158,9 +158,9 @@ to draw one line. The modest goal is to internalize the minimum plotting interfa
 
 - 数据点的顺序本身会影响 line plot 的视觉含义
 
-如果顺序没有物理意义，用 `plot` 可能会误导。
+如果顺序没有物理意义，用 `plot` 可能会误导。这里对应的通用判断见 [[图形问题匹配]]：连线本身就在声明相邻关系，不能让文件行序替代真实的时间、空间或路径顺序。
 <!-- bilingual-en:start -->
-The instructor next compares `plt.plot(...)` with `plt.scatter(...)` on a shuffled set of points. `plot` connects points in their supplied order, whereas `scatter` draws points without connecting them. A line plot therefore assigns visual meaning to observation order; if that order has no substantive meaning, connecting the points can mislead.
+The instructor next compares `plt.plot(...)` with `plt.scatter(...)` on a shuffled set of points. `plot` connects points in their supplied order, whereas `scatter` draws points without connecting them. A line plot therefore assigns visual meaning to observation order; if that order has no substantive meaning, connecting the points can mislead. [[图形问题匹配]] states the general rule: connecting marks asserts adjacency, so file row order cannot substitute for a real temporal, spatial, or path order.
 <!-- bilingual-en:end -->
 
 ### 6. 多条曲线放一张图：开始需要 label 和区分样式
@@ -201,8 +201,10 @@ The instructor then places several function curves on one plot. Once curves shar
 - ticks 决定读者怎么理解横纵轴
 
 比如月份数据如果保留 `1,2,3...12`，可读性远不如直接写成 `Jan ... Dec`。
+
+这些元素不只是装饰：轴范围、单位、刻度和图例共同决定图的语义，见 [[坐标与编码语义]]。
 <!-- bilingual-en:start -->
-Midway through the lecture, the instructor systematically adds `plt.title(...)`, `plt.xlabel(...)`, `plt.ylabel(...)`, `plt.xlim(...)`, `plt.xticks(...)`, and `plt.grid()`. This matters because a plot without a title or axis labels is difficult to reuse, and tick labels determine how readers interpret each axis. Month names such as `Jan ... Dec`, for example, communicate far more clearly than bare values `1,2,3...12`.
+Midway through the lecture, the instructor systematically adds `plt.title(...)`, `plt.xlabel(...)`, `plt.ylabel(...)`, `plt.xlim(...)`, `plt.xticks(...)`, and `plt.grid()`. This matters because a plot without a title or axis labels is difficult to reuse, and tick labels determine how readers interpret each axis. Month names such as `Jan ... Dec`, for example, communicate far more clearly than bare values `1,2,3...12`. These elements are not decoration: axis range, units, ticks, and legends jointly determine meaning; see [[坐标与编码语义]].
 <!-- bilingual-en:end -->
 
 ### 8. line style / marker / width：同一数据可以有不同表达风格
@@ -226,8 +228,10 @@ Midway through the lecture, the instructor systematically adds `plt.title(...)`,
 - 图形风格本身是信息编码的一部分
 
 当多条数据同时出现时，风格差异能显著提升可读性。
+
+实务上不要只靠颜色区分序列；课程已经演示的 line style 与 marker 正好可以作为第二个识别通道，见 [[坐标与编码语义]]。
 <!-- bilingual-en:start -->
-The instructor demonstrates shorthand styles such as `'b-'`, `'r--'`, and `'*g-.'`, as well as keyword arguments including `color='b'`, `linestyle='--'`, and `linewidth=...`. The important lesson is that style itself encodes information. When several series appear together, visual distinctions make the figure much easier to read.
+The instructor demonstrates shorthand styles such as `'b-'`, `'r--'`, and `'*g-.'`, as well as keyword arguments including `color='b'`, `linestyle='--'`, and `linewidth=...`. The important lesson is that style itself encodes information. When several series appear together, visual distinctions make the figure much easier to read. In practice, do not rely on colour alone; the line styles and markers taught here provide a second identification channel, as explained in [[坐标与编码语义]].
 <!-- bilingual-en:end -->
 
 ### 9. subplots：一张 figure 里放多个坐标区
@@ -268,8 +272,10 @@ The instructor then introduces `plt.subplot(...)`, which arranges several plots 
 让 y 轴变成对数尺度。
 
 这一步很关键，因为它说明可视化不只是换数据，也可以换刻度来让趋势更清楚。
+
+但线性轴和对数轴突出的是不同关系：前者偏向绝对差，后者偏向倍数变化，因此必须明确标出尺度，见 [[坐标与编码语义]]。
 <!-- bilingual-en:start -->
-In the second half, plotting is applied to file data. The first example reads years and population from `lec25_USPopulation.txt` and draws a line plot. The instructor then uses `plt.semilogy()` to place the y-axis on a logarithmic scale, showing that a clearer trend can come from changing the scale rather than the underlying data.
+In the second half, plotting is applied to file data. The first example reads years and population from `lec25_USPopulation.txt` and draws a line plot. The instructor then uses `plt.semilogy()` to place the y-axis on a logarithmic scale, showing that a clearer trend can come from changing the scale rather than the underlying data. Linear and logarithmic axes foreground different relations—absolute differences versus multiplicative change—so the scale must be explicit; see [[坐标与编码语义]].
 <!-- bilingual-en:end -->
 
 ### 11. Country population 与 Benford's law：图类型要匹配任务
@@ -288,9 +294,9 @@ In the second half, plotting is applied to file data. The first example reads ye
 - line plot 适合展示顺序趋势
 - histogram 更适合展示分布
 
-Benford's law 例子就是在训练“选择合适图形类型”。
+Benford's law 例子就是在训练“选择合适图形类型”，其一般原则见 [[图形问题匹配]]。
 <!-- bilingual-en:start -->
-The next example reads population data for many countries, plots population size by country rank, and then extracts leading digits for a histogram. The lasting lesson is that line plots suit ordered trends whereas histograms suit distributions. The Benford's law example is fundamentally an exercise in choosing a chart type that matches the question.
+The next example reads population data for many countries, plots population size by country rank, and then extracts leading digits for a histogram. The lasting lesson is that line plots suit ordered trends whereas histograms suit distributions. The Benford's law example is fundamentally an exercise in choosing a chart type that matches the question; [[图形问题匹配]] gives the general rule.
 <!-- bilingual-en:end -->
 
 ### 12. 温度数据：从单城市到多城市，再到更复杂对比

@@ -1,0 +1,214 @@
+{
+  "nodes": [
+    {
+      "id": "basel-title",
+      "type": "text",
+      "x": 0,
+      "y": -220,
+      "width": 2600,
+      "height": 140,
+      "text": "# 巴塞尔银行资本与流动性监管\n\n按**适用边界 → 资本与缓冲 → RWA 与方法 → 市场与对手方风险 → 流动性因子**阅读。颜色表示语义板块，不表示掌握度；每张卡都是可独立复习的知识原子。"
+    },
+    {
+      "id": "mb-bas-001",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 360,
+      "height": 120,
+      "color": "1",
+      "text": "## [[Basel 国际标准与本地法|国际标准不自动成为本地法]]\n\n先锁定法域、机构、合并范围与日期。"
+    },
+    {
+      "id": "mb-bas-002",
+      "type": "text",
+      "x": 560,
+      "y": 0,
+      "width": 360,
+      "height": 120,
+      "color": "1",
+      "text": "## [[Basel 框架演进|历史层次与当前版本]]\n\n历史解释演变，现行计算查整合框架与本地实施。"
+    },
+    {
+      "id": "mb-bas-003",
+      "type": "text",
+      "x": 1120,
+      "y": 0,
+      "width": 360,
+      "height": 120,
+      "color": "1",
+      "text": "## [[资本监管的收益与边界|资本监管的收益与边界]]\n\n降低外部性不等于消灭失败，还会改变行为。"
+    },
+    {
+      "id": "mb-bas-008",
+      "type": "text",
+      "x": 1680,
+      "y": 0,
+      "width": 360,
+      "height": 120,
+      "color": "1",
+      "text": "## [[Basel 三支柱|三支柱]]\n\n量化最低要求、监督审查与披露互补。"
+    },
+    {
+      "id": "mb-bas-004",
+      "type": "text",
+      "x": 0,
+      "y": 220,
+      "width": 360,
+      "height": 120,
+      "color": "2",
+      "text": "## [[CET1、AT1 与 Tier 2|CET1、AT1 与 Tier 2]]\n\n资本工具资格与损失吸收时点不同。"
+    },
+    {
+      "id": "mb-bas-005",
+      "type": "text",
+      "x": 560,
+      "y": 220,
+      "width": 360,
+      "height": 120,
+      "color": "2",
+      "text": "## [[Basel 最低比率基线|最低比率只是基线]]\n\n4.5-6-8、3 与 100 都不是最终完整约束。"
+    },
+    {
+      "id": "mb-bas-006",
+      "type": "text",
+      "x": 1120,
+      "y": 220,
+      "width": 360,
+      "height": 120,
+      "color": "2",
+      "text": "## [[CCB 与 CCyB|CCB 与 CCyB]]\n\n都使用 CET1，但触发与计算逻辑不同。"
+    },
+    {
+      "id": "mb-bas-007",
+      "type": "text",
+      "x": 1680,
+      "y": 220,
+      "width": 360,
+      "height": 120,
+      "color": "2",
+      "text": "## [[G-SIB 与 D-SIB|G-SIB 与 D-SIB]]\n\n全球与国内系统外部性必须分开识别。"
+    },
+    {
+      "id": "mb-bas-018",
+      "type": "text",
+      "x": 560,
+      "y": 440,
+      "width": 360,
+      "height": 120,
+      "color": "6",
+      "text": "## [[LCR 与 NSFR 因子分类|LCR 与 NSFR 因子分类]]\n\n资产简称不足以决定 HQLA、ASF、RSF 或流失率。"
+    },
+    {
+      "id": "mb-bas-009",
+      "type": "text",
+      "x": 0,
+      "y": 660,
+      "width": 360,
+      "height": 120,
+      "color": "3",
+      "text": "## [[Basel I 风险权重|Basel I 与 Cooke 比率]]\n\n原协议五档；课堂四档简表仍只是历史入口。"
+    },
+    {
+      "id": "mb-bas-010",
+      "type": "text",
+      "x": 560,
+      "y": 660,
+      "width": 360,
+      "height": 120,
+      "color": "3",
+      "text": "## [[RWA 聚合与 12.5 换算|总 RWA 与 12.5 转换]]\n\n多个风险模块汇总到统一资本率分母。"
+    },
+    {
+      "id": "mb-bas-012",
+      "type": "text",
+      "x": 1120,
+      "y": 660,
+      "width": 360,
+      "height": 120,
+      "color": "3",
+      "text": "## [[当前 Basel 操作风险标准法|当前操作风险标准法]]\n\nBI、BIC、ILM 取代 BIA、TSA、AMA 的旧菜单。"
+    },
+    {
+      "id": "mb-bas-011",
+      "type": "text",
+      "x": 560,
+      "y": 880,
+      "width": 360,
+      "height": 120,
+      "color": "3",
+      "text": "## [[Output floor|Output floor]]\n\n给模型 RWA 设标准法参照下限，不给资本率封顶。"
+    },
+    {
+      "id": "mb-bas-013",
+      "type": "text",
+      "x": 0,
+      "y": 1100,
+      "width": 360,
+      "height": 120,
+      "color": "4",
+      "text": "## [[交易簿与银行簿边界|交易簿与银行簿边界]]\n\n监管指定不等于短炒/长持或会计分类。"
+    },
+    {
+      "id": "mb-bas-014",
+      "type": "text",
+      "x": 560,
+      "y": 1100,
+      "width": 360,
+      "height": 120,
+      "color": "4",
+      "text": "## [[FRTB 市场风险|FRTB 市场风险]]\n\n压力 ES、流动性期限和 NMRF 共同处理尾部。"
+    },
+    {
+      "id": "mb-bas-015",
+      "type": "text",
+      "x": 1120,
+      "y": 1100,
+      "width": 360,
+      "height": 120,
+      "color": "4",
+      "text": "## [[FRTB 交易台资格|交易台级 IMA 资格]]\n\n回测与 PLA 分别检验尾部覆盖和风险表示。"
+    },
+    {
+      "id": "mb-bas-016",
+      "type": "text",
+      "x": 1680,
+      "y": 1100,
+      "width": 360,
+      "height": 120,
+      "color": "5",
+      "text": "## [[SA-CCR|SA-CCR]]\n\n当前 Basel 非模型标准法按法律净额集合计量；本地生效日另查。"
+    },
+    {
+      "id": "mb-bas-017",
+      "type": "text",
+      "x": 2240,
+      "y": 1100,
+      "width": 360,
+      "height": 120,
+      "color": "5",
+      "text": "## [[三类 CVA 口径|CVA 三种口径]]\n\n价值调整、违约资本与 CVA 风险资本不能混写。"
+    }
+  ],
+  "edges": [
+    {"id":"e01","fromNode":"mb-bas-001","fromSide":"right","toNode":"mb-bas-002","toSide":"left","label":"国际基线还要锁定版本"},
+    {"id":"e02","fromNode":"mb-bas-002","fromSide":"right","toNode":"mb-bas-003","toSide":"left","label":"历史改革回应监管失灵"},
+    {"id":"e03","fromNode":"mb-bas-003","fromSide":"right","toNode":"mb-bas-008","toSide":"left","label":"局限要求三类互补约束"},
+    {"id":"e04","fromNode":"mb-bas-001","fromSide":"bottom","toNode":"mb-bas-004","toSide":"top","label":"本地规则认定工具资格"},
+    {"id":"e05","fromNode":"mb-bas-002","fromSide":"bottom","toNode":"mb-bas-005","toSide":"top","label":"当前版本固定国际基线"},
+    {"id":"e06","fromNode":"mb-bas-003","fromSide":"bottom","toNode":"mb-bas-006","toSide":"top","label":"缓冲缓解顺周期"},
+    {"id":"e07","fromNode":"mb-bas-008","fromSide":"bottom","toNode":"mb-bas-007","toSide":"top","label":"资本与监督共同落实附加要求"},
+    {"id":"e08","fromNode":"mb-bas-004","fromSide":"right","toNode":"mb-bas-005","toSide":"left","label":"资本资格决定分子"},
+    {"id":"e09","fromNode":"mb-bas-005","fromSide":"right","toNode":"mb-bas-006","toSide":"left","label":"基线以上叠加缓冲"},
+    {"id":"e10","fromNode":"mb-bas-006","fromSide":"right","toNode":"mb-bas-007","toSide":"left","label":"系统重要性另加附加层"},
+    {"id":"e11","fromNode":"mb-bas-005","fromSide":"bottom","toNode":"mb-bas-018","toSide":"top","label":"流动性基线要按因子分类"},
+    {"id":"e12","fromNode":"mb-bas-004","fromSide":"bottom","toNode":"mb-bas-009","toSide":"top","label":"当前资本资格不能套旧 Cooke"},
+    {"id":"e13","fromNode":"mb-bas-009","fromSide":"right","toNode":"mb-bas-010","toSide":"left","label":"从信用 RWA 扩为多模块"},
+    {"id":"e14","fromNode":"mb-bas-012","fromSide":"left","toNode":"mb-bas-010","toSide":"right","label":"操作资本换算后进入总 RWA"},
+    {"id":"e15","fromNode":"mb-bas-010","fromSide":"bottom","toNode":"mb-bas-011","toSide":"top","label":"模型总 RWA 受下限"},
+    {"id":"e16","fromNode":"mb-bas-013","fromSide":"right","toNode":"mb-bas-014","toSide":"left","label":"簿边界划定市场风险范围"},
+    {"id":"e17","fromNode":"mb-bas-014","fromSide":"right","toNode":"mb-bas-015","toSide":"left","label":"IMA 必须通过交易台级检验"},
+    {"id":"e18","fromNode":"mb-bas-015","fromSide":"right","toNode":"mb-bas-016","toSide":"left","label":"交易台 IMA 不替代对手方敞口计量"},
+    {"id":"e19","fromNode":"mb-bas-016","fromSide":"right","toNode":"mb-bas-017","toSide":"left","label":"违约敞口与 CVA 风险分开"}
+  ]
+}

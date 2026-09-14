@@ -39,6 +39,11 @@ lecture: 08
 > - By the end, you should be able to explain why a function can be an argument rather than merely repeat that “everything in Python is an object.”
 > <!-- bilingual-en:end -->
 
+> [!links] 原子化入口
+> 本讲复用 [[返回值与打印]] 解释调用结果，再沿 [[函数调用帧]] → [[局部名称判定]] 理解 scope；随后进入 [[一等函数对象]] 与 [[高阶函数抽象]]，把 `calc` 和 `apply` 读成“固定框架接收可替换行为”。
+>
+> *Atomic path: [[返回值与打印|return versus output]] → [[函数调用帧|call frames]] → [[局部名称判定|local-name classification]] → [[一等函数对象|first-class function objects]] → [[高阶函数抽象|higher-order abstraction]].*
+
 ## Lecture flow
 
 ### 1. 开场先回顾函数，但重点放在“函数调用的结果”

@@ -39,6 +39,11 @@ lecture: 09
 > - By the end, you should understand why tuples and lists are both sequences while anticipating why their different mutability will matter.
 > <!-- bilingual-en:end -->
 
+> [!links] 原子化入口
+> 本讲前半段在 [[一等函数对象]] 与 [[高阶函数抽象]] 的基础上引入 [[lambda 表达式]]；lambda 只是产生单表达式函数对象的语法，不改变参数绑定、[[词法作用域]] 或 [[闭包晚绑定]] 的规则。后半段先用 [[序列共同接口]] 对齐 tuple/list 的共同读法，再分别进入 [[元组不可变边界]] 与 [[列表原地修改]]。
+>
+> *Atomic path: [[一等函数对象|first-class function objects]] → [[高阶函数抽象|higher-order abstraction]] → [[lambda 表达式|lambda expressions]], with [[词法作用域|lexical scope]] and [[闭包晚绑定|late binding]] unchanged; tuples and lists then share a sequence interface but diverge at their mutability boundaries.*
+
 ## Lecture flow
 
 ### 1. 先把上节高阶函数收尾：为什么需要 lambda

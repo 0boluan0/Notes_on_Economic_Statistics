@@ -1,0 +1,5 @@
+GET	/	200
+GET	/missing	404
+POST	/login	403
+GET	/	200
+GET	/health	200

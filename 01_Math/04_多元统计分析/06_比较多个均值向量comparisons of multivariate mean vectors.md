@@ -122,6 +122,12 @@ $$
 \frac{n-p}{p(n-1)}T^2\sim F_{p,n-p}.
 $$
 
+>[!attention] 精确模型
+> 上式要求不同 pair 的差向量 $D_j$ iid 服从 $N_p(\delta,\Sigma_D)$，其中 $\Sigma_D\succ0$ 且 $n>p$。同一 pair 内两次测量可以相关；这种相关性已经进入 $\Sigma_D$，不能据此放松不同 pairs 之间的独立性。
+> <!-- bilingual-en:start -->
+> The exact result requires the difference vectors from distinct pairs to be iid $N_p(\delta,\Sigma_D)$, with $\Sigma_D\succ0$ and $n>p$. Measurements within a pair may be correlated because that dependence is absorbed into $\Sigma_D$; independence across pairs is still required.
+> <!-- bilingual-en:end -->
+
 ### 1.2.4. 同时置信区间
 <!-- bilingual-en:start -->
 *1.2.4. Simultaneous Confidence Intervals*
@@ -225,9 +231,9 @@ $$
 can compare differences between two sets of variables.
 <!-- bilingual-en:end -->
 
-检验统计量仍使用 Hotelling 型：
+检验统计量仍使用 [[线性约束Hotelling T²|Hotelling 型]]：
 <!-- bilingual-en:start -->
-The test statistic retains the Hotelling form:
+The test statistic retains the [[线性约束Hotelling T²|Hotelling form]]:
 <!-- bilingual-en:end -->
 $$
 T^2=n(C\bar X-\psi_0)'(CSC')^{-1}(C\bar X-\psi_0).
@@ -241,6 +247,11 @@ $$
 \frac{n-m}{m(n-1)}T^2\sim F_{m,n-m}.
 $$
 
+只要 $C$ 固定、实际秩为 $m$ 且 $n>m$，精确校准使用的是变换后的维数；它不要求原始 $p$ 维 $S$ 可逆。冗余行必须按实际秩化简，且右端约束须保持一致。
+<!-- bilingual-en:start -->
+For fixed $C$ of actual rank $m$, exact calibration uses the transformed dimension and requires $n>m$; it does not require the original $p$-dimensional $S$ to be invertible. Redundant rows must be reduced to the actual rank while preserving a consistent right-hand side.
+<!-- bilingual-en:end -->
+
 ## 1.4. 两个独立总体均值向量比较
 <!-- bilingual-en:start -->
 *1.4. Comparing the Mean Vectors of Two Independent Populations*
@@ -251,9 +262,9 @@ $$
 *1.4.1. Equal Covariance Matrices*
 <!-- bilingual-en:end -->
 
-设两组样本独立，且
+设两组样本彼此独立、各组内部 iid 多元正态，且共享正定协方差矩阵
 <!-- bilingual-en:start -->
-Suppose the two samples are independent and
+Suppose the groups are independent, observations are iid multivariate normal within each group, and both groups share a positive-definite covariance matrix
 <!-- bilingual-en:end -->
 $$
 \Sigma_1=\Sigma_2=\Sigma.
@@ -292,6 +303,11 @@ $$
 \frac{n_1+n_2-p-1}{p(n_1+n_2-2)}T^2
 \sim F_{p,n_1+n_2-p-1}.
 $$
+
+令 $n_1,n_2\ge2$ 且 $m=n_1+n_2-2$；精确公式要求 $m\ge p$，因此分母自由度 $m-p+1=n_1+n_2-p-1$ 至少为 1。
+<!-- bilingual-en:start -->
+With $n_1,n_2\ge2$ and $m=n_1+n_2-2$, the exact formula requires $m\ge p$, so the denominator degrees of freedom $m-p+1=n_1+n_2-p-1$ are at least one.
+<!-- bilingual-en:end -->
 
 ### 1.4.2. 协方差矩阵不等
 <!-- bilingual-en:start -->
@@ -351,9 +367,9 @@ A one-way MANOVA can be written as
 $$
 X_{ij}=\mu+\tau_i+e_{ij},
 $$
-其中 $\tau_i$ 表示第 $i$ 个组的效应。
+其中 $\tau_i$ 表示第 $i$ 个组的效应；$\mu$ 与 $\tau_i$ 还需配合一种识别约束，例如 $\sum_i n_i\tau_i=0$。
 <!-- bilingual-en:start -->
-where $\tau_i$ is the effect of group $i$.
+where $\tau_i$ is the effect of group $i$; $\mu$ and the $\tau_i$ also require an identifying constraint, such as $\sum_i n_i\tau_i=0$.
 <!-- bilingual-en:end -->
 
 检验等价于
@@ -364,14 +380,14 @@ $$
 H_0:\tau_1=\cdots=\tau_g=0.
 $$
 
-### 1.5.3. SSP 矩阵分解
+### 1.5.3. SSCP 矩阵分解
 <!-- bilingual-en:start -->
-*1.5.3. SSP Matrix Decomposition*
+*1.5.3. SSCP Matrix Decomposition*
 <!-- bilingual-en:end -->
 
-总 SSP 矩阵分解为
+总 SSCP 矩阵分解为
 <!-- bilingual-en:start -->
-The total SSP matrix decomposes as
+The total SSCP matrix decomposes as
 <!-- bilingual-en:end -->
 $$
 T=H+E.
@@ -420,18 +436,18 @@ A small $\Lambda^*$ means that between-group differences explain a substantial s
 *1.5.5. MANOVA Table*
 <!-- bilingual-en:end -->
 
-MANOVA 表通常组织为：
+MANOVA 的 SSCP 表通常组织为：
 <!-- bilingual-en:start -->
-A MANOVA table is usually organised as follows:
+A MANOVA SSCP table is usually organised as follows:
 <!-- bilingual-en:end -->
 
-| 来源 | SSP 矩阵 | 自由度 |
+| 来源 | SSCP 矩阵 | 自由度 |
 |---|---|---|
 | 组间 | $H$ | $g-1$ |
 | 组内误差 | $E$ | $N-g$ |
 | 总计 | $T$ | $N-1$ |
 <!-- bilingual-en:start -->
-| Source | SSP matrix | Degrees of freedom |
+| Source | SSCP matrix | Degrees of freedom |
 |---|---|---|
 | Between groups | $H$ | $g-1$ |
 | Within-group error | $E$ | $N-g$ |
@@ -486,11 +502,14 @@ The exact or approximate distribution in MANOVA depends on sample size, the numb
 *1.8. Related Cards*
 <!-- bilingual-en:end -->
 
-- [[Hotelling T² 与多元均值推断#配对与两独立总体|Paired Mean Vector Comparison]]
-- [[Hotelling T² 与多元均值推断#配对与两独立总体|Two-Sample Hotelling T2 Test]]
-- [[Hotelling T² 与多元均值推断#单总体 Hotelling $T^2$|Hotelling T2 Test]]
-- [[MANOVA 多元方差分析#MANOVA 的模型|MANOVA]]
-- [[MANOVA 多元方差分析#MANOVA 的模型|One-way MANOVA Procedure]]
-- [[MANOVA 多元方差分析#$H$ 与 $E$ 矩阵|Wilks Lambda]]
-- [[MANOVA 多元方差分析#$H$ 与 $E$ 矩阵|SSP Matrix]]
-- [[Hotelling T² 与多元均值推断|Multivariate Mean Inference Map]]
+- [[配对Hotelling T²|Paired Mean Vector Comparison]]
+- [[pooled Hotelling T²|Two-Sample Hotelling T2 Test]]
+- [[单样本Hotelling T²|One-Sample Hotelling T2 Test]]
+- [[MANOVA 多元方差分析.canvas|MANOVA Map]]
+- [[MANOVA|MANOVA and the One-way Mean-Vector Special Case]]
+- [[MANOVA SSCP分解|SSCP Matrix Decomposition]]
+- [[MANOVA四种统计量|Wilks Lambda and the Four Criteria]]
+- [[Pillai稳健性边界|Qualified Robustness of Pillai Trace]]
+- [[MANOVA检验校准|Reference-Distribution Calibration]]
+- [[MANOVA经典假设|Classical MANOVA Assumptions]]
+- [[Hotelling T² 与多元均值推断.canvas|Multivariate Mean Inference Map]]

@@ -1,0 +1,177 @@
+{
+  "nodes": [
+    {
+      "id": "a1b2c3d4e5f60701",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 1660,
+      "height": 220,
+      "text": "# 外汇市场、利率平价与不可能三角\n\n*Foreign-exchange Markets, Interest Parity, and the Impossible Trinity*\n\n旧入口别名：**外汇市场**、**利率平价**。从左到右先固定报价与可执行回报，再分开无套利价格、预期回报证据和开放经济政策约束。颜色只区分语义角色，不表示掌握程度；8 张原子已完成独立来源复核，掌握状态均为 `unassessed`。",
+      "color": "4"
+    },
+    {
+      "id": "a1b2c3d4e5f60702",
+      "type": "text",
+      "x": 0,
+      "y": 340,
+      "width": 340,
+      "height": 210,
+      "text": "### [[汇率报价方向|报价方向]]\n\n若 $S$ 是本币/外币，$S\\uparrow$ 表示本币贬值；倒数报价反转方向，有限百分比幅度不必相等。",
+      "color": "5"
+    },
+    {
+      "id": "a1b2c3d4e5f60703",
+      "type": "text",
+      "x": 440,
+      "y": 340,
+      "width": 340,
+      "height": 250,
+      "text": "### [[跨币种套保回报|跨币种回报恒等式]]\n\n未套保：$R_fS_{t+1}/S_t$\n\n远期套保：$R_fF_t/S_t$\n\n这里只计算现金流；尚未要求本外币路径回报相等。",
+      "color": "5"
+    },
+    {
+      "id": "a1b2c3d4e5f60704",
+      "type": "text",
+      "x": 880,
+      "y": 340,
+      "width": 340,
+      "height": 250,
+      "text": "### [[抵补利率平价|CIP 无套利条件]]\n\n$R_d=R_fF_t/S_t$ 只在同期限、同风险口径且融资与远期均可执行时成立。观察到 basis 不自动等于免费套利。",
+      "color": "4"
+    },
+    {
+      "id": "a1b2c3d4e5f60705",
+      "type": "text",
+      "x": 1320,
+      "y": 340,
+      "width": 340,
+      "height": 250,
+      "text": "### [[远期升贴水|远期升贴水]]\n\n在本币/外币报价下，$F_t/S_t-1$ 是外币远期升贴水。它由合同价格与利差约束形成，不是未来 spot 的无条件预测。",
+      "color": "4"
+    },
+    {
+      "id": "a1b2c3d4e5f60706",
+      "type": "text",
+      "x": 0,
+      "y": 750,
+      "width": 340,
+      "height": 390,
+      "text": "## 复用与范围\n\n- [[无风险利率口径]]\n- [[期限匹配贴现因子]]\n- [[贴现率口径匹配]]\n- [[央行资产负债恒等式]]\n- [[央行准备金余额]]\n\n本图聚焦名义汇率报价、跨币种资产回报与开放经济政策约束。[[远期利率|利率远期]]与 FX forward 是不同合约对象。"
+    },
+    {
+      "id": "a1b2c3d4e5f60707",
+      "type": "text",
+      "x": 440,
+      "y": 750,
+      "width": 340,
+      "height": 270,
+      "text": "### [[无抵补利率平价|UIP 预期关系]]\n\n纯 UIP 令未套保外币投资的条件期望超额回报为零。含风险溢价的广义关系必须另行定义 $E_t[rx]=\\pi_t$；它不是锁定套利。",
+      "color": "6"
+    },
+    {
+      "id": "a1b2c3d4e5f60708",
+      "type": "text",
+      "x": 880,
+      "y": 750,
+      "width": 340,
+      "height": 270,
+      "text": "### [[UIP经验检验|UIP 经验检验]]\n\n经典短期限样本常拒绝零风险溢价的简单 UIP；风险溢价、预期误差、期限、子样本与测量方式都可能影响结果。",
+      "color": "6"
+    },
+    {
+      "id": "a1b2c3d4e5f60709",
+      "type": "text",
+      "x": 440,
+      "y": 1180,
+      "width": 340,
+      "height": 270,
+      "text": "### [[不可能三角|开放经济不可能三角]]\n\n高资本流动、可信固定汇率和独立利率路径不能同时完全维持。现实制度是程度权衡，不是脱离条件的绝对三选二口号。",
+      "color": "2"
+    },
+    {
+      "id": "a1b2c3d4e5f6070a",
+      "type": "text",
+      "x": 880,
+      "y": 1180,
+      "width": 340,
+      "height": 290,
+      "text": "### [[外汇干预与冲销|干预与冲销]]\n\n冲销决定干预是否改变基础货币或短期货币条件。portfolio-balance 与 signaling 效果依赖环境，冲销也不创造三角之外的第四种制度组合。",
+      "color": "2"
+    }
+  ],
+  "edges": [
+    {
+      "id": "b1c2d3e4f5a60801",
+      "fromNode": "a1b2c3d4e5f60702",
+      "fromSide": "right",
+      "toNode": "a1b2c3d4e5f60703",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "固定 S 与 F 的方向"
+    },
+    {
+      "id": "b1c2d3e4f5a60802",
+      "fromNode": "a1b2c3d4e5f60703",
+      "fromSide": "right",
+      "toNode": "a1b2c3d4e5f60704",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "无套利时两条锁定路径相等"
+    },
+    {
+      "id": "b1c2d3e4f5a60803",
+      "fromNode": "a1b2c3d4e5f60704",
+      "fromSide": "right",
+      "toNode": "a1b2c3d4e5f60705",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "推出利差与远期点关系"
+    },
+    {
+      "id": "b1c2d3e4f5a60804",
+      "fromNode": "a1b2c3d4e5f60703",
+      "fromSide": "bottom",
+      "toNode": "a1b2c3d4e5f60707",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "去掉远期后汇率腿变随机"
+    },
+    {
+      "id": "b1c2d3e4f5a60805",
+      "fromNode": "a1b2c3d4e5f60707",
+      "fromSide": "right",
+      "toNode": "a1b2c3d4e5f60708",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "检验零风险溢价版本"
+    },
+    {
+      "id": "b1c2d3e4f5a60806",
+      "fromNode": "a1b2c3d4e5f60705",
+      "fromSide": "bottom",
+      "toNode": "a1b2c3d4e5f60708",
+      "toSide": "right",
+      "toEnd": "arrow",
+      "label": "远期率不是未来 spot 的无条件预测"
+    },
+    {
+      "id": "b1c2d3e4f5a60807",
+      "fromNode": "a1b2c3d4e5f60707",
+      "fromSide": "bottom",
+      "toNode": "a1b2c3d4e5f60709",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "固定汇率压缩预期变动空间"
+    },
+    {
+      "id": "b1c2d3e4f5a60808",
+      "fromNode": "a1b2c3d4e5f60709",
+      "fromSide": "right",
+      "toNode": "a1b2c3d4e5f6070a",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "政策执行工具不解除制度约束"
+    }
+  ]
+}

@@ -15,6 +15,8 @@ lecture: 21
 
 # Lecture 21: Timing Programs and Counting Operations
 
+连续阅读：[[21_算法成本与渐近分析]] · 关系图：[[渐近记号与算法复杂度.canvas]]
+
 > [!tip] Hint
 > - 这节课开头先从“程序不仅要对，还要快”切换课程目标，复杂度单元正式开始。
 > - correctness 之前一直是主角，但现在老师要你开始关心 efficiency。
@@ -92,11 +94,16 @@ Rather than jumping straight into timing, the instructor establishes the motivat
 The familiar Fibonacci example makes this tradeoff concrete:
 <!-- bilingual-en:end -->
 
-- naive recursion：省空间，但会做海量重复工作
-- memoization：额外占用字典空间，但速度快很多
+- naive recursion：不保存结果缓存，但仍有线性深度的递归栈，并会做海量重复工作
+- memoization：额外保存已算结果，避免相同子问题反复展开
 <!-- bilingual-en:start -->
-- Naive recursion uses less auxiliary storage but repeats a great deal of work.
-- Memoization spends extra dictionary space to run much faster.
+- Naive recursion stores no result cache, but still has a linear-depth call stack and repeats a great deal of work.
+- Memoization stores computed results to avoid repeatedly expanding the same subproblems.
+<!-- bilingual-en:end -->
+
+这里“额外缓存”不表示空间阶数一定增加：若每个值和调用帧按常数空间计，两种递归的峰值空间都可能是线性，区别在缓存内容和重复计算。[[辅助空间]]要按同时存活的数据计；具体调用树见[[递归调用树成本]]。[[MIT 6.100L-slides/mit6_100l_lec21.pdf#page=3|讲义第 3 页]]用这一例子引出时间与空间取舍，并没有给出“朴素递归只用常数空间”的结论。
+<!-- bilingual-en:start -->
+An additional cache need not increase the asymptotic space class: with constant-size values and frames, both recursive versions can have linear peak space. Their caches and repeated work differ. Count simultaneously live data when reporting [[辅助空间|auxiliary space]]; see [[递归调用树成本|call-tree costs]]. [[MIT 6.100L-slides/mit6_100l_lec21.pdf#page=3|Slide 3]] motivates the time–space tradeoff, not a constant-space claim for naive recursion.
 <!-- bilingual-en:end -->
 
 这让课程一开始就把一个很重要的观念钉住：
@@ -305,6 +312,11 @@ The benefits of this approach are:
 The tradeoff is that you must decide what counts as a single operation.
 <!-- bilingual-en:end -->
 
+[[算法成本模型]]必须显式声明。[[MIT 6.100L-slides/mit6_100l_lec21.pdf#page=13|讲义第 13 页]]把算术、比较、赋值和访问当作常数成本；本讲下面的“线性、二次”首先指这个模型中的操作数。Python 任意精度整数变长时，加法与乘法的实际成本也会变化，不能把源代码的一行无条件当成机器的一步。
+<!-- bilingual-en:start -->
+State the [[算法成本模型|cost model]] explicitly. [[MIT 6.100L-slides/mit6_100l_lec21.pdf#page=13|Slide 13]] assumes constant-cost arithmetic, comparison, assignment, and access. The linear and quadratic claims below first describe counts in that model. Python's arbitrary-precision integers can grow longer, changing arithmetic costs; one source line is not unconditionally one machine step.
+<!-- bilingual-en:end -->
+
 ### 8. 从常数函数开始数：`c_to_f`
 <!-- bilingual-en:start -->
 *8. Starting with a Constant-Time Function: `c_to_f`*
@@ -343,6 +355,7 @@ def mysum(x):
     total = 0
     for i in range(x + 1):
         total += i
+    return total
 ```
 
 老师数操作时会把：
@@ -377,6 +390,11 @@ Although specific constant terms may vary, the core phenomenon is clear:
 这就是线性增长。
 <!-- bilingual-en:start -->
 That is linear growth.
+<!-- bilingual-en:end -->
+
+精确地说，对非负整数 $x$，这里循环 $x+1$ 次，[[输入规模|增长参数]]取的是数值 $x$，所以操作次数为 $\Theta(x+1)$。若改用表示 $x$ 的二进制位数 $b$ 作输入规模，$x$ 可以接近 $2^b$；同一段循环就不是关于 $b$ 的线性算法。
+<!-- bilingual-en:start -->
+For nonnegative integer $x$, the loop runs $x+1$ times. Taking the numerical value $x$ as the [[输入规模|growth parameter]] gives $\Theta(x+1)$ operations. If input size instead means the binary length $b$ of $x$, then $x$ can be nearly $2^b$; this loop is not linear in $b$.
 <!-- bilingual-en:end -->
 
 ### 10. 二次例子：`square(n)`
@@ -461,6 +479,11 @@ The instructor wants you to recognize that:
 The complexity theory introduced later abstracts this counting framework one step further.
 <!-- bilingual-en:end -->
 
+[[计时与渐近分析]]回答不同问题：渐近界控制规模继续增长时的趋势；计时回答某个实现、机器和工作负载下的实际耗时。分析时先定义[[算法复杂度]]中的资源函数，再通过重复测量检查有限规模表现。
+<!-- bilingual-en:start -->
+[[计时与渐近分析|Timing and asymptotic analysis]] answer different questions: asymptotic bounds describe growth, while timing measures a particular implementation, machine, and workload. Define the resource function in [[算法复杂度|algorithmic complexity]] first, then use repeated measurements to examine finite-size performance.
+<!-- bilingual-en:end -->
+
 ### 12. 课程这时还没正式进入 Big Theta，但地基已经搭好了
 <!-- bilingual-en:start -->
 *12. Preparing the Foundation for Big Theta*
@@ -521,7 +544,7 @@ These two steps directly correspond to the lecture's two main threads:
 - Transcript: [[MIT 6.100L-transcripts/mit6_100l_lec21_transcript.pdf|Lecture 21 transcript]]
 - Recitation: none attached to this lecture week
 - Problem set milestone: none directly scheduled on this lecture
-- Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (Ch 11)
+- Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (本地 Revised and Expanded Edition：Ch 9，A Simplistic Introduction to Algorithmic Complexity)
 
 ## Review checklist
 - [ ] 我能解释为什么课程会从 correctness 转向 efficiency。

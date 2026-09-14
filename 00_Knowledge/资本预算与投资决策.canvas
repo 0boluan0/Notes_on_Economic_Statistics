@@ -1,0 +1,266 @@
+{
+  "nodes": [
+    {
+      "id": "cb-map",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 1320,
+      "height": 220,
+      "text": "# 资本预算与投资决策\n\n从上到下读：先固定现金流与贴现口径，再用 NPV 建立价值基准，最后处理替代指标、互斥选择、资源约束、不确定性和管理灵活性。\n\n**颜色只分语义角色，不表示掌握状态。** 点击标题进入原子卡。",
+      "color": "4"
+    },
+    {
+      "id": "cb-rate",
+      "type": "text",
+      "x": 0,
+      "y": 300,
+      "width": 400,
+      "height": 220,
+      "text": "## [[贴现率口径匹配|匹配机会成本]]\n*Matching discount rate*\n\n风险、币种、期限与索取权决定可比的机会成本。",
+      "color": "5"
+    },
+    {
+      "id": "cb-real",
+      "type": "text",
+      "x": 920,
+      "y": 300,
+      "width": 400,
+      "height": 220,
+      "text": "## [[名义与实际贴现|名义与实际一致]]\n*Nominal-real consistency*\n\n分子和分母必须使用同一通胀口径。",
+      "color": "5"
+    },
+    {
+      "id": "cb-fcf",
+      "type": "text",
+      "x": 0,
+      "y": 640,
+      "width": 400,
+      "height": 220,
+      "text": "## [[WACC 与无杠杆 FCF|FCF 与融资分离]]\n*Separate project and financing cash flow*\n\n用 WACC 时不再从 FCF 扣利息、本金和股利。",
+      "color": "2"
+    },
+    {
+      "id": "cb-incremental",
+      "type": "text",
+      "x": 460,
+      "y": 640,
+      "width": 400,
+      "height": 220,
+      "text": "## [[项目增量现金流|接受减拒绝]]\n*Accept versus reject*\n\n排除沉没成本，纳入机会成本、侵蚀、协同和真实增量。",
+      "color": "2"
+    },
+    {
+      "id": "cb-terminal",
+      "type": "text",
+      "x": 920,
+      "y": 640,
+      "width": 400,
+      "height": 220,
+      "text": "## [[项目税盾、NWC 与终结现金流|税盾、NWC 与终结流]]\n*Tax shield, NWC, and terminal cash flow*\n\n折旧不是现金；税法、税基和实际回收日期决定金额。",
+      "color": "2"
+    },
+    {
+      "id": "cb-irr",
+      "type": "text",
+      "x": 0,
+      "y": 980,
+      "width": 400,
+      "height": 220,
+      "text": "## [[IRR 的根与失效边界|IRR 是方程的根]]\n*IRR is a root*\n\n非常规现金流可能多根、无根或比较方向反转。",
+      "color": "6"
+    },
+    {
+      "id": "cb-npv",
+      "type": "text",
+      "x": 460,
+      "y": 980,
+      "width": 400,
+      "height": 220,
+      "text": "## [[净现值决策|NPV 价值基准]]\n*NPV value benchmark*\n\n把全部增量现金流折到同一时点；独立项目按正负判断。",
+      "color": "3"
+    },
+    {
+      "id": "cb-payback",
+      "type": "text",
+      "x": 920,
+      "y": 980,
+      "width": 400,
+      "height": 220,
+      "text": "## [[回收期的价值盲区|回收期只量回收速度]]\n*Payback measures recovery speed*\n\n普通与折现回收期都忽略截止日后的现金流。",
+      "color": "6"
+    },
+    {
+      "id": "cb-risk",
+      "type": "text",
+      "x": 0,
+      "y": 1320,
+      "width": 400,
+      "height": 220,
+      "text": "## [[敏感性、情景与模拟|三种不确定性工具]]\n*Three uncertainty tools*\n\n分别看局部驱动、成套未来和模型隐含的结果分布。",
+      "color": "1"
+    },
+    {
+      "id": "cb-mutual",
+      "type": "text",
+      "x": 460,
+      "y": 1320,
+      "width": 400,
+      "height": 220,
+      "text": "## [[互斥项目的增量 NPV|互斥项目比较增量 NPV]]\n*Incremental NPV for exclusive choices*\n\n可行集须含“全部拒绝”；规模或时序不同会使 IRR、PI 排序偏离总价值最大化。",
+      "color": "3"
+    },
+    {
+      "id": "cb-capital",
+      "type": "text",
+      "x": 920,
+      "y": 1320,
+      "width": 400,
+      "height": 220,
+      "text": "## [[资本限额下的项目组合|资本限额下选组合]]\n*Portfolio choice under rationing*\n\n不可分项目要最大化组合 NPV；PI 贪心排序没有一般保证。",
+      "color": "3"
+    },
+    {
+      "id": "cb-unequal",
+      "type": "text",
+      "x": 460,
+      "y": 1660,
+      "width": 400,
+      "height": 220,
+      "text": "## [[不同寿命项目的替换假设|不同寿命先审替换假设]]\n*Unequal lives require a replacement assumption*\n\n一次性机会可直接比 NPV；EAV 不能凭空加入重复。",
+      "color": "3"
+    },
+    {
+      "id": "cb-option",
+      "type": "text",
+      "x": 0,
+      "y": 1660,
+      "width": 400,
+      "height": 220,
+      "text": "## [[实物期权与管理灵活性|实物期权是可执行权利]]\n*Real options are exercisable rights*\n\n未来信息到来后必须能延迟、分期、扩缩、切换或放弃。",
+      "color": "1"
+    }
+  ],
+  "edges": [
+    {
+      "id": "cb-e01",
+      "fromNode": "cb-rate",
+      "fromSide": "bottom",
+      "toNode": "cb-fcf",
+      "toSide": "top",
+      "label": "约束贴现口径"
+    },
+    {
+      "id": "cb-e02",
+      "fromNode": "cb-real",
+      "fromSide": "bottom",
+      "toNode": "cb-terminal",
+      "toSide": "top",
+      "label": "约束金额口径"
+    },
+    {
+      "id": "cb-e03",
+      "fromNode": "cb-incremental",
+      "fromSide": "left",
+      "toNode": "cb-fcf",
+      "toSide": "right",
+      "label": "形成经营口径"
+    },
+    {
+      "id": "cb-e04",
+      "fromNode": "cb-incremental",
+      "fromSide": "right",
+      "toNode": "cb-terminal",
+      "toSide": "left",
+      "label": "补齐时点现金流"
+    },
+    {
+      "id": "cb-e05",
+      "fromNode": "cb-fcf",
+      "fromSide": "right",
+      "toNode": "cb-npv",
+      "toSide": "left",
+      "label": "提供无杠杆分子"
+    },
+    {
+      "id": "cb-e06",
+      "fromNode": "cb-incremental",
+      "fromSide": "bottom",
+      "toNode": "cb-npv",
+      "toSide": "top",
+      "label": "只估决策差额"
+    },
+    {
+      "id": "cb-e07",
+      "fromNode": "cb-terminal",
+      "fromSide": "left",
+      "toNode": "cb-npv",
+      "toSide": "right",
+      "label": "补齐税后终值"
+    },
+    {
+      "id": "cb-e08",
+      "fromNode": "cb-npv",
+      "fromSide": "left",
+      "toNode": "cb-irr",
+      "toSide": "right",
+      "label": "根式替代指标"
+    },
+    {
+      "id": "cb-e09",
+      "fromNode": "cb-npv",
+      "fromSide": "right",
+      "toNode": "cb-payback",
+      "toSide": "left",
+      "label": "回收速度补充"
+    },
+    {
+      "id": "cb-e10",
+      "fromNode": "cb-npv",
+      "fromSide": "bottom",
+      "toNode": "cb-mutual",
+      "toSide": "top",
+      "label": "进入方案选择"
+    },
+    {
+      "id": "cb-e11",
+      "fromNode": "cb-irr",
+      "fromSide": "right",
+      "toNode": "cb-mutual",
+      "toSide": "left",
+      "label": "比率排序可冲突"
+    },
+    {
+      "id": "cb-e12",
+      "fromNode": "cb-npv",
+      "fromSide": "left",
+      "toNode": "cb-risk",
+      "toSide": "top",
+      "label": "分析输入不确定性"
+    },
+    {
+      "id": "cb-e13",
+      "fromNode": "cb-mutual",
+      "fromSide": "right",
+      "toNode": "cb-capital",
+      "toSide": "left",
+      "label": "加入预算约束"
+    },
+    {
+      "id": "cb-e14",
+      "fromNode": "cb-mutual",
+      "fromSide": "bottom",
+      "toNode": "cb-unequal",
+      "toSide": "top",
+      "label": "寿命不同时"
+    },
+    {
+      "id": "cb-e15",
+      "fromNode": "cb-risk",
+      "fromSide": "bottom",
+      "toNode": "cb-option",
+      "toSide": "top",
+      "label": "若信息后可行动"
+    }
+  ]
+}

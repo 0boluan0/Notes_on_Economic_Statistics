@@ -1,0 +1,23 @@
+{
+	"nodes":[
+		{"id":"title","type":"text","x":0,"y":-320,"width":2340,"height":230,"text":"# Missing Semester · 全课程路线\n\n[[03_Computer_Science/99_Miscellaneous/the_missing_semester|打开逐讲课程笔记]] · [[03_Computer_Science/99_Miscellaneous/Shell与数据管道|先从日志例子进入第 1、2、4、5 讲]]\n\n按讲次阅读；主题图用于理解关系，共享原子保留唯一解释。这里不推定学习完成状态，也不另建任务。"},
+		{"id":"l1","type":"text","x":0,"y":0,"width":480,"height":230,"text":"## [[03_Computer_Science/99_Miscellaneous/the_missing_semester#第 1 讲 课程概览与 shell|1 · Shell]]\n\n解释命令、路径、权限、流与退出状态。\n\n[[Shell、数据整理与命令行环境.canvas|展开主题关系图]]"},
+		{"id":"l2","type":"text","x":620,"y":0,"width":480,"height":230,"text":"## [[03_Computer_Science/99_Miscellaneous/the_missing_semester#第 2 讲 Shell 工具和脚本|2 · 工具与脚本]]\n\n展开后的参数边界、执行环境与可靠性。"},
+		{"id":"l3","type":"text","x":1240,"y":0,"width":480,"height":230,"text":"## [[03_Computer_Science/99_Miscellaneous/the_missing_semester#第 3 讲 编辑器 (Vim)|3 · 编辑器]]\n\n移动、选择、操作、重复与宏。"},
+		{"id":"l4","type":"text","x":1860,"y":0,"width":480,"height":230,"text":"## [[03_Computer_Science/99_Miscellaneous/the_missing_semester#第 4 讲 数据整理|4 · 数据整理]]\n\n先定格式，再筛选、替换、聚合和计数。\n\n[[Shell、数据整理与命令行环境.canvas|展开主题关系图]]"},
+		{"id":"l5","type":"text","x":0,"y":410,"width":480,"height":230,"text":"## [[03_Computer_Science/99_Miscellaneous/the_missing_semester#第 5 讲 命令行环境|5 · 运行环境]]\n\n配置、作业、终端会话与远端身份。"},
+		{"id":"l6","type":"text","x":620,"y":410,"width":480,"height":230,"text":"## [[03_Computer_Science/99_Miscellaneous/the_missing_semester#第 6 讲 版本控制 (Git)|6 · 版本控制]]\n\n对象图、三棵状态、整合与恢复边界。\n\n[[Git 版本控制.canvas|展开主题关系图]]"},
+		{"id":"l7","type":"text","x":1240,"y":410,"width":480,"height":230,"text":"## [[03_Computer_Science/99_Miscellaneous/the_missing_semester#第 7 讲 调试及性能分析|7 · 调试与性能]]\n\n先复现和检验假设，再按工作负载剖析。\n\n[[测试、调试、异常与断言.canvas|展开主题关系图]]"},
+		{"id":"l8","type":"text","x":1860,"y":410,"width":480,"height":230,"text":"## [[03_Computer_Science/99_Miscellaneous/the_missing_semester#第 8 讲 元编程|8 · 构建与自动化]]\n\n依赖关系、构建、版本与持续集成。\n\n[[构建、依赖与 CI.canvas|展开主题关系图]]"},
+		{"id":"l9","type":"text","x":0,"y":820,"width":480,"height":230,"text":"## [[03_Computer_Science/99_Miscellaneous/the_missing_semester#第 9 讲 安全和密码学|9 · 安全]]\n\n从威胁与信任边界选择密码学原语。\n\n[[密码学原语与安全模型.canvas|展开主题关系图]]"},
+		{"id":"l10","type":"text","x":620,"y":820,"width":480,"height":230,"text":"## [[03_Computer_Science/99_Miscellaneous/the_missing_semester#第 10 讲 大杂烩|10 · 其他工具]]\n\n回到课程原文，按具体问题扩展工具箱。"},
+		{"id":"l11","type":"text","x":1240,"y":820,"width":480,"height":230,"text":"## [[03_Computer_Science/99_Miscellaneous/the_missing_semester#第 11 讲 提问&回答|11 · 问答]]\n\n解释为什么选工具，迁移到自己的工作。"},
+		{"id":"practice","type":"text","x":1860,"y":820,"width":480,"height":230,"text":"## 回到实际操作\n\n[[03_Computer_Science/99_Miscellaneous/Shell与数据管道|五条模拟日志的完整推演]]\n\n原课程练习继续保存在课程目录；操作前确认路径、进程与权限范围。"}
+	],
+	"edges":[
+		{"id":"e0","fromNode":"l1","toNode":"l2","fromSide":"right","toSide":"left","toEnd":"arrow","label":"命令到复用"},
+		{"id":"e1","fromNode":"l7","toNode":"l8","fromSide":"right","toSide":"left","toEnd":"arrow","label":"验证自动化"},
+		{"id":"e2","fromNode":"l1","toNode":"l5","fromSide":"bottom","toSide":"top","toEnd":"arrow","label":"明确运行环境"},
+		{"id":"e3","fromNode":"l5","toNode":"l9","fromSide":"bottom","toSide":"top","toEnd":"arrow","label":"再核对信任"}
+	]
+}

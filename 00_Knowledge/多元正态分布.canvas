@@ -1,0 +1,159 @@
+{
+  "nodes": [
+    {
+      "id": "a17c09e4b36d5f82",
+      "type": "text",
+      "text": "## 多元正态分布 · 原子地图\n\n从定义出发：上支处理变换与条件化，中支标出独立性的 Gaussian 特例，下支处理密度、距离和模型诊断。颜色只区分语义角色，不表示掌握度；本主题七张原子卡均已完成来源核验，另引入一张跨主题独立性边界。",
+      "x": 0,
+      "y": 0,
+      "width": 480,
+      "height": 160
+    },
+    {
+      "id": "3f18b7c2a9d46e05",
+      "type": "text",
+      "text": "### [[联合Gaussian|联合 Gaussian 的定义]]\n\n所有线性组合都是一元 Gaussian；半正定协方差允许退化分布。",
+      "x": 0,
+      "y": 260,
+      "width": 480,
+      "height": 180,
+      "color": "4"
+    },
+    {
+      "id": "8c2e51f0d7a4396b",
+      "type": "text",
+      "text": "### [[Gaussian仿射闭包|仿射闭包与边际]]\n\n$AX+b$ 仍为 Gaussian；取边际是 selection matrix 的特例。",
+      "x": 680,
+      "y": 0,
+      "width": 500,
+      "height": 180,
+      "color": "2"
+    },
+    {
+      "id": "e4b9061c2d7f5a83",
+      "type": "text",
+      "text": "### [[Gaussian条件分布|条件 Gaussian]]\n\n条件均值作线性调整；条件协方差是 Schur 补。普通公式要求被条件化协方差块可逆。",
+      "x": 1400,
+      "y": 0,
+      "width": 520,
+      "height": 200,
+      "color": "2"
+    },
+    {
+      "id": "6d3a8f21c0b497e5",
+      "type": "text",
+      "text": "### [[联合高斯独立判据|零协方差与独立]]\n\n联合 Gaussian 下零交叉协方差推出独立；只有 Gaussian 边际仍不够。",
+      "x": 680,
+      "y": 260,
+      "width": 500,
+      "height": 180,
+      "color": "3"
+    },
+    {
+      "id": "b52f7d90a1c638e4",
+      "type": "text",
+      "text": "### [[Gaussian密度与奇异支撑|密度与奇异支撑]]\n\n正定协方差给全维椭球密度；奇异 Gaussian 只落在低维仿射子空间。",
+      "x": 680,
+      "y": 560,
+      "width": 500,
+      "height": 200,
+      "color": "5"
+    },
+    {
+      "id": "09e6c1b3f8a4725d",
+      "type": "text",
+      "text": "### [[Gaussian马氏平方律|Mahalanobis 平方律]]\n\n用真实总体均值与正定协方差白化时，平方距离服从 $\\chi_p^2$；同样本估计参数后不再是这条精确律。",
+      "x": 1400,
+      "y": 560,
+      "width": 520,
+      "height": 200,
+      "color": "5"
+    },
+    {
+      "id": "f7a320d5c9841e6b",
+      "type": "text",
+      "text": "### [[联合Gaussian诊断|联合 Gaussian 诊断流程]]\n\n先核对数据与拟合，再合并边际、投影、Mahalanobis 结构和下游敏感性；异常点必须回到来源判断。",
+      "x": 2120,
+      "y": 560,
+      "width": 520,
+      "height": 220,
+      "color": "1"
+    },
+    {
+      "id": "4c81d9a6e2f735b0",
+      "type": "text",
+      "text": "### [[边际与马氏图不证联合Gaussian|诊断相容不等于证明]]\n\n边际正态不控制变量的联合依赖；用同一样本拟合均值与协方差后，Mahalanobis 图也不是总体定律的独立证明。",
+      "x": 2120,
+      "y": 900,
+      "width": 520,
+      "height": 220,
+      "color": "1"
+    }
+  ],
+  "edges": [
+    {
+      "id": "1a6f3c8d52b790e4",
+      "fromNode": "3f18b7c2a9d46e05",
+      "fromSide": "right",
+      "toNode": "8c2e51f0d7a4396b",
+      "toSide": "left",
+      "label": "推出仿射闭包"
+    },
+    {
+      "id": "c4e91b2a760d5f83",
+      "fromNode": "8c2e51f0d7a4396b",
+      "fromSide": "right",
+      "toNode": "e4b9061c2d7f5a83",
+      "toSide": "left",
+      "label": "分块后条件化"
+    },
+    {
+      "id": "7b20e5c193d84fa6",
+      "fromNode": "3f18b7c2a9d46e05",
+      "fromSide": "right",
+      "toNode": "6d3a8f21c0b497e5",
+      "toSide": "left",
+      "label": "加零互协方差"
+    },
+    {
+      "id": "d58a0f3b9c2176e4",
+      "fromNode": "6d3a8f21c0b497e5",
+      "fromSide": "right",
+      "toNode": "e4b9061c2d7f5a83",
+      "toSide": "bottom",
+      "label": "独立残差导出条件律"
+    },
+    {
+      "id": "2f7c16a8e493b5d0",
+      "fromNode": "3f18b7c2a9d46e05",
+      "fromSide": "right",
+      "toNode": "b52f7d90a1c638e4",
+      "toSide": "left",
+      "label": "按协方差秩分流"
+    },
+    {
+      "id": "93b5e0c47a1d68f2",
+      "fromNode": "b52f7d90a1c638e4",
+      "fromSide": "right",
+      "toNode": "09e6c1b3f8a4725d",
+      "toSide": "left",
+      "label": "正定时白化"
+    },
+    {
+      "id": "e61d94a3b7082fc5",
+      "fromNode": "09e6c1b3f8a4725d",
+      "fromSide": "right",
+      "toNode": "f7a320d5c9841e6b",
+      "toSide": "left",
+      "label": "已知参数律仅作诊断参照"
+    },
+    {
+      "id": "5b92e0c7f3a846d1",
+      "fromNode": "f7a320d5c9841e6b",
+      "fromSide": "bottom",
+      "toNode": "4c81d9a6e2f735b0",
+      "toSide": "top",
+      "label": "诊断不等于证明"
+    }
+  ]
+}

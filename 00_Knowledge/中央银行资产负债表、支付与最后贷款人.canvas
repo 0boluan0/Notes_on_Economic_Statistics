@@ -1,0 +1,406 @@
+{
+  "nodes": [
+    {
+      "id": "cb-header",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 1780,
+      "height": 150,
+      "text": "# 中央银行资产负债表、支付与最后贷款人\n\n四条学习路径：**资产负债表与流动性**、**支付与日内信用**、**最后贷款人与危机工具**、**系统稳定与治理**。箭头标签说明命题关系；颜色只区分语义角色，不表示掌握程度。",
+      "color": "4"
+    },
+    {
+      "id": "cb001",
+      "type": "text",
+      "x": 0,
+      "y": 220,
+      "width": 400,
+      "height": 150,
+      "text": "### [[央行资产负债恒等式|资产 = 负债 + 资本]]\n\n恒等式普遍成立；科目、合并范围和估值口径必须按制度与日期核对。",
+      "color": "4"
+    },
+    {
+      "id": "cb002",
+      "type": "text",
+      "x": 460,
+      "y": 220,
+      "width": 400,
+      "height": 150,
+      "text": "### [[央行负债分类|负债持有人边界]]\n\n政府、外国官方与其他存款不能自动算作银行准备金。",
+      "color": "4"
+    },
+    {
+      "id": "cb003",
+      "type": "text",
+      "x": 0,
+      "y": 440,
+      "width": 400,
+      "height": 150,
+      "text": "### [[央行购券与贷款|购债 ≠ 央行贷款]]\n\n即使两者都扩表，资产、交易对手、期限、风险和政策目的仍不同。",
+      "color": "2"
+    },
+    {
+      "id": "cb004",
+      "type": "text",
+      "x": 460,
+      "y": 440,
+      "width": 400,
+      "height": 150,
+      "text": "### [[央行贷款分录|贷款与偿还 T-account]]\n\n在标准准备金结算中，发放扩表；还本通常反向注销。",
+      "color": "2"
+    },
+    {
+      "id": "cb005",
+      "type": "text",
+      "x": 920,
+      "y": 440,
+      "width": 400,
+      "height": 150,
+      "text": "### [[准备金与银行资本|准备金 ≠ 银行资本]]\n\n央行贷款增加流动性和负债，不自动填补净资产缺口。",
+      "color": "1"
+    },
+    {
+      "id": "cb011",
+      "type": "text",
+      "x": 1380,
+      "y": 440,
+      "width": 400,
+      "height": 150,
+      "text": "### [[流动性与偿付能力|流动性不足 ≠ 资不抵债]]\n\n概念可分；实时资产估值与未来回收率却不确定。",
+      "color": "1"
+    },
+    {
+      "id": "cb006",
+      "type": "text",
+      "x": 0,
+      "y": 660,
+      "width": 400,
+      "height": 150,
+      "text": "### [[支付最终性与日内流动性|最终性 ≠ 日内资金充足]]\n\n不可撤销的结算仍要求付款时点有余额或信用。",
+      "color": "2"
+    },
+    {
+      "id": "cb007",
+      "type": "text",
+      "x": 460,
+      "y": 660,
+      "width": 400,
+      "height": 150,
+      "text": "### [[日间透支|日间透支是央行信用]]\n\n支付继续进行，流动性约束转成央行对参与者的信用暴露。",
+      "color": "2"
+    },
+    {
+      "id": "cb008",
+      "type": "text",
+      "x": 920,
+      "y": 660,
+      "width": 400,
+      "height": 150,
+      "text": "### [[支付系统日内流动性指标|流量、资金缺口、净额与堵塞]]\n\n短时总流量、沿路径最大资金缺口、日终净额与协调等待不是同一量。",
+      "color": "1"
+    },
+    {
+      "id": "cb012",
+      "type": "text",
+      "x": 1380,
+      "y": 660,
+      "width": 400,
+      "height": 150,
+      "text": "### [[火售流动性偿付反馈|火售反馈]]\n\n折价变现侵蚀资本，价格外部性又触发更多同步出售。",
+      "color": "2"
+    },
+    {
+      "id": "cb009",
+      "type": "text",
+      "x": 0,
+      "y": 880,
+      "width": 400,
+      "height": 150,
+      "text": "### [[央行流动性工具分类|央行流动性工具分类]]\n\n按对象、常态/应急、交易形式、期限和政策目的识别。",
+      "color": "4"
+    },
+    {
+      "id": "cb010",
+      "type": "text",
+      "x": 460,
+      "y": 880,
+      "width": 400,
+      "height": 150,
+      "text": "### [[美国 §10B 与 §13(3)|美国 §10B 与 §13(3)]]\n\n个别存款机构窗口与广泛应急便利具有不同法权和限制。",
+      "color": "1"
+    },
+    {
+      "id": "cb018",
+      "type": "text",
+      "x": 1380,
+      "y": 880,
+      "width": 400,
+      "height": 150,
+      "text": "### [[微观与宏观审慎|单家稳健 ⇏ 体系稳定]]\n\n共同敞口、互联、期限错配和同步火售产生系统外部性。",
+      "color": "3"
+    },
+    {
+      "id": "cb013",
+      "type": "text",
+      "x": 0,
+      "y": 1100,
+      "width": 400,
+      "height": 150,
+      "text": "### [[Bagehot 准则|Bagehot 准则及边界]]\n\n充分放贷、合格抵押、保护性定价；不能越过现代法律与资格。",
+      "color": "4"
+    },
+    {
+      "id": "cb014",
+      "type": "text",
+      "x": 460,
+      "y": 1100,
+      "width": 400,
+      "height": 150,
+      "text": "### [[央行贷款风险控制|贷款风险控制]]\n\n抵押、haircut、期限、定价、资格和监督只能降险，不能归零。",
+      "color": "2"
+    },
+    {
+      "id": "cb015",
+      "type": "text",
+      "x": 920,
+      "y": 1100,
+      "width": 400,
+      "height": 150,
+      "text": "### [[惩罚性利率的比较基准|“惩罚性”必须有基准]]\n\n先锁定 facility、期限、市场基准、借款人条件和 operating framework。",
+      "color": "1"
+    },
+    {
+      "id": "cb016",
+      "type": "text",
+      "x": 1380,
+      "y": 1100,
+      "width": 400,
+      "height": 150,
+      "text": "### [[贴现窗口污名|贴现窗口污名]]\n\n借款信号可能妨碍早用；保密与披露之间存在真实取舍。",
+      "color": "3"
+    },
+    {
+      "id": "cb017",
+      "type": "text",
+      "x": 0,
+      "y": 1320,
+      "width": 400,
+      "height": 150,
+      "text": "### [[银行危机工具分工|危机工具与损失承担]]\n\n流动性、资本、保险和处置解决不同缺口，不能都叫 bailout。",
+      "color": "3"
+    },
+    {
+      "id": "cb019",
+      "type": "text",
+      "x": 0,
+      "y": 1540,
+      "width": 400,
+      "height": 150,
+      "text": "### [[央行法定目标|法定目标随法域变化]]\n\n价格、就业、政府政策与金融稳定的组合和排序并不统一。",
+      "color": "4"
+    },
+    {
+      "id": "cb020",
+      "type": "text",
+      "x": 460,
+      "y": 1540,
+      "width": 400,
+      "height": 150,
+      "text": "### [[央行目标与工具独立性|目标独立 ≠ 工具独立]]\n\n独立性有维度，也始终受法律授权和民主问责约束。",
+      "color": "1"
+    },
+    {
+      "id": "cb021",
+      "type": "text",
+      "x": 920,
+      "y": 1540,
+      "width": 400,
+      "height": 150,
+      "text": "### [[央行透明与问责|透明与问责机制]]\n\n沟通、报表、监督和事后解释分别回答理由、账目、授权与结果。",
+      "color": "2"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e001",
+      "fromNode": "cb001",
+      "fromSide": "right",
+      "toNode": "cb002",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "恒等式中的负债分类"
+    },
+    {
+      "id": "e002",
+      "fromNode": "cb001",
+      "fromSide": "bottom",
+      "toNode": "cb003",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "用于比较资产端操作"
+    },
+    {
+      "id": "e003",
+      "fromNode": "cb003",
+      "fromSide": "right",
+      "toNode": "cb004",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "贷款分支的具体记账"
+    },
+    {
+      "id": "e004",
+      "fromNode": "cb004",
+      "fromSide": "right",
+      "toNode": "cb005",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "资产负债等额增加不补资本"
+    },
+    {
+      "id": "e005",
+      "fromNode": "cb005",
+      "fromSide": "right",
+      "toNode": "cb011",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "区分现金缺口与价值缺口"
+    },
+    {
+      "id": "e006",
+      "fromNode": "cb011",
+      "fromSide": "bottom",
+      "toNode": "cb012",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "火售可把流动性缺口变成资本损失"
+    },
+    {
+      "id": "e007",
+      "fromNode": "cb012",
+      "fromSide": "bottom",
+      "toNode": "cb018",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "价格外部性可放大成系统风险"
+    },
+    {
+      "id": "e008",
+      "fromNode": "cb006",
+      "fromSide": "right",
+      "toNode": "cb007",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "适用条件下可由央行信用覆盖"
+    },
+    {
+      "id": "e009",
+      "fromNode": "cb007",
+      "fromSide": "right",
+      "toNode": "cb008",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "实际透支取决于日内收付路径"
+    },
+    {
+      "id": "e010",
+      "fromNode": "cb007",
+      "fromSide": "bottom",
+      "toNode": "cb009",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "日内信用须与其他便利区分"
+    },
+    {
+      "id": "e011",
+      "fromNode": "cb009",
+      "fromSide": "right",
+      "toNode": "cb010",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "美国法权的具体实例"
+    },
+    {
+      "id": "e012",
+      "fromNode": "cb009",
+      "fromSide": "bottom",
+      "toNode": "cb013",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "最后贷款人的历史原则"
+    },
+    {
+      "id": "e013",
+      "fromNode": "cb010",
+      "fromSide": "bottom",
+      "toNode": "cb014",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "法定边界要求风险控制"
+    },
+    {
+      "id": "e014",
+      "fromNode": "cb013",
+      "fromSide": "right",
+      "toNode": "cb014",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "现代制度需另设风险控制参数"
+    },
+    {
+      "id": "e015",
+      "fromNode": "cb014",
+      "fromSide": "right",
+      "toNode": "cb015",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "定价是控制之一"
+    },
+    {
+      "id": "e016",
+      "fromNode": "cb015",
+      "fromSide": "right",
+      "toNode": "cb016",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "价格之外还有信号成本"
+    },
+    {
+      "id": "e017",
+      "fromNode": "cb013",
+      "fromSide": "bottom",
+      "toNode": "cb017",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "最后贷款人只是流动性一支"
+    },
+    {
+      "id": "e018",
+      "fromNode": "cb019",
+      "fromSide": "right",
+      "toNode": "cb020",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "谁定目标与谁选工具"
+    },
+    {
+      "id": "e019",
+      "fromNode": "cb020",
+      "fromSide": "right",
+      "toNode": "cb021",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "独立性要求配套问责"
+    },
+    {
+      "id": "e020",
+      "fromNode": "cb016",
+      "fromSide": "bottom",
+      "toNode": "cb021",
+      "toSide": "right",
+      "toEnd": "arrow",
+      "label": "披露时点体现问责取舍"
+    }
+  ]
+}

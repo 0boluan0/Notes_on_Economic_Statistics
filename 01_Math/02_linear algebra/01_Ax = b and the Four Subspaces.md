@@ -21,7 +21,7 @@ tags:
 *Course sources, conventions, and navigation*
 <!-- bilingual-en:end -->
 
-- 官方课程：MIT OCW 18.06SC *Linear Algebra, Fall 2011*；总入口见 [[00_MIT OCW 18.06SC course map|课程总览]]。
+- 官方课程：MIT OCW 18.06SC *Linear Algebra, Fall 2011*；连续学习入口见 [[00_课程总览|线性代数课程总览]]，官方 Session 顺序与资料对应见 [[00_MIT OCW 18.06SC course map|课程资料地图]]。
 - 本地资料索引：[[MIT_OCW_18.06SC_PDF/index|MIT 18.06SC PDF 索引]]。
 - 本篇严格按官网逻辑顺序写：Geometry → Overview → Elimination → Inverse → LU → Vector Spaces → Column/Null Spaces → $Ax=0$ → $Ax=b$ → Basis/Dimension → Four Subspaces → Matrix Spaces → Graphs → Review → Exam 1。
 - **编号提醒**：官网第二讲 Overview 的本地 summary 是 `Ses1.13sum.pdf`；官网第三至第十三讲依次使用本地 `Ses1.2–Ses1.12` 资料。
@@ -127,14 +127,14 @@ $$
 =\begin{bmatrix}0\\3\end{bmatrix}.
 $$
 
-这引出 [[线性方程组与四个基本子空间#四个基本子空间|列空间]]：$Ax=b$ 有解，当且仅当 $b$ 属于 $A$ 的列向量所张成的空间。
+这引出 [[列空间]]：$Ax=b$ 有解，当且仅当 $b$ 属于 $A$ 的列向量所张成的空间。
 <!-- bilingual-en:start -->
-This leads to the [[线性方程组与四个基本子空间#四个基本子空间|column space]]: $Ax=b$ has a solution if and only if $b$ belongs to the span of the columns of $A$.
+This leads to the [[列空间|column space]]: $Ax=b$ has a solution if and only if $b$ belongs to the span of the columns of $A$.
 <!-- bilingual-en:end -->
 
-### 2. 矩阵乘向量的两种等价读法
+### 2. 矩阵乘向量的两种等价读法：[[Ax的列组合解释|列组合]]与[[矩阵乘积逐行作用|逐行作用]]
 <!-- bilingual-en:start -->
-*2. Two equivalent ways to read matrix–vector multiplication*
+*2. Two equivalent views of matrix–vector multiplication: [[Ax的列组合解释|column combinations]] and [[矩阵乘积逐行作用|rowwise action]]*
 <!-- bilingual-en:end -->
 
 设
@@ -194,9 +194,9 @@ The first view emphasizes which columns combine to produce the output; the secon
 > **Conclusion**: $Ax=\sum_jx_ja_j$.
 > <!-- bilingual-en:end -->
 
-### 3. 三种解的几何命运
+### 3. [[方程组解分类|三种解的几何命运]]
 <!-- bilingual-en:start -->
-*3. The three possible solution patterns*
+*3. [[方程组解分类|The three possible solution patterns]]*
 <!-- bilingual-en:end -->
 
 - **唯一解**：$b$ 可由列生成，而且系数表示唯一。
@@ -208,9 +208,9 @@ The first view emphasizes which columns combine to produce the output; the secon
 - **Infinitely many solutions**: $b$ is attainable, but some nonzero vector $z$ satisfies $Az=0$; if $Ax_p=b$, then $A(x_p+tz)=b$ for every scalar $t$.
 <!-- bilingual-en:end -->
 
-这里已经预告了 [[线性方程组与四个基本子空间#四个基本子空间|零空间]] 和 [[线性方程组与四个基本子空间#可解性与完整解|线性方程组解结构]]。注意：方阵并不自动可逆；列必须既独立又张成整个输出空间。
+这里已经预告了 [[零空间]] 和 [[特解加零空间|线性方程组解结构]]。注意：方阵并不自动可逆；列必须既独立又张成整个输出空间。
 <!-- bilingual-en:start -->
-This already anticipates the [[线性方程组与四个基本子空间#四个基本子空间|nullspace]] and the [[线性方程组与四个基本子空间#可解性与完整解|solution structure of a linear system]]. A square matrix is not automatically invertible: its columns must be linearly independent and must span the entire output space.
+This already anticipates the [[零空间|nullspace]] and the [[特解加零空间|solution structure of a linear system]]. A square matrix is not automatically invertible: its columns must be linearly independent and must span the entire output space.
 <!-- bilingual-en:end -->
 
 ### 4. Recitation 代表例题
@@ -474,9 +474,9 @@ $C(1,1,1)^T=0$. Constant displacements are therefore lost completely, and every 
 - **SVD**: Find the most natural orthogonal input and output directions for any $m\times n$ matrix.
 <!-- bilingual-en:end -->
 
-其中 [[线性方程组与四个基本子空间#基、维数与秩|秩]] 是贯穿全课的有效维数。若 $A$ 有 $n$ 列，秩—零度关系为
+其中 [[矩阵秩|秩]] 是贯穿全课的有效维数。若 $A$ 有 $n$ 列，[[秩零度定理|秩—零度关系]]为
 <!-- bilingual-en:start -->
-[[线性方程组与四个基本子空间#基、维数与秩|Rank]] is the effective dimension used throughout the course. If $A$ has $n$ columns, the rank–nullity relation is
+[[矩阵秩|Rank]] is the effective dimension used throughout the course. If $A$ has $n$ columns, the [[秩零度定理|rank–nullity relation]] is
 <!-- bilingual-en:end -->
 
 $$
@@ -627,9 +627,9 @@ $Ax=b$ → the input-side nullspace $N(A)$ and output-side column space $C(A)$ �
 *1. Three basic row operations*
 <!-- bilingual-en:end -->
 
-[[线性方程组与四个基本子空间#消元、主元与 LU|高斯消元（Gaussian elimination）]]对增广矩阵 $[A\mid b]$ 反复使用三类可逆行操作：
+[[高斯消元|高斯消元（Gaussian elimination）]]对增广矩阵 $[A\mid b]$ 反复使用三类可逆行操作：
 <!-- bilingual-en:start -->
-[[线性方程组与四个基本子空间#消元、主元与 LU|Gaussian elimination]] repeatedly uses three types of invertible operations on the augmented matrix $[A\mid b]$:
+[[高斯消元|Gaussian elimination]] repeatedly uses three types of invertible operations on the augmented matrix $[A\mid b]$:
 <!-- bilingual-en:end -->
 
 1. 交换两行；
@@ -650,17 +650,17 @@ $Ax=b$ → the input-side nullspace $N(A)$ and output-side column space $C(A)$ �
 >
 > **边界**：一行乘 $0$ 不可逆，会丢掉原方程，因此不允许。
 >
-> **结论**：三种操作均可逆，故新旧系统有完全相同的解集；对应的系数矩阵彼此[[线性方程组与四个基本子空间#消元、主元与 LU|行等价（row-equivalent）]]。
+> **结论**：三种操作均可逆，故新旧系统有完全相同的解集。由一串可逆行操作连接的矩阵称为[[行等价]]；这里要复用的核心结论是[[行操作的解集不变性|行操作保持解集]]。
 > <!-- bilingual-en:start -->
 > **Goal:** prove that the systems before and after each operation are equivalent.
 > **Argument:** Swapping two equations changes only their order. Multiplying an equation by $c\ne0$ is reversed by multiplying by $1/c$. Replacing $R_i$ by $R_i-kR_j$ is reversed by $R_i\leftarrow R_i+kR_j$. Since each operation is reversible, it neither loses nor introduces solutions.
 > **Boundary:** Multiplying a row by $0$ is not invertible: it destroys the original equation and is therefore not an allowed elementary row operation.
-> **Conclusion**: The three operations are invertible, so the original and transformed systems have exactly the same solution set; their coefficient matrices are [[线性方程组与四个基本子空间#消元、主元与 LU|row-equivalent]].
+> **Conclusion**: The three operations are invertible, so the original and transformed systems have exactly the same solution set. Matrices connected by reversible row operations are row-equivalent; the reusable result here is that [[行操作的解集不变性|row operations preserve the solution set]].
 > <!-- bilingual-en:end -->
 
-行操作也可以写成左乘[[线性方程组与四个基本子空间#消元、主元与 LU|初等矩阵（elementary matrix）]]。若
+行操作也可以写成左乘[[初等矩阵|初等矩阵（elementary matrix）]]。若
 <!-- bilingual-en:start -->
-Row operations can also be represented by left multiplication with an [[线性方程组与四个基本子空间#消元、主元与 LU|elementary matrix]]. If
+Row operations can also be represented by left multiplication with an [[初等矩阵|elementary matrix]]. If
 <!-- bilingual-en:end -->
 
 $$
@@ -677,9 +677,9 @@ $E_{21}A$ replaces the second row of $A$ by $R_2-3R_1$. Left multiplication perf
 *2. Pivots, row exchanges, and elimination failure*
 <!-- bilingual-en:end -->
 
-每一步用一个非零[[线性方程组与四个基本子空间#消元、主元与 LU|pivot（主元）]]消去其下方元素。若预定主元是 $0$：
+每一步用一个非零[[主元|pivot（主元）]]消去其下方元素。若预定主元是 $0$：
 <!-- bilingual-en:start -->
-Each step uses a nonzero [[线性方程组与四个基本子空间#消元、主元与 LU|pivot]] to eliminate the entries below it. If the intended pivot is $0$:
+Each step uses a nonzero [[主元|pivot]] to eliminate the entries below it. If the intended pivot is $0$:
 <!-- bilingual-en:end -->
 
 - 下方有非零数：交换行，将非零数换上来；
@@ -923,9 +923,9 @@ Let $A\in\mathbb R^{m\times n}$ and $B\in\mathbb R^{n\times p}$. Then $AB\in\mat
 <!-- bilingual-en:end -->
 
 1. **行乘列**：$(AB)_{ij}=\sum_{k=1}^n a_{ik}b_{kj}$。
-2. **按列**：$AB$ 的第 $j$ 列是 $A$ 乘 $B$ 的第 $j$ 列。
-3. **按行**：$AB$ 的第 $i$ 行是 $A$ 的第 $i$ 行乘 $B$。
-4. **外积和**：
+2. **[[矩阵乘积逐列作用|按列]]**：$AB$ 的第 $j$ 列是 $A$ 乘 $B$ 的第 $j$ 列。
+3. **[[矩阵乘积逐行作用|按行]]**：$AB$ 的第 $i$ 行是 $A$ 的第 $i$ 行乘 $B$。
+4. **[[矩阵乘积外积展开|外积和]]**：
    $$
    AB=\sum_{k=1}^n A_{:k}B_{k:},
    $$
@@ -934,20 +934,22 @@ Let $A\in\mathbb R^{m\times n}$ and $B\in\mathbb R^{n\times p}$. Then $AB\in\mat
 
 &nbsp;
 **1.** **Row times column**: $(AB)_{ij}=\sum_{k=1}^n a_{ik}b_{kj}$.<br>
-**2.** **By columns**: Column $j$ of $AB$ is $A$ times column $j$ of $B$.<br>
-**3.** **By rows**: Row $i$ of $AB$ is row $i$ of $A$ multiplied by $B$.<br>
-**4.** **Sum of outer products**: $AB=\sum_{k=1}^n A_{:k}B_{k:}$.<br>
+**2.** **[[矩阵乘积逐列作用|By columns]]**: Column $j$ of $AB$ is $A$ times column $j$ of $B$.<br>
+**3.** **[[矩阵乘积逐行作用|By rows]]**: Row $i$ of $AB$ is row $i$ of $A$ multiplied by $B$.<br>
+**4.** **[[矩阵乘积外积展开|Sum of outer products]]**: $AB=\sum_{k=1}^n A_{:k}B_{k:}$.<br>
    Each term is the outer product of a column vector and a row vector, and therefore has rank at most one.
 <!-- bilingual-en:end -->
 
 矩阵乘法表示变换复合：$ABx=A(Bx)$，因此先做 $B$、后做 $A$。它满足结合律与分配律，但一般不满足交换律。
+
+逐列与逐行包含关系共同给出[[矩阵乘积秩上界|乘积的秩不超过任一因子的秩]]；这个结论可能严格小于，因为中间方向可能被后一个作用完全抹去。
 <!-- bilingual-en:start -->
 Matrix multiplication represents composition of transformations: $ABx=A(Bx)$, so $B$ acts first and $A$ second. Matrix multiplication is associative and distributive, but generally not commutative.
 <!-- bilingual-en:end -->
 
-### 2. 逆矩阵
+### 2. [[逆矩阵]]
 <!-- bilingual-en:start -->
-*2. Inverse matrix*
+*2. [[逆矩阵|Inverse matrix]]*
 <!-- bilingual-en:end -->
 
 若方阵 $A\in\mathbb R^{n\times n}$ 存在 $A^{-1}$ 使
@@ -959,12 +961,12 @@ $$
 A^{-1}A=AA^{-1}=I_n,
 $$
 
-则称 $A$ 可逆，$A^{-1}$ 是 [[线性方程组与四个基本子空间#可解性与完整解|逆矩阵]]。于是 $Ax=b$ 的唯一解为 $x=A^{-1}b$。
+则称 $A$ 可逆，$A^{-1}$ 是它的[[逆矩阵]]。于是 $Ax=b$ 的唯一解为 $x=A^{-1}b$。
 <!-- bilingual-en:start -->
-then $A$ is invertible and $A^{-1}$ is its [[线性方程组与四个基本子空间#可解性与完整解|inverse]]. Hence $Ax=b$ has the unique solution $x=A^{-1}b$.
+then $A$ is invertible and $A^{-1}$ is its [[逆矩阵|inverse]]. Hence $Ax=b$ has the unique solution $x=A^{-1}b$.
 <!-- bilingual-en:end -->
 
-> [!proof] 逆矩阵若存在则唯一
+> [!proof] [[逆矩阵唯一性|逆矩阵若存在则唯一]]
 > **目标**：若 $B$、$C$ 都是 $A$ 的双侧逆，证明 $B=C$。
 >
 > **变形**：
@@ -983,9 +985,9 @@ then $A$ is invertible and $A^{-1}$ is its [[线性方程组与四个基本子�
 > **Conclusion**: A two-sided inverse is unique.
 > <!-- bilingual-en:end -->
 
-### 3. Gauss–Jordan 求逆的原理
+### 3. [[Gauss-Jordan求逆|Gauss–Jordan 求逆原理]]
 <!-- bilingual-en:start -->
-*3. Why Gauss–Jordan elimination finds the inverse*
+*3. [[Gauss-Jordan求逆|Why Gauss–Jordan elimination finds the inverse]]*
 <!-- bilingual-en:end -->
 
 对增广矩阵 $[A\mid I]$ 做相同行操作，相当于左乘一串初等矩阵 $E_k\cdots E_1$。若左侧最终成为 $I$，则
@@ -1006,9 +1008,9 @@ $$
 [A\mid I]\longrightarrow[I\mid A^{-1}].
 $$
 
-若左侧无法产生 $n$ 个主元，$A$ 是 [[线性方程组与四个基本子空间#可解性与完整解|奇异矩阵]]，逆不存在。
+若左侧无法产生 $n$ 个主元，$A$ [[逆矩阵|不可逆]]，因此逆不存在。
 <!-- bilingual-en:start -->
-If the left block cannot produce $n$ pivots, then $A$ is a [[线性方程组与四个基本子空间#可解性与完整解|singular matrix]] and has no inverse.
+If the left block cannot produce $n$ pivots, then $A$ is [[逆矩阵|not invertible]] and has no inverse.
 <!-- bilingual-en:end -->
 
 ### 4. 可逆等价链
@@ -1036,7 +1038,7 @@ For an $n\times n$ matrix, the following statements are equivalent:
 - for every $b$, the system $Ax=b$ has a unique solution.
 <!-- bilingual-en:end -->
 
-这组结论集中见 [[线性方程组与四个基本子空间#基、维数与秩|可逆矩阵等价链]]。其逻辑核心是：无非零丢失方向保证一一性，覆盖整个输出空间保证满射；同维有限维空间中二者等价。
+这组结论集中见 [[可逆性与非零行列式|可逆矩阵等价链]]。其逻辑核心是：无非零丢失方向保证一一性，覆盖整个输出空间保证满射；同维有限维空间中二者等价。
 <!-- bilingual-en:start -->
 For a square matrix, having no nonzero direction mapped to zero gives injectivity, while reaching the entire output space gives surjectivity. In finite-dimensional spaces of equal dimension, these two properties are equivalent and are also equivalent to invertibility.
 <!-- bilingual-en:end -->
@@ -1228,9 +1230,9 @@ Matrix multiplication represents composition → elementary matrices represent i
 
 **本地资料**：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.4sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S05_Lecture_Factorization_into_A_LU.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S05_Recitation_LU_Decomposition.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.4prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.4sol.pdf#page=1|official solution p.1]]
 
-### 1. 从消元到 [[线性方程组与四个基本子空间#消元、主元与 LU|LU 分解]]
+### 1. 从消元到 [[消元与LU分解|LU 分解]]
 <!-- bilingual-en:start -->
-*1. From elimination to [[线性方程组与四个基本子空间#消元、主元与 LU|LU decomposition]]*
+*1. From elimination to [[消元与LU分解|LU decomposition]]*
 <!-- bilingual-en:end -->
 
 设消元不需要换行。若初等矩阵依次满足
@@ -1360,9 +1362,9 @@ $$
 *4. $PA=LU$ when row exchanges are required*
 <!-- bilingual-en:end -->
 
-若某一步必须交换行，用 [[线性方程组与四个基本子空间#消元、主元与 LU|置换矩阵]] $P$ 记录交换。常用约定是
+若某一步必须交换行，用 [[置换矩阵]] $P$ 记录交换。常用约定是
 <!-- bilingual-en:start -->
-If a step must exchange rows, record the exchange with [[线性方程组与四个基本子空间#消元、主元与 LU|permutation matrix]] $P$.  Common conventions are
+If a step must exchange rows, record the exchange with a [[置换矩阵|permutation matrix]] $P$. Common conventions are
 <!-- bilingual-en:end -->
 
 $$
@@ -1570,9 +1572,9 @@ $$
 > **Dimension check**: If $AB$ is $m\times p$, then both $(AB)^T$ and $B^TA^T$ are $p\times m$.
 > <!-- bilingual-en:end -->
 
-若 $A^T=A$，称 $A$ 为 [[对称矩阵与正定二次型#对称矩阵与谱定理|对称矩阵]]；若 $A^T=-A$，称为斜对称矩阵，实数情形下其对角元必须为 $0$。
+若 $A^T=A$，称 $A$ 为 [[实对称矩阵|对称矩阵]]；若 $A^T=-A$，称为斜对称矩阵，实数情形下其对角元必须为 $0$。
 <!-- bilingual-en:start -->
-If $A^T=A$, then $A$ is a [[对称矩阵与正定二次型#对称矩阵与谱定理|symmetric matrix]]. If $A^T=-A$, it is skew-symmetric; over the reals, every diagonal entry must then be zero.
+If $A^T=A$, then $A$ is a [[实对称矩阵|symmetric matrix]]. If $A^T=-A$, it is skew-symmetric; over the reals, every diagonal entry must then be zero.
 <!-- bilingual-en:end -->
 
 ### 2. 置换矩阵
@@ -1599,9 +1601,9 @@ The columns of $P$ are a permutation of the standard orthonormal basis, so $P^TP
 *3. Vector spaces and subspaces*
 <!-- bilingual-en:end -->
 
-一个 [[线性方程组与四个基本子空间#基、维数与秩|向量空间]] 必须对向量加法和标量乘法封闭，并满足通常的加法、数乘公理。若 $S\subseteq V$ 在继承 $V$ 的运算后仍为向量空间，称 $S$ 是 [[线性方程组与四个基本子空间#基、维数与秩|子空间]]。
+一个 [[向量空间]] 必须对向量加法和标量乘法封闭，并满足通常的加法、数乘公理。若 $S\subseteq V$ 在继承 $V$ 的运算后仍为向量空间，称 $S$ 是 [[子空间]]。
 <!-- bilingual-en:start -->
-A [[线性方程组与四个基本子空间#基、维数与秩|vector space]] must be closed under vector addition and scalar multiplication and satisfy the usual vector-space axioms. If $S\subseteq V$ remains a vector space under the operations inherited from $V$, then $S$ is a [[线性方程组与四个基本子空间#基、维数与秩|subspace]].
+A [[向量空间|vector space]] must be closed under vector addition and scalar multiplication and satisfy the usual vector-space axioms. If $S\subseteq V$ remains a vector space under the operations inherited from $V$, then $S$ is a [[子空间|subspace]].
 <!-- bilingual-en:end -->
 
 实用的子空间判别法：非空集合 $S$ 是子空间，当且仅当对任意 $u,v\in S$、任意标量 $\alpha,\beta$，有
@@ -1619,7 +1621,7 @@ $$
 > Taking $\alpha=\beta=0$ gives $0\in S$; taking $\alpha=-1,\beta=0$ gives $-u\in S$; and taking $\alpha=\beta=1$ gives closure under addition. Thus closure under arbitrary linear combinations is sufficient.
 > <!-- bilingual-en:end -->
 
-Recitation 在 $\mathbb R^3$ 中展示：一个非零向量的 span 是过原点的直线；两个不共线向量的 span 是过原点的平面。两条不同直线的并集通常不是子空间，因为分别取一条线上的向量后，它们的和一般不在并集中；但两条线的 span 是它们的和空间。
+Recitation 在 $\mathbb R^3$ 中展示：一个非零向量的 span 是过原点的直线；两个不共线向量的 span 是过原点的平面。两条不同直线的并集通常不是子空间，因为分别取一条线上的向量后，它们的和一般不在并集中；完整的充要条件见[[子空间并集判据]]。两条线的 span 则是它们的和空间。
 <!-- bilingual-en:start -->
 The recitation illustrates in $\mathbb R^3$ that the span of one nonzero vector is a line through the origin, while the span of two noncollinear vectors is a plane through the origin. The union of two distinct lines is generally not a subspace: adding one vector from each line usually leaves the union. Their joint span, by contrast, is the sum of the two line subspaces.
 <!-- bilingual-en:end -->
@@ -1911,7 +1913,7 @@ If a set is described by the homogeneous linear condition $b_1+b_2-b_3=0$, it is
 *Errors, Boundaries and Counterexamples*
 <!-- bilingual-en:end -->
 
-- 行操作通常改变列空间中的具体列，但保持行空间与零空间；找 $C(A)$ 的基必须回到原矩阵选 pivot columns。
+- [[行操作与四个子空间|行操作通常改变列空间中的具体列，但保持行空间与零空间]]；找 $C(A)$ 的基必须回到原矩阵选 pivot columns。
 - $C(A)$ 是列向量的 span，不是“列向量组成的有限集合”。
 - 非齐次解集通常不是子空间，因为不含 $0$；它是零空间的仿射平移。
 <!-- bilingual-en:start -->
@@ -1977,9 +1979,9 @@ $C(A)$ describes the reachable outputs → $N(A)$ describes input directions los
 *1. Reduced row-echelon form and the roles of the variables*
 <!-- bilingual-en:end -->
 
-把 $A$ 化为 [[线性方程组与四个基本子空间#消元、主元与 LU|行最简形]] $R$。由于行操作等价于左乘可逆矩阵 $E$，
+把 $A$ 化为 [[行最简形]] $R$；[[RREF存在唯一性|最终的 RREF 与消元路线无关]]。由于行操作等价于左乘可逆矩阵 $E$，
 <!-- bilingual-en:start -->
-Reduce $A$ to [[线性方程组与四个基本子空间#消元、主元与 LU|reduced row-echelon form]] $R$. Since row operations are equivalent to left multiplication by an invertible matrix $E$,
+Reduce $A$ to [[行最简形|reduced row-echelon form]] $R$. Since row operations are equivalent to left multiplication by an invertible matrix $E$,
 <!-- bilingual-en:end -->
 
 $$
@@ -1991,18 +1993,22 @@ $$
 row operations preserve the nullspace.
 <!-- bilingual-en:end -->
 
-- 主元列对应 **pivot variables（主元变量）**；
-- 非主元列对应 **free variables（自由变量）**；
+- 主元列对应 [[主元|pivot variables（主元变量）]]；
+- 非主元列对应 [[自由变量|free variables（自由变量）]]；
 - 每个自由变量依次取 $1$、其余自由变量取 $0$，得到一个 **special solution（特殊解）**。
 <!-- bilingual-en:start -->
-- Pivot columns correspond to **pivot variables**;
-- Nonpivot columns correspond to **free variables**;
+- Pivot columns correspond to [[主元|pivot variables]];
+- Nonpivot columns correspond to [[自由变量|free variables]];
 - Set one free variable to $1$ and all the others to $0$ in turn to obtain a **special solution**.
 <!-- bilingual-en:end -->
 
 若 $A$ 有 $n$ 列、rank 为 $r$，自由变量数是 $n-r$，也就是 $\dim N(A)$。
+
+这正是[[主元与自由变量|主元数、秩与自由度之间的关系]]。
 <!-- bilingual-en:start -->
 If $A$ has $n$ columns and rank $r$, then it has $n-r$ free variables, so $\dim N(A)=n-r$.
+
+This is the [[主元与自由变量|relation among pivots, rank, and degrees of freedom]].
 <!-- bilingual-en:end -->
 
 ### 2. 标准块形式
@@ -2481,9 +2487,9 @@ Augmented elimination tests consistency → a particular solution locates the af
 *1. Linear independence*
 <!-- bilingual-en:end -->
 
-向量 $v_1,\ldots,v_k$ 称为 [[线性方程组与四个基本子空间#基、维数与秩|线性无关]]，若
+向量 $v_1,\ldots,v_k$ 称为 [[线性无关]]，若
 <!-- bilingual-en:start -->
-The vectors $v_1,\ldots,v_k$ are [[线性方程组与四个基本子空间#基、维数与秩|linearly independent]] if
+The vectors $v_1,\ldots,v_k$ are [[线性无关|linearly independent]] if
 <!-- bilingual-en:end -->
 
 $$
@@ -2510,12 +2516,12 @@ A set containing the zero vector, duplicate vectors, or a vector that is a linea
 *2. Basis and dimension*
 <!-- bilingual-en:end -->
 
-空间 $S$ 的一组 [[线性方程组与四个基本子空间#基、维数与秩|基]] 同时满足：
+空间 $S$ 的一组 [[基]] 同时满足：
 <!-- bilingual-en:start -->
-A [[线性方程组与四个基本子空间#基、维数与秩|basis]] for a space $S$ must satisfy both conditions:
+A [[基|basis]] for a space $S$ must satisfy both conditions:
 <!-- bilingual-en:end -->
 
-1. 张成 $S$；
+1. [[张成]] $S$；
 2. 线性无关。
 <!-- bilingual-en:start -->
 
@@ -2525,8 +2531,12 @@ A [[线性方程组与四个基本子空间#基、维数与秩|basis]] for a spa
 <!-- bilingual-en:end -->
 
 基实现“存在且唯一的坐标表示”。若 $v_1,\ldots,v_k$ 是基，每个 $s\in S$ 可唯一写成 $s=\sum c_iv_i$。
+
+[[线性无关与张成|线性无关与张成的辨析]]解释了为什么“没有冗余”和“覆盖全部目标”缺一不可。
 <!-- bilingual-en:start -->
 A basis gives every vector an existing and unique coordinate representation. If $v_1,\ldots,v_k$ is a basis, each $s\in S$ can be written uniquely as $s=\sum c_iv_i$.
+
+The [[线性无关与张成|independence-versus-spanning distinction]] explains why nonredundancy and full coverage are both necessary.
 <!-- bilingual-en:end -->
 
 > [!proof] 为什么基坐标唯一
@@ -2539,14 +2549,14 @@ A basis gives every vector an existing and unique coordinate representation. If 
 > If $s=\sum c_iv_i=\sum d_iv_i$, subtract the two representations to obtain $\sum_i(c_i-d_i)v_i=0$. Because the basis vectors are linearly independent, every $c_i-d_i$ is zero, so $c_i=d_i$ for all $i$.
 > <!-- bilingual-en:end -->
 
-有限维空间任意两组基含有相同数量的向量，这个数量称为 [[线性方程组与四个基本子空间#基、维数与秩|维数]]。零空间的基由特殊解给出；列空间的基由原矩阵的主元列给出。
+有限维空间任意两组基含有相同数量的向量，这个数量称为 [[维数]]。零空间的基由特殊解给出；列空间的基由原矩阵的主元列给出。
 <!-- bilingual-en:start -->
-Any two bases of a finite-dimensional vector space contain the same number of vectors; this number is the [[线性方程组与四个基本子空间#基、维数与秩|dimension]]. A basis of the nullspace is obtained from the special solutions, while a basis of the column space is formed by the pivot columns of the original matrix.
+Any two bases of a finite-dimensional vector space contain the same number of vectors; this number is the [[维数|dimension]]. A basis of the nullspace is obtained from the special solutions, while a basis of the column space is formed by the pivot columns of the original matrix.
 <!-- bilingual-en:end -->
 
-### 3. [[线性方程组与四个基本子空间#基、维数与秩|秩—零度定理]]
+### 3. [[秩零度定理|秩—零度定理]]
 <!-- bilingual-en:start -->
-*3. [[线性方程组与四个基本子空间#基、维数与秩|The rank–nullity theorem]]*
+*3. [[秩零度定理|The rank–nullity theorem]]*
 <!-- bilingual-en:end -->
 
 对 $A\in\mathbb R^{m\times n}$，设 rank $=r$：
@@ -2558,6 +2568,11 @@ $$
 \dim C(A)=r,\qquad \dim N(A)=n-r.
 $$
 
+这里 $r$ 是[[矩阵秩]]，而 $\dim N(A)$ 是[[零度]]。
+<!-- bilingual-en:start -->
+Here $r$ is the [[矩阵秩|matrix rank]], while $\dim N(A)$ is the [[零度|nullity]].
+<!-- bilingual-en:end -->
+
 因此
 <!-- bilingual-en:start -->
 Therefore,
@@ -2567,7 +2582,7 @@ $$
 \boxed{\operatorname{rank}(A)+\operatorname{nullity}(A)=n}.
 $$
 
-> [!proof] [[线性方程组与四个基本子空间#基、维数与秩|目标—构造—计数证明]]
+> [!proof] [[秩零度定理|目标—构造—计数证明]]
 > **目标**：证明输入空间的维数 $n$ 被行空间有效方向与零空间丢失方向分成 $r+(n-r)$。
 >
 > **构造**：把 $A$ 化为 rref。恰有 $r$ 个主元列，因此有 $r$ 个主元变量；余下 $n-r$ 个变量自由。
@@ -2697,7 +2712,7 @@ The recitation also treats vectors as rows: the nonzero rows after row reduction
 Independence means no redundancy → a basis is both nonredundant and complete → dimension is the number of vectors in a basis → rank–nullity counts input degrees of freedom → the next section extends this count to the four fundamental subspaces.
 <!-- bilingual-en:end -->
 
-## Session 1.11 The four fundamental subspaces
+## Session 1.11 [[四个基本子空间|The four fundamental subspaces]]
 
 ### 本节问题与前置知识
 <!-- bilingual-en:start -->
@@ -2728,27 +2743,27 @@ For $A\in\mathbb R^{m\times n}$ with rank $r$:
 
 | 空间 | 定义 | 所在环境 | 维数 |
 |---|---|---:|---:|
-| $C(A)$ | $A$ 的列的 span | $\mathbb R^m$ | $r$ |
-| $N(A)$ | $Ax=0$ 的全部解 | $\mathbb R^n$ | $n-r$ |
-| [[线性方程组与四个基本子空间#四个基本子空间|行空间]] $C(A^T)$ | $A$ 的行的 span | $\mathbb R^n$ | $r$ |
-| [[线性方程组与四个基本子空间#四个基本子空间|左零空间]] $N(A^T)$ | $A^Ty=0$ 的全部解 | $\mathbb R^m$ | $m-r$ |
+| [[列空间]] $C(A)$ | $A$ 的列的 span | $\mathbb R^m$ | $r$ |
+| [[零空间]] $N(A)$ | $Ax=0$ 的全部解 | $\mathbb R^n$ | $n-r$ |
+| [[行空间]] $C(A^T)$ | $A$ 的行的 span | $\mathbb R^n$ | $r$ |
+| [[左零空间]] $N(A^T)$ | $A^Ty=0$ 的全部解 | $\mathbb R^m$ | $m-r$ |
 <!-- bilingual-en:start -->
 | Space | Definition | Ambient space | Dimension |
 | --- | --- | ---: | ---: |
-| [[线性方程组与四个基本子空间#四个基本子空间|Column space]] $C(A)$ | span of the columns of $A$ | $\mathbb R^m$ | $r$ |
-| [[线性方程组与四个基本子空间#四个基本子空间|Nullspace]] $N(A)$ | solution set of $Ax=0$ | $\mathbb R^n$ | $n-r$ |
-| [[线性方程组与四个基本子空间#四个基本子空间|Row space]] $C(A^T)$ | span of the rows of $A$ | $\mathbb R^n$ | $r$ |
-| [[线性方程组与四个基本子空间#四个基本子空间|Left nullspace]] $N(A^T)$ | solution set of $A^Ty=0$ | $\mathbb R^m$ | $m-r$ |
+| [[列空间|Column space]] $C(A)$ | span of the columns of $A$ | $\mathbb R^m$ | $r$ |
+| [[零空间|Nullspace]] $N(A)$ | solution set of $Ax=0$ | $\mathbb R^n$ | $n-r$ |
+| [[行空间|Row space]] $C(A^T)$ | span of the rows of $A$ | $\mathbb R^n$ | $r$ |
+| [[左零空间|Left nullspace]] $N(A^T)$ | solution set of $A^Ty=0$ | $\mathbb R^m$ | $m-r$ |
 <!-- bilingual-en:end -->
 
-行空间与列空间维数相同，都是 rank；这就是“行秩 = 列秩”。实践中，rref 的非零行给行空间基，原矩阵的主元列给列空间基。
+行空间与列空间维数相同，都是 rank；这就是[[行秩等于列秩|“行秩 = 列秩”定理]]。实践中，RREF 的非零行给行空间基，原矩阵的主元列给列空间基。
 <!-- bilingual-en:start -->
-The row space and column space have the same dimension, namely the rank: this is the theorem that row rank equals column rank. In practice, the nonzero rows of the RREF form a row-space basis, while the pivot columns of the original matrix form a column-space basis.
+The row space and column space have the same dimension, namely the rank; this is the [[行秩等于列秩|row-rank equals column-rank theorem]]. In practice, the nonzero rows of the RREF form a row-space basis, while the pivot columns of the original matrix form a column-space basis.
 <!-- bilingual-en:end -->
 
-### 2. 正交关系
+### 2. [[基本子空间正交补|正交补关系]]
 <!-- bilingual-en:start -->
-*2. Orthogonal relations*
+*2. [[基本子空间正交补|Orthogonal-complement relations]]*
 <!-- bilingual-en:end -->
 
 $$
@@ -2758,6 +2773,11 @@ $$
 $$
 C(A)=N(A^T)^\perp\subseteq\mathbb R^m.
 $$
+
+第二个等式还把可解性写成[[左零空间相容性|左零空间相容条件]]：$Ax=b$ 有解，当且仅当 $b$ 与每个 $y\in N(A^T)$ 正交。
+<!-- bilingual-en:start -->
+The second equality also yields the [[左零空间相容性|left-nullspace compatibility condition]]: $Ax=b$ is solvable exactly when $b$ is orthogonal to every $y\in N(A^T)$.
+<!-- bilingual-en:end -->
 
 > [!proof] 行空间为何与零空间正交互补
 > **正交性**：若 $x\in N(A)$，则 $Ax=0$。$Ax$ 的第 $i$ 个分量是第 $i$ 行 $r_i^T$ 与 $x$ 的点积，所以每行都与 $x$ 正交；行的任意线性组合也与 $x$ 正交。因此 $C(A^T)\subseteq N(A)^\perp$。
@@ -2827,19 +2847,19 @@ This restricted map is a bijection. It is surjective because every $Ax$ depends 
 *4. Reading the four spaces from elimination*
 <!-- bilingual-en:end -->
 
-见 [[线性方程组与四个基本子空间#四个基本子空间|从 RREF 读四个基本子空间]]：
+见 [[RREF读取子空间基|从 RREF 读四个基本子空间]]：
 
-1. $C(A)$：取**原矩阵**的主元列；
-2. $N(A)$：从 rref 的自由变量构造特殊解；
-3. $C(A^T)$：取 rref 的非零行；
-4. $N(A^T)$：解 $A^Ty=0$，或在完整消元矩阵 $E$ 中读取把 $A$ 消成零行的行组合。
+1. $C(A)$：[[RREF读取列空间基|用 RREF 定位，再取原矩阵的主元列]]；
+2. $N(A)$：[[RREF读取零空间基|从 RREF 的自由变量构造特殊解]]；
+3. $C(A^T)$：[[RREF读取行空间基|取 RREF 的非零行]]；
+4. $N(A^T)$：直接解 $A^Ty=0$，或[[消元追踪左零空间基|在消元中保留行操作矩阵 $E$]]。
 <!-- bilingual-en:start -->
 
 &nbsp;
-**1.** $C(A)$: take the pivot columns of the **original matrix**;<br>
-**2.** $N(A)$: construct the special solutions from the free variables in the RREF;<br>
-**3.** $C(A^T)$: take the nonzero rows of the RREF;<br>
-**4.** $N(A^T)$: solve $A^Ty=0$, or read from the full elimination matrix $E$ the row combinations that reduce rows of $A$ to zero.<br>
+**1.** $C(A)$: [[RREF读取列空间基|use RREF to locate the pivot columns, then take them from the original matrix]];<br>
+**2.** $N(A)$: [[RREF读取零空间基|construct special solutions from the free variables in RREF]];<br>
+**3.** $C(A^T)$: [[RREF读取行空间基|take the nonzero rows of RREF]];<br>
+**4.** $N(A^T)$: solve $A^Ty=0$ directly, or [[消元追踪左零空间基|retain the row-operation matrix $E$ during elimination]].<br>
 <!-- bilingual-en:end -->
 
 Recitation 用 $B=LU$ 的 rank-2 例子说明：取 $L$ 中与 $U$ 的两个非零 pivot positions 对应的两列，可给出 $C(B)$ 的基；$U$ 给 $N(B)$ 与行空间，$E=L^{-1}$ 中对应 $U$ 零行的那一行给左零空间向量。
@@ -2987,9 +3007,9 @@ $$
 Symmetric matrices, skew-symmetric matrices, upper triangular matrices, and square matrices with trace zero each form a subspace. Invertible matrices do not form a subspace: the zero matrix is absent, and the sum of two invertible matrices may be singular.
 <!-- bilingual-en:end -->
 
-### 2. [[线性方程组与四个基本子空间#矩阵乘法的结构读法|秩一矩阵]]与外积
+### 2. [[秩一矩阵外积刻画|秩一矩阵的外积刻画]]
 <!-- bilingual-en:start -->
-*2. [[线性方程组与四个基本子空间#矩阵乘法的结构读法|Rank-one matrices]] and outer products*
+*2. [[秩一矩阵外积刻画|Outer-product characterization of rank-one matrices]]*
 <!-- bilingual-en:end -->
 
 若 $u\in\mathbb R^m$、$v\in\mathbb R^n$ 均非零，则
@@ -3197,9 +3217,9 @@ Matrices can themselves be elements of a vector space → rank-one outer product
 *1. Definition of the incidence matrix*
 <!-- bilingual-en:end -->
 
-给有向图任意指定每条边的方向。若图有 $n$ 个节点、$m$ 条边，其 [[图的基本结构、路径与遍历|关联矩阵]] $A\in\mathbb R^{m\times n}$ 每行对应一条边：边从节点 $i$ 指向节点 $j$，则该行在第 $i$ 列写 $-1$、第 $j$ 列写 $+1$，其余写 $0$。
+给无向图的每条边任意选定一个参考方向。若图有 $n$ 个节点、$m$ 条边，其 [[关联矩阵势差映射|关联矩阵]] $A\in\mathbb R^{m\times n}$ 每行对应一条边：边的参考方向从节点 $i$ 指向节点 $j$，则该行在第 $i$ 列写 $-1$、第 $j$ 列写 $+1$，其余写 $0$。
 <!-- bilingual-en:start -->
-Choose an arbitrary orientation for each edge of the graph. For a graph with $n$ vertices and $m$ edges, its [[图的基本结构、路径与遍历|incidence matrix]] $A\in\mathbb R^{m\times n}$ has one row per edge. If an edge is oriented from vertex $i$ to vertex $j$, its row contains $-1$ in column $i$, $+1$ in column $j$, and zeros elsewhere.
+Choose an arbitrary reference orientation for each edge of an undirected graph. For a graph with $n$ vertices and $m$ edges, its [[关联矩阵势差映射|incidence matrix]] $A\in\mathbb R^{m\times n}$ has one row per edge. If the reference orientation of an edge runs from vertex $i$ to vertex $j$, its row contains $-1$ in column $i$, $+1$ in column $j$, and zeros elsewhere.
 <!-- bilingual-en:end -->
 
 方向只是记号选择；反转一条边只会把对应行乘 $-1$，不改变图的连通结构或 $A^TA$。
@@ -3306,9 +3326,9 @@ $$
 L_G=A^TCA
 $$
 
-称加权[[图的基本结构、路径与遍历|图 Laplacian（graph Laplacian）]]。它对称，并且
+称加权[[加权图 Laplacian|图 Laplacian（graph Laplacian）]]。它对称，并且
 <!-- bilingual-en:start -->
-is called the weighted [[图的基本结构、路径与遍历|graph Laplacian]]. It is symmetric, and
+is called the weighted [[加权图 Laplacian|graph Laplacian]]. It is symmetric, and
 <!-- bilingual-en:end -->
 
 $$

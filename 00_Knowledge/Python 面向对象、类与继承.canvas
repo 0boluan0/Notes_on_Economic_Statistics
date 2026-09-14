@@ -1,0 +1,311 @@
+{
+  "nodes": [
+    {
+      "id": "f9a146c83b7e5021",
+      "type": "text",
+      "x": 0,
+      "y": -300,
+      "width": 1630,
+      "height": 200,
+      "text": "# Python 面向对象、类与继承\n\n沿四条线阅读：**类与实例怎样运行** → **状态与协议怎样受控** → **继承与多态怎样查找** → **何时选类、组合或继承**。颜色只区分语义角色，不表示掌握；全部原子的学习状态仍是 `unassessed`。",
+      "color": "4"
+    },
+    {
+      "id": "1b84e2c7571a309d",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 270,
+      "height": 170,
+      "text": "### 函数语义（复用）\n\n[[函数定义与调用]] · [[函数调用帧]]\n\n类体中的 `def` 仍创建函数；调用仍建立 frame。"
+    },
+    {
+      "id": "e4b7a236c51d809f",
+      "type": "text",
+      "x": 340,
+      "y": 0,
+      "width": 270,
+      "height": 170,
+      "text": "## 类体立即执行\n\n[[类语句执行]]\n\n先运行类体并保存命名空间，再创建类对象、绑定类名。",
+      "color": "4"
+    },
+    {
+      "id": "a12f67dc34e8905b",
+      "type": "text",
+      "x": 680,
+      "y": 0,
+      "width": 270,
+      "height": 170,
+      "text": "## 创建与初始化分开\n\n[[实例创建协议]]\n\n通常的元类调用协议由 `__new__` 创建对象，再由 `__init__` 初始化。",
+      "color": "4"
+    },
+    {
+      "id": "6d03bc9e8a24517f",
+      "type": "text",
+      "x": 1020,
+      "y": 0,
+      "width": 270,
+      "height": 170,
+      "text": "## 点号读取有优先级\n\n[[属性查找顺序]]\n\n数据描述器、实例字典与类 MRO 不是简单的二段查找。",
+      "color": "4"
+    },
+    {
+      "id": "73ca2df619b548e0",
+      "type": "text",
+      "x": 1360,
+      "y": 0,
+      "width": 270,
+      "height": 170,
+      "text": "## 函数读取成为方法\n\n[[实例方法绑定]]\n\n从实例读取类中函数，会把实例预绑定为首个实参。",
+      "color": "4"
+    },
+    {
+      "id": "c7e45a901d2f638b",
+      "type": "text",
+      "x": 0,
+      "y": 400,
+      "width": 270,
+      "height": 190,
+      "text": "### 对象共享（复用）\n\n[[对象别名]]\n[[对象身份与值相等]]\n\n名称共享、对象身份和值语义继续适用。"
+    },
+    {
+      "id": "b690af2c83517de4",
+      "type": "text",
+      "x": 340,
+      "y": 400,
+      "width": 270,
+      "height": 190,
+      "text": "## 状态归属不同\n\n[[实例与类属性]]\n\n实例属性逐对象保存；未遮蔽的类属性由实例共享。",
+      "color": "5"
+    },
+    {
+      "id": "4e1d8b603a97f25c",
+      "type": "text",
+      "x": 680,
+      "y": 400,
+      "width": 270,
+      "height": 190,
+      "text": "## 访问约定不等于正确性\n\n[[封装与不变量]]\n\n下划线标示边界、property 集中访问；所有 mutator 共同守不变量。",
+      "color": "5"
+    },
+    {
+      "id": "958ca4301b76e2df",
+      "type": "text",
+      "x": 1020,
+      "y": 400,
+      "width": 270,
+      "height": 190,
+      "text": "## 进入 Python 数据模型\n\n[[特殊方法协议]]\n\n特殊方法让对象参与显示、长度、迭代、比较等协议。",
+      "color": "5"
+    },
+    {
+      "id": "21d7e50b9c84a136",
+      "type": "text",
+      "x": 1360,
+      "y": 400,
+      "width": 270,
+      "height": 190,
+      "text": "### 相等与哈希（复用）\n\n[[哈希相等性契约]]\n[[哈希键语义稳定性]]\n\n自定义相等后仍须满足哈希集合契约。"
+    },
+    {
+      "id": "34fc19a78e2d650b",
+      "type": "text",
+      "x": 0,
+      "y": 800,
+      "width": 270,
+      "height": 180,
+      "text": "## 继承先决定查找顺序\n\n[[继承与MRO]]\n\nMRO 把单继承或多重继承层级线性化。",
+      "color": "3"
+    },
+    {
+      "id": "8a53d16e40b729cf",
+      "type": "text",
+      "x": 340,
+      "y": 800,
+      "width": 270,
+      "height": 180,
+      "text": "## 沿 MRO 协作调用\n\n[[super协作调用]]\n\n`super()` 从当前类之后继续，不固定指向直接父类。",
+      "color": "3"
+    },
+    {
+      "id": "d62b8ef5013ca479",
+      "type": "text",
+      "x": 680,
+      "y": 800,
+      "width": 270,
+      "height": 180,
+      "text": "## 覆盖要保持基类契约\n\n[[覆盖与可替换性]]\n\ndispatch 成功不等于子类可安全替换基类。",
+      "color": "3"
+    },
+    {
+      "id": "7ce91a5f26b438d0",
+      "type": "text",
+      "x": 1020,
+      "y": 800,
+      "width": 270,
+      "height": 180,
+      "text": "## 接口不要求共同父类\n\n[[鸭子类型多态]]\n\n共同调用依赖属性名和行为条件，不只依赖继承。",
+      "color": "3"
+    },
+    {
+      "id": "e208b54f91c73a60",
+      "type": "text",
+      "x": 0,
+      "y": 1200,
+      "width": 270,
+      "height": 190,
+      "text": "### 抽象边界（复用）\n\n[[函数契约]] · [[数据抽象屏障]] · [[不变量原理]]\n\n先明确契约、表示边界以及初始化与保持义务。"
+    },
+    {
+      "id": "5db8a1e340f7692c",
+      "type": "text",
+      "x": 340,
+      "y": 1200,
+      "width": 270,
+      "height": 190,
+      "text": "## 类必须解决真实问题\n\n[[类的适用边界]]\n\n有状态、身份或不变量才值得集中；简单情形先用轻表示。",
+      "color": "6"
+    },
+    {
+      "id": "69b2ce7058a134fd",
+      "type": "text",
+      "x": 680,
+      "y": 1200,
+      "width": 270,
+      "height": 190,
+      "text": "## has-a 与 is-a 分开\n\n[[组合与继承]]\n\n成员委托表达 has-a；满足完整可替换契约才用 is-a。",
+      "color": "6"
+    },
+    {
+      "id": "0f76d3ae459b81c2",
+      "type": "text",
+      "x": 1020,
+      "y": 1200,
+      "width": 610,
+      "height": 190,
+      "text": "## 设计复核\n\n1. 状态属于实例还是确实应共享？\n2. 每个公开变更入口都保持什么不变量？\n3. 调用者依赖的是具体类，还是行为接口？\n4. 关系是真正可替换的 is-a，还是 has-a 委托？\n5. 若只是数据载体，轻表示或 dataclass 是否已足够？"
+    }
+  ],
+  "edges": [
+    {
+      "id": "a61f4cb098d327e5",
+      "fromNode": "1b84e2c7571a309d",
+      "fromSide": "right",
+      "toNode": "e4b7a236c51d809f",
+      "toSide": "left",
+      "label": "def 与名称绑定迁移到 class"
+    },
+    {
+      "id": "97de41b5c62f380a",
+      "fromNode": "e4b7a236c51d809f",
+      "fromSide": "right",
+      "toNode": "a12f67dc34e8905b",
+      "toSide": "left",
+      "label": "类对象被调用后进入实例协议"
+    },
+    {
+      "id": "30c9b1527e64da8f",
+      "fromNode": "a12f67dc34e8905b",
+      "fromSide": "right",
+      "toNode": "6d03bc9e8a24517f",
+      "toSide": "left",
+      "label": "实例存在后才能解析点号属性"
+    },
+    {
+      "id": "be7c3196a082f4d5",
+      "fromNode": "6d03bc9e8a24517f",
+      "fromSide": "right",
+      "toNode": "73ca2df619b548e0",
+      "toSide": "left",
+      "label": "查到类中函数时绑定接收者"
+    },
+    {
+      "id": "c30b75a48916de27",
+      "fromNode": "c7e45a901d2f638b",
+      "fromSide": "right",
+      "toNode": "b690af2c83517de4",
+      "toSide": "left",
+      "label": "共享对象语义决定类属性风险"
+    },
+    {
+      "id": "51e47b09c8326daf",
+      "fromNode": "b690af2c83517de4",
+      "fromSide": "right",
+      "toNode": "4e1d8b603a97f25c",
+      "toSide": "left",
+      "label": "明确状态归属后才能维护不变量"
+    },
+    {
+      "id": "2864db3e0a9f71c5",
+      "fromNode": "4e1d8b603a97f25c",
+      "fromSide": "right",
+      "toNode": "958ca4301b76e2df",
+      "toSide": "left",
+      "label": "协议入口也必须保持对象契约"
+    },
+    {
+      "id": "75bd03af69e1284c",
+      "fromNode": "958ca4301b76e2df",
+      "fromSide": "right",
+      "toNode": "21d7e50b9c84a136",
+      "toSide": "left",
+      "label": "自定义相等必须同时检查哈希契约"
+    },
+    {
+      "id": "8c257f01be34d69a",
+      "fromNode": "34fc19a78e2d650b",
+      "fromSide": "right",
+      "toNode": "8a53d16e40b729cf",
+      "toSide": "left",
+      "label": "super 按同一 MRO 继续"
+    },
+    {
+      "id": "fc01a8b73d529e64",
+      "fromNode": "8a53d16e40b729cf",
+      "fromSide": "right",
+      "toNode": "d62b8ef5013ca479",
+      "toSide": "left",
+      "label": "协作复用仍需保持覆盖契约"
+    },
+    {
+      "id": "46da981b25c703ef",
+      "fromNode": "d62b8ef5013ca479",
+      "fromSide": "right",
+      "toNode": "7ce91a5f26b438d0",
+      "toSide": "left",
+      "label": "统一调用可只依赖行为接口"
+    },
+    {
+      "id": "1a0c5bd4e896f237",
+      "fromNode": "e208b54f91c73a60",
+      "fromSide": "right",
+      "toNode": "5db8a1e340f7692c",
+      "toSide": "left",
+      "label": "先判断是否真的需要类"
+    },
+    {
+      "id": "d53a27e6081bf49c",
+      "fromNode": "5db8a1e340f7692c",
+      "fromSide": "right",
+      "toNode": "69b2ce7058a134fd",
+      "toSide": "left",
+      "label": "确需对象协作后再选 has-a 或 is-a"
+    },
+    {
+      "id": "a27d8e64cb193f50",
+      "fromNode": "7ce91a5f26b438d0",
+      "fromSide": "bottom",
+      "toNode": "69b2ce7058a134fd",
+      "toSide": "top",
+      "label": "接口可替换性决定继承是否成立"
+    },
+    {
+      "id": "6b4e809c2d75a31f",
+      "fromNode": "69b2ce7058a134fd",
+      "fromSide": "right",
+      "toNode": "0f76d3ae459b81c2",
+      "toSide": "left",
+      "label": "用契约检查设计关系"
+    }
+  ]
+}

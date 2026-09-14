@@ -83,9 +83,9 @@ The prerequisites are the four fundamental subspaces, the rank–nullity theorem
 *Lecture: from orthogonal vectors to the four fundamental subspaces*
 <!-- bilingual-en:end -->
 
-两个向量 $x,y\in\mathbb R^n$ 的[[正交投影与最小二乘#正交补与最近点|正交性（orthogonality）]]定义为
+两个向量 $x,y\in\mathbb R^n$ 的[[正交|正交性（orthogonality）]]定义为
 <!-- bilingual-en:start -->
-The [[正交投影与最小二乘#正交补与最近点|orthogonality]] of two vectors $x,y\in\mathbb R^n$ is defined as
+The [[正交|orthogonality]] of two vectors $x,y\in\mathbb R^n$ is defined as
 <!-- bilingual-en:end -->
 
 $$
@@ -111,9 +111,9 @@ $$
 \end{aligned}
 $$
 
-这就是高维勾股定理。后面“投影是最近点”的证明，只是在这个等式中把 $x,y$ 换成两个互相正交的误差分量。
+这就是[[正交向量勾股关系|高维勾股定理]]。后面“投影是最近点”的证明，只是在这个等式中把 $x,y$ 换成两个互相正交的误差分量。
 <!-- bilingual-en:start -->
-This is the Pythagorean theorem in higher dimensions. The later proof that an orthogonal projection is the nearest point uses the same identity with $x$ and $y$ replaced by two orthogonal error components.
+This is the [[正交向量勾股关系|Pythagorean theorem in higher dimensions]]. The later proof that an orthogonal projection is the nearest point uses the same identity with $x$ and $y$ replaced by two orthogonal error components.
 <!-- bilingual-en:end -->
 
 两个子空间 $S,T\subseteq\mathbb R^n$ 正交，是指
@@ -130,9 +130,9 @@ $$
 The condition must hold for every pair, not merely for one chosen pair of orthogonal vectors. For example, two planes that intersect in a line in three-dimensional space cannot be orthogonal subspaces: a nonzero vector on their intersection belongs to both planes and cannot be orthogonal to itself.
 <!-- bilingual-en:end -->
 
-子空间 $S$ 的[[正交投影与最小二乘#正交补与最近点|正交补（orthogonal complement）]]定义为
+子空间 $S$ 的[[正交补|正交补（orthogonal complement）]]定义为
 <!-- bilingual-en:start -->
-The [[正交投影与最小二乘#正交补与最近点|orthogonal complement]] of the subspace $S$ is defined as
+The [[正交补|orthogonal complement]] of the subspace $S$ is defined as
 <!-- bilingual-en:end -->
 
 $$
@@ -382,9 +382,9 @@ The two vectors in parentheses therefore form a basis for $S^\perp$. The origina
 *Knowledge chain*
 <!-- bilingual-en:end -->
 
-[[线性方程组与四个基本子空间#四个基本子空间|列空间]]与[[线性方程组与四个基本子空间#四个基本子空间|零空间]] → 正交补 → $N(A^TA)=N(A)$ → 下一节的[[正交投影与最小二乘#投影矩阵|正交投影]]。
+[[列空间]]与[[零空间]] → [[基本子空间正交补|正交补]] → $N(A^TA)=N(A)$ → 下一节的[[正交投影|正交投影]]。
 <!-- bilingual-en:start -->
-[[线性方程组与四个基本子空间#四个基本子空间|Column space]] and [[线性方程组与四个基本子空间#四个基本子空间|nullspace]] → orthogonal complements → $N(A^TA)=N(A)$ → [[正交投影与最小二乘#投影矩阵|orthogonal projection]] in the next section.
+[[列空间|Column space]] and [[零空间|nullspace]] → [[基本子空间正交补|orthogonal complements]] → $N(A^TA)=N(A)$ → [[正交投影|orthogonal projection]] in the next section.
 <!-- bilingual-en:end -->
 
 ---
@@ -506,9 +506,9 @@ $$
 p=A(A^TA)^{-1}A^Tb.
 $$
 
-因此投影到 $C(A)$ 的[[正交投影与最小二乘#投影矩阵|投影矩阵（projection matrix）]]是
+因此投影到 $C(A)$ 的[[满列秩投影公式|投影矩阵（projection matrix）]]是
 <!-- bilingual-en:start -->
-Thus the [[正交投影与最小二乘#投影矩阵|projection matrix]] onto $C(A)$ is
+Thus the [[满列秩投影公式|projection matrix]] onto $C(A)$ is
 <!-- bilingual-en:end -->
 
 $$
@@ -690,9 +690,9 @@ Check that $P_{\text{plane}}n=0$ and $P_{\text{plane}}a_i=a_i$, and that the mat
 *Knowledge chain*
 <!-- bilingual-en:end -->
 
-正交补 → [[正交投影与最小二乘#投影矩阵|正交投影]] → 正规方程 → 下一节的[[正交投影与最小二乘#最小二乘与正规方程|最小二乘]]与残差分析。
+正交补 → [[正交投影|正交投影]] → 正规方程 → 下一节的[[线性最小二乘|最小二乘]]与残差分析。
 <!-- bilingual-en:start -->
-Orthogonal complement → [[正交投影与最小二乘#投影矩阵|orthogonal projection]] → normal equations → [[正交投影与最小二乘#最小二乘与正规方程|least squares]] and residual analysis in the next section.
+Orthogonal complement → [[正交投影|orthogonal projection]] → normal equations → [[线性最小二乘|least squares]] and residual analysis in the next section.
 <!-- bilingual-en:end -->
 
 ---
@@ -704,9 +704,9 @@ Orthogonal complement → [[正交投影与最小二乘#投影矩阵|orthogonal 
 *Questions, prerequisites, and dimensions for this section*
 <!-- bilingual-en:end -->
 
-当 $Ax=b$ 因 $b\notin C(A)$ 而无解时，我们不伪造精确解，而是在所有 $Ax$ 中寻找离 $b$ 最近的一个。本节把这个几何问题写成[[正交投影与最小二乘#最小二乘与正规方程|最小二乘（least squares）]]，并解释正规方程的来源、解的唯一性条件和残差所属的子空间。
+当 $Ax=b$ 因 $b\notin C(A)$ 而无解时，我们不伪造精确解，而是在所有 $Ax$ 中寻找离 $b$ 最近的一个。本节把这个几何问题写成[[线性最小二乘|最小二乘（least squares）]]，并解释正规方程的来源、[[最小二乘解唯一性|解的唯一性条件]]和残差所属的子空间。
 <!-- bilingual-en:start -->
-When $Ax=b$ is inconsistent because $b\notin C(A)$, we do not invent an exact solution. Instead, among all vectors $Ax$, we find the one closest to $b$. This section formulates that geometric problem as [[正交投影与最小二乘#最小二乘与正规方程|least squares]] and explains where the normal equations come from, when the coefficient vector is unique, and which subspace contains the residual.
+When $Ax=b$ is inconsistent because $b\notin C(A)$, we do not invent an exact solution. Instead, among all vectors $Ax$, we find the one closest to $b$. This section formulates that geometric problem as [[线性最小二乘|least squares]] and explains where the normal equations come from, [[最小二乘解唯一性|when the coefficient vector is unique]], and which subspace contains the residual.
 <!-- bilingual-en:end -->
 
 仍设 $A\in\mathbb R^{m\times n}$、$b\in\mathbb R^m$。若 $A$ 满列秩，$\hat x\in\mathbb R^n$ 唯一；无论坐标是否唯一，最佳拟合向量 $p=A\hat x\in C(A)$ 都是唯一的正交投影。
@@ -756,9 +756,9 @@ A^T(b-A\hat x)=0
 A^TA\hat x=A^Tb.
 $$
 
-这就是[[正交投影与最小二乘#最小二乘与正规方程|用正规方程求最小二乘解]]。它不是对 $Ax=b$ 随意左乘 $A^T$，而是把“残差与全部列正交”同时写成一组方程。
+这就是[[最小二乘正规方程|用正规方程求最小二乘解]]。它不是对 $Ax=b$ 随意左乘 $A^T$，而是把“残差与全部列正交”同时写成一组方程。
 <!-- bilingual-en:start -->
-These are the [[正交投影与最小二乘#最小二乘与正规方程|normal equations for the least-squares solution]]. They do not arise from arbitrarily multiplying $Ax=b$ by $A^T$; they encode in one system the condition that the residual be orthogonal to every column of $A$.
+These are the [[最小二乘正规方程|normal equations for the least-squares solution]]. They do not arise from arbitrarily multiplying $Ax=b$ by $A^T$; they encode in one system the condition that the residual be orthogonal to every column of $A$.
 <!-- bilingual-en:end -->
 
 若希望用微积分核对，令
@@ -1080,9 +1080,9 @@ $$
 *Knowledge chain*
 <!-- bilingual-en:end -->
 
-投影 → 正规方程 → 残差 $N(A^T)$ → 下一节用[[正交投影与最小二乘#Gram–Schmidt 与 QR|Gram–Schmidt]]和 QR 更稳定地求投影系数。
+投影 → 正规方程 → 残差 $N(A^T)$ → 下一节先用[[Gram-Schmidt正交化|Gram–Schmidt]]理解 QR，再说明数值计算为何通常改用 Householder QR 求投影系数。
 <!-- bilingual-en:start -->
-Projection → normal equations → residual in $N(A^T)$ → more stable computation of projection coefficients using [[正交投影与最小二乘#Gram–Schmidt 与 QR|Gram–Schmidt]] and QR in the next section.
+Projection → normal equations → residual in $N(A^T)$ → use [[Gram-Schmidt正交化|Gram–Schmidt]] to understand QR, then use Householder QR as the usual numerically robust route to projection coefficients.
 <!-- bilingual-en:end -->
 
 ---
@@ -1115,9 +1115,9 @@ Let $A=[a_1\ \cdots\ a_n]\in\mathbb R^{m\times n}$ have linearly independent col
 *Lecture: why orthonormal columns are so convenient*
 <!-- bilingual-en:end -->
 
-向量 $q_1,\dots,q_n$ **标准正交（orthonormal）**，是指
+向量 $q_1,\dots,q_n$ **[[标准正交组|标准正交（orthonormal）]]**，是指
 <!-- bilingual-en:start -->
-Vectors $q_1,\dots,q_n$ are **orthonormal** when
+Vectors $q_1,\dots,q_n$ are **[[标准正交组|orthonormal]]** when
 <!-- bilingual-en:end -->
 
 $$
@@ -1134,9 +1134,9 @@ $$
 Q^TQ=I_n.
 $$
 
-若 $Q$ 是方阵，则称为[[对称矩阵与正定二次型#对称矩阵与谱定理|正交矩阵（orthogonal matrix）]]，且
+若 $Q$ 是方阵，则称为[[正交矩阵|正交矩阵（orthogonal matrix）]]，且
 <!-- bilingual-en:start -->
-If $Q$ is a square matrix, it is called [[对称矩阵与正定二次型#对称矩阵与谱定理|orthogonal matrix]], and
+If $Q$ is a square matrix, it is called [[正交矩阵|orthogonal matrix]], and
 <!-- bilingual-en:end -->
 
 $$
@@ -1248,9 +1248,9 @@ $$
 Linear independence of the original columns guarantees $u_k\ne0$. If some step produced $u_k=0$, then $a_k$ would already lie in the span of the preceding columns.
 <!-- bilingual-en:end -->
 
-#### 从 Gram–Schmidt 到 [[正交投影与最小二乘#Gram–Schmidt 与 QR|QR 分解]]
+#### 从 Gram–Schmidt 到 [[薄QR分解|QR 分解]]
 <!-- bilingual-en:start -->
-*From Gram-Schmidt to [[正交投影与最小二乘#Gram–Schmidt 与 QR|QR decomposition]]*
+*From Gram-Schmidt to [[薄QR分解|QR decomposition]]*
 <!-- bilingual-en:end -->
 
 每个 $a_j$ 都能写成 $q_1,\dots,q_j$ 的组合：
@@ -1442,9 +1442,9 @@ Column $j$ of $R$ contains the coordinates of $a_j$ in the orthonormal basis for
 *Knowledge chain*
 <!-- bilingual-en:end -->
 
-正交投影 → 标准正交基 → [[正交投影与最小二乘#Gram–Schmidt 与 QR|Gram–Schmidt 正交化]] → QR → 更稳定的最小二乘。
+正交投影 → 标准正交基 → [[Gram-Schmidt正交化|Gram–Schmidt 的精确算术构造]] → QR → 数值计算中的 Householder QR → 更稳健的最小二乘。
 <!-- bilingual-en:start -->
-Orthogonal projection → orthonormal basis → [[正交投影与最小二乘#Gram–Schmidt 与 QR|Gram–Schmidt orthogonalization]] → QR → more stable least squares.
+Orthogonal projection → orthonormal basis → [[Gram-Schmidt正交化|exact-arithmetic Gram–Schmidt]] → QR → Householder QR in floating point → more robust least squares.
 <!-- bilingual-en:end -->
 
 ---
@@ -1456,9 +1456,9 @@ Orthogonal projection → orthonormal basis → [[正交投影与最小二乘#Gr
 *Questions, prerequisites, and dimensions for this section*
 <!-- bilingual-en:end -->
 
-本节不把行列式当成待背的展开式，而是从三条基本性质推出所有计算规则。[[行列式#行列式的结构含义|行列式（determinant）]]只对方阵 $A\in\mathbb R^{n\times n}$ 定义，输出一个标量 $\det A$。
+本节不把行列式当成待背的展开式，而是从三条基本性质推出所有计算规则。[[行列式|行列式（determinant）]]只对方阵 $A\in\mathbb R^{n\times n}$ 定义，输出一个标量 $\det A$。
 <!-- bilingual-en:start -->
-Rather than treating the determinant as an expansion formula to memorize, this section derives its computational rules from three basic properties. The [[行列式#行列式的结构含义|determinant]] is defined for a square matrix $A\in\mathbb R^{n\times n}$ and returns the scalar $\det A$.
+Rather than treating the determinant as an expansion formula to memorize, this section derives its computational rules from three basic properties. The [[行列式|determinant]] is defined for a square matrix $A\in\mathbb R^{n\times n}$ and returns the scalar $\det A$.
 <!-- bilingual-en:end -->
 
 > [!info] 本地材料
@@ -1472,9 +1472,9 @@ Rather than treating the determinant as an expansion formula to memorize, this s
 *Lecture: three axioms that determine all the rules*
 <!-- bilingual-en:end -->
 
-行列式由以下三条性质唯一确定：
+行列式由以下三条性质唯一确定。在本节的实数域语境中，“交换两行变号”与[[行列式|交替性]]配合逐行线性给出同一刻画；若推广到特征 $2$，必须直接保留“重复行为零”的交替性条件。
 <!-- bilingual-en:start -->
-The determinant is uniquely determined by the following three properties:
+The determinant is uniquely determined by the following three properties. Over the real numbers, sign reversal under a row swap is equivalent to the alternating formulation together with row multilinearity; in characteristic two, repeated-row vanishing must be stated directly.
 <!-- bilingual-en:end -->
 
 1. $\det I=1$。
@@ -1498,7 +1498,7 @@ The determinant is uniquely determined by the following three properties:
 *Consequence 1: Equal rows force the determinant to be zero*
 <!-- bilingual-en:end -->
 
-若 $D$ 有两行相同，交换这两行后矩阵不变；但性质 2 说行列式变成 $-D$。因此 $D=-D$，在实数域中 $D=0$。
+若 $D$ 有两行相同，交换这两行后矩阵不变；但性质 2 说行列式变成 $-\det D$。因此 $\det D=-\det D$，在实数域中 $\det D=0$。
 <!-- bilingual-en:start -->
 If $D$ has two identical rows, swapping those rows leaves the matrix unchanged, but property 2 says that its determinant changes sign. Thus $\det D=-\det D$, so $\det D=0$ over the real numbers.
 <!-- bilingual-en:end -->
@@ -1530,14 +1530,14 @@ $$
 \Longleftrightarrow N(A)=\{0\}.
 $$
 
-#### 推论 4：三角矩阵的行列式是对角线乘积
+#### 推论 4：[[三角矩阵行列式|三角矩阵的行列式是对角线乘积]]
 <!-- bilingual-en:start -->
 *Consequence 4: the determinant of a triangular matrix is the product of its diagonal entries*
 <!-- bilingual-en:end -->
 
-对上三角矩阵，从左上角开始利用行线性和零元素，或沿用消元规则，得到
+对阶数作归纳：从上三角矩阵最后一行提出 $u_{nn}$，再用倍加行清空最后一列上方元素，便只剩左上角的低一阶三角块。逐层重复得到
 <!-- bilingual-en:start -->
-For an upper triangular matrix, repeated expansion along a row or column with many zeros—or, equivalently, the elimination rules—gives
+Induct on the order: extract $u_{nn}$ from the last row of an upper-triangular matrix, then use determinant-preserving row replacements to clear the entries above it in the last column. Repeating the argument on the leading triangular block gives
 <!-- bilingual-en:end -->
 
 $$
@@ -1698,9 +1698,9 @@ The factor is $c^n$, not merely $c$.
 *Knowledge chain*
 <!-- bilingual-en:end -->
 
-消元与可逆性 → [[行列式#行列式的结构含义|行列式]]三公理 → 大公式与余子式 → 下一节的可计算公式。
+[[行列式|行列式定义]] → 行操作规则 → 三角矩阵与消元计算 → 大公式、余子式和下一节的伴随矩阵公式。
 <!-- bilingual-en:start -->
-Elimination and invertibility → the three axioms of the [[行列式#行列式的结构含义|determinant]] → the Leibniz and cofactor-expansion formulas → the inverse formula in the next section.
+[[行列式|Determinant definition]] → row-operation rules → triangular matrices and elimination → the Leibniz formula, cofactors, and the adjugate formulas in the next section.
 <!-- bilingual-en:end -->
 
 ---
@@ -1754,18 +1754,20 @@ Why can a term not select the same column in two different rows? Repeating one c
 The Leibniz formula can be convenient for very sparse matrices with few nonzero terms, but in general it requires $n!$ terms and is vastly slower than elimination, which costs roughly $O(n^3)$ operations.
 <!-- bilingual-en:end -->
 
-### [[行列式#行列式的结构含义|余子式展开]]与代数余子式
+### [[余子式与代数余子式]]和[[余子式展开]]
 <!-- bilingual-en:start -->
-*[[行列式#行列式的结构含义|Cofactor expansion]] and cofactors*
+*[[余子式与代数余子式|Minors and cofactors]], followed by [[余子式展开|cofactor expansion]]*
 <!-- bilingual-en:end -->
 
-删去第 $i$ 行、第 $j$ 列所得的 $(n-1)\times(n-1)$ 矩阵记为 $M_{ij}$。对应的**代数余子式（cofactor）**是
+删去第 $i$ 行、第 $j$ 列所得的 $(n-1)\times(n-1)$ 矩阵记为 $A_{\widehat i,\widehat j}$。对应的余子式与**代数余子式（cofactor）**分别是
 <!-- bilingual-en:start -->
-The $(n-1)\times(n-1)$ matrix obtained by deleting row $i$ and column $j$ is denoted by $M_{ij}$. The corresponding **cofactor** is
+Denote by $A_{\widehat i,\widehat j}$ the $(n-1)\times(n-1)$ matrix obtained by deleting row $i$ and column $j$. Its minor and corresponding **cofactor** are
 <!-- bilingual-en:end -->
 
 $$
-C_{ij}=(-1)^{i+j}\det M_{ij}.
+M_{ij}=\det A_{\widehat i,\widehat j},
+\qquad
+C_{ij}=(-1)^{i+j}M_{ij}.
 $$
 
 符号棋盘为
@@ -1910,9 +1912,9 @@ Cofactor expansion is fully general, but recursive expansion is very slow for la
 *Knowledge chain*
 <!-- bilingual-en:end -->
 
-行列式性质 → 排列大公式 → cofactor 展开 → 下一节的 adjugate、[[行列式#乘法性与可逆性|Cramer 法则]]与体积。
+行列式性质 → 排列大公式 → cofactor 展开 → 下一节的 adjugate、[[Cramer 法则|Cramer 法则]]与体积。
 <!-- bilingual-en:start -->
-Determinant properties → permutation formula → cofactor expansion → adjugate, [[行列式#乘法性与可逆性|Cramer's rule]], and volume in the next section.
+Determinant properties → permutation formula → cofactor expansion → adjugate, [[Cramer 法则|Cramer's rule]], and volume in the next section.
 <!-- bilingual-en:end -->
 
 ---
@@ -1924,9 +1926,9 @@ Determinant properties → permutation formula → cofactor expansion → adjuga
 *Questions, prerequisites, and dimensions for this section*
 <!-- bilingual-en:end -->
 
-本节把 cofactor 矩阵用于三个方向：构造逆矩阵、推导 Cramer 法则、解释坐标变换的面积或体积缩放。设 $A\in\mathbb R^{n\times n}$；逆矩阵与 Cramer 法则都要求 $\det A\ne0$。
+本节有三条并列路线：代数余子式先定义[[伴随矩阵]]并导出伴随求逆公式；行列式的逐列线性导出 Cramer 法则；行列式本身解释线性变换的面积或体积缩放。设 $A\in\mathbb R^{n\times n}$；伴随求逆与 Cramer 法则要求 $\det A\ne0$，体积解释不要求可逆。
 <!-- bilingual-en:start -->
-This section uses cofactors in three ways: to construct the inverse, derive Cramer's rule, and interpret the area or volume scaling of a linear transformation. Let $A\in\mathbb R^{n\times n}$; both the inverse formula and Cramer's rule require $\det A\ne0$.
+This section follows three parallel routes: cofactors define the adjugate and yield an inverse formula; column multilinearity yields Cramer's rule; and the determinant itself describes area or volume scaling. Let $A\in\mathbb R^{n\times n}$. The adjugate inverse formula and Cramer's rule require $\det A\ne0$, whereas the volume interpretation does not require invertibility.
 <!-- bilingual-en:end -->
 
 > [!info] 本地材料
@@ -1935,12 +1937,12 @@ This section uses cofactors in three ways: to construct the inverse, derive Cram
 > - [Recitation transcript](MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U2_S07_Recitation_Problem_Solving_Determinants_and_Volume.pdf#page=1)
 > - [Homework problems](MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses2.7prob.pdf#page=1) · [official solutions](MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses2.7sol.pdf#page=1)
 
-### Lecture：为什么 cofactor 的转置给出逆矩阵
+### Lecture：为什么[[伴随矩阵]]在行列式非零时给出逆矩阵
 <!-- bilingual-en:start -->
-*Lecture: why transposing the cofactor matrix gives the inverse*
+*Lecture: why the [[伴随矩阵|adjugate]] gives the inverse when the determinant is nonzero*
 <!-- bilingual-en:end -->
 
-令 $C=(C_{ij})$ 为 cofactor 矩阵。考察 $AC^T$ 的 $(i,j)$ 元素：
+令 $C=(C_{ij})$ 为 cofactor 矩阵，所以 $C^T=\operatorname{adj}(A)$ 是 $A$ 的[[伴随矩阵]]。考察 $AC^T$ 的 $(i,j)$ 元素：
 <!-- bilingual-en:start -->
 Let $C=(C_{ij})$ be the cofactor matrix. Consider the $(i,j)$ entry of $AC^T$:
 <!-- bilingual-en:end -->
@@ -1965,9 +1967,9 @@ $$
 AC^T=(\det A)I.
 $$
 
-$C^T$ 称为伴随矩阵 $\operatorname{adj}(A)$。当 $\det A\ne0$ 时，两边除以 $\det A$，得到[[线性方程组与四个基本子空间#可解性与完整解|逆矩阵]]公式：
+这正是[[伴随矩阵恒等式]]的一侧；沿列展开可得另一侧 $C^TA=(\det A)I$。当 $\det A\ne0$ 时，两边除以 $\det A$，得到[[伴随矩阵求逆|伴随矩阵求逆公式]]：
 <!-- bilingual-en:start -->
-$C^T$ is the adjugate matrix $\operatorname{adj}(A)$. When $\det A\ne0$, dividing both sides by $\det A$ gives the [[线性方程组与四个基本子空间#可解性与完整解|inverse-matrix formula]]:
+This is one side of the [[伴随矩阵恒等式|adjugate identity]]; column expansion gives $C^TA=(\det A)I$. When $\det A\ne0$, division by the determinant gives the [[伴随矩阵求逆|adjugate inverse formula]]:
 <!-- bilingual-en:end -->
 
 $$
@@ -2004,9 +2006,9 @@ $$
 x_j=\frac{\det B_j}{\det A}.
 $$
 
-这就是[[行列式#乘法性与可逆性|Cramer 法则（Cramer's rule）]]。它清楚揭示解对数据的依赖，但求全部分量需要许多行列式，计算上通常不如消元。
+这就是[[Cramer 法则|Cramer 法则（Cramer's rule）]]。它清楚揭示解对数据的依赖，但求全部分量需要许多行列式，计算上通常不如消元。
 <!-- bilingual-en:start -->
-This is [[行列式#乘法性与可逆性|Cramer's rule]]. It makes the solution's dependence on the data explicit, but computing every component requires many determinants and is usually less efficient than elimination.
+This is [[Cramer 法则|Cramer's rule]]. It makes the solution's dependence on the data explicit, but computing every component requires many determinants and is usually less efficient than elimination.
 <!-- bilingual-en:end -->
 
 #### 行列式的几何意义
@@ -2053,9 +2055,9 @@ $$
 \left|\det\begin{bmatrix}2&2&-1\\1&3&0\\-1&1&4\end{bmatrix}\right|=12.
 $$
 
-同底同高关系给出四面体体积是平行六面体的 $1/6$：
+同底同高关系给出[[单纯形行列式体积|四面体体积是平行六面体的 $1/6$]]：
 <!-- bilingual-en:start -->
-The tetrahedron has one sixth of the parallelepiped's volume.
+[[单纯形行列式体积|The tetrahedron has one sixth of the parallelepiped's volume.]]
 <!-- bilingual-en:end -->
 
 $$
@@ -2127,13 +2129,13 @@ This replaces the third row by the third row minus $100$ times the first, which 
 > &=\boxed{\rho^2\sin\phi}.
 > \end{aligned}
 > $$
-> 在通常范围 $\rho\ge0,0\le\phi\le\pi$，该值非负，所以体积元为 $dV=\rho^2\sin\phi\,d\rho\,d\phi\,d\theta$。
+> 在一组通常的单次覆盖范围 $\rho\ge0$、$0\le\phi\le\pi$、$0\le\theta<2\pi$ 上，该值非负，所以体积元为 $dV=\rho^2\sin\phi\,d\rho\,d\phi\,d\theta$；边界上的坐标重复不影响积分。
 > <!-- bilingual-en:start -->
 > Given the spherical-coordinate transformation
 > $$x=\rho\sin\phi\cos\theta,\quad y=\rho\sin\phi\sin\theta,\quad z=\rho\cos\phi,$$
 > Find the determinant of the partial derivative matrix.
 > **Solution.** The Jacobian matrix is shown above. Expanding its determinant along the third row yields the displayed calculation.
-> On the standard range $\rho\ge0$ and $0\le\phi\le\pi$, the result is nonnegative, so the volume element is $dV=\rho^2\sin\phi\,d\rho\,d\phi\,d\theta$.
+> On the standard single-cover range $\rho\ge0$, $0\le\phi\le\pi$, and $0\le\theta<2\pi$, the result is nonnegative, so the volume element is $dV=\rho^2\sin\phi\,d\rho\,d\phi\,d\theta$; coordinate duplication on the boundary does not affect the integral.
 > <!-- bilingual-en:end -->
 
 ### 边界、反例与易错点
@@ -2180,9 +2182,11 @@ This replaces the third row by the third row minus $100$ times the first, which 
 *Knowledge chain*
 <!-- bilingual-en:end -->
 
-cofactor → adjugate 与[[线性方程组与四个基本子空间#可解性与完整解|逆矩阵]] → [[行列式#乘法性与可逆性|Cramer 法则]] → 体积缩放 → 下一节由 $\det(A-\lambda I)=0$ 寻找特征方向。
+- 代数支路：[[余子式与代数余子式|余子式定义]] → [[余子式展开]]与[[伴随矩阵]] → [[伴随矩阵恒等式]] → 行列式非零时[[伴随矩阵求逆|求逆]] → [[Cramer 法则]]。
+- 几何与谱支路：[[行列式]] → [[行列式体积与取向|体积与取向]]；下一节再由 $\det(A-\lambda I)=0$ 寻找特征方向。
 <!-- bilingual-en:start -->
-cofactor → adjugate and [[线性方程组与四个基本子空间#可解性与完整解|inverse matrix]] → [[行列式#乘法性与可逆性|Cramer's rule]] → volume scaling → the next section finds eigenvector directions from $\det(A-\lambda I)=0$.
+- Algebraic branch: [[余子式与代数余子式|minor and cofactor definitions]] → [[余子式展开|cofactor expansion]] and the [[伴随矩阵|adjugate]] → [[伴随矩阵恒等式|adjugate identity]] → [[伴随矩阵求逆|inverse formula]] when the determinant is nonzero → [[Cramer 法则|Cramer's rule]].
+- Geometric and spectral branch: [[行列式|determinant]] → [[行列式体积与取向|volume and orientation]]; the next section then finds eigenvector directions from $\det(A-\lambda I)=0$.
 <!-- bilingual-en:end -->
 
 ---
@@ -2194,9 +2198,9 @@ cofactor → adjugate and [[线性方程组与四个基本子空间#可解性与
 *Questions, prerequisites, and dimensions for this section*
 <!-- bilingual-en:end -->
 
-一般向量被矩阵作用后会改变方向。哪些特殊方向只被缩放而不转向？设 $A\in\mathbb R^{n\times n}$；只有方阵才能在同一空间中比较 $x$ 与 $Ax$ 的方向。
+一般向量被矩阵作用后会离开原来张成的一维子空间。哪些一维子空间会被 $A$ 保持？当 $\lambda\ne0$ 时，特征向量只被缩放或翻向；当 $\lambda=0$ 时，整条特征方向被压到原点。设 $A\in\mathbb R^{n\times n}$；只有方阵才把 $x$ 与 $Ax$ 放在同一个空间里讨论这种不变性。
 <!-- bilingual-en:start -->
-A general vector changes direction when a matrix acts on it. Which special directions are merely scaled, with no change of direction? Let $A\in\mathbb R^{n\times n}$; a square matrix is required so that $x$ and $Ax$ lie in the same space and their directions can be compared.
+A general vector leaves the one-dimensional subspace that it spans when a matrix acts on it. Which one-dimensional subspaces are invariant under $A$? For $\lambda\ne0$, an eigenvector is only rescaled or reversed; for $\lambda=0$, its whole eigendirection is collapsed to the origin. Let $A\in\mathbb R^{n\times n}$ so that $x$ and $Ax$ lie in the same space and this invariance is meaningful.
 <!-- bilingual-en:end -->
 
 > [!info] 本地材料
@@ -2219,9 +2223,9 @@ $$
 Ax=\lambda x,
 $$
 
-则 $x$ 是 $A$ 的[[特征值、对角化与线性动力系统#特征值与特征向量|特征向量（eigenvector）]]，$\lambda$ 是对应的[[特征值、对角化与线性动力系统#特征值与特征向量|特征值（eigenvalue）]]。必须排除 $x=0$，因为零向量会对任意 $\lambda$ 满足等式，却不代表任何方向。
+则 $x$ 是 $A$ 的[[特征对|特征向量（eigenvector）]]，$\lambda$ 是对应的[[特征对|特征值（eigenvalue）]]。必须排除 $x=0$，因为零向量会对任意 $\lambda$ 满足等式，却不代表任何方向。
 <!-- bilingual-en:start -->
-Then $x$ is an [[特征值、对角化与线性动力系统#特征值与特征向量|eigenvector]] of $A$, and $\lambda$ is its corresponding [[特征值、对角化与线性动力系统#特征值与特征向量|eigenvalue]]. The case $x=0$ is excluded because the zero vector satisfies the equation for every $\lambda$ but represents no direction.
+Then $x$ is an [[特征对|eigenvector]] of $A$, and $\lambda$ is its corresponding [[特征对|eigenvalue]]. The case $x=0$ is excluded because the zero vector satisfies the equation for every $\lambda$ but represents no direction.
 <!-- bilingual-en:end -->
 
 移项得
@@ -2242,9 +2246,9 @@ $$
 \det(A-\lambda I)=0.
 $$
 
-这称为[[特征值、对角化与线性动力系统#特征值与特征向量|特征多项式（characteristic polynomial）]]对应的**特征方程**。具体计算可按[[特征值、对角化与线性动力系统#特征值与特征向量|特征对计算流程]]执行：
+这称为[[特征多项式|特征多项式（characteristic polynomial）]]对应的**特征方程**。计算时先由该方程找 $\lambda$，再用 [[特征空间|$\operatorname{null}(A-\lambda I)$]] 找对应的非零 $x$。若要讨论根是否都在当前数域中，还需另查[[特征多项式底层域]]：
 <!-- bilingual-en:start -->
-This is the **characteristic equation** associated with the [[特征值、对角化与线性动力系统#特征值与特征向量|characteristic polynomial]]. An [[特征值、对角化与线性动力系统#特征值与特征向量|eigenvalue–eigenvector pair]] can be computed as follows:
+This is the **characteristic equation** associated with the [[特征多项式|characteristic polynomial]]. First solve it for $\lambda$; then find the corresponding nonzero $x$ in [[特征空间|$\operatorname{null}(A-\lambda I)$]]. Whether all roots lie in the current field is the separate boundary recorded in [[特征多项式底层域]]:
 <!-- bilingual-en:end -->
 
 1. 解标量多项式 $\det(A-\lambda I)=0$ 得特征值；
@@ -2285,9 +2289,9 @@ $$
 \det(\lambda I-A)=\lambda^n-(\operatorname{tr}A)\lambda^{n-1}+\cdots+(-1)^n\det A.
 $$
 
-若在复数域计入[[特征值、对角化与线性动力系统#特征值与特征向量|代数重数]]，根为 $\lambda_1,\dots,\lambda_n$，比较系数得
+若在复数域计入[[代数重数与几何重数|代数重数]]，根为 $\lambda_1,\dots,\lambda_n$，比较系数得
 <!-- bilingual-en:start -->
-Over a field containing all roots, list the roots of the characteristic polynomial with [[特征值、对角化与线性动力系统#特征值与特征向量|algebraic multiplicity]] as $\lambda_1,\dots,\lambda_n$. Comparing coefficients gives
+Over a field containing all roots, list the roots of the characteristic polynomial with [[代数重数与几何重数|algebraic multiplicity]] as $\lambda_1,\dots,\lambda_n$. Comparing coefficients gives
 <!-- bilingual-en:end -->
 
 $$
@@ -2322,7 +2326,7 @@ $$
 This follows because $A^kx=\lambda^kx$ for every power, after which the terms are combined linearly.
 <!-- bilingual-en:end -->
 
-#### 不同特征值的特征向量线性无关
+#### [[互异特征值向量独立|不同特征值的特征向量线性无关]]
 <!-- bilingual-en:start -->
 *Eigenvectors corresponding to distinct eigenvalues are linearly independent*
 <!-- bilingual-en:end -->
@@ -2510,9 +2514,9 @@ This is the advantage of eigenvector coordinates: along each eigendirection, a m
 *Knowledge chain*
 <!-- bilingual-en:end -->
 
-$\det(A-\lambda I)=0$ → [[特征值、对角化与线性动力系统#特征值与特征向量|特征值]]与[[特征值、对角化与线性动力系统#特征值与特征向量|特征向量]] → 独立特征方向 → 下一节的[[特征值、对角化与线性动力系统#对角化与矩阵幂|对角化]]。
+[[特征对]] → $\det(A-\lambda I)=0$ → [[特征多项式|用特征多项式找候选特征值]] → [[特征空间|求对应特征方向]] → [[互异特征值向量独立|独立特征方向]] → 下一节的[[对角化]]。
 <!-- bilingual-en:start -->
-$\det(A-\lambda I)=0$ → [[特征值、对角化与线性动力系统#特征值与特征向量|eigenvalues]] and [[特征值、对角化与线性动力系统#特征值与特征向量|eigenvectors]] → independent eigendirections → [[特征值、对角化与线性动力系统#对角化与矩阵幂|diagonalization]] in the next section.
+[[特征对|Eigenpairs]] → $\det(A-\lambda I)=0$ → the [[特征多项式|characteristic polynomial identifies candidate eigenvalues]] → [[特征空间|solve for the corresponding eigendirections]] → [[互异特征值向量独立|independent eigendirections]] → [[对角化|diagonalization]] in the next section.
 <!-- bilingual-en:end -->
 
 ---
@@ -2570,9 +2574,9 @@ $$
 A=S\Lambda S^{-1},\qquad S^{-1}AS=\Lambda.
 $$
 
-这称为[[特征值、对角化与线性动力系统#对角化与矩阵幂|对角化（diagonalization）]]。它的含义不是把 $A$ 通过行操作变成对角矩阵，而是**换到特征向量基底**：$S^{-1}$ 把标准坐标换成特征坐标，$\Lambda$ 在各坐标独立缩放，$S$ 再换回标准坐标。
+这称为[[对角化|对角化（diagonalization）]]。它的含义不是把 $A$ 通过行操作变成对角矩阵，而是**换到特征向量基底**：$S^{-1}$ 把标准坐标换成特征坐标，$\Lambda$ 在各坐标独立缩放，$S$ 再换回标准坐标；与行操作的差别见[[对角化与行化简]]。
 <!-- bilingual-en:start -->
-This is [[特征值、对角化与线性动力系统#对角化与矩阵幂|diagonalization]]. It is not obtained by row-reducing $A$. Rather, $S$ changes eigencoordinates into standard coordinates, $S^{-1}$ changes standard coordinates into eigencoordinates, and $\Lambda$ describes the action of $A$ in the eigenvector basis.
+This is [[对角化|diagonalization]]. It is not obtained by row-reducing $A$; that distinction is recorded in [[对角化与行化简]]. Rather, $S$ changes eigencoordinates into standard coordinates, $S^{-1}$ changes standard coordinates into eigencoordinates, and $\Lambda$ describes the action of $A$ in the eigenvector basis.
 <!-- bilingual-en:end -->
 
 ![[98_attachment/linear_algebra/mit18_06sc/mit18.06sc-unit2-diagonalization.png|780]]
@@ -2653,9 +2657,9 @@ $$
 u_k=A^ku_0=c_1\lambda_1^kx_1+\cdots+c_n\lambda_n^kx_n.
 $$
 
-[[特征值、对角化与线性动力系统#线性动力系统|谱半径（spectral radius）]] $\rho(A)=\max_i|\lambda_i|$ 给出长期增长的基本尺度：$|\lambda|<1$ 衰减，$|\lambda|>1$ 增长，$\lambda<0$ 伴随交替翻转，复特征值带来旋转振荡。若存在 Jordan 块，还要额外考虑多项式因子。
+[[谱半径|谱半径（spectral radius）]] $\rho(A)=\max_i|\lambda_i|$ 给出长期的渐近指数尺度：$|\lambda|<1$ 衰减，$|\lambda|>1$ 增长，$\lambda<0$ 伴随交替翻转，复特征值带来旋转振荡。若存在 Jordan 块，还要额外考虑多项式因子；精确的趋零条件见[[矩阵幂趋零判据]]，而对非正规矩阵，[[非正规矩阵瞬态|谱半径不能单独控制有限时放大]]。
 <!-- bilingual-en:start -->
-The [[特征值、对角化与线性动力系统#线性动力系统|spectral radius]] $\rho(A)=\max_i|\lambda_i|$ sets the basic long-run growth scale: modes with $|\lambda|<1$ decay, those with $|\lambda|>1$ grow, negative eigenvalues alternate in sign, and complex eigenvalues generate rotation and oscillation. Nontrivial Jordan blocks also contribute polynomial factors.
+The [[谱半径|spectral radius]] $\rho(A)=\max_i|\lambda_i|$ sets the asymptotic exponential scale: modes with $|\lambda|<1$ decay, those with $|\lambda|>1$ grow, negative eigenvalues alternate in sign, and complex eigenvalues generate rotation and oscillation. Nontrivial Jordan blocks also contribute polynomial factors; the exact vanishing criterion is in [[矩阵幂趋零判据]], while for a nonnormal matrix [[非正规矩阵瞬态|the spectral radius alone does not control finite-time amplification]].
 <!-- bilingual-en:end -->
 
 ### Recitation：参数矩阵的 $k$ 次幂
@@ -2795,9 +2799,9 @@ Setting $k=1$ recovers the original matrix, an essential algebraic check. If $a=
 *Knowledge chain*
 <!-- bilingual-en:end -->
 
-独立特征向量 → [[特征值、对角化与线性动力系统#对角化与矩阵幂|对角化]] → $A^k$ 与差分方程 → 下一节把标量 $e^{\lambda t}$ 提升为[[特征值、对角化与线性动力系统#对角化与矩阵幂|矩阵指数]]。
+独立特征向量 → [[对角化]]与[[可对角化判据]] → [[对角化计算矩阵幂|$A^k$ 与差分方程]] → 下一节把标量 $e^{\lambda t}$ 提升为[[矩阵指数]]。
 <!-- bilingual-en:start -->
-Independent eigenvectors → [[特征值、对角化与线性动力系统#对角化与矩阵幂|diagonalization]] → $A^k$ and difference equations → the next section lifts the scalar exponential $e^{\lambda t}$ to the [[特征值、对角化与线性动力系统#对角化与矩阵幂|matrix exponential]].
+Independent eigenvectors → [[对角化|diagonalization]] and its [[可对角化判据|criterion]] → [[对角化计算矩阵幂|$A^k$ and difference equations]] → the next section lifts the scalar exponential $e^{\lambda t}$ to the [[矩阵指数|matrix exponential]].
 <!-- bilingual-en:end -->
 
 ---
@@ -2809,18 +2813,18 @@ Independent eigenvectors → [[特征值、对角化与线性动力系统#对角
 *Questions, prerequisites, and dimensions for this section*
 <!-- bilingual-en:end -->
 
-如何求解耦合常系数系统
+[[常系数线性系统的矩阵指数解|如何求解耦合常系数系统]]
 <!-- bilingual-en:start -->
-How can we solve the coupled constant-coefficient system
+[[常系数线性系统的矩阵指数解|How can we solve the coupled constant-coefficient system]]
 <!-- bilingual-en:end -->
 
 $$
 \frac{du}{dt}=Au,\qquad u(0)=u_0,\qquad A\in\mathbb R^{n\times n}?
 $$
 
-核心思想是：特征向量方向把向量微分方程化为标量指数增长；把全部方向合起来得到[[特征值、对角化与线性动力系统#对角化与矩阵幂|矩阵指数（matrix exponential）]] $e^{At}\in\mathbb R^{n\times n}$。
+核心思想是：每个特征向量方向都给出一个标量指数模式；若这些方向组成一组基，就能按模式合成全部解。不论 $A$ 是否可对角化，[[矩阵指数|矩阵指数（matrix exponential）]] $e^{At}\in\mathbb R^{n\times n}$ 都由幂级数定义。
 <!-- bilingual-en:start -->
-The central idea is that each eigendirection reduces the vector differential equation to scalar exponential growth. Combining all eigendirections produces the [[特征值、对角化与线性动力系统#对角化与矩阵幂|matrix exponential]] $e^{At}\in\mathbb R^{n\times n}$.
+Each eigendirection supplies a scalar exponential mode; when the eigendirections form a basis, all solutions can be assembled from those modes. Whether or not $A$ is diagonalizable, the [[矩阵指数|matrix exponential]] $e^{At}\in\mathbb R^{n\times n}$ is defined by its power series.
 <!-- bilingual-en:end -->
 
 > [!info] 本地材料
@@ -2909,9 +2913,9 @@ $$
 u(t)=e^{At}u_0
 $$
 
-满足微分方程和初值。若 $A=S\Lambda S^{-1}$，则 $A^k=S\Lambda^kS^{-1}$，代入级数：
+满足微分方程和初值。若 $A=S\Lambda S^{-1}$，则可用[[对角化计算矩阵指数|对角化算法]]：由 $A^k=S\Lambda^kS^{-1}$ 代入级数，得到
 <!-- bilingual-en:start -->
-satisfies both the differential equation and the initial condition. If $A=S\Lambda S^{-1}$, then $A^k=S\Lambda^kS^{-1}$; substituting this into the series gives
+satisfies both the differential equation and the initial condition. If $A=S\Lambda S^{-1}$, the [[对角化计算矩阵指数|diagonalization method]] substitutes $A^k=S\Lambda^kS^{-1}$ into the series to give
 <!-- bilingual-en:end -->
 
 $$
@@ -3131,9 +3135,9 @@ Only the required column is computed. This illustrates the strategy: identify th
 *Knowledge chain*
 <!-- bilingual-en:end -->
 
-对角化 → 特征模式 $e^{\lambda t}x$ → [[特征值、对角化与线性动力系统#对角化与矩阵幂|矩阵指数]] → 连续动力系统 → 下一节的概率稳态与正交函数展开。
+[[对角化]] → 特征模式 $e^{\lambda t}x$ → [[矩阵指数]]与[[对角化计算矩阵指数|对角化算法]] → 连续动力系统 → 下一节的概率稳态与正交函数展开。
 <!-- bilingual-en:start -->
-Diagonalization → eigenmodes $e^{\lambda t}x$ → [[特征值、对角化与线性动力系统#对角化与矩阵幂|matrix exponential]] → continuous-time dynamical systems → steady-state probability distributions and orthogonal function expansions in the next section.
+[[对角化|Diagonalization]] → eigenmodes $e^{\lambda t}x$ → the [[矩阵指数|matrix exponential]] and its [[对角化计算矩阵指数|diagonalization method]] → continuous-time dynamical systems → steady-state probability distributions and orthogonal function expansions in the next section.
 <!-- bilingual-en:end -->
 
 ---
@@ -3161,9 +3165,9 @@ This section applies earlier tools to two apparently different questions: why a 
 *Lecture A: Markov matrices and steady states*
 <!-- bilingual-en:end -->
 
-课程采用“列随机”约定：[[特征值、对角化与线性动力系统#Markov 矩阵与稳态|Markov 矩阵（Markov matrix）]] $A=(a_{ij})$ 满足
+课程采用[[Markov矩阵左右约定|列随机约定]]：[[Markov矩阵|Markov 矩阵（Markov matrix）]] $A=(a_{ij})$ 满足
 <!-- bilingual-en:start -->
-The course uses the column-stochastic convention: the [[特征值、对角化与线性动力系统#Markov 矩阵与稳态|Markov matrix]] $A=(a_{ij})$ satisfies
+The course uses the [[Markov矩阵左右约定|column-stochastic convention]]: a [[Markov矩阵|Markov matrix]] $A=(a_{ij})$ satisfies
 <!-- bilingual-en:end -->
 
 $$
@@ -3197,33 +3201,39 @@ $$
 \mathbf1^Tp_{k+1}=\mathbf1^TAp_k=\mathbf1^Tp_k=1.
 $$
 
-$\mathbf1^T$ 是左特征向量；由于 $A$ 与 $A^T$ 特征值相同，$1$ 是 $A$ 的特征值。满足
+$\mathbf1^T$ 是左特征向量；由于 $A$ 与 $A^T$ 特征值相同，[[Markov矩阵必有特征值一|$1$ 是 $A$ 的特征值]]。满足
 <!-- bilingual-en:start -->
-$\mathbf1^T$ is a left eigenvector. Since $A$ and $A^T$ have the same eigenvalues, $1$ is also an eigenvalue of $A$. A probability vector satisfying
+$\mathbf1^T$ is a left eigenvector. Since $A$ and $A^T$ have the same eigenvalues, [[Markov矩阵必有特征值一|$1$ is also an eigenvalue of $A$]]. A probability vector satisfying
 <!-- bilingual-en:end -->
 
 $$
 Ap_*=p_*
 $$
 
-的概率向量称为**稳态（steady state）**。
+的概率向量称为[[Markov稳态分布|稳态分布（stationary distribution）]]。
 <!-- bilingual-en:start -->
-is called a **steady state**.
+is called a [[Markov稳态分布|stationary distribution]].
 <!-- bilingual-en:end -->
 
-若 $A$ 可对角化，特征值 $1$ 是单特征值，并且其他特征值均满足 $|\lambda_i|<1$，则
+先看课程采用的可对角化情形。若把唯一稳态 $p_*$ 归一化为 $\mathbf1^Tp_*=1$，特征值 $1$ 是单根，并且其他特征值均满足 $|\lambda_i|<1$，则
 <!-- bilingual-en:start -->
-If $A$ is diagonalizable, the eigenvalue $1$ is simple, and every other eigenvalue satisfies $|\lambda_i|<1$, then
+First consider the diagonalizable case used in the course. Normalize the unique stationary vector by $\mathbf1^Tp_*=1$. If eigenvalue $1$ is simple and every other eigenvalue satisfies $|\lambda_i|<1$, then
 <!-- bilingual-en:end -->
 
 $$
-p_k=A^kp_0=c_1p_*+\sum_{i\ge2}c_i\lambda_i^kx_i
-\longrightarrow c_1p_*.
+p_k=A^kp_0=p_*+\sum_{i\ge2}c_i\lambda_i^kx_i
+\longrightarrow p_*.
 $$
 
-归一化使极限分量和为 $1$。若 $1$ 的重数大于 $1$，稳态可能不唯一；若还存在 $\lambda=-1$ 或其他单位圆上的特征值，则可能周期振荡而不收敛。因此“Markov”本身并不自动保证收敛到唯一稳态。有限状态的正矩阵满足更强的 Perron--Frobenius 条件，本节图中的具体矩阵正是这一情形。
+这里 $\lambda_i\ne1$ 的特征向量满足 $\mathbf1^Tx_i=0$，所以概率向量 $p_0$ 在已归一化的 $p_*$ 方向上的系数就是 $1$。更一般地，有限列随机矩阵不必可对角化；精确结论是
+$$
+A^k\longrightarrow p_*\mathbf1^T
+\quad\Longleftrightarrow\quad
+1\text{ 是代数单根，且其余特征值都满足 }|\lambda|<1.
+$$
+严格在单位圆内的 Jordan 块所带多项式因子仍会衰减，所以不需要额外假设可对角化。每个有限随机矩阵至少有一个稳态，概率论中的存在结构见[[有限链平稳分解]]；[[Markov稳态唯一判据|稳态唯一当且仅当 $\dim\operatorname{null}(A-I)=1$]]。若固定点空间维数大于 $1$，稳态就不唯一；[[稳态唯一不推收敛|即使稳态唯一，$\lambda=-1$ 或其他单位圆特征值仍可造成周期振荡]]。因此“Markov”本身并不自动保证收敛到唯一稳态；完整的谱条件见[[Markov幂的秩一稳态极限|Markov矩阵幂收敛判据]]。有限状态的严格正矩阵满足更强的 Perron--Frobenius 条件，本节图中的具体矩阵正是这一情形。
 <!-- bilingual-en:start -->
-The limiting vector is normalized so that its entries sum to $1$. If the eigenvalue $1$ has multiplicity greater than one, the steady state may not be unique. If another eigenvalue, such as $-1$, lies on the unit circle, the chain may oscillate periodically rather than converge. Thus being a Markov matrix alone does not guarantee convergence to a unique steady state. Finite-state positive matrices satisfy the stronger Perron–Frobenius conditions; the specific matrices illustrated in this section fall into that setting.
+For every eigenvector with $\lambda_i\ne1$, $\mathbf1^Tx_i=0$, so a probability vector has coefficient one on the normalized stationary direction. More generally, a finite column-stochastic matrix need not be diagonalizable: $A^k\to p_*\mathbf1^T$ exactly when one is an algebraically simple eigenvalue and every other eigenvalue lies strictly inside the unit circle. Jordan polynomial factors attached to eigenvalues strictly inside the disk still decay. Every finite stochastic matrix has at least one stationary distribution; its probabilistic existence structure is recorded in [[有限链平稳分解]]. The [[Markov稳态唯一判据|stationary distribution is unique exactly when $\dim\operatorname{null}(A-I)=1$]]. A larger fixed-point space means nonuniqueness, while [[稳态唯一不推收敛|uniqueness still does not preclude periodic oscillation]] from another unit-circle eigenvalue such as $-1$. Thus stochasticity alone does not guarantee convergence; the complete spectral condition is in [[Markov幂的秩一稳态极限|the matrix-power convergence criterion]]. Finite-state matrices with every entry strictly positive satisfy the stronger Perron–Frobenius conditions, as do the specific matrices illustrated here.
 <!-- bilingual-en:end -->
 
 ![[98_attachment/linear_algebra/mit18_06sc/mit18.06sc-unit2-markov-steady-state.png|760]]
@@ -3316,9 +3326,9 @@ $$
 \int_0^{2\pi}\sin x\cos x\,dx=0,
 $$
 
-但它们尚未全部归一化：$\|1\|^2=2\pi$，$\|\cos nx\|^2=\|\sin nx\|^2=\pi$。因此[[特征值、对角化与线性动力系统#对角化与矩阵幂|Fourier 级数（Fourier series）]]写成
+但它们尚未全部归一化：$\|1\|^2=2\pi$，$\|\cos nx\|^2=\|\sin nx\|^2=\pi$。因此 Fourier 级数（Fourier series）写成
 <!-- bilingual-en:start -->
-They are not all normalized: $\|1\|^2=2\pi$, while $\|\cos(nx)\|^2=\|\sin(nx)\|^2=\pi$. Therefore the [[特征值、对角化与线性动力系统#对角化与矩阵幂|Fourier series]] is written as
+They are not all normalized: $\|1\|^2=2\pi$, while $\|\cos(nx)\|^2=\|\sin(nx)\|^2=\pi$. Therefore the Fourier series is written as
 <!-- bilingual-en:end -->
 
 $$
@@ -3443,9 +3453,9 @@ After truncation to finitely many trigonometric functions, the Fourier partial s
 *Knowledge chain*
 <!-- bilingual-en:end -->
 
-矩阵幂 → [[特征值、对角化与线性动力系统#Markov 矩阵与稳态|Markov 稳态]]；标准正交投影 → [[特征值、对角化与线性动力系统#对角化与矩阵幂|Fourier 展开]]。两条线都体现“在合适的基中解耦”。
+矩阵幂 → [[Markov矩阵]] → [[Markov稳态分布]] → [[Markov矩阵幂收敛判据|矩阵幂收敛]]；标准正交投影 → Fourier 展开。若[[Markov幂的秩一稳态极限|还要求所有初态收敛到同一个稳态]]，必须另加[[Markov稳态唯一判据|稳态唯一性]]。两条线都体现“在合适的基中解耦”。
 <!-- bilingual-en:start -->
-Matrix powers → [[特征值、对角化与线性动力系统#Markov 矩阵与稳态|Markov steady states]]; orthogonal projection → [[特征值、对角化与线性动力系统#对角化与矩阵幂|Fourier expansion]]. Both threads express the same idea: decouple the problem in an appropriate basis.
+Matrix powers → [[Markov矩阵|Markov matrices]] → [[Markov稳态分布|stationary distributions]] → [[Markov矩阵幂收敛判据|matrix-power convergence]]; [[Markov幂的秩一稳态极限|convergence from every initial distribution to one common stationary distribution]] additionally requires [[Markov稳态唯一判据|stationary uniqueness]]. Orthogonal projection → Fourier expansion. Both threads express the same idea: decouple the problem in an appropriate basis.
 <!-- bilingual-en:end -->
 
 ---

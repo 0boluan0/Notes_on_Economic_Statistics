@@ -17,7 +17,7 @@
       "y": 0,
       "width": 310,
       "height": 100,
-      "text": "## RAG\n\nRAG 与长上下文",
+      "text": "## RAG\n\n[[RAG（检索增强生成）]]",
       "color": "5"
     },
     {
@@ -27,7 +27,7 @@
       "y": 150,
       "width": 310,
       "height": 100,
-      "text": "## Long Context\n\nRAG 与长上下文",
+      "text": "## Long Context\n\n[[长上下文语言模型]]",
       "color": "2"
     },
     {
@@ -37,7 +37,7 @@
       "y": 300,
       "width": 310,
       "height": 100,
-      "text": "## Pretraining\n\n预训练、指令微调与偏好优化",
+      "text": "## Pretraining\n\n[[LLM 预训练.canvas|LLM 预训练]]",
       "color": "5"
     },
     {
@@ -47,7 +47,7 @@
       "y": 450,
       "width": 310,
       "height": 100,
-      "text": "## Instruction Tuning / RLHF\n\n预训练、指令微调与偏好优化",
+      "text": "## Instruction Tuning / RLHF\n\n[[LLM 后训练.canvas|LLM 后训练]]",
       "color": "4"
     },
     {
@@ -171,16 +171,6 @@
       "toEnd": "arrow",
       "label": "specializes",
       "color": "5"
-    },
-    {
-      "id": "e0002",
-      "fromNode": "route-long-context",
-      "fromSide": "right",
-      "toNode": "paper-khattab2020colbertefficienteffective",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "specializes",
-      "color": "2"
     },
     {
       "id": "e0003",

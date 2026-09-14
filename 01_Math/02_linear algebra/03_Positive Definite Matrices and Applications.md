@@ -124,19 +124,19 @@ Prerequisites: eigenvalues and eigenvectors, diagonalization, orthogonal matrice
 
 资料入口：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.1sum.pdf#page=1|Summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U3_S01_Lecture_Lecture_25_Symmetric_Matrices_and_Positive_Definiteness.pdf#page=1|Lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U3_S01_Recitation_Problem_Solving_Symmetric_Matrices_and_Positive_Definiteness.pdf#page=1|Recitation p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.1prob.pdf#page=1|Homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses3.1sol.pdf#page=1|Official solution p.1]]
 
-关联卡片：[[对称矩阵与正定二次型#对称矩阵与谱定理|对称矩阵]]、[[对称矩阵与正定二次型#二次型与正定性|正定矩阵]]、[[对称矩阵与正定二次型#对称矩阵与谱定理|谱分解]]、[[对称矩阵与正定二次型#二次型与正定性|正定性判别]]。
+关联卡片：[[实对称矩阵|对称矩阵]]、[[正定矩阵]]、[[实对称矩阵谱定理|谱分解]]、[[正定判据的选择|正定性判别]]。
 
 ### 3.1.1 实对称矩阵的谱定理
 <!-- bilingual-en:start -->
 *3.1.1 The spectral theorem for real symmetric matrices*
 <!-- bilingual-en:end -->
 
-若 $A=A^T$，称 $A$ 为实[[对称矩阵与正定二次型#对称矩阵与谱定理|对称矩阵]]。课程采用的实谱定理（spectral theorem）是：
+若 $A=A^T$，称 $A$ 为实[[实对称矩阵|对称矩阵]]。课程采用的实谱定理（spectral theorem）是：
 <!-- bilingual-en:start -->
-If $A=A^T$, then $A$ is a real [[对称矩阵与正定二次型#对称矩阵与谱定理|symmetric matrix]]. The version of the real spectral theorem used in this course is:
+If $A=A^T$, then $A$ is a real [[实对称矩阵|symmetric matrix]]. The version of the real spectral theorem used in this course is:
 <!-- bilingual-en:end -->
 
-> [!theorem] [[对称矩阵与正定二次型#对称矩阵与谱定理|实谱定理]]
+> [!theorem] [[实对称矩阵谱定理|实谱定理]]
 > 对每个 $A\in\mathbb R^{n\times n}$，若 $A=A^T$，则：
 > 1. $A$ 的所有特征值都是实数；
 > 2. 不同特征值的特征向量彼此正交；
@@ -340,13 +340,13 @@ Thus the action of $A$ can be understood one direction at a time: decompose $x$ 
 > $$
 > x^TAx>0,
 > $$
-> 则称 $A$ 为正定矩阵。若改为 $x^TAx\ge0$，则称[[对称矩阵与正定二次型#二次型与正定性|正半定（positive semidefinite）]]。复数情形把条件改成 $A=A^*$ 与 $x^*Ax>0$。
+> 则称 $A$ 为正定矩阵。若改为 $x^TAx\ge0$，则称[[半正定矩阵|正半定（positive semidefinite）]]。复数情形把条件改成 $A=A^*$ 与 $x^*Ax>0$。
 > <!-- bilingual-en:start -->
 > A real matrix $A\in\mathbb R^{n\times n}$ is **positive definite** if $A=A^T$ and
 > $$
 > x^TAx>0
 > $$
-> for every nonzero $x$. Replacing $>$ by $\geq$ gives [[对称矩阵与正定二次型#二次型与正定性|positive semidefiniteness]]. Over $\mathbb C$, require $A=A^*$ and $x^*Ax>0$ for every nonzero $x$.
+> for every nonzero $x$. Replacing $>$ by $\geq$ gives [[半正定矩阵|positive semidefiniteness]]. Over $\mathbb C$, require $A=A^*$ and $x^*Ax>0$ for every nonzero $x$.
 > <!-- bilingual-en:end -->
 
 对实对称 $A$，下列条件等价：
@@ -671,9 +671,9 @@ A=A^T\Longrightarrow\text{实谱与正交特征基}
 \Longrightarrow x^TAx=\sum\lambda_i y_i^2.
 $$
 
-正定性把[[特征值、对角化与线性动力系统#特征值与特征向量|特征值]]、主元、顺序主子式、二次型与可逆性连接在一起；下一节把相同思想推广到复数域。
+正定性把[[正定与半正定的谱判据|正定与半正定的特征值判据]]、主元、顺序主子式、二次型与可逆性连接在一起；下一节把相同思想推广到复数域。
 <!-- bilingual-en:start -->
-Positive definiteness connects [[特征值、对角化与线性动力系统#特征值与特征向量|eigenvalues]], pivots, leading principal minors, quadratic forms, and invertibility. The next section extends the same ideas to complex vector spaces.
+Positive definiteness connects the [[正定与半正定的谱判据|eigenvalue criterion for definiteness]], pivots, leading principal minors, quadratic forms, and invertibility. The next section extends the same ideas to complex vector spaces.
 <!-- bilingual-en:end -->
 
 ---
@@ -697,7 +697,7 @@ Prerequisites: complex numbers and conjugation, inner products, orthogonal matri
 
 资料入口：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.2sum.pdf#page=1|Summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U3_S02_Lecture_Lecture_26_Complex_Matrices_Fast_Fourier_Transform_FFT.pdf#page=1|Lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U3_S02_Recitation_Problem_Solving_Complex_Matrices.pdf#page=1|Recitation p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.2prob.pdf#page=1|Homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses3.2sol.pdf#page=1|Official solution p.1]]
 
-关联卡片：[[正交投影与最小二乘#正交补与最近点|正交性]]、[[对称矩阵与正定二次型#对称矩阵与谱定理|正交矩阵]]、[[特征值、对角化与线性动力系统#对角化与矩阵幂|Fourier 展开]]。
+关联卡片：[[正交|正交性]]、[[正交矩阵]]、Fourier 展开。
 
 ### 3.2.1 复向量的长度与 Hermitian 内积
 <!-- bilingual-en:start -->
@@ -732,11 +732,11 @@ It satisfies:
 <!-- bilingual-en:end -->
 
 > [!definition] Hermitian 与 unitary
-> - $A\in\mathbb C^{n\times n}$ 若 $A=A^*$，称为[[对称矩阵与正定二次型#对称矩阵与谱定理|Hermitian 矩阵]]；它是实对称矩阵的复数推广。
-> - $Q\in\mathbb C^{n\times n}$ 若 $Q^*Q=QQ^*=I$，称为[[对称矩阵与正定二次型#对称矩阵与谱定理|unitary 矩阵]]；它是实正交矩阵的复数推广。
+> - $A\in\mathbb C^{n\times n}$ 若 $A=A^*$，称为[[Hermitian 矩阵|Hermitian 矩阵]]；它是实对称矩阵的复数推广。
+> - $Q\in\mathbb C^{n\times n}$ 若 $Q^*Q=QQ^*=I$，称为[[Unitary 矩阵|unitary 矩阵]]；它是实正交矩阵的复数推广。
 > <!-- bilingual-en:start -->
-> - A matrix $A\in\mathbb C^{n\times n}$ is [[对称矩阵与正定二次型#对称矩阵与谱定理|Hermitian]] if $A=A^*$; this is the complex analogue of a real symmetric matrix.
-> - A matrix $Q\in\mathbb C^{n\times n}$ is [[对称矩阵与正定二次型#对称矩阵与谱定理|unitary]] if $Q^*Q=QQ^*=I$; this is the complex analogue of a real orthogonal matrix.
+> - A matrix $A\in\mathbb C^{n\times n}$ is [[Hermitian 矩阵|Hermitian]] if $A=A^*$; this is the complex analogue of a real symmetric matrix.
+> - A matrix $Q\in\mathbb C^{n\times n}$ is [[Unitary 矩阵|unitary]] if $Q^*Q=QQ^*=I$; this is the complex analogue of a real orthogonal matrix.
 > <!-- bilingual-en:end -->
 
 Hermitian 谱定理把 3.1 的所有 $T$ 换为 $*$：特征值为实数，可以选 unitary 特征向量矩阵 $Q$，并写成
@@ -909,9 +909,9 @@ $$
 If $e_0=(1,0,0,0)^T$, then $F_4e_0=(1,1,1,1)^T$: a single impulse in the time domain contains all frequencies with equal amplitude.
 <!-- bilingual-en:end -->
 
-### 3.2.4 [[特征值、对角化与线性动力系统#对角化与矩阵幂|FFT 的偶奇递归]]
+### 3.2.4 FFT 的偶奇递归
 <!-- bilingual-en:start -->
-*3.2.4 [[特征值、对角化与线性动力系统#对角化与矩阵幂|Even–odd recursion in the FFT]]*
+*3.2.4 Even–odd recursion in the FFT*
 <!-- bilingual-en:end -->
 
 普通矩阵—向量乘法 $F_nx$ 需要约 $n^2$ 次标量运算。对 $n=2m$，先用置换矩阵 $P$ 把输入排成偶数下标、奇数下标：
@@ -1108,7 +1108,7 @@ Prerequisites: the positive-definiteness criteria from Session 3.1, critical poi
 
 资料入口：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.3sum.pdf#page=1|Summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U3_S03_Lecture_Lecture_27_Positive_Definite_Matrices_and_Minima.pdf#page=1|Lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U3_S03_Recitation_Problem_Solving_Positive_Definite_Matrices_and_Minima.pdf#page=1|Recitation p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.3prob.pdf#page=1|Homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses3.3sol.pdf#page=1|Official solution p.1]]
 
-关联卡片：[[对称矩阵与正定二次型#二次型与正定性|正定矩阵]]、[[对称矩阵与正定二次型#二次型与正定性|二次型]]、[[对称矩阵与正定二次型#二次型与正定性|正定性判别]]、[[正交投影与最小二乘#最小二乘与正规方程|最小二乘]]。
+关联卡片：[[正定矩阵]]、[[二次型]]、[[正定判据的选择|正定性判别]]、[[线性最小二乘|最小二乘]]。
 
 ### 3.3.1 二阶二次型的四个判据
 <!-- bilingual-en:start -->
@@ -1261,14 +1261,14 @@ This is completing the square in higher dimensions: $L^Tx$ supplies the new line
 
 ![[98_attachment/linear_algebra/mit18_06sc/mit18.06sc-unit3-quadratic-bowl.png|820]]
 
-### 3.3.3 [[对称矩阵与正定二次型#二次型与正定性|Hessian]] 与极小值
+### 3.3.3 Hessian 与极小值
 <!-- bilingual-en:start -->
-*3.3.3 The [[对称矩阵与正定二次型#二次型与正定性|Hessian]] and minima*
+*3.3.3 The Hessian and minima*
 <!-- bilingual-en:end -->
 
-对二次函数
+先把[[Hessian 局部极小判据|正定 Hessian 的局部极小判据]]放到最清楚的二次函数中。对二次函数
 <!-- bilingual-en:start -->
-For the quadratic function
+Start with the [[Hessian 局部极小判据|positive-definite Hessian test]] in its clearest setting. For the quadratic function
 <!-- bilingual-en:end -->
 
 $$
@@ -1589,7 +1589,7 @@ Prerequisites are diagonalization $A=S\Lambda S^{-1}$, eigenspaces, and matrix p
 
 资料入口：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.4sum.pdf#page=1|Summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U3_S04_Lecture_Lecture_28_Similar_Matrices_and_Jordan_Form.pdf#page=1|Lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U3_S04_Recitation_Problem_Solving_Similar_Matrices.pdf#page=1|Recitation p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.4prob.pdf#page=1|Homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses3.4sol.pdf#page=1|Official solution p.1]]
 
-关联卡片：[[对称矩阵与正定二次型#二次型与正定性|正定矩阵]]、[[线性变换与换基#换基与相似|相似矩阵]]、[[特征值、对角化与线性动力系统#对角化与矩阵幂|对角化]]、[[特征值、对角化与线性动力系统#Jordan 结构的边界|Jordan 形]]、[[特征值、对角化与线性动力系统#对角化与矩阵幂|矩阵指数]]。
+关联卡片：[[正定矩阵]]、[[相似矩阵]]、[[对角化]]、[[Jordan标准形]]、[[矩阵指数]]、[[Schur分解]]、[[Schur分解存在性]]。
 
 ### 3.4.1 Lecture 28 开头：正定矩阵的封闭性质与 $A^TA$
 <!-- bilingual-en:start -->
@@ -1680,7 +1680,7 @@ Thus $C^TC$ is invertible if and only if $C$ has full column rank. In that case 
 *3.4.2 What similarity preserves*
 <!-- bilingual-en:end -->
 
-> [!definition] 相似矩阵
+> [!definition] [[相似矩阵|相似矩阵]]
 > 若存在可逆 $M\in\mathbb F^{n\times n}$ 使
 > $$
 > B=M^{-1}AM,
@@ -1690,7 +1690,7 @@ Thus $C^TC$ is invertible if and only if $C$ has full column rank. In that case 
 > If there is an invertible matrix $M\in\mathbb F^{n\times n}$ such that $B=M^{-1}AM$, then $A$ and $B$ are similar. The columns of $M$ usually contain the new basis vectors expressed in the old coordinates.
 > <!-- bilingual-en:end -->
 
-相似变换保存：
+相似关系分别保留[[相似保持特征多项式|特征多项式信息]]与[[相似保持特征空间维数|特征空间维数]]，因此还保存：
 <!-- bilingual-en:start -->
 Similarity transformations preserve:
 <!-- bilingual-en:end -->
@@ -1757,7 +1757,7 @@ $$
 Applying the same argument term by term to the convergent power series gives $e^B=M^{-1}e^AM$.
 <!-- bilingual-en:end -->
 
-### 3.4.3 对角化与重复特征值
+### 3.4.3 [[对角化]]与重复特征值
 <!-- bilingual-en:start -->
 *3.4.3 Diagonalization and repeated eigenvalues*
 <!-- bilingual-en:end -->
@@ -1771,7 +1771,7 @@ $$
 AS=S\Lambda,\qquad S^{-1}AS=\Lambda.
 $$
 
-有 $n$ 个互不相同特征值时必有 $n$ 个独立特征向量，所以必可对角化。但特征值重复时，代数重数不保证几何重数足够。例如
+有 $n$ 个互不相同特征值时，由[[互异特征值向量独立]]可知必有 $n$ 个独立特征向量，所以必可对角化。但特征值重复时，代数重数不保证几何重数足够。例如
 <!-- bilingual-en:start -->
 If a matrix has $n$ distinct eigenvalues, it has $n$ linearly independent eigenvectors and is therefore diagonalizable. With repeated eigenvalues, however, algebraic multiplicity alone does not guarantee enough eigenvectors. For example,
 <!-- bilingual-en:end -->
@@ -1789,17 +1789,17 @@ $$
 \begin{bmatrix}4&1\\0&4\end{bmatrix}
 $$
 
-只有一维特征空间；二者不能相似。
+只有一维特征空间；二者不能相似。这也是[[同谱不必相似]]的最小边界。
 <!-- bilingual-en:start -->
 has only a one-dimensional eigenspace. The two matrices therefore cannot be similar.
 <!-- bilingual-en:end -->
 
-### 3.4.4 Jordan 链与 Jordan 标准形
+### 3.4.4 [[Jordan链]]与[[Jordan标准形]]
 <!-- bilingual-en:start -->
 *3.4.4 Jordan chains and Jordan canonical form*
 <!-- bilingual-en:end -->
 
-对特征值 $\lambda$，大小为 $k$ 的 Jordan 块是
+对特征值 $\lambda$，[[Jordan块|大小为 $k$ 的 Jordan 块]]是
 <!-- bilingual-en:start -->
 For the eigenvalue $\lambda$, a Jordan block of size $k$ is
 <!-- bilingual-en:end -->
@@ -1816,7 +1816,7 @@ J_k(\lambda)=
 =\lambda I+N,
 $$
 
-其中 $N^k=0$。对应基向量形成广义特征向量链：
+其中 $N^k=0$。对应的[[广义特征向量]]形成[[Jordan链]]：
 <!-- bilingual-en:start -->
 where $N^k=0$.  The corresponding basis vectors form a generalized eigenvector chain:
 <!-- bilingual-en:end -->
@@ -1827,14 +1827,14 @@ $$
 (A-\lambda I)v_k=v_{k-1}.
 $$
 
-在特征多项式分裂的条件下，存在可逆 $S$ 使 $S^{-1}AS$ 为 Jordan 块的直和。课程重点是理解块结构与计算，不从头证明整个存在性定理。
+在[[Jordan标准形的域条件|特征多项式分裂]]的条件下，存在可逆 $S$ 使 $S^{-1}AS$ 为[[Jordan标准形|Jordan 块的直和]]。课程重点是理解块结构与计算，不从头证明整个存在性定理；块尺寸的唯一性另见[[Jordan形唯一性]]。
 <!-- bilingual-en:start -->
 If the characteristic polynomial splits over the underlying field, there is an invertible matrix $S$ such that $S^{-1}AS$ is a direct sum of Jordan blocks. The course focuses on understanding and computing with this block structure rather than proving the full existence theorem from first principles.
 <!-- bilingual-en:end -->
 
 ![[98_attachment/linear_algebra/mit18_06sc/mit18.06sc-unit3-jordan-chain.png|820]]
 
-#### Jordan 块的幂和指数
+#### [[Jordan块的幂]]与[[Jordan块的指数]]
 <!-- bilingual-en:start -->
 *Powers and exponentials of a Jordan block*
 <!-- bilingual-en:end -->
@@ -1865,7 +1865,7 @@ $$
 So the long-term behavior is not only determined by $e^{\lambda t}$: the Jordan block size $k$ also brings a polynomial factor of up to $t^{k-1}$.
 <!-- bilingual-en:end -->
 
-> [!warning] 稳定性的重要边界
+> [!warning] [[连续系统有界判据|稳定性的重要边界]]
 > 若 $\operatorname{Re}\lambda<0$，指数衰减最终压过任意固定次数多项式；若 $\operatorname{Re}\lambda>0$，解指数增长。若 $\operatorname{Re}\lambda=0$，非平凡 Jordan 块会产生多项式增长。尤其“所有特征值纯虚，所以解有界”只在这些纯虚特征值对应 Jordan 块全为 $1\times1$（即相应部分可对角化）时成立。
 > <!-- bilingual-en:start -->
 > If $\operatorname{Re}\lambda<0$, exponential decay dominates every fixed-degree polynomial; if $\operatorname{Re}\lambda>0$, the solution grows exponentially. If $\operatorname{Re}\lambda=0$, a nontrivial Jordan block produces polynomial growth. Therefore, the claim “all eigenvalues are purely imaginary, so every solution is bounded” is valid only when all Jordan blocks for those eigenvalues have size $1\times1$, equivalently when that part of the matrix is diagonalizable.
@@ -1990,10 +1990,10 @@ The recitation emphasizes three structural tests:
 *3.4.7 Boundaries, Counterexamples and common errors*
 <!-- bilingual-en:end -->
 
-- “特征值相同”通常不推出相似；还需相同 Jordan 块结构。只有特征值互异从而都可对角化时，才可直接推出。
+- [[同谱不必相似|“特征值相同”通常不推出相似]]；还需相同 Jordan 块结构。只有特征值互异从而都可对角化时，才可直接推出。
 - 相似与合同（congruence）不同：$M^{-1}AM$ 描述同一线性算子换基，$M^TAM$ 描述同一二次型换坐标。
-- Jordan 形在浮点计算中极不稳定；它主要提供理论分类，不是大规模数值算法首选。
-- 实矩阵若有非实特征值，必须到 $\mathbb C$ 上使用普通 Jordan 形，或在 $\mathbb R$ 上使用 $2\times2$ 实块。
+- [[Jordan、Schur与SVD用途边界|Jordan 形在浮点计算中极不稳定]]；它主要提供理论分类，不是大规模数值算法首选。
+- [[Jordan标准形的域条件|实矩阵若有非实特征值]]，必须到 $\mathbb C$ 上使用普通 Jordan 形，或在 $\mathbb R$ 上使用 $2\times2$ 实块。
 <!-- bilingual-en:start -->
 - Having the same eigenvalues does not generally imply similarity; the Jordan block structure must also agree. A direct conclusion is possible when all eigenvalues are distinct, because both matrices are then diagonalizable.
 - Similarity and congruence are different: $M^{-1}AM$ represents a change of basis for the same linear operator, while $M^TAM$ represents a change of coordinates for the same quadratic form.
@@ -2038,7 +2038,7 @@ The recitation emphasizes three structural tests:
 > <!-- bilingual-en:end -->
 
 > [!question]- 自检 3（判断）
-> 迹和行列式都相同的两个 $2\times2$ 矩阵一定相似吗？
+> [[同谱不必相似|迹和行列式都相同的两个 $2\times2$ 矩阵一定相似吗？]]
 > <!-- bilingual-en:start -->
 > Must two $2\times2$ matrices with the same trace and determinant be similar?
 > <!-- bilingual-en:end -->
@@ -2088,14 +2088,14 @@ $$
 
 资料入口：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.5sum.pdf#page=1|Summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U3_S05_Lecture_Lecture_29_Singular_Value_Decomposition.pdf#page=1|Lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U3_S05_Recitation_Problem_Solving_Computing_the_Singular_Value_Decomposition.pdf#page=1|Recitation p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.5prob.pdf#page=1|Homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses3.5sol.pdf#page=1|Official solution p.1]]
 
-关联卡片：[[奇异值分解与低秩近似#SVD 的三层结构|奇异值分解]]、[[对称矩阵与正定二次型#对称矩阵与谱定理|谱分解]]、[[正交投影与最小二乘#正交补与最近点|正交性]]、[[线性方程组与四个基本子空间#基、维数与秩|矩阵秩]]。
+关联卡片：[[奇异值分解|两空间 SVD]]、[[SVD存在性]]、[[奇异值]]、[[奇异值与Gram谱]]、[[奇异向量]]、[[奇异向量与Gram特征向量]]、[[SVD手算流程]]、[[奇异值与秩]]、[[SVD与四个基本子空间]]、[[紧SVD]]、[[SVD秩一展开]]、[[谱范数]]、[[谱范数与最大奇异值]]、[[Frobenius范数]]、[[Frobenius范数与奇异值]]、[[奇异向量共同相位]]、[[重奇异值下方向不唯一]]、[[SVD零块补基不唯一]]、[[实对称矩阵谱定理|谱分解]]、[[矩阵秩]]。
 
-### 3.5.1 SVD 定理与几何意义
+### 3.5.1 [[SVD存在性|SVD 定理]]与几何意义
 <!-- bilingual-en:start -->
 *3.5.1 The SVD theorem and its geometric meaning*
 <!-- bilingual-en:end -->
 
-> [!theorem] 奇异值分解（SVD）
+> [!theorem] [[SVD存在性|奇异值分解存在定理]]
 > 对每个 $A\in\mathbb R^{m\times n}$，存在正交矩阵 $U\in\mathbb R^{m\times m}$、$V\in\mathbb R^{n\times n}$，以及仅在主对角线上可能非零的 $\Sigma\in\mathbb R^{m\times n}$，使
 > $$
 > A=U\Sigma V^T.
@@ -2104,12 +2104,12 @@ $$
 > $$
 > \sigma_1\ge\sigma_2\ge\cdots\ge\sigma_r>0
 > $$
-> 排列，称为[[奇异值分解与低秩近似#SVD 的三层结构|奇异值（singular value）]]；$r=\operatorname{rank}(A)$。
+> 排列，称为[[奇异值|奇异值（singular value）]]；$r=\operatorname{rank}(A)$。
 > <!-- bilingual-en:start -->
-> For every $A\in\mathbb R^{m\times n}$, there are orthogonal matrices $U\in\mathbb R^{m\times m}$ and $V\in\mathbb R^{n\times n}$, together with a rectangular diagonal matrix $\Sigma\in\mathbb R^{m\times n}$, such that $A=U\Sigma V^T$. The nonzero diagonal entries are ordered as $\sigma_1\ge\cdots\ge\sigma_r>0$ and are called the [[奇异值分解与低秩近似#SVD 的三层结构|singular values]] of $A$, where $r=\operatorname{rank}(A)$.
+> For every $A\in\mathbb R^{m\times n}$, there are orthogonal matrices $U\in\mathbb R^{m\times m}$ and $V\in\mathbb R^{n\times n}$, together with a rectangular diagonal matrix $\Sigma\in\mathbb R^{m\times n}$, such that $A=U\Sigma V^T$. The nonzero diagonal entries are ordered as $\sigma_1\ge\cdots\ge\sigma_r>0$ and are called the [[奇异值|singular values]] of $A$, where $r=\operatorname{rank}(A)$.
 > <!-- bilingual-en:end -->
 
-等价地，若 $v_i$ 是 $V$ 的第 $i$ 列、$u_i$ 是 $U$ 的第 $i$ 列，则
+等价地，若[[奇异向量|右奇异向量]] $v_i$ 是 $V$ 的第 $i$ 列、[[奇异向量|左奇异向量]] $u_i$ 是 $U$ 的第 $i$ 列，则
 <!-- bilingual-en:start -->
 Equivalently, if $v_i$ is the $i$th column of $V$ and $u_i$ is the $i$th column of $U$, then
 <!-- bilingual-en:end -->
@@ -2130,9 +2130,9 @@ $Av_i=0$ for $i>r$. Thus $V^T$ converts the input into right-singular-vector coo
 The matrix $A$ maps the unit sphere to an ellipsoid whose principal directions are the $u_i$ and whose semiaxis lengths are the $\sigma_i$. An input direction associated with a zero singular value is collapsed to zero.
 <!-- bilingual-en:end -->
 
-### 3.5.2 [[奇异值分解与低秩近似#SVD 的三层结构|SVD 的课程级存在性证明]]
+### 3.5.2 [[SVD存在性|SVD 的课程级存在性证明]]
 <!-- bilingual-en:start -->
-*3.5.2 [[奇异值分解与低秩近似#SVD 的三层结构|A course-level existence proof for the SVD]]*
+*3.5.2 [[SVD存在性|A course-level existence proof for the SVD]]*
 <!-- bilingual-en:end -->
 
 **目标。** 从已经证明的实对称谱定理构造 $U,\Sigma,V$。
@@ -2172,7 +2172,7 @@ $$
 \sigma_i=\sqrt{\lambda_i}\ge0.
 $$
 
-**第二步：由右奇异向量构造左奇异向量。**
+**第二步：由[[奇异向量与Gram特征向量|右奇异向量]]构造[[奇异向量与Gram特征向量|左奇异向量]]。**
 <!-- bilingual-en:start -->
 **Step 2: Construct the left singular vectors from the right singular vectors.**
 <!-- bilingual-en:end -->
@@ -2256,7 +2256,7 @@ $$
 > This argument reduces existence of the SVD entirely to the spectral theorem for real symmetric matrices. A proof of that theorem from more elementary foundations additionally requires the fundamental theorem of algebra or an equivalent compactness argument. MIT 18.06SC treats the spectral theorem as a central result already established in the course.
 > <!-- bilingual-en:end -->
 
-### 3.5.3 四个基本子空间在 SVD 中的归位
+### 3.5.3 [[SVD与四个基本子空间|四个基本子空间在 SVD 中的归位]]
 <!-- bilingual-en:start -->
 *3.5.3 Locating the four fundamental subspaces in the SVD*
 <!-- bilingual-en:end -->
@@ -2280,7 +2280,7 @@ $$
 Restricted to the row space, $A$ gives a one-to-one correspondence with the column space via $v_i\mapsto\sigma_i u_i$; on the nullspace it maps every vector to zero. This is why the pseudoinverse reverses only the invertible part of the transformation.
 <!-- bilingual-en:end -->
 
-SVD 还给出秩一展开：
+SVD 还给出[[SVD秩一展开|秩一展开]]：
 <!-- bilingual-en:start -->
 SVD also gives the rank-one expansion:
 <!-- bilingual-en:end -->
@@ -2294,9 +2294,9 @@ $$
 Each $u_iv_i^T$ takes a component of the input along the $v_i$ and outputs it along the $u_i$.
 <!-- bilingual-en:end -->
 
-### 3.5.4 课件例题：按[[奇异值分解与低秩近似#SVD 的三层结构|标准流程计算 SVD]]
+### 3.5.4 课件例题：按[[SVD手算流程|标准流程计算 SVD]]
 <!-- bilingual-en:start -->
-*3.5.4 Course example: computing an SVD with the [[奇异值分解与低秩近似#SVD 的三层结构|standard workflow]]*
+*3.5.4 Course example: computing an SVD with the [[SVD手算流程|standard workflow]]*
 <!-- bilingual-en:end -->
 
 设
@@ -2522,11 +2522,11 @@ The last matrix is $V^T$, not $V$; this is the focus of the size and transpose c
 *3.5.7 Boundaries, Counterexamples and common errors*
 <!-- bilingual-en:end -->
 
-- 奇异值永远非负；负号应吸收到 $u_i$ 或 $v_i$，不能写进 $\Sigma$。
+- [[奇异值]]永远非负；负号应吸收到 $u_i$ 或 $v_i$，不能写进 $\Sigma$。
 - $A^TA$ 与 $AA^T$ 的非零特征值相同，都是 $\sigma_i^2$；零特征值个数可能因 $m,n$ 不同而不同。
-- 特征值只适用于方阵；SVD 适用于任意矩阵。
-- 对称矩阵的奇异值是特征值的绝对值。只有对称正半定时才可直接令 $U=V=Q$、$\Sigma=\Lambda$。
-- 重复奇异值对应的奇异向量不唯一，但相应子空间唯一。
+- 特征值只适用于方阵；[[SVD与特征分解|SVD 适用于任意矩阵，并连接两个空间中的方向]]。
+- 对称矩阵的奇异值是特征值的绝对值。只有对称正半定时才可直接令 $U=V=Q$、$\Sigma=\Lambda$；见 [[SVD与特征分解]]。
+- [[重奇异值下方向不唯一|重复奇异值对应的逐列奇异向量不唯一，但相应子空间唯一]]。
 <!-- bilingual-en:start -->
 - Singular values are never negative; negative signs should be absorbed into $u_i$ or $v_i$ and cannot be written into $\Sigma$.
 - $A^TA$ and $AA^T$ have the same nonzero eigenvalues, namely the values $\sigma_i^2$; their numbers of zero eigenvalues may differ when $m\ne n$.
@@ -2559,7 +2559,7 @@ The last matrix is $V^T$, not $V$; this is the focus of the size and transpose c
 > <!-- bilingual-en:end -->
 
 > [!success]- 答案
-> 与零奇异值对应的右奇异向量，即 $v_{r+1},\ldots,v_n$。
+> 由 [[SVD与四个基本子空间]]，完整 SVD 中补齐右零空间的列 $v_{r+1},\ldots,v_n$ 张成 $N(A)$。
 > <!-- bilingual-en:start -->
 > The right singular vectors corresponding to zero singular values, $v_{r+1},\ldots,v_n$, span $N(A)$.
 > <!-- bilingual-en:end -->
@@ -2571,7 +2571,7 @@ The last matrix is $V^T$, not $V$; this is the focus of the size and transpose c
 > <!-- bilingual-en:end -->
 
 > [!success]- 答案
-> 写 $x=Vy$，则 $\|y\|=1$，且
+> 由 [[谱范数与最大奇异值]]，写 $x=Vy$，则 $\|y\|=1$，且
 > $$
 > \|Ax\|^2=\|U\Sigma y\|^2=\sum_i\sigma_i^2y_i^2\le\sigma_1^2.
 > $$
@@ -2613,7 +2613,7 @@ Prerequisites: vector spaces, bases, coordinate vectors, and matrix multiplicati
 
 资料入口：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.6sum.pdf#page=1|Summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U3_S06_Lecture_Lecture_30_Linear_Transformations_and_their_Matrices.pdf#page=1|Lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U3_S06_Recitation_Problem_Solving_Linear_Transformations.pdf#page=1|Recitation p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.6prob.pdf#page=1|Homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses3.6sol.pdf#page=1|Official solution p.1]]
 
-关联卡片：[[线性变换与换基#线性变换与矩阵表示|线性变换]]、[[线性方程组与四个基本子空间#基、维数与秩|基]]、[[线性变换与换基#换基与相似|换基]]。
+关联卡片：[[线性映射]]、[[线性映射与矩阵表示|抽象映射与矩阵表示]]、[[复合映射的表示矩阵|复合的矩阵定理]]、[[线性映射的基向量像|基像的存在唯一延拓]]、[[相关向量像需保持关系|相关集的一致性]]、[[非张成集像不定全映射|非张成集的不唯一性]]、[[表示矩阵的列|表示矩阵逐列构造]]、[[基]]。
 
 ### 3.6.1 定义与立刻可推出的性质
 <!-- bilingual-en:start -->
@@ -3093,7 +3093,7 @@ Prerequisites: bases and coordinates, linear transformations, similarity, orthog
 
 资料入口：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.7sum.pdf#page=1|Summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U3_S07_Lecture_Lecture_31_Change_of_Basis_Image_Compression.pdf#page=1|Lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U3_S07_Recitation_Problem_Solving_Change_of_Basis.pdf#page=1|Recitation p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.7prob.pdf#page=1|Homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses3.7sol.pdf#page=1|Official solution p.1]]
 
-关联卡片：[[线性变换与换基#换基与相似|换基]]、[[线性变换与换基#换基与相似|相似矩阵]]、[[奇异值分解与低秩近似#SVD 的三层结构|奇异值分解]]、[[特征值、对角化与线性动力系统#对角化与矩阵幂|Fourier 展开]]。
+关联卡片：[[换基矩阵的方向|换基方向]]、[[正交基换基矩阵|标准正交基特例]]、[[一般线性映射的换基|一般双边换基]]、[[相似矩阵|相似特例]]、[[奇异值分解|奇异值分解]]、Fourier 展开。
 
 ### 3.7.1 向量换基：先说明矩阵的方向
 <!-- bilingual-en:start -->
@@ -3262,9 +3262,9 @@ Fourier 基擅长全局频率；Haar wavelet 同时具有尺度和位置局部�
 The Fourier basis captures global frequency content, whereas Haar wavelets are localized in both scale and position. In practice, JPEG primarily uses blockwise discrete cosine transforms rather than the complex Fourier matrix; the course uses Fourier ideas to explain the underlying structure.
 <!-- bilingual-en:end -->
 
-### 3.7.4 课程外补充：SVD 的[[奇异值分解与低秩近似#低秩近似与压缩|低秩近似与压缩]]
+### 3.7.4 课程外补充：SVD 的[[低秩近似|低秩重构]]
 <!-- bilingual-en:start -->
-*3.7.4 Supplement: SVD-based [[奇异值分解与低秩近似#低秩近似与压缩|low-rank approximation and compression]]*
+*3.7.4 Supplement: SVD-based [[低秩近似|low-rank approximation and compression]]*
 <!-- bilingual-en:end -->
 
 > [!note] 与 Lecture 31 的边界
@@ -3282,7 +3282,7 @@ $$
 A=\sum_{i=1}^r\sigma_i u_iv_i^T.
 $$
 
-对 $0\le k<r$，保留前 $k$ 项得到秩至多 $k$ 的近似
+对 $0\le k<r$，保留前 $k$ 项得到[[截断SVD|秩至多 $k$ 的截断 SVD]]
 <!-- bilingual-en:start -->
 For $0\le k<r$, retaining the first $k$ terms gives an approximation of rank at most $k$:
 <!-- bilingual-en:end -->
@@ -3291,7 +3291,7 @@ $$
 A_k=\sum_{i=1}^k\sigma_i u_iv_i^T.
 $$
 
-Eckart–Young 定理说明，在所有秩至多 $k$ 的矩阵中，$A_k$ 同时最小化谱范数误差与 Frobenius 范数误差：
+[[截断SVD最佳低秩近似|Eckart–Young–Mirsky 定理]]说明，在所有秩至多 $k$ 的矩阵中，$A_k$ 同时最小化[[谱范数]]误差与 [[Frobenius范数]]误差：
 <!-- bilingual-en:start -->
 The Eckart–Young theorem states that, among all matrices of rank at most $k$, $A_k$ minimizes both the spectral-norm error and the Frobenius-norm error:
 <!-- bilingual-en:end -->
@@ -3307,6 +3307,11 @@ $$
 若 $k\ge r$，则 $A_k=A$，上述两种误差都为零。Eckart–Young 的完整极小化证明通常放在后续数值线性代数课程；这里把结论作为拓展而不冒充 Lecture 31 的内容。存储 $A_k$ 约需 $k(m+n+1)$ 个数；只有当它显著小于 $mn$ 时才真正节省空间。
 <!-- bilingual-en:start -->
 If $k\ge r$, then $A_k=A$ and both errors are zero. A complete proof of the Eckart–Young minimization result is usually given in a later numerical linear algebra course; here it is presented as an extension, not as content taught in Lecture 31. Storing $A_k$ requires about $k(m+n+1)$ numbers, so it saves space only when that quantity is substantially smaller than $mn$.
+<!-- bilingual-en:end -->
+
+这里的定理只保证达到指定矩阵范数下的最小重构误差，并不自动保证最优解唯一；重复奇异值尤其会让截断子空间的基不唯一。它也不说明被删方向对预测、分类或因果问题不重要。Frobenius 唯一性见 [[Frobenius低秩近似唯一性]]，谱范数非唯一性见 [[谱范数低秩近似不唯一]]，重构比例见 [[奇异值能量比]]，任务边界见 [[奇异值能量不等于任务信息]]。
+<!-- bilingual-en:start -->
+The theorem guarantees minimum reconstruction error in the stated matrix norm, not automatic uniqueness; repeated singular values make the basis at a truncation boundary nonunique. Nor does it establish that discarded directions are irrelevant for prediction, classification, or causal analysis. See the linked atoms for the exact uniqueness and downstream-task boundaries.
 <!-- bilingual-en:end -->
 
 ### 3.7.5 Recitation：插值基、换基与微分矩阵
@@ -3518,7 +3523,7 @@ This product of three matrices corresponds exactly to “new coordinates → old
 - 写换基公式前先写清“矩阵的列是哪组基用哪组坐标表示”，不要只背 $W$ 或 $W^{-1}$。
 - 若 $W$ 的列是新基在旧基中的坐标，则 $W^{-1}=W^T$ 要求这个坐标矩阵本身正交；例如新旧两组基都标准正交。只说“新基在几何上标准正交”而旧基任意，还不够。
 - 阈值置零是有损压缩；可逆换基本身不损失信息。
-- SVD 低秩近似对给定矩阵最优，但计算完整 SVD 可能昂贵；JPEG 使用固定快速基而不是每张小块都求全局 SVD。
+- [[截断SVD最佳低秩近似|截断 SVD 在给定矩阵与秩预算下达到最小重构误差]]，但计算完整 SVD 可能昂贵；JPEG 使用固定快速基而不是每张小块都求全局 SVD。
 <!-- bilingual-en:start -->
 - Before writing a change-of-basis formula, state the basis in which the columns of the matrix are expressed; do not write only "$W$" or "$W^{-1}$" without this context.
 - If the columns of $W$ are the new basis vectors expressed in the old coordinates, then $W^{-1}=W^T$ requires the coordinate matrix itself to be orthogonal—for example, both old and new bases may be orthonormal. It is not enough that the new basis is geometrically orthonormal when the old basis is arbitrary.
@@ -3562,7 +3567,7 @@ This product of three matrices corresponds exactly to “new coordinates → old
 > <!-- bilingual-en:end -->
 
 > [!success]- 答案
-> $\sigma_{k+1}$；若 $k\ge r$，误差为零。
+> 由 [[截断SVD最佳低秩近似]]，答案是 $\sigma_{k+1}$；若 $k\ge r$，误差为零。
 > <!-- bilingual-en:start -->
 > $\sigma_{k+1}$; if $k\ge r$, the error is zero.
 > <!-- bilingual-en:end -->
@@ -3599,7 +3604,7 @@ Prerequisites: rank, the four fundamental subspaces, least squares, and the SVD.
 
 资料入口：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.8sum.pdf#page=1|Summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U3_S08_Lecture_Lecture_33_Left_and_Right_Inverses_Pseudoinverse.pdf#page=1|Lecture 33 transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U3_S08_Recitation_Problem_Solving_Pseudoinverses.pdf#page=1|Recitation p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.8prob.pdf#page=1|Homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses3.8sol.pdf#page=1|Official solution p.1]]
 
-关联卡片：[[广义逆与最小范数解#左逆、右逆与可逆|左逆]]、[[广义逆与最小范数解#左逆、右逆与可逆|右逆]]、[[广义逆与最小范数解#Moore–Penrose 伪逆|伪逆]]、[[正交投影与最小二乘#最小二乘与正规方程|最小二乘]]、[[正交投影与最小二乘#投影矩阵|正交投影]]。
+关联卡片：[[左逆]]、[[左逆与满列秩|左逆的秩条件]]、[[满列秩伪逆公式]]、[[右逆]]、[[右逆与满行秩|右逆的秩条件]]、[[满行秩伪逆公式]]、[[广义逆]]、[[Moore–Penrose 伪逆|伪逆]]、[[伪逆SVD公式|SVD 公式]]、[[伪逆存在唯一性|存在唯一性]]、[[线性最小二乘|最小二乘]]、[[正交投影|正交投影]]、[[AA+列空间投影|$AA^+$ 列空间投影]]、[[A+A行空间投影|$A^+A$ 行空间投影]]。
 
 ### 3.8.1 左逆与满列秩
 <!-- bilingual-en:start -->
@@ -3615,14 +3620,14 @@ $$
 LA=I_n,
 $$
 
-则 $L$ 是 $A$ 的左逆。若 $Ax=0$，左乘 $L$ 得 $x=0$，所以 $N(A)=\{0\}$，即 $r=n$；因此必须 $m\ge n$。
+则 $L$ 是 $A$ 的[[左逆|左逆]]。若 $Ax=0$，左乘 $L$ 得 $x=0$，所以 $N(A)=\{0\}$，即 $r=n$；因此必须 $m\ge n$。
 <!-- bilingual-en:start -->
-then $L$ is a left inverse of $A$. If $Ax=0$, multiplying on the left by $L$ gives $x=0$, so $N(A)=\{0\}$ and $r=n$. Consequently $m\ge n$.
+then $L$ is a [[左逆|left inverse]] of $A$. If $Ax=0$, multiplying on the left by $L$ gives $x=0$, so $N(A)=\{0\}$ and $r=n$. Consequently $m\ge n$.
 <!-- bilingual-en:end -->
 
-反之，若 $r=n$，则 $A^TA$ 正定可逆，并且
+反之，[[满列秩伪逆公式|若 $r=n$]]，则 $A^TA$ 正定可逆，并且
 <!-- bilingual-en:start -->
-Conversely, if $r=n$, then $A^TA$ is positive definite and therefore invertible, and
+Conversely, [[满列秩伪逆公式|if $r=n$]], then $A^TA$ is positive definite and therefore invertible, and
 <!-- bilingual-en:end -->
 
 $$
@@ -3666,14 +3671,14 @@ $$
 AR=I_m,
 $$
 
-则 $R$ 是 $A$ 的右逆。这说明每个 $b\in\mathbb R^m$ 都等于 $A(Rb)$，故 $C(A)=\mathbb R^m$，即 $r=m$；因此必须 $n\ge m$。
+则 $R$ 是 $A$ 的[[右逆|右逆]]。这说明每个 $b\in\mathbb R^m$ 都等于 $A(Rb)$，故 $C(A)=\mathbb R^m$，即 $r=m$；因此必须 $n\ge m$。
 <!-- bilingual-en:start -->
-Then $R$ is a right inverse of $A$. Every $b\in\mathbb R^m$ equals $A(Rb)$, so $C(A)=\mathbb R^m$ and $r=m$. Consequently $n\ge m$ is necessary.
+Then $R$ is a [[右逆|right inverse]] of $A$. Every $b\in\mathbb R^m$ equals $A(Rb)$, so $C(A)=\mathbb R^m$ and $r=m$. Consequently $n\ge m$ is necessary.
 <!-- bilingual-en:end -->
 
-反之，若 $r=m$，则 $AA^T$ 正定可逆，且
+反之，[[满行秩伪逆公式|若 $r=m$]]，则 $AA^T$ 正定可逆，且
 <!-- bilingual-en:start -->
-Conversely, if $r=m$, then $AA^T$ is positive definite and therefore invertible, and
+Conversely, [[满行秩伪逆公式|if $r=m$]], then $AA^T$ is positive definite and therefore invertible, and
 <!-- bilingual-en:end -->
 
 $$
@@ -3700,9 +3705,9 @@ Then $Ax=b$ is solvable for every $b$. If $n>m$, however, $\dim N(A)=n-m>0$, so 
 > If the same matrix $A$ has both a left inverse and a right inverse, then $n\le m$ and $m\le n$, so $m=n=r$. The left and right inverses then coincide and equal the ordinary inverse $A^{-1}$.
 > <!-- bilingual-en:end -->
 
-### 3.8.3 SVD 定义伪逆
+### 3.8.3 [[伪逆SVD公式|SVD 定义伪逆]]
 <!-- bilingual-en:start -->
-*3.8.3 Defining the pseudoinverse through the SVD*
+*3.8.3 [[伪逆SVD公式|Defining the pseudoinverse through the SVD]]*
 <!-- bilingual-en:end -->
 
 设完整 SVD 为
@@ -4032,7 +4037,7 @@ The lower-right entry must be $4/5$. Writing $1/5$ instead makes the projection 
 
 - 左逆要求满列秩，右逆要求满行秩；记忆时看单位矩阵尺寸：$LA=I_n$、$AR=I_m$。
 - $(A^TA)^{-1}A^T$ 只有在 $A$ 满列秩时才存在，不能拿来定义所有矩阵的伪逆。
-- 小奇异值取倒数会放大噪声；理论伪逆存在不代表数值计算稳定。实际常用截断 SVD 或正则化。
+- 小奇异值取倒数会放大噪声；理论伪逆存在不代表数值计算稳定。实际常用[[截断SVD与岭正则化|截断 SVD 或正则化]]。
 - $A^+A$ 与 $AA^+$ 通常不是单位矩阵，而是两个不同空间上的正交投影。
 <!-- bilingual-en:start -->
 - A left inverse requires full column rank, whereas a right inverse requires full row rank. The dimensions of the identity matrices—$LA=I_n$ and $AR=I_m$—make the distinction easy to remember.
@@ -4228,9 +4233,9 @@ $$
 If the initial condition lies entirely in the zero eigenspace, the solution is constant. In that special case every positive number is a period, so there is no smallest positive fundamental period.
 <!-- bilingual-en:end -->
 
-这里 $A$ 是实斜对称，亦是[[对称矩阵与正定二次型#对称矩阵与谱定理|normal matrix]]；它可 unitary 对角化，没有非平凡 Jordan 块，所以纯虚谱确实给出有界振荡。不能把这个结论推广到带 Jordan 块的任意纯虚谱矩阵。
+这里 $A$ 是实斜对称，亦是[[Normal 矩阵|normal matrix]]；由[[Normal 矩阵谱定理|normal 谱定理]]，它可 unitary 对角化且没有非平凡 Jordan 块，所以纯虚谱确实给出有界振荡。不能把这个结论推广到带 Jordan 块的任意纯虚谱矩阵。
 <!-- bilingual-en:start -->
-Here $A$ is real and skew-symmetric, and is therefore also a [[对称矩阵与正定二次型#对称矩阵与谱定理|normal matrix]]. It is unitarily diagonalizable and has no nontrivial Jordan blocks, so its purely imaginary spectrum does produce bounded oscillations. This conclusion does not extend to arbitrary matrices with purely imaginary spectra and nontrivial Jordan blocks.
+Here $A$ is real and skew-symmetric, and is therefore also a [[Normal 矩阵|normal matrix]]. By the [[Normal 矩阵谱定理|normal spectral theorem]], it is unitarily diagonalizable and has no nontrivial Jordan blocks, so its purely imaginary spectrum does produce bounded oscillations. This conclusion does not extend to arbitrary matrices with purely imaginary spectra and nontrivial Jordan blocks.
 <!-- bilingual-en:end -->
 
 #### (c) 正交性与共轭
@@ -4673,7 +4678,7 @@ $$
 > $$
 > A^TAe_1=\begin{bmatrix}1\\-2\\-4\end{bmatrix}
 > $$
-> 不是 $e_1$ 的倍数。一般而言，$A$ 的特征向量与 $A^TA$ 的右奇异向量是不同概念；只有 normal 等特殊情形才可能一致。
+> 不是 $e_1$ 的倍数。一般而言，$A$ 的特征向量与 $A^TA$ 的[[奇异向量与Gram特征向量|右奇异向量]]是不同概念；只有 normal 等特殊情形才可能一致。
 > <!-- bilingual-en:start -->
 > **(a) Spectrum and $S$.**
 > Since $A$ is upper triangular, its eigenvalues are its diagonal entries: $-1,0,1$.

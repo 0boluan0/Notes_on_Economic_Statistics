@@ -1,0 +1,176 @@
+{
+  "nodes": [
+    {
+      "id": "alm8a00000000001",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 2640,
+      "height": 250,
+      "text": "# 银行账簿利率风险 · 学习总图\n*Interest Rate Risk in the Banking Book*\n\n先用 [[合同期限、重定价期限与行为期限|期限三口径]] 确定现金流时间，用 [[债券久期、凸性与收益率曲线风险.canvas|久期与凸性关系图]] 理解价格敏感度，并用 [[曲线形变]] 说明冲击不必平行。主图再把 IRRBB 分成 NII 收益视角、EVE 价值视角、基差与两类行为选择权，最后进入压力传导和影响估计。箭头表示测量责任与模型修正，不表示掌握度。\n\n**当前状态：** 5 张新原子均为 source-checked，掌握状态均为 unassessed。",
+      "color": "6"
+    },
+    {
+      "id": "alm8a00000000002",
+      "type": "text",
+      "x": 700,
+      "y": 360,
+      "width": 600,
+      "height": 300,
+      "text": "## [[IRRBB 的 NII 与 EVE|NII 与 EVE 入口]]\n\nNII 看规划期内资产收益和负债成本怎样重定价；EVE 看全部相关现金流现值怎样变化。\n\n**边界：** 两种视角时间窗和对象不同，结果不必同号。",
+      "color": "2"
+    },
+    {
+      "id": "alm8a00000000003",
+      "type": "text",
+      "x": 0,
+      "y": 860,
+      "width": 540,
+      "height": 310,
+      "text": "## [[重定价缺口]]\n\n按时间桶比较 RSA 与 RSL，并按实际重定价后的计息时间近似规划期 NII 变化。\n\n**边界：** 只在静态、同幅和完全传导等假设下成立，不是总利润或 EVE。",
+      "color": "3"
+    },
+    {
+      "id": "alm8a00000000004",
+      "type": "text",
+      "x": 900,
+      "y": 860,
+      "width": 560,
+      "height": 330,
+      "text": "## [[久期缺口]]\n\n用 $D_A-(L/A)D_L$ 比较资产与负债的规模调整敏感度，近似共同平行小冲击下的 EVE 变化。\n\n**边界：** modified duration 不再除 $1+y$；零缺口也不免疫曲线、基差、凸性和行为变化。",
+      "color": "4"
+    },
+    {
+      "id": "alm8a00000000005",
+      "type": "text",
+      "x": 0,
+      "y": 1420,
+      "width": 540,
+      "height": 290,
+      "text": "## [[IRRBB基差]]\n\n相同重定价时点的资产与负债仍可能因参考利率、beta 或传导幅度不同而错配。\n\n**边界：** 这是银行账簿利率基差，不是 CDS—现金债基差或信用利差风险。",
+      "color": "5"
+    },
+    {
+      "id": "alm8a00000000006",
+      "type": "text",
+      "x": 700,
+      "y": 1420,
+      "width": 560,
+      "height": 320,
+      "text": "## [[无到期存款行为]]\n\n核心余额、流失、deposit beta、lag 与产品迁移共同决定存款的行为期限和利率传导。\n\n**边界：** 平静期稳定不是压力期事实；合同可随时支取也不等于全部隔夜。",
+      "color": "5"
+    },
+    {
+      "id": "alm8a00000000007",
+      "type": "text",
+      "x": 1420,
+      "y": 1420,
+      "width": 560,
+      "height": 320,
+      "text": "## [[提前还款选择权]]\n\n降息可能加快固定利率贷款提前还款和再投资损失；加息又可能延长现金流期限。\n\n**边界：** 负凸性需要有效久期或情景重估，提前还款也不只由利率驱动。",
+      "color": "5"
+    },
+    {
+      "id": "alm8a00000000008",
+      "type": "text",
+      "x": 700,
+      "y": 1990,
+      "width": 600,
+      "height": 300,
+      "text": "## [[压力传导映射]]\n\n把曲线、基差、存款行为、提前还款和管理行动映射到一致情景中的现金流与头寸。\n\n**边界：** 单一 gap 或单一久期不能替代多因子、行为一致的传导图。",
+      "color": "1"
+    },
+    {
+      "id": "alm8a00000000009",
+      "type": "text",
+      "x": 1520,
+      "y": 1990,
+      "width": 560,
+      "height": 290,
+      "text": "## [[压力影响估计]]\n\n在同一情景下分别重算规划期 NII 与全期限 EVE，再解释模型假设和管理行动。\n\n**边界：** 近似结果须与完整重估、行为压力和数据质量一起判断。",
+      "color": "1"
+    }
+  ],
+  "edges": [
+    {
+      "id": "alm8b00000000001",
+      "fromNode": "alm8a00000000002",
+      "fromSide": "bottom",
+      "toNode": "alm8a00000000003",
+      "toSide": "top",
+      "label": "收益视角追踪谁在规划期内先重定价"
+    },
+    {
+      "id": "alm8b00000000002",
+      "fromNode": "alm8a00000000002",
+      "fromSide": "bottom",
+      "toNode": "alm8a00000000004",
+      "toSide": "top",
+      "label": "价值视角比较全部现金流现值敏感度"
+    },
+    {
+      "id": "alm8b00000000003",
+      "fromNode": "alm8a00000000003",
+      "fromSide": "bottom",
+      "toNode": "alm8a00000000005",
+      "toSide": "top",
+      "label": "时点匹配后仍可能参考利率不同"
+    },
+    {
+      "id": "alm8b00000000004",
+      "fromNode": "alm8a00000000003",
+      "fromSide": "bottom",
+      "toNode": "alm8a00000000006",
+      "toSide": "top",
+      "label": "存款 beta 与余额行为改变 NII 缺口"
+    },
+    {
+      "id": "alm8b00000000005",
+      "fromNode": "alm8a00000000004",
+      "fromSide": "bottom",
+      "toNode": "alm8a00000000006",
+      "toSide": "top",
+      "label": "行为期限改变负债现值与久期"
+    },
+    {
+      "id": "alm8b00000000006",
+      "fromNode": "alm8a00000000004",
+      "fromSide": "bottom",
+      "toNode": "alm8a00000000007",
+      "toSide": "top",
+      "label": "现金流随利率变化形成负凸性"
+    },
+    {
+      "id": "alm8b00000000007",
+      "fromNode": "alm8a00000000005",
+      "fromSide": "bottom",
+      "toNode": "alm8a00000000008",
+      "toSide": "left",
+      "label": "不同参考利率传导进入多因子情景"
+    },
+    {
+      "id": "alm8b00000000008",
+      "fromNode": "alm8a00000000006",
+      "fromSide": "bottom",
+      "toNode": "alm8a00000000008",
+      "toSide": "top",
+      "label": "beta、lag 与流失进入压力路径"
+    },
+    {
+      "id": "alm8b00000000009",
+      "fromNode": "alm8a00000000007",
+      "fromSide": "bottom",
+      "toNode": "alm8a00000000008",
+      "toSide": "right",
+      "label": "提前还款与期限延长进入现金流情景"
+    },
+    {
+      "id": "alm8b0000000000a",
+      "fromNode": "alm8a00000000008",
+      "fromSide": "right",
+      "toNode": "alm8a00000000009",
+      "toSide": "left",
+      "label": "先映射冲击再分别重估 NII 与 EVE"
+    }
+  ]
+}

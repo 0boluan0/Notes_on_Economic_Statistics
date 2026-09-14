@@ -1,0 +1,36 @@
+{
+	"nodes":[
+		{"id":"simulation-header","type":"text","text":"# 风险模拟\n\n两条路线都把当前组合映射成未来损失分布。历史模拟重放联合冲击；风险 Monte Carlo 依次规定终点联合分布、必要的时间动态、路径进入估值的条件和数值误差。","x":-600,"y":0,"width":1660,"height":120,"color":"5"},
+		{"id":"var-map-entry","type":"text","text":"## [[VaR、ES与回测.canvas|VaR、ES 与回测]]\n\n风险量定义、贡献分解与回测证据在主题图中展开。","x":2300,"y":0,"width":520,"height":120,"color":"4"},
+		{"id":"lane-history","type":"text","text":"## 路线 A　历史联合冲击","x":-600,"y":180,"width":1660,"height":70,"color":"3"},
+		{"id":"lane-model","type":"text","text":"## 路线 B　中：生成与估值主链　｜　右：数值与估值验证边界","x":1100,"y":180,"width":1660,"height":70,"color":"5"},
+		{"id":"rm-var-017","type":"text","text":"## [[历史模拟法]]\n\n把同一历史日的联合因子变动施加到当前组合，从重估损失的经验分布读取风险。","x":0,"y":300,"width":460,"height":170,"color":"3"},
+		{"id":"rm-var-029","type":"text","text":"## [[加权历史模拟]]\n\n日期权重改变经验分布，但每个权重仍跟随产生该损失的历史日期。","x":-600,"y":600,"width":460,"height":170,"color":"3"},
+		{"id":"rm-var-030","type":"text","text":"## [[过滤历史模拟]]\n\n先标准化历史联合冲击，再按当前条件尺度重映射。","x":0,"y":600,"width":460,"height":170,"color":"3"},
+		{"id":"rm-var-031","type":"text","text":"## [[历史模拟Bootstrap]]\n\n有放回重抽描述给定样本下的估计不确定性，不创造新的尾部证据。","x":600,"y":600,"width":460,"height":170,"color":"3"},
+		{"id":"rm-var-018","type":"text","text":"## [[风险蒙特卡洛]]\n\n从联合因子模型生成情景，对当前组合估值，再从损失样本计算风险量。","x":1400,"y":300,"width":460,"height":170,"color":"5"},
+		{"id":"rm-var-032","type":"text","text":"## [[风险模拟P-Q分工]]\n\n外层 $P$ 描述真实世界状态频率，内层 $Q$ 给定状态下进行无套利估值。","x":1100,"y":600,"width":460,"height":170,"color":"5"},
+		{"id":"rm-var-033","type":"text","text":"## [[风险因子联合生成]]\n\n目标时点的边际分布与横截面依赖必须一起规定；终点联合分布不等于时间动态。","x":1700,"y":600,"width":460,"height":190,"color":"5"},
+		{"id":"rm-var-061","type":"text","text":"## [[风险因子时间动态]]\n\n多期或路径模拟必须另外规定跨时点递推；终点联合分布不能恢复中间状态。","x":1700,"y":840,"width":460,"height":190,"color":"5"},
+		{"id":"rm-var-034","type":"text","text":"## [[风险模拟路径依赖]]\n\n中间触碰、平均或现金流顺序影响损益时，必须把有序路径保留到估值层。","x":1700,"y":1080,"width":460,"height":170,"color":"5"},
+		{"id":"rm-var-062","type":"text","text":"## [[路径模拟离散化误差]]\n\n有序路径仍可能因网格过粗漏掉穿越；需用网格加密、桥修正或基准核验。","x":2300,"y":1080,"width":460,"height":190,"color":"5"},
+		{"id":"rm-var-064","type":"text","text":"## [[风险模拟估值层]]\n\n把每个模拟状态或有序路径映射为同一口径下的组合价值与损失。","x":1400,"y":1320,"width":460,"height":170,"color":"5"},
+		{"id":"rm-var-035","type":"text","text":"## [[估值近似验证]]\n\n代理误差必须在覆盖目标尾部的验证情景上与全重估比较。","x":2300,"y":1320,"width":460,"height":170,"color":"5"},
+		{"id":"rm-var-036","type":"text","text":"## [[路径数不修模型]]\n\n增加路径只缩小 Monte Carlo 数值误差，不能修复分布、依赖或估值模型误设。","x":2300,"y":600,"width":460,"height":170,"color":"5"}
+	],
+	"edges":[
+		{"id":"edge-sim-001","fromNode":"rm-var-017","fromSide":"bottom","toNode":"rm-var-029","toSide":"top","label":"变体：改变日期权重"},
+		{"id":"edge-sim-002","fromNode":"rm-var-017","fromSide":"bottom","toNode":"rm-var-030","toSide":"top","label":"变体：调整条件尺度"},
+		{"id":"edge-sim-003","fromNode":"rm-var-017","fromSide":"bottom","toNode":"rm-var-031","toSide":"top","label":"变体：重抽量化不确定性"},
+		{"id":"edge-sim-004","fromNode":"rm-var-018","fromSide":"bottom","toNode":"rm-var-032","toSide":"top","label":"区分情景频率与条件定价"},
+		{"id":"edge-sim-005","fromNode":"rm-var-018","fromSide":"bottom","toNode":"rm-var-033","toSide":"top","label":"生成联合风险状态"},
+		{"id":"edge-sim-006","fromNode":"rm-var-033","fromSide":"bottom","toNode":"rm-var-061","toSide":"top","label":"多期任务还需跨时点递推"},
+		{"id":"edge-sim-008","fromNode":"rm-var-061","fromSide":"bottom","toNode":"rm-var-034","toSide":"top","label":"按头寸判断哪些中间状态进入损益"},
+		{"id":"edge-sim-009","fromNode":"rm-var-034","fromSide":"bottom","toNode":"rm-var-064","toSide":"top","label":"有序路径进入估值"},
+		{"id":"edge-sim-010","fromNode":"rm-var-034","fromSide":"right","toNode":"rm-var-062","toSide":"left","label":"网格误差"},
+		{"id":"edge-sim-011","fromNode":"rm-var-032","fromSide":"bottom","toNode":"rm-var-064","toSide":"top","label":"条件定价进入估值层"},
+		{"id":"edge-sim-012","fromNode":"rm-var-017","fromSide":"right","toNode":"rm-var-018","toSide":"left","fromEnd":"none","toEnd":"none","label":"经验重放与模型生成是两条替代路线"},
+		{"id":"edge-sim-013","fromNode":"rm-var-018","fromSide":"right","toNode":"rm-var-036","toSide":"right","label":"路径增加只缩小数值误差"},
+		{"id":"edge-sim-014","fromNode":"rm-var-064","fromSide":"right","toNode":"rm-var-035","toSide":"left","label":"采用近似时验证目标尾部"}
+	]
+}

@@ -3,27 +3,27 @@
 *1. VaR Definition and Explanation*
 <!-- bilingual-en:end -->
 
-[[VaR、ES 与回测|VaR]]（[[VaR、ES 与回测|Value at Risk]]，[[VaR、ES 与回测|风险价值]]）表示在正常市场条件下、给定置信水平（如95%或99%）和持有期内，金融资产或投资组合可能遭受的最大潜在损失。换言之，VaR回答的是：“在未来特定时期内，有一定概率（如99%）损失不超过多少。” 
+[[VaR定义|VaR]]（[[VaR定义|Value at Risk]]，[[VaR定义|风险价值]]）是在给定损失口径、置信水平和持有期下的损失分位阈值，不是最大可能损失。它回答的是：“在所设模型与期限内，损失以给定概率不会超过哪个阈值？”
 <!-- bilingual-en:start -->
-VaR ([[VaR、ES 与回测|value at risk]]) is the loss quantile for a financial asset or portfolio over a specified holding period and at a specified confidence level, usually under ordinary market conditions. It is often described informally as a “maximum loss,” but it is not the worst loss that can ever occur. Rather, VaR answers: “Over this horizon, what loss threshold will be exceeded only with a stated small probability, such as 1%?”
+VaR ([[VaR定义|value at risk]]) is the loss quantile for a financial asset or portfolio over a specified holding period and at a specified confidence level, usually under ordinary market conditions. It is often described informally as a “maximum loss,” but it is not the worst loss that can ever occur. Rather, VaR answers: “Over this horizon, what loss threshold will be exceeded only with a stated small probability, such as 1%?”
 <!-- bilingual-en:end -->
 
 从定义来看，如果记$X_t$为时刻$t$资产价值，$L_{t\to T}$为从$t$到$T$期间资产的损失（损失取正值），那么在置信水平$\alpha$下、持有期为$T-t$的VaR可以表示为该损失分布的$\alpha$分位数：
 $$
 \text{VaR}_{\alpha}(T-t) = F^{-1}_{L}(\alpha),
 $$
-其中$F^{-1}_L$表示损失随机变量$L$的分位数函数。此定义意味着：
+其中采用左分位数定义 $F_L^{-1}(\alpha)=\inf\{\ell:F_L(\ell)\ge\alpha\}$。因此一般只能保证：
 $$
-P(L \le \text{VaR}_{\alpha}) = \alpha,\quad P(L > \text{VaR}_{\alpha}) = 1-\alpha,
+P(L \le \text{VaR}_{\alpha}) \ge \alpha,\quad P(L > \text{VaR}_{\alpha}) \le 1-\alpha.
 $$ 
-即有$(1-\alpha)$的概率损失将超过VaR。【通常将损失以正值表示，VaR本身取一个非负货币额。】
+当损失分布在该分位点连续且没有概率质量堆积时，上式才通常写成等号。【损失一般取正值，VaR通常报告为非负货币额。】
 <!-- bilingual-en:start -->
-Formally, let $X_t$ be the asset value at time $t$ and let $L_{t\to T}$ be the positive loss between $t$ and $T$. At confidence level $\alpha$ and holding period $T-t$, VaR is the $\alpha$ quantile of the loss distribution. Here, $F^{-1}_L$ is the quantile function of the loss variable $L$. Equivalently, the probability that loss exceeds VaR is $1-\alpha$. Losses are normally recorded as positive amounts, so VaR is reported as a non-negative monetary figure.
+Formally, let $X_t$ be the asset value at time $t$ and let $L_{t\to T}$ be the positive loss between $t$ and $T$. At confidence level $\alpha$ and holding period $T-t$, VaR is the left quantile $F_L^{-1}(\alpha)=\inf\{\ell:F_L(\ell)\ge\alpha\}$. Thus $P(L\le\mathrm{VaR}_\alpha)\ge\alpha$ and $P(L>\mathrm{VaR}_\alpha)\le1-\alpha$; equality requires suitable continuity at the quantile. Losses are normally recorded as positive amounts, so VaR is reported as a non-negative monetary figure.
 <!-- bilingual-en:end -->
 
-直观解释：例如某投资组合10日、99%置信水平的VaR为6400万元，意味着在未来10天内，该组合有99%的把握损失不超过6400万元（损失超过6400万的概率仅为1%）。==VaR常以绝对金额表示这一最大可能损失。==
+直观解释：例如某投资组合10日、99%置信水平的VaR为6400万元，意味着在所设模型下，损失不超过6400万元的概率至少为99%；若分位点连续，超过它的概率为1%。==VaR常以绝对金额报告这个分位阈值，但它不是最大可能损失。==
 <!-- bilingual-en:start -->
-Intuition: if a portfolio has a ten-day 99% VaR of CNY 64 million, the model says that its loss over the next ten days will not exceed CNY 64 million with 99% probability; the probability of a larger loss is 1%. ==VaR usually reports this threshold as an absolute monetary amount.==
+Intuition: if a portfolio has a ten-day 99% VaR of CNY 64 million, the model assigns at least 99% probability to a loss no greater than CNY 64 million. With a continuous quantile, the exceedance probability is 1%. ==VaR reports this quantile threshold as an absolute monetary amount; it is not the maximum possible loss.==
 <!-- bilingual-en:end -->
 
 # 2. 三种 VaR 测算方法及优缺点
@@ -31,22 +31,22 @@ Intuition: if a portfolio has a ten-day 99% VaR of CNY 64 million, the model say
 *2. Three VaR Methods and Their Advantages and Disadvantages*
 <!-- bilingual-en:end -->
 
-计算VaR常用的三种方法为：**[[VaR、ES 与回测|方差-协方差法]]（[[VaR、ES 与回测|参数法]]）**、**[[历史模拟与 Monte Carlo 风险模拟|历史模拟法]]**和**[[历史模拟与 Monte Carlo 风险模拟|蒙特卡罗模拟法]]**。
+计算VaR常用的三种方法为：**[[方差协方差VaR|方差-协方差法]]（[[方差协方差VaR|参数法]]）**、**[[历史模拟法]]**和**[[风险蒙特卡洛|蒙特卡罗模拟法]]**。
 <!-- bilingual-en:start -->
-Three common methods for calculating VaR are **[[VaR、ES 与回测|variance-covariance method]] ([[VaR、ES 与回测|parametric method]])**, **[[历史模拟与 Monte Carlo 风险模拟|historical simulation method]]** and **[[历史模拟与 Monte Carlo 风险模拟|Monte Carlo simulation method]]**.
+Three common methods for calculating VaR are **[[方差协方差VaR|the variance-covariance method]] ([[方差协方差VaR|parametric method]])**, **[[历史模拟法|historical simulation]]**, and **[[风险蒙特卡洛|risk Monte Carlo simulation]]**.
 <!-- bilingual-en:end -->
 ## 2.1 方差-协方差法（正态分布假设法）
 <!-- bilingual-en:start -->
-*2.1 [[VaR、ES 与回测|Variance–Covariance Method]] (Normal Parametric Method)*
+*2.1 [[方差协方差VaR|Variance–Covariance Method]] (Normal Parametric Method)*
 <!-- bilingual-en:end -->
 
-计算方法：方差-协方差法是假定资产或投资组合收益（或损失）服从某种已知分布（通常假设正态分布），利用收益的期望和方差-协方差等参数直接计算VaR。该方法也称“参数法”。在最常见的正态分布假设下，若已知组合在单位时间的预期收益$\mu$和标准差$\sigma$，则$\alpha$置信水平下的一天VaR为：
+计算方法：方差-协方差法是假定资产或投资组合收益（或损失）服从某种已知分布（通常假设正态分布），利用收益的期望和方差-协方差等参数直接计算VaR。若单位时间组合收益 $R\sim N(\mu,\sigma^2)$，并把正损失定义为 $L=-R$，则 $\alpha$ 置信水平下一天VaR为：
 <!-- bilingual-en:start -->
-**Method:** The variance–covariance method assumes a known distribution for asset or portfolio returns, usually a normal distribution, and calculates VaR from parameters such as the mean and covariance matrix. It is therefore also called the parametric method. Under the standard normal specification, if one-period portfolio return has mean $\mu$ and standard deviation $\sigma$, the one-day VaR at confidence level $\alpha$ is given by the displayed formula.
+**Method:** The variance–covariance method assumes a known distribution for asset or portfolio returns, usually a normal distribution, and calculates VaR from parameters such as the mean and covariance matrix. If one-period return is $R\sim N(\mu,\sigma^2)$ and positive loss is $L=-R$, the one-day VaR is $-\mu+z_\alpha\sigma$.
 <!-- bilingual-en:end -->
 
 $$
-\text{VaR}_{\alpha,1\text{天}} = -\left(\mu + z_{\alpha}\sigma\right),
+\text{VaR}_{\alpha,1\text{天}} = -\mu + z_{\alpha}\sigma,
 $$ 
 其中$z_{\alpha}$是标准正态分布的$\alpha$分位点（例如$\alpha=99\%$时$z_{0.99}\approx 2.33$；$\alpha=95\%$时$z_{0.95}\approx 1.645$）。当假设$\mu\approx0$时，VaR近似$z_{\alpha}\sigma$。如果持有期为$N$天且每天损失独立，则$N$天VaR可按$\text{VaR}_{\alpha,N\text{天}} \approx z_{\alpha}\sigma\sqrt{N}$进行尺度调整（详见后文持有期的影响）。
 <!-- bilingual-en:start -->
@@ -75,14 +75,14 @@ Here, $z_{\alpha}$ is the $\alpha$ quantile of the standard normal distribution:
 - **Unstable dependence:** Historical covariance estimates treat dependence as sufficiently stable, even though correlations can change sharply in a crisis.
 <!-- bilingual-en:end -->
 
-## 2.2 历史模拟法
+## 2.2 [[历史模拟法]]
 <!-- bilingual-en:start -->
 *2.2 historical simulation method*
 <!-- bilingual-en:end -->
 
-计算方法：历史模拟法无需对收益分布作特定假设，而直接利用过去观察到的历史数据来估计VaR。步骤为：收集过去一段观察期内资产或组合的实际收益/损失数据，假设未来风险与历史相似；将这些收益按从最坏损失到最好的结果排序，取相应分位数处的损失作为VaR。例如，有100天历史日损益数据，99% VaR 对应将损益从最亏到最盈排序后第~~第~~2 大亏损（因为 1% 的尾部对应最差 1 天）。历史模拟直接以过去实际波动来评估未来风险。
+计算方法：[[历史模拟法]]不为风险因子收益指定参数分布，而是把每个历史日的**联合风险因子变动**作为一整行情景施加到当前固定组合，并在每行情景下全重估或使用经验证的估值近似。所得反事实损益从小到大排序后取经验分位数。若采用最近秩定义，有100行情景时，99% VaR 的位置为 $\lceil0.99\times100\rceil=99$，即第2大损失；不能把不同历史日的单个因子任意拼接。
 <!-- bilingual-en:start -->
-**Method:** Historical simulation makes no parametric assumption about return distributions. Revalue today's portfolio under a window of observed historical market moves, sort the resulting profit-and-loss observations from worst to best, and select the relevant loss quantile. With 100 daily observations, a 99% VaR is determined by the extreme 1% tail; the precise order statistic depends on the chosen sample-quantile convention. The method therefore asks what today's portfolio would have lost under past market moves.
+**Method:** Historical simulation imposes no parametric distribution on risk-factor returns. Apply each historical day's joint risk-factor move as one row to today's fixed portfolio, fully revalue it or use a validated approximation, and take an empirical quantile of the counterfactual losses. Under nearest rank, 100 scenarios place 99% VaR at ascending rank 99, the second-largest loss. Risk-factor moves from different dates must not be mixed into one row.
 <!-- bilingual-en:end -->
 
 **优点：** 
@@ -107,35 +107,35 @@ Here, $z_{\alpha}$ is the $\alpha$ quantile of the standard normal distribution:
 - **Poor fit for new or changing portfolios:** New instruments may lack histories, and an unweighted historical window does not model time-varying volatility unless it is modified.
 <!-- bilingual-en:end -->
 
-## 2.3 [[历史模拟与 Monte Carlo 风险模拟|蒙特卡罗模拟方法]]
+## 2.3 [[风险蒙特卡洛|蒙特卡罗模拟方法]]
 <!-- bilingual-en:start -->
-*2.3 [[历史模拟与 Monte Carlo 风险模拟|Monte Carlo Simulation]]*
+*2.3 [[风险蒙特卡洛|Risk Monte Carlo Simulation]]*
 <!-- bilingual-en:end -->
 
-计算方法：蒙特卡罗模拟法通过对风险因素进行随机抽样模拟大量可能的未来情景，从而估计组合损益分布并计算VaR。一般步骤：根据假定的概率分布模型（可考虑更复杂的分布、相关结构），用计算机生成成千上万次模拟的价格路径或收益样本，每次重新估值组合得到一次收益/损失结果；然后对所有模拟损失取$\alpha$分位数作为VaR。此方法灵活强大，适用于复杂组合。
+计算方法：[[风险蒙特卡洛]]先在[[风险模拟P-Q分工|真实世界测度]] $P$ 下规定[[风险因子联合生成|终点边际分布与横截面依赖]]；需要逐期演化时，再规定[[风险因子时间动态|风险因子时间动态]]。随后由[[风险模拟估值层|估值层]]把联合情景施加到当前固定组合上全重估，或使用已经针对该组合和冲击范围[[估值近似验证|验证的近似]]，最后取模拟损失的 $\alpha$ 分位数。只有中间触碰、平均或现金流顺序会改变损益时，才必须按[[风险模拟路径依赖|路径依赖要求]]把完整有序路径保留到估值层。若衍生品需要条件未来价值，情景内估值使用相应的[[风险模拟P-Q分工|风险中性测度]] $Q$；外层风险分布 $P$ 与内层定价测度 $Q$ 不能混用。
 <!-- bilingual-en:start -->
-**Method:** Monte Carlo simulation draws risk-factor shocks from a calibrated model to create many possible future scenarios. The portfolio is revalued in every scenario, producing a simulated loss distribution; its $\alpha$ quantile is the VaR. Because both the risk-factor model and valuation function can be complex, the method is especially useful for nonlinear or path-dependent portfolios.
+**Method:** Under a calibrated [[风险模拟P-Q分工|real-world measure]] $P$, risk Monte Carlo specifies [[风险因子联合生成|terminal margins and cross-sectional dependence]] and, when period-by-period evolution is required, separate [[风险因子时间动态|risk-factor time dynamics]]. A [[风险模拟估值层|valuation layer]] applies each joint scenario to today's fixed portfolio and either fully revalues it or uses an [[估值近似验证|approximation validated for that portfolio and shock range]]. A complete ordered path must reach valuation only when intermediate crossings, averages, or cash-flow order affect profit and loss under the [[风险模拟路径依赖|path-dependence requirement]]. If a derivative requires a conditional future value, inner valuation uses a [[风险模拟P-Q分工|risk-neutral measure]] $Q$ consistent with the scenario; outer $P$ and inner $Q$ have different roles.
 <!-- bilingual-en:end -->
 
 **优点：** 
 - 适用复杂情况：能够处理高维、多因素的组合风险，适用于包含非线性、路径依赖的衍生品，突破了解析法的局限。  
-- 分布灵活：可以假设和校准更贴近现实的收益分布（如带厚尾、偏度），或者采用历史数据重抽样（Bootstrapping）来模拟，从而更准确反映风险。  
+- 分布灵活：可以校准带厚尾、偏度和非线性依赖的联合模型，也可对历史数据重抽样；但重抽样不会自动提高准确性，普通逐日 bootstrap 会破坏序列依赖，需要时应采用块抽样并另行验证。
 - 可计算任意风险指标：除了VaR，还可同时估计预期损失等其他风险度量，获得整个损失分布信息。
 <!-- bilingual-en:start -->
 **Advantages:**
 - Handles high-dimensional, nonlinear, and path-dependent portfolios.
-- Allows flexible marginal distributions, tail behavior, and dependence structures, including calibrated heavy-tailed models or bootstrap resampling.
-- Produces an entire simulated loss distribution, from which VaR, [[VaR、ES 与回测|ES]], and other risk measures can be estimated.
+- Allows flexible marginal distributions, tail behavior, and dependence structures. Bootstrap resampling is possible, but it is not automatically more accurate; ordinary row-wise resampling destroys serial dependence, so block methods and validation may be required.
+- Produces an entire simulated loss distribution, from which VaR, [[ES定义|ES]], and other risk measures can be estimated.
 <!-- bilingual-en:end -->
 
 **缺点：** 
-- 计算量大：需大量模拟运行，计算过程耗时，尤其对大型组合需要高性能计算资源。模拟次数不足时，结果会有随机误差。  
-- 模型风险：模拟结果依赖于对风险因子分布和相关结构的假设，若模型假设不当（例如相关性危机时被低估），VaR结果仍可能有偏差。  
+- 计算量取决于情景数和估值器；全重估复杂组合可能很慢，模拟次数不足时还会有[[VaR采样误差|抽样误差]]。
+- 模型风险来自边际分布、联合依赖、动态过程和估值近似。增加路径只会降低抽样误差，不会修复错误模型。
 - 实现较复杂：需构建全面的估值模型和随机发生器，对技术和数据要求较高，不如参数法和历史法直观。
 <!-- bilingual-en:start -->
 **Disadvantages:**
-- Computationally expensive; too few simulations leave material Monte Carlo error, particularly in the tail.
-- Exposed to model risk because results depend on the assumed risk-factor distributions, dynamics, and correlations.
+- Cost depends on both the scenario count and valuation engine; full revaluation can be expensive, and too few simulations leave material [[VaR采样误差|sampling error]] in the tail.
+- Exposed to model risk in marginal distributions, joint dependence, dynamics, and valuation approximations. More paths reduce sampling error but do not repair a misspecified model.
 - Operationally demanding: robust valuation models, data pipelines, random-number generation, and validation are all required.
 <!-- bilingual-en:end -->
 
@@ -144,9 +144,9 @@ Here, $z_{\alpha}$ is the $\alpha$ quantile of the standard normal distribution:
 *3. VaR Key Parameter Setting and Impact Analysis*
 <!-- bilingual-en:end -->
 
-VaR的数值取决于所采用的**[[VaR、ES 与回测|置信水平]]、[[VaR、ES 与回测|持有期]]**（或称展望期）**以及观察期**（历史数据窗口）等关键参数的设定。这些参数的选择会显著影响VaR结果，需要根据监管要求和实际风险偏好进行设定。
+VaR的数值取决于所采用的**[[风险度量口径|置信水平]]、[[风险度量口径|持有期]]**（或称展望期）**以及[[风险估计窗口|观察期]]**（历史数据窗口）等关键参数的设定。这些参数的选择会显著影响VaR结果，需要根据监管要求和实际风险偏好进行设定。
 <!-- bilingual-en:start -->
-VaR depends on several design choices: the **[[VaR、ES 与回测|confidence level]]**, **[[VaR、ES 与回测|holding period]]** or horizon, and the **observation window** used to estimate the model. Changing any of them can materially change the reported number, so they must match the decision, regulatory rule, and risk appetite for which VaR is being used.
+VaR depends on several design choices: the **[[风险度量口径|confidence level]]**, **[[风险度量口径|holding period]]** or horizon, and the **[[风险估计窗口|observation window]]** used to estimate the model. Changing any of them can materially change the reported number, so they must match the decision, regulatory rule, and risk appetite for which VaR is being used.
 <!-- bilingual-en:end -->
 
 ## 3.1 置信水平
@@ -154,14 +154,14 @@ VaR depends on several design choices: the **[[VaR、ES 与回测|confidence lev
 *3.1 confidence level*
 <!-- bilingual-en:end -->
 
-**置信水平**（[[VaR、ES 与回测|Confidence Level]]）指计算VaR时要有多大的把握不超过该损失金额，常用的有90%、95%、99%、99.9%等。置信水平越高，意味着要求对极端损失也有更高的把握度，因此**VaR值会越大**（因为需要覆盖更极端的不利情形）。 
+**置信水平**（[[风险度量口径|Confidence Level]]）指计算VaR时要有多大的把握不超过该损失金额，常用的有90%、95%、99%、99.9%等。置信水平越高，意味着要求对极端损失也有更高的把握度，因此**VaR值会越大**（因为需要覆盖更极端的不利情形）。
 <!-- bilingual-en:start -->
 The **confidence level** is the probability with which modeled loss should not exceed VaR. Common choices include 90%, 95%, 99%, and 99.9%. A higher confidence level reaches farther into the adverse tail, so the corresponding **VaR is larger**, all else equal.
 <!-- bilingual-en:end -->
 
 ## 3.2 持有期（展望期）
 <!-- bilingual-en:start -->
-*3.2 [[VaR、ES 与回测|Holding Period]] (Risk Horizon)*
+*3.2 [[风险度量口径|Holding Period]] (Risk Horizon)*
 <!-- bilingual-en:end -->
 
 **持有期**（Holding Period，也称展望期）是指VaR所针对的未来时间长度，即假定头寸在多长时间内可能无法或不方便调整，从而暴露于市场风险。典型持有期可以是1天、10天、2周、1个月等。持有期应根据资产流动性和风险管理需要确定：**流动性高**的头寸（如日交易的股票、外汇头寸）常用**1天**VaR，因为可以每日调整仓位；**长期投资**（如养老基金、大型投资组合）可用**更长周期**（如10天、1个月）VaR评估中长期风险。
@@ -169,7 +169,7 @@ The **confidence level** is the probability with which modeled loss should not e
 The **holding period**, or risk horizon, is the future interval over which the position is assumed to remain exposed before it can be adjusted or unwound. Typical horizons include one day, ten days, two weeks, and one month. Highly liquid trading positions often use a one-day horizon, while less liquid or longer-term positions may require longer horizons. The chosen horizon should reflect both liquidity and the purpose of the risk measure.
 <!-- bilingual-en:end -->
 
-**监管要求：巴塞尔委员会为市场风险计量规定了**10天**的持有期，即监管VaR通常指10日99% VaR；信用和操作风险则采用一年（约252交易日）的99.9% VaR来计算所需资本。这些较长持有期是出于审慎考虑，因为在压力情况下可能需要较长时间平仓或对冲风险。**
+**监管背景：**较早的 Basel 市场风险内部模型框架使用10日、99% VaR。现行 FRTB 内部模型框架改用97.5% ES，并按规定的流动性期限调整；因此不能把“监管市场风险仍统一等于10日99% VaR”当作当前规则。信用风险等其他风险类型另有各自的期限、置信水平和资本口径，应以适用规则为准。
 <!-- bilingual-en:start -->
 **Regulatory context:** The earlier Basel market-risk VaR framework used a ten-day, 99% VaR for capital calculations. The current FRTB internal-model framework instead uses 97.5% ES with prescribed liquidity-horizon adjustments. Credit and operational-risk capital are commonly framed over a one-year horizon at very high confidence levels. Longer horizons reflect the possibility that positions take longer to close or hedge under stress.
 <!-- bilingual-en:end -->
@@ -189,14 +189,14 @@ The **holding period**, or risk horizon, is the future interval over which the p
 >Suppose daily portfolio profit and loss has a standard deviation of USD 3 million and adjacent daily returns have correlation $\rho=0.1$. The exact five-day variance formula shown above gives a standard deviation of about USD 7.26 million, whereas independence would give $\sqrt{5}\times3\approx USD 6.70$ million. Positive serial correlation therefore raises five-day risk. **Conclusion:** VaR generally grows with the holding period, but $\sqrt{N}$ scaling is justified only when the dependence and volatility assumptions support it.
 ><!-- bilingual-en:end -->
 
-## 3.3 [[VaR、ES 与回测|观察期]]（数据窗口）
+## 3.3 [[风险估计窗口|观察期]]（数据窗口）
 <!-- bilingual-en:start -->
-*3.3 [[VaR、ES 与回测|Observation Window]] (Data Window)*
+*3.3 [[风险估计窗口|Observation Window]] (Data Window)*
 <!-- bilingual-en:end -->
 
-**观察期**（Observation Period，又称数据窗口）指用于计算VaR时历史数据取样的时间长度。例如我们可能采用过去1年的每日收益数据来估计波动率、分位数等。观察期的选择存在权衡：**数据越长**，包含更多市场环境，统计估计更稳定，能平滑短期异常；但**窗口过长**可能引入过时信息，若市场结构发生变化，久远数据会降低准确性。
+**观察期**（Observation Period，又称数据窗口）是[[风险估计窗口|在预测时点规定历史观测范围与权重的样本规则]]。例如我们可能采用过去1年的每日收益数据来估计波动率、分位数等。它的长度存在[[风险窗口权衡|响应、尾部信息量与制度代表性之间的权衡]]：**数据越长**，包含更多市场环境，统计估计通常更稳定，能平滑短期异常；但**窗口过长**可能引入过时信息，若市场结构发生变化，久远数据会降低准确性。
 <!-- bilingual-en:start -->
-The **[[VaR、ES 与回测|observation window]]** is the span of historical data used to estimate volatility, correlations, or quantiles. A longer window includes more market regimes and usually stabilizes estimates, but it may give substantial weight to stale observations after the market structure changes. A shorter window is more responsive but noisier.
+The **[[风险估计窗口|observation window]]** is the historical-sample rule that fixes the eligible observations and weights at the forecast origin. Its length creates a [[风险窗口权衡|trade-off among responsiveness, tail information, and regime representativeness]]: a longer window usually stabilises estimates but may give substantial weight to stale observations, while a shorter window is more responsive but noisier.
 <!-- bilingual-en:end -->
 
 一般而言，为平衡统计可靠性与现实适用性，**1年左右**的历史数据较常用（约250个交易日）。巴塞尔委员会规定内部模型法计算VaR至少用**一年**历史数据。此外，有些金融机构采用**加权历史数据**（赋予近期更大权重）以兼顾新旧信息。
@@ -205,8 +205,10 @@ A window of roughly one year, or about 250 trading days, is common when balancin
 <!-- bilingual-en:end -->
 
 观察期的影响：窗口过短，VaR易受偶发事件左右，不稳定；窗口过长，可能掩盖近期风险上升的趋势，导致VaR反应迟缓。例如，在平稳时期用10年的数据估计波动可能低估近期的剧烈波动风险。因此实际应用中，常针对不同目的选择不同长度窗口，或者采用滚动窗口并辅以压力情景补充，使VaR既有充分数据支撑又能反映当前风险水平。
+窗口长度、衰减参数和自适应规则一旦通过验证期选定，就应在最终评估期开始前冻结；否则同一批结果同时参与选择和验证，见 [[风险窗口选择冻结]]。
 <!-- bilingual-en:start -->
 A window that is too short produces unstable VaR estimates dominated by individual observations. A window that is too long can conceal a recent rise in risk; for example, a ten-year volatility estimate may react slowly to a newly turbulent regime. In practice, institutions use windows suited to the purpose, often rolling them through time and supplementing them with stress scenarios.
+Once window length, decay parameters, and adaptation rules have been selected on validation periods, they should be frozen before final evaluation begins; otherwise the same outcomes both choose and evaluate the design. See [[风险窗口选择冻结|freezing the risk-window rule]].
 <!-- bilingual-en:end -->
 
 # 4. 绝对 VaR 与相对 VaR 的区别
@@ -214,17 +216,17 @@ A window that is too short produces unstable VaR estimates dominated by individu
 *4. Difference between absolute VaR and relative VaR*
 <!-- bilingual-en:end -->
 
-VaR可以分为**[[VaR、ES 与回测|绝对VaR]]**和**[[VaR、ES 与回测|相对VaR]]**两种口径：
+VaR可以分为**[[绝对与相对VaR|绝对VaR]]**和**[[绝对与相对VaR|相对VaR]]**两种口径：
 <!-- bilingual-en:start -->
-VaR can be divided into **[[VaR、ES 与回测|absolute VaR]]** and **[[VaR、ES 与回测|relative VaR]]**:
+VaR can be divided into **[[绝对与相对VaR|absolute VaR]]** and **[[绝对与相对VaR|relative VaR]]**:
 <!-- bilingual-en:end -->
 
-- **绝对VaR**（[[VaR、ES 与回测|Absolute VaR]]）指相对于当前持仓价值本身可能遭受的最大损失，直接以头寸价值减少的金额表示。这通常是我们默认的VaR概念，即假设初始资产价值为$W$，在置信水平下未来价值降至$W-\text{VaR}$（或损失$\text{VaR}$）。
+- **绝对VaR**（[[绝对与相对VaR|Absolute VaR]]）以当前持仓价值为基准，报告未来价值不利分位点对应的损失金额。若初始价值为 $W$，该不利价值分位点写成 $W-\text{VaR}$；这里的 VaR 仍是分位阈值，不是最大可能损失。
 <!-- bilingual-en:start -->
 - **Absolute VaR** measures the loss relative to the portfolio's current value. If current value is $W$, the adverse quantile of future value is $W-\text{VaR}$, so the reported VaR is the corresponding loss from today's value.
 <!-- bilingual-en:end -->
 
-- **相对VaR**（[[VaR、ES 与回测|Relative VaR]]）则是指相对于某基准收益水平（通常是持有期间的期望收益或无风险收益）的最大损失。换言之，先考虑资产在持有期内的**期望增长**，相对VaR表示实际收益相对期望值下降的最大幅度。若资产预期收益为正，**相对VaR**将略大于绝对VaR（因为包含放弃掉的那部分正期望收益）；若预期收益为负，相对VaR反而小一些（因为基准期望本就亏损）。
+- **相对VaR**（[[绝对与相对VaR|Relative VaR]]）以某个基准收益水平（通常是持有期间的期望收益或无风险收益）为参照，报告实际收益相对基准的不利分位偏离。若资产预期收益为正，**相对VaR**通常略大于绝对VaR（因为包含放弃的正期望收益）；若预期收益为负，相对VaR反而可能较小。
 <!-- bilingual-en:start -->
 - **Relative VaR** measures underperformance relative to a benchmark, usually expected return or a risk-free return. It therefore includes the return that the portfolio was expected to earn but did not. With positive expected return, relative VaR is slightly larger than absolute VaR; with negative expected return, it can be smaller.
 <!-- bilingual-en:end -->
@@ -251,31 +253,31 @@ Risk reports usually use absolute monetary VaR by default. Relative VaR is more 
 
 # 5. VaR 与 ES（预期损失）的比较及一致性问题
 <!-- bilingual-en:start -->
-*5. VaR versus [[VaR、ES 与回测|Expected Shortfall]] and the Question of Coherence*
+*5. VaR versus [[ES定义|Expected Shortfall]] and the Question of Coherence*
 <!-- bilingual-en:end -->
 
-ES（Expected Shortfall，预期损失）也称条件VaR（CVaR）或尾部期望损失，是另一种风险度量，定义为在损失超过VaR条件下的平均损失。换言之，ES关心的是“最坏的$(1-\alpha)$的情况平均会损失多少”。举例来说，在99%置信水平下的10日ES是指未来10天内，处于最糟糕1%情形下的平均损失金额。
+ES（Expected Shortfall，期望短缺）也称尾部期望损失，是最坏 $1-\alpha$ 概率质量中的平均损失，也可用分位数积分定义。连续分布且阈值处没有概率质量时，它可写成损失超过 VaR 条件下的均值；离散分布则不能机械使用这个条件式。举例来说，99%置信水平的10日ES是未来10日模型损失中最坏1%尾部的平均金额。
 <!-- bilingual-en:start -->
-[[VaR、ES 与回测|Expected shortfall]] (ES), also called conditional VaR or expected tail loss, measures average loss in the worst $1-\alpha$ fraction of outcomes. For example, ten-day ES at 99% confidence is the average ten-day loss among the worst 1% of modeled scenarios. For discontinuous loss distributions, this tail-average definition is preferable to conditioning mechanically on $L>\text{VaR}$ because probability mass may sit exactly at the VaR threshold.
+[[ES定义|Expected shortfall]] (ES), also called conditional VaR or expected tail loss, measures average loss in the worst $1-\alpha$ fraction of outcomes. For example, ten-day ES at 99% confidence is the average ten-day loss among the worst 1% of modeled scenarios. For discontinuous loss distributions, this tail-average definition is preferable to conditioning mechanically on $L>\text{VaR}$ because probability mass may sit exactly at the VaR threshold.
 <!-- bilingual-en:end -->
 
 **VaR vs ES:**
 - VaR提供的是**分位点信息**：它告诉我们损失分布在某高置信度下的阈值，但对更坏的情况并无涉及。比如99% VaR = 6400万，说明99%时候损失不超过6400万，但万一超过了6400万，可能是6500万也可能是1亿，都不体现。
-- ES提供**尾部均值信息**：它进一步回答“如果损失超出了VaR，这些极端情况下平均会亏多少钱”。因此ES考虑了损失分布尾部的厚度，比VaR更全面反映极端风险的严重程度。
+- ES提供**尾部均值信息**：它回答“最坏的 $1-\alpha$ 概率质量平均会亏多少钱”。因此ES考虑了损失分布尾部的严重度；离散情形还要把 VaR 阈值处所需的概率质量按定义纳入。
 <!-- bilingual-en:start -->
 **VaR versus ES:**
 - VaR supplies a **quantile threshold**. A 99% VaR of CNY 64 million says that 99% of modeled losses are no greater than CNY 64 million, but it says nothing about how large losses are after the threshold is crossed.
 - ES supplies a **tail average**. It asks how much is lost on average in the worst 1% of cases and therefore reflects the severity of the distribution beyond VaR.
 <!-- bilingual-en:end -->
 
-一致性（Coherence）问题：在风险度量理论中，[[VaR、ES 与回测|一致性风险度量]]指满足一组合理性的公理（详见下一节）。ES被证明是**一致风险度量**，而VaR并不满足所有一致性要求（特别是次可加性）。这使得ES在理论上更受青睐，因为它不会像VaR那样可能违反分散化原则。例如，对于两个子组合，ES(A+B)总是≤ ES(A)+ES(B)，而VaR在某些罕见情况下可能出现组合风险>单独风险之和的反直觉结果。
+一致性（Coherence）问题：在风险度量理论中，[[一致风险度量|一致性风险度量]]指满足一组合理性的公理（详见下一节）。ES被证明是**一致风险度量**，而VaR并不满足所有一致性要求（特别是次可加性）。这使得ES在理论上更受青睐，因为它不会像VaR那样可能违反分散化原则。例如，对于两个子组合，ES(A+B)总是≤ ES(A)+ES(B)，而VaR在某些罕见情况下可能出现组合风险>单独风险之和的反直觉结果。
 <!-- bilingual-en:start -->
-**Coherence:** A [[VaR、ES 与回测|coherent risk measure]] satisfies a set of economically meaningful axioms. ES is coherent under standard conditions, whereas VaR can violate subadditivity. Thus, for two portfolios, ES obeys $\mathrm{ES}(A+B)\le \mathrm{ES}(A)+\mathrm{ES}(B)$, while VaR can sometimes report more risk for the diversified combination than the sum of the separate VaRs.
+**Coherence:** A [[一致风险度量|coherent risk measure]] satisfies a set of economically meaningful axioms. ES is coherent under standard conditions, whereas VaR can violate subadditivity. Thus, for two portfolios, ES obeys $\mathrm{ES}(A+B)\le \mathrm{ES}(A)+\mathrm{ES}(B)$, while VaR can sometimes report more risk for the diversified combination than the sum of the separate VaRs.
 <!-- bilingual-en:end -->
 
 监管选择：由于ES在极端风险衡量和一致性方面的优势，巴塞尔新规（如FRTB框架）已从VaR转向使用**97.5% ES**作为市场风险资本计量标准，部分原因正是VaR不一致而ES更合理。此外，ES难以被交易员“投机性规避”——因为它关注尾部平均，交易员若试图通过降低VaR而将风险集中到极端尾部（“赌小概率大亏”）会被ES捕捉到。例如有交易员每日将99% VaR控制在1000万，但留下0.5%概率出现5000万损失，这种策略下VaR看似合规，实际尾部风险巨大；ES则会将那0.5%的巨大损失平均进来，显示一个高得多的风险值，阻止此类规避行为。
 <!-- bilingual-en:start -->
-**Regulatory choice:** The FRTB internal-model approach uses **97.5% [[VaR、ES 与回测|expected shortfall]]** for market-risk capital because ES captures losses beyond a single quantile and is sensitive to tail severity. It also makes it harder to hide a very small probability of a very large loss just beyond the VaR cutoff. A strategy can keep 99% VaR low while concentrating losses in the worst 1%; ES brings those losses into the reported tail average.
+**Regulatory choice:** The FRTB internal-model approach uses **97.5% [[ES定义|expected shortfall]]** for market-risk capital because ES captures losses beyond a single quantile and is sensitive to tail severity. It also makes it harder to hide a very small probability of a very large loss just beyond the VaR cutoff. A strategy can keep 99% VaR low while concentrating losses in the worst 1%; ES brings those losses into the reported tail average.
 <!-- bilingual-en:end -->
 
 总结：VaR直观易懂且便于计算，但它仅给出“不超过”的损失界限；ES进一步告诉我们“超出界限时有多糟”。在关注极端事件的风险管理中，ES被视为比VaR更有信息量的指标。不过ES计算相对复杂且对极值敏感度高，需要更多数据或假设支撑，这也是实际应用中曾长期沿用VaR的原因。
@@ -283,9 +285,9 @@ ES（Expected Shortfall，预期损失）也称条件VaR（CVaR）或尾部期�
 In summary, VaR is intuitive and easy to communicate, but it reports only a loss threshold. ES describes the average severity beyond that threshold and is therefore more informative about extreme loss. Its tail estimate is also more data- and model-intensive, which helps explain the long historical use of VaR.
 <!-- bilingual-en:end -->
 
-# 6. VaR 的一致性争议、CVaR 的优势、[[VaR、ES 与回测|光谱风险度量]]
+# 6. VaR 的一致性争议、[[CVaR缩写歧义|CVaR]] 的优势、[[光谱风险度量|光谱风险度量]]
 <!-- bilingual-en:start -->
-*6. VaR, Coherence, CVaR, and [[VaR、ES 与回测|Spectral Risk Measures]]*
+*6. VaR, Coherence, [[CVaR缩写歧义|CVaR]], and [[光谱风险度量|Spectral Risk Measures]]*
 <!-- bilingual-en:end -->
 
 1997年，Artzner等人提出了一致性风险度量的概念，认为合理的风险度量应满足以下公理：
@@ -311,34 +313,34 @@ VaR 的不一致性：VaR一般满足单调性、正齐次、平移不变性，�
 VaR generally satisfies monotonicity, positive homogeneity, and translation invariance, but it **need not satisfy subadditivity**. This is the source of its failure to be coherent in general.
 <!-- bilingual-en:end -->
 
-CVaR/ES 的优势：CVaR（ES）满足上述所有一致性公理，包括次可加性，因而是一致风险度量。ES不仅规避了VaR的理论问题，还提供了尾部损失信息，因此在衡量极端风险时更可靠。
+[[CVaR缩写歧义|本节所称 CVaR]] 指 Conditional VaR，并按一般分布口径与 ES 对齐。它满足上述所有一致性公理，包括次可加性；ES还提供了分位阈值以外的尾部损失信息。
 <!-- bilingual-en:start -->
-CVaR, or ES, satisfies the four coherence axioms, including subadditivity. It also reports information about losses beyond the VaR threshold, making it more informative for extreme-risk analysis.
+[[CVaR缩写歧义|CVaR in this section]] means Conditional VaR and follows the general-distribution convention aligned with ES. It satisfies the four coherence axioms, including subadditivity, and reports information about losses beyond the VaR threshold.
 <!-- bilingual-en:end -->
 
 >[!quote] 光谱风险度量 
-> 光谱风险度量：为了广泛刻画风险厌恶程度，Acerbi等提出光谱风险度量（[[VaR、ES 与回测|Spectral Risk Measure]]）概念。光谱风险度量将损失分布的各个分位损失按照某种**权重函数**加权求和：
+> 光谱风险度量：为了广泛刻画风险厌恶程度，Acerbi等提出光谱风险度量（[[光谱风险度量|Spectral Risk Measure]]）概念。光谱风险度量将损失分布的各个分位损失按照某种**权重函数**加权求和：
 > $$
 > \rho_{\phi}(X) = \int_{0}^{1} \phi(q) F^{-1}_X(q)\,\mathrm{d}q,
 > $$ 
-> 其中$\phi(q)$为对第$q$分位损失的权重函数。如果$\phi(q)$是非递减的（对更大损失给予不小于前面的权重），则该风险度量满足次可加性，是一致的。直观理解：光谱风险度量按照预先设定的权重关注不同置信水平的损失，权重越偏向尾部，高损失得到更大强调，该度量就越保守。
+> 其中$\phi(q)$为对第$q$分位损失的权重函数。若$\phi(q)$非负、积分为一，并且随损失分位水平非递减（对更大损失给予不小于前面的权重），则该风险度量是一致的。直观理解：光谱风险度量按照预先设定的权重关注不同置信水平的损失，权重越偏向尾部，高损失得到更大强调。
 > 
-> VaR和ES都属于特殊的光谱度量：
-> - VaR只关注单一分位点（如99%分位损失），可视为在该点权重100%、其他损失权重0%的极端光谱。这种权重函数在尾部突然跃升，不满足单调递增的平滑条件，导致VaR不是一致风险度量。
-> - ES对超出VaR阈值以上的尾部损失赋予**均等权重**，对更糟糕情形并不再区别对待，因此它对应的权重函数在VaR分位点后是常数（对所有尾部损失一视同仁），这是一个非下降函数，满足一致性要求。
+> [[ES是光谱特例|ES 是普通光谱风险度量的阶梯权重特例]]；[[VaR单点权重边界|VaR 只能形式化地类比为单点权重]]，不能由此归入普通可积光谱类：
+> - ES在置信水平以下赋零权重，在最坏 $1-\alpha$ 的分位区间赋相同正权重 $1/(1-\alpha)$。这个权重非负、归一且不减，因此给出一致风险度量。
+> - VaR只读取单一分位点。可以把它形式化地想成该点上的 Dirac 质量，但 Dirac 不是光谱定义要求的普通可积权重函数；这个类比不能让 VaR 自动继承一致性。
 > 
-> 通过光谱视角我们看到，**VaR的问题在于其风险权重集中在临界分位点，无法体现更极端损失，且权重函数不满足递增性**；而ES平滑地考虑了VaR之后的所有损失，因此更符合一致性。进一步的光谱度量族，如**指数光谱风险度量**（对越极端损失赋予指数增长的权重），允许根据风险厌恶程度调整尾部权重，所有这些光谱风险度量只要权重递增，都满足一致性，比VaR更一般化。
+> 通过光谱视角可以看到：VaR把信息压缩在一个分位点，普通光谱表示无法接纳这种单点质量；ES则平均完整的固定上尾概率质量。进一步的光谱度量族可以让权重随损失分位水平上升，但还必须同时满足非负与积分为一，不能只检查“权重递增”。
 ><!-- bilingual-en:start -->
->A [[VaR、ES 与回测|spectral risk measure]] combines loss quantiles using a **weight function**:
+>A [[光谱风险度量|spectral risk measure]] combines loss quantiles using a **weight function**:
 >$\rho_{\phi}(X)=\int_0^1\phi(q)F_X^{-1}(q)\,\mathrm dq$.
 >Here, $\phi(q)$ is the weight assigned to the $q$th loss quantile. If the weights are non-negative, integrate to one, and are non-decreasing toward worse outcomes, the measure is coherent. Greater weight in the far tail represents greater aversion to catastrophic loss.
 >
->ES is a spectral risk measure: it assigns equal positive weight to every quantile beyond the VaR cutoff and zero weight below it. VaR can be represented informally as a point mass at one quantile, but that generalized “spectrum” is not an admissible increasing integrable weight function, which is why VaR is not a coherent spectral risk measure. Exponential and other increasing spectra allow tail weights to reflect different degrees of risk aversion.
+>[[ES是光谱特例|ES is a spectral risk measure]]: it assigns equal positive weight to every quantile beyond the VaR cutoff and zero weight below it. [[VaR单点权重边界|VaR can be represented only informally as a point mass]] at one quantile; that generalized “spectrum” is not an admissible integrable weight function and does not make VaR a coherent spectral measure. Exponential and other spectra can express different degrees of tail aversion, but admissibility also requires non-negative weights with unit integral.
 ><!-- bilingual-en:end -->
 
-# 7. VaR 分解（[[VaR、ES 与回测|边际VaR]]、[[VaR、ES 与回测|成分VaR]]、[[VaR、ES 与回测|递增VaR]]）及欧拉分解法
+# 7. VaR 分解（[[边际VaR]]、[[成分VaR]]、[[递增VaR]]）及欧拉分解法
 <!-- bilingual-en:start -->
-*7. VaR Decomposition ([[VaR、ES 与回测|marginal VaR]], [[VaR、ES 与回测|component VaR]], [[VaR、ES 与回测|incremental VaR]]) and Euler Decomposition*
+*7. VaR Decomposition ([[边际VaR|marginal VaR]], [[成分VaR|component VaR]], [[递增VaR|incremental VaR]]) and Euler Decomposition*
 <!-- bilingual-en:end -->
 
 看看得了.
@@ -346,12 +348,17 @@ CVaR, or ES, satisfies the four coherence axioms, including subadditivity. It al
 Skim this section.
 <!-- bilingual-en:end -->
 
+本节采用 [[VaR贡献口径|本组固定术语]]：marginal 指局部导数，component 指当前头寸乘局部导数，incremental 指有限交易前后差。其他文献可能交换标签，因此应以公式为准。
+<!-- bilingual-en:start -->
+This section follows the [[VaR贡献口径|convention fixed for this group]]: marginal means the local derivative, component means current position times that derivative, and incremental means the finite before-and-after trade difference. Other sources may swap labels, so the formula takes priority.
+<!-- bilingual-en:end -->
+
 ## 7.1 边际VaR
 <!-- bilingual-en:start -->
 *7.1 marginal VaR*
 <!-- bilingual-en:end -->
 
-**边际VaR（[[VaR、ES 与回测|Marginal VaR]]）**：边际VaR定义为组合VaR对某资产头寸的变化率，直观上是**组合VaR对单个资产头寸的偏导数**。边际VaR表示在当前组合中，若第$i$项资产持仓增加一微小单位，组合VaR增加多少。公式上，资产$i$的边际VaR = $\partial \text{VaR}_{\text{组合}} / \partial w_i$（$w_i$为资产权重或金额）。边际VaR反映了每增加一元资产$i$所带来的风险增量。
+**边际VaR（[[边际VaR|Marginal VaR]]）**：边际VaR定义为组合VaR对某资产头寸的变化率，直观上是**组合VaR对单个资产头寸的偏导数**。边际VaR表示在当前组合中，若第$i$项资产持仓增加一微小单位，组合VaR增加多少。公式上，资产$i$的边际VaR = $\partial \text{VaR}_{\text{组合}} / \partial w_i$（$w_i$为资产权重或金额）。边际VaR反映了每增加一元资产$i$所带来的风险增量。
 <!-- bilingual-en:start -->
 **Marginal VaR (Marginal VaR):** Marginal VaR is the derivative of portfolio VaR with respect to a position. It answers how much total VaR changes when position $i$ is increased by an infinitesimal amount:
 $\partial \text{VaR}_{\text{portfolio}}/\partial w_i$,
@@ -368,7 +375,7 @@ Marginal VaR reflects how an asset co-moves with the rest of the portfolio. Unde
 *7.2 incremental VaR*
 <!-- bilingual-en:end -->
 
- **递增VaR（[[VaR、ES 与回测|Incremental VaR]]）**：递增VaR指**新增或剔除一笔交易对组合VaR的影响**，即比较“有该交易”和“无该交易”两种组合VaR之差。例如，计算将资产$j$从组合中去掉后VaR的变化量，或者新增一个头寸后VaR的增量。递增VaR实际上是有限幅度（非无限小）的VaR变化评估，适用于评估一项具体投资决策对整体风险的影响。对于相对小的新增头寸，递增VaR与边际VaR近似相等；对于较大调整，需重新计算组合VaR来获得精确增量。
+ **递增VaR（[[递增VaR|Incremental VaR]]）**：递增VaR指**新增或剔除一笔交易对组合VaR的影响**，即比较“有该交易”和“无该交易”两种组合VaR之差。例如，计算将资产$j$从组合中去掉后VaR的变化量，或者新增一个头寸后VaR的增量。递增VaR实际上是有限幅度（非无限小）的VaR变化评估，适用于评估一项具体投资决策对整体风险的影响。对于相对小的新增头寸，递增VaR与边际VaR近似相等；对于较大调整，需重新计算组合VaR来获得精确增量。
 <!-- bilingual-en:start -->
 **Incremental VaR (Incremental VaR):** Incremental VaR is the finite change in portfolio VaR caused by adding, removing, or resizing a trade. It compares VaR with and without the change. For a very small adjustment it is approximated by marginal VaR times the position change; for a large adjustment, the portfolio must be fully re-evaluated.
 <!-- bilingual-en:end -->
@@ -378,7 +385,7 @@ Marginal VaR reflects how an asset co-moves with the rest of the portfolio. Unde
 *7.3 component VaR*
 <!-- bilingual-en:end -->
 
- **成分VaR（[[VaR、ES 与回测|Component VaR]]）**：成分VaR又称风险贡献度，是将组合总VaR划分到各组成资产的一种分摊，使各部分成分VaR之和等于整体VaR。成分VaR旨在回答：“组合总VaR中有多少是由资产$i$贡献的？” 根据风险分配理论，若风险度量满足正齐次性，可应用**欧拉分解法（Euler’s Theorem）**：对于组合风险$V$，如果对任意$\lambda>0$有$V(\lambda \mathbf{x}) = \lambda V(\mathbf{x})$（线性齐次），则
+ **成分VaR（[[成分VaR|Component VaR]]）**：在本组采用的口径下，第 $i$ 项成分 VaR 是当前头寸乘以该头寸的边际 VaR，用来表示当前组合点上的局部风险贡献。各项能否精确加总为组合 VaR，是另一个有条件的 [[成分VaR加总|Euler 加总命题]]。若风险度量一次正齐次且可微，则对于组合风险 $V$，
   $$
   V(\mathbf{x}) = \sum_{i=1}^{N} x_i \frac{\partial V}{\partial x_i}(\mathbf{x}),
   $$
@@ -386,14 +393,14 @@ Marginal VaR reflects how an asset co-moves with the rest of the portfolio. Unde
   $$
   \text{VaR}_{\text{组合}} = \sum_{i} w_i \frac{\partial \text{VaR}}{\partial w_i}.
   $$
-  右侧每一项正是资产$i$的持仓规模乘以其边际VaR，定义为资产$i$的**成分VaR**。这一定义下，各资产成分VaR之和正好等于组合VaR，实现了VaR的可加分解。
+  右侧每一项正是资产$i$的持仓规模乘以其边际VaR，定义为资产$i$的**成分VaR**；精确加总来自这里明确写出的正齐次与可微条件。
 <!-- bilingual-en:start -->
-**Component VaR (Component VaR):** Component VaR allocates total portfolio VaR across positions. For a positively homogeneous differentiable risk measure $V$, Euler's theorem gives the decomposition shown above. Applied to VaR, position $i$ contributes $w_i\,\partial\text{VaR}/\partial w_i$. The component contributions sum exactly to portfolio VaR when the required homogeneity and differentiability conditions hold.
+**[[成分VaR|Component VaR]]:** In the convention used here, position $i$ contributes its current holding times its marginal VaR. Exact aggregation is a separate [[成分VaR加总|Euler add-up result]]: for a positively homogeneous differentiable risk measure $V$, Euler's theorem gives the decomposition shown above, and position $i$ contributes $w_i\,\partial\text{VaR}/\partial w_i$.
 <!-- bilingual-en:end -->
 
-  性质：成分VaR具有如下特性：(1) 对大型组合，成分VaR与单一资产被视作“小幅变化”时的递增VaR非常接近，即成分VaR近似等于将该资产从组合中移除一点点的VaR差异；(2) 将所有资产的成分VaR相加，正好得到组合总VaR（由欧拉定理保证）。
+  性质：若把第 $i$ 项按很小比例 $\delta$ 缩减，组合 VaR 的一阶变化约为 $-\delta$ 乘该项成分 VaR；这不是删除整笔头寸的精确有限差。各项精确加总为组合 VaR 还要满足 [[成分VaR加总|Euler 命题的正齐次与可微条件]]。
 <!-- bilingual-en:start -->
-Component VaR has two useful interpretations. First, for a large portfolio and a small proportional reduction in one position, its risk contribution is closely related to incremental VaR. Second, summing the component VaRs across all positions reproduces total portfolio VaR by Euler's theorem.
+For a small proportional reduction $\delta$ in position $i$, the first-order change in portfolio VaR is approximately $-\delta$ times that position's component VaR; this is not the exact finite effect of deleting the whole position. Exact aggregation across positions additionally requires the homogeneity and differentiability conditions in [[成分VaR加总|the Euler add-up theorem]].
 <!-- bilingual-en:end -->
 
 # 8. VaR 的聚合方法
@@ -439,14 +446,14 @@ The formula is exact for jointly normal, zero-mean losses when each unit's VaR i
 Before aggregating VaR, ensure that business-unit estimates use the same confidence level, holding period, valuation date, loss convention, and compatible data. The covariance formula may be unreliable across risks with heavy tails or state-dependent dependence, such as market and credit risk. Institutions sometimes impose stressed or conservative correlations to reduce the chance of overstating diversification.
 <!-- bilingual-en:end -->
 
-# 9. VaR 模型的检验方法（[[VaR、ES 与回测|回溯检验]]、[[VaR、ES 与回测|Kupiec检验]]、聚束效应等）
+# 9. VaR 模型的检验方法（[[VaR回测损益口径|回溯检验]]、[[Kupiec无条件覆盖|Kupiec检验]]、聚束效应等）
 <!-- bilingual-en:start -->
-*9. Validating VaR Models: [[VaR、ES 与回测|Backtesting]], the [[VaR、ES 与回测|Kupiec Test]], and Exception Clustering*
+*9. Validating VaR Models: [[VaR回测损益口径|Backtesting]], the [[Kupiec无条件覆盖|Kupiec Test]], and Exception Clustering*
 <!-- bilingual-en:end -->
 
 VaR模型需要通过**回溯检验（Backtesting）**来评估其准确性。回溯检验是将模型预测的VaR与实际损益数据对比，统计实际损失超过VaR的次数（称为“例外”或“突破”，exception）的频率，以及这些异常是否随机分布。
 <!-- bilingual-en:start -->
-A VaR model is assessed through **[[VaR、ES 与回测|backtesting]]**: compare each forecast VaR with the subsequently realized profit and loss, record every day on which loss exceeds VaR, and examine both the number and timing of these “exceptions.”
+A VaR model is assessed through **[[VaR回测损益口径|backtesting]]**: compare each forecast VaR with the subsequently realized profit and loss, record every day on which loss exceeds VaR, and examine both the number and timing of these “exceptions.”
 <!-- bilingual-en:end -->
 
 ## 9.1 违反频率检验（Kupiec比例检验）
@@ -454,16 +461,16 @@ A VaR model is assessed through **[[VaR、ES 与回测|backtesting]]**: compare 
 *9.1 Unconditional Coverage: the Kupiec Proportion-of-Failures Test*
 <!-- bilingual-en:end -->
 
-**Kupiec检验**是一种检验例外率是否与标称概率一致的方法，又称“比例违约检验”（Proportion of Failures, POF）。假设模型计算的一日VaR置信水平为$\alpha$（例如99%，则$p=1-\alpha=0.01$为单日超VaR的理论概率）。在$n$天中，我们期望例外次数$X$服从$\text{Binomial}(n, p)$的二项分布，期望值为$np$。
+**Kupiec检验**是一种检验例外率是否与标称概率一致的方法，又称“比例违约检验”（Proportion of Failures, POF）。当条件损失分布在 VaR 点连续时，一日 VaR 置信水平为 $\alpha$ 意味着严格超越概率 $p=1-\alpha$；若分位点上有概率质量，就必须预先规定并报告并列值处理规则，不能把严格超越概率机械写成 $1-\alpha$。在例外概率固定且各日指标独立的原假设下，$n$ 天例外次数 $X$ 服从 $\text{Binomial}(n,p)$，期望值为 $np$。
 <!-- bilingual-en:start -->
-The **[[VaR、ES 与回测|Kupiec test]]**, or proportion-of-failures (POF) test, checks whether the observed exception rate is consistent with the nominal rate. For one-day VaR at confidence level $\alpha$, the model-implied exception probability is $p=1-\alpha$. Over $n$ independent days, the exception count $X$ follows $\text{Binomial}(n,p)$ under the null, with expected value $np$.
+The **[[Kupiec无条件覆盖|Kupiec test]]**, or proportion-of-failures (POF) test, checks whether the observed exception rate is consistent with the nominal rate. When the conditional loss distribution is continuous at VaR, confidence level $\alpha$ gives strict-exceedance probability $p=1-\alpha$. If the quantile has probability mass, a tie rule must be fixed and reported rather than mechanically assigning $1-\alpha$ to strict exceedance. Under a null with constant exception probability and independent daily indicators, $X\sim\text{Binomial}(n,p)$ and $E[X]=np$.
 <!-- bilingual-en:end -->
 
-检验的原假设$H_0$：实际例外发生概率等于$p$，备择假设$H_1$：实际例外概率高于$p$（模型低估风险，异常过多）。统计量可以采用似然比形式：
+标准 Kupiec POF 似然比检验的原假设是实际例外概率等于名义概率 $p$，双侧备择是假设实际概率不等于 $p$。统计量为：
 $$
 LR_{\text{POF}} = -2 \ln\left[\frac{(1-p)^{(n-X)}p^X}{(1-\hat{p})^{(n-X)}\hat{p}^X}\right],
 $$
-其中$\hat{p} = X/n$是观测例外率。该统计量近似服从$\chi^2(1)$（自由度1的卡方分布）。简化来说，也可以直接利用二项分布计算出现$X$个及以上例外的概率$p_{\text{obs}} = P(X_{\text{bin}} \ge X)$作为$p$值。
+其中 $\hat{p}=X/n$ 是观测例外率；在常规正则条件下，该统计量渐近服从 $\chi^2(1)$。若问题明确只检验风险低估，即单侧备择 $P(I_t=1)>p$，应使用精确二项上尾概率 $P(X_{\mathrm{bin}}\ge X)$ 或明确的单侧受约束似然比；它与上面的标准双侧 POF 检验不是同一个 $p$ 值。
 <!-- bilingual-en:start -->
 The null hypothesis $H_0$ is that the exception probability equals $p$. A one-sided alternative asks whether it is greater than $p$, meaning that the model understates risk. The displayed likelihood-ratio statistic compares the null likelihood with the likelihood at the observed rate $\hat p=X/n$ and is asymptotically $\chi^2(1)$ for the standard two-sided POF test. For a one-sided exact test, use the binomial upper-tail probability $P(X_{\text{bin}}\ge X)$.
 <!-- bilingual-en:end -->
@@ -481,7 +488,7 @@ A two-sided coverage test rejects for either too many or too few exceptions. Ris
 <!-- bilingual-en:end -->
 
 >[!example] 示例
-> 某模型声称99%置信度VaR（日频），在600个交易日回溯中实际出现了$m=9$天损失超过VaR。理论期望例外$np = 600\times0.01 = 6$天。利用二项分布计算$P(X\ge 9)$，或使用Kupiec统计量，都可得出$p\approx0.15$（15%）。由于$p$值 > 0.05，无法拒绝模型，认为9次异常尚在随机波动范围内。反之，如果600天内异常发生了15次（明显多于6次），计算将得到极小的$p$，应拒绝模型有效性。
+> 某模型声称99%置信度VaR（日频），在600个交易日回溯中实际出现了$m=9$天损失超过VaR。理论期望例外$np = 600\times0.01 = 6$天。精确二项上尾概率 $P(X\ge 9)\approx0.152$；标准双侧 Kupiec 统计量约为 $1.314$，对应渐近 $p$ 值约为 $0.252$。两种问题和校准不同，但在 5% 水平下都不拒绝。这里的“未拒绝”只表示9次例外仍与有限样本波动相容，不证明模型正确。若600天内出现15次例外，风险低估的证据会明显增强。
 ><!-- bilingual-en:start -->
 >A daily 99% VaR model produces $m=9$ exceptions over 600 trading days. The expected count is $np=600\times0.01=6$. The exact binomial upper-tail probability is $P(X\ge9)\approx0.152$, so a one-sided 5% test does not reject the model. Nine exceptions are still plausible sampling variation. Fifteen exceptions would yield a much smaller upper-tail probability and much stronger evidence of risk understatement.
 ><!-- bilingual-en:end -->
@@ -491,9 +498,9 @@ A two-sided coverage test rejects for either too many or too few exceptions. Ris
 The Basel backtesting traffic-light framework for 250 observations of one-day 99% VaR classifies 0–4 exceptions as green, 5–9 as amber, and 10 or more as red. These zones prescribe increasing supervisory consequences; they are not simply informal labels for “accurate” and “inaccurate” models.
 <!-- bilingual-en:end -->
 
-## 9.2 序列独立性检验（[[VaR、ES 与回测|聚束效应检验]]）
+## 9.2 序列独立性检验（[[Christoffersen独立性|聚束效应检验]]）
 <!-- bilingual-en:start -->
-*9.2 Exception Independence and the [[VaR、ES 与回测|Clustering Test]]*
+*9.2 Exception Independence and the [[Christoffersen独立性|Clustering Test]]*
 <!-- bilingual-en:end -->
 
 除了例外频率正确，**独立性**也是重要假设：理想模型下，超VaR事件在时间上不应有系统性规律，即昨天发生异常不应提高今天异常的概率 —— 换言之，异常应独立分布。如果异常现象**聚束在某些时期**，则说明风险模型未能捕捉时变的波动性或相关性。
@@ -506,28 +513,42 @@ Correct unconditional frequency is not enough. Under a well-calibrated dynamic m
 Bunching, or exception clustering, occurs when breaches arrive in groups—for example, several consecutive exceptions during a volatile market followed by a long quiet interval. This pattern often indicates that the VaR forecast failed to adjust quickly enough to a volatility regime change.
 <!-- bilingual-en:end -->
 
-**[[VaR、ES 与回测|Christoffersen检验]]**用于检测异常序列的独立性。其构造一个2×2转移矩阵，统计：
+**[[Christoffersen独立性|Christoffersen检验]]**用于检测异常序列的独立性。其构造一个2×2转移矩阵，统计：
 - $N_{00}$：今天不异常、明天不异常的次数
 - $N_{01}$：今天不异常、明天异常的次数
 - $N_{10}$：今天异常、明天不异常的次数
 - $N_{11}$：今天异常、明天异常的次数
 <!-- bilingual-en:start -->
-The **[[VaR、ES 与回测|Christoffersen test]]** examines independence through a $2\times2$ transition table:
+The **[[Christoffersen独立性|Christoffersen test]]** examines independence through a $2\times2$ transition table:
 - $N_{00}$: no exception followed by no exception.
 - $N_{01}$: no exception followed by an exception.
 - $N_{10}$: an exception followed by no exception.
 - $N_{11}$: an exception followed by an exception.
 <!-- bilingual-en:end -->
 
-在独立性假设下，明日异常概率应不依赖今日状态，所以$P(\text{异常}|前日异常) = P(\text{异常}|前日正常) = p$。检验可采用似然比：
+在纯独立性原假设下，明日例外概率不依赖今日状态，但这个共同概率由样本估计，不固定为名义尾概率。令
 $$
-LR_{\text{ind}} = -2 \ln\left[\frac{(1-p)^{N_{00}}p^{N_{01}}(1-p)^{N_{10}}p^{N_{11}}}{(1-\hat{p}_0)^{N_{00}} \hat{p}_0^{N_{01}}(1-\hat{p}_1)^{N_{10}} \hat{p}_1^{N_{11}}}\right],
+\hat p_0=\frac{N_{01}}{N_{00}+N_{01}},\qquad
+\hat p_1=\frac{N_{11}}{N_{10}+N_{11}},\qquad
+\hat p=\frac{N_{01}+N_{11}}{N_{00}+N_{01}+N_{10}+N_{11}}.
 $$
-其中$\hat{p}_0 = \frac{N_{01}}{N_{00}+N_{01}}$，$\hat{p}_1 = \frac{N_{11}}{N_{10}+N_{11}}$分别是前日正常和异常条件下观察到的次日异常率。该统计量服从$\chi^2(1)$。如果$LR_{\text{ind}}$显著，则拒绝独立性假设，认为存在异常聚集。
+纯独立性检验为
+$$
+LR_{\text{ind}}
+=-2\ln\left[
+\frac{(1-\hat p)^{N_{00}+N_{10}}\hat p^{N_{01}+N_{11}}}
+{(1-\hat p_0)^{N_{00}}\hat p_0^{N_{01}}
+ (1-\hat p_1)^{N_{10}}\hat p_1^{N_{11}}}
+\right]
+\overset{a}{\sim}\chi^2(1).
+$$
+若显著，说明一阶转移概率不同，存在该检验能够识别的例外聚集。只有在联合检验“例外率等于名义 $p$ 且相互独立”时，受限似然才把共同概率固定为 $p$；相应
+$$
+LR_{\text{cc}}=LR_{\text{POF}}+LR_{\text{ind}}
+\overset{a}{\sim}\chi^2(2).
+$$
 <!-- bilingual-en:start -->
-Under independence, tomorrow's exception probability does not depend on today's state:
-$P(\text{exception}\mid\text{previous exception})=P(\text{exception}\mid\text{previous non-exception})=p$.
-The likelihood-ratio statistic shown above compares this restriction with separate transition probabilities $\hat p_0=N_{01}/(N_{00}+N_{01})$ and $\hat p_1=N_{11}/(N_{10}+N_{11})$. It is asymptotically $\chi^2(1)$. A significant result rejects independence and indicates exception clustering.
+Under the pure independence null, tomorrow's exception probability does not depend on today's state, but the common probability is estimated from the sample as $\hat p$ rather than fixed at the nominal tail probability. The likelihood-ratio statistic compares that common-rate model with separate transition probabilities $\hat p_0=N_{01}/(N_{00}+N_{01})$ and $\hat p_1=N_{11}/(N_{10}+N_{11})$ and is asymptotically $\chi^2(1)$. Fixing the common probability at the nominal $p$ imposes both coverage and independence; the resulting conditional-coverage statistic is $LR_{\mathrm{cc}}=LR_{\mathrm{POF}}+LR_{\mathrm{ind}}\overset a\sim\chi^2(2)$.
 <!-- bilingual-en:end -->
 
 含义：异常聚束往往意味着市场波动性有时段性上升，而VaR模型可能假设波动率恒定未能及时调整。例如，若发现$N_{11}$明显偏多（一旦发生异常，次日也异常的情况频繁），说明模型低估了危机期间风险的持续性。改进措施包括引入波动率动态模型（如GARCH）或针对集群风险设置情景VaR。
@@ -540,9 +561,9 @@ A large $N_{11}$ means exceptions tend to persist once they begin, suggesting th
 *9.3 Overall Backtesting Assessment*
 <!-- bilingual-en:end -->
 
-完整的VaR回溯检验通常同时考察**异常比例**和**异常独立性**（称为条件覆盖率检验，Conditional Coverage）。只有当异常次数与理论匹配且无聚集特征时，模型才能算通过检验。若频率不符，应调整VaR模型风险因子的估计（提高波动率预测或厚尾性）；若频率尚可但聚集显著，则可能需要引入时变风险因子模型，或分析风险在不同市场状态下的行为。
+完整的VaR条件覆盖检验同时考察**异常比例**和**异常独立性**。异常次数与名义概率相容且未发现一阶聚集，只表示模型未被这组有限样本检验拒绝，不证明损失分布、数据和实施都正确。若频率不符，应检查尾部分布和尺度校准；若频率尚可但聚集显著，则应检查时变波动、相关性、持有期重叠和状态变化。
 <!-- bilingual-en:start -->
-A complete backtest examines both the **exception rate** and **exception independence**. Their joint assessment is called a conditional-coverage test. A model passes only when the frequency is compatible with the nominal rate and the sequence shows no material clustering. Frequency failure calls for recalibration of the loss distribution; clustering calls for more responsive time-varying dynamics.
+A conditional-coverage backtest examines both the **exception rate** and **exception independence**. Compatibility with the nominal rate and no detected first-order clustering mean only that this finite-sample test did not reject the model; they do not prove that the full loss distribution, data, and implementation are correct. Frequency failure calls for checking tail calibration, while clustering calls for checking time-varying volatility, dependence, overlapping horizons, and regime changes.
 <!-- bilingual-en:end -->
 
 回溯检验是监管要求的重要部分，每日VaR模型需要不断以最新数据验证。在实际操作中，若模型未通过回溯测试，可能需要增加附加资本、调整模型参数甚至更换模型方法，以确保VaR可信可靠。
@@ -576,7 +597,7 @@ A portfolio is worth CNY 100 million. Daily return is approximately normal with 
 **解答：**  
 - 第一步，明确参数：$W=1$亿元，$\mu=0$，$\sigma=2\%$。95%置信水平对应正态分布的临界值$z_{0.95}=1.645$。  
 - 由于$\mu=0$，VaR可直接近似为$z_{0.95}\sigma$（以收益的绝对下降幅度表示）。计算：$1.645 \times 2\% = 3.29\%$。  
-- 将比例转化为金额：$3.29\% \times 1$亿 = **329万元**。这表示在95%置信度下，该组合1日最大可能损失为329万元人民币。  
+- 将比例转化为金额：$3.29\% \times 1$亿 = **329万元**。这表示在正态模型下，该组合1日损失的95%分位阈值为329万元人民币，并非最大可能损失。
 - 换言之，100天中大约有5天的损失会超过329万元（符合5%的尾部概率）。
 <!-- bilingual-en:start -->
 **Solution:**
@@ -603,7 +624,7 @@ A one-year project earns USD 2 million with 98% probability, loses USD 4 million
   - 最好情形：-200万（盈利） —— 累计概率98%  
   - 中间情形：+400万（亏损400万） —— 累计概率98% + 1.5% = 99.5%  
   - 最差情形：+1000万（亏损1000万） —— 累计概率99.5% + 0.5% = 100%  
-- 我们寻找99%置信水平下的VaR，即找损失不超过该值的概率为99%。从累计概率看：98%时损失为-200万，到了99.5%时损失跳到+400万。因此**99%分位损失介于-200万和+400万之间**。严格来说，99%分位应取400万元损失（因为在99%这个位置上，损失已经可能达到400万，超过它的概率≤1%）。  
+- 按左分位数定义寻找最小的 $l$ 使 $P(L\le l)\ge99\%$。累计概率在 $-200$ 万元处只有98%，到 $+400$ 万元处为99.5%，所以99% VaR **直接等于400万美元**，不处于两个可能损失之间。
 - 因此，该项目99% VaR = **400万美元**。这表示一年内有99%的把握损失不超过400万，只有极少数情况下（1%概率内）会损失更大（最大可能1000万）。  
 <!-- bilingual-en:start -->
 **Solution:**
@@ -612,7 +633,7 @@ A one-year project earns USD 2 million with 98% probability, loses USD 4 million
 - Using the left-quantile definition $\inf\{l:P(L\le l)\ge0.99\}$, the 99% VaR is therefore **USD 4 million**.
 <!-- bilingual-en:end -->
 
-*(注：此例中采用保守做法将99% VaR取为400万，即使99%落在离散分布的间隙上，也通常选择下一个可能损失水平。实际中可根据具体分布插值估算。)*
+*（注：400万美元来自本章已声明的左分位数定义，不是额外的“保守调整”。若软件采用插值分位数，必须明确声明那套不同约定并保持全章一致。）*
 <!-- bilingual-en:start -->
 *Note: For this discrete distribution, the 99th percentile is USD 4 million under the standard left-quantile convention. Interpolation would define a different statistic and should not be introduced silently.*
 <!-- bilingual-en:end -->
@@ -647,10 +668,10 @@ A portfolio's one-day 95% VaR is CNY 1.5 million. Daily profit and loss is norma
 The 99% VaR rises with the square root of the holding period under the independent normal model. Relative to the original one-day **95%** VaR of CNY 1.5 million, ten-day 99% VaR is about 4.5 times as large and 250-day 99% VaR is more than twenty times as large. This comparison combines both a higher confidence level and a longer horizon.
 <!-- bilingual-en:end -->
 
-**例题 4：VaR 模型回溯检验（[[VaR、ES 与回测|Kupiec]] 检验）**  
+**例题 4：VaR 模型回溯检验（[[Kupiec无条件覆盖|Kupiec]] 检验）**
 某投资银行采用99%置信水平的VaR模型来监控每日交易风险。在过去250个交易日中，有8天的实际损失超过了VaR预测值。问：该模型在95%置信水平的Kupiec检验下是否通过？（假设检验原假设$H_0$：模型准确，即日超额损失概率为1%）  
 <!-- bilingual-en:start -->
-**Example 4: VaR [[VaR、ES 与回测|Kupiec Backtest]]**
+**Example 4: VaR [[Kupiec无条件覆盖|Kupiec Backtest]]**
 
 A bank uses one-day 99% VaR and observes eight exceptions over 250 trading days. Does the model pass a 5% test of the null that the daily exception probability is 1%?
 <!-- bilingual-en:end -->
@@ -848,7 +869,7 @@ The formula is shown above, where $z_c$ is the standard normal quantile and $T$ 
 | $97.5\%$    | $1.96$    | $5$        | $$VaR_{0.975,5}=1.96\times2,000,000\times\sqrt{5}$$ | $$\approx8,765,000$$  |
 | $99\%$      | $2.326$   | $5$        | $$VaR_{0.99,5}=2.326\times2,000,000\times\sqrt{5}$$ | $$\approx10,406,000$$ |
 <!-- bilingual-en:start -->
-| **[[VaR、ES 与回测|Confidence level]] $c$** | **$z_c$** | **Horizon $T$** | **Formula** | **Result** |
+| **[[风险度量口径|Confidence level]] $c$** | **$z_c$** | **Horizon $T$** | **Formula** | **Result** |
 | --- | --- | --- | --- | --- |
 | $97.5\%$ | $1.96$ | $1$ | $1.96\times2{,}000{,}000$ | USD 3.920 million |
 | $97.5\%$ | $1.96$ | $5$ | $1.96\times2{,}000{,}000\times\sqrt5$ | approximately USD 8.765 million |
@@ -1054,8 +1075,8 @@ $$
 | β (Beta)   | $$\beta = \frac{Cov(r_i, r_m)}{Var(r_m)}$$      | 系统性风险，对市场的敏感度        | 只适合衡量相对市场波动（如CAPM），反映与市场的相关风险，**不反映绝对风险或极端尾部** |
 | $\sigma$   | $$\sigma = \sqrt{Var(r)}$$                      | 总波动性                 | 容易理解和计算，假设风险对称、正态，**不能捕捉尾部和偏度**                |
 | $\sigma^2$ | $$Var(r) = E[(r-E(r))^2]$$                      | 波动率的平方               | 便于理论推导，缺点同上                                    |
-| $VaR$      | $$VaR_\alpha$$使得$$P(loss>VaR_\alpha)=1-\alpha$$ | 指定置信度下最大损失           | 易于理解和监管采用，**不能反映分布尾部极端损失、不可加**，对非正态/厚尾分布失真     |
-| $ES$       | $$ES_\alpha = E[loss                            | loss > VaR_\alpha]$$ | 超过VaR的平均损失（尾部期望损失）                             |
+| $VaR$ | $F_L^{-1}(\alpha)=\inf\{\ell:F_L(\ell)\ge\alpha\}$ | 指定置信度下的损失分位阈值 | 易于解释，但不描述阈值以外的损失严重度，并可能不满足次可加性 |
+| $ES$ | $\operatorname{ES}_\alpha=(1-\alpha)^{-1}\int_\alpha^1\operatorname{VaR}_u\,du$ | 最坏 $1-\alpha$ 尾部的平均损失 | 对尾部敏感且在标准条件下是一致风险度量；小样本估计困难 |
 <!-- bilingual-en:start -->
 | **Measure** | **Formula or definition** | **What it measures** | **Uses and limitations** |
 | --- | --- | --- | --- |
@@ -1120,7 +1141,7 @@ $$
 *(3) VaR (Value at Risk)*
 <!-- bilingual-en:end -->
 
-- 衡量：给定置信度下，最大可能损失。
+- 衡量：给定损失口径、持有期与置信水平下的损失分位阈值，不是最大可能损失。
 <!-- bilingual-en:start -->
 - Measures a loss quantile at a specified confidence level, not the absolute worst possible loss.
 <!-- bilingual-en:end -->
@@ -1130,23 +1151,23 @@ $$
 - Intuitive, easy to communicate, and embedded in many risk-management practices.
 <!-- bilingual-en:end -->
     
-- 缺点：**不关注VaR之外的损失（尾部风险）**，不满足次可加性，不一致，非正态下失效。
+- 缺点：**不描述VaR阈值之外的损失严重度**，一般不保证次可加性；非正态或厚尾时必须使用适合该分布的估计方法，不能机械套用正态公式。
 <!-- bilingual-en:start -->
 - Does not report severity beyond the VaR threshold and can violate subadditivity. It does not automatically “fail” for every non-normal distribution, but a normal-parametric implementation can be badly misspecified for skewed or heavy-tailed losses.
 <!-- bilingual-en:end -->
 
 
-### **(4) ES（期望损失，尾部期望，CVaR）**
+### **(4) ES（期望损失，尾部期望，[[ES定义|Conditional VaR]]）**
 <!-- bilingual-en:start -->
-*(4) Expected Shortfall, Expected Tail Loss, or CVaR*
+*(4) Expected Shortfall, Expected Tail Loss, or [[ES定义|Conditional VaR]]*
 <!-- bilingual-en:end -->
 
-- 衡量：在超过VaR的情况下的平均损失。
+- 衡量：最坏 $1-\alpha$ 概率质量中的平均损失；只有分位点累计概率恰好满足 $F_L(q_\alpha)=\alpha$ 时，才等于严格超过 VaR 后的条件均值，见 [[ES严格超越均值边界]]。
 <!-- bilingual-en:start -->
-- Measures average loss in the worst $1-\alpha$ fraction of outcomes.
+- Measures average loss over the worst $1-\alpha$ probability mass. It equals the conditional mean strictly above VaR only when the quantile satisfies $F_L(q_\alpha)=\alpha$; see [[ES严格超越均值边界|the strict-exceedance boundary]].
 <!-- bilingual-en:end -->
     
-- 优点：**关注尾部风险**，一致风险度量，**满足可加性**（合组合不会增加风险估计）。
+- 优点：**关注尾部风险**，在标准条件下是一致风险度量，并满足**次可加性**：$ES(X+Y)\le ES(X)+ES(Y)$。
 <!-- bilingual-en:start -->
 - Tail-sensitive and coherent; **subadditivity**, not additivity, formalizes the diversification property.
 <!-- bilingual-en:end -->
@@ -1215,12 +1236,12 @@ $$
 *4. Which Measure Is Best?*
 <!-- bilingual-en:end -->
 
-- **理论上**：$ES$（期望损失）最优，因为它**满足所有一致性公理，能反映极端损失，组合可加**，也是巴塞尔新资本协议主推方法。
+- **没有对所有用途都最优的单一指标。** 当决策关心尾部严重度和一致性公理时，ES通常比VaR提供更多信息；当前 FRTB 内部模型框架以97.5% ES为核心市场风险度量。
 <!-- bilingual-en:start -->
 - **There is no universally best measure.** Within this comparison, $ES$ is preferable when tail severity and coherence matter, and 97.5% ES is central to the FRTB internal-model framework.
 <!-- bilingual-en:end -->
     
-- **实际中**：监管、机构常用$VaR$，因其直观、便于操作。
+- **实际中**：VaR仍被广泛报告并用于分位诊断，因为它直观且操作成熟；这不改变当前 FRTB 内部模型使用97.5% ES的监管口径。
 <!-- bilingual-en:start -->
 - **In practice,** $VaR$ remains widely used because it is intuitive, operationally familiar, and useful as a quantile diagnostic.
 <!-- bilingual-en:end -->
@@ -1237,12 +1258,12 @@ $$
 *5. Brief Summary*
 <!-- bilingual-en:end -->
 
-- > **$VaR$**：监管常用，直观但不能反映极端尾部损失，不满足次可加性。
+- > **$VaR$**：直观且广泛使用，但不描述阈值以外的损失严重度，并可能违反次可加性。
 <!-- bilingual-en:start -->
 - > **$VaR$:** an intuitive and widely used quantile measure, but it does not describe loss severity beyond the threshold and may violate subadditivity.
 <!-- bilingual-en:end -->
     
-- > **$ES$**：理论最优，能度量极端尾部损失，满足一致性公理，是未来主流方向。
+- > **$ES$**：度量尾部平均损失，在标准条件下满足一致性公理，并已用于当前 FRTB 内部模型框架；它仍有显著的尾部估计误差。
 <!-- bilingual-en:start -->
 - > **$ES$:** a coherent, tail-sensitive measure and a central market-risk measure in the FRTB framework.
 <!-- bilingual-en:end -->

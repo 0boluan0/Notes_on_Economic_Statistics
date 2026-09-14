@@ -15,10 +15,10 @@ aliases:
 # GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding
 
 ## 一句话位置
-这篇论文位于 `02 规模化与模型家族`，第一版用于连接 Scaling Law, Efficiency / MoE 路线；此笔记暂作索引，不做精读摘要。
+这篇论文位于 `02 规模化与模型家族`，核心位置是把稀疏门控 MoE 与自动分片结合，使巨型翻译模型能在大规模 TPU 集群上训练；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-规模化、MoE 与分布式训练, [[LLM 推理效率]]
+[[Mixture of Experts（MoE）.canvas|MoE]], [[大模型分布式训练]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/PFIRUH6D)
@@ -30,4 +30,3 @@ aliases:
 ## Canvas
 - [[LLM Big Picture]]
 - [[02 规模化与模型家族.canvas|02 规模化与模型家族 Canvas]]
-

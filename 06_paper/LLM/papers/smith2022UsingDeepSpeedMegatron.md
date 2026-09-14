@@ -15,10 +15,10 @@ aliases:
 # Using DeepSpeed and Megatron to Train Megatron-Turing NLG 530B, A Large-Scale Generative Language Model
 
 ## 一句话位置
-这篇论文位于 `02 规模化与模型家族`，第一版用于连接 Scaling Law, Efficiency / MoE 路线；此笔记暂作索引，不做精读摘要。
+这篇论文位于 `02 规模化与模型家族`，核心位置是用 DeepSpeed 与 Megatron 的三维并行训练 530B dense 模型，并记录其语料设计与数据清理；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-规模化、MoE 与分布式训练, [[LLM 推理效率]]
+[[大模型分布式训练]], [[预训练分布]], [[数据混合]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/G8D29RG8)
@@ -30,4 +30,3 @@ aliases:
 ## Canvas
 - [[LLM Big Picture]]
 - [[02 规模化与模型家族.canvas|02 规模化与模型家族 Canvas]]
-

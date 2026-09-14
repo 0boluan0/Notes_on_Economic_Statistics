@@ -1,0 +1,32 @@
+{
+	"nodes":[
+		{"id":"91f2a7c83d4e5b60","type":"text","x":560,"y":0,"width":420,"height":210,"text":"# MANOVA 多元方差分析\n\n先定义多响应联合假设，再建立 $H/E$，选择统计量并核对校准；最后才分别解释总体拒绝与因果识别。\n\n本主题六张原子，另引入五张一般模型、对象、秩、定位与因果边界卡。","color":"4"},
+		{"id":"0a1b2c3d4e5f6071","type":"text","x":0,"y":1530,"width":360,"height":250,"text":"## [[MANOVA经典假设]]\n*校准前提*\n\n独立多元正态误差、共同组内协方差、可估效应与足够残差秩授权经典有限样本校准，而不是定义 MANOVA。","color":"5"},
+		{"id":"1b2c3d4e5f607182","type":"text","x":560,"y":300,"width":420,"height":250,"text":"## [[MANOVA|MANOVA 的定义]]\n*检验对象*\n\n在共享设计的多响应模型中联合检验预设假设；$H_0:\\mu_1=\\cdots=\\mu_g$ 是单因素特例。","color":"3"},
+		{"id":"2c3d4e5f60718293","type":"text","x":1200,"y":300,"width":400,"height":250,"text":"## [[多响应一般线性假设]]\n*复用：一般形式*\n\n$H_0:CBA=D$ 同时选择系数方向与响应方向；MANOVA 是多响应线性模型的联合检验用法。","color":"6"},
+		{"id":"3d4e5f60718293a4","type":"text","x":0,"y":690,"width":360,"height":250,"text":"## [[多响应残差与误差SSP|多响应残差与误差 SSCP]]\n*复用：对象边界*\n\n逐观测残差矩阵与 $p\\times p$ 误差 SSCP 不同；MANOVA 中的 $E$ 指后者。","color":"6"},
+		{"id":"4e5f60718293a4b5","type":"text","x":560,"y":690,"width":420,"height":280,"text":"## [[MANOVA SSCP分解]]\n*证据结构*\n\n$T=H+E$：$H$ 汇总组间均值向量差异，$E$ 汇总组内残差；自由度为 $g-1$、$N-g$ 与 $N-1$。","color":"3"},
+		{"id":"5f60718293a4b5c6","type":"text","x":1200,"y":690,"width":400,"height":250,"text":"## [[误差SSP秩边界|误差 SSCP 秩边界]]\n*复用：可逆边界*\n\n$\\operatorname{rank}(E)\\le\\min(p,N-g)$；求 $E^{-1}$ 前先查残差自由度与实际响应共线。","color":"5"},
+		{"id":"60718293a4b5c6d7","type":"text","x":560,"y":1090,"width":420,"height":310,"text":"## [[MANOVA四种统计量]]\n*汇总 $H$ 相对 $E$*\n\nWilks、Pillai、Hotelling–Lawley 与 Roy 分别用乘积、压缩和、普通和与最大值汇总同一组特征根。","color":"2"},
+		{"id":"a4c5e6f708192b3c","type":"text","x":1200,"y":1090,"width":400,"height":280,"text":"## [[Pillai稳健性边界]]\n*经验选型边界*\n\n部分固定效应仿真中 Pillai 往往较稳健；这不等于它能无条件修复依赖、异质、秩亏或错误校准。","color":"1"},
+		{"id":"718293a4b5c6d8e9","type":"text","x":560,"y":1530,"width":420,"height":270,"text":"## [[MANOVA检验校准]]\n*从统计量到尾概率*\n\n近似 $F$ 依赖假设秩、响应维数、误差自由度和误差模型；软件表里的 $F$ 不自动等于精确检验。","color":"2"},
+		{"id":"8293a4b5c6d7e9f0","type":"text","x":560,"y":1930,"width":420,"height":280,"text":"## [[多响应联合显著边界]]\n*复用：定位边界*\n\n总体拒绝只说明至少一个预设组合偏离零假设；它不推出每个响应显著，后续定位需控制多重性。","color":"1"},
+		{"id":"a3b4c5d6e7f80912","type":"text","x":1200,"y":1930,"width":400,"height":280,"text":"## [[多响应因果边界]]\n*复用：识别边界*\n\n多响应形式不会自动提供随机分配、无混杂或其他识别依据；因果授权来自研究设计，不来自总体统计量。","color":"1"},
+		{"id":"93a4b5c6d7e8f001","type":"text","x":560,"y":2340,"width":420,"height":240,"text":"## 相邻入口\n\n- 两组与单均值：[[Hotelling T² 与多元均值推断.canvas|Hotelling T²]]\n- 一般共享设计：[[多元线性回归.canvas|多元线性回归]]\n- 协方差抽样律：[[Wishart 分布与样本协方差推断.canvas|Wishart]]"}
+	],
+	"edges":[
+		{"id":"a4b5c6d7e8f00112","fromNode":"91f2a7c83d4e5b60","fromSide":"bottom","toNode":"1b2c3d4e5f607182","toSide":"top","label":"先定义总体问题"},
+		{"id":"b5c6d7e8f0011223","fromNode":"0a1b2c3d4e5f6071","fromSide":"right","toNode":"718293a4b5c6d8e9","toSide":"left","label":"授权经典校准"},
+		{"id":"c6d7e8f001122334","fromNode":"1b2c3d4e5f607182","fromSide":"right","toNode":"2c3d4e5f60718293","toSide":"left","label":"写成一般线性假设"},
+		{"id":"d7e8f00112233445","fromNode":"1b2c3d4e5f607182","fromSide":"bottom","toNode":"4e5f60718293a4b5","toSide":"top","label":"单因素特例形成 H 与 E"},
+		{"id":"e8f0011223344556","fromNode":"3d4e5f60718293a4","fromSide":"right","toNode":"4e5f60718293a4b5","toSide":"left","label":"明确 E 的对象"},
+		{"id":"f001122334455667","fromNode":"4e5f60718293a4b5","fromSide":"right","toNode":"5f60718293a4b5c6","toSide":"left","label":"求逆前检查秩"},
+		{"id":"0112233445566778","fromNode":"4e5f60718293a4b5","fromSide":"bottom","toNode":"60718293a4b5c6d7","toSide":"top","label":"由 H 与 E 生成特征根"},
+		{"id":"1223344556677889","fromNode":"60718293a4b5c6d7","fromSide":"bottom","toNode":"718293a4b5c6d8e9","toSide":"top","label":"换算参考尾概率"},
+		{"id":"b5d6e7f8091a2c3d","fromNode":"60718293a4b5c6d7","fromSide":"right","toNode":"a4c5e6f708192b3c","toSide":"left","label":"比较经验稳健性"},
+		{"id":"c6e7f8091a2b3d4e","fromNode":"a4c5e6f708192b3c","fromSide":"bottom","toNode":"718293a4b5c6d8e9","toSide":"right","label":"仍需明确校准"},
+		{"id":"233445566778899a","fromNode":"718293a4b5c6d8e9","fromSide":"bottom","toNode":"8293a4b5c6d7e9f0","toSide":"top","label":"拒绝后才定位解释"},
+		{"id":"2a3b4c5d6e7f8091","fromNode":"8293a4b5c6d7e9f0","fromSide":"right","toNode":"a3b4c5d6e7f80912","toSide":"left","label":"因果解释是另一层"},
+		{"id":"3445566778899aab","fromNode":"8293a4b5c6d7e9f0","fromSide":"bottom","toNode":"93a4b5c6d7e8f001","toSide":"top","label":"按设计继续"}
+	]
+}

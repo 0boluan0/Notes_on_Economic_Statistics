@@ -15,10 +15,10 @@ aliases:
 # LongNet: Scaling Transformers to 1,000,000,000 Tokens
 
 ## 一句话位置
-这篇论文位于 `06 长上下文与效率`，第一版用于连接 Long Context, Scaling Law, Transformer 路线；此笔记暂作索引，不做精读摘要。
+这篇论文位于 `06 长上下文与效率`，核心位置是用膨胀注意力把 Transformer 的序列长度扩展到极长上下文，并支持跨设备训练；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-RAG 与长上下文, 规模化、MoE 与分布式训练, [[Transformer 与注意力机制]]
+[[长上下文语言模型]], [[大模型分布式训练]], [[自注意力]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/LC4BBFVG)
@@ -30,4 +30,3 @@ RAG 与长上下文, 规模化、MoE 与分布式训练, [[Transformer 与注意
 ## Canvas
 - [[LLM Big Picture]]
 - [[06 长上下文与效率.canvas|06 长上下文与效率 Canvas]]
-

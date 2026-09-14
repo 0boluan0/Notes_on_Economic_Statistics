@@ -21,12 +21,14 @@ sessions: 12-22
 > <!-- bilingual-en:end -->
 
 > [!warning] 答案来源
-> “在线反馈题”中的答案和反馈来自官方离线 courseware；课堂题、Problem Set 与 Midterm 2 没有公开官方解答，以下均为**非官方独立题解**。每个正式题解都给出足够的推导，以便自行复算。
+> “在线反馈题”中的答案和反馈来自官方离线 courseware；本地课堂题、Problem Set 与 Midterm 2 材料未附官方解答，以下均为**非官方独立题解**。每个正式题解都给出足够的推导，以便自行复算。若官方反馈有笔误，保留原始入口并在本笔记注明校正。
 > <!-- bilingual-en:start -->
-> Answers and feedback in the “Online Feedback Questions” come from the official offline courseware. No official public solutions are available for the in-class questions, problem sets, or Midterm 2, so the solutions below are **unofficial and independently derived**. Each formal solution includes enough reasoning to be checked independently.
+> Answers and feedback in the “Online Feedback Questions” come from the official offline courseware. The local in-class questions, problem sets, and Midterm 2 materials do not include official solutions; the solutions below are **unofficial and independently derived**. Each formal solution includes enough reasoning to be checked independently. Where official feedback contains an error, its original link is retained and the correction is identified here.
 > <!-- bilingual-en:end -->
 
 ## 导航
+
+- 数论连续阅读：[[02_数论与RSA]] · 知识地图：[[数论与RSA.canvas]]
 
 - [[#Session 12 — GCDs|12 GCDs]]
 - [[#Session 13 — Congruences|13 Congruences]]
@@ -64,9 +66,9 @@ sessions: 12-22
 *12.1 Divisibility and greatest common divisors*
 <!-- bilingual-en:end -->
 
-[[模运算、欧几里得算法与 RSA#GCD、Euclidean algorithm 与 Bézout|整除]]定义为
+[[整除]]定义为
 <!-- bilingual-en:start -->
-[[模运算、欧几里得算法与 RSA#GCD、Euclidean algorithm 与 Bézout|divisibility]] is defined by
+[[整除|Divisibility]] is defined by
 <!-- bilingual-en:end -->
 
 $$
@@ -95,9 +97,9 @@ The last property says that **every common divisor divides every integer linear 
 <!-- bilingual-en:end -->
 
 > [!definition] 最大公因数
-> 对不全为零的整数 $a,b$，[[模运算、欧几里得算法与 RSA#GCD、Euclidean algorithm 与 Bézout|最大公因数]] $\gcd(a,b)$ 是同时整除 $a,b$ 的最大正整数。约定 $\gcd(0,0)=0$，且 $\gcd(a,b)=\gcd(|a|,|b|)$。
+> 对不全为零的整数 $a,b$，[[最大公因数]] $\gcd(a,b)$ 是同时整除 $a,b$ 的最大正整数。约定 $\gcd(0,0)=0$，且 $\gcd(a,b)=\gcd(|a|,|b|)$。
 > <!-- bilingual-en:start -->
-> For integers $a,b$ that are not both zero, the [[模运算、欧几里得算法与 RSA#GCD、Euclidean algorithm 与 Bézout|greatest common divisor]] $\gcd(a,b)$ is the greatest positive integer that divides both $a$ and $b$. By convention, $\gcd(0,0)=0$, and $\gcd(a,b)=\gcd(|a|,|b|)$.
+> For integers $a,b$ that are not both zero, the [[最大公因数|greatest common divisor]] $\gcd(a,b)$ is the greatest positive integer that divides both $a$ and $b$. By convention, $\gcd(0,0)=0$, and $\gcd(a,b)=\gcd(|a|,|b|)$.
 > <!-- bilingual-en:end -->
 
 ### 12.2 Division Algorithm 与 Euclidean Algorithm
@@ -105,9 +107,9 @@ The last property says that **every common divisor divides every integer linear 
 *12.2 Division Algorithm and Euclidean Algorithm*
 <!-- bilingual-en:end -->
 
-**除法定理。** 若 $n>0$，则对每个整数 $a$，存在唯一整数 $q,r$ 使
+**[[带余除法|除法定理]]。** 若 $n>0$，则对每个整数 $a$，存在唯一整数 $q,r$ 使
 <!-- bilingual-en:start -->
-**Division algorithm.** If $n>0$, then for every integer $a$ there are unique integers $q,r$ such that
+**[[带余除法|Division algorithm]].** If $n>0$, then for every integer $a$ there are unique integers $q,r$ such that
 <!-- bilingual-en:end -->
 
 $$
@@ -119,9 +121,9 @@ $$
 Write $r=\operatorname{rem}(a,n)$. The uniqueness proof is worth making explicit: if also $a=q'n+r'$ with $0\le r,r'<n$, subtraction gives $(q-q')n=r'-r$. The right-hand side lies strictly between $-n$ and $n$, where the only multiple of $n$ is $0$. Hence $r=r'$ and then $q=q'$.
 <!-- bilingual-en:end -->
 
-[[模运算、欧几里得算法与 RSA#GCD、Euclidean algorithm 与 Bézout|Euclidean algorithm]]依赖等式
+[[欧几里得算法|Euclidean algorithm]]依赖等式
 <!-- bilingual-en:start -->
-The [[模运算、欧几里得算法与 RSA#GCD、Euclidean algorithm 与 Bézout|Euclidean algorithm]] relies on the identity
+The [[欧几里得算法|Euclidean algorithm]] relies on the identity
 <!-- bilingual-en:end -->
 
 $$
@@ -133,9 +135,9 @@ $$
 **Complete proof.** Write $a=qb+r$. If $d\mid a$ and $d\mid b$, then $d\mid(a-qb)=r$. Conversely, if $d\mid b$ and $d\mid r$, then $d\mid(qb+r)=a$. Thus $(a,b)$ and $(b,r)$ have exactly the same common divisors, so their greatest positive common divisors are equal.
 <!-- bilingual-en:end -->
 
-每一步把第二个正参数换成更小的余数，故余数构成严格下降的非负整数列；良序原理保证它最终到达 $0$。若最后一行是 $r_{k-1}=q_kr_k+0$，则答案为 $r_k$。
+先把输入替换为绝对值；若第二个参数已经是 $0$，直接返回第一个参数。否则每一步把第二个正参数换成更小的余数，故余数构成严格下降的非负整数列；良序原理保证它最终到达 $0$。若最后一行是 $r_{k-1}=q_kr_k+0$，则答案为 $r_k$。
 <!-- bilingual-en:start -->
-At each step, the second positive argument is replaced by a smaller nonnegative remainder. The remainders therefore form a strictly decreasing sequence of nonnegative integers, which must eventually reach $0$ by the well-ordering principle. If the final equation is $r_{k-1}=q_kr_k+0$, then the gcd is $r_k$.
+First replace the inputs by their absolute values. If the second argument is already $0$, return the first. Otherwise, each step replaces the second positive argument by a smaller nonnegative remainder. The remainders form a strictly decreasing sequence of nonnegative integers, which must eventually reach $0$ by the well-ordering principle. If the final equation is $r_{k-1}=q_kr_k+0$, then the gcd is $r_k$.
 <!-- bilingual-en:end -->
 
 ![[98_attachment/mathematics_for_computer_science/mit6_042j/unit02-euclidean-algorithm.png|900]]
@@ -173,9 +175,9 @@ So, $\gcd(1944,874)=2$.
 *12.3 Bézout identity and Pulverizer*
 <!-- bilingual-en:end -->
 
-[[模运算、欧几里得算法与 RSA#GCD、Euclidean algorithm 与 Bézout|Bézout identity]]断言：若 $(a,b)\ne(0,0)$，则存在 $s,t\in\mathbb Z$ 使
+[[Bézout等式|Bézout identity]]断言：若 $(a,b)\ne(0,0)$，则存在 $s,t\in\mathbb Z$ 使
 <!-- bilingual-en:start -->
-The [[模运算、欧几里得算法与 RSA#GCD、Euclidean algorithm 与 Bézout|Bézout identity]] states that if $(a,b)\ne(0,0)$, then there exist $s,t\in\mathbb Z$ such that
+The [[Bézout等式|Bézout identity]] states that if $(a,b)\ne(0,0)$, then there exist $s,t\in\mathbb Z$ such that
 <!-- bilingual-en:end -->
 
 $$
@@ -191,9 +193,9 @@ $$
 r_i=r_{i-2}-q_ir_{i-1}
 $$
 
-仍是线性组合。最后一个非零余数就是 gcd，故结论成立。这也是扩展 Euclidean algorithm（课中称 **Pulverizer**）的循环不变量。
+仍是线性组合。最后一个非零余数就是 gcd，故结论成立。这也是[[扩展欧几里得算法|扩展 Euclidean algorithm]]（课中称 **Pulverizer**）的循环不变量。
 <!-- bilingual-en:start -->
-is another integer linear combination. The last nonzero remainder is the gcd, which proves the identity. This is also the loop invariant behind the extended Euclidean algorithm, called the **Pulverizer** in the course.
+is another integer linear combination. The last nonzero remainder is the gcd, which proves the identity. This is also the loop invariant behind the [[扩展欧几里得算法|extended Euclidean algorithm]], called the **Pulverizer** in the course.
 <!-- bilingual-en:end -->
 
 例如
@@ -219,9 +221,9 @@ $$
 *12.4 Why prime factorization is unique*
 <!-- bilingual-en:end -->
 
-关键引理是 Euclid's lemma：若素数 $p\mid ab$，则 $p\mid a$ 或 $p\mid b$。
+[[素数]]是大于 $1$、仅有 $1$ 和自身两个正因子的整数。关键引理是 [[素数整除乘积|Euclid's lemma]]：若素数 $p\mid ab$，则 $p\mid a$ 或 $p\mid b$。
 <!-- bilingual-en:start -->
-The key step is Euclid's lemma: if a prime $p$ divides $ab$, then $p$ divides $a$ or $p$ divides $b$.
+A [[素数|prime]] is an integer greater than $1$ whose only positive divisors are $1$ and itself. The key step is [[素数整除乘积|Euclid's lemma]]: if a prime $p$ divides $ab$, then $p$ divides $a$ or $p$ divides $b$.
 <!-- bilingual-en:end -->
 
 **证明。** 若 $p\nmid a$，素数 $p$ 与 $a$ 互素。由 Bézout identity，存在 $x,y$ 使 $xp+ya=1$。两边乘 $b$：$xpb+yab=b$。左侧两项都被 $p$ 整除，因此 $p\mid b$。
@@ -229,9 +231,14 @@ The key step is Euclid's lemma: if a prime $p$ divides $ab$, then $p$ divides $a
 **Proof.** If $p\nmid a$, then $\gcd(p,a)=1$. Bézout's identity gives integers $x,y$ with $xp+ya=1$. Multiplying by $b$ yields $xpb+yab=b$. Both terms on the left are divisible by $p$, so $p\mid b$.
 <!-- bilingual-en:end -->
 
-**唯一分解证明。** 假设
+**分解的存在性。** 对 $n\ge2$ 作强归纳：素数自身就是分解；合数 $n=ab$ 可取 $1<a,b<n$，分别分解后相乘。$1$ 对应空乘积。[[唯一素因数分解|唯一性]]还需下面的证明，不能先用唯一分解来证明上面的引理。
 <!-- bilingual-en:start -->
-**Proof of unique factorization.** Suppose
+**Existence.** Use strong induction for $n\ge2$: a prime is already factored; a composite $n=ab$ has $1<a,b<n$, so factor each smaller number and multiply. The number $1$ corresponds to the empty product. [[唯一素因数分解|Uniqueness]] still requires the argument below; using unique factorization to prove the preceding lemma would be circular.
+<!-- bilingual-en:end -->
+
+**唯一分解证明。** 对 $n\ge2$，假设
+<!-- bilingual-en:start -->
+**Proof of unique factorization.** For $n\ge2$, suppose
 <!-- bilingual-en:end -->
 
 $$
@@ -247,16 +254,16 @@ Both products are prime factorizations. Since $p_1$ divides $q_1\cdots q_s$, Euc
 
 | 顺序 | 内容 | 本地入口 |
 |---:|---|---|
-| 2.1.1 | GCDs & Linear Combinations | [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/et3FOZdI6pk.pdf]] · [[MIT_OCW_6.042J_Materials/04_Captions/et3FOZdI6pk.srt]] |
-| 2.1.2 | Euclidean Algorithm | [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/dW0f62lcCLE.pdf]] |
+| 2.1.1 | GCDs & Linear Combinations | [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/et3FOZdI6pk.pdf#page=1|讲稿 pp.1–3：整除、线性组合与 gcd]] · [[MIT_OCW_6.042J_Materials/04_Captions/et3FOZdI6pk.srt]] |
+| 2.1.2 | Euclidean Algorithm | [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/dW0f62lcCLE.pdf#page=1|讲稿 pp.1–3：余数不变量与终止]] |
 | 2.1.3 | Run Euclid Run | 在线题 |
-| 2.1.4 | Pulverizer | [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/yzKPotFLfsc.pdf]] |
+| 2.1.4 | Pulverizer | [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/yzKPotFLfsc.pdf#page=1|讲稿 pp.1–5：Bézout 系数递推]] |
 | 2.1.5 | GCDs I | 在线题 |
-| 2.1.6 | Die Hard Primes | [[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_Hard_Primes.pdf|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/c3qNBNl1h8g.pdf|transcript]] |
-| 2.1.7 | Unique Factorization | [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/QsKtEuUyIdw.pdf]] |
+| 2.1.6 | Die Hard Primes | [[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_Hard_Primes.pdf#page=1|slides pp.1–2：水罐中的线性组合]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/c3qNBNl1h8g.pdf#page=1|transcript pp.1–2：可达容量]] |
+| 2.1.7 | Unique Factorization | [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/QsKtEuUyIdw.pdf#page=1|讲稿 pp.1–3：素数引理与唯一性]] |
 | 2.1.8–10 | Unique Primes；Divisors；GCDs II | 在线题 |
 
-阅读：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session12.pdf]]。Slides：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_GCDsandLinear.pdf]]、[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_EuclidnAlgori.pdf]]、[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_Pulverizer.pdf]]、[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_UniqueFactor.pdf]]。
+阅读按 PDF 物理页定位：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session12.pdf#page=1|pp.1–3：整除与带余除法]]；[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session12.pdf#page=6|pp.6–10：gcd、Euclid、Bézout 与 Pulverizer]]；[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session12.pdf#page=12|p.12、pp.15–17：素数定义与唯一分解]]。Slides：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_GCDsandLinear.pdf#page=1|pp.1–3：除法、线性组合、gcd]]、[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_EuclidnAlgori.pdf#page=1|pp.1–3：余数引理、状态不变量与终止]]、[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_Pulverizer.pdf#page=1|pp.1–4：Bézout 与系数算法]]、[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_UniqueFactor.pdf#page=1|pp.1–3：素数整除乘积与唯一性证明]]。
 
 ### 在线反馈题（9 prompts，官方答案）
 <!-- bilingual-en:start -->
@@ -287,7 +294,12 @@ Both products are prime factorizations. Since $p_1$ divides $q_1\cdots q_s$, Euc
 *In-class questions (unofficial independent solutions)*
 <!-- bilingual-en:end -->
 
-原题：[[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp12.pdf]]。
+原题：[[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp12.pdf#page=1|p.1：Problems 1–2 与 Binary GCD 规则]]；[[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp12.pdf#page=2|p.2：Problem 3 复杂度、Problem 4 的 gcd 性质]]。
+
+在线来源校正：2.1.8 反馈的不同素因子列表把 $5$ 误写成 $4$，正确为 $2,3,5$，答案数量 $3$ 不变。2.1.10 的 lcm 旁注需遍历两数出现素数的**并集**，缺失指数按 $0$ 处理后取最大值；只遍历共同素数会漏项。
+<!-- bilingual-en:start -->
+Online-source corrections: feedback for 2.1.8 lists $4$ instead of $5$; the distinct primes are $2,3,5$, so the count remains $3$. The lcm remark in 2.1.10 requires the **union** of primes occurring in either number, treating absent exponents as $0$ before taking maxima. Restricting the calculation to common primes omits factors.
+<!-- bilingual-en:end -->
 
 > [!example]- CP12 Problem 1：Pulverizer
 > (a) 上文已得 $3(30)-4(22)=2$，故 $(x,y)=(3,-4)$。
@@ -299,18 +311,23 @@ Both products are prime factorizations. Since $p_1$ divides $q_1\cdots q_s$, Euc
 > <!-- bilingual-en:end -->
 
 > [!example]- CP12 Problem 2：从素因数分解求 gcd 与 lcm
-> 对每个素数分别比较指数：gcd 取最小指数，lcm 取最大指数。因此题中
+> 原题 p.1 给出正整数 $m=2^9 5^{24}11^7 17^{12}$、$n=2^3 7^{22}11^{211}13\,17^9 19^2$；其中 $11$ 的指数是 $211$。对每个素数分别比较指数：gcd 取最小指数，[[最小公倍数|lcm]] 取最大指数，缺失的指数按 $0$ 计。因此题中
 > $$\gcd(m,n)=2^3 11^7 17^9,$$
-> $$\operatorname{lcm}(m,n)=2^9 5^{24}7^{22}11^{21}13\,17^{12}19^2.$$
-> 对任意素数 $p$，两式乘积中 $p$ 的指数为 $\min(\alpha_p,\beta_p)+\max(\alpha_p,\beta_p)=\alpha_p+\beta_p$，正好等于 $mn$ 中的指数，故 $\gcd(m,n)\operatorname{lcm}(m,n)=mn$。
+> $$\operatorname{lcm}(m,n)=2^9 5^{24}7^{22}11^{211}13\,17^{12}19^2.$$
+> 对任意素数 $p$，两式乘积中 $p$ 的指数为 $\min(\alpha_p,\beta_p)+\max(\alpha_p,\beta_p)=\alpha_p+\beta_p$，正好等于 $mn$ 中的指数，故对正整数 $m,n$ 有[[公因公倍乘积]] $\gcd(m,n)\operatorname{lcm}(m,n)=mn$。
 > <!-- bilingual-en:start -->
-> Compare exponents prime by prime: the gcd takes the smaller exponent, while the lcm takes the larger. Therefore, in this problem,
+> The problem on PDF page 1 specifies positive integers $m=2^9 5^{24}11^7 17^{12}$ and $n=2^3 7^{22}11^{211}13\,17^9 19^2$; the exponent of $11$ is $211$. Compare exponents prime by prime: the gcd takes the smaller, while the [[最小公倍数|lcm]] takes the larger, treating absent exponents as $0$. Therefore,
 > $$\gcd(m,n)=2^3 11^7 17^9,$$
-> $$\operatorname{lcm}(m,n)=2^9 5^{24}7^{22}11^{21}13\,17^{12}19^2.$$
-> For every prime $p$, the exponent of $p$ in the product of these two expressions is $\min(\alpha_p,\beta_p)+\max(\alpha_p,\beta_p)=\alpha_p+\beta_p$, exactly its exponent in $mn$. Hence $\gcd(m,n)\operatorname{lcm}(m,n)=mn$.
+> $$\operatorname{lcm}(m,n)=2^9 5^{24}7^{22}11^{211}13\,17^{12}19^2.$$
+> For every prime $p$, the product has exponent $\min(\alpha_p,\beta_p)+\max(\alpha_p,\beta_p)=\alpha_p+\beta_p$, exactly its exponent in $mn$. Hence the [[公因公倍乘积|gcd–lcm product identity]] holds for positive integers $m,n$: $\gcd(m,n)\operatorname{lcm}(m,n)=mn$.
 > <!-- bilingual-en:end -->
 
 > [!example]- CP12 Problem 3：Binary GCD 状态机
+> 以下输入 $a,b$ 均为正整数，规则编号沿用原题。
+> <!-- bilingual-en:start -->
+> The inputs $a,b$ below are positive integers; rule numbers follow the original problem.
+> <!-- bilingual-en:end -->
+>
 > (a) 取不变量 $e\gcd(x,y)=\gcd(a,b)$。初态 $(a,b,1)$ 成立。两数同为偶数时，$\gcd(x,y)=2\gcd(x/2,y/2)$；仅一数为偶数而另一数为奇数时，除去偶数的因子 $2$ 不改变 gcd；两奇数相减也不改变 gcd。规则 (7) 把 $(x,x,e)$ 变成 $(1,0,ex)$，仍保持不变量。终态只能形如 $(1,0,g)$，于是 $g=\gcd(a,b)$。
 >
 > (b) 一旦执行规则 (3)–(6)，新状态至少有一个坐标为奇数；规则 (7) 则终止。之后不可能再次“两坐标均为偶数”，故规则 (2) 只能出现在开头。
@@ -329,12 +346,12 @@ Both products are prime factorizations. Since $p_1$ divides $q_1\cdots q_s$, Euc
 >
 > (c) 令 $a=p$。若 $p\nmid b$，则 $\gcd(p,b)=1$，由 (b) 得 $p\mid c$。
 >
-> (d) 设 $m=xa+yb$ 是最小正线性组合。$g=\gcd(a,b)$ 整除 $m$。再用除法定理写 $a=qm+r$，则 $r=a-q(xa+yb)$ 也是非负线性组合且 $0\le r<m$；最小性迫使 $r=0$，故 $m\mid a$。同理 $m\mid b$，于是 $m\le g$；而 $g\mid m$ 又给 $g\le m$，故 $m=g$。
+> (d) 对不全为零的 $a,b$，设 $m=xa+yb$ 是最小正整数线性组合。$g=\gcd(a,b)$ 整除 $m$。再用除法定理写 $a=qm+r$，则 $r=a-q(xa+yb)$ 也是取值非负的整数线性组合，且 $0\le r<m$；若 $r>0$ 就违背最小性，所以 $r=0$，故 $m\mid a$。同理 $m\mid b$，于是 $m\le g$；而 $g\mid m$ 又给 $g\le m$，故 $m=g$。
 > <!-- bilingual-en:start -->
 > (a) Bézout gives $g=sa+tb$; any common factor $d$ divides the right side, so $d\mid g$.
 > (b) If $a\mid bc$ and $\gcd(a,b)=1$, choose $x,y$ with $xa+yb=1$ and multiply the identity by $c$ to obtain $xac+ybc=c$. Both terms on the left are divisible by $a$, so $a\mid c$.
 > (c) Set $a=p$. If $p\nmid b$, then $\gcd(p,b)=1$, so part (b) gives $p\mid c$.
-> (d) Let $m=xa+yb$ be the least positive integer expressible as a linear combination of $a$ and $b$, and let $g=\gcd(a,b)$. Every common divisor of $a$ and $b$ divides every linear combination, so $g\mid m$. By the division algorithm, write $a=qm+r$ with $0\le r<m$. Then $r=a-q(xa+yb)$ is also a linear combination of $a$ and $b$. The minimality of $m$ forces $r=0$, so $m\mid a$; the same argument gives $m\mid b$. Thus $m$ is a common divisor and $m\le g$. Since $g\mid m$ and both are positive, $g\le m$. Therefore $m=g$.
+> (d) For $a,b$ not both zero, let $m=xa+yb$ be the least positive integer expressible as an integer linear combination of $a,b$, and let $g=\gcd(a,b)$. Every common divisor divides every integer linear combination, so $g\mid m$. Write $a=qm+r$ with $0\le r<m$. Then $r=a-q(xa+yb)$ is an integer linear combination with a nonnegative value. If $r>0$, it contradicts minimality, so $r=0$ and $m\mid a$; similarly $m\mid b$. Thus $m\le g$. Since $g\mid m$ and both are positive, $g\le m$, proving $m=g$.
 > <!-- bilingual-en:end -->
 
 ### 易错点与三道自检
@@ -376,10 +393,10 @@ Both products are prime factorizations. Since $p_1$ divides $q_1\cdots q_s$, Euc
 > <!-- bilingual-en:end -->
 
 > [!question]- 自检 3
-> 若 $d\mid a,b$，为什么 $d\mid\gcd(a,b)$ 比“$d\le\gcd(a,b)$”更强？
+> 若 $a,b$ 不全为零，$d>0$ 且 $d\mid a,b$，为什么 $d\mid\gcd(a,b)$ 比“$d\le\gcd(a,b)$”更强？
 >
 > <!-- bilingual-en:start -->
-> If $d\mid a,b$, why is $d\mid\gcd(a,b)$ stronger than "$d\le\gcd(a,b)$"?
+> For $a,b$ not both zero and $d>0$ with $d\mid a,b$, why is $d\mid\gcd(a,b)$ stronger than "$d\le\gcd(a,b)$"?
 > <!-- bilingual-en:end -->
 > [!success]- 答案
 > 后者只比较大小；前者还给出代数结构，可继续推出 $d$ 整除任何 Bézout 线性组合。
@@ -387,9 +404,9 @@ Both products are prime factorizations. Since $p_1$ divides $q_1\cdots q_s$, Euc
 > The first formulation gives the algebraic structure; it also shows that $d$ divides every Bézout linear combination of the two integers.
 > <!-- bilingual-en:end -->
 
-**知识链：**整除 → 共同因子 → Euclidean algorithm → Bézout → Euclid's lemma → 唯一素因数分解。
+**知识链：**[[整除]] → [[最大公因数|共同因子与 gcd]] → [[欧几里得算法]] → [[Bézout等式]] → [[素数整除乘积|Euclid's lemma]] → [[唯一素因数分解]]。
 <!-- bilingual-en:start -->
-**Knowledge chain:** divisibility → common divisors → Euclidean algorithm → Bézout identity → Euclid's lemma → unique prime factorization.
+**Knowledge chain:** [[整除|divisibility]] → [[最大公因数|common divisors and gcd]] → [[欧几里得算法|Euclidean algorithm]] → [[Bézout等式|Bézout identity]] → [[素数整除乘积|Euclid's lemma]] → [[唯一素因数分解|unique prime factorization]].
 <!-- bilingual-en:end -->
 
 ---
@@ -411,9 +428,9 @@ Both products are prime factorizations. Since $p_1$ divides $q_1\cdots q_s$, Euc
 *13.1 Congruence is an equivalence relation*
 <!-- bilingual-en:end -->
 
-对模数 $n>1$，[[模运算、欧几里得算法与 RSA#同余与模运算|同余]]定义为
+对整数模数 $n>1$，[[同余]]定义为
 <!-- bilingual-en:start -->
-For modulus $n>1$, [[模运算、欧几里得算法与 RSA#同余与模运算|congruence]] is defined as
+For an integer modulus $n>1$, [[同余|congruence]] is defined as
 <!-- bilingual-en:end -->
 
 $$
@@ -442,9 +459,9 @@ How to read the diagram: integers that differ by a whole number of turns land at
 *13.2 Arithmetic rules for congruences*
 <!-- bilingual-en:end -->
 
-若 $a\equiv b\pmod n$ 且 $c\equiv d\pmod n$，则
+[[模运算]]是在余数类上运算；可用 $0,\ldots,n-1$ 作代表，每次加、乘后取余。它的良定义性来自：若 $a\equiv b\pmod n$ 且 $c\equiv d\pmod n$，则
 <!-- bilingual-en:start -->
-If $a\equiv b\pmod n$ and $c\equiv d\pmod n$, then
+[[模运算|Modular arithmetic]] operates on residue classes. We may represent them by $0,\ldots,n-1$ and reduce after each addition or multiplication. The operations are well-defined because, if $a\equiv b\pmod n$ and $c\equiv d\pmod n$, then
 <!-- bilingual-en:end -->
 
 $$
@@ -456,9 +473,14 @@ $$
 For multiplication, $ac-bd=a(c-d)+d(a-b)$, and both terms on the right are divisible by $n$. Structural induction then shows that every polynomial $p$ with integer coefficients preserves congruence: $a\equiv b\pmod n\Rightarrow p(a)\equiv p(b)\pmod n$.
 <!-- bilingual-en:end -->
 
-**不能随意约分。** $8\cdot2\equiv3\cdot2\pmod{10}$ 成立，但 $8\not\equiv3\pmod{10}$。若 $ak\equiv bk\pmod n$ 且 $\gcd(k,n)=1$，Bézout 给出 $uk+vn=1$；由 $n\mid k(a-b)$ 可推出 $n\mid(a-b)$，此时才能约去 $k$。
+**不能随意约分。** $8\cdot2\equiv3\cdot2\pmod{10}$ 成立，但 $8\not\equiv3\pmod{10}$。若 $ak\equiv bk\pmod n$ 且 $\gcd(k,n)=1$，Bézout 给出 $uk+vn=1$；将它乘以 $a-b$，由 $n\mid k(a-b)$ 可推出 $n\mid(a-b)$。互素条件保证对任意 $a,b$ 均可保留原模数消去 $k$。
 <!-- bilingual-en:start -->
-**Cancellation is not automatic.** The congruence $8\cdot2\equiv3\cdot2\pmod{10}$ holds, but $8\not\equiv3\pmod{10}$. If $ak\equiv bk\pmod n$ and $\gcd(k,n)=1$, Bézout gives $uk+vn=1$. Combining this identity with $n\mid k(a-b)$ yields $n\mid(a-b)$; only under this coprimality condition may we cancel $k$.
+**Cancellation is not automatic.** The congruence $8\cdot2\equiv3\cdot2\pmod{10}$ holds, but $8\not\equiv3\pmod{10}$. If $ak\equiv bk\pmod n$ and $\gcd(k,n)=1$, Bézout gives $uk+vn=1$. Multiply this identity by $a-b$ and use $n\mid k(a-b)$ to obtain $n\mid(a-b)$. Coprimality guarantees cancellation with the original modulus for every pair $a,b$.
+<!-- bilingual-en:end -->
+
+更一般的[[同余消去律]]是：令 $g=\gcd(k,n)$，则 $ak\equiv bk\pmod n$ 当且仅当 $a\equiv b\pmod{n/g}$。因为约去整数公因子后，$k/g$ 与 $n/g$ 互素；若 $n/g=1$，结论只是所有整数模 $1$ 同余。
+<!-- bilingual-en:start -->
+The general [[同余消去律|cancellation law]] states that, for $g=\gcd(k,n)$, $ak\equiv bk\pmod n$ if and only if $a\equiv b\pmod{n/g}$. After removing the common integer factor, $k/g$ is coprime to $n/g$. When $n/g=1$, the conclusion simply says that all integers are congruent modulo $1$.
 <!-- bilingual-en:end -->
 
 ### 13.3 模逆元
@@ -466,26 +488,31 @@ For multiplication, $ac-bd=a(c-d)+d(a-b)$, and both terms on the right are divis
 *13.3 Modular inverses*
 <!-- bilingual-en:end -->
 
-[[模运算、欧几里得算法与 RSA#同余与模运算|模逆元]] $k^{-1}$ 满足 $kk^{-1}\equiv1\pmod n$。
+[[模逆元]] $k^{-1}$ 是满足 $kk^{-1}\equiv1\pmod n$ 的整数代表，不是有理数 $1/k$。存在时逆元余数类唯一，但整数代表可相差 $n$ 的倍数。
 <!-- bilingual-en:start -->
-A [[模运算、欧几里得算法与 RSA#同余与模运算|modular inverse]] $k^{-1}$ satisfies $kk^{-1}\equiv1\pmod n$.
+A [[模逆元|modular inverse]] $k^{-1}$ is an integer representative satisfying $kk^{-1}\equiv1\pmod n$, not the rational number $1/k$. When it exists, its residue class is unique, but integer representatives may differ by multiples of $n$.
 <!-- bilingual-en:end -->
 
-**定理。** $k$ 模 $n$ 可逆，当且仅当 $\gcd(k,n)=1$。
+**[[模逆元存在条件|定理]]。** $k$ 模 $n$ 可逆，当且仅当 $\gcd(k,n)=1$。
 <!-- bilingual-en:start -->
-**Theorem.** The residue class of $k$ is invertible modulo $n$ if and only if $\gcd(k,n)=1$.
+**[[模逆元存在条件|Theorem]].** The residue class of $k$ is invertible modulo $n$ if and only if $\gcd(k,n)=1$.
 <!-- bilingual-en:end -->
 
-**证明。** 若可逆，则 $kk^{-1}-1=qn$，即 $kk^{-1}+n(-q)=1$，所以任何共同因子只能是 $1$。反过来，若 gcd 为 $1$，Bézout 给出 $sk+tn=1$，取模 $n$ 即 $sk\equiv1$，所以 $s$ 是逆元。
+**证明。** 若可逆，则 $kk^{-1}-1=qn$，即 $kk^{-1}+n(-q)=1$，所以任何正共同因子只能是 $1$。反过来，若 gcd 为 $1$，Bézout 给出 $sk+tn=1$，取模 $n$ 即 $sk\equiv1$，所以 $s$ 是逆元。
 <!-- bilingual-en:start -->
-**Proof.** If $k$ is invertible, then $kk^{-1}-1=qn$, or equivalently $kk^{-1}+n(-q)=1$, so every common divisor of $k$ and $n$ divides $1$. Conversely, if $\gcd(k,n)=1$, Bézout's identity gives $sk+tn=1$. Reducing modulo $n$ yields $sk\equiv1$, so $s$ is an inverse of $k$.
+**Proof.** If $k$ is invertible, then $kk^{-1}-1=qn$, or equivalently $kk^{-1}+n(-q)=1$, so every positive common divisor of $k$ and $n$ must be $1$. Conversely, if $\gcd(k,n)=1$, Bézout's identity gives $sk+tn=1$. Reducing modulo $n$ yields $sk\equiv1$, so $s$ is an inverse of $k$.
+<!-- bilingual-en:end -->
+
+这也解释了[[线性同余方程]] $ax\equiv b\pmod n$ 的求解入口。令 $g=\gcd(a,n)$：有解当且仅当 $g\mid b$；必要性来自 $ax-b$ 是 $n$ 的倍数，充分性来自将 Bézout 等式 $ua+vn=g$ 乘以 $b/g$。有一个解后，全部整数解为 $x=x_0+t(n/g)$，$t\in\mathbb Z$；详见[[线性同余求解]]。
+<!-- bilingual-en:start -->
+This also provides the route to solving a [[线性同余方程|linear congruence]] $ax\equiv b\pmod n$. For $g=\gcd(a,n)$, a solution exists exactly when $g\mid b$. Necessity follows because $ax-b$ is a multiple of $n$; sufficiency follows by multiplying the Bézout identity $ua+vn=g$ by $b/g$. Once one solution is known, all integer solutions are $x=x_0+t(n/g)$ for $t\in\mathbb Z$; see [[线性同余求解|solving linear congruences]].
 <!-- bilingual-en:end -->
 
 ### 13.4 Chinese Remainder Theorem
 
-[[模运算、欧几里得算法与 RSA#同余与模运算|Chinese Remainder Theorem]]：若 $\gcd(a,b)=1$，对任意 $m,n$，方程
+[[中国剩余定理|Chinese Remainder Theorem]]：若整数 $a,b>1$ 且 $\gcd(a,b)=1$，对任意整数 $m,n$，方程
 <!-- bilingual-en:start -->
-[[模运算、欧几里得算法与 RSA#同余与模运算|Chinese Remainder Theorem]]: If $\gcd(a,b)=1$, then for any residues $m,n$, the system
+[[中国剩余定理|Chinese Remainder Theorem]]: If integers $a,b>1$ satisfy $\gcd(a,b)=1$, then for any integers $m,n$, the system
 <!-- bilingual-en:end -->
 
 $$
@@ -527,11 +554,11 @@ So $x=me_a+ne_b$ satisfies both.
 The order is Congruence mod $n$ → Divisibility and Congruence → Inverses mod $n$ → cancellation conditions → Multiplicative Inverses → Inverses With Linear Combinations.
 <!-- bilingual-en:end -->
 
-阅读：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session13.pdf]]。视频讲稿：[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/KvtLWgCTwn4.pdf]]、[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/CAKSh3M0y8k.pdf]]。Slides：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_congruence.pdf]]、[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_inverses_mod.pdf]]。
+阅读：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session13.pdf#page=1|pp.1–6：同余、余数运算与环律]]；[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session13.pdf#page=8|pp.8–10：逆元定义、存在性与消去]]。视频讲稿：[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/KvtLWgCTwn4.pdf#page=1|pp.1–5：同余与重复平方例]]、[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/CAKSh3M0y8k.pdf#page=1|pp.1–2：逆元和消去条件]]。Slides：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_congruence.pdf#page=1|pp.1–5：同余运算及 $287^9\bmod4$]]、[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_inverses_mod.pdf#page=1|pp.1–2：不能任意消去及 Bézout 求逆]]。
 
 | block | prompt | 官方答案 |
 |---|---|---|
-| 2.2.2 Q1 | 从七个说法中选择与 $a\equiv b\pmod n$ 等价者 | 同余；余数相同；$n\mid(a-b)$；$a=b+nk$；$a-b$ 是 $n$ 的倍数 |
+| 2.2.2 Q1 | 从七个说法中选择与 $a\equiv b\pmod n$ 等价者 | 同余；余数相同；$n\mid(a-b)$；存在整数 $k$ 使 $a=b+nk$；$a-b$ 是 $n$ 的倍数 |
 | 2.2.4 Q1 | 为什么不能在 $8\cdot2\equiv3\cdot2\pmod{10}$ 中约去 $2$ | $2$ 与 $10$ 有共同因子 |
 | 2.2.4 Q2 | $k,n$ 满足什么条件才能约去 $k$ | relatively prime |
 | 2.2.5 Q1 | $2$ 模 $7$ 的逆元 | $4$ |
@@ -539,7 +566,7 @@ The order is Congruence mod $n$ → Divisibility and Congruence → Inverses mod
 <!-- bilingual-en:start -->
 | block | prompt | Official Answer |
 |---|---|---|
-| 2.2.2 Q1 | Select the statements equivalent to $a\equiv b\pmod n$ | Same residue; $n\mid(a-b)$; $a=b+nk$; $a-b$ is a multiple of $n$ |
+| 2.2.2 Q1 | Select the statements equivalent to $a\equiv b\pmod n$ | Congruence itself; same remainder; $n\mid(a-b)$; $a=b+nk$ for some integer $k$; $a-b$ is a multiple of $n$ |
 | 2.2.4 Q1 | Why can $2$ not be cancelled from $8\cdot2\equiv3\cdot2\pmod{10}$? | $2$ and $10$ have a common factor |
 | 2.2.4 Q2 | What condition on $k,n$ permits cancellation of $k$? | They must be relatively prime |
 | 2.2.5 Q1 | Inverse of $2$ modulo $7$ | $4$ |
@@ -553,7 +580,7 @@ The order is Congruence mod $n$ → Divisibility and Congruence → Inverses mod
 *In-class questions (unofficial independent solutions)*
 <!-- bilingual-en:end -->
 
-原题：[[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp13.pdf]]。
+原题：[[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp13.pdf#page=1|p.1：巨指数余数、CRT 构造及唯一性]]；[[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp13.pdf#page=2|p.2：整数多项式保持同余与倍数值]]。
 
 > [!example]- CP13 Problem 1：巨指数只看余数周期
 > 题式为 $9876^{3456789}(9^{99})^{5555}-6789^{3414259}$ 模 $14$。有 $9876\equiv6$，而 $6$ 的正幂在 $6,8$ 间交替；指数为奇数，故第一因子为 $6$。$9^3\equiv1$ 且 $99$ 被 $3$ 整除，故 $(9^{99})^{5555}\equiv1$。$6789\equiv-1$ 且指数为奇数，故末项为 $-1$。总和 $6-(-1)=7\pmod{14}$。
@@ -627,9 +654,9 @@ The order is Congruence mod $n$ → Divisibility and Congruence → Inverses mod
 > Not directly, because $\gcd(6,15)=3$. The congruence implies only $x\equiv y\pmod5$.
 > <!-- bilingual-en:end -->
 
-**知识链：**余数 → 同余等价类 → 运算兼容 → Bézout → 逆元 → CRT。
+**知识链：**[[带余除法|余数]] → [[同余|同余等价类]] → [[模运算|运算兼容]] → [[Bézout等式]] → [[模逆元]] → [[中国剩余定理|CRT]]。
 <!-- bilingual-en:start -->
-**Knowledge chain:** remainders → congruence classes → compatibility with arithmetic → Bézout identity → modular inverses → CRT.
+**Knowledge chain:** [[带余除法|remainders]] → [[同余|congruence classes]] → [[模运算|compatibility with arithmetic]] → [[Bézout等式|Bézout identity]] → [[模逆元|modular inverses]] → [[中国剩余定理|CRT]].
 <!-- bilingual-en:end -->
 
 ---
@@ -641,27 +668,27 @@ The order is Congruence mod $n$ → Divisibility and Congruence → Inverses mod
 *14.1 Euler's totient function and the group of units*
 <!-- bilingual-en:end -->
 
-[[模运算、欧几里得算法与 RSA#Euler 定理与 RSA|Euler's totient function]]定义为
+对正整数 $n$，[[欧拉函数|Euler's totient function]]定义为
 <!-- bilingual-en:start -->
-The [[模运算、欧几里得算法与 RSA#Euler 定理与 RSA|Euler's totient function]] is defined by
+For a positive integer $n$, [[欧拉函数|Euler's totient function]] is defined by
 <!-- bilingual-en:end -->
 
 $$
 \varphi(n)=\bigl|\{k\in\{0,1,\ldots,n-1\}:\gcd(k,n)=1\}\bigr|.
 $$
 
-这些可逆余数类构成 $\mathbb Z_n^*$。若 $p$ 为素数，$\varphi(p)=p-1$；若 $p$ 为素数且 $k\ge1$，在 $0,\ldots,p^k-1$ 中恰有 $p^{k-1}$ 个 $p$ 的倍数，所以
+当 $n>1$ 时，这些可逆余数类构成 $\mathbb Z_n^*$。定义在 $n=1$ 处给出 $\varphi(1)=1$，因为 $\gcd(0,1)=1$。若 $p$ 为素数，$\varphi(p)=p-1$；若 $p$ 为素数且 $k\ge1$ 为整数，在 $0,\ldots,p^k-1$ 中恰有 $p^{k-1}$ 个 $p$ 的倍数，所以得到[[素数幂欧拉函数]]公式
 <!-- bilingual-en:start -->
-These invertible residue classes form the group $\mathbb Z_n^*$. If $p$ is prime, then $\varphi(p)=p-1$. More generally, for prime $p$ and $k\ge1$, exactly $p^{k-1}$ numbers in $0,\ldots,p^k-1$ are divisible by $p$, so
+For $n>1$, these invertible residue classes form the group $\mathbb Z_n^*$. At $n=1$, the definition gives $\varphi(1)=1$ because $\gcd(0,1)=1$. If $p$ is prime, then $\varphi(p)=p-1$. For prime $p$ and integer $k\ge1$, exactly $p^{k-1}$ numbers in $0,\ldots,p^k-1$ are divisible by $p$, giving the [[素数幂欧拉函数|prime-power totient formula]]
 <!-- bilingual-en:end -->
 
 $$
 \varphi(p^k)=p^k-p^{k-1}.
 $$
 
-若 $\gcd(a,b)=1$，CRT 给出 $\mathbb Z_{ab}^*\leftrightarrow\mathbb Z_a^*\times\mathbb Z_b^*$ 的双射，因此 $\varphi(ab)=\varphi(a)\varphi(b)$。由此若 $n=\prod p_i^{\alpha_i}$，则
+若整数 $a,b>1$ 且 $\gcd(a,b)=1$，CRT 给出 $\mathbb Z_{ab}^*\leftrightarrow\mathbb Z_a^*\times\mathbb Z_b^*$ 的双射，因此 $\varphi(ab)=\varphi(a)\varphi(b)$；有一个因子为 $1$ 时由 $\varphi(1)=1$ 直接成立。这是[[欧拉函数互素乘法性]]。由此若 $n\ge2$ 的素因数分解为 $n=\prod p_i^{\alpha_i}$，其中 $p_i$ 互异且 $\alpha_i$ 为正整数，则得到[[欧拉函数乘积公式]]
 <!-- bilingual-en:start -->
-If $\gcd(a,b)=1$, the CRT gives a bijection $\mathbb Z_{ab}^*\leftrightarrow\mathbb Z_a^*\times\mathbb Z_b^*$, so $\varphi(ab)=\varphi(a)\varphi(b)$. Therefore, if $n=\prod p_i^{\alpha_i}$, then
+If integers $a,b>1$ satisfy $\gcd(a,b)=1$, the CRT gives a bijection $\mathbb Z_{ab}^*\leftrightarrow\mathbb Z_a^*\times\mathbb Z_b^*$, so $\varphi(ab)=\varphi(a)\varphi(b)$. If one factor is $1$, this follows from $\varphi(1)=1$. This is [[欧拉函数互素乘法性|multiplicativity on coprime inputs]]. If $n\ge2$ has factorization $n=\prod p_i^{\alpha_i}$ with distinct primes $p_i$ and positive integer exponents $\alpha_i$, it yields the [[欧拉函数乘积公式|totient product formula]]
 <!-- bilingual-en:end -->
 
 $$
@@ -673,18 +700,18 @@ $$
 *14.2 Full proof of Euler's theorem*
 <!-- bilingual-en:end -->
 
-[[模运算、欧几里得算法与 RSA#Euler 定理与 RSA|Euler's theorem]]：若 $\gcd(k,n)=1$，则
+[[欧拉定理|Euler's theorem]]：若整数 $n>1$、$k\in\mathbb Z$ 且 $\gcd(k,n)=1$，则
 <!-- bilingual-en:start -->
-[[模运算、欧几里得算法与 RSA#Euler 定理与 RSA|Euler's theorem]]: if $\gcd(k,n)=1$, then
+[[欧拉定理|Euler's theorem]]: if $n>1$ and $k$ are integers with $\gcd(k,n)=1$, then
 <!-- bilingual-en:end -->
 
 $$
 k^{\varphi(n)}\equiv1\pmod n.
 $$
 
-**构造。** 将 $\mathbb Z_n^*$ 中元素列为 $r_1,\ldots,r_{\varphi(n)}$。乘以 $k$ 后，$kr_i$ 仍可逆；若 $kr_i\equiv kr_j$，因 $k$ 可逆可约去，得 $r_i\equiv r_j$。有限集合上的单射是双射，因此 $kr_1,\ldots,kr_\varphi$ 只是原列表的重排。
+**构造。** 将 $\mathbb Z_n^*$ 中元素列为 $r_1,\ldots,r_{\varphi(n)}$。乘以 $k$ 后，$kr_i$ 的余数类仍可逆；若 $kr_i\equiv kr_j\pmod n$，因 $k$ 可逆可约去，得 $r_i\equiv r_j\pmod n$。有限集合上的单射是双射，因此 $kr_1,\ldots,kr_{\varphi(n)}$ 取余后只是原列表的重排。
 <!-- bilingual-en:start -->
-**Construction.** List the elements of $\mathbb Z_n^*$ as $r_1,\ldots,r_{\varphi(n)}$. Multiplication by $k$ keeps each $kr_i$ invertible. If $kr_i\equiv kr_j$, the invertibility of $k$ permits cancellation, giving $r_i\equiv r_j$. Thus multiplication by $k$ is injective on a finite set and therefore bijective, so $kr_1,\ldots,kr_{\varphi(n)}$ is just a permutation of the original list.
+**Construction.** List the elements of $\mathbb Z_n^*$ as $r_1,\ldots,r_{\varphi(n)}$. Multiplication by $k$ keeps each residue class of $kr_i$ invertible. If $kr_i\equiv kr_j\pmod n$, cancellation gives $r_i\equiv r_j\pmod n$. Thus multiplication by $k$ is injective on a finite set and therefore bijective: after reduction modulo $n$, the list $kr_1,\ldots,kr_{\varphi(n)}$ is a permutation of the original list.
 <!-- bilingual-en:end -->
 
 于是
@@ -696,9 +723,9 @@ $$
 k^{\varphi(n)}\prod_i r_i\equiv\prod_i kr_i\equiv\prod_i r_i\pmod n.
 $$
 
-$\prod_i r_i$ 仍可逆，约去后即得结论。若 $n=p$ 为素数，得到 [[模运算、欧几里得算法与 RSA#Euler 定理与 RSA|Fermat's little theorem]]：$p\nmid k\Rightarrow k^{p-1}\equiv1\pmod p$。
+$\prod_i r_i$ 仍可逆，约去后即得结论。若 $n=p$ 为素数，得到 [[费马小定理|Fermat's little theorem]]：$p\nmid k\Rightarrow k^{p-1}\equiv1\pmod p$。乘以 $k$，再补上 $p\mid k$ 时两边都为 $0$ 的情形，得到对任意整数 $k$ 都成立的形式 $k^p\equiv k\pmod p$。
 <!-- bilingual-en:start -->
-$\prod_i r_i$ is invertible, so it may be cancelled to obtain the result. If $n=p$ is prime, this gives [[模运算、欧几里得算法与 RSA#Euler 定理与 RSA|Fermat's little theorem]]: $p\nmid k\Rightarrow k^{p-1}\equiv1\pmod p$.
+$\prod_i r_i$ is invertible, so it may be cancelled to obtain the result. If $n=p$ is prime, this gives [[费马小定理|Fermat's little theorem]]: $p\nmid k\Rightarrow k^{p-1}\equiv1\pmod p$. Multiplying by $k$ and adding the case $p\mid k$, where both sides are $0$, gives the form valid for every integer $k$: $k^p\equiv k\pmod p$.
 <!-- bilingual-en:end -->
 
 > [!warning] 假设不可删除
@@ -712,9 +739,9 @@ $\prod_i r_i$ is invertible, so it may be cancelled to obtain the result. If $n=
 *14.3 Algorithmic Intuition of Modular Exponents*
 <!-- bilingual-en:end -->
 
-不要先计算 $k^N$ 再取余。重复平方法将 $N$ 写成二进制；每次平方或乘法后立即取模。由于同余与乘法兼容，中间缩小数值不改变最终余数，复杂度只需 $O(\log N)$ 次模乘。
+对整数 $k$、模数 $n>1$ 和正整数指数 $N$，不要先计算 $k^N$ 再取余。[[模重复平方法]]将 $N$ 写成二进制；每次平方或乘法后立即取模。由于同余与乘法兼容，中间缩小数值不改变最终余数，只需 $O(\log N)$ 次模乘；这不是把每次大整数模乘的位运算成本也当作常数。$N=0$ 时直接返回 $1$，本流程不处理负指数。
 <!-- bilingual-en:start -->
-Do not compute $k^N$ in full and reduce only at the end. Repeated squaring uses the binary expansion of $N$ and reduces modulo $n$ after every square or multiplication. Because congruence is compatible with multiplication, reducing intermediate values does not change the final residue, and only $O(\log N)$ modular multiplications are required.
+For integer $k$, modulus $n>1$, and a positive integer exponent $N$, do not compute $k^N$ in full before reducing. [[模重复平方法|Modular repeated squaring]] uses the binary expansion of $N$ and reduces after each square or multiplication. Compatibility with multiplication preserves the final residue, using $O(\log N)$ modular multiplications; this operation count does not treat their large-integer bit cost as constant. For $N=0$, return $1$ directly. This routine does not handle negative exponents.
 <!-- bilingual-en:end -->
 
 ### 官方顺序、资源与在线题（9 prompts）
@@ -722,7 +749,12 @@ Do not compute $k^N$ in full and reduce only at the end. Repeated squaring uses 
 *Official Order, Resources and Online Questions (9 prompts)*
 <!-- bilingual-en:end -->
 
-阅读：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session14.pdf]]。讲稿：[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/TeRYL7kkhqs.pdf]]、[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/dZgI16nMuqE.pdf]]。Slides：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_ModularEuler.pdf]]、[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_TheRingZn.pdf]]。
+阅读：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session14.pdf#page=1|p.1：欧拉函数与 Euler 定理]]；[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session14.pdf#page=3|pp.3–4：单位置换证明与 FLT]]；[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session14.pdf#page=5|pp.5–6：素数幂、互素乘法性与乘积公式]]。讲稿：[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/TeRYL7kkhqs.pdf#page=1|pp.1–3：欧拉函数的计数]]、[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/dZgI16nMuqE.pdf#page=1|pp.1–6：余数环、单位与 Euler 证明]]。Slides：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_ModularEuler.pdf#page=1|pp.1–5：欧拉函数公式与定理]]、[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_TheRingZn.pdf#page=1|pp.1–7：环律与单位乘法置换证明]]。
+
+来源边界：Session 14 阅读 p.1 脚注把“$0$ 不与任何整数互素”写成无例外结论；$n=1$ 是例外，故本笔记按定义保留 $\varphi(1)=1$。本节 Euler 定理仍采用 $n>1$ 的课程版本。
+<!-- bilingual-en:start -->
+Source boundary: the footnote on Session 14, PDF page 1, states without qualification that $0$ is coprime to no integer. The exception is $n=1$, so this note retains $\varphi(1)=1$ as required by the definition. Euler's theorem in this section uses the course version with $n>1$.
+<!-- bilingual-en:end -->
 
 | block | prompt | 官方答案 |
 |---|---|---|
@@ -752,7 +784,12 @@ Do not compute $k^N$ in full and reduce only at the end. Repeated squaring uses 
 *In-class questions (unofficial independent solutions)*
 <!-- bilingual-en:end -->
 
-原题：[[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp14.pdf]]。
+原题：[[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp14.pdf#page=1|p.1：Problems 1–4，模幂、欧拉函数与十进制末位]]。
+
+在线来源校正：2.3.7 Q2 的答案 $22$ 正确，但反馈中间的指数括号应写为 $22^{12001}=(22^{120})^{100}\cdot22$，不是 $22^{120^{100}}\cdot22$。因 $\gcd(22,175)=1$、$\varphi(175)=120$，Euler 定理给出余数 $22$。
+<!-- bilingual-en:start -->
+Online-source correction: the answer $22$ to 2.3.7 Q2 is correct, but its intermediate exponentiation should read $22^{12001}=(22^{120})^{100}\cdot22$, not $22^{120^{100}}\cdot22$. Since $\gcd(22,175)=1$ and $\varphi(175)=120$, Euler's theorem gives remainder $22$.
+<!-- bilingual-en:end -->
 
 > [!example]- CP14 Problem 1
 > $297=3^3\cdot11$，故 $\varphi(297)=18\cdot10=180$。又 $\gcd(26,297)=1$，且 $1818181=180(10101)+1$，所以
@@ -769,20 +806,20 @@ Do not compute $k^N$ in full and reduce only at the end. Repeated squaring uses 
 > <!-- bilingual-en:end -->
 
 > [!example]- CP14 Problem 3
-> $0,1,\ldots,p^k-1$ 中不与 $p^k$ 互素的数恰是 $p$ 的倍数：$0,p,2p,\ldots,(p^{k-1}-1)p$，共 $p^{k-1}$ 个。因此 $\varphi(p^k)=p^k-p^{k-1}$。
+> 对素数 $p$ 和正整数 $k$，$0,1,\ldots,p^k-1$ 中不与 $p^k$ 互素的数恰是 $p$ 的倍数：$0,p,2p,\ldots,(p^{k-1}-1)p$，共 $p^{k-1}$ 个。因此 $\varphi(p^k)=p^k-p^{k-1}$。
 > <!-- bilingual-en:start -->
-> The elements of $0,1,\ldots,p^k-1$ that are not coprime to $p^k$ are exactly the multiples of $p$: $0,p,2p,\ldots,(p^{k-1}-1)p$, of which there are $p^{k-1}$. Hence $\varphi(p^k)=p^k-p^{k-1}$.
+> For a prime $p$ and positive integer $k$, the elements of $0,1,\ldots,p^k-1$ not coprime to $p^k$ are exactly the multiples of $p$: $0,p,2p,\ldots,(p^{k-1}-1)p$, of which there are $p^{k-1}$. Hence $\varphi(p^k)=p^k-p^{k-1}$.
 > <!-- bilingual-en:end -->
 
 > [!example]- CP14 Problem 4
 > (a) Euler theorem 只直接处理与 $10$ 互素的 $n$，偶数和 $5$ 的倍数不满足假设。
 >
-> (b) 对 $d=0,\ldots,9$ 直接检查；更结构化地，模 $2$ 有 $d^{13}\equiv d$，模 $5$ 时若 $5\nmid d$，$d^{12}\equiv1$，若 $5\mid d$ 两边均为 $0$。CRT 得 $d^{13}\equiv d\pmod{10}$。
+> (b) 对 $d=0,\ldots,9$ 直接检查；更结构化地，模 $2$ 有 $d^{13}\equiv d$。模 $5$ 时若 $5\nmid d$，Fermat 给 $d^{12}\equiv1$，所以 $d^{13}\equiv d$；若 $5\mid d$，则 $d^{13}$ 与 $d$ 均为 $0\pmod5$。CRT 得 $d^{13}\equiv d\pmod{10}$。
 >
 > (c) 任意 $n\equiv d\pmod{10}$，多项式保持同余给 $n^{13}\equiv d^{13}\equiv d\equiv n\pmod{10}$。
 > <!-- bilingual-en:start -->
 > (a) Euler's theorem applies directly only when $n$ is coprime to $10$; even integers and multiples of $5$ do not satisfy the hypothesis.
-> (b) Check $d=0,\ldots,9$ directly. More structurally, modulo $2$ we have $d^{13}\equiv d$. Modulo $5$, if $5\nmid d$ then $d^{12}\equiv1$, while if $5\mid d$ then both sides are $0$. The Chinese remainder theorem gives $d^{13}\equiv d\pmod{10}$.
+> (b) Check $d=0,\ldots,9$ directly. More structurally, modulo $2$ we have $d^{13}\equiv d$. Modulo $5$, if $5\nmid d$, Fermat gives $d^{12}\equiv1$, hence $d^{13}\equiv d$. If $5\mid d$, both $d^{13}$ and $d$ are $0$ modulo $5$. The CRT gives $d^{13}\equiv d\pmod{10}$.
 > (c) For any $n\equiv d\pmod{10}$, polynomial expressions preserve congruence, so $n^{13}\equiv d^{13}\equiv d\equiv n\pmod{10}$.
 > <!-- bilingual-en:end -->
 
@@ -827,19 +864,19 @@ Do not compute $k^N$ in full and reduce only at the end. Repeated squaring uses 
 > Twice: first, to ensure that every $kr_i$ remains in $\mathbb Z_n^*$; second, to cancel $k$ from $kr_i\equiv kr_j$ and prove that multiplication by $k$ permutes the residue classes.
 > <!-- bilingual-en:end -->
 
-**知识链：**CRT → 单位集合 → $\varphi$ 乘法性 → 乘法置换 → Euler/FLT → 快速模指数。
+**知识链：**[[中国剩余定理|CRT]] → 单位集合 → [[欧拉函数|$\varphi$ 及其计数]] → 乘法置换 → [[欧拉定理|Euler]] / [[费马小定理|FLT]] → [[模重复平方法|快速模指数]]。
 <!-- bilingual-en:start -->
-**Knowledge chain:** CRT → units modulo $n$ → multiplicativity of $\varphi$ → multiplication as a permutation → Euler/FLT → fast modular exponentiation.
+**Knowledge chain:** [[中国剩余定理|CRT]] → units modulo $n$ → [[欧拉函数|totient counts]] → multiplication as a permutation → [[欧拉定理|Euler]] / [[费马小定理|FLT]] → [[模重复平方法|fast modular exponentiation]].
 <!-- bilingual-en:end -->
 
 ---
 
 ## Problem Set 5
 
-原题：[[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps5.pdf]]。
+原题：[[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps5.pdf#page=1|p.1：Binary Pulverizer、Wilson 定理及 CRT 计数映射]]；[[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps5.pdf#page=2|p.2：互素限制、欧拉函数乘法性与乘积公式]]。
 
 > [!example]- PS5 Problem 1：Binary Pulverizer
-> **预处理。** 若原输入 $A,B$ 同时为偶数，先重复提取共同因子 $2$，写成 $A=2^ra,B=2^rb$，使 $a,b$ 至少一个为奇数。以下先求 $\gcd(a,b)$ 的系数；最后因 $\gcd(A,B)=2^r\gcd(a,b)$，同一对系数也立即给出 $A,B$ 的 Bézout 组合。
+> **预处理。** 对正整数输入 $A,B$，若它们同时为偶数，先重复提取共同因子 $2$，写成 $A=2^ra,B=2^rb$，使 $a,b$ 至少一个为奇数。以下先求 $\gcd(a,b)$ 的系数；最后因 $\gcd(A,B)=2^r\gcd(a,b)$，同一对系数也立即给出 $A,B$ 的 Bézout 组合。
 >
 > **目标。** 在 binary gcd 的同时保持
 > $$x=u_xa+v_xb,\qquad y=u_ya+v_yb.$$
@@ -847,42 +884,42 @@ Do not compute $k^N$ in full and reduce only at the end. Repeated squaring uses 
 >
 > 若 $z=ua+vb$ 为偶数：若 $u,v$ 都为偶数，直接各除以 $2$；否则需证 $u-b$ 与 $v+a$ 均为偶数。分三种奇偶性：若 $a$ 奇、$b$ 偶，则 $ua+vb$ 偶迫使 $u$ 偶，而“$u,v$ 不全偶”迫使 $v$ 奇；若 $a$ 偶、$b$ 奇则对称；若 $a,b$ 均奇，则 $u+v$ 偶，故不全偶时 $u,v$ 均奇。三种情形都给出 $u-b,v+a$ 为偶数，且
 > $$(u-b)a+(v+a)b=ua+vb=z.$$
-> 因而 $z/2=((u-b)/2)a+((v+a)/2)b$。这给出所有除以 $2$ 的合法系数更新。算法终止时 $x$ 或 $y$ 为 gcd，相应系数就是 Bézout 系数。
+> 因而 $z/2=((u-b)/2)a+((v+a)/2)b$。这给出所有除以 $2$ 的合法系数更新。这个扩展版本在 $x=y$ 时结束，即在 CP12 规则 (7) 把结果打包成 $(1,0,ex)$ **之前**输出 $x$ 及其系数；此时 $x=y=\gcd(a,b)$。再乘回 $2^r$ 就得到原输入的 gcd，系数保持不变。
 > <!-- bilingual-en:start -->
-> **Preprocessing.** If the original inputs $A,B$ are both even, repeatedly factor out their common power of $2$ and write $A=2^ra,B=2^rb$, where at least one of $a,b$ is odd. First compute coefficients for $\gcd(a,b)$. Because $\gcd(A,B)=2^r\gcd(a,b)$, the same coefficients immediately give a Bézout combination of $A,B$.
+> **Preprocessing.** For positive integer inputs $A,B$, repeatedly remove their common power of $2$ if both are even, writing $A=2^ra,B=2^rb$ with at least one of $a,b$ odd. First compute coefficients for $\gcd(a,b)$. Because $\gcd(A,B)=2^r\gcd(a,b)$, the same coefficients give a Bézout combination of $A,B$.
 > **Objective.** Run binary gcd while maintaining
 > $$x=u_xa+v_xb,\qquad y=u_ya+v_yb.$$
 > Initially, $(u_x,v_x)=(1,0)$ and $(u_y,v_y)=(0,1)$. When $x\leftarrow x-y$, update $(u_x,v_x)\leftarrow(u_x-u_y,v_x-v_y)$ as well; swapping $x,y$ also swaps their coefficient pairs.
 > Suppose $z=ua+vb$ is even. If $u,v$ are both even, divide both coefficients by $2$. Otherwise, we must show that $u-b$ and $v+a$ are both even. There are three parity cases. If $a$ is odd and $b$ is even, the evenness of $ua+vb$ forces $u$ to be even; because $u,v$ are not both even, $v$ is odd. The case where $a$ is even and $b$ is odd is symmetric. If $a,b$ are both odd, then $u+v$ is even, so when $u,v$ are not both even they must both be odd. In every case, $u-b$ and $v+a$ are even, and
 > $$(u-b)a+(v+a)b=ua+vb=z.$$
-> Thus $z/2=((u-b)/2)a+((v+a)/2)b$. This gives the valid coefficient update when the current value is halved. When the algorithm terminates, the nonzero value is the gcd, and its stored coefficients are Bézout coefficients.
+> Thus $z/2=((u-b)/2)a+((v+a)/2)b$, giving the valid coefficient update for halving. This extended version stops at $x=y$ and outputs $x$ with its coefficients **before** CP12 rule (7) packages the result as $(1,0,ex)$. At that point, $x=y=\gcd(a,b)$. Multiplying the value by $2^r$ recovers the original gcd, with the same coefficients.
 > <!-- bilingual-en:end -->
 
 > [!example]- PS5 Problem 2：Wilson's Theorem
 > (a) $k^2\equiv1\pmod p$ 等价于 $p\mid(k-1)(k+1)$。因 $p$ 为素数，$p\mid k-1$ 或 $p\mid k+1$；在 $0<k<p$ 内即 $k=1$ 或 $p-1$。逆向直接代入。
 >
-> (b) 在 $1,\ldots,p-1$ 中，每个元素有唯一逆元。除自逆元 $1,p-1$ 外，其余元素可成对配成 $a,a^{-1}$，每对乘积为 $1$。所以
+> (b) $p=2$ 时直接有 $1!\equiv-1\pmod2$。以下取奇素数 $p$：在 $1,\ldots,p-1$ 中，每个元素有唯一逆元。除两个不同的自逆元 $1,p-1$ 外，其余元素可成对配成 $a,a^{-1}$，每对乘积为 $1$。所以
 > $$(p-1)!\equiv1\cdot(p-1)\equiv-1\pmod p.$$
 > <!-- bilingual-en:start -->
 > (a) $k^2\equiv1\pmod p$ is equivalent to $p\mid(k-1)(k+1)$. Because $p$ is prime, $p\mid k-1$ or $p\mid k+1$; within $0<k<p$, this means $k=1$ or $k=p-1$. The converse follows by direct substitution.
-> (b) In $1,\ldots,p-1$, every element has a unique inverse. Apart from the self-inverse elements $1$ and $p-1$, the elements pair off as $a,a^{-1}$, with each pair contributing a product of $1$. Therefore,
+> (b) For $p=2$, directly check $1!\equiv-1\pmod2$. Now let $p$ be an odd prime. In $1,\ldots,p-1$, each element has a unique inverse. Apart from the two distinct self-inverse elements $1$ and $p-1$, elements pair off as $a,a^{-1}$, each pair contributing $1$. Therefore,
 > $$(p-1)!\equiv1\cdot(p-1)\equiv-1\pmod p.$$
 > <!-- bilingual-en:end -->
 
 > [!example]- PS5 Problem 3：$\varphi$ 的乘法性
-> (a) CRT 恰好说明 $f(x)=(x\bmod a,x\bmod b)$ 从 $[0,ab)$ 到 $[0,a)\times[0,b)$ 既存在逆映射又唯一，故为双射。
+> (a) 题设为整数 $a,b>1$ 且 $\gcd(a,b)=1$。CRT 恰好说明 $f(x)=(x\bmod a,x\bmod b)$ 从整数余数集 $\{0,\ldots,ab-1\}$ 到 $\{0,\ldots,a-1\}\times\{0,\ldots,b-1\}$ 的每个元素都有唯一原像，故为双射。
 >
 > (b) $\gcd(x,ab)=1$ 当且仅当同时 $\gcd(x,a)=\gcd(x,b)=1$；所以 $f$ 限制为 $\mathbb Z_{ab}^*\to\mathbb Z_a^*\times\mathbb Z_b^*$ 的双射。
 >
 > (c) 取基数：$\varphi(ab)=\varphi(a)\varphi(b)$。
 >
-> (d) 将 $n=\prod_i p_i^{\alpha_i}$，反复应用乘法性与 $\varphi(p^\alpha)=p^\alpha-p^{\alpha-1}$：
+> (d) 将 $n\ge2$ 写成 $n=\prod_i p_i^{\alpha_i}$，其中 $p_i$ 为互异素数、$\alpha_i$ 为正整数，反复应用[[欧拉函数互素乘法性|乘法性]]与[[素数幂欧拉函数|$\varphi(p^\alpha)=p^\alpha-p^{\alpha-1}$]]：
 > $$\varphi(n)=\prod_i p_i^{\alpha_i}(1-1/p_i)=n\prod_i(1-1/p_i).$$
 > <!-- bilingual-en:start -->
-> (a) The CRT says precisely that $f(x)=(x\bmod a,x\bmod b)$ maps $[0,ab)$ bijectively onto $[0,a)\times[0,b)$: every pair of residues has exactly one preimage modulo $ab$.
+> (a) The hypotheses are integers $a,b>1$ with $\gcd(a,b)=1$. The CRT says that $f(x)=(x\bmod a,x\bmod b)$ maps the integer residue set $\{0,\ldots,ab-1\}$ bijectively onto $\{0,\ldots,a-1\}\times\{0,\ldots,b-1\}$: each residue pair has exactly one preimage.
 > (b) $\gcd(x,ab)=1$ if and only if $\gcd(x,a)=\gcd(x,b)=1$; therefore the restriction of $f$ is a bijection $\mathbb Z_{ab}^*\to\mathbb Z_a^*\times\mathbb Z_b^*$.
 > (c) Taking cardinalities gives $\varphi(ab)=\varphi(a)\varphi(b)$.
-> (d) Write $n=\prod_i p_i^{\alpha_i}$ and repeatedly apply multiplicativity together with $\varphi(p^\alpha)=p^\alpha-p^{\alpha-1}$:
+> (d) For $n\ge2$, write $n=\prod_i p_i^{\alpha_i}$ with distinct primes $p_i$ and positive integer exponents $\alpha_i$. Repeatedly apply [[欧拉函数互素乘法性|multiplicativity]] and the [[素数幂欧拉函数|prime-power formula]] $\varphi(p^\alpha)=p^\alpha-p^{\alpha-1}$:
 > $$\varphi(n)=\prod_i p_i^{\alpha_i}(1-1/p_i)=n\prod_i(1-1/p_i).$$
 > <!-- bilingual-en:end -->
 
@@ -905,24 +942,24 @@ Do not compute $k^N$ in full and reduce only at the end. Repeated squaring uses 
 *15.1 Construction of Public Key and Private Key*
 <!-- bilingual-en:end -->
 
-[[模运算、欧几里得算法与 RSA#Euler 定理与 RSA|RSA public-key cryptosystem]]的数学核心如下。
+[[RSA公钥加密|RSA public-key cryptosystem]]的数学核心如下。
 <!-- bilingual-en:start -->
-The mathematical core of the [[模运算、欧几里得算法与 RSA#Euler 定理与 RSA|RSA public-key cryptosystem]] is as follows.
+The mathematical core of [[RSA公钥加密|RSA public-key encryption]] is as follows.
 <!-- bilingual-en:end -->
 
-1. 选取不同大素数 $p,q$，令 $n=pq$，因而 $\varphi(n)=(p-1)(q-1)$。
-2. 选 $e$ 使 $\gcd(e,\varphi(n))=1$。
-3. 用 Pulverizer 求 $d$，使 $ed\equiv1\pmod{\varphi(n)}$。
-4. 公开 $(e,n)$，保密 $(d,n)$ 及 $p,q$。
-5. 消息 $m\in[0,n)$ 加密为 $c\equiv m^e\pmod n$；解密为 $c^d\pmod n$。
+1. 选取不同大素数 $p,q$（此处 $p,q>2$），令 $n=pq$，因而 $\varphi(n)=(p-1)(q-1)$。
+2. 选正整数 $e$ 使 $\gcd(e,\varphi(n))=1$；课堂构造可取 $1<e<\varphi(n)$，排除恒等映射 $e=1$。
+3. 用 Pulverizer 求正整数逆元代表 $d$，使 $ed\equiv1\pmod{\varphi(n)}$，可取 $1\le d<\varphi(n)$。
+4. 公开 $(e,n)$，保密 $d$ 及 $p,q$。私钥常记为 $(d,n)$，但其中 $n$ 本身是公开的。
+5. 整数消息 $m\in\{0,\ldots,n-1\}$ 加密为 $c=\operatorname{rem}(m^e,n)$；解密为 $\operatorname{rem}(c^d,n)$。
 <!-- bilingual-en:start -->
 
 &nbsp;
-**1.** Choose distinct large primes $p,q$ and set $n=pq$, so $\varphi(n)=(p-1)(q-1)$.<br>
-**2.** Choose $e$ with $\gcd(e,\varphi(n))=1$.<br>
-**3.** Use the Pulverizer to find $d$ such that $ed\equiv1\pmod{\varphi(n)}$.<br>
-**4.** Publish $(e,n)$; keep $(d,n)$ and the factors $p,q$ secret.<br>
-**5.** Encrypt a message $m\in[0,n)$ as $c\equiv m^e\pmod n$; decrypt it as $c^d\pmod n$.<br>
+**1.** Choose distinct large primes $p,q>2$ and set $n=pq$, so $\varphi(n)=(p-1)(q-1)$.<br>
+**2.** Choose a positive integer $e$ with $\gcd(e,\varphi(n))=1$. In this classroom construction, we may take $1<e<\varphi(n)$, excluding the identity map $e=1$.<br>
+**3.** Use the Pulverizer to find a positive inverse representative $d$ such that $ed\equiv1\pmod{\varphi(n)}$; we may take $1\le d<\varphi(n)$.<br>
+**4.** Publish $(e,n)$ and keep $d,p,q$ secret. The private key is often written $(d,n)$, but its modulus $n$ is public.<br>
+**5.** Encrypt an integer message $m\in\{0,\ldots,n-1\}$ as $c=\operatorname{rem}(m^e,n)$; decrypt it as $\operatorname{rem}(c^d,n)$.<br>
 <!-- bilingual-en:end -->
 
 ![[98_attachment/mathematics_for_computer_science/mit6_042j/unit02-rsa-flow.png|900]]
@@ -932,9 +969,9 @@ The mathematical core of the [[模运算、欧几里得算法与 RSA#Euler 定�
 Reading the diagram: the public key $(e,n)$ performs modular-exponentiation encryption, while the private exponent $d$ maps the ciphertext back to the original message. Correctness depends on the congruence satisfied by the exponent $ed$.
 <!-- bilingual-en:end -->
 
-这里公开钥允许任何人加密，却没有直接暴露逆指数 $d$。实际系统还必须使用随机化 padding；“裸 RSA”具有确定性和可塑性，不能直接作为安全协议。
+这里公钥允许任何人计算加密映射，却没有直接暴露逆指数 $d$。“裸 RSA”具有确定性：相同 $m$ 总给相同 $c$；又有乘法可塑性：$c\,r^e\pmod n$ 是 $mr\pmod n$ 的密文。因此实际加密要使用完整方案，如带随机种子编码的 RSAES-OAEP；模幂运算原语本身不提供协议安全性。参见 [RFC 8017 §5、§7.1.1](https://www.rfc-editor.org/rfc/rfc8017.html#section-7.1.1) 对原语边界和随机化编码的规定。
 <!-- bilingual-en:start -->
-The public key lets anyone encrypt without revealing the inverse exponent $d$. A real system must also use randomized padding: “textbook RSA” is deterministic and malleable, so it is not secure as a protocol on its own.
+The public key allows anyone to evaluate the encryption map without directly revealing $d$. Textbook RSA is deterministic: the same $m$ always gives the same $c$. It is also multiplicatively malleable: $c\,r^e\pmod n$ encrypts $mr\pmod n$. Actual encryption therefore uses a complete scheme, such as RSAES-OAEP with randomized encoding. Modular exponentiation alone does not provide protocol security; see [RFC 8017 §5 and §7.1.1](https://www.rfc-editor.org/rfc/rfc8017.html#section-7.1.1).
 <!-- bilingual-en:end -->
 
 ### 15.2 正确性：不能偷用互素假设
@@ -942,9 +979,9 @@ The public key lets anyone encrypt without revealing the inverse exponent $d$. A
 *15.2 Correctness without an unjustified coprimality assumption*
 <!-- bilingual-en:end -->
 
-由 $ed\equiv1\pmod{(p-1)(q-1)}$，存在整数 $t$ 使
+由 $e,d$ 为正整数及 $ed\equiv1\pmod{(p-1)(q-1)}$，存在非负整数 $t$ 使
 <!-- bilingual-en:start -->
-Since $ed\equiv1\pmod{(p-1)(q-1)}$, there is an integer $t$ such that
+Since $e,d$ are positive integers and $ed\equiv1\pmod{(p-1)(q-1)}$, there is a nonnegative integer $t$ such that
 <!-- bilingual-en:end -->
 
 $$
@@ -957,10 +994,10 @@ If $\gcd(m,n)=1$, Euler's theorem immediately gives $m^{ed}\equiv m\pmod n$. How
 <!-- bilingual-en:end -->
 
 - 若 $p\mid m$，则 $m^{ed}\equiv0\equiv m\pmod p$；
-- 若 $p\nmid m$，则 $ed\equiv1\pmod{p-1}$，Fermat 给 $m^{ed}=m(m^{p-1})^k\equiv m\pmod p$。
+- 若 $p\nmid m$，则令 $k=t(q-1)\ge0$，Fermat 给 $m^{ed}=m(m^{p-1})^k\equiv m\pmod p$。
 <!-- bilingual-en:start -->
 - If $p\mid m$, $m^{ed}\equiv0\equiv m\pmod p$;
-- If $p\nmid m$, then $ed\equiv1\pmod{p-1}$, and Fermat's little theorem gives $m^{ed}=m(m^{p-1})^k\equiv m\pmod p$.
+- If $p\nmid m$, set $k=t(q-1)\ge0$. Fermat's little theorem gives $m^{ed}=m(m^{p-1})^k\equiv m\pmod p$.
 <!-- bilingual-en:end -->
 
 所以无论哪种情形都有 $m^{ed}\equiv m\pmod p$。同理模 $q$ 成立。$p,q$ 互素，CRT 推出
@@ -972,9 +1009,9 @@ $$
 m^{ed}\equiv m\pmod{pq}.
 $$
 
-这一步明确覆盖了 $m=0$、$p\mid m$、$q\mid m$ 等边界情况。
+这一步明确覆盖了 $m=0$、$p\mid m$、$q\mid m$ 等边界情况。又因 $c^d\equiv(m^e)^d=m^{ed}\pmod n$，取 $\{0,\ldots,n-1\}$ 中的唯一代表便精确恢复 $m$，这就是 [[RSA全消息正确性]]。
 <!-- bilingual-en:start -->
-This argument explicitly covers the boundary cases $m=0$, $p\mid m$, and $q\mid m$.
+This argument explicitly covers $m=0$, $p\mid m$, and $q\mid m$. Moreover, $c^d\equiv(m^e)^d=m^{ed}\pmod n$; selecting the unique representative in $\{0,\ldots,n-1\}$ recovers $m$ exactly. This establishes [[RSA全消息正确性|RSA correctness for every message]].
 <!-- bilingual-en:end -->
 
 ### 15.3 可行性与安全假设
@@ -987,9 +1024,9 @@ This argument explicitly covers the boundary cases $m=0$, $p\mid m$, and $q\mid 
 A legitimate user must be able to generate large random primes and efficiently perform primality testing, gcd computation, modular inversion, and repeated squaring. If an attacker factors $n$ to recover $p$ and $q$, they can compute $\varphi(n)=(p-1)(q-1)$ and recover $d$.
 <!-- bilingual-en:end -->
 
-反之，若已知 $n$ 与 $\varphi(n)$，则
+在本节 $n=pq$、$p\ne q$ 为素数的条件下，若已知 $n$ 与 $\varphi(n)$，则
 <!-- bilingual-en:start -->
-Conversely, if $n$ and $\varphi(n)$ are known,
+Under this section's assumption $n=pq$ for distinct primes $p,q$, knowing $n$ and $\varphi(n)$ gives
 <!-- bilingual-en:end -->
 
 $$
@@ -999,6 +1036,11 @@ $$
 $p,q$ 是方程 $X^2-(p+q)X+n=0$ 的两根，故也能因式分解 $n$。课程中的 “Reducing Factoring to SAT” 用来说明：一个具体计算问题可编码为布尔可满足性问题；它不等于证明 SAT 或 factoring 在经典计算上容易。
 <!-- bilingual-en:start -->
 The numbers $p,q$ are the two roots of $X^2-(p+q)X+n=0$, so this also factors $n$. The course segment “Reducing Factoring to SAT” shows that a concrete computational problem can be encoded as a Boolean satisfiability problem; it does not prove that SAT or factoring is easy on a classical computer.
+<!-- bilingual-en:end -->
+
+这里须区分[[RSA安全边界|分解模数、恢复私钥、逆转密文和完整方案安全性]]。已知分解足以恢复私钥；但不能据此把“任意方式逆转 RSA 密文”与因数分解说成已证明等价，更不能由因数分解困难直接推出裸 RSA 安全。Session 15 阅读第 3 页明确保留了这个逻辑缺口。
+<!-- bilingual-en:start -->
+Distinguish [[RSA安全边界|factoring the modulus, recovering a private key, inverting ciphertexts, and scheme security]]. Factoring suffices to recover a private key. It does not establish that every method of RSA inversion is equivalent to factoring, nor that factoring hardness makes textbook RSA secure. Session 15, PDF page 3, explicitly distinguishes these claims.
 <!-- bilingual-en:end -->
 
 ### 官方顺序、资源与在线题（4 prompts）
@@ -1011,7 +1053,12 @@ The numbers $p,q$ are the two roots of $X^2-(p+q)X+n=0$, so this also factors $n
 Order: RSA Public Key Encryption → RSA Encryption → Reducing Factoring to SAT → Relative Primality → RSA computations.
 <!-- bilingual-en:end -->
 
-阅读：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session15.pdf]]。讲稿：[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/ZUZ8VbX1YNQ.pdf]]、[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/yWIQCewgfwY.pdf]]。Slides：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_RSA_Encytion.pdf]]、[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_FactoringSAT.pdf]]。
+阅读：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session15.pdf#page=2|p.2：RSA 密钥、消息与解密步骤]]；[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session15.pdf#page=3|p.3：因数分解与 RSA 逆转的安全边界]]；[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session15.pdf#page=4|p.4：乘法电路归约到 SAT]]。讲稿：[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/ZUZ8VbX1YNQ.pdf#page=3|pp.3–4：RSA 流程；pp.6–7：素性测试讨论与安全区分]]、[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/yWIQCewgfwY.pdf#page=1|pp.1–3：逐位调用 SAT 搜索因子]]。Slides：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_RSA_Encytion.pdf#page=2|pp.2–4：密钥、互素消息的 Euler 证明及可行性]]、[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_FactoringSAT.pdf#page=1|pp.1–3：因数分解的 SAT 编码]]。
+
+下面 2.4.5 的“300 位素数、600 位合数”保留的是 2015 年课堂题设，不是当前部署参数建议。RSA 视频讲稿还把 Fermat 测试的失败概率界说得过强；一般合数（尤其 Carmichael 数）不满足该统一界，不能把这一段当作可靠素性测试的完整规范。
+<!-- bilingual-en:start -->
+The “300-digit primes and 600-digit composite” in 2.4.5 below are the 2015 exercise assumptions, not a current deployment recommendation. The RSA transcript also overstates a failure-probability bound for Fermat testing. General composites, especially Carmichael numbers, need not satisfy that uniform bound, so this passage is not a complete specification of a reliable primality test.
+<!-- bilingual-en:end -->
 
 | block | prompt | 官方答案 |
 |---|---|---|
@@ -1035,7 +1082,7 @@ Order: RSA Public Key Encryption → RSA Encryption → Reducing Factoring to SA
 *In-class questions (unofficial independent solutions)*
 <!-- bilingual-en:end -->
 
-原题：[[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp15.pdf]]。
+原题：[[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp15.pdf#page=1|p.1：小型 RSA、已知欧拉函数恢复密钥及因子]]；[[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp15.pdf#page=2|p.2：Problem 3 的全消息与互异素数乘积证明]]；[[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp15.pdf#page=3|p.3：RSA 步骤与正整数密钥范围]]。
 
 > [!example]- CP15 Problem 1：完整的小型 RSA 演算
 > 选 $p=11,q=17$，则 $n=187,\varphi(n)=160$。选 $e=3$，因 $\gcd(3,160)=1$；$3\cdot107=321\equiv1\pmod{160}$，所以 $d=107$。公钥 $(3,187)$，私钥 $(107,187)$。
@@ -1049,27 +1096,27 @@ Order: RSA Public Key Encryption → RSA Encryption → Reducing Factoring to SA
 > [!example]- CP15 Problem 2：知道 $\varphi(n)$ 就能破解
 > (a) 由公开 $e$ 与 $\varphi(n)$ 求 $d=e^{-1}\pmod{\varphi(n)}$，即可解密。
 >
-> (b) 若 $n=pq$，则 $\varphi(n)=pq-p-q+1=n-(p+q)+1$，故 $S=p+q=n-\varphi(n)+1$。判别式 $S^2-4n=(p-q)^2$，于是
+> (b) 若 $n=pq$ 且 $p,q$ 为不同素数，则 $\varphi(n)=pq-p-q+1=n-(p+q)+1$，故 $S=p+q=n-\varphi(n)+1$。判别式 $S^2-4n=(p-q)^2$，于是
 > $$p,q=\frac{S\pm\sqrt{S^2-4n}}2.$$
 > <!-- bilingual-en:start -->
 > (a) Given the public exponent $e$ and $\varphi(n)$, compute $d=e^{-1}\pmod{\varphi(n)}$ and decrypt normally.
-> (b) If $n=pq$, then $\varphi(n)=pq-p-q+1=n-(p+q)+1$, and hence $S=p+q=n-\varphi(n)+1$. The discriminant is $S^2-4n=(p-q)^2$, so
+> (b) If $n=pq$ for distinct primes $p,q$, then $\varphi(n)=pq-p-q+1=n-(p+q)+1$, and hence $S=p+q=n-\varphi(n)+1$. The discriminant is $S^2-4n=(p-q)^2$, so
 > $$p,q=\frac{S\pm\sqrt{S^2-4n}}2.$$
 > <!-- bilingual-en:end -->
 
 > [!example]- CP15 Problem 3：去掉 $\gcd(m,n)=1$ 限制
 > (a) 互素时 $m^{ed}=m(m^{\varphi(n)})^t\equiv m$。
 >
-> (b) 若 $a\equiv1\pmod{p-1}$：当 $p\mid m$ 时两边均为 $0$；否则 Fermat 给 $m^a=m(m^{p-1})^t\equiv m\pmod p$。
+> (b) 若 $a\ge1$ 为整数且 $a\equiv1\pmod{p-1}$：当 $p\mid m$ 时 $m^a,m$ 均为 $0\pmod p$；否则写 $a=1+t(p-1)$、$t\ge0$，Fermat 给 $m^a=m(m^{p-1})^t\equiv m\pmod p$。
 >
 > (c) 若不同素数 $p_i$ 都整除 $a-b$，其乘积也整除 $a-b$；这是反复使用“互素因子分别整除则乘积整除”。
 >
-> (d) $a\equiv1\pmod{\varphi(n)}$ 蕴含对每个 $p_i\mid n$ 都有 $a\equiv1\pmod{p_i-1}$。由 (b) 得 $m^a\equiv m\pmod{p_i}$，由 (c) 合并为模 $n$ 同余。取 $a=ed$ 即为 RSA 正确性。
+> (d) 题设必须保留：$n=p_1\cdots p_r$ 是**互异素数之积**，且 $a\ge1$ 为整数。此时 $\varphi(n)=\prod_i(p_i-1)$，所以 $a\equiv1\pmod{\varphi(n)}$ 蕴含每个 $a\equiv1\pmod{p_i-1}$。由 (b) 得 $m^a\equiv m\pmod{p_i}$，由 (c) 合并为模 $n$ 同余。取 $r=2,a=ed$ 即为 RSA 正确性。不能推广到任意合数：$n=4,a=3,m=2$ 满足 $a\equiv1\pmod{\varphi(4)}$，但 $2^3\equiv0\not\equiv2\pmod4$。
 > <!-- bilingual-en:start -->
 > (a) When $\gcd(m,n)=1$, $m^{ed}=m(m^{\varphi(n)})^t\equiv m$.
-> (b) Suppose $a\equiv1\pmod{p-1}$. If $p\mid m$, both sides are $0$ modulo $p$; otherwise, Fermat's little theorem gives $m^a=m(m^{p-1})^t\equiv m\pmod p$.
+> (b) Suppose the integer $a\ge1$ satisfies $a\equiv1\pmod{p-1}$. If $p\mid m$, both $m^a$ and $m$ are $0$ modulo $p$. Otherwise, write $a=1+t(p-1)$ with $t\ge0$; Fermat's little theorem gives $m^a=m(m^{p-1})^t\equiv m\pmod p$.
 > (c) If the distinct primes $p_i$ all divide $a-b$, then, because they are pairwise coprime, their product also divides $a-b$. This repeatedly uses the fact that coprime divisors have a product that also divides the number.
-> (d) If $a\equiv1\pmod{\varphi(n)}$, then $a\equiv1\pmod{p_i-1}$ for every $p_i\mid n$. Part (b) gives $m^a\equiv m\pmod{p_i}$, and part (c) combines these congruences modulo $n$. Taking $a=ed$ proves RSA correctness.
+> (d) Retain the hypothesis that $n=p_1\cdots p_r$ is a product of **distinct primes**, and that $a\ge1$ is an integer. Then $\varphi(n)=\prod_i(p_i-1)$, so $a\equiv1\pmod{\varphi(n)}$ implies $a\equiv1\pmod{p_i-1}$ for every $i$. Part (b) gives $m^a\equiv m\pmod{p_i}$; part (c) combines them modulo $n$. Taking $r=2,a=ed$ proves RSA correctness. This does not hold for arbitrary composites: $n=4,a=3,m=2$ satisfies $a\equiv1\pmod{\varphi(4)}$, but $2^3\equiv0\not\equiv2\pmod4$.
 > <!-- bilingual-en:end -->
 
 ### 易错点、自检与知识链
@@ -1079,11 +1126,11 @@ Order: RSA Public Key Encryption → RSA Encryption → Reducing Factoring to SA
 
 - RSA 正确性是定理；“分解大整数在经典计算上足够难”是安全假设，不是本课证明的数学定理。
 - 指数逆元是模 $(p-1)(q-1)$ 求，不是模 $pq$ 求。
-- 现代协议不直接加密任意长文本；先编码、分块并使用经过标准化的 padding。
+- RSAES-OAEP 不直接加密任意长文本：编码后再执行 RSA 原语，单条消息长度受 $k-2hLen-2$ 字节约束，其中 $k$ 是模数的字节长度，$hLen$ 是所用散列的输出字节长度。不能把简单分块后逐块裸 RSA 当作安全方案。
 <!-- bilingual-en:start -->
 - RSA correctness is a theorem. The claim that factoring large integers is sufficiently hard on classical computers is a security assumption, not a mathematical theorem proved in this course.
 - The inverse exponent is computed modulo $(p-1)(q-1)$, not modulo $pq$.
-- Modern protocols do not directly encrypt any long text; encode, block, and use standardized padding.
+- RSAES-OAEP does not directly encrypt arbitrary-length text. It encodes before applying the RSA primitive and limits a message to $k-2hLen-2$ bytes, where $k$ is the modulus length and $hLen$ is the hash-output length in bytes. Splitting text into blocks and applying textbook RSA to each is not a secure scheme.
 <!-- bilingual-en:end -->
 
 > [!question]- 自检 1
@@ -1105,9 +1152,9 @@ Order: RSA Public Key Encryption → RSA Encryption → Reducing Factoring to SA
 > Why does decryption still work when the message happens to be divisible by $p$?
 > <!-- bilingual-en:end -->
 > [!success]- 答案
-> 模 $p$ 时原消息与任意正幂均为 $0$；模 $q$ 使用 Fermat，最后由 CRT 合并。
+> 模 $p$ 时原消息与任意正幂均为 $0$；模 $q$ 时若 $q\mid m$ 也同为 $0$，否则使用 Fermat。最后由 CRT 合并，因此也覆盖 $m=0$。
 > <!-- bilingual-en:start -->
-> Modulo $p$, both the message and every positive power of it are $0$. Modulo $q$, use Fermat's little theorem, then combine the two congruences with the CRT.
+> Modulo $p$, both the message and every positive power of it are $0$. Modulo $q$, they are also $0$ if $q\mid m$; otherwise use Fermat's little theorem. Combine the congruences with the CRT. This includes $m=0$.
 > <!-- bilingual-en:end -->
 
 > [!question]- 自检 3
@@ -1122,9 +1169,9 @@ Order: RSA Public Key Encryption → RSA Encryption → Reducing Factoring to SA
 > $p+q=55-40+1=16$, so the roots are $(16\pm\sqrt{256-220})/2=(16\pm6)/2$, namely $5$ and $11$.
 > <!-- bilingual-en:end -->
 
-**知识链：**逆元 + Euler/FLT + CRT → RSA 正确性；快速模指数 → 可行性；因式分解 → 安全边界。
+**知识链：**[[模逆元存在条件|逆元存在条件]] + [[欧拉定理|Euler]] / [[费马小定理|FLT]] + [[中国剩余定理|CRT]] → [[RSA全消息正确性]]；[[模重复平方法|快速模指数]] → [[RSA公钥加密|可行性]]；因式分解 → [[RSA安全边界]]。
 <!-- bilingual-en:start -->
-**Knowledge chain:** modular inverses + Euler/FLT + CRT → RSA correctness; fast modular exponentiation → feasibility; factorization → security boundary.
+**Knowledge chain:** [[模逆元存在条件|inverse existence]] + [[欧拉定理|Euler]] / [[费马小定理|FLT]] + [[中国剩余定理|CRT]] → [[RSA全消息正确性|RSA correctness for every message]]; [[模重复平方法|fast modular exponentiation]] → [[RSA公钥加密|feasibility]]; factorization → [[RSA安全边界|security boundary]].
 <!-- bilingual-en:end -->
 
 ---
@@ -1136,9 +1183,9 @@ Order: RSA Public Key Encryption → RSA Encryption → Reducing Factoring to SA
 *16.1 Distinguishing the basic definitions*
 <!-- bilingual-en:end -->
 
-[[图的基本结构、路径与遍历#先声明你建的是什么图|有向图]] $G=(V,E)$ 中，边是有序对 $(u,v)$，记作 $u\to v$。允许自环与否、是否允许平行边必须由模型声明；本课程默认边集合，因此同方向平行边不重复。
+[[图类型的建模边界|有向图]] $G=(V,E)$ 中，边是有序对 $(u,v)$，记作 $u\to v$。允许自环与否、是否允许平行边必须由模型声明；本课程默认边集合，因此同方向平行边不重复。
 <!-- bilingual-en:start -->
-In a [[图的基本结构、路径与遍历#先声明你建的是什么图|directed graph]] $G=(V,E)$, an edge is an ordered pair $(u,v)$, written $u\to v$. The model must state whether self-loops and parallel edges are allowed. This course treats $E$ as a set, so duplicate parallel edges in the same direction are not distinguished.
+In a [[图类型的建模边界|directed graph]] $G=(V,E)$, an edge is an ordered pair $(u,v)$, written $u\to v$. The model must state whether self-loops and parallel edges are allowed. This course treats $E$ as a set, so duplicate parallel edges in the same direction are not distinguished.
 <!-- bilingual-en:end -->
 
 - **walk**：$v_0,e_1,v_1,\ldots,e_k,v_k$，允许重复顶点和边；长度为 $k$。
@@ -1190,9 +1237,9 @@ Equality holds if and only if $x$ lies on some shortest path from $u$ to $v$. Th
 *16.3 Adjacency matrices and walk counting*
 <!-- bilingual-en:end -->
 
-给顶点编号 $1,\ldots,n$，[[图的基本结构、路径与遍历#先声明你建的是什么图|邻接矩阵]] $A$ 定义为 $A_{ij}=1$ 当且仅当 $i\to j$。矩阵乘法给
+给顶点编号 $1,\ldots,n$，[[邻接表与邻接矩阵|邻接矩阵]] $A$ 定义为 $A_{ij}=1$ 当且仅当 $i\to j$。矩阵乘法给
 <!-- bilingual-en:start -->
-Number the vertices $1,\ldots,n$. The [[图的基本结构、路径与遍历#先声明你建的是什么图|adjacency matrix]] $A$ is defined by $A_{ij}=1$ if and only if $i\to j$. Matrix multiplication gives
+Number the vertices $1,\ldots,n$. The [[邻接表与邻接矩阵|adjacency matrix]] $A$ is defined by $A_{ij}=1$ if and only if $i\to j$. Matrix multiplication gives
 <!-- bilingual-en:end -->
 
 $$
@@ -1469,9 +1516,9 @@ The positive-walk relation $E^+$ records reachability by a walk of positive leng
 *17.1 DAGs and topological ordering*
 <!-- bilingual-en:end -->
 
-[[无环图：树、生成树、DAG 与拓扑排序#DAG 与拓扑排序|directed acyclic graph, DAG]] 是没有有向 cycle 的 digraph。课程先用 prerequisites 建模：边 $u\to v$ 表示 $u$ 必须先完成；正 walk 关系给出间接先修关系。
+[[DAG 与拓扑序等价|directed acyclic graph, DAG]] 是没有有向 cycle 的 digraph。课程先用 prerequisites 建模：边 $u\to v$ 表示 $u$ 必须先完成；正 walk 关系给出间接先修关系。
 <!-- bilingual-en:start -->
-A [[无环图：树、生成树、DAG 与拓扑排序#DAG 与拓扑排序|directed acyclic graph, or DAG]] is a digraph with no directed cycle. The course first models prerequisites: an edge $u\to v$ means that $u$ must be completed before $v$, and the positive-walk relation records indirect prerequisites.
+A [[DAG 与拓扑序等价|directed acyclic graph, or DAG]] is a digraph with no directed cycle. The course first models prerequisites: an edge $u\to v$ means that $u$ must be completed before $v$, and the positive-walk relation records indirect prerequisites.
 <!-- bilingual-en:end -->
 
 **有限 DAG 必有入度为 $0$ 的顶点。** 反证：若每点都有入边，从任一点不断沿入边逆行。有限性保证某顶点重复，重复段形成有向 cycle，矛盾。对出度为 $0$ 的顶点同理。
@@ -1479,9 +1526,9 @@ A [[无环图：树、生成树、DAG 与拓扑排序#DAG 与拓扑排序|direct
 **Every finite DAG has a vertex of indegree $0$.** Suppose instead that every vertex had an incoming edge. Starting from any vertex, repeatedly follow incoming edges backwards. Because the graph is finite, some vertex must repeat, and the repeated segment forms a directed cycle—a contradiction. The same argument, with directions reversed, gives a vertex of outdegree $0$.
 <!-- bilingual-en:end -->
 
-[[无环图：树、生成树、DAG 与拓扑排序#DAG 与拓扑排序|拓扑排序]]可由此递归构造：反复删除一个入度为 $0$ 的点并输出。每条边的起点必在终点之前。反过来，若图存在拓扑顺序，就不可能有 cycle，因为沿 cycle 每一步都要求位置严格增加，最后却回到起点。
+[[Kahn 拓扑排序与环证书|拓扑排序]]可由此递归构造：反复删除一个入度为 $0$ 的点并输出。每条边的起点必在终点之前。反过来，若图存在拓扑顺序，就不可能有 cycle，因为沿 cycle 每一步都要求位置严格增加，最后却回到起点。
 <!-- bilingual-en:start -->
-A [[无环图：树、生成树、DAG 与拓扑排序#DAG 与拓扑排序|topological ordering]] can therefore be constructed recursively: repeatedly output and delete a vertex of indegree $0$. The tail of every edge appears before its head. Conversely, a graph with a topological ordering cannot contain a cycle, because positions would have to increase strictly around the cycle and still return to the starting vertex.
+A [[Kahn 拓扑排序与环证书|topological ordering]] can therefore be constructed recursively: repeatedly output and delete a vertex of indegree $0$. The tail of every edge appears before its head. Conversely, a graph with a topological ordering cannot contain a cycle, because positions would have to increase strictly around the cycle and still return to the starting vertex.
 <!-- bilingual-en:end -->
 
 ![[98_attachment/mathematics_for_computer_science/mit6_042j/unit02-dag-topological-order.png|900]]
@@ -1516,9 +1563,9 @@ If each task takes a unit of time, the dependencies form a DAG:
 - With $P$ processors, total work gives the additional lower bound $\lceil n/P\rceil$.
 <!-- bilingual-en:end -->
 
-无限处理器下，按“最长前驱链长度”分层：第 $i$ 层放所有最长前驱链长度为 $i$ 的任务。边必从低层指向高层，故每层可并行；层数恰等于最长 chain。这证明该下界可达。
+[[DAG 关键路径与最短工期|无限处理器下，按“最长前驱链长度”分层]]：第 $i$ 层放所有最长前驱链长度为 $i$ 的任务。边必从低层指向高层，故每层可并行；层数恰等于最长 chain。这证明该下界可达。
 <!-- bilingual-en:start -->
-With unlimited processors, place a task in layer $i$ when the longest predecessor chain ending at that task has length $i$. Every dependency edge points from a lower layer to a higher one, so all tasks in a layer can run in parallel. The number of layers equals the longest-chain length, showing that this lower bound is attainable.
+[[DAG 关键路径与最短工期|With unlimited processors]], place a task in layer $i$ when the longest predecessor chain ending at that task has length $i$. Every dependency edge points from a lower layer to a higher one, so all tasks in a layer can run in parallel. The number of layers equals the longest-chain length, showing that this lower bound is attainable.
 <!-- bilingual-en:end -->
 
 有任务时长 $w(v)$ 时，critical path 的权重和仍是下界，但还要同时检查总工作量/处理器数；两者都只是下界，非抢占调度可能因空闲缝隙而更长。
@@ -1970,12 +2017,12 @@ Every finite partial order can be represented by set inclusion via $x\mapsto D(x
 *19.1 simple graph and degree*
 <!-- bilingual-en:end -->
 
-[[图的基本结构、路径与遍历#先声明你建的是什么图|简单图]] $G=(V,E)$ 的边是二元无序集合 $\{u,v\}$，无自环、无平行边。顶点 $v$ 的 degree $\deg(v)$ 是以它为端点的边数。
+[[图类型的建模边界|简单图]] $G=(V,E)$ 的边是二元无序集合 $\{u,v\}$，无自环、无平行边。顶点 $v$ 的 degree $\deg(v)$ 是以它为端点的边数。
 <!-- bilingual-en:start -->
-An edge of a [[图的基本结构、路径与遍历#先声明你建的是什么图|simple graph]] $G=(V,E)$ is a two-element unordered set $\{u,v\}$. There are no self-loops or parallel edges. The degree $\deg(v)$ is the number of edges incident to vertex $v$.
+An edge of a [[图类型的建模边界|simple graph]] $G=(V,E)$ is a two-element unordered set $\{u,v\}$. There are no self-loops or parallel edges. The degree $\deg(v)$ is the number of edges incident to vertex $v$.
 <!-- bilingual-en:end -->
 
-[[图的基本结构、路径与遍历#Walk、path、cycle 与可达性|Handshaking lemma]]：
+[[无向图握手定理|Handshaking lemma]]：
 
 $$
 \sum_{v\in V}\deg(v)=2|E|.
@@ -2003,9 +2050,9 @@ Corollary: the number of odd-degree vertices is even. The total degree sum is ev
 *19.2 Graph isomorphism*
 <!-- bilingual-en:end -->
 
-[[图的基本结构、路径与遍历#先声明你建的是什么图|图同构]]是双射 $f:V(G)\to V(H)$，满足
+[[图同构的定义与不变量|图同构]]是双射 $f:V(G)\to V(H)$，满足
 <!-- bilingual-en:start -->
-A [[图的基本结构、路径与遍历#先声明你建的是什么图|graph isomorphism]] is a bijection $f:V(G)\to V(H)$ satisfying
+A [[图同构的定义与不变量|graph isomorphism]] is a bijection $f:V(G)\to V(H)$ satisfying
 <!-- bilingual-en:end -->
 
 $$
@@ -2241,9 +2288,9 @@ $$
 c:V\to\{1,2,\ldots,k\},
 $$
 
-满足每条边 $\{u,v\}\in E$ 的两端颜色不同，即 $c(u)\ne c(v)$。图的 [[图着色与色数#如何证明 chromatic number|着色数]]
+满足每条边 $\{u,v\}\in E$ 的两端颜色不同，即 $c(u)\ne c(v)$。图的 [[Proper 着色与独立集划分|着色数]]
 <!-- bilingual-en:start -->
-such that the endpoints of every edge $\{u,v\}\in E$ receive different colors: $c(u)\ne c(v)$. The [[图着色与色数#如何证明 chromatic number|chromatic number]] of the graph
+such that the endpoints of every edge $\{u,v\}\in E$ receive different colors: $c(u)\ne c(v)$. The [[Proper 着色与独立集划分|chromatic number]] of the graph
 <!-- bilingual-en:end -->
 
 $$
@@ -2296,9 +2343,9 @@ In a compiler, each variable is a vertex. If two variables' **live ranges** over
 
 ### 20.2 bipartite iff no odd cycle
 
-图 $G$ 是 [[图着色与色数#Bipartite、二着色与 odd cycle 是同一件事|二分图]]，若 $V$ 可分成不交集 $L,R$，且每条边都一端在 $L$、一端在 $R$。这等价于 $G$ 可 $2$-color。
+图 $G$ 是 [[二着色与奇环|二分图]]，若 $V$ 可分成不交集 $L,R$，且每条边都一端在 $L$、一端在 $R$。这等价于 $G$ 可 $2$-color。
 <!-- bilingual-en:start -->
-A graph $G$ is [[图着色与色数#Bipartite、二着色与 odd cycle 是同一件事|bipartite]] if $V$ can be partitioned into disjoint sets $L,R$ such that every edge has one endpoint in each set. This is equivalent to $G$ being $2$-colorable.
+A graph $G$ is [[二着色与奇环|bipartite]] if $V$ can be partitioned into disjoint sets $L,R$ such that every edge has one endpoint in each set. This is equivalent to $G$ being $2$-colorable.
 <!-- bilingual-en:end -->
 
 > [!theorem] Odd-cycle characterization
@@ -2350,9 +2397,9 @@ Two vertices are **connected** when a path joins them. “There exists a path”
 - transitive: concatenate two paths to obtain a walk, then remove repeated segments to obtain a path.
 <!-- bilingual-en:end -->
 
-它的等价类就是 [[图的基本结构、路径与遍历#Walk、path、cycle 与可达性|连通分量]]。图 connected 当且仅当只有一个 component。
+它的等价类就是 [[无向图连通分量|连通分量]]。图 connected 当且仅当只有一个 component。
 <!-- bilingual-en:start -->
-Its equivalence classes are the [[图的基本结构、路径与遍历#Walk、path、cycle 与可达性|connected components]]. A graph is connected if and only if it has exactly one component.
+Its equivalence classes are the [[无向图连通分量|connected components]]. A graph is connected if and only if it has exactly one component.
 <!-- bilingual-en:end -->
 
 一条边 $e$ 是 **bridge/cut edge**，若删除 $e$ 后 component 数增加。一个顶点 $v$ 是 **cut vertex/articulation point**，若删除 $v$ 及其 incident edges 后 component 数增加（对原本 connected 的图，这就是删点后不再 connected）。边在某个 cycle 上当且仅当它不是 bridge：若在 cycle 上，删边后可绕行；若删边后两端仍有 path，该 path 加原边形成 cycle。
@@ -2632,9 +2679,9 @@ This section combines connectivity and acyclicity into a minimal skeleton: a tre
 *21.1 Equivalent characterizations of trees*
 <!-- bilingual-en:end -->
 
-一张 finite simple graph $T=(V,E)$ 是 [[无环图：树、生成树、DAG 与拓扑排序#Tree 的等价刻画|树]]，若它 **connected 且 acyclic**。不要把这两个形容词当成互不相干的条件：它们联合后迫使 tree 恰好处在“保持全部顶点连通”的边数下界。
+一张 finite simple graph $T=(V,E)$ 是 [[有限树的等价刻画|树]]，若它 **connected 且 acyclic**。不要把这两个形容词当成互不相干的条件：它们联合后迫使 tree 恰好处在“保持全部顶点连通”的边数下界。
 <!-- bilingual-en:start -->
-A finite simple graph $T=(V,E)$ is a [[无环图：树、生成树、DAG 与拓扑排序#Tree 的等价刻画|tree]] if it is **connected and acyclic**. These conditions are not independent accidents: together they force a tree to use the minimum number of edges needed to keep all vertices connected.
+A finite simple graph $T=(V,E)$ is a [[有限树的等价刻画|tree]] if it is **connected and acyclic**. These conditions are not independent accidents: together they force a tree to use the minimum number of edges needed to keep all vertices connected.
 <!-- bilingual-en:end -->
 
 > [!theorem] Tree 的常用等价定义
@@ -2701,9 +2748,9 @@ Adding an edge between two nonadjacent vertices $u,v$ of a tree combines that ed
 *$1\Longleftrightarrow6$: $n-1$ edges*
 <!-- bilingual-en:end -->
 
-先证 leaf lemma：至少两个顶点的 finite tree 有至少两片 [[无环图：树、生成树、DAG 与拓扑排序#Tree 的等价刻画|叶子]]（degree $1$ 顶点）。取一条最长 simple path $v_0,\ldots,v_m$。若 $v_0$ 还有不是 $v_1$ 的邻居 $w$，则 $w$ 若在路上会造成 cycle，若不在路上则 $w,v_0,\ldots,v_m$ 比原 path 更长；两者皆矛盾。故 $\deg(v_0)=1$，同理 $\deg(v_m)=1$。
+先证 leaf lemma：至少两个顶点的 finite tree 有至少两片 [[有限树的两叶定理|叶子]]（degree $1$ 顶点）。取一条最长 simple path $v_0,\ldots,v_m$。若 $v_0$ 还有不是 $v_1$ 的邻居 $w$，则 $w$ 若在路上会造成 cycle，若不在路上则 $w,v_0,\ldots,v_m$ 比原 path 更长；两者皆矛盾。故 $\deg(v_0)=1$，同理 $\deg(v_m)=1$。
 <!-- bilingual-en:start -->
-First prove the leaf lemma: every finite tree with at least two vertices has at least two [[无环图：树、生成树、DAG 与拓扑排序#Tree 的等价刻画|leaves]] (vertices of degree $1$). Choose a longest simple path $v_0,\ldots,v_m$. If $v_0$ had a neighbor $w\ne v_1$, then either $w$ lies on the path, creating a cycle, or it lies off the path, making $w,v_0,\ldots,v_m$ a longer path. Both are impossible. Hence $\deg(v_0)=1$, and similarly $\deg(v_m)=1$.
+First prove the leaf lemma: every finite tree with at least two vertices has at least two [[有限树的两叶定理|leaves]] (vertices of degree $1$). Choose a longest simple path $v_0,\ldots,v_m$. If $v_0$ had a neighbor $w\ne v_1$, then either $w$ lies on the path, creating a cycle, or it lies off the path, making $w,v_0,\ldots,v_m$ a longer path. Both are impossible. Hence $\deg(v_0)=1$, and similarly $\deg(v_m)=1$.
 <!-- bilingual-en:end -->
 
 现对 $n$ 归纳证 tree 有 $n-1$ 边。$n=1$ 时无边。$n\ge2$ 时取 leaf $v$，删去 $v$ 及其唯一 incident edge；所得图仍 connected 且 acyclic，是 $n-1$ 顶点 tree。归纳假设给它 $n-2$ 边，加回一边得 $n-1$。
@@ -2727,9 +2774,9 @@ Conversely, start from any finite connected graph and delete one edge from a cyc
 *21.2 Forests, leaves, and two-coloring*
 <!-- bilingual-en:end -->
 
-[[无环图：树、生成树、DAG 与拓扑排序#Tree 的等价刻画|森林]]是 acyclic graph，每个 connected component 都是 tree。若 forest 有 $n$ 个顶点、$c$ 个 components，则
+[[Forest 的边数公式|森林]]是 acyclic graph，每个 connected component 都是 tree。若 forest 有 $n$ 个顶点、$c$ 个 components，则
 <!-- bilingual-en:start -->
-A [[无环图：树、生成树、DAG 与拓扑排序#Tree 的等价刻画|forest]] is an acyclic graph; every connected component is a tree. If a forest has $n$ vertices and $c$ components, then
+A [[Forest 的边数公式|forest]] is an acyclic graph; every connected component is a tree. If a forest has $n$ vertices and $c$ components, then
 <!-- bilingual-en:end -->
 
 $$
@@ -2746,9 +2793,9 @@ because component $i$ has $n_i-1$ edges, and summing gives $\sum_i(n_i-1)=n-c$.
 Every tree is $2$-colorable. One proof applies the Session 20 theorem because a tree has no odd cycle. More constructively, choose a root $r$ and color each vertex by the parity of the unique $r$–$v$ path length. Every tree edge changes depth by $1$, so its endpoints receive different colors.
 <!-- bilingual-en:end -->
 
-按本课“leaf = degree-$1$ 顶点”的定义，边界必须分开：$n=1$ 时唯一顶点 degree $0$，没有 leaf；$n=2$ 时唯一的 tree 是 $K_2$，两个顶点都是 leaves。对 $n\ge3$，leaves 至少 $2$、至多 $n-1$：下界由 leaf lemma；若所有 $n\ge3$ 个顶点都 degree $1$，图只能是若干不交的单边，不可能 connected；star $K_{1,n-1}$ 达到上界 $n-1$。
+本课 2015 Session 21 reading 把 leaf 定义为 degree-$1$ 顶点；按这个口径，$n=1$ 时唯一顶点 degree $0$，没有 leaf，$n=2$ 时 $K_2$ 的两个顶点都是 leaves。2018 主教材改用“forest 中 degree 至多 $1$”的口径，因而把单点 tree 的顶点也算作 leaf；两种约定对至少两个顶点的 tree 没有差别。对 $n\ge3$，leaves 至少 $2$、至多 $n-1$：下界由 leaf lemma；若所有 $n\ge3$ 个顶点都 degree $1$，图只能是若干不交的单边，不可能 connected；star $K_{1,n-1}$ 达到上界 $n-1$。
 <!-- bilingual-en:start -->
-Under this course's definition, a leaf has degree $1$, so the boundary cases must be separated. For $n=1$, the sole vertex has degree $0$ and there is no leaf. For $n=2$, the only tree is $K_2$, whose two vertices are both leaves. For $n\ge3$, a tree has at least $2$ and at most $n-1$ leaves. The leaf lemma gives the lower bound. If all $n\ge3$ vertices had degree $1$, the graph would be a disjoint union of edges and could not be connected. The star $K_{1,n-1}$ attains the upper bound.
+The 2015 Session 21 reading defines a leaf to have degree $1$. Under that convention, the sole vertex of a one-vertex tree has degree $0$ and is not a leaf, while both vertices of $K_2$ are leaves. The 2018 textbook instead calls every forest vertex of degree at most $1$ a leaf, so it counts the singleton vertex; the conventions agree for every tree with at least two vertices. For $n\ge3$, a tree has at least $2$ and at most $n-1$ leaves. The leaf lemma gives the lower bound. If all $n\ge3$ vertices had degree $1$, the graph would be a disjoint union of edges and could not be connected. The star $K_{1,n-1}$ attains the upper bound.
 <!-- bilingual-en:end -->
 
 ### 21.3 spanning tree 与 MST
@@ -2756,9 +2803,9 @@ Under this course's definition, a leaf has degree $1$, so the boundary cases mus
 *21.3 Spanning trees and minimum spanning trees*
 <!-- bilingual-en:end -->
 
-图 $G$ 的 **spanning subgraph** 保留 $G$ 的全部顶点，只可能删边。若该子图还是 tree，就是 [[无环图：树、生成树、DAG 与拓扑排序#生成树和最小生成树|生成树]]。一张 finite graph 有 spanning tree 当且仅当它 connected：
+图 $G$ 的 **spanning subgraph** 保留 $G$ 的全部顶点，只可能删边。若该子图还是 tree，就是 [[生成树的存在条件|生成树]]。一张 finite graph 有 spanning tree 当且仅当它 connected：
 <!-- bilingual-en:start -->
-A **spanning subgraph** of $G$ retains every vertex of $G$ and may delete only edges. If that subgraph is a tree, it is a [[无环图：树、生成树、DAG 与拓扑排序#生成树和最小生成树|spanning tree]]. A finite graph has a spanning tree if and only if it is connected:
+A **spanning subgraph** of $G$ retains every vertex of $G$ and may delete only edges. If that subgraph is a tree, it is a [[生成树的存在条件|spanning tree]]. A finite graph has a spanning tree if and only if it is connected:
 <!-- bilingual-en:end -->
 
 - 有 spanning tree 则其中的 path 也是原图 path，原图 connected；
@@ -2784,9 +2831,9 @@ $$
 w(T)=\sum_{e\in E(T)}w(e).
 $$
 
-[[无环图：树、生成树、DAG 与拓扑排序#生成树和最小生成树|最小生成树]]（MST）是总权重最小的 spanning tree。因 spanning trees 数量有限，connected finite weighted graph 一定存在 MST；权重相同时它可能不唯一。
+[[最小生成树的定义与唯一性|最小生成树]]（MST）是总权重最小的 spanning tree。因 spanning trees 数量有限，connected finite weighted graph 一定存在 MST；权重相同时它可能不唯一。
 <!-- bilingual-en:start -->
-A [[无环图：树、生成树、DAG 与拓扑排序#生成树和最小生成树|minimum spanning tree]] (MST) is a spanning tree of minimum total weight. A finite connected weighted graph has only finitely many spanning trees, so an MST exists. It need not be unique when edge weights tie.
+A [[最小生成树的定义与唯一性|minimum spanning tree]] (MST) is a spanning tree of minimum total weight. A finite connected weighted graph has only finitely many spanning trees, so an MST exists. It need not be unique when edge weights tie.
 <!-- bilingual-en:end -->
 
 ### 21.4 cut/gray-edge lemma
@@ -2796,7 +2843,7 @@ A [[无环图：树、生成树、DAG 与拓扑排序#生成树和最小生成�
 A partition of the vertices into two nonempty sets $S$ and $V\setminus S$ is a cut. An edge with one endpoint in each part is a crossing, or gray, edge.
 <!-- bilingual-en:end -->
 
-> [!theorem] Cut property（gray-edge lemma）
+> [!theorem] [[MST 割性质|Cut property（gray-edge lemma）]]
 > 给定任意 cut，其上权重最小的 crossing edge $e$ 属于某个 MST。若 $e$ 是该 cut 上唯一最轻边，则它属于每个 MST。
 > <!-- bilingual-en:start -->
 > For any cut, a minimum-weight edge $e$ crossing that cut belongs to some MST. If $e$ is the unique lightest edge crossing the cut, it belongs to every MST.
@@ -2831,14 +2878,14 @@ Because $T$ is already minimum, equality must hold and $T'$ is also an MST conta
 *21.5 Kruskal, Prim, and parallel component growth*
 <!-- bilingual-en:end -->
 
-**Kruskal.** 从空边集 $F$ 开始，按权重从小到大查看边；若加该边不产生 cycle就接受，否则跳过。当前 $F$ 始终是 forest。被接受的边连接两个不同 components，并是此时跨越对应 cut 的最轻可用边，因而由 cut property 是 safe edge。接受 $n-1$ 条后得 MST。
+**[[Kruskal 算法|Kruskal]].** 从空边集 $F$ 开始，按权重从小到大查看边；若加该边不产生 cycle 就接受，否则跳过。当前 $F$ 始终是 forest。被接受的边连接两个不同 components，并是其中一个 component cut 上的 light edge，因而由 cut property 是 safe edge。connected graph 中接受 $n-1$ 条后得 MST；disconnected graph 中扫描结束得到的是各 connected components 的 minimum spanning forest。
 <!-- bilingual-en:start -->
-**Kruskal.** Start with the empty edge set $F$ and examine edges in nondecreasing order of weight. Accept an edge if it creates no cycle; otherwise skip it. The current $F$ is always a forest. Every accepted edge joins two components and is the lightest available edge crossing the corresponding cut, so the cut property makes it safe. After accepting $n-1$ edges, the result is an MST.
+**[[Kruskal 算法|Kruskal]].** Start with the empty edge set $F$ and examine edges in nondecreasing order of weight. Accept an edge if it creates no cycle; otherwise skip it. The current $F$ is always a forest. Every accepted edge joins two components and is a light edge across the cut defined by either one, so the cut property makes it safe. On a connected graph, $n-1$ accepted edges form an MST; on a disconnected graph, scanning all edges yields a minimum spanning forest of the connected components.
 <!-- bilingual-en:end -->
 
-**Prim.** 从任意根 $r$ 的单点 tree $S$ 开始；每次选恰有一端在 $S$中的最轻边，把另一端加入。该边就是 cut $(S,V\setminus S)$ 的最轻边，故 safe。每次增一顶点且无 cycle，$n-1$ 次后得 MST。
+**[[Prim 算法|Prim]].** 从任意根 $r$ 的单点 tree $S$ 开始；每次选恰有一端在 $S$ 中的最轻边，把另一端加入。该边就是 cut $(S,V\setminus S)$ 的最轻边，故 safe。connected graph 中每次增一顶点且无 cycle，$n-1$ 次后得 MST；disconnected graph 上单次运行只覆盖根所在 component，需从未覆盖 component 重启才得到 minimum spanning forest。
 <!-- bilingual-en:start -->
-**Prim.** Start from the one-vertex tree $S=\{r\}$. At each step, choose the lightest edge with exactly one endpoint in $S$ and add its other endpoint. This is the lightest edge across the cut $(S,V\setminus S)$ and is therefore safe. Each step adds one vertex without creating a cycle, so after $n-1$ steps the result is an MST.
+**[[Prim 算法|Prim]].** Start from the one-vertex tree $S=\{r\}$. At each step, choose the lightest edge with exactly one endpoint in $S$ and add its other endpoint. This is the lightest edge across the cut $(S,V\setminus S)$ and is therefore safe. On a connected graph, each step adds one vertex without creating a cycle, so $n-1$ additions give an MST. On a disconnected graph, one run covers only the root's component; restart from uncovered components to obtain a minimum spanning forest.
 <!-- bilingual-en:end -->
 
 **Component-growth / Borůvka 观点。** 严格的安全版可写成“一次选一个当前 component，加入离开它的最轻边”：该 component 与其余顶点形成 cut，故每次加入的边都由 cut property 保证 safe。不同 components 可并行**计算**候选边，但接受候选边时必须保持当前已选边仍为 forest，并在每次合并后按新 component 重新解释 cut。若边权可并列，不经协调地同时接受所有候选边可能形成等权 cycle；需固定 tie-breaking 或只接受其中的无环子集。
@@ -2979,11 +3026,13 @@ Because $T$ is already minimum, equality must hold and $T'$ is also an MST conta
 - MST 只对 connected weighted graph 是一棵 spanning tree；不 connected 时对应对象是 minimum spanning forest。
 - 权重互异 $\Rightarrow$ MST 唯一；逆命题不成立，有重复权重的图也可恰有一个 MST。
 - Prim 选的是“跨越当前 tree cut 的最轻边”，不是全图尚未使用的最轻边；后者是 Kruskal 的视角。
+- Kruskal 在 disconnected graph 上自然保留多个 components；Prim 单次运行不会自动覆盖其余 components，必须显式重启。
 - “加边产生 cycle”在 tree 中恰产生一个 cycle，因为新边两端原来只有一条 path。
 <!-- bilingual-en:start -->
 - An MST is a spanning tree only for a connected weighted graph; the corresponding object for a disconnected graph is a minimum spanning forest.
 - Distinct edge weights imply a unique MST. The converse is false: a graph may have repeated edge weights and still have a unique MST.
 - Prim chooses the lightest edge across the cut defined by the current tree, not the globally lightest unused edge; the latter is Kruskal's perspective.
+- Kruskal naturally retains several components on a disconnected graph. One run of Prim does not cover the other components and must be restarted explicitly.
 - Adding an edge to a tree creates exactly one cycle because its endpoints were previously joined by exactly one path.
 <!-- bilingual-en:end -->
 
@@ -3042,9 +3091,9 @@ Because $T$ is already minimum, equality must hold and $T'$ is also an MST conta
 *Learning questions and prerequisites*
 <!-- bilingual-en:end -->
 
-一个“每人都有严格偏好”的双边分配问题，往往不是找总分最高的配对，而是排除任何一对双方都想背离当前结果的对象。本节问：Gale–Shapley/Mating Ritual 为什么必停、为什么稳定？“男方最优”究竟是定义还是定理？只给一张 bipartite graph 而没有偏好时，什么条件恰保证能完美匹配？前置知识是 invariant、bipartite graph、injection 与 path。
+一个“每人都有严格偏好”的双边分配问题，往往不是找总分最高的配对，而是排除任何一对双方都想背离当前结果的对象。本节问：Gale–Shapley/Mating Ritual 为什么必停、为什么稳定？“男方最优”究竟是定义还是定理？只给一张 bipartite graph 而没有偏好时，什么条件恰保证存在覆盖指定一侧的 matching（两侧等大时即 perfect）？前置知识是 invariant、bipartite graph、injection 与 path。
 <!-- bilingual-en:start -->
-A two-sided allocation problem with strict preferences is usually not about maximizing a total score; it asks whether any unmatched pair would both prefer to leave their current partners. This section asks why Gale–Shapley/deferred acceptance terminates and produces a stable matching. Is proposer optimality a definition or a theorem? If only a bipartite graph is given, without preferences, what condition guarantees a perfect matching? Prerequisites: invariants, bipartite graphs, injections, and paths.
+A two-sided allocation problem with strict preferences is usually not about maximizing a total score; it asks whether any pair not matched to each other would both prefer to leave their current partners. This section asks why Gale–Shapley/deferred acceptance terminates and produces a stable matching. Is proposer optimality a definition or a theorem? If only a bipartite graph is given, without preferences, what condition guarantees a matching that covers a designated side—and hence a perfect matching when the sides have equal size? Prerequisites: invariants, bipartite graphs, injections, and paths.
 <!-- bilingual-en:end -->
 
 ### 22.1 matching、rogue pair 与 stability
@@ -3201,9 +3250,9 @@ Thus the choice of proposer and receiver sides affects which stable matching the
 *22.5 bipartite matching and Hall's condition*
 <!-- bilingual-en:end -->
 
-现在忘掉偏好，只保留一张 bipartite graph $G=(L\cup R,E)$；边表示“允许配对”。一个 [[二分图匹配与 Hall 定理#从允许关系到 matching|匹配]] 是顶点互不重复的边集。若它覆盖 $L$ 的每个顶点，就给出一个从 $L$ 到 $R$ 的 total injection；若 $|L|=|R|$，则这也是 perfect matching。
+现在忘掉偏好，只保留一张 bipartite graph $G=(L\cup R,E)$；边表示“允许配对”。一个 [[匹配定义|匹配]] 是顶点互不重复的边集。若它覆盖 $L$ 的每个顶点，就给出一个从 $L$ 到 $R$ 的 total injection；若 $|L|=|R|$，则这也是 perfect matching。
 <!-- bilingual-en:start -->
-Now discard the preferences and retain only a bipartite graph $G=(L\cup R,E)$, where an edge means that a pair is allowed. A [[二分图匹配与 Hall 定理#从允许关系到 matching|matching]] is a set of pairwise vertex-disjoint edges. If it covers every vertex of $L$, it defines a total injection from $L$ to $R$; if $|L|=|R|$, it is also a perfect matching.
+Now discard the preferences and retain only a bipartite graph $G=(L\cup R,E)$, where an edge means that a pair is allowed. A [[匹配定义|matching]] is a set of pairwise vertex-disjoint edges. If it covers every vertex of $L$, it defines a total injection from $L$ to $R$; if $|L|=|R|$, it is also a perfect matching.
 <!-- bilingual-en:end -->
 
 对 $S\subseteq L$，定义邻居集
@@ -3220,7 +3269,7 @@ $$
 If $|N(S)|<|S|$, then $S$ is a **bottleneck**: its $|S|$ left vertices have fewer than $|S|$ possible partners on the right, so the pigeonhole principle rules out matching all of them one-to-one.
 <!-- bilingual-en:end -->
 
-> [!theorem] [[二分图匹配与 Hall 定理#Hall 定理：全覆盖恰好等价于没有瓶颈子集|Hall's Marriage Theorem]]
+> [!theorem] [[Hall 定理|Hall's Marriage Theorem]]
 > finite bipartite graph $G=(L\cup R,E)$ 有一个覆盖全部 $L$ 的 matching，当且仅当
 > $$
 > \forall S\subseteq L,\qquad |N(S)|\ge |S|.
@@ -3251,7 +3300,7 @@ If $|N(S)|<|S|$, then $S$ is a **bottleneck**: its $|S|$ left vertices have fewe
 
 记搜到的左点为 $S$，右点为 $T$。若搜到某个未匹配右点，则从 $S_0$ 到它的 alternating path 两端未匹配；把路上“非 matching/matching”边互换，matching 边数增 $1$，与 $M$ 最大矛盾。故 $T$ 中每个右点均已匹配。
 <!-- bilingual-en:start -->
-Let $S$ and $T$ be the reached vertices on the left and right, respectively. If the search reaches an unmatched right vertex, the alternating path from $S_0$ to that vertex has unmatched endpoints. Swapping matched and unmatched edges along this path increases the size of the matching by $1$, contradicting maximality. Therefore every vertex in $T$ is matched.
+Let $S$ and $T$ be the reached vertices on the left and right, respectively. If the search reaches an unmatched right vertex, the alternating path from $S_0$ to that vertex has unmatched endpoints. Swapping matched and unmatched edges along this path increases the size of the matching by $1$, contradicting the maximum cardinality of $M$. Therefore every vertex in $T$ is matched.
 <!-- bilingual-en:end -->
 
 每个 $t\in T$ 的 matching partner 都被搜到并落在 $S$；反之，$S\setminus S_0$ 中每个左点都是通过某个 $t\in T$ 的 matching edge 到达。因 matching 一对一，

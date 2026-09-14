@@ -39,6 +39,11 @@ lecture: 02
 > - The closing bugs concern indentation, the order and coverage of conditions, and the difference between independent if statements and an elif chain.
 > <!-- bilingual-en:end -->
 
+> [!links] 原子化入口
+> 先看 [[计算模型、Python 表达式与控制流.canvas|基础执行语义总图]]；字符串的长度、索引与切片复用 [[序列共同接口]]，字符槽不能原地改写的原因见 [[对象可变性]]。外部文本边界对应 [[输入解析边界]]，条件求值与路径选择对应 [[布尔短路]] 和 [[条件分支]]，其对象图前提来自 [[名称绑定与赋值]]。f-string 是本讲的具体输出语法，完整示例见下文；数值显示精度与存储值的边界见 [[浮点表示误差与打印]]。
+>
+> *Atomic path: the shared sequence interface, object mutability, input parsing, name binding, Boolean short-circuiting, and mutually exclusive conditional branches. F-strings are the lecture's concrete output syntax; the complete example appears below, while [[浮点表示误差与打印|floating-point representation versus display rounding]] covers numerical display precision.*
+
 ## Lecture flow
 
 ### 1. 开场先复习上一讲：对象、表达式、变量绑定

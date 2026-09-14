@@ -39,6 +39,13 @@ lecture: 12
 > - By the end, you should be able to give a systematic debugging recipe instead of changing random lines whenever something fails.
 > <!-- bilingual-en:end -->
 
+> [!links] 原子化入口
+> 本讲的函数部分先用 [[默认参数求值]] 固定定义时点，再由 [[一等函数对象]]、[[词法作用域]] 和 [[闭包环境保留]] 解释 `make_prod` 为什么能返回仍可访问 `a` 的函数。后半段继续复用 [[03_Computer_Science/03_MIT 6.100L/12_测试与失败处理|测试与失败处理连续路径]]。
+>
+> *Atomic path: [[默认参数求值|default evaluation time]] → [[一等函数对象|first-class functions]] → [[词法作用域|lexical scope]] → [[闭包环境保留|closure environment retention]], followed by [[03_Computer_Science/03_MIT 6.100L/12_测试与失败处理|the testing and failure-handling reading path]].*
+>
+> [[测试、调试、异常与断言.canvas|测试、调试、异常与断言 · 关系图]]
+
 ## Lecture flow
 
 ### 1. 开场先说明：这讲是在收尾 lists 和 functions
@@ -294,16 +301,26 @@ In the latter half, the lecture turns explicitly to testing and debugging. The f
 
 老师先把几个词分开：
 
-- validation / testing：程序是否按预期工作
-- debugging：程序不对时，如何系统地定位原因
+- validation / [[软件测试|testing]]：程序是否按预期工作
+- [[调试|debugging]]：程序不对时，如何系统地定位原因
 <!-- bilingual-en:start -->
-- Validation and testing ask whether a program behaves as intended.
-- Debugging asks how to locate the cause systematically when it does not.
+- Validation and [[软件测试|testing]] ask whether a program behaves as intended.
+- [[调试|Debugging]] asks how to locate the cause systematically when it does not.
 <!-- bilingual-en:end -->
 
 这两个动作往往在现实里交织出现，但课堂故意拆开讲，是为了避免你把“乱试输入”和“修 bug”混为一谈。
 <!-- bilingual-en:start -->
 Although these activities intertwine in practice, the lecture separates them so that ad hoc input trials are not confused with the disciplined work of finding and repairing a bug.
+<!-- bilingual-en:end -->
+
+测试前先从[[函数契约]]写下输入、预期返回值及需要观察的副作用或异常，再运行并比较实际行为。课堂 slides pp. 33–35 强调先有规格和预期结果；“没有报错”本身不是结果正确的判据。
+<!-- bilingual-en:start -->
+Before execution, use the [[函数契约|function contract]] to record the input, expected return value, and any observable effects or exceptions; then compare the actual behavior. Slides pp. 33–35 require a specification and expected results. Merely completing without an error is not a correctness criterion.
+<!-- bilingual-en:end -->
+
+这里区分[[测试用例]]和[[测试判据]]：一次具体检查需要输入与执行条件，而判断结果是否可接受还需要独立于实际输出的预期规则。
+<!-- bilingual-en:start -->
+Distinguish a [[测试用例|test case]] from its [[测试判据|oracle]]: a concrete check needs inputs and execution conditions, while judging acceptability requires an expectation independent of the observed output.
 <!-- bilingual-en:end -->
 
 ### 9. 测试策略：unit / regression / integration
@@ -312,26 +329,26 @@ Although these activities intertwine in practice, the lecture separates them so 
 <!-- bilingual-en:end -->
 老师先给出几种更工程化的 testing 视角：
 
-- unit testing：单个函数或模块分别测
-- regression testing：修改以后，确认原来通过的东西没被改坏
-- integration testing：多个部件组合后一起测
+- [[单元测试|unit testing]]：单个函数或模块分别测
+- [[回归测试|regression testing]]：修改以后，确认原来通过的东西没被改坏
+- [[集成测试|integration testing]]：多个部件组合后一起测
 <!-- bilingual-en:start -->
-- Unit testing checks a function or module in isolation.
-- Regression testing checks that a change has not broken behavior that previously worked.
-- Integration testing checks several components after they have been combined.
+- [[单元测试|Unit testing]] checks a function or module in isolation.
+- [[回归测试|Regression testing]] checks that a change has not broken behavior that previously worked.
+- [[集成测试|Integration testing]] checks several components after they have been combined.
 <!-- bilingual-en:end -->
 
 这部分的课堂重点是：  
-测试不是“随便挑几个输入跑一下”，而是要知道自己在检查哪一层行为。
+测试不是“随便挑几个输入跑一下”，而是要知道自己在检查哪一层行为、出于什么目的。单元与集成描述组合范围；回归描述修改后重新检查已有行为的目的，可以在不同范围执行，并不是夹在两者之间的第三个层级。
 <!-- bilingual-en:start -->
-Testing is not a matter of running a few arbitrary inputs; you should know which level of behavior each test is meant to check.
+Testing is not a matter of running a few arbitrary inputs: identify both the scope and the purpose. Unit and integration testing describe the scope of composition; regression testing describes checking existing behavior after a change and can occur at either scope. It is not a third level between them.
 <!-- bilingual-en:end -->
 
 ### 10. black-box testing：按 specification 设计输入
 <!-- bilingual-en:start -->
 *10. Black-Box Testing: Designing Inputs from the Specification*
 <!-- bilingual-en:end -->
-老师随后讲 **black-box testing**。
+老师随后讲 **[[黑盒测试|black-box testing]]**。
 
 黑箱测试的核心是：
 
@@ -357,11 +374,22 @@ This perspective prompts tests of ordinary cases, boundaries, special cases, emp
 If the implementation is rewritten while the specification remains unchanged, the same black-box tests should still be valid.
 <!-- bilingual-en:end -->
 
+课堂的具体规格是 `sqrt(x, eps)`：假设 `x, eps` 是浮点数、`x >= 0`、`eps > 0`，返回 `res` 满足 `x-eps <= res*res <= x+eps`。按[[分区与边界选例]]先选 `x=0`、完全平方数、`0<x<1`、无理平方根，再组合很大/很小的 `x` 和 `eps`（slides pp. 38–39）。这里应检验平方后的误差，不要擅自把规格换成 `abs(res-sqrt(x)) <= eps`。契约没有规定非法输入的结果时，不能把自己猜测的异常行为当作合格标准；若接口承诺拒绝非法输入，再测试该失败路径。
+<!-- bilingual-en:start -->
+The classroom specification for `sqrt(x, eps)` assumes floating-point arguments with `x >= 0` and `eps > 0`, and promises `x-eps <= res*res <= x+eps`. Using [[分区与边界选例|partition and boundary cases]], slides pp. 38–39 test zero, perfect squares, values between zero and one, irrational square roots, and extreme combinations of `x` and `eps`. Check the squared-result error stated by the contract, not a substituted bound on `abs(res-sqrt(x))`. An unspecified response to invalid input is not a test requirement; test rejection when the interface actually promises it.
+<!-- bilingual-en:end -->
+
+> [!note] 随机测试的结论边界
+> Slides p. 37 用“更多测试提高程序正确的概率”作直觉说明。严格地说，在给定采样方式与判据下，更多有信息的测试可能提高发现某类错误的机会；不能不加模型地据此计算“程序正确概率”，也不能由有限抽样推出所有输入都正确。极端浮点案例还可能暴露规格过强，而不只是实现写错；本地 Guttag §6.1.1（印刷 p. 72）明确保留这种可能。
+> <!-- bilingual-en:start -->
+> Slide p. 37 informally says that more tests increase the probability of correctness. More informative tests can improve the chance of revealing a class of faults under a specified sampling scheme and criterion, but do not establish a model-free probability of correctness or prove correctness for every input. Extreme floating-point cases can also expose an unrealistic specification, as Guttag §6.1.1, printed p. 72, explicitly notes.
+> <!-- bilingual-en:end -->
+
 ### 11. glass-box testing：看实现路径是否覆盖到
 <!-- bilingual-en:start -->
 *11. Glass-Box Testing: Checking Coverage of Implementation Paths*
 <!-- bilingual-en:end -->
-接着老师再讲 **glass-box testing**。
+接着老师再讲 **[[白盒测试|glass-box testing]]**。
 
 玻璃盒测试的视角恰恰相反：
 
@@ -384,6 +412,25 @@ If positive and negative inputs follow different branches, for example, glass-bo
 The two strategies complement rather than replace each other: black-box tests enforce the specification, while glass-box tests cover the implementation's structure.
 <!-- bilingual-en:end -->
 
+[[代码覆盖率]]描述指定结构被执行的情况，但[[覆盖率不能证明正确|路径覆盖仍不保证正确]]。课堂 slides pp. 40–41 的反例是：
+<!-- bilingual-en:start -->
+[[代码覆盖率|Code coverage]] describes execution of specified structures, but [[覆盖率不能证明正确|path coverage still does not guarantee correctness]]. Slides pp. 40–41 give this counterexample:
+<!-- bilingual-en:end -->
+
+```python
+def abs(x):
+    """Assumes x is an int; returns its absolute value."""
+    if x < -1:
+        return -x
+    else:
+        return x
+```
+
+测试 `2` 与 `-2` 已执行两个分支，却都通过；边界 `-1` 才揭示错误返回 `-1`。一般程序还可能因循环次数或递归深度没有上界而无法穷尽所有路径。实用选例包括循环执行 0 次、1 次、多次，各分支与不同退出原因；走过代码以后，仍须核对预期结果。
+<!-- bilingual-en:start -->
+The inputs `2` and `-2` exercise both branches and pass, but the boundary input `-1` reveals the incorrect result `-1`. Unbounded loop counts or recursion depths may make exhaustive path coverage impossible. Useful cases exercise loops zero times, once, and repeatedly, as well as different branches and exit causes; executing a path still requires checking its expected result.
+<!-- bilingual-en:end -->
+
 ### 12. debugging recipe：不要乱改，先收集证据
 <!-- bilingual-en:start -->
 *12. A Debugging Recipe: Gather Evidence Before Changing Code*
@@ -396,7 +443,7 @@ After testing, the instructor presents a concrete debugging method.
 核心思想是：
 
 1. 先复现 bug
-2. 选最小测试案例
+2. [[最小失败复现|选最小测试案例]]
 3. 在关键位置加打印
 4. 观察期望和实际在哪一步开始分叉
 5. 一次只修一个问题
@@ -405,7 +452,7 @@ After testing, the instructor presents a concrete debugging method.
 
 &nbsp;
 **1.** Reproduce the bug.<br>
-**2.** Choose the smallest useful test case.<br>
+**2.** [[最小失败复现|Choose the smallest useful failing test case]].<br>
 **3.** Add diagnostic output at key points.<br>
 **4.** Find the first step at which expected and actual behavior diverge.<br>
 **5.** Repair one problem at a time.<br>
@@ -415,6 +462,11 @@ After testing, the instructor presents a concrete debugging method.
 这套 recipe 是整节课最值得模仿的部分，因为它把 debugging 从“靠感觉”变成了一个过程。
 <!-- bilingual-en:start -->
 This recipe is the lecture's most transferable lesson because it turns debugging from intuition-driven tinkering into an evidence-based process.
+<!-- bilingual-en:end -->
+
+[[调试假设检验]]要求每次实验前先说明假设和能推翻它的观察。例如在一个有明确预期状态的中间检查点打印值，判断本次失败是否已经出现，再缩小候选区段（slides pp. 45–46）。这不是只按代码行数机械对半，也不保证“一处值看起来正常，就证明此前没有任何 bug”；检查点必须足以区分当前假设，多个错误也可能同时存在。
+<!-- bilingual-en:start -->
+[[调试假设检验|Hypothesis-driven debugging]] states the hypothesis and an observation that would refute it before each experiment. At an intermediate checkpoint with a known expected state, inspect whether the observed failure is already present and narrow the candidate region (slides pp. 45–46). This is not mechanical halving by line count: one apparently normal value does not prove that all preceding code is bug-free. A checkpoint must distinguish the current hypotheses, and multiple faults may coexist.
 <!-- bilingual-en:end -->
 
 ### 13. buggy palindrome：课堂现场示范如何 debug
@@ -453,11 +505,23 @@ The investigation proceeds step by step: run a test; observe the wrong result; p
 
 这个示范非常好，因为它连续暴露了两种不同 bug：
 
-- 语法层面 / 调用层面错误
-- aliasing / mutability 层面错误
+- 调用层面错误：`temp.reverse` 是合法的属性访问，只取得方法对象，没有调用它；不是 `SyntaxError`
+- aliasing / mutability 层面错误：`temp = x` 形成[[对象别名]]，`temp = x[:]` 才按[[复制层级边界]]建立独立的外层列表
 <!-- bilingual-en:start -->
-The demonstration exposes two distinct faults in sequence: a call-level error and a deeper aliasing/mutability error.
+The demonstration exposes two faults: `temp.reverse` is valid attribute access that retrieves a method without calling it, not a `SyntaxError`; then `temp = x` creates [[对象别名|an alias]], whereas `temp = x[:]` creates a separate outer list according to the [[复制层级边界|copying boundary]].
 <!-- bilingual-en:end -->
+
+原代码用 `list('ab')` 作最小非回文失败例，修复后还重跑原先通过的 `list('abcba')`；这一步就是[[回归测试]]。修复后的核心可以保留为：
+<!-- bilingual-en:start -->
+The source uses `list('ab')` as a minimal failing non-palindrome and reruns the previously passing `list('abcba')` after the fixes: this is [[回归测试|regression testing]]. The repaired core is:
+<!-- bilingual-en:end -->
+
+```python
+def is_pal(x):
+    temp = x[:]
+    temp.reverse()
+    return temp == x
+```
 
 > [!example]
 > 真正好的 debugging 不是一步到位，而是先修掉第一个确认的问题，再看是否还有第二层问题。
@@ -485,6 +549,12 @@ Lecture 12 到这里实际上完成了一个关键转折：
 Lecture 12 thus marks a transition from merely writing code to writing, testing, and repairing it.
 <!-- bilingual-en:end -->
 
+> [!warning] Wordle 原文件的核验边界
+> 原文件同时保留 buggy 与 `FIXES TO THE BUGGY CODE` 两段，后者也不能当作完整正确答案：`get_word_list(words_str)` 仍读取全局 `words`，且未按其 docstring 转小写；`struck` 对 `strike` 按所述逐位置规则应得 `'STR  k'`，不是注释中的 `'ST   k'`；修订版重复字母处理仍与该文字规则不一致，输入合法性检查也仍被注释。保留文件作为调试练习，判断行为时先写清当前函数的合同，不把“FIXES”标签当作验证结果。
+> <!-- bilingual-en:start -->
+> The file preserves both a buggy section and a `FIXES TO THE BUGGY CODE` section, but the latter is not a fully verified solution. `get_word_list(words_str)` still reads global `words` and does not lowercase words as its docstring promises. The stated position-by-position rule gives `'STR  k'` for `struck` against `strike`, not the documented `'ST   k'`. Duplicate-letter behavior still conflicts with that rule, and input validation remains commented out. Retain the file as debugging practice and judge it against an explicit contract, not its “FIXES” label.
+> <!-- bilingual-en:end -->
+
 ## Exercise log
 
 > [!example] Finger exercise 12
@@ -510,6 +580,11 @@ for i in nums_list:
 return cnt
 ```
 
+官方题干从“列表中哪些值是另一个元素的平方”描述目标，而代码从根 `i` 检查 `i*i`。在正数、无重复的前提下，两种计数一一对应；`1` 的平方还是自身，因此也计数。PDF p. 1 的题干末尾被截断，[[MIT 6.100L-OCW-offline-site/pages/lecture-12-list-comprehension-functions-as-objects-testing-debugging/index.html|官方离线页面题干]]保留完整的 `including itself`。上方代码是函数体片段，缩进按其逻辑整理，不照搬 PDF 解答框的排版错位。
+<!-- bilingual-en:start -->
+The official specification counts values that are squares of elements in the list, whereas the code tests each root `i` for membership of `i*i`. With distinct positive inputs, these counts correspond one-to-one; `1` counts because it is its own square. The end of the statement is clipped on PDF p. 1, while the [[MIT 6.100L-OCW-offline-site/pages/lecture-12-list-comprehension-functions-as-objects-testing-debugging/index.html|official offline page]] retains “including itself.” The code above is a function-body excerpt with logical indentation restored from the PDF's misaligned solution layout.
+<!-- bilingual-en:end -->
+
 这题虽然不复杂，但很适合放在本讲之后，因为它逼你把几种“列表处理模式”压缩到一个短函数里：
 
 - 遍历列表
@@ -525,14 +600,17 @@ To extend the first half of the lecture, you can reinterpret or rewrite it in a 
 <!-- bilingual-en:end -->
 
 ## Links to follow-up practice
-- Slides: [[MIT 6.100L-slides/mit6_100l_lec12.pdf|Lecture 12 slides]]
+- Slides: [[MIT 6.100L-slides/mit6_100l_lec12.pdf|Lecture 12 slides]]；[[MIT 6.100L-slides/mit6_100l_lec12.pdf#page=33|pp. 33–46: testing, black/glass-box cases, and debugging]]
 - Lecture code: [[MIT 6.100L-lecture-code/mit6_100l_lec12_code.zip|Lecture 12 code (zip)]]
-- Finger exercise: [[MIT 6.100L-finger-exercises/mit6_100l_ex12_sol.pdf|Lecture 12 finger exercise solution]]
+- Finger exercise: [[MIT 6.100L-finger-exercises/mit6_100l_ex12_sol.pdf|Lecture 12 finger exercise solution]]；[[MIT 6.100L-finger-exercises/mit6_100l_ex12_sol.pdf#page=1|p. 1: count_sqrts specification and solution]]
 - Transcript: [[MIT 6.100L-transcripts/mit6_100l_lec12_transcript.pdf|Lecture 12 transcript]]
 - Recitation 6: [[MIT 6.100L-recitations/mit6_100l_rec06.zip|Recitation 06 materials]]
 - PS 3 out: [[MIT 6.100L-problem-sets/mit6_100l_ps3.pdf|PS3 statement]], [[MIT 6.100L-problem-sets/mit6_100l_ps3_code.zip|PS3 starter code]]
 - PS 2 due: [[MIT 6.100L-problem-sets/mit6_100l_ps2.pdf|PS2 statement]], [[MIT 6.100L-problem-sets/mit6_100l_ps2_code.zip|PS2 starter code]]
-- Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (Ch 4.4, Ch 8)
+- Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]]；本地 2013 Revised and Expanded 版的对应阅读是 §4.1.2、§5.2.2、§5.3，以及 [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf#page=87|Ch 6 Testing and Debugging，印刷 pp. 70–83 / PDF pp. 87–100]]。
+  <!-- bilingual-en:start -->
+  In the local 2013 revised and expanded edition, the relevant sections are §4.1.2, §5.2.2, §5.3, and Chapter 6, printed pp. 70–83 / PDF pp. 87–100.
+  <!-- bilingual-en:end -->
 
 ## Review checklist
 - [ ] 我能把一条 list comprehension 展开成普通循环，也能反过来压缩回去。

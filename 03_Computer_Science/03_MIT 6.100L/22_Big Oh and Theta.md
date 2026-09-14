@@ -15,6 +15,8 @@ lecture: 22
 
 # Lecture 22: Big Oh and Theta
 
+连续阅读：[[21_算法成本与渐近分析]] · 关系图：[[渐近记号与算法复杂度.canvas]]
+
 > [!tip] Hint
 > - 这节课前半段继续 timing，但比上节更系统，用 `perf_counter` 提高精度。
 > - timing 不再只看数字函数，还开始看 list 相关函数，比如求和、查找、diameter。
@@ -56,12 +58,17 @@ The reasons are practical:
 <!-- bilingual-en:end -->
 
 - 上讲某些函数太快
-- `time.time()` 分辨率不够
-- `perf_counter()` 更适合测短代码段
+- 本讲用 `perf_counter()` 测短时间差，避免只依赖墙钟读数
+- 极短代码仍要重复多次，减少计时开销与噪声的影响
 <!-- bilingual-en:start -->
 - Some functions in the previous lecture ran too quickly to time reliably.
-- `time.time()` lacks sufficient resolution for those measurements.
-- `perf_counter()` is better suited to short code segments.
+- This lecture uses `perf_counter()` for short elapsed-time measurements rather than relying only on wall-clock readings.
+- Very short code still needs repeated runs to reduce timing overhead and noise.
+<!-- bilingual-en:end -->
+
+[Python 文档](https://docs.python.org/3/library/time.html#time.perf_counter)说明 `perf_counter()` 使用可用的高分辨率性能计数器，只应比较两次调用的差值；具体时钟分辨率依平台而定。因此不能把这堂课的计时困难推广为“所有环境的 `time.time()` 分辨率都不足”。
+<!-- bilingual-en:start -->
+The [Python documentation](https://docs.python.org/3/library/time.html#time.perf_counter) specifies a high-resolution performance counter whose differences measure elapsed time. Clock resolution is platform-dependent; the classroom observation does not establish that `time.time()` is inadequate in every environment.
 <!-- bilingual-en:end -->
 
 所以这节课虽然还在 timing，但已经更强调测量质量。
@@ -224,6 +231,11 @@ This continues until the search space shrinks to `1`.
 This is where the intuition behind logarithmic growth comes from.
 <!-- bilingual-en:end -->
 
+[[减半迭代次数]]先给出轮数；要得到时间界，还需每轮工作为常数。[[MIT 6.100L-lecture-code/mit6_100l_lec22_code.py|本讲 `binary_search`]]用索引缩区间、到最后才检查是否命中，且要求列表非空，否则最后的 `L[lo]` 会越界。[[二分查找]]原子中的半开区间版本则自然处理空区间，并可在中点命中时提前返回；两种实现不能混用最好情况结论。
+<!-- bilingual-en:start -->
+[[减半迭代次数|Halving analysis]] first counts rounds; a time bound additionally requires constant work per round. [[MIT 6.100L-lecture-code/mit6_100l_lec22_code.py|This lecture's `binary_search`]] narrows index bounds and tests equality only at the end. It also requires a nonempty list, or the final `L[lo]` fails. The half-open version in [[二分查找|the shared binary-search atom]] handles empty intervals and can return on a midpoint match. Best-case bounds depend on the exact version.
+<!-- bilingual-en:end -->
+
 > [!note]
 > 当问题规模每一步按比例缩小，而不是按固定常数减少时，复杂度往往会走向 `log n`。
 > <!-- bilingual-en:start -->
@@ -254,6 +266,11 @@ Because:
 所以总比较次数和 `len(L)^2` 同阶。
 <!-- bilingual-en:start -->
 So the total number of comparisons is on the order of `len(L)^2`.
+<!-- bilingual-en:end -->
+
+令 $n=\operatorname{len}(L)$，真正的点对数量是 $\sum_{i=0}^{n-1}(n-i-1)=n(n-1)/2$。在固定二维、一次距离计算为常数成本时，总时间为 $\Theta(n^2)$；这是[[循环成本求和]]，而不是每一轮内层都执行 $n$ 次。
+<!-- bilingual-en:start -->
+For $n=\operatorname{len}(L)$, the exact pair count is $\sum_{i=0}^{n-1}(n-i-1)=n(n-1)/2$. With fixed dimension two and constant-cost distance evaluation, time is $\Theta(n^2)$. This follows from [[循环成本求和|summing iteration costs]], not from claiming that every inner loop runs $n$ times.
 <!-- bilingual-en:end -->
 
 这时课堂已经在把几种经典增长阶直觉排开：
@@ -305,6 +322,11 @@ This example makes an important point:
 <!-- bilingual-en:start -->
 - Some problems are not slow because of a poor implementation.
 - The required output size itself imposes a very large lower bound.
+<!-- bilingual-en:end -->
+
+按[[显式输出下界]]，若返回全部独立字符串，每个结果还长 $N$ 个字符，总输出长度为 $N2^N$；不能把输出个数直接当成完整的字符操作数。
+<!-- bilingual-en:start -->
+By the [[显式输出下界|explicit-output lower bound]], returning separate strings writes $N$ characters per result, for total length $N2^N$. Output count alone is not a complete character-operation count.
 <!-- bilingual-en:end -->
 
 ### 8. 从 timing 转向理论语言：order of growth
@@ -363,6 +385,11 @@ The reason is:
 也就是说，Theta 不是随便找个长得更快的函数就完事，而是要抓住真正同阶的增长。
 <!-- bilingual-en:start -->
 Theta therefore does not merely name a function that grows at least as fast; it captures the same asymptotic growth rate.
+<!-- bilingual-en:end -->
+
+[[大O记号]]给足够大规模下的统一常数倍上界；[[大Ω记号]]给下界；[[大Θ记号]]同时给两边界。比如 $n^2$ 既是 $O(n^2)$ 也是 $O(n^3)$，但只与 $n^2$ 同阶。三种记号本身都不指定最好或最坏情形：先选定要描述的成本函数，再对它写界。
+<!-- bilingual-en:start -->
+[[大O记号|Big O]] gives an eventual upper bound with a uniform constant; [[大Ω记号|big Omega]] gives a lower bound; [[大Θ记号|big Theta]] gives both. Thus $n^2$ is both $O(n^2)$ and $O(n^3)$, but is only $\Theta(n^2)$. None of these symbols chooses best or worst case: select the cost function first, then bound it.
 <!-- bilingual-en:end -->
 
 ### 10. 定义 `n` 代表什么，比写符号更重要
@@ -445,6 +472,11 @@ The instructor then connects code structure to rules for combining Theta costs:
 - For nested loops or nested work, the costs usually multiply.
 <!-- bilingual-en:end -->
 
+乘法需要各轮内层成本有统一的同阶界。若内层范围依赖外层索引，就先写总和：[[MIT 6.100L-slides/mit6_100l_lec22.pdf#page=54|讲义第 54 页]]的 `for j in range(i,x)` 总共执行 $x+(x-1)+\cdots+1=x(x+1)/2$ 次。结果确为 $\Theta(x^2)$，但不能声称每个 $i$ 对应的内层都为 $\Theta(x)$；最后一轮只有一次。
+<!-- bilingual-en:start -->
+Multiplication requires a uniform same-order bound on the work of each inner iteration block. If bounds depend on the outer index, sum them first: `for j in range(i,x)` on [[MIT 6.100L-slides/mit6_100l_lec22.pdf#page=54|slide 54]] executes $x+(x-1)+\cdots+1=x(x+1)/2$ times. The result is $\Theta(x^2)$, but the inner loop is not $\Theta(x)$ for every $i$: the last one runs once.
+<!-- bilingual-en:end -->
+
 这为下一讲从真实代码直接读复杂度打基础。
 <!-- bilingual-en:start -->
 This prepares you to infer complexity directly from real code in the next lecture.
@@ -463,6 +495,11 @@ This prepares you to infer complexity directly from real code in the next lectur
 > - `2**n + n*log(n) + n**2` -> `Theta(2^n)`
 > - `f*log(f) + 100000 + 300*a + x*y*z` -> `Theta(1)` with respect to `n`
 > <!-- bilingual-en:end -->
+
+这些答案按[[MIT 6.100L-finger-exercises/mit6_100l_ex22_sol.pdf#page=1|原题第 1 页]]指定的 $n\to\infty$ 解释，其他参数固定，并按正成本参数理解；第三题的固定表达式须为正才是 $\Theta(1)$，若恰为零则只有 $O(1)$。例如第一题若改成 $a=n$，$2^a$ 就不再是常数，结果变为 $\Theta(2^n)$。多参数分析必须声明哪些量可以一起增长。
+<!-- bilingual-en:start -->
+As specified on [[MIT 6.100L-finger-exercises/mit6_100l_ex22_sol.pdf#page=1|page 1 of the exercise]], let $n\to\infty$ while other parameters remain fixed, interpreted as positive cost parameters. Problem 3's fixed expression must be positive to be $\Theta(1)$; if it is zero, only $O(1)$ applies. In the first problem, setting $a=n$ would instead give $\Theta(2^n)$. Multivariable analysis must state which quantities may grow together.
+<!-- bilingual-en:end -->
 
 这套题的价值非常高，因为它逼你明确区分：
 <!-- bilingual-en:start -->
@@ -488,7 +525,7 @@ This is the easiest part of the theory to gloss over, but also the part where pr
 - Transcript: [[MIT 6.100L-transcripts/mit6_100l_lec22_transcript.pdf|Lecture 22 transcript]]
 - Recitation 10: [[MIT 6.100L-recitations/mit6_100l_rec10.zip|Recitation 10 materials]]
 - Problem set milestone: none directly scheduled on this lecture
-- Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (Ch 11)
+- Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (本地 Revised and Expanded Edition：Ch 9.1–9.3)
 
 ## Review checklist
 - [ ] 我能解释为什么 `perf_counter` 比普通 timing 更适合本讲。

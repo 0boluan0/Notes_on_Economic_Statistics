@@ -1,0 +1,250 @@
+{
+  "nodes": [
+    {
+      "id": "c710000000000000",
+      "type": "text",
+      "x": 0,
+      "y": -520,
+      "width": 6740,
+      "height": 280,
+      "text": "# LLM 后训练\n\n从 **后训练信号是什么** 开始，先区分预训练、SFT 与偏好学习的监督来源，再沿 SFT、显式奖励模型 RLHF 和 DPO 三条路径读目标、假设与失效方式。\n\n每个原子节点只对应一个知识原子；颜色表示本图中的语义角色，不表示掌握程度。来源与学习状态在 [[知识原子.base|知识原子 Base]] 中查询。"
+    },
+    {
+      "id": "c710000000000001",
+      "type": "text",
+      "x": 0,
+      "y": 1080,
+      "width": 520,
+      "height": 230,
+      "text": "## [[LLM 预训练.canvas|预训练基座]]\n*Pretrained base model*\n\n预训练先从观测 token 建立基座；后训练再用新的监督信息塑造输出行为。",
+      "color": "5"
+    },
+    {
+      "id": "c710000000000002",
+      "type": "text",
+      "x": 680,
+      "y": 1080,
+      "width": 520,
+      "height": 250,
+      "text": "## [[后训练信号|后训练信号]]\n*Post-training signal*\n\n目标函数从示范、比较或评价中读取的监督信息。信号说明训练依据，不等于具体算法。",
+      "color": "4"
+    },
+    {
+      "id": "c710000000000003",
+      "type": "text",
+      "x": 1360,
+      "y": 1080,
+      "width": 540,
+      "height": 250,
+      "text": "## [[训练信号差异|三类训练信号]]\n*Three supervision sources*\n\n预训练读观测 token，SFT 读示范回答，偏好学习读候选之间的相对选择；三者不能混称。",
+      "color": "4"
+    },
+    {
+      "id": "c710000000000004",
+      "type": "text",
+      "x": 1360,
+      "y": 1450,
+      "width": 540,
+      "height": 260,
+      "text": "## [[后训练能力归因边界|后训练能力归因边界]]\n*Capability attribution boundary*\n\n一次行为变化不能区分能力新增、能力唤起、格式适配与能力压制。",
+      "color": "6"
+    },
+    {
+      "id": "c710000000000005",
+      "type": "text",
+      "x": 2080,
+      "y": 0,
+      "width": 540,
+      "height": 250,
+      "text": "## [[SFT目标|SFT 目标]]\n*Supervised fine-tuning objective*\n\n给定提示，最小化示范回答 token 的条件负对数似然；它做条件模仿，不直接比较候选。",
+      "color": "2"
+    },
+    {
+      "id": "c710000000000006",
+      "type": "text",
+      "x": 2760,
+      "y": 0,
+      "width": 560,
+      "height": 270,
+      "text": "## [[SFT损失掩码|SFT 损失掩码]]\n*Loss masking*\n\n决定哪些 token 直接贡献训练梯度；assistant-only masking 不等于 causal mask 或 padding mask。",
+      "color": "2"
+    },
+    {
+      "id": "c710000000000007",
+      "type": "text",
+      "x": 3440,
+      "y": 0,
+      "width": 560,
+      "height": 270,
+      "text": "## [[SFT数据边界|SFT 数据边界]]\n*SFT data boundary*\n\n示范质量、覆盖、对话模板与训练强度共同塑造行为；样本更多不自动保证改进。",
+      "color": "2"
+    },
+    {
+      "id": "c710000000000008",
+      "type": "text",
+      "x": 2080,
+      "y": 1080,
+      "width": 540,
+      "height": 250,
+      "text": "## [[成对偏好模型|成对偏好模型]]\n*Pairwise preference model*\n\n根据同一提示下两个候选的相对选择，估计一个候选胜过另一个的条件概率或排序规则。",
+      "color": "3"
+    },
+    {
+      "id": "c710000000000009",
+      "type": "text",
+      "x": 2760,
+      "y": 620,
+      "width": 560,
+      "height": 270,
+      "text": "## [[Bradley–Terry模型|Bradley–Terry 模型]]\n*Bradley–Terry model*\n\n把同一提示下两个回答的选择概率写成二者标量分数之差的 logistic 函数。",
+      "color": "3"
+    },
+    {
+      "id": "c71000000000000a",
+      "type": "text",
+      "x": 3440,
+      "y": 460,
+      "width": 580,
+      "height": 290,
+      "text": "## [[提示内奖励平移不变|提示内奖励平移不变]]\n*Prompt-wise reward translation invariance*\n\n固定参考策略与 KL 系数时，同一提示内给所有回答加相同奖励，不改变偏好概率或 KL 正则最优策略。",
+      "color": "6"
+    },
+    {
+      "id": "c71000000000000b",
+      "type": "text",
+      "x": 4120,
+      "y": 780,
+      "width": 560,
+      "height": 270,
+      "text": "## [[DPO目标|DPO 目标]]\n*Direct preference objective*\n\n直接提高 chosen 相对 rejected、且相对参考策略的对数概率优势，省去显式奖励模型与在线 RL。",
+      "color": "3"
+    },
+    {
+      "id": "c71000000000000c",
+      "type": "text",
+      "x": 4800,
+      "y": 780,
+      "width": 580,
+      "height": 280,
+      "text": "## [[DPO边界|DPO 边界]]\n*DPO boundary*\n\n管线更短，却仍依赖偏好数据、参考策略、β 与成对偏好建模假设。",
+      "color": "6"
+    },
+    {
+      "id": "c71000000000000d",
+      "type": "text",
+      "x": 2760,
+      "y": 1450,
+      "width": 580,
+      "height": 290,
+      "text": "## [[偏好分数解释边界|偏好分数解释边界]]\n*Interpretation boundary*\n\n在既定标注协议上预测准确，只说明模型复现相对选择；不能单独证明分数代表事实性、安全性或广泛效用。",
+      "color": "6"
+    },
+    {
+      "id": "c71000000000000e",
+      "type": "text",
+      "x": 3440,
+      "y": 1110,
+      "width": 580,
+      "height": 290,
+      "text": "## [[长度代理偏差|长度代理偏差]]\n*Length proxy bias*\n\n长度相关可能被奖励模型或 DPO 当成质量捷径；评审器自身的长度偏好还须单独检验。",
+      "color": "1"
+    },
+    {
+      "id": "c71000000000000f",
+      "type": "text",
+      "x": 3440,
+      "y": 1780,
+      "width": 580,
+      "height": 270,
+      "text": "## [[迎合偏好偏差|迎合偏好偏差]]\n*Sycophancy bias*\n\n偏好标签可能奖励顺从评估者立场，而不是真实纠正；优化偏好分数会把这种偏差放大。",
+      "color": "1"
+    },
+    {
+      "id": "c710000000000010",
+      "type": "text",
+      "x": 3440,
+      "y": 2140,
+      "width": 580,
+      "height": 280,
+      "text": "## [[对齐目标聚合|对齐目标聚合]]\n*Alignment objective aggregation*\n\n有用、诚实、安全与不同人群的偏好可能冲突；单一总分不能替代目标分解和聚合规则。",
+      "color": "6"
+    },
+    {
+      "id": "c710000000000011",
+      "type": "text",
+      "x": 4120,
+      "y": 1450,
+      "width": 560,
+      "height": 260,
+      "text": "## [[LLM 评测|分维度评测]]\n*Evaluation exit*\n\n把能力、指令遵循、事实性、安全、校准与代价分开验收；偏好胜率只覆盖其中一部分。",
+      "color": "5"
+    },
+    {
+      "id": "c710000000000012",
+      "type": "text",
+      "x": 2080,
+      "y": 2560,
+      "width": 560,
+      "height": 270,
+      "text": "## [[显式奖励模型RLHF|显式奖励模型 RLHF]]\n*Explicit-reward-model RLHF*\n\n先从成对比较拟合标量奖励模型，再以该代理奖励优化策略。",
+      "color": "3"
+    },
+    {
+      "id": "c710000000000013",
+      "type": "text",
+      "x": 4800,
+      "y": 2560,
+      "width": 560,
+      "height": 270,
+      "text": "## [[KL参考约束|KL 参考约束]]\n*KL reference constraint*\n\n以策略相对参考策略的 KL 散度惩罚偏离，用于限制后训练中的分布漂移。",
+      "color": "3"
+    },
+    {
+      "id": "c710000000000014",
+      "type": "text",
+      "x": 6160,
+      "y": 2560,
+      "width": 580,
+      "height": 280,
+      "text": "## [[奖励代理过优化|奖励代理过优化]]\n*Reward proxy overoptimisation*\n\n持续优化有误差的奖励代理，可能使代理分数继续上升而目标质量下降。",
+      "color": "1"
+    },
+    {
+      "id": "c710000000000015",
+      "type": "text",
+      "x": 5480,
+      "y": 2560,
+      "width": 560,
+      "height": 280,
+      "text": "## [[KL不保证奖励有效|KL 不保证奖励有效]]\n*KL does not validate the reward*\n\nKL 只约束策略离参考模型多远；它不证明奖励代理代表真实目标，也不消除代理误差。",
+      "color": "6"
+    }
+  ],
+  "edges": [
+    {"id":"c7e0000000000001","fromNode":"c710000000000001","fromSide":"right","toNode":"c710000000000002","toSide":"left","toEnd":"arrow","label":"基座进入后训练"},
+    {"id":"c7e0000000000002","fromNode":"c710000000000002","fromSide":"right","toNode":"c710000000000003","toSide":"left","toEnd":"arrow","label":"先区分信号来源"},
+    {"id":"c7e0000000000003","fromNode":"c710000000000003","fromSide":"top","toNode":"c710000000000005","toSide":"left","toEnd":"arrow","label":"示范回答形成 SFT 分支"},
+    {"id":"c7e0000000000004","fromNode":"c710000000000003","fromSide":"right","toNode":"c710000000000008","toSide":"left","toEnd":"arrow","label":"相对选择形成偏好分支"},
+    {"id":"c7e0000000000005","fromNode":"c710000000000003","fromSide":"bottom","toNode":"c710000000000004","toSide":"top","toEnd":"arrow","label":"行为变化不能直接归因于能力"},
+    {"id":"c7e0000000000006","fromNode":"c710000000000005","fromSide":"right","toNode":"c710000000000006","toSide":"left","toEnd":"arrow","label":"实现时选择计入损失的位置"},
+    {"id":"c7e0000000000007","fromNode":"c710000000000006","fromSide":"right","toNode":"c710000000000007","toSide":"left","toEnd":"arrow","label":"损失实现与示范覆盖共同塑形"},
+    {"id":"c7e0000000000008","fromNode":"c710000000000008","fromSide":"right","toNode":"c710000000000009","toSide":"left","toEnd":"arrow","label":"一种具体概率模型"},
+    {"id":"c7e0000000000009","fromNode":"c710000000000008","fromSide":"right","toNode":"c71000000000000d","toSide":"left","toEnd":"arrow","label":"排序分数有解释边界"},
+    {"id":"c7e000000000000a","fromNode":"c710000000000008","fromSide":"bottom","toNode":"c710000000000012","toSide":"top","toEnd":"arrow","label":"显式拟合奖励再优化策略"},
+    {"id":"c7e000000000000b","fromNode":"c710000000000009","fromSide":"right","toNode":"c71000000000000a","toSide":"left","toEnd":"arrow","label":"分数差决定提示内可识别部分"},
+    {"id":"c7e000000000000c","fromNode":"c710000000000009","fromSide":"right","toNode":"c71000000000000b","toSide":"left","toEnd":"arrow","label":"DPO 继承成对偏好建模"},
+    {"id":"c7e000000000000d","fromNode":"c71000000000000a","fromSide":"right","toNode":"c71000000000000b","toSide":"top","toEnd":"arrow","label":"等价类进入直接偏好目标"},
+    {"id":"c7e000000000000e","fromNode":"c71000000000000b","fromSide":"right","toNode":"c71000000000000c","toSide":"left","toEnd":"arrow","label":"管线简化不省去假设核验"},
+    {"id":"c7e000000000000f","fromNode":"c710000000000012","fromSide":"right","toNode":"c710000000000013","toSide":"left","toEnd":"arrow","label":"以参考策略限制漂移"},
+    {"id":"c7e0000000000010","fromNode":"c710000000000013","fromSide":"right","toNode":"c710000000000015","toSide":"left","toEnd":"arrow","label":"约束范围不等于有效性保证"},
+    {"id":"c7e0000000000011","fromNode":"c71000000000000d","fromSide":"right","toNode":"c71000000000000e","toSide":"left","toEnd":"arrow","label":"长度可能成为评分捷径"},
+    {"id":"c7e0000000000012","fromNode":"c71000000000000d","fromSide":"right","toNode":"c71000000000000f","toSide":"left","toEnd":"arrow","label":"标签可能奖励立场迎合"},
+    {"id":"c7e0000000000013","fromNode":"c71000000000000d","fromSide":"right","toNode":"c710000000000011","toSide":"left","toEnd":"arrow","label":"分数解释必须回到独立评测"},
+    {"id":"c7e0000000000014","fromNode":"c71000000000000d","fromSide":"bottom","toNode":"c710000000000010","toSide":"left","toEnd":"arrow","label":"先定义目标与人群"},
+    {"id":"c7e0000000000015","fromNode":"c71000000000000e","fromSide":"right","toNode":"c710000000000011","toSide":"left","toEnd":"arrow","label":"独立检验长度因素"},
+    {"id":"c7e0000000000016","fromNode":"c71000000000000f","fromSide":"right","toNode":"c710000000000011","toSide":"left","toEnd":"arrow","label":"独立检验迎合行为"},
+    {"id":"c7e0000000000017","fromNode":"c710000000000010","fromSide":"right","toNode":"c710000000000011","toSide":"bottom","toEnd":"arrow","label":"目标分解决定评测分账"},
+    {"id":"c7e0000000000018","fromNode":"c710000000000015","fromSide":"right","toNode":"c710000000000014","toSide":"left","toEnd":"arrow","label":"代理有效性缺口可被持续优化放大"},
+    {"id":"c7e0000000000019","fromNode":"c71000000000000b","fromSide":"right","toNode":"c710000000000013","toSide":"left","toEnd":"arrow","label":"DPO 同样以参考策略和 KL 系数定标"}
+  ]
+}

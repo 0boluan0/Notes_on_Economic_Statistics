@@ -1,0 +1,514 @@
+{
+  "nodes": [
+    {
+      "id": "b6b0000000000001",
+      "type": "text",
+      "x": 0,
+      "y": -400,
+      "width": 3600,
+      "height": 250,
+      "text": "# 货币、流动性与货币口径\n\n先用三项功能和多维货币性识别对象，再把统计口径与资产负债表负债主体分开，最后沿同行支付、跨行结算、提现与央行购债追踪余额。\n\n每张卡链接一个可独立回忆或应用的 Markdown 原子。箭头文字说明为什么相连；颜色只表示本图中的语义角色，不表示掌握度。22 个原子已完成独立来源核验，学习掌握度仍未评估；美国现行口径依据 2026-08-25 H.6，检索于 2026-08-29。"
+    },
+    {
+      "id": "b6b0000000000002",
+      "type": "text",
+      "x": 1450,
+      "y": 0,
+      "width": 500,
+      "height": 220,
+      "text": "## [[货币的支付定义|货币：被接受的支付能力]]\n*Money as accepted payment*\n\n货币由支付功能与制度接受识别，不由纸张、金属或电子形态识别。",
+      "color": "5"
+    },
+    {
+      "id": "b6b0000000000003",
+      "type": "text",
+      "x": 0,
+      "y": 360,
+      "width": 500,
+      "height": 220,
+      "text": "## [[货币、财富与收入|货币、财富与收入]]\n*Money, wealth, and income*\n\n货币是时点存量；财富范围更广；收入必须按期间计量。",
+      "color": "5"
+    },
+    {
+      "id": "b6b0000000000004",
+      "type": "text",
+      "x": 1560,
+      "y": 360,
+      "width": 500,
+      "height": 220,
+      "text": "## [[交换媒介|交换媒介]]\n*Medium of exchange*\n\n共同接受把卖与买拆开，避免物物交换的双重需求巧合。",
+      "color": "5"
+    },
+    {
+      "id": "b6b0000000000005",
+      "type": "text",
+      "x": 1040,
+      "y": 360,
+      "width": 500,
+      "height": 220,
+      "text": "## [[计价单位|计价单位]]\n*Unit of account*\n\n价格、合同和账簿使用共同名义尺度，不必为每对商品单独报价。",
+      "color": "5"
+    },
+    {
+      "id": "b6b0000000000006",
+      "type": "text",
+      "x": 2080,
+      "y": 0,
+      "width": 500,
+      "height": 220,
+      "text": "## [[货币的价值储藏|价值储藏]]\n*Store of value*\n\n名义面值可跨期保存，但通胀仍会侵蚀实际购买力。",
+      "color": "5"
+    },
+    {
+      "id": "b6b0000000000007",
+      "type": "text",
+      "x": 2080,
+      "y": 360,
+      "width": 500,
+      "height": 220,
+      "text": "## [[货币性与流动性|多维货币性连续谱]]\n*Moneyness as a continuum*\n\n按面值、速度、接受范围、价格风险与转换成本共同判断。",
+      "color": "5"
+    },
+    {
+      "id": "b6b0000000000008",
+      "type": "text",
+      "x": 2600,
+      "y": 360,
+      "width": 500,
+      "height": 220,
+      "text": "## [[货币总量统计口径|货币总量是统计约定]]\n*Monetary aggregates*\n\nM1、M2 是制度化统计集合；在现行美国 H.6 中 M2 包含 M1，二者不能相加。",
+      "color": "6"
+    },
+    {
+      "id": "b6b0000000000009",
+      "type": "text",
+      "x": 2600,
+      "y": 720,
+      "width": 500,
+      "height": 230,
+      "text": "## [[美国现行 M1 口径|美国现行 M1]]\n*Current U.S. M1*\n\n公众通货、需求存款与其他流动存款；现行口径已包括储蓄存款。",
+      "color": "6"
+    },
+    {
+      "id": "b6b000000000000a",
+      "type": "text",
+      "x": 3120,
+      "y": 720,
+      "width": 500,
+      "height": 230,
+      "text": "## [[美国现行 M2 口径|美国现行 M2]]\n*Current U.S. M2*\n\n在 M1 上加入指定定期存款与零售货币市场基金并扣除退休账户余额。",
+      "color": "6"
+    },
+    {
+      "id": "b6b000000000000b",
+      "type": "text",
+      "x": 3120,
+      "y": 1060,
+      "width": 500,
+      "height": 230,
+      "text": "## [[美国 M1 统计断点|2020 年美国 M1 断点]]\n*May 2020 M1 series break*\n\n储蓄存款被重分类进 M1；M1 跳升而 M2 不因这项变更增加。",
+      "color": "1"
+    },
+    {
+      "id": "b6b000000000000c",
+      "type": "text",
+      "x": 3120,
+      "y": 1400,
+      "width": 500,
+      "height": 230,
+      "text": "## [[货币数据可比性|货币数据比较清单]]\n*Comparability checklist*\n\n先固定定义、负债主体、持有人、地域、日期、单位、频率、季调与断点。",
+      "color": "1"
+    },
+    {
+      "id": "b6b000000000000d",
+      "type": "text",
+      "x": 0,
+      "y": 720,
+      "width": 500,
+      "height": 230,
+      "text": "## [[纸币与硬币的负债主体|纸币与硬币的发行主体]]\n*Currency issuer boundary*\n\n央行纸币是央行负债；硬币的法律发行主体必须按法域核对。",
+      "color": "3"
+    },
+    {
+      "id": "b6b000000000000e",
+      "type": "text",
+      "x": 1040,
+      "y": 720,
+      "width": 500,
+      "height": 230,
+      "text": "## [[商业银行存款|商业银行存款]]\n*Commercial-bank deposits*\n\n同一余额是客户资产和银行负债，并可在公众支付网络中按面值使用。",
+      "color": "3"
+    },
+    {
+      "id": "b6b000000000000f",
+      "type": "text",
+      "x": 1560,
+      "y": 720,
+      "width": 500,
+      "height": 230,
+      "text": "## [[央行准备金余额|准备金余额]]\n*Reserve balances*\n\n它是央行负债与获准合格机构资产；申请资格不等于获批，公众通常不能持有。",
+      "color": "3"
+    },
+    {
+      "id": "b6b0000000000010",
+      "type": "text",
+      "x": 0,
+      "y": 1060,
+      "width": 500,
+      "height": 230,
+      "text": "## [[库存现金与准备金|库存现金不是准备金余额]]\n*Vault cash versus reserves*\n\n银行持有的实物纸币硬币与央行账户中的电子余额必须分开。",
+      "color": "3"
+    },
+    {
+      "id": "b6b0000000000011",
+      "type": "text",
+      "x": 2600,
+      "y": 1060,
+      "width": 500,
+      "height": 230,
+      "text": "## [[美国货币基础、M1 与 M2|美国现行货币基础不等于 M1／M2 的更窄层]]\n*Current U.S. monetary base versus M1 and M2*\n\n基础通货包括库存现金，M1 通货排除它；准备金与银行存款又覆盖不同部门。",
+      "color": "1"
+    },
+    {
+      "id": "b6b0000000000012",
+      "type": "text",
+      "x": 520,
+      "y": 1060,
+      "width": 500,
+      "height": 230,
+      "text": "## [[同行支付分录|同行支付]]\n*On-us payment*\n\n付款人和收款人在同一家银行时，只改变存款负债归属。",
+      "color": "4"
+    },
+    {
+      "id": "b6b0000000000013",
+      "type": "text",
+      "x": 1560,
+      "y": 1060,
+      "width": 500,
+      "height": 230,
+      "text": "## [[跨行支付结算|跨行支付]]\n*Interbank payment*\n\nFedwire 逐笔结算，NSS 记净额；纯支付只在固定持有人集合内重分配准备金。",
+      "color": "4"
+    },
+    {
+      "id": "b6b0000000000014",
+      "type": "text",
+      "x": 0,
+      "y": 1400,
+      "width": 500,
+      "height": 230,
+      "text": "## [[存款转现金|存款转现金]]\n*Deposit-to-currency conversion*\n\n提现与补充库存是两步；通货与准备金可此增彼减而基础总量不变。",
+      "color": "4"
+    },
+    {
+      "id": "b6b0000000000015",
+      "type": "text",
+      "x": 1560,
+      "y": 1400,
+      "width": 500,
+      "height": 230,
+      "text": "## [[体系准备金总量|体系准备金不变量]]\n*System-wide reserve invariant*\n\n银行间交易只转移准备金；央行操作或其他央行负债转换才改变体系总量。",
+      "color": "4"
+    },
+    {
+      "id": "b6b0000000000016",
+      "type": "text",
+      "x": 1040,
+      "y": 1740,
+      "width": 500,
+      "height": 230,
+      "text": "## [[央行购债结算链|央行购债的结算链]]\n*Asset-purchase settlement chain*\n\n标准银行结算中，银行卖方只换资产；非银行卖方通常还会收到一笔存款。",
+      "color": "4"
+    },
+    {
+      "id": "b6b0000000000017",
+      "type": "text",
+      "x": 2600,
+      "y": 1740,
+      "width": 500,
+      "height": 230,
+      "text": "## [[QE 与贷款创造|QE 没有固定准备金乘数]]\n*No fixed reserve multiplier*\n\n准备金增加不机械转为贷款；需求、风险、资本、定价与结算共同约束。",
+      "color": "1"
+    }
+  ],
+  "edges": [
+    {
+      "id": "b6be000000000001",
+      "fromNode": "b6b0000000000002",
+      "fromSide": "left",
+      "toNode": "b6b0000000000003",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "先避免把货币存量与收入流量混淆"
+    },
+    {
+      "id": "b6be000000000002",
+      "fromNode": "b6b0000000000002",
+      "fromSide": "bottom",
+      "toNode": "b6b0000000000004",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "支付功能"
+    },
+    {
+      "id": "b6be000000000003",
+      "fromNode": "b6b0000000000002",
+      "fromSide": "bottom",
+      "toNode": "b6b0000000000005",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "价格尺度"
+    },
+    {
+      "id": "b6be000000000004",
+      "fromNode": "b6b0000000000002",
+      "fromSide": "right",
+      "toNode": "b6b0000000000006",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "跨期功能"
+    },
+    {
+      "id": "b6be000000000005",
+      "fromNode": "b6b0000000000004",
+      "fromSide": "right",
+      "toNode": "b6b0000000000007",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "接受范围与结算速度是货币性的两个维度"
+    },
+    {
+      "id": "b6be000000000006",
+      "fromNode": "b6b0000000000006",
+      "fromSide": "bottom",
+      "toNode": "b6b0000000000007",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "价格风险是货币性的另一维"
+    },
+    {
+      "id": "b6be000000000007",
+      "fromNode": "b6b0000000000007",
+      "fromSide": "right",
+      "toNode": "b6b0000000000008",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "连续谱被统计制度离散成口径"
+    },
+    {
+      "id": "b6be000000000008",
+      "fromNode": "b6b0000000000008",
+      "fromSide": "bottom",
+      "toNode": "b6b0000000000009",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "美国窄口径的现行实例"
+    },
+    {
+      "id": "b6be000000000009",
+      "fromNode": "b6b0000000000009",
+      "fromSide": "right",
+      "toNode": "b6b000000000000a",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "现行美国 H.6 的 M2 包含 M1 并加入指定近货币"
+    },
+    {
+      "id": "b6be00000000000a",
+      "fromNode": "b6b0000000000009",
+      "fromSide": "bottom",
+      "toNode": "b6b000000000000b",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "现行 other liquid deposits 源自 2020 年重分类"
+    },
+    {
+      "id": "b6be00000000000b",
+      "fromNode": "b6b000000000000a",
+      "fromSide": "bottom",
+      "toNode": "b6b000000000000b",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "M2 不变揭示同一资产被移入 M1"
+    },
+    {
+      "id": "b6be00000000000c",
+      "fromNode": "b6b000000000000b",
+      "fromSide": "bottom",
+      "toNode": "b6b000000000000c",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "系列断点要求分段比较"
+    },
+    {
+      "id": "b6be00000000000d",
+      "fromNode": "b6b0000000000008",
+      "fromSide": "right",
+      "toNode": "b6b000000000000c",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "跨国比较先核对统计约定"
+    },
+    {
+      "id": "b6be00000000000e",
+      "fromNode": "b6b0000000000004",
+      "fromSide": "bottom",
+      "toNode": "b6b000000000000d",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "纸币硬币是交换媒介的一种实物载体"
+    },
+    {
+      "id": "b6be00000000000f",
+      "fromNode": "b6b0000000000004",
+      "fromSide": "bottom",
+      "toNode": "b6b000000000000e",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "账户转账让银行存款充当交换媒介"
+    },
+    {
+      "id": "b6be000000000010",
+      "fromNode": "b6b000000000000e",
+      "fromSide": "right",
+      "toNode": "b6b000000000000f",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "对照商业银行负债与央行负债"
+    },
+    {
+      "id": "b6be000000000011",
+      "fromNode": "b6b000000000000d",
+      "fromSide": "bottom",
+      "toNode": "b6b0000000000010",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "同为实物纸币硬币"
+    },
+    {
+      "id": "b6be000000000012",
+      "fromNode": "b6b000000000000f",
+      "fromSide": "bottom",
+      "toNode": "b6b0000000000010",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "但库存现金不是央行账户余额"
+    },
+    {
+      "id": "b6be000000000013",
+      "fromNode": "b6b0000000000009",
+      "fromSide": "left",
+      "toNode": "b6b0000000000011",
+      "toSide": "right",
+      "toEnd": "arrow",
+      "label": "M1 覆盖公众通货与存款"
+    },
+    {
+      "id": "b6be000000000014",
+      "fromNode": "b6b000000000000f",
+      "fromSide": "bottom",
+      "toNode": "b6b0000000000011",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "现行美国口径下准备金进入基础但不进入公众 M1"
+    },
+    {
+      "id": "b6be000000000015",
+      "fromNode": "b6b000000000000e",
+      "fromSide": "bottom",
+      "toNode": "b6b0000000000012",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "同行支付只重记银行存款负债"
+    },
+    {
+      "id": "b6be000000000016",
+      "fromNode": "b6b0000000000012",
+      "fromSide": "right",
+      "toNode": "b6b0000000000013",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "跨银行后增加准备金结算腿"
+    },
+    {
+      "id": "b6be000000000017",
+      "fromNode": "b6b000000000000f",
+      "fromSide": "bottom",
+      "toNode": "b6b0000000000013",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "准备金承担银行间最终结算"
+    },
+    {
+      "id": "b6be000000000018",
+      "fromNode": "b6b0000000000010",
+      "fromSide": "bottom",
+      "toNode": "b6b0000000000014",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "先交付或补充库存现金"
+    },
+    {
+      "id": "b6be000000000019",
+      "fromNode": "b6b0000000000011",
+      "fromSide": "bottom",
+      "toNode": "b6b0000000000014",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "基础内部的通货与准备金转换"
+    },
+    {
+      "id": "b6be00000000001a",
+      "fromNode": "b6b0000000000013",
+      "fromSide": "bottom",
+      "toNode": "b6b0000000000015",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "纯支付在既定持有人集合内只重分配准备金"
+    },
+    {
+      "id": "b6be00000000001b",
+      "fromNode": "b6b0000000000014",
+      "fromSide": "right",
+      "toNode": "b6b0000000000015",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "补充现金可把准备金转为流通中通货"
+    },
+    {
+      "id": "b6be00000000001c",
+      "fromNode": "b6b0000000000015",
+      "fromSide": "bottom",
+      "toNode": "b6b0000000000016",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "标准银行结算链下央行购债创造体系准备金"
+    },
+    {
+      "id": "b6be00000000001d",
+      "fromNode": "b6b000000000000e",
+      "fromSide": "bottom",
+      "toNode": "b6b0000000000016",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "非银行卖方还需要商业银行存款腿"
+    },
+    {
+      "id": "b6be00000000001e",
+      "fromNode": "b6b0000000000016",
+      "fromSide": "right",
+      "toNode": "b6b0000000000017",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "先区分直接结算效果与后续传导"
+    },
+    {
+      "id": "b6be00000000001f",
+      "fromNode": "b6b0000000000011",
+      "fromSide": "bottom",
+      "toNode": "b6b0000000000017",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "基础与广义货币不存在固定倍数"
+    }
+  ]
+}

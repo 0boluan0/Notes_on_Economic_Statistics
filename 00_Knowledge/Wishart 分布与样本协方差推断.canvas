@@ -1,0 +1,166 @@
+{
+  "nodes": [
+    {
+      "id": "wishart-header",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 1320,
+      "height": 180,
+      "text": "# Wishart 分布与样本协方差推断\n\n从 Gaussian 外积和的整数生成式与实数自由度延拓，走到样本协方差的精确抽样律、均值—协方差独立性与秩边界。\n\n本主题六张原子，另引入两张线性代数边界。先核对假设与参数化，再使用求逆、检验或尾概率公式。",
+      "color": "4"
+    },
+    {
+      "id": "wishart-definition",
+      "type": "text",
+      "x": 450,
+      "y": 280,
+      "width": 420,
+      "height": 210,
+      "text": "## [[Wishart分布|Wishart 分布]]\n\n整数自由度时由独立 Gaussian 外积和生成；正定密度把分布族延拓到实数 $\\nu>p-1$。",
+      "color": "5"
+    },
+    {
+      "id": "wishart-psd",
+      "type": "text",
+      "x": -40,
+      "y": 280,
+      "width": 360,
+      "height": 190,
+      "text": "## [[协方差矩阵半正定性|半正定结构]]\n\n对任意 $a$，$a^TWa=\\sum_i(a^TZ_i)^2\\ge0$；Wishart 矩阵天然半正定。"
+    },
+    {
+      "id": "wishart-convention",
+      "type": "text",
+      "x": 1000,
+      "y": 280,
+      "width": 420,
+      "height": 210,
+      "text": "## [[Wishart参数化|参数化边界]]\n\n矩阵可写成 covariance scale 或其逆，参数顺序也不统一；用生成式、密度或期望确认。",
+      "color": "6"
+    },
+    {
+      "id": "wishart-sample",
+      "type": "text",
+      "x": 450,
+      "y": 620,
+      "width": 420,
+      "height": 210,
+      "text": "## [[样本协方差Wishart律|样本协方差律]]\n\n若 $X_i\\overset{iid}{\\sim}N_p(\\mu,\\Sigma)$，则 $(n-1)S\\sim W_p(\\Sigma,n-1)$；中心化消耗一个样本方向。",
+      "color": "3"
+    },
+    {
+      "id": "wishart-assumption",
+      "type": "text",
+      "x": -40,
+      "y": 620,
+      "width": 360,
+      "height": 220,
+      "text": "## [[Wishart抽样假设|抽样假设边界]]\n\nIID 多元正态给出标准精确律；相同二阶矩并不够，其他抽样结构一般需要另行校准。",
+      "color": "1"
+    },
+    {
+      "id": "wishart-independence",
+      "type": "text",
+      "x": 80,
+      "y": 980,
+      "width": 390,
+      "height": 210,
+      "text": "## [[正态均值协方差独立|均值—协方差独立]]\n\nGaussian 正交分解把样本均值方向与 $n-1$ 个残差方向分开；一般总体中零协方差不足以推出独立。",
+      "color": "3"
+    },
+    {
+      "id": "wishart-rank",
+      "type": "text",
+      "x": 600,
+      "y": 980,
+      "width": 430,
+      "height": 220,
+      "text": "## [[Wishart秩与可逆性|整数自由度下的秩与可逆性]]\n\n当 $\\Sigma\\succ0$ 且 $\\nu$ 为整数时，$\\operatorname{rank}(W)=\\min(p,\\nu)$ 几乎必然；样本协方差可逆需 $n\\ge p+1$，但不保证稳定。",
+      "color": "1"
+    },
+    {
+      "id": "wishart-pd",
+      "type": "text",
+      "x": 1160,
+      "y": 980,
+      "width": 360,
+      "height": 190,
+      "text": "## [[正定与半正定可逆性|正定与可逆]]\n\n半正定只保证非负二次型；只有正定才保证普通逆存在。"
+    }
+  ],
+  "edges": [
+    {
+      "id": "wishart-edge-header-definition",
+      "fromNode": "wishart-header",
+      "fromSide": "bottom",
+      "toNode": "wishart-definition",
+      "toSide": "top",
+      "label": "先固定生成定义"
+    },
+    {
+      "id": "wishart-edge-definition-psd",
+      "fromNode": "wishart-definition",
+      "fromSide": "left",
+      "toNode": "wishart-psd",
+      "toSide": "right",
+      "label": "外积和保持半正定"
+    },
+    {
+      "id": "wishart-edge-definition-convention",
+      "fromNode": "wishart-definition",
+      "fromSide": "right",
+      "toNode": "wishart-convention",
+      "toSide": "left",
+      "label": "用生成式校准符号"
+    },
+    {
+      "id": "wishart-edge-definition-sample",
+      "fromNode": "wishart-definition",
+      "fromSide": "bottom",
+      "toNode": "wishart-sample",
+      "toSide": "top",
+      "label": "中心化残差形成外积和"
+    },
+    {
+      "id": "wishart-edge-sample-assumption",
+      "fromNode": "wishart-sample",
+      "fromSide": "left",
+      "toNode": "wishart-assumption",
+      "toSide": "right",
+      "label": "iid Gaussian 给出标准精确律"
+    },
+    {
+      "id": "wishart-edge-sample-independence",
+      "fromNode": "wishart-sample",
+      "fromSide": "bottom",
+      "toNode": "wishart-independence",
+      "toSide": "top",
+      "label": "同一正交分解还给出独立性"
+    },
+    {
+      "id": "wishart-edge-sample-rank",
+      "fromNode": "wishart-sample",
+      "fromSide": "bottom",
+      "toNode": "wishart-rank",
+      "toSide": "top",
+      "label": "自由度限制残差方向数"
+    },
+    {
+      "id": "wishart-edge-assumption-independence",
+      "fromNode": "wishart-assumption",
+      "fromSide": "bottom",
+      "toNode": "wishart-independence",
+      "toSide": "left",
+      "label": "非 Gaussian 时通常失去精确独立性"
+    },
+    {
+      "id": "wishart-edge-rank-pd",
+      "fromNode": "wishart-rank",
+      "fromSide": "right",
+      "toNode": "wishart-pd",
+      "toSide": "left",
+      "label": "满秩时才由半正定升级为正定"
+    }
+  ]
+}

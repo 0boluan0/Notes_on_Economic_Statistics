@@ -1,0 +1,138 @@
+{
+  "nodes": [
+    {
+      "id": "hd-header",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 1280,
+      "height": 180,
+      "text": "# Harrod—Domar 增长模型\n\n先分开 Harrod 与 Domar 的原始问题，再看它们为什么在简化教科书模型中会合于相似的增长条件。\n\n**$s/v$ 是计划一致条件；增长率的实现与稳定性仍需要行为机制。**",
+      "color": "4"
+    },
+    {
+      "id": "hd-distinction",
+      "type": "text",
+      "x": 0,
+      "y": 300,
+      "width": 400,
+      "height": 220,
+      "text": "## [[Harrod 与 Domar 的机制差异|DEV-HD-005 · 两条原始问题线]]\n\nHarrod：储蓄供给与投资需求是否相容。\n\nDomar：收入增长能否利用投资新增的产能。",
+      "color": "6"
+    },
+    {
+      "id": "hd-dual-effect",
+      "type": "text",
+      "x": 780,
+      "y": 300,
+      "width": 400,
+      "height": 210,
+      "text": "## [[投资双重效应|DEV-HD-001 · 投资双重效应]]\n\n投资今天是需求流量，完成后又增加资本存量与未来产能；两面需要动态协调。",
+      "color": "5"
+    },
+    {
+      "id": "hd-consistency",
+      "type": "text",
+      "x": 780,
+      "y": 650,
+      "width": 420,
+      "height": 230,
+      "text": "## [[Harrod-Domar 一致增长率|DEV-HD-002 · $g_w=s/v$]]\n\n固定增量资本系数、计划储蓄等于所需投资且采用净投资口径时，$s/v$ 给出计划一致率，不是预测。",
+      "color": "3"
+    },
+    {
+      "id": "hd-rates",
+      "type": "text",
+      "x": 0,
+      "y": 650,
+      "width": 400,
+      "height": 230,
+      "text": "## [[Harrod 三种增长率|DEV-HD-003 · 三种增长率]]\n\n实际：发生了什么。\n保证：企业计划是否被验证。\n自然：供给条件允许的充分就业增长上限。",
+      "color": "3"
+    },
+    {
+      "id": "hd-instability",
+      "type": "text",
+      "x": 0,
+      "y": 1020,
+      "width": 430,
+      "height": 230,
+      "text": "## [[Harrod 离轨不稳定性|DEV-HD-004 · 离轨反馈边界]]\n\n产能过紧或闲置可能经投资反应放大；但 $g_w=s/v$ 本身没有给出完整离轨动态。",
+      "color": "1"
+    },
+    {
+      "id": "hd-solow",
+      "type": "text",
+      "x": 780,
+      "y": 1020,
+      "width": 400,
+      "height": 220,
+      "text": "## [[Solow 转型动态|Solow · 稳定调整的对照]]\n\n要素替代、资本边际收益递减与明确运动方程提供另一套回归稳态机制；这改变模型结构，不是给现实稳定作保证。"
+    }
+  ],
+  "edges": [
+    {
+      "id": "hd-edge-header-distinction",
+      "fromNode": "hd-header",
+      "fromSide": "bottom",
+      "toNode": "hd-distinction",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "先拆开合称中的两条问题线"
+    },
+    {
+      "id": "hd-edge-distinction-dual",
+      "fromNode": "hd-distinction",
+      "fromSide": "right",
+      "toNode": "hd-dual-effect",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "Domar 从投资的两面出发"
+    },
+    {
+      "id": "hd-edge-dual-consistency",
+      "fromNode": "hd-dual-effect",
+      "fromSide": "bottom",
+      "toNode": "hd-consistency",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "让需求增长追上新增产能"
+    },
+    {
+      "id": "hd-edge-distinction-rates",
+      "fromNode": "hd-distinction",
+      "fromSide": "bottom",
+      "toNode": "hd-rates",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "Harrod 区分三种增长率"
+    },
+    {
+      "id": "hd-edge-consistency-rates",
+      "fromNode": "hd-consistency",
+      "fromSide": "left",
+      "toNode": "hd-rates",
+      "toSide": "right",
+      "toEnd": "arrow",
+      "label": "一致条件对应保证增长率"
+    },
+    {
+      "id": "hd-edge-rates-instability",
+      "fromNode": "hd-rates",
+      "fromSide": "bottom",
+      "toNode": "hd-instability",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "实际增长偏离计划时考察反馈"
+    },
+    {
+      "id": "hd-edge-instability-solow",
+      "fromNode": "hd-instability",
+      "fromSide": "right",
+      "toNode": "hd-solow",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "用可替代要素改写调整机制"
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "nodes": [
+    {
+      "id": "8f4c1a2d7b603e95",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 1500,
+      "height": 180,
+      "text": "# Solow 增长模型、稳态与收敛\n\n先固定生产函数与计量口径，再由资本运动推出稳态、转型和收敛；最后把模型结论与增长核算、跨国经验检验分开。\n\n**稳态是有条件的模型结论；水平效应、过渡增长与外生长期增长率不是一回事。**",
+      "color": "4"
+    },
+    {
+      "id": "2b8e6d4a91c307f5",
+      "type": "text",
+      "x": 0,
+      "y": 320,
+      "width": 420,
+      "height": 240,
+      "text": "## [[Solow 人均化边界|MACRO-SOLOW-001 · 人均化边界]]\n\nCRS 只对指定投入允许缩放：无技术时按劳动者；$Y=F(K,AL)$ 时按有效劳动。两种 $k$ 不能混用。",
+      "color": "5"
+    },
+    {
+      "id": "5d1f9a3c7e024b86",
+      "type": "text",
+      "x": 540,
+      "y": 320,
+      "width": 420,
+      "height": 240,
+      "text": "## [[Solow 资本积累方程|MACRO-SOLOW-002 · 资本积累]]\n\n$\\dot k=sf(k)-(n+g+\\delta)k$ 仅适用于每有效劳动资本；无技术的人均口径令 $g=0$。",
+      "color": "5"
+    },
+    {
+      "id": "a6c3e9f1075b4d28",
+      "type": "text",
+      "x": 1080,
+      "y": 320,
+      "width": 420,
+      "height": 240,
+      "text": "## [[Solow 稳态条件|MACRO-SOLOW-003 · 稳态条件]]\n\n$sf(k^*)=(n+g+\\delta)k^*$。正内点稳态的存在与唯一还需凹性、单调性和端点条件。",
+      "color": "3"
+    },
+    {
+      "id": "0e7a4c9b2d613f85",
+      "type": "text",
+      "x": 0,
+      "y": 720,
+      "width": 420,
+      "height": 240,
+      "text": "## [[Solow 黄金律|MACRO-SOLOW-005 · 黄金律]]\n\n$f'(k_{gold}^*)=n+g+\\delta$ 最大化稳态消费；它不评价过渡消费和贴现效用。",
+      "color": "6"
+    },
+    {
+      "id": "3c9f1b6e8052a7d4",
+      "type": "text",
+      "x": 540,
+      "y": 720,
+      "width": 420,
+      "height": 240,
+      "text": "## [[Solow 转型动态|MACRO-SOLOW-004 · 转型动态]]\n\n标准条件下，$k<k^*$ 时净投资为正，$k>k^*$ 时为负。比较静态只给终点，转型动态追踪整条路径。",
+      "color": "4"
+    },
+    {
+      "id": "7a2d5e8c1f904b63",
+      "type": "text",
+      "x": 1080,
+      "y": 720,
+      "width": 420,
+      "height": 240,
+      "text": "## [[储蓄率的水平效应|MACRO-SOLOW-007 · 储蓄率效应]]\n\n更高 $s$ 抬高稳态水平并带来过渡增长；到达新路径后，人均长期增长率仍由外生 $g$ 决定。",
+      "color": "3"
+    },
+    {
+      "id": "c8a5f20d7b319e64",
+      "type": "text",
+      "x": 0,
+      "y": 1120,
+      "width": 420,
+      "height": 240,
+      "text": "## [[Solow 收敛边界|MACRO-SOLOW-006 · 收敛边界]]\n\n绝对收敛要求共同稳态；条件收敛比较各经济相对自身稳态的距离，不保证任意穷国追上富国。",
+      "color": "6"
+    },
+    {
+      "id": "1f6b3d8a4e907c25",
+      "type": "text",
+      "x": 540,
+      "y": 1120,
+      "width": 420,
+      "height": 240,
+      "text": "## [[增长核算的 TFP 残差|MACRO-SOLOW-009 · TFP 残差]]\n\n增长核算在给定函数、份额和测量口径下反推剩余；它不是直接观测的纯技术。",
+      "color": "2"
+    },
+    {
+      "id": "b4e1c7a5902d6f38",
+      "type": "text",
+      "x": 1080,
+      "y": 1120,
+      "width": 420,
+      "height": 240,
+      "text": "## [[Solow 的外生技术边界|MACRO-SOLOW-008 · 外生技术]]\n\n每有效劳动产出稳态不增长；每名劳动者产出按外生 $g$ 增长。基本模型不解释 $g$ 从何而来。",
+      "color": "5"
+    },
+    {
+      "id": "6d0c9b4e2a7f8153",
+      "type": "text",
+      "x": 540,
+      "y": 1520,
+      "width": 420,
+      "height": 250,
+      "text": "## [[跨国增长回归的因果边界|MACRO-SOLOW-010 · 经验检验]]\n\n负的初始收入系数描述收敛相关性；遗漏技术、反向因果和错误控制使它不能单独识别 Solow 参数或政策效应。",
+      "color": "1"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1a4b7c0295d8f63",
+      "fromNode": "2b8e6d4a91c307f5",
+      "fromSide": "right",
+      "toNode": "5d1f9a3c7e024b86",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "确定变量口径后推导运动方程"
+    },
+    {
+      "id": "4b7d0f2a8c519e36",
+      "fromNode": "5d1f9a3c7e024b86",
+      "fromSide": "right",
+      "toNode": "a6c3e9f1075b4d28",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "令净积累为零并检查交点条件"
+    },
+    {
+      "id": "9c2e5a7d1f804b63",
+      "fromNode": "a6c3e9f1075b4d28",
+      "fromSide": "bottom",
+      "toNode": "0e7a4c9b2d613f85",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "在可行稳态中选择消费最高点"
+    },
+    {
+      "id": "d5f8a1c4073e9b62",
+      "fromNode": "a6c3e9f1075b4d28",
+      "fromSide": "bottom",
+      "toNode": "3c9f1b6e8052a7d4",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "检查稳态两侧的运动方向"
+    },
+    {
+      "id": "2a6e9c3f5b107d84",
+      "fromNode": "a6c3e9f1075b4d28",
+      "fromSide": "bottom",
+      "toNode": "7a2d5e8c1f904b63",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "改变储蓄率并比较新旧目标"
+    },
+    {
+      "id": "7e1b4d8a0c639f52",
+      "fromNode": "3c9f1b6e8052a7d4",
+      "fromSide": "bottom",
+      "toNode": "c8a5f20d7b319e64",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "把单一经济的回归推广到经济间比较"
+    },
+    {
+      "id": "a3f6c9e2057b1d84",
+      "fromNode": "3c9f1b6e8052a7d4",
+      "fromSide": "right",
+      "toNode": "7a2d5e8c1f904b63",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "终点变化还要经过资本调整"
+    },
+    {
+      "id": "5c8f1a4e7d209b63",
+      "fromNode": "7a2d5e8c1f904b63",
+      "fromSide": "bottom",
+      "toNode": "b4e1c7a5902d6f38",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "分开水平效应与长期增长率来源"
+    },
+    {
+      "id": "b7d0e3a6295c8f14",
+      "fromNode": "b4e1c7a5902d6f38",
+      "fromSide": "left",
+      "toNode": "1f6b3d8a4e907c25",
+      "toSide": "right",
+      "toEnd": "arrow",
+      "label": "外生技术变量在数据中只能被间接核算"
+    },
+    {
+      "id": "0a4d7b1e8c539f26",
+      "fromNode": "c8a5f20d7b319e64",
+      "fromSide": "bottom",
+      "toNode": "6d0c9b4e2a7f8153",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "把收敛预测带到跨国样本"
+    },
+    {
+      "id": "f2c5a8d1047e9b63",
+      "fromNode": "1f6b3d8a4e907c25",
+      "fromSide": "bottom",
+      "toNode": "6d0c9b4e2a7f8153",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "未观测生产率进入回归误差与识别问题"
+    }
+  ]
+}

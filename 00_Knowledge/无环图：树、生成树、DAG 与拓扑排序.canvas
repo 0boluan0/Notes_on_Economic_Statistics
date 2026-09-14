@@ -1,0 +1,310 @@
+{
+  "nodes": [
+    {
+      "id": "acy-intro",
+      "type": "text",
+      "x": 0,
+      "y": 500,
+      "width": 460,
+      "height": 220,
+      "text": "# 无环图：tree、MST、DAG 与拓扑排序\n\n先锁定图的方向与 cycle 定义，再沿无向分支学习 tree/MST，或沿有向分支学习 DAG/topological order。\n\n**颜色只表示角色：**紫色区分；青色定义/定理；黄色算法；橙色易混边界。",
+      "color": "4"
+    },
+    {
+      "id": "acy-split",
+      "type": "text",
+      "x": 700,
+      "y": 500,
+      "width": 460,
+      "height": 220,
+      "text": "## [[Tree 与 DAG 的区别]]\n\ntree：无向、connected、无 undirected cycle。\n\nDAG：有向、无 directed cycle；可以断开，underlying graph 也可以有环。",
+      "color": "6"
+    },
+    {
+      "id": "tree-core",
+      "type": "text",
+      "x": 1400,
+      "y": 0,
+      "width": 480,
+      "height": 220,
+      "text": "## [[有限树的等价刻画]]\n\nconnected + acyclic、unique path、edge-minimal connected 与 edge-maximal acyclic 是同一结构的等价刻画。",
+      "color": "5"
+    },
+    {
+      "id": "forest-count",
+      "type": "text",
+      "x": 2120,
+      "y": -260,
+      "width": 480,
+      "height": 200,
+      "text": "## [[Forest 的边数公式]]\n\nforest 的每个 component 是 tree；$|E|=n-c$。只有再配合 connected 或 acyclic，$n-1$ 才能刻画 tree。",
+      "color": "5"
+    },
+    {
+      "id": "tree-leaves",
+      "type": "text",
+      "x": 2120,
+      "y": 0,
+      "width": 480,
+      "height": 200,
+      "text": "## [[有限树的两叶定理]]\n\n最长 path 的两个端点是 degree-1 leaves；单点 tree 是否称有一片 leaf 取决于约定，但不满足本定理结论。",
+      "color": "5"
+    },
+    {
+      "id": "spanning-tree",
+      "type": "text",
+      "x": 2120,
+      "y": 260,
+      "width": 480,
+      "height": 200,
+      "text": "## [[生成树的存在条件]]\n\nspanning tree 保留全部 vertices，只删多余边。connected graph 可反复删 cycle edge 得到它。",
+      "color": "5"
+    },
+    {
+      "id": "mst-definition",
+      "type": "text",
+      "x": 2840,
+      "y": 260,
+      "width": 480,
+      "height": 200,
+      "text": "## [[最小生成树的定义与唯一性]]\n\nMST 最小化整棵 spanning tree 的 edge-weight 总和。distinct weights 足以保证唯一，但有 ties 不必然多解。",
+      "color": "5"
+    },
+    {
+      "id": "search-vs-mst",
+      "type": "text",
+      "x": 2840,
+      "y": 560,
+      "width": 480,
+      "height": 200,
+      "text": "## [[搜索树与 MST 的目标差异]]\n\nsearch/shortest-path tree 围绕固定 root 给路径证书；MST 无指定 root，优化全树总权重。",
+      "color": "2"
+    },
+    {
+      "id": "cut-property",
+      "type": "text",
+      "x": 3560,
+      "y": 260,
+      "width": 480,
+      "height": 220,
+      "text": "## [[MST 割性质]]\n\ncut 上一条 light edge 属于某个 MST；唯一 light edge 属于每个 MST。算法还要求 cut respect 当前安全边集。",
+      "color": "5"
+    },
+    {
+      "id": "kruskal",
+      "type": "text",
+      "x": 4280,
+      "y": 100,
+      "width": 480,
+      "height": 200,
+      "text": "## [[Kruskal 算法]]\n\n全局按权重扫描；只合并不同 components。connected 时得 MST，disconnected 时得 minimum spanning forest。",
+      "color": "3"
+    },
+    {
+      "id": "prim",
+      "type": "text",
+      "x": 4280,
+      "y": 400,
+      "width": 480,
+      "height": 200,
+      "text": "## [[Prim 算法]]\n\n从一个 root 生长一棵 tree；每次取 $(S,V\\setminus S)$ 上的 light edge。disconnected 时须按 component 重启。",
+      "color": "3"
+    },
+    {
+      "id": "dag-topo",
+      "type": "text",
+      "x": 1400,
+      "y": 900,
+      "width": 480,
+      "height": 220,
+      "text": "## [[DAG 与拓扑序等价]]\n\nfinite DAG、存在 topological order、每个非空 induced subgraph 有 source/sink 四者等价。",
+      "color": "5"
+    },
+    {
+      "id": "kahn",
+      "type": "text",
+      "x": 2120,
+      "y": 820,
+      "width": 480,
+      "height": 220,
+      "text": "## [[Kahn 拓扑排序与环证书]]\n\n反复删除 source；若未输出全部 vertices 就没有 source，剩余 induced subgraph 含 directed cycle。",
+      "color": "3"
+    },
+    {
+      "id": "dfs-topo",
+      "type": "text",
+      "x": 2120,
+      "y": 1120,
+      "width": 480,
+      "height": 220,
+      "text": "## [[DFS 逆完成序拓扑排序]]\n\n复用 [[有向 DFS 的环证书|back-edge 环证书]]；无 back edge 时反转 full-DFS finishing order。",
+      "color": "3"
+    },
+    {
+      "id": "linear-extension",
+      "type": "text",
+      "x": 2840,
+      "y": 970,
+      "width": 480,
+      "height": 220,
+      "text": "## [[拓扑序的线性扩张]]\n\n它把偏序补成一种全序；互不可达任务可交换，但没有 direct edge 不等于不可比。",
+      "color": "2"
+    },
+    {
+      "id": "critical-path",
+      "type": "text",
+      "x": 3560,
+      "y": 970,
+      "width": 480,
+      "height": 240,
+      "text": "## [[DAG 关键路径与最短工期]]\n\ncritical-path 下界只在 unit duration、unlimited processors、precedence-only 条件下由 depth layering 精确达到；否则还需资源调度。",
+      "color": "5"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-intro-split",
+      "fromNode": "acy-intro",
+      "fromSide": "right",
+      "toNode": "acy-split",
+      "toSide": "left",
+      "label": "先锁定图类型与 cycle"
+    },
+    {
+      "id": "e-split-tree",
+      "fromNode": "acy-split",
+      "fromSide": "right",
+      "toNode": "tree-core",
+      "toSide": "left",
+      "label": "无向且 connected"
+    },
+    {
+      "id": "e-split-dag",
+      "fromNode": "acy-split",
+      "fromSide": "right",
+      "toNode": "dag-topo",
+      "toSide": "left",
+      "label": "有向且无 directed cycle"
+    },
+    {
+      "id": "e-tree-forest",
+      "fromNode": "tree-core",
+      "fromSide": "right",
+      "toNode": "forest-count",
+      "toSide": "left",
+      "label": "推广到多个 components"
+    },
+    {
+      "id": "e-tree-leaves",
+      "fromNode": "tree-core",
+      "fromSide": "right",
+      "toNode": "tree-leaves",
+      "toSide": "left",
+      "label": "有限结构推出"
+    },
+    {
+      "id": "e-tree-spanning",
+      "fromNode": "tree-core",
+      "fromSide": "right",
+      "toNode": "spanning-tree",
+      "toSide": "left",
+      "label": "保留全部顶点"
+    },
+    {
+      "id": "e-spanning-mst",
+      "fromNode": "spanning-tree",
+      "fromSide": "right",
+      "toNode": "mst-definition",
+      "toSide": "left",
+      "label": "加入 edge weights 后优化"
+    },
+    {
+      "id": "e-spanning-search",
+      "fromNode": "spanning-tree",
+      "fromSide": "right",
+      "toNode": "search-vs-mst",
+      "toSide": "left",
+      "label": "connected 时 spans 全图"
+    },
+    {
+      "id": "e-mst-search",
+      "fromNode": "mst-definition",
+      "fromSide": "bottom",
+      "toNode": "search-vs-mst",
+      "toSide": "top",
+      "label": "目标函数不同"
+    },
+    {
+      "id": "e-mst-cut",
+      "fromNode": "mst-definition",
+      "fromSide": "right",
+      "toNode": "cut-property",
+      "toSide": "left",
+      "label": "用 exchange 证明安全"
+    },
+    {
+      "id": "e-forest-kruskal",
+      "fromNode": "forest-count",
+      "fromSide": "right",
+      "toNode": "kruskal",
+      "toSide": "left",
+      "label": "维护 forest invariant"
+    },
+    {
+      "id": "e-cut-kruskal",
+      "fromNode": "cut-property",
+      "fromSide": "right",
+      "toNode": "kruskal",
+      "toSide": "left",
+      "label": "保证 component 合并安全"
+    },
+    {
+      "id": "e-cut-prim",
+      "fromNode": "cut-property",
+      "fromSide": "right",
+      "toNode": "prim",
+      "toSide": "left",
+      "label": "保证 frontier 选择安全"
+    },
+    {
+      "id": "e-dag-kahn",
+      "fromNode": "dag-topo",
+      "fromSide": "right",
+      "toNode": "kahn",
+      "toSide": "left",
+      "label": "source 删除构造"
+    },
+    {
+      "id": "e-dag-dfs",
+      "fromNode": "dag-topo",
+      "fromSide": "right",
+      "toNode": "dfs-topo",
+      "toSide": "left",
+      "label": "finishing time 构造"
+    },
+    {
+      "id": "e-kahn-linear",
+      "fromNode": "kahn",
+      "fromSide": "right",
+      "toNode": "linear-extension",
+      "toSide": "left",
+      "label": "source 选择可以分叉"
+    },
+    {
+      "id": "e-dfs-linear",
+      "fromNode": "dfs-topo",
+      "fromSide": "right",
+      "toNode": "linear-extension",
+      "toSide": "left",
+      "label": "输出一种合法排列"
+    },
+    {
+      "id": "e-linear-critical",
+      "fromNode": "linear-extension",
+      "fromSide": "right",
+      "toNode": "critical-path",
+      "toSide": "left",
+      "label": "加入时长与处理器假设"
+    }
+  ]
+}

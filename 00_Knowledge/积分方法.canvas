@@ -1,0 +1,27 @@
+{
+	"nodes":[
+		{"id":"4f7a1c9e2b6d8053","type":"text","x":-340,"y":-700,"width":680,"height":280,"color":"4","text":"# 积分方法\n\n这张图不是公式清单，而是按 **integrand 的结构** 选择改写方式。\n\n- 先走下方的选择与验算顺序\n- 原子卡保存公式、条件、反例和自检\n- 无穷端点或奇点的收敛问题另见 [[反常积分.canvas|反常积分]]\n\n**底线：** 变换后同步处理微分、上下限、定义域与分支；最后对候选原函数求导。"},
+		{"id":"8c2e5a7d1f9b3046","type":"text","x":-300,"y":-260,"width":600,"height":330,"color":"4","text":"## [[积分方法选择|按结构选择，再独立验算]]\n\n1. 定义域与化简\n2. 完整复合导数 → 换元\n3. 三角幂 → 奇偶或导数配对\n4. 二次根式 → 先直接换元，再考虑三角代换\n5. 有理函数 → 长除与部分分式\n6. 乘积 → 普通分部积分；回到原式时检查能否闭环\n\n**验算：** 求导；定积分核对有向上下限；坏点另判收敛。"},
+		{"id":"1d6f8a3c5e7b9024","type":"text","x":-1050,"y":-200,"width":420,"height":260,"color":"5","text":"## [[换元积分|换元积分]]\n\n识别 $f(g(x))g'(x)$：\n$$u=g(x),\\qquad du=g'(x)dx.$$\n\n内层表达式与微分必须一起替换；缺失的链式因子不能靠命名 $u$ 制造。"},
+		{"id":"2e7a9c4d6f1b3058","type":"text","x":-1050,"y":200,"width":420,"height":300,"color":"5","text":"## [[定积分换元|定积分换元]]\n\n$$\\int_a^b f(g(x))g'(x)dx=\\int_{g(a)}^{g(b)}f(u)du.$$\n\n微分与有向上下限同步改变；精确复合导数型本身不要求 $g$ 单调。"},
+		{"id":"a1c3e5g7i9k2m406","type":"text","x":-1050,"y":600,"width":420,"height":280,"color":"1","text":"## [[非单调换元需分支|非单调换元需分支]]\n\n若换元后仍需用 $g^{-1}$ 消去残余变量，而 $g$ 在原区间不是一一对应，就必须按单调分支拆分。"},
+		{"id":"3f8b1d5e7a2c4069","type":"text","x":-600,"y":450,"width":420,"height":280,"color":"3","text":"## [[正弦余弦幂积分|正弦余弦幂]]\n\n对非负整数幂：\n- 某指数奇数：留一个导数配对因子，再用 $\\sin^2x+\\cos^2x=1$\n- 两指数都偶：用半角公式反复降幂\n\n奇偶路由不自动覆盖负数或分数幂。"},
+		{"id":"5a9c2e6f8b3d1074","type":"text","x":-120,"y":540,"width":420,"height":280,"color":"3","text":"## [[正切正割幂积分|正切正割幂]]\n\n优先保留一组完整导数：\n$$d(\\tan x)=\\sec^2x\\,dx,$$\n$$d(\\sec x)=\\sec x\\tan x\\,dx.$$\n\n先确认因子确实存在；余切、余割类比时带负号。两条主路由不覆盖所有指数。"},
+		{"id":"6b1d3f7a9c4e2058","type":"text","x":360,"y":450,"width":420,"height":300,"color":"3","text":"## [[三角代换|三角代换]]\n\n二次根式配方后对应：\n- $a^2-x^2$ → $x=a\\sin\\theta$\n- $a^2+x^2$ → $x=a\\tan\\theta$\n- $x^2-a^2$ → 按 $x$ 正负选择 $\\pm a\\sec\\theta$\n\n角度范围控制绝对值与符号；先检查更短的直接换元。"},
+		{"id":"7c2e4a8b1d5f3069","type":"text","x":750,"y":100,"width":420,"height":330,"color":"2","text":"## [[部分分式积分|部分分式积分]]\n\n实有理函数：\n1. 先记原定义域与可去点\n2. 假分式长除\n3. 分母在实数上完全因式分解\n4. 重复因子逐幂列项\n5. 不可约二次因子配一般一次分子\n\n分解不消除极点。"},
+		{"id":"9d3f5b1c7e2a4068","type":"text","x":750,"y":-280,"width":420,"height":290,"color":"2","text":"## [[分部积分|分部积分]]\n\n$$\\int u\\,dv=uv-\\int v\\,du.$$\n\nLIATE 只是提示；通常应让新积分更简单。定积分还要保留完整的 $[uv]_a^b$。"},
+		{"id":"b2d4f6h8j1l3n507","type":"text","x":1230,"y":-280,"width":420,"height":290,"color":"2","text":"## [[循环分部积分|循环分部积分]]\n\n有限次重复后若得到 $I=G+cI$ 且 $c\\ne1$，就能移项解出 $I$；把未知原积分直接塞进 $dv$ 不会产生信息。"}
+	],
+	"edges":[
+		{"id":"0a4c6e8b2d5f7139","fromNode":"4f7a1c9e2b6d8053","fromSide":"bottom","toNode":"8c2e5a7d1f9b3046","toSide":"top","label":"从选择顺序进入"},
+		{"id":"1b5d7f9c3e6a8240","fromNode":"8c2e5a7d1f9b3046","fromSide":"left","toNode":"1d6f8a3c5e7b9024","toSide":"right","label":"完整复合导数"},
+		{"id":"2c6e8a1d4f7b9350","fromNode":"1d6f8a3c5e7b9024","fromSide":"bottom","toNode":"2e7a9c4d6f1b3058","toSide":"top","label":"加入有向上下限"},
+		{"id":"8c4e6a2d5f7b1930","fromNode":"2e7a9c4d6f1b3058","fromSide":"bottom","toNode":"a1c3e5g7i9k2m406","toSide":"top","label":"残余变量需要逆分支时"},
+		{"id":"3d7f9b2e5a8c1460","fromNode":"8c2e5a7d1f9b3046","fromSide":"bottom","toNode":"3f8b1d5e7a2c4069","toSide":"top","label":"正弦余弦奇偶"},
+		{"id":"4e8a1c3f6b9d2570","fromNode":"8c2e5a7d1f9b3046","fromSide":"bottom","toNode":"5a9c2e6f8b3d1074","toSide":"top","label":"正切正割配对"},
+		{"id":"5f9b2d4a7c1e3680","fromNode":"8c2e5a7d1f9b3046","fromSide":"bottom","toNode":"6b1d3f7a9c4e2058","toSide":"top","label":"二次根式"},
+		{"id":"6a1c3e5b8d2f4790","fromNode":"8c2e5a7d1f9b3046","fromSide":"right","toNode":"7c2e4a8b1d5f3069","toSide":"left","label":"有理函数"},
+		{"id":"7b2d4f6c9e3a5810","fromNode":"8c2e5a7d1f9b3046","fromSide":"right","toNode":"9d3f5b1c7e2a4068","toSide":"left","label":"乘积法则逆向"},
+		{"id":"9d5f7b3e6a8c2041","fromNode":"9d3f5b1c7e2a4068","fromSide":"right","toNode":"b2d4f6h8j1l3n507","toSide":"left","label":"重复后形成可解线性等式"}
+	]
+}

@@ -15,10 +15,10 @@ aliases:
 # Pythia: A Suite for Analyzing Large Language Models Across Training and Scaling
 
 ## 一句话位置
-这篇论文位于 `09 开源模型技术报告`，第一版用于连接 Open Models, Scaling Law 路线；此笔记暂作索引，不做精读摘要。
+这篇论文位于 `09 开源模型技术报告`，核心位置是用相同数据顺序、多个模型规模与密集检查点支持可控的损失缩放与训练动态研究；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[开放模型生态]], 规模化、MoE 与分布式训练
+[[开放模型生态]], [[损失缩放律]], [[预训练去重]], [[去重强度与净收益]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/2ZWK7GRQ)
@@ -28,4 +28,3 @@ aliases:
 ## Canvas
 - [[LLM Big Picture]]
 - [[09 开源模型技术报告.canvas|09 开源模型技术报告 Canvas]]
-

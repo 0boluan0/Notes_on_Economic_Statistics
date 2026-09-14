@@ -1,0 +1,20 @@
+{
+	"nodes":[
+		{"id":"si-header","type":"text","x":0,"y":0,"width":1300,"height":190,"text":"# 社会保险：风险共担与行为激励\n*Social Insurance: Risk Sharing and Behavioral Incentives*\n\n先区分进入风险池、保障后行为与同时赔付三种问题；再评价消费平滑和制度成本；最后把证据落实到资格、给付、期限、审核与筹资规则。"},
+		{"id":"si-001","type":"text","x":0,"y":280,"width":500,"height":240,"color":"4","text":"## [[逆向选择、道德风险与相关冲击]]\n\n隐藏风险改变谁入池、难以订约的保障后行动改变、许多赔付同时发生，是三种不同机制。"},
+		{"id":"si-002","type":"text","x":800,"y":280,"width":500,"height":240,"color":"4","text":"## [[强制参保的选择边界]]\n\n强制参与主要限制低风险者退出共同池；行为与相关冲击仍需另行处理。"},
+		{"id":"si-003","type":"text","x":0,"y":620,"width":500,"height":240,"color":"5","text":"## [[社会保险消费平滑]]\n\n若坏状态的边际效用更高，可行的跨状态转移创造保险价值；给付额本身不等于福利或资源成本。"},
+		{"id":"si-004","type":"text","x":800,"y":620,"width":500,"height":240,"color":"5","text":"## [[社会保险慷慨度]]\n\n给付变化要同时比较保险与分配收益、行为反应、筹资风险和执行成本。"},
+		{"id":"si-005","type":"text","x":0,"y":960,"width":500,"height":240,"color":"3","text":"## [[失业给付的福利评价]]\n\n持续期反应可含激励、流动性和岗位选择；福利评价还要看消费、产出和匹配质量。"},
+		{"id":"si-006","type":"text","x":800,"y":960,"width":500,"height":240,"color":"3","text":"## [[社会保险机制匹配]]\n\n资格、等待期、给付、期限、审核和经验费率都要写明目标机制与副作用。"}
+	],
+	"edges":[
+		{"id":"si-e01","fromNode":"si-001","fromSide":"right","toNode":"si-002","toSide":"left","toEnd":"arrow","label":"区分后定位强制参保的靶点"},
+		{"id":"si-e02","fromNode":"si-001","fromSide":"bottom","toNode":"si-003","toSide":"top","toEnd":"arrow","label":"区分失灵后评价保险收益"},
+		{"id":"si-e03","fromNode":"si-002","fromSide":"bottom","toNode":"si-004","toSide":"top","toEnd":"arrow","label":"入池之后仍要选择给付强度"},
+		{"id":"si-e04","fromNode":"si-003","fromSide":"right","toNode":"si-004","toSide":"left","toEnd":"arrow","label":"保险价值进入边际权衡"},
+		{"id":"si-e05","fromNode":"si-003","fromSide":"bottom","toNode":"si-005","toSide":"top","toEnd":"arrow","label":"失业保险中分开持续期与福利"},
+		{"id":"si-e06","fromNode":"si-004","fromSide":"bottom","toNode":"si-006","toSide":"top","toEnd":"arrow","label":"把权衡落实到制度参数"},
+		{"id":"si-e07","fromNode":"si-005","fromSide":"right","toNode":"si-006","toSide":"left","toEnd":"arrow","label":"用结果分解校准规则"}
+	]
+}

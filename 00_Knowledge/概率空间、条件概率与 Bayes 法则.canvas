@@ -1,0 +1,423 @@
+{
+  "nodes": [
+    {
+      "id": "a000000000000000",
+      "type": "text",
+      "x": 0,
+      "y": -480,
+      "width": 4160,
+      "height": 330,
+      "text": "# 概率空间、条件概率与 Bayes 法则\n\n**读图方式：** 上半部分是建模与条件信息；下半部分把“独立”的定义入口和边界命题分开。\n**关键区别：** 蓝色是定义入口，紫色是规则或定理，红色是不能越过的边界。\n**继续：** 随机计数进入 [[指示变量与随机计数.canvas|指示变量与随机计数]]；时间结构进入 [[随机过程基础.canvas|随机过程、平稳性与遍历性]]。\n\n*Definitions form the main route; counterexamples and non-implications remain separate, linkable boundaries.*"
+    },
+    {
+      "id": "a000000000000001",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 430,
+      "height": 190,
+      "text": "## [[概率建模四步法|概率建模顺序]]\n*Probability modelling workflow*\n\n先定一次试验、基本结果和事件，再选公式并检查结果。",
+      "color": "5"
+    },
+    {
+      "id": "a000000000000002",
+      "type": "text",
+      "x": 520,
+      "y": 0,
+      "width": 430,
+      "height": 190,
+      "text": "## [[离散概率空间]]\n*Discrete probability space*\n\n基本结果的概率非负且总和为一；事件概率按结果求和。",
+      "color": "5"
+    },
+    {
+      "id": "a000000000000003",
+      "type": "text",
+      "x": 1040,
+      "y": 0,
+      "width": 430,
+      "height": 190,
+      "text": "## [[古典概型等可能条件|计数公式的等可能条件]]\n*Equiprobable counting rule*\n\n“有利个数除以总数”只适用于有限且等可能的基本结果。",
+      "color": "1"
+    },
+    {
+      "id": "a000000000000004",
+      "type": "text",
+      "x": 1560,
+      "y": 0,
+      "width": 430,
+      "height": 190,
+			"text": "## [[互斥事件加法]]\n*Addition rule for events*\n\n互斥保证并概率可直接相加；一般情形必须扣除重复交集。",
+      "color": "4"
+    },
+    {
+      "id": "a000000000000005",
+      "type": "text",
+      "x": 2080,
+      "y": 0,
+      "width": 430,
+      "height": 190,
+      "text": "## [[补事件法]]\n*Complement rule*\n\n目标复杂而补事件简单时，用 $P(A)=1-P(A^c)$。",
+      "color": "4"
+    },
+    {
+      "id": "a000000000000006",
+      "type": "text",
+      "x": 520,
+      "y": 400,
+      "width": 430,
+      "height": 200,
+      "text": "## [[条件概率]]\n*Conditional probability*\n\n已知 $B$ 后，把概率空间限制在 $B$ 并重新归一化。",
+      "color": "5"
+    },
+    {
+      "id": "a000000000000007",
+      "type": "text",
+      "x": 1040,
+      "y": 400,
+      "width": 430,
+      "height": 200,
+      "text": "## [[概率乘法法则]]\n*Multiplication rule*\n\n$P(A\\cap B)=P(A\\mid B)P(B)$；换条件方向也要换边际项。",
+      "color": "4"
+    },
+    {
+      "id": "a000000000000008",
+      "type": "text",
+      "x": 1560,
+      "y": 400,
+      "width": 430,
+      "height": 200,
+      "text": "## [[全概率公式]]\n*Law of total probability*\n\n沿完备互斥分区展开事件，再按各分区概率加权。",
+      "color": "4"
+    },
+    {
+      "id": "a000000000000009",
+      "type": "text",
+      "x": 2080,
+      "y": 400,
+      "width": 430,
+      "height": 200,
+      "text": "## [[Bayes法则|Bayes 法则]]\n*Bayes' rule*\n\n似然乘先验，再除以证据总概率，得到后验。",
+      "color": "4"
+    },
+    {
+      "id": "a00000000000000a",
+      "type": "text",
+      "x": 2600,
+      "y": 400,
+      "width": 470,
+      "height": 220,
+      "text": "## [[灵敏度与后验概率|灵敏度不是阳性后患病率]]\n*Sensitivity is not the posterior*\n\n低基率下，假阳性会让阳性后的患病概率远低于灵敏度。",
+      "color": "1"
+    },
+    {
+      "id": "a00000000000000b",
+      "type": "text",
+      "x": 0,
+      "y": 960,
+      "width": 430,
+      "height": 200,
+      "text": "## [[事件独立]]\n*Independent events*\n\n两个事件的联合概率等于边际概率乘积。",
+      "color": "5"
+    },
+    {
+      "id": "a00000000000000c",
+      "type": "text",
+      "x": 0,
+      "y": 1320,
+      "width": 430,
+      "height": 210,
+      "text": "## [[正概率互斥不独立]]\n*Positive-probability disjoint events are not independent*\n\n交集概率为零，而边际概率乘积为正。",
+      "color": "1"
+    },
+    {
+      "id": "a00000000000000d",
+      "type": "text",
+      "x": 520,
+      "y": 960,
+      "width": 430,
+      "height": 200,
+      "text": "## [[两两独立]]\n*Pairwise independence*\n\n任意两个成员都独立：事件检查二重交集，随机变量检查二元取值事件。",
+      "color": "5"
+    },
+    {
+      "id": "a00000000000000e",
+      "type": "text",
+      "x": 1040,
+      "y": 960,
+      "width": 430,
+      "height": 200,
+      "text": "## [[相互独立]]\n*Mutual independence*\n\n事件或随机变量的每个有限子族都必须联合分解；不只检查每一对。",
+      "color": "5"
+    },
+    {
+      "id": "a00000000000000f",
+      "type": "text",
+      "x": 780,
+      "y": 1320,
+      "width": 430,
+      "height": 210,
+      "text": "## [[两两独立不推出相互独立]]\n*Pairwise does not imply mutual independence*\n\n二阶分解不能补齐三重和更高阶分解。",
+      "color": "1"
+    },
+    {
+      "id": "a000000000000010",
+      "type": "text",
+      "x": 1560,
+      "y": 960,
+      "width": 430,
+      "height": 200,
+      "text": "## [[随机变量独立]]\n*Independence of random variables*\n\n一方取值生成的任意事件都与另一方的任意事件独立。",
+      "color": "5"
+    },
+    {
+      "id": "a000000000000011",
+      "type": "text",
+      "x": 1560,
+      "y": 1320,
+      "width": 430,
+      "height": 210,
+      "text": "## [[随机变量独立的分布判据]]\n*Distribution criteria*\n\n联合 CDF 分解是通用判据；PMF 和密度分解是对应特例。",
+      "color": "3"
+    },
+    {
+      "id": "a000000000000012",
+      "type": "text",
+      "x": 2080,
+      "y": 960,
+      "width": 430,
+      "height": 200,
+      "text": "## [[条件独立]]\n*Conditional independence*\n\n给定同一信息后，每个有限子族的条件联合分布都分解；逐对检查不够。",
+      "color": "5"
+    },
+    {
+      "id": "a000000000000013",
+      "type": "text",
+      "x": 2080,
+      "y": 1320,
+      "width": 430,
+      "height": 210,
+      "text": "## [[条件独立不等于边际独立]]\n*Conditional and marginal independence differ*\n\n加入或移除条件会改变所比较的分布。",
+      "color": "1"
+    },
+    {
+      "id": "a000000000000014",
+      "type": "text",
+      "x": 1040,
+      "y": 1680,
+      "width": 430,
+      "height": 200,
+      "text": "## [[独立同分布|i.i.d.]]\n*Independent and identically distributed*\n\n共同分布与相互独立缺一不可。",
+      "color": "4"
+    },
+    {
+      "id": "a000000000000015",
+      "type": "text",
+      "x": 3260,
+      "y": 400,
+      "width": 520,
+      "height": 220,
+      "text": "## [[概率依赖与因果|概率依赖不是因果识别]]\n*Dependence is not causal identification*\n\n观察分布中的依赖或后验不能单独识别干预效果。",
+      "color": "1"
+    }
+  ],
+  "edges": [
+    {
+      "id": "b000000000000001",
+      "fromNode": "a000000000000001",
+      "fromSide": "right",
+      "toNode": "a000000000000002",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "建立概率空间"
+    },
+    {
+      "id": "b000000000000002",
+      "fromNode": "a000000000000002",
+      "fromSide": "right",
+      "toNode": "a000000000000003",
+      "toSide": "left",
+      "toEnd": "none",
+      "label": "计数捷径需要等可能"
+    },
+    {
+      "id": "b000000000000003",
+      "fromNode": "a000000000000004",
+      "fromSide": "bottom",
+      "toNode": "a000000000000008",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "互斥分区才能求和"
+    },
+    {
+      "id": "b000000000000004",
+      "fromNode": "a000000000000004",
+      "fromSide": "right",
+      "toNode": "a000000000000005",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "转向补事件"
+    },
+    {
+      "id": "b000000000000005",
+      "fromNode": "a000000000000002",
+      "fromSide": "bottom",
+      "toNode": "a000000000000006",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "加入已知信息"
+    },
+    {
+      "id": "b000000000000006",
+      "fromNode": "a000000000000006",
+      "fromSide": "right",
+      "toNode": "a000000000000007",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "改写定义"
+    },
+    {
+      "id": "b000000000000007",
+      "fromNode": "a000000000000007",
+      "fromSide": "right",
+      "toNode": "a000000000000008",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "按分区求和"
+    },
+    {
+      "id": "b000000000000008",
+      "fromNode": "a000000000000008",
+      "fromSide": "right",
+      "toNode": "a000000000000009",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "归一化证据"
+    },
+    {
+      "id": "b000000000000009",
+      "fromNode": "a000000000000009",
+      "fromSide": "right",
+      "toNode": "a00000000000000a",
+      "toSide": "left",
+      "toEnd": "none",
+      "label": "基率决定后验"
+    },
+    {
+      "id": "b00000000000000a",
+      "fromNode": "a000000000000006",
+      "fromSide": "bottom",
+      "toNode": "a00000000000000b",
+      "toSide": "top",
+      "toEnd": "none",
+      "label": "正概率时可用条件不变解释"
+    },
+    {
+      "id": "b00000000000000b",
+      "fromNode": "a00000000000000b",
+      "fromSide": "bottom",
+      "toNode": "a00000000000000c",
+      "toSide": "top",
+      "toEnd": "none",
+      "label": "互斥是反向边界"
+    },
+    {
+      "id": "b00000000000000c",
+      "fromNode": "a00000000000000b",
+      "fromSide": "right",
+      "toNode": "a00000000000000d",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "逐对推广"
+    },
+    {
+      "id": "b00000000000000d",
+      "fromNode": "a00000000000000d",
+      "fromSide": "right",
+      "toNode": "a00000000000000e",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "再补所有高阶子族"
+    },
+    {
+      "id": "b00000000000000e",
+      "fromNode": "a00000000000000d",
+      "fromSide": "bottom",
+      "toNode": "a00000000000000f",
+      "toSide": "top",
+      "toEnd": "none",
+      "label": "只满足二阶"
+    },
+    {
+      "id": "b00000000000000f",
+      "fromNode": "a00000000000000e",
+      "fromSide": "bottom",
+      "toNode": "a00000000000000f",
+      "toSide": "top",
+      "toEnd": "none",
+      "label": "还要求高阶"
+    },
+    {
+      "id": "b000000000000011",
+      "fromNode": "a000000000000010",
+      "fromSide": "bottom",
+      "toNode": "a000000000000011",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "化为可计算判据"
+    },
+    {
+      "id": "b000000000000010",
+      "fromNode": "a000000000000010",
+      "fromSide": "left",
+      "toNode": "a00000000000000e",
+      "toSide": "right",
+      "toEnd": "arrow",
+      "label": "推广到每个有限子族"
+    },
+    {
+      "id": "b000000000000012",
+      "fromNode": "a000000000000006",
+      "fromSide": "bottom",
+      "toNode": "a000000000000012",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "在条件层内分解"
+    },
+    {
+      "id": "b000000000000013",
+      "fromNode": "a000000000000010",
+      "fromSide": "right",
+      "toNode": "a000000000000012",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "加入条件变量"
+    },
+    {
+      "id": "b000000000000014",
+      "fromNode": "a000000000000012",
+      "fromSide": "bottom",
+      "toNode": "a000000000000013",
+      "toSide": "top",
+      "toEnd": "none",
+      "label": "不能直接边际化"
+    },
+    {
+      "id": "b000000000000016",
+      "fromNode": "a00000000000000e",
+      "fromSide": "bottom",
+      "toNode": "a000000000000014",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "再加共同分布"
+    },
+    {
+      "id": "b000000000000017",
+      "fromNode": "a00000000000000a",
+      "fromSide": "right",
+      "toNode": "a000000000000015",
+      "toSide": "left",
+      "toEnd": "none",
+      "label": "后验仍不能识别干预"
+    }
+  ]
+}

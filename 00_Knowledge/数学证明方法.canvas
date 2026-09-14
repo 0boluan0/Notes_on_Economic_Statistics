@@ -1,0 +1,467 @@
+{
+  "nodes": [
+    {
+      "id": "c6a0000000000000",
+      "type": "text",
+      "x": 0,
+      "y": -360,
+      "width": 2820,
+      "height": 240,
+      "text": "# 数学证明方法\n\n**这张图解决什么：** 先判断命题的逻辑形状，再选择与结构相符的证明入口，最后检查覆盖、依赖、递推或终止条件。\n**读图方式：** 从命题与逻辑语言进入，沿带语义的箭头走向证明程序；下方两条支路分别处理归纳与逐步过程。\n\n点击卡片标题进入中英双语原子。青色表示语言与模型，红色表示反驳或矛盾，绿色表示证明程序，紫色表示原则间关系；颜色不表示掌握度。属性另见 [[知识原子.base|知识原子 Base]]。"
+    },
+    {
+      "id": "c6a0000000000001",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 430,
+      "height": 170,
+      "text": "## [[命题与谓词|命题与谓词]]\n*Propositions and predicates*\n\n先判断表达式是否已经具有确定真值。",
+      "color": "5"
+    },
+    {
+      "id": "c6a0000000000002",
+      "type": "text",
+      "x": 520,
+      "y": 0,
+      "width": 430,
+      "height": 170,
+      "text": "## [[公理、定理、引理与推论|公理、定理与引理]]\n*Axioms, theorems, and lemmas*\n\n区分无需本证明推出的起点与已经证明的结果。",
+      "color": "5"
+    },
+    {
+      "id": "c6a0000000000003",
+      "type": "text",
+      "x": 1040,
+      "y": 0,
+      "width": 430,
+      "height": 170,
+      "text": "## [[数学证明的有效推理|证明的结构]]\n*Structure of a proof*\n\n每一步都要由前提、定义或已证结果支撑。",
+      "color": "5"
+    },
+    {
+      "id": "c6a0000000000004",
+      "type": "text",
+      "x": 1560,
+      "y": 0,
+      "width": 430,
+      "height": 170,
+      "text": "## [[全称命题与反例|例子与全称命题]]\n*Examples and universal claims*\n\n有限次成功不能覆盖无限论域；一次合格失败即可反驳。",
+      "color": "1"
+    },
+    {
+      "id": "c6a0000000000005",
+      "type": "text",
+      "x": 2080,
+      "y": 0,
+      "width": 430,
+      "height": 170,
+      "text": "## [[反例有效性|合格反例]]\n*Valid counterexamples*\n\n反例必须同时进入前提适用域并让结论失败。",
+      "color": "1"
+    },
+    {
+      "id": "c6a0000000000006",
+      "type": "text",
+      "x": 0,
+      "y": 310,
+      "width": 430,
+      "height": 170,
+      "text": "## [[量词次序|量词次序]]\n*Quantifier order*\n\n先辨认谁可依赖谁，再开始证明。",
+      "color": "5"
+    },
+    {
+      "id": "c6a0000000000007",
+      "type": "text",
+      "x": 520,
+      "y": 310,
+      "width": 430,
+      "height": 170,
+      "text": "## [[量词否定规则|量词否定]]\n*Negating quantifiers*\n\n每穿过一层否定，全称与存在都要交换。",
+      "color": "4"
+    },
+    {
+      "id": "c6a0000000000008",
+      "type": "text",
+      "x": 1040,
+      "y": 310,
+      "width": 430,
+      "height": 170,
+      "text": "## [[全称证明与存在见证|量词决定证明入口]]\n*Quantifiers determine the proof move*\n\n全称固定任意对象；存在给出并核验见证。",
+      "color": "4"
+    },
+    {
+      "id": "c6a0000000000009",
+      "type": "text",
+      "x": 1560,
+      "y": 310,
+      "width": 430,
+      "height": 170,
+      "text": "## [[真值表等价检验|命题逻辑与真值表]]\n*Propositional logic and truth tables*\n\n等价要求在每一种赋值下逐行一致。",
+      "color": "5"
+    },
+    {
+      "id": "c6a000000000000a",
+      "type": "text",
+      "x": 2080,
+      "y": 310,
+      "width": 430,
+      "height": 170,
+      "text": "## [[蕴含真值条件|蕴含的假值条件]]\n*When an implication is false*\n\n只有前件真而后件假才能推翻蕴含。",
+      "color": "5"
+    },
+    {
+      "id": "c6a000000000000b",
+      "type": "text",
+      "x": 0,
+      "y": 620,
+      "width": 430,
+      "height": 170,
+      "text": "## [[逆否与逆命题|蕴含、逆否与逆命题]]\n*Implication, contrapositive, converse*\n\n逆否保留真值；交换两端通常不会。",
+      "color": "6"
+    },
+    {
+      "id": "c6a000000000000c",
+      "type": "text",
+      "x": 520,
+      "y": 620,
+      "width": 430,
+      "height": 170,
+      "text": "## [[直接证明|直接证明]]\n*Direct proof*\n\n假设前件，沿定义与已知结果到达后件。",
+      "color": "4"
+    },
+    {
+      "id": "c6a000000000000d",
+      "type": "text",
+      "x": 1040,
+      "y": 620,
+      "width": 430,
+      "height": 170,
+      "text": "## [[逆否证明|逆否证明]]\n*Proof by contraposition*\n\n当否定结论更可操作时，改证等价的逆否命题。",
+      "color": "4"
+    },
+    {
+      "id": "c6a000000000000e",
+      "type": "text",
+      "x": 1560,
+      "y": 620,
+      "width": 430,
+      "height": 170,
+      "text": "## [[反证法|反证法]]\n*Proof by contradiction*\n\n否定目标，并让矛盾真正依赖这个反设。",
+      "color": "1"
+    },
+    {
+      "id": "c6a000000000000f",
+      "type": "text",
+      "x": 2080,
+      "y": 620,
+      "width": 430,
+      "height": 170,
+      "text": "## [[分类证明的完备性|分类证明]]\n*Proof by cases*\n\n分支可重叠，但必须覆盖全部可能。",
+      "color": "4"
+    },
+    {
+      "id": "c6a0000000000010",
+      "type": "text",
+      "x": 0,
+      "y": 980,
+      "width": 410,
+      "height": 180,
+      "text": "## [[普通数学归纳法|普通归纳]]\n*Ordinary induction*\n\n基例启动链条，归纳步连接每个相邻下标。",
+      "color": "4"
+    },
+    {
+      "id": "c6a0000000000011",
+      "type": "text",
+      "x": 480,
+      "y": 980,
+      "width": 410,
+      "height": 180,
+      "text": "## [[强数学归纳法|强归纳]]\n*Strong induction*\n\n可用全部较小情形，但仍需启动所有递推路径。",
+      "color": "4"
+    },
+    {
+      "id": "c6a0000000000012",
+      "type": "text",
+      "x": 960,
+      "y": 980,
+      "width": 410,
+      "height": 180,
+      "text": "## [[结构归纳法|结构归纳]]\n*Structural induction*\n\n证明分支要逐一对应递归定义的基例和构造器。",
+      "color": "4"
+    },
+    {
+      "id": "c6a0000000000013",
+      "type": "text",
+      "x": 1440,
+      "y": 980,
+      "width": 410,
+      "height": 180,
+      "text": "## [[良序原理适用域|良序原理]]\n*Well Ordering Principle*\n\n非空非负整数集合才保证有最小元。",
+      "color": "4"
+    },
+    {
+      "id": "c6a0000000000014",
+      "type": "text",
+      "x": 1920,
+      "y": 980,
+      "width": 410,
+      "height": 180,
+      "text": "## [[最小反例递降|最小反例法]]\n*Minimal counterexample method*\n\n必须制造同一反例集里的更小成员。",
+      "color": "4"
+    },
+    {
+      "id": "c6a0000000000015",
+      "type": "text",
+      "x": 2400,
+      "y": 980,
+      "width": 410,
+      "height": 180,
+      "text": "## [[归纳与良序法的等价|三种原则的等价]]\n*Equivalent proof principles*\n\n证明能力等价，暴露的问题结构不同。",
+      "color": "6"
+    },
+    {
+      "id": "c6a0000000000016",
+      "type": "text",
+      "x": 0,
+      "y": 1340,
+      "width": 470,
+      "height": 180,
+      "text": "## [[状态机与可达性|状态机与可达性]]\n*State machines and reachability*\n\n只有从指定起点沿合法转移出现的状态才可达。",
+      "color": "5"
+    },
+    {
+      "id": "c6a0000000000017",
+      "type": "text",
+      "x": 560,
+      "y": 1340,
+      "width": 470,
+      "height": 180,
+      "text": "## [[不变量原理|不变量原理]]\n*Invariant Principle*\n\n初始化加每步保持，推出所有可达状态满足性质。",
+      "color": "4"
+    },
+    {
+      "id": "c6a000000000001a",
+      "type": "text",
+      "x": 1120,
+      "y": 1340,
+      "width": 470,
+      "height": 180,
+      "text": "## [[不变量与部分正确性|从不变量到后置条件]]\n*Invariant to postcondition*\n\n在终止状态把不变量与退出条件合起来推出规格。",
+      "color": "4"
+    },
+    {
+      "id": "c6a0000000000018",
+      "type": "text",
+      "x": 1680,
+      "y": 1340,
+      "width": 470,
+      "height": 180,
+      "text": "## [[全正确性构成|部分正确性与终止]]\n*Partial and total correctness*\n\n若停则正确，还要加上必定终止。",
+      "color": "6"
+    },
+    {
+      "id": "c6a0000000000019",
+      "type": "text",
+      "x": 2240,
+      "y": 1340,
+      "width": 470,
+      "height": 180,
+      "text": "## [[秩函数与终止证明|秩函数与终止]]\n*Ranking functions and termination*\n\n良序值域上的严格下降排除无限执行。",
+      "color": "4"
+    }
+  ],
+  "edges": [
+    {
+      "id": "c6e0000000000001",
+      "fromNode": "c6a0000000000001",
+      "fromSide": "bottom",
+      "toNode": "c6a0000000000006",
+      "toSide": "top",
+      "label": "谓词经量化后成为命题"
+    },
+    {
+      "id": "c6e0000000000002",
+      "fromNode": "c6a0000000000006",
+      "fromSide": "right",
+      "toNode": "c6a0000000000007",
+      "toSide": "left",
+      "label": "否定嵌套量词须逐层换量词"
+    },
+    {
+      "id": "c6e0000000000003",
+      "fromNode": "c6a0000000000006",
+      "fromSide": "right",
+      "toNode": "c6a0000000000008",
+      "toSide": "left",
+      "label": "量词形状决定证明入口"
+    },
+    {
+      "id": "c6e0000000000004",
+      "fromNode": "c6a0000000000009",
+      "fromSide": "right",
+      "toNode": "c6a000000000000a",
+      "toSide": "left",
+      "label": "真值表给出蕴含条件"
+    },
+    {
+      "id": "c6e0000000000005",
+      "fromNode": "c6a000000000000a",
+      "fromSide": "top",
+      "toNode": "c6a0000000000005",
+      "toSide": "bottom",
+      "label": "唯一假行刻画合格反例"
+    },
+    {
+      "id": "c6e0000000000006",
+      "fromNode": "c6a0000000000004",
+      "fromSide": "right",
+      "toNode": "c6a0000000000005",
+      "toSide": "left",
+      "label": "反驳全称需要合格反例"
+    },
+    {
+      "id": "c6e0000000000007",
+      "fromNode": "c6a0000000000002",
+      "fromSide": "right",
+      "toNode": "c6a0000000000003",
+      "toSide": "left",
+      "label": "公理与已证结果支撑推理"
+    },
+    {
+      "id": "c6e0000000000008",
+      "fromNode": "c6a000000000000a",
+      "fromSide": "bottom",
+      "toNode": "c6a000000000000b",
+      "toSide": "top",
+      "label": "逐行比较可判逆否等价"
+    },
+    {
+      "id": "c6e0000000000009",
+      "fromNode": "c6a0000000000003",
+      "fromSide": "bottom",
+      "toNode": "c6a000000000000c",
+      "toSide": "top",
+      "label": "蕴含目标可采用直接证明"
+    },
+    {
+      "id": "c6e000000000000a",
+      "fromNode": "c6a0000000000008",
+      "fromSide": "bottom",
+      "toNode": "c6a000000000000c",
+      "toSide": "top",
+      "label": "任意对象常作为直接证明起点"
+    },
+    {
+      "id": "c6e000000000000b",
+      "fromNode": "c6a000000000000b",
+      "fromSide": "right",
+      "toNode": "c6a000000000000d",
+      "toSide": "left",
+      "label": "等价允许改证逆否"
+    },
+    {
+      "id": "c6e000000000000c",
+      "fromNode": "c6a000000000000c",
+      "fromSide": "right",
+      "toNode": "c6a000000000000d",
+      "toSide": "left",
+      "label": "同一蕴含的两种入口"
+    },
+    {
+      "id": "c6e000000000000d",
+      "fromNode": "c6a000000000000d",
+      "fromSide": "right",
+      "toNode": "c6a000000000000e",
+      "toSide": "left",
+      "label": "逆否证等价命题；反证推矛盾"
+    },
+    {
+      "id": "c6e000000000000e",
+      "fromNode": "c6a000000000000f",
+      "fromSide": "bottom",
+      "toNode": "c6a0000000000011",
+      "toSide": "top",
+      "label": "递归分解常按情形组织"
+    },
+    {
+      "id": "c6e000000000000f",
+      "fromNode": "c6a0000000000010",
+      "fromSide": "right",
+      "toNode": "c6a0000000000011",
+      "toSide": "left",
+      "label": "扩大可用归纳假设"
+    },
+    {
+      "id": "c6e0000000000010",
+      "fromNode": "c6a0000000000010",
+      "fromSide": "right",
+      "toNode": "c6a0000000000012",
+      "toSide": "left",
+      "label": "把后继推广为递归构造器"
+    },
+    {
+      "id": "c6e0000000000011",
+      "fromNode": "c6a0000000000013",
+      "fromSide": "right",
+      "toNode": "c6a0000000000014",
+      "toSide": "left",
+      "label": "最小反例建立在良序原理上"
+    },
+    {
+      "id": "c6e0000000000012",
+      "fromNode": "c6a0000000000011",
+      "fromSide": "right",
+      "toNode": "c6a0000000000015",
+      "toSide": "left",
+      "label": "与普通归纳证明能力等价"
+    },
+    {
+      "id": "c6e0000000000013",
+      "fromNode": "c6a0000000000013",
+      "fromSide": "right",
+      "toNode": "c6a0000000000015",
+      "toSide": "left",
+      "label": "与归纳原则证明能力等价"
+    },
+    {
+      "id": "c6e0000000000014",
+      "fromNode": "c6a0000000000016",
+      "fromSide": "right",
+      "toNode": "c6a0000000000017",
+      "toSide": "left",
+      "label": "在合法执行长度上做归纳"
+    },
+    {
+      "id": "c6e0000000000015",
+      "fromNode": "c6a0000000000017",
+      "fromSide": "right",
+      "toNode": "c6a000000000001a",
+      "toSide": "left",
+      "label": "终止状态仍满足不变量"
+    },
+    {
+      "id": "c6e0000000000016",
+      "fromNode": "c6a0000000000013",
+      "fromSide": "bottom",
+      "toNode": "c6a0000000000019",
+      "toSide": "top",
+      "label": "良序排除无限严格下降"
+    },
+    {
+      "id": "c6e0000000000017",
+      "fromNode": "c6a0000000000019",
+      "fromSide": "left",
+      "toNode": "c6a0000000000018",
+      "toSide": "right",
+      "label": "补上终止性"
+    },
+    {
+      "id": "c6e0000000000018",
+      "fromNode": "c6a000000000001a",
+      "fromSide": "right",
+      "toNode": "c6a0000000000018",
+      "toSide": "left",
+      "label": "完成部分正确性，还缺终止"
+    }
+  ]
+}

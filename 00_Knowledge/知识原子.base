@@ -1,0 +1,62 @@
+filters:
+  and:
+    - student_os == "knowledge-atom"
+    - file.ext == "md"
+properties:
+  atom_id:
+    displayName: 原子 ID
+  atom_type:
+    displayName: 类型
+  atom_set:
+    displayName: 主题
+  status:
+    displayName: 来源状态
+  mastery_state:
+    displayName: 掌握状态
+  part_of:
+    displayName: 主题图
+  requires:
+    displayName: 依赖
+  contrasts_with:
+    displayName: 对照
+views:
+  - type: table
+    name: 定义与概念入口
+    filters:
+      or:
+        - atom_type == "definition"
+        - atom_type == "definition-boundary"
+        - atom_type == "definition-distinction"
+        - atom_type == "model-definition"
+        - atom_type == "comparative-statics-definition"
+        - atom_type == "concept"
+    order:
+      - file.name
+      - atom_id
+      - atom_type
+      - atom_set
+      - status
+      - mastery_state
+      - part_of
+  - type: table
+    name: 全部知识原子
+    order:
+      - file.name
+      - atom_id
+      - atom_type
+      - status
+      - mastery_state
+      - part_of
+      - requires
+      - contrasts_with
+  - type: cards
+    name: 按主题浏览
+    groupBy:
+      property: atom_set
+      direction: ASC
+    order:
+      - file.name
+      - atom_set
+      - atom_type
+      - mastery_state
+      - part_of

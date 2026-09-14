@@ -15,10 +15,10 @@ aliases:
 # ToolLLM: Facilitating Large Language Models to Master 16000+ Real-world APIs
 
 ## 一句话位置
-这篇论文位于 `01 架构与预训练`，第一版用于连接 Transformer, Pretraining, Agent 路线；此笔记暂作索引，不做精读摘要。
+这篇论文位于 `01 架构与预训练`，核心位置是用指令数据训练模型调用真实 API；它属于后训练与 Agent，而不是预训练来源；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[Transformer 与注意力机制]], 预训练、指令微调与偏好优化, 推理模型与 LLM Agent
+[[LLM 后训练.canvas|LLM 后训练]], [[LLM Agent 与工具调用]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/EK9D9GRX)
@@ -30,4 +30,3 @@ aliases:
 ## Canvas
 - [[LLM Big Picture]]
 - [[01 架构与预训练.canvas|01 架构与预训练 Canvas]]
-

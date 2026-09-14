@@ -409,14 +409,26 @@ $$
 \hat\mu=\bar X.
 $$
 
-协方差矩阵的 MLE 为
+令中心化散布矩阵
 <!-- bilingual-en:start -->
-the MLE of the covariance matrix is
+Let the centred scatter matrix be
 <!-- bilingual-en:end -->
 $$
-\hat\Sigma_{\text{MLE}}
-=\frac1n\sum_{j=1}^n(X_j-\bar X)(X_j-\bar X)'.
+A=\sum_{j=1}^n(X_j-\bar X)(X_j-\bar X)'.
 $$
+
+若 $A$ 满秩，则在正定协方差参数空间内，协方差矩阵的 MLE 为
+<!-- bilingual-en:start -->
+If $A$ has full rank, the MLE of the covariance matrix over the positive-definite parameter space is
+<!-- bilingual-en:end -->
+$$
+\hat\Sigma_{\text{MLE}}=\frac{A}{n}.
+$$
+
+由于 $\operatorname{rank}(A)\leq \min(p,n-1)$，满秩至少要求 $n>p$；即使 $n>p$，样本仍须张成整个 $p$ 维仿射空间。若 $A$ 奇异，上式只是奇异的经验协方差矩阵，正定多元正态模型内不存在有限的协方差 MLE。
+<!-- bilingual-en:start -->
+Because $\operatorname{rank}(A)\leq\min(p,n-1)$, full rank requires at least $n>p$; even then, the observations must span the full $p$-dimensional affine space. If $A$ is singular, $A/n$ is only a singular empirical covariance matrix, and no finite covariance MLE exists within the positive-definite multivariate-normal model.
+<!-- bilingual-en:end -->
 
 样本协方差矩阵通常定义为
 <!-- bilingual-en:start -->
@@ -427,9 +439,9 @@ S=\frac1{n-1}\sum_{j=1}^n(X_j-\bar X)(X_j-\bar X)'.
 $$
 
 >[!attention] 分母区别
-> MLE 用 $n$；无偏样本协方差矩阵用 $n-1$。考试中要看题目问的是 MLE 还是 sample covariance。
+> 满秩条件成立时，MLE 用 $n$；iid 且二阶矩有限时，无偏样本协方差矩阵用 $n-1$。考试中既要看题目问的是 MLE 还是 sample covariance，也要先检查 MLE 是否在正定参数空间内存在。
 > <!-- bilingual-en:start -->
-> The MLE uses $n$, whereas the unbiased sample covariance matrix uses $n-1$. In an exam, check whether the question asks for the MLE or the sample covariance.
+> Under the full-rank condition, the MLE uses $n$; for iid observations with finite second moments, the unbiased sample covariance matrix uses $n-1$. In an exam, check both which object is requested and whether the MLE exists in the positive-definite parameter space.
 > <!-- bilingual-en:end -->
 
 ### 1.5.3. 不变性
@@ -466,6 +478,12 @@ then
 $$
 \sum_{j=1}^m Z_jZ_j'\sim W_p(m,\Sigma).
 $$
+
+>[!attention] 本章的参数顺序
+> 本章沿用“自由度在前、尺度在后”的 $W_p(m,\Sigma)$；原子卡采用“尺度在前、自由度在后”的 $W_p(\Sigma,m)$。两者指同一分布，不能脱离作者定义解读，详见 [[Wishart参数化]]。
+> <!-- bilingual-en:start -->
+> This chapter writes degrees of freedom first, as $W_p(m,\Sigma)$, whereas the atomic notes write the scale first, as $W_p(\Sigma,m)$. They denote the same distribution under their stated conventions; see [[Wishart参数化|Wishart notation and scale conventions]].
+> <!-- bilingual-en:end -->
 
 在多元正态随机样本中：
 <!-- bilingual-en:start -->
@@ -530,13 +548,18 @@ $$
 \bar X\sim N_p\left(\mu,\frac1n\Sigma\right).
 $$
 
-大样本下，Hotelling $T^2$ 常可近似为
+对固定维数 $p$，若观测 iid、具有有限二阶矩且总体协方差正定，则在均值原假设下，[[单样本Hotelling T²|单样本 Hotelling T²]] 渐近服从
 <!-- bilingual-en:start -->
-In large samples, Hotelling's $T^2$ can often be approximated by
+For fixed $p$, iid observations with finite second moments and a positive-definite population covariance give the following null limit for the [[单样本Hotelling T²|one-sample Hotelling statistic]]:
 <!-- bilingual-en:end -->
 $$
-T^2\approx\chi_p^2.
+T^2\overset{d}{\longrightarrow}\chi_p^2.
 $$
+
+这是固定维数的大样本极限，不是有限样本等式，也不覆盖 $p$ 随 $n$ 增长或样本协方差奇异的情形。
+<!-- bilingual-en:start -->
+This is a fixed-dimensional asymptotic limit, not a finite-sample identity; it does not cover growing dimension or singular sample covariance.
+<!-- bilingual-en:end -->
 
 ## 1.8. 正态性假设检验
 <!-- bilingual-en:start -->
@@ -576,9 +599,9 @@ $$
 d_j^2=(X_j-\bar X)'S^{-1}(X_j-\bar X).
 $$
 
-若多元正态近似成立，$d_j^2$ 应大致符合 $\chi_p^2$ 分布。
+若多元正态近似成立，$d_j^2$ 可与 $\chi_p^2$ 分位作近似形状比较。但这里的 $\bar X,S$ 由同一批观测估计，所以这些距离不是相互独立的精确 $\chi_p^2$ 变量；已知总体参数时的精确结论与同样本图形诊断不能混写。
 <!-- bilingual-en:start -->
-If multivariate normality is a reasonable approximation, the $d_j^2$ values should approximately follow a $\chi_p^2$ distribution.
+If multivariate normality is a reasonable approximation, the $d_j^2$ values may be compared with $\chi_p^2$ quantiles as a shape diagnostic. Because $\bar X$ and $S$ are fitted on the same observations, these distances are not independent exact $\chi_p^2$ variables; the known-parameter law must not be confused with this fitted-sample plot.
 <!-- bilingual-en:end -->
 
 常见做法：
@@ -605,11 +628,16 @@ A common procedure is to:
 *Related Cards*
 <!-- bilingual-en:end -->
 
-- [[多元正态分布#密度与椭球几何|Multivariate Normal Distribution]]
-- [[多元正态分布#边际、条件与独立|Bivariate Normal Distribution]]
-- [[多元正态分布#边际、条件与独立|Conditional Multivariate Normal Distribution]]
-- [[多元数据、随机向量与样本协方差#距离与几何|Mahalanobis Distance]]
-- [[Wishart 分布与样本协方差推断|Wishart Distribution]]
-- [[多元正态分布#正态性诊断|Multivariate Normality Check]]
-- [[多元正态分布#二次型与卡方|Chi-square Distribution]]
-- [[对称矩阵与正定二次型#二次型与正定性|Matrix Square Root]]
+- [[多元正态分布.canvas|Multivariate Normal Distribution Map]]
+- [[联合Gaussian|Joint-Gaussian Characterisation]]
+- [[Gaussian仿射闭包|Affine Transformations and Marginals]]
+- [[Gaussian密度与奇异支撑|Multivariate Normal Density and Singular Support]]
+- [[Gaussian条件分布|Conditional Multivariate Normal Distribution]]
+- [[联合高斯独立判据|Uncorrelated Gaussian Blocks Are Independent]]
+- [[马氏距离|Mahalanobis Distance]]
+- [[Wishart 分布与样本协方差推断.canvas|Wishart Distribution]]
+- [[Gaussian马氏平方律|Gaussian Mahalanobis Chi-square Law]]
+- [[联合Gaussian诊断|Multivariate Normality Diagnostics]]
+- [[边际与马氏图不证联合Gaussian|Why Marginal and Mahalanobis Plots Do Not Prove Joint Gaussianity]]
+- [[半正定主平方根|Positive-Semidefinite Principal Square Root]]
+- [[正定逆平方根|Positive-Definite Inverse Square Root]]

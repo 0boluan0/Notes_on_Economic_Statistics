@@ -25,6 +25,9 @@ Basel II(2004)       三支柱：最低资本 + 监管审查 + 市场披露
 Basel III            引入杠杆率、资本缓冲、LCR/NSFR
 ```
 
+> [!warning] 历史路线与现行口径
+> 上图用于解释制度演进，不是 2026 年可任选的方法菜单。当前计算先看 [[Basel 框架演进|整合框架与本地实施日期]]；操作风险见 [[当前 Basel 操作风险标准法]]，市场风险见 [[FRTB 市场风险]]。
+
 ---
 
 ## **⬇️ 第二层：两本账的“分水岭”**
@@ -34,24 +37,24 @@ Basel III            引入杠杆率、资本缓冲、LCR/NSFR
 
 |**维度**|**银行簿 (Banking Book)**|**交易簿 (Trading Book)**|
 |---|---|---|
-|定位|长期持有赚息差|短期买卖赚价差/流动性|
-|会计|摊余成本 or FVOCI|Fair Value through P&L|
-|**风险类别**|_信用风险为主_|_市场风险为主_ (+ Specific)|
-|资本公式|权重 × 余额 × 8 %|VaR×mc + SRC _or_ 标准法表格|
-|常见业务|贷款、HTM债|债券做市、利率互换、期权|
+|监管指定|不满足交易簿纳入条件或被规则指定进入银行簿的头寸|以短期转售、短期价格获利、套利或对冲交易簿风险为目的，并满足规则条件的头寸|
+|会计关系|可能按摊余成本、FVOCI 或 FVTPL 计量；会计分类不能单独决定监管簿别|通常公允价值计量，但 FVTPL 也不自动等于监管交易簿|
+|**主要资本框架**|信用风险、银行账簿利率风险等按各自规则处理|当前市场风险按 FRTB 标准法或获批 IMA 处理|
+|边界治理|簿间转移受限，不能为降低资本随意改签|须有交易策略、估值、风险管理和交易台治理|
+|常见但非决定性例子|贷款、结构性流动性资产|做市债券、部分互换与期权|
 <!-- bilingual-en:start -->
 | **Dimension** | **Banking book** | **Trading book** |
 | --- | --- | --- |
-| Purpose | Hold positions over longer horizons and earn interest margins | Trade, make markets, hedge, or provide liquidity over shorter horizons |
-| Accounting | Often amortised cost or FVOCI, depending on classification | Generally fair value through profit or loss |
-| **Dominant risk** | *Credit risk* | *Market risk*, plus instrument-specific risk |
-| Historical capital approach | Exposure × risk weight × 8% | VaR × multiplier plus a specific-risk charge, or the standardised tables |
-| Typical business | Loans and held-to-maturity debt | Bond market-making, interest-rate swaps, and options |
+| Regulatory designation | Positions not assigned to the trading book under the regulatory boundary | Positions held for short-term resale, short-term price gains, arbitrage, or trading-book hedging, subject to the regulatory rules |
+| Accounting relationship | May be amortised cost, FVOCI, or FVTPL; accounting classification does not decide the regulatory book | Usually fair-valued, but FVTPL does not automatically imply regulatory trading-book treatment |
+| **Main capital framework** | Credit risk and banking-book interest-rate risk under their applicable rules | Current market-risk standardised approach or approved FRTB IMA |
+| Boundary governance | Transfers are restricted and cannot be made simply to reduce capital | Trading strategy, valuation, risk management, and desk governance are required |
+| Typical but non-determinative examples | Loans and structural-liquidity holdings | Market-making bonds, some swaps, and options |
 <!-- bilingual-en:end -->
 
-> **口诀：**“长留进银行簿，短炒进交易簿；信用吃权重，市场看 VaR。”
+> **边界记忆：**“意图只是起点，监管指定和治理才决定簿别；旧框架看 VaR，当前 FRTB 看压力 ES、流动性期限与交易台资格。”详见 [[交易簿与银行簿边界]]。
 > <!-- bilingual-en:start -->
-> **Mnemonic:** “Long-term holdings go to the banking book; positions held for trading go to the trading book. Credit capital follows risk weights, while the historical market-risk framework used VaR.”
+> **Boundary cue:** Intent is only the starting point; regulatory designation and governance determine book classification. VaR belongs to the historical route, while current FRTB uses stressed ES, liquidity horizons, and desk-level eligibility.
 > <!-- bilingual-en:end -->
 
 ---
@@ -68,15 +71,15 @@ Basel III            引入杠杆率、资本缓冲、LCR/NSFR
 
 |**风险块**|**你要准备的输入**|**一行公式**|**表格/参数从哪查**|
 |---|---|---|---|
-|**[[信用风险：PD、LGD、EAD 与评级迁移|信用风险]]**|余额、评级 or [[信用风险：PD、LGD、EAD 与评级迁移|PD]]/[[信用风险：PD、LGD、EAD 与评级迁移|LGD]]|[[巴塞尔银行资本与流动性监管|RWA]] = 余额 × 权重 (或 12.5 K [[信用风险：PD、LGD、EAD 与评级迁移|EAD]])|[[巴塞尔银行资本与流动性监管|Basel]] SA 权重表 or IRB ρ-PD 函数|
-|**[[市场风险、Greeks 与动态对冲|市场风险]]**|交易簿 P&L 历史|**VaR10d,99% × mc** (+SRC)|回溯测试 mc 表；SRC 权数表|
-|**[[巴塞尔银行资本与流动性监管|操作风险]]**|毛收入 or 损失数据库|BIA: -|15 %×Gross|
+|**[[信用风险参数与模型.canvas|信用风险]]**|余额、评级或 PD/LGD/EAD|按适用标准法或获批 IRB 得到信用 RWA|当前 Basel CRE 章节与本地实施|
+|**[[市场风险]]**|交易簿头寸、敏感度、真实价格观测与 P&L|当前 FRTB 标准法，或获批 IMA 的压力 ES、DRC 与 NMRF 等组件|[[FRTB 市场风险|FRTB]] 与交易台测试|
+|**[[当前 Basel 操作风险标准法|操作风险]]**|BI 组成与适用的内部损失数据|$ORC=BIC\times ILM$，再乘 12.5 转为 RWA|当前 OPE25 与本地 ILM 裁量|
 <!-- bilingual-en:start -->
 | **Risk block** | **Inputs** | **Condensed historical formula** | **Where to obtain parameters** |
 | --- | --- | --- | --- |
-| **[[信用风险：PD、LGD、EAD 与评级迁移|Credit risk]]** | Exposure, rating, or PD/LGD | RWA = exposure × risk weight, or $12.5K\times$ EAD under IRB | [[巴塞尔银行资本与流动性监管|Basel]] standardised risk-weight tables or the IRB correlation and PD functions |
-| **[[市场风险、Greeks 与动态对冲|Market risk]]** | Trading-book P&L history | Historical IMA: ten-day 99% VaR × multiplier, plus SRC | Backtesting multiplier and specific-risk tables |
-| **[[巴塞尔银行资本与流动性监管|Operational risk]]** | Gross income or internal loss data | Historical BIA: 15% × gross income | The applicable Basel operational-risk approach |
+| **[[信用风险参数与模型.canvas|Credit risk]]** | Exposure, rating, or PD/LGD/EAD | Credit RWA under the applicable standardised or approved IRB approach | Current CRE chapters and local implementation |
+| **[[市场风险|Market risk]]** | Trading-book positions, sensitivities, real-price observations, and P&L | Current FRTB standardised approach or approved IMA components including stressed ES, DRC, and NMRF | FRTB rules and desk-level tests |
+| **[[当前 Basel 操作风险标准法|Operational risk]]** | BI components and applicable internal-loss data | $ORC=BIC\times ILM$, then multiply by 12.5 for RWA | Current OPE25 and local ILM discretion |
 <!-- bilingual-en:end -->
 
 ---
@@ -86,9 +89,9 @@ Basel III            引入杠杆率、资本缓冲、LCR/NSFR
 *⬇️ Layer 4: Commonly Examined Procedures*
 <!-- bilingual-en:end -->
 
-### **1. 衍生品（无净额）——CEM**
+### **1. 衍生品（无净额）——历史 CEM**
 <!-- bilingual-en:start -->
-*1. Derivatives without a netting agreement — CEM*
+*1. Derivatives without a netting agreement — historical CEM*
 <!-- bilingual-en:end -->
 
 ```
@@ -104,16 +107,22 @@ RWA       = EAD × 对手权重
 > Add-on mnemonic under the historical table: interest rates 0 / 0.5 / 1.5; general commodities 10 / 12 / 15 for maturities ≤1 year / 1–5 years / >5 years.
 > <!-- bilingual-en:end -->
 
-### **2. 有净额——再加两步**
+### **2. 历史 CEM 有认可净额——再加两步**
 <!-- bilingual-en:start -->
 *2. With recognised netting — add two further steps*
 <!-- bilingual-en:end -->
 
 ```
-NRR = Σ正值 / Σ绝对值
-θ   = 0.4 + 0.6×NRR
-Add-on 改为 θ×ΣAdd-on
+NGR = max(ΣVᵢ, 0) / Σmax(Vᵢ, 0)
+θ   = 0.4 + 0.6×NGR
+EAD = max(ΣVᵢ,0) + θ×Σ(αᵢLᵢ)
 ```
+
+> [!warning] 当前方法
+> 在当前 Basel 非模型标准法中，CEM 已被 [[SA-CCR|SA-CCR]] 取代。这里保留 CEM 只为历史课程题；现实合规还须核对本地生效日，法律净额集合能否认可也要逐法域判断。
+> <!-- bilingual-en:start -->
+> Under the current Basel non-model standardised approach, SA-CCR has replaced CEM. CEM is retained here only for historical exercises; actual compliance still depends on the local effective date and legal enforceability of the netting set.
+> <!-- bilingual-en:end -->
 
 ### **3. 交易簿 VaR 路**
 <!-- bilingual-en:start -->
@@ -137,12 +146,12 @@ VaR × mc
 *🔑 Six-point memory sheet*
 <!-- bilingual-en:end -->
 
-1. **总资本 = 8 % × RWA**（核心）
-2. **银行簿 RWA = 余额 × 权重**
-3. **交易簿 VaR 用 10 d × mc**
-4. **mc 表：红叉 0-4→3.0，5-9→3.4，10-14→3.5，15+→4.0**
-5. **NRR 折扣：θ = 0.4 + 0.6 η**
-6. **利率 Add-on 0 | 0.5 | 1.5 %**
+1. **历史总资本基线 = 8 % × RWA**；当前最终约束另加缓冲、杠杆与本地要求。
+2. **Basel I 信用 RWA = 余额 × 历史权重**；不能当现行通用表。
+3. **10 日 99% VaR × mc 属于 1996/旧 IMA 路线**；当前 FRTB 另见精确原子。
+4. **经典 mc 表：0–4→3.00；5→3.40；6→3.50；7→3.65；8→3.75；9→3.85；10+→4.00。**
+5. **历史 CEM 净额折扣：$\theta=0.4+0.6\times NGR$；NGR 的分子是净当前重置成本。**
+6. **利率 Add-on 0 / 0.5 / 1.5 % 只属于该历史 CEM 表。**
 <!-- bilingual-en:start -->
 
 &nbsp;
@@ -189,22 +198,22 @@ The purpose is to reduce the probability that one institution fails and that its
 
 # 2. basel I
 
-> 目标：学会 **① 资本分层（Tier 1 / Tier 2）**、**② [[巴塞尔银行资本与流动性监管|风险加权资产]] RWA 的四档权重**、**③ 计算 Cooke Ratio 并判断合规性**。
+> 目标：学会 **① 历史资本分层（Tier 1 / Tier 2）**、**② [[Basel I 风险权重|Basel I 五档 RWA 权重及课堂四档简表]]**、**③ 计算历史 Cooke Ratio**。
 > <!-- bilingual-en:start -->
-> Objective: understand **(1) the historical Tier 1/Tier 2 capital structure**, **(2) the four broad [[巴塞尔银行资本与流动性监管|risk-weight]] categories used in Basel I**, and **(3) how to calculate the Cooke capital ratio and assess compliance**.
+> Objective: understand **(1) the historical Tier 1/Tier 2 capital structure**, **(2) the five [[Basel I 风险权重|Basel I risk weights and the common four-bucket classroom simplification]]**, and **(3) how to calculate the historical Cooke ratio**.
 > <!-- bilingual-en:end -->
 
 | **模块**           | **核心内容**                                      | **监管意图**        |
 | ---------------- | --------------------------------------------- | --------------- |
 | **资本定义**         | Tier 1（核心资本：股本 + 留存收益）；Tier 2（附属资本：次级债、一般准备等） | 确保最能吸收损失的是真金白银  |
-| **风险加权资产 (RWA)** | 把资产按 0 % / 20 % / 50 % / 100 % 四档系数加权         | 让“多赚多压本”，降低监管套利 |
-| **Cooke Ratio**  | [[巴塞尔银行资本与流动性监管|资本充足率]] = 总资本 ÷ RWA ≥ **8 %**，且 Tier 1 ≥ 4 %    | 全球统一尺子，限制过度杠杆   |
+| **风险加权资产 (RWA)** | 原协议使用 0 % / 10 % / 20 % / 50 % / 100 % 五档；本课表只列常用四档 | 建立粗粒度风险敏感性，但仍会产生监管套利 |
+| **Cooke Ratio**  | [[Basel I 风险权重|历史总资本率]] = 总资本 ÷ RWA ≥ **8%**，且 Tier 1 历史最低 4% | 建立共同最低尺子，但风险桶较粗 |
 <!-- bilingual-en:start -->
 | **Module** | **Core content** | **Regulatory purpose** |
 | --- | --- | --- |
 | **Capital definition** | Tier 1: equity and disclosed reserves; Tier 2: eligible supplementary items such as subordinated debt and general provisions | Ensure that recognised capital can absorb losses |
-| **[[巴塞尔银行资本与流动性监管|Risk-weighted assets]] (RWA)** | Apply historical weights of 0%, 20%, 50%, or 100% to broad asset classes | Relate capital to measured credit exposure, albeit coarsely |
-| **Cooke ratio** | [[巴塞尔银行资本与流动性监管|Total capital ratio]] = total eligible capital ÷ RWA ≥ **8%**, with Tier 1 historically at least 4% | Establish a common international minimum and constrain leverage |
+| **[[Basel I 风险权重|Risk-weighted assets]] (RWA)** | The Accord used 0%, 10%, 20%, 50% and 100%; this course table displays the four commonly used buckets and omits the national-discretion 10% bucket | Relate capital to measured credit exposure, albeit coarsely |
+| **Cooke ratio** | Historical total capital ratio = total eligible capital ÷ RWA ≥ **8%**, with Tier 1 historically at least 4% | Establish a common minimum, with coarse risk buckets |
 <!-- bilingual-en:end -->
 
 |**资产类别**|**示例**|**权重 (wᵢ)**|
@@ -222,19 +231,21 @@ The purpose is to reduce the probability that one institution fails and that its
 | **100%** | Corporate lending, equity, and other claims | 1.00 |
 <!-- bilingual-en:end -->
 
-_表外项目_ 先乘 **[[巴塞尔银行资本与流动性监管|信用转换系数（CCF）]]** 再乘风险权重，例如：
+_表外项目_ 在历史 Basel I 题中先乘 **[[Basel I 风险权重|信用转换系数（CCF）]]** 再乘风险权重，例如：
 <!-- bilingual-en:start -->
-For an *off-balance-sheet item*, first apply the **[[巴塞尔银行资本与流动性监管|credit conversion factor (CCF)]]** and then the counterparty risk weight. The note gives these examples:
+For an *off-balance-sheet item* in the historical Basel I exercise, first apply the **[[Basel I 风险权重|credit conversion factor (CCF)]]** and then the counterparty risk weight.
 <!-- bilingual-en:end -->
 
-- 授信承诺 ≤ 1 年：CCF = 20 %
-- OTC 利率互换：CCF = 0.0 %（早期免资本）
+- 原始期限不超过 1 年、或可由银行随时无条件取消的授信承诺：CCF = 0 %；原始期限超过 1 年的承诺：CCF = 50 %。
+- 与贸易相关、短期且自偿性的或有项目（例如由货物担保的跟单信用证）：CCF = 20 %。这不是普通短期授信承诺的系数。
+- 期限不超过 1 年的利率合约：历史 PFE add-on 为 0 %，但正的当前重置成本仍须计入，不能说整笔合约“免资本”。
 <!-- bilingual-en:start -->
-- Credit commitment with maturity of no more than one year: CCF = 20% under the convention used in this note.
-- Interest-rate swap with maturity of no more than one year: the historical potential-future-exposure add-on is 0.0%, although positive current exposure is still counted.
+- A commitment with an original maturity of no more than one year, or one unconditionally cancellable by the bank at any time, had a 0% CCF; a commitment with original maturity over one year had a 50% CCF.
+- A short-term, self-liquidating trade-related contingency, such as a documentary credit collateralised by the underlying shipment, had a 20% CCF. This is not the factor for an ordinary short-term commitment.
+- For an interest-rate contract with maturity of no more than one year, the historical PFE add-on was 0%, but any positive current replacement cost was still included; the whole contract was not capital-exempt.
 <!-- bilingual-en:end -->
 
-[[巴塞尔银行资本与流动性监管|库克比率]]
+[[Basel I 风险权重|库克比率]]
 $$\text{库克比率}=\frac{\text{资本（一级资本+二级资本）}}{\text{风险加权资产（RWA）}}$$
 # 3.G30
 
@@ -259,7 +270,7 @@ In response to such failures, the Group of Thirty brought together dealers, trea
 | **主题**         | **关键守则（选摘 & 编号）**                                                                            | **要解决的痛点**      | **PPT 章节** |
 | -------------- | -------------------------------------------------------------------------------------------- | --------------- | ---------- |
 | **A. 治理与文化**   | (1)董事会批准风险政策；(2)独立风险部门；(3)制定清晰授权矩阵                                                           | 风险“谁拍板、谁监督”不清   |            |
-| **B. 计量与监控**   | (4)每日盯市 _(mark-to-market)_；(5)统一 **VaR** 口径；(6)设置头寸限额 _(limits)_；(7)[[压力测试与逆向压力测试|压力测试]]                     | 账面价格滞后 & 模型口径各异 |            |
+| **B. 计量与监控**   | (4)每日盯市 _(mark-to-market)_；(5)统一 **VaR** 口径；(6)设置头寸限额 _(limits)_；(7)[[压力测试方法|压力测试]]                     | 账面价格滞后 & 模型口径各异 |            |
 | **C. 信用风险管理**  | (8)净额结算应计入敞口；(9)设交易对手限额独立于前台；(10)审慎使用抵押品 / 保证金；(11)关注潜在未来敞口 _(PFE)_                          | 衍生品的双向信用风险被低估   |            |
 | **D. 人才与系统**   | (12)保证交易、风险、后台人员资质；(13)IT 系统需捕获完整交易数据；(14)及时生成对账与管理报告                                        | “人/机”双短板导致操作风险  |            |
 | **E. 财务报告与用途** | (15)衍生品收益来源要与被对冲项目配对披露；(16)禁止“纯投机”掩饰为对冲；(17)按公允价值列报表外项目；(18)披露模型假设；(19)与审计充分沟通；(20)持续评估政策有效性 | 提高透明度，抑制掩饰性风险   |            |
@@ -267,7 +278,7 @@ In response to such failures, the Group of Thirty brought together dealers, trea
 | **Theme** | **Selected practices** | **Problem addressed** | **Slides** |
 | --- | --- | --- | --- |
 | **A. Governance and culture** | Board-approved risk policy; an independent risk function; clear delegated authorities | Unclear ownership and oversight of risk | |
-| **B. Measurement and monitoring** | Daily mark-to-market; consistent **VaR** conventions; position limits; [[压力测试与逆向压力测试|stress testing]] | Stale valuations and inconsistent model conventions | |
+| **B. Measurement and monitoring** | Daily mark-to-market; consistent **VaR** conventions; position limits; [[压力测试方法|stress testing]] | Stale valuations and inconsistent model conventions | |
 | **C. Credit-risk management** | Recognise netting; set independent counterparty limits; use collateral and margin prudently; monitor potential future exposure (PFE) | Undermeasurement of two-way derivative credit exposure | |
 | **D. People and systems** | Qualified front-, middle-, and back-office staff; complete transaction capture; timely reconciliation and management reports | Operational risk created by weak people or systems | |
 | **E. Reporting and purpose** | Link hedge results to hedged items; distinguish hedging from speculation; fair-value reporting; disclose model assumptions; engage auditors; review policy effectiveness | Poor transparency and concealed risk | |
@@ -311,8 +322,8 @@ In response to such failures, the Group of Thirty brought together dealers, trea
 |**G30 守则 →**|**1996 市场风险修正案**|**Basel II / Pillar-3**|
 |---|---|---|
 |日盯市、VaR(99%,10d)|被写进 **内部模型法** 资本公式 Max(VaRt-1, mc × VaRavg)|银行须披露 VaR、压力测试及限额执行情况，供市场监督|
-|回溯测试 & 惩罚系数 mc|例外次数 5-9 对应 mc 3.4-3.85 表格直接源自 G30 思想|—|
-|净额结算计量|引入 **NRR**（净替换比率）公式显著降低 RWA|—|
+|回溯测试与监管乘数|Basel 另行规定 250 日例外数到 3.00–4.00 乘数的映射；G30 实务不能替代监管表来源|—|
+|净额结算计量|在法律可执行条件下引入 **NGR**（净额对总额比率）调整历史 CEM add-on|—|
 |独立风险部 / 人才资质|被 Basel II 第 2 支柱“监管审查过程”吸收，视作合规条件|—|
 <!-- bilingual-en:start -->
 | **G30 practice** | **1996 Market Risk Amendment** | **Basel II and Pillar 3** |
@@ -328,9 +339,9 @@ In response to such failures, the Group of Thirty brought together dealers, trea
 **Conclusion:** The G30 recommendations were not a formal amendment to Basel I, but they supplied governance and measurement practices that influenced later derivatives supervision and Basel implementation.
 <!-- bilingual-en:end -->
 
-# 4.[[OTC 衍生品清算、保证金与 CCP 风险|净额结算]]
+# 4.[[净额与抵押品|净额结算]]
 <!-- bilingual-en:start -->
-*4. [[OTC 衍生品清算、保证金与 CCP 风险|Netting]]*
+*4. [[净额与抵押品|Netting]]*
 <!-- bilingual-en:end -->
 
 ## 4.1 什么叫净额结算？为什么能降信用风险
@@ -340,7 +351,7 @@ In response to such failures, the Group of Thirty brought together dealers, trea
 
 |**名称**|**定义**|**风险削减机理**|
 |---|---|---|
-|**支付净额 (payment [[OTC 衍生品清算、保证金与 CCP 风险|netting]])**|到期日把正负现金流先抵销，只结算“净额”|发生违约前就已减少待收/待付金额|
+|**支付净额 (payment [[净额与抵押品|netting]])**|到期日把正负现金流先抵销，只结算“净额”|发生违约前就已减少待收/待付金额|
 |**清算/关闭净额 (close-out netting)**|若对手违约，双方所有合约同时终止，按**净赔偿额**结算|把“挑好合约赖账、挑坏合约履约”的 **选摘权**（cherry-picking）拔掉，确保你的正价值和负价值“同生共死”|
 <!-- bilingual-en:start -->
 | **Type** | **Definition** | **How it reduces risk** |
@@ -349,12 +360,15 @@ In response to such failures, the Group of Thirty brought together dealers, trea
 | **Close-out netting** | Upon default, terminate covered contracts and combine their replacement values into one net claim | Prevents selective performance, or “cherry-picking,” and makes positive and negative contract values part of one close-out set |
 <!-- bilingual-en:end -->
 
-在 OTC 衍生品里，**ISDA Master Agreement + CSA** 赋予 close-out netting 的法律效力。若获监管认可，银行可在资本计算里使用“净敞口”而不是“逐笔敞口”，信用 RWA 立刻打折。
+在 OTC 衍生品里，**ISDA Master Agreement** 通常承载提前终止与 close-out netting，**CSA** 主要规定抵押品交换；两者分工不同，合同名称本身也不自动赋予监管认可。银行还须证明相关交易、对手方、破产程序和司法辖区下的净额可依法执行；只有满足法律与监管条件，才能按认可净额集合而非逐笔正敞口计算。
 <!-- bilingual-en:start -->
-For OTC derivatives, an enforceable **ISDA Master Agreement plus a CSA** can support close-out netting. When the legal and regulatory conditions are met, exposure is calculated for the netting set rather than by simply adding every positive trade exposure, reducing credit RWA.
+For OTC derivatives, the **ISDA Master Agreement** normally provides termination and close-out netting, while the **CSA** primarily governs collateral exchange. Neither label by itself proves regulatory legal enforceability. When the legal and regulatory conditions are met, exposure is calculated for the recognised netting set rather than by simply adding every positive trade exposure.
 <!-- bilingual-en:end -->
 
-## 4.2 **CEM → NRR → EAD → RWA**
+## 4.2 **历史 CEM → NGR → EAD → RWA**
+
+> [!warning] 版本边界
+> 下列流程用于历史题。当前 Basel 非模型标准法见 [[SA-CCR|SA-CCR]]；本地生效日另查。
 
 1. **现期敞口法 (Current Exposure Method, CEM)**
 <!-- bilingual-en:start -->
@@ -368,16 +382,16 @@ For OTC derivatives, an enforceable **ISDA Master Agreement plus a CSA** can sup
 - Exposure for a trade equals current exposure $\max(V,0)$ plus a potential-future-exposure add-on $\alpha\times L$, where $L$ is notional amount under the notation used here.
 <!-- bilingual-en:end -->
         
-2. **净替换比率 NRR**
+2. **净额对总额比率 NGR**
 <!-- bilingual-en:start -->
 
 &nbsp;
-**2.** **Net-to-gross ratio (NGR), called NRR in parts of the source note**<br>
+**2.** **Net-to-gross ratio (NGR)**<br>
 <!-- bilingual-en:end -->
     
-    $\text{NRR}=\frac{\sum_{i=1}^{N}\max(V_i,0)}{\sum_{i=1}^{N}|V_i|}$
+    $$\text{NGR}=\frac{\max\!\left(\sum_{i=1}^{N}V_i,0\right)}{\sum_{i=1}^{N}\max(V_i,0)}$$
     
-    ——用**净额正敞口** ÷ **绝对敞口** 量化净额效率（范围 0–1）。
+    ——用**净当前重置成本** ÷ **总正当前重置成本**量化认可净额的效果（范围 0–1）；它不是正市值之和除以绝对市值之和。
 <!-- bilingual-en:start -->
 It measures the effectiveness of netting as **net current replacement cost divided by gross positive replacement cost**, and lies between 0 and 1.
 <!-- bilingual-en:end -->
@@ -389,11 +403,11 @@ It measures the effectiveness of netting as **net current replacement cost divid
 **3.** **Exposure at default (EAD) with recognised netting**<br>
 <!-- bilingual-en:end -->
     
-    $\text{EAD}= \underbrace{\sum_{i}\max(V_i,0)}{\text{现期}} \;+\;\bigl(0.4 + 0.6 \times \text{NRR}\bigr)\,\times \sum{i}L_i$
+    $$\text{EAD}=\underbrace{\max\!\left(\sum_iV_i,0\right)}_{\text{净当前重置成本}}+\bigl(0.4+0.6\times\text{NGR}\bigr)\sum_i\alpha_iL_i$$
     
     没有净额时就是$\sum \max(V_i,0) + \sum \alpha_i L_i$。
 <!-- bilingual-en:start -->
-A clean form of the historical CEM calculation is $\text{EAD}=\sum_i\max(V_i,0)+(0.4+0.6\,\text{NGR})\sum_i\alpha_iL_i$, subject to the precise legal-netting and regulatory rules.
+A clean collateral-free form of the historical recognised-netting CEM calculation is $\text{EAD}=\max(\sum_iV_i,0)+(0.4+0.6\,\text{NGR})\sum_i\alpha_iL_i$, subject to the precise legal and regulatory rules.
 <!-- bilingual-en:end -->
     
 4. **风险加权资产 (RWA)**
@@ -423,7 +437,7 @@ $\text{RWA} = \text{EAD}\times\text{counterparty risk weight}$.
 The add-on coefficients used in the note are:
 <!-- bilingual-en:end -->
 
-NRR-[[市场风险、Greeks 与动态对冲|theta]]-EAD-RAW-节省百分比
+历史计算链：NGR → add-on 调整系数 → EAD → RWA → 与未净额情形比较。
 <!-- bilingual-en:start -->
 | **Contract type** | **≤1 year** | **1–5 years** | **>5 years** | **Historical table** |
 | --- | ---: | ---: | ---: | --- |
@@ -436,9 +450,9 @@ NRR-[[市场风险、Greeks 与动态对冲|theta]]-EAD-RAW-节省百分比
 *Gold and foreign-exchange derivatives use different columns in the historical table. The question discussed here specifies a general commodity, so it uses the commodity column.*
 <!-- bilingual-en:end -->
 
-> **目标**：把“VaR × 惩罚系数 mc”资本公式拆开讲，直到你能自己算出一家银行的市场风险资本。
+> **目标**：把历史“VaR × 监管乘数 $m_c$”公式拆开，直到你能自己算出旧框架下的市场风险资本。
 > <!-- bilingual-en:start -->
-> NGR → netting multiplier → EAD → RWA → percentage capital saving
+> **Objective:** unpack the historical VaR-and-multiplier formula; current FRTB uses a different architecture.
 > <!-- bilingual-en:end -->
 
  **1️⃣ 为什么 Basle I 之后还需要“1996 修正案”？**
@@ -478,8 +492,8 @@ NRR-[[市场风险、Greeks 与动态对冲|theta]]-EAD-RAW-节省百分比
 
 | **路线**    | **监管给的公式**                      | **银行要做什么**                    |
 | --------- | ------------------------------- | ----------------------------- |
-| **标准法**   | 为各资产类别设“[[债券久期、凸性与收益率曲线风险|久期]]-区段”或“贝塔权数”，逐块加总      | 会计科目+表格填报，简单但资本通常较高           |
-| **内部模型法** | **VaR10d, 99 % × mc** + SRC特定风险 | 自己搭 VaR 引擎，满足 **[[VaR、ES 与回测|模型验证]] & 回溯测试** |
+| **标准法**   | 为各资产类别设“[[修正久期|久期]]-区段”或“贝塔权数”，逐块加总      | 会计科目与监管表格映射；资本与 IMA 没有固定高低顺序 |
+| **内部模型法** | **VaR10d, 99 % × mc** + SRC特定风险 | 自己搭 VaR 引擎，满足 **[[风险模型验证|模型验证]] & 回溯测试** |
 <!-- bilingual-en:start -->
 **2️⃣ Two routes:**
 <!-- bilingual-en:end -->
@@ -493,8 +507,8 @@ NRR-[[市场风险、Greeks 与动态对冲|theta]]-EAD-RAW-节省百分比
 <!-- bilingual-en:start -->
 | **Route** | **Regulatory method** | **What the bank must do** |
 | --- | --- | --- |
-| **Standardised approach** | Apply prescribed duration bands, risk weights, and aggregation rules | Map accounting positions into regulatory tables; simple, but often conservative |
-| **Internal models approach** | Historical formula based on ten-day 99% VaR and a multiplier, plus specific-risk capital | Build an approved VaR engine and satisfy qualitative standards, [[VaR、ES 与回测|model validation]], and backtesting |
+| **Standardised approach** | Apply prescribed duration bands, risk weights, and aggregation rules | Map positions into regulatory tables; the result is not predetermined to exceed IMA |
+| **Internal models approach** | Historical formula based on ten-day 99% VaR and a multiplier, plus specific-risk capital | Build an approved VaR engine and satisfy qualitative standards, [[风险模型验证|model validation]], and backtesting |
 <!-- bilingual-en:end -->
 
 1. **每日计算 1-day VaR(99 %)**——取过去 ≥ 1 年历史数据或蒙特卡洛。
@@ -509,12 +523,15 @@ NRR-[[市场风险、Greeks 与动态对冲|theta]]-EAD-RAW-节省百分比
 Basel 2.5 and the Fundamental Review of the Trading Book later changed the market-risk framework substantially; the 1996 amendment was the first Basel internal-models regime.
 <!-- bilingual-en:end -->
 
-| **例外次数 (12 月)** | **mc** |
-| --------------- | ------ |
-| 0–4             | 3.0    |
-| 5–9             | 3.4    |
-| 10–14           | 3.5    |
-| 15+             | 4.0    |
+| **例外次数（约 250 个交易日）** | **mc** |
+| ---: | ---: |
+| 0–4 | 3.00 |
+| 5 | 3.40 |
+| 6 | 3.50 |
+| 7 | 3.65 |
+| 8 | 3.75 |
+| 9 | 3.85 |
+| 10 或以上 | 4.00 |
 <!-- bilingual-en:start -->
 **3️⃣ Decomposing the Historical IMA Formula**
 <!-- bilingual-en:end -->
@@ -546,19 +563,19 @@ Basel 2.5 and the Fundamental Review of the Trading Book later changed the marke
 
 | **数据**                | **数值**                                            | **步骤**              |
 | --------------------- | ------------------------------------------------- | ------------------- |
-| 1-day VaR(99 %)       | $2 m                                              | 蒙特卡洛 or 历史          |
-| **① 10-day VaR**      | 2 ×√10 ≈ \$6.32 m                                 | 扩⻓[[VaR、ES 与回测|持有期]]               |
-| 回溯测试 250 天 **例外 6 次** | mc = 3.4                                          | 查表                  |
-| **② Capital core**    | $\max(6.32,\; 3.4×6.00)=\max(6.32,20.4)=\$20.4 m$ | 假设 60-日均 VaR = $6 m |
+| 1-day VaR(99 %)       | $2m$                                               | 蒙特卡洛或历史估计          |
+| **① 10-day VaR**      | 2 ×√10 ≈ \$6.32 m                                 | 扩⻓[[VaR时间缩放|持有期]]               |
+| 回溯测试 250 天 **例外 6 次** | $m_c=3.50$                                        | 查经典乘数表                  |
+| **② Capital core**    | $\max(6.32,\;3.50\times6.00)=\$21.0m$           | 假设 60 日均 VaR = $6m$ |
 | **③ SRC**             | $4 m                                              | 用债券久期表法算            |
-| **总市场风险资本**           | **$24.4 m**                                       | ② + ③               |
+| **总市场风险资本**           | **$25.0m$**                                       | ② + ③               |
 <!-- bilingual-en:start -->
 
 &nbsp;
 **4.** **Specific risk capital charge (SRC).** This covered issuer-specific default and price risk not adequately captured by a diversified general-market VaR model, using either prescribed charges or an approved specific-risk model.<br>
 <!-- bilingual-en:end -->
 
-**对比**：如果走标准法，很多中小行常被算出 >$30 m；因此只要模型合格，IMA 省资本显著。
+**对比**：若本题另给标准法结果高于 $30m$，本例的获批旧 IMA 结果较低；这只是题设比较。IMA 不保证普遍节省资本，模型输出、NMRF、标准法基准、output floor 和交易台资格都可能使结果更高。
 <!-- bilingual-en:start -->
 **Historical total market-risk charge** = VaR-based charge **+ SRC**.
 <!-- bilingual-en:end -->
@@ -567,7 +584,7 @@ Basel 2.5 and the Fundamental Review of the Trading Book later changed the marke
 
 ## 6.1 内容
 <!-- bilingual-en:start -->
-*| **Input or result** | **Value** | **Step** | | --- | ---: | --- | | One-day 99% VaR | USD 2 million | Monte Carlo or historical estimate | | **① Ten-day VaR** | $2\sqrt{10}\approx\$6.32$ million | Extend the [[VaR、ES 与回测|holding period]] | | Six exceptions in 250 days | $m_c=3.50$ under the original schedule | Read the regulatory table | | **② Core VaR charge** | $\max(6.32,3.50\times6.00)=\$21.0$ million | Assume mean ten-day VaR is USD 6 million | | **③ SRC** | USD 4 million | Apply the specific-risk method | | **Total historical market-risk capital** | **USD 25.0 million** | ② + ③ |*
+*| **Input or result** | **Value** | **Step** | | --- | ---: | --- | | One-day 99% VaR | USD 2 million | Monte Carlo or historical estimate | | **① Ten-day VaR** | $2\sqrt{10}\approx\$6.32$ million | Extend the [[VaR时间缩放|holding period]] | | Six exceptions in 250 days | $m_c=3.50$ under the original schedule | Read the regulatory table | | **② Core VaR charge** | $\max(6.32,3.50\times6.00)=\$21.0$ million | Assume mean ten-day VaR is USD 6 million | | **③ SRC** | USD 4 million | Apply the specific-risk method | | **Total historical market-risk capital** | **USD 25.0 million** | ② + ③ |*
 <!-- bilingual-en:end -->
 
 | **支柱**                    | **问题**              | **监管答案（Basel II 做了什么？）**                             |
@@ -586,7 +603,7 @@ Basel 2.5 and the Fundamental Review of the Trading Book later changed the marke
 
 ## 6.2 最低资本金要求
 <!-- bilingual-en:start -->
-*| **Pillar** | **Question** | **What Basel II introduced** | | --- | --- | --- | | **Pillar 1: minimum capital requirements** | *How much capital must be held against measured risk?* | Calculate RWA for **[[信用风险：PD、LGD、EAD 与评级迁移|credit risk]], [[市场风险、Greeks 与动态对冲|market risk]], and [[巴塞尔银行资本与流动性监管|operational risk]]**, then apply the applicable minimum capital ratios | | **Pillar 2: supervisory review process** | *What about material risks not captured by Pillar 1?* | Banks conduct ICAAP; supervisors assess it and can require extra capital, stronger controls, or limits | | **Pillar 3: market discipline** | *How can investors and counterparties also monitor the bank?* | Disclose material information about capital, RWA, PD, LGD, market risk, and risk management |*
+*| **Pillar** | **Question** | **What Basel II introduced** | | --- | --- | --- | | **Pillar 1: minimum capital requirements** | *How much capital must be held against measured risk?* | Calculate RWA for **[[信用风险参数与模型.canvas|credit risk]], [[市场风险|market risk]], and [[当前 Basel 操作风险标准法|operational risk]]**, then apply the applicable minimum capital ratios | | **Pillar 2: supervisory review process** | *What about material risks not captured by Pillar 1?* | Banks conduct ICAAP; supervisors assess it and can require extra capital, stronger controls, or limits | | **Pillar 3: market discipline** | *How can investors and counterparties also monitor the bank?* | Disclose material information about capital, RWA, PD, LGD, market risk, and risk management |*
 <!-- bilingual-en:end -->
 
 抵押品风险:
@@ -597,14 +614,14 @@ Basel 2.5 and the Fundamental Review of the Trading Book later changed the marke
 | **路线**                 | **关键词**         | **资本敏感度** | **你要做什么**                 |
 | ---------------------- | --------------- | --------- | ------------------------- |
 | **标准法 (SA)**           | 外部评级、风险权重表      | ★☆☆       | 直接查表：AAA 20 %、BB 150 %… ） |
-| **内部评级法 – 基础 (F-IRB)** | 自估 PD，监管给 LGD   | ★★☆       | 建 PD 模型，评级系统须通过监督检查。      |
-| **内部评级法 – 高级 (A-IRB)** | 自估 PD+LGD+EAD+M | ★★★       | 全套自估，最省资本，但门槛高。           |
+| **内部评级法 – 基础 (F-IRB)** | 对合格非零售暴露自估 PD，其他参数主要采用监管值 | ★★☆ | 建 PD 模型，评级系统须通过监督检查。 |
+| **内部评级法 – 高级 (A-IRB)** | 对适用非零售暴露按规则自估更多参数 | ★★★ | 维持经批准的数据、模型与治理；结果不保证更低。 |
 <!-- bilingual-en:start -->
 6.2 Minimum Capital Requirements
 <!-- bilingual-en:end -->
 
 > **公式（简化）**：
-> $K = LGD \Bigl[\,N\!\bigl(\tfrac{1}{\sqrt{1-R}}\,G(PD) + \sqrt{\tfrac{R}{1-R}}\;G(0.999)\bigr) - PD \Bigr]$$\quad\Longrightarrow\quad RWA = 12.5 \times K \times EAD$
+> $$K=LGD\left[N\!\left(\frac{G(PD)+\sqrt{R}\,G(0.999)}{\sqrt{1-R}}\right)-PD\right],\qquad RWA=12.5\times K\times EAD.$$
 > <!-- bilingual-en:start -->
 > Collateral and credit-risk treatment:
 > <!-- bilingual-en:end -->
@@ -618,6 +635,9 @@ Basel 2.5 and the Fundamental Review of the Trading Book later changed the marke
 | **Foundation IRB (F-IRB)** | Bank estimates PD; regulation supplies other parameters such as LGD | ★★☆ | Build and validate a PD rating system subject to supervisory approval |
 | **Advanced IRB (A-IRB)** | Bank estimates PD, LGD, EAD, and maturity inputs | ★★★ | Maintain a fully validated internal system; potentially more risk-sensitive, but subject to much higher approval and governance standards |
 <!-- bilingual-en:end -->
+
+> [!warning] Retail IRB 边界
+> F-IRB/A-IRB 的简单双路线主要用于非零售暴露的课堂概括。零售 IRB 有自己的暴露分类、池化与参数规则，不能写成“零售基础 IRB”；具体当前可用范围还须查本地实施与 output-floor 约束。
 
 - **1996 修正案的 VaR × mc** 直接并入 Basel II。
 - 如果你已通过 **内部模型法 (IMA)** 回溯测试，就把那套数字塞进 Pillar 1。
@@ -633,16 +653,19 @@ Operational risk, a major category that Basel I did not explicitly capitalise.
 
 |**路线**|**口径**|**计算法**|**资本量级**|
 |---|---|---|---|
-|**BIA** 基础指标法|“毛利 × 15 %”|过去三年平均营业净收入 × 15 %|最高|
-|**TSA/SA** 标准法|分业务线 × 系数 (12–18 %)|零售、批发、交易等各自套系数再加和|中等|
-|**AMA** 高级计量法|自建模型，VaR(99.9 %, 1y)|需历史损失数据库、[[压力测试与逆向压力测试|情景分析]]|最低，但监管门槛高|
+|**BIA** 基础指标法|历史：毛收入 × 15%|历史三年正毛收入平均值 × 15%|结果取决于收入与业务结构，不能先断言最高|
+|**TSA/SA** 标准法|历史：分业务线 × 系数 (12–18%)|按历史业务线映射后加总|结果与 BIA/AMA 没有固定高低顺序|
+|**AMA** 高级计量法|历史：获批内部计量系统|内部/外部损失、[[压力测试方法|情景分析]]和控制环境|不保证最低；已被当前单一标准法取消|
 <!-- bilingual-en:start -->
 | **Historical route** | **Basis** | **Calculation** | **General capital effect** |
 | --- | --- | --- | --- |
-| **BIA: Basic Indicator Approach** | A fixed percentage of gross income | Average positive annual gross income over three years × 15% | Coarse and often conservative |
-| **TSA/SA: Standardised Approach** | Business-line income × prescribed beta factors | Apply 12–18% factors by business line and aggregate | More differentiated |
-| **AMA: Advanced Measurement Approaches** | Approved internal operational-risk model | Internal and external loss data, [[压力测试与逆向压力测试|scenario analysis]], and control factors | Potentially more risk-sensitive, but with demanding approval requirements |
+| **BIA: Basic Indicator Approach** | A fixed percentage of gross income | Average positive annual gross income over three years × 15% | No predetermined ranking versus TSA or AMA |
+| **TSA/SA: Standardised Approach** | Business-line income × prescribed beta factors | Apply 12–18% factors by business line and aggregate | No predetermined ranking versus BIA or AMA |
+| **AMA: Advanced Measurement Approaches** | Approved internal operational-risk model | Internal and external loss data, [[压力测试方法|scenario analysis]], and control factors | Did not guarantee lower capital; now historical |
 <!-- bilingual-en:end -->
+
+> [!important] 当前操作风险口径
+> BIA、TSA/SA 和 AMA 仅用于 Basel II 历史题。当前框架使用 [[当前 Basel 操作风险标准法|BI、BIC 与 ILM]]；是否以及何时实施仍看法域。
 
 ##  6.3监管审查过程
 <!-- bilingual-en:start -->
@@ -672,11 +695,11 @@ Operational risk, a major category that Basel I did not explicitly capitalise.
 
 - **量化表**：RWA 分布、平均 PD、违约资产回收率。
 - **质化文字**：风险管理组织架构、VaR 模型假设、应急流动性计划。
-- **更新频率**：至少半年一次，大行通常随年报附 _Pillar 3 Report_。
+- **更新频率**：按具体披露模板、表格和法域规则核对；Basel DIS 同时包含季度、半年和年度要求，不能统一缩成“至少半年一次”。本地若有重大事件临时披露，须另引该法域规则。
 <!-- bilingual-en:start -->
 - **Quantitative disclosures:** the composition of RWA, average PD, recovery or loss rates, and capital ratios.
 - **Qualitative disclosures:** governance, risk-management organisation, VaR model assumptions, and contingency funding plans.
-- **Frequency:** the source note uses at least semiannual disclosure as a memory rule; large banks commonly publish a dedicated *Pillar 3 Report* alongside regular reporting.
+- **Frequency:** check the applicable template and local rule. Basel DIS includes quarterly, semiannual and annual frequencies rather than one universal semiannual rule. Any local ad hoc or event-driven disclosure must be sourced to that jurisdiction separately.
 <!-- bilingual-en:end -->
 
 **好处**：投资者、评级机构用脚投票 → 让银行“怕丢脸、怕股价跌”。
@@ -766,7 +789,7 @@ Operational risk, a major category that Basel I did not explicitly capitalise.
 |**路线**|**用什么表**|**适合谁**|**思路一句话**|
 |---|---|---|---|
 |**标准公式**|EIOPA 给的模块权数|中小保险|像拼乐高：市场 + 承保 + 信用 + 操作|
-|**内部模型**|监管批准后自算|大型跨国险企|类似银行 VaR 模型，能省资本|
+|**内部模型**|监管批准后自算|大型或复杂险企|更贴合自身风险，但不保证比标准公式资本更低|
 <!-- bilingual-en:start -->
 | **Route** | **Inputs** | **Typical user** | **Core idea** |
 | --- | --- | --- | --- |
@@ -1031,7 +1054,7 @@ The historical OTC-derivatives amendment to Basel I calculates **counterparty cr
 **2.** **Calculate potential future exposure (PFE)**<br>
 <!-- bilingual-en:end -->
     
-    $PFE=名义本金×附加系数(add-on)\text{PFE}= \text{名义本金}\times \text{附加系数(add-on)}$
+    $$PFE=\text{名义本金}\times\text{附加系数（add-on）}$$
     - 利率合约 add-on：0.0 % / 0.5 % / **1.5 %**（分别对应 ≤1 年、1–5 年、>5 年）。
 <!-- bilingual-en:start -->
 - Historical interest-rate add-ons are 0.0%, 0.5%, and **1.5%** for maturities ≤1 year, 1–5 years, and >5 years, respectively.
@@ -1042,14 +1065,14 @@ The historical OTC-derivatives amendment to Basel I calculates **counterparty cr
 - Under the general-commodity column used by this question, the ≤1-year add-on is **10%**.
 <!-- bilingual-en:end -->
         
-3. **信用当量 (Credit Equivalent Amount, CEA)**
+3. **信用当量（[[SA-CCR|历史 CEM 的 Credit Equivalent Amount, CEA]]）**
 <!-- bilingual-en:start -->
 
 &nbsp;
-**3.** **Credit Equivalent Amount ([[信用风险：PD、LGD、EAD 与评级迁移|Credit Equivalent Amount]], CEA)**<br>
+**3.** **Credit Equivalent Amount ([[SA-CCR|historical CEM exposure measure]], CEA)**<br>
 <!-- bilingual-en:end -->
     
-    $CEA=CE+PFE\text{CEA}= \text{CE}+ \text{PFE}$
+    $$CEA=CE+PFE$$
 4. **风险加权资产 (RWA)**
 <!-- bilingual-en:start -->
 
@@ -1063,7 +1086,7 @@ The historical OTC-derivatives amendment to Basel I calculates **counterparty cr
 <!-- bilingual-en:end -->
         
     
-    $RWA=CEA×100\%\text{RWA}= \text{CEA}\times100\%$
+    $$RWA=CEA\times100\%$$
 5. **资本要求**（巴塞尔 I 统一乘 8 %）
 <!-- bilingual-en:start -->
 
@@ -1071,7 +1094,7 @@ The historical OTC-derivatives amendment to Basel I calculates **counterparty cr
 **5.** **Capital requirement:** apply the historical 8% total-capital minimum under Basel I.<br>
 <!-- bilingual-en:end -->
     
-    $K=0.08×RWAK = 0.08 \times \text{RWA}$
+    $$K=0.08\times RWA$$
 
  逐项计算
 <!-- bilingual-en:start -->
@@ -1130,11 +1153,11 @@ I. Trading Book versus Banking Book
 
 |维度|交易账户|银行账户|
 |---|---|---|
-|**目的**|为短期买卖、做市或对冲而持有|为持有至到期、放贷、资产负债管理|
-|**会计处理**|按公允价值 **每日** 重新估值 (mark-to-market)|多数资产按摊余成本或减值后成本|
-|**主要风险类别**|**市场风险** 为主（利率、汇率、信用利差波动）|**信用风险** 为主（违约 & 迁移）+ 利率重定价风险|
-|**资本计量**|巴塞尔市场风险框架：10 天、99% VaR × 乘数＋特定风险 (或后续 sVaR/IRC 等)|巴塞尔信用风险框架：• 标准法：RWA=100%×面值RWA = 100\%\times\text{面值}• IRB：一年、99.9% VaR（PD/LGD/EAD 模型）|
-|**典型资本水平**|早期 (<Basel 2.5) 往往 **低于** 银行账户；Basel 2.5 起因 IRC 等显著提高|通常高于或与交易账户相当|
+|**监管指定**|短期转售、短期价格获利、套利或对冲交易簿风险，并满足指定与治理条件|规则未指定进入交易簿的头寸，以及被明确要求进入银行簿的头寸|
+|**会计关系**|通常公允价值计量，但 FVTPL 不自动等于监管交易簿|可为摊余成本、FVOCI 或 FVTPL；会计分类不能单独决定簿别|
+|**主要监管风险**|市场风险为主，另有对手方与信用风险组件|信用风险、银行账簿利率风险等按各自框架处理|
+|**本题历史资本计量**|10 天、99% VaR × 乘数＋特定风险；后续有 sVaR/IRC，当前 FRTB 另算|标准法风险权重或 IRB 的 PD/LGD/EAD 模型|
+|**资本比较**|本题旧规则下可能较低，但不构成一般定理；分类须先满足监管边界|结果取决于借款人、工具、抵押品、方法和版本|
 <!-- bilingual-en:start -->
 | Dimension | Trading book | Banking book |
 | --- | --- | --- |
@@ -1377,11 +1400,11 @@ Regulatory arbitrage minimises measured capital by moving assets or reshaping th
 
 >[!question] 
 某银行资产包含 2 亿美元的零售贷款（非住房抵押贷款），PD = 1%，LGD = 70%。  
-  根据《巴塞尔协议 II》IRB 法：  
+  根据题设的历史 Basel II 零售 IRB 法：
   ① 计算风险加权资产；  
-  ② 给出所需的第一类资本（Tier 1）和第二类资本（Tier 2）。  
+  ② 给出历史 Tier 1 最低额、总资本最低额，以及 Tier 1 恰好为 4% 时 Tier 2 最多可补多少。
 <!-- bilingual-en:start -->
-A bank has USD 200 million of non-mortgage retail loans with PD = 1% and LGD = 70%. Under the Basel II IRB approach: (1) calculate [[巴塞尔银行资本与流动性监管|risk-weighted assets]]; and (2) state the historical minimum Tier 1 and total-capital amounts, together with the amount that Tier 2 could supply if Tier 1 is held at its minimum.
+A bank has USD 200 million of non-mortgage retail loans with PD = 1% and LGD = 70%. Under the historical Basel II retail IRB approach: (1) calculate [[风险加权资本率|risk-weighted assets]]; and (2) state the historical minimum Tier 1 and total-capital amounts, together with the amount that Tier 2 could supply if Tier 1 is held at its minimum.
 <!-- bilingual-en:end -->
 
  已知数据  
@@ -1389,7 +1412,7 @@ A bank has USD 200 million of non-mortgage retail loans with PD = 1% and LGD = 7
 - **PD** = 1% = 0.01  
 - **LGD** = 70% = 0.70  
 - 资产类别：**“其他零售”**（非住房抵押贷款）  
-- 使用《巴塞尔Ⅱ》IRB 基础法（零售资产无到期调整）  
+- 使用题设的 Basel II **零售 IRB** 公式（零售暴露不套 F-IRB/A-IRB 的简单双分，且这里无公司暴露的到期调整）
 <!-- bilingual-en:start -->
 Given:
 - **EAD**, or exposure at default = USD 200 million
@@ -1404,7 +1427,7 @@ Given:
 ① Calculate risk-weighted assets (RWA)
 <!-- bilingual-en:end -->
 
-1. **[[相关性、Copula 与尾部依赖|相关系数]] \(R\)**  
+1. **[[Vasicek违约因子|资产相关参数]] \(R\)**
   $$
    R = 0.03\!\left(\frac{1-e^{-35\text{PD}}}{1-e^{-35}}\right)
      + 0.16\!\left[1-\frac{1-e^{-35\text{PD}}}{1-e^{-35}}\right]
@@ -1427,7 +1450,7 @@ $$
 <!-- bilingual-en:start -->
 
 &nbsp;
-**1.** **[[相关性、Copula 与尾部依赖|Asset correlation]] $R$**<br>
+**1.** **[[Vasicek违约因子|Asset-correlation parameter]] $R$**<br>
 $R = 0.03\!\left(\frac{1-e^{-35PD}}{1-e^{-35}}\right)+0.16\!\left[1-\frac{1-e^{-35PD}}{1-e^{-35}}\right]\approx0.1216$.
 **2.** **Capital coefficient $K$**<br>
 $K=LGD\left[N\!\left(\frac{N^{-1}(PD)+\sqrt{R}N^{-1}(0.999)}{\sqrt{1-R}}\right)-PD\right]\approx0.0573$.
@@ -1502,7 +1525,7 @@ Given:
 |------|------|-----------|---------------|--------------------|-----------|
 | (a) 利率互换 | 2 年 | \$100 m | **\$3 m** | 0.5 % | **\$0.5 m** |
 | (b) 外汇远期 | 9 月 | \$150 m | 0 (–\$5 m) | 1 %  | **\$1.5 m** |
-| (c) 黄金期权 | 6 月 | \$50 m | **\$0.7 m** | 10 % | **\$5 m** |
+| (c) 黄金期权 | 6 月 | \$50 m | **\$0.7 m** | **1 %（外汇与黄金栏）** | **\$0.5 m** |
 <!-- bilingual-en:start -->
 | Contract | Maturity | Notional | Positive CE | Historical add-on | PFE $A$ |
 | --- | --- | ---: | ---: | ---: | ---: |
@@ -1524,7 +1547,7 @@ $$
 |------|-------------|--------------------|-----------------|
 | (a) | 3 + 0.5 = **3.5** | 3.5 | **0.28** |
 | (b) | 0 + 1.5 = **1.5** | 1.5 | **0.12** |
-| (c) | 0.7 + 5 = **5.7** | 5.7 | **0.456** |
+| (c) | 0.7 + 0.5 = **1.2** | 1.2 | **0.096** |
 <!-- bilingual-en:start -->
 | Contract | CEA (USD m) | RWA at 100% | Capital at 8% |
 | --- | ---: | ---: | ---: |
@@ -1533,7 +1556,7 @@ $$
 | (c) | $0.7+0.5=\mathbf{1.2}$ | 1.2 | **0.096** |
 <!-- bilingual-en:end -->
 
-> **Basel I 总资本 = 0.28 + 0.12 + 0.456 ≈ \$0.86 m**
+> **Basel I 总资本 = 0.28 + 0.12 + 0.096 = \$0.496 m**
 > <!-- bilingual-en:start -->
 > **Corrected historical Basel I total capital = USD 0.496 million.**
 > <!-- bilingual-en:end -->
@@ -1555,16 +1578,16 @@ $$
 <!-- bilingual-en:end -->
 
 $$
-\text{Add-on}_{\text{net}} = 0.4 \times 7\,\text{m} = 2.8\,\text{m}
+\text{Add-on}_{\text{net}} = 0.4 \times 2.5\,\text{m} = 1.0\,\text{m}
 $$
 $$
-\text{CEA}_{\text{net}} = 0 + 2.8 = 2.8\,\text{m}
+\text{CEA}_{\text{net}} = 0 + 1.0 = 1.0\,\text{m}
 $$
 $$
-\text{资本} = 8\% \times 2.8 = \text{\$0.224 m}
+\text{资本} = 8\% \times 1.0 = \text{\$0.080 m}
 $$
 
-> **净额后资本从 \$0.86 m 降至 \$0.22 m**
+> **净额后资本从 \$0.496 m 降至 \$0.080 m**
 > <!-- bilingual-en:start -->
 > **With the gold add-on corrected, recognised netting reduces capital from USD 0.496 million to USD 0.080 million.**
 > <!-- bilingual-en:end -->
@@ -1574,29 +1597,29 @@ $$
 ③ Basel II standardised approach under the assumed 20% counterparty weight
 <!-- bilingual-en:end -->
 
- (a) 无净额  
+ (a) 无净额
 $$
-\text{RWA} = 20\% \times 10.7 = 2.14\,\text{m}, 
+\text{RWA} = 20\% \times 6.2 = 1.24\,\text{m},
 \qquad
-\text{资本} = 8\% \times 2.14 = \$0.171\,\text{m}
+\text{资本} = 8\% \times 1.24 = \$0.0992\,\text{m}
 $$
 <!-- bilingual-en:start -->
 (a) Without netting: CEA is USD 6.2 million, so RWA are $20\%\times6.2=1.24$ million and capital is **USD 0.0992 million**.
 <!-- bilingual-en:end -->
 
- (b) 承认净额  
+ (b) 承认净额
 $$
-\text{RWA} = 20\% \times 2.8 = 0.56\,\text{m}, 
+\text{RWA} = 20\% \times 1.0 = 0.20\,\text{m},
 \qquad
-\text{资本} = 8\% \times 0.56 = \$0.045\,\text{m}
+\text{资本} = 8\% \times 0.20 = \$0.016\,\text{m}
 $$
 <!-- bilingual-en:start -->
 (b) With recognised netting: CEA is USD 1.0 million, so RWA are $20\%\times1.0=0.20$ million and capital is **USD 0.016 million**.
 <!-- bilingual-en:end -->
 
 > **Basel II-SA 资本要求**  
-> - **无净额：≈ \$0.17 m**  
-> - **净额：≈ \$0.05 m**
+> - **无净额：≈ \$0.099 m**
+> - **净额：≈ \$0.016 m**
 > <!-- bilingual-en:start -->
 > **Corrected Basel II standardised capital requirement**
 > - **Without netting: approximately USD 0.10 million**

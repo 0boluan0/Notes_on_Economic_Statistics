@@ -15,10 +15,10 @@ aliases:
 # LIMA: Less Is More for Alignment
 
 ## 一句话位置
-这篇论文位于 `03 对齐与偏好优化`，第一版用于连接 Instruction Tuning / RLHF 路线；此笔记暂作索引，不做精读摘要。
+这篇论文位于 `03 对齐与偏好优化`，核心位置是用少量高质量示范研究 SFT 的数据质量与覆盖边界；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-预训练、指令微调与偏好优化
+[[SFT目标]], [[SFT数据边界]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/6QNFHQZC)
@@ -30,4 +30,3 @@ aliases:
 ## Canvas
 - [[LLM Big Picture]]
 - [[03 对齐与偏好优化.canvas|03 对齐与偏好优化 Canvas]]
-

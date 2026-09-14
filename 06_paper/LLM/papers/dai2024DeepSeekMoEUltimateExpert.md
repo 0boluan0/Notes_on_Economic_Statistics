@@ -15,10 +15,10 @@ aliases:
 # DeepSeekMoE: Towards Ultimate Expert Specialization in Mixture-of-Experts Language Models
 
 ## 一句话位置
-这篇论文位于 `09 开源模型技术报告`，第一版用于连接 Open Models, Efficiency / MoE 路线；此笔记暂作索引，不做精读摘要。
+这篇论文位于 `09 开源模型技术报告`，核心职责是解释细粒度专家划分与共享专家隔离怎样促进 MoE 专门化，并提高开放模型的参数与计算效率；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[开放模型生态]], [[LLM 推理效率]]
+[[开放模型生态]], [[06_paper/LLM/LLM推理效率课程|LLM 推理效率]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/9MAR9PJH)
@@ -30,4 +30,3 @@ aliases:
 ## Canvas
 - [[LLM Big Picture]]
 - [[09 开源模型技术报告.canvas|09 开源模型技术报告 Canvas]]
-

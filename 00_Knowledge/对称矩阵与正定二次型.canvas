@@ -1,0 +1,712 @@
+{
+  "nodes": [
+    {
+      "id": "group-spectral",
+      "type": "group",
+      "x": -100,
+      "y": 0,
+      "width": 2600,
+      "height": 1070,
+      "label": "一、对称、Hermitian 与标准正交谱结构",
+      "color": "5"
+    },
+    {
+      "id": "group-quadratic",
+      "type": "group",
+      "x": 2700,
+      "y": 0,
+      "width": 3050,
+      "height": 1270,
+      "label": "二、二次型、定号与谱后果",
+      "color": "6"
+    },
+    {
+      "id": "group-tests",
+      "type": "group",
+      "x": -100,
+      "y": 1300,
+      "width": 3150,
+      "height": 1090,
+      "label": "三、完整判据与常见误判",
+      "color": "2"
+    },
+    {
+      "id": "group-applications",
+      "type": "group",
+      "x": 3250,
+      "y": 1300,
+      "width": 2500,
+      "height": 1090,
+      "label": "四、几何、优化与协方差",
+      "color": "3"
+    },
+    {
+      "id": "header",
+      "type": "text",
+      "x": -100,
+      "y": -300,
+      "width": 5850,
+      "height": 180,
+      "text": "# 对称矩阵与正定二次型\n\n先认清实数域与复数域中的结构，再用谱坐标读二次型的符号；完整判据、失败边界和应用分别展开。箭头表示学习依赖或需要紧邻辨析的关系。"
+    },
+    {
+      "id": "footer",
+      "type": "text",
+      "x": -100,
+      "y": 2460,
+      "width": 5850,
+      "height": 150,
+      "text": "**颜色只表示本图中的语义角色：** 青色是定义，紫色是定理或等价，红色是边界或反例，黄色是解释或应用，绿色是综合判断。颜色不表示掌握程度。"
+    },
+    {
+      "id": "n001",
+      "type": "text",
+      "x": 0,
+      "y": 100,
+      "width": 400,
+      "height": 190,
+      "color": "5",
+      "text": "## [[实对称矩阵]]\n\n实方阵满足 $A=A^T$；它只是结构条件，本身不保证正定。"
+    },
+    {
+      "id": "n002",
+      "type": "text",
+      "x": 650,
+      "y": 100,
+      "width": 400,
+      "height": 190,
+      "color": "5",
+      "text": "## [[正交矩阵]]\n\n满足 $Q^TQ=I$ 的实方阵；它保持内积与长度。"
+    },
+    {
+      "id": "n003",
+      "type": "text",
+      "x": 1300,
+      "y": 100,
+      "width": 400,
+      "height": 190,
+      "color": "5",
+      "text": "## [[Hermitian 矩阵]]\n\n复方阵满足 $A=A^*$；实对称矩阵是它在实数域中的特例。"
+    },
+    {
+      "id": "n004",
+      "type": "text",
+      "x": 1950,
+      "y": 100,
+      "width": 400,
+      "height": 190,
+      "color": "5",
+      "text": "## [[Unitary 矩阵]]\n\n满足 $U^*U=I$ 的复方阵；它是正交矩阵的复数推广。"
+    },
+    {
+      "id": "n007",
+      "type": "text",
+      "x": 325,
+      "y": 420,
+      "width": 400,
+      "height": 190,
+      "color": "6",
+      "text": "## [[实对称矩阵谱定理]]\n\n实对称矩阵有实特征值，并有一组标准正交特征基。"
+    },
+    {
+      "id": "n008",
+      "type": "text",
+      "x": 1625,
+      "y": 420,
+      "width": 400,
+      "height": 190,
+      "color": "6",
+      "text": "## [[Hermitian 谱定理]]\n\nHermitian 矩阵有实特征值，并可由 unitary 特征基对角化。"
+    },
+    {
+      "id": "n005",
+      "type": "text",
+      "x": 650,
+      "y": 740,
+      "width": 400,
+      "height": 190,
+      "color": "5",
+      "text": "## [[Normal 矩阵]]\n\n复方阵满足 $A^*A=AA^*$；Hermitian 与 unitary 都是它的子类。"
+    },
+    {
+      "id": "n006",
+      "type": "text",
+      "x": 1300,
+      "y": 740,
+      "width": 400,
+      "height": 190,
+      "color": "6",
+      "text": "## [[Normal 矩阵谱定理]]\n\n复矩阵可 unitary 对角化，当且仅当它是 normal 矩阵。"
+    },
+    {
+      "id": "n030",
+      "type": "text",
+      "x": 1950,
+      "y": 740,
+      "width": 400,
+      "height": 190,
+      "color": "1",
+      "text": "## [[Unitary不等于Hermitian|Unitary 与 Hermitian 互不推出]]\n\n前者说共轭转置是逆，后者说矩阵等于共轭转置。"
+    },
+    {
+      "id": "n025",
+      "type": "text",
+      "x": 2800,
+      "y": 100,
+      "width": 400,
+      "height": 190,
+      "color": "5",
+      "text": "## [[二次型]]\n\n$q(x)=x^TAx$ 是实向量上的二次齐次标量函数。"
+    },
+    {
+      "id": "n009",
+      "type": "text",
+      "x": 3450,
+      "y": 100,
+      "width": 400,
+      "height": 190,
+      "color": "6",
+      "text": "## [[二次型对称化]]\n\n实二次型只由 $(A+A^T)/2$ 决定。"
+    },
+    {
+      "id": "n028",
+      "type": "text",
+      "x": 4100,
+      "y": 100,
+      "width": 400,
+      "height": 190,
+      "color": "6",
+      "text": "## [[复二次型实部]]\n\n$\\operatorname{Re}(x^*Ax)$ 只由 $A$ 的 Hermitian 部分决定。"
+    },
+    {
+      "id": "n034",
+      "type": "text",
+      "x": 4750,
+      "y": 100,
+      "width": 400,
+      "height": 190,
+      "color": "6",
+      "text": "## [[Hermitian二次型实值判据]]\n\n$x^*Ax$ 对每个复向量都为实数，当且仅当 $A$ 是 Hermitian。"
+    },
+    {
+      "id": "n010",
+      "type": "text",
+      "x": 2800,
+      "y": 420,
+      "width": 400,
+      "height": 190,
+      "color": "5",
+      "text": "## [[正定矩阵]]\n\n实对称或复 Hermitian 矩阵在每个非零方向的二次型都严格为正。"
+    },
+    {
+      "id": "n011",
+      "type": "text",
+      "x": 3450,
+      "y": 420,
+      "width": 400,
+      "height": 190,
+      "color": "5",
+      "text": "## [[半正定矩阵]]\n\n实对称或复 Hermitian 矩阵在每个方向的二次型都非负。"
+    },
+    {
+      "id": "n012",
+      "type": "text",
+      "x": 4100,
+      "y": 420,
+      "width": 400,
+      "height": 190,
+      "color": "6",
+      "text": "## [[正定与半正定的谱判据]]\n\n正定对应特征值全正；半正定对应特征值全非负。"
+    },
+    {
+      "id": "n031",
+      "type": "text",
+      "x": 4750,
+      "y": 420,
+      "width": 400,
+      "height": 190,
+      "color": "6",
+      "text": "## [[正定谱下界]]\n\n正定等价于二次型统一压住 $c\\lVert x\\rVert_2^2$，最优 $c$ 是最小特征值。"
+    },
+    {
+      "id": "n032",
+      "type": "text",
+      "x": 2800,
+      "y": 740,
+      "width": 400,
+      "height": 190,
+      "color": "6",
+      "text": "## [[半正定零方向]]\n\n对半正定矩阵，二次型为零当且仅当向量属于零空间。"
+    },
+    {
+      "id": "n017",
+      "type": "text",
+      "x": 3450,
+      "y": 740,
+      "width": 400,
+      "height": 190,
+      "color": "6",
+      "text": "## [[半正定主平方根]]\n\n半正定矩阵有唯一的半正定主平方根，允许零特征值。"
+    },
+    {
+      "id": "n036",
+      "type": "text",
+      "x": 4100,
+      "y": 1040,
+      "width": 400,
+      "height": 190,
+      "color": "5",
+      "text": "## [[正定逆平方根]]\n\n正定矩阵的逆平方根是主平方根的逆；奇异半正定矩阵没有普通逆平方根。"
+    },
+    {
+      "id": "n020",
+      "type": "text",
+      "x": 4100,
+      "y": 740,
+      "width": 400,
+      "height": 190,
+      "color": "1",
+      "text": "## [[正定与半正定可逆性]]\n\n正定必可逆；半正定允许零特征值，因而可能奇异。"
+    },
+    {
+      "id": "n033",
+      "type": "text",
+      "x": 4750,
+      "y": 740,
+      "width": 400,
+      "height": 190,
+      "color": "6",
+      "text": "## [[正定逆仍正定]]\n\n正定矩阵的正特征值取倒数后仍为正，所以逆矩阵仍正定。"
+    },
+    {
+      "id": "n013",
+      "type": "text",
+      "x": 0,
+      "y": 1420,
+      "width": 400,
+      "height": 190,
+      "color": "6",
+      "text": "## [[LDL正定判别]]\n\n无行交换的 $LDL^T$ 分解中，正定等价于所有主元严格为正。"
+    },
+    {
+      "id": "n014",
+      "type": "text",
+      "x": 650,
+      "y": 1420,
+      "width": 400,
+      "height": 190,
+      "color": "6",
+      "text": "## [[Sylvester 正定判据]]\n\n实对称或 Hermitian 矩阵正定，当且仅当全部顺序主子式严格为正。"
+    },
+    {
+      "id": "n016",
+      "type": "text",
+      "x": 1300,
+      "y": 1420,
+      "width": 400,
+      "height": 190,
+      "color": "6",
+      "text": "## [[Cholesky 正定判据]]\n\n实对称矩阵正定，当且仅当它有唯一的正对角 Cholesky 因子。"
+    },
+    {
+      "id": "n015",
+      "type": "text",
+      "x": 1950,
+      "y": 1420,
+      "width": 400,
+      "height": 190,
+      "color": "6",
+      "text": "## [[半正定主子式判别]]\n\n半正定要求全部主子式非负，而不是只看左上角的一串。"
+    },
+    {
+      "id": "n027",
+      "type": "text",
+      "x": 0,
+      "y": 1760,
+      "width": 400,
+      "height": 190,
+      "color": "1",
+      "text": "## [[LDL零主元边界]]\n\n奇异半正定矩阵的零主元会破坏标准递推与唯一性。"
+    },
+    {
+      "id": "n018",
+      "type": "text",
+      "x": 650,
+      "y": 1760,
+      "width": 400,
+      "height": 190,
+      "color": "1",
+      "text": "## [[正对角元的正定边界]]\n\n正对角元只检查坐标轴，不能排除交叉项制造的负方向。"
+    },
+    {
+      "id": "n019",
+      "type": "text",
+      "x": 1950,
+      "y": 1760,
+      "width": 400,
+      "height": 190,
+      "color": "1",
+      "text": "## [[正行列式的正定边界]]\n\n正行列式不能排除偶数个负特征方向。"
+    },
+    {
+      "id": "n026",
+      "type": "text",
+      "x": 2600,
+      "y": 1760,
+      "width": 400,
+      "height": 190,
+      "color": "1",
+      "text": "## [[顺序主子式不推半正定]]\n\n把 Sylvester 判据中的 $>0$ 改成 $\\ge0$，不能得到半正定判据。"
+    },
+    {
+      "id": "n024",
+      "type": "text",
+      "x": 1300,
+      "y": 2100,
+      "width": 400,
+      "height": 190,
+      "color": "4",
+      "text": "## [[正定判据的选择]]\n\n先确认对称或 Hermitian，再按现有信息选一个完整判据。"
+    },
+    {
+      "id": "n021",
+      "type": "text",
+      "x": 3350,
+      "y": 1420,
+      "width": 400,
+      "height": 190,
+      "color": "3",
+      "text": "## [[正定二次型的椭球]]\n\n$x^TAx=1$ 的主轴是特征向量，半轴长度为 $1/\\sqrt{\\lambda_i}$。"
+    },
+    {
+      "id": "n022",
+      "type": "text",
+      "x": 4000,
+      "y": 1420,
+      "width": 400,
+      "height": 190,
+      "color": "3",
+      "text": "## [[Hessian 局部极小判据]]\n\n驻点处 Hessian 正定推出严格局部极小，但不自动推出全局极小。"
+    },
+    {
+      "id": "n029",
+      "type": "text",
+      "x": 4650,
+      "y": 1420,
+      "width": 400,
+      "height": 190,
+      "color": "1",
+      "text": "## [[半定Hessian无结论]]\n\nHessian 有零方向时，高阶项仍可形成极小、极大或鞍点。"
+    },
+    {
+      "id": "n023",
+      "type": "text",
+      "x": 3675,
+      "y": 1760,
+      "width": 400,
+      "height": 190,
+      "color": "3",
+      "text": "## [[协方差矩阵半正定性]]\n\n协方差二次型就是线性投影的方差，因此始终非负。"
+    },
+    {
+      "id": "n035",
+      "type": "text",
+      "x": 4325,
+      "y": 1760,
+      "width": 400,
+      "height": 190,
+      "color": "3",
+      "text": "## [[协方差奇异性]]\n\n协方差奇异，当且仅当某个非零线性组合几乎处处为常数。"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-a01",
+      "fromNode": "n001",
+      "fromSide": "bottom",
+      "toNode": "n007",
+      "toSide": "top",
+      "label": "对称结构推出实谱与正交特征基"
+    },
+    {
+      "id": "e-a02",
+      "fromNode": "n002",
+      "fromSide": "bottom",
+      "toNode": "n007",
+      "toSide": "top",
+      "label": "正交换基"
+    },
+    {
+      "id": "e-a03",
+      "fromNode": "n003",
+      "fromSide": "bottom",
+      "toNode": "n008",
+      "toSide": "top",
+      "label": "Hermitian 结构推出实谱与 unitary 特征基"
+    },
+    {
+      "id": "e-a04",
+      "fromNode": "n004",
+      "fromSide": "bottom",
+      "toNode": "n008",
+      "toSide": "top",
+      "label": "unitary 换基"
+    },
+    {
+      "id": "e-a05",
+      "fromNode": "n005",
+      "fromSide": "right",
+      "toNode": "n006",
+      "toSide": "left",
+      "label": "等价于 unitary 对角化"
+    },
+    {
+      "id": "e-a06",
+      "fromNode": "n008",
+      "fromSide": "bottom",
+      "toNode": "n006",
+      "toSide": "top",
+      "label": "Hermitian 是 normal 的实谱特例"
+    },
+    {
+      "id": "e-a07",
+      "fromNode": "n008",
+      "fromSide": "bottom",
+      "toNode": "n030",
+      "toSide": "top",
+      "label": "与 Unitary 分开辨析"
+    },
+    {
+      "id": "e-b01",
+      "fromNode": "n025",
+      "fromSide": "right",
+      "toNode": "n009",
+      "toSide": "left",
+      "label": "取唯一对称代表"
+    },
+    {
+      "id": "e-b02",
+      "fromNode": "n009",
+      "fromSide": "right",
+      "toNode": "n028",
+      "toSide": "left",
+      "label": "复数域的实部类比"
+    },
+    {
+      "id": "e-b03",
+      "fromNode": "n028",
+      "fromSide": "right",
+      "toNode": "n034",
+      "toSide": "left",
+      "label": "由实部到全部取实值"
+    },
+    {
+      "id": "e-b04",
+      "fromNode": "n010",
+      "fromSide": "right",
+      "toNode": "n011",
+      "toSide": "left",
+      "label": "放宽严格正"
+    },
+    {
+      "id": "e-b05",
+      "fromNode": "n011",
+      "fromSide": "right",
+      "toNode": "n012",
+      "toSide": "left",
+      "label": "用谱坐标逐向判号"
+    },
+    {
+      "id": "e-b06",
+      "fromNode": "n012",
+      "fromSide": "right",
+      "toNode": "n031",
+      "toSide": "left",
+      "label": "最小特征值给统一下界"
+    },
+    {
+      "id": "e-b07",
+      "fromNode": "n011",
+      "fromSide": "bottom",
+      "toNode": "n032",
+      "toSide": "top",
+      "label": "零值只能来自零空间"
+    },
+    {
+      "id": "e-b08",
+      "fromNode": "n011",
+      "fromSide": "bottom",
+      "toNode": "n017",
+      "toSide": "top",
+      "label": "非负谱逐项开方"
+    },
+    {
+      "id": "e-b11",
+      "fromNode": "n017",
+      "fromSide": "right",
+      "toNode": "n036",
+      "toSide": "left",
+      "label": "主平方根可逆时再取逆"
+    },
+    {
+      "id": "e-b12",
+      "fromNode": "n020",
+      "fromSide": "bottom",
+      "toNode": "n036",
+      "toSide": "top",
+      "label": "正定排除零特征值"
+    },
+    {
+      "id": "e-b09",
+      "fromNode": "n012",
+      "fromSide": "bottom",
+      "toNode": "n020",
+      "toSide": "top",
+      "label": "零特征值决定可逆边界"
+    },
+    {
+      "id": "e-b10",
+      "fromNode": "n020",
+      "fromSide": "right",
+      "toNode": "n033",
+      "toSide": "left",
+      "label": "正谱取倒数仍为正"
+    },
+    {
+      "id": "e-c01",
+      "fromNode": "n013",
+      "fromSide": "right",
+      "toNode": "n014",
+      "toSide": "left",
+      "label": "顺序主子式是主元累积乘积"
+    },
+    {
+      "id": "e-c02",
+      "fromNode": "n014",
+      "fromSide": "right",
+      "toNode": "n016",
+      "toSide": "left",
+      "label": "同属完整正定判据"
+    },
+    {
+      "id": "e-c03",
+      "fromNode": "n013",
+      "fromSide": "bottom",
+      "toNode": "n027",
+      "toSide": "top",
+      "label": "零主元进入奇异边界"
+    },
+    {
+      "id": "e-c04",
+      "fromNode": "n015",
+      "fromSide": "bottom",
+      "toNode": "n026",
+      "toSide": "top",
+      "label": "只查顺序主子式不够"
+    },
+    {
+      "id": "e-c05",
+      "fromNode": "n016",
+      "fromSide": "bottom",
+      "toNode": "n024",
+      "toSide": "top",
+      "label": "按已有结构选判据"
+    },
+    {
+      "id": "e-c06",
+      "fromNode": "n018",
+      "fromSide": "bottom",
+      "toNode": "n024",
+      "toSide": "left",
+      "label": "不能据此判正定"
+    },
+    {
+      "id": "e-c07",
+      "fromNode": "n019",
+      "fromSide": "bottom",
+      "toNode": "n024",
+      "toSide": "right",
+      "label": "不能据此判正定"
+    },
+    {
+      "id": "e-d01",
+      "fromNode": "n021",
+      "fromSide": "right",
+      "toNode": "n022",
+      "toSide": "left",
+      "label": "二次几何成为局部曲率"
+    },
+    {
+      "id": "e-d02",
+      "fromNode": "n022",
+      "fromSide": "right",
+      "toNode": "n029",
+      "toSide": "left",
+      "label": "失去严格定号后无结论"
+    },
+    {
+      "id": "e-d03",
+      "fromNode": "n023",
+      "fromSide": "right",
+      "toNode": "n035",
+      "toSide": "left",
+      "label": "零投影方差刻画奇异性"
+    },
+    {
+      "id": "e-x01",
+      "fromNode": "n007",
+      "fromSide": "right",
+      "toNode": "n008",
+      "toSide": "left",
+      "label": "实对称谱定理是 Hermitian 谱定理的实数情形"
+    },
+    {
+      "id": "e-x02",
+      "fromNode": "n008",
+      "fromSide": "right",
+      "toNode": "n010",
+      "toSide": "left",
+      "label": "谱坐标把二次型符号化为特征值符号"
+    },
+    {
+      "id": "e-x03",
+      "fromNode": "n025",
+      "fromSide": "bottom",
+      "toNode": "n010",
+      "toSide": "top",
+      "label": "每个非零方向严格为正定义正定"
+    },
+    {
+      "id": "e-x04",
+      "fromNode": "n032",
+      "fromSide": "bottom",
+      "toNode": "n015",
+      "toSide": "right",
+      "label": "零方向是半正定的几何边界；全部主子式非负是完整代数判据"
+    },
+    {
+      "id": "e-x05",
+      "fromNode": "n016",
+      "fromSide": "right",
+      "toNode": "n015",
+      "toSide": "left",
+      "label": "从严格正放宽到非负时不能照搬正定判据"
+    },
+    {
+      "id": "e-x06",
+      "fromNode": "n017",
+      "fromSide": "bottom",
+      "toNode": "n021",
+      "toSide": "top",
+      "label": "当 $A\\succ0$ 时，$A^{1/2}$ 把椭球变为单位球；零谱会使等值面退化"
+    },
+    {
+      "id": "e-x07",
+      "fromNode": "n029",
+      "fromSide": "bottom",
+      "toNode": "n035",
+      "toSide": "top",
+      "label": "零曲率方向使二阶检验退化；零方差方向使协方差奇异"
+    }
+  ]
+}

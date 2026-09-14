@@ -1,0 +1,170 @@
+{
+  "nodes": [
+    {
+      "id": "7ad4c1e8b3902f65",
+      "type": "text",
+      "text": "# 交换经济、Edgeworth box 与福利定理\n*Exchange Economies, the Edgeworth Box, and the Welfare Theorems*\n\n先读可行集与相对禀赋的交易空间，再区分效率集合、竞争均衡和两条方向相反但条件不同的福利定理。箭头表示命题关系，不表示掌握度。",
+      "x": 0,
+      "y": -360,
+      "width": 2420,
+      "height": 220,
+      "color": "6"
+    },
+    {
+      "id": "1f6c8a32d4b709e5",
+      "type": "text",
+      "text": "## [[交换经济可行配置]]\n\n箱子的宽高是两种商品总禀赋；相反原点使一个点同时表示两人的消费。箱内只保证资源可行。",
+      "x": 0,
+      "y": 0,
+      "width": 440,
+      "height": 240,
+      "color": "5"
+    },
+    {
+      "id": "9b20e5f71a4c63d8",
+      "type": "text",
+      "text": "## [[Pareto改进与有效]]\n\nPareto 改进要求至少一人严格变好且无人变差；不存在这种可行替代才叫有效，公平仍未被判断。",
+      "x": 660,
+      "y": 0,
+      "width": 440,
+      "height": 240,
+      "color": "5"
+    },
+    {
+      "id": "c3a8f05d62e194b7",
+      "type": "text",
+      "text": "## [[互利透镜]]\n\n透镜以初始禀赋为比较基准，筛出双方至少不差的配置；换禀赋会换透镜，不会换全部有效集合。",
+      "x": 1320,
+      "y": 0,
+      "width": 440,
+      "height": 240,
+      "color": "2"
+    },
+    {
+      "id": "e71b49c2a8056fd3",
+      "type": "text",
+      "text": "## [[契约曲线]]\n\n宽口径契约曲线汇集全部 Pareto 有效配置。MRS 相等只刻画光滑内点候选；角点、非凸与教材术语差异要另查。",
+      "x": 1980,
+      "y": 0,
+      "width": 440,
+      "height": 240,
+      "color": "2"
+    },
+    {
+      "id": "4d90a7e1c6382bf5",
+      "type": "text",
+      "text": "## [[竞争均衡预算与出清]]\n\n每个人按共同价格在禀赋财富预算内最优选择，并且每种商品市场出清；共同 MRS 本身不够。",
+      "x": 1980,
+      "y": 460,
+      "width": 440,
+      "height": 240,
+      "color": "4"
+    },
+    {
+      "id": "8f23c6b1d9470ae5",
+      "type": "text",
+      "text": "## [[第一福利定理]]\n\n理性且局部非饱和时：给定竞争均衡 → Pareto 有效。这个效率蕴含不需要凸性，也不证明均衡存在或收敛。",
+      "x": 1320,
+      "y": 460,
+      "width": 440,
+      "height": 240,
+      "color": "3"
+    },
+    {
+      "id": "b6e108d4f32a7c59",
+      "type": "text",
+      "text": "## [[第二福利定理]]\n\n凸性分离通常先给价格准均衡；强单调、正总消费等非退化条件再把它升级为预算平衡转移下的竞争均衡。",
+      "x": 660,
+      "y": 460,
+      "width": 440,
+      "height": 240,
+      "color": "3"
+    },
+    {
+      "id": "2c7f95a0e4b831d6",
+      "type": "text",
+      "text": "## [[福利定理边界]]\n\n效率不等于公平；一次总额转移不等于现实税制。交易成本、信息、市场力量、外部性与缺失市场都要重新建模。",
+      "x": 0,
+      "y": 460,
+      "width": 440,
+      "height": 240,
+      "color": "1"
+    },
+    {
+      "id": "d5a31e7c9046bf28",
+      "type": "text",
+      "text": "## [[生产配置的MRS与MRT]]\n\n放松纯交换的固定总量后，内点总体效率还要求消费者共同 MRS 等于生产 MRT；税楔和非凸技术会破坏简式。",
+      "x": 1980,
+      "y": 920,
+      "width": 440,
+      "height": 240,
+      "color": "6"
+    }
+  ],
+  "edges": [
+    {
+      "id": "3e8b61d0a5c742f9",
+      "fromNode": "1f6c8a32d4b709e5",
+      "fromSide": "right",
+      "toNode": "9b20e5f71a4c63d8",
+      "toSide": "left",
+      "label": "先限定可行比较域"
+    },
+    {
+      "id": "a4f7c2e930d1685b",
+      "fromNode": "9b20e5f71a4c63d8",
+      "fromSide": "right",
+      "toNode": "c3a8f05d62e194b7",
+      "toSide": "left",
+      "label": "相对禀赋筛选改进"
+    },
+    {
+      "id": "6c10b8f4d2a793e5",
+      "fromNode": "c3a8f05d62e194b7",
+      "fromSide": "right",
+      "toNode": "e71b49c2a8056fd3",
+      "toSide": "left",
+      "label": "继续交易直到没有改进"
+    },
+    {
+      "id": "f2b690e13c7a5d48",
+      "fromNode": "e71b49c2a8056fd3",
+      "fromSide": "bottom",
+      "toNode": "4d90a7e1c6382bf5",
+      "toSide": "top",
+      "label": "效率点还需预算支持"
+    },
+    {
+      "id": "0a7d34c8e5b2f961",
+      "fromNode": "4d90a7e1c6382bf5",
+      "fromSide": "left",
+      "toNode": "8f23c6b1d9470ae5",
+      "toSide": "right",
+      "label": "局部非饱和下推出有效"
+    },
+    {
+      "id": "95c1e70b4a8d263f",
+      "fromNode": "8f23c6b1d9470ae5",
+      "fromSide": "left",
+      "toNode": "b6e108d4f32a7c59",
+      "toSide": "right",
+      "label": "反向命题另需凸性与转移"
+    },
+    {
+      "id": "c8f42a19d6053e7b",
+      "fromNode": "b6e108d4f32a7c59",
+      "fromSide": "left",
+      "toNode": "2c7f95a0e4b831d6",
+      "toSide": "right",
+      "label": "可分权不等于可无成本实施"
+    },
+    {
+      "id": "1d69b3e80f4c72a5",
+      "fromNode": "4d90a7e1c6382bf5",
+      "fromSide": "bottom",
+      "toNode": "d5a31e7c9046bf28",
+      "toSide": "top",
+      "label": "加入生产后还需机会成本一致"
+    }
+  ]
+}

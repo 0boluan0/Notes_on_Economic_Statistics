@@ -16,9 +16,9 @@ lecture: 06
 # Lecture 06: Bisection search and Newton-Raphson
 
 > [!tip] Hint
-> - 这节课一开始不是讲新算法，而是先回顾上节 approximation method 为什么正确却太慢。
+> - 这节课一开始不是讲新算法，而是先回顾上节 approximation method：参数合适时它能工作，但可能极慢，也可能因网格跨过接受区域而失败。
 > - 老师用 “448 页课本找藏着的 100 美元” 的游戏把 bisection search 的直觉先种下去，再讲平方根代码。
-> - 二分搜索的关键不是“取中点”四个字，而是问题必须有内在顺序，且答案始终被当前区间包住。
+> - 离散二分查找靠有序候选和方向反馈排除一半；连续函数的二分求根则靠连续性与端点异号保留至少一个根。两者都不只是“取中点”。
 > - low/high/guess 三个变量不是并列的：low 和 high 描述不确定区间，guess 只是当前试探点。
 > - `x < 1` 时区间不能再写成 `[0, x]`，这是课堂中专门拎出来修补的边界。
 > - cube root 的 you try it 是要你把 “平方根上的二分” 迁移到另一种单调函数上。
@@ -27,9 +27,9 @@ lecture: 06
 > - bisection 的速度来自每次砍半区间，Newton 的速度来自利用导数信息做更聪明的跳跃。
 > - 这节课的核心不是把公式背熟，而是理解“如何用问题结构换速度”。
 > <!-- bilingual-en:start -->
-> - The lecture begins not with a new algorithm, but by revisiting why the previous approximation method is correct yet slow.
+> - The lecture begins by revisiting the previous approximation method: suitable parameters may make it work, but it can be extremely slow or miss the entire acceptance region.
 > - A game about finding a hidden $100 bill in a 448-page textbook develops the intuition for bisection before the square-root code appears.
-> - Bisection is not merely “take the midpoint.” The search space must be ordered, and the current interval must continue to contain the answer.
+> - Discrete binary search uses ordered candidates and directional feedback to discard half. Continuous bisection root-finding instead preserves a root through continuity and opposite endpoint signs. Neither is merely “take the midpoint.”
 > - `low` and `high` describe the remaining uncertainty; `guess` is only the current probe, so the three variables do not play equivalent roles.
 > - For `x < 1`, `[0, x]` cannot contain the square root. The lecture treats this as an explicit boundary correction.
 > - The cube-root exercise transfers bisection from one monotone function to another.
@@ -39,16 +39,25 @@ lecture: 06
 > - The central lesson is not memorizing formulas, but exchanging additional problem structure for speed.
 > <!-- bilingual-en:end -->
 
+> [!links] 本讲知识入口
+> 课堂主线：[[固定步长求根]] → [[固定步长漏根]] → [[二分查找]] / [[二分求根]] → [[Newton迭代]]；完整关系见 [[数值求根.canvas|数值求根总图]]。
+>
+> [[二分误差界]]、[[求根残差]]、[[残差控制根误差]]、[[Newton局部收敛]]、[[Newton失效边界]]、[[混合求根]] 与 [[求根策略]] 是用后续数值分析补齐的可靠性概念与边界，不是本讲全部讲授内容。
+> <!-- bilingual-en:start -->
+> Classroom path: [[固定步长求根|fixed-step root search]] → [[固定步长漏根|fixed-step grid miss]] → [[二分查找|binary search]] / [[二分求根|bisection root-finding]] → [[Newton迭代|Newton iteration]]. See [[数值求根.canvas|Numerical Root-Finding]] for the complete relationship.
+>
+> [[二分误差界|Bisection error bounds]], [[求根残差|root residuals]], [[残差控制根误差|conditions for converting residual to root error]], [[Newton局部收敛|Newton local convergence]], [[Newton失效边界|Newton failure boundaries]], [[混合求根|hybrid solvers]], and [[求根策略|solver selection]] are reliability concepts and boundaries supplied by later numerical analysis, not content fully taught in this lecture.
+> <!-- bilingual-en:end -->
+
 ## Lecture flow
 
 ### 1. 开场先回顾：approximation method 为什么不够好
 <!-- bilingual-en:start -->
 *1. Opening Review: Why the Approximation Method Is Not Good Enough*
 <!-- bilingual-en:end -->
-Lecture 6 的出发点非常直接：  
-上节课我们已经有了 approximation method，它是对的，但它太慢了。
+Lecture 6 的出发点非常直接：上节课的 [[固定步长求根|固定步长近似法]] 在网格命中接受区域时可以工作，但它不只可能很慢；步长过粗时，还可能跨过全部合格点。这个独立边界见 [[固定步长漏根]]。
 <!-- bilingual-en:start -->
-Lecture 6 starts from a direct observation: the previous approximation method works, but it is too slow.
+Lecture 6 starts from [[固定步长求根|fixed-step root search]]. It can work when the grid intersects the acceptance region, but it may be extremely slow and a coarse step can miss every acceptable point. That independent boundary belongs to [[固定步长漏根|fixed-step grid miss]].
 <!-- bilingual-en:end -->
 
 老师先回顾上一讲的平方根近似代码：
@@ -58,13 +67,13 @@ while abs(guess**2 - x) >= epsilon and guess**2 <= x:
     guess += increment
 ```
 
-这个方法的问题不是会不会成功，而是：
+这个方法首先有覆盖问题，其次才是速度问题：
 
-- 走得太小步
-- 每次只前进一个固定 increment
-- 对大输入时效率极差
+- 网格若没有踩进 `epsilon` 接受区域，程序会显式失败
+- 为了减少漏过接受区域而把 increment 设得很小，又会产生大量候选
+- 对大输入时，这种逐点推进尤其低效
 <!-- bilingual-en:start -->
-Its problem is not correctness. It takes a tiny fixed step on every iteration and consequently performs very poorly on large inputs.
+The method faces coverage before speed: a grid that never enters the `epsilon` acceptance region must fail explicitly, while reducing the increment to improve coverage creates many more candidates and performs poorly on large inputs.
 <!-- bilingual-en:end -->
 
 所以这一讲的问题变成：
@@ -117,9 +126,9 @@ The natural strategy is to guess the midpoint of the current interval and retain
 > Bisection is powerful because every step eliminates half of the remaining candidate space.
 > <!-- bilingual-en:end -->
 
-### 3. bisection search 的适用前提：问题必须自带顺序
+### 3. 离散二分查找的适用前提：问题必须自带顺序
 <!-- bilingual-en:start -->
-*3. A Prerequisite for Bisection: The Problem Must Be Ordered*
+*3. A Prerequisite for Discrete Binary Search: The Problem Must Be Ordered*
 <!-- bilingual-en:end -->
 老师随后把直觉收成正式条件：
 <!-- bilingual-en:start -->
@@ -143,9 +152,9 @@ The instructor turns the intuition into explicit conditions:
 Without order, “left half” and “right half” have no useful meaning; without an initial containing interval, neither half can be discarded safely.
 <!-- bilingual-en:end -->
 
-所以 bisection 不是一个可以胡乱套用的模板，而是一种依赖问题结构的搜索策略。
+所以这里的离散 [[二分查找]] 不是一个可以胡乱套用的模板，而是一种依赖有序候选和方向反馈的搜索策略。连续函数的 [[二分求根]] 使用另一套前提，后文会明确区分。
 <!-- bilingual-en:start -->
-Bisection is therefore a search strategy justified by problem structure, not a template that can be applied indiscriminately.
+Discrete [[二分查找|binary search]] is therefore justified by ordered candidates and directional feedback, not by midpoint syntax alone. Continuous [[二分求根|bisection root-finding]] uses a different set of premises, distinguished below.
 <!-- bilingual-en:end -->
 
 ### 4. 从 approximation 的“线性前进”切换到 bisection 的“区间收缩”
@@ -215,6 +224,11 @@ while abs(guess**2 - x) >= epsilon:
         high = guess
     guess = (high + low) / 2.0
 ```
+
+这段程序把 `abs(guess**2 - x) < epsilon` 作为成功标准；它检查的是 [[求根残差|方程残差]] $|guess^2-x|$，不是根的位置误差 $|guess-\sqrt{x}|$。两者怎样换算需要额外条件，见 [[残差控制根误差]]；若要直接控制位置，当前括区间宽度给出的证书见 [[二分误差界]]。
+<!-- bilingual-en:start -->
+The loop checks the [[求根残差|equation residual]] $|guess^2-x|$, not the positional error $|guess-\sqrt{x}|$. Converting between them needs additional conditions, covered by [[残差控制根误差|conditions for converting residual to root error]]. The current bracket width supplies a direct positional certificate through [[二分误差界|the bisection error bound]].
+<!-- bilingual-en:end -->
 
 这段代码的真正逻辑不是 if/else，而是它一直维护一个关键不变量：
 <!-- bilingual-en:start -->
@@ -353,6 +367,11 @@ The exercise shows that bisection is not a square-root-specific template. It dep
 As long as these properties remain, the target function can change.
 <!-- bilingual-en:end -->
 
+这里的单调性属于“反解平方或立方”这两个具体程序：它让比较 `guess**2` 或 `guess**3` 的大小直接决定更新哪一侧。一般连续函数的 [[二分求根]] 不要求单调，也不要求根唯一；它要求函数连续、先处理端点根，并在其余情形保持端点严格异号。每轮根据函数值的符号保留仍有存在性证书的子区间。
+<!-- bilingual-en:start -->
+Monotonicity belongs to these particular inverse-square and inverse-cube programs: comparing `guess**2` or `guess**3` tells the code which bound to move. General [[二分求根|bisection root-finding]] requires neither monotonicity nor a unique root. It requires continuity, explicit handling of endpoint roots, and otherwise a strict sign-changing bracket whose certified subinterval is retained by function signs.
+<!-- bilingual-en:end -->
+
 ### 9. 再进一步：对负 cube 也能做，但要先处理 sign
 <!-- bilingual-en:start -->
 *9. Extending Further: Handling Negative Cubes Through Their Sign*
@@ -383,9 +402,9 @@ The same design habit appears again: preserve the main algorithmic skeleton whil
 <!-- bilingual-en:start -->
 *10. Newton–Raphson: Using a Local Derivative Instead of an Interval*
 <!-- bilingual-en:end -->
-讲到最后一部分，老师引入 Newton-Raphson。
+讲到最后一部分，老师引入 [[Newton迭代|Newton–Raphson]]。
 <!-- bilingual-en:start -->
-The final part introduces Newton–Raphson.
+The final part introduces [[Newton迭代|Newton–Raphson]].
 <!-- bilingual-en:end -->
 
 这时课堂的语气其实已经不是“再学一个公式”，而是：
@@ -421,27 +440,27 @@ Rather than centering the derivation, the instructor emphasizes the mechanism:
 <!-- bilingual-en:start -->
 *11. Why Newton's Method Is Often Faster but More Structure-Dependent*
 <!-- bilingual-en:end -->
-课堂里这一部分虽然简短，但你最好在笔记里明确记下来：
+课堂直接比较的是：
 <!-- bilingual-en:start -->
-Although brief, this comparison should remain explicit:
+The lecture directly compares:
 <!-- bilingual-en:end -->
 
 - approximation method：最笨，但很直观
-- bisection：利用 order 和 interval，每次砍半
-- Newton：利用 derivative 信息，通常更快
+- 本讲的平方根/立方根二分：利用单调关系和包含答案的区间，每次砍半
+- Newton：利用导数生成下一候选
 <!-- bilingual-en:start -->
 - Fixed-increment approximation is crude but intuitive.
-- Bisection uses order and an interval to discard half the search space.
-- Newton's method uses derivative information and is often faster.
+- The square-root and cube-root programs use monotonicity and a containing interval to discard half.
+- Newton's method uses derivative information to generate the next candidate.
 <!-- bilingual-en:end -->
 
-它们的差别不是只在代码长短，而在于每一步使用了多少问题结构：
+为把课堂方法放进一般数值求根，还需补上课外边界：
 
-- fixed increment：几乎不用结构
-- bisection：用顺序和单调
-- Newton：再进一步用局部斜率
+- 一般 [[二分求根]] 依赖连续性与异号括区间，不要求单调或根唯一
+- [[Newton局部收敛]] 的误差平方界只在简单根附近、相应光滑条件成立时适用
+- 零或近零导数、其他吸引域、循环和机器数失败见 [[Newton失效边界]]
 <!-- bilingual-en:start -->
-The code differs because each method exploits a different amount of structure: almost none for fixed increments, order and monotonicity for bisection, and local slope as well for Newton's method.
+To place the classroom methods in general numerical root-finding, add the following boundaries: [[二分求根|general bisection]] relies on continuity and a sign-changing bracket rather than monotonicity or a unique root; the squared-error bound in [[Newton局部收敛|Newton local convergence]] applies only near a simple root under the corresponding smoothness conditions; and zero or near-zero derivatives, other basins, cycles, and machine-number failures are covered by [[Newton失效边界|Newton failure boundaries]].
 <!-- bilingual-en:end -->
 
 所以速度提升的本质，是你愿意并且能够利用更多信息。
@@ -524,7 +543,7 @@ Beyond asking whether a problem is solvable, ask whether it has an order, a natu
 - Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (Ch 3.4-3.5)
 
 ## Review checklist
-- [ ] 我能解释为什么 approximation method 虽然正确却常常太慢。
+- [ ] 我能解释固定步长近似为什么可能极慢，也可能跨过整个接受区域而失败。
 - [ ] 我能复述“猜课本页码”例子为什么会自然导向 midpoint strategy。
 - [ ] 我能说清楚 bisection search 的适用前提，而不是只背代码模板。
 - [ ] 我能解释 low、high、guess 在每一轮中各自承担什么角色。
@@ -535,7 +554,7 @@ Beyond asking whether a problem is solvable, ask whether it has an order, a natu
 - [ ] 我能比较 fixed increment、bisection、Newton-Raphson 三者使用了哪些结构信息。
 - [ ] 我能解释为什么“如何利用问题结构”决定了算法快慢。
 <!-- bilingual-en:start -->
-- [ ] I can explain why a correct fixed-increment approximation may still be very slow.
+- [ ] I can explain why fixed-increment approximation may be extremely slow or miss the entire acceptance region.
 - [ ] I can reconstruct how the textbook-page game motivates a midpoint strategy.
 - [ ] I can state the prerequisites for bisection instead of merely memorizing its code.
 - [ ] I can explain the distinct roles of `low`, `high`, and `guess` on each iteration.
@@ -549,10 +568,12 @@ Beyond asking whether a problem is solvable, ask whether it has an order, a natu
 
 > [!warning] Common mistakes
 > - 没有保证真实答案一开始就在 `[low, high]` 区间内。
-> - 把 bisection 机械套用到不满足单调/有序结构的问题上。
-> - 只记 Newton 公式，不理解它为什么可能快、也为什么可能不稳。
+> - 对离散二分查找，没有有序候选和方向反馈却仍机械减半。
+> - 对连续二分求根，没有连续性与有效异号括区间却仍机械减半；单调性只是本讲平方根/立方根反演代码的额外结构，不是一般必要条件。
+> - 只记 Newton 公式，不理解局部快速收敛的条件和 [[Newton失效边界|可能的失效方式]]。
 > <!-- bilingual-en:start -->
 > - Failing to ensure that the true answer lies in the initial `[low, high]` interval.
-> - Applying bisection mechanically to a problem without the required monotone or ordered structure.
-> - Memorizing Newton's formula without understanding either its potential speed or its possible instability.
+> - Halving a discrete search without ordered candidates and directional feedback.
+> - Halving a continuous root problem without continuity and a valid sign-changing bracket. Monotonicity is additional structure in the square-root and cube-root examples, not a general requirement.
+> - Memorizing Newton's formula without understanding the conditions for local speed or its [[Newton失效边界|possible failure modes]].
 > <!-- bilingual-en:end -->

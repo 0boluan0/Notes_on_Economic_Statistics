@@ -4,6 +4,14 @@
 *0. Recall*
 <!-- bilingual-en:end -->
 
+> [!tip] 连续学习入口
+> 动态回归、干预函数与 ADL 的连续学习见 [[01_Math/06_时间序列分析/08_动态回归与干预|动态回归与干预完整路径]]，全局关系见 [[回归预测与动态回归.canvas|主题 Canvas]]；VAR 从 [[01_Math/06_时间序列分析/05_VAR-脉冲响应与Granger因果|VAR 完整学习路径]] 进入。本文仍作为课堂板书、原题与作业的永久源记录。
+
+<!-- bilingual-en:start -->
+> [!tip] Continuous learning entries
+> Use the [[01_Math/06_时间序列分析/08_动态回归与干预|complete dynamic-regression and intervention path]] with its [[回归预测与动态回归.canvas|topic Canvas]], then enter the [[01_Math/06_时间序列分析/05_VAR-脉冲响应与Granger因果|complete VAR path]]. This file remains the permanent source record for board work, original questions, and homework.
+<!-- bilingual-en:end -->
+
 # 1. 引言
 <!-- bilingual-en:start -->
 *1. Introduction*
@@ -29,11 +37,11 @@
 >
 > $$
 >
-> 这里，$a_0$ 是常数项，$a_1$ 是劫机次数的**[[ARMA 模型：识别、估计、诊断与预测#AR、MA 与 ARMA|AR]](1)系数**（表示过去劫机次数对当前的影响），$c_0$ 是干预效应系数，$\varepsilon_t$ 是白噪声误差项。模型中包含一个滞后项$y_{t-1}$，假定序列在没有干预时服从AR(1)动态，并以$c_0 z_t$项刻画政策干预的即时影响。
+> 这里，$a_0$ 是常数项，$a_1$ 是劫机次数的**[[AR(p)模型|AR]](1)系数**（表示过去劫机次数对当前的影响），$c_0$ 是干预效应系数，$\varepsilon_t$ 是白噪声误差项。模型中包含一个滞后项$y_{t-1}$，假定序列在没有干预时服从AR(1)动态，并以$c_0 z_t$项刻画政策干预的即时影响。
 > <!-- bilingual-en:start -->
 > To test the effect of airport metal-detector screening, include an intervention variable in a time-series model. Let $y_t$ be the number of hijackings in period $t$, and let $z_t$ equal zero before 1973 Q1 and one from 1973 Q1 onward. A simple intervention model is
 > $$y_t=a_0+a_1y_{t-1}+c_0z_t+\varepsilon_t,\qquad |a_1|<1.$$
-> Here, $a_0$ is the constant, $a_1$ is the **[[ARMA 模型：识别、估计、诊断与预测#AR、MA 与 ARMA|AR(1)]] coefficient** governing how the previous period's hijacking count affects the current count, $c_0$ measures the intervention effect, and $\varepsilon_t$ is a white-noise error. The lagged term $y_{t-1}$ captures the series' ordinary AR(1) dynamics, while $c_0z_t$ captures the policy's immediate effect.
+> Here, $a_0$ is the constant, $a_1$ is the **[[AR(p)模型|AR(1)]] coefficient** governing how the previous period's hijacking count affects the current count, $c_0$ measures the intervention effect, and $\varepsilon_t$ is a white-noise error. The lagged term $y_{t-1}$ captures the series' ordinary AR(1) dynamics, while $c_0z_t$ captures the policy's immediate effect.
 > <!-- bilingual-en:end -->
 
 • 如果没有干预（$z_t=0$），模型退化为 $y_t = a_0 + a_1 y_{t-1} + \varepsilon_t$，是一个均值为 $a_0/(1-a_1)$ 的稳定AR(1)过程。
@@ -94,30 +102,34 @@ $$
 The intervention changes the effective intercept from $a_0$ to $a_0+c_0$, shifting the **long-run mean** by $c_0/(1-a_1)$. If $c_0<0$, the policy permanently lowers the mean number of hijackings; if $c_0>0$, it raises it. The immediate coefficient $c_0$ is propagated through the AR(1) dynamics to produce the larger total level change.
 <!-- bilingual-en:end -->
 
-## 1.2. [[VAR、脉冲响应与 Granger 因果#脉冲响应|脉冲响应函数]] IRF Impulse Response Analysis
+## 1.2. 脉冲响应与阶跃响应
 <!-- bilingual-en:start -->
-*1.2. [[VAR、脉冲响应与 Granger 因果#脉冲响应|Impulse responses]]*
+*1.2. Pulse and step responses*
 <!-- bilingual-en:end -->
 
->[!note] 脉冲响应函数
->即干预发生后各期对 $y$ 的影响路径。这里的“冲击”指的是干预变量$z_t$从0跳变为1的变化，相当于一次永久性的干预。
+>[!note] 先区分 pulse 与 step
+>在这个[[干预函数类型|干预模型]]中，**pulse** 是 $z_t$ 只在一期从 0 变为 1，之后立即回到 0；**step** 是从 $t$ 起永久地从 0 变为 1。两者的期限响应不同，不能把“一次脉冲”与“永久干预”混为同一输入。
 >
-> 对于任意$j \ge 0$，我们可以计算**脉冲响应**：干预在$t$期发生对未来第$j$期 ($t+j$) 的影响大小。由于模型是线性的，冲击响应等于对 $z_t$ 求偏导：
+> 对孤立单位脉冲，任意 $j\ge0$ 的响应为
 >
 > $$
 > \frac{\partial y_{t+j}}{\partial z_t} = c_0  a_1^j, \qquad j = 0,1,2,\dots
 > $$
 >
-> 该公式表明：在干预发生的当期（$j=0$），$y_t$对$z_t$的立即反应为$c_0$（这正是回归中的$c_0$系数）。随后每一时期的影响按因子$a_1$衰减：$j=1$ 时影响为 $c_0 a_1$，$j=2$ 时为 $c_0 a_1^2$，以此类推。因为 $|a_1|<1$，干预对 $y$ 的边际影响会几何级数地减弱，但**不会消失**——这是由于$z_t$的变化是永久性的：干预实施后$z_{t+j}$在之后各期都保持1。因此，$y$ 水平永久地移至新的轨道上（相对于未干预的情形）。
+> 当 $|a_1|<1$ 时，这条 pulse response 按几何速度衰减并趋于 0。对永久 step，期限 $j$ 的水平响应则是截至该期所有 pulse response 的和：
+> $$
+> c_0\sum_{i=0}^{j}a_1^i.
+> $$
+> 它随 $j\to\infty$ 趋于 $c_0/(1-a_1)$，所以相对于无干预反事实形成永久水平位移。
 > <!-- bilingual-en:start -->
 > An impulse response traces how a one-period change in the intervention input affects future $y$. For an isolated unit pulse in $z_t$,
 > $$\frac{\partial y_{t+j}}{\partial z_t}=c_0a_1^j,\qquad j=0,1,2,\ldots.$$
-> The contemporaneous response is $c_0$, and each later response is multiplied by $a_1$, so it decays geometrically when $|a_1|<1$.
+> The contemporaneous response is $c_0$, and each later response is multiplied by $a_1$, so it decays geometrically to zero when $|a_1|<1$.
 >
 > A permanent intervention dummy is a **step**, not a one-period pulse: $z_t,z_{t+1},\ldots$ all change from zero to one. Its effect at horizon $j$ is therefore the sum of the pulse responses through that horizon, and the level of $y$ moves permanently relative to the no-intervention counterfactual.
 > <!-- bilingual-en:end -->
 
-那么按照这个定义,我们也可以定义**累计冲击响应函数**，表示干预发生后直到第$j$期末总的影响积累。由于干预在$t$期后一直“在位”，累计影响等于将各期的边际影响相加：
+因此，**累计 pulse response** 与**永久 step 的期限响应**在这个线性模型中数值相同：
 <!-- bilingual-en:start -->
 The **cumulative impulse response** through horizon $j$—equivalently, the horizon-$j$ response to a permanent step intervention—is the sum of the individual pulse responses:
 <!-- bilingual-en:end -->
@@ -157,9 +169,9 @@ This geometric **partial sum** approaches $c_0/(1-a_1)$ as $j$ increases, matchi
 **3.** **Add the intervention and estimate the model.** Include the dummy or intervention function $z_t$ in the benchmark specification and estimate all parameters, including $c_0$. Then check:<br>
 <!-- bilingual-en:end -->
 
-• 干预系数$c_0$是否显著，显著则意味着干预有统计学上的显著影响。
+• 干预系数$c_0$是否显著；显著只表示给定模型中的条件差异可从零区分，不能单独证明干预造成了该变化。
 <!-- bilingual-en:start -->
-- whether $c_0$ is statistically significant;
+- whether $c_0$ is statistically distinguishable from zero in the stated model, without treating significance alone as causal identification;
 <!-- bilingual-en:end -->
 
 • 其它模型系数在加入干预后是否依然合理。
@@ -172,12 +184,18 @@ This geometric **partial sum** approaches $c_0/(1-a_1)$ as $j$ increases, matchi
 - whether the intervention-model residuals are approximately white noise.
 <!-- bilingual-en:end -->
 
-4. **模型诊断与比较：** 对比包含干预项的模型与不含干预项的基准模型，或者与其他可能的备选模型，使用信息准则（[[回归模型比较与选择#AIC 与 BIC：likelihood fit 加 complexity penalty|AIC]]、SBC/[[回归模型比较与选择#AIC 与 BIC：likelihood fit 加 complexity penalty|BIC]]）来评估优劣。理想情况下，含干预模型应当有更低的信息准则值、残差更随机，以及**优于**不包含干预的模型。
+4. **模型诊断与比较：** 对比包含干预项的模型与不含干预项的基准模型，或者与其他可能的备选模型，使用信息准则（[[AIC]]、SBC/[[BIC]]）来评估优劣。理想情况下，含干预模型应当有更低的信息准则值、残差更随机，以及**优于**不包含干预的模型。
 <!-- bilingual-en:start -->
 
 &nbsp;
-**4.** **Model diagnosis and comparison:** Compare the intervention model with the no-intervention benchmark and other plausible alternatives using information criteria ([[回归模型比较与选择#AIC 与 BIC：likelihood fit 加 complexity penalty|AIC]], SBC/[[回归模型比较与选择#AIC 与 BIC：likelihood fit 加 complexity penalty|BIC]]). A well-specified intervention model should have lower information-criterion values and residuals that are closer to white noise than the corresponding benchmark.<br>
+**4.** **Model diagnosis and comparison:** Compare the intervention model with the no-intervention benchmark and other plausible alternatives using information criteria ([[AIC]], SBC/[[BIC]]). A well-specified intervention model should have lower information-criterion values and residuals that are closer to white noise than the corresponding benchmark.<br>
 <!-- bilingual-en:end -->
+
+> [!attention] 统计干预不自动等于因果干预
+> 上述流程检验的是给定时间序列规格中的条件差异。若政策因预期结果恶化而启动、同日还有其他变化，或主体提前反应，即使 $c_0$ 显著且残差近似白噪声，也不能单独识别政策反事实效应；见 [[干预系数因果边界]]。
+> <!-- bilingual-en:start -->
+> The workflow estimates a conditional difference in the stated time-series model. Anticipatory adoption, coincident changes, or pre-event behavioural responses prevent a causal interpretation even when $c_0$ is significant and residuals look white; see the [[干预系数因果边界|causal boundary of intervention analysis]].
+> <!-- bilingual-en:end -->
 
 # 2. 政策分析
 <!-- bilingual-en:start -->
@@ -189,7 +207,7 @@ This geometric **partial sum** approaches $c_0/(1-a_1)$ as $j$ increases, matchi
 Background remarks.
 <!-- bilingual-en:end -->
 
-# 3. 自回归分布滞后ADL  Autoregressive [[回归预测与动态回归#分布滞后与动态乘数|Distributed]] Lag
+# 3. [[自回归分布滞后|自回归分布滞后 ADL]]  Autoregressive Distributed Lag
 <!-- bilingual-en:start -->
 *3. Autoregressive Distributed Lag (ADL) model*
 <!-- bilingual-en:end -->
@@ -227,12 +245,12 @@ where $A(L)$, $C(L)$, and $B(L)$ are polynomials in the lag operator $L$:
 - $B(L)$ represents the moving-average component of the disturbance, for example $B(L)\epsilon_t=\epsilon_t+b_1\epsilon_{t-1}+\cdots+b_q\epsilon_{t-q}$. Setting $B(L)=1$ assumes white-noise errors with no MA dynamics and simplifies the analysis.
 <!-- bilingual-en:end -->
 
->[!note] [[回归预测与动态回归#分布滞后与动态乘数|自回归分布滞后模型]]
+>[!note] [[自回归分布滞后|自回归分布滞后模型]]
 >
 > **自回归分布滞后模型**（Autoregressive Distributed Lag Model, 简称 **ADL 模型**）就是干预模型的自然延伸。在 ADL 模型中，$z_t$ 可以是随机的外生变量序列.在上面的模型的基础上当我们忽略$B(L)$（设$B(L)=1$）时，就得到**自回归分布滞后（ADL）模型**：
 $$y_t = a_0 + A(L)y_{t-1} + C(L) z_t + \varepsilon_t$$
 <!-- bilingual-en:start -->
->The **[[回归预测与动态回归#分布滞后与动态乘数|autoregressive distributed lag model]]** (Autoregressive Distributed Lag Model, abbreviated **ADL**) is a natural extension of the intervention model. In an ADL model, $z_t$ may be a stochastic exogenous variable. Setting $B(L)=1$ in the model above gives:
+>The **[[自回归分布滞后|autoregressive distributed lag model]]** (Autoregressive Distributed Lag Model, abbreviated **ADL**) is a natural extension of the intervention model. In an ADL model, $z_t$ may be a stochastic exogenous variable. Setting $B(L)=1$ in the model above gives:
 $$y_t = a_0 + A(L)y_{t-1} + C(L)z_t + \varepsilon_t$$
 <!-- bilingual-en:end -->
 
@@ -246,9 +264,9 @@ $$y_t = a_0 + A(L)y_{t-1} + C(L)z_t + \varepsilon_t$$
 - The coefficients $c_i$ are **transfer-function weights**. They measure the direct effect of a unit change in $z$ at each lag.
 <!-- bilingual-en:end -->
 
-• 由于$z_t$影响被分布在多个时滞上，因此此类模型也常被称为“**[[回归预测与动态回归#分布滞后与动态乘数|分布滞后模型]]**”。
+• 由于$z_t$影响被分布在多个时滞上，因此这部分 $C(L)z_t$ 构成**[[分布滞后模型|分布滞后结构]]**。
 <!-- bilingual-en:start -->
-- Because the effect of $z_t$ is distributed across several lags, this is also called a **[[回归预测与动态回归#分布滞后与动态乘数|distributed-lag model]]**.
+- Because the effect of $z_t$ is distributed across several lags, $C(L)z_t$ is the model's **[[分布滞后模型|distributed-lag component]]**.
 <!-- bilingual-en:end -->
 
 >[!note] leading indicator
@@ -268,13 +286,13 @@ $$y_t = a_0 + A(L)y_{t-1} + C(L)z_t + \varepsilon_t$$
 *3.2. Properties of ADL*
 <!-- bilingual-en:end -->
 
-考虑一个简单情形来探究ADL模型的统计性质和如何识别滞后效应：**[[ARMA 模型：识别、估计、诊断与预测#AR、MA 与 ARMA|AR]](1)过程 + 延迟$d$期的单一滞后效应**。具体模型：
+考虑一个简单情形来探究ADL模型的统计性质和如何识别滞后效应：**[[AR(p)模型|AR]](1)过程 + 延迟$d$期的单一滞后效应**。具体模型：
 <!-- bilingual-en:start -->
-To study the statistical properties of an ADL model and identify its delay, consider an [[ARMA 模型：识别、估计、诊断与预测#AR、MA 与 ARMA|AR]](1) process with a single effect from $z$ after $d$ periods:
+To study the statistical properties of an ADL model and identify its delay, consider an [[AR(p)模型|AR]](1) process with a single effect from $z$ after $d$ periods:
 <!-- bilingual-en:end -->
 
 $$
-y_t = a_1 y_{t-1} + c_d z_{t-d} + \varepsilon_t, \tag{[[回归预测与动态回归#分布滞后与动态乘数|ADL]](1, d)}
+y_t = a_1 y_{t-1} + c_d z_{t-d} + \varepsilon_t. \tag{ADL(1,d)}
 $$
 
 其中 $z_t$ 是外生的白噪声过程（均值0，方差$\sigma_z^2$），$\varepsilon_t$是白噪声误差（与$z_t$独立），$d \ge 0$为整数，表示$z$对$y$影响的延迟长度。
@@ -480,7 +498,7 @@ Method 1: Do not impose a transfer-function structure in advance. Instead, use i
 Method 2: Identify the transfer function by **prefiltering**, or **prewhitening**. First estimate the model $D(L)$ for $z_t$. Then apply the filter $(1-\hat D(L)L)$ to both $y_t$ and $z_t$, removing the autocorrelation in $z_t$ so that the filtered input is approximately white noise. The steps are:
 <!-- bilingual-en:end -->
 
-# 4. 向量自回归VAR
+# 4. [[VAR、脉冲响应与 Granger 因果.canvas|向量自回归 VAR]]
 <!-- bilingual-en:start -->
 *4. Vector autoregression (VAR)*
 <!-- bilingual-en:end -->
@@ -490,8 +508,8 @@ Method 2: Identify the transfer function by **prefiltering**, or **prewhitening*
 *4.1. Definition of a VAR*
 <!-- bilingual-en:end -->
 
-==是用来处理内生性问题的工具==
->[!note] [[VAR、脉冲响应与 Granger 因果#VAR|VAR]]
+[[VAR(p)模型|简约型 VAR]] 用系统变量的共同滞后描述联合线性动态；它不会因变量被共同建模就自动解决内生性或成为结构模型。
+>[!note] 从候选结构式到简约式
 > 考虑一个二元系统（bivariate VAR）：
 > $$
 > \begin{aligned}
@@ -504,13 +522,13 @@ Method 2: Identify the transfer function by **prefiltering**, or **prewhitening*
 > - $\varepsilon_{yt}$,$\varepsilon_{zt}$：白噪声扰动项
 > - $b_{12}$, $b_{21}$：**即时交叉依赖**（contemporaneous interaction）
 >
-> 我们将系统写成如下矩阵形式==结构VAR==：
+> 把这组带同期反馈的方程写成一个**候选结构 VAR**：
 > $$
 > \begin{bmatrix} 1 & b_{12} \\ b_{21} & 1 \end{bmatrix} \begin{bmatrix} y_t \\ z_t \end{bmatrix} =\begin{bmatrix} b_{10} \\ b_{20} \end{bmatrix} + \begin{bmatrix} \gamma_{11} & \gamma_{12} \\ \gamma_{21} & \gamma_{22} \end{bmatrix} \begin{bmatrix} y_{t-1} \\ z_{t-1} \end{bmatrix} + \begin{bmatrix} \varepsilon_{yt} \\ \varepsilon_{zt} \end{bmatrix}
 > $$
 > 记作：
 > $$B x_t = \Gamma_0 + \Gamma_1 x_{t-1} + \varepsilon_t$$
-> 我们乘以 $B^{-1}$,==这个叫做同期变换,该是白噪声还是白噪声,不影响的==，得到==简约VAR==：
+> 在 $B$ 非奇异时左乘 $B^{-1}$，得到**简约型 VAR**：
 > $$x_t = A_0 + A_1 x_{t-1} + e_t $$
 > 其中：
 > - $A_0 = B^{-1} \Gamma_0$
@@ -530,7 +548,7 @@ Method 2: Identify the transfer function by **prefiltering**, or **prewhitening*
 > - $\varepsilon_{yt}$ and $\varepsilon_{zt}$ are white-noise shocks;
 > - $b_{12}$ and $b_{21}$ capture **contemporaneous cross-dependence**.
 >
-> In matrix notation, this is the **structural VAR**
+> In matrix notation, this is a candidate **structural VAR**
 > $$B x_t = \Gamma_0 + \Gamma_1 x_{t-1} + \varepsilon_t.$$
 > Premultiplying by $B^{-1}$ is a contemporaneous transformation. It preserves the white-noise property and yields the **reduced-form VAR**
 > $$x_t = A_0 + A_1 x_{t-1} + e_t,$$
@@ -540,19 +558,23 @@ Method 2: Identify the transfer function by **prefiltering**, or **prewhitening*
 > - $e_t = B^{-1} \varepsilon_t$.
 > <!-- bilingual-en:end -->
 
-==简约VAR中的$e_{t}$依旧是白噪声,并且消除了内生性.那就意味着可以直接用OLS估计.但是扰动项出现了同期相关==
+若结构扰动跨期为白噪声，固定非奇异变换后的 $e_t$ 仍跨期为白噪声。简约式右侧不含当期系统变量；在创新对过去回归量正交、设计矩阵满秩及相应动态正则条件下，可按 [[VAR逐方程OLS|逐方程 OLS]] 估计。这个变换没有“消除所有内生性”，而且不同方程的简约型创新仍可同期相关。
 <!-- bilingual-en:start -->
-==The reduced-form innovations $e_t$ are still white noise, and no current endogenous variable appears on the right-hand side. Each reduced-form equation can therefore be estimated by OLS. However, the innovations in different equations may be contemporaneously correlated.==
+If the structural disturbances are white noise over time, their fixed nonsingular transformation $e_t$ remains white noise over time. No current system variable appears on the right-hand side of the reduced form. Equation-by-equation OLS is therefore available when innovations are orthogonal to lagged regressors, the design has full rank, and the required dynamic regularity conditions hold. This does not eliminate every endogeneity problem, and innovations from different equations may remain contemporaneously correlated.
 <!-- bilingual-en:end -->
 
 由于$\text{Cov}(e_{1t}, e_{2t}) = \mathbb{E}[e_{1t} e_{2t}] = \mathbb{E} \left[ \frac{(\varepsilon_{yt} - b_{12} \varepsilon_{zt})(\varepsilon_{zt} - b_{21} \varepsilon_{yt})} {(1 - b_{12}b_{21})^2} \right]$
-展开乘法期望后，注意 $\varepsilon_{yt}, \varepsilon_{zt}$ 是**独立白噪声** ⇒ 所有交叉项消掉，只剩下：$\text{Cov}(e_{1t}, e_{2t}) = \frac{ - b_{21} \sigma_y^2 + b_{12} \sigma_z^2 } {(1 - b_{12}b_{21})^2}$.
+展开后，若 $\varepsilon_{yt}$ 与 $\varepsilon_{zt}$ 同期正交，则交叉乘积期望为零。按上面结构方程的负号约定，
+$$
+\operatorname{Cov}(e_{1t},e_{2t})
+=\frac{-b_{21}\sigma_y^2-b_{12}\sigma_z^2}
+{(1-b_{12}b_{21})^2}.
+$$
 <!-- bilingual-en:start -->
 Since
 $$\operatorname{Cov}(e_{1t},e_{2t})=E\left[\frac{(\varepsilon_{yt}-b_{12}\varepsilon_{zt})(\varepsilon_{zt}-b_{21}\varepsilon_{yt})}{(1-b_{12}b_{21})^2}\right],$$
 independence of the structural shocks eliminates the cross-products. With the signs used in the displayed structural equations, the result is
 $$\operatorname{Cov}(e_{1t},e_{2t})=\frac{-b_{21}\sigma_y^2-b_{12}\sigma_z^2}{(1-b_{12}b_{21})^2}.$$
-The plus sign before the $b_{12}\sigma_z^2$ term in the Chinese line above is a sign error.
 <!-- bilingual-en:end -->
 
 >[!note] 方差-协方差矩阵 $\Sigma = \mathbb{E}[e_t e_t']$
@@ -575,8 +597,8 @@ Iterating the VAR gives
 $$x_t=\left(I+A_1+A_1^2+\cdots+A_1^n\right)A_0+\sum_{i=0}^nA_1^ie_{t-i}+A_1^{n+1}x_{t-n-1}.$$
 <!-- bilingual-en:end -->
 
->[!note] VAR的稳定性
->要让 [[VAR、脉冲响应与 Granger 因果#VAR|VAR]] 模型在长期不爆炸（即收敛），我们要求：
+>[!note] [[VAR稳定根条件|VAR 的稳定性]]
+>对这里的 VAR(1)，长期不爆炸要求：
 >
 > $\boxed{ \lim_{n \to \infty} A_1^n = 0 } \Rightarrow \text{所有特征值（eigenvalues）都在单位圆内}$
 >
@@ -588,10 +610,10 @@ $$x_t=\left(I+A_1+A_1^2+\cdots+A_1^n\right)A_0+\sum_{i=0}^nA_1^ie_{t-i}+A_1^{n+1
 >
 > $\det(I - A_1 L) = (1 - a_{11}L)(1 - a_{22}L) - a_{12}a_{21}L^2$
 >
-> 如果这个方程的根（特征根）都小于 1 ⇒ 模型稳定。
+> 因而要区分两个对象：$A_1$ 的特征值模必须小于 1；$\det(I-A_1L)=0$ 的滞后多项式根模必须大于 1。
 > <!-- bilingual-en:start -->
 > **Stability of VAR**
-> For a [[VAR、脉冲响应与 Granger 因果#VAR|VAR]] process to be stable rather than explosive, we require:
+> For this VAR(1) process to be stable rather than explosive, we require:
 > $\boxed{\lim_{n\to\infty}A_1^n=0}\quad\Longleftrightarrow\quad\text{every eigenvalue }\lambda\text{ of }A_1\text{ satisfies }|\lambda|<1.$
 > Equivalently, the roots $z$ of the lag polynomial $\det(I-A_1z)=0$ must lie **outside** the unit circle, because those roots are reciprocals of the eigenvalues of $A_1$. For a two-variable VAR:
 > $I - A_1 L = \begin{bmatrix} 1 - a_{11}L & -a_{12}L \\ -a_{21}L & 1 - a_{22}L \end{bmatrix}$
@@ -600,7 +622,7 @@ $$x_t=\left(I+A_1+A_1^2+\cdots+A_1^n\right)A_0+\sum_{i=0}^nA_1^ie_{t-i}+A_1^{n+1
 > Thus the two statements use different objects but are consistent: the eigenvalues of $A_1$ have modulus below one, while the roots of $\det(I-A_1L)=0$ have modulus above one.
 > <!-- bilingual-en:end -->
 
-==在VAR中,如果稳定,就一定弱平稳==
+稳定根条件与有限创新二阶矩保证存在唯一的 [[VAR因果VMA表示|因果协方差平稳解]]。只有从该平稳分布初始化时，过程才从第一期起弱平稳；任意有限初值产生的过渡项会消失，矩只是在以后逐渐收敛到平稳解。
 <!-- bilingual-en:start -->
 ==A stable VAR initialized in its stationary distribution has a weakly stationary solution. With an arbitrary finite initial condition, its moments converge to those of that solution as the initial effect vanishes.==
 <!-- bilingual-en:end -->
@@ -612,11 +634,11 @@ If every eigenvalue of $A_1$ has modulus below one, then $A_1^{n+1}\to0$ and the
 
 $$
 
-\mathbf{x}_t = \mu + \sum_{i=0}^{\infty} A_1^i, e_{t-i}，
+\mathbf{x}_t = \mu + \sum_{i=0}^{\infty} A_1^i e_{t-i},
 
 $$
 
-其中 $\displaystyle \mu = (I - A_1)^{-1} A_0$ 是VAR过程的**无条件均值**（平稳均值）。换句话说，在稳定条件下，VAR模型是**协方差平稳过程**，其均值为$\mu$，方差有限且时间不变，并且可以表示为白噪声$e_t$的无限响应之和。
+其中 $\displaystyle \mu=(I-A_1)^{-1}A_0$ 是平稳解的无条件均值。在稳定条件与有限创新方差下，该平稳解可表示为简约型创新 $e_t$ 的无限响应之和；这不把从任意固定初值启动的早期过渡过程自动变成平稳过程。
 <!-- bilingual-en:start -->
 Here $\mu=(I-A_1)^{-1}A_0$ is the VAR's **unconditional mean**. Under stability and finite innovation variance, the stationary solution is covariance-stationary and has an infinite moving-average representation in the reduced-form innovations $e_t$.
 <!-- bilingual-en:end -->
@@ -625,44 +647,44 @@ Here $\mu=(I-A_1)^{-1}A_0$ is the VAR's **unconditional mean**. Under stability 
 >
 > $x_t = \mu + \sum_{i=0}^\infty A_1^i e_{t-i}$
 > 那么：
-> $\begin{aligned} \text{Cov}(x_t) &= \mathbb{E}[(x_t - \mu)(x_t - \mu)’] = \sum_{i=0}^{\infty} A_1^i \Sigma (A_1^i)’ \\ &= \boxed{ (I - A_1)^{-1} \Sigma [(I - A_1)^{-1}]’ } \end{aligned}$
-> 这里 $\Sigma = \text{Cov}(e_t)$，即 [[VAR、脉冲响应与 Granger 因果#reduced-form 与结构识别|reduced form]] 误差的协方差矩阵。
+> $$
+> \Omega\equiv\operatorname{Cov}(x_t)
+> =\sum_{i=0}^{\infty}A_1^i\Sigma(A_1^i)'
+> $$
+> 等价地，$\Omega$ 是 [[VAR无条件协方差|离散 Lyapunov 方程]]
+> $$
+> \Omega=A_1\Omega A_1'+\Sigma
+> $$
+> 的唯一有限解。这里 $\Sigma=\operatorname{Cov}(e_t)$ 是 [[简约型VAR创新|简约型创新]] 的协方差矩阵。一般不能把同期无条件协方差写成 $(I-A_1)^{-1}\Sigma[(I-A_1)^{-1}]'$；后者使用长期累计乘数并带有跨滞后交叉项。
 > <!-- bilingual-en:start -->
 > **Covariance matrix from the VMA representation**
 > $x_t = \mu + \sum_{i=0}^\infty A_1^i e_{t-i}$
 > Therefore
 > $$\Omega\equiv\operatorname{Cov}(x_t)=\sum_{i=0}^{\infty}A_1^i\Sigma(A_1^i)'$$
-> where $\Sigma=\operatorname{Cov}(e_t)$ is the covariance matrix of the [[VAR、脉冲响应与 Granger 因果#reduced-form 与结构识别|reduced-form]] innovations. Equivalently, $\Omega$ solves the discrete Lyapunov equation $\Omega=A_1\Omega A_1'+\Sigma$.
->
-> The boxed equality to $(I-A_1)^{-1}\Sigma[(I-A_1)^{-1}]'$ in the Chinese line is not generally the contemporaneous covariance; that expression uses the long-run multiplier and includes cross-lag terms absent from $\operatorname{Cov}(x_t)$.
+> where $\Sigma=\operatorname{Cov}(e_t)$ is the covariance matrix of the reduced-form innovations. Equivalently, $\Omega$ solves the discrete Lyapunov equation $\Omega=A_1\Omega A_1'+\Sigma$. The long-run-multiplier expression $(I-A_1)^{-1}\Sigma[(I-A_1)^{-1}]'$ is not generally the contemporaneous covariance.
 > <!-- bilingual-en:end -->
 
-## 4.3. [[VAR、脉冲响应与 Granger 因果#VAR|VAR]] 的估计
+## 4.3. 简约型估计与结构识别
 <!-- bilingual-en:start -->
-*4.3. Estimating a [[VAR、脉冲响应与 Granger 因果#VAR|VAR]]*
+*4.3. Reduced-form estimation and structural identification*
 <!-- bilingual-en:end -->
 
-<span style="color: yellow;">简约的VAR可以使用OLS估计,但是简约的VAR不能反推结构化VAR.</span>
+简约型 VAR 可在条件满足时 [[VAR逐方程OLS|逐方程 OLS]] 估计；但 $\Sigma_e$ 只识别创新混合后的协方差，不能单独反推出结构冲击。
 <!-- bilingual-en:start -->
-<span style="color: yellow;">A reduced-form VAR can be estimated equation by equation with OLS, but the reduced form alone does not identify the underlying structural VAR.</span>
+A reduced-form VAR can be estimated equation by equation by OLS under the stated conditions, but its covariance matrix alone does not identify the structural shocks.
 <!-- bilingual-en:end -->
 
->[!note] Cholesky 识别法
->我们前面提到过：[[VAR、脉冲响应与 Granger 因果#reduced-form 与结构识别|Reduced]]-form VAR $x_t = A_0 + A_1 x_{t-1} + e_t$ 只有 9 个估计量（如果二维系统），而结构系统（SVAR）有 10 个参数 ⇒ **未识别（under-identified）**
-> 假设第一个变量对第二个变量有即时影响，但反过来没有：
->$B = \begin{bmatrix} 1 & b_{12} \\ 0 & 1 \end{bmatrix}$
-> $$
-> \begin{cases}
-> y_t = b_{10} + b_{12} z_t + \gamma_{11} y_{t-1} + \gamma_{12} z_{t-1} + \varepsilon^y_t  \\
-> z_t = b_{20}  + \gamma_{21} y_{t-1} + \gamma_{22} z_{t-1} + \varepsilon^z_t.
-> \end{cases}
-> $$
-> 这样**原始结构参数数降为9个**（因为$b_{21}$被设为0）。而简约形式提供9个信息，因此可以完全识别。
+[[结构VAR|结构 VAR]] 是在简约型联合动态之上，再用当期关系与可解释冲击说明经济传导的模型。简约型创新可同期相关，而且 [[简约型创新不是结构冲击|不能直接按方程名称命名]]。
+<!-- bilingual-en:start -->
+A [[结构VAR|structural VAR]] adds contemporaneous relations and interpretable shocks to the reduced-form dynamics. Reduced-form innovations may be contemporaneously correlated and cannot be named structural shocks directly from their equation labels.
+<!-- bilingual-en:end -->
+
+>[!note] [[SVAR识别条件|识别计数]]与 [[Cholesky递归识别|Cholesky]]
+>若写 $e_t=P\nu_t$ 且 $E(\nu_t\nu_t')=I_K$，$P$ 有 $K^2$ 个未知元素，而对称 $\Sigma_e=PP'$ 只有 $K(K+1)/2$ 个独立矩。这个明确参数化下，常见精确识别至少还需 $K(K-1)/2$ 个独立、有效的限制。
+>
+>对给定变量顺序取 $P$ 为正对角下三角 Cholesky 因子，恰好加入这些上三角零。方向是：$P_{ij}=0$（$j>i$）表示第 $i$ 个变量当期不响应排在其后的第 $j$ 个冲击。改变排序就改变同期零限制与结果；代数分解本身不证明这种递归经济结构成立。
 > <!-- bilingual-en:start -->
-> As noted above, a two-variable [[VAR、脉冲响应与 Granger 因果#reduced-form 与结构识别|reduced-form]] VAR $x_t=A_0+A_1x_{t-1}+e_t$ supplies only nine estimated quantities, whereas the unrestricted structural VAR has ten parameters. The structural system is therefore underidentified.
-> Suppose $z_t$ has a contemporaneous effect on $y_t$, while $y_t$ has no contemporaneous effect on $z_t$:
-> $B = \begin{bmatrix} 1 & b_{12} \\ 0 & 1 \end{bmatrix}$
-> This restriction sets $b_{21}=0$ and reduces the number of **structural parameters to nine**. The nine reduced-form quantities are then sufficient to identify the structural system.
+> With $e_t=P\nu_t$ and $E(\nu_t\nu_t')=I_K$, $P$ has $K^2$ unknown entries whereas the symmetric covariance $\Sigma_e=PP'$ supplies $K(K+1)/2$ independent moments. In this parameterization, exact identification commonly needs at least $K(K-1)/2$ independent valid restrictions. A lower-triangular Cholesky factor supplies those zeros for a chosen ordering; changing the ordering changes the restrictions and the results.
 > <!-- bilingual-en:end -->
 
 ## 4.4. 脉冲响应函数在VAR中的应用
@@ -670,7 +692,7 @@ Here $\mu=(I-A_1)^{-1}A_0$ is the VAR's **unconditional mean**. Under stability 
 *4.4. Impulse responses in a VAR*
 <!-- bilingual-en:end -->
 
-在平稳VAR模型中，我们有简约形式的VMA表示：
+稳定 VAR 有 [[VAR因果VMA表示|简约型 VMA 表示]]：
 <!-- bilingual-en:start -->
 For a stationary VAR model, the reduced form has the following VMA representation:
 <!-- bilingual-en:end -->
@@ -679,27 +701,27 @@ $$
 \mathbf{x}_t = \mu + \sum_{i=0}^{\infty} \Phi(i)e_{t-i}
 $$
 
-其中$\Phi(0) = I$（冲击对自身的即时影响矩阵即单位阵），$\Phi(1)=A_1, \Phi(2)=A_1^2$, … 一般$\Phi(i) = A_1^i$。**但是**，$e_{t-i}$并非结构冲击。如果想用结构冲击表示，可以利用 $e_t = B^{-1}\varepsilon_t$，也即 $\varepsilon_t = B e_t$。代入上式：
+其中 $\Phi(0)=I$。对本节 VAR(1)，$\Phi(i)=A_1^i$；对 VAR($p>1$)，$\Phi(i)$ 必须按各滞后矩阵递推，或用 [[VAR伴随形式|伴随矩阵]] 计算。$e_t$ 是 [[简约型VAR创新|简约型创新]]；它可同期相关，且 [[简约型创新不是结构冲击|不是已经命名的结构冲击]]。若已通过有效方案识别候选结构式 $e_t=B^{-1}\varepsilon_t$，则：
 <!-- bilingual-en:start -->
-Here $\Phi(0)=I$, $\Phi(1)=A_1$, and, in general, $\Phi(i)=A_1^i$. **However,** $e_t$ is a reduced-form innovation, not an economically interpretable structural shock. Using $e_t=B^{-1}\varepsilon_t$, substitute the structural shocks into the VMA representation:
+Here $\Phi(0)=I$. For the VAR(1) in this section, $\Phi(i)=A_1^i$; for VAR($p>1$), the matrices follow a recursion involving every lag matrix or are computed through companion form. The $e_t$ are reduced-form innovations. If an identifying scheme has justified $e_t=B^{-1}\varepsilon_t$, substitution gives:
 <!-- bilingual-en:end -->
 
 $$
 \mathbf{x}_t = \mu + \sum_{i=0}^{\infty} \Phi(i) B^{-1} \varepsilon_{t-i}。
 $$
 
-定义 $\Psi(i) = \Phi(i)B^{-1} = A_1^i B^{-1}$，则：
+定义 $\Psi(i)=\Phi(i)B^{-1}$；仅在本节 VAR(1) 中才可进一步写为 $A_1^iB^{-1}$。于是：
 <!-- bilingual-en:start -->
-Define $\Psi(i) = \Phi(i)B^{-1} = A_1^i B^{-1}$, then:
+Define $\Psi(i)=\Phi(i)B^{-1}$, which reduces to $A_1^iB^{-1}$ only for this VAR(1). Then:
 <!-- bilingual-en:end -->
 
 $$
 \mathbf{x}_t = \mu + \sum_{i=0}^{\infty} \Psi(i)\varepsilon_{t-i}，
 $$
 
-这就是使用**结构冲击**的VMA表示。矩阵$\Psi(i)$的元素 $\psi_{jk}(i)$ 就表示**第$k$个结构冲击在滞后$i$期对第$j$个变量的影响**。这组${\psi_{jk}(i)}$就是VAR的**冲击响应函数**([[VAR、脉冲响应与 Granger 因果#脉冲响应|Impulse Response Functions]])。对于二维例子：
+在识别方案有效且冲击尺度已经说明时，这就是 [[结构脉冲响应|结构 VMA 与结构 IRF]]。$\psi_{jk}(i)$ 表示第 $k$ 个结构冲击在期限 $i$ 对第 $j$ 个变量的响应。对于二维例子：
 <!-- bilingual-en:start -->
-This is the VMA representation in terms of **structural shocks**. The element $\psi_{jk}(i)$ of $\Psi(i)$ is **the effect of the $k$-th structural shock on the $j$-th variable after $i$ periods**. The collection ${\psi_{jk}(i)}$ forms the VAR's **[[VAR、脉冲响应与 Granger 因果#脉冲响应|impulse response functions]]**. For a two-variable example:
+Provided the identifying scheme is valid and the shock scale is stated, this is the structural VMA. The element $\psi_{jk}(i)$ is the response of variable $j$ at horizon $i$ to structural shock $k$. For a two-variable example:
 <!-- bilingual-en:end -->
 
 • $\psi_{11}(i)$：$y$对自身冲击$\varepsilon^y$在$i$期后的响应，
@@ -718,35 +740,56 @@ This is the VMA representation in terms of **structural shocks**. The element $\
 In particular, $\Psi(0)=B^{-1}$. Its element $\psi_{jk}(0)$ is called an **impact multiplier** or **impact coefficient**: it gives the contemporaneous effect of structural shock $k$ on variable $j$ ($i=0$).
 <!-- bilingual-en:end -->
 
-==必须知道结构VAR才能进行脉冲响应分析==
+简约型单位创新响应和 [[广义脉冲响应|GIRF]] 不要求先识别完整 SVAR；但 [[广义脉冲响应边界|排序不变并不完成结构识别]]。要把曲线解释为某个经济结构冲击的因果路径，必须给出识别方案，并报告冲击尺度、变量单位、是否累计、期限和区间。
 <!-- bilingual-en:start -->
-==Economically interpretable impulse responses require an identification scheme that maps reduced-form innovations into structural shocks.==
+Reduced-form unit-innovation responses and GIRFs can be computed without a fully identified SVAR. Economically interpretable structural responses, however, require an identifying scheme and explicit reporting of shock scale, variable units, cumulative versus point responses, horizons, and uncertainty.
 <!-- bilingual-en:end -->
 
-## 4.5. [[VAR、脉冲响应与 Granger 因果#Granger 因果|格兰杰因果检验]]
+## 4.5. 预测误差方差分解
 <!-- bilingual-en:start -->
-*4.5. [[VAR、脉冲响应与 Granger 因果#Granger 因果|Granger causality test]]*
+*4.5. Forecast error variance decomposition*
 <!-- bilingual-en:end -->
 
->[!note] 格兰杰因果
->形式定义为：若包含变量 $X$ 的过去信息能够提高对变量 $Y$ 未来的预测，那么称 $X$ Granger成因于（Granger-cause） $Y$。数学表述为，对于任意事件集 $A$，
+[[预测误差方差分解|FEVD]] 在指定期限 $h$ 下，把某个变量的预测误差方差分摊给一组已识别、按所用口径正交化的冲击。它不是无条件的“变量方差来源表”：份额随期限变化，并随 Cholesky 排序或其他结构识别方案改变。若只使用相关的简约型创新，不能直接把每个份额命名为经济冲击贡献。
+<!-- bilingual-en:start -->
+At a specified horizon $h$, FEVD allocates a variable's forecast error variance to a set of identified shocks under the chosen orthogonalization. It is not an unconditional table of the sources of a variable's variance: shares change with the horizon and with the Cholesky ordering or other identifying scheme.
+<!-- bilingual-en:end -->
+
+## 4.6. 格兰杰因果检验
+<!-- bilingual-en:start -->
+*4.6. Granger causality test*
+<!-- bilingual-en:end -->
+
+>[!note] [[Granger因果|Granger 因果]]
+>令 $\mathcal F_t$ 包含 $X$ 的过去，$\mathcal F^{-X}_t$ 删除这部分历史。$X$ **不** Granger 导致 $Y$ 的分布定义要求，对所有相关期限 $h$ 和事件集 $A$，
 >
 > $$
-> P\{Y_{t+1}\in A \mid \mathcal{F}_t\} \neq P\{Y_{t+1}\in A \mid \mathcal{F}_{-X,t}\}
+> P\{Y_{t+h}\in A\mid\mathcal F_t\}
+> =P\{Y_{t+h}\in A\mid\mathcal F^{-X}_t\}.
 > $$
+> 若该等式对某个期限或事件集失败，$X$ 的历史含有增量预测信息。结论依赖信息集、滞后阶数和模型类，不等于结构干预因果。
 > <!-- bilingual-en:start -->
 > **Granger causality**
-> Formally, $X$ Granger-causes $Y$ if past information about $X$ improves the prediction of future $Y$ beyond the information already available without $X$. For any event set $A$, this can be written as:
+> Granger noncausality requires the conditional distribution of future $Y$ to be unchanged when the history of $X$ is removed from the information set, for every relevant horizon and event. Granger causality is present if this equality fails for at least one such comparison. This is an information-set-dependent predictive relation, not structural intervention causality.
 > <!-- bilingual-en:end -->
 
-说是没有放之四海而皆准的检验
+遗漏共同驱动、时间聚合、错误变换或新增控制都可能改变结论，具体见 [[Granger因果边界|解释边界]]。
+<!-- bilingual-en:start -->
+Omitted common drivers, temporal aggregation, incorrect transformations, and added controls can all change the conclusion; see the [[Granger因果边界|interpretation boundary]].
+<!-- bilingual-en:end -->
+
+没有脱离规格、放之四海而皆准的 Granger 检验。
 <!-- bilingual-en:start -->
 There is no single specification-free Granger-causality test; the implemented test depends on the chosen information set, lag order, and model class.
 <!-- bilingual-en:end -->
 
-在VAR模型中，这个概念可简化为对滞后系数的检验。例如，对于二元VAR(p)，如果我们想检验“$y$ 是否格兰杰导致 $z$”，只需检验 $z_t$ 方程中 $y$ 的所有滞后系数是否同时为0。具体来说，$z_t$ 方程可表示为 $z_t = a_{20} + \sum_{i=1}^p a_{21,i} y_{t-i} + \sum_{i=1}^p a_{22,i} z_{t-i} + e_{2,t}$。$y$ 不格兰杰成因 $z$ 当且仅当 $a_{21,1} = a_{21,2} = \cdots = a_{21,p} = 0$。因此，可以通过对这些系数的联合零假设进行F检验或似然比检验来判断。如果拒绝假设，则认为 $y$ 的滞后总体上显著影响 $z$，即 $y$ 格兰杰致因 $z$；若不拒绝，则 $y$ 在有 $z$ 自身滞后作为控制后对 $z$ 没有预测力。
+在线性 VAR($p$) 中，[[VAR Granger检验|检验 $y$ 不 Granger 导致 $z$]]，就是联合检验 $z_t$ 方程中 $y$ 的全部滞后系数：
+$$
+H_0:a_{21,1}=\cdots=a_{21,p}=0.
+$$
+拒绝表示在给定变量集、滞后和样本下，至少一个 $y$ 的滞后为预测 $z$ 提供增量信息。**未拒绝只表示证据不足以排除联合零，不能改写成已经证明 $y$ 没有预测力。**
 <!-- bilingual-en:start -->
-In a VAR model, this becomes a joint test of lag coefficients. For a bivariate VAR($p$), testing whether $y$ Granger-causes $z$ means testing whether all coefficients on lagged $y$ in the $z_t$ equation are jointly zero. With $z_t = a_{20} + \sum_{i=1}^p a_{21,i} y_{t-i} + \sum_{i=1}^p a_{22,i} z_{t-i} + e_{2,t}$, $y$ does not Granger-cause $z$ if and only if $a_{21,1} = a_{21,2} = \cdots = a_{21,p} = 0$. An F-test or likelihood-ratio test can assess this joint null. Rejecting it means lagged $y$ adds predictive information for $z$; failing to reject means it does not, conditional on $z$'s own lags.
+In a linear VAR($p$), testing whether $y$ does not Granger-cause $z$ is a joint test that every coefficient on lagged $y$ in the $z_t$ equation equals zero. Rejection indicates incremental predictive information in the stated specification. Failure to reject is insufficient evidence against the joint null; it does not prove that predictive content is absent.
 <!-- bilingual-en:end -->
 
 
@@ -754,18 +797,26 @@ In a VAR model, this becomes a joint test of lag coefficients. For a bivariate V
 # 5. 关联卡片
 
 - Time Series Analysis-hub
-- [[回归预测与动态回归#动态回归与干预|Intervention Analysis]]
-- [[回归预测与动态回归#分布滞后与动态乘数|ADL]]
-- [[回归预测与动态回归#分布滞后与动态乘数|Distributed Lag Model]]
-- [[回归预测与动态回归#干预变量|Transfer Function Model]]
+- [[干预函数类型|Intervention functions]] · [[干预系数因果边界|causal boundary]]
+- [[自回归分布滞后|ADL / ARDL]]
+- [[分布滞后模型|Distributed lag model]] · [[分布滞后乘数|dynamic multipliers]]
+- [[动态回归模型|Dynamic regression and transfer-function family]]
 - Cross-Correlation Function
 - Leading Indicator
-- [[VAR、脉冲响应与 Granger 因果#VAR|VAR Model]]
-- [[VAR、脉冲响应与 Granger 因果#reduced-form 与结构识别|Structural VAR]]
-- [[VAR、脉冲响应与 Granger 因果#reduced-form 与结构识别|Reduced Form VAR]]
-- [[VAR、脉冲响应与 Granger 因果#脉冲响应|Impulse Response Function]]
-- [[VAR、脉冲响应与 Granger 因果#预测误差方差分解|Variance Decomposition]]
-- [[VAR、脉冲响应与 Granger 因果#Granger 因果|Granger Causality Test]]
+- [[VAR、脉冲响应与 Granger 因果.canvas|VAR topic map]]
+- [[结构VAR|Structural VAR]]
+- [[SVAR识别条件|Structural VAR identification]]
+- [[简约型VAR创新|Reduced-form VAR innovations]]
+- [[简约型创新不是结构冲击|Reduced-form/structural-shock boundary]]
+- [[Proxy SVAR|External-instrument SVAR]]
+- [[外部工具识别条件|External-instrument validity]]
+- [[结构脉冲响应|Impulse Response Function]]
+- [[广义脉冲响应|Generalized Impulse Response]]
+- [[广义脉冲响应边界|GIRF interpretation boundary]]
+- [[预测误差方差分解|Forecast Error Variance Decomposition]]
+- [[Granger因果|Granger Causality]]
+- [[VAR Granger检验|Granger Causality Test]]
+- [[Granger因果边界|Granger interpretation boundary]]
 
 # 6. 作业
 <!-- bilingual-en:start -->

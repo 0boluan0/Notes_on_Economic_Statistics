@@ -1,0 +1,143 @@
+{
+  "nodes": [
+    {
+      "id": "marginal-header",
+      "type": "text",
+      "x": 80,
+      "y": 40,
+      "width": 1160,
+      "height": 170,
+      "text": "# 边际革命与 Marshall 综合\n\n从边际评价出发，先区分三位奠基者的方法，再进入消费条件、Walras 多市场协调与 Marshall 局部均衡。箭头标签说明为什么相连；卡片颜色只区分语义角色，不表示掌握度。"
+    },
+    {
+      "id": "marginal-001",
+      "type": "text",
+      "x": 500,
+      "y": 300,
+      "width": 360,
+      "height": 180,
+      "color": "2",
+      "text": "## [[边际效用与总效用|总效用 ≠ 边际效用]]\n\n边际效用下降时，总效用仍可继续上升。"
+    },
+    {
+      "id": "marginal-002",
+      "type": "text",
+      "x": 920,
+      "y": 600,
+      "width": 360,
+      "height": 180,
+      "color": "2",
+      "text": "## [[边际效用与市场价格|价值悖论的边界]]\n\n边际评价解释需求侧，却不是完整价格理论。"
+    },
+    {
+      "id": "marginal-003",
+      "type": "text",
+      "x": 80,
+      "y": 600,
+      "width": 360,
+      "height": 180,
+      "color": "6",
+      "text": "## [[边际革命的三条理论路径|共同转向，不同理论]]\n\nJevons、Menger、Walras 不能压成同一个模型。"
+    },
+    {
+      "id": "marginal-004",
+      "type": "text",
+      "x": 500,
+      "y": 600,
+      "width": 360,
+      "height": 190,
+      "color": "4",
+      "text": "## [[等边际原则|内部消费最优]]\n\n$MU_x/p_x=MU_y/p_y$，边界解要改用不等式。"
+    },
+    {
+      "id": "marginal-005",
+      "type": "text",
+      "x": 80,
+      "y": 920,
+      "width": 360,
+      "height": 190,
+      "color": "5",
+      "text": "## [[Walras 一般均衡|Walras：多市场联立]]\n\n预算、生产与清算必须全体系相容。"
+    },
+    {
+      "id": "marginal-006",
+      "type": "text",
+      "x": 500,
+      "y": 1240,
+      "width": 360,
+      "height": 190,
+      "color": "3",
+      "text": "## [[Marshall 局部均衡|Marshall：局部均衡]]\n\n暂时固定跨市场反馈，换取一个市场的透明分析。"
+    },
+    {
+      "id": "marginal-007",
+      "type": "text",
+      "x": 920,
+      "y": 920,
+      "width": 380,
+      "height": 200,
+      "color": "3",
+      "text": "## [[Marshall 供求与调整期限|供求与调整期限]]\n\n市场期、短期、长期允许调整的变量不同。"
+    },
+    {
+      "id": "marginal-008",
+      "type": "text",
+      "x": 920,
+      "y": 1240,
+      "width": 380,
+      "height": 200,
+      "color": "4",
+      "text": "## [[价格弹性的测量边界|弹性是局部、带口径的响应]]\n\n无量纲不等于跨价格点、期限和市场边界恒定。"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-001-002",
+      "fromNode": "marginal-001",
+      "toNode": "marginal-002",
+      "label": "区分总量后解释价值悖论"
+    },
+    {
+      "id": "edge-001-003",
+      "fromNode": "marginal-001",
+      "toNode": "marginal-003",
+      "label": "概念进入历史分化"
+    },
+    {
+      "id": "edge-001-004",
+      "fromNode": "marginal-001",
+      "toNode": "marginal-004",
+      "label": "边际量形成配置条件"
+    },
+    {
+      "id": "edge-003-005",
+      "fromNode": "marginal-003",
+      "toNode": "marginal-005",
+      "label": "Walras 路线"
+    },
+    {
+      "id": "edge-002-007",
+      "fromNode": "marginal-002",
+      "toNode": "marginal-007",
+      "label": "需求侧必须接上供给"
+    },
+    {
+      "id": "edge-005-006",
+      "fromNode": "marginal-005",
+      "toNode": "marginal-006",
+      "label": "对照全体系与隔离近似"
+    },
+    {
+      "id": "edge-007-006",
+      "fromNode": "marginal-007",
+      "toNode": "marginal-006",
+      "label": "单市场中组织供求"
+    },
+    {
+      "id": "edge-007-008",
+      "fromNode": "marginal-007",
+      "toNode": "marginal-008",
+      "label": "期限改变响应大小"
+    }
+  ]
+}

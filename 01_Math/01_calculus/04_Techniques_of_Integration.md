@@ -13,9 +13,9 @@ source: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/p
 # Techniques of Integration
 
 > [!abstract] 本章主线
-> 求导有一套局部规则，积分却没有能机械处理一切函数的单一算法。本章的核心是识别结构并进行[[积分方法#积分方法选择树|积分技巧选择]]：三角恒等式处理三角幂，三角代换消去二次根式，部分分式拆开有理函数，分部积分逆用乘积法则。随后把同一个“微元—累加—取极限”的思想用于弧长、旋转曲面、参数曲线与极坐标面积。
+> 求导有一套局部规则，积分却没有能机械处理一切函数的单一算法。本章的核心是识别结构并进行[[积分方法选择|积分技巧选择]]：三角恒等式处理三角幂，三角代换消去二次根式，部分分式拆开有理函数，分部积分逆用乘积法则。随后把同一个“微元—累加—取极限”的思想用于弧长、旋转曲面、参数曲线与极坐标面积。
 > <!-- bilingual-en:start -->
-> Differentiation has a set of local rules, but integration has no single algorithm that mechanically handles every function. The central task in this chapter is to recognize structure and choose an [[积分方法#积分方法选择树|integration technique]]: trigonometric identities handle powers of trigonometric functions, trigonometric substitution removes quadratic radicals, partial fractions split rational functions, and integration by parts reverses the product rule. The same idea of “small elements, accumulation, and a limiting process” is then applied to arc length, surfaces of revolution, parametric curves, and polar area.
+> Differentiation has a set of local rules, but integration has no single algorithm that mechanically handles every function. The central task in this chapter is to recognize structure and choose an [[积分方法选择|integration technique]]: trigonometric identities handle powers of trigonometric functions, trigonometric substitution removes quadratic radicals, partial fractions split rational functions, and integration by parts reverses the product rule. The same idea of “small elements, accumulation, and a limiting process” is then applied to arc length, surfaces of revolution, parametric curves, and polar area.
 > <!-- bilingual-en:end -->
 
 - 官方课程：[MIT OCW 18.01SC — Unit 4: Techniques of Integration](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/unit-4-techniques-of-integration/)
@@ -70,7 +70,7 @@ After completing this chapter, you should be able to:
 | $\tan^m x\sec^n x$ | 留 $\sec^2x$ 或 $\sec x\tan x$ | 依据可用导数配对，而非死背 |
 | $\sqrt{a^2-x^2},\sqrt{a^2+x^2},\sqrt{x^2-a^2}$ | 分别用 $a\sin\theta,a\tan\theta,a\sec\theta$ | 根式的符号、角度范围、回代绝对值 |
 | 有理函数 $P/Q$ | 长除 → 分解 $Q$ → 部分分式 | 必须先使 $\deg P<\deg Q$；重复因子不能漏项 |
-| 多项式乘指数/三角，或含 $\ln x,\arctan x$ | 分部积分 | 选择 $u$ 后是否变简单；定积分边界项 |
+| 多项式乘指数/三角，或含 $\ln x,\arctan x$ | 分部积分 | 新积分是否变简单或形成可解循环；定积分边界项 |
 | 几何长度或旋转表面积 | 先写 $ds$，再乘相应半径 | 半径是到旋转轴的距离，不能带负号 |
 
 ## 课程目录
@@ -111,6 +111,11 @@ After completing this chapter, you should be able to:
 ## Part A：Trigonometric Powers, Trigonometric Substitution and Completing the Square
 
 ## Session 68：Integral of $\sin^n x\cos^m x$，odd exponents
+
+本节与 Session 69 共用原子方法 [[正弦余弦幂积分]]：先限定为非负整数幂，再由奇偶性选择换元或降幂。
+<!-- bilingual-en:start -->
+This session and Session 69 share [[正弦余弦幂积分|one atomic method]]: for nonnegative integer powers, parity determines substitution or power reduction.
+<!-- bilingual-en:end -->
 
 ### 本节问题与前置知识
 <!-- bilingual-en:start -->
@@ -263,6 +268,11 @@ Here we can think of $\cos^0x$: zero is even, and the sinusoidal exponent $3$ is
 
 ## Session 69：Integral of $\sin^n x\cos^m x$，even exponents
 
+全偶情形仍属于 [[正弦余弦幂积分]]；半角公式的作用是严格降低幂次，而不是提供另一套无条件口诀。
+<!-- bilingual-en:start -->
+The both-even case remains part of [[正弦余弦幂积分|the same atomic method]]: half-angle identities strictly reduce powers rather than supply an unconditional mnemonic.
+<!-- bilingual-en:end -->
+
 ### 本节问题与知识目标
 <!-- bilingual-en:start -->
 *Questions and Knowledge Objectives for this Section*
@@ -404,9 +414,9 @@ For higher powers, apply the power-reduction identities repeatedly. The goal is 
 *Questions in this section*
 <!-- bilingual-en:end -->
 
-为何圆会自然导出[[积分方法#三角积分、分部积分与部分分式|三角代换]]？课堂以半径为 $a$ 的圆中、高为 $b$ 的区域为例。横切片长度为 $x=\sqrt{a^2-y^2}$，所以
+为何圆会自然导出[[三角代换|三角代换]]？课堂以半径为 $a$ 的圆中、高为 $b$ 的区域为例。横切片长度为 $x=\sqrt{a^2-y^2}$，所以
 <!-- bilingual-en:start -->
-Why does a circle naturally suggest [[积分方法#三角积分、分部积分与部分分式|trigonometric substitution]]? The lecture considers a region inside a circle of radius $a$, extending to height $b$. A horizontal slice has length $x=\sqrt{a^2-y^2}$, so
+Why does a circle naturally suggest [[三角代换|trigonometric substitution]]? The lecture considers a region inside a circle of radius $a$, extending to height $b$. A horizontal slice has length $x=\sqrt{a^2-y^2}$, so
 <!-- bilingual-en:end -->
 
 $$
@@ -502,6 +512,11 @@ The first term is the sector area, and the second term is the triangle area, so 
 
 ## Session 71：Integrals involving secant, cosecant and cotangent
 
+本节的原子方法是 [[正切正割幂积分]]：先确认 integrand 里确实存在一组完整导数因子，再决定换元。
+<!-- bilingual-en:start -->
+The atomic method is [[正切正割幂积分|derivative-pair routing for tangent and secant powers]]: first verify that the integrand actually contains a complete derivative pair.
+<!-- bilingual-en:end -->
+
 ### 本节问题与基础恒等式
 <!-- bilingual-en:start -->
 *Problems in this Section and Basic Identities*
@@ -576,11 +591,11 @@ $$
 <!-- bilingual-en:end -->
 
 - $\int\tan^m x\sec^n x\,dx$ 中若 $n$ 为正偶数，留一个 $\sec^2x\,dx$，其余用 $\sec^2x=1+\tan^2x$，令 $u=\tan x$。
-- 若 $m$ 为正奇数，留 $\sec x\tan x\,dx$，其余把 $\tan^2x$ 攐成 $\sec^2x-1$，令 $u=\sec x$。
+- 若 $m$ 为正奇数且 $n\ge1$，留 $\sec x\tan x\,dx$，其余把 $\tan^2x$ 改写成 $\sec^2x-1$，令 $u=\sec x$。$n\ge1$ 保证原 integrand 中确有一个 $\sec x$ 可保留。
 - 余切与余割完全平行，但 $d(\cot x)=-\csc^2x\,dx$、$d(\csc x)=-\csc x\cot x\,dx$ 带负号。
 <!-- bilingual-en:start -->
 - If $n$ is a positive even number in $\int\tan^m x\sec^n x\,dx$, leave one $\sec^2x\,dx$, and use $\sec^2x=1+\tan^2x$ for the remainder, making $u=\tan x$.
-- If $m$ is a positive odd number, leave $\sec x\tan x\,dx$, and the remainder Qian turn $\tan^2x$ into $\sec^2x-1$, so that $u=\sec x$.
+- If $m$ is positive and odd and $n\ge1$, reserve $\sec x\tan x\,dx$, rewrite the remaining even tangent power with $\tan^2x=\sec^2x-1$, and use $u=\sec x$. The condition $n\ge1$ ensures that a secant factor is present.
 - Cotangent is completely parallel to cotangent, but $d(\cot x)=-\csc^2x\,dx$, $d(\csc x)=-\csc x\cot x\,dx$ are minus.
 <!-- bilingual-en:end -->
 
@@ -650,7 +665,8 @@ The quadratic suggestive Pythagorean identity in the root equation:
 |---|---|---|---|
 | $\sqrt{a^2-x^2}$ | $x=a\sin\theta$ | $a\cos\theta$ | $-\pi/2\le\theta\le\pi/2$ |
 | $\sqrt{a^2+x^2}$ | $x=a\tan\theta$ | $a\sec\theta$ | $-\pi/2<\theta<\pi/2$ |
-| $\sqrt{x^2-a^2}$ | $x=a\sec\theta$ | $a\tan\theta$ | 按 $x$ 的符号选支 |
+| $\sqrt{x^2-a^2}$，$x\ge a$ | $x=a\sec\theta$ | $a\tan\theta$ | $0\le\theta<\pi/2$ |
+| $\sqrt{x^2-a^2}$，$x\le-a$ | $x=-a\sec\theta$ | $a\tan\theta$ | $0\le\theta<\pi/2$ |
 
 ### 72a：完整例题
 <!-- bilingual-en:start -->
@@ -739,9 +755,9 @@ $$
 > <!-- bilingual-en:end -->
 
 > [!warning] 适用条件
-> $\sqrt{x^2-a^2}$ 只在 $|x|\ge a$ 有实值。把 $\sqrt{a^2\sec^2\theta-a^2}$ 写成 $a\tan\theta$ 前必须选择使 $\tan\theta\ge0$ 的分支，否则应保留绝对值。
+> $\sqrt{x^2-a^2}$ 只在 $|x|\ge a$ 有实值。正支可用 $x=a\sec\theta$，负支可用 $x=-a\sec\theta$，并在两者中都取 $0\le\theta<\pi/2$；否则 $\sqrt{a^2\tan^2\theta}$ 只能写成 $a|\tan\theta|$。
 > <!-- bilingual-en:start -->
-> $\sqrt{x^2-a^2}$ has real values only in $|x|\ge a$.  You must select a branch to make $\tan\theta\ge0$ before writing $\sqrt{a^2\sec^2\theta-a^2}$ as $a\tan\theta$, or you should keep the absolute value.
+> $\sqrt{x^2-a^2}$ is real only for $|x|\ge a$. Use $x=a\sec\theta$ on the positive branch and $x=-a\sec\theta$ on the negative branch, with $0\le\theta<\pi/2$ in both cases. Without a stated branch, the radical is only $a|\tan\theta|$.
 > <!-- bilingual-en:end -->
 
 > [!question]- 三道自检题与答案
@@ -1119,9 +1135,9 @@ The official assignments are 5B: 9, 11, 13, 16; 5C: 5, 7, 9, 11; and 5D: 1, 2, 7
 *Questions and Prerequisites for This Section*
 <!-- bilingual-en:end -->
 
-有理函数（rational function）是 $R(x)=P(x)/Q(x)$，其中 $P,Q$ 为多项式且 $Q\ne0$。[[积分方法#三角积分、分部积分与部分分式|部分分式分解]]（partial fractions）的目标是把复杂的一个商拆成若干个原函数已知的简单商。Session 74 先处理两个条件：
+有理函数（rational function）是 $R(x)=P(x)/Q(x)$，其中 $P,Q$ 为多项式且 $Q\ne0$。[[部分分式积分|部分分式分解]]（partial fractions）的目标是把复杂的一个商拆成若干个原函数已知的简单商。Session 74 先处理两个条件：
 <!-- bilingual-en:start -->
-A rational function has the form $R(x)=P(x)/Q(x)$, where $P$ and $Q$ are polynomials and $Q\ne0$. The goal of [[积分方法#三角积分、分部积分与部分分式|partial-fraction decomposition]] is to split a complicated quotient into simpler terms with known antiderivatives. Session 74 first handles the case in which:
+A rational function has the form $R(x)=P(x)/Q(x)$, where $P$ and $Q$ are polynomials and $Q\ne0$. The goal of [[部分分式积分|partial-fraction decomposition]] is to split a complicated quotient into simpler terms with known antiderivatives. Session 74 first handles the case in which:
 <!-- bilingual-en:end -->
 
 1. $\deg P<\deg Q$，即真分式；
@@ -1431,9 +1447,9 @@ $$
 **Summary:** “Long-divide first, then include every required term” turns partial fractions into a systematic procedure for any rational function.
 <!-- bilingual-en:end -->
 
-## Session 76：[[积分方法#三角积分、分部积分与部分分式|分部积分]]
+## Session 76：[[分部积分|分部积分]]
 <!-- bilingual-en:start -->
-*Session 76: [[积分方法#三角积分、分部积分与部分分式|Integration by Parts]]*
+*Session 76: [[分部积分|Integration by Parts]]*
 <!-- bilingual-en:end -->
 
 ### 本节问题：公式从哪里来
@@ -1468,9 +1484,14 @@ $$
 \boxed{\int_a^b u(x)v'(x)dx=[u(x)v(x)]_a^b-\int_a^b v(x)u'(x)dx.}
 $$
 
-公式的目标是用右边的新积分替换左边；只有 $du$ 比 $u$ 更简单且 $dv$ 容易积分时，这个替换才有价值。
+公式的目标是用右边的新积分替换左边；通常应让 $du$ 比 $u$ 更简单且 $dv$ 容易积分。
 <!-- bilingual-en:start -->
-The goal of the formula is to replace the left with a new integral on the right; this replacement is only valuable if $du$ is simpler than $u$ and $dv$ is easier to integrate.
+The usual productive choice makes $du$ simpler than $u$ while keeping $v$ easy to obtain.
+<!-- bilingual-en:end -->
+
+还有一种有效边界：有限次重复后若回到原积分并产生新的线性等式，就可以代数求解；这与把尚未知的原积分直接塞进 $dv$ 的无信息循环不同。完整模式见 [[循环分部积分]]。
+<!-- bilingual-en:start -->
+A second productive boundary is a finite cycle that returns to the original integral with a new linear equation that can be solved. This differs from the uninformative circular choice of placing an unknown antiderivative directly inside $dv$; see [[循环分部积分]].
 <!-- bilingual-en:end -->
 
 ### 76a–76c：选择与基本例题
@@ -1478,9 +1499,9 @@ The goal of the formula is to replace the left with a new integral on the right;
 *76a-76c: Choices and Basic Instances*
 <!-- bilingual-en:end -->
 
-常用经验 LIATE：对数（Logarithmic）→ 反三角（Inverse trig）→ 代数（Algebraic）→ 三角（Trig）→ 指数（Exponential）优先选作 $u$。它只是经验，最终标准仍是新积分是否更简单。
+常用经验 LIATE：对数（Logarithmic）→ 反三角（Inverse trig）→ 代数（Algebraic）→ 三角（Trig）→ 指数（Exponential）优先选作 $u$。它只是提示；最终要检查新积分是否更简单，或有限次重复是否形成可解等式。
 <!-- bilingual-en:start -->
-The common experience LIATE: Logarithmic→Inverse trig→Algebraic→Trig→Exponential is preferred as $u$.  It's just experience, and the final criterion is whether the new points are simpler.
+LIATE suggests choosing logarithmic, inverse-trigonometric, algebraic, trigonometric, and exponential factors as $u$ in that order. It is only a heuristic; the remaining integral must become simpler or enter a finite solvable cycle.
 <!-- bilingual-en:end -->
 
 计算 $\int\ln x\,dx$（$x>0$），把未写出的 $1$ 当成 $dv$：
@@ -1722,9 +1743,9 @@ $$
 \boxed{L=\int_a^b\sqrt{1+[f'(x)]^2}\,dx.}
 $$
 
-严格条件通常取 $f'$ 连续；这样上述 Riemann 和确实收敛到[[参数曲线与极坐标#弧长、曲面与检查|弧长]]。
+严格条件通常取 $f'$ 连续；这样上述 Riemann 和确实收敛到[[参数曲线弧长与重复描画|弧长]]。
 <!-- bilingual-en:start -->
-A standard sufficient condition is that $f'$ be continuous; then the Riemann sums above converge to the [[参数曲线与极坐标#弧长、曲面与检查|arc length]].
+A standard sufficient condition is that $f'$ be continuous; then the Riemann sums above converge to the [[参数曲线弧长与重复描画|arc length]].
 <!-- bilingual-en:end -->
 
 ![[unit04-arc-length-element.png|820]]
@@ -1950,9 +1971,9 @@ The whole spherical surface area is $4\pi R^2$ if $a=-R,b=R$, and the area of th
 - [[Ses79a_Lecture_Notes.pdf#page=1|79a 旋转曲面微元]] · [[Ses79b_Lecture_Notes.pdf#page=1|79b 球面面积]]
 - [[Exercise079_Problems.pdf#page=1|Exercise 079 原题]] · [[Exercise079_Solutions.pdf#page=1|官方解答]]
 
-**小结：**[[参数曲线与极坐标#弧长、曲面与检查|旋转曲面面积]]是“圆周 × 弧长微元”的累加；真正容易错的是几何半径和 $ds$，而不是最后的积分技巧。
+**小结：**[[旋转曲面面积与重复覆盖|旋转曲面面积]]是“圆周 × 弧长微元”的累加；真正容易错的是几何半径和 $ds$，而不是最后的积分技巧。
 <!-- bilingual-en:start -->
-**Summary:** A [[参数曲线与极坐标#弧长、曲面与检查|surface of revolution]] accumulates “circumference × arc-length element.” The main sources of error are the geometric radius and $ds$, not the final integration technique.
+**Summary:** A [[旋转曲面面积与重复覆盖|surface of revolution]] accumulates “circumference × arc-length element.” The main sources of error are the geometric radius and $ds$, not the final integration technique.
 <!-- bilingual-en:end -->
 
 ## Problem Set 10
@@ -2154,9 +2175,9 @@ The official assignments are 5E: 2, 3, 5, 6, 10h; and 5F: 1a, 2d, then 2b and 3.
 *Questions and Definitions in this Section*
 <!-- bilingual-en:end -->
 
-[[参数曲线与极坐标#参数曲线|参数曲线]]（parametric curve）把位置的两个坐标都写成第三个变量的函数：
+[[参数曲线]]（parametric curve）把位置的两个坐标都写成第三个变量的函数：
 <!-- bilingual-en:start -->
-A [[参数曲线与极坐标#参数曲线|parametric curve]] expresses both coordinates of a point as functions of a third variable:
+A [[参数曲线|parametric curve]] expresses both coordinates of a point as functions of a third variable:
 <!-- bilingual-en:end -->
 
 $$
@@ -2356,7 +2377,7 @@ varies with $t$: the speed is $2$ at the top of the ellipse when $t=0$, and $1$ 
 
 ### 81b：旋转椭球面的列式
 <!-- bilingual-en:start -->
-*81b: Formula of Rotating Ellipsoid*
+*81b: Setting up the surface area of an ellipsoid*
 <!-- bilingual-en:end -->
 
 将上面椭圆的右半边绕 $y$ 轴旋转。$0\le t\le\pi$ 已从顶端走到下端并且 $x=2\sin t\ge0$，恰好描右半边一次。旋转半径为 $x$：
@@ -2446,9 +2467,9 @@ With $u=\cos t$, this becomes $4\pi\int_{-1}^{1}\sqrt{1+3u^2}\,du$, which can be
 *Questions and Definitions in this Section*
 <!-- bilingual-en:end -->
 
-[[参数曲线与极坐标#极坐标|极坐标]]（polar coordinates）用到原点的有向距离 $r$ 和方向角 $\theta$ 描述点：
+[[极坐标]]（polar coordinates）用到原点的有向距离 $r$ 和方向角 $\theta$ 描述点：
 <!-- bilingual-en:start -->
-[[参数曲线与极坐标#极坐标|Polar coordinates]] describe a point using the signed radial distance $r$ from the origin and the direction angle $\theta$:
+[[极坐标|Polar coordinates]] describe a point using the signed radial distance $r$ from the origin and the direction angle $\theta$:
 <!-- bilingual-en:end -->
 
 $$
@@ -2466,7 +2487,7 @@ $$
 
 ### 82a–82b：同一点有无穷多表示
 <!-- bilingual-en:start -->
-*82a-82b: The same point has infinite representations*
+*82a-82b: The same point has infinitely many representations*
 <!-- bilingual-en:end -->
 
 $$
@@ -2506,7 +2527,7 @@ This formula is meaningful only when $\sin\theta\ne0$; when $0<\theta<\pi$, $r>0
 
 ### 82d：过原点的偏心圆
 <!-- bilingual-en:start -->
-*82d: Eccentric circle over origin*
+*82d: An off-center circle through the origin*
 <!-- bilingual-en:end -->
 
 圆心 $(a,0)$、半径 $a$ 的圆：
@@ -2531,7 +2552,7 @@ $$
 
 对 $a>0$，取 $-\pi/2\le\theta\le\pi/2$ 时 $r\ge0$ 并将圆描一次。
 <!-- bilingual-en:start -->
-For $a>0$, take $-\pi/2\le\theta\le\pi/2$ to $r\ge0$ and stroke the circle once.
+For $a>0$, taking $-\pi/2\le\theta\le\pi/2$ keeps $r\ge0$ and traces the circle once.
 <!-- bilingual-en:end -->
 
 > [!warning] 易错点
@@ -2548,8 +2569,8 @@ For $a>0$, take $-\pi/2\le\theta\le\pi/2$ to $r\ge0$ and stroke the circle once.
 >
 > &nbsp;
 > **1.** $x=1$ becomes $r=\sec\theta$.<br>
-> **2.** $x^2+y^2=4$ becomes $r=2$ (also translated with $r=-2$ angle).<br>
-> **3.** $r=2a\sin\theta$ is a circle with center $(0,a)$ and radius $a$.<br>
+> **2.** $x^2+y^2=4$ can be written as $r=2$; the convention $r=-2$ describes the same circle after shifting each angle by $\pi$.<br>
+> **3.** $r=2a\sin\theta$ is a circle with centre $(0,a)$ and radius $a$.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料与知识链
@@ -2565,7 +2586,7 @@ For $a>0$, take $-\pi/2\le\theta\le\pi/2$ to $r\ge0$ and stroke the circle once.
 
 ### 本节问题：面积微元如何推导
 <!-- bilingual-en:start -->
-*Question in this section: How area infinitesimal is derived*
+*Question in this section: How is the polar area element derived?*
 <!-- bilingual-en:end -->
 
 半径 $r$、圆心角 $\Delta\theta$ 的扇形面积是
@@ -2587,18 +2608,18 @@ $$
 \boxed{dA=\frac12r^2d\theta}.
 $$
 
-所以由 $0\le r\le f(\theta)$、$\alpha\le\theta\le\beta$ 描述的区域面积为
+所以，若 $f(\theta)\ge0$，且 $0\le r\le f(\theta)$、$\alpha\le\theta\le\beta$ 这些径向线段把目标区域恰好覆盖一次，则区域面积为
 <!-- bilingual-en:start -->
-So the area described by $0\le r\le f(\theta)$, $\alpha\le\theta\le\beta$ is
+Thus, if $f(\theta)\ge0$ and the radial segments described by $0\le r\le f(\theta)$ and $\alpha\le\theta\le\beta$ cover the target region exactly once, its area is
 <!-- bilingual-en:end -->
 
 $$
 \boxed{A=\frac12\int_\alpha^\beta[f(\theta)]^2d\theta.}
 $$
 
-若位于外曲线 $r=R(\theta)$ 与内曲线 $r=r_0(\theta)$ 之间，则
+若还满足 $0\le r_0(\theta)\le R(\theta)$，且每条相应径向线段只覆盖目标区域一次，则外曲线 $r=R(\theta)$ 与内曲线 $r=r_0(\theta)$ 之间的面积为
 <!-- bilingual-en:start -->
-If it lies between the outer curve $r=R(\theta)$ and the inner curve $r=r_0(\theta)$, then
+If $0\le r_0(\theta)\le R(\theta)$ and the corresponding radial segments cover the target region exactly once, the area between the outer curve $r=R(\theta)$ and the inner curve $r=r_0(\theta)$ is
 <!-- bilingual-en:end -->
 
 $$
@@ -2614,7 +2635,7 @@ $$
 
 对 $r=2a\cos\theta$，选择 $-\pi/2\le\theta\le\pi/2$ 恰好描圆一次：
 <!-- bilingual-en:start -->
-For $r=2a\cos\theta$, choose $-\pi/2\le\theta\le\pi/2$ to circle exactly once:
+For $r=2a\cos\theta$, choose $-\pi/2\le\theta\le\pi/2$ to trace the circle exactly once:
 <!-- bilingual-en:end -->
 
 $$
@@ -2629,7 +2650,7 @@ $$
 
 结果与半径为 $a$ 的圆面积一致，验证了积分范围和 $1/2$ 因子。
 <!-- bilingual-en:start -->
-The results are consistent with the circular area of radius $a$, which verifies the integration range and $1/2$ factor.
+The result agrees with the area of a circle of radius $a$, confirming both the integration range and the factor $1/2$.
 <!-- bilingual-en:end -->
 
 > [!warning] 易错点
@@ -2638,8 +2659,8 @@ The results are consistent with the circular area of radius $a$, which verifies 
 > - 求两曲线间面积时必须先判断每个角度谁是外半径；交点处可能需要分段。
 > <!-- bilingual-en:start -->
 > - Forget $1/2$.
-> —Select the corner interval that makes the entire curve repeat, and the area is repeated.
-> —When you calculate the area between two curves, you must first determine which is the outer radius at each angle; you may need to segment at the intersection point.
+> - Choosing an angular interval that retraces the entire curve counts the area again.
+> - When finding the area between two curves, first determine which radius is outer at each angle; split the integral where that ordering changes.
 > <!-- bilingual-en:end -->
 
 > [!question]- 三道自检题与答案
@@ -2649,8 +2670,8 @@ The results are consistent with the circular area of radius $a$, which verifies 
 > <!-- bilingual-en:start -->
 >
 > &nbsp;
-> **1.** $r=R$, $0\le\theta\le2\pi$ to $A=\pi R^2$.<br>
-> **2.** $r=2\cos\theta$ is $0\le\theta\le\pi/2$ with an area of $\pi/2$ and only half a circle is included.<br>
+> **1.** For $R>0$, the curve $r=R$ over $0\le\theta\le2\pi$ gives $A=\pi R^2$.<br>
+> **2.** For $r=2\cos\theta$, the interval $0\le\theta\le\pi/2$ traces only the upper semicircle, whose area is $\pi/2$.<br>
 > **3.** If $r$ is negative on part of the interval, $r^2$ remains positive, but the geometric region and any repeated tracing must still be checked separately.<br>
 > <!-- bilingual-en:end -->
 
@@ -2697,7 +2718,7 @@ To sketch $r=f(\theta)$, use the following sequence:
 
 在 $[-\pi/2,\pi/2]$ 已描完整个圆。继续增加 $\theta$ 时 $r<0$，点转到反方向，再次描同一个圆；因此 $[0,2\pi]$ 会重复，而不是产生第二个圆。
 <!-- bilingual-en:start -->
-The entire circle has been traced in $[-\pi/2,\pi/2]$.  When you continue to increase $\theta$, $r<0$, the point goes in the opposite direction and traces the same circle again; therefore, $[0,2\pi]$ repeats, rather than producing a second circle.
+The entire circle is traced over $[-\pi/2,\pi/2]$. As $\theta$ continues to increase, $r<0$ places the point on the opposite ray and traces the same circle again. Thus $[0,2\pi]$ traces the circle twice rather than producing a second circle.
 <!-- bilingual-en:end -->
 
 ### 84b：玫瑰线 $r=\sin2\theta$

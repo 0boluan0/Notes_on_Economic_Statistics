@@ -15,10 +15,10 @@ aliases:
 # QLoRA: Efficient Finetuning of Quantized LLMs
 
 ## 一句话位置
-这篇论文位于 `03 对齐与偏好优化`，第一版用于连接 Instruction Tuning / RLHF, Efficiency / MoE 路线；此笔记暂作索引，不做精读摘要。
+这篇论文位于 `03 对齐与偏好优化`，核心位置是在量化冻结基座上训练 LoRA 适配器，以降低大模型微调的显存门槛；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-预训练、指令微调与偏好优化, [[LLM 推理效率]]
+[[LLM 后训练.canvas|LLM 后训练]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/DI7CC9IV)
@@ -30,4 +30,3 @@ aliases:
 ## Canvas
 - [[LLM Big Picture]]
 - [[03 对齐与偏好优化.canvas|03 对齐与偏好优化 Canvas]]
-

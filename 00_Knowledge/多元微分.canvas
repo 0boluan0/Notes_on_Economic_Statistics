@@ -1,0 +1,585 @@
+{
+  "nodes": [
+    {
+      "id": "c100000000000001",
+      "type": "group",
+      "x": 40,
+      "y": 240,
+      "width": 3500,
+      "height": 980,
+      "label": "一阶线性化与方向几何"
+    },
+    {
+      "id": "c100000000000002",
+      "type": "group",
+      "x": 40,
+      "y": 1300,
+      "width": 2200,
+      "height": 900,
+      "label": "二阶方向响应与局部曲率"
+    },
+    {
+      "id": "c100000000000003",
+      "type": "group",
+      "x": 40,
+      "y": 2280,
+      "width": 3500,
+      "height": 950,
+      "label": "隐式解支、局部可逆性与体积"
+    },
+    {
+      "id": "c100000000000004",
+      "type": "text",
+      "x": 40,
+      "y": 20,
+      "width": 3500,
+      "height": 180,
+      "text": "# 多元微分\n\n这张图把一点附近的小扰动分成三层：统一的一阶线性化、Hessian 控制的二阶方向响应，以及 Jacobian 正则性带来的隐式解支、局部逆与体积变化。\n\n**箭头只表示明确的定义依赖、推出、特化或边界关系；颜色区分语义角色，不表示掌握度。**"
+    },
+    {
+      "id": "c200000000000001",
+      "type": "text",
+      "x": 120,
+      "y": 360,
+      "width": 320,
+      "height": 180,
+      "color": "4",
+      "text": "## [[偏导数]]\nCALC-MV-001 · 定义入口\n\n固定其余坐标，沿一个坐标轴方向取差商极限。"
+    },
+    {
+      "id": "c200000000000013",
+      "type": "text",
+      "x": 500,
+      "y": 360,
+      "width": 320,
+      "height": 180,
+      "color": "1",
+      "text": "## [[偏导不可推可微]]\nCALC-MV-013 · 边界\n\n所有偏导存在仍可能不连续，更不能推出一个统一的多元导数。"
+    },
+    {
+      "id": "c200000000000002",
+      "type": "text",
+      "x": 880,
+      "y": 360,
+      "width": 320,
+      "height": 180,
+      "color": "4",
+      "text": "## [[全微分]]\nCALC-MV-002 · 定义入口\n\n一个线性映射同时控制所有小扰动，余项相对扰动长度更小。"
+    },
+    {
+      "id": "c200000000000003",
+      "type": "text",
+      "x": 1260,
+      "y": 360,
+      "width": 320,
+      "height": 180,
+      "color": "4",
+      "text": "## [[Jacobian矩阵]]\nCALC-MV-003 · 定义入口\n\nJacobian 是导数线性映射在标准基下的矩阵表示。"
+    },
+    {
+      "id": "c200000000000004",
+      "type": "text",
+      "x": 1640,
+      "y": 360,
+      "width": 320,
+      "height": 180,
+      "color": "6",
+      "text": "## [[多元链式法则]]\nCALC-MV-004 · 定理\n\n复合映射的 Jacobian 按作用顺序相乘，内层导数写在右边。"
+    },
+    {
+      "id": "c200000000000005",
+      "type": "text",
+      "x": 120,
+      "y": 680,
+      "width": 320,
+      "height": 180,
+      "color": "4",
+      "text": "## [[方向导数]]\nCALC-MV-005 · 定义入口\n\n把函数限制在 $a+tv$ 上，再对直线参数 $t$ 求一元导数。"
+    },
+    {
+      "id": "c200000000000014",
+      "type": "text",
+      "x": 500,
+      "y": 680,
+      "width": 320,
+      "height": 180,
+      "color": "5",
+      "text": "## [[方向导数梯度公式]]\nCALC-MV-014 · 恒等式\n\n函数可微时，$D_vf(a)=\\nabla f(a)^Tv$。"
+    },
+    {
+      "id": "c200000000000020",
+      "type": "text",
+      "x": 880,
+      "y": 680,
+      "width": 320,
+      "height": 180,
+      "color": "1",
+      "text": "## [[方向导数尺度]]\nCALC-MV-020 · 尺度边界\n\n方向向量缩放会等比例缩放方向导数；比较几何方向前必须统一长度。"
+    },
+    {
+      "id": "c200000000000006",
+      "type": "text",
+      "x": 1260,
+      "y": 680,
+      "width": 320,
+      "height": 180,
+      "color": "6",
+      "text": "## [[梯度最陡方向]]\nCALC-MV-006 · 极值刻画\n\n在 Euclidean 单位方向中，非零梯度方向唯一实现最大一阶上升率。"
+    },
+    {
+      "id": "c200000000000021",
+      "type": "text",
+      "x": 1640,
+      "y": 680,
+      "width": 320,
+      "height": 180,
+      "color": "1",
+      "text": "## [[最陡方向依赖度量]]\nCALC-MV-021 · 度量边界\n\n改变单位扰动所用的度量会改变最陡方向；$M$-度量下方向与 $M^{-1}\\nabla f$ 同向。"
+    },
+    {
+      "id": "c200000000000007",
+      "type": "text",
+      "x": 2020,
+      "y": 680,
+      "width": 320,
+      "height": 180,
+      "color": "4",
+      "text": "## [[梯度与水平集]]\nCALC-MV-007 · 几何刻画\n\n在正则点，梯度是水平集切空间的法向量。"
+    },
+    {
+      "id": "c200000000000022",
+      "type": "text",
+      "x": 2400,
+      "y": 680,
+      "width": 320,
+      "height": 180,
+      "color": "1",
+      "text": "## [[零梯度不定切空间]]\nCALC-MV-022 · 边界\n\n梯度为零时，方程 $\\nabla f(a)^Tv=0$ 不再决定水平集的实际切空间。"
+    },
+    {
+      "id": "c200000000000015",
+      "type": "text",
+      "x": 120,
+      "y": 960,
+      "width": 320,
+      "height": 180,
+      "color": "1",
+      "text": "## [[方向导数不可推可微]]\nCALC-MV-015 · 边界\n\n逐方向极限即使全部存在，也未必组成同一个线性映射。"
+    },
+    {
+      "id": "c200000000000008",
+      "type": "text",
+      "x": 500,
+      "y": 1420,
+      "width": 320,
+      "height": 180,
+      "color": "4",
+      "text": "## [[Hessian矩阵]]\nCALC-MV-008 · 定义入口\n\nHessian 是实值函数全部二阶偏导排成的方阵。"
+    },
+    {
+      "id": "c200000000000023",
+      "type": "text",
+      "x": 880,
+      "y": 1420,
+      "width": 320,
+      "height": 180,
+      "color": "5",
+      "text": "## [[Hessian方向二阶导数]]\nCALC-MV-023 · 恒等式\n\n沿 $v$ 的二阶导数是 $v^T\\nabla^2f(a)v$。"
+    },
+    {
+      "id": "c200000000000009",
+      "type": "text",
+      "x": 1260,
+      "y": 1420,
+      "width": 320,
+      "height": 180,
+      "color": "6",
+      "text": "## [[多元Taylor近似]]\nCALC-MV-009 · 近似定理\n\n局部变化由梯度线性项、Hessian 二次项与更小余项组成。"
+    },
+    {
+      "id": "c200000000000016",
+      "type": "text",
+      "x": 120,
+      "y": 1720,
+      "width": 320,
+      "height": 180,
+      "color": "1",
+      "text": "## [[Hessian对称条件]]\nCALC-MV-016 · 定理边界\n\n邻域内二阶偏导连续可推出混合偏导相等；一点处存在并不足够。"
+    },
+    {
+      "id": "c300000000000001",
+      "type": "text",
+      "x": 500,
+      "y": 1720,
+      "width": 320,
+      "height": 180,
+      "color": "6",
+      "text": "## [[Hessian 局部极小判据]]\n外部后续 · 正定\n\n在二阶连续可微的驻点处，正定 Hessian 推出严格局部极小。"
+    },
+    {
+      "id": "c200000000000010",
+      "type": "text",
+      "x": 880,
+      "y": 1720,
+      "width": 320,
+      "height": 180,
+      "color": "1",
+      "text": "## [[Hessian 局部极大判据]]\nCALC-MV-010 · 充分条件\n\n在二阶连续可微的驻点处，负定 Hessian 推出严格局部极大。"
+    },
+    {
+      "id": "c200000000000011",
+      "type": "text",
+      "x": 1260,
+      "y": 1720,
+      "width": 320,
+      "height": 180,
+      "color": "2",
+      "text": "## [[Hessian 鞍点判据]]\nCALC-MV-011 · 诊断规则\n\n在二阶连续可微的驻点处，不定 Hessian 推出鞍点。"
+    },
+    {
+      "id": "c300000000000002",
+      "type": "text",
+      "x": 1640,
+      "y": 1720,
+      "width": 320,
+      "height": 180,
+      "color": "1",
+      "text": "## [[半定Hessian无结论]]\n外部边界 · 半定\n\n二次项沿某些方向消失时，二阶检验通常没有结论。"
+    },
+    {
+      "id": "c200000000000012",
+      "type": "text",
+      "x": 120,
+      "y": 2440,
+      "width": 320,
+      "height": 180,
+      "color": "6",
+      "text": "## [[隐函数定理]]\nCALC-MV-012 · 定理\n\n待解变量 Jacobian 块可逆时，零点附近存在唯一的 $C^1$ 局部解支。"
+    },
+    {
+      "id": "c200000000000024",
+      "type": "text",
+      "x": 500,
+      "y": 2440,
+      "width": 320,
+      "height": 180,
+      "color": "5",
+      "text": "## [[隐函数导数公式]]\nCALC-MV-024 · 公式\n\n定理给出的解支满足 $Dg=-(D_vF)^{-1}D_uF$。"
+    },
+    {
+      "id": "c300000000000003",
+      "type": "text",
+      "x": 880,
+      "y": 2440,
+      "width": 320,
+      "height": 180,
+      "color": "3",
+      "text": "## [[隐函数比较静态]]\n外部应用\n\n把最优性系统写成隐式方程后，用导数公式追踪局部选择分支。"
+    },
+    {
+      "id": "c200000000000025",
+      "type": "text",
+      "x": 120,
+      "y": 2740,
+      "width": 320,
+      "height": 180,
+      "color": "1",
+      "text": "## [[隐函数奇异块不推无解支]]\nCALC-MV-025 · 边界\n\n待解变量块奇异只使标准定理失效，不推出局部解支不存在。"
+    },
+    {
+      "id": "c300000000000004",
+      "type": "text",
+      "x": 1500,
+      "y": 2440,
+      "width": 320,
+      "height": 180,
+      "color": "4",
+      "text": "## [[Jacobian行列式]]\n外部定义 · 方阵 Jacobian\n\n方阵导数的 determinant 记录一阶有向体积，并判别导数是否可逆。"
+    },
+    {
+      "id": "c200000000000017",
+      "type": "text",
+      "x": 1900,
+      "y": 2340,
+      "width": 320,
+      "height": 180,
+      "color": "6",
+      "text": "## [[多元换元公式]]\nCALC-MV-017 · 定理\n\n开集间微分同胚的积分换元用 $|\\det DT|$ 校正普通体积。"
+    },
+    {
+      "id": "c200000000000018",
+      "type": "text",
+      "x": 1900,
+      "y": 2640,
+      "width": 320,
+      "height": 180,
+      "color": "6",
+      "text": "## [[逆函数定理]]\nCALC-MV-018 · 定理\n\n一点处导数可逆时，映射在该点附近存在同阶光滑的局部逆。"
+    },
+    {
+      "id": "c200000000000019",
+      "type": "text",
+      "x": 2280,
+      "y": 2640,
+      "width": 320,
+      "height": 180,
+      "color": "1",
+      "text": "## [[Jacobian奇异不推局部非单射]]\nCALC-MV-019 · 边界\n\nJacobian 奇异只使逆函数定理失效，不推出映射局部非单射。"
+    },
+    {
+      "id": "c300000000000005",
+      "type": "text",
+      "x": 1500,
+      "y": 2940,
+      "width": 360,
+      "height": 180,
+      "color": "4",
+      "text": "## [[矩形Jacobian体积因子]]\n外部定义 · 矩形 Jacobian\n\n低维参数化进入高维空间时，用 $\\sqrt{\\det(J^TJ)}$ 计算局部低维体积缩放。"
+    },
+    {
+      "id": "c100000000000005",
+      "type": "text",
+      "x": 40,
+      "y": 3300,
+      "width": 3500,
+      "height": 150,
+      "text": "## 阅读路线\n\n先用偏导与方向导数获取局部切片信息，再以全微分统一所有一阶扰动；Hessian 的方向二阶响应进入 Taylor 近似和驻点分类；最后根据 Jacobian 的形状与正则性区分隐式解支、局部逆和体积公式。"
+    }
+  ],
+  "edges": [
+    {
+      "id": "d100000000000001",
+      "fromNode": "c200000000000001",
+      "fromSide": "right",
+      "toNode": "c200000000000013",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "坐标方向极限不足以控制所有趋近"
+    },
+    {
+      "id": "d100000000000002",
+      "fromNode": "c200000000000013",
+      "fromSide": "right",
+      "toNode": "c200000000000002",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "缺失的是统一线性近似"
+    },
+    {
+      "id": "d100000000000003",
+      "fromNode": "c200000000000002",
+      "fromSide": "right",
+      "toNode": "c200000000000003",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "在标准基下写成矩阵"
+    },
+    {
+      "id": "d100000000000004",
+      "fromNode": "c200000000000003",
+      "fromSide": "right",
+      "toNode": "c200000000000004",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "导数线性映射按复合顺序相乘"
+    },
+    {
+      "id": "d100000000000005",
+      "fromNode": "c200000000000005",
+      "fromSide": "right",
+      "toNode": "c200000000000014",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "可微时由同一个全微分给出"
+    },
+    {
+      "id": "d100000000000006",
+      "fromNode": "c200000000000005",
+      "fromSide": "bottom",
+      "toNode": "c200000000000015",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "逐方向存在仍可能不线性"
+    },
+    {
+      "id": "d100000000000007",
+      "fromNode": "c200000000000002",
+      "fromSide": "bottom",
+      "toNode": "c200000000000014",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "让统一线性映射作用于方向向量"
+    },
+    {
+      "id": "d100000000000008",
+      "fromNode": "c200000000000014",
+      "fromSide": "right",
+      "toNode": "c200000000000020",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "缩放向量会缩放内积值"
+    },
+    {
+      "id": "d100000000000009",
+      "fromNode": "c200000000000020",
+      "fromSide": "right",
+      "toNode": "c200000000000006",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "先单位化，才能比较几何方向"
+    },
+    {
+      "id": "d100000000000010",
+      "fromNode": "c200000000000006",
+      "fromSide": "right",
+      "toNode": "c200000000000021",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "Euclidean 结论依赖单位球的度量"
+    },
+    {
+      "id": "d100000000000011",
+      "fromNode": "c200000000000007",
+      "fromSide": "right",
+      "toNode": "c200000000000022",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "正则点条件失败时切空间需另判"
+    },
+    {
+      "id": "d100000000000026",
+      "fromNode": "c200000000000002",
+      "fromSide": "bottom",
+      "toNode": "c200000000000007",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "微分核给出零变化方向，正则性将其识别为切空间"
+    },
+    {
+      "id": "d100000000000012",
+      "fromNode": "c200000000000008",
+      "fromSide": "right",
+      "toNode": "c200000000000023",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "二次型组合沿线的二阶响应"
+    },
+    {
+      "id": "d100000000000013",
+      "fromNode": "c200000000000023",
+      "fromSide": "right",
+      "toNode": "c200000000000009",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "方向二阶响应组成 Taylor 二次项"
+    },
+    {
+      "id": "d100000000000014",
+      "fromNode": "c200000000000008",
+      "fromSide": "bottom",
+      "toNode": "c200000000000016",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "对称性还需要邻域正则条件"
+    },
+    {
+      "id": "d100000000000015",
+      "fromNode": "c200000000000009",
+      "fromSide": "bottom",
+      "toNode": "c300000000000001",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "驻点处正定二次项"
+    },
+    {
+      "id": "d100000000000016",
+      "fromNode": "c200000000000009",
+      "fromSide": "bottom",
+      "toNode": "c200000000000010",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "驻点处负定二次项"
+    },
+    {
+      "id": "d100000000000017",
+      "fromNode": "c200000000000009",
+      "fromSide": "bottom",
+      "toNode": "c200000000000011",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "驻点处不定二次项"
+    },
+    {
+      "id": "d100000000000018",
+      "fromNode": "c200000000000009",
+      "fromSide": "bottom",
+      "toNode": "c300000000000002",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "半定时二次项可能不足"
+    },
+    {
+      "id": "d100000000000019",
+      "fromNode": "c200000000000012",
+      "fromSide": "right",
+      "toNode": "c200000000000024",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "在已建立的局部解支上求导"
+    },
+    {
+      "id": "d100000000000020",
+      "fromNode": "c200000000000024",
+      "fromSide": "right",
+      "toNode": "c300000000000003",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "公式用于追踪局部选择分支"
+    },
+    {
+      "id": "d100000000000021",
+      "fromNode": "c200000000000012",
+      "fromSide": "bottom",
+      "toNode": "c200000000000025",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "可逆块条件失败只使定理失去保证"
+    },
+    {
+      "id": "d100000000000022",
+      "fromNode": "c300000000000004",
+      "fromSide": "right",
+      "toNode": "c200000000000017",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "积分换元使用绝对值体积因子"
+    },
+    {
+      "id": "d100000000000023",
+      "fromNode": "c300000000000004",
+      "fromSide": "right",
+      "toNode": "c200000000000018",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "非零 determinant 等价于导数可逆"
+    },
+    {
+      "id": "d100000000000024",
+      "fromNode": "c200000000000018",
+      "fromSide": "right",
+      "toNode": "c200000000000019",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "奇异时只能撤销定理保证"
+    },
+    {
+      "id": "d100000000000025",
+      "fromNode": "c300000000000004",
+      "fromSide": "bottom",
+      "toNode": "c300000000000005",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "矩形时改用 Gram 体积因子"
+    }
+  ]
+}

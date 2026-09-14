@@ -1,0 +1,357 @@
+{
+  "nodes": [
+    {
+      "id": "count-header",
+      "type": "text",
+      "x": 0,
+      "y": -330,
+      "width": 4240,
+      "height": 230,
+      "text": "# 组合计数原理\n\n先定义一个结果是什么，再选择分类、分阶段构造、对应、容量论证或序列编码。通用概念节点只回答“它是什么”；恒等式、定理和有限误差界各自成为可单独链接的原子。\n\n**本图显示精选学习关系，不机械展开全部双链。25 张原子的颜色只表示语义角色，不表示掌握度。**",
+      "color": "6"
+    },
+    {
+      "id": "count-group-classify",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 520,
+      "height": 150,
+      "text": "## 建模、分类与重叠\n先固定对象；互斥时相加，重叠时容斥，截断时只得到一侧界。",
+      "color": "6"
+    },
+    {
+      "id": "count-group-product",
+      "type": "text",
+      "x": 620,
+      "y": 0,
+      "width": 520,
+      "height": 150,
+      "text": "## 分阶段构造与阶乘\n固定延伸数给乘法；有序无重复选择产生排列与阶乘。",
+      "color": "6"
+    },
+    {
+      "id": "count-group-choice",
+      "type": "text",
+      "x": 1240,
+      "y": 0,
+      "width": 520,
+      "height": 150,
+      "text": "## 对应、去重与组合数\n可逆编码先排除遗漏；等纤维再除去重复表示。",
+      "color": "6"
+    },
+    {
+      "id": "count-group-multi",
+      "type": "text",
+      "x": 1860,
+      "y": 0,
+      "width": 520,
+      "height": 150,
+      "text": "## 多类分配\n多项式系数处理有标签多组；隔板法处理不可区分单位的定和分配。",
+      "color": "6"
+    },
+    {
+      "id": "count-group-proof",
+      "type": "text",
+      "x": 2480,
+      "y": 0,
+      "width": 520,
+      "height": 150,
+      "text": "## 恒等式与存在性证明\n双重计数证明两式相等；鸽巢原理只保证某个盒子过载。",
+      "color": "6"
+    },
+    {
+      "id": "count-group-series",
+      "type": "text",
+      "x": 3100,
+      "y": 0,
+      "width": 520,
+      "height": 150,
+      "text": "## 序列编码与增长\n生成函数编码整列计数；几何和与调和数展示不同的累积尺度。",
+      "color": "6"
+    },
+    {
+      "id": "count-object",
+      "type": "text",
+      "x": 0,
+      "y": 250,
+      "width": 520,
+      "height": 220,
+      "text": "## [[计数对象]]\nMCS-COUNT-001 · 建模原则\n\n先说明标签、顺序、重复、约束与相等标准。",
+      "color": "6"
+    },
+    {
+      "id": "count-add",
+      "type": "text",
+      "x": 0,
+      "y": 580,
+      "width": 520,
+      "height": 220,
+      "text": "## [[加法法则]]\nMCS-COUNT-002 · 计数规则\n\n有限不交并的基数等于各部分基数之和。",
+      "color": "2"
+    },
+    {
+      "id": "count-inclusion",
+      "type": "text",
+      "x": 0,
+      "y": 910,
+      "width": 520,
+      "height": 220,
+      "text": "## [[容斥原理]]\nMCS-COUNT-012 · 精确规则\n\n完整交替和使每个并集元素最终只计一次。",
+      "color": "2"
+    },
+    {
+      "id": "count-bonferroni",
+      "type": "text",
+      "x": 0,
+      "y": 1240,
+      "width": 520,
+      "height": 220,
+      "text": "## [[Bonferroni界]]\nMCS-COUNT-023 · 定理\n\n奇数阶截断给上界，偶数阶截断给下界。",
+      "color": "1"
+    },
+    {
+      "id": "count-product",
+      "type": "text",
+      "x": 620,
+      "y": 250,
+      "width": 520,
+      "height": 220,
+      "text": "## [[乘法法则]]\nMCS-COUNT-003 · 计数规则\n\n每个同层前缀有固定延伸数时分阶段相乘。",
+      "color": "2"
+    },
+    {
+      "id": "count-permutation",
+      "type": "text",
+      "x": 620,
+      "y": 580,
+      "width": 520,
+      "height": 220,
+      "text": "## [[排列]]\nMCS-COUNT-007 · 定义入口\n\n从不同对象中形成有序且无重复的 k 元序列。",
+      "color": "5"
+    },
+    {
+      "id": "count-stirling",
+      "type": "text",
+      "x": 620,
+      "y": 910,
+      "width": 520,
+      "height": 220,
+      "text": "## [[斯特林公式]]\nMCS-COUNT-016 · 渐近定理\n\n以相对误差趋零的主式近似阶乘。",
+      "color": "3"
+    },
+    {
+      "id": "count-robbins",
+      "type": "text",
+      "x": 620,
+      "y": 1240,
+      "width": 520,
+      "height": 220,
+      "text": "## [[Robbins阶乘界]]\nMCS-COUNT-024 · 有限界\n\n为每个正整数 n 给出显式 Stirling 余项范围。",
+      "color": "1"
+    },
+    {
+      "id": "count-bijection",
+      "type": "text",
+      "x": 1240,
+      "y": 250,
+      "width": 520,
+      "height": 220,
+      "text": "## [[双射计数]]\nMCS-COUNT-004 · 证明方法\n\n可逆映射同时排除重复和遗漏。",
+      "color": "3"
+    },
+    {
+      "id": "count-division",
+      "type": "text",
+      "x": 1240,
+      "y": 580,
+      "width": 520,
+      "height": 220,
+      "text": "## [[除法法则]]\nMCS-COUNT-005 · 计数规则\n\n每个目标有固定数量表示时除去等纤维重数。",
+      "color": "3"
+    },
+    {
+      "id": "count-combination",
+      "type": "text",
+      "x": 1240,
+      "y": 910,
+      "width": 520,
+      "height": 220,
+      "text": "## [[组合数]]\nMCS-COUNT-008 · 定义入口\n\n计数无序、无重复的 k 元子集。",
+      "color": "5"
+    },
+    {
+      "id": "count-symmetry",
+      "type": "text",
+      "x": 1240,
+      "y": 1240,
+      "width": 520,
+      "height": 220,
+      "text": "## [[组合数对称性]]\nMCS-COUNT-017 · 恒等式\n\n选 k 个与选出未选的 n-k 个由补集双射连接。",
+      "color": "3"
+    },
+    {
+      "id": "count-pascal",
+      "type": "text",
+      "x": 1240,
+      "y": 1570,
+      "width": 520,
+      "height": 220,
+      "text": "## [[Pascal恒等式]]\nMCS-COUNT-018 · 恒等式\n\n按一个固定元素是否入选做不交分类。",
+      "color": "3"
+    },
+    {
+      "id": "count-binomial",
+      "type": "text",
+      "x": 1240,
+      "y": 1900,
+      "width": 520,
+      "height": 220,
+      "text": "## [[二项式定理]]\nMCS-COUNT-019 · 定理\n\n组合数给出二项式非负整数次幂的展开系数。",
+      "color": "3"
+    },
+    {
+      "id": "count-multinomial",
+      "type": "text",
+      "x": 1860,
+      "y": 250,
+      "width": 520,
+      "height": 220,
+      "text": "## [[多项式系数]]\nMCS-COUNT-009 · 定义入口\n\n把 n 个位置分成给定大小的多个有标签组。",
+      "color": "5"
+    },
+    {
+      "id": "count-multitheorem",
+      "type": "text",
+      "x": 1860,
+      "y": 580,
+      "width": 520,
+      "height": 220,
+      "text": "## [[多项式定理]]\nMCS-COUNT-020 · 定理\n\n多项式系数给出多个项之和的展开系数。",
+      "color": "3"
+    },
+    {
+      "id": "count-stars",
+      "type": "text",
+      "x": 1860,
+      "y": 910,
+      "width": 520,
+      "height": 220,
+      "text": "## [[隔板法]]\nMCS-COUNT-010 · 双射方法\n\n把定和非负整数解编码成星与隔板的位置。",
+      "color": "3"
+    },
+    {
+      "id": "count-double",
+      "type": "text",
+      "x": 2480,
+      "y": 250,
+      "width": 520,
+      "height": 220,
+      "text": "## [[双重计数]]\nMCS-COUNT-006 · 证明方法\n\n对同一有限集合做两种完备分组，得到恒等式。",
+      "color": "4"
+    },
+    {
+      "id": "count-pigeon",
+      "type": "text",
+      "x": 2480,
+      "y": 580,
+      "width": 520,
+      "height": 220,
+      "text": "## [[鸽巢原理]]\nMCS-COUNT-011 · 存在性原理\n\n总容量不足时至少有一个纤维过载。",
+      "color": "4"
+    },
+    {
+      "id": "count-ogf",
+      "type": "text",
+      "x": 3100,
+      "y": 250,
+      "width": 520,
+      "height": 220,
+      "text": "## [[普通生成函数]]\nMCS-COUNT-013 · 定义入口\n\n以数列为系数的形式幂级数。",
+      "color": "5"
+    },
+    {
+      "id": "count-convolution",
+      "type": "text",
+      "x": 3100,
+      "y": 580,
+      "width": 520,
+      "height": 220,
+      "text": "## [[生成函数乘积与卷积]]\nMCS-COUNT-021 · 恒等式\n\n乘积的第 n 个系数遍历全部规模拆分。",
+      "color": "3"
+    },
+    {
+      "id": "count-geometric",
+      "type": "text",
+      "x": 3100,
+      "y": 910,
+      "width": 520,
+      "height": 220,
+      "text": "## [[几何和]]\nMCS-COUNT-014 · 定义\n\n固定公比的有限项相加；r = 1 时直接数项数。\n\n项数趋于无穷 → [[几何级数]] 的收敛问题。",
+      "color": "3"
+    },
+    {
+      "id": "count-harmonic",
+      "type": "text",
+      "x": 3100,
+      "y": 1240,
+      "width": 520,
+      "height": 220,
+      "text": "## [[调和数]]\nMCS-COUNT-015 · 定义入口\n\n第 n 个调和数是前 n 个正整数倒数之和。",
+      "color": "5"
+    },
+    {
+      "id": "count-weighted-geometric",
+      "type": "text",
+      "x": 3720,
+      "y": 910,
+      "width": 520,
+      "height": 220,
+      "text": "## [[加权几何和]]\nMCS-COUNT-025 · 求和恒等式\n\n有限几何和逐项求导后得到带位置权重的闭式。",
+      "color": "3"
+    },
+    {
+      "id": "count-harmonic-growth",
+      "type": "text",
+      "x": 3100,
+      "y": 1570,
+      "width": 520,
+      "height": 220,
+      "text": "## [[调和数对数增长]]\nMCS-COUNT-022 · 定理\n\n它与 ln n 渐近等价，却仍趋于无穷。",
+      "color": "3"
+    },
+    {
+      "id": "count-asymptotic",
+      "type": "text",
+      "x": 3720,
+      "y": 1240,
+      "width": 520,
+      "height": 220,
+      "text": "## [[渐近记号与算法复杂度.canvas|渐近记号与算法复杂度]]\n跨主题出口\n\n在对象与公式固定后，比较它们随规模怎样增长。",
+      "color": "4"
+    }
+  ],
+  "edges": [
+    {"id":"count-e001","fromNode":"count-group-classify","fromSide":"bottom","toNode":"count-object","toSide":"top","toEnd":"arrow","label":"先固定对象"},
+    {"id":"count-e002","fromNode":"count-object","fromSide":"bottom","toNode":"count-add","toSide":"top","toEnd":"arrow","label":"能分成不交类别时"},
+    {"id":"count-e003","fromNode":"count-add","fromSide":"bottom","toNode":"count-inclusion","toSide":"top","toEnd":"arrow","label":"类别重叠时修正"},
+    {"id":"count-e004","fromNode":"count-inclusion","fromSide":"bottom","toNode":"count-bonferroni","toSide":"top","toEnd":"arrow","label":"无法算完全部交集时保留一侧界"},
+    {"id":"count-e005","fromNode":"count-group-product","fromSide":"bottom","toNode":"count-product","toSide":"top","toEnd":"arrow","label":"分阶段构造"},
+    {"id":"count-e006","fromNode":"count-product","fromSide":"bottom","toNode":"count-permutation","toSide":"top","toEnd":"arrow","label":"有序且无重复"},
+    {"id":"count-e007","fromNode":"count-permutation","fromSide":"bottom","toNode":"count-stirling","toSide":"top","toEnd":"arrow","label":"阶乘规模进入渐近"},
+    {"id":"count-e008","fromNode":"count-stirling","fromSide":"bottom","toNode":"count-robbins","toSide":"top","toEnd":"arrow","label":"需要有限 n 的显式误差时"},
+    {"id":"count-e009","fromNode":"count-group-choice","fromSide":"bottom","toNode":"count-bijection","toSide":"top","toEnd":"arrow","label":"先找可逆编码"},
+    {"id":"count-e010","fromNode":"count-bijection","fromSide":"bottom","toNode":"count-division","toSide":"top","toEnd":"arrow","label":"固定重数表示时"},
+    {"id":"count-e011","fromNode":"count-division","fromSide":"bottom","toNode":"count-combination","toSide":"top","toEnd":"arrow","label":"除去 k! 个内部顺序"},
+    {"id":"count-e012","fromNode":"count-combination","fromSide":"bottom","toNode":"count-symmetry","toSide":"top","toEnd":"arrow","label":"取补集得到对称性"},
+    {"id":"count-e015","fromNode":"count-group-multi","fromSide":"bottom","toNode":"count-multinomial","toSide":"top","toEnd":"arrow","label":"先定义有标签多组计数"},
+    {"id":"count-e016","fromNode":"count-multinomial","fromSide":"bottom","toNode":"count-multitheorem","toSide":"top","toEnd":"arrow","label":"再成为展开系数"},
+    {"id":"count-e017","fromNode":"count-group-proof","fromSide":"bottom","toNode":"count-double","toSide":"top","toEnd":"arrow","label":"同一集合两次分组"},
+    {"id":"count-e019","fromNode":"count-group-series","fromSide":"bottom","toNode":"count-ogf","toSide":"top","toEnd":"arrow","label":"把整列计数编码为系数"},
+    {"id":"count-e020","fromNode":"count-ogf","fromSide":"bottom","toNode":"count-convolution","toSide":"top","toEnd":"arrow","label":"相乘后系数卷积"},
+    {"id":"count-e021","fromNode":"count-convolution","fromSide":"bottom","toNode":"count-geometric","toSide":"top","label":"几何级数是最基本的形式例"},
+    {"id":"count-e022","fromNode":"count-geometric","fromSide":"right","toNode":"count-weighted-geometric","toSide":"left","toEnd":"arrow","label":"逐项求导后乘回公比"},
+    {"id":"count-e023","fromNode":"count-harmonic","fromSide":"bottom","toNode":"count-harmonic-growth","toSide":"top","toEnd":"arrow","label":"积分比较确定增长速度"},
+    {"id":"count-e024","fromNode":"count-asymptotic","fromSide":"left","toNode":"count-harmonic-growth","toSide":"right","toEnd":"arrow","label":"用渐近记号表述增长阶"}
+  ]
+}

@@ -1,5 +1,6 @@
 ---
 aliases:
+  - "大语言模型 Hub"
   - "Large Language Models Hub"
   - "LLM Hub"
 status: source-checked
@@ -23,24 +24,24 @@ status: source-checked
 *Backbone*
 <!-- bilingual-en:end -->
 
-1. [[Transformer 与注意力机制]]：模型怎样在序列中读取信息，是后续训练、长上下文和多模态的共同计算骨架。
-2. [[LLM 预训练]] → [[LLM 后训练：SFT、RLHF 与 DPO]]：先学习续写分布中的通用能力，再把这些能力调成可用、可控的助手行为。
-3. [[Scaling laws 与计算最优训练]] → [[Mixture of Experts（MoE）]] / [[大模型分布式训练]]：先决定参数、数据与计算的预算，再分别理解条件计算和跨设备执行。
+1. [[Transformer]]：模型怎样在序列中读取信息，是后续训练、长上下文和多模态的共同计算骨架。进入 [[06_paper/LLM/Transformer课程|连续学习正文]]，或打开 [[Transformer.canvas|全局关系图]]。
+2. [[LLM 预训练.canvas|LLM 预训练]] → [[LLM 后训练.canvas|LLM 后训练]]：先学习续写分布中的通用能力，再把这些能力调成可用、可控的助手行为。
+3. [[损失缩放律]]只描述匹配口径下的预训练 loss；训练预算分配继续到 [[计算最优分配]]。[[预训练损失不决定任务表现|预训练 loss 不能决定下游任务、安全与适配方法的表现]]，后者必须按 [[任务表现缩放|固定任务与评测协议分别测量]]。若部署需求不可忽略，再读 [[生命周期最优]] → [[06_paper/LLM/LLM推理效率课程|LLM 推理效率]]。条件计算与跨设备执行分别见 [[Mixture of Experts（MoE）.canvas|MoE]] 和 [[大模型分布式训练]]。
 4. [[LLM 推理与验证]] → [[LLM Agent 与工具调用]]：先理解模型怎样分解并验证答案，再看它怎样把推理落实为环境中的多步行动。
 5. [[RAG（检索增强生成）]] ↔ [[长上下文语言模型]]：两者都把参数外知识交给模型，但一个强调检索、更新与溯源，另一个强调一次容纳和利用更长输入。
-6. [[LLM 推理效率]]：训练完成后怎样控制首 token 延迟、吞吐和显存。
+6. [[06_paper/LLM/LLM推理效率课程|LLM 推理效率]]：训练完成后怎样控制首 token 延迟、吞吐和显存。
 7. [[LLM 评测]]：怎样证明能力、可靠性和成本真的满足用途。
 8. [[多模态大模型]]：视觉等模态怎样与语言表示对齐并共同生成。
 9. [[开放模型生态]]：怎样从权重、数据、许可证、资源和任务效果选择可用模型。
 <!-- bilingual-en:start -->
 
 &nbsp;
-**1.** [[Transformer 与注意力机制|Transformers and Attention]]: the shared computational backbone through which models read sequences, supporting later training, long context, and multimodality.<br>
-**2.** [[LLM 预训练|LLM Pretraining]] → [[LLM 后训练：SFT、RLHF 与 DPO|LLM Post-Training: SFT, RLHF, and DPO]]: first learn general capabilities from the continuation distribution, then shape those capabilities into useful and controllable assistant behaviour.<br>
-**3.** [[Scaling laws 与计算最优训练|Scaling Laws and Compute-Optimal Training]] → [[Mixture of Experts（MoE）|Mixture of Experts (MoE)]] / [[大模型分布式训练|Distributed Training for Large Models]]: first allocate the parameter, data, and compute budget, then understand conditional computation and execution across devices.<br>
+**1.** [[Transformer|Transformer]]: the shared computational backbone through which models read sequences, supporting later training, long context, and multimodality. Follow the [[06_paper/LLM/Transformer课程|continuous reading path]] or open the [[Transformer.canvas|relationship map]].<br>
+**2.** [[LLM 预训练.canvas|LLM Pretraining]] → [[LLM 后训练.canvas|LLM Post-Training]]: first learn general capabilities from the continuation distribution, then shape those capabilities into useful and controllable assistant behaviour.<br>
+**3.** [[损失缩放律|Loss Scaling Laws]] describe matched pretraining loss only. Continue to [[计算最优分配|Compute-Optimal Allocation]] for training budgets. [[预训练损失不决定任务表现|Pretraining loss does not determine downstream task, safety, or adaptation-method performance]]; measure each through [[任务表现缩放|Task-Performance Scaling]] under a fixed task and evaluation protocol. If deployment demand matters, continue to [[生命周期最优|Lifecycle Optimality]] → [[06_paper/LLM/LLM推理效率课程|Inference Efficiency]]. See [[Mixture of Experts（MoE）.canvas|MoE]] and [[大模型分布式训练|Distributed Training]] for conditional computation and multi-device execution.<br>
 **4.** [[LLM 推理与验证|LLM Reasoning and Verification]] → [[LLM Agent 与工具调用|LLM Agents and Tool Use]]: first understand how a model decomposes and verifies an answer, then how reasoning becomes a sequence of actions in an external environment.<br>
 **5.** [[RAG（检索增强生成）|Retrieval-Augmented Generation (RAG)]] ↔ [[长上下文语言模型|Long-Context Language Models]]: both provide knowledge outside the parameters, but RAG emphasizes retrieval, updating, and provenance, while long context emphasizes holding and using more input at once.<br>
-**6.** [[LLM 推理效率|LLM Inference Efficiency]]: controlling time to first token, throughput, and memory after training.<br>
+**6.** [[06_paper/LLM/LLM推理效率课程|LLM Inference Efficiency]]: controlling time to first token, throughput, and memory after training.<br>
 **7.** [[LLM 评测|LLM Evaluation]]: establishing whether capability, reliability, and cost actually satisfy the intended use.<br>
 **8.** [[多模态大模型|Multimodal Large Models]]: aligning visual and other modalities with language representations for joint generation.<br>
 **9.** [[开放模型生态|Open Model Ecosystems]]: choosing a usable model from its weights, data, licence, resource requirements, and task performance.<br>

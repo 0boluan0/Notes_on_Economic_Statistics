@@ -1,0 +1,35 @@
+{
+  "nodes": [
+    {"id":"bm00000000000001","type":"text","text":"# 布朗运动 · 语义原子地图\n\n从定义出发，分别进入有限维分布、尺度不变性、带漂移模型、路径粗糙性与越界问题。颜色只区分语义角色，不表示掌握度；点击节点可打开对应 Markdown 原子。\n\n**当前结构：** 11 张原子卡，分别表示概念定义、正向定理、反向刻画和边界辨析。","x":0,"y":-420,"width":4060,"height":260},
+    {"id":"bm00000000000002","type":"text","text":"[[标准布朗运动|标准布朗运动]]\n\n**PROB-BM-001 · 定义**\n从零出发；不交区间增量相互独立且为 N(0,时长)；整条样本路径几乎必然连续。","x":0,"y":0,"width":4060,"height":230,"color":"4"},
+
+    {"id":"bm00000000000003","type":"text","text":"[[布朗有限维分布|有限维分布]]\n\n**PROB-BM-002 · 定理**\n有限时点向量联合 Gaussian，均值为 0，协方差为 s∧t。","x":0,"y":360,"width":560,"height":230,"color":"5"},
+    {"id":"bm00000000000004","type":"text","text":"[[布朗尺度变换|尺度变换]]\n\n**PROB-BM-003 · 不变性**\n(c⁻¹ᐟ²Wct) 仍是标准布朗运动；这是过程律相同，不是逐路径等式。","x":700,"y":360,"width":560,"height":230,"color":"5"},
+    {"id":"bm00000000000005","type":"text","text":"[[带漂移布朗运动|带漂移布朗运动]]\n\n**PROB-BM-004 · 模型定义**\nXₜ=x+μt+σWₜ；x、μ、σ 分别控制起点、中心轨道与波动尺度。","x":1400,"y":360,"width":560,"height":230,"color":"2"},
+    {"id":"bm00000000000006","type":"text","text":"[[布朗路径处处不可导|路径处处不可导]]\n\n**PROB-BM-005 · 定理**\n同一个概率 1 事件上，每条路径在所有时点都不可导。","x":2100,"y":360,"width":560,"height":230,"color":"3"},
+    {"id":"bm00000000000007","type":"text","text":"[[布朗反射原理|反射原理]]\n\n**PROB-BM-007 · 定理**\n首次触及后反射路径，把途中越界概率化为终点 Gaussian 尾概率。","x":3500,"y":360,"width":560,"height":230,"color":"1"},
+
+    {"id":"bm00000000000008","type":"text","text":"[[协方差核刻画布朗运动|协方差核反向刻画]]\n\n**PROB-BM-008 · 定理**\n中心 Gaussian + 协方差 s∧t 给出 Brownian 有限维律；连续版本才满足完整定义。","x":0,"y":700,"width":560,"height":240,"color":"5"},
+    {"id":"bm00000000000009","type":"text","text":"[[带漂移布朗增量|带漂移布朗增量]]\n\n**PROB-BM-010 · 定理**\n长度 h 的增量为 N(μh,σ²h)，并具有平稳独立增量。","x":1400,"y":700,"width":560,"height":230,"color":"5"},
+    {"id":"bm0000000000000a","type":"text","text":"[[布朗路径无限总变差|路径无限总变差]]\n\n**PROB-BM-011 · 定理**\n典型路径在每个非退化有限区间上的绝对增量总和无界。","x":2100,"y":700,"width":560,"height":230,"color":"3"},
+    {"id":"bm0000000000000b","type":"text","text":"[[鞅与停时.canvas|鞅与停时]]\n\n反射原理使用首次到达时刻与强 Markov 结构；下一主题把信息流和停时条件单独展开。","x":3500,"y":700,"width":560,"height":230},
+
+    {"id":"bm0000000000000c","type":"text","text":"[[布朗运动不平稳|水平不平稳，增量平稳]]\n\n**PROB-BM-009 · 辨析**\nWₜ 的方差随 t 增长；固定长度增量的分布却不随起点改变。","x":0,"y":1060,"width":560,"height":230,"color":"6"},
+    {"id":"bm0000000000000d","type":"text","text":"[[布朗二次变差|二次变差]]\n\n**PROB-BM-006 · 定理**\n确定性分割网格趋零时，平方增量和在 L² 中收敛到区间长度。","x":2100,"y":1060,"width":560,"height":240,"color":"3"},
+    {"id":"bm0000000000000e","type":"text","text":"# 下一层：随机积分\n\n有限且非零的二次变差解释了普通链式法则为何需要二阶修正。Itô 积分与 Itô 公式属于后续随机积分主题。","x":2800,"y":1060,"width":560,"height":240,"color":"6"}
+  ],
+  "edges": [
+    {"id":"bme0000000000001","fromNode":"bm00000000000002","fromSide":"bottom","toNode":"bm00000000000003","toSide":"top","label":"推出有限维 Gaussian 律"},
+    {"id":"bme0000000000002","fromNode":"bm00000000000003","fromSide":"bottom","toNode":"bm00000000000008","toSide":"top","label":"加入连续版本可反向识别"},
+    {"id":"bme0000000000003","fromNode":"bm00000000000008","fromSide":"bottom","toNode":"bm0000000000000c","toSide":"top","label":"s∧t 核也显示水平不平稳"},
+    {"id":"bme0000000000004","fromNode":"bm00000000000002","fromSide":"bottom","toNode":"bm00000000000004","toSide":"top","label":"完整定义在缩放下保持"},
+    {"id":"bme0000000000005","fromNode":"bm00000000000002","fromSide":"bottom","toNode":"bm00000000000005","toSide":"top","label":"加入线性漂移与波动率"},
+    {"id":"bme0000000000006","fromNode":"bm00000000000005","fromSide":"bottom","toNode":"bm00000000000009","toSide":"top","label":"定义推出增量律"},
+    {"id":"bme0000000000007","fromNode":"bm00000000000002","fromSide":"bottom","toNode":"bm00000000000006","toSide":"top","label":"连续路径仍可无处有切线"},
+    {"id":"bme0000000000008","fromNode":"bm00000000000006","fromSide":"bottom","toNode":"bm0000000000000a","toSide":"top","label":"由 BV 几乎处处可导推出"},
+    {"id":"bme0000000000009","fromNode":"bm0000000000000a","fromSide":"bottom","toNode":"bm0000000000000d","toSide":"top","label":"与有限二次变差对照"},
+    {"id":"bme000000000000a","fromNode":"bm0000000000000d","fromSide":"right","toNode":"bm0000000000000e","toSide":"left","label":"解释二阶修正来源"},
+    {"id":"bme000000000000b","fromNode":"bm00000000000002","fromSide":"bottom","toNode":"bm00000000000007","toSide":"top","label":"研究首次越界"},
+    {"id":"bme000000000000c","fromNode":"bm00000000000007","fromSide":"bottom","toNode":"bm0000000000000b","toSide":"top","label":"首达时间进入停时框架"}
+  ]
+}

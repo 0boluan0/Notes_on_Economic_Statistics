@@ -18,13 +18,13 @@ lecture: 05
 > [!tip] Hint
 > - 这节课的出发点是上节那个看似离谱的事实：`0.1` 加十次不等于 1。
 > - 老师先回顾十进制整数转二进制，再问“那小数怎么办”，整个 lecture 的推进是从表示问题走到算法问题。
-> - `3/8` 能精确写成有限二进制，而 `1/10` 不行，这是理解 float 不精确的关键分水岭。
+> - `3/8` 能精确写成有限二进制，而 `1/10` 不行；这解释了为什么 float 有时不能精确代表程序想表达的实数。
 > - float 不是“近似实数”这个哲学句子而已，老师真正在讲的是：机器只能用有限 bits 近似无限展开。
 > - approximation method 不是猜-and-check 的重复，而是把 candidate 从整数枚举换成了小步长浮点枚举。
 > - epsilon 决定什么叫 close enough，increment 决定你走得多快，两者不是一回事。
 > - 54321 的平方根例子故意让程序很慢，是为了让你真正感到 fixed increment 的代价。
 > - 近似算法的失败不是 bug，而是算法结构本身必须显式处理的一个出口。
-> - 本讲的真正主线是：一旦“完全相等”不可信，程序就必须改成“足够接近 + 明确失败分支”。
+> - 本讲的真正主线是：`==` 会确定地比较两个已存值；当表示与运算舍入使它们偏离想比较的数学量时，程序需要与任务相匹配的“足够接近”标准，并保留明确失败分支。
 > - 这节课其实在为 bisection search 做铺垫：我们已经知道小步子能逼近，但也已经看到它太慢。
 > <!-- bilingual-en:start -->
 > - The lecture begins from the previous lecture's unsettling observation that adding `0.1` ten times does not produce a value exactly equal to 1.
@@ -35,8 +35,14 @@ lecture: 05
 > - `epsilon` defines what counts as close enough; `increment` defines the step size and therefore the search speed. They are not interchangeable.
 > - The deliberately slow search for the square root of 54321 makes the cost of a fixed increment tangible.
 > - Failure of the approximation method is not an implementation bug, but an outcome the algorithm must represent explicitly.
-> - Once exact equality is unreliable, the program needs both a closeness criterion and an explicit failure branch.
+> - `==` deterministically compares two stored values. When representation and arithmetic rounding make those values differ from the mathematical quantities of interest, the program needs a task-appropriate closeness criterion and an explicit failure branch.
 > - The lecture prepares bisection: small steps can approximate the answer, but they may do so far too slowly.
+> <!-- bilingual-en:end -->
+
+> [!links] 本讲知识入口
+> [[枚举验证]] → [[固定步长求根]] → [[固定步长漏根]] → [[数值迭代停止条件]]；整条关系见 [[数值求根.canvas|数值求根总图]]。二分、Newton 与混合方法属于后续讲次或理论扩展。
+> <!-- bilingual-en:start -->
+> [[枚举验证|Exhaustive enumeration]] → [[固定步长求根|fixed-step root search]] → [[固定步长漏根|fixed-step grid miss]] → [[数值迭代停止条件|numerical stopping criteria]]. See [[数值求根.canvas|Numerical Root-Finding]] for the complete relationship; bisection, Newton, and hybrid methods belong to later lectures or theoretical extensions.
 > <!-- bilingual-en:end -->
 
 ## Lecture flow
@@ -65,10 +71,11 @@ The comparison is `False`, because the final value of `x` is extremely close to 
 
 老师把这当作整讲的动机：
 
-- 如果 float 连最基本的 equality 都不稳定
-- 那我们以后做数值计算怎么办？
+- `==` 对两个已存浮点值的比较是确定的
+- 但表示与运算舍入后，这两个值未必仍对应数学上想比较的量
+- 那么数值程序应该用什么标准判断结果？
 <!-- bilingual-en:start -->
-This motivates the entire lecture: if even a simple floating-point equality is unreliable, how should numerical programs be written?
+This motivates the lecture without treating equality as random or unstable: `==` compares the stored values deterministically, but representation and arithmetic rounding may leave those values different from the mathematical quantities the programmer intended to compare. Numerical code therefore needs an appropriate success criterion.
 <!-- bilingual-en:end -->
 
 所以这一讲并不是随便讲讲机器底层，而是在回答一个非常直接的问题：  
@@ -157,10 +164,11 @@ If multiplying the fraction by some `2**p` produces an integer, convert that int
 Here, `0.375 * 2**3 = 3`, the binary form of `3` is `11`, and the binary fraction is consequently `0.011`.
 <!-- bilingual-en:end -->
 
-这说明 `3/8` 是一个 “power-of-two friendly” 的 fraction。  
-但 `1/10 = 0.1` 不存在这样的 `p`，永远无法乘成一个整数。
+这说明精确有理数 $3/8$ 是一个 “power-of-two friendly” 的 fraction。对数学上的精确 $1/10$，不存在有限的 $p$ 使 $2^p/10$ 成为整数。
+
+这里必须先固定讨论对象：数学上的 $1/10$ 没有有限二进制展开；Python 读入字面量 `0.1` 后，存下的却是附近一个分母为 $2$ 的幂的有理数。下一节专门区分这两件事。
 <!-- bilingual-en:start -->
-`3/8` is friendly to powers of two. No corresponding finite `p` makes `1/10 = 0.1` an integer after multiplication by `2**p`.
+The exact rational number $3/8$ is friendly to powers of two. For the exact mathematical number $1/10$, no finite $p$ makes $2^p/10$ an integer. The object must nevertheless be stated carefully: mathematical $1/10$ has no finite binary expansion, whereas the Python literal `0.1` has already been rounded to a nearby rational number whose denominator is a power of two. The next section separates these two facts.
 <!-- bilingual-en:end -->
 
 > [!note]
@@ -192,9 +200,9 @@ The instructor generalizes the conclusion:
 Integers have relatively direct binary representations; real-number fractions may require infinitely many places, whereas a machine stores only finitely many bits.
 <!-- bilingual-en:end -->
 
-所以 float 本质上是近似表示，而不是数学上的精确实数。
+所以每个有限 float 都精确代表一个二进有理数；当程序想表达的数学实数不在这组有限可表示值中时，存下来的 float 才是那个目标实数的舍入近似。
 <!-- bilingual-en:start -->
-A float is therefore a finite approximation, not an exact mathematical real number.
+Every finite float therefore represents one dyadic rational exactly. When the intended mathematical real number is outside the finite set of representable values, the stored float is a rounded approximation to that target real number.
 <!-- bilingual-en:end -->
 
 接着她介绍了 floating point number 的一个简单抽象：
@@ -209,18 +217,18 @@ The lecture abstracts a floating-point number into a significand and an exponent
 这样做的目的不是让你去背 IEEE 标准，而是让你理解：
 
 - float 其实是一个有限位宽的工程折中
-- 一旦位数有限，就一定有 rounding
+- 位数有限意味着有些目标值必须舍入，不意味着每个已存 float 都“不精确”
 <!-- bilingual-en:start -->
-The goal is not to memorize an IEEE standard, but to understand the engineering compromise: a fixed width necessarily entails rounding for some values.
+The goal is not to memorize an IEEE standard, but to understand the engineering compromise: a fixed width necessarily entails rounding for some target values, not that every stored float is inexact.
 <!-- bilingual-en:end -->
 
-### 6. 用一段 fraction-to-binary 的代码，体会“并不是所有数都能终止”
+### 6. 用 fraction-to-binary 代码时，先分清数学上的 $1/10$ 与已存的 `float(0.1)`
 <!-- bilingual-en:start -->
-*6. Fraction-to-Binary Code: Not Every Conversion Terminates*
+*6. Fraction-to-Binary Code Must Distinguish Mathematical $1/10$ from the Stored `float(0.1)`*
 <!-- bilingual-en:end -->
-老师展示了一段把十进制 fraction 转成二进制的代码。
+老师展示了一段尝试把输入 fraction 写成有限二进制小数的代码。
 <!-- bilingual-en:start -->
-The instructor shows code that attempts to convert a decimal fraction to binary.
+The instructor shows code that attempts to express an input fraction as a finite binary fraction.
 <!-- bilingual-en:end -->
 
 核心结构大致是：
@@ -239,23 +247,30 @@ while ((2**p) * x) % 1 != 0:
 It repeatedly multiplies `x` by larger powers `2**p` and checks whether the result has become an integer.
 <!-- bilingual-en:end -->
 
-对 `0.625` 这类数，它会成功；  
-对 `0.1`，它就会一直找不到让小数部分变成 0 的那个 `p`。
+对能被精确存储的 `0.625=5/8`，循环在 $p=3$ 时停止。数学上的精确 $1/10$ 确实没有这样的有限 $p$；但把 Python 字面量 `0.1` 直接代入这段循环时，情况不同：输入阶段已经先把 $1/10$ 舍入成
+
+```python
+0.1.as_integer_ratio()
+# (3602879701896397, 36028797018963968)
+```
+
+分母 $36028797018963968=2^{55}$，所以循环会在 $p=55$ 停止。它此时求出的，是**已存浮点近似值**的精确有限二进制表示，不是数学上精确 $1/10$ 的有限表示。
 <!-- bilingual-en:start -->
-The test succeeds for a value such as `0.625`; for `0.1`, it never finds a finite `p` that eliminates the fractional part.
+For the exactly stored value `0.625 = 5/8`, the loop stops at $p=3$. The exact mathematical number $1/10$ has no such finite $p$. Passing the Python literal `0.1` to the loop is different, however, because input conversion has already rounded $1/10$ to `3602879701896397 / 2**55`. The loop therefore stops at $p=55$ and recovers the finite binary representation of the stored approximation, not a finite representation of exact mathematical $1/10$.
 <!-- bilingual-en:end -->
 
-老师借这个例子想让你真正看到：
+课件在这里还特意提醒：推导“某个十进制 fraction 能否有限转成二进制”时，曾暂时假定输入值本身完全准确，而不是已经被 Python 近似。代码一旦运行在 float 上，就必须把这层输入舍入算进去。因此真正应记住的是：
 
-- “二进制里无限展开” 不是一句抽象判断
-- 它会直接体现在程序无法找到终止条件
+- 先说明讨论的是数学实数，还是机器已经存下的浮点数；
+- 精确 $1/10$ 需要无限二进制展开；
+- 已存的 Python `0.1` 是有限 dyadic rational（二进有理数），但它不等于精确 $1/10$。
 <!-- bilingual-en:start -->
-An infinite binary expansion is thus not merely an abstract claim: it appears operationally as the failure to reach the loop's terminating condition.
+The slides explicitly warn that the mathematical argument temporarily assumes the decimal input itself is exact rather than already approximated on entry. Code running on a float must account for that first rounding step. The lasting distinction is therefore between the mathematical real number and the machine value already stored: exact $1/10$ needs infinitely many binary digits, whereas Python's stored `0.1` is a finite dyadic rational that is not exactly $1/10$.
 <!-- bilingual-en:end -->
 
-### 7. 既然 float 不精确，那数值算法就不能再死盯 `==`
+### 7. 目标实数未必能由 float 精确表示，数值算法不能盲目依赖 `==`
 <!-- bilingual-en:start -->
-*7. If Floats Are Inexact, Numerical Algorithms Cannot Rely Blindly on `==`*
+*7. When the Intended Real Is Not Exactly Representable as a Float, Numerical Algorithms Cannot Rely Blindly on `==`*
 <!-- bilingual-en:end -->
 讲完表示问题后，整讲进入第二部分：approximation method。
 <!-- bilingual-en:start -->
@@ -266,9 +281,9 @@ After representation, the lecture turns to an approximation method.
 
 - 对 perfect square，我们可以用整数 guess-and-check
 - 但大多数平方根不是整数
-- 而且 float equality 本身也不可靠
+- 而且反复浮点运算得到的已存值，未必与数学上预期的目标值完全相同
 <!-- bilingual-en:start -->
-Integer guess-and-check works for perfect squares, but most square roots are nonintegers and exact floating-point equality is itself unreliable.
+Integer guess-and-check works for perfect squares, but most square roots are nonintegers, and stored results after floating-point operations need not equal the ideal mathematical target exactly.
 <!-- bilingual-en:end -->
 
 所以新的问题变成：
@@ -346,11 +361,11 @@ Even with `increment = 0.0001`, the program is extremely slow. Periodic printing
 
 这一段在课堂上的作用不是“让程序跑出来”，而是让你切身体会到：
 
-- fixed increment 当然能逼近
-- 但它可能极慢
-- 特别是在目标值很大、精度要求又不低的时候
+- 参数合适且网格命中接受区域时，fixed increment 可以给出近似
+- 但它可能极慢，也可能完全跨过接受区域
+- 目标值大、步长细或容差严时，这两项代价尤其明显
 <!-- bilingual-en:start -->
-The point is experiential: a fixed increment can approximate the answer, but it may require an enormous number of steps when the target is large and the tolerance demanding.
+The point is experiential: when the chosen grid intersects the acceptance region, fixed increments can approximate the answer but may require an enormous number of steps. A coarse grid can also miss that region entirely.
 <!-- bilingual-en:end -->
 
 这也是 Lecture 6 要讲 bisection search 的直接铺垫。
@@ -461,11 +476,11 @@ The deepest change in Lecture 5 is not a particular code fragment but the standa
 从现在起，数值程序里经常要问：
 
 - 我能不能精确表示目标值？
-- equality 是否可信？
+- 当前任务要的是已存值精确相等，还是数学量在容差内足够接近？
 - 我是不是应该改用 closeness test？
 - 如果近似法失败了，程序如何显式说明？
 <!-- bilingual-en:start -->
-Numerical code must ask whether the target is exactly representable, whether equality is trustworthy, whether a closeness test is more appropriate, and how an approximation failure will be reported explicitly.
+Numerical code must ask whether the target is exactly representable, whether the task requires equality of stored values or closeness of mathematical quantities, and how an approximation failure will be reported explicitly.
 <!-- bilingual-en:end -->
 
 所以这一讲并不是单纯讲 float 或近似算法，而是在重写你对“数值正确性”的直觉。
@@ -535,11 +550,11 @@ The lecture therefore reshapes the notion of numerical correctness rather than m
 <!-- bilingual-en:end -->
 
 > [!warning] Common mistakes
-> - 把 float 当成精确实数，写大量 `==` 判断。
+> - 没有先区分“已存的二进有理数”和“想表达的数学实数”，也没有判断任务是否真的要求已存值精确相等，就大量使用 `==`；具体边界见 [[浮点精确等号]]。
 > - 只关心 epsilon，不关心步长和边界条件，导致程序极慢或失败。
 > - 近似算法没有失败分支，最后得到一个看起来像答案但其实不可信的结果。
 > <!-- bilingual-en:start -->
-> - Treating a float as an exact real number and relying heavily on `==`.
+> - Using `==` heavily without distinguishing stored dyadic values from the intended mathematical quantities or asking whether equality of stored values is actually required; see [[浮点精确等号]].
 > - Tuning only `epsilon` while ignoring the increment and boundary conditions, making the program excessively slow or unsuccessful.
 > - Omitting a failure branch and presenting a plausible-looking but untrustworthy approximation as an answer.
 > <!-- bilingual-en:end -->

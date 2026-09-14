@@ -1,0 +1,224 @@
+{
+  "nodes": [
+    {
+      "id": "c100000000000001",
+      "type": "text",
+      "x": 0,
+      "y": -260,
+      "width": 2520,
+      "height": 180,
+      "text": "# 概率不等式与集中界\n*Probability inequalities and concentration bounds*\n\n先读清 tail bound 的含义，再按已知信息选路：nonnegativity + mean 走 Markov；finite variance 走 Chebyshev；independence + boundedness 走 exponential bounds。随机量还是 event count 时，先到 [[指示变量与随机计数.canvas|indicator 建模]]。"
+    },
+    {
+      "id": "c100000000000002",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 420,
+      "height": 180,
+      "color": "3",
+      "text": "## 先读结果\n\n[[尾界含义|尾界是保证，不是概率等号]]\n\n数值超过 1 时只剩平凡界。"
+    },
+    {
+      "id": "c100000000000003",
+      "type": "text",
+      "x": 620,
+      "y": 0,
+      "width": 500,
+      "height": 180,
+      "color": "3",
+      "text": "## 再选工具\n\n[[概率界选择|写 target event、threshold 与条件]]\n\n没有满足 assumptions，就没有使用公式的资格。"
+    },
+    {
+      "id": "c100000000000004",
+      "type": "text",
+      "x": 0,
+      "y": 300,
+      "width": 420,
+      "height": 180,
+      "color": "5",
+      "text": "## 均值入口\n\n[[Markov不等式|Markov：非负 + mean 控制右尾]]\n\n证明来自逐点比较。"
+    },
+    {
+      "id": "c100000000000005",
+      "type": "text",
+      "x": 620,
+      "y": 300,
+      "width": 500,
+      "height": 180,
+      "color": "4",
+      "text": "## 支持集改进\n\n[[平移Markov界|shifted Markov：移除已知基线]]\n\n下界必须 almost surely 成立。"
+    },
+    {
+      "id": "c100000000000006",
+      "type": "text",
+      "x": 0,
+      "y": 600,
+      "width": 420,
+      "height": 200,
+      "color": "5",
+      "text": "## 二阶入口\n\n[[和的方差协方差项|variance of sum 要保留 covariance]]\n\npairwise uncorrelated 可逐项删交叉项；总和抵消也可能使方差相加。"
+    },
+    {
+      "id": "c100000000000007",
+      "type": "text",
+      "x": 800,
+      "y": 600,
+      "width": 500,
+      "height": 200,
+      "color": "4",
+      "text": "## 平方变换\n\n[[Chebyshev不等式|Chebyshev：对 squared deviation 用 Markov]]\n\nfinite variance 给双侧 polynomial tail。"
+    },
+    {
+      "id": "c100000000000008",
+      "type": "text",
+      "x": 0,
+      "y": 900,
+      "width": 420,
+      "height": 200,
+      "color": "6",
+      "text": "## Independence 边界\n\n[[两两独立不推出相互独立|pairwise 不推出 mutual]]\n\n二阶 covariance 与联合 MGF 需要的独立层级不同。"
+    },
+    {
+      "id": "c100000000000009",
+      "type": "text",
+			"x": 1320,
+			"y": 600,
+      "width": 500,
+      "height": 200,
+      "color": "5",
+      "text": "## 指数入口\n\n[[指数Markov法|exponential Markov：优化 MGF 上界]]\n\n[[相互独立|Mutual independence]] 保证联合乘积分解；[[两两独立]]一般不够。"
+    },
+    {
+      "id": "c10000000000000a",
+      "type": "text",
+			"x": 2020,
+			"y": 600,
+      "width": 500,
+      "height": 220,
+      "color": "4",
+      "text": "## 相对偏差\n\n[[乘法Chernoff上界|multiplicative Chernoff]]\n\n独立 $[0,1]$ 变量和的 relative upper tail。"
+    },
+    {
+      "id": "c10000000000000b",
+      "type": "text",
+			"x": 1320,
+			"y": 900,
+      "width": 500,
+      "height": 220,
+      "color": "4",
+      "text": "## 加性偏差\n\n[[Hoeffding不等式|general Hoeffding]]\n\n常数来自每个 support interval 的长度。"
+    },
+    {
+      "id": "c10000000000000c",
+      "type": "text",
+			"x": 2020,
+			"y": 900,
+      "width": 500,
+      "height": 220,
+      "color": "4",
+      "text": "## 样本均值\n\n[[样本均值Hoeffding界|令 $t=n\\varepsilon$]]\n\n$[0,1]$ 时得到 $2e^{-2n\\varepsilon^2}$。"
+    }
+  ],
+  "edges": [
+    {
+      "id": "d100000000000001",
+      "fromNode": "c100000000000002",
+      "fromSide": "right",
+      "toNode": "c100000000000003",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "先解释 ≤，再选工具"
+    },
+    {
+      "id": "d100000000000002",
+      "fromNode": "c100000000000003",
+      "fromSide": "bottom",
+      "toNode": "c100000000000004",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "仅知非负与均值"
+    },
+    {
+      "id": "d100000000000003",
+      "fromNode": "c100000000000004",
+      "fromSide": "right",
+      "toNode": "c100000000000005",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "已知下界后平移"
+    },
+    {
+      "id": "d100000000000004",
+      "fromNode": "c100000000000004",
+      "fromSide": "bottom",
+      "toNode": "c100000000000007",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "对平方偏差应用"
+    },
+    {
+      "id": "d100000000000005",
+      "fromNode": "c100000000000006",
+      "fromSide": "right",
+      "toNode": "c100000000000007",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "先算对 variance"
+    },
+    {
+      "id": "d100000000000006",
+      "fromNode": "c100000000000008",
+      "fromSide": "top",
+      "toNode": "c100000000000006",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "pairwise 已够二阶相加"
+    },
+    {
+      "id": "d100000000000007",
+      "fromNode": "c100000000000004",
+			"fromSide": "bottom",
+			"toNode": "c100000000000009",
+			"toSide": "top",
+      "toEnd": "arrow",
+      "label": "指数变换后仍用 Markov"
+    },
+    {
+      "id": "d100000000000008",
+			"fromNode": "c100000000000008",
+			"fromSide": "right",
+			"toNode": "c100000000000009",
+			"toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "mutual 保证 MGF 分解"
+    },
+    {
+      "id": "d100000000000009",
+      "fromNode": "c100000000000009",
+      "fromSide": "right",
+      "toNode": "c10000000000000a",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "[0,1] 凸性给相对上尾"
+    },
+    {
+      "id": "d10000000000000a",
+      "fromNode": "c100000000000009",
+			"fromSide": "bottom",
+			"toNode": "c10000000000000b",
+			"toSide": "top",
+      "toEnd": "arrow",
+      "label": "区间长度给加性偏差"
+    },
+    {
+      "id": "d10000000000000b",
+      "fromNode": "c10000000000000b",
+      "fromSide": "right",
+      "toNode": "c10000000000000c",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "取 t=nε"
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "nodes": [
+    {
+      "id": "cc7a000000000001",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 2560,
+      "height": 230,
+      "text": "# 对手方信用风险与估值调整 · 学习总图\n*Counterparty Credit Risk and Valuation Adjustments*\n\n先确定未来未覆盖正敞口，再按法律净额集合与抵押品条款形成敞口路径；单边 CVA 把该路径与对手违约联合定价，双边估值再加入本方违约和 first-to-default。错向风险专门表示敞口与违约在同一状态恶化。箭头表示计量、缓释、定价与监管分流，不表示掌握度。\n\n**当前状态：** 5 张原子均已 source-checked，掌握状态仍为 unassessed。",
+      "color": "6"
+    },
+    {
+      "id": "cc7a000000000002",
+      "type": "text",
+      "x": 0,
+      "y": 350,
+      "width": 420,
+      "height": 220,
+      "text": "## [[违约敞口口径]]\n\n贷款 EAD 以违约时余额、未用承诺和 CCF 为主。\n\n**边界：** 不能把贷款余额加 CCF 公式搬到衍生品未来市值。",
+      "color": "1"
+    },
+    {
+      "id": "cc7a000000000003",
+      "type": "text",
+      "x": 600,
+      "y": 350,
+      "width": 520,
+      "height": 280,
+      "text": "## [[对手方敞口指标]]\n\nCE、EE、EPE 与 PFE 分别描述当前正重置价值、未来均值、时间平均和未来高分位。\n\n**边界：** PFE 不是 EAD、VaR 或信用损失分位；时点、期限、分位与净额口径都是定义的一部分。",
+      "color": "2"
+    },
+    {
+      "id": "cc7a000000000004",
+      "type": "text",
+      "x": 1320,
+      "y": 350,
+      "width": 520,
+      "height": 280,
+      "text": "## [[净额与抵押品]]\n\n同一法律可执行净额集合内先聚合市值，再应用抵押品和协议条款，最后取剩余正敞口。\n\n**边界：** VM、IM、门槛、争议和保证金风险期改变敞口，却不保证敞口为零。",
+      "color": "3"
+    },
+    {
+      "id": "cc7a000000000005",
+      "type": "text",
+      "x": 2040,
+      "y": 350,
+      "width": 420,
+      "height": 220,
+      "text": "## [[SA-CCR]]\n\n监管非模型标准法按净额集合计算 $EAD=1.4(RC+PFE)$。\n\n**边界：** 这里的 PFE 是监管 add-on 组成，不是内部模拟分位。",
+      "color": "1"
+    },
+    {
+      "id": "cc7a000000000006",
+      "type": "text",
+      "x": 600,
+      "y": 820,
+      "width": 520,
+      "height": 280,
+      "text": "## [[错向风险]]\n\n对手更可能违约的状态若也使我方正敞口升高，就形成不利依赖；直接经济联系与共同市场状态要分别识别。\n\n**边界：** 交易方向本身不证明错向风险，必须说明敞口与对手违约为何共同变化。",
+      "color": "5"
+    },
+    {
+      "id": "cc7a000000000007",
+      "type": "text",
+      "x": 1320,
+      "y": 820,
+      "width": 520,
+      "height": 300,
+      "text": "## [[单边CVA]]\n\n本方无违约时，CVA 是对手违约造成的未覆盖正敞口损失之风险中性贴现期望。\n\n**边界：** $EE\\times$ 边际违约概率 $\\times LGD$ 只在相应分解条件下成立；一般式必须保留敞口与违约的联合状态。",
+      "color": "4"
+    },
+    {
+      "id": "cc7a000000000008",
+      "type": "text",
+      "x": 2040,
+      "y": 820,
+      "width": 520,
+      "height": 280,
+      "text": "## [[OTC清算与CCP风险.canvas|OTC 清算与 CCP 风险]]\n\n中央清算、违约瀑布与保证金反馈改变净额、流动性和损失分配网络。\n\n**边界：** CCP 集中是基础设施问题，不由一张双边抵押品卡重复承载。",
+      "color": "1"
+    },
+    {
+      "id": "cc7a000000000009",
+      "type": "text",
+      "x": 1320,
+      "y": 1290,
+      "width": 520,
+      "height": 300,
+      "text": "## [[DVA与双边估值]]\n\nDVA 是本方自身不履约风险对负敞口的公允价值调整；双边估值需按同一 close-out 和 first-to-default 规则联合计算。\n\n**边界：** $V_{clean}-CVA+DVA$ 只有在定义一致时才是有效分解，不能把两个独立单边数机械拼接。",
+      "color": "4"
+    },
+    {
+      "id": "cc7a00000000000a",
+      "type": "text",
+      "x": 2040,
+      "y": 1290,
+      "width": 520,
+      "height": 260,
+      "text": "## [[三类 CVA 口径]]\n\n会计 CVA、CCR 违约资本与 CVA 风险资本服务不同目标。\n\n**边界：** 公允价值调整不能替代违约资本，CVA 利差与市场因子风险也不能缩成单一 PD 变化。",
+      "color": "1"
+    }
+  ],
+  "edges": [
+    {
+      "id": "cc7b000000000001",
+      "fromNode": "cc7a000000000002",
+      "fromSide": "right",
+      "toNode": "cc7a000000000003",
+      "toSide": "left",
+      "label": "同名敞口参数必须先分产品口径"
+    },
+    {
+      "id": "cc7b000000000002",
+      "fromNode": "cc7a000000000003",
+      "fromSide": "right",
+      "toNode": "cc7a000000000004",
+      "toSide": "left",
+      "label": "净额与抵押品形成未覆盖敞口"
+    },
+    {
+      "id": "cc7b000000000003",
+      "fromNode": "cc7a000000000004",
+      "fromSide": "right",
+      "toNode": "cc7a000000000005",
+      "toSide": "left",
+      "label": "法律净额集合进入监管 RC 与 PFE"
+    },
+    {
+      "id": "cc7b000000000004",
+      "fromNode": "cc7a000000000003",
+      "fromSide": "bottom",
+      "toNode": "cc7a000000000006",
+      "toSide": "top",
+      "label": "随机敞口与违约状态可能依赖"
+    },
+    {
+      "id": "cc7b000000000005",
+      "fromNode": "cc7a000000000004",
+      "fromSide": "bottom",
+      "toNode": "cc7a000000000007",
+      "toSide": "top",
+      "label": "剩余正敞口进入损失定价"
+    },
+    {
+      "id": "cc7b000000000006",
+      "fromNode": "cc7a000000000006",
+      "fromSide": "right",
+      "toNode": "cc7a000000000007",
+      "toSide": "left",
+      "label": "依赖改变违约时的条件敞口"
+    },
+    {
+      "id": "cc7b000000000007",
+      "fromNode": "cc7a000000000004",
+      "fromSide": "right",
+      "toNode": "cc7a000000000008",
+      "toSide": "left",
+      "label": "保证金机制扩展到清算基础设施"
+    },
+    {
+      "id": "cc7b000000000008",
+      "fromNode": "cc7a000000000007",
+      "fromSide": "bottom",
+      "toNode": "cc7a000000000009",
+      "toSide": "top",
+      "label": "加入本方违约与先违约条件"
+    },
+    {
+      "id": "cc7b000000000009",
+      "fromNode": "cc7a000000000007",
+      "fromSide": "right",
+      "toNode": "cc7a00000000000a",
+      "toSide": "left",
+      "label": "会计估值与监管资本分流"
+    },
+    {
+      "id": "cc7b00000000000a",
+      "fromNode": "cc7a000000000009",
+      "fromSide": "right",
+      "toNode": "cc7a00000000000a",
+      "toSide": "left",
+      "label": "DVA 留在公允价值而非 CVA 资本"
+    }
+  ]
+}

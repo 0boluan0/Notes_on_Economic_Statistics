@@ -1,0 +1,139 @@
+{
+  "nodes": [
+    {
+      "id": "d19a2c6b4e8f0731",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 1260,
+      "height": 190,
+      "text": "# 制度、地理与长期发展差距\n\n先分清解释层次，再比较制度与地理的可并存通道，最后检查历史识别能支持到哪一步。颜色只区分语义角色，不表示掌握度。"
+    },
+    {
+      "id": "e42b7d9c1a5f6803",
+      "type": "text",
+      "x": 430,
+      "y": 270,
+      "width": 400,
+      "height": 220,
+      "color": "2",
+      "text": "## [[发展差距的近因与根因|近因与根因]]\n\n资本、人力资本和生产率解释差距怎样形成；制度、地理和历史追问这些近因为何长期不同。"
+    },
+    {
+      "id": "a73c0e5d9b2f4618",
+      "type": "text",
+      "x": 0,
+      "y": 600,
+      "width": 360,
+      "height": 250,
+      "color": "4",
+      "text": "## [[制度塑造发展激励|制度机制]]\n\n权利、执行、交易成本与权力约束改变投资、创新、进入和公共品供给的激励。"
+    },
+    {
+      "id": "f15e8a3c7d9b2046",
+      "type": "text",
+      "x": 450,
+      "y": 600,
+      "width": 360,
+      "height": 250,
+      "color": "4",
+      "text": "## [[地理的发展双通道|地理双通道]]\n\n地理可直接影响疾病、农业与运输成本，也可经定居和殖民策略间接塑造制度。"
+    },
+    {
+      "id": "b60d4f1a8c3e7295",
+      "type": "text",
+      "x": 900,
+      "y": 600,
+      "width": 360,
+      "height": 250,
+      "color": "6",
+      "text": "## [[制度收入的识别边界|制度—收入识别]]\n\n观察相关混合了制度效应、收入反向影响、历史/地理共同原因和测量误差。"
+    },
+    {
+      "id": "c82f6a0d4e1b9375",
+      "type": "text",
+      "x": 180,
+      "y": 990,
+      "width": 420,
+      "height": 260,
+      "color": "3",
+      "text": "## [[制度路径依赖|制度路径依赖]]\n\n历史冲击要通过权力、受益集团和正式/非正式规则的再生产环才能持续；持续不等于不可改变。"
+    },
+    {
+      "id": "9e31b7c5d0a462f8",
+      "type": "text",
+      "x": 760,
+      "y": 990,
+      "width": 420,
+      "height": 310,
+      "color": "5",
+      "text": "## [[定居者死亡率工具变量|定居者死亡率 IV]]\n\n历史死亡率只有在相关性、外生性和排除限制成立时才能识别制度效应；数据争论与样本外推仍需单独报告。"
+    }
+  ],
+  "edges": [
+    {
+      "id": "18a4c7e2b9d0536f",
+      "fromNode": "e42b7d9c1a5f6803",
+      "fromSide": "left",
+      "toNode": "a73c0e5d9b2f4618",
+      "toSide": "top",
+      "label": "追问积累与创新为何不同"
+    },
+    {
+      "id": "2b6d9f0a4c7e1358",
+      "fromNode": "e42b7d9c1a5f6803",
+      "fromSide": "bottom",
+      "toNode": "f15e8a3c7d9b2046",
+      "toSide": "top",
+      "label": "追问自然机会与成本"
+    },
+    {
+      "id": "3c7e0a1b5d8f2469",
+      "fromNode": "e42b7d9c1a5f6803",
+      "fromSide": "right",
+      "toNode": "b60d4f1a8c3e7295",
+      "toSide": "top",
+      "label": "解释主张还需识别"
+    },
+    {
+      "id": "4d8f1b2c6e9a3570",
+      "fromNode": "a73c0e5d9b2f4618",
+      "fromSide": "bottom",
+      "toNode": "c82f6a0d4e1b9375",
+      "toSide": "top",
+      "label": "权力与受益可自我强化"
+    },
+    {
+      "id": "5e9a2c3d7f0b4681",
+      "fromNode": "f15e8a3c7d9b2046",
+      "fromSide": "bottom",
+      "toNode": "c82f6a0d4e1b9375",
+      "toSide": "top",
+      "label": "定居与殖民策略塑造初始制度"
+    },
+    {
+      "id": "6f0b3d4e8a1c5792",
+      "fromNode": "f15e8a3c7d9b2046",
+      "fromSide": "right",
+      "toNode": "b60d4f1a8c3e7295",
+      "toSide": "left",
+      "label": "直接通道可构成遗漏路径"
+    },
+    {
+      "id": "7a1c4e5f9b2d6803",
+      "fromNode": "c82f6a0d4e1b9375",
+      "fromSide": "right",
+      "toNode": "9e31b7c5d0a462f8",
+      "toSide": "left",
+      "label": "历史变异提供工具候选"
+    },
+    {
+      "id": "8b2d5f6a0c3e7914",
+      "fromNode": "b60d4f1a8c3e7295",
+      "fromSide": "bottom",
+      "toNode": "9e31b7c5d0a462f8",
+      "toSide": "top",
+      "label": "IV 用更强假设换取识别"
+    }
+  ]
+}

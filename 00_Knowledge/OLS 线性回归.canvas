@@ -1,0 +1,314 @@
+{
+  "nodes": [
+    {
+      "id": "0150000000000000",
+      "type": "text",
+      "x": 0,
+      "y": -420,
+      "width": 2940,
+      "height": 250,
+      "text": "# OLS 线性回归\n\n主线是：**先界定 OLS 在逼近什么 → 再看样本平方损失产生哪些代数性质 → 最后逐项加入总体假设，判断无偏、一致、效率与推断分别能否成立**。函数形式改变系数单位和边际效应，但不改变“对参数线性”的核心。\n\n青色表示对象与解释，紫色表示样本估计代数，黄色表示统计假设与保证。颜色只帮助阅读，不表示掌握程度；来源与掌握情况可在 [[知识原子.base|知识原子 Base]] 中查看。"
+    },
+    {
+      "id": "0150000000000001",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 440,
+      "height": 200,
+      "text": "## [[条件均值与线性投影|条件均值与线性投影]]\n*Conditional mean vs. best linear projection*\n\n条件均值是完整的总体回归函数；最佳线性投影是在当前联合分布下，用平方损失选出的最佳线性近似。",
+      "color": "5"
+    },
+    {
+      "id": "0150000000000002",
+      "type": "text",
+      "x": 0,
+      "y": 340,
+      "width": 440,
+      "height": 200,
+      "text": "## [[参数线性|什么叫线性]]\n*Linearity in the parameters*\n\n原变量可取 log、平方或交互；只要未知参数仍以一次、可加形式进入，模型就对参数线性。",
+      "color": "5"
+    },
+    {
+      "id": "015000000000000e",
+      "type": "text",
+      "x": 0,
+      "y": 680,
+      "width": 440,
+      "height": 220,
+      "text": "## [[level-log 系数解释|level 与 log]]\n*Levels, logs, and coefficient units*\n\n谁取对数决定单位变化、半弹性或弹性的读法；因变量取 log 时，回到原尺度还要处理重转换。",
+      "color": "5"
+    },
+    {
+      "id": "015000000000000f",
+      "type": "text",
+      "x": 500,
+      "y": 680,
+      "width": 440,
+      "height": 220,
+      "text": "## [[取值依赖边际效应|取值依赖的边际效应]]\n*Value-dependent marginal effects*\n\n二次项和连续交互项用导数读边际效应；涉及离散变量时应比较有限差分。",
+      "color": "5"
+    },
+    {
+      "id": "0150000000000003",
+      "type": "text",
+      "x": 650,
+      "y": 0,
+      "width": 440,
+      "height": 200,
+      "text": "## [[普通最小二乘|OLS 的估计准则]]\n*The OLS criterion*\n\nOLS 系数是残差平方和的任一最小化解；系数是否唯一要另看秩条件。",
+      "color": "6"
+    },
+    {
+      "id": "0150000000000011",
+      "type": "text",
+      "x": 1150,
+      "y": 0,
+      "width": 440,
+      "height": 200,
+      "text": "## [[回归残差|回归残差]]\n*Regression residual*\n\n样本残差是观测值与拟合值之差；它由估计结果构造，不等于不可观测的总体误差。",
+      "color": "6"
+    },
+    {
+      "id": "0150000000000004",
+      "type": "text",
+      "x": 650,
+      "y": 340,
+      "width": 440,
+      "height": 200,
+      "text": "## [[满列秩与OLS唯一性|唯一系数的秩条件]]\n*Full rank and uniqueness*\n\n满列秩让 $X'X$ 可逆；秩亏时拟合投影仍唯一，但系数表示可能不唯一。",
+      "color": "6"
+    },
+    {
+      "id": "0150000000000005",
+      "type": "text",
+      "x": 1150,
+      "y": 340,
+      "width": 440,
+      "height": 200,
+      "text": "## [[OLS正规方程|正规方程与样本正交]]\n*Normal equations and sample orthogonality*\n\n一阶条件 $X'\\hat u=0$ 让样本残差与实际放入设计矩阵的每一列正交。",
+      "color": "6"
+    },
+    {
+      "id": "0150000000000007",
+      "type": "text",
+      "x": 650,
+      "y": 1030,
+      "width": 440,
+      "height": 200,
+      "text": "## [[一元 OLS 斜率|一元斜率公式]]\n*Simple-regression slope*\n\n含截距且解释变量有样本变异时，斜率等于 $X,Y$ 的样本协方差除以 $X$ 的样本方差。",
+      "color": "6"
+    },
+    {
+      "id": "0150000000000009",
+      "type": "text",
+      "x": 1150,
+      "y": 680,
+      "width": 440,
+      "height": 220,
+      "text": "## [[FWL残差化定理|FWL 残差化]]\n*Frisch–Waugh–Lovell residualisation*\n\n把结果和焦点变量都对同一组控制变量残差化，可恢复原多元回归中的焦点系数。",
+      "color": "6"
+    },
+    {
+      "id": "0150000000000008",
+      "type": "text",
+      "x": 1150,
+      "y": 1030,
+      "width": 440,
+      "height": 230,
+      "text": "## [[多元回归系数|多元系数的读法]]\n*Interpreting a multiple-regression coefficient*\n\n在线性条件均值模型中，它是控制已含变量后的条件均值斜率；仅作最佳线性投影时，它是偏线性关联，不自动具有因果含义。",
+      "color": "5"
+    },
+    {
+      "id": "0150000000000006",
+      "type": "text",
+      "x": 1800,
+      "y": 0,
+      "width": 440,
+      "height": 210,
+      "text": "## [[样本正交与总体外生性|样本正交不等于外生性]]\n*Sample orthogonality is not exogeneity*\n\n$X'\\hat u=0$ 是估计制造的样本恒等式，不能验证不可观测总体误差的条件均值。",
+      "color": "2"
+    },
+    {
+      "id": "015000000000000a",
+      "type": "text",
+      "x": 1800,
+      "y": 340,
+      "width": 440,
+      "height": 210,
+      "text": "## [[零条件均值无偏性|零条件均值与条件无偏]]\n*Zero conditional mean and conditional unbiasedness*\n\n给定完整设计矩阵时，$E(u\\mid X)=0$ 使有限样本 OLS 满足 $E(\\hat\\beta\\mid X)=\\beta$。",
+      "color": "2"
+    },
+    {
+      "id": "015000000000000b",
+      "type": "text",
+      "x": 1750,
+      "y": 680,
+      "width": 440,
+      "height": 220,
+      "text": "## [[OLS一致性条件|OLS 一致性]]\n*Consistency of OLS*\n\n总体正交、参数识别与样本矩的大样本稳定性共同让 $\\hat\\beta$ 收敛到目标；它不要求有限样本无偏。",
+      "color": "2"
+    },
+    {
+      "id": "015000000000000c",
+      "type": "text",
+      "x": 2300,
+      "y": 680,
+      "width": 440,
+      "height": 230,
+      "text": "## [[经典 Gauss–Markov 定理|经典 Gauss–Markov 的范围]]\n*Scope of the classical Gauss–Markov theorem*\n\n经典 BLUE 表述在线性无偏估计量类别中比较方差；现代结果可在重新表述后覆盖更宽的无偏估计量类别。",
+      "color": "2"
+    },
+    {
+      "id": "015000000000000d",
+      "type": "text",
+      "x": 2300,
+      "y": 1030,
+      "width": 440,
+      "height": 210,
+      "text": "## [[BLUE正态性边界|正态性的真正作用]]\n*What normality actually adds*\n\n正态性不参与经典 BLUE 结论；在经典正态模型中，它提供精确的小样本 $t/F$ 分布。",
+      "color": "2"
+    },
+    {
+      "id": "0150000000000010",
+      "type": "text",
+      "x": 0,
+      "y": 1420,
+      "width": 2940,
+      "height": 170,
+      "text": "## [[回归推断.canvas|进入：回归推断]]\n*Continue to regression inference*\n\n系数如何算、何时无偏或 BLUE 只是估计层；标准误、t/F/Wald、p 值、区间和选择后有效性进入独立子地图。",
+      "color": "4"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e150000000000001",
+      "fromNode": "0150000000000001",
+      "fromSide": "right",
+      "toNode": "0150000000000003",
+      "toSide": "left",
+      "label": "样本中采用对应的平方损失"
+    },
+    {
+      "id": "e150000000000002",
+      "fromNode": "0150000000000002",
+      "fromSide": "right",
+      "toNode": "0150000000000003",
+      "toSide": "left",
+      "label": "变换项仍可作为设计矩阵列"
+    },
+    {
+      "id": "e150000000000003",
+      "fromNode": "0150000000000002",
+      "fromSide": "bottom",
+      "toNode": "015000000000000e",
+      "toSide": "top",
+      "label": "变换位置决定系数单位"
+    },
+    {
+      "id": "e150000000000004",
+      "fromNode": "0150000000000002",
+      "fromSide": "right",
+      "toNode": "015000000000000f",
+      "toSide": "top",
+      "label": "参数线性不等于边际效应恒定"
+    },
+    {
+      "id": "e150000000000005",
+      "fromNode": "0150000000000003",
+      "fromSide": "bottom",
+      "toNode": "0150000000000004",
+      "toSide": "top",
+      "label": "唯一系数还需满列秩"
+    },
+    {
+      "id": "e150000000000006",
+      "fromNode": "0150000000000011",
+      "fromSide": "left",
+      "toNode": "0150000000000003",
+      "toSide": "right",
+      "label": "残差平方和定义 OLS 的估计准则"
+    },
+    {
+      "id": "e150000000000010",
+      "fromNode": "0150000000000011",
+      "fromSide": "bottom",
+      "toNode": "0150000000000005",
+      "toSide": "top",
+      "label": "一阶条件使残差与设计矩阵列正交"
+    },
+    {
+      "id": "e150000000000007",
+      "fromNode": "0150000000000005",
+      "fromSide": "left",
+      "toNode": "0150000000000007",
+      "toSide": "right",
+      "label": "含截距一元情形化为 cov/var"
+    },
+    {
+      "id": "e150000000000008",
+      "fromNode": "0150000000000005",
+      "fromSide": "bottom",
+      "toNode": "0150000000000009",
+      "toSide": "top",
+      "label": "从 X 与 Y 中剔除同一控制空间"
+    },
+    {
+      "id": "e150000000000009",
+      "fromNode": "0150000000000009",
+      "fromSide": "bottom",
+      "toNode": "0150000000000008",
+      "toSide": "top",
+      "label": "给出偏线性系数的读法"
+    },
+    {
+      "id": "e15000000000000a",
+      "fromNode": "0150000000000005",
+      "fromSide": "right",
+      "toNode": "0150000000000006",
+      "toSide": "left",
+      "label": "样本恒等式不是总体外生性"
+    },
+    {
+      "id": "e15000000000000b",
+      "fromNode": "0150000000000006",
+      "fromSide": "bottom",
+      "toNode": "015000000000000a",
+      "toSide": "top",
+      "label": "条件无偏必须另加总体假设"
+    },
+    {
+      "id": "e15000000000000c",
+      "fromNode": "015000000000000a",
+      "fromSide": "bottom",
+      "toNode": "015000000000000b",
+      "toSide": "top",
+      "label": "无偏与一致性的条件不可互换"
+    },
+    {
+      "id": "e15000000000000d",
+      "fromNode": "015000000000000a",
+      "fromSide": "right",
+      "toNode": "015000000000000c",
+      "toSide": "top",
+      "label": "再加球形条件方差得到经典 BLUE"
+    },
+    {
+      "id": "e15000000000000e",
+      "fromNode": "015000000000000c",
+      "fromSide": "bottom",
+      "toNode": "015000000000000d",
+      "toSide": "top",
+      "label": "经典 BLUE 不需要正态"
+    },
+    {
+      "id": "e15000000000000f",
+      "fromNode": "015000000000000d",
+      "fromSide": "bottom",
+      "toNode": "0150000000000010",
+      "toSide": "top",
+      "label": "从估计性质进入抽样推断",
+      "toEnd": "arrow"
+    }
+  ]
+}

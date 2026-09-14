@@ -1,0 +1,262 @@
+{
+  "nodes": [
+    {
+      "id": "header",
+      "type": "text",
+      "text": "# 指示变量与随机计数 · 原子地图\n\n主线先把事件定义成 0/1 随机变量，再用‘期望等于概率’把有限计数化成概率之和。下方分支把补、交、并三条恒等式与协方差边界分开，不让一张卡同时承担定义和性质。",
+      "x": 40,
+      "y": 20,
+      "width": 1860,
+      "height": 180
+    },
+    {
+      "id": "indicator-definition",
+      "type": "text",
+      "text": "## [[事件指示变量]]\n\n定义入口：事件发生取 1，否则取 0。它是随机变量，不是概率本身。",
+      "x": 40,
+      "y": 300,
+      "width": 340,
+      "height": 190,
+      "color": "4"
+    },
+    {
+      "id": "indicator-expectation",
+      "type": "text",
+      "text": "## [[指示变量期望]]\n\n$E[I_A]=P(A)$：0/1 贡献的平均值恰好等于事件概率。",
+      "x": 420,
+      "y": 300,
+      "width": 340,
+      "height": 190,
+      "color": "6"
+    },
+    {
+      "id": "random-count",
+      "type": "text",
+      "text": "## [[随机计数的指标和]]\n\n逐结果先验证 $X=\\sum_j I_{A_j}$，再得到 $E[X]=\\sum_jP(A_j)$；不需要独立。",
+      "x": 800,
+      "y": 300,
+      "width": 340,
+      "height": 190,
+      "color": "6"
+    },
+    {
+      "id": "indexing-method",
+      "type": "text",
+      "text": "## [[计数指标的索引策略]]\n\n按对象、位置或无序子结构索引；每个真实贡献必须恰好出现一次。",
+      "x": 1180,
+      "y": 300,
+      "width": 340,
+      "height": 190,
+      "color": "5"
+    },
+    {
+      "id": "linearity",
+      "type": "text",
+      "text": "## [[期望线性性]]\n\n有限和的期望直接相加，不要求各指标独立。",
+      "x": 800,
+      "y": 650,
+      "width": 340,
+      "height": 190,
+      "color": "6"
+    },
+    {
+      "id": "binomial-boundary",
+      "type": "text",
+      "text": "## [[Bernoulli和的二项分布]]\n\n只有同一成功概率并且相互独立时，指标和才由这些条件推出 Binomial。",
+      "x": 1180,
+      "y": 650,
+      "width": 340,
+      "height": 190,
+      "color": "1"
+    },
+    {
+      "id": "complement",
+      "type": "text",
+      "text": "## [[指示变量的补集变换]]\n\n$I_{A^c}=1-I_A$：逻辑上的‘非’变成用一减去。",
+      "x": 40,
+      "y": 1050,
+      "width": 340,
+      "height": 190,
+      "color": "6"
+    },
+    {
+      "id": "intersection",
+      "type": "text",
+      "text": "## [[指示变量的交事件乘积]]\n\n$I_AI_B=I_{A\\cap B}$：逻辑上的‘同时发生’变成乘法。",
+      "x": 420,
+      "y": 1050,
+      "width": 340,
+      "height": 190,
+      "color": "6"
+    },
+    {
+      "id": "indicator-covariance",
+      "type": "text",
+      "text": "## [[指示变量协方差]]\n\n$\\operatorname{Cov}(I_A,I_B)=P(A\\cap B)-P(A)P(B)$，比较实际重叠与独立基准。",
+      "x": 800,
+      "y": 1050,
+      "width": 340,
+      "height": 190,
+      "color": "6"
+    },
+    {
+      "id": "shared-index-boundary",
+      "type": "text",
+      "text": "## [[共享索引不决定协方差]]\n\n共享一个人或下标不推出相依，也不决定协方差为正、零还是负。",
+      "x": 1560,
+      "y": 1050,
+      "width": 340,
+      "height": 210,
+      "color": "1"
+    },
+    {
+      "id": "union",
+      "type": "text",
+      "text": "## [[指示变量的并事件恒等式]]\n\n$I_{A\\cup B}=I_A+I_B-I_AI_B$：减去交集上的一次重复计数。",
+      "x": 420,
+      "y": 1400,
+      "width": 340,
+      "height": 190,
+      "color": "6"
+    },
+    {
+      "id": "variance-sum",
+      "type": "text",
+      "text": "## [[和的方差协方差项]]\n\n求计数方差时保留全部二阶协方差；只求均值时不需要这些联合概率。",
+      "x": 800,
+      "y": 1400,
+      "width": 340,
+      "height": 190,
+      "color": "6"
+    },
+    {
+      "id": "zero-covariance-boundary",
+      "type": "text",
+      "text": "## [[零协方差不推独立]]\n\n一般随机变量零协方差不推出独立；两个事件指标是特殊情形。",
+      "x": 1180,
+      "y": 1400,
+      "width": 340,
+      "height": 190,
+      "color": "1"
+    },
+    {
+      "id": "footer",
+      "type": "text",
+      "text": "颜色只区分本图中的语义角色：绿色是定义入口，紫色是定理或恒等式，青色是方法，红色是适用边界。掌握状态仍由 Base 与 YAML 管理；点击节点名会打开对应的 Markdown 原子。",
+      "x": 40,
+      "y": 1750,
+      "width": 1860,
+      "height": 170
+    }
+  ],
+  "edges": [
+    {
+      "id": "e01",
+      "fromNode": "indicator-definition",
+      "fromSide": "right",
+      "toNode": "indicator-expectation",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "对 0/1 取期望"
+    },
+    {
+      "id": "e02",
+      "fromNode": "indicator-expectation",
+      "fromSide": "right",
+      "toNode": "random-count",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "逐项把期望换成概率"
+    },
+    {
+      "id": "e03",
+      "fromNode": "random-count",
+      "fromSide": "right",
+      "toNode": "indexing-method",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "选择真正的计数单位"
+    },
+    {
+      "id": "e04",
+      "fromNode": "linearity",
+      "fromSide": "top",
+      "toNode": "random-count",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "有限和无需独立"
+    },
+    {
+      "id": "e05",
+      "fromNode": "random-count",
+      "fromSide": "bottom",
+      "toNode": "binomial-boundary",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "再核验同 p 与相互独立"
+    },
+    {
+      "id": "e06",
+      "fromNode": "indicator-definition",
+      "fromSide": "bottom",
+      "toNode": "complement",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "逻辑非"
+    },
+    {
+      "id": "e07",
+      "fromNode": "indicator-definition",
+      "fromSide": "bottom",
+      "toNode": "intersection",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "逻辑交"
+    },
+    {
+      "id": "e08",
+      "fromNode": "intersection",
+      "fromSide": "bottom",
+      "toNode": "union",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "修正并事件的重复计数"
+    },
+    {
+      "id": "e09",
+      "fromNode": "intersection",
+      "fromSide": "right",
+      "toNode": "indicator-covariance",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "取期望并扣除独立基准"
+    },
+    {
+      "id": "e10",
+      "fromNode": "indicator-covariance",
+      "fromSide": "right",
+      "toNode": "shared-index-boundary",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "联合机制决定符号"
+    },
+    {
+      "id": "e11",
+      "fromNode": "indicator-covariance",
+      "fromSide": "bottom",
+      "toNode": "variance-sum",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "代入随机和方差"
+    },
+    {
+      "id": "e12",
+      "fromNode": "indicator-covariance",
+      "fromSide": "bottom",
+      "toNode": "zero-covariance-boundary",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "对照一般零协方差边界"
+    }
+  ]
+}

@@ -1,0 +1,442 @@
+{
+  "nodes": [
+    {
+      "id": "d7a0000000000000",
+      "type": "text",
+      "x": 0,
+      "y": -400,
+      "width": 2510,
+      "height": 250,
+      "text": "# 图的基本结构、路径与遍历\n\n**读图方式：** 先声明 vertex/edge 语义与图类型，再选表示；随后沿 walk → path → distance → connectivity 建立数学语言，最后进入共享搜索不变量、BFS 与 DFS。右上角是线性代数接口。\n\n点击卡片标题进入中英双语原子。青色表示基础定义、定理与代数接口，紫色表示需要主动区分的结构，绿色表示搜索程序，红色表示 cycle 诊断；颜色不表示掌握度。属性另见 [[知识原子.base|知识原子 Base]]。"
+    },
+    {
+      "id": "d7a0000000000001",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 430,
+      "height": 190,
+      "text": "## [[图模型语义|顶点与边的语义]]\n*Vertex and edge semantics*\n\n先说清对象身份、连边判据与目标。",
+      "color": "5"
+    },
+    {
+      "id": "d7a0000000000002",
+      "type": "text",
+      "x": 520,
+      "y": 0,
+      "width": 430,
+      "height": 190,
+      "text": "## [[图类型的建模边界|图类型边界]]\n*Graph-type boundaries*\n\n方向、重边、自环与权重是四个不同选择。",
+      "color": "6"
+    },
+    {
+      "id": "d7a0000000000003",
+      "type": "text",
+      "x": 1040,
+      "y": 0,
+      "width": 430,
+      "height": 190,
+      "text": "## [[度数、入度与出度|degree、in-degree 与 out-degree]]\n*Degree, in-degree, and out-degree*\n\n先按边方向选择正确的局部计数。",
+      "color": "5"
+    },
+    {
+      "id": "d7a0000000000004",
+      "type": "text",
+      "x": 1560,
+      "y": 0,
+      "width": 430,
+      "height": 190,
+      "text": "## [[无向图握手定理|Handshaking lemma]]\n*Degree sum equals twice the edge count*\n\n对 vertex–edge incidences 做双重计数。",
+      "color": "5"
+    },
+    {
+      "id": "d7a0000000000005",
+      "type": "text",
+      "x": 0,
+      "y": 310,
+      "width": 430,
+      "height": 190,
+      "text": "## [[邻接表与邻接矩阵|邻接表与邻接矩阵]]\n*Adjacency list versus matrix*\n\n表示法决定存储、邻居枚举与查边成本。",
+      "color": "6"
+    },
+    {
+      "id": "d7a0000000000006",
+      "type": "text",
+      "x": 520,
+      "y": 310,
+      "width": 430,
+      "height": 190,
+      "text": "## [[邻接矩阵幂计数游走|矩阵幂计数 walks]]\n*Matrix powers count walks*\n\n矩阵乘法按中间点拼接固定长度游走。",
+      "color": "5"
+    },
+    {
+      "id": "d7a0000000000014",
+      "type": "text",
+      "x": 1040,
+      "y": 310,
+      "width": 430,
+      "height": 190,
+      "text": "## [[图同构的定义与不变量|图同构]]\n*Graph isomorphism*\n\n比较邻接结构，不比较画法与标签。",
+      "color": "6"
+    },
+    {
+      "id": "d7a0000000000015",
+      "type": "text",
+      "x": 1560,
+      "y": 310,
+      "width": 430,
+      "height": 190,
+      "text": "## [[关联矩阵势差映射|关联矩阵]]\n*Incidence matrix*\n\n每行一条边，把 vertex potentials 映成 edge differences。",
+      "color": "5"
+    },
+    {
+      "id": "d7a0000000000016",
+      "type": "text",
+      "x": 2080,
+      "y": 310,
+      "width": 430,
+      "height": 190,
+      "text": "## [[加权图 Laplacian|加权 graph Laplacian]]\n*Weighted graph Laplacian*\n\n$A^TCA$ 合成边传导、节点守恒与能量。",
+      "color": "5"
+    },
+    {
+      "id": "d7a0000000000007",
+      "type": "text",
+      "x": 0,
+      "y": 660,
+      "width": 430,
+      "height": 190,
+      "text": "## [[游走路径与环|walk、path、closed walk、cycle]]\n*Walks, paths, closed walks, cycles*\n\n先分清允许重复到什么程度。",
+      "color": "6"
+    },
+    {
+      "id": "d7a0000000000008",
+      "type": "text",
+      "x": 520,
+      "y": 660,
+      "width": 430,
+      "height": 190,
+      "text": "## [[游走去环得到路径|walk 去环得到 path]]\n*Delete closed detours*\n\n重复顶点之间的闭合段可以安全删除。",
+      "color": "5"
+    },
+    {
+      "id": "d7a0000000000009",
+      "type": "text",
+      "x": 1040,
+      "y": 660,
+      "width": 430,
+      "height": 190,
+      "text": "## [[图距离与可达性|distance 与 reachability]]\n*Distance and reachability*\n\n先问能否到达，再问最少经过多少条边。",
+      "color": "6"
+    },
+    {
+      "id": "d7a000000000000a",
+      "type": "text",
+      "x": 1560,
+      "y": 660,
+      "width": 430,
+      "height": 190,
+      "text": "## [[无向图连通分量|无向 connected components]]\n*Undirected connected components*\n\n无向可达是等价关系，每个类一个 component。",
+      "color": "6"
+    },
+    {
+      "id": "d7a000000000000b",
+      "type": "text",
+      "x": 2080,
+      "y": 660,
+      "width": 430,
+      "height": 190,
+      "text": "## [[强连通与弱连通|strong 与 weak connectivity]]\n*Strong versus weak connectivity*\n\n互相可达与忽略方向是两种不同条件。",
+      "color": "6"
+    },
+    {
+      "id": "d7a000000000000c",
+      "type": "text",
+      "x": 520,
+      "y": 1000,
+      "width": 430,
+      "height": 190,
+      "text": "## [[搜索标记与父森林|发现标记与 parent forest]]\n*Discovery and parent forest*\n\n发现、标记、写 parent、入 frontier 是同一动作。",
+      "color": "4"
+    },
+    {
+      "id": "d7a000000000000d",
+      "type": "text",
+      "x": 1040,
+      "y": 1000,
+      "width": 430,
+      "height": 190,
+      "text": "## [[邻接表图搜索复杂度|邻接表搜索 $O(|V|+|E|)$]]\n*Linear-time adjacency-list search*\n\n每点一次，每个 adjacency entry 常数次。",
+      "color": "4"
+    },
+    {
+      "id": "d7a000000000000e",
+      "type": "text",
+      "x": 0,
+      "y": 1340,
+      "width": 430,
+      "height": 190,
+      "text": "## [[BFS 分层与无权最短路|BFS 分层与无权最短距离]]\n*BFS distance layers*\n\nFIFO 让首次发现落在真实最小边数层。",
+      "color": "4"
+    },
+    {
+      "id": "d7a000000000000f",
+      "type": "text",
+      "x": 520,
+      "y": 1340,
+      "width": 430,
+      "height": 190,
+      "text": "## [[BFS 最短路树的顺序依赖|BFS parent shortest-path tree]]\n*One shortest-path tree*\n\n距离不变；tie 时 parent 可随邻接顺序改变。",
+      "color": "4"
+    },
+    {
+      "id": "d7a0000000000010",
+      "type": "text",
+      "x": 1040,
+      "y": 1340,
+      "width": 430,
+      "height": 190,
+      "text": "## [[DFS 可达性与非最短路径|DFS reachability]]\n*DFS reachability, not shortest paths*\n\n沿分支深入，正确找可达点但不按距离排序。",
+      "color": "4"
+    },
+    {
+      "id": "d7a0000000000011",
+      "type": "text",
+      "x": 1560,
+      "y": 1340,
+      "width": 430,
+      "height": 190,
+      "text": "## [[有向 DFS 的环证书|directed DFS 的 back edge]]\n*Directed back-edge certificate*\n\n指向 active ancestor 的边闭合 directed cycle。",
+      "color": "1"
+    },
+    {
+      "id": "d7a0000000000012",
+      "type": "text",
+      "x": 2080,
+      "y": 1340,
+      "width": 430,
+      "height": 210,
+      "text": "## [[无向 DFS 的父边例外|undirected DFS 的 parent-edge 例外]]\n*Ignore the exact parent edge*\n\n同一无向 tree edge 的反向读取不能误报为 cycle。",
+      "color": "1"
+    },
+    {
+      "id": "d7a0000000000013",
+      "type": "text",
+      "x": 1560,
+      "y": 1680,
+      "width": 430,
+      "height": 210,
+      "text": "## [[全图搜索与强连通边界|full traversal 与 SCC 边界]]\n*Full traversal and SCC boundary*\n\n无向树对应 components；有向 forest 不等于 SCC partition。",
+      "color": "4"
+    }
+  ],
+  "edges": [
+    {
+      "id": "d7b0000000000000",
+      "fromNode": "d7a0000000000001",
+      "fromSide": "right",
+      "toNode": "d7a0000000000002",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "进一步声明图类型"
+    },
+    {
+      "id": "d7b0000000000001",
+      "fromNode": "d7a0000000000002",
+      "fromSide": "right",
+      "toNode": "d7a0000000000003",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "方向决定 degree 的种类"
+    },
+    {
+      "id": "d7b0000000000002",
+      "fromNode": "d7a0000000000003",
+      "fromSide": "right",
+      "toNode": "d7a0000000000004",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "对 incidences 双重计数"
+    },
+    {
+      "id": "d7b0000000000003",
+      "fromNode": "d7a0000000000002",
+      "fromSide": "bottom",
+      "toNode": "d7a0000000000005",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "选择存储表示"
+    },
+    {
+      "id": "d7b0000000000004",
+      "fromNode": "d7a0000000000005",
+      "fromSide": "right",
+      "toNode": "d7a0000000000006",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "矩阵表示支持"
+    },
+    {
+      "id": "d7b0000000000005",
+      "fromNode": "d7a0000000000003",
+      "fromSide": "bottom",
+      "toNode": "d7a0000000000014",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "degree 可作结构不变量"
+    },
+    {
+      "id": "d7b0000000000006",
+      "fromNode": "d7a0000000000003",
+      "fromSide": "bottom",
+      "toNode": "d7a0000000000015",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "编码 edge–vertex incidence"
+    },
+    {
+      "id": "d7b0000000000007",
+      "fromNode": "d7a0000000000015",
+      "fromSide": "right",
+      "toNode": "d7a0000000000016",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "加入 edge conductance 并回收到 vertices"
+    },
+    {
+      "id": "d7b0000000000008",
+      "fromNode": "d7a0000000000007",
+      "fromSide": "right",
+      "toNode": "d7a0000000000008",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "删除闭合重复段"
+    },
+    {
+      "id": "d7b0000000000009",
+      "fromNode": "d7a0000000000008",
+      "fromSide": "right",
+      "toNode": "d7a0000000000009",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "最短 walk 可取为 path"
+    },
+    {
+      "id": "d7b000000000000a",
+      "fromNode": "d7a0000000000009",
+      "fromSide": "right",
+      "toNode": "d7a000000000000a",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "无向可达形成等价类"
+    },
+    {
+      "id": "d7b000000000000b",
+      "fromNode": "d7a000000000000a",
+      "fromSide": "right",
+      "toNode": "d7a000000000000b",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "有向时改查互相可达"
+    },
+    {
+      "id": "d7b000000000000c",
+      "fromNode": "d7a0000000000009",
+      "fromSide": "bottom",
+      "toNode": "d7a000000000000c",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "把 reachability 变成搜索"
+    },
+    {
+      "id": "d7b000000000000d",
+      "fromNode": "d7a000000000000c",
+      "fromSide": "right",
+      "toNode": "d7a000000000000d",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "每点一次并扫描全部 adjacency entries"
+    },
+    {
+      "id": "d7b000000000000e",
+      "fromNode": "d7a000000000000c",
+      "fromSide": "bottom",
+      "toNode": "d7a000000000000e",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "FIFO frontier 形成距离层"
+    },
+    {
+      "id": "d7b000000000000f",
+      "fromNode": "d7a000000000000e",
+      "fromSide": "right",
+      "toNode": "d7a000000000000f",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "沿 parent 重建一条 shortest path"
+    },
+    {
+      "id": "d7b0000000000010",
+      "fromNode": "d7a000000000000c",
+      "fromSide": "bottom",
+      "toNode": "d7a0000000000010",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "LIFO 或 recursion 改为纵深"
+    },
+    {
+      "id": "d7b0000000000011",
+      "fromNode": "d7a0000000000010",
+      "fromSide": "right",
+      "toNode": "d7a0000000000011",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "保留 active ancestor chain"
+    },
+    {
+      "id": "d7b0000000000012",
+      "fromNode": "d7a0000000000011",
+      "fromSide": "right",
+      "toNode": "d7a0000000000012",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "无向图先排除同一 parent edge"
+    },
+    {
+      "id": "d7b0000000000013",
+      "fromNode": "d7a0000000000012",
+      "fromSide": "bottom",
+      "toNode": "d7a0000000000013",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "完成一棵树后从未发现点重启"
+    },
+    {
+      "id": "d7b0000000000014",
+      "fromNode": "d7a0000000000002",
+      "fromSide": "bottom",
+      "toNode": "d7a0000000000007",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "图类型决定可走方向与环长边界"
+    },
+    {
+      "id": "d7b0000000000015",
+      "fromNode": "d7a0000000000007",
+      "fromSide": "top",
+      "toNode": "d7a0000000000006",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "walk 定义决定矩阵幂的计数对象"
+    },
+    {
+      "id": "d7b0000000000016",
+      "fromNode": "d7a000000000000a",
+      "fromSide": "top",
+      "toNode": "d7a0000000000015",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "分量数决定关联矩阵的核维数"
+    }
+  ]
+}

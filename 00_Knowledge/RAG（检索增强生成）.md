@@ -22,7 +22,7 @@ status: source-checked
 > **Concrete anchor:** A system answering questions about the latest company policy should retrieve the current source document and pass supported passages and provenance to the model rather than expecting pretraining to remember it.
 > **Central difficulty:** Evidence appearing in context does not mean the model will find, understand, and cite it faithfully. Recall, ranking, chunking, placement, and generation constraints can each lose information.
 > **Why it matters:** The design controls knowledge freshness, traceability, cost, and latency and reveals whether an error came from failing to retrieve evidence or failing to use it.
-> **Continue with:** Trace the retrieval-to-generation pipeline below, compare it with [[长上下文语言模型|Long-Context Language Models]], and use [[LLM 推理效率|LLM Inference Efficiency]] for serving cost.
+> **Continue with:** Trace the retrieval-to-generation pipeline below, compare it with [[长上下文语言模型|Long-Context Language Models]], and use [[06_paper/LLM/LLM推理效率课程|LLM Inference Efficiency]] for serving cost.
 > <!-- bilingual-en:end -->
 
 > [!source] 本节依据

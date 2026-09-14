@@ -39,6 +39,11 @@ lecture: 03
 > - As a practical first distinction, use `while` when the number of repetitions is unknown but the stopping condition is known, and `for` when a sequence is already available for traversal.
 > <!-- bilingual-en:end -->
 
+> [!links] 原子化入口
+> 先看 [[计算模型、Python 表达式与控制流.canvas|基础执行语义总图]]；本讲对应 [[while循环]] 与 [[for与range]]，完整正确性证明复用 [[循环不变量与终止]]。
+>
+> *Atomic path: condition-driven iteration, iterable traversal, range boundaries, and the reused loop-proof method.*
+
 ## Lecture flow
 
 ### 1. 一开始先回顾 branching，因为 iteration 是另一种 control flow

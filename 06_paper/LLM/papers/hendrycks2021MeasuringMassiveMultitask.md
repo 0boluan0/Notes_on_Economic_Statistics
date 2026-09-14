@@ -15,10 +15,10 @@ aliases:
 # Measuring Massive Multitask Language Understanding
 
 ## 一句话位置
-这篇论文位于 `01 架构与预训练`，第一版用于连接 Transformer, Pretraining 路线；此笔记暂作索引，不做精读摘要。
+这篇论文位于 `01 架构与预训练`，但它提供的是多任务知识与推理基准，不是预训练方法；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[Transformer 与注意力机制]], 预训练、指令微调与偏好优化
+[[LLM 评测]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/FJ2BPTCT)
@@ -30,4 +30,3 @@ aliases:
 ## Canvas
 - [[LLM Big Picture]]
 - [[01 架构与预训练.canvas|01 架构与预训练 Canvas]]
-

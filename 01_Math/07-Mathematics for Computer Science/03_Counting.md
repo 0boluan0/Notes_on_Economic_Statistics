@@ -39,6 +39,8 @@ This notebook follows the block/video order of MIT OCW Spring 2015 Unit 3: Sessi
 
 ## 课程导航与覆盖
 
+渐近专题连续阅读：[[03_渐近比较]] · 知识地图：[[渐近记号与算法复杂度.canvas]]
+
 | 顺序 | 内容 | 官方 block | 在线 prompt | 课堂题 | 评量 |
 |---:|---|---:|---:|---:|---|
 | 1 | Session 23：Sums & Products | 13 | 16 | 5 | — |
@@ -71,9 +73,9 @@ This notebook follows the block/video order of MIT OCW Spring 2015 Unit 3: Sessi
 **Learning questions**: How can a long sum be converted into a closed form? How can reliable upper and lower bounds be obtained when no closed form is available? Why does taking logarithms turn products into sums? How quickly does the factorial grow?
 <!-- bilingual-en:end -->
 
-**前置知识**：有限求和符号、极限、导数与定积分、归纳法、质心。首次正式使用 [[无穷级数与幂级数#数项级数与必要条件|级数]]、[[定积分与微积分基本定理#从黎曼和到定积分|积分]] 与 [[货币时间价值与贴现#年金、永续年金与增长永续年金|年金]]。
+**前置知识**：有限求和符号、极限、导数与定积分、归纳法、质心。首次正式使用 [[无穷级数|级数]]、[[定积分|积分]] 与 [[普通年金|年金]]。
 <!-- bilingual-en:start -->
-**Prerequisites**: finite sums, limits, derivatives, definite integrals, induction, and centres of mass. This session gives the first formal use of [[无穷级数与幂级数#数项级数与必要条件|series]], [[定积分与微积分基本定理#从黎曼和到定积分|integration]], and [[货币时间价值与贴现#年金、永续年金与增长永续年金|annuities]].
+**Prerequisites**: finite sums, limits, derivatives, definite integrals, induction, and centres of mass. This session gives the first formal use of [[无穷级数|series]], [[定积分|integration]], and [[普通年金|annuities]].
 <!-- bilingual-en:end -->
 
 - Reading：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session23.pdf#page=1|Session 23 reading, pp. 1–24]]
@@ -151,9 +153,9 @@ This is not a formula to memorize; it is a **perturbation** argument: construct 
 *finite geometric sum*
 <!-- bilingual-en:end -->
 
-[[组合计数原理#求和与渐近|几何和（geometric sum）]]的公比固定。令
+[[几何和|几何和（geometric sum）]]的公比固定。令
 <!-- bilingual-en:start -->
-A [[组合计数原理#求和与渐近|geometric sum]] has a fixed common ratio. Let
+A [[几何和|geometric sum]] has a fixed common ratio. Let
 <!-- bilingual-en:end -->
 
 $$
@@ -188,9 +190,9 @@ When $x=1$, division by $1-x$ is invalid, so return to the definition: $S_n=n+1$
 *Infinite Geometric Series and Its Necessary Conditions*
 <!-- bilingual-en:end -->
 
-所谓无限和，是部分和的极限：
+[[几何级数]] 的无限和，是部分和的极限：
 <!-- bilingual-en:start -->
-An infinite sum is defined as the limit of its partial sums:
+An infinite [[几何级数|geometric sum]] is defined as the limit of its partial sums:
 <!-- bilingual-en:end -->
 
 $$
@@ -211,7 +213,7 @@ $$
 If $|x|\ge1$, the term $x^i$ does not tend to $0$ (for $x=-1$ it oscillates). Every convergent series must have terms tending to zero: if its partial sums satisfy $s_n\to s$, then $x^n=s_n-s_{n-1}\to0$. Hence the geometric series diverges in this case.
 <!-- bilingual-en:end -->
 
-#### 对几何和求导：带权和
+#### [[加权几何和|对几何和求导：带权和]]
 <!-- bilingual-en:start -->
 *Differentiating a Geometric Sum: Weighted Sums*
 <!-- bilingual-en:end -->
@@ -331,9 +333,9 @@ $$
 \boxed{B_n=\frac12\left(1+\frac12+\cdots+\frac1n\right)=\frac12H_n},
 $$
 
-其中 [[组合计数原理#求和与渐近|调和数]] $H_n=\sum_{k=1}^{n}1/k$。
+其中 [[调和数]] $H_n=\sum_{k=1}^{n}1/k$。
 <!-- bilingual-en:start -->
-where [[组合计数原理#求和与渐近|harmonic number]] $H_n=\sum_{k=1}^{n}1/k$.
+where the [[调和数|harmonic number]] is $H_n=\sum_{k=1}^{n}1/k$.
 <!-- bilingual-en:end -->
 
 由于调和级数发散，理论上可以把书伸出任意远；但 $H_n$ 只像 $\ln n$ 增长，代价呈指数级。
@@ -507,18 +509,18 @@ $$
 \boxed{\ln(n+1)\le H_n\le1+\ln n}.
 $$
 
-两边除以 $\ln n$ 均趋于 $1$，由夹逼定理
+两边除以 $\ln n$ 均趋于 $1$，由夹逼定理得到 [[调和数对数增长|调和数的对数渐近]]：
 <!-- bilingual-en:start -->
-After division by $\ln n$, both bounds tend to $1$; the squeeze theorem therefore gives
+After division by $\ln n$, both bounds tend to $1$; the squeeze theorem therefore gives the [[调和数对数增长|logarithmic asymptotic of harmonic numbers]]:
 <!-- bilingual-en:end -->
 
 $$
 H_n\sim\ln n.
 $$
 
-且下界 $\ln(n+1)\to\infty$，所以 [[无穷级数与幂级数#数项级数与必要条件|调和级数发散]]。
+且下界 $\ln(n+1)\to\infty$，所以 [[调和数对数增长|调和级数发散]]。
 <!-- bilingual-en:start -->
-Moreover, the lower bound $\ln(n+1)\to\infty$, so the [[无穷级数与幂级数#数项级数与必要条件|harmonic series diverges]].
+Moreover, the lower bound $\ln(n+1)\to\infty$, so the [[调和数对数增长|harmonic series diverges]].
 <!-- bilingual-en:end -->
 
 ### 3.1.8 Integral Method Demystified — 官方在线题 O23-04 至 O23-11
@@ -595,18 +597,18 @@ It shows that the main scale is about $(n/e)^n$, but the key factor $\sqrt{2\pi 
 *The main Stirling formula*
 <!-- bilingual-en:end -->
 
-[[组合计数原理#求和与渐近|Stirling 公式]]给出 factorial 的相对误差渐近：
+[[斯特林公式]]给出 factorial 的相对误差渐近：
 <!-- bilingual-en:start -->
-[[组合计数原理#求和与渐近|Stirling's formula]] gives an asymptotic approximation with relative error tending to zero:
+[[斯特林公式|Stirling's formula]] gives an asymptotic approximation with relative error tending to zero:
 <!-- bilingual-en:end -->
 
 $$
 \boxed{n!\sim\sqrt{2\pi n}\left(\frac{n}{e}\right)^n}.
 $$
 
-更精细的 Robbins 形式为
+[[Robbins阶乘界|更精细的 Robbins 形式]]为
 <!-- bilingual-en:start -->
-The finer Robbins form is
+The [[Robbins阶乘界|finer Robbins form]] is
 <!-- bilingual-en:end -->
 
 $$
@@ -1004,7 +1006,7 @@ $f$ is decreasing, so the difference between the bounds is $f(1)-f(57)=1/2-1/4=1
 > **(d)** With $m=10,f=0.1,p=1.01,d=365$, the displayed formula gives approximately $\boxed{749.35\text{ dollars}}$.
 > <!-- bilingual-en:end -->
 
-> [!example]- C23-5 带权几何和
+> [!example]- C23-5 [[加权几何和|带权几何和]]
 > 令 $T=z+2z^2+\cdots+nz^n$。乘 $z$：
 > $$
 > zT=z^2+2z^3+\cdots+(n-1)z^n+nz^{n+1}.
@@ -1051,24 +1053,24 @@ $$
 **Learning questions**: When do two functions have the same growth rate? What logical relationship does each of $O$, $o$, $\Theta$, and $\sim$ express? How can one prove such a claim with a single constant and threshold instead of guessing from the leading term?
 <!-- bilingual-en:end -->
 
-**前置知识**：函数极限、绝对值、关系的自反/对称/传递/反对称性质。首次正式使用 [[渐近记号与算法复杂度#O、Omega 与 Theta|渐近记号与 Θ 同阶关系]]。
+**前置知识**：函数极限、绝对值、关系的自反/对称/传递/反对称性质。首次正式使用[[大O记号]]与[[大Θ记号|Θ 同阶关系]]。
 <!-- bilingual-en:start -->
-**Prerequisites**: limits of functions, absolute values, and the reflexive, symmetric, transitive, and antisymmetric properties of relations. This session gives the first formal use of [[渐近记号与算法复杂度#O、Omega 与 Theta|asymptotic notation and the Θ relation]].
+**Prerequisites**: limits of functions, absolute values, and the reflexive, symmetric, transitive, and antisymmetric properties of relations. This session introduces [[大O记号|Big O notation]] and the [[大Θ记号|Theta relation]] formally.
 <!-- bilingual-en:end -->
 
-- Reading：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session24.pdf#page=1|Session 24 reading, pp. 1–8]]
-- Classroom Problems：[[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp24.pdf#page=1|cp24, pp. 1–3]]
+- Reading：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session24.pdf#page=1|p.1：little o 与对数／幂／指数比较]]；[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session24.pdf#page=2|pp.2–3：Big O、limsup 与统一常数]]；[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session24.pdf#page=4|p.4：Theta 及放大输入的边界]]；[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session24.pdf#page=5|pp.5–7：记号误用、Omega 与 little omega]]。
+- Classroom Problems：[[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp24.pdf#page=1|p.1：常数阈值、关系分类及伪归纳题设]]；[[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp24.pdf#page=2|p.2：伪归纳、真假判断及阶乘对数界]]。
 
 ### 3.2.1 Asymptotic Notation — 五种关系各说什么
 <!-- bilingual-en:start -->
 *3.2.1 Asymptotic Notation — What each of the five relationships says*
 <!-- bilingual-en:end -->
 
-资源：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_AsymNotation.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/CWkh5kb4TGc.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=CWkh5kb4TGc)
+资源：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_AsymNotation.pdf#page=1|slides pp.1–2：渐近等价与关系性质]]；[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_AsymNotation.pdf#page=3|slides pp.3–5：little o、Big O、Theta]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/CWkh5kb4TGc.pdf#page=1|transcript pp.1–3：四种关系的讲解]] · [video](https://www.youtube.com/watch?v=CWkh5kb4TGc)
 
-以下默认 $f,g$ 在充分大的 $x$ 上有定义，且 $g(x)>0$；若 $f$ 可取负值，Big O 定义使用 $|f|$。
+以下商式与关系分类的主语境是：$f,g,h$ 在同一无界定义域上最终严格为正，比较 $x\to\infty$；写 $n$ 时取整数输入。这样互换分子、分母仍在同一函数类中。含负值、零函数或无限零点的题目，改用本节随后说明的[[渐近比较的符号与零点边界|幅度不等式扩展]]，不能不加说明地套用商式或严格序分类。所有对数的底数固定且大于 $1$，除非另有说明。
 <!-- bilingual-en:start -->
-Unless stated otherwise, assume that $f$ and $g$ are defined for all sufficiently large $x$ and that $g(x)>0$. If $f$ may be negative, the Big O definition uses $|f(x)|$.
+For the quotient formulas and relation classifications below, $f,g,h$ share one unbounded domain and are eventually strictly positive as $x\to\infty$; $n$ denotes an integer input. Reversing a quotient then stays within the same class. For negative values, the zero function, or infinitely many zeros, use the [[渐近比较的符号与零点边界|absolute-value inequality extension]] stated below, without automatically transferring quotient formulas or strict-order classifications. Logarithm bases are fixed and greater than $1$ unless stated otherwise.
 <!-- bilingual-en:end -->
 
 #### 渐近等价 $f\sim g$
@@ -1080,9 +1082,9 @@ $$
 \boxed{f\sim g\iff\lim_{x\to\infty}\frac{f(x)}{g(x)}=1}.
 $$
 
-它说相对误差趋于零：$f=g(1+o(1))$。例如 $n^2+n\sim n^2$，但 $2n^2\not\sim n^2$。
+[[渐近等价]]说相对误差趋于零：$f=g(1+o(1))$。例如 $n^2+n\sim n^2$，但 $2n^2\not\sim n^2$。
 <!-- bilingual-en:start -->
-It says that the relative error tends to zero: $f=g(1+o(1))$. For example, $n^2+n\sim n^2$, but $2n^2\not\sim n^2$.
+[[渐近等价|Asymptotic equivalence]] says that the relative error tends to zero: $f=g(1+o(1))$. For example, $n^2+n\sim n^2$, but $2n^2\not\sim n^2$.
 <!-- bilingual-en:end -->
 
 #### 严格低阶 $f=o(g)$
@@ -1094,9 +1096,9 @@ $$
 \boxed{f=o(g)\iff\lim_{x\to\infty}\frac{|f(x)|}{g(x)}=0}.
 $$
 
-它说无论给定多小的 $\varepsilon>0$，总存在 $x_0$，使 $x\ge x_0$ 时 $|f(x)|\le\varepsilon g(x)$。
+[[小o记号]]说无论给定多小的 $\varepsilon>0$，总存在 $x_0$，使 $x\ge x_0$ 时 $|f(x)|\le\varepsilon g(x)$。
 <!-- bilingual-en:start -->
-Equivalently, for every $\varepsilon>0$ there exists $x_0$ such that $|f(x)|\le\varepsilon g(x)$ whenever $x\ge x_0$.
+Equivalently, [[小o记号|little o notation]] requires that for every $\varepsilon>0$ there exists $x_0$ such that $|f(x)|\le\varepsilon g(x)$ whenever $x\ge x_0$.
 <!-- bilingual-en:end -->
 
 #### 上界关系 $f=O(g)$
@@ -1110,9 +1112,9 @@ $$
 |f(x)|\le c g(x)}.
 $$
 
-若商不一定有普通极限，也可写成
+按[[渐近比较的比值判别]]，若商不一定有普通极限，也可写成
 <!-- bilingual-en:start -->
-Even when the quotient has no ordinary limit, the condition can be expressed as
+By the [[渐近比较的比值判别|quotient criterion for asymptotic comparison]], even when the quotient has no ordinary limit the condition can be expressed as
 <!-- bilingual-en:end -->
 
 $$
@@ -1142,9 +1144,19 @@ $$
 c_1g(x)\le |f(x)|\le c_2g(x).
 $$
 
-$f=\Omega(g)$ 定义为 $g=O(f)$；$f=\omega(g)$ 定义为 $g=o(f)$。
+[[大Ω记号|$f=\Omega(g)$]] 定义为 $g=O(f)$；补充的 [[小ω记号|$f=\omega(g)$]] 定义为 $g=o(f)$。
 <!-- bilingual-en:start -->
-$f=\Omega(g)$ is defined as $g=O(f)$; $f=\omega(g)$ is defined as $g=o(f)$.
+[[大Ω记号|Big Omega]], $f=\Omega(g)$, is defined as $g=O(f)$; the additional [[小ω记号|little omega]] notation, $f=\omega(g)$, means $g=o(f)$.
+<!-- bilingual-en:end -->
+
+**幅度扩展。** 若允许有符号函数或零点，Big O 改用最终 $|f|\le C|g|$；Theta 用 $c|g|\le|f|\le C|g|$，其中 $c,C>0$；Omega 是反向 Big O。little o 可扩为“每个 $\varepsilon>0$ 都有最终 $|f|\le\varepsilon|g|$”，little omega 是反向 little o。这些不等式不除以零；但在此扩展下 $0=o(0)$ 成立，所以不能把“little o 非自反”的分类搬到含零函数的全域。$\sim$ 仍按带符号的 $f/g\to1$ 理解，须保证分母最终非零；例如 $-n=\Theta(n)$ 是幅度同阶，却不满足 $-n\sim n$。
+<!-- bilingual-en:start -->
+**Absolute-value extension.** For signed functions or zeros, use the eventual inequality $|f|\le C|g|$ for Big O and $c|g|\le|f|\le C|g|$ for Theta, with $c,C>0$; Omega reverses Big O. Little o can be extended to require eventual $|f|\le\varepsilon|g|$ for every $\varepsilon>0$, and little omega reverses little o. These inequalities avoid division by zero. Under this extension, however, $0=o(0)$ holds, so irreflexivity cannot be transferred to the full class containing the zero function. The notation $\sim$ still means the signed quotient $f/g\to1$, with an eventually nonzero denominator. Thus $-n=\Theta(n)$ in magnitude, but $-n\not\sim n$.
+<!-- bilingual-en:end -->
+
+此外，[[同阶不要求比值收敛]]：对正整数 $n$，$f(n)=(1+\sin^2(\pi n/2))g(n)$ 的比值在 $1,2$ 之间交替，仍有 $g\le f\le2g$，所以 $f=\Theta(g)$。
+<!-- bilingual-en:start -->
+Moreover, [[同阶不要求比值收敛|Theta does not require a convergent quotient]]. For positive integers $n$, the ratio in $f(n)=(1+\sin^2(\pi n/2))g(n)$ alternates between $1$ and $2$. Nevertheless, $g\le f\le2g$, so $f=\Theta(g)$.
 <!-- bilingual-en:end -->
 
 > [!example] 一眼看出逻辑强弱
@@ -1179,7 +1191,7 @@ $f=\Omega(g)$ is defined as $g=O(f)$; $f=\omega(g)$ is defined as $g=o(f)$.
 *3.2.3 Asymptotic Properties — Relationship Structure and Growth Hierarchy*
 <!-- bilingual-en:end -->
 
-资源：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_AsymProperti.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/HeyEK0TWiBw.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=HeyEK0TWiBw)
+资源：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_AsymProperti.pdf#page=1|slides p.1：关系蕴含与幂比较]]；[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_AsymProperti.pdf#page=2|slides pp.2–3：对数／指数增长与振荡商]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/HeyEK0TWiBw.pdf#page=1|transcript pp.1–4：统一阈值、limsup 与增长比较]] · [video](https://www.youtube.com/watch?v=HeyEK0TWiBw)
 
 #### 关系性质
 <!-- bilingual-en:start -->
@@ -1188,15 +1200,15 @@ $f=\Omega(g)$ is defined as $g=O(f)$; $f=\omega(g)$ is defined as $g=o(f)$.
 
 - $\sim$ 是等价关系：自反来自 $f/f=1$；对称来自倒数；传递来自 $(f/g)(g/h)=f/h$。
 - $\Theta$ 是等价关系：自反显然；定义本身对称；Big O 的传递性给传递。
-- $o$ 是严格偏序式关系：非自反且传递。若 $f=o(g)$，不可能同时 $g=O(f)$，否则充分大时 $g\le C|f|$，而 $|f|/g\to0$ 与 $1\le C|f|/g$ 冲突。
+- 在上述最终正函数类上，$o$ 是严格偏序：非自反且传递。若 $f=o(g)$，不可能同时 $g=O(f)$，否则充分大时 $g\le C|f|$，而 $|f|/g\to0$ 与 $1\le C|f|/g$ 冲突。它是非对称的（asymmetric），不是“不满足反对称性”：因双向关系不可能同时成立，反对称蕴含式也自动成立。
 - $O$ 是预序：自反、传递，但不反对称。不同函数 $f=n$ 与 $g=2n$ 互为 Big O。
-- 关系“$f=O(g)$ 且 $g\ne O(f)$”是严格偏序，表达“严格不快于”。它比 $o$ 弱，因为商可能在 $0$ 与正常数量级之间振荡。
+- 关系“$f=O(g)$ 且 $g\ne O(f)$”是严格偏序，表达“严格不快于”。[[严格大O不等于小o|它比 $o$ 弱]]，因为商可能在趋近 $0$ 的值与正常数量级之间振荡。
 <!-- bilingual-en:start -->
 - $\sim$ is an equivalence relation: reflexivity follows from $f/f=1$, symmetry from taking reciprocals, and transitivity from $(f/g)(g/h)=f/h$.
 - $\Theta$ is also an equivalence relation: reflexivity is immediate, the definition is symmetric, and transitivity follows from the transitivity of Big O.
-- $o$ behaves like a strict partial order: it is irreflexive and transitive. If $f=o(g)$, then $g=O(f)$ is impossible; otherwise $g\le C|f|$ eventually, contradicting $|f|/g\to0$.
+- On the eventually positive class, $o$ is a strict partial order: it is irreflexive and transitive. If $f=o(g)$, then $g=O(f)$ is impossible; otherwise $g\le C|f|$ eventually, contradicting $|f|/g\to0$. It is asymmetric, not a failure of antisymmetry: because the two directions cannot both hold, the antisymmetry implication is automatically true.
 - $O$ is a preorder: it is reflexive and transitive but not antisymmetric. For example, the distinct functions $f(n)=n$ and $g(n)=2n$ are Big O of each other.
-- The relation "$f=O(g)$ and $g\ne O(f)$" is a strict partial order expressing that $f$ grows strictly no faster than $g$. It is weaker than $f=o(g)$ because the quotient may oscillate between values near zero and values of ordinary size.
+- The relation "$f=O(g)$ and $g\ne O(f)$" is a strict partial order expressing that $f$ grows strictly no faster than $g$. [[严格大O不等于小o|It is weaker than little o]] because the quotient may oscillate between values approaching zero and values of ordinary size.
 <!-- bilingual-en:end -->
 
 #### 对数慢于任意正幂
@@ -1223,9 +1235,9 @@ $$
 \le\frac{2}{\varepsilon^2t}\to0.
 $$
 
-故 $\ln x=o(x^\varepsilon)$，不需要把“对数很慢”当作直觉口号。
+故 $\ln x=o(x^\varepsilon)$，即[[对数慢于正幂]]，不需要把“对数很慢”当作直觉口号。
 <!-- bilingual-en:start -->
-Thus $\ln x=o(x^\varepsilon)$; “logarithms grow slowly” is a proved comparison, not merely an intuition.
+Thus $\ln x=o(x^\varepsilon)$: [[对数慢于正幂|logarithms grow more slowly than positive powers]]. This is a proved comparison, not merely an intuition.
 <!-- bilingual-en:end -->
 
 #### 指数快于任意固定多项式
@@ -1251,18 +1263,18 @@ $$
 n^c=o(a^n).
 $$
 
-典型增长层级为
+[[幂函数慢于指数函数]]给出中间的比较；典型增长层级为
 <!-- bilingual-en:start -->
-A typical growth hierarchy is
+[[幂函数慢于指数函数|Powers grow more slowly than exponentials]], giving the middle comparison in the typical hierarchy
 <!-- bilingual-en:end -->
 
 $$
 1\prec\log n\prec n^\varepsilon\prec n^c\prec a^n\prec n!\prec n^n,
 $$
 
-其中 $\prec$ 表示左边是右边的 little o；幂指数的具体顺序需满足 $0<\varepsilon<c$。
+其中 $\prec$ 表示左边是右边的 little o；$a>1$、$0<\varepsilon<c$ 均为固定常数。最后两步也可直接检查：$u_n=a^n/n!$ 满足 $u_{n+1}/u_n=a/(n+1)\to0$，故 $u_n\to0$；而 $n!/n^n=\prod_{k=1}^n(k/n)\le2^{-\lfloor n/2\rfloor}\to0$。
 <!-- bilingual-en:start -->
-where $f\prec g$ means $f=o(g)$. The displayed ordering of powers assumes $0<\varepsilon<c$.
+Here $f\prec g$ means $f=o(g)$, with fixed constants $a>1$ and $0<\varepsilon<c$. The final two steps also follow directly: $u_n=a^n/n!$ satisfies $u_{n+1}/u_n=a/(n+1)\to0$, so $u_n\to0$; and $n!/n^n=\prod_{k=1}^n(k/n)\le2^{-\lfloor n/2\rfloor}\to0$.
 <!-- bilingual-en:end -->
 
 ### 3.2.4 Little oh / Big Oh — 官方在线题 O24-03 至 O24-05
@@ -1302,21 +1314,26 @@ where $f\prec g$ means $f=o(g)$. The displayed ordering of powers assumes $0<\va
 *3.2.6 Asymptotic Blunders — Syntactic Errors Often Reveal Logical Errors*
 <!-- bilingual-en:end -->
 
-资源：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_AsymBlunders.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/Y9Blo_G-Mvg.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=Y9Blo_G-Mvg)
+资源：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_AsymBlunders.pdf#page=1|slides pp.1–2：等号、下界与求和误用]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/Y9Blo_G-Mvg.pdf#page=1|transcript pp.1–2：二元关系与逐项常数]] · [video](https://www.youtube.com/watch?v=Y9Blo_G-Mvg)
 
 1. **把关系写成数量**：$O(n^2)$ 不是一个可比较大小的数，而是一类函数或二元关系的右侧。
 2. **说“至少 $O(n^2)$”**：Big O 是上界。“$f$ 至少像 $n^2$”应写 $n^2=O(f)$ 或 $f=\Omega(n^2)$。
-3. **把逐项常数当统一常数**：对固定 $i$，$i=O(1)$，但这里隐藏常数依赖 $i$。求和到 $n$ 时不能用同一个常数控制所有 $i$，实际 $\sum_{i=1}^ni=\Theta(n^2)$。
-4. **随意对渐近关系做非线性运算**：$f\sim g$ 不保证 $3^f=\Theta(3^g)$。例：$f=n+\sqrt n$、$g=n$，虽 $f/g\to1$，但 $3^f/3^g=3^{\sqrt n}\to\infty$。
-5. **忽略常数与交叉点**：渐近阶只描述充分大输入；实际系统中 $1000n$ 可能在很长区间内慢于 $n^2$，也可能快于带巨大常数的低阶算法。
+3. **把逐项常数当[[渐近界的统一常数|统一常数]]**：对固定 $i$，$i=O(1)$，但这里隐藏常数依赖 $i$。求和到 $n$ 时不能用同一个常数控制所有 $i$，实际 $\sum_{i=1}^ni=\Theta(n^2)$。
+4. **随意对渐近关系做非线性运算**：[[渐近等价不保留指数运算|$f\sim g$ 不保证 $3^f=\Theta(3^g)$]]。例：$f=n+\sqrt n$、$g=n$，虽 $f/g\to1$，但 $3^f/3^g=3^{\sqrt n}\to\infty$。
+5. **忽略[[计时与渐近分析|常数与交叉点]]**：渐近阶只描述充分大输入；实际系统中 $1000n$ 可能在很长区间内慢于 $n^2$，也可能快于带巨大常数的低阶算法。
 <!-- bilingual-en:start -->
 
 &nbsp;
 **1.** **Treating a relation as a number**: $O(n^2)$ is not a numerical quantity that can be compared by size; it denotes a class of functions, or the right-hand side of an asymptotic relation.<br>
 **2.** **Saying “at least $O(n^2)$”**: Big O is an upper bound. “$f$ grows at least as fast as $n^2$” should be written $n^2=O(f)$ or $f=\Omega(n^2)$.<br>
-**3.** **Mistaking pointwise constants for one uniform constant**: For fixed $i$, we may write $i=O(1)$, but the hidden constant depends on $i$. No single constant bounds every term up to $n$; in fact, $\sum_{i=1}^ni=\Theta(n^2)$.<br>
-**4.** **Applying nonlinear operations indiscriminately**: $f\sim g$ does not imply $3^f=\Theta(3^g)$. For $f=n+\sqrt n$ and $g=n$, the ratio $f/g\to1$, but $3^f/3^g=3^{\sqrt n}\to\infty$.<br>
-**5.** **Ignoring constants and crossover points**: Asymptotic order describes only sufficiently large inputs. In practice, $1000n$ may exceed $n^2$ over a long range, while a lower-order algorithm with a huge constant may still be slower.<br>
+**3.** **Mistaking pointwise constants for [[渐近界的统一常数|one uniform constant]]**: For fixed $i$, we may write $i=O(1)$, but the hidden constant depends on $i$. No single constant bounds every term up to $n$; in fact, $\sum_{i=1}^ni=\Theta(n^2)$.<br>
+**4.** **Applying nonlinear operations indiscriminately**: [[渐近等价不保留指数运算|Asymptotic equivalence does not preserve exponential comparisons]]: $f\sim g$ does not imply $3^f=\Theta(3^g)$. For $f=n+\sqrt n$ and $g=n$, the ratio $f/g\to1$, but $3^f/3^g=3^{\sqrt n}\to\infty$.<br>
+**5.** **Ignoring [[计时与渐近分析|constants and crossover points]]**: Asymptotic order describes only sufficiently large inputs. In practice, $1000n$ may exceed $n^2$ over a long range, while a lower-order algorithm with a huge constant may still be slower.<br>
+<!-- bilingual-en:end -->
+
+来源边界：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session24.pdf#page=6|阅读 p.6]] 另写了 $f=\Theta(g)\Rightarrow\ln f\sim\ln g$，不能无条件使用。例如常函数 $f=2,g=4$ 同阶，但 $\ln f/\ln g=1/2$。一个常用充分条件是 $g\to\infty$：此时 $\ln f-\ln g=O(1)$，除以 $\ln g\to\infty$ 才得到比值趋于 $1$。
+<!-- bilingual-en:start -->
+Source boundary: [[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session24.pdf#page=6|PDF page 6]] also states $f=\Theta(g)\Rightarrow\ln f\sim\ln g$, which requires an additional condition. For instance, constants $f=2,g=4$ have the same order but $\ln f/\ln g=1/2$. A standard sufficient condition is $g\to\infty$: then $\ln f-\ln g=O(1)$, and division by $\ln g\to\infty$ makes the ratio tend to $1$.
 <!-- bilingual-en:end -->
 
 ### 3.2.7 Asymptotics the Right Way — 官方在线题 O24-08 至 O24-10
@@ -1327,11 +1344,11 @@ where $f\prec g$ means $f=o(g)$. The displayed ordering of powers assumes $0<\va
 原题与官方反馈：[[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S24_3.2.7_asymptotics-the-right-way|3.2.7]]
 
 > [!success]- 官方答案与反馈
-> **O24-08**：$O(\cdot)$、$o(\cdot)$、$\Theta(\cdot)$ 放在等号右侧，例如 $f=O(n^2)$。
+> **O24-08**：按本课二元关系记法，$O(\cdot)$、$o(\cdot)$、$\Theta(\cdot)$ 放在等号右侧，例如 $f=O(n^2)$；这里的等号不表示两个对象的普通相等。
 > **O24-09**：“$f$ 至少是 $O(n^2)$”四方面都错：$O(n^2)$ 不是数量；Big O 表示上界；它是关系；“至少 $n^2$”应写 $n^2=O(f)$。
 > **O24-10**：$\sum_{i=1}^ni=O(n)$ 错在逐项 $O(1)$ 没有统一常数；正确结果是 $\Theta(n^2)$，且 $O(1)$ 不能当作普通数字相加。
 > <!-- bilingual-en:start -->
-> **O24-08**: Put $O(\cdot)$, $o(\cdot)$, and $\Theta(\cdot)$ on the right-hand side of an equality, for example $f=O(n^2)$.
+> **O24-08**: In the course's binary-relation convention, put $O(\cdot)$, $o(\cdot)$, and $\Theta(\cdot)$ on the right, as in $f=O(n^2)$. This equals sign does not mean ordinary equality between two objects.
 > **O24-09**: “$f$ is at least $O(n^2)$” is wrong in four ways: $O(n^2)$ is not a quantity; Big O denotes an upper bound; it is a relation; and “at least $n^2$” should be written $n^2=O(f)$.
 > **O24-10**: The claim $\sum_{i=1}^ni=O(n)$ wrongly assumes that the termwise $O(1)$ bounds share one uniform constant. The correct order is $\Theta(n^2)$, and $O(1)$ cannot be added as though it were an ordinary number.
 > <!-- bilingual-en:end -->
@@ -1380,15 +1397,20 @@ Each question asks for the smallest nonnegative integer $k$ such that $f(x)=O(x^
 |---|---|---|---|
 | O24-18 | $\log_3n,\log_7n$ | $f=O(g)$ 且 $f=\Theta(g)$ | 比值 $\ln7/\ln3\ne1$，故不 $\sim$ |
 | O24-19 | $0,33$ | $f=o(g)$ 且 $f=O(g)$ | 商恒为 $0$ |
-| O24-20 | $1+\cos(\pi n/2),1+\sin(\pi n/2)$ | 所列均不成立 | 两函数交替取零，商无法统一控制 |
+| O24-20 | $1+\cos(\pi n/2),1+\sin(\pi n/2)$ | 所列均不成立 | $n\equiv3\pmod4$ 时 $f=1,g=0$，已使 $f\le Cg$ 对任意 $C$ 失败；反向在 $n\equiv2\pmod4$ 失败 |
 | O24-21 | $1.01^n,n^{100}$ | 所列均不成立 | 实际 $g=o(f)$，但选项只问 $f$ 相对 $g$ |
 <!-- bilingual-en:start -->
 | Number | $f,g$ | Official answer | Check |
 |---|---|---|---|
 | O24-18 | $\log_3n,\log_7n$ | $f=O(g)$ and $f=\Theta(g)$ | The ratio is $\ln7/\ln3\ne1$, so the functions are not asymptotically equivalent |
 | O24-19 | $0,33$ | $f=o(g)$ and $f=O(g)$ | The quotient is identically $0$ |
-| O24-20 | $1+\cos(\pi n/2),1+\sin(\pi n/2)$ | None of the listed relations holds | The functions alternate between zero and positive values, preventing either quotient from being uniformly controlled |
+| O24-20 | $1+\cos(\pi n/2),1+\sin(\pi n/2)$ | None of the listed relations holds | For $n\equiv3\pmod4$, $f=1,g=0$, so $f\le Cg$ fails for every $C$; the reverse bound fails for $n\equiv2\pmod4$ |
 | O24-21 | $1.01^n,n^{100}$ | None of the listed relations holds | In fact $g=o(f)$, whereas the choices compare only $f$ with $g$ |
+<!-- bilingual-en:end -->
+
+来源校正：O24-20 的官方答案保留，但原反馈的零点同余类写错了；$f=0$ 在 $n\equiv2\pmod4$，$g=0$ 在 $n\equiv3\pmod4$。这里否定 Big O 的理由是任意阈值之后仍有点违反常数倍上界，而不是“商没有普通极限”本身。
+<!-- bilingual-en:start -->
+Source correction: the official answer to O24-20 is retained, but its feedback gives incorrect residue classes for the zeros. We have $f=0$ for $n\equiv2\pmod4$ and $g=0$ for $n\equiv3\pmod4$. Big O fails because every threshold is followed by points violating any constant-factor bound, not merely because an ordinary quotient limit does not exist.
 <!-- bilingual-en:end -->
 
 ### Session 24 易错点与反例
@@ -1450,9 +1472,9 @@ Each question asks for the smallest nonnegative integer $k$ such that $f(x)=O(x^
 > <!-- bilingual-en:end -->
 
 > [!answer]- 答案
-> 即使每次都有统一常数 $C$，总成本也至多 $nC=O(n)$；不能把 $O(1)$ 当成相加后仍不变的数字。若每次隐藏常数还依赖循环下标，错误更严重。
+> 即使每次都有统一常数 $C$，总成本也至多 $nC=O(n)$，不能由此推出总计 $O(1)$；例如每轮成本恰为 $1$，总成本就是 $n$。不能把 $O(1)$ 当成相加后仍不变的数字。若每次隐藏常数还依赖循环下标，错误更严重；应先按[[循环成本求和]]汇总实际迭代，再检查[[渐近界的统一常数|统一界]]。
 > <!-- bilingual-en:start -->
-> Even if every iteration is bounded by the same constant $C$, the total cost is at most $nC=O(n)$. The notation $O(1)$ cannot be added as though it were a number that remains unchanged. The error is worse if the hidden constant also depends on the loop index.
+> Even if each iteration is bounded by the same constant $C$, the total is at most $nC=O(n)$, which does not establish an $O(1)$ total. For example, cost $1$ per iteration gives total cost $n$. The notation $O(1)$ is not a number left unchanged by addition. If hidden constants depend on the loop index, even the uniform bound is missing. First [[循环成本求和|sum the actual iteration costs]], then check for a [[渐近界的统一常数|uniform bound]].
 > <!-- bilingual-en:end -->
 
 ### Classroom Problems 24 — 5 题完整独立题解
@@ -1460,7 +1482,12 @@ Each question asks for the smallest nonnegative integer $k$ such that $f(x)=O(x^
 *Classroom Problems 24 — complete independent solutions to five problems*
 <!-- bilingual-en:end -->
 
-原题：[[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp24.pdf#page=1|cp24 pp. 1–3]]
+应用到[[算法复杂度]]时，还须先固定[[输入规模]]和[[算法成本模型|基本操作成本]]，再选定要比较的成本函数。Big O 只表示上界，不自动等于[[最坏情况复杂度]]；本节的函数比较本身也没有给出机器实测时间。
+<!-- bilingual-en:start -->
+For [[算法复杂度|algorithm complexity]], first fix the [[输入规模|input-size measure]] and [[算法成本模型|primitive-operation costs]], then choose the cost function to compare. Big O supplies an upper bound; it does not automatically mean [[最坏情况复杂度|worst-case complexity]], nor does a function comparison by itself give measured wall-clock time.
+<!-- bilingual-en:end -->
+
+原题：[[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp24.pdf#page=1|cp24 p.1：Problems 1–3 题设]]；[[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp24.pdf#page=2|p.2：Problem 3 伪证明及 Problems 4–5]]。
 
 > [!example]- C24-1 用定义找最小整数常数与阈值
 > 课程定义 $f=O(g)$ 要求 $c,n_0\in\mathbb N$ 且 $n\ge n_0$ 时 $|f(n)|\le c g(n)$。
@@ -1479,6 +1506,11 @@ Each question asks for the smallest nonnegative integer $k$ such that $f(x)=O(x^
 > <!-- bilingual-en:end -->
 
 > [!example]- C24-2 把渐近关系分类
+> **定义域说明。** 原题 p.1 写“非负实值函数”，其中也包含零函数，商式因而未必有定义。下表的 E/S 分类明确采用最终严格正函数类；若按全 $\varepsilon$ 不等式把 little o 扩到零函数，则 $0=o(0)$，不能再无条件称其为严格偏序。原题的函数列表与比较任务保留。
+> <!-- bilingual-en:start -->
+> **Domain qualification.** The problem on PDF page 1 says “nonnegative real-valued functions,” which includes the zero function and may leave quotients undefined. The E/S classifications below use the eventually strictly positive class. If little o is extended to the zero function by the all-$\varepsilon$ inequality, $0=o(0)$ holds and strict partial order is no longer an unconditional classification. The original list of relations and comparison task is retained.
+> <!-- bilingual-en:end -->
+>
 > **(a)**
 >
 > | 关系 | 分类 | 关键理由 |
@@ -1511,10 +1543,10 @@ Each question asks for the smallest nonnegative integer $k$ such that $f(x)=O(x^
 > <!-- bilingual-en:end -->
 
 > [!example]- C24-3 错误归纳“$2^n=O(1)$”
-> **反证原命题**：若 $2^n=O(1)$，则存在单个 $c$、$n_0$，使所有 $n\ge n_0$ 有 $2^n\le c$；取 $n>\log_2c$ 即矛盾。
+> **反证原命题**：若 $2^n=O(1)$，则存在单个 $c>0$、$n_0$，使所有 $n\ge n_0$ 有 $2^n\le c$；取整数 $n\ge n_0$ 且 $n>\log_2c$ 即矛盾。
 > **归纳错误**：Big O 中的 $n$ 是函数输入，不是一个可逐点归纳的命题参数。伪证明从控制 $2^n$ 的常数 $c_n$ 构造控制下一点的 $2c_n$；常数随 $n$ 变成 $2^n$，从未得到一个对所有充分大 $n$ 通用的常数。逐点“每个数都被某常数控制”是平凡事实，不等于整个函数有统一常数上界。
 > <!-- bilingual-en:start -->
-> **Disproof of the claim**: If $2^n=O(1)$, there would be fixed constants $c$ and $n_0$ such that $2^n\le c$ for every $n\ge n_0$. Choosing $n>\log_2c$ gives a contradiction.
+> **Disproof of the claim**: If $2^n=O(1)$, fixed constants $c>0,n_0$ would give $2^n\le c$ for every $n\ge n_0$. Choose an integer $n\ge n_0$ also satisfying $n>\log_2c$ to obtain a contradiction.
 > **Error in the induction**: In Big O notation, $n$ is the input to a function, not a proposition parameter that can be handled point by point. The bogus proof replaces a constant $c_n$ that bounds one value with $2c_n$ for the next value; the bound therefore grows with $n$ and never becomes one fixed constant valid for all sufficiently large inputs. Every individual number being bounded by some constant is trivial and does not imply a uniform bound on the whole function.
 > <!-- bilingual-en:end -->
 
@@ -1537,7 +1569,7 @@ Each question asks for the smallest nonnegative integer $k$ such that $f(x)=O(x^
 > $$
 > \log(n!)=\sum_{i=1}^n\log i\le n\log n.
 > $$
-> 下界：只保留后半段至少 $\lfloor n/2\rfloor$ 项，每项不少于 $\log(n/2)$：
+> 下界：保留下标 $i=\lfloor n/2\rfloor+1,\ldots,n$ 的 $\lceil n/2\rceil\ge n/2$ 项；对 $n\ge2$，每项不少于非负的 $\log(n/2)$：
 > $$
 > \log(n!)\ge\frac n2\log\frac n2
 > =\frac n2(\log n-\log2).
@@ -1549,7 +1581,7 @@ Each question asks for the smallest nonnegative integer $k$ such that $f(x)=O(x^
 > 因而 $\boxed{\log(n!)=\Theta(n\log n)}$。
 > <!-- bilingual-en:start -->
 > For the upper bound, every factor satisfies $i\le n$, so $\log(n!)=\sum_{i=1}^n\log i\le n\log n$.
-> For the lower bound, keep only the last $\lfloor n/2\rfloor$ terms; each is at least $\log(n/2)$. For $n\ge4$, $\log n-\log2\ge\frac12\log n$, giving $\frac14n\log n\le\log(n!)\le n\log n$. Hence $\boxed{\log(n!)=\Theta(n\log n)}$.
+> For the lower bound, keep indices $i=\lfloor n/2\rfloor+1,\ldots,n$, giving $\lceil n/2\rceil\ge n/2$ terms. For $n\ge2$, each is at least the nonnegative value $\log(n/2)$. For $n\ge4$, $\log n-\log2\ge\frac12\log n$, yielding $\frac14n\log n\le\log(n!)\le n\log n$. Hence $\boxed{\log(n!)=\Theta(n\log n)}$.
 > <!-- bilingual-en:end -->
 
 ### Session 24 知识链小结
@@ -1570,7 +1602,7 @@ $$
 
 ## Problem Set 9 — after Session 24
 
-原题：[[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps9.pdf#page=1|Problem Set 9, pp. 1–2]]。以下为非官方独立题解。
+原题：[[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps9.pdf#page=1|Problem Set 9 p.1：立方和、$\ln((n^2)!)$ 与六次幂和三题]]。以下为非官方独立题解。
 
 > [!example]- PS9-1 求 $\sum_{i=1}^{n}i^3$ 的多项式
 > **目标**：找出闭式并验证。结论为
@@ -1593,7 +1625,7 @@ $$
 > <!-- bilingual-en:end -->
 
 > [!example]- PS9-2 证明 $\ln((n^2)!)=\Theta(n^2\ln n)$
-> 令 $N=n^2$。Stirling 公式给出
+> 令 $N=n^2$。[[斯特林公式]]给出
 > $$
 > \ln(N!)=N\ln N-N+\frac12\ln(2\pi N)+o(1).
 > $$
@@ -1610,7 +1642,7 @@ $$
 > $$
 > 定义域检查：$n$ 为正整数；对数底数换成任意固定 $>1$ 的底只差常数倍。
 > <!-- bilingual-en:start -->
-> Let $N=n^2$. Stirling's formula gives the displayed expansion for $\ln(N!)$. Substituting $N=n^2$ makes the leading term $2n^2\ln n$; every remaining term tends to zero after division by $n^2\ln n$. Therefore $\ln((n^2)!)\sim2n^2\ln n$ and hence $\ln((n^2)!)=\Theta(n^2\ln n)$. Here $n$ is a positive integer; changing to any fixed logarithm base greater than $1$ only multiplies the expression by a constant.
+> Let $N=n^2$. [[斯特林公式|Stirling's formula]] gives the displayed expansion for $\ln(N!)$. Substituting $N=n^2$ makes the leading term $2n^2\ln n$; every remaining term tends to zero after division by $n^2\ln n$. Therefore $\ln((n^2)!)\sim2n^2\ln n$ and hence $\ln((n^2)!)=\Theta(n^2\ln n)$. Here $n$ is a positive integer; changing to any fixed logarithm base greater than $1$ only multiplies the expression by a constant.
 > <!-- bilingual-en:end -->
 
 > [!example]- PS9-3 证明 $\sum_{k=1}^{n}k^6=\Theta(n^7)$
@@ -1642,9 +1674,9 @@ Original paper: [[MIT_OCW_6.042J_Materials/07_Exams/MIT6_042JS15_midterm3.pdf#pa
 *Problem 1 — Scheduling (15 points)*
 <!-- bilingual-en:end -->
 
-题图见 [[MIT_OCW_6.042J_Materials/07_Exams/MIT6_042JS15_midterm3.pdf#page=2|Midterm 3 p. 2]]。[[无环图：树、生成树、DAG 与拓扑排序#DAG 与拓扑排序|DAG]] 的边为
+题图见 [[MIT_OCW_6.042J_Materials/07_Exams/MIT6_042JS15_midterm3.pdf#page=2|Midterm 3 p. 2]]。[[DAG 与拓扑序等价|DAG]] 的边为
 <!-- bilingual-en:start -->
-The [[无环图：树、生成树、DAG 与拓扑排序#DAG 与拓扑排序|DAG]] has edges
+The [[DAG 与拓扑序等价|DAG]] has edges
 <!-- bilingual-en:end -->
 
 $$
@@ -1662,12 +1694,12 @@ $$
 > A<D<E<G,\quad B,\quad C<F<H
 > $$
 > 可知任一反链至多从三条链各取一个元素。
-> **(b)** 无限处理器下，最短时间等于最长链的任务数。链 $A\to D\to E\to G$ 有 4 个任务，故至少 4；按
+> **(b)** [[DAG 关键路径与最短工期|无限处理器下，最短时间等于最长链的任务数]]。链 $A\to D\to E\to G$ 有 4 个任务，故至少 4；按
 > $$
 > t_1:\{A,B,C\},\quad t_2:\{D,F\},\quad
 > t_3:\{E,H\},\quad t_4:\{G\}
 > $$
-> 可在 4 完成，故答案 $\boxed{4}$。
+> 可在 4 步内完成，故答案 $\boxed{4}$。
 > **(c)** 最多并行 2 个任务时，工作量下界为 $\lceil8/2\rceil=4$，关键路径下界仍为 4。安排
 > $$
 > t_1:\{A,B\},\quad t_2:\{C,D\},\quad
@@ -1676,7 +1708,7 @@ $$
 > 满足全部先决条件，因此仍为 $\boxed{4}$。
 > <!-- bilingual-en:start -->
 > **(a)** The transitive comparabilities include $A<D<E<G$, $B<E<G$, $B<F<H$, and $C<F<H$. The width is $3$, and the two maximum antichains are $\{A,B,C\}$ and $\{B,C,D\}$. A four-element antichain is impossible: the chain cover $A<D<E<G$, $B$, and $C<F<H$ shows that any antichain contains at most one element from each of three chains.
-> **(b)** With unlimited processors, the minimum completion time equals the number of tasks on a longest chain. The chain $A\to D\to E\to G$ gives a lower bound of $4$, and the displayed four-step schedule achieves it. Thus the answer is $\boxed{4}$.
+> **(b)** [[DAG 关键路径与最短工期|With unlimited processors, the minimum completion time equals the number of tasks on a longest chain]]. The chain $A\to D\to E\to G$ gives a lower bound of $4$, and the displayed four-step schedule achieves it. Thus the answer is $\boxed{4}$.
 > **(c)** With at most two parallel tasks, both the workload bound $\lceil8/2\rceil=4$ and the critical-path bound equal $4$. The displayed schedule satisfies every prerequisite in four steps, so the answer remains $\boxed{4}$.
 > <!-- bilingual-en:end -->
 
@@ -1724,9 +1756,9 @@ This problem first reconnects to [[02_Structures#Session 18 — Partial Orders a
 *Problem 4 — Trees & Coloring (20 points)*
 <!-- bilingual-en:end -->
 
-首次回链 [[无环图：树、生成树、DAG 与拓扑排序#Tree 的等价刻画|树]] 与 [[图着色与色数#如何证明 chromatic number|图着色]]。
+首次回链 [[有限树的等价刻画|树]] 与 [[精确色数的上下界|图着色的上下界证明]]。
 <!-- bilingual-en:start -->
-This problem reconnects to [[无环图：树、生成树、DAG 与拓扑排序#Tree 的等价刻画|trees]] and [[图着色与色数#如何证明 chromatic number|graph colouring]].
+This problem reconnects to [[有限树的等价刻画|trees]] and [[精确色数的上下界|upper- and lower-bound proofs for graph colouring]].
 <!-- bilingual-en:end -->
 
 > [!answer]- 完整归纳证明
@@ -1736,7 +1768,7 @@ This problem reconnects to [[无环图：树、生成树、DAG 与拓扑排序#T
 > $$
 > 个合法顶点着色。
 > **基例 $m=1$**：唯一顶点可任选 $n$ 种颜色，数量 $n=n(n-1)^0$。
-> **归纳步**：假设所有 $m-1$ 顶点的树均有 $n(n-1)^{m-2}$ 个合法着色。任取一棵 $m$ 顶点树 $T$。有限树至少有一个叶子 $v$；删去 $v$ 及其唯一关联边，所得 $T'$ 仍连通且无环，故是 $m-1$ 顶点树。按归纳假设，$T'$ 有 $n(n-1)^{m-2}$ 个着色。对每个着色，$v$ 只需避开其唯一邻点的颜色，所以恰有 $n-1$ 种扩展；不同 $T'$ 着色或不同扩展产生不同 $T$ 着色，且每个 $T$ 着色都唯一限制回 $T'$。由乘法法则，
+> **归纳步（$m\ge2$）**：假设所有 $m-1$ 顶点的树均有 $n(n-1)^{m-2}$ 个合法着色。任取一棵 $m$ 顶点树 $T$。[[有限树的两叶定理|有限树至少有一个 degree-$1$ 叶子]] $v$；删去 $v$ 及其唯一关联边，所得 $T'$ 仍连通且无环，故是 $m-1$ 顶点树。按归纳假设，$T'$ 有 $n(n-1)^{m-2}$ 个着色。对每个着色，$v$ 只需避开其唯一邻点的颜色，所以恰有 $n-1$ 种扩展；不同 $T'$ 着色或不同扩展产生不同 $T$ 着色，且每个 $T$ 着色都唯一限制回 $T'$。由乘法法则，
 > $$
 > n(n-1)^{m-2}(n-1)=n(n-1)^{m-1}.
 > $$
@@ -1744,7 +1776,7 @@ This problem reconnects to [[无环图：树、生成树、DAG 与拓扑排序#T
 > <!-- bilingual-en:start -->
 > **Claim.** For fixed $n>1$ colours, every tree with $m$ vertices has exactly $n(n-1)^{m-1}$ proper vertex colourings.
 > **Base case $m=1$.** The single vertex may receive any of the $n$ colours, giving $n=n(n-1)^0$ colourings.
-> **Inductive step.** Assume every tree with $m-1$ vertices has $n(n-1)^{m-2}$ proper colourings. Let $T$ be an $m$-vertex tree and remove a leaf $v$ and its incident edge. The remaining graph $T'$ is an $(m-1)$-vertex tree. By induction it has $n(n-1)^{m-2}$ colourings. For each one, $v$ may receive any colour except that of its unique neighbour, giving exactly $n-1$ extensions. Restriction back to $T'$ is unique, so the multiplication rule gives $n(n-1)^{m-1}$ colourings.
+> **Inductive step ($m\ge2$).** Assume every tree with $m-1$ vertices has $n(n-1)^{m-2}$ proper colourings. Let $T$ be an $m$-vertex tree and remove [[有限树的两叶定理|a degree-one leaf $v$]] and its incident edge. The remaining graph $T'$ is an $(m-1)$-vertex tree. By induction it has $n(n-1)^{m-2}$ colourings. For each one, $v$ may receive any colour except that of its unique neighbour, giving exactly $n-1$ extensions. Restriction back to $T'$ is unique, so the multiplication rule gives $n(n-1)^{m-1}$ colourings.
 > <!-- bilingual-en:end -->
 
 ### Problem 5 — Stable Marriage（15 分）
@@ -1823,9 +1855,9 @@ This problem reconnects to [[02_Structures#Session 22 — Stable Matching and Ha
 **Learning questions**: How should counts be added when objects split into mutually exclusive cases? How should choices be multiplied when an object is built through successive decisions? When the original objects are hard to count, how can a reversible encoding transfer the problem to a familiar set?
 <!-- bilingual-en:end -->
 
-**前置知识**：有限集合、函数、单射/满射/双射、笛卡尔积。首次正式使用 [[组合计数原理#加法、乘法与双射|加法与乘法法则]]、[[组合计数原理#加法、乘法与双射|双射计数原理]] 与 [[组合计数原理#加法、乘法与双射|计数策略选择框架]]。
+**前置知识**：有限集合、函数、单射/满射/双射、笛卡尔积。首次正式使用 [[加法法则]]、[[乘法法则]]、[[双射计数]] 与 [[组合计数原理.canvas|计数策略选择总图]]。
 <!-- bilingual-en:start -->
-**Prerequisites**: finite sets, functions, injections, surjections, bijections, and Cartesian products. This session gives the first formal use of the [[组合计数原理#加法、乘法与双射|sum and product rules]], the [[组合计数原理#加法、乘法与双射|bijection rule]], and the [[组合计数原理#加法、乘法与双射|framework for choosing a counting strategy]].
+**Prerequisites**: finite sets, functions, injections, surjections, bijections, and Cartesian products. This session gives the first formal use of the [[加法法则|sum rule]], [[乘法法则|product rule]], [[双射计数|bijection rule]], and the [[组合计数原理.canvas|map for choosing a counting strategy]].
 <!-- bilingual-en:end -->
 
 - Reading：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session25.pdf#page=1|Session 25 reading, pp. 1–6]]
@@ -2193,9 +2225,9 @@ $$
 *Questions, Prerequisites, and Resources for this Section*
 <!-- bilingual-en:end -->
 
-**学习问题**：多对一映射怎样安全地除掉重复？有重复字母的排列、无序分组、组合数与多项式系数为何是同一个结构？
+**学习问题**：多对一映射怎样安全地除掉重复？有重复字母的排列、有标签分组、组合数与多项式系数如何由固定重数统一起来？转向未标号分组时，为什么必须根据同样大小各组之间允许的置换重新确定除数？
 <!-- bilingual-en:start -->
-**Learning questions**: How can a many-to-one map remove overcounting safely? Why do permutations with repeated letters, unlabeled groupings, binomial coefficients, and multinomial coefficients all share the same structure?
+**Learning questions**: How can a many-to-one map remove overcounting safely? How do fixed multiplicities unify repeated-letter permutations, labelled groupings, binomial coefficients, and multinomial coefficients? When groups become unlabelled, why must the divisor be recomputed from the permitted permutations among equal-sized groups?
 <!-- bilingual-en:end -->
 
 **前置知识**：Session 25 的和、积、双射；阶乘；集合与序列。
@@ -2332,9 +2364,9 @@ If the two pairs are selected in an ordered first-pair/second-pair procedure, ea
 
 资源：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_BinomialTheo.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/jwjDj4GoSV0.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=jwjDj4GoSV0)
 
-[[组合计数原理#二项式、鸽巢与容斥|二项式定理]]：对非负整数 $n$，
+[[二项式定理]]：对非负整数 $n$，
 <!-- bilingual-en:start -->
-The [[组合计数原理#二项式、鸽巢与容斥|binomial theorem]] states that, for every nonnegative integer $n$,
+The [[二项式定理|binomial theorem]] states that, for every nonnegative integer $n$,
 <!-- bilingual-en:end -->
 
 $$
@@ -2358,9 +2390,9 @@ How to read the diagram: every shortest lattice path corresponds to a binary str
 *Pascal's identity*
 <!-- bilingual-en:end -->
 
-从 $n$ 元集合选 $k$ 个，固定元素 $x$：不选 $x$ 有 $\binom{n-1}{k}$ 种，选 $x$ 后还需从其余选 $k-1$ 个，有 $\binom{n-1}{k-1}$ 种。两类互斥且穷尽，所以
+[[Pascal恒等式]]可以直接按一个固定元素是否入选来证明：从 $n$ 元集合选 $k$ 个，固定元素 $x$；不选 $x$ 有 $\binom{n-1}{k}$ 种，选 $x$ 后还需从其余选 $k-1$ 个，有 $\binom{n-1}{k-1}$ 种。两类互斥且穷尽，所以
 <!-- bilingual-en:start -->
-Choose $k$ elements from an $n$-element set and fix one element $x$. There are $\binom{n-1}{k}$ choices that omit $x$, and $\binom{n-1}{k-1}$ choices that include $x$ and choose the remaining $k-1$ elements. These cases are disjoint and exhaustive, so
+The [[Pascal恒等式|Pascal identity]] follows by fixing one element $x$. There are $\binom{n-1}{k}$ choices that omit $x$, and $\binom{n-1}{k-1}$ choices that include $x$ and choose the remaining $k-1$ elements. These cases are disjoint and exhaustive, so
 <!-- bilingual-en:end -->
 
 $$
@@ -2381,9 +2413,9 @@ How to read the diagram: stars represent identical objects being distributed, an
 
 资源：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_Bookkeeper.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/juGgfHsO-xM.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=juGgfHsO-xM)
 
-[[组合计数原理#排列、组合与重复|多项式定理（multinomial theorem）]]从多类位置分配出发。若 $k_1+\cdots+k_m=n$，把 $n$ 个不同位置分成大小分别为 $k_1,\ldots,k_m$ 的有标号组，方式数为多项式系数
+[[多项式定理|多项式定理（multinomial theorem）]]从多类位置分配出发。若 $k_1+\cdots+k_m=n$，把 $n$ 个不同位置分成大小分别为 $k_1,\ldots,k_m$ 的有标号组，方式数为多项式系数
 <!-- bilingual-en:start -->
-The [[组合计数原理#排列、组合与重复|multinomial theorem]] begins with assigning positions to several labelled classes. If $k_1+\cdots+k_m=n$, the number of ways to divide $n$ distinct positions into labelled groups of sizes $k_1,\ldots,k_m$ is the multinomial coefficient
+The [[多项式定理|multinomial theorem]] begins with assigning positions to several labelled classes. If $k_1+\cdots+k_m=n$, the number of ways to divide $n$ distinct positions into labelled groups of sizes $k_1,\ldots,k_m$ is the multinomial coefficient
 <!-- bilingual-en:end -->
 
 $$
@@ -2512,7 +2544,7 @@ Temporarily distinguish repeated letters with subscripts, giving $n!$ permutatio
 > **(b)** 忘掉四组的顺序，每个无序分组有 $4!$ 个有序组序列原像，故 $\boxed{4!\text{-to-1}}$。
 > **(c)** 从 $12!$ 个名单连续应用两次 Division Rule：
 > $$
-> \boxed{\frac{12!}{(3!)^4,4!}}.
+> \boxed{\frac{12!}{(3!)^4 4!}}.
 > $$
 > **(d)** 一般地，$3n$ 人分成 $n$ 个无标号三人组：
 > $$
@@ -2639,9 +2671,9 @@ $$
 **Learning questions**: When the exact distribution is unknown, how can sheer quantity force a collision? When several “bad events” overlap, how can they be counted without omissions or duplicates?
 <!-- bilingual-en:end -->
 
-**前置知识**：函数与单射、组合数、二项式定理、加法法则。首次正式使用 [[组合计数原理#二项式、鸽巢与容斥|鸽巢原理]] 与 [[组合计数原理#二项式、鸽巢与容斥|容斥原理]]。
+**前置知识**：函数与单射、组合数、二项式定理、加法法则。首次正式使用 [[鸽巢原理]] 与 [[容斥原理]]。
 <!-- bilingual-en:start -->
-**Prerequisites:** functions and injections, binomial coefficients, the binomial theorem, and the addition rule. This session gives the first formal use of the [[组合计数原理#二项式、鸽巢与容斥|pigeonhole principle]] and the [[组合计数原理#二项式、鸽巢与容斥|inclusion–exclusion principle]].
+**Prerequisites:** functions and injections, binomial coefficients, the binomial theorem, and the addition rule. This session gives the first formal use of the [[鸽巢原理|pigeonhole principle]] and the [[容斥原理|inclusion–exclusion principle]].
 <!-- bilingual-en:end -->
 
 - Reading：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session27.pdf#page=1|Session 27 reading, pp. 1–11]]

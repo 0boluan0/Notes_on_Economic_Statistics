@@ -1,0 +1,232 @@
+{
+  "nodes": [
+    {
+      "id": "8c1f0d2e3a4b5c6d",
+      "type": "text",
+      "x": -1400,
+      "y": -430,
+      "width": 2150,
+      "height": 250,
+      "text": "# 扩展式博弈 · 原子图\n\n上层先分清“树如何变成完整策略”；向下再读信息、倒推、子博弈、SPE 与可信承诺。箭头只表示标注的关系；颜色不表示掌握程度。",
+      "color": "5"
+    },
+    {
+      "id": "1a2b3c4d5e6f7081",
+      "type": "text",
+      "x": -1400,
+      "y": 0,
+      "width": 420,
+      "height": 240,
+      "text": "## [[扩展式博弈]]\n\n用历史、行动者、时序、信息、自然概率与终端收益保留序贯结构。",
+      "color": "5"
+    },
+    {
+      "id": "91a2b3c4d5e6f708",
+      "type": "text",
+      "x": -650,
+      "y": 0,
+      "width": 420,
+      "height": 240,
+      "text": "## [[行动与策略]]\n\n共享原子：行动是局部选择，策略是覆盖每个信息集的完整应对计划。",
+      "color": "6"
+    },
+    {
+      "id": "a2b3c4d5e6f70819",
+      "type": "text",
+      "x": 100,
+      "y": 0,
+      "width": 420,
+      "height": 240,
+      "text": "## [[扩展式转策略式]]\n\n列出完整应对计划，再把每个策略组合诱导的终端收益填入策略式。",
+      "color": "6"
+    },
+    {
+      "id": "2b3c4d5e6f708192",
+      "type": "text",
+      "x": -1400,
+      "y": 500,
+      "width": 420,
+      "height": 240,
+      "text": "## [[博弈信息集]]\n\n把同一行动者无法区分、且提供相同行动的决策节点归在一起。",
+      "color": "6"
+    },
+    {
+      "id": "3c4d5e6f708192a3",
+      "type": "text",
+      "x": -650,
+      "y": 500,
+      "width": 420,
+      "height": 240,
+      "text": "## [[完全与完美信息]]\n\n共同知道规则与收益，不等于行动时看见此前的完整历史。",
+      "color": "2"
+    },
+    {
+      "id": "4d5e6f708192a3b4",
+      "type": "text",
+      "x": 100,
+      "y": 500,
+      "width": 420,
+      "height": 240,
+      "text": "## [[逆向归纳]]\n\n在有限完美信息树中从终端前节点向根保留所有最优行动。",
+      "color": "4"
+    },
+    {
+      "id": "5e6f708192a3b4c5",
+      "type": "text",
+      "x": -1400,
+      "y": 1000,
+      "width": 420,
+      "height": 240,
+      "text": "## [[子博弈判定]]\n\n从单点信息集开始，收进全部后继，并且不切断任何信息集。",
+      "color": "6"
+    },
+    {
+      "id": "6f708192a3b4c5d6",
+      "type": "text",
+      "x": -650,
+      "y": 1000,
+      "width": 420,
+      "height": 260,
+      "text": "## [[子博弈完美均衡]]\n\n把同一完整策略限制到每个合法续局，并要求其中都是 Nash 均衡。",
+      "color": "4"
+    },
+    {
+      "id": "b3c4d5e6f708192a",
+      "type": "text",
+      "x": 100,
+      "y": 1000,
+      "width": 420,
+      "height": 260,
+      "text": "## [[单次偏离原理]]\n\n有限期多阶段可观察行动时，只需逐历史排除改一次决策的有利偏离。",
+      "color": "2"
+    },
+    {
+      "id": "c4d5e6f708192a3b",
+      "type": "text",
+      "x": -1400,
+      "y": 1500,
+      "width": 420,
+      "height": 230,
+      "text": "## 后续：belief / PBE\n\n非单点信息集或没有真子博弈时，SPE 可能缺少筛选力；继续到 [[信号博弈与PBE.canvas|信号博弈与 PBE 原子图]]。",
+      "color": "3"
+    },
+    {
+      "id": "708192a3b4c5d6e7",
+      "type": "text",
+      "x": -650,
+      "y": 1500,
+      "width": 420,
+      "height": 240,
+      "text": "## [[可信威胁]]\n\n假定路径外续局真的到达，再检查执行威胁是否仍是最优行动。",
+      "color": "1"
+    },
+    {
+      "id": "d5e6f708192a3b4c",
+      "type": "text",
+      "x": 100,
+      "y": 1500,
+      "width": 420,
+      "height": 260,
+      "text": "## [[承诺与可信性]]\n\n只有先于对手决策、可观察地改变行动、收益或信息的承诺，才可能改变可信性。",
+      "color": "1"
+    }
+  ],
+  "edges": [
+    {
+      "id": "a102b203c304d405",
+      "fromNode": "1a2b3c4d5e6f7081",
+      "fromSide": "right",
+      "toNode": "91a2b3c4d5e6f708",
+      "toSide": "left",
+      "label": "局部行动必须扩展成完整计划"
+    },
+    {
+      "id": "b203c304d405e506",
+      "fromNode": "91a2b3c4d5e6f708",
+      "fromSide": "right",
+      "toNode": "a2b3c4d5e6f70819",
+      "toSide": "left",
+      "label": "作为策略式的纯策略"
+    },
+    {
+      "id": "c304d405e506f607",
+      "fromNode": "1a2b3c4d5e6f7081",
+      "fromSide": "bottom",
+      "toNode": "2b3c4d5e6f708192",
+      "toSide": "top",
+      "label": "用信息集编码可辨认的历史"
+    },
+    {
+      "id": "d405e506f607a708",
+      "fromNode": "2b3c4d5e6f708192",
+      "fromSide": "right",
+      "toNode": "3c4d5e6f708192a3",
+      "toSide": "left",
+      "label": "全部信息集皆为单点才是完美信息"
+    },
+    {
+      "id": "e506f607a708b809",
+      "fromNode": "3c4d5e6f708192a3",
+      "fromSide": "right",
+      "toNode": "4d5e6f708192a3b4",
+      "toSide": "left",
+      "label": "有限且完美信息时可以倒推"
+    },
+    {
+      "id": "f607a708b809c90a",
+      "fromNode": "2b3c4d5e6f708192",
+      "fromSide": "bottom",
+      "toNode": "5e6f708192a3b4c5",
+      "toSide": "top",
+      "label": "合法续局不得切断信息集"
+    },
+    {
+      "id": "a708b809c90ad01b",
+      "fromNode": "5e6f708192a3b4c5",
+      "fromSide": "right",
+      "toNode": "6f708192a3b4c5d6",
+      "toSide": "left",
+      "label": "逐个续局施加 Nash 条件"
+    },
+    {
+      "id": "b809c90ad01be12c",
+      "fromNode": "4d5e6f708192a3b4",
+      "fromSide": "bottom",
+      "toNode": "b3c4d5e6f708192a",
+      "toSide": "top",
+      "label": "多阶段检验的局部化条件"
+    },
+    {
+      "id": "c90ad01be12cf23d",
+      "fromNode": "6f708192a3b4c5d6",
+      "fromSide": "right",
+      "toNode": "b3c4d5e6f708192a",
+      "toSide": "left",
+      "label": "适用时用单次偏离验证 SPE"
+    },
+    {
+      "id": "d01be12cf23d034e",
+      "fromNode": "6f708192a3b4c5d6",
+      "fromSide": "bottom",
+      "toNode": "708192a3b4c5d6e7",
+      "toSide": "top",
+      "label": "在真实续局中检查路径外行动"
+    },
+    {
+      "id": "e12cf23d034e145f",
+      "fromNode": "708192a3b4c5d6e7",
+      "fromSide": "right",
+      "toNode": "d5e6f708192a3b4c",
+      "toSide": "left",
+      "label": "承诺只能通过改变博弈改变可信性"
+    },
+    {
+      "id": "f23d034e145f2560",
+      "fromNode": "6f708192a3b4c5d6",
+      "fromSide": "bottom",
+      "toNode": "c4d5e6f708192a3b",
+      "toSide": "top",
+      "label": "真子博弈不足时转入信念精炼"
+    }
+  ]
+}

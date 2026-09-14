@@ -15,10 +15,10 @@ aliases:
 # GLaM: Efficient Scaling of Language Models with Mixture-of-Experts
 
 ## 一句话位置
-这篇论文位于 `02 规模化与模型家族`，第一版用于连接 Scaling Law, Efficiency / MoE 路线；此笔记暂作索引，不做精读摘要。
+这篇论文位于 `02 规模化与模型家族`，核心位置是用稀疏激活的 MoE 扩大模型容量，同时降低相对 dense 模型的训练与推理计算；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-规模化、MoE 与分布式训练, [[LLM 推理效率]]
+[[Mixture of Experts（MoE）.canvas|MoE]], [[06_paper/LLM/LLM推理效率课程|LLM 推理效率]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/4AQWK8R6)
@@ -30,4 +30,3 @@ aliases:
 ## Canvas
 - [[LLM Big Picture]]
 - [[02 规模化与模型家族.canvas|02 规模化与模型家族 Canvas]]
-

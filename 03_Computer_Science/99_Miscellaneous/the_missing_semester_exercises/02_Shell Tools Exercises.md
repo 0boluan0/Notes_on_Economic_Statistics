@@ -19,9 +19,14 @@ tags:
 >[!note]
 > 对应主笔记：[[the_missing_semester#第 2 讲 Shell 工具和脚本]]
 > 
-> 官方来源：https://missing-semester-cn.github.io/2020/shell-tools/
+> MIT 原课程与题目：https://missing.csail.mit.edu/2020/shell-tools/
+>
+> 社区中文译文：https://missing-semester-cn.github.io/2020/shell-tools/
 > 
-> 官方解答：https://missing-semester-cn.github.io/missing-notes-and-solutions/2020/solutions//shell-tools-solution
+> 社区参考解答：https://missing-semester-cn.github.io/missing-notes-and-solutions/2020/solutions//shell-tools-solution
+> <!-- bilingual-en:start -->
+> The MIT page is the primary course source; translation and solutions are community materials.
+> <!-- bilingual-en:end -->
 
 ## 练习清单
 <!-- bilingual-en:start -->

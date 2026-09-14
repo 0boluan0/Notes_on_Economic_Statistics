@@ -39,6 +39,14 @@ lecture: 04
 > - Decimal-to-binary conversion develops the representation intuition needed for the next lecture's treatment of floating-point approximation.
 > <!-- bilingual-en:end -->
 
+> [!links] 原子化入口
+> 先看 [[计算模型、Python 表达式与控制流.canvas|基础执行语义总图]]；本讲的直接遍历与提前退出对应 [[for与range]] 和 [[控制转移语句]]。
+>
+> 后半讲的直接算法入口是 [[枚举验证]]。它以后怎样进入固定步长、二分与 Newton，见 [[数值求根.canvas|数值求根总图]]；总图同时包含后续讲次和课外理论扩展。
+> <!-- bilingual-en:start -->
+> The direct algorithmic entry for the second half is [[枚举验证|exhaustive enumeration]]. Its later development into fixed steps, bisection, and Newton is mapped in [[数值求根.canvas|Numerical Root-Finding]], which also includes later lectures and theoretical extensions beyond this class session.
+> <!-- bilingual-en:end -->
+
 ## Lecture flow
 
 ### 1. 开场先回顾 loops，然后补一个很实用的细节：`break`

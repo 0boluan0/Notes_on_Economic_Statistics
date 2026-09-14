@@ -12,6 +12,12 @@ source: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/p
 
 # Applications of Differentiation
 
+> [!tip] 学习入口
+> 若要连续学习本单元，先读 [[01_Math/01_calculus/02_导数的应用|导数的应用：从局部近似到整体控制与动态方程]]；需要定位依赖关系时打开 [[导数的应用.canvas|主题 Canvas]]。本页继续保留 MIT 18.01SC Sessions 23–42 的完整课堂记录、练习与考试材料。
+> <!-- bilingual-en:start -->
+> For a continuous route through this unit, begin with [[01_Math/01_calculus/02_导数的应用|Applications of derivatives: from local approximation to global control and dynamic equations]]. Use the [[导数的应用.canvas|topic Canvas]] to inspect dependencies. This page remains the complete MIT 18.01SC record for Sessions 23–42, exercises, and exam materials.
+> <!-- bilingual-en:end -->
+
 > [!abstract] 本章主线
 > 第一章回答“怎样求导”，本章回答“导数知道以后能做什么”。局部的一阶、二阶导数分别给出直线与抛物线近似；导数的符号把局部信息拼成整张图；约束、相关变化率和 Newton 法把现实问题变成可计算方程；平均值定理（Mean Value Theorem, MVT）再严格说明为什么局部斜率能够控制整体变化。最后，反导数、换元和可分离微分方程为积分单元搭桥。
 > <!-- bilingual-en:start -->
@@ -118,9 +124,9 @@ After completing this chapter, you should be able to:
 *23a-23c: From tangent equation to linearization*
 <!-- bilingual-en:end -->
 
-[[导数的应用#线性与二次近似|线性近似]]从切线开始。设 $f$ 在 $a$ 可导，过 $(a,f(a))$、斜率为 $f'(a)$ 的切线是
+[[线性近似]]从切线开始。设 $f$ 在 $a$ 可导，过 $(a,f(a))$、斜率为 $f'(a)$ 的切线是
 <!-- bilingual-en:start -->
-[[导数的应用#线性与二次近似|Linear approximation]] begins with the tangent line. Let $f$ be differentiable at $a$. The tangent line through $(a,f(a))$ with slope $f'(a)$ is
+[[线性近似|Linear approximation]] begins with the tangent line. Let $f$ be differentiable at $a$. The tangent line through $(a,f(a))$ with slope $f'(a)$ is
 <!-- bilingual-en:end -->
 
 $$
@@ -187,9 +193,9 @@ $$
 \ln x\approx x-1\qquad(x\approx1).
 $$
 
-例如 $\ln1.02\approx0.02$。离 $1$ 越远，不能仅凭该式保证准确；需要单独判断[[导数的应用#线性与二次近似|近似误差]]。
+例如 $\ln1.02\approx0.02$。离 $1$ 越远，不能仅凭该式保证准确；需要单独判断[[Taylor余项|近似误差]]。
 <!-- bilingual-en:start -->
-For example, $\ln 1.02\approx0.02$. Farther from $1$, this formula alone gives no guarantee of accuracy; the [[导数的应用#线性与二次近似|approximation error]] must be assessed separately.
+For example, $\ln 1.02\approx0.02$. Farther from $1$, this formula alone gives no guarantee of accuracy; the [[Taylor余项|approximation error]] must be assessed separately.
 <!-- bilingual-en:end -->
 
 ### 23d–23e：必须掌握的基准近似
@@ -414,9 +420,9 @@ Here $v/c$ is dimensionless, so its square can legitimately be added to $1$. Thi
 *24e: Relative error*
 <!-- bilingual-en:end -->
 
-绝对误差是 $|\widetilde y-y|$；相对误差是
+[[绝对误差与相对误差|绝对误差]]是 $|\widetilde y-y|$；相对误差是
 <!-- bilingual-en:start -->
-The absolute error is $|\widetilde y-y|$ and the relative error is
+The [[绝对误差与相对误差|absolute error]] is $|\widetilde y-y|$ and the relative error is
 <!-- bilingual-en:end -->
 
 $$
@@ -512,9 +518,9 @@ The first two terms form the linearization of $fg$; the only discrepancy is quad
 *Questions and Prerequisites for This Section*
 <!-- bilingual-en:end -->
 
-**问题：**切线没记录[[导数的应用#从导数读图像|凹凸性]]，怎样加入最少的新信息来改进精度？为什么二次项系数是 $f''(a)/2$？
+**问题：**切线没记录[[凹凸性]]，怎样加入最少的新信息来改进精度？为什么二次项系数是 $f''(a)/2$？
 <!-- bilingual-en:start -->
-**Question:** A tangent line does not capture [[导数的应用#从导数读图像|concavity]]. What is the smallest amount of additional information needed to improve the approximation, and why is the quadratic coefficient $f''(a)/2$?
+**Question:** A tangent line does not capture [[凹凸性|concavity]]. What is the smallest amount of additional information needed to improve the approximation, and why is the quadratic coefficient $f''(a)/2$?
 <!-- bilingual-en:end -->
 
 **前置：**线性化、二阶导数及凹凸性。
@@ -527,9 +533,9 @@ The first two terms form the linearization of $fg$; the only discrepancy is quad
 *25a: Quadratic approximation formula*
 <!-- bilingual-en:end -->
 
-若 $f$ 在 $a$ 有二阶导数，[[导数的应用#线性与二次近似|二次近似]]定义为
+若 $f$ 在 $a$ 有二阶导数，[[二次近似]]定义为
 <!-- bilingual-en:start -->
-If $f$ has a second derivative at $a$, its [[导数的应用#线性与二次近似|quadratic approximation]] is defined by
+If $f$ has a second derivative at $a$, its [[二次近似|quadratic approximation]] is defined by
 <!-- bilingual-en:end -->
 
 $$
@@ -814,9 +820,9 @@ $$
 P_n(x)=\sum_{k=0}^n\frac{f^{(k)}(0)}{k!}x^k.
 $$
 
-这已是 Taylor 多项式的骨架；本章先用到二次，Unit 5 再研究无穷级数与余项。
+这已是 [[Taylor多项式|Taylor 多项式]]的骨架；本章先用到二次，Unit 5 再研究无穷级数与余项。
 <!-- bilingual-en:start -->
-This is already the structure of the Taylor polynomial. This chapter uses only the quadratic case; Unit 5 later develops infinite series and remainder terms.
+This is already the structure of the [[Taylor多项式|Taylor polynomial]]. This chapter uses only the quadratic case; Unit 5 later develops infinite series and remainder terms.
 <!-- bilingual-en:end -->
 
 ### 易错点与边界
@@ -911,9 +917,9 @@ $$
 f''(x)<0\Rightarrow f'\text{ 递减，图像凹向下}.
 $$
 
-严格证明将在 Session 34 用 MVT 完成。
+严格证明将在 Session 34 用 MVT 完成。[[导数判凹凸]]把这里的二阶符号规则与弦定义接起来，并说明它需要在整个区间成立。
 <!-- bilingual-en:start -->
-A rigorous proof using the MVT appears in Session 34.
+A rigorous proof using the MVT appears in Session 34. The [[导数判凹凸|derivative criterion for convexity]] connects these second-derivative signs to the chord definition and states the interval-wide conditions.
 <!-- bilingual-en:end -->
 
 ### 27b：多项式例 $f(x)=3x-x^3$
@@ -940,9 +946,9 @@ Sign chart:
 | $f'$ | $-$ | $+$ | $-$ |
 | $f$ | 递减 | 递增 | 递减 |
 
-[[导数的应用#从导数读图像|临界点]]（critical point）是定义域内 $f'(x)=0$ 或 $f'$ 不存在而 $f$ 存在的候选位置。此处 $x=\pm1$，函数点为 $(-1,-2),(1,2)$。故前者局部最小，后者局部最大。
+[[临界点]]（critical point）是定义域内 $f'(x)=0$ 或 $f'$ 不存在而 $f$ 存在的候选位置。此处 $x=\pm1$，函数点为 $(-1,-2),(1,2)$。故前者局部最小，后者局部最大。
 <!-- bilingual-en:start -->
-A [[导数的应用#从导数读图像|critical point]] is a point in the domain where $f'(x)=0$, or where $f'$ does not exist while $f$ does. Here $x=\pm1$, giving the points $(-1,-2)$ and $(1,2)$. The former is a local minimum and the latter a local maximum.
+A [[临界点|critical point]] is a point in the domain where $f'(x)=0$, or where $f'$ does not exist while $f$ does. Here $x=\pm1$, giving the points $(-1,-2)$ and $(1,2)$. The former is a local minimum and the latter a local maximum.
 <!-- bilingual-en:end -->
 
 $$
@@ -993,9 +999,9 @@ $$
 f''(x)=-\frac2{(x+2)^3},
 $$
 
-左支凹向上、右支凹向下。$x=-2$ 不是拐点，因为原函数在那里不连续。
+左支凹向上、右支凹向下。$x=-2$ 不是[[拐点]]，因为原函数在那里不连续。
 <!-- bilingual-en:start -->
-The left branch is concave up and the right branch is concave down. Nevertheless, $x=-2$ is not an inflection point because the function is discontinuous there.
+The left branch is concave up and the right branch is concave down. Nevertheless, $x=-2$ is not an [[拐点|inflection point]] because the function is discontinuous there.
 <!-- bilingual-en:end -->
 
 ### 易错点与边界
@@ -1064,9 +1070,14 @@ The left branch is concave up and the right branch is concave down. Nevertheless
 **Prerequisites:** Monotonicity, concavity, asymptotes, and critical points from Session 27.
 <!-- bilingual-en:end -->
 
-### 28a：[[导数的应用#从导数读图像|曲线描绘]]五步法
+### 28a：曲线描绘五步法
 <!-- bilingual-en:start -->
-*28a: A five-step method for [[导数的应用#从导数读图像|curve sketching]]*
+*28a: A five-step method for [[曲线描绘|curve sketching]]*
+<!-- bilingual-en:end -->
+
+[[曲线描绘]]把下面五步合成一张相互一致的函数图像。
+<!-- bilingual-en:start -->
+[[曲线描绘|Curve sketching]] combines the following five steps into one consistent graph.
 <!-- bilingual-en:end -->
 
 1. **先做预备代数：**定义域、对称性、截距、易算点。
@@ -1552,9 +1563,9 @@ $D$ produces only a vertical shift and does not affect monotonicity or concavity
 *29a: Extreme candidate list*
 <!-- bilingual-en:end -->
 
-[[导数的应用#优化：把目标变成一阶条件|导数优化]]先列候选。若 $f$ 在闭区间 $[a,b]$ 连续，极值定理保证绝对最大、最小存在。它们只能出现在：
+[[闭区间极值法|导数优化]]先列候选。若 $f$ 在闭区间 $[a,b]$ 连续，极值定理保证绝对最大、最小存在。它们只能出现在：
 <!-- bilingual-en:start -->
-[[导数的应用#优化：把目标变成一阶条件|Derivative-based optimization]] begins by listing candidates. If $f$ is continuous on the closed interval $[a,b]$, the Extreme Value Theorem guarantees that an absolute maximum and minimum exist. They can occur only at
+[[闭区间极值法|Derivative-based optimization]] begins by listing candidates. If $f$ is continuous on the closed interval $[a,b]$, the Extreme Value Theorem guarantees that an absolute maximum and minimum exist. They can occur only at
 <!-- bilingual-en:end -->
 
 1. 内点且 $f'(x)=0$；
@@ -1916,9 +1927,9 @@ $S\to\infty$ when $r\to0^+$ or $r\to\infty$, so this is the global minimum.
 *Questions and Prerequisites for This Section*
 <!-- bilingual-en:end -->
 
-**问题：**[[导数的应用#相关变化率与弹性|相关变化率]]中，多个随时间变化的量由一个几何方程联系时，怎样从已知速率求未知速率？
+**问题：**[[相关变化率]]中，多个随时间变化的量由一个几何方程联系时，怎样从已知速率求未知速率？
 <!-- bilingual-en:start -->
-**Question:** In a [[导数的应用#相关变化率与弹性|related-rates]] problem, several time-varying quantities are connected by a geometric equation. How can a known rate be used to find an unknown one?
+**Question:** In a [[相关变化率|related-rates]] problem, several time-varying quantities are connected by a geometric equation. How can a known rate be used to find an unknown one?
 <!-- bilingual-en:end -->
 
 **前置：**链式法则、隐函数求导、相似三角形、常见面积与体积公式。
@@ -2339,9 +2350,9 @@ The presence of a true slack position also requires that the length be sufficien
 *33a: Iterative Formula Derivation*
 <!-- bilingual-en:end -->
 
-[[数值求根：二分法与 Newton–Raphson#Newton–Raphson|Newton 法]]从已有近似 $x_n$ 出发，在它附近用切线
+[[Newton迭代|Newton 法]]从已有近似 $x_n$ 出发，在它附近用切线
 <!-- bilingual-en:start -->
-Starting from the existing approximation $x_n$, [[数值求根：二分法与 Newton–Raphson#Newton–Raphson|Newton method]] uses a tangent near it
+Starting from the existing approximation $x_n$, [[Newton迭代|Newton method]] uses a tangent near it
 <!-- bilingual-en:end -->
 
 $$
@@ -2398,9 +2409,9 @@ This is already very close to $\sqrt5\approx2.236068$.
 *33b: Why it's usually very fast*
 <!-- bilingual-en:end -->
 
-设真根为 $r$，误差 $e_n=x_n-r$。若 $f'(r)\ne0$ 且二阶导在附近受控，Taylor 展开给
+设真根为 $r$，误差 $e_n=x_n-r$。若 $f$ 在 $r$ 附近二阶连续可微、$f'(r)\ne0$，并且初值足够接近，使迭代始终留在导数远离 $0$ 的邻域，Taylor 展开给
 <!-- bilingual-en:start -->
-Let the true root be $r$ and define the error by $e_n=x_n-r$. If $f'(r)\ne0$ and the second derivative is bounded nearby, a Taylor expansion gives
+Let the true root be $r$ and define the error by $e_n=x_n-r$. If $f$ is twice continuously differentiable near $r$, $f'(r)\ne0$, and the initial value is close enough that the iterates remain in a neighbourhood where the derivative stays away from zero, a Taylor expansion gives
 <!-- bilingual-en:end -->
 
 $$
@@ -2408,9 +2419,9 @@ e_{n+1}\approx
 \frac{f''(r)}{2f'(r)}e_n^2.
 $$
 
-误差大致平方，所以当误差小于 $1$ 后，有效数字常近似翻倍。这叫二次收敛（quadratic convergence），但它是局部结论。
+误差大致平方，所以进入合适的局部邻域后，有效数字常近似翻倍。这叫二次收敛（quadratic convergence）；它依赖简单根、附近光滑性与不退化导数，不是任意初值的全局保证。严格条件与误差界见 [[Newton局部收敛]]。
 <!-- bilingual-en:start -->
-The error is approximately squared at each step, so once it is below $1$, the number of correct digits often roughly doubles. This is called quadratic convergence, but it is only a local result.
+Once the iteration enters a suitable local neighbourhood, the error is approximately squared and the number of correct digits often roughly doubles. This is called quadratic convergence; it depends on a simple root, local smoothness, and a nondegenerate derivative rather than holding globally for arbitrary initial values. See [[Newton局部收敛|Newton local convergence]] for precise conditions and bounds.
 <!-- bilingual-en:end -->
 
 ### 33c：四类失败
@@ -2418,27 +2429,27 @@ The error is approximately squared at each step, so once it is below $1$, the nu
 *33c: Four types of failure*
 <!-- bilingual-en:end -->
 
-1. $f'(x_n)=0$：切线水平，没有有限的横轴交点。
+1. 尚未到根时，若 $f'(x_n)=0$，Newton 更新没有定义；若导数只接近 $0$，更新步也可能异常大。若 $f(x_n)=0$，则应在除法前直接返回这个根。
 2. 初值落在另一个根的吸引域，收敛到“错误的根”。
 3. 曲率过大或初值太远，切线零点反而更远。
 4. 迭代进入周期，例如两点来回跳动。
 <!-- bilingual-en:start -->
 
 &nbsp;
-**1.** If $f'(x_n)=0$, the tangent is horizontal and has no finite $x$-intercept.<br>
+**1.** Away from a root, a zero derivative makes the Newton update undefined, while a near-zero derivative can produce an excessively large step. If $f(x_n)=0$, return that root before dividing.<br>
 **2.** The initial value may lie in the basin of attraction of another root and converge to the “wrong” root.<br>
 **3.** If the curvature is too large or the initial value too far away, the tangent's zero may be even farther from the desired root.<br>
 **4.** The iteration may enter a cycle, such as oscillating between two points.<br>
 <!-- bilingual-en:end -->
 
-因此每步应检查 $|f(x_n)|$ 是否变小、$f'(x_n)$ 是否接近 $0$，不能只机械按键。
+这些情形汇总在 [[Newton失效边界]]。实现时应先检查当前点是否已经是根，再检查导数、候选点与函数值是否有限，并保留 [[数值迭代停止条件|迭代上限和明确失败状态]]。[[求根残差|残差]] 可以作为运行证据，但 Newton 法并不普遍最小化 $|f(x)|$，所以不能要求它每轮单调下降。
 <!-- bilingual-en:start -->
-Therefore, at each step check whether $|f(x_n)|$ is decreasing and whether $f'(x_n)$ is close to $0$; do not merely press the calculator keys mechanically.
+These cases are collected in [[Newton失效边界|Newton failure boundaries]]. An implementation should first test whether the current point is already a root, then check the derivative, candidate, and function value for validity and retain an [[数值迭代停止条件|iteration limit and explicit failure state]]. A [[求根残差|residual]] is useful runtime evidence, but Newton's method does not generally minimize $|f(x)|$, so it need not decrease on every step.
 <!-- bilingual-en:end -->
 
-### 配套练习：$f(x)=x^3$ 永远不会有限步到根
+### 配套练习：精确算术中，$f(x)=x^3$ 从非零初值出发不会有限步到根
 <!-- bilingual-en:start -->
-*Supporting exercise: Newton's method for $f(x)=x^3$ never reaches the root in finitely many steps*
+*Supporting exercise: In exact arithmetic, Newton iteration for $f(x)=x^3$ does not reach the root in finitely many steps from a nonzero initial value*
 <!-- bilingual-en:end -->
 
 若 $x_n\ne0$，
@@ -2461,9 +2472,9 @@ $$
 x_n=\left(\frac23\right)^nx_0.
 $$
 
-若 $x_0\ne0$，任何有限 $n$ 都有 $x_n\ne0$，但 $x_n\to0$。这里根是重根且 $f'(0)=0$，只呈线性收敛，而不是通常的二次收敛。
+若 $x_0\ne0$，任何有限 $n$ 都有 $x_n\ne0$，但 $x_n\to0$。这里根是重根且 $f'(0)=0$，只呈线性收敛，而不是简单根附近的二次收敛；这正是 [[Newton局部收敛]] 条件不满足时的边界例子。
 <!-- bilingual-en:start -->
-If $x_0\ne0$, then $x_n\ne0$ for every finite $n$, although $x_n\to0$. Here the root is multiple and $f'(0)=0$, so convergence is only linear rather than the usual quadratic convergence.
+If $x_0\ne0$, then $x_n\ne0$ for every finite $n$, although $x_n\to0$. Here the root is multiple and $f'(0)=0$, so convergence is only linear rather than quadratic as near a simple root; this is a boundary case in which the conditions of [[Newton局部收敛|Newton local convergence]] fail.
 <!-- bilingual-en:end -->
 
 ### 易错点与边界
@@ -2472,11 +2483,13 @@ If $x_0\ne0$, then $x_n\ne0$ for every finite $n$, although $x_n\to0$. Here the 
 <!-- bilingual-en:end -->
 
 - 分母必须是 $f'(x_n)$，不能写成 $f'(x_{n+1})$。
-- “连续若干位不变”是停止准则之一，但更可靠的是同时检查残差 $|f(x_n)|$。
+- “连续若干位不变”只说明步长已经很小或发生舍入停滞，不能单独证明成功；应同时按 [[数值迭代停止条件]] 检查迭代上限与失败状态。
+- 小残差不自动等于小位置误差；两者之间还需要 [[残差控制根误差|导数下界等转换条件]]，或改用括区间等位置证书。
 - 重根处 $f'(r)=0$，普通快速收敛理论不适用。
 <!-- bilingual-en:start -->
 - The denominator must be $f'(x_n)$ and cannot be written as $f'(x_{n+1})$.
-- Several unchanged decimal places can be used as one stopping criterion, but it is safer to check the residual $|f(x_n)|$ as well.
+- Several unchanged decimal places show only that the step is small or rounding has caused stagnation; this cannot establish success on its own. Also apply an [[数值迭代停止条件|iteration limit and explicit failure checks]].
+- A small residual is not automatically a small positional error; the two require [[残差控制根误差|a conversion condition such as a lower derivative bound]], or a separate positional certificate such as a valid bracket.
 - $f'(r)=0$ at multiple roots. The ordinary fast convergence theory is not applicable.
 <!-- bilingual-en:end -->
 
@@ -2485,7 +2498,7 @@ If $x_0\ne0$, then $x_n\ne0$ for every finite $n$, although $x_n\to0$. Here the 
 > 例如 $f(x)=1/x-a$ 或 $f(x)=1-ax$；后者本身线性，一步到达。
 >
 > 2. 若 $f(x_n)=0$ 会怎样？
-> 已找到精确根，公式给 $x_{n+1}=x_n$（只要 $f'(x_n)\ne0$）。
+> 已找到精确根；程序应在除以导数前直接返回。这样即使它是导数也为零的重根，也不会把成功误报成除零失败。
 >
 > 3. 为何初值应尽量靠近目标根？
 > 线性化只在局部可信，靠近后才进入误差平方的收敛区。
@@ -2495,7 +2508,7 @@ If $x_0\ne0$, then $x_n\ne0$ for every finite $n$, although $x_n\to0$. Here the 
 > **1.** What equation could be used to compute $1/a$ with Newton's method?<br>
 > For example, $f(x)=1/x-a$ or $f(x)=1-ax$; the latter itself is linear and arrives in one step.
 > **2.** What if $f(x_n)=0$?<br>
-> An exact root has been found, and the formula gives $x_{n+1}=x_n$ provided $f'(x_n)\ne0$.
+> An exact root has been found; the program should return it before dividing by the derivative. This avoids misreporting success as division failure when the exact root is also a multiple root with zero derivative.
 > **3.** Why should initial values be as close to the target root as possible?<br>
 > Linearization is reliable only locally; a nearby starting value is more likely to enter the region where the error is squared at each step.
 > <!-- bilingual-en:end -->
@@ -2933,9 +2946,9 @@ If $x_0\ne0$, then $x_n\ne0$ for every finite $n$, although $x_n\to0$. Here the 
 *34a: Theorem Statement and Geometric Meaning*
 <!-- bilingual-en:end -->
 
-[[导数的应用|拉格朗日中值定理]]要求 $f$ 满足：
+[[拉格朗日中值定理]]要求 $f$ 满足：
 <!-- bilingual-en:start -->
-[[导数的应用|Lagrange's Mean Value Theorem]] requires $f$ to satisfy three hypotheses:
+[[拉格朗日中值定理|Lagrange's Mean Value Theorem]] requires $f$ to satisfy three hypotheses:
 <!-- bilingual-en:end -->
 
 1. 在闭区间 $[a,b]$ 上连续；
@@ -3000,9 +3013,9 @@ $$
 If the two one-sided limits exist and agree, their common value can only be $0$.
 <!-- bilingual-en:end -->
 
-**[[导数的应用|罗尔定理]]：**若 $f$ 在 $[a,b]$ 连续、在 $(a,b)$ 可导且 $f(a)=f(b)$，则存在 $c\in(a,b)$ 使 $f'(c)=0$。
+**[[罗尔定理]]：**若 $f$ 在 $[a,b]$ 连续、在 $(a,b)$ 可导且 $f(a)=f(b)$，则存在 $c\in(a,b)$ 使 $f'(c)=0$。
 <!-- bilingual-en:start -->
-**[[导数的应用|Rolle's theorem]]:** If $f$ is continuous on $[a,b]$, differentiable on $(a,b)$, and $f(a)=f(b)$, then some $c\in(a,b)$ satisfies $f'(c)=0$.
+**[[罗尔定理|Rolle's theorem]]:** If $f$ is continuous on $[a,b]$, differentiable on $(a,b)$, and $f(a)=f(b)$, then some $c\in(a,b)$ satisfies $f'(c)=0$.
 <!-- bilingual-en:end -->
 
 证明：连续函数由极值定理在闭区间达到最大、最小。若二者相同，$f$ 为常函数，任取内点即可。若不同，因为两端函数值相等，至少一个非平凡极值必须在内点取得；Fermat 引理给 $f'(c)=0$。
@@ -3010,9 +3023,9 @@ If the two one-sided limits exist and agree, their common value can only be $0$.
 Proof: By the Extreme Value Theorem, a continuous function attains both a maximum and a minimum on the closed interval. If these values are equal, $f$ is constant and any interior point works. Otherwise, because the endpoint values are equal, at least one nontrivial extremum must occur at an interior point; Fermat's lemma then gives $f'(c)=0$.
 <!-- bilingual-en:end -->
 
-### [[导数的应用|平均值定理证明]]
+### 平均值定理证明
 <!-- bilingual-en:start -->
-*[[导数的应用|Proof of the Mean Value Theorem]]*
+*[[拉格朗日中值定理|Proof of the Mean Value Theorem]]*
 <!-- bilingual-en:end -->
 
 令割线斜率
@@ -3110,9 +3123,9 @@ $$
 P_n(b)=\sum_{k=0}^n\frac{f^{(k)}(a)}{k!}(b-a)^k.
 $$
 
-Taylor 定理将 MVT 的结构推广为：在足够光滑的条件下，存在 $c$ 位于 $a,b$ 之间，使
+[[Taylor余项|Taylor 定理]]将 MVT 的结构推广为：在足够光滑的条件下，存在 $c$ 位于 $a,b$ 之间，使
 <!-- bilingual-en:start -->
-Taylor's theorem generalizes the structure of MVT to the following conclusion: under smooth enough conditions, there exists a $c$ between $a,b$, so that
+The [[Taylor余项|Taylor remainder theorem]] generalizes the structure of MVT to the following conclusion: under smooth enough conditions, there exists a $c$ between $a,b$, so that
 <!-- bilingual-en:end -->
 
 $$
@@ -3645,18 +3658,18 @@ $$
 F'(x)=f(x),
 $$
 
-则称 $F$ 是 $f$ 的[[定积分与微积分基本定理#两个基本定理怎样把导数与积分接起来|反导数]]（antiderivative）。记号
+则称 $F$ 是 $f$ 的[[原函数|反导数]]（antiderivative）。记号
 <!-- bilingual-en:start -->
-then $F$ is called an [[定积分与微积分基本定理#两个基本定理怎样把导数与积分接起来|antiderivative]] of $f$. The notation
+then $F$ is called an [[原函数|antiderivative]] of $f$. The notation
 <!-- bilingual-en:end -->
 
 $$
 \int f(x)\,dx=F(x)+C
 $$
 
-叫[[定积分与微积分基本定理#积分应用的建模顺序|积分]]（这里是不定积分，indefinite integral）。积分号表示“寻找全部反导数”，$dx$ 指明积分变量。
+叫不定积分（indefinite integral）。这里表示的是 $f$ 的全部[[原函数]]组成的函数族，$dx$ 指明积分变量；它不是一个上下限之间累积得到的数。
 <!-- bilingual-en:start -->
-is called an [[定积分与微积分基本定理#积分应用的建模顺序|integral]]—specifically, an indefinite integral here. The integral sign means “find all antiderivatives,” and $dx$ identifies the variable of integration.
+is an indefinite integral: the family of all [[原函数|antiderivatives]] of $f$, with $dx$ identifying the variable of integration. It is not a number accumulated between two bounds.
 <!-- bilingual-en:end -->
 
 例如
@@ -3866,9 +3879,9 @@ $$
 **Prerequisites:** Differentials, basic antiderivatives, and the chain rule.
 <!-- bilingual-en:end -->
 
-### 38a：[[积分方法#积分方法选择树|换元积分]]的来源
+### 38a：[[换元积分|换元积分]]的来源
 <!-- bilingual-en:start -->
-*38a: The Basis of [[积分方法#积分方法选择树|Integration by Substitution]]*
+*38a: The Basis of [[换元积分|Integration by Substitution]]*
 <!-- bilingual-en:end -->
 
 链式法则：
@@ -4066,18 +4079,18 @@ By $\sec^2x-\tan^2x=1$, the two answers differ by $1/2$, so they are equivalent.
 *39a: Differential Equations and General Solutions*
 <!-- bilingual-en:end -->
 
-[[导数的应用#微分方程与增长率|微分方程]]（differential equation）把未知函数与导数联系起来。最简单的
+[[常微分方程|微分方程]]（differential equation）把未知函数与导数联系起来。最简单的
 <!-- bilingual-en:start -->
-A [[导数的应用#微分方程与增长率|differential equation]] relates an unknown function to one or more of its derivatives. In the simplest case,
+A [[常微分方程|differential equation]] relates an unknown function to one or more of its derivatives. In the simplest case,
 <!-- bilingual-en:end -->
 
 $$
 \frac{dy}{dx}=f(x)
 $$
 
-的通解是
+的[[通解与初值|通解]]是
 <!-- bilingual-en:start -->
-the general solution is
+the [[通解与初值|general solution]] is
 <!-- bilingual-en:end -->
 
 $$
@@ -4150,9 +4163,9 @@ $$
 \frac{dy}{dx}=f(x)g(y),
 $$
 
-先另列 $g(y)=0$ 的常数平衡解。对 $g(y)\ne0$：
+先另列 $g(y)=0$ 的常数[[分离变量漏平衡解|平衡解]]。对 $g(y)\ne0$：
 <!-- bilingual-en:start -->
-The constant equilibrium solutions of $g(y)=0$ are listed first.  For $g(y)\ne0$:
+The constant [[分离变量漏平衡解|equilibrium solutions]] of $g(y)=0$ are listed first. For $g(y)\ne0$:
 <!-- bilingual-en:end -->
 
 $$
@@ -4273,9 +4286,9 @@ Substitution checks the algebra and also exposes the domain restriction $x\ne0$.
 **Prerequisites:** The general framework from Session 39, $\int dx/x$, and implicit curves.
 <!-- bilingual-en:end -->
 
-### 40a：最简单的[[导数的应用#微分方程与增长率|分离变量法]]
+### 40a：最简单的[[分离变量|分离变量法]]
 <!-- bilingual-en:start -->
-*40a: The Simplest Case of [[导数的应用#微分方程与增长率|Separation of Variables]]*
+*40a: The Simplest Case of [[分离变量|Separation of Variables]]*
 <!-- bilingual-en:end -->
 
 $$
@@ -4337,9 +4350,9 @@ $$
 \boxed{y=Ax^2}.
 $$
 
-代回 $y'=2Ax=2y/x$ 对 $x\ne0$ 成立。注意原方程在 $x=0$ 未规定斜率，因此穿过 $x=0$ 时可能把左右不同参数的抛物线拼接；这是奇点导致的非唯一性。
+代回 $y'=2Ax=2y/x$ 对 $x\ne0$ 成立。原方程在 $x=0$ 没有定义，因此左右半轴可以各选一个参数。把两侧抛物线补成一条经过零点的曲线，也没有使它在零点满足原方程；这里首先是[[方程未定义处分支独立|方程未覆盖该点且未约束两侧参数]]，应分别报告两侧的解区间。
 <!-- bilingual-en:start -->
-Substitution verifies that $y'=2Ax=2y/x$ for $x\ne0$. Notice that the original equation does not prescribe a slope at $x=0$. A curve passing through $x=0$ may therefore splice together parabolas with different parameters on the left and right; this is nonuniqueness caused by the singular point.
+Substitution verifies the equation for $x\ne0$. The ODE is undefined at zero, so the two half-lines may carry independent constants. Filling in a curve through zero does not make the original equation hold there. The [[方程未定义处分支独立|gap in the equation's domain imposes no relation between the two constants]], and the two solution intervals should be reported separately.
 <!-- bilingual-en:end -->
 
 ### 40c：与抛物线正交的轨线
@@ -4347,9 +4360,9 @@ Substitution verifies that $y'=2Ax=2y/x$ for $x\ne0$. Notice that the original e
 *40c: Trajectories Orthogonal to a Family of Parabolas*
 <!-- bilingual-en:end -->
 
-抛物线族 $y=ax^2$ 在点 $(x,y)$ 的斜率为 $2y/x$。正交曲线斜率取负倒数：
+[[正交轨线]]要求交点处的切线垂直。抛物线族 $y=ax^2$ 在 $x\ne0$ 处的斜率为 $2y/x$；[[正交轨线求解]]在该斜率有限且非零时取负倒数：
 <!-- bilingual-en:start -->
-The family of parabolas $y=ax^2$ has slope $2y/x$ at $(x,y)$. An orthogonal trajectory must have the negative reciprocal slope:
+An [[正交轨线|orthogonal trajectory]] has a perpendicular tangent at each intersection. The parabola family $y=ax^2$ has slope $2y/x$ when $x\ne0$; the [[正交轨线求解|solution method]] takes its negative reciprocal where the slope is finite and nonzero:
 <!-- bilingual-en:end -->
 
 $$
@@ -4395,9 +4408,9 @@ the upper and lower halves are separate functions. At $y=0$ the ellipse has a ve
 *Supplementary Exercise: Exponential and Bounded Growth*
 <!-- bilingual-en:end -->
 
-**指数增长**
+**[[指数增长与衰减|指数增长]]**
 <!-- bilingual-en:start -->
-**Exponential growth**
+**[[指数增长与衰减|Exponential growth]]**
 <!-- bilingual-en:end -->
 
 $$
@@ -4408,13 +4421,13 @@ $$
 \boxed{y=Ae^{rx}}.
 $$
 
-**Logistic 型受限增长**
+**[[Logistic增长|Logistic 型受限增长]]**
 <!-- bilingual-en:start -->
-**Logistic-type bounded growth**
+**[[Logistic增长|Logistic-type bounded growth]]**
 <!-- bilingual-en:end -->
 
 $$
-\frac{dy}{dx}=ry(s-y),\qquad s>0.
+\frac{dy}{dx}=ry(s-y),\qquad r>0,\ s>0.
 $$
 
 先记录平衡解 $y=0,s$。对其他解：
@@ -4475,12 +4488,12 @@ For a typical initial condition with $0<y_0<s$, we have $A>0$ and $y\to s$ as $x
 - 负倒数斜率只适用于有限非零斜率；水平/竖直需单独解释。
 - 分离前列平衡解，分离后检查分母为零的位置。
 - 显式开根会产生多个分支；一个隐式曲线未必是全局函数。
-- 求出公式后要确定由初值连通得到的最大区间，不能跨越分母零点。
+- 求出公式后要确定由初值连通得到的[[微分方程最大区间|最大区间]]，不能跨越分母零点。
 <!-- bilingual-en:start -->
 - The negative-reciprocal slope rule applies only to finite, nonzero slopes; horizontal and vertical tangents need separate treatment.
 - List equilibrium solutions before separating variables, and after separation check where any denominator vanishes.
 - Solving explicitly by taking roots can create multiple branches; an implicit curve need not be a global function.
-- After deriving a formula, identify the maximal interval connected to the initial condition; it cannot cross a zero of the denominator.
+- After deriving a formula, identify the [[微分方程最大区间|maximal interval]] connected to the initial condition; it cannot cross a zero of the denominator.
 <!-- bilingual-en:end -->
 
 > [!question]- 三道自检题与答案

@@ -1,0 +1,342 @@
+{
+  "nodes": [
+    {
+      "id": "header",
+      "type": "text",
+      "text": "# 奇异值分解与低秩近似\n\n先问分解是什么、为什么存在；再辨认奇异值和奇异向量怎样组织矩阵结构；最后用两种范数理解截断误差、唯一性和任务边界。\n\n**箭头表示直接的学习前提。**",
+      "x": 0,
+      "y": 0,
+      "width": 5200,
+      "height": 220
+    },
+    {
+      "id": "group-structure",
+      "type": "group",
+      "label": "1. 分解、方向与子空间",
+      "x": 0,
+      "y": 280,
+      "width": 5200,
+      "height": 1700,
+      "color": "5"
+    },
+    {
+      "id": "group-norms",
+      "type": "group",
+      "label": "2. 两种矩阵范数",
+      "x": 0,
+      "y": 2040,
+      "width": 5200,
+      "height": 760,
+      "color": "3"
+    },
+    {
+      "id": "group-low-rank",
+      "type": "group",
+      "label": "3. 低秩近似与解释边界",
+      "x": 0,
+      "y": 2860,
+      "width": 5200,
+      "height": 1180,
+      "color": "6"
+    },
+    {
+      "id": "svd",
+      "type": "text",
+      "text": "## [[奇异值分解]]\n\n$A=U\\Sigma V^*$：两个酉基把线性映射表示成互相独立的非负轴向伸缩。",
+      "x": 2250,
+      "y": 350,
+      "width": 700,
+      "height": 170,
+      "color": "4"
+    },
+    {
+      "id": "existence",
+      "type": "text",
+      "text": "## [[SVD存在性]]\n\n每个有限维实矩阵或复矩阵都有 SVD，不要求方形、可逆或可对角化。",
+      "x": 150,
+      "y": 650,
+      "width": 650,
+      "height": 180,
+      "color": "6"
+    },
+    {
+      "id": "singular-value",
+      "type": "text",
+      "text": "## [[奇异值]]\n\n$\\Sigma$ 的非负对角元记录各奇异方向的伸缩量。",
+      "x": 1250,
+      "y": 650,
+      "width": 650,
+      "height": 180,
+      "color": "4"
+    },
+    {
+      "id": "singular-vector",
+      "type": "text",
+      "text": "## [[奇异向量]]\n\n右奇异向量给输入方向，左奇异向量给输出方向；正奇异值把两者配成方向对。",
+      "x": 2350,
+      "y": 650,
+      "width": 650,
+      "height": 180,
+      "color": "4"
+    },
+    {
+      "id": "singular-value-gram",
+      "type": "text",
+      "text": "## [[奇异值与Gram谱]]\n\n$A^*A$ 与 $AA^*$ 的正特征值相同，恰为正奇异值的平方。",
+      "x": 1250,
+      "y": 970,
+      "width": 650,
+      "height": 180,
+      "color": "5"
+    },
+    {
+      "id": "singular-vector-gram",
+      "type": "text",
+      "text": "## [[奇异向量与Gram特征向量]]\n\n左右奇异向量分别是两个 Gram 矩阵的 $\\sigma_i^2$ 特征向量。",
+      "x": 2350,
+      "y": 970,
+      "width": 650,
+      "height": 180,
+      "color": "5"
+    },
+    {
+      "id": "svd-vs-eigen",
+      "type": "text",
+      "text": "## [[SVD与特征分解]]\n\n特征分解寻找同一空间中的不变方向；SVD 连接输入与输出两个空间。",
+      "x": 3450,
+      "y": 650,
+      "width": 650,
+      "height": 180,
+      "color": "2"
+    },
+    {
+      "id": "hand-computation",
+      "type": "text",
+      "text": "## [[SVD手算流程]]\n\n先对角化 Gram 矩阵，再配出另一侧正奇异方向并补齐零空间基。",
+      "x": 150,
+      "y": 1290,
+      "width": 650,
+      "height": 180,
+      "color": "3"
+    },
+    {
+      "id": "rank",
+      "type": "text",
+      "text": "## [[奇异值与秩]]\n\n矩阵的精确秩等于正奇异值的个数。",
+      "x": 1250,
+      "y": 1290,
+      "width": 650,
+      "height": 180,
+      "color": "5"
+    },
+    {
+      "id": "compact",
+      "type": "text",
+      "text": "## [[紧SVD]]\n\n只保留全部正奇异方向，仍然精确重构原矩阵。",
+      "x": 2350,
+      "y": 1290,
+      "width": 650,
+      "height": 180,
+      "color": "4"
+    },
+    {
+      "id": "four-subspaces",
+      "type": "text",
+      "text": "## [[SVD与四个基本子空间]]\n\n正奇异方向与左右零空间补基分别给出行空间、列空间、零空间和左零空间的正交基。",
+      "x": 3450,
+      "y": 1290,
+      "width": 650,
+      "height": 190,
+      "color": "5"
+    },
+    {
+      "id": "paired-phase",
+		"type": "text",
+      "text": "## [[奇异向量共同相位]]\n\n简单正奇异值的左右向量只能成对改变共同符号或复相位。",
+		"x": 700,
+      "y": 1610,
+      "width": 650,
+      "height": 180,
+      "color": "1"
+    },
+    {
+      "id": "rank-one-expansion",
+      "type": "text",
+      "text": "## [[SVD秩一展开]]\n\n$A=\\sum_i\\sigma_i u_iv_i^*$：每一项读取一个输入坐标，再沿对应输出方向送出。",
+      "x": 2350,
+      "y": 1610,
+      "width": 650,
+      "height": 180,
+      "color": "5"
+    },
+    {
+      "id": "repeated-value",
+      "type": "text",
+      "text": "## [[重奇异值下方向不唯一]]\n\n重复正奇异值只确定成对的奇异子空间，不确定其中逐列选取的基。",
+      "x": 4350,
+      "y": 1290,
+      "width": 650,
+      "height": 180,
+      "color": "1"
+    },
+    {
+      "id": "zero-block",
+      "type": "text",
+      "text": "## [[SVD零块补基不唯一]]\n\n右零空间与左零空间分别补基，两侧没有天然的一一配对。",
+      "x": 3450,
+      "y": 1610,
+      "width": 650,
+      "height": 180,
+      "color": "1"
+    },
+	{
+		"id": "spectral-norm",
+		"type": "text",
+      "text": "## [[谱范数]]\n\n$\\|A\\|_2$ 是矩阵对 Euclidean 单位输入能够产生的最大伸缩。",
+		"x": 700,
+      "y": 2120,
+      "width": 800,
+      "height": 180,
+      "color": "4"
+    },
+	{
+		"id": "spectral-identity",
+		"type": "text",
+      "text": "## [[谱范数与最大奇异值]]\n\n$\\|A\\|_2=\\sigma_1$：最大奇异值恰好实现最大伸缩。",
+		"x": 700,
+      "y": 2470,
+      "width": 800,
+      "height": 180,
+      "color": "5"
+    },
+    {
+      "id": "frobenius-norm",
+      "type": "text",
+      "text": "## [[Frobenius范数]]\n\n$\\|A\\|_F$ 是全部矩阵元素模平方和的平方根。",
+      "x": 2900,
+      "y": 2120,
+      "width": 800,
+      "height": 180,
+      "color": "4"
+    },
+    {
+      "id": "frobenius-identity",
+      "type": "text",
+      "text": "## [[Frobenius范数与奇异值]]\n\n$\\|A\\|_F^2=\\sum_i\\sigma_i^2$：全部奇异方向共同决定整体平方大小。",
+      "x": 2900,
+      "y": 2470,
+      "width": 800,
+      "height": 180,
+      "color": "5"
+    },
+    {
+      "id": "low-rank",
+      "type": "text",
+      "text": "## [[低秩近似]]\n\n先给定秩预算和误差度量，再在所有秩受限矩阵中寻找最接近原矩阵的候选。",
+      "x": 200,
+      "y": 2980,
+      "width": 800,
+      "height": 190,
+      "color": "4"
+    },
+    {
+      "id": "truncated-svd",
+      "type": "text",
+      "text": "## [[截断SVD]]\n\n$A_k=\\sum_{i=1}^k\\sigma_i u_iv_i^*$：保留前 $k$ 个奇异分量，舍去其余分量。",
+      "x": 1300,
+      "y": 2980,
+      "width": 800,
+      "height": 190,
+      "color": "4"
+    },
+    {
+      "id": "eym",
+      "type": "text",
+      "text": "## [[截断SVD最佳低秩近似]]\n\n截断 SVD 同时达到谱范数和 Frobenius 范数下的最小秩受限重构误差。",
+      "x": 2400,
+      "y": 2980,
+      "width": 900,
+      "height": 190,
+      "color": "6"
+    },
+    {
+      "id": "frobenius-uniqueness",
+      "type": "text",
+		"text": "## [[Frobenius低秩近似唯一性]]\n\n当 $1\\le k<\\operatorname{rank}(A)$ 时，Frobenius 最优解恰在 $\\sigma_k>\\sigma_{k+1}$ 时唯一。",
+      "x": 3600,
+      "y": 2900,
+      "width": 1300,
+      "height": 200,
+      "color": "6"
+    },
+    {
+      "id": "spectral-nonuniqueness",
+      "type": "text",
+      "text": "## [[谱范数低秩近似不唯一]]\n\n$1\\le k<\\operatorname{rank}(A)$ 时，谱范数最优低秩近似总有多个解。",
+      "x": 3600,
+      "y": 3180,
+      "width": 1300,
+      "height": 200,
+      "color": "6"
+    },
+    {
+      "id": "energy-ratio",
+      "type": "text",
+		"text": "## [[奇异值能量比]]\n\n对 $A\\ne0$，保留奇异值平方和占总平方和的比例，等于一减相对 Frobenius 平方重构误差。",
+      "x": 2400,
+      "y": 3570,
+      "width": 900,
+      "height": 190,
+      "color": "4"
+    },
+    {
+      "id": "task-boundary",
+      "type": "text",
+      "text": "## [[奇异值能量不等于任务信息]]\n\n高能量比只约束重构误差；预测、分类、因果与反演仍要按任务目标验证。",
+      "x": 3600,
+      "y": 3570,
+      "width": 1300,
+      "height": 190,
+      "color": "1"
+    },
+    {
+      "id": "footer",
+      "type": "text",
+		"text": "### 阅读提示\n\n绿色表示概念入口；黄色表示计算方法；蓝色表示结构与恒等式；紫色表示定理；红色表示限制结论；橙色表示概念辨析。颜色不表示掌握程度。点击标题可打开对应笔记。",
+      "x": 0,
+      "y": 4100,
+      "width": 5200,
+      "height": 200
+    }
+  ],
+  "edges": [
+    {"id":"e-svd-existence","fromNode":"svd","fromSide":"bottom","toNode":"existence","toSide":"top","label":"为什么总能分解"},
+    {"id":"e-svd-value","fromNode":"svd","fromSide":"bottom","toNode":"singular-value","toSide":"top","label":"伸缩量"},
+    {"id":"e-value-gram","fromNode":"singular-value","fromSide":"bottom","toNode":"singular-value-gram","toSide":"top","label":"由 Gram 谱读取"},
+    {"id":"e-svd-vector","fromNode":"svd","fromSide":"bottom","toNode":"singular-vector","toSide":"top","label":"两侧方向"},
+    {"id":"e-vector-gram","fromNode":"singular-vector","fromSide":"bottom","toNode":"singular-vector-gram","toSide":"top","label":"由 Gram 特征向量构造"},
+    {"id":"e-svd-eigen","fromNode":"svd","fromSide":"bottom","toNode":"svd-vs-eigen","toSide":"top","label":"区别"},
+    {"id":"e-existence-hand","fromNode":"existence","fromSide":"bottom","toNode":"hand-computation","toSide":"top","label":"构造为步骤"},
+    {"id":"e-value-gram-hand","fromNode":"singular-value-gram","fromSide":"left","toNode":"hand-computation","toSide":"right","label":"先求平方谱"},
+    {"id":"e-vector-gram-hand","fromNode":"singular-value-gram","fromSide":"right","toNode":"singular-vector-gram","toSide":"left","label":"再配左右方向"},
+    {"id":"e-value-rank","fromNode":"singular-value-gram","fromSide":"bottom","toNode":"rank","toSide":"top","label":"数正值"},
+    {"id":"e-rank-compact","fromNode":"rank","fromSide":"right","toNode":"compact","toSide":"left","label":"保留全部正值"},
+    {"id":"e-vector-compact","fromNode":"singular-vector-gram","fromSide":"bottom","toNode":"compact","toSide":"top","label":"保留正方向"},
+    {"id":"e-vector-subspaces","fromNode":"singular-vector","fromSide":"bottom","toNode":"four-subspaces","toSide":"top","label":"正与零方向归位"},
+    {"id":"e-compact-rank-one","fromNode":"compact","fromSide":"bottom","toNode":"rank-one-expansion","toSide":"top","label":"展开"},
+    {"id":"e-rank-one-phase","fromNode":"rank-one-expansion","fromSide":"left","toNode":"paired-phase","toSide":"right","label":"共同相位不改变秩一项"},
+    {"id":"e-vector-repeated","fromNode":"singular-vector","fromSide":"bottom","toNode":"repeated-value","toSide":"top","label":"重复正奇异值"},
+    {"id":"e-subspaces-zero","fromNode":"four-subspaces","fromSide":"bottom","toNode":"zero-block","toSide":"top","label":"左右零空间"},
+    {"id":"e-spectral-definition","fromNode":"spectral-norm","fromSide":"bottom","toNode":"spectral-identity","toSide":"top","label":"由 SVD 读取"},
+    {"id":"e-frobenius-definition","fromNode":"frobenius-norm","fromSide":"bottom","toNode":"frobenius-identity","toSide":"top","label":"由 SVD 读取"},
+    {"id":"e-rank-one-eym","fromNode":"rank-one-expansion","fromSide":"bottom","toNode":"eym","toSide":"top","label":"展开截断误差"},
+    {"id":"e-low-rank-truncation","fromNode":"low-rank","fromSide":"right","toNode":"truncated-svd","toSide":"left","label":"一种候选构造"},
+    {"id":"e-truncation-eym","fromNode":"truncated-svd","fromSide":"right","toNode":"eym","toSide":"left","label":"证明最优"},
+    {"id":"e-spectral-eym","fromNode":"spectral-identity","fromSide":"bottom","toNode":"eym","toSide":"top","label":"谱误差"},
+    {"id":"e-frobenius-eym","fromNode":"frobenius-identity","fromSide":"bottom","toNode":"eym","toSide":"top","label":"平方总误差"},
+    {"id":"e-eym-frobenius-unique","fromNode":"eym","fromSide":"right","toNode":"frobenius-uniqueness","toSide":"left","label":"何时唯一"},
+    {"id":"e-eym-spectral-nonunique","fromNode":"eym","fromSide":"right","toNode":"spectral-nonuniqueness","toSide":"left","label":"为什么不唯一"},
+    {"id":"e-truncation-energy","fromNode":"truncated-svd","fromSide":"bottom","toNode":"energy-ratio","toSide":"top","label":"保留比例"},
+    {"id":"e-energy-task","fromNode":"energy-ratio","fromSide":"right","toNode":"task-boundary","toSide":"left","label":"不能推出"}
+  ]
+}

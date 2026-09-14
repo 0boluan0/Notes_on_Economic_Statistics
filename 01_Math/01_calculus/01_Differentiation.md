@@ -12,6 +12,12 @@ source: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/p
 
 # Differentiation
 
+> [!tip] 当前学习入口
+> 若要按一条较短主线学习，先读[[01_Math/01_calculus/01_导数与求导|导数与求导：从差商极限到指数与对数]]；需要定位全局关系时打开[[导数与求导.canvas|主题 Canvas]]。本页继续保留逐 Session 课堂讲解、习题和考试材料。
+> <!-- bilingual-en:start -->
+> For a shorter continuous route, begin with [[01_Math/01_calculus/01_导数与求导|Derivatives and differentiation: from difference quotients to exponentials and logarithms]]. Open the [[导数与求导.canvas|topic Canvas]] for the global dependency map. This page remains the permanent session-by-session class record with exercises and exam material.
+> <!-- bilingual-en:end -->
+
 > [!abstract] 本章主线
 > 微分学把“在一小段区间内平均变化多少”推进为“在某一瞬间怎样变化”。几何上，这个数是切线斜率；物理上，它是瞬时速度；在经济、测量和工程中，它又是边际量与灵敏度。全章都从一个极限出发：
 > $$
@@ -174,9 +180,9 @@ $$
 =\frac{f(x_0+h)-f(x_0)}h.
 $$
 
-**01e - Main formula。** 取极限便得到[[导数与求导规则#从差商到导数|导数]]定义；几何上它对应[[导数与求导规则#从差商到导数|导数的几何意义]]：
+**01e - Main formula。** 取极限便得到[[导数|导数]]定义；几何上它对应[[导数|导数的几何意义]]：
 <!-- bilingual-en:start -->
-**01e — Main formula.** Taking the limit gives the definition of the [[导数与求导规则#从差商到导数|derivative]]; geometrically, it is the [[导数与求导规则#从差商到导数|slope of the tangent line]]:
+**01e — Main formula.** Taking the limit gives the definition of the [[导数|derivative]]; geometrically, it is the [[导数|slope of the tangent line]]:
 <!-- bilingual-en:end -->
 
 > [!important] 点处导数
@@ -927,12 +933,12 @@ The one-sided limits differ, so $\lim_{x\to0}f(x)$ does not exist. Although $f(0
 <!-- bilingual-en:end -->
 
 > [!important] 点连续
-> $f$ 在 $x=a$ 具有[[极限与连续#极限与连续|连续性]]，当且仅当：
+> $f$ 在 $x=a$ 具有[[一点连续|连续性]]，当且仅当：
 > 1. $f(a)$ 有定义；
 > 2. $\lim_{x\to a}f(x)$ 存在；
 > 3. $\lim_{x\to a}f(x)=f(a)$。
 > <!-- bilingual-en:start -->
-> $f$ is [[极限与连续#极限与连续|continuous]] at $x=a$ if and only if:
+> $f$ is [[一点连续|continuous]] at $x=a$ if and only if:
 > **1.** $f(a)$ is defined;<br>
 > **2.** $\lim_{x\to a}f(x)$ exists;<br>
 > **3.** $\lim_{x\to a}f(x)=f(a)$.<br>
@@ -1043,9 +1049,9 @@ These laws let us break complicated difference quotients into simpler pieces whe
 *05a-05d: Four types of discontinuities*
 <!-- bilingual-en:end -->
 
-[[极限与连续#极限与连续|间断]]按连续条件失败的方式分类：
+[[间断类型判别|间断]]按连续条件失败的方式分类：
 <!-- bilingual-en:start -->
-[[极限与连续#极限与连续|Discontinuities]] are classified by which condition for continuity fails:
+[[间断类型判别|Discontinuities]] are classified by which condition for continuity fails:
 <!-- bilingual-en:end -->
 
 1. **跳跃间断（jump discontinuity）**：左右极限都存在但不相等。上一节分段函数在 $0$ 即为例子。
@@ -1066,9 +1072,9 @@ These laws let us break complicated difference quotients into simpler pieces whe
 The lecture notes also compare $f(x)=1/x$ with $f'(x)=-1/x^2$: $f$ is odd, whereas $f'$ is even. The inequality $f'(x)<0$ correctly records that both branches decrease from left to right, but a derivative's graph need not resemble the original graph.
 <!-- bilingual-en:end -->
 
-### 05e：[[导数与求导规则#导数的信息边界|可导蕴含连续]]的逐步证明
+### 05e：[[可导必连续|可导蕴含连续]]的逐步证明
 <!-- bilingual-en:start -->
-*05e: Step-by-step proof that [[导数与求导规则#导数的信息边界|differentiability implies continuity]]*
+*05e: Step-by-step proof that [[可导必连续|differentiability implies continuity]]*
 <!-- bilingual-en:end -->
 
 > [!important] 定理
@@ -1116,9 +1122,9 @@ Therefore, $\lim_{x\to x_0}f(x)=f(x_0)$, so $f$ is continuous at $x_0$.
 **Boundary condition.** The proof relies on the derivative being finite. If the difference quotient diverges, it cannot be treated as a finite number multiplied by zero. Because the limiting process always has $x\ne x_0$, division by $x-x_0$ in the intermediate step is valid.
 <!-- bilingual-en:end -->
 
-### 逆命题为什么错：$|x|$
+### [[连续不必可导|逆命题为什么错：$|x|$]]
 <!-- bilingual-en:start -->
-*Why the Converse Fails: $|x|$*
+*[[连续不必可导|Why the Converse Fails: $|x|$]]*
 <!-- bilingual-en:end -->
 
 $f(x)=|x|$ 在 $0$ 连续，但
@@ -1584,9 +1590,9 @@ Only in radians does an angle's numerical value equal the corresponding arc leng
 
 ### 08a：$\lim_{\theta\to0}\sin\theta/\theta=1$
 
-课件先给出直觉：单位圆中，弦的竖直投影长为 $\sin\theta$，弧长为 $\theta$；小角度时弧与弦越来越接近。为了使流程可检查，写成[[极限与连续#极限存在的检查顺序|三角极限夹逼证明]]。
+课件先给出直觉：单位圆中，弦的竖直投影长为 $\sin\theta$，弧长为 $\theta$；小角度时弧与弦越来越接近。为了使流程可检查，写成[[夹逼定理|三角极限夹逼证明]]。
 <!-- bilingual-en:start -->
-The lecture notes begin with the geometric intuition: in the unit circle, the chord's vertical projection has length $\sin\theta$, while the corresponding arc has length $\theta$. For small angles, the chord and arc become increasingly close. The rigorous argument is a [[极限与连续#极限存在的检查顺序|squeeze-theorem proof of the trigonometric limit]].
+The lecture notes begin with the geometric intuition: in the unit circle, the chord's vertical projection has length $\sin\theta$, while the corresponding arc has length $\theta$. For small angles, the chord and arc become increasingly close. The rigorous argument is a [[夹逼定理|squeeze-theorem proof of the trigonometric limit]].
 <!-- bilingual-en:end -->
 
 对 $0<\theta<\pi/2$，单位圆内三角形、扇形、外切三角形面积满足
@@ -2193,7 +2199,7 @@ $$
 As $\Delta t\to0$, differentiability implies $\Delta x\to0$, and the two factors tend to $dy/dx$ and $dx/dt$, respectively.
 <!-- bilingual-en:end -->
 
-> [!important] [[导数与求导规则#求导规则为何成立|链式法则]]
+> [!important] [[链式法则]]
 > $$
 > \boxed{\frac{dy}{dt}=\frac{dy}{dx}\frac{dx}{dt}},
 > $$
@@ -2401,9 +2407,9 @@ $$
 f^{(n)}(x)=D^nf(x)=\frac{d^nf}{dx^n}.
 $$
 
-这里 $f^{(n)}$ 是[[导数与求导规则#从差商到导数|高阶导数]]，不是 $f$ 的 $n$ 次幂。Leibniz 记号中的 $d^2f/dx^2$ 也是一个整体，不应读成普通分数平方。
+这里 $f^{(n)}$ 是[[高阶导数]]，不是 $f$ 的 $n$ 次幂。Leibniz 记号中的 $d^2f/dx^2$ 也是一个整体，不应读成普通分数平方。
 <!-- bilingual-en:start -->
-Here $f^{(n)}$ denotes the [[导数与求导规则#从差商到导数|$n$th derivative]], not the $n$th power of $f$. Likewise, $d^2f/dx^2$ is a single piece of Leibniz notation and should not be read as the square of an ordinary fraction.
+Here $f^{(n)}$ denotes the [[高阶导数|$n$th derivative]], not the $n$th power of $f$. Likewise, $d^2f/dx^2$ is a single piece of Leibniz notation and should not be read as the square of an ordinary fraction.
 <!-- bilingual-en:end -->
 
 运动中
@@ -3260,9 +3266,9 @@ After Part A, the official course assigns selected problems from Sections 1A, 1B
 *13a: Implicit Differentiation*
 <!-- bilingual-en:end -->
 
-[[导数与求导规则#Worked example：用隐式求导找圆的切线|隐函数求导]]从关系式
+[[隐式求导|隐函数求导]]从关系式
 <!-- bilingual-en:start -->
-[[导数与求导规则#Worked example：用隐式求导找圆的切线|Implicit differentiation]] starts from a relation such as
+[[隐式求导|Implicit differentiation]] starts from a relation such as
 <!-- bilingual-en:end -->
 
 $$
@@ -3763,7 +3769,7 @@ $$
 As long as $f'(g(x))\ne0$,
 <!-- bilingual-en:end -->
 
-> [!important] [[导数与求导规则#求导规则为何成立|反函数导数]]
+> [!important] [[反函数导数]]
 > $$
 > \boxed{(f^{-1})'(x)=\frac1{f'(f^{-1}(x))}}.
 > $$
@@ -3969,9 +3975,9 @@ Writing $y=\sqrt x=x^{1/2}$ directly gives the same result by the rational-expon
 *16a–16b: Extending the Exponential Function to Real Exponents*
 <!-- bilingual-en:end -->
 
-[[导数与求导规则|指数函数]]取 $a>0$。整数指数由重复相乘与倒数定义；对有理数 $p/q$，定义
+[[指数函数]]取 $a>0$。整数指数由重复相乘与倒数定义；对有理数 $p/q$，定义
 <!-- bilingual-en:start -->
-For the [[导数与求导规则|exponential function]], take $a>0$. Integer exponents are defined by repeated multiplication and reciprocals; for a rational exponent $p/q$, define
+For the [[指数函数|exponential function]], take $a>0$. Integer exponents are defined by repeated multiplication and reciprocals; for a rational exponent $p/q$, define
 <!-- bilingual-en:end -->
 
 $$
@@ -4203,9 +4209,9 @@ Therefore,
 Geometrically, $y=e^x$ has tangent slope $1$ at $(0,1)$. The lecture notes locate the base between $2$ and $4$: the slope of $2^x$ at $0$ is $M(2)<1$, while the slope of $4^x$ there exceeds the slope of the secant through $(0,1)$ and $(1,4)$, so $M(4)>1$. If $M(a)$ varies continuously and strictly increasingly with $a$, there is a unique intermediate base for which $M(a)=1$. A complete proof requires the continuity and monotonicity theory of exponential functions.
 <!-- bilingual-en:end -->
 
-### 17b：[[导数与求导规则|自然对数]]是 $e^x$ 的反函数
+### 17b：[[自然对数]]是 $e^x$ 的反函数
 <!-- bilingual-en:start -->
-*17b: The [[导数与求导规则|Natural Logarithm]] Is the Inverse of $e^x$*
+*17b: The [[自然对数|Natural Logarithm]] Is the Inverse of $e^x$*
 <!-- bilingual-en:end -->
 
 定义
@@ -4460,9 +4466,9 @@ $$
 Even with the familiar bases $2$ and $10$, the natural logarithm appears automatically. The special feature of $e$ is precisely that $\ln e=1$.
 <!-- bilingual-en:end -->
 
-### 18b：[[导数与求导规则#求导规则为何成立|对数求导]]的核心公式
+### 18b：[[对数求导]]的核心公式
 <!-- bilingual-en:start -->
-*18b: The Core Formula for [[导数与求导规则#求导规则为何成立|Logarithmic Differentiation]]*
+*18b: The Core Formula for [[对数求导|Logarithmic Differentiation]]*
 <!-- bilingual-en:end -->
 
 若 $u(x)>0$，链式法则给
@@ -4884,9 +4890,9 @@ $$
 *20a: Definition and Derivative*
 <!-- bilingual-en:end -->
 
-[[导数与求导规则|双曲函数]]中的双曲正弦（hyperbolic sine）和双曲余弦（hyperbolic cosine）定义为：
+[[双曲函数]]中的双曲正弦（hyperbolic sine）和双曲余弦（hyperbolic cosine）定义为：
 <!-- bilingual-en:start -->
-The [[导数与求导规则|hyperbolic functions]] hyperbolic sine and hyperbolic cosine are defined by
+The [[双曲函数|hyperbolic functions]] hyperbolic sine and hyperbolic cosine are defined by
 <!-- bilingual-en:end -->
 
 $$

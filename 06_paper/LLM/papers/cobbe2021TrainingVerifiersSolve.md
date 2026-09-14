@@ -15,10 +15,10 @@ aliases:
 # Training Verifiers to Solve Math Word Problems
 
 ## 一句话位置
-这篇论文位于 `01 架构与预训练`，第一版用于连接 Transformer, Pretraining, Reasoning 路线；此笔记暂作索引，不做精读摘要。
+这篇论文位于 `01 架构与预训练`，核心位置是用已训练验证器选择数学题候选解；它属于推理训练与验证，而不是预训练来源；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[Transformer 与注意力机制]], 预训练、指令微调与偏好优化, 推理模型与 LLM Agent
+[[LLM 后训练.canvas|LLM 后训练]], [[LLM 推理与验证]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/KFTEFLIS)
@@ -30,4 +30,3 @@ aliases:
 ## Canvas
 - [[LLM Big Picture]]
 - [[01 架构与预训练.canvas|01 架构与预训练 Canvas]]
-

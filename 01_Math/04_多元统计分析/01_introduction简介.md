@@ -348,9 +348,9 @@ A distance function normally satisfies:
 <!-- bilingual-en:end -->
 
 >[!item] 后续连接
-> 多元正态中的 [[多元数据、随机向量与样本协方差#距离与几何|Mahalanobis Distance]] 是普通距离的协方差调整版；聚类中的距离会直接决定分组结果。
+> [[马氏距离|Mahalanobis Distance]] 是普通距离的协方差调整版；它的几何定义[[马氏距离不要求正态|不要求 Gaussian]]，Gaussian 只在概率校准时进入。聚类中的距离会直接决定分组结果。
 > <!-- bilingual-en:start -->
-> [[多元数据、随机向量与样本协方差#距离与几何|Mahalanobis Distance]] is a covariance-adjusted version of ordinary distance for multivariate normal data; in clustering, the chosen distance directly determines the grouping result.
+> [[马氏距离|Mahalanobis Distance]] is a covariance-adjusted version of ordinary distance. Its geometry [[马氏距离不要求正态|does not require Gaussian data]]; Gaussianity enters only for probability calibration. In clustering, the chosen distance directly determines the grouping result.
 > <!-- bilingual-en:end -->
 
 ## 1.7. 关联卡片
@@ -359,8 +359,8 @@ A distance function normally satisfies:
 <!-- bilingual-en:end -->
 
 - [[多元统计分析 Course Atlas|Multivariate Statistics-hub]]
-- [[多元数据、随机向量与样本协方差#数据矩阵与随机向量|Random Vector]]
-- [[多元数据、随机向量与样本协方差#样本协方差矩阵|Sample Mean Vector]]
-- [[多元数据、随机向量与样本协方差#样本协方差矩阵|Sample Covariance Matrix]]
-- [[多元数据、随机向量与样本协方差#均值、协方差与相关|Correlation Matrix]]
-- [[多元数据、随机向量与样本协方差#距离与几何|Mahalanobis Distance]]
+- [[随机向量|Random Vector]]
+- [[样本均值向量|Sample Mean Vector]]
+- [[样本协方差矩阵|Sample Covariance Matrix]]
+- [[相关矩阵|Correlation Matrix]]
+- [[马氏距离|Mahalanobis Distance]]

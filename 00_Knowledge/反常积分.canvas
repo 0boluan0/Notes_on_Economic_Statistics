@@ -1,0 +1,224 @@
+{
+  "nodes": [
+    {
+      "id": "ca10000000000001",
+      "type": "text",
+      "x": 0,
+      "y": -360,
+      "width": 2040,
+      "height": 260,
+      "text": "# 反常积分\n\n先把**无穷区间或奇点改写成截断极限**，再按三条路线判断：**定义与坏点拆分**、**尾部尺度与比较**、**普通反常积分与对称主值的边界**。函数趋零与尾积分收敛在缺少额外条件时互不推出；同一个式子也可能同时有多个问题点。\n\n每张卡链接一个可独立回忆或应用的 Markdown 原子。颜色只表示本图中的语义角色，不表示掌握度；来源与掌握状态在 [[知识原子.base|知识原子 Base]] 中查询。"
+    },
+    {
+      "id": "ca10000000000002",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 450,
+      "height": 230,
+      "text": "## [[反常积分|截断积分的极限]]\n*Limit of proper truncations*\n\n先在合法有限区间积分，再让边界逼近无穷或奇点。",
+      "color": "5"
+    },
+    {
+      "id": "ca10000000000003",
+      "type": "text",
+      "x": 0,
+      "y": 360,
+      "width": 450,
+      "height": 230,
+      "text": "## [[无穷不是积分端点|无穷不是可代入端点]]\n*Infinity is a direction*\n\n原函数只先计算有限截断；收敛仍要另证极限。",
+      "color": "1"
+    },
+    {
+      "id": "ca10000000000004",
+      "type": "text",
+      "x": 0,
+      "y": 720,
+      "width": 450,
+      "height": 230,
+      "text": "## [[反常积分逐坏点拆分|每个坏点独立收敛]]\n*Split every problematic point*\n\n有限多个端点或孤立奇点要分别取极限；一段发散便整体发散。",
+      "color": "1"
+    },
+    {
+      "id": "ca10000000000005",
+      "type": "text",
+      "x": 530,
+      "y": 720,
+      "width": 450,
+      "height": 230,
+      "text": "## [[Cauchy 主值与反常积分|普通反常积分不等于 Cauchy 主值]]\n*Improper integral versus principal value*\n\n主值按规定协调两侧截断；普通反常积分要求各侧自己收敛。",
+      "color": "6"
+    },
+    {
+      "id": "ca10000000000006",
+      "type": "text",
+      "x": 1060,
+      "y": 0,
+      "width": 450,
+      "height": 230,
+      "text": "## [[无穷远 p 积分判别|无穷远的 p 积分]]\n*$p$-integral at infinity*\n\n$\\int_1^\\infty x^{-p}dx$ 当且仅当 $p>1$ 收敛。",
+      "color": "4"
+    },
+    {
+      "id": "ca10000000000007",
+      "type": "text",
+      "x": 1060,
+      "y": 360,
+      "width": 450,
+      "height": 230,
+      "text": "## [[趋零不推尾积分收敛|趋零不保证尾面积有限]]\n*Tending to zero is insufficient*\n\n$1/x$ 趋零，倍增区间却不断贡献固定面积。",
+      "color": "1"
+    },
+    {
+      "id": "ca10000000000008",
+      "type": "text",
+      "x": 1060,
+      "y": 720,
+      "width": 450,
+      "height": 230,
+      "text": "## [[反常积分直接比较判别|直接比较的正确方向]]\n*Direct comparison*\n\n对同一坏点附近局部可积的非负函数：小于收敛上界可证收敛；大于发散下界可证发散。",
+      "color": "3"
+    },
+    {
+      "id": "ca10000000000009",
+      "type": "text",
+      "x": 1060,
+      "y": 1080,
+      "width": 450,
+      "height": 230,
+      "text": "## [[反常积分极限比较判别|极限比较]]\n*Limit comparison*\n\n对同一坏点附近局部可积的正函数：比值趋于正有限常数时，两者被正常数倍互相夹住。",
+      "color": "3"
+    },
+    {
+      "id": "ca1000000000000a",
+      "type": "text",
+      "x": 1590,
+      "y": 0,
+      "width": 450,
+      "height": 230,
+      "text": "## [[零附近 p 积分判别|零附近的 p 积分]]\n*$p$-integral near zero*\n\n$\\int_0^1 x^{-p}dx$ 当且仅当 $p<1$ 收敛，方向与无穷远相反。",
+      "color": "4"
+    },
+    {
+      "id": "ca1000000000000d",
+      "type": "text",
+      "x": 1590,
+      "y": 360,
+      "width": 450,
+      "height": 230,
+      "text": "## [[尾积分收敛不推函数趋零|尾积分有限也不保证函数趋零]]\n*Integrability need not force a zero limit*\n\n越来越窄但保持高度的连续尖峰可以让总面积有限，却使函数值不趋零。",
+      "color": "1"
+    },
+    {
+      "id": "ca1000000000000b",
+      "type": "text",
+      "x": 1590,
+      "y": 720,
+      "width": 450,
+      "height": 230,
+      "text": "## [[反常积分敛散的局部性|敛散只看问题点附近]]\n*Locality of convergence*\n\n有限正常区间只加一个有限数；藏着奇点时则必须另拆。",
+      "color": "5"
+    },
+    {
+      "id": "ca1000000000000c",
+      "type": "text",
+      "x": 0,
+      "y": 1080,
+      "width": 450,
+      "height": 230,
+      "text": "## [[跨奇点积分拆分|原函数不能跨奇点]]\n*Do not cross a singularity*\n\n先求定义域和坏点，再逐段使用基本定理。",
+      "color": "1"
+    }
+  ],
+  "edges": [
+    {
+      "id": "cae0000000000001",
+      "fromNode": "ca10000000000002",
+      "fromSide": "bottom",
+      "toNode": "ca10000000000003",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "极限定义排除了把无穷直接代入的写法"
+    },
+    {
+      "id": "cae0000000000002",
+      "fromNode": "ca10000000000003",
+      "fromSide": "bottom",
+      "toNode": "ca10000000000004",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "列出每个极限方向后逐一拆分"
+    },
+    {
+      "id": "cae0000000000003",
+      "fromNode": "ca10000000000004",
+      "fromSide": "right",
+      "toNode": "ca10000000000005",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "独立收敛与协调截断定义的是不同对象"
+    },
+    {
+      "id": "cae0000000000004",
+      "fromNode": "ca10000000000006",
+      "fromSide": "bottom",
+      "toNode": "ca10000000000007",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "临界例说明只知道函数趋零远远不够"
+    },
+    {
+      "id": "cae0000000000005",
+      "fromNode": "ca10000000000007",
+      "fromSide": "bottom",
+      "toNode": "ca10000000000008",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "需要用已知基准控制真正的衰减速度"
+    },
+    {
+      "id": "cae0000000000006",
+      "fromNode": "ca10000000000008",
+      "fromSide": "bottom",
+      "toNode": "ca10000000000009",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "正函数比值趋于正有限常数时转成双向直接比较"
+    },
+    {
+      "id": "cae0000000000007",
+      "fromNode": "ca10000000000006",
+      "fromSide": "right",
+      "toNode": "ca1000000000000a",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "同一幂函数在无穷远与零附近的临界方向相反"
+    },
+    {
+      "id": "cae0000000000008",
+      "fromNode": "ca10000000000008",
+      "fromSide": "right",
+      "toNode": "ca1000000000000b",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "比较不等式只需在相关问题点附近成立"
+    },
+    {
+      "id": "cae000000000000a",
+      "fromNode": "ca10000000000007",
+      "fromSide": "right",
+      "toNode": "ca1000000000000d",
+      "toSide": "left",
+      "label": "两个方向都需要各自的反例"
+    },
+    {
+      "id": "cae000000000000b",
+      "fromNode": "ca10000000000004",
+      "fromSide": "bottom",
+      "toNode": "ca1000000000000c",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "先按坏点拆分，才能逐段使用原函数"
+    }
+  ]
+}

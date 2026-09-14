@@ -1,0 +1,355 @@
+{
+  "nodes": [
+    {
+      "id": "f100000000000001",
+      "type": "text",
+      "x": 0,
+      "y": -360,
+      "width": 1980,
+      "height": 240,
+      "text": "# 浮点数与数值误差\n\n按四层阅读：**格式与表示 → 误差尺度与比较 → 运算中的误差传播 → 范围边界与数值可信度**。每张卡链接一个可独立回忆或应用的中英双语原子。\n\n颜色只表示本图中的语义角色，不表示掌握度；来源与掌握状态在 [[知识原子.base|知识原子 Base]] 中查询。"
+    },
+    {
+      "id": "f100000000000002",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 430,
+      "height": 210,
+      "text": "## [[浮点格式的精度与范围|格式模型]]\n*Format model*\n\n有效数限制精度，指数限制范围；可表示值是离散集合。",
+      "color": "4"
+    },
+    {
+      "id": "f100000000000003",
+      "type": "text",
+      "x": 500,
+      "y": 0,
+      "width": 430,
+      "height": 210,
+      "text": "## [[有限二进制小数|有限二进制判据]]\n*Finite-binary criterion*\n\n约分后分母只有因子 2，二进制展开才会终止。",
+      "color": "4"
+    },
+    {
+      "id": "f100000000000004",
+      "type": "text",
+      "x": 1000,
+      "y": 0,
+      "width": 430,
+      "height": 210,
+      "text": "## [[浮点表示误差与打印|表示误差 ≠ 显示]]\n*Storage vs display*\n\n`0.1` 的存储近似与屏幕打印是两个转换。",
+      "color": "6"
+    },
+    {
+      "id": "f100000000000005",
+      "type": "text",
+      "x": 1500,
+      "y": 0,
+      "width": 480,
+      "height": 210,
+      "text": "## [[浮点舍入|运算舍入模型]]\n*Operation rounding*\n\n基本运算先有精确数学结果，再舍入到目标格式。",
+      "color": "4"
+    },
+    {
+      "id": "f100000000000006",
+      "type": "text",
+      "x": 0,
+      "y": 400,
+      "width": 430,
+      "height": 210,
+      "text": "## [[ULP 局部间距|ULP：局部间距]]\n*Local spacing*\n\n浮点网格随尺度变稀；ULP 不是全局固定小数。",
+      "color": "6"
+    },
+    {
+      "id": "f100000000000007",
+      "type": "text",
+      "x": 500,
+      "y": 400,
+      "width": 430,
+      "height": 210,
+      "text": "## [[绝对误差与相对误差|绝对误差 vs 相对误差]]\n*Magnitude vs proportion*\n\n绝对误差保留单位；相对误差跨尺度但在零附近失效。",
+      "color": "6"
+    },
+    {
+      "id": "f100000000000008",
+      "type": "text",
+      "x": 1000,
+      "y": 400,
+      "width": 430,
+      "height": 210,
+      "text": "## [[浮点精确等号|`==` 的问题边界]]\n*Exact equality boundary*\n\n等号判断运行时数值相等；近似正确性要另写规格。",
+      "color": "2"
+    },
+    {
+      "id": "f100000000000009",
+      "type": "text",
+      "x": 1500,
+      "y": 400,
+      "width": 480,
+      "height": 220,
+      "text": "## [[浮点容差比较|容差比较]]\n*Tolerance comparison*\n\n`rel_tol` 管尺度，`abs_tol` 管近零；两者来自问题误差预算。",
+      "color": "2"
+    },
+    {
+      "id": "f10000000000000a",
+      "type": "text",
+      "x": 0,
+      "y": 800,
+      "width": 430,
+      "height": 210,
+      "text": "## [[浮点加法非结合性|非结合性]]\n*Non-associativity*\n\n分组改变中间舍入位置，因此求和顺序可以改变结果。",
+      "color": "1"
+    },
+    {
+      "id": "f10000000000000b",
+      "type": "text",
+      "x": 500,
+      "y": 800,
+      "width": 430,
+      "height": 220,
+      "text": "## [[灾难性消去|灾难性消去]]\n*Catastrophic cancellation*\n\n近数相减消掉共同高位，让操作数已有误差主导差值。",
+      "color": "1"
+    },
+    {
+      "id": "f10000000000000c",
+      "type": "text",
+      "x": 1000,
+      "y": 800,
+      "width": 430,
+      "height": 220,
+      "text": "## [[高精度求和的边界|更准确的求和]]\n*Accurate summation*\n\n`math.fsum` 减少累计舍入，但不修复输入误差或病态问题。",
+      "color": "3"
+    },
+    {
+      "id": "f10000000000000d",
+      "type": "text",
+      "x": 1500,
+      "y": 800,
+      "width": 480,
+      "height": 220,
+      "text": "## [[数值迭代停止条件|停止与失败出口]]\n*Stopping and failure*\n\n残差、区间或误差界定义成功；迭代上限与非有限值定义失败。",
+      "color": "2"
+    },
+    {
+      "id": "f10000000000000e",
+      "type": "text",
+      "x": 0,
+      "y": 1200,
+      "width": 430,
+      "height": 220,
+      "text": "## [[浮点溢出与下溢|溢出 vs 下溢]]\n*Opposite range failures*\n\n溢出越过最大有限值；下溢进入最小正规数以下。",
+      "color": "1"
+    },
+    {
+      "id": "f10000000000000f",
+      "type": "text",
+      "x": 500,
+      "y": 1200,
+      "width": 430,
+      "height": 220,
+      "text": "## [[次正规数与渐进下溢|次正规与渐进下溢]]\n*Subnormals*\n\n固定最小绝对间距填补到零的空隙，但相对精度逐渐下降。",
+      "color": "4"
+    },
+    {
+      "id": "f100000000000010",
+      "type": "text",
+      "x": 1000,
+      "y": 1200,
+      "width": 430,
+      "height": 220,
+      "text": "## [[NaN 与无穷|NaN 与无穷]]\n*Special values*\n\n它们不是普通有限数；检测、传播与比较都用专门规则。",
+      "color": "1"
+    },
+    {
+      "id": "f100000000000011",
+      "type": "text",
+      "x": 1500,
+      "y": 1200,
+      "width": 480,
+      "height": 230,
+      "text": "## [[条件性与算法稳定性|条件性 vs 稳定性]]\n*Conditioning vs stability*\n\n问题放大输入扰动；算法决定额外舍入是否受控。可复现不等于正确。",
+      "color": "5"
+    }
+  ],
+  "edges": [
+    {
+      "id": "f1e0000000000001",
+      "fromNode": "f100000000000002",
+      "fromSide": "right",
+      "toNode": "f100000000000003",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "有限有效位先问展开能否终止；不能终止则任何有限格式都要近似"
+    },
+    {
+      "id": "f1e0000000000002",
+      "fromNode": "f100000000000003",
+      "fromSide": "right",
+      "toNode": "f100000000000004",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "1/10 不满足终止判据，因此十进制输入先映射到邻近二进制值"
+    },
+    {
+      "id": "f1e0000000000003",
+      "fromNode": "f100000000000002",
+      "fromSide": "right",
+      "toNode": "f100000000000005",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "同一有限格式也是每个基本运算结果的舍入目的地"
+    },
+    {
+      "id": "f1e0000000000004",
+      "fromNode": "f100000000000005",
+      "fromSide": "bottom",
+      "toNode": "f100000000000006",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "舍入在局部浮点网格上选择邻点；ULP 量化该处间距"
+    },
+    {
+      "id": "f1e0000000000005",
+      "fromNode": "f100000000000006",
+      "fromSide": "right",
+      "toNode": "f100000000000007",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "ULP 是格式局部尺度；业务误差还要选绝对或相对度量"
+    },
+    {
+      "id": "f1e0000000000006",
+      "fromNode": "f100000000000004",
+      "fromSide": "bottom",
+      "toNode": "f100000000000008",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "输入和显示都可能近似，所以精确机器相等不自动代表理想实数相等"
+    },
+    {
+      "id": "f1e0000000000007",
+      "fromNode": "f100000000000007",
+      "fromSide": "right",
+      "toNode": "f100000000000009",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "相对尺度处理跨量级，绝对边界补上零附近的定义缺口"
+    },
+    {
+      "id": "f1e0000000000008",
+      "fromNode": "f100000000000008",
+      "fromSide": "right",
+      "toNode": "f100000000000009",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "当任务问近似一致而非精确运行时相等时，才进入容差契约"
+    },
+    {
+      "id": "f1e0000000000009",
+      "fromNode": "f100000000000005",
+      "fromSide": "bottom",
+      "toNode": "f10000000000000a",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "各括号处分别舍入，使代数结合律不能直接搬到机器运算"
+    },
+    {
+      "id": "f1e000000000000a",
+      "fromNode": "f100000000000005",
+      "fromSide": "bottom",
+      "toNode": "f10000000000000b",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "先前舍入藏在近数高位中；相减后共同高位消失而暴露误差"
+    },
+    {
+      "id": "f1e000000000000b",
+      "fromNode": "f10000000000000a",
+      "fromSide": "right",
+      "toNode": "f10000000000000c",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "求和顺序改变舍入路径；更准确算法保留多个部分和"
+    },
+    {
+      "id": "f1e000000000000c",
+      "fromNode": "f10000000000000b",
+      "fromSide": "right",
+      "toNode": "f10000000000000c",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "正负量抵消时普通部分和丢位；准确求和可减少但不消除风险"
+    },
+    {
+      "id": "f1e000000000000d",
+      "fromNode": "f100000000000009",
+      "fromSide": "bottom",
+      "toNode": "f10000000000000d",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "容差只有绑定残差、区间或理论误差指标，才能成为成功条件"
+    },
+    {
+      "id": "f1e000000000000e",
+      "fromNode": "f100000000000008",
+      "fromSide": "bottom",
+      "toNode": "f10000000000000d",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "相邻迭代值精确相等可能只是停滞，因此仍要保留残差与失败出口"
+    },
+    {
+      "id": "f1e000000000000f",
+      "fromNode": "f100000000000002",
+      "fromSide": "bottom",
+      "toNode": "f10000000000000e",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "有限指数范围产生大数端溢出与近零端下溢"
+    },
+    {
+      "id": "f1e0000000000010",
+      "fromNode": "f10000000000000e",
+      "fromSide": "right",
+      "toNode": "f10000000000000f",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "下溢路径先进入次正规区，以渐进方式接近零"
+    },
+    {
+      "id": "f1e0000000000011",
+      "fromNode": "f10000000000000e",
+      "fromSide": "right",
+      "toNode": "f100000000000010",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "溢出和无效运算可进入无穷或 NaN，但具体 API 还可能抛异常"
+    },
+    {
+      "id": "f1e0000000000012",
+      "fromNode": "f100000000000010",
+      "fromSide": "top",
+      "toNode": "f100000000000009",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "容差比较对 NaN 与无穷采用专门规则，不能当作普通有限差值"
+    },
+    {
+      "id": "f1e0000000000013",
+      "fromNode": "f10000000000000b",
+      "fromSide": "bottom",
+      "toNode": "f100000000000011",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "消去可能来自不稳定公式，也可能揭示问题对输入扰动本就敏感"
+    },
+    {
+      "id": "f1e0000000000014",
+      "fromNode": "f10000000000000c",
+      "fromSide": "bottom",
+      "toNode": "f100000000000011",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "更准确的求和改善算法稳定性，但不能消除和本身的条件性"
+    }
+  ]
+}

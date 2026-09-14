@@ -4,9 +4,9 @@
 <!-- bilingual-en:end -->
 
 >[!note] 本章主线
-> PCA 的核心是把原变量旋转成一组互不相关的新变量，并按方差大小排序。它回答的是“哪些方向保留了最多信息”。
+> PCA 的核心是把原变量旋转成一组互不相关的新变量，并按方差大小排序。它回答的是“在当前中心化与尺度下，哪些方向保留了最多总变异”，而不是一般意义上的任务信息。
 > <!-- bilingual-en:start -->
-> PCA rotates the original variables into a set of uncorrelated new variables and orders them by variance. It asks which directions preserve the most information.
+> PCA rotates the original variables into a set of uncorrelated new variables and orders them by variance. It asks which directions preserve the most total variation under the chosen centring and scaling, not which preserve arbitrary task information.
 > <!-- bilingual-en:end -->
 
 ## 1.1. PCA 的目标
@@ -33,9 +33,9 @@ Principal component analysis is mainly used to:
 <!-- bilingual-en:end -->
 
 >[!note] 一句话
-> PCA 不是找最重要的原变量，而是找最重要的线性组合。
+> PCA 不是找最重要的原变量，而是按投影方差寻找有序的线性组合。
 > <!-- bilingual-en:start -->
-> PCA does not identify the most important original variable; it identifies the most important linear combinations.
+> PCA does not identify the most important original variable; it orders linear combinations by projected variance.
 > <!-- bilingual-en:end -->
 
 ## 1.2. 总体主成分（Population Principal Components）
@@ -244,9 +244,9 @@ $$
 *1.8. Related Cards*
 <!-- bilingual-en:end -->
 
-- [[主成分分析 PCA#PCA 的方差最大化|PCA]]
-- [[主成分分析 PCA#PCA 的方差最大化|PCA Procedure]]
-- [[主成分分析 PCA#标准化与成分选择|Variance Explained]]
-- [[主成分分析 PCA#标准化与成分选择|Scree Plot]]
-- [[主成分分析 PCA#标准化与成分选择|Choosing Covariance vs Correlation Matrix]]
-- [[主成分分析 PCA#PCA 与因子分析的选择|PCA vs Factor Analysis]]
+- 定义与总图：[[主成分分析]]、[[主成分分析.canvas|主题图]]
+- 目标与计算：[[主成分目标]]、[[主成分谱结构]]、[[主成分得分]]、[[主成分载荷]]、[[PCA低秩重构]]
+- 解释率与维数：[[解释方差比]]、[[解释方差不等于任务信息]]、[[PCA成分数]]
+- 尺度与识别：[[PCA尺度选择]]、[[主成分符号任意]]、[[重根下主成分不唯一]]
+- 模型与解释边界：[[PCA与因子分析]]、[[概率PCA]]、[[主成分不等于潜变量]]、[[主成分不识别因果]]
+- 稳健性、稳定性与外推：[[PCA协方差敏感性]]、[[PCA稳定性]]、[[PCA验证与泄漏]]

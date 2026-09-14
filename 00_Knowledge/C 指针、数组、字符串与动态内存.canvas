@@ -1,0 +1,421 @@
+{
+  "nodes": [
+    {
+      "id": "c200000000000001",
+      "type": "text",
+      "x": 0,
+      "y": -420,
+      "width": 2400,
+      "height": 270,
+      "text": "# C 指针、数组、字符串与动态内存\n\n本图沿 **对象与指针值 → 数组边界 → 字符串表示 → 分配生命周期 → 组合结构** 展开。箭头给出一个判断为什么约束下一个判断；两张桥接卡复用函数板块已有原子，不创建第二个身份。\n\n颜色只表示本图中的语义角色（模型、接口、边界、不变量、应用），不表示掌握度。来源、审核与掌握状态在 [[知识原子.base|知识原子 Base]] 查询。"
+    },
+    {
+      "id": "c200000000000002",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 450,
+      "height": 240,
+      "text": "## [[对象与指针对象|对象、地址与指针值]]\n*Objects and pointer values*\n\n对象占据存储；指针对象保存指针值。指针不是固定宽度的物理地址整数。",
+      "color": "5"
+    },
+    {
+      "id": "c200000000000003",
+      "type": "text",
+      "x": 650,
+      "y": 0,
+      "width": 450,
+      "height": 240,
+      "text": "## [[C 声明符阅读|从名字向外读声明符]]\n*Read a declarator outward*\n\n每个逗号后的名字独立组合；括号与 `const` 决定 `*` 落在哪一层。",
+      "color": "4"
+    },
+    {
+      "id": "c200000000000004",
+      "type": "text",
+      "x": 1300,
+      "y": 0,
+      "width": 450,
+      "height": 240,
+      "text": "## [[取地址与解引用|取地址与实际间接访问]]\n*Address and indirection*\n\n`&x` 产生指针值；实际求值 `*p` 前，`p` 必须指向有效、仍存活的对象。",
+      "color": "4"
+    },
+    {
+      "id": "c200000000000005",
+      "type": "text",
+      "x": 1950,
+      "y": 0,
+      "width": 450,
+      "height": 240,
+      "text": "## [[空、未确定与悬空指针|三种指针状态]]\n*Null, indeterminate, dangling*\n\n空指针是已知无对象的有效值；未确定值不能先读；目标寿命结束会让旧指针失效。",
+      "color": "1"
+    },
+    {
+      "id": "c200000000000006",
+      "type": "text",
+      "x": 0,
+      "y": 400,
+      "width": 450,
+      "height": 240,
+      "text": "## [[形参数组退化与边界|桥接：数组形参调整]]\n*Bridge: array parameters*\n\n函数形参中的数组写法调整为指针，长度必须由接口另行表达。",
+      "color": "4"
+    },
+    {
+      "id": "c200000000000007",
+      "type": "text",
+      "x": 650,
+      "y": 400,
+      "width": 450,
+      "height": 240,
+      "text": "## [[数组到指针转换|数组对象不等于指针]]\n*Array is not pointer*\n\n数组通常转换为首元素指针；`sizeof`、`_Alignof`、一元 `&` 与字符串初始化是四类例外。",
+      "color": "5"
+    },
+    {
+      "id": "c200000000000008",
+      "type": "text",
+      "x": 1300,
+      "y": 400,
+      "width": 450,
+      "height": 240,
+      "text": "## [[数组下标与边界|下标不提供边界检查]]\n*Subscript has no bounds check*\n\n`a[i]` 是 `*(a+i)`；类型可组合不证明 `i` 落在真实对象范围内。",
+      "color": "1"
+    },
+    {
+      "id": "c200000000000009",
+      "type": "text",
+      "x": 1950,
+      "y": 400,
+      "width": 450,
+      "height": 240,
+      "text": "## [[指针算术边界|同一数组与 one-past]]\n*Same array and one-past*\n\n可形成末尾后一位作终点但不能解引用；更远结果、跨无关对象排序或相减都无定义。",
+      "color": "1"
+    },
+    {
+      "id": "c20000000000000a",
+      "type": "text",
+      "x": 0,
+      "y": 800,
+      "width": 450,
+      "height": 240,
+      "text": "## [[C 按值传参与指针|桥接：指针仍按值传递]]\n*Bridge: pointers pass by value*\n\n复制的指针值能改所指对象，却不能直接改调用者的指针对象。",
+      "color": "4"
+    },
+    {
+      "id": "c20000000000000b",
+      "type": "text",
+      "x": 650,
+      "y": 800,
+      "width": 450,
+      "height": 240,
+      "text": "## [[二级指针与指针回写|返回指针或传入 T **]]\n*Return a pointer or pass `T **`*\n\n多一级地址才能写调用者的指针对象；二维数组不是自动的 `T **`。",
+      "color": "4"
+    },
+    {
+      "id": "c20000000000000c",
+      "type": "text",
+      "x": 1300,
+      "y": 800,
+      "width": 450,
+      "height": 240,
+      "text": "## [[C 字符串终止条件|NUL 终止与容量]]\n*NUL termination and capacity*\n\n字符数组只有在边界内出现首个 `\\0` 才是字符串；长度不是缓冲区容量。",
+      "color": "5"
+    },
+    {
+      "id": "c20000000000000d",
+      "type": "text",
+      "x": 1950,
+      "y": 800,
+      "width": 450,
+      "height": 240,
+      "text": "## [[字符串字面量修改边界|字符串字面量不可修改]]\n*String literals are not modifiable*\n\n字面量数组有静态存储期；`char copy[]` 才创建独立、可修改的数组副本。",
+      "color": "1"
+    },
+    {
+      "id": "c20000000000000e",
+      "type": "text",
+      "x": 0,
+      "y": 1200,
+      "width": 450,
+      "height": 240,
+      "text": "## [[malloc 与 calloc|分配不等于初始化]]\n*Allocation is not initialisation*\n\n`malloc` 初值未确定；`calloc` 保证全零位；两者都可能返回空指针。",
+      "color": "5"
+    },
+    {
+      "id": "c20000000000000f",
+      "type": "text",
+      "x": 650,
+      "y": 1200,
+      "width": 450,
+      "height": 240,
+      "text": "## [[free 与单一所有权|生命周期与唯一所有者]]\n*Lifetime and one owner*\n\n`free` 结束对象生命周期；C 指针类型不编码谁有权恰好释放一次。",
+      "color": "3"
+    },
+    {
+      "id": "c200000000000010",
+      "type": "text",
+      "x": 1300,
+      "y": 1200,
+      "width": 450,
+      "height": 240,
+      "text": "## [[指针别名与字符串深拷贝|别名与字符串深拷贝]]\n*Alias versus deep copy*\n\n深拷贝建立独立存储，复制完整终止符，并把新对象所有权交给调用者。",
+      "color": "6"
+    },
+    {
+      "id": "c200000000000011",
+      "type": "text",
+      "x": 1950,
+      "y": 1200,
+      "width": 450,
+      "height": 240,
+      "text": "## [[内存契约错误分类|内存错误必须分类]]\n*Classify memory contract failures*\n\n泄漏、越界、释放后使用、重复释放和无效释放破坏的是不同不变量。",
+      "color": "1"
+    },
+    {
+      "id": "c200000000000012",
+      "type": "text",
+      "x": 0,
+      "y": 1600,
+      "width": 450,
+      "height": 240,
+      "text": "## [[动态分配大小检查|先检查分配大小]]\n*Check allocation size first*\n\n先防 `count * sizeof *p` 回绕，再检查分配函数是否返回空指针。",
+      "color": "1"
+    },
+    {
+      "id": "c200000000000013",
+      "type": "text",
+      "x": 650,
+      "y": 1600,
+      "width": 450,
+      "height": 240,
+      "text": "## [[realloc 失败安全|正大小下 realloc 的两条路径]]\n*Positive-size `realloc` outcomes*\n\n正大小且旧指针非空时，成功替换旧对象；失败返回空且旧分配保持有效。空旧指针等同 `malloc`。",
+      "color": "1"
+    },
+    {
+      "id": "c200000000000014",
+      "type": "text",
+      "x": 1300,
+      "y": 1600,
+      "width": 450,
+      "height": 240,
+      "text": "## [[动态数组三元不变量|指针、长度与容量]]\n*Pointer, length, capacity*\n\n`length <= capacity`；扩容事务成功后再提交新指针和容量，写元素后再提交长度。",
+      "color": "3"
+    }
+  ],
+  "edges": [
+    {
+      "id": "c2e0000000000001",
+      "fromNode": "c200000000000002",
+      "fromSide": "right",
+      "toNode": "c200000000000003",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "声明指针对象"
+    },
+    {
+      "id": "c2e0000000000002",
+      "fromNode": "c200000000000003",
+      "fromSide": "right",
+      "toNode": "c200000000000004",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "声明进入表达式"
+    },
+    {
+      "id": "c2e0000000000003",
+      "fromNode": "c200000000000004",
+      "fromSide": "right",
+      "toNode": "c200000000000005",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "解引用前判状态"
+    },
+    {
+      "id": "c2e0000000000004",
+      "fromNode": "c200000000000003",
+      "fromSide": "bottom",
+      "toNode": "c200000000000007",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "声明结构区分数组与指针"
+    },
+    {
+      "id": "c2e0000000000005",
+      "fromNode": "c200000000000004",
+      "fromSide": "bottom",
+      "toNode": "c200000000000008",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "下标最终执行间接访问"
+    },
+    {
+      "id": "c2e0000000000006",
+      "fromNode": "c200000000000006",
+      "fromSide": "right",
+      "toNode": "c200000000000007",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "形参特例不能推广"
+    },
+    {
+      "id": "c2e0000000000007",
+      "fromNode": "c200000000000007",
+      "fromSide": "right",
+      "toNode": "c200000000000008",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "转换提供首元素基准"
+    },
+    {
+      "id": "c2e0000000000008",
+      "fromNode": "c200000000000008",
+      "fromSide": "right",
+      "toNode": "c200000000000009",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "下标受同数组范围约束"
+    },
+    {
+      "id": "c2e0000000000009",
+      "fromNode": "c200000000000009",
+      "fromSide": "top",
+      "toNode": "c200000000000005",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "one-past 不是悬空值"
+    },
+    {
+      "id": "c2e000000000000a",
+      "fromNode": "c20000000000000a",
+      "fromSide": "right",
+      "toNode": "c20000000000000b",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "多一级地址改指针对象"
+    },
+    {
+      "id": "c2e000000000000b",
+      "fromNode": "c200000000000007",
+      "fromSide": "bottom",
+      "toNode": "c20000000000000c",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "char 数组还需终止条件"
+    },
+    {
+      "id": "c2e000000000000c",
+      "fromNode": "c200000000000008",
+      "fromSide": "bottom",
+      "toNode": "c20000000000000c",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "容量约束每次字符访问"
+    },
+    {
+      "id": "c2e000000000000d",
+      "fromNode": "c20000000000000c",
+      "fromSide": "right",
+      "toNode": "c20000000000000d",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "字面量自带终止字节"
+    },
+    {
+      "id": "c2e000000000000e",
+      "fromNode": "c20000000000000c",
+      "fromSide": "bottom",
+      "toNode": "c200000000000010",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "完整复制必须含终止符"
+    },
+    {
+      "id": "c2e000000000000f",
+      "fromNode": "c20000000000000d",
+      "fromSide": "bottom",
+      "toNode": "c200000000000010",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "可修改副本需独立存储"
+    },
+    {
+      "id": "c2e0000000000010",
+      "fromNode": "c20000000000000b",
+      "fromSide": "bottom",
+      "toNode": "c20000000000000f",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "若输出分配对象，须声明所有权"
+    },
+    {
+      "id": "c2e0000000000011",
+      "fromNode": "c20000000000000e",
+      "fromSide": "right",
+      "toNode": "c20000000000000f",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "成功分配产生释放责任"
+    },
+    {
+      "id": "c2e0000000000012",
+      "fromNode": "c20000000000000e",
+      "fromSide": "bottom",
+      "toNode": "c200000000000012",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "先证明请求大小可表示"
+    },
+    {
+      "id": "c2e0000000000013",
+      "fromNode": "c200000000000012",
+      "fromSide": "right",
+      "toNode": "c200000000000013",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "重分配沿用大小检查"
+    },
+    {
+      "id": "c2e0000000000014",
+      "fromNode": "c20000000000000f",
+      "fromSide": "bottom",
+      "toNode": "c200000000000013",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "失败时保留旧所有者"
+    },
+    {
+      "id": "c2e0000000000015",
+      "fromNode": "c200000000000013",
+      "fromSide": "right",
+      "toNode": "c200000000000014",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "扩容按事务提交"
+    },
+    {
+      "id": "c2e0000000000016",
+      "fromNode": "c20000000000000f",
+      "fromSide": "bottom",
+      "toNode": "c200000000000014",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "数组结构持有唯一所有者"
+    },
+    {
+      "id": "c2e0000000000017",
+      "fromNode": "c20000000000000f",
+      "fromSide": "right",
+      "toNode": "c200000000000010",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "深拷贝转移新对象所有权"
+    },
+    {
+      "id": "c2e0000000000018",
+      "fromNode": "c200000000000010",
+      "fromSide": "right",
+      "toNode": "c200000000000011",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "复制错误按契约分类"
+    }
+  ]
+}

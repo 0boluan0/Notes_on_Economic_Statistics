@@ -52,14 +52,19 @@ Evaluation design should work backward from the decision. For customer support, 
 *Benchmark Validity and Contamination*
 <!-- bilingual-en:end -->
 
-construct validity 问“这个题集是否真的测目标能力”。训练集污染、近重复和公开答案会抬高得分；基准饱和后差异主要是噪声。使用隐藏/新鲜集、canary、去重分析和时间切分，并记录版本。
+construct validity 问“这个题集是否真的测目标能力”。[[训练评测污染|训练—评测重叠]]、近重复和公开答案都可能抬高得分，但 [[污染标记率与得分增益|发现多少重叠不能直接量化得分影响]]；基准饱和后差异主要是噪声。使用隐藏/新鲜集、canary、[[基准去污染|训练前去污染]]和时间切分，并记录版本。
 <!-- bilingual-en:start -->
-Construct validity asks whether the item set actually measures the target capability. Training contamination, near duplicates, and public answers inflate scores; once a benchmark saturates, differences can be dominated by noise. Use hidden or fresh sets, canaries, deduplication analysis, and time splits, and record versions.
+Construct validity asks whether the item set actually measures the target capability. [[训练评测污染|Training–evaluation overlap]], near duplicates, and public answers may inflate scores, but [[污染标记率与得分增益|the flagged overlap rate does not quantify score gain]]. Once a benchmark saturates, differences can be dominated by noise. Use hidden or fresh sets, canaries, [[基准去污染|pre-training decontamination]], and time splits, and record versions.
 <!-- bilingual-en:end -->
 
-还要区分内容污染与过程调参：即使题目不在预训练中，开发者反复查看 test error 并改 prompt、tool 或 system，就把 test 集变成了开发集。最终结论需要未参与选择的 held-out 集或嵌套评测流程。
+如果模型已经训练完成，重叠检测仍能支持 clean/flagged 分层报告、下调结论强度或停用受影响的分数，但它不能撤销模型已经经历的训练暴露；这条时间边界见 [[训练后重叠审计不等于去污染]]。
 <!-- bilingual-en:start -->
-Content contamination must be separated from procedural tuning. Even if items were absent from pretraining, repeatedly inspecting test errors and changing prompts, tools, or systems turns the test set into a development set. Final claims need a held-out set untouched by selection or a nested evaluation process.
+After training, overlap detection can still support clean-versus-flagged reporting, weaker claims, or withdrawal of affected scores, but it cannot undo exposure the model has already received; see [[训练后重叠审计不等于去污染|A post-training overlap audit is not decontamination]].
+<!-- bilingual-en:end -->
+
+还要区分内容污染与 [[测试集自适应复用|过程调参]]：即使题目不在训练数据中，开发者反复查看 test error 并改 prompt、tool 或 system，也会把 test 集变成开发集。最终结论需要未参与选择的 held-out 集或嵌套评测流程。
+<!-- bilingual-en:start -->
+Content contamination must be separated from [[测试集自适应复用|adaptive procedural tuning]]. Even if items were absent from training data, repeatedly inspecting test errors and changing prompts, tools, or systems turns the test set into a development set. Final claims need a held-out set untouched by selection or a nested evaluation process.
 <!-- bilingual-en:end -->
 
 ## 自动指标、LLM judge 与人类评审
@@ -67,9 +72,9 @@ Content contamination must be separated from procedural tuning. Even if items we
 *Automatic Metrics, LLM Judges, and Human Review*
 <!-- bilingual-en:end -->
 
-精确匹配适合有唯一规范答案，代码可用测试，生成任务常需 rubric。LLM-as-a-judge 可扩展，但受位置、长度、风格、自我偏好与提示影响；要随机顺序、校准人类标签并报告一致性。高风险领域需要合格专家。
+精确匹配适合有唯一规范答案，代码可用测试，生成任务常需 rubric。LLM-as-a-judge 可扩展，但受位置、长度、风格、自我偏好与提示影响；要随机顺序、校准人类标签并报告一致性。训练阶段还要单独审计[[长度代理偏差|长度与质量是否被混为同一信号]]。高风险领域需要合格专家。
 <!-- bilingual-en:start -->
-Exact match suits unique canonical answers, code can be executed against tests, and generation tasks often need a rubric. LLM-as-a-judge scales, but is affected by position, length, style, self-preference, and prompt choice. Randomize order, calibrate against human labels, and report agreement. High-risk domains require qualified experts.
+Exact match suits unique canonical answers, code can be executed against tests, and generation tasks often need a rubric. LLM-as-a-judge scales, but is affected by position, length, style, self-preference, and prompt choice. Randomize order, calibrate against human labels, and report agreement. During training, separately audit whether [[长度代理偏差|length has been substituted for quality]]. High-risk domains require qualified experts.
 <!-- bilingual-en:end -->
 
 评分器的能力上限、偏差和方差都要测。成对比较通常比绝对 1–10 分更稳定，但仍需交换 A/B 顺序；rubric 要把事实正确、相关、完整、引用和风格拆开，避免 judge 用“更长”代替“更好”。
@@ -102,9 +107,9 @@ If B samples 32 times per item and takes a majority vote while A samples once, t
 Factuality evaluation should check whether claims have evidence and whether the model expresses uncertainty appropriately. Safety evaluation measures both harmful compliance and over-refusal or ordinary-task utility. Robustness requires varying wording, order, language, and distractors rather than repeating one template.
 <!-- bilingual-en:end -->
 
-风险指标应保留严重度和分母。例如“危险服从率”要说明哪些 prompt 真正需要拒绝，“过度拒答率”要在明确良性集上测；把两类样本混成总体准确率会掩盖安全—效用 trade-off。
+风险指标应保留严重度和分母。例如“危险服从率”要说明哪些 prompt 真正需要拒绝，“过度拒答率”要在明确良性集上测；把两类样本混成总体准确率会掩盖安全—效用 trade-off。[[对齐目标聚合]]进一步提醒我们：这些维度怎样加权、代表谁的偏好，本身就是目标定义的一部分。
 <!-- bilingual-en:start -->
-Risk metrics should preserve severity and denominator. A harmful-compliance rate must define which prompts truly require refusal, while over-refusal should be measured on clearly benign items. Combining both into overall accuracy hides the safety–utility trade-off.
+Risk metrics should preserve severity and denominator. A harmful-compliance rate must define which prompts truly require refusal, while over-refusal should be measured on clearly benign items. Combining both into overall accuracy hides the safety–utility trade-off. [[对齐目标聚合|Alignment target aggregation]] adds a prior question: how are these dimensions weighted, and whose preferences does the aggregation represent?
 <!-- bilingual-en:end -->
 
 ## 推理、工具与 Agent 评测

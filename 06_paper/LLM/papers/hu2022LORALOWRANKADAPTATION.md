@@ -15,10 +15,10 @@ aliases:
 # LORA: LOW-RANK ADAPTATION OF LARGE LAN- GUAGE MODELS
 
 ## 一句话位置
-这篇论文位于 `03 对齐与偏好优化`，第一版用于连接 Instruction Tuning / RLHF, Efficiency / MoE 路线；此笔记暂作索引，不做精读摘要。
+这篇论文位于 `03 对齐与偏好优化`，核心位置是冻结预训练权重，以低秩增量矩阵减少适配时的可训练参数与状态开销；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-预训练、指令微调与偏好优化, [[LLM 推理效率]]
+[[LLM 后训练.canvas|LLM 后训练]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/4XPKYLR8)
@@ -28,4 +28,3 @@ aliases:
 ## Canvas
 - [[LLM Big Picture]]
 - [[03 对齐与偏好优化.canvas|03 对齐与偏好优化 Canvas]]
-

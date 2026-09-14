@@ -9,16 +9,51 @@
 *1.1 Definitions of the Correlation Coefficient and Covariance*
 <!-- bilingual-en:end -->
 
-[[相关性、Copula 与尾部依赖|相关系数]]
+三种常用的[[相关度量比较|相关度量]]回答不同问题：
+
+- **[[相关系数|Pearson相关系数]]**
+  $$
+  \rho_P=\operatorname{Corr}(X,Y)
+  =\frac{\operatorname{Cov}(X,Y)}{\sigma_X\sigma_Y}
+  $$
+  衡量有限二阶矩下的**线性**共同变化；任一变量方差为0时无定义，对离群值敏感，也可能漏掉强非线性关系。
+- **[[Spearman秩相关|Spearman秩相关系数]]**是样本秩的Pearson相关。连续边际下可写为$\rho_S=\operatorname{Corr}(F_X(X),F_Y(Y))$，衡量单调一致性，并对各变量的严格递增变换不变；若只对一个变量作严格递减变换，符号会反转。存在并列秩时必须采用约定的平均秩和并列修正。
+- **[[Kendall秩相关|Kendall秩相关系数]]**在连续、无并列情形下为
+  $$
+  \tau=P\big((X-X')(Y-Y')>0\big)-P\big((X-X')(Y-Y')<0\big),
+  $$
+  其中$(X',Y')$是独立同分布副本。它比较一致对与不一致对；存在并列时要明确使用$\tau_b$等修正版。
+
+三者都只是依赖关系的投影，单独等于0都不能一般性地证明独立。独立且相应矩存在会推出这些相关度量为0；反方向只有在额外分布条件下才成立，例如联合正态中Pearson相关为0可推出独立。
+<!-- bilingual-en:start -->
+The three common [[相关度量比较|dependence measures]] answer different questions:
+
+- **[[相关系数|Pearson correlation]]**, $\rho_P=\operatorname{Cov}(X,Y)/(\sigma_X\sigma_Y)$, measures linear co-movement when second moments are finite. It is undefined if either variance is zero, sensitive to outliers, and can miss strong nonlinear dependence.
+- **[[Spearman秩相关|Spearman rank correlation]]** is Pearson correlation applied to sample ranks. With continuous marginals it can be written as $\rho_S=\operatorname{Corr}(F_X(X),F_Y(Y))$. It measures monotone association and is invariant to strictly increasing transformations; ties require a stated ranking and tie convention.
+- **[[Kendall秩相关|Kendall rank correlation]]** is the probability of concordance minus the probability of discordance for two independent copies. Ties require a version such as $\tau_b$.
+
+All three are projections of dependence. A value of zero does not generally prove independence. Independence implies zero correlation when the relevant quantities exist; the converse needs extra assumptions, such as joint normality for zero Pearson correlation.
+<!-- bilingual-en:end -->
 
 ## 1.2 EWMA更新协方差和相关系数
 <!-- bilingual-en:start -->
 *1.2 EWMA updates covariance and correlation coefficient*
 <!-- bilingual-en:end -->
 
-[[波动率度量：历史、实现与隐含波动率|EWMA]] 下协方差的更新公式为：
+[[EWMA波动率|EWMA]] 必须先说明收益口径。若向量 $u_{n-1}$ 是零条件均值收益或已经去均值的创新，并对整个矩阵使用同一个 $0<\lambda<1$，则
 $$
-\mathrm{Cov}_{n} = \lambda \,\mathrm{Cov}_{n-1} + (1-\lambda)\,x_{n-1}\,y_{n-1} \, $$ 方差更新公式：$\sigma^2_{X,n} = \lambda\,\sigma^2_{X,n-1} + (1-\lambda)\,x_{n-1}^2$
+\Sigma_n=\lambda\Sigma_{n-1}+(1-\lambda)u_{n-1}u_{n-1}^{\mathsf T}.
+$$
+因此两变量协方差与方差分别为
+$$
+\operatorname{Cov}_{XY,n}=\lambda\operatorname{Cov}_{XY,n-1}+(1-\lambda)x_{n-1}y_{n-1},
+\qquad
+\sigma^2_{X,n}=\lambda\sigma^2_{X,n-1}+(1-\lambda)x_{n-1}^2.
+$$
+若 $\Sigma_{n-1}$ 为半正定矩阵，同一 $\lambda$ 的矩阵递推仍保持半正定；对每个资产对随意使用不同衰减因子则不保证这一性质。相关矩阵的合法性见 [[协方差矩阵半正定性]]。
+<!-- bilingual-en:start -->
+If $u_{n-1}$ contains zero-conditional-mean returns or demeaned innovations, EWMA updates the whole covariance matrix with one common decay factor: $\Sigma_n=\lambda\Sigma_{n-1}+(1-\lambda)u_{n-1}u_{n-1}^{\mathsf T}$. A positive-semidefinite starting matrix remains positive semidefinite under this update. Arbitrary pair-specific decay factors do not guarantee a valid covariance matrix.
+<!-- bilingual-en:end -->
 
 >[!question] 
 >**模拟考题：**假设在第 $n-1$ 日，资产 $X$ 和 $Y$ 的相关系数估计值为 0.6，波动率估计分别为 1%和 2%（即 $\sigma_{X,n-1}=1\%, \sigma_{Y,n-1}=2\%$）。已知当日协方差 $\mathrm{Cov}_{n-1}=0.6 \times 0.01 \times 0.02 = 0.00012$。若第 $n-1$ 日 $X$ 的收益为 0.5%（即 $x_{n-1}=0.5\%$），$Y$ 的收益为 2.5%（$y_{n-1}=2.5\%$），使用指数加权移动平均法（EWMA，衰减因子 $\lambda=0.95$）计算第 $n$ 日更新的协方差和相关系数。
@@ -41,18 +76,21 @@ $$
 
 ## 1.3独立性与不相关的区别
 
-概率统计内容，~~略~~ 简述：本节可按相关矩阵的正定性、尾部相关定义与计算、以及 Copula 的基本性质（Sklar 定理）三方面复习要点。
+独立意味着联合分布可以分解为边际分布的乘积；不相关只说明某一种共同变化测度为0，因此条件更弱。复习时应分别检查[[相关度量比较|相关度量]]、相关矩阵合法性、[[尾部依赖]]与[[Copula分解|Sklar 分解]]，不能用一个相关系数替代完整的联合分布。
+<!-- bilingual-en:start -->
+Independence means that the joint distribution factorizes into its marginals. Zero correlation only sets one dependence summary to zero and is therefore weaker. A complete review separates the chosen dependence measure, matrix validity, tail dependence, and the Copula decomposition instead of treating one coefficient as the whole joint distribution.
+<!-- bilingual-en:end -->
 
 ## 协方差矩阵的正定性条件
 
 
-在多变量情形下，所有随机变量的协方差构成**协方差矩阵** $\Omega$。要成为有效的协方差矩阵，$\Omega$ 必须是**正定或半正定**的，即满足对任意非零向量 $w$：
+在多变量情形下，所有随机变量的协方差构成对称矩阵$\Omega$。有效的协方差矩阵必须是**半正定**（positive semidefinite, PSD）的，即对任意向量$w$：
 $$ 
 w^T\,\Omega\,w \;\ge\; 0 \,. 
 $$ 
-这是协方差矩阵的**内部一致性**条件——否则计算得出的组合方差将出现负值等不合理情况。
+若对每个非零$w$都有严格不等式$w^T\Omega w>0$，矩阵才是**正定**（positive definite, PD）。PSD允许某个非零线性组合方差为0；PD不允许。内部一致性只要求PSD，否则某个组合会得到负方差。
 
-检验协方差矩阵正定性的常用方法之一是检查其特征值或主子式：所有特征值均非负（主子式均为非负）是半正定矩阵的充要条件。**例如：** 
+等价地，实对称矩阵PSD当且仅当全部特征值非负，也当且仅当全部**主子式**非负。PD要求全部特征值严格为正；按Sylvester判据，也等价于全部**顺序主子式**严格为正。不要把PSD与PD的判据混写。**例如：**
 $$ 
 \Omega = \begin{pmatrix}
 1 & 0 & 0.9\\[6pt]
@@ -67,7 +105,7 @@ $$
 $$ 
 \det(\Omega) = 1(1 - 0.9^2) + 0.9(0 - 0.9) = 1(1 - 0.81) - 0.9^2 = 0.19 - 0.81 = -0.62 \,<\, 0 \,. 
 $$ 
-由于行列式为负，该矩阵存在负特征值，不满足半正定条件。因此这个“相关矩阵”不具备内部一致性，实际上不可能是某组随机变量的协方差矩阵。在风险管理中，若计算得到的相关矩阵不正定，需要进行调整（如降秩近似或调整相关系数）以修正为最接近的正定矩阵。
+由于行列式为负，该矩阵存在负特征值，不满足半正定条件。因此这个“相关矩阵”不具备内部一致性，实际上不可能是某组随机变量的相关矩阵。在风险管理中，若估计矩阵不是PSD，需要在保留对角线和业务约束的前提下做最近PSD等修正；若下游算法要求标准Cholesky，还可能需要进一步得到PD矩阵。
 
 **模拟考题：**判断以下相关矩阵是否满足正定要求，并给出理由：
 $$ 
@@ -81,12 +119,12 @@ Under EWMA, covariance is updated by combining the previous covariance with the 
 
 Independence is stronger than zero correlation: independent variables are uncorrelated when their moments exist, but uncorrelated variables need not be independent unless additional distributional assumptions, such as joint normality, apply.
 
-A valid covariance or correlation matrix must be positive semidefinite, because the variance of every linear combination must be non-negative: $w^T\,\Omega\,w \ge 0$. For the displayed matrix, each diagonal entry is 1 and each relevant $2\times2$ principal minor is 0.19, but the full determinant is $-0.62$. The negative determinant implies a negative eigenvalue, so the matrix is not positive semidefinite and cannot be a valid correlation matrix. In practice, an invalid estimated matrix must be adjusted, for example through a nearest-positive-semidefinite or lower-rank approximation.
+A valid covariance or correlation matrix must be symmetric and positive semidefinite because every linear-combination variance must satisfy $w^T\Omega w\ge0$. Positive definite means strict positivity for every nonzero $w$. A symmetric matrix is PSD exactly when all eigenvalues, or equivalently all principal minors, are non-negative; Sylvester's leading-principal-minor test with strict inequalities is for PD. For the displayed matrix, the three second-order principal minors are $1$, $0.19$, and $0.19$, but the full determinant is $-0.62$. The negative determinant implies a negative eigenvalue, so the matrix is not PSD. A downstream standard Cholesky routine may require a PD repair rather than merely a singular PSD approximation.
 <!-- bilingual-en:end -->
 
-详细解答：检验 $\Omega$ 的正定性，可以计算其特征值或主子式。上面矩阵的一阶和二阶主子式均为非负（对角元为1，任意 $2\times2$ 子矩阵行列式$=1-0.9^2=0.19$），但三阶行列式计算得到 $-0.62$。因为出现了负的行列式（即负特征值），$\Omega$ 不是半正定矩阵。因此该矩阵不能作为有效的相关矩阵（它会导致某线性组合的方差为负，这是不可能的）。因此结论是**不满足**正定条件。
+详细解答：检验$\Omega$是否PSD，可以计算特征值或全部主子式。上面矩阵的一阶主子式均为1，三个二阶主子式分别为$1$、$0.19$和$0.19$，但三阶行列式为$-0.62$。因此$\Omega$存在负特征值，不是PSD，不能作为有效的相关矩阵；结论是**不满足半正定要求**。
 <!-- bilingual-en:start -->
-Detailed answer: positive semidefiniteness can be checked through eigenvalues or principal minors. Although the first- and second-order principal minors are non-negative, the full determinant is $-0.62$. The matrix therefore has a negative eigenvalue and cannot be a valid covariance or correlation matrix: it would imply a negative variance for some linear combination. The correct conclusion is that the matrix **fails** the positive-semidefiniteness requirement.
+Detailed answer: the first-order principal minors are all 1 and the three second-order principal minors are $1$, $0.19$, and $0.19$, whereas the full determinant is $-0.62$. The matrix therefore has a negative eigenvalue and would imply a negative variance for some linear combination. It **fails** the positive-semidefiniteness requirement.
 <!-- bilingual-en:end -->
 
 ## 多元正态分布与相关系数的生成机制
@@ -99,14 +137,14 @@ Detailed answer: positive semidefiniteness can be checked through eigenvalues or
 Skip this section.
 <!-- bilingual-en:end -->
 
-在**[[多元正态分布|多元正态分布]]**中，相关性的一个重要性质是：**任意线性组合**的分布仍为正态，且条件分布是正态分布。例如，若 $(V_1, V_2)$ 服从二维正态分布，$V_2$ 在给定 $V_1=v_1$ 条件下仍是正态，其条件均值和标准差为：
+在**[[多元正态分布.canvas|多元正态分布]]**中，[[Gaussian仿射闭包|任意线性组合仍为正态]]，而[[Gaussian条件分布|条件分布仍为正态]]。例如，若 $(V_1, V_2)$ 服从二维正态分布，$V_2$ 在给定 $V_1=v_1$ 条件下仍是正态，其条件均值和标准差为：
 $$ 
 E[V_2 \mid V_1 = v_1] = \mu_2 + \rho\,\frac{\sigma_2}{\sigma_1}\, (v_1 - \mu_1)\,, \qquad 
 \sqrt{\mathrm{Var}(V_2 \mid V_1 = v_1)} = \sigma_2\,\sqrt{\,1-\rho^2\,} \,,
 $$ 
 其中 $\mu_i, \sigma_i$ 是 $V_i$ 的均值和标准差，$\rho$ 是相关系数。这表明在联合正态中，相关使得一个变量对另一个的条件期望是线性函数，条件方差为常数。
 <!-- bilingual-en:start -->
-In a **[[多元正态分布|multivariate normal distribution]]**, every linear combination is normally distributed, and every conditional distribution is also normal. For example, if $(V_1, V_2)$ is bivariate normal, then the conditional distribution of $V_2$ given $V_1=v_1$ is normal with the mean and standard deviation shown above. Here, $\mu_i$ and $\sigma_i$ are the mean and standard deviation of $V_i$, and $\rho$ is the correlation coefficient. Thus, under joint normality, one variable's conditional mean is a linear function of the other variable, while its conditional variance is constant.
+In a **[[多元正态分布.canvas|multivariate normal distribution]]**, [[Gaussian仿射闭包|every linear combination is normal]], and [[Gaussian条件分布|conditioning preserves Gaussianity]] under the stated covariance-block conditions. For example, if $(V_1, V_2)$ is bivariate normal, then the conditional distribution of $V_2$ given $V_1=v_1$ is normal with the mean and standard deviation shown above. Here, $\mu_i$ and $\sigma_i$ are the mean and standard deviation of $V_i$, and $\rho$ is the correlation coefficient. Thus, under joint normality, one variable's conditional mean is a linear function of the other variable, while its conditional variance is constant.
 <!-- bilingual-en:end -->
 
 **相关系数的生成机制：**对于正态分布，我们可以通过线性变换方便地“制造”出指定的相关性。例如，要生成**两**个相关系数为 $\rho$ 的标准正态随机变量 $X, Y$，可以按以下步骤：
@@ -128,9 +166,9 @@ $$
 Both constructed variables are standard normal. Moreover, $E(X)=E(Y)=0,\ \mathrm{Var}(Y) = \rho^2 + (1-\rho^2)=1$, and the displayed covariance calculation gives $\mathrm{Cov}(X,Y)=\rho$. Therefore, $\mathrm{Corr}(X,Y)=\rho$.
 <!-- bilingual-en:end -->
 
-一般地，对于 $n$ 维正态分布，可以使用**科列斯基分解**法：设希望生成协方差矩阵为 $\Sigma$（$n\times n$）的正态向量。先生成 $n$ 维独立标准正态向量 $Z = (Z_1,\dots,Z_n)^T$。令 $A$ 为 $\Sigma$ 的科列斯基下三角矩阵（满足 $A A^T = \Sigma$），则随机向量 $X = A\,Z$ 即服从协方差为 $\Sigma$ 的 $n$ 维正态分布。此方法确保生成的相关结构满足正定性要求，因为 $\Sigma = AA^T$ 天生正定。
+一般地，对于$n$维正态分布，可以使用**Cholesky分解**。若目标协方差矩阵$\Sigma$对称PD，则存在唯一的正对角下三角矩阵$A$使$AA^T=\Sigma$。生成独立标准正态向量$Z=(Z_1,\dots,Z_n)^T$并令$X=AZ$，便得到协方差为$\Sigma$的正态向量。任意$AA^T$只能保证PSD，不自动保证PD；若$\Sigma$只是奇异PSD，标准正对角Cholesky不适用，需要允许零对角的广义/主元分解或其他矩阵平方根。
 <!-- bilingual-en:start -->
-More generally, an $n$-dimensional normal vector can be generated by **Cholesky decomposition**. Suppose the target covariance matrix is $\Sigma$ of size $n\times n$. Generate an independent standard normal vector $Z = (Z_1,\dots,Z_n)^T$, and let $A$ be the lower-triangular Cholesky factor satisfying $A A^T = \Sigma$. Then $X = A\,Z$ is multivariate normal with covariance matrix $\Sigma$. This construction also makes the consistency requirement explicit: a Cholesky factor exists only when the target matrix has the required positive-semidefinite structure.
+More generally, if the target covariance matrix $\Sigma$ is symmetric PD, it has a unique lower-triangular Cholesky factor $A$ with a positive diagonal and $AA^T=\Sigma$. For an independent standard normal vector $Z$, the vector $X=AZ$ is normal with covariance $\Sigma$. Any product $AA^T$ is PSD, not automatically PD. A singular PSD matrix needs a generalized or pivoted factorization, or another matrix square root, rather than the standard positive-diagonal Cholesky factor.
 <!-- bilingual-en:end -->
 
 **模拟考题：**假设我们需要模拟两个相关的标准正态随机变量，目标相关系数为 $\rho=0.5$。请给出一种可行的模拟方法（要求利用独立正态变量来构造）。
@@ -153,9 +191,9 @@ $$
 *2. Factor Models*
 <!-- bilingual-en:end -->
 
-当涉及 $N$ 个随机变量（如 $N$ 个资产收益）时，直接估计两两之间的相关系数有 $\frac{N(N-1)}{2}$ 个参数，随着 $N$ 增大变得非常繁琐。**因子模型（[[因子分析|Factor]] Model）**假设变量的相关结构由少数几个共同因子驱动，从而减少需估计的参数数量。
+当涉及 $N$ 个随机变量（如 $N$ 个资产收益）时，直接估计两两之间的相关系数有 $\frac{N(N-1)}{2}$ 个参数，随着 $N$ 增大变得非常繁琐。**[[公共因子模型|因子模型（Factor Model）]]**假设变量的相关结构由少数几个共同因子驱动，从而减少需估计的参数数量。
 <!-- bilingual-en:start -->
-With $N$ random variables, such as $N$ asset returns, estimating every pairwise correlation requires $\frac{N(N-1)}{2}$ parameters. This quickly becomes unwieldy as $N$ grows. A **factor model ([[因子分析|factor]] model)** assumes that a small number of common factors drive most of the dependence, greatly reducing the number of parameters that must be estimated.
+With $N$ random variables, such as $N$ asset returns, estimating every pairwise correlation requires $\frac{N(N-1)}{2}$ parameters. This quickly becomes unwieldy as $N$ grows. A **[[公共因子模型|factor model]]** assumes that a small number of common factors drive most of the dependence, greatly reducing the number of parameters that must be estimated.
 <!-- bilingual-en:end -->
 
 ## 2.1 单因子模型
@@ -199,77 +237,70 @@ $$
 *3. Gaussian Copula Modeling*
 <!-- bilingual-en:end -->
 
-在处理非正态分布的变量时，我们需要一种灵活的方法来定义它们之间的相关结构，而不改变各自的边际分布。这正是 **Copula** 方法的核心思想。**Gaussian Copula** 是 Copula 函数的一种特殊类别，用于通过正态分布构造相关性。其建模的基本步骤如下：
+在处理非正态变量时，[[Copula分解|Sklar 定理]]把边际分布与依赖结构分开。[[Gaussian Copula]]通过多元标准正态潜变量构造依赖，但不会把原变量的边际强行改成正态。连续边际下，其[[Copula拟合|拟合]]与模拟步骤如下：
 <!-- bilingual-en:start -->
-When variables have non-normal marginal distributions, a Copula lets us model their dependence without changing those marginals. This is the central purpose of a **Copula**. A **Gaussian Copula** imposes dependence through a multivariate normal latent space. Its basic construction proceeds as follows:
+For non-normal variables, [[Copula分解|Sklar's theorem]] separates marginal distributions from dependence. A [[Gaussian Copula]] supplies dependence through multivariate standard-normal latent variables without forcing the original marginals to be normal. With continuous marginals, [[Copula拟合|fitting]] and simulation proceed as follows:
 <!-- bilingual-en:end -->
 
 1. **边际分布估计：**首先针对每个变量估计其边际分布 $F_{V_i}(v)$（累积分布函数），例如通过历史数据拟合得到。
-2. **分位数映射：**将每个原始变量 $V_i$ 映射到对应的标准正态变量 $U_i$。具体做法是利用**分位数对分位数**映射：令 
-   $$u_i = \Phi^{-1}\!\big(F_{V_i}(v_i)\big)\,,$$ 
-   其中 $\Phi^{-1}$ 是标准正态分布的反函数（把边际分布概率映射为对应的正态分位数）。如此得到的新变量 $U_1,\dots,U_n$ 均服从标准正态分布。
-3. **施加相关结构：**假定 $(U_1,\dots,U_n)$ 服从某一 $n$ 元**多元正态分布**，并根据需要设定它们之间的相关矩阵（如通过单因子模型或历史估计得到）。在 Gaussian Copula 模型中，我们通常直接设定这些 $U$ 变量的线性相关系数矩阵为我们期望的相关结构。
-4. **构建联合分布：**由于 $U$ 的联合分布已由上述步骤确定，利用逆映射可得到原变量 $V$ 的联合分布，即 Copula 联合分布。形式上，对于任意一组取值 $(v_1,\dots,v_n)$：
-   $$ 
-   P(V_1 \le v_1, \dots, V_n \le v_n) \;=\; P\!\big(U_1 \le \Phi^{-1}(F_{V_1}(v_1)),\,\dots,\,U_n \le \Phi^{-1}(F_{V_n}(v_n))\big)\,. 
-   $$ 
-   右侧概率可通过已知的 $U$ 联合正态分布计算（如多元正态CDF计算），这定义了原变量的Copula联合分布。
+2. **概率积分变换（PIT）：**对连续边际，$Q_i=F_{V_i}(V_i)$服从$U(0,1)$，再令$Z_i=\Phi^{-1}(Q_i)$，便得到标准正态边际。若$V_i$离散，$F_{V_i}(V_i)$一般不服从连续均匀分布，Copula在跳点之间也不唯一；此时须明确使用随机化PIT、潜变量阈值模型或其他离散Copula约定，不能直接声称$Z_i$标准正态。
+3. **估计依赖：**用变换后的$Z_i$估计一个合法的相关矩阵$R$，并检查$R$至少PSD；需要标准Cholesky时还要PD。$R$是Gaussian-Copula潜变量的相关参数，不等于原变量在任意边际下的Pearson相关。
+4. **模拟并逆变换：**先抽取$Z\sim N(0,R)$，再令$Q_i=\Phi(Z_i)$和$V_i=F_{V_i}^{-1}(Q_i)$。于是
+   $$
+   P(V_1\le v_1,\dots,V_n\le v_n)
+   =\Phi_R\!\left(\Phi^{-1}(F_{V_1}(v_1)),\dots,\Phi^{-1}(F_{V_n}(v_n))\right),
+   $$
+   其中$\Phi_R$是相关矩阵为$R$的多元标准正态CDF。
 <!-- bilingual-en:start -->
 
 &nbsp;
 **1.** **Estimate the marginal distributions:** Estimate each variable's marginal cumulative distribution function $F_{V_i}(v)$, for example from historical data.<br>
-**2.** **Map quantiles into normal space:** Transform each observation $V_i$ into a standard normal latent variable $U_i$ using the probability-integral and inverse-normal transformations:<br>
-   $$u_i = \Phi^{-1}\!\big(F_{V_i}(v_i)\big)\,.$$
-   Each transformed variable is standard normal.
-**3.** **Impose a dependence structure:** Assume $(U_1,\dots,U_n)$ follows an $n$-dimensional **multivariate normal distribution** with a chosen correlation matrix, estimated historically or specified through a factor model.<br>
-**4.** **Construct the joint distribution:** The multivariate normal law determines joint probabilities in latent space. Mapping those probabilities back through the marginal distributions defines the Copula-based joint distribution of the original variables $(V_1,\dots,V_n)$.<br>
+**2.** **Apply the probability-integral transform (PIT):** For a continuous marginal, $Q_i=F_{V_i}(V_i)$ is uniform and $Z_i=\Phi^{-1}(Q_i)$ is standard normal. For a discrete marginal, the ordinary PIT is not continuous uniform and the Copula is non-unique between jumps; use a stated randomized PIT, latent-threshold model, or another discrete convention.<br>
+**3.** **Estimate dependence:** Estimate a valid latent correlation matrix $R$ from the transformed $Z_i$. It must be PSD, and standard Cholesky requires PD. This latent parameter is not generally the original variables' Pearson correlation.<br>
+**4.** **Simulate and invert:** Draw $Z\sim N(0,R)$, set $Q_i=\Phi(Z_i)$, and return to the original scale with $V_i=F_{V_i}^{-1}(Q_i)$. The displayed multivariate-normal CDF then defines the joint distribution while preserving the chosen marginals.<br>
 <!-- bilingual-en:end -->
 
-简单来说，Gaussian Copula 先把各变量各自“正态化”（变为$U(0,1)$的概率再映射到标准正态），然后假设这些正态化后的变量服从一个多元正态（相关由Copula参数决定），最后通过逆变换回到原始变量空间，从而为原变量施加所需的相关关系。
+简单说，连续数据拟合时先做$V_i\to Q_i=F_i(V_i)\to Z_i=\Phi^{-1}(Q_i)$，模拟时按$Z\sim N(0,R)\to Q_i=\Phi(Z_i)\to V_i=F_i^{-1}(Q_i)$反向走完整条链。离散变量不能未经处理套用连续PIT结论。
 <!-- bilingual-en:start -->
-In short, a Gaussian Copula first converts each original variable into a uniform probability and then into a standard normal quantile. It models the transformed variables jointly with a multivariate normal distribution whose correlation matrix contains the Copula parameters. Finally, inverse marginal transformations return the simulated values to their original scales. The marginals remain unchanged; only the dependence structure is supplied by the Copula.
+In short, continuous-data fitting follows $V_i\to Q_i=F_i(V_i)\to Z_i=\Phi^{-1}(Q_i)$, whereas simulation follows the reverse chain $Z\sim N(0,R)\to Q_i=\Phi(Z_i)\to V_i=F_i^{-1}(Q_i)$. Discrete variables need an explicit treatment rather than the continuous-PIT claim.
 <!-- bilingual-en:end -->
 
-**模拟考题：**有两种非正态分布的风险因子 $V_1$ 和 $V_2$，我们希望用高斯 Copula 来建立它们的联合分布关系。请写出使用 Gaussian Copula 建立相关结构的基本步骤。
+**模拟考题：**有两个边际连续但非正态的风险因子$V_1$和$V_2$，我们希望用Gaussian Copula建立联合分布。请写出拟合依赖并模拟新样本的基本步骤；若边际离散，还需说明什么会改变。
 <!-- bilingual-en:start -->
-**Practice question:** Two risk factors $V_1$ and $V_2$ have non-normal marginal distributions. We want to use a Gaussian Copula to model their joint distribution. State the basic steps used to construct the dependence structure.
+**Practice question:** Two risk factors $V_1$ and $V_2$ have continuous, non-normal marginals. State the steps for fitting a Gaussian Copula and simulating new observations, and explain what changes for discrete marginals.
 <!-- bilingual-en:end -->
 
 **详细解答：**可以按照以下步骤：
 1. **确定边际分布：**分别确定 $V_1$ 和 $V_2$ 的边际分布 $F_{V_1}(x)$ 和 $F_{V_2}(y)$（例如通过数据拟合出各自的分布类型和参数）。
-2. **转换到标准正态空间：**将观测值 $v_1, v_2$ 转换为对应的标准正态分位数：
-   $$u_1 = \Phi^{-1}(F_{V_1}(v_1)), \qquad u_2 = \Phi^{-1}(F_{V_2}(v_2)),$$ 
-   这样得到的 $U_1, U_2$ 均服从 $N(0,1)$ 分布。
-3. **假设正态相关结构：**在 $U_1, U_2$ 空间引入相关假设，即设 $(U_1, U_2)$ 服从相关系数为 $\rho$ 的二维正态分布 $N(0,1)$。参数 $\rho$ 被称为**Copula相关系数**。
-4. **得到联合分布：**通过 $U$ 空间的二维正态分布，可以得到任意联合事件的概率。例如：
-   $$P(V_1 \le x,\; V_2 \le y) = P\!\big(U_1 \le \Phi^{-1}(F_{V_1}(x)),\; U_2 \le \Phi^{-1}(F_{V_2}(y))\big)\,,$$ 
-   后者可用标准正态Copula的分布函数计算，从而定义了 $(V_1, V_2)$ 的联合分布。
+2. **转换到标准正态空间：**令$q_i=F_{V_i}(v_i)$、$z_i=\Phi^{-1}(q_i)$。连续且模型正确时，$q_i$为均匀边际、$z_i$为标准正态边际。
+3. **估计相关结构：**从$(z_1,z_2)$估计$\rho$并检查相关矩阵合法；$\rho$是潜在正态空间参数。
+4. **模拟：**抽取相关系数为$\rho$的$(Z_1,Z_2)$，再令$V_i=F_{V_i}^{-1}(\Phi(Z_i))$。联合CDF为
+   $$
+   P(V_1\le x,V_2\le y)=\Phi_{2,\rho}\!\left(\Phi^{-1}(F_{V_1}(x)),\Phi^{-1}(F_{V_2}(y))\right).
+   $$
+   离散边际的普通PIT不均匀且Copula不唯一，必须另行声明随机化或潜变量约定。
 <!-- bilingual-en:start -->
 **Detailed answer:**
 **1.** **Determine the marginals:** Estimate $F_{V_1}(x)$ and $F_{V_2}(y)$, including their distributional forms and parameters.<br>
-**2.** **Transform to standard normal space:** Map observations $v_1, v_2$ to<br>
-   $$u_1 = \Phi^{-1}(F_{V_1}(v_1)), \qquad u_2 = \Phi^{-1}(F_{V_2}(v_2)).$$
-   The transformed variables $U_1, U_2$ are standard normal.
-**3.** **Specify normal dependence:** Let $(U_1, U_2)$ be bivariate normal with correlation $\rho$. This $\rho$ is the **Copula correlation parameter**.<br>
-**4.** **Recover the joint distribution:** Compute joint probabilities in latent normal space:<br>
-   $$P(V_1 \le x,\; V_2 \le y) = P\!\big(U_1 \le \Phi^{-1}(F_{V_1}(x)),\; U_2 \le \Phi^{-1}(F_{V_2}(y))\big).$$
-   The bivariate normal CDF on the right defines the joint distribution of $(V_1,V_2)$ while preserving both marginals.
+**2.** **Transform to normal space:** Set $q_i=F_{V_i}(v_i)$ and $z_i=\Phi^{-1}(q_i)$. Under continuous, correctly specified marginals, the transformed observations have standard-normal marginals.<br>
+**3.** **Estimate dependence:** Estimate $\rho$ from $(z_1,z_2)$ and check that the resulting matrix is valid. This is a latent-normal parameter.<br>
+**4.** **Simulate:** Draw a bivariate standard-normal vector with correlation $\rho$ and set $V_i=F_{V_i}^{-1}(\Phi(Z_i))$. The displayed bivariate-normal CDF gives the joint law. For discrete marginals, the ordinary PIT is not uniform and the Copula is non-unique, so a randomized or latent-variable convention must be stated.
 <!-- bilingual-en:end -->
 
 ## 3.1Copula 函数的定义与代数表达
 <!-- bilingual-en:start -->
 *3.1 Definition and Algebraic Form of a Copula*
 <!-- bilingual-en:end -->
-**Copula函数**是描述多维随机变量**相关结构**的函数，它将各维边际分布拼接成联合分布，同时保证边际分布保持不变。Copula 概念的数学基础是 **Sklar 定理**：任何多维分布函数 $F_{X,Y}(x,y)$ 都可表示为其边际分布和一个Copula的组合：
+[[Copula|Copula函数]]描述边际分布之外的依赖结构。[[Copula分解|Sklar 定理]]说明：任意二维联合分布函数 $F_{X,Y}$ 都存在一个Copula $C$，使得
 $$
 F_{X,Y}(x,y) = C\!\big(F_X(x),\;F_Y(y)\big)\,,
 $$
-其中 $C(u,v)$ 即为一二维Copula函数（满足边际为$U(0,1)$分布的联结函数）。
+其中 $C$ 的两个边际都是 $U(0,1)$。若 $F_X,F_Y$ 都连续，则 $C$ 在 $[0,1]^2$ 上唯一；若存在离散或混合边际，$C$ 只在 $\operatorname{Ran}(F_X)\times\operatorname{Ran}(F_Y)$ 上由联合分布确定，向整个单位方形的延拓一般不唯一。因此“联合分布已确定”不等于“离散边际下Copula表示唯一”，估计与解释时必须说明约定。
 <!-- bilingual-en:start -->
-A **Copula function** describes the dependence structure of a multivariate distribution. It combines marginal distributions into a joint distribution while leaving each marginal unchanged. Its mathematical foundation is **Sklar's theorem**: any multivariate distribution function $F_{X,Y}(x,y)$ can be represented by its marginals and a Copula. Here, $C(u,v)$ is a bivariate Copula whose own marginals are uniform on $U(0,1)$.
+A [[Copula|Copula function]] describes dependence separately from the marginal distributions. [[Copula分解|Sklar's theorem]] states that for any bivariate joint CDF $F_{X,Y}$ there exists a Copula $C$ such that the displayed decomposition holds, with uniform marginals for $C$. If both marginals are continuous, $C$ is unique on $[0,1]^2$. With a discrete or mixed marginal, it is determined only on $\operatorname{Ran}(F_X)\times\operatorname{Ran}(F_Y)$ and its extension to the whole unit square is generally non-unique. Estimation and interpretation must therefore state the convention used for discrete data.
 <!-- bilingual-en:end -->
 
-对于**Gaussian Copula**而言，有显式的代数表达形式。以二维为例，假设 $X$ 和 $Y$ 边际分布分别为 $G_1(x)$ 和 $G_2(y)$。高斯Copula下的联合分布函数为：
+对于[[Gaussian Copula]]而言，有显式的代数表达形式。以二维为例，假设 $X$ 和 $Y$ 边际分布分别为 $G_1(x)$ 和 $G_2(y)$。高斯Copula下的联合分布函数为：
 $$ 
 F_{X,Y}(x,y) \;=\; \Phi_{2,\rho}\!\Big(\Phi^{-1}\big(G_1(x)\big)\,,\;\Phi^{-1}\big(G_2(y)\big)\Big)\,,
 $$ 
@@ -279,7 +310,7 @@ C(u_1, u_2) = \Phi_{2,\rho}\!\big(\Phi^{-1}(u_1),\; \Phi^{-1}(u_2)\big)\,, \qqua
 $$ 
 可以看出，Copula函数将边际分布的概率值 $(u_1,u_2)$ 通过正态分位数映射，再代入相关正态分布的CDF，从而得到联合概率。对任意给定的 $\rho$，Gaussian Copula 都保证 $F_X$ 和 $F_Y$ 保持各自不变，仅通过 $\rho$ 来影响变量间的关联形式。
 <!-- bilingual-en:start -->
-The **Gaussian Copula** has an explicit algebraic form. In two dimensions, suppose $X$ and $Y$ have marginal CDFs $G_1(x)$ and $G_2(y)$. Their Gaussian-Copula joint CDF is the expression shown above, where $\Phi^{-1}$ is the standard normal quantile function and $\Phi_{2,\rho}$ is the bivariate standard normal CDF with correlation $\rho$. Thus the Copula maps marginal probabilities $(u_1,u_2)$ into normal quantiles and evaluates their joint normal probability. For any fixed $\rho$, the marginals $F_X$ and $F_Y$ remain unchanged; $\rho$ affects only their dependence.
+The [[Gaussian Copula]] has an explicit algebraic form. In two dimensions, suppose $X$ and $Y$ have marginal CDFs $G_1(x)$ and $G_2(y)$. Their Gaussian-Copula joint CDF is the expression shown above, where $\Phi^{-1}$ is the standard normal quantile function and $\Phi_{2,\rho}$ is the bivariate standard normal CDF with correlation $\rho$. Thus the Copula maps marginal probabilities $(u_1,u_2)$ into normal quantiles and evaluates their joint normal probability. For any fixed $\rho$, the marginals $F_X$ and $F_Y$ remain unchanged; $\rho$ affects only their dependence.
 <!-- bilingual-en:end -->
 
 **模拟考题：**设 $V_1$ 和 $V_2$ 的边际分布函数分别为 $G_1(v_1)$ 和 $G_2(v_2)$。请写出高斯 Copula 下它们联合分布函数的表达式，并指出其中的 Copula 函数形式。
@@ -310,7 +341,7 @@ Copula 方法在信贷风险中广泛用于构建**贷款组合违约分布**。
 $$ 
 U_i = \sqrt{\rho}\;F + \sqrt{\,1-\rho\,}\;Z_i \,,
 $$ 
-其中相关参数 $\rho$ 被视为所有贷款对公共因子的同质相关性，$Z_i \sim N(0,1)$ 是借款人 $i$ 独立的特有风险。给定单因子结构，任意两家公司 $i,j$ 的 **Copula相关系数**（对应 $U_i, U_j$ 间的相关系数）均为 $\rho$。
+其中 $\rho$ 是同质的**潜在资产相关参数**，$Z_i\sim N(0,1)$ 是借款人 $i$ 的独立特有风险。在这个单因子结构中，任意两家不同公司 $i,j$ 的潜变量相关系数 $\operatorname{Corr}(U_i,U_j)$ 均为 $\rho$；它不是观测违约指标的普通Pearson相关。
 <!-- bilingual-en:start -->
 Copulas are widely used in credit risk to construct the **distribution of defaults in a loan portfolio**. The standard example is the **one-factor Gaussian Copula**, including the asset-value model underlying Basel capital formulas. Each borrower $i$ is assigned a latent standard normal variable $U_i$, interpreted as a standardized asset-value index. A common factor $F \sim N(0,1)$ represents macroeconomic conditions, while $Z_i \sim N(0,1)$ captures borrower-specific risk. Under the homogeneous specification shown above, the loading is $\sqrt{\rho}$, so any two latent variables $U_i$ and $U_j$ have correlation $\rho$.
 <!-- bilingual-en:end -->
@@ -332,7 +363,7 @@ $$
 Default is linked to the latent variable $U_i$. If borrower $i$ has annual probability of default (PD) $p_i$, define the threshold $\theta_i = \Phi^{-1}(p_i)$ and treat the borrower as defaulting when its latent variable falls below that threshold. For a large homogeneous portfolio with common PD $p$, the **conditional probability of default** given $F=f$ is the expression shown above, where $\theta = \Phi^{-1}(p)$. A low value of the common factor represents adverse economic conditions and raises conditional default probability; a high value lowers it. As the number of loans $M$ becomes large, idiosyncratic risk diversifies away and the realized default rate $DR$ converges to that conditional probability. Integrating over $F$, or applying an equivalent change of variables, gives the Vasicek distribution for $DR$ and hence high-confidence default-rate quantiles.
 <!-- bilingual-en:end -->
 
-**模拟考题：**假设有两个公司，年违约概率均为 2%（即 $p=0.02$）。利用单因子高斯 Copula 模型，并设两家公司之间的 Copula相关系数 $\rho=0.1$，求它们在同一年内**同时违约**的概率。
+**模拟考题：**假设有两个公司，年违约概率均为2%（即 $p=0.02$）。利用单因子高斯Copula模型，并设两家公司潜变量的相关参数 $\rho=0.1$，求它们在同一年内**同时违约**的概率。
 <!-- bilingual-en:start -->
 **Practice question:** Two companies each have an annual default probability of 2%, so $p=0.02$. Under a one-factor Gaussian Copula with latent-variable correlation $\rho=0.1$, calculate the probability that both companies **default in the same year**.
 <!-- bilingual-en:end -->
@@ -341,13 +372,17 @@ Default is linked to the latent variable $U_i$. If borrower $i$ has annual proba
 $$ 
 P(\text{两家公司都违约}) = C_{\rho}(p,\;p) \;=\; \Phi_{2,\;0.1}\Big(\Phi^{-1}(0.02),\;\Phi^{-1}(0.02)\Big)\,. 
 $$ 
-我们需要将违约概率转换为对应的正态临界值：$\Phi^{-1}(0.02) \approx -2.0537$。于是：
+将违约概率转换为正态临界值：$\Phi^{-1}(0.02)\approx-2.05374891$。于是
 $$ 
-P(\text{同时违约}) = \Phi_{2,\;0.1}(-2.0537,\; -2.0537) \,.
+P(\text{同时违约})=\Phi_{2,0.1}(-2.05374891,-2.05374891).
 $$ 
-这个值需要通过二维正态积分计算。近似计算可得到约 $7.4\times 10^{-4}$，即0.074%的概率。相比于独立情形下 $0.02 \times 0.02 = 0.0004$（0.04%）的同时违约概率，考虑相关性后同时违约的概率有所提高（从0.04%增至0.074%）。这体现了正相关违约风险中，相关性使极端共同违约事件更可能发生。
+这个值需要通过二维正态积分计算：
+$$
+\Phi_{2,0.1}(-2.05374891,-2.05374891)\approx0.000687984=0.0687984\%.
+$$
+独立时同时违约概率为 $0.02\times0.02=0.0004=0.04\%$。在这个参数设定下，正的潜变量相关性把共同违约概率从0.04%提高到约0.0688%；这是一年、两家公司、给定高斯Copula下的结果，不应外推成任意组合的固定倍数。
 <!-- bilingual-en:start -->
-**Detailed answer:** Joint default occurs when both latent variables fall below the threshold $\Phi^{-1}(0.02) \approx -2.0537$. Therefore, the joint-default probability is the bivariate normal lower-tail probability shown above. Numerical integration gives approximately $7.4\times 10^{-4}$, or 0.074%. Under independence, the probability would be $0.02 \times 0.02 = 0.0004$, or 0.04%. Positive dependence therefore raises the probability of simultaneous default from about 0.04% to 0.074%.
+**Detailed answer:** Joint default occurs when both latent variables fall below $\Phi^{-1}(0.02)\approx-2.05374891$. Numerical evaluation gives $\Phi_{2,0.1}(-2.05374891,-2.05374891)\approx0.000687984$, or $0.0687984\%$. Under independence the probability is $0.02\times0.02=0.0004$, or $0.04\%$. For this one-year, two-borrower Gaussian-Copula example, positive latent correlation therefore raises joint-default probability from 0.04% to about 0.0688%; it is not a universal multiplier for other portfolios.
 <!-- bilingual-en:end -->
 
 ## 3.3最坏违约率计算与 VaR 推导
@@ -356,7 +391,7 @@ $$
 <!-- bilingual-en:end -->
 
 
-在信贷组合风险管理中，我们关注高置信水平下的**最坏违约率**（Worst Case Default Rate, **WCDR**），即在给定置信度下组合违约率可能达到的最大值。通常监管设定99.9%的置信度（即极端情景），相应的WCDR用于计算信用风险资本。利用单因子高斯Copula模型，可以推导WCDR的解析形式。
+在信贷组合风险管理中，**最坏违约率**（Worst Case Default Rate, **WCDR**）通常是组合违约率分布在置信水平 $\alpha$ 下的**高分位点**，不是绝对最大值；模型认为违约率超过它的概率为 $1-\alpha$。99.9%是常见的监管置信水平之一，但具体资本口径还必须遵守适用规则。单因子高斯Copula给出该分位点的解析式。
 <!-- bilingual-en:start -->
 In credit-portfolio risk management, the **worst-case default rate (WCDR)** is a high quantile of the portfolio default-rate distribution. It is not an absolute maximum; it is the default rate that is exceeded only with probability $1-\alpha$ at confidence level $\alpha$. Regulators often use 99.9%, and the resulting WCDR feeds into credit-risk capital calculations. The one-factor Gaussian Copula yields a closed-form expression.
 <!-- bilingual-en:end -->
@@ -365,7 +400,7 @@ In credit-portfolio risk management, the **worst-case default rate (WCDR)** is a
 $$ 
 DR = \Phi\Big(\frac{\Phi^{-1}(p) - \sqrt{\rho}\,F}{\sqrt{\,1-\rho\,}}\Big)\,,
 $$ 
-其中 $F \sim N(0,1)$。要得到置信度 $\alpha$（如$\alpha=99.9\%$）对应的违约率分位点 $x_\alpha = \text{WCDR}( \alpha)$，相当于取 $F$ 在高端分位数 $z_\alpha = \Phi^{-1}(\alpha)$（如3.0902对应99.9%）处的情形，因为最极端违约发生在公共因子最差的情况下。设 $\theta = \Phi^{-1}(p)$ 为单个贷款违约临界值，则：
+其中 $F \sim N(0,1)$。条件违约率随 $F$ 下降而上升，因此置信水平 $\alpha$ 的违约率分位点对应**不利因子状态** $F=-z_\alpha$，其中 $z_\alpha=\Phi^{-1}(\alpha)$；绝不能把 $F=+z_\alpha$ 说成坏状态。设 $\theta=\Phi^{-1}(p)$，则
 $$ 
 x_\alpha = \Phi\!\Big(\frac{\theta + \sqrt{\rho}\,z_\alpha}{\sqrt{\,1-\rho\,}}\Big) \,,
 $$ 
@@ -387,68 +422,76 @@ This is the WCDR formula.
 $$ 
 \text{VaR}_{\alpha} = L \times \lambda \times x_\alpha \,,
 $$ 
-表示在置信度 $\alpha$ 下，一年内最大损失 = 最坏违约比例 $\times$ 敞口总额 $\times$ 损失率。
+这是模型中的一年损失**分位点**，不是一年内的绝对最大损失。若资本定义为非预期损失，还要按适用口径从该损失分位点中扣除预期损失；不能仅凭这条教学公式声称满足监管资本要求。
 <!-- bilingual-en:start -->
 To compute **value at risk (VaR)**, convert WCDR into a loss amount. If a homogeneous portfolio has total exposure $L$ and loss given default $\lambda=1-\text{recovery rate}$, then the confidence-level loss is WCDR multiplied by total exposure and LGD. In other words, the one-year loss quantile at confidence level $\alpha$ equals the worst-case default fraction times the portfolio exposure times the loss rate.
 <!-- bilingual-en:end -->
 
-**模拟考题：**某银行持有价值 \$100 百万的均质零售贷款组合，每笔贷款的年违约概率为 2%，平均回收率为 60%（故单笔损失率 $\lambda=40\%$）。假设贷款之间的Copula相关系数为 $\rho=0.1$（单因子高斯Copula模型）。请计算该组合一年期的 **99.9%最坏违约率** 以及 **99.9%置信水平下的损失VaR**。
+**模拟考题：**某银行持有价值\$100百万的均质零售贷款组合，每笔贷款的年违约概率为2%，平均回收率为60%（故LGD为 $\lambda=40\%$）。假设单因子高斯Copula的潜在资产相关参数为 $\rho=0.1$。请计算该组合一年期的**99.9%违约率分位点**以及**99.9%损失VaR**。
 <!-- bilingual-en:start -->
-**Practice question:** A bank holds a homogeneous retail-loan portfolio worth \$100 million. Each loan has a 2% annual probability of default, and the average recovery rate is 60%, so $\lambda=40\%$. Assume a one-factor Gaussian Copula with correlation $\rho=0.1$. Calculate the portfolio's one-year **99.9% worst-case default rate** and its **loss VaR at the 99.9% confidence level**.
+**Practice question:** A bank holds a homogeneous retail-loan portfolio worth \$100 million. Each loan has a 2% annual probability of default, and the average recovery rate is 60%, so $\lambda=40\%$. Assume a one-factor Gaussian Copula with latent asset-correlation parameter $\rho=0.1$. Calculate the portfolio's one-year **99.9th-percentile default rate** and its **99.9% loss VaR**.
 <!-- bilingual-en:end -->
 
-**详细解答：**首先确定参数：$p=0.02$，回收率$=60\%$，$\lambda=40\%$，置信水平$\alpha=99.9\%$，$\Phi^{-1}(0.999) \approx 3.0902$，$\Phi^{-1}(0.02) = \theta \approx -2.0537$。应用WCDR公式：
+**详细解答：**参数为 $p=0.02$、LGD $\lambda=40\%$、$\alpha=0.999$、$\Phi^{-1}(0.999)\approx3.09023231$、$\Phi^{-1}(0.02)\approx-2.05374891$。应用WCDR公式：
 $$ 
-x_{99.9\%} = \Phi\!\Big(\frac{-2.0537 + \sqrt{0.1}\times 3.0902}{\sqrt{1-0.1}}\Big)\,. 
+x_{99.9\%}=\Phi\!\left(
+\frac{-2.05374891+\sqrt{0.1}\times3.09023231}{\sqrt{0.9}}
+\right).
 $$ 
 计算分步如下：
-- $\sqrt{0.1} \times 3.0902 \approx 0.9773$，与 $-2.0537$ 相加得 $-1.0764$。
-- $\sqrt{1-0.1} = \sqrt{0.9} \approx 0.9487$。
-- 分数值为 $-1.0764/0.9487 \approx -1.1349$。
-- 最后取标准正态CDF：$\Phi(-1.1349) = 0.1282$。
+- $\sqrt{0.1}\times3.09023231\approx0.97721726$，分子约为 $-1.07653165$。
+- $\sqrt{0.9}\approx0.94868330$，标准化参数约为 $-1.13476400$。
+- $\Phi(-1.13476400)\approx0.12823711$。
 <!-- bilingual-en:start -->
-**Detailed answer:** The parameters are $p=0.02$, recovery $=60\%$, $\lambda=40\%$, and confidence level $\alpha=99.9\%$. Also, $\Phi^{-1}(0.999) \approx 3.0902$ and $\Phi^{-1}(0.02) = \theta \approx -2.0537$. Applying the WCDR formula:
-- $\sqrt{0.1} \times 3.0902 \approx 0.9773$, and adding this to $-2.0537$ gives $-1.0764$.
-- $\sqrt{1-0.1} = \sqrt{0.9} \approx 0.9487$.
-- The argument of the standard normal CDF is $-1.0764/0.9487 \approx -1.1349$.
-- Finally, $\Phi(-1.1349) = 0.1282$.
+**Detailed answer:** The parameters are $p=0.02$, LGD $\lambda=40\%$, $\alpha=0.999$, $\Phi^{-1}(0.999)\approx3.09023231$, and $\Phi^{-1}(0.02)\approx-2.05374891$. Then $\sqrt{0.1}\times3.09023231\approx0.97721726$, the numerator is about $-1.07653165$, and division by $\sqrt{0.9}\approx0.94868330$ gives $-1.13476400$. Hence $\Phi(-1.13476400)\approx0.12823711$.
 <!-- bilingual-en:end -->
 
-因此 **99.9%最坏违约率** $x_{99.9\%} \approx 12.8\%$。这意味着我们有99.9%的把握违约率不会超过12.8%。对应的信用组合 **99.9% VaR**（一年期损失）为：
+因此，**99.9%违约率分位点**为 $x_{99.9\%}\approx0.128237=12.8237\%$；模型给出的超越概率为0.1%。对应的一年**99.9%损失VaR**为
 $$ 
-\text{VaR}_{99.9\%} = 100\,\text{百万} \times 12.8\% \times 40\% = 5.12\,\text{百万美元}\,. 
+\text{VaR}_{99.9\%}
+=100\,\text{百万}\times12.8237\%\times40\%
+\approx5.12948\,\text{百万美元}.
 $$ 
-换言之，在极端情况下该组合一年内最大可能损失约\$512万，占组合的5.12%。
+换言之，该模型下的一年99.9%损失分位点约为\$512.95万，占组合的5.12948%；它不是绝对最大可能损失，也尚未扣除预期损失。
 <!-- bilingual-en:start -->
-Therefore, the **99.9% worst-case default rate** is $x_{99.9\%} \approx 12.8\%$: according to the model, the portfolio default rate exceeds 12.8% with only 0.1% probability. Multiplying by \$100 million and a 40% LGD gives a one-year **99.9% VaR** of about \$5.12 million, or 5.12% of portfolio value.
+Therefore, the **99.9th-percentile default rate** is $x_{99.9\%}\approx0.128237=12.8237\%$, with model-implied exceedance probability 0.1%. Multiplying by \$100 million and a 40% LGD gives a one-year **99.9% loss VaR** of approximately \$5.12948 million, or 5.12948% of portfolio value. It is not an absolute maximum and has not been reduced by expected loss.
 <!-- bilingual-en:end -->
 
 ## Copula相关性与尾部风险
 <!-- bilingual-en:start -->
 *Copula Correlation and Tail Risk*
 <!-- bilingual-en:end -->
-高斯Copula模型假设资产间关联完全由线性相关系数 $\rho$ 控制。这种假设在描述**尾部关联性（Tail Dependence）**方面存在局限。**尾部相关**通常指在极端情况下（如一段分布尾部）变量同时发生极端变动的倾向。用定量描述，比如**上尾相关**系数可定义为：
+[[Gaussian Copula]]模型用潜在正态相关矩阵描述依赖，但这不等于可由原变量的Pearson相关系数完整刻画。它在描述[[尾部依赖|尾部依赖（tail dependence）]]方面存在局限；Gaussian 与 t 模型的具体比较见 [[Gaussian与t Copula尾部]]。上尾依赖系数定义为
 $$ 
 \lambda_U = \lim_{q \to 1^-} P\big(Y > F_Y^{-1}(q) \,\big|\, X > F_X^{-1}(q)\big) \,,
 $$ 
 表示当 $X$ 处于极高分位时 $Y$ 也极端偏大的概率（下尾类似定义）。
 <!-- bilingual-en:start -->
-The Gaussian Copula assumes that dependence is fully characterized by a linear correlation coefficient $\rho$. This is restrictive when modeling **tail dependence**, the tendency for variables to become extreme together. For example, upper-tail dependence measures the limiting conditional probability that $Y$ is also extremely high given that $X$ is extremely high; lower-tail dependence is defined analogously.
+The Gaussian Copula uses a latent-normal correlation matrix to parameterize dependence; this is not the same as saying that the original variables' Pearson correlations fully determine their joint law. It is restrictive when modeling **tail dependence**, the tendency for variables to become extreme together. Upper-tail dependence is the limiting conditional probability that $Y$ is also extremely high given that $X$ is increasingly extreme; lower-tail dependence is defined analogously.
 <!-- bilingual-en:end -->
 
-对于高斯Copula，当相关系数 $\rho < 1$ 时，上尾相关和下尾相关系数实际上都为0。这意味着在Gaussian Copula模型中，**极端事件很少同时发生**：即使相关较高，发生罕见极端损失的情况下，另一风险因素同时极端的不概率趋于零。这与某些金融现象（如危机中多资产同步暴跌）不符。
+对于非退化的二维高斯Copula（$-1<\rho<1$），上、下尾依赖系数都为0。这**不表示有限阈值下的共同极端事件不可能或一定很少**；它只表示当阈值趋向分布端点时，条件共同极端概率趋于0。即使潜在相关较高，高斯依赖仍可能低估危机中观察到的极端损失聚集。
 <!-- bilingual-en:start -->
-For a Gaussian Copula with $\rho < 1$, both upper- and lower-tail dependence coefficients are zero. This does not mean ordinary joint extremes are impossible; it means that their limiting conditional probability vanishes as the threshold moves farther into the tail. Even with high linear correlation, Gaussian dependence can therefore understate the clustering of rare losses observed when many assets fall together during a crisis.
+For a non-degenerate bivariate Gaussian Copula with $-1<\rho<1$, both upper- and lower-tail dependence coefficients are zero. This does not mean finite-threshold joint extremes are impossible or necessarily rare; it means that their limiting conditional probability vanishes as the threshold moves to the endpoint. Even with high latent correlation, Gaussian dependence can therefore understate the clustering of rare losses observed when many assets fall together during a crisis.
 <!-- bilingual-en:end -->
 
-**尾部风险**是指金融资产在分布尾部发生共振（同时极端变化）的风险。高斯Copula由于尾部独立，往往低估了这种风险。例如，假设某组合年均违约概率 $PD=1\%$，在10年中有一年违约率达到3%。在高斯Copula单因子模型下，无论选择何种 $\rho$，都难以给予“一年出现3倍于平均违约的事件”以足够概率质量——因为正态因子很难产生如此厚尾的联合违约事件。这表明模型对尾部共灾的刻画不足。
+**尾部风险**包括多个金融变量同时进入不利尾部的风险。假设某组合平均年违约概率为1%，十年中观察到一年违约率为3%；这个事实本身并不能证明高斯Copula错误，更不能说任意 $\rho$ 都无法产生该结果。正确做法是把该观测与给定 $p$、$\rho$、组合粒度和样本期下的预测分布比较；只有当尾部事件系统性地比模型预测更频繁或更严重，才构成模型尾部拟合不足的证据。
 <!-- bilingual-en:start -->
-**Tail risk** here is the risk that several financial variables move into adverse distributional tails together. A Gaussian Copula may understate this risk because it is asymptotically tail-independent. For example, suppose a portfolio has average annual PD of 1% but records a 3% default rate in one year out of ten. A thin-tailed one-factor Gaussian model may assign too little probability to such clustered default outcomes, indicating that the model does not adequately capture common tail shocks.
+**Tail risk** includes the risk that several financial variables enter adverse tails together. Suppose a portfolio has an average annual PD of 1% and records a 3% default rate in one year out of ten. That observation alone neither rejects a Gaussian Copula nor proves that no value of $\rho$ can produce it. It must be compared with the predictive distribution conditional on $p$, $\rho$, portfolio granularity, and sample length. Systematically more frequent or severe tail events than the model predicts would be evidence of deficient tail fit.
 <!-- bilingual-en:end -->
 
-解决方案是采用具有更强尾部相关性的 Copula 模型，例如**$t$-Copula（学生t Copula）**。具体做法如：让单因子模型中的公共因子 $F$ 服从自由度较低的$t$分布（而非正态），或者直接使用多元$t$分布作为Copula基础。学生$t$分布相比正态有更肥厚的尾部，因而$t$-Copula 能产生**正的尾部相关性**：在极端情景下，多个风险变量**同时处于极端**的概率不再接近于0。这提高了模型对系统性尾部事件的捕捉能力。
+一个候选替代是有限自由度的[[t Copula|$t$-Copula（Student's $t$ Copula）]]。标准构造不是简单地把高斯单因子模型中的公共因子改成 $t$ 而继续保留正态特有项；这种混合一般不产生标准 $t$-Copula。正确的椭圆 $t$-Copula 构造为：先取 $Z\sim N(0,R)$ 与独立的 $W\sim\chi^2_\nu$，令
+$$
+T=\frac{Z}{\sqrt{W/\nu}},\qquad U_i=t_\nu(T_i),\qquad X_i=F_i^{-1}(U_i),
+$$
+其中 $t_\nu$ 表示自由度为 $\nu$ 的一元Student-$t$分布函数。所有分量共享随机尺度 $W$，从而产生共同尾部。二维、$-1<\rho<1$、有限 $\nu$ 时，其对称尾依赖系数为
+$$
+\lambda_L=\lambda_U
+=2t_{\nu+1}\!\left(-\sqrt{\frac{(\nu+1)(1-\rho)}{1+\rho}}\right)>0.
+$$
+自由度越小通常尾部越厚，但是否改善拟合必须用边际、整体依赖与尾部的样本外诊断分别验证。
 <!-- bilingual-en:start -->
-One remedy is a Copula with stronger tail dependence, such as a **$t$-Copula (Student's $t$ Copula)**. The common factor $F$ can be modeled with a low-degrees-of-freedom $t$ distribution rather than a normal distribution, or the Copula can be built directly from a multivariate $t$ distribution. Because Student's $t$ has heavier tails, the model assigns more probability to extreme common-factor realizations and hence to several risks becoming extreme together. This improves sensitivity to systemic tail events.
+One candidate alternative is a finite-degrees-of-freedom [[t Copula|Student's $t$ Copula]]. Merely replacing the common Gaussian factor by a $t$ variable while retaining normal idiosyncratic terms does not generally create a standard $t$ Copula. The elliptical construction draws $Z\sim N(0,R)$ and an independent $W\sim\chi^2_\nu$, sets $T=Z/\sqrt{W/\nu}$, then $U_i=t_\nu(T_i)$ and $X_i=F_i^{-1}(U_i)$, where $t_\nu$ denotes the univariate Student-$t$ CDF. The common random scale $W$ creates joint tail behavior. In the bivariate case with finite $\nu$ and $-1<\rho<1$, the symmetric coefficient is $\lambda_L=\lambda_U=2t_{\nu+1}(-\sqrt{(\nu+1)(1-\rho)/(1+\rho)})>0$. Lower degrees of freedom usually mean heavier tails, but improvement must be demonstrated by separate out-of-sample checks of marginals, overall dependence, and tails.
 <!-- bilingual-en:end -->
 
 **模拟考题：**为何单因子高斯Copula模型可能低估信用组合的尾部风险？什么是尾部相关性？举例说明采用厚尾Copula（如 $t$-Copula）如何改进对尾部共同违约事件的拟合。
@@ -456,86 +499,108 @@ One remedy is a Copula with stronger tail dependence, such as a **$t$-Copula (St
 **Practice question:** Why can a one-factor Gaussian Copula underestimate the tail risk of a credit portfolio? What is tail dependence? Explain how a heavy-tailed Copula, such as a $t$-Copula, can fit clustered default events more effectively.
 <!-- bilingual-en:end -->
 
-**详细解答：**单因子高斯Copula假定公共因子 $F$ 为正态，从而各违约事件的关联主要体现在共同响应 $F$ 的线性部分。此模型下，极端尾部事件（例如大多数债务人在同一年违约）出现的概率非常低。一旦观察到比模型预测更频繁的极端事件，说明模型低估了尾部风险。
+**详细解答：**单因子高斯Copula假定公共因子 $F$ 为正态，从而各违约事件通过对 $F$ 的共同线性暴露产生依赖。它在非退化情形下渐近尾部独立；若独立的样本外证据显示共同极端违约比给定参数下的预测分布更频繁或更严重，才说明模型低估了尾部风险。
 <!-- bilingual-en:start -->
-**Detailed answer:** A one-factor Gaussian Copula assumes that the common factor $F$ is normal, so dependence among defaults arises through borrowers' shared linear exposure to $F$. Large common shocks, and therefore years in which many borrowers default together, receive very little probability. If extreme default years occur more frequently than the model predicts, the model is understating tail risk.
+**Detailed answer:** A one-factor Gaussian Copula assumes a normal common factor $F$, so dependence among defaults arises through shared linear exposure to that factor. The non-degenerate model is asymptotically tail-independent. If independent out-of-sample evidence shows that joint extreme defaults occur more frequently or severely than the fitted predictive distribution allows, the model is understating tail risk.
 <!-- bilingual-en:end -->
 
-**尾部相关性**指变量在极端尾部同时发生极端变动的相关程度。高斯Copula的尾部相关性为0（在 $\rho < 1$ 时），意味着例如 $P(X$ 极端下跌 $\land Y$ 极端下跌$)$相对于单边极端事件的条件概率趋于零。现实中金融资产往往存在尾部相关，例如市场崩盘时多数资产一起下跌、经济萧条时多家公司一同违约。
+**尾部相关性**指变量在极端尾部同时发生极端变动的相关程度。非退化二维高斯Copula的尾部相关性为0（$-1<\rho<1$），意味着例如 $P(X$ 极端下跌 $\land Y$ 极端下跌$)$相对于单边极端事件的条件概率趋于零。现实中金融资产可能呈现更强的尾部共动，例如市场崩盘时多数资产一起下跌、经济萧条时多家公司一同违约。
 <!-- bilingual-en:start -->
-**Tail dependence** measures the limiting tendency of variables to enter the same extreme tail together. For a Gaussian Copula, it is zero whenever $\rho < 1$. Thus the conditional probability of an extreme fall in $Y$, given an increasingly extreme fall in $X$, tends to zero as the threshold moves into the tail. Financial data often show stronger tail co-movement: many assets fall together in a crash, and many firms default together in a recession.
+**Tail dependence** measures the limiting tendency of variables to enter the same extreme tail together. For a non-degenerate bivariate Gaussian Copula it is zero when $-1<\rho<1$. Thus the conditional probability of an extreme fall in $Y$, given an increasingly extreme fall in $X$, tends to zero as the threshold moves to the endpoint. Financial data may show stronger tail co-movement: many assets fall together in a crash, and many firms default together in a recession.
 <!-- bilingual-en:end -->
 
-采用更重尾的 Copula 可以缓解这一问题。比如**学生t-Copula**：令单因子模型中公共因子 $F$ 服从自由度$\nu$较低的$t$分布。$t$分布尾部衰减比正态慢，意味着 $F$ 有更大概率取极端值。这将导致多个 $U_i = \sqrt{\rho}F + \sqrt{1-\rho}Z_i$ 同时极端低的概率增加，即贷款的联合违约更容易发生。换言之，$t$-Copula 模型赋予组合违约分布更厚的尾部，使模型可以解释“PD=1%但偶尔违约率达3%”此类现象。总之，引入尾部相关性更强的Copula（通过选择厚尾分布的因子）能更好地拟合数据中观察到的尾部共倒现象，提高风险度量对极端情景的敏感度。
+采用有限自由度的 $t$-Copula 可以给出正的对称尾依赖。应使用上面的共同尺度多元 $t$ 构造，而不是只把公共因子换成 $t$、特有项仍保留正态。它可提高多个潜变量同时进入下尾的概率，因此是共同违约建模的候选；但“更厚尾”不自动等于“更正确”，仍须分别检验边际、依赖结构、尾部覆盖和样本外稳定性。1%平均PD与偶尔3%违约率只能作为待检验的尾部观测，不能单独识别Copula族或参数。
 <!-- bilingual-en:start -->
-A heavier-tailed Copula can mitigate this problem. In a **Student's $t$ Copula**, for example, the common factor $F$ has a $t$ distribution with relatively few degrees of freedom $\nu$. Its tails decay more slowly than normal tails, so extreme values of $F$ occur more often. Consequently, several latent variables $U_i = \sqrt{\rho}F + \sqrt{1-\rho}Z_i$ are more likely to be extremely low at the same time, increasing joint-default probability. The resulting portfolio default distribution has a heavier tail and can better accommodate observations such as an average PD of 1% accompanied by occasional 3% default years.
+A finite-$\nu$ $t$ Copula has positive symmetric tail dependence. It must use the common-scale multivariate-$t$ construction above, rather than a $t$ common factor mixed with normal idiosyncratic terms. This can raise the probability that several latent variables enter the lower tail together, making it a candidate for joint-default modeling. Heavier tails are not automatically a better model: marginals, dependence, tail coverage, and out-of-sample stability must be validated separately. An average PD of 1% with an occasional 3% default year is an observation to test, not enough by itself to identify the Copula family or parameters.
 <!-- bilingual-en:end -->
 
-## Copula 参数的极大似然估计方法
+## 边际 PD 与 Copula 依赖参数的极大似然估计
 <!-- bilingual-en:start -->
-*Maximum Likelihood Estimation of Copula Parameters*
+*Maximum Likelihood Estimation of Marginal PD and the Copula Dependence Parameter*
 <!-- bilingual-en:end -->
-Copula模型通常包含需要估计的参数，例如单因子高斯Copula模型中的**违约概率** $PD$ 和**相关系数** $\rho$。给定历史数据，我们可以使用**极大似然估计（MLE）**来估计这些参数。
+单因子 Vasicek 信贷模型同时包含边际**违约概率** $PD$ 与 Gaussian Copula 的**潜在资产相关参数** $\rho$；前者控制单名边际违约率，后者控制依赖。给定历史数据，可以用**极大似然估计（MLE）**联合估计这两个整体模型参数。
 <!-- bilingual-en:start -->
-Copula models contain parameters that must be estimated, such as the **probability of default** $PD$ and **correlation coefficient** $\rho$ in a one-factor Gaussian Copula. Given historical observations, these parameters can be estimated by **maximum likelihood estimation (MLE)**.
-<!-- bilingual-en:end -->
-
-以违约率数据为例：假设我们观测到 $T$ 年中每年的组合违约率 $DR_1, DR_2, \dots, DR_T$。在单因子模型假设下，这些违约率服从一个由 $(PD,\;\rho)$ 参数决定的分布（即 Vasicek 分布）。记 $G(DR)$ 为违约率的累计分布函数（CDF），$g(DR)$ 为相应的概率密度函数（PDF）。MLE 方法步骤如下：
-<!-- bilingual-en:start -->
-Suppose we observe annual portfolio default rates $DR_1, DR_2, \dots, DR_T$ over $T$ years. Under the one-factor model, they follow a Vasicek distribution determined by $(PD,\;\rho)$. Let $G(DR)$ denote the CDF and $g(DR)$ the corresponding PDF. The MLE procedure is:
+The one-factor Vasicek credit model contains both a marginal **probability of default** $PD$ and the Gaussian-Copula **latent asset-correlation parameter** $\rho$. The former controls the single-name default margin and the latter controls dependence. Given historical observations, the two full-model parameters can be estimated jointly by **maximum likelihood estimation (MLE)**.
 <!-- bilingual-en:end -->
 
-1. **初始猜测：**先对 $PD$ 和 $\rho$ 选取一个初始猜测值（例如 $PD$ 可用历史平均违约率，$\rho$ 可从资产相关性经验取值）。
-2. **构建似然函数：**写出 **对数似然函数** $\ell(PD,\rho) = \sum_{t=1}^T \ln\! \big[g(DR_t; PD,\rho)\big]$。其中 $g(DR_t; PD,\rho)$ 可以通过微分 Copula分布函数得到，其形式较复杂（略去推导）。关键是 $g(DR)$ 会包含 $PD$ 和 $\rho$ 非线性组合，比如模型推导出的密度一般形如：
-   $$ 
-   g(DR) = \frac{1}{\sqrt{2\pi(1-\rho)}} \exp\!\Big\{-\frac{1}{2(1-\rho)}\Big[\Phi^{-1}(DR) - \Phi^{-1}([[信用风险：PD、LGD、EAD 与评级迁移|PD]])\sqrt{\rho}\Big]^2\Big\} \times \frac{1}{DR'(F)} \,,
-   $$ 
-   其中最后一项是从违约率分布的隐函数中求导的雅可比项。这一密度函数对应 $DR$ 在单因子模型下的分布（无需学生完整记忆公式，理解其随参数变化即可）。
-3. **最大化：**通过数学优化方法，找到使对数似然 $\ell(PD,\rho)$ 最大的参数值 $(\hat{PD}, \hat{\rho})$。通常需要借助数值算法迭代搜索，因为对数似然对参数的一阶条件方程一般无法解析解出。
-4. **结果检验：**得到 MLE 参数后，可检验拟合优度，或利用它们计算感兴趣的风险量（如$99.9\%$违约率分位值）。
+以渐近均质组合为例，记 $p=PD$、$a=\Phi^{-1}(p)$，并假定 $0<\rho<1$。模型给出
+$$
+DR=\Phi\!\left(\frac{a-\sqrt{\rho}\,F}{\sqrt{1-\rho}}\right),
+\qquad F\sim N(0,1).
+$$
+由于 $DR$ 随 $F$ 单调递减，对 $0<x<1$，Vasicek分布的CDF为
+$$
+G(x)=P(DR\le x)
+=\Phi\!\left(\frac{\sqrt{1-\rho}\,\Phi^{-1}(x)-\Phi^{-1}(p)}{\sqrt{\rho}}\right).
+$$
+令括号内为 $h(x)$，其密度为
+$$
+g(x)=\phi\!\big(h(x)\big)
+\sqrt{\frac{1-\rho}{\rho}}
+\frac{1}{\phi\!\big(\Phi^{-1}(x)\big)}.
+$$
+观测违约率对应的系统因子反解是
+$$
+F_t=\frac{\Phi^{-1}(p)-\sqrt{1-\rho}\,\Phi^{-1}(DR_t)}{\sqrt{\rho}}.
+$$
+因此可用 $\ell(p,\rho)=\sum_t\log g(DR_t;p,\rho)$ 标定参数。这个连续、渐近Vasicek特例还有更直接的变换：
+$$
+Y_t=\Phi^{-1}(DR_t)\sim N\!\left(
+\frac{\Phi^{-1}(p)}{\sqrt{1-\rho}},\frac{\rho}{1-\rho}
+\right).
+$$
+若年度观测独立，则令 $\hat\mu=\bar Y$、$\hat v=T^{-1}\sum_t(Y_t-\bar Y)^2$，闭式MLE为
+$$
+\hat\rho=\frac{\hat v}{1+\hat v},
+\qquad
+\hat p=\Phi\!\big(\hat\mu\sqrt{1-\hat\rho}\big).
+$$
+对有限组合的离散违约数、年份相关、异质敞口或更一般Copula，这个闭式解不再适用，必须写出相应似然并做数值估计。
 <!-- bilingual-en:start -->
+For an asymptotic homogeneous portfolio, write $p=PD$, $a=\Phi^{-1}(p)$, and assume $0<\rho<1$. The default rate is $DR=\Phi((a-\sqrt{\rho}F)/\sqrt{1-\rho})$ with $F\sim N(0,1)$. Since $DR$ decreases in $F$, its CDF is $G(x)=\Phi((\sqrt{1-\rho}\,\Phi^{-1}(x)-\Phi^{-1}(p))/\sqrt{\rho})$. If the bracketed expression is $h(x)$, the density is $g(x)=\phi(h(x))\sqrt{(1-\rho)/\rho}/\phi(\Phi^{-1}(x))$, and the factor inversion is $F_t=[\Phi^{-1}(p)-\sqrt{1-\rho}\,\Phi^{-1}(DR_t)]/\sqrt{\rho}$. Thus one may maximize $\ell(p,\rho)=\sum_t\log g(DR_t;p,\rho)$.
 
-&nbsp;
-**1.** **Choose starting values:** Use an initial value for $PD$, such as the historical average default rate, and a plausible starting value for $\rho$.<br>
-**2.** **Construct the likelihood:** Write the **log-likelihood** $\ell(PD,\rho) = \sum_{t=1}^T \ln\! \big[g(DR_t; PD,\rho)\big]$. The density $g(DR_t; PD,\rho)$ follows from differentiating the Vasicek CDF and includes a Jacobian term from the transformation between the systematic factor and the observed default rate.<br>
-**3.** **Maximize it:** Numerically search for $(\hat{PD}, \hat{\rho})$ that maximizes $\ell(PD,\rho)$. Closed-form first-order conditions are generally unavailable.<br>
-**4.** **Check and use the result:** Assess goodness of fit and use the estimates to calculate quantities such as the 99.9% default-rate quantile.<br>
+This continuous asymptotic Vasicek case also has a closed-form transformed-normal MLE. Since $Y_t=\Phi^{-1}(DR_t)\sim N(\Phi^{-1}(p)/\sqrt{1-\rho},\rho/(1-\rho))$, independent annual observations give $\hat\mu=\bar Y$, $\hat v=T^{-1}\sum_t(Y_t-\bar Y)^2$, $\hat\rho=\hat v/(1+\hat v)$, and $\hat p=\Phi(\hat\mu\sqrt{1-\hat\rho})$. Finite-portfolio default counts, serial dependence, heterogeneous exposures, or more general Copulas require the appropriate likelihood and usually numerical estimation.
 <!-- bilingual-en:end -->
 
-实际操作中，可以使用软件对历史违约率序列进行MLE拟合。例如，某信用卡组合过去10年数据，通过MLE得到估计 $PD \approx 1.34\%$，$\rho \approx 0.11$。基于此，我们可以绘制出模型拟合的违约率分布，并从中读出99.9%分位违约率约10.4%【对应之前WCDR公式的结果】。
+估计后不能只看样本内似然。应按照[[Copula验证]]分别检验边际分布、整体依赖、上下尾覆盖、参数稳定性与样本外表现；较高似然不等于联合模型正确，也不等于资本模型已获批准。
 <!-- bilingual-en:start -->
-In practice, software is used to fit the MLE to a historical default-rate series. For example, a ten-year credit-card portfolio sample may produce estimates of $PD \approx 1.34\%$ and $\rho \approx 0.11$. The fitted default-rate distribution can then be plotted, and its 99.9th percentile—about 10.4% in this illustration—can be read or calculated using the WCDR formula.
+After estimation, in-sample likelihood is not enough. [[Copula验证|Copula validation]] should separately assess marginal fit, overall dependence, upper- and lower-tail coverage, parameter stability, and out-of-sample performance. A higher likelihood neither proves that the joint model is correct nor constitutes regulatory model approval.
 <!-- bilingual-en:end -->
 
-**模拟考题：**给定过去5年的某贷款组合违约率数据：$ \{2.1\%,\;0.5\%,\;1.4\%,\;3.0\%,\;0.8\%\}$，试说明如何利用极大似然估计来推断单因子Copula模型的违约概率 $PD$ 以及相关参数 $\rho$。简单描述估计步骤并指出计算中涉及的关键公式。
+**模拟考题：**给定过去5年的某贷款组合违约率数据：$ \{2.1\%,\;0.5\%,\;1.4\%,\;3.0\%,\;0.8\%\}$，试说明如何利用极大似然估计来推断单因子 Vasicek 信贷模型的边际违约概率 $PD$ 与 Gaussian Copula 依赖参数 $\rho$。简单描述估计步骤并指出计算中涉及的关键公式。
 <!-- bilingual-en:start -->
-**Practice question:** The annual default rates of a loan portfolio over the past five years are $ \{2.1\%,\;0.5\%,\;1.4\%,\;3.0\%,\;0.8\%\}$. Explain how maximum likelihood can be used to estimate the one-factor Copula parameters $PD$ and $\rho$. State the estimation steps and the key formulas.
+**Practice question:** The annual default rates of a loan portfolio over the past five years are $ \{2.1\%,\;0.5\%,\;1.4\%,\;3.0\%,\;0.8\%\}$. Explain how maximum likelihood can estimate the marginal PD and Gaussian-Copula dependence parameter $\rho$ of the one-factor Vasicek credit model. State the estimation steps and the key formulas.
 <!-- bilingual-en:end -->
 
-**详细解答：**首先构建单因子高斯Copula下违约率的分布模型。其CDF可以表示为：
-$$ 
-P(DR \le x) = \Phi\!\Big(\frac{\Phi^{-1}(x) - \Phi^{-1}(PD)}{\sqrt{\rho}}\Big)\,,
-$$ 
-据此可推导PDF（略去繁琐推导）。估计步骤如下：
-1. **初值选取：**用历史违约率的均值作为初始 $PD$（如上述数据平均违约率约$1.56\%$），相关性 $\rho$ 初始可取一个小值（比如0.1）。
-2. **构建似然：**假设每年违约率独立（年份之间近似独立），则总似然 $L(PD,\rho) = \prod_{t=1}^5 g(DR_t; PD,\rho)$。取对数：
-   $$ 
-   \ell(PD,\rho) = \sum_{t=1}^5 \ln g(DR_t; PD,\rho)\,. 
-   $$ 
-   需要将每个观测违约率代入模型PDF $g(DR; PD,\rho)$。这涉及例如将 $DR_t$ 反算为对应因子 $F_t$ 的值：$F_t = \frac{\Phi^{-1}(DR_t) - \Phi^{-1}(PD)}{\sqrt{1-\rho}}$，然后代入正态密度计算。
-3. **优化求解：**通过数值方法调整 $PD$ 和 $\rho$，反复计算 $\ell(PD,\rho)$，使其最大化。可以采用梯度上升法或内置优化算法。最终得到的参数即为 $\hat{PD}, \hat{\rho}$。
-4. **结果与应用：**将估计的参数代入模型，即得到该组合的违约分布。可以进一步算出$99.9\%$分位违约率用于风险计算。比如（假设）估计结果 $\hat{PD}=1.5\%, \hat{\rho}=0.12$，则99.9%违约率 $\approx \Phi\!\Big(\frac{\Phi^{-1}(0.015)+\sqrt{0.12}\times 3.09}{\sqrt{0.88}}\Big)$，可得相应极端违约水平，用以评估所需经济资本等。
+**详细解答：**先声明这是连续、渐近均质Vasicek近似，并暂时把五个年度观测视为相互独立。CDF与因子反解分别为
+$$
+G(x)=\Phi\!\left(
+\frac{\sqrt{1-\rho}\,\Phi^{-1}(x)-\Phi^{-1}(p)}{\sqrt{\rho}}
+\right),
+\qquad
+F_t=\frac{\Phi^{-1}(p)-\sqrt{1-\rho}\,\Phi^{-1}(DR_t)}{\sqrt{\rho}}.
+$$
+可以把每个 $DR_t$ 代入上述密度 $g$，最大化
+$$
+\ell(p,\rho)=\sum_{t=1}^{5}\log g(DR_t;p,\rho),
+$$
+约束为 $0<p<1$、$0<\rho<1$。在这个特例中，更简便的是计算 $Y_t=\Phi^{-1}(DR_t)$，再用
+$$
+\hat\mu=\bar Y,\qquad
+\hat v=\frac{1}{5}\sum_{t=1}^{5}(Y_t-\bar Y)^2,\qquad
+\hat\rho=\frac{\hat v}{1+\hat v},\qquad
+\hat p=\Phi\!\big(\hat\mu\sqrt{1-\hat\rho}\big).
+$$
+这里方差除以5才是正态似然的MLE；除以4得到的是无偏样本方差，不是本题的MLE。把估计值代回WCDR公式可得到模型分位点，但实际应用还要检查年度相关、组合有限粒度、参数不确定性和样本外尾部覆盖。
 <!-- bilingual-en:start -->
-**Detailed answer:** First specify the Vasicek distribution implied by the one-factor Gaussian Copula and derive its PDF from the CDF shown above.
-**1.** **Choose starting values:** Use the sample mean default rate, approximately $1.56\%$, as the initial $PD$, and start $\rho$ at a small positive value such as 0.1.<br>
-**2.** **Construct the likelihood:** If annual observations are treated as independent, use $L(PD,\rho) = \prod_{t=1}^5 g(DR_t; PD,\rho)$ and its log form. Under the stated model, the consistent inversion is $F_t=[\Phi^{-1}(PD)-\sqrt{1-\rho}\,\Phi^{-1}(DR_t)]/\sqrt{\rho}$; this corrects the inconsistent inversion printed in the source text. The normal factor density and the transformation Jacobian together determine $g(DR_t;PD,\rho)$.<br>
-**3.** **Optimize numerically:** Vary $PD$ and $\rho$ to maximize $\ell(PD,\rho)$, using a constrained optimizer so that both parameters remain in their admissible ranges.<br>
-**4.** **Apply the estimates:** Substitute $\hat{PD}$ and $\hat{\rho}$ into the fitted default-rate distribution. For illustration, if $\hat{PD}=1.5\%$ and $\hat{\rho}=0.12$, the 99.9% default-rate quantile is $\Phi\!\big((\Phi^{-1}(0.015)+\sqrt{0.12}\times 3.09)/\sqrt{0.88}\big)$ and can be used to assess economic capital.<br>
+**Detailed answer:** State first that this is the continuous asymptotic-homogeneous Vasicek approximation and provisionally treat the five annual observations as independent. The CDF and factor inversion are $G(x)=\Phi((\sqrt{1-\rho}\,\Phi^{-1}(x)-\Phi^{-1}(p))/\sqrt{\rho})$ and $F_t=[\Phi^{-1}(p)-\sqrt{1-\rho}\,\Phi^{-1}(DR_t)]/\sqrt{\rho}$. One route is to maximize $\ell(p,\rho)=\sum_{t=1}^{5}\log g(DR_t;p,\rho)$ subject to $0<p<1$ and $0<\rho<1$.
+
+For this special case, transform $Y_t=\Phi^{-1}(DR_t)$ and use $\hat\mu=\bar Y$, $\hat v=5^{-1}\sum_t(Y_t-\bar Y)^2$, $\hat\rho=\hat v/(1+\hat v)$, and $\hat p=\Phi(\hat\mu\sqrt{1-\hat\rho})$. Dividing by five gives the normal-likelihood MLE variance; dividing by four gives the unbiased sample variance, not the MLE. Fitted parameters can be inserted into the WCDR formula, but application still requires checks for serial dependence, finite-portfolio granularity, parameter uncertainty, and out-of-sample tail coverage.
 <!-- bilingual-en:end -->
 
-以上步骤概括了利用MLE标定Copula模型参数的过程。在实际计算中应使用软件，以确保计算精度和搜索效率。
+以上步骤概括了利用 MLE 联合标定整体单因子信贷模型参数的过程。在实际计算中应使用软件，以确保计算精度和搜索效率。
 <!-- bilingual-en:start -->
-These steps summarize how MLE calibrates a Copula model. In an actual application, numerical software should be used both for accuracy and for efficient constrained optimization.
+These steps summarize how MLE jointly calibrates the full one-factor credit model. In an actual application, numerical software should be used both for accuracy and for efficient constrained optimization.
 <!-- bilingual-en:end -->
 
 # 作业
@@ -546,15 +611,15 @@ These steps summarize how MLE calibrates a Copula model. In an actual applicatio
 ## 11.6
 
 >[!question] 
->假定资产X和Y的当前日波动率分别为1.0%和1.2%，上个交易日结束时资产价格分别为30美元和50美元，资产回报的相关系数为0.5。在这里我们采用GARCH(1，1)模型来计算更新相关系数及波动率，[[条件异方差：ARCH 与 GARCH|GARCH]](1，1)模型中的参数估计为a=0.04及B=0.94，在相关系数估计中采用w=0.000 001，在波动率估计中采用w=0.000003，假如在今天交易结束时，资产价格分别为31美元和51美元，相关系数的最新估计为多少?
+>资产X和Y当前的日波动率分别为1.0%和1.2%，上个交易日收盘价分别为30美元和50美元，收益相关系数为0.5。采用[[GARCH一步方差预测|GARCH(1,1)]]式更新，令 $\alpha=0.04$、$\beta=0.94$；协方差递推的 $\omega=0.000001$，两个方差递推的 $\omega=0.000003$。若今天收盘价分别为31美元和51美元，最新相关系数是多少？
 ><!-- bilingual-en:start -->
->Assume that the current daily volatilities of assets X and Y are 1.0% and 1.2%, their previous closing prices were \$30 and \$50, and the correlation of their returns was 0.5. Use a [[条件异方差：ARCH 与 GARCH|GARCH]](1,1)-style update with $a=0.04$ and $B=0.94$, taking $w=0.000001$ for covariance and $w=0.000003$ for each variance. If today's closing prices are \$31 and \$51, what is the updated correlation estimate?
+>Assume that the current daily volatilities of assets X and Y are 1.0% and 1.2%, their previous closing prices were \$30 and \$50, and their return correlation was 0.5. Use a [[GARCH一步方差预测|GARCH(1,1)]]-style update with $\alpha=0.04$ and $\beta=0.94$, taking $\omega=0.000001$ for covariance and $\omega=0.000003$ for each variance. If today's closing prices are \$31 and \$51, what is the updated correlation estimate?
 ><!-- bilingual-en:end -->
 
 逻辑:
-1. 老波动率和今日波动率推新波动率
-2. 老协方差和今日波动率推新协方差
-3. 新协方差除以新波动率得到新相关系数
+1. 老方差和今日平方收益推新方差
+2. 老协方差和今日收益乘积推新协方差
+3. 新协方差除以新波动率乘积得到新相关系数
 <!-- bilingual-en:start -->
 Logic:
 **1.** Update each variance from the previous volatility and today's return.<br>
@@ -609,7 +674,7 @@ For $X$, use $\omega=0.000003,\ \alpha=0.04,\ \beta=0.94$ and yesterday's volati
 
 协方差估计更新（类GARCH）：
 $$
-\text{cov}_{\text{new}} = \omega + \alpha, r_X r_Y + \beta, \text{cov}_{\text{old}}
+\text{cov}_{\text{new}} = \omega + \alpha r_X r_Y + \beta\, \text{cov}_{\text{old}}
 $$
 昨日协方差：
 <!-- bilingual-en:start -->
@@ -621,25 +686,25 @@ $$
 $$
 新协方差：
 $$
-\text{cov}_{\text{new}} = 0.000003 + 0.00002596 + 0.0000564 = 0.00008536
+\text{cov}_{\text{new}} = 0.000001 + 0.00002597 + 0.0000564 \approx 0.00008337
 $$
  **最新相关系数**
 $$
 \rho_{XY,\text{new}} = \frac{\text{cov}_{\text{new}}}{\sigma_{X,\text{new}} \times \sigma_{Y,\text{new}}}
-= \frac{0.00008536}{0.01175 \times 0.01233} \approx \frac{0.00008536}{0.00014487} \approx 0.589
+= \frac{0.00008337}{0.01183 \times 0.01241} \approx 0.568
 $$
 <!-- bilingual-en:start -->
-The new covariance should use the stated covariance intercept $\omega=0.000001$. This gives $0.000001+0.04(0.03279)(0.01980)+0.94(0.00006)\approx0.00008337$. Combining it with the updated volatilities shown above, approximately 0.01183 and 0.01241, gives an updated correlation of about **0.568**. The source's values 0.00008536 and 0.589 mix the variance intercept with the covariance recursion and also use different volatility denominators, so they are not internally consistent.
+The new covariance uses the stated covariance intercept $\omega=0.000001$. This gives $0.000001+0.04(0.03279)(0.01980)+0.94(0.00006)\approx0.00008337$. Combining it with the updated volatilities shown above, approximately 0.01183 and 0.01241, gives an updated correlation of about **0.568**.
 <!-- bilingual-en:end -->
 
 ## 11.9
 
 >[!question] 
->假定你有3个相互独立并服从正态分布的变量z1、z2、z3，你想将这3组变量由cholesky分解来产生服从三元正态分布的随机变量“$\epsilon$ 1 、$\epsilon$ 2、$\epsilon$ 3
+>假定你有3个相互独立的标准正态变量 $z_1,z_2,z_3$。请用Cholesky分解构造具有指定相关矩阵的三元正态变量 $\epsilon_1,\epsilon_2,\epsilon_3$。
 > <!-- bilingual-en:start -->
 > Assume that $z_1,z_2,z_3$ are mutually independent standard normal variables. Use a Cholesky decomposition to construct trivariate normal variables $\epsilon_1,\epsilon_2,\epsilon_3$.
 > <!-- bilingual-en:end -->
-请求出由z1、z2、z3及变量之间的相关系数组成的$\epsilon$ 1、$\epsilon$ 2、$\epsilon$ 3的表达式。
+请写出 $\epsilon_1,\epsilon_2,\epsilon_3$ 关于 $z_1,z_2,z_3$ 和三个两两相关系数的表达式。
 <!-- bilingual-en:start -->
 Express them in terms of $z_1,z_2,z_3$ and the three pairwise correlations.
 <!-- bilingual-en:end -->
@@ -656,11 +721,11 @@ Express them in terms of $z_1,z_2,z_3$ and the three pairwise correlations.
 **Cholesky Decomposition**
 <!-- bilingual-en:end -->
 
-任何协方差矩阵$\Sigma$都可以Cholesky分解为
+若相关矩阵 $\Sigma$ 为正定矩阵，则存在唯一的正对角下三角Cholesky因子 $L$，使得
 $$
 \Sigma = L L^\top
 $$
-其中$L$是下三角矩阵。
+奇异的半正定矩阵仍可写成平方根分解，但标准正对角Cholesky不适用，通常要用广义或带主元分解。
 <!-- bilingual-en:start -->
 Any positive-definite covariance matrix $\Sigma$ can be factorized as shown above, where $L$ is a lower-triangular matrix. A positive-semidefinite matrix may require a generalized or pivoted factorization if it is singular.
 <!-- bilingual-en:end -->
@@ -688,9 +753,9 @@ Let
 **General Trivariate Normal Correlation Structure**
 <!-- bilingual-en:end -->
 
-假设三变量的相关系数分别为$\rho_{12},,\rho_{13},,\rho_{23}$，则
+假设三变量的相关系数分别为 $\rho_{12},\rho_{13},\rho_{23}$，则
 <!-- bilingual-en:start -->
-If the three pairwise correlations are $\rho_{12},,\rho_{13},,\rho_{23}$, then the correlation matrix is the one shown above.
+If the three pairwise correlations are $\rho_{12},\rho_{13},\rho_{23}$, then the correlation matrix is the one shown above.
 <!-- bilingual-en:end -->
 
 $$
@@ -706,7 +771,7 @@ $$
 **Expression for the Cholesky Factor $L$**
 <!-- bilingual-en:end -->
 
-$L$具体如下（可以记公式）：
+在 $|\rho_{12}|<1$ 且整个矩阵正定时，$L$ 为
 $$
 L = \begin{pmatrix}
 1 & 0 & 0 \\
@@ -715,12 +780,12 @@ L = \begin{pmatrix}
 \end{pmatrix}
 $$
 <!-- bilingual-en:start -->
-The lower-triangular factor $L$ is shown above. This formula may be memorized, but it is more important to understand that it is obtained by solving $\Sigma=LL^\top$ row by row.
+The displayed formula assumes $|\rho_{12}|<1$ and that the full matrix is positive definite, so every denominator is nonzero and the final radicand is positive. It is obtained by solving $\Sigma=LL^\top$ row by row. Singular boundary cases require a generalized or pivoted factorization.
 <!-- bilingual-en:end -->
 
- **$\epsilon_1,,\epsilon_2,,\epsilon_3$的具体表达式**
+ **$\epsilon_1,\epsilon_2,\epsilon_3$的具体表达式**
 <!-- bilingual-en:start -->
-**Explicit Expressions for $\epsilon_1,,\epsilon_2,,\epsilon_3$**
+**Explicit Expressions for $\epsilon_1,\epsilon_2,\epsilon_3$**
 <!-- bilingual-en:end -->
 
 根据$\epsilon = L z$，逐项写出：
@@ -733,21 +798,21 @@ $$\begin{aligned} \epsilon_1 &= z_1 \\ \epsilon_2 &= \rho_{12}z_1 + \sqrt{1-\rho
 ## 11.14
 
 >[!question] 
->假定银行有一笔大数量的贷款，每笔贷款每年的违约概率为1.5%，违约时的回收率为30%，银行采用高斯copula来模拟违约时间。请使用vasicek模型来估计99.5%置信度下的违约率。假设Copula相关系数为0.2。
+>假设银行持有一个非常大的均质贷款组合，每笔贷款的年违约概率为1.5%，回收率为30%。银行采用单因子高斯Copula，潜在资产相关参数为0.2。请用Vasicek模型估计组合违约率的99.5%分位点。
 ><!-- bilingual-en:start -->
->Assume a bank holds a very large portfolio of loans. Each loan has an annual probability of default of 1.5% and a recovery rate of 30%. The bank models default dependence with a Gaussian Copula. Use the Vasicek model to estimate the portfolio default rate at the 99.5% confidence level, assuming a Copula correlation of 0.2.
+>Assume a bank holds a very large homogeneous portfolio of loans. Each loan has an annual probability of default of 1.5% and a recovery rate of 30%. The bank uses a one-factor Gaussian Copula with latent asset-correlation parameter 0.2. Use the Vasicek model to estimate the 99.5th percentile of the portfolio default rate.
 ><!-- bilingual-en:end -->
 
 - 贷款数目很大（$n\to\infty$，可认为“连续”）
 - 每笔贷款年违约概率 $p=1.5\% = 0.015$
-- 违约时回收率 $=30\%$（其实计算违约率时不用）
-- Copula相关系数 $\rho=0.2$
-- 计算“99.5%置信度下的违约率”（即，极端情况下的贷款池**总体违约率99.5%分位点**）
+- 违约时回收率为30%（计算违约率分位点时不用；计算损失分位点时才需要）
+- 潜在资产相关参数 $\rho=0.2$
+- 计算贷款池**总体违约率的99.5%分位点**
 <!-- bilingual-en:start -->
 - The number of loans is very large, so the portfolio can be treated as asymptotically granular.
 - Each loan has annual default probability $p=1.5\% = 0.015$.
-- Recovery at default is $=30\%$; it is irrelevant when calculating the default-rate quantile itself.
-- The Copula correlation is $\rho=0.2$.
+- Recovery at default is 30%; it is irrelevant to the default-rate quantile itself but would matter for a loss quantile.
+- The latent asset-correlation parameter is $\rho=0.2$.
 - We need the **99.5th percentile of the portfolio-wide default rate**.
 <!-- bilingual-en:end -->
 
@@ -762,11 +827,11 @@ For a very large loan portfolio, let
 <!-- bilingual-en:end -->
 
 - 单笔贷款年违约概率 $p$
-- 单因子Copula相关系数 $\rho$
+- 单因子潜在资产相关参数 $\rho$
 - 组合违约率的$q$分位点为$L_q$
 <!-- bilingual-en:start -->
 - $p$ be the annual default probability of each loan.
-- $\rho$ be the one-factor Copula correlation.
+- $\rho$ be the one-factor latent asset-correlation parameter.
 - $L_q$ be the $q$th quantile of the portfolio default rate.
 <!-- bilingual-en:end -->
 
@@ -776,9 +841,9 @@ For a very large loan portfolio, let
 <!-- bilingual-en:end -->
 
 $$
-
-L_q = \Phi\left( \frac{ \Phi^{-1}(p) + \sqrt{\rho}, \Phi^{-1}(q) }{ \sqrt{1-\rho} } \right)
-
+L_q = \Phi\!\left(
+\frac{\Phi^{-1}(p)+\sqrt{\rho}\,\Phi^{-1}(q)}{\sqrt{1-\rho}}
+\right).
 $$
 
 - $\Phi$：标准正态分布函数
@@ -802,25 +867,26 @@ $$
 **Calculate the Required Quantiles**
 <!-- bilingual-en:end -->
 
-- $\Phi^{-1}(0.015)\approx -2.17$
-- $\Phi^{-1}(0.995)\approx 2.58$
-- $\sqrt{\rho}=\sqrt{0.2}\approx 0.447$
-- $\sqrt{1-\rho}=\sqrt{0.8}\approx 0.894$
+- $\Phi^{-1}(0.015)\approx -2.17009038$
+- $\Phi^{-1}(0.995)\approx 2.57582930$
+- $\sqrt{\rho}=\sqrt{0.2}\approx 0.44721360$
+- $\sqrt{1-\rho}=\sqrt{0.8}\approx 0.89442719$
     
 代入公式：
 $$
-L_{0.995} = \Phi\left(
-\frac{-2.17 + 0.447\times 2.58}{0.894}
+L_{0.995}=\Phi\!\left(
+\frac{-2.17009038+0.44721360\times2.57582930}{0.89442719}
 \right)
+\approx\Phi(-1.13832015).
 $$
-- $0.447 \times 2.58 \approx 1.153$
-- $-2.17 + 1.153 = -1.017$    
-- $-1.017 / 0.894 \approx -1.138$
+- $0.44721360\times2.57582930\approx1.15194588$
+- 分子约为 $-1.01814449$
+- 标准化参数约为 $-1.13832015$
 <!-- bilingual-en:start -->
 Substitute into the formula:
-- $0.447 \times 2.58 \approx 1.153$.
-- $-2.17 + 1.153 = -1.017$.
-- $-1.017 / 0.894 \approx -1.138$.
+- $0.44721360\times2.57582930\approx1.15194588$.
+- The numerator is approximately $-1.01814449$.
+- The standardized argument is approximately $-1.13832015$.
 <!-- bilingual-en:end -->
 
 
@@ -830,19 +896,19 @@ Substitute into the formula:
 Using a standard normal table:
 <!-- bilingual-en:end -->
 
-- $\Phi(-1.138)\approx 0.127$
+- $\Phi(-1.13832015)\approx0.12749341$
     
 **最终答案**
 <!-- bilingual-en:start -->
 **Final Answer**
 <!-- bilingual-en:end -->
 
-- 99.5%置信度下的贷款组合违约率为
+- 99.5%置信度下的贷款组合违约率分位点为
     $$
-    \boxed{12.7\%}
+    \boxed{12.74934\%}
     $$
 <!-- bilingual-en:start -->
-- At the 99.5% confidence level, the portfolio default rate is
+- At the 99.5% confidence level, the portfolio default-rate quantile is $\boxed{12.74934\%}$. The 30% recovery rate would matter for a loss quantile, but not for this default-rate quantile.
 <!-- bilingual-en:end -->
 
 ## 11.15
@@ -875,86 +941,90 @@ The ten annual default rates are shown above, first as percentages and then as d
 **2. Transform to Normal Quantiles: $Y_t = \Phi^{-1}(l_t)$**
 <!-- bilingual-en:end -->
 
-查表/用Python可得（四舍五入保留三位小数）：
+查表或用软件可得（下表保留6位小数；计算时使用未舍入值）：
 <!-- bilingual-en:start -->
-The values can be obtained from a standard normal table or with Python and are rounded to three decimal places.
+The values can be obtained from a standard normal table or software. Six decimals are displayed below, while the calculations use unrounded values.
 <!-- bilingual-en:end -->
 
 |**$l_t$**|**$Y_t = \Phi^{-1}(l_t)$**|
 |---|---|
-|0.01|$-2.326$|
-|0.09|$-1.340$|
-|0.02|$-2.054$|
-|0.03|$-1.881$|
-|0.05|$-1.645$|
-|0.01|$-2.326$|
-|0.06|$-1.555$|
-|0.07|$-1.475$|
-|0.04|$-1.751$|
-|0.01|$-2.326$|
+|0.01|$-2.326348$|
+|0.09|$-1.340755$|
+|0.02|$-2.053749$|
+|0.03|$-1.880794$|
+|0.05|$-1.644854$|
+|0.01|$-2.326348$|
+|0.06|$-1.554774$|
+|0.07|$-1.475791$|
+|0.04|$-1.750686$|
+|0.01|$-2.326348$|
 
  **3. 计算均值和方差**
 <!-- bilingual-en:start -->
 **3. Calculate the Mean and Variance**
 <!-- bilingual-en:end -->
 
-**均值：**
+正态似然下，均值与方差的MLE分别为
 $$
-\bar{Y} = \frac{1}{10} \sum_{t=1}^{10} Y_t = \frac{-2.326-1.340-2.054-1.881-1.645-2.326-1.555-1.475-1.751-2.326}{10}
-$$
-$$
-\bar{Y} = \frac{-18.679}{10} = -1.868
-$$
-**方差：**
-$$
-s_Y^2 = \frac{1}{9}\sum_{t=1}^{10}(Y_t-\bar{Y})^2
+\hat\mu=\bar Y=-1.86804455,
+\qquad
+\sum_{t=1}^{10}(Y_t-\bar Y)^2=1.25839741,
 $$
 $$
-s_Y^2 = \frac{1.260}{9} = 0.140
+\hat v_{\mathrm{MLE}}
+=\frac{1.25839741}{10}
+=0.125839741.
 $$
- **4. 得到 Vasicek 模型最大似然参数**
+这里必须除以 $T=10$；除以9得到无偏样本方差，但不是正态模型的方差MLE。
+
+ **4. 映射回 Vasicek 参数**
 <!-- bilingual-en:start -->
-**Mean:** Use the average of the ten transformed observations shown above.
+Under the normal likelihood, the MLEs of the transformed mean and variance are $\hat\mu=\bar Y=-1.86804455$ and $\hat v_{\mathrm{MLE}}=1.25839741/10=0.125839741$. The variance must divide by $T=10$; division by nine gives the unbiased sample variance, not the normal-model variance MLE.
 
-**Variance:** Distinguish the maximum-likelihood variance, which divides by 10, from the unbiased sample variance, which divides by 9.
-
-**4. Obtain the Vasicek-Model Parameter Estimates**
+**4. Map Back to the Vasicek Parameters**
 <!-- bilingual-en:end -->
 
- **(1) 系统相关性参数**
+由于
 $$
-\boxed{\hat{\rho} = 0.140}
+E[Y]=\frac{\Phi^{-1}(p)}{\sqrt{1-\rho}},
+\qquad
+\operatorname{Var}(Y)=\frac{\rho}{1-\rho},
 $$
-<!-- bilingual-en:start -->
-**(1) Systematic-Correlation Parameter**
-<!-- bilingual-en:end -->
-
- **(2) 长期违约率参数**
+所以
 $$
-\hat{p} = \Phi(\bar{Y}) = \Phi(-1.868) \approx 0.0309 = 3.1\%
+\hat\rho=\frac{\hat v}{1+\hat v}
+=\frac{0.125839741}{1.125839741}
+=\boxed{0.11177412},
+$$
+$$
+\hat p=\Phi\!\left(\hat\mu\sqrt{1-\hat\rho}\right)
+=\Phi(-1.76055234\ldots)
+=\boxed{0.03915710}.
 $$
  **5. 最终结论**
 <!-- bilingual-en:start -->
-**(2) Long-Run Default-Probability Parameter**
+Because $E[Y]=\Phi^{-1}(p)/\sqrt{1-\rho}$ and $\operatorname{Var}(Y)=\rho/(1-\rho)$, the exact transformed-normal MLEs are $\hat\rho=\hat v/(1+\hat v)=\boxed{0.11177412}$ and $\hat p=\Phi(\hat\mu\sqrt{1-\hat\rho})=\boxed{0.03915710}$.
 
 **5. Final Conclusion**
 <!-- bilingual-en:end -->
 
-- **Vasicek模型相关性参数最大似然估计值为** $\boxed{0.14}$
-- **长期平均违约率最大似然估计为约** $\boxed{3.1\%}$
-<!-- bilingual-en:start -->
-- The shortcut in the source reports a Vasicek correlation estimate of $\boxed{0.14}$.
-- It also reports a long-run default probability of approximately $\boxed{3.1\%}$.
+- **Vasicek相关参数MLE：** $\boxed{\hat\rho=0.11177412}$
+- **长期无条件违约概率MLE：** $\boxed{\hat p=3.915710\%}$
 
-These are not the exact MLEs under the stated Vasicek transformation. If $Y_t=\Phi^{-1}(l_t)$, then $\operatorname{Var}(Y)=\rho/(1-\rho)$ and $E[Y]=\Phi^{-1}(p)/\sqrt{1-\rho}$. Using the MLE variance $1.2584/10\approx0.12584$ gives $\hat\rho\approx0.1118$ and $\hat p\approx3.92\%$. Using the unbiased variance $1.2584/9\approx0.13982$ instead gives $\hat\rho\approx0.1227$ and $\hat p\approx4.01\%$. Thus 0.14 and 3.1% result from treating the transformed variance directly as $\rho$ and ignoring the scaling in the transformed mean.
+这些估计依赖连续、渐近组合近似以及年度观测相互独立的假设；有限组合、序列相关或参数不确定性需要改写似然或另行处理。
+<!-- bilingual-en:start -->
+- **Vasicek correlation-parameter MLE:** $\boxed{\hat\rho=0.11177412}$.
+- **Long-run unconditional default-probability MLE:** $\boxed{\hat p=3.915710\%}$.
+
+These estimates rely on the continuous asymptotic portfolio approximation and independent annual observations. A finite portfolio, serial dependence, or parameter uncertainty requires a different likelihood or additional treatment.
 <!-- bilingual-en:end -->
 
 ## 11.16
 
 >[!question] 
->假定在上个交易日结束时某资产X的价格为300美元，价格波动率为每天1.3%，今天X的价格在交易结束时为298美元，假定在上个交易日结束时资产Y的价格为8美元，价格波动率为每天1.5%。Y的价格与X的价格的相关系数为0.8。今天在交易结束时Y的价格同昨天相同，即8美元。请求出最新的X价格及Y价格的波动率及相关系数，在计算中请采用:(a)EWMA模型，参数为$\lambda$=0.94:(b)GARCH(1，1)模型，其中模型参数如$\omega$=0.000 002、a=0.04及 $\beta$-0.94。在实践中，对于X和Y的。参数是否相同?
+>上个交易日收盘时，资产X价格为300美元、日波动率为1.3%，资产Y价格为8美元、日波动率为1.5%，两者收益相关系数为0.8。今天X收于298美元，Y仍收于8美元。请计算：(a) $\lambda=0.94$ 的EWMA更新；(b) $\omega=0.000002$、$\alpha=0.04$、$\beta=0.94$ 的题设GARCH(1,1)式更新。分别求X、Y的新波动率和新相关系数，并说明实际建模中两个资产是否必须使用相同参数。
 ><!-- bilingual-en:start -->
->At the end of the previous trading day, asset X had a price of \$300 and daily volatility of 1.3%; today it closes at \$298. Asset Y had a price of \$8, daily volatility of 1.5%, and return correlation of 0.8 with X; today it again closes at \$8. Calculate the updated volatilities of X and Y and their updated correlation using (a) an EWMA model with $\lambda$=0.94 and (b) a GARCH(1,1) model with $\omega$=0.000002, $a=0.04$, and $\beta=0.94$. In practice, should X and Y use the same parameter values?
+>At the end of the previous trading day, asset X had a price of \$300 and daily volatility of 1.3%; today it closes at \$298. Asset Y had a price of \$8, daily volatility of 1.5%, and return correlation of 0.8 with X; today it again closes at \$8. Calculate the updated volatilities of X and Y and their updated correlation using (a) an EWMA model with $\lambda=0.94$ and (b) a GARCH(1,1)-style model with $\omega=0.000002$, $\alpha=0.04$, and $\beta=0.94$. In practice, should X and Y use the same parameter values?
 ><!-- bilingual-en:end -->
 
  **1. 收益率计算**
@@ -962,7 +1032,7 @@ These are not the exact MLEs under the stated Vasicek transformation. If $Y_t=\P
 **1. Calculate Returns**
 <!-- bilingual-en:end -->
 
-- $r_X = \ln\left(\frac{298}{300}\right) \approx -0.006684$
+- $r_X = \ln\left(\frac{298}{300}\right) \approx -0.006688988$
 - $r_Y = \ln\left(\frac{8}{8}\right) = 0$   
 
  **2. EWMA模型**
@@ -981,10 +1051,10 @@ $$
 
 **$X$：**
     $$
-    \sigma_{X,\text{new}}^2 = 0.00015886 + 0.000002682 = 0.00016154
+    \sigma_{X,\text{new}}^2 = 0.94(0.013)^2+0.06(-0.006688988)^2=0.000161544554
     $$
     $$  
-    \sigma_{X,\text{new}} = \sqrt{0.00016154} \approx 0.01271 = 1.27\%
+    \sigma_{X,\text{new}} = \sqrt{0.000161544554} \approx 0.01271002 = 1.271002\%
     $$
 
 
@@ -993,7 +1063,7 @@ $$
     \sigma_{Y,\text{new}}^2 = 0.0002115 + 0 = 0.0002115  
     $$
     $$
-    \sigma_{Y,\text{new}} = \sqrt{0.0002115} \approx 0.01454 = 1.45\%
+    \sigma_{Y,\text{new}} = \sqrt{0.0002115} \approx 0.01454304 = 1.454304\%
     $$
 
  **相关系数(EWMA-协方差)**
@@ -1002,18 +1072,19 @@ $$
 <!-- bilingual-en:end -->
 
 - 上日协方差：$0.8\times0.013\times0.015=0.000156$
-- $r_X r_Y = -0.006684 \times 0 = 0$
+- $r_X r_Y = -0.006688988 \times 0 = 0$
 - $0.94\times0.000156 = 0.00014664$
     $$
     \text{cov}_{\text{new}} = 0.00014664
     $$
     $$
-    \rho_{\text{new}} = \frac{0.00014664}{0.01271\times0.01454} = \frac{0.00014664}{0.00018477} \approx 0.794
+    \rho_{\text{new}} = \frac{0.00014664}{0.01271002\times0.01454304} \approx \boxed{0.793325}
     $$
 <!-- bilingual-en:start -->
 - Previous covariance: $0.8\times0.013\times0.015=0.000156$.
-- Today's return cross-product: $r_X r_Y = -0.006684 \times 0 = 0$.
+- Today's return cross-product: $r_X r_Y = -0.006688988 \times 0 = 0$.
 - Decayed previous covariance: $0.94\times0.000156 = 0.00014664$.
+- With the updated volatilities, the EWMA correlation is $\boxed{0.793325}$.
 <!-- bilingual-en:end -->
 
  **3. GARCH(1,1)模型**
@@ -1032,11 +1103,11 @@ $$
 **$X$：**
 
     $$
-    \sigma_{X,\text{new}}^2 = 0.000002 + 0.000001788 + 0.00015886 = 0.000162648
+    \sigma_{X,\text{new}}^2 = 0.000002 + 0.04(-0.006688988)^2 + 0.94(0.013)^2 = 0.000162649702
     $$
     
     $$
-    \sigma_{X,\text{new}} = \sqrt{0.000162648} \approx 0.01276 = 1.28\%
+    \sigma_{X,\text{new}} = \sqrt{0.000162649702} \approx 0.01275342 = 1.275342\%
     $$
 
 **$Y$：**
@@ -1045,7 +1116,7 @@ $$
     \sigma_{Y,\text{new}}^2 = 0.000002 + 0 + 0.0002115 = 0.0002135
     $$
     $$
-    \sigma_{Y,\text{new}} = \sqrt{0.0002135} \approx 0.01461 = 1.46\%
+    \sigma_{Y,\text{new}} = \sqrt{0.0002135} \approx 0.01461164 = 1.461164\%
     $$
 
  **相关系数(GARCH协方差法)**
@@ -1063,27 +1134,25 @@ $$
     \text{cov}_{\text{new}} = 0.000002 + 0 + 0.00014664 = 0.00014864
     $$
     $$
-    \rho_{\text{new}} = \frac{0.00014864}{0.01276\times0.01461} = \frac{0.00014864}{0.00018648} \approx 0.797
+    \rho_{\text{new}} = \frac{0.00014864}{0.01275342\times0.01461164} \approx \boxed{0.797646}
     $$
 
- **4. $\omega$参数是否相同？**
+ **4. 参数是否必须相同？模型边界是什么？**
 <!-- bilingual-en:start -->
-**4. Should the $\omega$ Parameters Be the Same?**
+**4. Must the Parameters Be the Same, and What Is the Model Boundary?**
 <!-- bilingual-en:end -->
 
-- $\omega$参数是控制模型长期均值（长期方差/协方差）的参数。
-- **在实际建模时，$X$和$Y$各自的$\omega$参数通常要**单独校准（不一定相同），以贴合不同资产的历史波动水平。**
-- 只有在教学或简化题目时，才会人为设置为相同。
+- $\omega$参与决定长期方差或协方差水平；$\alpha$和$\beta$控制对新冲击与旧状态的响应。X与Y不必使用相同标量参数，实际中应按数据与模型结构联合或分别校准。
+- 本题把同一标量递推逐对用于方差和协方差，只是教学近似。对多资产矩阵逐对独立套用这类公式，不保证更新后的协方差矩阵半正定，甚至可能产生绝对值大于1的“相关系数”。实际应用应使用能保持矩阵合法性的多变量波动模型或整矩阵更新，并检查PSD、参数稳定性和样本外表现。
 <!-- bilingual-en:start -->
-- The $\omega$ parameter helps determine the model's long-run variance or covariance level.
-- In practice, the $\omega$ parameters for $X$ and $Y$ are normally calibrated **separately**, because different assets have different long-run volatility levels.
-- Equal values are generally imposed only in teaching examples or deliberately simplified models.
+- $\omega$ helps determine the long-run variance or covariance level, while $\alpha$ and $\beta$ control responsiveness to new shocks and persistence. X and Y need not use identical scalar parameters; they should be calibrated consistently with the chosen model and data.
+- Applying separate scalar recursions pair by pair, as this exercise does, is only a teaching approximation. It does not guarantee that a multi-asset covariance matrix remains positive semidefinite and can even imply an invalid correlation. Real applications require a multivariate specification or whole-matrix update that preserves validity, followed by PSD, stability, and out-of-sample checks. Under the exercise convention, the GARCH-style updated correlation is $\boxed{0.797646}$.
 <!-- bilingual-en:end -->
 
 
 ## 11.19
 
-计算由软件实现数值积分与矩阵运算得到（可用脚本重现）。~~电脑算的,略.~~
+数值积分与矩阵运算可由软件实现，并应保留可复现的参数、算法和精度设置。
 <!-- bilingual-en:start -->
-The numerical integration and matrix operations can be performed in software and reproduced with a script. ~~The omitted computation was delegated to a computer.~~
+Numerical integration and matrix operations can be implemented in software; the parameters, algorithm, and precision settings should be retained for reproducibility.
 <!-- bilingual-en:end -->

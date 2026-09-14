@@ -12,6 +12,16 @@ source: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/p
 
 # MIT 18.01SC Unit 3: The Definite Integral and Its Applications
 
+连续阅读：[[01_Math/01_calculus/03_定积分与应用]] · 主题关系：[[定积分与应用.canvas]]。本页保留 Session、课堂推导、习题和考试的永久记录。
+<!-- bilingual-en:start -->
+This page preserves the permanent session record, classroom derivations, exercises, and exam work.
+<!-- bilingual-en:end -->
+
+本页沿用 MIT 18.01SC 的编号：FTC I 是[[Newton-Leibniz公式|原函数端点求值]]，FTC II 是[[积分求导定理|累积函数求导]]；分别在 Session 47、51 引入，Session 52 依次证明 FTC II 与 FTC I。其他教材可能采用相反编号，跨来源比较时以公式内容为准。
+<!-- bilingual-en:start -->
+This page follows MIT 18.01SC's numbering: FTC I is [[Newton-Leibniz公式|evaluation by antiderivative endpoints]], and FTC II is [[积分求导定理|differentiation of an accumulation function]]. They are introduced in Sessions 47 and 51; Session 52 proves FTC II and then FTC I. Other texts may reverse the numbering, so compare the actual formulas across sources.
+<!-- bilingual-en:end -->
+
 > [!abstract] 本章主线
 > 导数解决“已知量，求瞬时变化率”；定积分反过来解决“已知变化率和初值，求累计变化”。本章从矩形面积的极限构造定积分，证明微积分基本定理把“求和”与“求导”连接起来，再把这一工具用于面积、体积、平均值、概率和数值计算。
 > <!-- bilingual-en:start -->
@@ -42,16 +52,16 @@ $$
 a=x_0<x_1<\cdots<x_n=b,
 $$
 
-第 \(i\) 段宽度为 \(\Delta x_i=x_i-x_{i-1}\)，样本点 \(x_i^*\in[x_{i-1},x_i]\)。[[定积分与微积分基本定理#从黎曼和到定积分|黎曼和]]（Riemann sum）是
+第 \(i\) 段宽度为 \(\Delta x_i=x_i-x_{i-1}\)，样本点 \(x_i^*\in[x_{i-1},x_i]\)。[[黎曼和]]（Riemann sum）是
 <!-- bilingual-en:start -->
-The $i$th subinterval has width $\Delta x_i=x_i-x_{i-1}$, and its sample point is $x_i^*\in[x_{i-1},x_i]$. The [[定积分与微积分基本定理#从黎曼和到定积分|Riemann sum]] is
+The $i$th subinterval has width $\Delta x_i=x_i-x_{i-1}$, and its sample point is $x_i^*\in[x_{i-1},x_i]$. The [[黎曼和|Riemann sum]] is
 <!-- bilingual-en:end -->
 
 $$
 \sum_{i=1}^{n}f(x_i^*)\Delta x_i.
 $$
 
-等分时 $(\Delta x=(b-a)/n)$。单位检查始终是“被积函数单位 × \(dx\) 单位”。
+等分时 $\Delta x=(b-a)/n$。单位检查始终是“被积函数单位 × \(dx\) 单位”。
 <!-- bilingual-en:start -->
 For an equal partition, $\Delta x=(b-a)/n$. The units are always “units of the integrand × units of $dx$.”
 <!-- bilingual-en:end -->
@@ -69,14 +79,19 @@ For an equal partition, $\Delta x=(b-a)/n$. The units are always “units of the
 *Questions, Definitions and Intuitions*
 <!-- bilingual-en:end -->
 
-若速度 \(v(t)\) 在短时间 \(\Delta t\) 内近似不变，小段路程约为 \(v(t_i^*)\Delta t\)，总路程约为
+若有向速度 \(v(t)\) 在短时间 \(\Delta t\) 内近似不变，小段位移约为 \(v(t_i^*)\Delta t\)，总位移约为
 <!-- bilingual-en:start -->
-If the speed \(v(t)\) is approximately constant in a short time \(\Delta t\), the short distance is about \(v(t_i^*)\Delta t\), and the total distance is about
+If the signed velocity \(v(t)\) is approximately constant over a short time \(\Delta t\), the displacement is about \(v(t_i^*)\Delta t\), and the total displacement is about
 <!-- bilingual-en:end -->
 
 $$
 \sum v(t_i^*)\Delta t.
 $$
+
+若要求总路程，应累计速率 $|v(t)|$：$\int_a^b|v(t)|dt$；位移则是 $\int_a^bv(t)dt$。见[[净变化与总变化]]。
+<!-- bilingual-en:start -->
+Total distance accumulates speed: $\int_a^b|v(t)|dt$. Displacement is $\int_a^bv(t)dt$; see [[净变化与总变化|net change and total change]].
+<!-- bilingual-en:end -->
 
 面积、质量、成本和概率都是同一种结构：“密度 × 小宽度”再累计。
 <!-- bilingual-en:start -->
@@ -92,9 +107,9 @@ $$
 \|P\|=\max_i\Delta x_i\to0,
 $$
 
-所有 Riemann 和都趋于同一个有限值 \(I\)，由此定义[[定积分与微积分基本定理#从黎曼和到定积分|定积分]]
+所有 Riemann 和都趋于同一个有限值 \(I\)，由此定义[[定积分]]
 <!-- bilingual-en:start -->
-All Riemann sums tend to the same finite value \(I\), which defines the [[定积分与微积分基本定理#从黎曼和到定积分|definite integral]]
+All Riemann sums tend to the same finite value \(I\), which defines the [[定积分|definite integral]]
 <!-- bilingual-en:end -->
 
 $$
@@ -121,6 +136,8 @@ A negative function contributes negative signed area, so a definite integral is 
 > This course uses the fact that a continuous function on a closed interval is integrable. A complete proof relies on uniform continuity; the focus here is the limit of Riemann sums and its consequences.
 > <!-- bilingual-en:end -->
 
+![[连续函数可积]]
+
 ### 本地材料
 
 - [[Ses43a_Lecture_Notes.pdf|43a Introduction to Definite Integrals]]
@@ -130,7 +147,7 @@ A negative function contributes negative signed area, so a definite integral is 
 > [!example]- Exercise 43：只凭图形估计积分
 > 三幅图的纵横坐标刻度不同，必须先读刻度，再把阴影与可计算的三角形、矩形比较。
 >
-> 1. 第一幅阴影恰为底 (2)、高 (4) 的三角形，故
+> 1. 第一幅阴影恰为底 $2$、高 $4$ 的三角形，故
 >    $$
 >    \int f(x)\,dx=\frac12\cdot2\cdot4=\boxed{4},
 >    $$
@@ -232,7 +249,7 @@ $$
 > \sum_{k=0}^{5}2^k&=1+2+4+8+16+32=\boxed{63}.
 > \end{aligned}
 > $$
-> 最后一式也可用等比数列公式 ((2^6-1)/(2-1))。易错点是把 (k=0) 项 (2^0=1) 漏掉。
+> 最后一式也可用等比数列公式 $(2^6-1)/(2-1)$。易错点是把 $k=0$ 项 $2^0=1$ 漏掉。
 > <!-- bilingual-en:start -->
 > Identify the starting index, ending index, and general term before expanding:
 > $$
@@ -283,9 +300,9 @@ $$
 f(-x)=f(x)\Longrightarrow\int_{-a}^{a}f(x)dx=2\int_0^af(x)dx.
 $$
 
-由 Riemann 和逐项运算可证明线性、区间可加性和单调性：
+以下假设所用函数在相关闭区间上可积、$a<b$，半圆半径 $r>0$。由 Riemann 和逐项运算可证明[[定积分线性性|线性]]、[[定积分区间可加性|区间可加性]]和[[积分保序性|保序性]]：
 <!-- bilingual-en:start -->
-Linearity, additivity over adjacent intervals, and monotonicity follow by applying the corresponding operations term by term to Riemann sums.
+Assume the functions are integrable on the relevant closed intervals, $a<b$, and the semicircle radius is $r>0$. [[定积分线性性|Linearity]], [[定积分区间可加性|interval additivity]], and [[积分保序性|order preservation]] follow by applying the corresponding operations term by term to Riemann sums.
 <!-- bilingual-en:end -->
 
 $$
@@ -299,6 +316,11 @@ $$
 $$
 f\le g\Longrightarrow\int_a^bf\le\int_a^bg.
 $$
+
+对称区间上的规则见[[奇偶函数积分]]；正负抵消的大小界见[[积分绝对值界]]。
+<!-- bilingual-en:start -->
+See [[奇偶函数积分|integration of even and odd functions]] for symmetric intervals and [[积分绝对值界|the absolute-value bound for integrals]] for the effect of cancellation.
+<!-- bilingual-en:end -->
 
 ### 本地材料
 
@@ -356,9 +378,9 @@ $$
 f\!\left(a+i\frac{b-a}{n}\right)\frac{b-a}{n},
 $$
 
-先识别 \(\Delta x=(b-a)/n\) 和右端点，再写成 \(\int_a^bf(x)dx\)。
+先识别 \(\Delta x=(b-a)/n\) 和右端点，再写成 \(\int_a^bf(x)dx\)；这一极限转换以 $f$ 在 $[a,b]$ 可积为前提。见[[和式识别为积分]]。
 <!-- bilingual-en:start -->
-Recognize \(\Delta x=(b-a)/n\) and the right endpoint before writing as \(\int_a^bf(x)dx\).
+Recognize \(\Delta x=(b-a)/n\) and the right endpoint before writing \(\int_a^bf(x)dx\). This limit conversion assumes that $f$ is integrable on $[a,b]$; see [[和式识别为积分|recognising a sum as an integral]].
 <!-- bilingual-en:end -->
 
 若债务增长率为 \(r(t)\) 美元/年，则
@@ -383,8 +405,8 @@ The units reduce from “dollars per year × years” to dollars. The local file
 - [[Exercise046_Problems.pdf|Exercise 46]] · [[Exercise046_Solutions.pdf|解答]]
 
 > [!example]- Exercise 46：六个左端点矩形
-> 估计 (int_0^2(3x+2)dx)。六等分给出 (Delta x=2/6=1/3)，左端点为
-> (0,1/3,2/3,1,4/3,5/3)，相应高度为 (2,3,4,5,6,7)。因此
+> 估计 $\int_0^2(3x+2)dx$。六等分给出 $\Delta x=2/6=1/3$，左端点为
+> $0,1/3,2/3,1,4/3,5/3$，相应高度为 $2,3,4,5,6,7$。因此
 > $$
 > L_6=\frac13(2+3+4+5+6+7)=\boxed{9}.
 > $$
@@ -392,7 +414,7 @@ The units reduce from “dollars per year × years” to dollars. The local file
 > $$
 > \left[\frac32x^2+2x\right]_0^2=10.
 > $$
-> 被积函数递增，所以每段左端点高度都是该段最小值，(L_6<10) 的方向与图形一致。
+> 被积函数递增，所以每段左端点高度都是该段最小值，$L_6<10$ 的方向与图形一致。
 > <!-- bilingual-en:start -->
 > Estimate $\int_0^2(3x+2)dx$. Six equal subintervals give $\Delta x=2/6=1/3$ and left endpoints
 > $0,1/3,2/3,1,4/3,5/3$, with corresponding heights $2,3,4,5,6,7$. Therefore,
@@ -422,39 +444,26 @@ The units reduce from “dollars per year × years” to dollars. The local file
 
 ## Session 47：Introduction to the FTC
 
-定义累积函数
-<!-- bilingual-en:start -->
-Define the accumulation function
-<!-- bilingual-en:end -->
-
-$$
-F(x)=\int_a^xf(t)dt.
-$$
-
-上限从 \(x\) 移到 \(x+h\) 时，
-<!-- bilingual-en:start -->
-When the upper limit is moved from \(x\) to \(x+h\),
-<!-- bilingual-en:end -->
-
-$$
-F(x+h)-F(x)=\int_x^{x+h}f(t)dt.
-$$
-
-连续性使小条面积近似 \(f(x)h\)，因此差商近似 \(f(x)\)。第一基本定理是：
-<!-- bilingual-en:start -->
-Continuity makes the area of the narrow strip approximately \(f(x)h\), so the difference quotient is approximately \(f(x)\). The first part of the Fundamental Theorem states:
-<!-- bilingual-en:end -->
-
-> [!important] [[定积分与微积分基本定理#两个基本定理怎样把导数与积分接起来|微积分基本定理]]第一部分（FTC I）
-> 若 \(f\) 在 \(x\) 附近连续，\(F(x)=\int_a^xf(t)dt\)，则
+> [!important] [[Newton-Leibniz公式]]（MIT FTC I）
+> 若 $f$ 在 $[a,b]$ 连续，$F$ 是其原函数，即 $F'=f$，则
 > $$
-> \boxed{F'(x)=f(x)}.
+> \boxed{\int_a^bf(x)dx=F(b)-F(a)}.
 > $$
 > <!-- bilingual-en:start -->
-> If \(f\) is continuous near \(x\), \(F(x)=\int_a^xf(t)dt\), then
+> If $f$ is continuous on $[a,b]$ and $F'=f$, the definite integral equals the endpoint difference $F(b)-F(a)$.
 > <!-- bilingual-en:end -->
 
-![[98_attachment/MIT18.01SC/unit03-ftc-accumulator.png|819]]
+使用流程：找原函数 → 写 \([F]_a^b\) → 上限值减下限值 → 检查符号与单位。定积分不写 \(+C\)，因为常数在端点差中抵消。
+<!-- bilingual-en:start -->
+Use this procedure: find an antiderivative → write \([F]_a^b\) → subtract the lower-endpoint value from the upper-endpoint value → check the sign and units. Do not append \(+C\) to a definite integral, because constants cancel in the endpoint difference.
+<!-- bilingual-en:end -->
+
+[[Ses47b_Lecture_Notes.pdf|47b]] 用 $F(x)=x^3/3$ 得到 $\int_a^b x^2dx=(b^3-a^3)/3$，并用 $F(x)=-\cos x$ 得到 $\int_0^\pi\sin x\,dx=2$。这把前面逐项求和、再取极限的计算化为原函数的两次代入；两方向的证明留到 Session 52。
+<!-- bilingual-en:start -->
+[[Ses47b_Lecture_Notes.pdf|47b]] uses $F(x)=x^3/3$ to obtain $\int_a^b x^2dx=(b^3-a^3)/3$, and $F(x)=-\cos x$ to obtain $\int_0^\pi\sin x\,dx=2$. The earlier sum-and-limit calculation becomes two endpoint evaluations; both directions are proved in Session 52.
+<!-- bilingual-en:end -->
+
+![[Newton-Leibniz公式]]
 
 ### 本地材料
 
@@ -475,7 +484,7 @@ Continuity makes the area of the narrow strip approximately \(f(x)h\), so the di
 > =\boxed{\frac{\sqrt2-2}{2}}.
 > \end{aligned}
 > $$
-> 第三题约为 (-0.293)。区间内 (sin x\le0)，所以负号不是计算错误，而是有向面积的必然结果。
+> 第三题约为 $-0.293$。区间内 $\sin x\le0$，所以负号不是计算错误，而是有向面积的必然结果。
 > <!-- bilingual-en:start -->
 > $$
 > \begin{aligned}
@@ -493,72 +502,37 @@ Continuity makes the area of the narrow strip approximately \(f(x)h\), so the di
 > <!-- bilingual-en:end -->
 
 > [!question]- 三问自检
-> 1. 为什么积分变量写 \(t\)？2. \(f<0\) 时 \(F\) 怎样？3. \(F(a)\)？
+> 1. 为什么无 \(+C\)？2. \(\int_1^3(2x+1)dx\)？3. 原函数不唯一为何结果唯一？
 >
-> 答：\(t\) 是哑变量；\(F\) 递减；\(F(a)=0\)。
+> 答：常数抵消；\(10\)；任意两原函数只差常数。
 > <!-- bilingual-en:start -->
 >
 > &nbsp;
-> **1.** Why is the integration variable written as $t$?<br>
-> **2.** What happens to $F$ when $f<0$?<br>
-> **3.** What is $F(a)$?<br>
+> **1.** Why is there no $+C$?<br>
+> **2.** Evaluate $\int_1^3(2x+1)dx$.<br>
+> **3.** Antiderivatives are not unique, so why is the definite integral unique?<br>
 >
-> Answer: $t$ is a dummy variable; $F$ decreases; $F(a)=0$.
+> Answer: The constant cancels; the value is $10$; any two antiderivatives differ only by a constant.
 > <!-- bilingual-en:end -->
 
 ## Session 48：The Fundamental Theorem
 
-### FTC I 的逐步证明
+### 净变化、负被积函数与积分性质
 <!-- bilingual-en:start -->
-*Step-by-step proof of FTC I*
+*Net change, negative integrands, and integral properties*
 <!-- bilingual-en:end -->
 
-目标：
+若位置函数 $s$ 连续可导，$v=s'$，FTC I 给出位移 $s(b)-s(a)=\int_a^bv(t)dt$。若途中折返，正负位移抵消；总路程必须另算 $\int_a^b|v(t)|dt$。[[Ses48a_Lecture_Notes.pdf|48a]] 的行程直觉须连同 [[Ses48b_Lecture_Notes.pdf|48b]] 的有向速度解释一起读。
 <!-- bilingual-en:start -->
-Goal:
+For a continuously differentiable position $s$ with $v=s'$, FTC I gives displacement $s(b)-s(a)=\int_a^bv(t)dt$. Contributions in opposite directions cancel; total distance is $\int_a^b|v(t)|dt$. Read the trip interpretation in [[Ses48a_Lecture_Notes.pdf|48a]] together with the signed-velocity clarification in [[Ses48b_Lecture_Notes.pdf|48b]].
 <!-- bilingual-en:end -->
 
-$$
-\lim_{h\to0}\frac{F(x+h)-F(x)}h=f(x).
-$$
-
-由积分可加性，
+例如 $\int_0^{2\pi}\sin x\,dx=0$，但两拱的几何面积是 $\int_0^{2\pi}|\sin x|dx=4$。负被积函数无需另造积分；它贡献负的累计量。线性、分段相加和保序性随后让我们组合或估计这些累计量。
 <!-- bilingual-en:start -->
-By integral additivity,
+For example, $\int_0^{2\pi}\sin x\,dx=0$, while the geometric area of the two arches is $\int_0^{2\pi}|\sin x|dx=4$. Negative integrands contribute negative accumulation. Linearity, interval additivity, and order preservation then let us combine or estimate these quantities.
 <!-- bilingual-en:end -->
 
-$$
-\frac{F(x+h)-F(x)}h
-=\frac1h\int_x^{x+h}f(t)dt.
-$$
-
-减去目标值并把常数写入积分：
-<!-- bilingual-en:start -->
-Subtract the target value and place the constant inside the integral:
-<!-- bilingual-en:end -->
-
-$$
-\frac{F(x+h)-F(x)}h-f(x)
-=\frac1h\int_x^{x+h}[f(t)-f(x)]dt.
-$$
-
-给定 \(\varepsilon>0\)。连续性保证存在 \(\delta>0\)，当 \(|t-x|<\delta\) 时，
-\(|f(t)-f(x)|<\varepsilon\)。若 \(0<|h|<\delta\)，则
-<!-- bilingual-en:start -->
-Given \(\varepsilon>0\), continuity provides a \(\delta>0\) such that \(|f(t)-f(x)|<\varepsilon\) whenever \(|t-x|<\delta\). If \(0<|h|<\delta\), then
-<!-- bilingual-en:end -->
-
-$$
-\left|
-\frac{F(x+h)-F(x)}h-f(x)
-\right|
-\le\frac1{|h|}\varepsilon|h|=\varepsilon.
-$$
-
-故差商极限为 \(f(x)\)。证明没有假设 \(f\ge0\)，因此负被积函数同样成立。
-<!-- bilingual-en:start -->
-Thus the difference quotient tends to \(f(x)\). The proof never assumes \(f\ge0\), so it applies equally when the integrand is negative.
-<!-- bilingual-en:end -->
+![[净变化与总变化]]
 
 ### 本地材料
 
@@ -576,7 +550,7 @@ Thus the difference quotient tends to \(f(x)\). The proof never assumes \(f\ge0\
 > &=2+0=\boxed{2}.
 > \end{aligned}
 > $$
-> 几何上，(sin x) 在区间上方贡献面积 (2)；(cos x) 在 ([0,\pi/2]) 与 ([\pi/2,\pi]) 的正负面积互相抵消。
+> 几何上，$\sin x$ 在区间上方贡献面积 $2$；$\cos x$ 在 $[0,\pi/2]$ 与 $[\pi/2,\pi]$ 的正负面积互相抵消。
 > <!-- bilingual-en:start -->
 > $$
 > \begin{aligned}
@@ -590,67 +564,43 @@ Thus the difference quotient tends to \(f(x)\). The proof never assumes \(f\ge0\
 > <!-- bilingual-en:end -->
 
 > [!question]- 三问自检
-> 1. FTC I 证明中连续性控制哪一个量？2. 证明为何也覆盖 \(h<0\)？3. \(\frac d{dx}\int_2^x f(t)dt\) 是什么？
+> 1. 往返行程位移为何可为零？2. 怎样求总路程？3. 负被积函数是否使 FTC I 失效？
 >
-> 答：控制 (|f(t)-f(x)|)；估计使用 (|h|)，反向积分的符号也包含在等式中；结果为 (f(x))。
+> 答：有向速度积分中正负贡献抵消；对速率 $|v|$ 积分；不失效，定积分本来就是有向累计量。
 > <!-- bilingual-en:start -->
 >
 > &nbsp;
-> **1.** In the proof of FTC I, which quantity is controlled by continuity?<br>
-> **2.** Why does the proof also cover $h<0$?<br>
-> **3.** What is $\frac d{dx}\int_2^x f(t)dt$?<br>
+> **1.** Why can a round trip have zero displacement?<br>
+> **2.** How is total distance computed?<br>
+> **3.** Do negative integrands invalidate FTC I?<br>
 >
-> Answer: Continuity controls $|f(t)-f(x)|$; the estimate uses $|h|$, while the sign of reversing an integral is already built into the equation; the derivative is $f(x)$.
+> Answer: Positive and negative velocity contributions cancel; integrate speed $|v|$; no, definite integrals already represent signed accumulation.
 > <!-- bilingual-en:end -->
 
-**知识链：**连续性控制小区间内高度变化，区间长度正好约掉差商分母。
+**知识链：**速度的正负 → 位移的方向 → 净变化；取绝对值再累计 → 总变化。
 <!-- bilingual-en:start -->
-**Knowledge chain:** continuity controls how much the function varies on a short interval, while the interval length cancels the denominator of the difference quotient.
+**Knowledge chain:** velocity sign → displacement direction → net change; take absolute values before accumulating → total change.
 <!-- bilingual-en:end -->
 
 ## Session 49：Applications of FTC
 
-若
+本节用 FTC I 做估计与[[定积分换元]]。[[Ses49a_Lecture_Notes.pdf|49a]] 从 $e^x\ge1$（$x\ge0$）出发，在 $[0,b]$（$b\ge0$）积分得到 $e^b\ge1+b$，再积分一次得到 $e^b\ge1+b+b^2/2$。每次都是先用[[积分保序性]]，再用原函数端点差计算两边。
 <!-- bilingual-en:start -->
-If
+This session applies FTC I to estimates and [[定积分换元|definite-integral substitution]]. [[Ses49a_Lecture_Notes.pdf|49a]] starts with $e^x\ge1$ for $x\ge0$, integrates over $[0,b]$ with $b\ge0$ to obtain $e^b\ge1+b$, then integrates again to obtain $e^b\ge1+b+b^2/2$. Each step uses [[积分保序性|order preservation]] followed by endpoint evaluation.
+<!-- bilingual-en:end -->
+
+[[Ses49b_Lecture_Notes.pdf|49b]] 的换元同时转换端点：令 $u=x^3+2$，则
+<!-- bilingual-en:start -->
+The substitution in [[Ses49b_Lecture_Notes.pdf|49b]] also transforms the endpoints: with $u=x^3+2$,
 <!-- bilingual-en:end -->
 
 $$
-G(x)=\int_a^{g(x)}f(t)dt,
+\int_1^2(x^3+2)^5x^2dx=\frac13\int_3^{10}u^5du=\frac{10^6-3^6}{18}.
 $$
 
-令 \(H(u)=\int_a^uf(t)dt\)，则 \(G=H\circ g\)。FTC 与链式法则给出
+对完整复合导数型 $f(u(x))u'(x)$，只要 $f$ 在 $u$ 的像所在区间连续且 $u$ 连续可导，[[定积分换元]]可直接使用有向上下限，即使 $u'$ 变号也成立。只有换元后仍需用逆映射消去残余变量，而换元函数又不单调时，才要按 [[非单调换元需分支|单调分支]] 拆开。[[Ses48c_Lecture_Notes.pdf#page=2|48c 第 7 条]] 的变号即分段说法应限于需要逆分支的情形；[[Ses49c_Lecture_Notes.pdf|49c]] 专门讨论这一范围差异。
 <!-- bilingual-en:start -->
-If \(H(u)=\int_a^uf(t)dt\), then \(G=H\circ g\). The FTC and the chain rule give
-<!-- bilingual-en:end -->
-
-$$
-\boxed{G'(x)=f(g(x))g'(x)}.
-$$
-
-上下限都变时：
-<!-- bilingual-en:start -->
-When both limits depend on \(x\),
-<!-- bilingual-en:end -->
-
-$$
-\frac d{dx}\int_{u(x)}^{v(x)}f(t)dt
-=f(v(x))v'(x)-f(u(x))u'(x).
-$$
-
-例：
-<!-- bilingual-en:start -->
-Example:
-<!-- bilingual-en:end -->
-
-$$
-\frac d{dx}\int_0^{x^2}\sin(t^3)dt
-=2x\sin(x^6).
-$$
-
-无需先求 \(\sin(t^3)\) 的原函数。换元函数若不单调，要按单调区间拆开，避免重复覆盖。
-<!-- bilingual-en:start -->
-You do not need to find an antiderivative of \(\sin(t^3)\) first. If the substitution function is not monotone, split the interval into monotone pieces to avoid covering part of the range more than once.
+For an exact composite derivative $f(u(x))u'(x)$, [[定积分换元|definite-integral substitution]] uses oriented bounds whenever $f$ is continuous on an interval containing the image of $u$ and $u$ is continuously differentiable, even when $u'$ changes sign. [[非单调换元需分支|Monotone branches]] are needed when an inverse map must remove residual variables and the substitution is not one-to-one. The sign-change restriction in [[Ses48c_Lecture_Notes.pdf#page=2|48c, property 7]] applies to that inverse-branch setting; [[Ses49c_Lecture_Notes.pdf|49c]] discusses this distinction.
 <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -661,25 +611,25 @@ You do not need to find an antiderivative of \(\sin(t^3)\) first. If the substit
 - [[Exercise049_Problems.pdf|Exercise 49]] · [[Exercise049_Solutions.pdf|解答]]
 
 > [!example]- Exercise 49：换元时同步更换积分限
-> (a) 令 (u=3x+4)，则 (du=3dx)，且 (x=0,4) 对应 (u=4,16)：
+> (a) 令 $u=3x+4$，则 $du=3dx$，且 $x=0,4$ 对应 $u=4,16$：
 > $$
 > \int_0^4\sqrt{3x+4}\,dx
 > =\frac13\int_4^{16}u^{1/2}du
 > =\frac29[u^{3/2}]_4^{16}
 > =\boxed{\frac{112}{9}}.
 > $$
-> (b) 令 (u=x^2+1)，(du=2x\,dx)，积分限 (2\to10)：
+> (b) 令 $u=x^2+1$，$du=2x\,dx$，积分限 $2\to10$：
 > $$
 > \int_1^3\frac{x}{x^2+1}dx
 > =\frac12\int_2^{10}\frac{du}{u}
 > =\boxed{\frac12\ln5}.
 > $$
-> (c) 令 (u=\sin x)，(du=\cos x\,dx)，积分限 (0\to1)：
+> (c) 令 $u=\sin x$，$du=\cos x\,dx$，积分限 $0\to1$：
 > $$
 > \int_0^{\pi/2}\sin^5x\cos x\,dx
 > =\int_0^1u^5du=\boxed{\frac16}.
 > $$
-> 一旦换成 (u) 的积分限，最后就不再代回 (x)；两套端点不可混用。
+> 一旦换成 $u$ 的积分限，最后就不再代回 $x$；两套端点不可混用。
 > <!-- bilingual-en:start -->
 > **(a)** Let $u=3x+4$, so $du=3dx$, and $x=0,4$ correspond to $u=4,16$:
 > $$
@@ -703,29 +653,29 @@ You do not need to find an antiderivative of \(\sin(t^3)\) first. If the substit
 > <!-- bilingual-en:end -->
 
 > [!question]- 三问自检
-> 1. \(d/dx\int_x^0f(t)dt\)？2. \(d/dx\int_x^{x^2}e^{t^2}dt\)？3. 内层导数为何不能漏？
+> 1. 换元后端点用哪一变量？2. $u'$ 变号是否一定分段？3. 如何从 $e^x\ge1$ 得到 $e^b\ge1+b$？
 >
-> 答：\(-f(x)\)；\(2xe^{x^4}-e^{x^2}\)；因为上限移动速度不一定为 1。
+> 答：新变量；完整复合导数型无需，需逆映射时检查分支；在 $[0,b]$（$b\ge0$）积分并用 FTC I。
 > <!-- bilingual-en:start -->
 >
 > &nbsp;
-> **1.** What is $d/dx\int_x^0f(t)dt$?<br>
-> **2.** What is $d/dx\int_x^{x^2}e^{t^2}dt$?<br>
-> **3.** Why must the derivative of the inner limit be included?<br>
+> **1.** Which variable determines the limits after substitution?<br>
+> **2.** Must an integral be split whenever $u'$ changes sign?<br>
+> **3.** How does $e^x\ge1$ give $e^b\ge1+b$?<br>
 >
-> Answer: $-f(x)$; $2xe^{x^4}-e^{x^2}$; because an integration limit need not move at unit speed.
+> Answer: The new variable; no for an exact composite derivative, but check branches when using an inverse; integrate on $[0,b]$ with $b\ge0$ and apply FTC I.
 > <!-- bilingual-en:end -->
 
 ## Session 50：FTC and MVT
 
-### [[定积分与微积分基本定理#平均值、净变化与单位|积分平均值]]定理及证明
+### [[积分中值定理]]及证明
 <!-- bilingual-en:start -->
-*The [[定积分与微积分基本定理#平均值、净变化与单位|mean value theorem for integrals]] and its proof*
+*The [[积分中值定理|mean value theorem for integrals]] and its proof*
 <!-- bilingual-en:end -->
 
-若 \(f\) 在 \([a,b]\) 连续，令 \(F(x)=\int_a^xf(t)dt\)。FTC 给出 \(F'=f\)。对 \(F\) 用普通平均值定理，存在 \(c\in(a,b)\)：
+沿本节官方顺序，先给定连续可导的 $F$，令 $f=F'$，且 $a<b$。FTC I 给出 $F(b)-F(a)=\int_a^bf(x)dx$。对 $F$ 用普通平均值定理，存在 $c\in(a,b)$：
 <!-- bilingual-en:start -->
-If \(f\) is continuous on \([a,b]\), let \(F(x)=\int_a^xf(t)dt\). The FTC gives \(F'=f\). Applying the ordinary mean value theorem to \(F\), there is some \(c\in(a,b)\) such that
+Following the official sequence, start with a continuously differentiable $F$, set $f=F'$, and assume $a<b$. FTC I gives $F(b)-F(a)=\int_a^bf(x)dx$. Applying the ordinary mean value theorem to $F$, there is some $c\in(a,b)$ such that
 <!-- bilingual-en:end -->
 
 $$
@@ -741,6 +691,11 @@ $$
 \boxed{\int_a^bf(x)dx=f(c)(b-a)}.
 $$
 
+因此 $f(c)$ 是[[积分平均值]]。若只给定连续 $f$，Session 51 的 FTC II 会构造原函数，使上述证明适用于任意连续被积函数；也可直接由积分保序性和介值定理证明。
+<!-- bilingual-en:start -->
+Thus $f(c)$ is the [[积分平均值|integral average]]. For an arbitrary continuous $f$, FTC II in Session 51 constructs an antiderivative and extends this proof to every continuous integrand; an alternative proof uses order preservation and the intermediate value theorem.
+<!-- bilingual-en:end -->
+
 若 \(m\le f\le M\)，积分保持不等式给出
 <!-- bilingual-en:start -->
 If \(m\le f\le M\), monotonicity of the integral gives
@@ -749,6 +704,8 @@ If \(m\le f\le M\), monotonicity of the integral gives
 $$
 m(b-a)\le\int_a^bf\le M(b-a).
 $$
+
+![[积分上下界估计]]
 
 ### 本地材料
 
@@ -816,11 +773,11 @@ $$
 > ![[PSet04_Solutions.pdf#height=650]]
 
 > [!example]- 3B 2a、2b：把有限和写成 \(\Sigma\)
-> 2a 的各项为 (3,-5,7,-9,11,-13)。第 (n) 项的绝对值是 (2n+1)，符号由 ((-1)^{n+1}) 控制，因此
+> 2a 的各项为 $3,-5,7,-9,11,-13$。第 $n$ 项的绝对值是 $2n+1$，符号由 $(-1)^{n+1}$ 控制，因此
 > $$
 > \boxed{\sum_{n=1}^{6}(-1)^{n+1}(2n+1)}.
 > $$
-> 2b 是倒数平方和，首项 (1)、末项 (1/n^2)，故
+> 2b 是倒数平方和，首项 $1$、末项 $1/n^2$，故
 > $$
 > \boxed{\sum_{k=1}^{n}\frac1{k^2}}.
 > $$
@@ -838,17 +795,17 @@ $$
 > <!-- bilingual-en:end -->
 
 > [!example]- 3B 3b、4a：上下和及其误差
-> 对 (f(x)=x^2) 在 ([-1,3]) 作四等分，(Delta x=1)，节点为 (-1,0,1,2,3)。逐段比较可得
+> 对 $f(x)=x^2$ 在 $[-1,3]$ 作四等分，$\Delta x=1$，节点为 $-1,0,1,2,3$。逐段比较可得
 > $$
 > L_4=1+0+1+4=\boxed{6},
 > \qquad
 > R_4=0+1+4+9=\boxed{14}.
 > $$
-> 因 (x^2) 在 ([-1,0]) 递减、在 ([0,3]) 递增，各段取最大、最小值后
+> 因 $x^2$ 在 $[-1,0]$ 递减、在 $[0,3]$ 递增，各段取最大、最小值后
 > $$
 > \boxed{U_4=15},\qquad \boxed{D_4=5}.
 > $$
-> 对 4a，(x^2) 在 ([0,b]) 单调递增（(b>0)）。每一小段的上、下矩形高度分别是右、左端点值，故望远镜相消：
+> 对 4a，$x^2$ 在 $[0,b]$ 单调递增（$b>0$）。每一小段的上、下矩形高度分别是右、左端点值，故望远镜相消：
 > $$
 > U_n-L_n
 > =\frac bn\sum_{i=1}^n
@@ -885,20 +842,20 @@ $$
 > \frac1n\sum_{i=1}^{n}\sin\frac{ib}{n}
 > =\frac1b\sum_{i=1}^{n}\sin\frac{ib}{n}\frac bn.
 > $$
-> 右边是 ([0,b]) 上 (sin x) 的右端点和再乘 (1/b)，因此（(b\ne0)）
+> 若 $b>0$，右边是 $[0,b]$ 上 $\sin x$ 的右端点和再乘 $1/b$；若 $b<0$，按从 $0$ 到 $b$ 的方向解释为有向和式。因此（$b\ne0$）
 > $$
 > \lim_{n\to\infty}\frac1n\sum_{i=1}^{n}\sin\frac{ib}{n}
 > =\frac1b\int_0^b\sin x\,dx
 > =\boxed{\frac{1-\cos b}{b}}.
 > $$
-> (b=0) 时原和每项均为零；右侧的连续延拓也趋于 (0)。
+> $b=0$ 时原和每项均为零；右侧的连续延拓也趋于 $0$。
 > <!-- bilingual-en:start -->
 > The expression is
 > $$
 > \frac1n\sum_{i=1}^{n}\sin\frac{ib}{n}
 > =\frac1b\sum_{i=1}^{n}\sin\frac{ib}{n}\frac bn.
 > $$
-> The sum on the right is the right-endpoint sum for $\sin x$ on $[0,b]$, multiplied by $1/b$. Therefore, for $b\ne0$,
+> For $b>0$, the sum on the right is the right-endpoint sum for $\sin x$ on $[0,b]$, multiplied by $1/b$. For $b<0$, interpret it as an oriented sum from $0$ to $b$. Therefore, for $b\ne0$,
 > $$
 > \lim_{n\to\infty}\frac1n\sum_{i=1}^{n}\sin\frac{ib}{n}
 > =\frac1b\int_0^b\sin x\,dx
@@ -908,25 +865,25 @@ $$
 > <!-- bilingual-en:end -->
 
 > [!example]- 3C 1、2a、3a、5a：FTC 与换元
-> 1. 令 (u=x-2)，端点 (3,6) 变为 (1,4)：
+> 1. 令 $u=x-2$，端点 $3,6$ 变为 $1,4$：
 >    $$
 >    \int_3^6\frac{dx}{\sqrt{x-2}}
 >    =\int_1^4u^{-1/2}du
 >    =[2\sqrt u]_1^4=\boxed{2}.
 >    $$
-> 2a. 令 (u=3x+5)，(du=3dx)，端点 (5,11)：
+> 2a. 令 $u=3x+5$，$du=3dx$，端点 $5,11$：
 >    $$
 >    \int_0^2\sqrt{3x+5}\,dx
 >    =\frac13\int_5^{11}u^{1/2}du
 >    =\boxed{\frac29\left(11^{3/2}-5^{3/2}\right)}.
 >    $$
-> 3a. 令 (u=x^2+1)，(du=2x\,dx)，端点 (2,5)：
+> 3a. 令 $u=x^2+1$，$du=2x\,dx$，端点 $2,5$：
 >    $$
 >    \int_1^2\frac{x}{x^2+1}dx
 >    =\frac12\int_2^5\frac{du}{u}
 >    =\boxed{\frac12\ln\frac52}.
 >    $$
-> 5a. 一拱 (sin x) 位于 ([0,\pi]) 且非负，所以几何面积就是
+> 5a. 一拱 $\sin x$ 位于 $[0,\pi]$ 且非负，所以几何面积就是
 >    $$
 >    \int_0^\pi\sin x\,dx=[-\cos x]_0^\pi=\boxed{2}.
 >    $$
@@ -958,15 +915,15 @@ $$
 > <!-- bilingual-en:end -->
 
 > [!example]- 3E 6b、6c：不用求原函数的严格比较
-> 6b. 在 ([0,\pi]) 上 (0\le\sin x\le1)，所以
+> 6b. 在 $[0,\pi]$ 上 $0\le\sin x\le1$，所以
 > $$
 > \sin^2x\le\sin x,
 > $$
-> 且除端点和 (x=\pi/2) 外严格小于。积分保持不等式，故
+> 且除端点和 $x=\pi/2$ 外严格小于。积分保持不等式，故
 > $$
 > \boxed{\int_0^\pi\sin^2x\,dx<\int_0^\pi\sin x\,dx=2}.
 > $$
-> 6c. 对 (x\in[10,20])，(sqrt{x^2+1}>x)，因此
+> 6c. 对 $x\in[10,20]$，$\sqrt{x^2+1}>x$，因此
 > $$
 > \boxed{\int_{10}^{20}\sqrt{x^2+1}\,dx>
 > \int_{10}^{20}x\,dx
@@ -990,12 +947,12 @@ $$
 > <!-- bilingual-en:end -->
 
 > [!example]- 4J 1、2：从“密度 × 小量”建立积分
-> 1. 圆柱形孔直径 (1)，截面积为 (pi(1/2)^2=pi/4)。以 (y) 表示水被提升的距离，厚度 (dy) 的水层体积为 ((\pi/4)dy)，若单位体积提升单位距离需能量 (k)，则题目要求的“只列式”为
+> 1. 圆柱形孔直径 $1$，截面积为 $\pi(1/2)^2=\pi/4$。以 $y$ 表示水被提升的距离，厚度 $dy$ 的水层体积为 $(\pi/4)dy$，若单位体积提升单位距离需能量 $k$，则题目要求的“只列式”为
 >    $$
 >    \boxed{E=\frac{\pi k}{4}\int_0^{100}y\,dy}.
 >    $$
->    因素 (y) 不能漏，它表示不同深度的水提升距离不同。
-> 2. 初始放射性物质量为 (x_0)，时刻 (t) 剩余 (x_0e^{-kt})，每单位物质的计数率为 (r)。一分钟内的计数率是 (rx_0e^{-kt})，故一小时（(0\le t\le60)）总计数为
+>    因素 $y$ 不能漏，它表示不同深度的水提升距离不同；见[[功的积分]]。
+> 2. 初始放射性物质量为 $x_0$，时刻 $t$ 剩余 $x_0e^{-kt}$（$k>0$），每单位物质的计数率为 $r$。瞬时计数率是 $rx_0e^{-kt}$，故一小时（$0\le t\le60$，$t$ 以分钟计）总计数为
 >    $$
 >    R=\int_0^{60}rx_0e^{-kt}dt
 >    =\boxed{\frac{rx_0}{k}\left(1-e^{-60k}\right)}.
@@ -1007,8 +964,8 @@ $$
 > $$
 > \boxed{E=\frac{\pi k}{4}\int_0^{100}y\,dy}.
 > $$
-> The factor $y$ is essential because water at different depths travels different distances.
-> **2.** If the initial amount of radioactive material is $x_0$, the amount remaining at time $t$ is $x_0e^{-kt}$. If the count rate per unit amount is $r$, the instantaneous count rate is $rx_0e^{-kt}$. The total count over one hour, $0\le t\le60$, is<br>
+> The factor $y$ is essential because water at different depths travels different distances; see [[功的积分|work as an integral]].
+> **2.** If the initial amount of radioactive material is $x_0$, the amount remaining at time $t$ is $x_0e^{-kt}$ with $k>0$. If the count rate per unit amount is $r$, the instantaneous count rate is $rx_0e^{-kt}$. The total count over one hour, $0\le t\le60$ with $t$ in minutes, is<br>
 > $$
 > R=\int_0^{60}rx_0e^{-kt}dt
 > =\boxed{\frac{rx_0}{k}\left(1-e^{-60k}\right)}.
@@ -1021,22 +978,83 @@ $$
 
 ## Session 51：The Second Fundamental Theorem
 
-> [!important] FTC II
-> 若 \(f\) 连续且 \(F'=f\)，则
+定义[[累积函数]]
+<!-- bilingual-en:start -->
+Define the [[累积函数|accumulation function]]
+<!-- bilingual-en:end -->
+
+$$
+F(x)=\int_a^xf(t)dt.
+$$
+
+上限从 \(x\) 移到 \(x+h\) 时，
+<!-- bilingual-en:start -->
+When the upper limit is moved from \(x\) to \(x+h\),
+<!-- bilingual-en:end -->
+
+$$
+F(x+h)-F(x)=\int_x^{x+h}f(t)dt.
+$$
+
+连续性使小条面积近似 \(f(x)h\)，因此差商近似 \(f(x)\)。本课第二基本定理是：
+<!-- bilingual-en:start -->
+Continuity makes the area of the narrow strip approximately $f(x)h$, so the difference quotient is approximately $f(x)$. This is the course's second Fundamental Theorem:
+<!-- bilingual-en:end -->
+
+> [!important] [[积分求导定理]]（MIT FTC II）
+> 若 $f$ 在包含 $a$ 与 $x$ 的整个闭区间上可积，且在内点 $x$ 连续，则 $F(x)=\int_a^xf(t)dt$ 满足
 > $$
-> \boxed{\int_a^bf(x)dx=F(b)-F(a)}.
+> \boxed{F'(x)=f(x)}.
 > $$
+> 本课采用更方便的充分条件：$f$ 在所讨论的整个区间连续；端点只取相应单侧导数。
 > <!-- bilingual-en:start -->
-> If $f$ is continuous and $F'=f$, then
-> $$
-> \boxed{\int_a^bf(x)dx=F(b)-F(a)}.
-> $$
+> If $f$ is integrable on the entire closed interval containing $a$ and $x$, and is continuous at the interior point $x$, then $F(x)=\int_a^xf(t)dt$ satisfies $F'(x)=f(x)$. The course uses the simpler sufficient condition that $f$ is continuous throughout the interval. At endpoints, use the appropriate one-sided derivative.
 > <!-- bilingual-en:end -->
 
-使用流程：找原函数 → 写 \([F]_a^b\) → 上限值减下限值 → 检查符号与单位。定积分不写 \(+C\)，因为常数在端点差中抵消。
+这里的 $t$ 是哑变量，$x$ 是函数输入；$F(a)=0$。因此积分为每个连续 $f$ 构造一个满足 $F'=f$ 的[[原函数]]，无需先知道它的初等表达式。
 <!-- bilingual-en:start -->
-Use this procedure: find an antiderivative → write \([F]_a^b\) → subtract the lower-endpoint value from the upper-endpoint value → check the sign and units. Do not append \(+C\) to a definite integral, because constants cancel in the endpoint difference.
+Here $t$ is a dummy variable and $x$ is the function input; $F(a)=0$. The integral therefore constructs an [[原函数|antiderivative]] of every continuous $f$ without requiring an elementary expression in advance.
 <!-- bilingual-en:end -->
+
+![[98_attachment/MIT18.01SC/unit03-ftc-accumulator.png|819]]
+
+![[积分求导定理]]
+
+### 变限积分与链式法则
+<!-- bilingual-en:start -->
+*Variable limits and the chain rule*
+<!-- bilingual-en:end -->
+
+若 $f$ 在相关范围连续、$g$ 可导，令 $G(x)=\int_a^{g(x)}f(t)dt$、$H(u)=\int_a^uf(t)dt$，则 $G=H\circ g$。FTC II 与[[链式法则]]给出
+<!-- bilingual-en:start -->
+If $f$ is continuous on the relevant range and $g$ is differentiable, set $G(x)=\int_a^{g(x)}f(t)dt$ and $H(u)=\int_a^uf(t)dt$. Then $G=H\circ g$, so FTC II and the [[链式法则|chain rule]] give
+<!-- bilingual-en:end -->
+
+$$
+\boxed{G'(x)=f(g(x))g'(x)}.
+$$
+
+上下限都可导时：
+<!-- bilingual-en:start -->
+When both limits are differentiable:
+<!-- bilingual-en:end -->
+
+$$
+\frac d{dx}\int_{u(x)}^{v(x)}f(t)dt
+=f(v(x))v'(x)-f(u(x))u'(x).
+$$
+
+例：无需先求 $\sin(t^3)$ 的原函数，就有
+<!-- bilingual-en:start -->
+For example, without first finding an antiderivative of $\sin(t^3)$,
+<!-- bilingual-en:end -->
+
+$$
+\frac d{dx}\int_0^{x^2}\sin(t^3)dt
+=2x\sin(x^6).
+$$
+
+![[变限积分求导]]
 
 ### 本地材料
 
@@ -1044,22 +1062,113 @@ Use this procedure: find an antiderivative → write \([F]_a^b\) → subtract th
 - [[Ses51b_Lecture_Notes.pdf|51b Using Second FTC]]
 
 > [!question]- 三问自检
-> 1. 为什么无 \(+C\)？2. \(\int_1^3(2x+1)dx\)？3. 原函数不唯一为何结果唯一？
+> 1. 为什么积分变量写 $t$？2. $f<0$ 时累积函数怎样？3. $F(a)$？
 >
-> 答：常数抵消；\(10\)；任意两原函数只差常数。
+> 答：$t$ 是哑变量；$F$ 递减；$F(a)=0$。
 > <!-- bilingual-en:start -->
 >
 > &nbsp;
-> **1.** Why is there no \(+C\)?<br>
-> **2.** Evaluate \(\int_1^3(2x+1)dx\).<br>
-> **3.** Antiderivatives are not unique, so why is the definite integral unique?<br>
+> **1.** Why is the integration variable written as $t$?<br>
+> **2.** What happens to $F$ when $f<0$?<br>
+> **3.** What is $F(a)$?<br>
 >
-> Answer: The constant cancels; the value is \(10\); any two antiderivatives differ only by a constant.
+> Answer: $t$ is a dummy variable; $F$ decreases; $F(a)=0$.
 > <!-- bilingual-en:end -->
 
-## Session 52：[[定积分与微积分基本定理#两个基本定理怎样把导数与积分接起来|微积分基本定理证明]]
+> [!question]- 变限求导自检
+> 假设 $f$ 连续：1. $\frac d{dx}\int_x^0f(t)dt$？2. $\frac d{dx}\int_x^{x^2}e^{t^2}dt$？3. 内层导数为何不能漏？
+>
+> 答：$-f(x)$；$2xe^{x^4}-e^{x^2}$；因为上限移动速度不一定为 $1$。
+> <!-- bilingual-en:start -->
+> Assume $f$ is continuous.
+>
+> &nbsp;
+> **1.** What is $\frac d{dx}\int_x^0f(t)dt$?<br>
+> **2.** What is $\frac d{dx}\int_x^{x^2}e^{t^2}dt$?<br>
+> **3.** Why must the derivative of the inner limit be included?<br>
+>
+> Answer: $-f(x)$; $2xe^{x^4}-e^{x^2}$; because an integration limit need not move at unit speed.
+> <!-- bilingual-en:end -->
+
+## Session 52：微积分基本定理证明
 <!-- bilingual-en:start -->
-*Session 52: [[定积分与微积分基本定理#两个基本定理怎样把导数与积分接起来|Proof of the Fundamental Theorem of Calculus]]*
+*Session 52: Proofs of the Fundamental Theorem of Calculus*
+<!-- bilingual-en:end -->
+
+### FTC II 的逐步证明：累积求导
+<!-- bilingual-en:start -->
+*Step-by-step proof of FTC II: differentiating accumulation*
+<!-- bilingual-en:end -->
+
+沿用 Session 51 的 $F(x)=\int_a^xf(t)dt$ 和连续性条件，目标：
+<!-- bilingual-en:start -->
+Use $F(x)=\int_a^xf(t)dt$ and the continuity assumptions from Session 51. The goal is
+<!-- bilingual-en:end -->
+
+$$
+\lim_{h\to0}\frac{F(x+h)-F(x)}h=f(x).
+$$
+
+由积分可加性，
+<!-- bilingual-en:start -->
+By integral additivity,
+<!-- bilingual-en:end -->
+
+$$
+\frac{F(x+h)-F(x)}h
+=\frac1h\int_x^{x+h}f(t)dt.
+$$
+
+减去目标值并把常数写入积分：
+<!-- bilingual-en:start -->
+Subtract the target value and place the constant inside the integral:
+<!-- bilingual-en:end -->
+
+$$
+\frac{F(x+h)-F(x)}h-f(x)
+=\frac1h\int_x^{x+h}[f(t)-f(x)]dt.
+$$
+
+给定 \(\varepsilon>0\)。连续性保证存在 \(\delta>0\)，当 \(|t-x|<\delta\) 时，
+\(|f(t)-f(x)|<\varepsilon\)。若 \(0<|h|<\delta\)，则
+<!-- bilingual-en:start -->
+Given \(\varepsilon>0\), continuity provides a \(\delta>0\) such that \(|f(t)-f(x)|<\varepsilon\) whenever \(|t-x|<\delta\). If \(0<|h|<\delta\), then
+<!-- bilingual-en:end -->
+
+$$
+\left|
+\frac{F(x+h)-F(x)}h-f(x)
+\right|
+\le\frac1{|h|}\varepsilon|h|=\varepsilon.
+$$
+
+故差商极限为 \(f(x)\)。证明没有假设 \(f\ge0\)，因此负被积函数同样成立。
+<!-- bilingual-en:start -->
+Thus the difference quotient tends to \(f(x)\). The proof never assumes \(f\ge0\), so it applies equally when the integrand is negative.
+<!-- bilingual-en:end -->
+
+**知识链：**连续性控制小区间内高度变化，区间长度正好约掉差商分母。这个估计补全了 [[Ses52a_Lecture_Notes.pdf|52a]] 的窄条面积论证。
+<!-- bilingual-en:start -->
+**Knowledge chain:** continuity controls variation on a short interval, while its length cancels the difference-quotient denominator. This estimate makes the thin-strip argument in [[Ses52a_Lecture_Notes.pdf|52a]] precise.
+<!-- bilingual-en:end -->
+
+> [!question]- 累积求导自检
+> 1. FTC II 证明中连续性控制哪一个量？2. 证明为何也覆盖 $h<0$？3. $\frac d{dx}\int_2^xf(t)dt$ 是什么？
+>
+> 答：控制 $|f(t)-f(x)|$；估计使用 $|h|$，反向积分的符号也包含在等式中；结果为 $f(x)$。
+> <!-- bilingual-en:start -->
+>
+> &nbsp;
+> **1.** Which quantity does continuity control in the proof of FTC II?<br>
+> **2.** Why does the proof also cover $h<0$?<br>
+> **3.** What is $\frac d{dx}\int_2^xf(t)dt$?<br>
+>
+> Answer: $|f(t)-f(x)|$; the bound uses $|h|$ and the oriented integral accounts for reversal; the result is $f(x)$.
+> <!-- bilingual-en:end -->
+
+### FTC I 的证明：原函数只差常数
+<!-- bilingual-en:start -->
+*Proof of FTC I: antiderivatives differ by a constant*
 <!-- bilingual-en:end -->
 
 令
@@ -1071,9 +1180,9 @@ $$
 A(x)=\int_a^xf(t)dt.
 $$
 
-FTC I 给出 \(A'=f\)。若 \(F'=f\)，则
+FTC II 给出 \(A'=f\)。若 \(F'=f\)，则
 <!-- bilingual-en:start -->
-FTC I gives \(A'=f\). If \(F'=f\), then
+FTC II gives \(A'=f\). If \(F'=f\), then
 <!-- bilingual-en:end -->
 
 $$
@@ -1112,9 +1221,9 @@ $$
 - [[Ses52a_Lecture_Notes.pdf|52a Proof of Second FTC]]
 - [[Ses52b_Lecture_Notes.pdf|52b Proof of First FTC]]
 
-**知识链：**FTC I 造出一个原函数；MVT 说明所有原函数只差常数；因此端点差就是累计量。
+**知识链：**[[积分求导定理|FTC II]] 造出一个原函数；MVT 说明[[原函数相差常数|所有原函数只差常数]]；因此端点差就是累计量，即[[Newton-Leibniz公式|FTC I]]。
 <!-- bilingual-en:start -->
-**Conceptual chain:** FTC I constructs an antiderivative; MVT shows that any two antiderivatives differ only by a constant; therefore, their endpoint difference gives the accumulated quantity.
+**Conceptual chain:** [[积分求导定理|FTC II]] constructs an antiderivative; MVT shows that [[原函数相差常数|antiderivatives differ only by a constant]]; therefore, their endpoint difference gives the accumulated quantity, which is [[Newton-Leibniz公式|FTC I]].
 <!-- bilingual-en:end -->
 
 > [!question]- 三问自检
@@ -1142,6 +1251,8 @@ $$
 E(x)=\int_0^xe^{-t^2}dt,
 \qquad E'(x)=e^{-x^2}.
 $$
+
+![[无初等原函数的积分]]
 
 对 \(x>0\) 定义
 <!-- bilingual-en:start -->
@@ -1205,10 +1316,17 @@ $$
 \boxed{L(xy)=L(x)+L(y)}.
 $$
 
-又因 \(L'(x)=1/x>0\)，\(L\) 严格递增并有反函数；这个反函数就是 \(e^x\)。
+又因 $L'(x)=1/x>0$，$L$ 严格递增。乘法性质给出 $L(2^n)=nL(2)\to\infty$ 与 $L(2^{-n})=-nL(2)\to-\infty$，其中 $L(2)>0$。结合连续性和介值定理，$L$ 的值域才可确定为整个 $\mathbb R$，故反函数定义在整个实轴上。
 <!-- bilingual-en:start -->
-Because \(L'(x)=1/x>0\), \(L\) is strictly increasing and therefore invertible; its inverse is \(e^x\).
+Since $L'(x)=1/x>0$, $L$ is strictly increasing. The product rule gives $L(2^n)=nL(2)\to\infty$ and $L(2^{-n})=-nL(2)\to-\infty$, with $L(2)>0$. Continuity and the intermediate value theorem then establish that its range is all of $\mathbb R$, so its inverse is defined on the whole real line.
 <!-- bilingual-en:end -->
+
+这也与已建立的[[自然对数]]对象一致：$(L-\ln)'=1/x-1/x=0$，而 $L(1)=\ln1=0$，由[[原函数相差常数]]得 $L(x)=\ln x$。所以反函数正是[[自然指数函数|$e^x$]]，这里证明的是同一个对数的[[自然对数积分表示|积分表示]]。
+<!-- bilingual-en:start -->
+This agrees with the established [[自然对数|natural logarithm]]: $(L-\ln)'=0$ and $L(1)=\ln1=0$, so [[原函数相差常数|uniqueness of antiderivatives up to a constant]] gives $L(x)=\ln x$. Its inverse is therefore the [[自然指数函数|natural exponential function]], and the result establishes the [[自然对数积分表示|integral representation of that same logarithm]].
+<!-- bilingual-en:end -->
+
+![[自然对数积分表示]]
 
 ### 本地材料
 
@@ -1217,7 +1335,7 @@ Because \(L'(x)=1/x>0\), \(L\) is strictly increasing and therefore invertible; 
 - [[Exercise054_Problems.pdf|Exercise 54]] · [[Exercise054_Solutions.pdf|解答]]
 
 > [!example]- Exercise 54：面积形式的幂法则
-> 设 (x>1)、(a>0)。题目要证明
+> 设 $x>1$、$a>0$。题目要证明
 > $$
 > a\int_{1/x}^{1}\frac{dt}{t}
 > =\int_{(1/x)^a}^{1}\frac{dt}{t}.
@@ -1230,11 +1348,11 @@ Because \(L'(x)=1/x>0\), \(L\) is strictly increasing and therefore invertible; 
 > $$
 > [\ln t]_{x^{-a}}^{1}=0-\ln(x^{-a})=a\ln x.
 > $$
-> 因而两边相等。几何上，从 (x^{-a}) 到 (1) 的 (1/t) 曲线下面积是从 (x^{-1}) 到 (1) 面积的 (a) 倍。固定 (x>1) 并令 (a\to\infty)，下限 (x^{-a}\to0^+)，右侧面积 (a\ln x\to\infty)；这也说明
+> 因而两边相等。几何上，从 $x^{-a}$ 到 $1$ 的 $1/t$ 曲线下面积是从 $x^{-1}$ 到 $1$ 面积的 $a$ 倍。固定 $x>1$ 并令 $a\to\infty$，下限 $x^{-a}\to0^+$，右侧面积 $a\ln x\to\infty$；这也说明
 > $$
 > \int_{0}^{1}\frac{dt}{t}
 > $$
-> 在 (0) 附近发散。
+> 这一[[反常积分]]在 $0$ 附近发散。
 > <!-- bilingual-en:start -->
 > Let $x>1$ and $a>0$. The claim is
 > $$
@@ -1253,7 +1371,7 @@ Because \(L'(x)=1/x>0\), \(L\) is strictly increasing and therefore invertible; 
 > $$
 > \int_{0}^{1}\frac{dt}{t}
 > $$
-> diverges near $0$.
+> is an [[反常积分|improper integral]] that diverges near $0$.
 > <!-- bilingual-en:end -->
 
 > [!question]- 三问自检
@@ -1281,9 +1399,9 @@ $$
 F(x)=\int_a^xf(t)dt,
 $$
 
-则 \(F'=f\)、\(F''=f'\)。因此从 \(f\) 的图像直接判断 \(F\)：
+若 $f$ 在所讨论的整个区间连续，则 $F'=f$；在 $f$ 还可导的点，才有 $F''=f'$。在这些条件下，可从 $f$ 的图像直接判断 $F$：
 <!-- bilingual-en:start -->
-Then $F'=f$ and $F''=f'$. The graph of $f$ therefore lets us read the following features of $F$ directly:
+If $f$ is continuous throughout the interval, then $F'=f$; at points where $f$ is also differentiable, $F''=f'$. Under these assumptions, the graph of $f$ lets us read the following features of $F$ directly:
 <!-- bilingual-en:end -->
 
 - \(f>0\)：\(F\) 递增；
@@ -1297,9 +1415,11 @@ Then $F'=f$ and $F''=f'$. The graph of $f$ therefore lets us read the following 
 - \(f'>0\): \(F\) is concave up.
 <!-- bilingual-en:end -->
 
-标准正态累计函数
+![[累积函数图像]]
+
+标准正态[[累积分布函数|累计函数]]
 <!-- bilingual-en:start -->
-The standard normal cumulative distribution function
+The standard normal [[累积分布函数|cumulative distribution function]]
 <!-- bilingual-en:end -->
 
 $$
@@ -1326,21 +1446,21 @@ is another example of constructing a new function from an existing one.
 > \end{cases}
 > \qquad \lambda>0.
 > $$
-> 原函数在正半轴上为 (-e^{-\lambda x})。因此：
+> 原函数在正半轴上为 $-e^{-\lambda x}$。因此：
 >
-> - 若 (b\ge a>0)，
+> - 若 $b\ge a>0$，
 >   $$
 >   \int_a^bf(x)dx=[-e^{-\lambda x}]_a^b
 >   =\boxed{e^{-\lambda a}-e^{-\lambda b}}.
 >   $$
-> - 若 (a\le0<b)，负半轴贡献为零，
+> - 若 $a\le0<b$，负半轴贡献为零，
 >   $$
 >   \int_a^bf(x)dx=\int_0^b\lambda e^{-\lambda x}dx
 >   =\boxed{1-e^{-\lambda b}}.
 >   $$
 > - 若 \(a\le b\le0\)，则 \(\boxed{\int_a^bf(x)dx=0}\)。
 >
-> 三种情形必须由 (0) 是否落在积分区间内决定；不能跨过分段点仍套同一个原函数。
+> 三种情形必须由 $0$ 是否落在积分区间内决定；不能跨过分段点仍套同一个原函数。
 > <!-- bilingual-en:start -->
 > Let
 > $$
@@ -1383,9 +1503,9 @@ is another example of constructing a new function from an existing one.
 
 ## Session 56：Geometric Interpretation
 
-若 \(f\ge g\)，两曲线面积为
+若 $a<b$，$f,g$ 在 $[a,b]$ 连续且 $f\ge g$，[[曲线间面积|两曲线面积]]为
 <!-- bilingual-en:start -->
-If \(f\ge g\), the area between the two curves is
+If $a<b$, $f,g$ are continuous on $[a,b]$, and $f\ge g$, the [[曲线间面积|area between the curves]] is
 <!-- bilingual-en:end -->
 
 $$
@@ -1420,8 +1540,8 @@ Choose \(dx\) or \(dy\) to minimise inverse solving, piecewise cases, and absolu
 > y=\frac12x^2-\frac12,
 > \qquad y=x^4-1.
 > $$
-> 令二者相等：(2x^4-x^2-1=0)。设 (u=x^2)，则
-> ((2u+1)(u-1)=0)，实交点为 (x=\pm1)。在 (x=0) 处，上曲线是 (-1/2)，下曲线是 (-1)，所以
+> 令二者相等：$2x^4-x^2-1=0$。设 $u=x^2$，则
+> $(2u+1)(u-1)=0$，实交点为 $x=\pm1$。在 $x=0$ 处，上曲线是 $-1/2$，下曲线是 $-1$，所以
 > $$
 > \begin{aligned}
 > A
@@ -1431,7 +1551,7 @@ Choose \(dx\) or \(dy\) to minimise inverse solving, piecewise cases, and absolu
 > =\boxed{\frac{14}{15}}.
 > \end{aligned}
 > $$
-> 被积函数在 ([-1,1]) 非负；偶对称使计算减半。
+> 被积函数在 $[-1,1]$ 非负；偶对称使计算减半。
 > <!-- bilingual-en:start -->
 > The curves are
 > $$
@@ -1468,32 +1588,37 @@ Choose \(dx\) or \(dy\) to minimise inverse solving, piecewise cases, and absolu
 
 ## Session 57：How to Calculate Volumes
 
-[[定积分与微积分基本定理#积分应用的建模顺序|旋转体]]及一般切片体积都从截面积开始。若截面积为 \(A(x)\)，
+旋转体及一般[[切片体积]]都从截面积开始。若 $a<b$，非负截面积 $A(x)$ 在 $[a,b]$ 可积，
 <!-- bilingual-en:start -->
-Both [[定积分与微积分基本定理#积分应用的建模顺序|solids of revolution]] and general slicing methods begin with cross-sectional area. If the cross-sectional area is \(A(x)\),
+Solids of revolution and general [[切片体积|volumes by slicing]] begin with cross-sectional area. If $a<b$ and the nonnegative cross-sectional area $A(x)$ is integrable on $[a,b]$,
 <!-- bilingual-en:end -->
 
 $$
 \boxed{V=\int_a^bA(x)dx}.
 $$
 
-圆盘/垫圈法：
+[[圆盘垫圈法]]：$R(x)\ge r(x)\ge0$ 都是到旋转轴的距离；截面若实心则 $r=0$。
 <!-- bilingual-en:start -->
-Disk/washer method:
+[[圆盘垫圈法|Disk/washer method]]: $R(x)\ge r(x)\ge0$ are distances from the axis; a filled cross-section has $r=0$.
 <!-- bilingual-en:end -->
 
 $$
 V=\pi\int_a^b[R(x)^2-r(x)^2]dx.
 $$
 
-圆柱壳法：
+[[圆柱壳法]]：绕竖直轴 $x=c$ 时，壳半径是非负距离 $\rho=|x-c|$。先按半径合并重叠高度，让每个壳只计一次，则
 <!-- bilingual-en:start -->
-Cylindrical shell method:
+[[圆柱壳法|Cylindrical shell method]]: for a vertical axis $x=c$, the shell radius is the nonnegative distance $\rho=|x-c|$. Merge overlapping height intervals at each radius so each shell is counted once; then
 <!-- bilingual-en:end -->
 
 $$
-V=2\pi\int_a^bx\,h(x)dx.
+V=2\pi\int_{\rho_{\min}}^{\rho_{\max}}\rho\,H(\rho)d\rho.
 $$
+
+熟悉的 $V=2\pi\int_a^bxh(x)dx$ 适用于绕 $y$ 轴、$0\le a<b$ 且竖直切片只覆盖每个壳一次的情形。区域跨轴时，不能把两侧重复生成的实体直接相加；见[[旋转体重复覆盖]]。
+<!-- bilingual-en:start -->
+The familiar $V=2\pi\int_a^bxh(x)dx$ applies about the $y$-axis when $0\le a<b$ and the vertical slices cover each shell once. If the region crosses the axis, adding both sides may count the same solid twice; see [[旋转体重复覆盖|overlap in solids of revolution]].
+<!-- bilingual-en:end -->
 
 washer 切片垂直于旋转轴，shell 切片平行于旋转轴。先画代表性切片，再决定方法。
 <!-- bilingual-en:start -->
@@ -1509,7 +1634,7 @@ The washer slice is perpendicular to the axis of rotation, and the shell slice i
 - [[Exercise057_Problems.pdf|Exercise 57]] · [[Exercise057_Solutions.pdf|解答]]
 
 > [!example]- Exercise 57：绕 \(x\) 轴的两个旋转体
-> (a) (y=3x-x^2) 与 (y=0) 在 (x=0,3) 相交。圆盘半径为 (3x-x^2)：
+> (a) $y=3x-x^2$ 与 $y=0$ 在 $x=0,3$ 相交。圆盘半径为 $3x-x^2$：
 > $$
 > \begin{aligned}
 > V
@@ -1519,7 +1644,7 @@ The washer slice is perpendicular to the axis of rotation, and the shell slice i
 > =\boxed{\frac{81\pi}{10}}.
 > \end{aligned}
 > $$
-> (b) 对 (y=\sqrt{ax})、(0\le x\le a)（(a>0)），圆盘半径平方为 (y^2=ax)：
+> (b) 对 $y=\sqrt{ax}$、$0\le x\le a$（$a>0$），圆盘半径平方为 $y^2=ax$：
 > $$
 > V=\pi\int_0^aax\,dx
 > =\pi a\left[\frac{x^2}{2}\right]_0^a
@@ -1562,9 +1687,9 @@ The washer slice is perpendicular to the axis of rotation, and the shell slice i
 
 ## Session 58：Volume of a Sphere
 
-半径 \(R\) 的圆满足 \(y^2=R^2-x^2\)。绕 \(x\) 轴：
+半径 $R>0$ 的圆满足 $y^2=R^2-x^2$。将圆盘区域绕 $x$ 轴旋转：
 <!-- bilingual-en:start -->
-The circle of radius \(R\) satisfies \(y^2=R^2-x^2\).  Around the \(x\) axis:
+A circle of radius $R>0$ satisfies $y^2=R^2-x^2$. Rotate its filled disk about the $x$-axis:
 <!-- bilingual-en:end -->
 
 $$
@@ -1582,7 +1707,7 @@ $$
 - [[Exercise058_Problems.pdf|Exercise 58]] · [[Exercise058_Solutions.pdf|解答]]
 
 > [!example]- Exercise 58：扁球体体积
-> 椭圆 (x^2+4y^2=4) 的纵坐标范围是 ([-1,1])。绕 (y) 轴旋转时，水平截面是半径
+> 椭圆 $x^2+4y^2=4$ 的纵坐标范围是 $[-1,1]$。绕 $y$ 轴旋转时，水平截面是半径
 > $$
 > x=2\sqrt{1-y^2}
 > $$
@@ -1631,9 +1756,9 @@ $$
 
 ## Session 59：Volume of a Paraboloid
 
-若水平圆盘半径为 \(R\sqrt{y/h}\)，则
+若 $R,h>0$，水平圆盘半径为 $R\sqrt{y/h}$（$0\le y\le h$），则
 <!-- bilingual-en:start -->
-If the radius of the horizontal disk is \(R\sqrt{y/h}\), then
+If $R,h>0$ and the horizontal disk radius is $R\sqrt{y/h}$ for $0\le y\le h$, then
 <!-- bilingual-en:end -->
 
 $$
@@ -1657,7 +1782,7 @@ Dimensional warning: if both \(x\) and \(y\) have units of length, \(y=x^2\) is 
 - [[Exercise059_Problems.pdf|Exercise 59]] · [[Exercise059_Solutions.pdf|解答]]
 
 > [!example]- Exercise 59：绕外部竖直轴的垫圈
-> 区域由 (y=0)、(x=4)、(y=\sqrt x) 围成，绕 (x=6) 旋转。用水平切片最自然：(x=y^2)，且 (0\le y\le2)。外半径来自左边界 (x=y^2)，内半径来自右边界 (x=4)：
+> 区域由 $y=0$、$x=4$、$y=\sqrt{x}$ 围成，绕 $x=6$ 旋转。用水平切片最自然：$x=y^2$，且 $0\le y\le2$。外半径来自左边界 $x=y^2$，内半径来自右边界 $x=4$：
 > $$
 > R(y)=6-y^2,\qquad r(y)=6-4=2.
 > $$
@@ -1671,7 +1796,7 @@ Dimensional warning: if both \(x\) and \(y\) have units of length, \(y=x^2\) is 
 > =\boxed{\frac{192\pi}{5}}.
 > \end{aligned}
 > $$
-> “外减内”发生在平方以后：(R^2-r^2)，不是 ((R-r)^2)。
+> “外减内”发生在平方以后：$R^2-r^2$，不是 $(R-r)^2$。
 > <!-- bilingual-en:start -->
 > The region bounded by $y=0$, $x=4$, and $y=\sqrt x$ is rotated about $x=6$. Horizontal slices are most natural: $x=y^2$ and $0\le y\le2$. The outer radius comes from the left boundary $x=y^2$, and the inner radius from the right boundary $x=4$:
 > $$
@@ -1716,11 +1841,11 @@ Dimensional warning: if both \(x\) and \(y\) have units of length, \(y=x^2\) is 
 > ![[PSet04_Solutions.pdf#height=650]]
 
 > [!example]- 4B 2：对 1e、1g 使用垫圈法
-> 1e 的区域由 (y=2x-x^2) 与 (y=0) 围成，并绕 (y) 轴旋转。为使用垂直于旋转轴的水平垫圈，解出
+> 1e 的区域由 $y=2x-x^2$ 与 $y=0$ 围成，并绕 $y$ 轴旋转。为使用垂直于旋转轴的水平垫圈，解出
 > $$
 > x=1\pm\sqrt{1-y},\qquad 0\le y\le1.
 > $$
-> 外、内半径分别为 (1+\sqrt{1-y}) 与 (1-\sqrt{1-y})，故
+> 外、内半径分别为 $1+\sqrt{1-y}$ 与 $1-\sqrt{1-y}$，故
 > $$
 > \begin{aligned}
 > V
@@ -1729,7 +1854,7 @@ Dimensional warning: if both \(x\) and \(y\) have units of length, \(y=x^2\) is 
 > =\boxed{\frac{8\pi}{3}}.
 > \end{aligned}
 > $$
-> 1g 的区域由 (y^2=ax)、(y=0)、(x=a) 围成（(a>0)），绕 (y) 轴旋转。对 (0\le y\le a)，外半径为 (a)，内半径为 (y^2/a)：
+> 1g 的区域由 $y^2=ax$、$y=0$、$x=a$ 围成（$a>0$），绕 $y$ 轴旋转。对 $0\le y\le a$，外半径为 $a$，内半径为 $y^2/a$：
 > $$
 > \begin{aligned}
 > V
@@ -1764,7 +1889,7 @@ Dimensional warning: if both \(x\) and \(y\) have units of length, \(y=x^2\) is 
 > <!-- bilingual-en:end -->
 
 > [!example]- 4B 5：等边三角形绕一边旋转
-> 设边长为 (a)，取旋转边为 (x) 轴。三角形高度为 (sqrt3a/2)，利用关于中线的对称性，左半边界可写成 (y=\sqrt3x)，(0\le x\le a/2)。圆盘法给出
+> 设边长为 $a>0$，取旋转边为 $x$ 轴。三角形高度为 $\sqrt{3}a/2$，利用关于中线的对称性，左半边界可写成 $y=\sqrt{3}x$，$0\le x\le a/2$。圆盘法给出
 > $$
 > \begin{aligned}
 > V
@@ -1773,9 +1898,9 @@ Dimensional warning: if both \(x\) and \(y\) have units of length, \(y=x^2\) is 
 > =\boxed{\frac{\pi a^3}{4}}.
 > \end{aligned}
 > $$
-> 系数 (2) 来自左右两半；少乘它会只算出半个旋转体。
+> 系数 $2$ 来自左右两半；少乘它会只算出半个旋转体。
 > <!-- bilingual-en:start -->
-> Let the side length be $a$ and take the axis of rotation as the $x$-axis. The triangle's height is $\sqrt3a/2$. By symmetry about the median, the left boundary is $y=\sqrt3x$ for $0\le x\le a/2$. The disk method gives
+> Let the side length be $a>0$ and take the axis of rotation as the $x$-axis. The triangle's height is $\sqrt{3}a/2$. By symmetry about the median, the left boundary is $y=\sqrt{3}x$ for $0\le x\le a/2$. The disk method gives
 > $$
 > \begin{aligned}
 > V
@@ -1788,19 +1913,19 @@ Dimensional warning: if both \(x\) and \(y\) have units of length, \(y=x^2\) is 
 > <!-- bilingual-en:end -->
 
 > [!example]- 4C 2、3：圆柱壳与垫圈互相核对
-> 2. 区域 (0\le y\le x^2)、(0\le x\le1) 绕 (y) 轴。半径为 (x)、壳高为 (x^2)：
+> 2. 区域 $0\le y\le x^2$、$0\le x\le1$ 绕 $y$ 轴。半径为 $x$、壳高为 $x^2$：
 >    $$
 >    V=2\pi\int_0^1x(x^2)dx
 >    =2\pi\left[\frac{x^4}{4}\right]_0^1
 >    =\boxed{\frac\pi2}.
 >    $$
-> 3. 区域 (sqrt x\le y\le1)、(x\ge0) 绕 (y) 轴。用壳法时 (0\le x\le1)，壳高为 (1-\sqrt x)：
+> 3. 区域 $\sqrt{x}\le y\le1$、$x\ge0$ 绕 $y$ 轴。用壳法时 $0\le x\le1$，壳高为 $1-\sqrt{x}$：
 >    $$
 >    V=2\pi\int_0^1x(1-\sqrt x)dx
 >    =2\pi\left(\frac12-\frac25\right)
 >    =\boxed{\frac\pi5}.
 >    $$
->    反解 (x=y^2) 后，用圆盘法也得
+>    反解 $x=y^2$ 后，用圆盘法也得
 >    $$
 >    V=\pi\int_0^1(y^2)^2dy=\frac\pi5,
 >    $$
@@ -1828,7 +1953,7 @@ Dimensional warning: if both \(x\) and \(y\) have units of length, \(y=x^2\) is 
 > <!-- bilingual-en:end -->
 
 > [!example]- 4J 3：反射池中的总物质量
-> 池深为 (D)、半径为 (R)，距中心 (r) 处浓度为 (k/(1+r^2))。半径 (r)、厚度 (dr) 的圆环体积是
+> 池深为 $D$、半径为 $R$，距中心 $r$ 处浓度为 $k/(1+r^2)$。半径 $r$、厚度 $dr$ 的圆环体积是
 > $$
 > dV=(2\pi r\,dr)D.
 > $$
@@ -1865,9 +1990,9 @@ Dimensional warning: if both \(x\) and \(y\) have units of length, \(y=x^2\) is 
 
 ## Session 60：Integrals and Averages
 
-连续平均值：
+若 $a<b$ 且 $f$ 可积，[[积分平均值|连续平均值]]为：
 <!-- bilingual-en:start -->
-The continuous average is
+For $a<b$ and integrable $f$, the [[积分平均值|continuous average]] is
 <!-- bilingual-en:end -->
 
 $$
@@ -1883,9 +2008,9 @@ $$
 \int_a^bf=f_{\mathrm{avg}}(b-a),
 $$
 
-它是与原有向面积相同的等高矩形高度。沿曲线弧长平均时，
+它是与原有向面积相同的等高矩形高度。沿连续可导图像 $y=y(x)$ 按弧长平均时，以下 $dx$ 按 $x$ 递增方向取正，且曲线只描画一次、弧长有限并为正：
 <!-- bilingual-en:start -->
-It is the height of a rectangle with the same signed area as the original graph. To average along a curve by arc length, use
+It is the height of a rectangle with the same signed area as the original graph. For an arc-length average along a continuously differentiable graph $y=y(x)$, take $dx$ in the increasing-$x$ direction, trace the curve once, and assume positive finite length:
 <!-- bilingual-en:end -->
 
 $$
@@ -1893,6 +2018,11 @@ ds=\sqrt{1+(y')^2}dx,
 \qquad
 q_{\mathrm{avg}}=\frac{\int_Cq\,ds}{\int_C1\,ds}.
 $$
+
+需保证 $\int_C|q|ds<\infty$；一般参数方向用 $ds=\sqrt{x'(t)^2+y'(t)^2}\,dt$（$t$ 递增），见[[参数曲线弧长与重复描画]]。
+<!-- bilingual-en:start -->
+Require $\int_C|q|ds<\infty$. For a general parametrisation, use $ds=\sqrt{x'(t)^2+y'(t)^2}\,dt$ with increasing $t$; see [[参数曲线弧长与重复描画|parametric arc length and repeated tracing]].
+<!-- bilingual-en:end -->
 
 ### 本地材料
 
@@ -1902,7 +2032,7 @@ $$
 - [[Exercise060_Problems.pdf|Exercise 60]] · [[Exercise060_Solutions.pdf|解答]]
 
 > [!example]- Exercise 60：复利账户的时间平均余额
-> 若 (A(t)=A_0e^{rt})，在 (0\le t\le T) 上的平均余额为
+> 若 $A(t)=A_0e^{rt}$、$T>0$ 且 $r\ne0$，在 $0\le t\le T$ 上的平均余额为
 > $$
 > \begin{aligned}
 > A_{\mathrm{avg}}
@@ -1911,13 +2041,13 @@ $$
 > &=\boxed{\frac{A_0}{rT}(e^{rT}-1)}.
 > \end{aligned}
 > $$
-> 代入 (A_0=100)、(r=0.05)、(T=1)，
+> 若 $r=0$，余额恒为 $A_0$，平均值也是 $A_0$；这也等于上述式子的 $r\to0$ 极限。代入 $A_0=100$、$r=0.05$、$T=1$，
 > $$
 > A_{\mathrm{avg}}=2000(e^{0.05}-1)\approx\boxed{102.54}.
 > $$
-> 它位于初值 (100) 与终值 (100e^{0.05}\approx105.13) 之间，符合单调增长函数的平均值范围。
+> 它位于初值 $100$ 与终值 $100e^{0.05}\approx105.13$ 之间，符合单调增长函数的平均值范围。
 > <!-- bilingual-en:start -->
-> If $A(t)=A_0e^{rt}$, then its average balance over $0\le t\le T$ is
+> If $A(t)=A_0e^{rt}$, $T>0$, and $r\ne0$, then its average balance over $0\le t\le T$ is
 > $$
 > \begin{aligned}
 > A_{\mathrm{avg}}
@@ -1926,7 +2056,7 @@ $$
 > &=\boxed{\frac{A_0}{rT}(e^{rT}-1)}.
 > \end{aligned}
 > $$
-> With $A_0=100$, $r=0.05$, and $T=1$,
+> If $r=0$, the balance and its average are both $A_0$, also the limit of the formula as $r\to0$. With $A_0=100$, $r=0.05$, and $T=1$,
 > $$
 > A_{\mathrm{avg}}=2000(e^{0.05}-1)\approx\boxed{102.54}.
 > $$
@@ -1949,23 +2079,23 @@ $$
 
 ## Session 61：Weighted Averages
 
-若权重密度 \(w(x)\ge0\)，
+[[加权平均]]要求 $a<b$、权重密度 $w(x)\ge0$、$0<\int_a^bw(x)dx<\infty$，且 $\int_a^b|f(x)w(x)|dx<\infty$，此时
 <!-- bilingual-en:start -->
-If the weight density \(w(x)\ge0\),
+For a [[加权平均|weighted average]], require $a<b$, $w(x)\ge0$, $0<\int_a^bw(x)dx<\infty$, and $\int_a^b|f(x)w(x)|dx<\infty$. Then
 <!-- bilingual-en:end -->
 
 $$
 \boxed{\bar f=\frac{\int_a^bf(x)w(x)dx}{\int_a^bw(x)dx}}.
 $$
 
-细杆密度 \(\rho\) 时：
+细杆在 $[a,b]$ 上密度为 $\rho\ge0$、总质量 $M>0$ 时，[[质心]]由[[质心积分计算|一阶矩除以质量]]给出：
 <!-- bilingual-en:start -->
-For a thin rod with density \(\rho\),
+For a thin rod on $[a,b]$ with density $\rho\ge0$ and positive mass $M$, its [[质心|center of mass]] is given by [[质心积分计算|first moment divided by mass]]:
 <!-- bilingual-en:end -->
 
 $$
-M=\int\rho(x)dx,\qquad
-\bar x=\frac1M\int x\rho(x)dx.
+M=\int_a^b\rho(x)dx,\qquad
+\bar x=\frac1M\int_a^bx\rho(x)dx.
 $$
 
 “Boiling Cauldron” 的关键是先明确按长度、面积、体积还是质量抽样；普通算术平均往往用了错误权重。
@@ -1981,7 +2111,7 @@ The key in “Boiling Cauldron” is to decide whether sampling is by length, ar
 - [[Exercise061_Problems.pdf|Exercise 61]] · [[Exercise061_Solutions.pdf|解答]]
 
 > [!example]- Exercise 61：平面区域的质心
-> 区域由 (x=-1)、(x=3)、(y=(x-1)^2) 与 (y=4) 围成。它关于 (x=1) 对称，所以
+> 区域由 $x=-1$、$x=3$、$y=(x-1)^2$ 与 $y=4$ 围成。假设均匀密度，它关于 $x=1$ 对称，所以
 > $$
 > \boxed{\bar x=1}.
 > $$
@@ -1990,7 +2120,7 @@ The key in “Boiling Cauldron” is to decide whether sampling is by length, ar
 > A=\int_{-1}^{3}\left[4-(x-1)^2\right]dx=\frac{32}{3}.
 > $$
 > 求 \(\bar y\) 时改用水平切片更简洁。由 \(y=(x-1)^2\) 得同一高度处宽度
-> (x_{\rm right}-x_{\rm left}=2\sqrt y)，其中 (0\le y\le4)。因此
+> $x_{\rm right}-x_{\rm left}=2\sqrt y$，其中 $0\le y\le4$。因此
 > $$
 > \bar y
 > =\frac{\int_0^4 y(2\sqrt y)dy}{\int_0^4 2\sqrt y\,dy}
@@ -2001,7 +2131,7 @@ The key in “Boiling Cauldron” is to decide whether sampling is by length, ar
 > $$
 > 故质心为 \(\boxed{(1,12/5)}\)，且确实落在区域的对称轴上。
 > <!-- bilingual-en:start -->
-> The region is bounded by $x=-1$, $x=3$, $y=(x-1)^2$, and $y=4$. It is symmetric about $x=1$, so
+> The region is bounded by $x=-1$, $x=3$, $y=(x-1)^2$, and $y=4$. Assuming uniform density, it is symmetric about $x=1$, so
 > $$
 > \boxed{\bar x=1}.
 > $$
@@ -2038,9 +2168,9 @@ The key in “Boiling Cauldron” is to decide whether sampling is by length, ar
 
 ## Session 62：Integrals and Probability
 
-[[随机变量、分布与矩#随机变量与分布|概率密度]] \(p\) 满足
+[[概率密度函数|概率密度]] \(p\) 满足
 <!-- bilingual-en:start -->
-A [[随机变量、分布与矩#随机变量与分布|probability density]] \(p\) satisfies
+A [[概率密度函数|probability density]] \(p\) satisfies
 <!-- bilingual-en:end -->
 
 $$
@@ -2052,14 +2182,19 @@ P(a\le X\le b)=\int_a^bp(x)dx,
 $$
 
 $$
-E[X]=\int xp(x)dx,
+\mu=E[X]=\int_{-\infty}^{\infty}xp(x)dx,
 \qquad
-\operatorname{Var}(X)=\int(x-\mu)^2p(x)dx.
+\operatorname{Var}(X)=\int_{-\infty}^{\infty}(x-\mu)^2p(x)dx.
 $$
 
-密度可以大于 1；真正受限在 \([0,1]\) 的是面积代表的概率。连续模型中单点概率为零。
+有限[[期望]]要求绝对一阶矩 $\int_{-\infty}^{\infty}|x|p(x)dx<\infty$；有限[[方差]]要求二阶矩 $\int_{-\infty}^{\infty}x^2p(x)dx<\infty$（它也保证一阶矩有限）。对称抵消不能替代这些存在性条件。
 <!-- bilingual-en:start -->
-A density may exceed $1$; it is the area representing a probability that must lie in $[0,1]$. In a continuous model, the probability of any single point is zero.
+A finite [[期望|expectation]] requires $\int_{-\infty}^{\infty}|x|p(x)dx<\infty$. A finite [[方差|variance]] requires $\int_{-\infty}^{\infty}x^2p(x)dx<\infty$, which also ensures a finite first absolute moment. Symmetric cancellation does not replace these existence conditions.
+<!-- bilingual-en:end -->
+
+密度可以大于 1；真正受限在 \([0,1]\) 的是面积代表的概率。在这里的绝对连续模型中，单点概率为零。
+<!-- bilingual-en:start -->
+A density may exceed $1$; it is the area representing a probability that must lie in $[0,1]$. In the absolutely continuous model used here, the probability of any single point is zero.
 <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -2072,7 +2207,7 @@ A density may exceed $1$; it is the area representing a probability that must li
 > [!question]- 三问自检
 > 1. 密度能大于 1 吗？2. 对称密度均值？3. 为什么单点概率为零？
 >
-> 答：能；若期望存在则为 0；零宽区间的积分为 0。
+> 答：能；若密度关于 $0$ 对称且期望存在则为 $0$，一般关于 $c$ 对称时存在的均值为 $c$；零宽区间的积分为 $0$。
 > <!-- bilingual-en:start -->
 >
 > &nbsp;
@@ -2080,20 +2215,25 @@ A density may exceed $1$; it is the area representing a probability that must li
 > **2.** What is the mean of a symmetric density?<br>
 > **3.** Why does a single point have probability zero?<br>
 >
-> Answer: Yes; the mean is zero when it exists and the density is symmetric about zero; a point is an interval of zero width, whose integral is zero.
+> Answer: Yes; an existing mean is zero for symmetry about zero, and is $c$ for symmetry about $c$; a point is an interval of zero width, whose integral is zero.
 > <!-- bilingual-en:end -->
 
 ## Session 63：Numerical Integration
 
-[[定积分与微积分基本定理#积分应用的建模顺序|数值积分]]取步长 \(h=(b-a)/n\)：
+数值积分把 $[a,b]$（$a<b$）等分为 $n$ 段，取步长 $h=(b-a)/n$、节点 $x_i=a+ih$。[[左右端点矩形法]]为：
 <!-- bilingual-en:start -->
-For [[定积分与微积分基本定理#积分应用的建模顺序|numerical integration]], use the step size \(h=(b-a)/n\):
+For numerical integration, split $[a,b]$ with $a<b$ into $n$ equal intervals, with $h=(b-a)/n$ and $x_i=a+ih$. The [[左右端点矩形法|left- and right-endpoint rules]] are
 <!-- bilingual-en:end -->
 
 $$
 L_n=h\sum_{i=0}^{n-1}f(x_i),\quad
 R_n=h\sum_{i=1}^{n}f(x_i),
 $$
+
+[[中点法]]在各段中点采样；[[梯形法]]则取两端高度的平均：
+<!-- bilingual-en:start -->
+The [[中点法|midpoint rule]] samples each midpoint; the [[梯形法|trapezoidal rule]] averages the two endpoint heights:
+<!-- bilingual-en:end -->
 
 $$
 M_n=h\sum_{i=1}^{n}f\!\left(\frac{x_{i-1}+x_i}{2}\right),
@@ -2105,14 +2245,14 @@ T_n=\frac h2\left[f(x_0)+2\sum_{i=1}^{n-1}f(x_i)+f(x_n)\right]
 }.
 $$
 
-Session 63 第四段误放在 Problem Sets：
+Session 63 第四份本地材料存放在 Problem Sets，内容是[[Simpson法]]。另取偶数 $N$ 个小区间，步长 $h=(b-a)/N$、节点 $x_i=a+ih$（$0\le i\le N$）：
 <!-- bilingual-en:start -->
-The fourth paragraph of Session 63 is misplaced in Problem Sets:
+The fourth local file for Session 63 is stored in Problem Sets and covers [[Simpson法|Simpson's rule]]. Use an even number $N$ of subintervals, with $h=(b-a)/N$ and $x_i=a+ih$ for $0\le i\le N$:
 <!-- bilingual-en:end -->
 
 $$
 \boxed{
-S_{2n}=\frac h3[f(x_0)+4f(x_1)+2f(x_2)+\cdots+4f(x_{2n-1})+f(x_{2n})]
+S_N=\frac h3[f(x_0)+4f(x_1)+2f(x_2)+\cdots+4f(x_{N-1})+f(x_N)]
 }.
 $$
 
@@ -2125,12 +2265,12 @@ $$
 - [[Exercise063_Problems.pdf|Exercise 63]] · [[Exercise063_Solutions.pdf|解答]]
 
 > [!example]- Exercise 63：两种数值近似与精确值
-> 对 (f(x)=x^3-2x) 在 ([-1,2]) 上积分，题目给出的梯形法取 (n=6)，步长 (h=3/6=1/2)。代入节点 (-1,-1/2,0,1/2,1,3/2,2) 后，
+> 对 $f(x)=x^3-2x$ 在 $[-1,2]$ 上积分，题目给出的梯形法取 $n=6$，步长 $h=3/6=1/2$。代入节点 $-1,-1/2,0,1/2,1,3/2,2$ 后，
 > $$
 > T_6=\frac h2\left[f(-1)+2\sum_{i=1}^{5}f(x_i)+f(2)\right]
 > =\boxed{0.93750}.
 > $$
-> 第二种 Riemann 和在每段取相对位置 (0.5)，即中点法；(n=12)、(h=3/12=1/4)，代入十二个中点得到
+> 第二种 Riemann 和在每段取相对位置 $0.5$，即中点法；$n=12$、$h=3/12=1/4$，代入十二个中点得到
 > $$
 > \boxed{M_{12}=0.72656}.
 > $$
@@ -2141,7 +2281,7 @@ $$
 > =0-\left(\frac14-1\right)
 > =\boxed{\frac34=0.75}.
 > $$
-> 中点近似的绝对误差约 (0.02344)，小于梯形近似的 (0.18750)。不要用“梯形用了两倍节点”解释误差：相邻梯形共享端点，且方法的精度取决于误差阶与函数曲率。
+> 中点近似的绝对误差约 $0.02344$，小于梯形近似的 $0.18750$。不要用“梯形用了两倍节点”解释误差：相邻梯形共享端点，且方法的精度取决于误差阶与函数曲率。
 > <!-- bilingual-en:start -->
 > Integrate $f(x)=x^3-2x$ over $[-1,2]$. The problem specifies the trapezoidal rule with $n=6$, so $h=3/6=1/2$. Substituting the nodes $-1,-1/2,0,1/2,1,3/2,2$ gives
 > $$
@@ -2185,9 +2325,9 @@ $$
 For $f(x)=1/x$, $f''(x)>0$, so the graph is convex and each chord lies above the curve. The trapezoidal rule therefore overestimates $\ln2=\int_1^2dx/x$.
 <!-- bilingual-en:end -->
 
-在同一组 \(2n\) 网格点上：
+在同一粗网格的 $n$ 个小区间上计算 $T_n$ 和 $M_n$。加入这 $n$ 个中点后，细网格有 $2n$ 个小区间、$2n+1$ 个节点，步长为粗网格的一半；[[Simpson组合恒等式]]为：
 <!-- bilingual-en:start -->
-On the same set of \(2n\) grid points:
+Compute $T_n$ and $M_n$ on the same coarse grid with $n$ subintervals. Adding its $n$ midpoints creates a fine grid with $2n$ subintervals and $2n+1$ nodes, at half the coarse step size. The [[Simpson组合恒等式|Simpson combination identity]] is
 <!-- bilingual-en:end -->
 
 $$
@@ -2199,12 +2339,18 @@ $$
 Expanding the weights shows that the endpoints have weight \(1\), even-indexed interior nodes have weight \(2\), and odd-indexed midpoint nodes have weight \(4\).
 <!-- bilingual-en:end -->
 
-- 梯形法主要误差由 \(f''\) 决定；
-- Simpson 法对三次及以下多项式精确，主要误差与 \(f^{(4)}\) 有关。
+- 若 $f\in C^2[a,b]$，[[梯形积分误差界]]与[[中点积分误差界]]由 $K_2=\max_{[a,b]}|f''|$ 控制；
+- Simpson 法对三次及以下多项式精确；若 $f\in C^4[a,b]$，[[Simpson误差界]]由 $K_4=\max_{[a,b]}|f^{(4)}|$ 控制。
 <!-- bilingual-en:start -->
-- The leading trapezoidal-rule error is governed by \(f''\).
-- Simpson's rule is exact for polynomials of degree at most three, and its leading error is governed by \(f^{(4)}\).
+- If $f\in C^2[a,b]$, the [[梯形积分误差界|trapezoidal]] and [[中点积分误差界|midpoint error bounds]] are controlled by $K_2=\max_{[a,b]}|f''|$.
+- Simpson's rule is exact for polynomials of degree at most three. If $f\in C^4[a,b]$, its [[Simpson误差界|error bound]] is controlled by $K_4=\max_{[a,b]}|f^{(4)}|$.
 <!-- bilingual-en:end -->
+
+$$
+|I-T_n|\le\frac{K_2(b-a)^3}{12n^2},\qquad
+|I-M_n|\le\frac{K_2(b-a)^3}{24n^2},\qquad
+|I-S_N|\le\frac{K_4(b-a)^5}{180N^4}\quad(N\in2\mathbb N_{>0}).
+$$
 
 ### 本地材料
 
@@ -2213,12 +2359,13 @@ Expanding the weights shows that the endpoints have weight \(1\), even-indexed i
 - [[Ses64c_Lecture_Notes.pdf|64c Study Tips]]
 - [[Exercise064_Problems.pdf|Exercise 64]] · [[Exercise064_Solutions.pdf|解答]]
 
-> [!example]- Exercise 64：Simpson 法估计身高概率
-> 题册给出的模型（(x) 以英寸计）是
+> [!example]- Exercise 64：原题函数的 Simpson 积分与归一化核对
+> 题册与官方解答都印有以下函数（$x$ 以英寸计），原式保留如下：
 > $$
 > h(x)=\frac1{2.8\sqrt{2\pi}}
 > e^{-(x-69)^2/5.6}.
 > $$
+> 但[[高斯积分]]给出 $\int_{-\infty}^{\infty}h(x)dx=\sqrt{5.6\pi}/(2.8\sqrt{2\pi})=1/\sqrt{2.8}\approx0.5976$，并非 $1$，所以它不是归一化的[[概率密度函数]]。以下计算复现原式的积分近似，不能直接解释为概率。
 > (a) 五到六英尺即 \(60\le x\le72\)。取步长 \(\Delta x=2\)，节点函数值依次约为
 > $$
 > \begin{array}{c|rrrrrrr}
@@ -2229,15 +2376,15 @@ Expanding the weights shows that the endpoints have weight \(1\), even-indexed i
 > 六个小区间满足 Simpson 法要求，所以
 > $$
 > \begin{aligned}
-> P(60\le X\le72)
+> \int_{60}^{72}h(x)dx
 > &\approx\frac23[h(60)+4h(62)+2h(64)+4h(66)\\
 > &\qquad\qquad+2h(68)+4h(70)+h(72)]\\
 > &\approx\boxed{0.574}.
 > \end{aligned}
 > $$
-> 即约 \(57.4\%\)。
+> $0.574$ 是官方按所列节点得到的原式 Simpson 积分近似；它不是已验证的 $57.4\%$ 概率。
 >
-> (b) 八英尺是 \(96\) 英寸。严格概率是 \(\int_{96}^{\infty}h(x)dx\)；官方解答以 \(100\) 英寸截断，因为此后函数已极小。取节点 \(96,98,100\)：
+> (b) 八英尺是 $96$ 英寸。原式尾部积分是 $\int_{96}^{\infty}h(x)dx$；官方解答以 $100$ 英寸截断，因为此后函数已极小。取节点 $96,98,100$：
 > $$
 > h(96)\approx4.15\times10^{-58},\quad
 > h(98)\approx8.55\times10^{-67},\quad
@@ -2249,13 +2396,16 @@ Expanding the weights shows that the endpoints have weight \(1\), even-indexed i
 > \approx\frac23[h(96)+4h(98)+h(100)]
 > =\boxed{2.77\times10^{-58}},
 > $$
-> 在该模型下可视为零。原解答中写成 \(\int_8^\infty\) 是英尺与英寸混写；与密度自变量一致的下限应是 \(96\)。
+> 这是极小的尾部积分近似。原解答中写成 $\int_8^\infty$ 是英尺与英寸混写；与函数自变量一致的下限应是 $96$。
+>
+> 两种修正对应不同分布，不能代替作者作选择：保留指数形状并归一化，得到 $\sqrt{2.8}\,h(x)$，方差为 $2.8$；若另外指定标准差为 $2.8$，则应保留前因子并把指数分母改为 $2(2.8)^2=15.68$。现有材料没有说明应采用哪一种修正。
 > <!-- bilingual-en:start -->
-> The model in the exercise, with $x$ measured in inches, is
+> Both the exercise and its official solution print the following function, with $x$ measured in inches; the source formula is retained:
 > $$
 > h(x)=\frac1{2.8\sqrt{2\pi}}
 > e^{-(x-69)^2/5.6}.
 > $$
+> The [[高斯积分|Gaussian integral]] gives $\int_{-\infty}^{\infty}h(x)dx=\sqrt{5.6\pi}/(2.8\sqrt{2\pi})=1/\sqrt{2.8}\approx0.5976$, rather than $1$. Thus it is not a normalised [[概率密度函数|probability density]]. The following computations reproduce integral approximations for the printed formula; they cannot be interpreted directly as probabilities.
 > **(a)** Five to six feet corresponds to $60\le x\le72$. With step size $\Delta x=2$, the node values are approximately
 > $$
 > \begin{array}{c|rrrrrrr}
@@ -2266,15 +2416,15 @@ Expanding the weights shows that the endpoints have weight \(1\), even-indexed i
 > Six subintervals satisfy Simpson's requirement, so
 > $$
 > \begin{aligned}
-> P(60\le X\le72)
+> \int_{60}^{72}h(x)dx
 > &\approx\frac23[h(60)+4h(62)+2h(64)+4h(66)\\
 > &\qquad\qquad+2h(68)+4h(70)+h(72)]\\
 > &\approx\boxed{0.574}.
 > \end{aligned}
 > $$
-> Thus the probability is about $57.4\%$.
+> The official value $0.574$ is a Simpson integral approximation for the printed function using the listed nodes, not a verified probability of $57.4\%$.
 >
-> **(b)** Eight feet is $96$ inches. The exact probability is $\int_{96}^{\infty}h(x)dx$; the official solution truncates at $100$ inches because the density is already negligible beyond that point. At the nodes $96,98,100$,
+> **(b)** Eight feet is $96$ inches. The printed function's tail integral is $\int_{96}^{\infty}h(x)dx$; the official solution truncates at $100$ inches because the function is already extremely small there. At the nodes $96,98,100$,
 > $$
 > h(96)\approx4.15\times10^{-58},\quad
 > h(98)\approx8.55\times10^{-67},\quad
@@ -2286,7 +2436,9 @@ Expanding the weights shows that the endpoints have weight \(1\), even-indexed i
 > \approx\frac23[h(96)+4h(98)+h(100)]
 > =\boxed{2.77\times10^{-58}},
 > $$
-> which is effectively zero under this model. The original solution writes $\int_8^\infty$, mixing feet with inches; the lower limit consistent with the density's input unit is $96$.
+> a very small approximation to the tail integral. The original solution writes $\int_8^\infty$, mixing feet with inches; the lower limit consistent with the function's input unit is $96$.
+>
+> Two repairs describe different distributions and cannot be selected on the author's behalf. Preserving the exponent's shape and normalising gives $\sqrt{2.8}\,h(x)$, with variance $2.8$. Alternatively, specifying standard deviation $2.8$ requires keeping the prefactor and changing the exponent denominator to $2(2.8)^2=15.68$. The available materials do not establish which repair was intended.
 > <!-- bilingual-en:end -->
 
 > [!question]- 三问自检
@@ -2314,9 +2466,9 @@ $$
 \phi(x)=\frac1{\sqrt{2\pi}}e^{-x^2/2}
 $$
 
-总面积为 1。它没有初等原函数，但可通过数值积分求概率。因 \(\phi\) 为偶函数，
+总面积为 $1$，归一化由[[高斯积分]]支持。它没有初等原函数，但可通过数值积分求概率。因 $\phi$ 为偶函数，对 $a\ge0$，
 <!-- bilingual-en:start -->
-Its total area is \(1\). Although it has no elementary antiderivative, probabilities can be computed numerically. Since \(\phi\) is even,
+Its total area is $1$, as established by the [[高斯积分|Gaussian integral]]. Although it has no elementary antiderivative, probabilities can be computed numerically. Since $\phi$ is even, for $a\ge0$,
 <!-- bilingual-en:end -->
 
 $$
@@ -2381,41 +2533,41 @@ $$
 > <!-- bilingual-en:end -->
 
 > [!example]- 4D 3：速度的函数平均等于平均速度
-> 若位置 (s(t)) 可导且 (v(t)=s'(t))，则 (v) 在 ([a,b]) 上的函数平均为
+> 假设 $a<b$，位置 $s\in C^1[a,b]$ 且 $v=s'$。连续可导保证导数可积，仅有 $s$ 可导并不足以保证 $s'$ 黎曼可积。$v$ 在 $[a,b]$ 上的函数平均为
 > $$
 > v_{\rm avg}
 > =\frac1{b-a}\int_a^bv(t)dt
 > =\frac1{b-a}\int_a^bs'(t)dt.
 > $$
-> 由 FTC II，
+> 由 [[Newton-Leibniz公式|FTC I]]，
 > $$
 > \boxed{v_{\rm avg}=\frac{s(b)-s(a)}{b-a}},
 > $$
 > 右边正是“总位移 ÷ 总时间”的平均速度。这里用的是位移而非总路程；若速度变号，两者不能混为一谈。
 > <!-- bilingual-en:start -->
-> If position $s(t)$ is differentiable and $v(t)=s'(t)$, then the average value of $v$ on $[a,b]$ is
+> Assume $a<b$, $s\in C^1[a,b]$, and $v=s'$. Continuous differentiability ensures that $v$ is integrable; differentiability alone does not ensure Riemann integrability of $s'$. The average value of $v$ on $[a,b]$ is
 > $$
 > v_{\rm avg}
 > =\frac1{b-a}\int_a^bv(t)dt
 > =\frac1{b-a}\int_a^bs'(t)dt.
 > $$
-> By FTC II,
+> By [[Newton-Leibniz公式|FTC I]],
 > $$
 > \boxed{v_{\rm avg}=\frac{s(b)-s(a)}{b-a}}.
 > $$
 > The right-hand side is total displacement divided by total time. It uses displacement, not total distance; if velocity changes sign, the two quantities must not be confused.
 > <!-- bilingual-en:end -->
 
-> [!example]- 4D 5：由区间平均恢复原函数
-> 已知 (f) 在 ([0,x]) 上的平均值为 (g(x))，即对 (x>0)
+> [!example]- 4D 5：由区间平均恢复被积函数
+> 已知连续函数 $f$ 在 $[0,x]$ 上的平均值为 $g(x)$，即对 $x>0$
 > $$
 > g(x)=\frac1x\int_0^xf(t)dt.
 > $$
-> 先乘以 (x)：
+> 先乘以 $x$：
 > $$
 > xg(x)=\int_0^xf(t)dt.
 > $$
-> 两边对 (x) 求导。左边用乘积法则，右边用 FTC I：
+> 两边对 $x$ 求导。左边用乘积法则，右边用 [[积分求导定理|FTC II]]：
 > $$
 > g(x)+xg'(x)=f(x).
 > $$
@@ -2423,9 +2575,9 @@ $$
 > $$
 > \boxed{f(x)=g(x)+xg'(x)}.
 > $$
-> 易错点是直接对 (g=(1/x)\int_0^xf) 求导却漏掉 (1/x) 的导数；先清除分母最稳妥。
+> 易错点是直接对 $g=(1/x)\int_0^xf$ 求导却漏掉 $1/x$ 的导数；先清除分母最稳妥。
 > <!-- bilingual-en:start -->
-> Suppose the average value of $f$ on $[0,x]$ is $g(x)$, so for $x>0$,
+> Suppose the average value of the continuous function $f$ on $[0,x]$ is $g(x)$, so for $x>0$,
 > $$
 > g(x)=\frac1x\int_0^xf(t)dt.
 > $$
@@ -2433,7 +2585,7 @@ $$
 > $$
 > xg(x)=\int_0^xf(t)dt.
 > $$
-> Differentiate both sides with respect to $x$. The left side uses the product rule and the right side uses FTC I:
+> Differentiate both sides with respect to $x$. The left side uses the product rule and the right side uses [[积分求导定理|FTC II]]:
 > $$
 > g(x)+xg'(x)=f(x).
 > $$
@@ -2472,7 +2624,7 @@ $$
 
 &nbsp;
 **1.** Read the interval, \(\Delta x\), sample points, and integrand from a sum.<br>
-**2.** Distinguish differentiating an integral with FTC I from evaluating endpoint values with FTC II.<br>
+**2.** Distinguish differentiating an integral with FTC II from evaluating endpoint values with FTC I.<br>
 **3.** Choose \(dx\) or \(dy\) for area; for volume, draw the representative slice first.<br>
 **4.** Use the correct weights for averages and probabilities.<br>
 **5.** Do not confuse the number of nodes with the number of subintervals in a numerical rule.<br>
@@ -2553,9 +2705,9 @@ $$
 =\boxed{21}.
 $$
 
-若
+若 $f$ 连续且
 <!-- bilingual-en:start -->
-If
+If $f$ is continuous and
 <!-- bilingual-en:end -->
 
 $$
@@ -2585,9 +2737,9 @@ $$
 *Problem 4: Triangle Centroid and Pappus*
 <!-- bilingual-en:end -->
 
-直角三角形上边界 \(y=h-(h/r)x\)，面积 \(A=rh/2\)：
+设 $r,h>0$，均匀密度直角三角形的上边界为 $y=h-(h/r)x$，面积 $A=rh/2$；用[[质心积分计算]]：
 <!-- bilingual-en:start -->
-The upper boundary of the right triangle is \(y=h-(h/r)x\), and its area is \(A=rh/2\):
+Let $r,h>0$. The uniform-density right triangle has upper boundary $y=h-(h/r)x$ and area $A=rh/2$. Its [[质心积分计算|centroid is calculated by integration]]:
 <!-- bilingual-en:end -->
 
 $$
@@ -2597,9 +2749,9 @@ $$
 =\frac r3.
 $$
 
-水平切片同理给 \(\bar y=h/3\)。绕 \(y\) 轴时质心走过 \(2\pi r/3\)：
+水平切片同理给 $\bar y=h/3$。区域在旋转轴一侧且轴不穿过内部，可用[[Pappus体积定理]]；绕 $y$ 轴时质心走过 $2\pi r/3$：
 <!-- bilingual-en:start -->
-Horizontal slices similarly give \(\bar y=h/3\). When the region revolves about the \(y\)-axis, the centroid travels a distance \(2\pi r/3\):
+Horizontal slices similarly give $\bar y=h/3$. The region lies on one side of the axis and the axis does not cross its interior, so [[Pappus体积定理|Pappus's volume theorem]] applies. The centroid travels $2\pi r/3$ about the $y$-axis:
 <!-- bilingual-en:end -->
 
 $$
@@ -2612,9 +2764,9 @@ $$
 *Problem 5: Simpson's identity*
 <!-- bilingual-en:end -->
 
-在 \(2n\) 个小区间、步长 \(h=(b-a)/(2n)\) 上，
+在 $2n$ 个小区间、步长 $h=(b-a)/(2n)$ 的细网格上，令 $f_i=f(a+ih)$。$T_n,M_n$ 各用 $n$ 个粗区间，粗步长为 $2h$：
 <!-- bilingual-en:start -->
-With \(2n\) subintervals and step size \(h=(b-a)/(2n)\),
+On a fine grid with $2n$ subintervals and $h=(b-a)/(2n)$, write $f_i=f(a+ih)$. Both $T_n$ and $M_n$ use $n$ coarse subintervals of width $2h$:
 <!-- bilingual-en:end -->
 
 $$
@@ -2641,9 +2793,9 @@ $$
 *Problem 6: Saltwater mixing*
 <!-- bilingual-en:end -->
 
-令 \(s(t)\) 为盐量 kg。浓度 \(s/1000\) kg/L，流出 \(10\) L/min，流入纯水：
+令 $s(t)$ 为盐量 kg。水箱初始体积为 $1000$ L，纯水流入与溶液流出均为 $10$ L/min，因此体积恒为 $1000$ L。充分混合保证流出液浓度等于箱内浓度 $s/1000$ kg/L：
 <!-- bilingual-en:start -->
-Let \(s(t)\) be the mass of salt, in kilograms. The concentration is \(s/1000\) kg/L, the outflow is \(10\) L/min, and the inflow is pure water:
+Let $s(t)$ be the salt mass in kilograms. The initial tank volume is $1000$ L; pure water enters and solution leaves at the same rate of $10$ L/min, so the volume remains $1000$ L. Thorough mixing makes the outflow concentration equal to the tank concentration $s/1000$ kg/L:
 <!-- bilingual-en:end -->
 
 $$
@@ -2651,9 +2803,9 @@ $$
 \qquad s(0)=15.
 $$
 
-分离变量：
+用[[分离变量]]求解：
 <!-- bilingual-en:start -->
-Separate variables:
+Use [[分离变量|separation of variables]]:
 <!-- bilingual-en:end -->
 
 $$
@@ -2671,9 +2823,9 @@ $$
 \boxed{s(t)=15e^{-t/100}}.
 $$
 
-半衰期：
+这是[[指数增长与衰减|指数衰减]]；半衰期为：
 <!-- bilingual-en:start -->
-Half-life:
+This is [[指数增长与衰减|exponential decay]]; its half-life is
 <!-- bilingual-en:end -->
 
 $$
@@ -2702,8 +2854,8 @@ $$
 <!-- bilingual-en:end -->
 
 1. Riemann 和把有限近似升级为定积分；
-2. FTC I 说明累计函数的导数是当前密度；
-3. FTC II 把定积分化为原函数端点差；
+2. FTC I 把定积分化为原函数端点差；
+3. FTC II 说明连续密度的累计函数求导后回到该密度；
 4. 面积、体积、质量、平均值和概率都是“密度 × 小尺度”的累计；
 5. 没有初等原函数时仍可定义新函数并数值计算；
 6. 应用题先明确小量、单位、积分方向和边界，再选择公式。
@@ -2711,8 +2863,8 @@ $$
 
 &nbsp;
 **1.** Riemann sums turn finite approximations into definite integrals.<br>
-**2.** FTC I says that the derivative of an accumulation function is the current density.<br>
-**3.** FTC II evaluates a definite integral as the endpoint difference of an antiderivative.<br>
+**2.** FTC I evaluates a definite integral as the endpoint difference of an antiderivative.<br>
+**3.** FTC II differentiates the accumulation of a continuous density to recover that density.<br>
 **4.** Area, volume, mass, averages, and probabilities all accumulate “density × a small scale.”<br>
 **5.** Even without an elementary antiderivative, an integral can define a new function and be approximated numerically.<br>
 **6.** In an application, first identify the small quantity, units, orientation, and boundaries; only then choose a formula.<br>

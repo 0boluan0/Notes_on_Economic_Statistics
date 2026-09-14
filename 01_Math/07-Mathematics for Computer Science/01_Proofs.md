@@ -104,27 +104,27 @@ How to read the map: begin with the logical form of the statement you want to pr
 
 | 目标的逻辑形状 | 首选结构 | 开头必须写出 | 最常见漏洞 |
 |---|---|---|---|
-| $P\Rightarrow Q$ | [[数学证明方法#命题、量词与否定|直接证明]] | 假设 $P$ 成立 | 偷偷假设 $Q$；证明了逆命题 |
-| $P\Rightarrow Q$，而 $\neg Q$ 信息更强 | [[数学证明方法#直接证明、逆否与反证|逆否证明]] | 假设 $\neg Q$ | 写成 $\neg P\Rightarrow\neg Q$ |
-| “不存在……”或假设会造成冲突 | [[数学证明方法#直接证明、逆否与反证|反证法]] | 假设目标命题为假 | 得到的“矛盾”不是由该假设造成 |
-| 论域自然分成互斥区域 | [[数学证明方法#直接证明、逆否与反证|分类证明]] | 列出覆盖全部可能的情形 | 漏掉 $0$、空集或交界点 |
-| 对每个 $n\in\mathbb N$ | [[数学证明方法#归纳法|数学归纳法]] | 命题 $P(n)$ 与基例 | 归纳步没有连接到下一个整数 |
-| $P(n)$ 依赖多个更小规模 | [[数学证明方法#归纳法|强归纳法]] | 所有 $P(k),k<n$ | 基例不足以启动递推 |
-| 假设存在最小反例更易下降 | [[数学证明方法#良序与最小反例|良序原理]] | 反例集合 $C\subseteq\mathbb N$ | 构造的更小对象不在 $C$ 中 |
-| 程序永不进入坏状态 | [[数学证明方法#不变量与算法正确性|不变量]] | 初始成立、转移保持 | 只证明“保持”，没证明初始成立 |
-| 递归生成的所有对象 | [[数学证明方法#归纳法|结构归纳]] | 每个 base/constructor | 漏掉某个构造器 |
+| $P\Rightarrow Q$ | [[直接证明|直接证明]] | 假设 $P$ 成立 | 偷偷假设 $Q$；证明了逆命题 |
+| $P\Rightarrow Q$，而 $\neg Q$ 信息更强 | [[逆否证明|逆否证明]] | 假设 $\neg Q$ | 写成 $\neg P\Rightarrow\neg Q$ |
+| “不存在……”或假设会造成冲突 | [[反证法|反证法]] | 假设目标命题为假 | 得到的“矛盾”不是由该假设造成 |
+| 论域可分成覆盖全部可能的情形 | [[分类证明的完备性|分类证明]] | 列出覆盖全部可能的情形 | 漏掉 $0$、空集或交界点 |
+| 对每个 $n\in\mathbb N$ | [[普通数学归纳法|数学归纳法]] | 命题 $P(n)$ 与基例 | 归纳步没有连接到下一个整数 |
+| $P(n)$ 依赖多个更小规模 | [[强数学归纳法|强归纳法]] | 所有 $P(k),k<n$ | 基例不足以启动递推 |
+| 假设存在最小反例更易下降 | [[良序原理适用域|良序原理]] | 反例集合 $C\subseteq\mathbb N$ | 构造的更小对象不在 $C$ 中 |
+| 程序永不进入坏状态 | [[不变量原理|不变量]] | 初始成立、转移保持 | 只证明“保持”，没证明初始成立 |
+| 递归生成的所有对象 | [[结构归纳法|结构归纳]] | 每个 base/constructor | 漏掉某个构造器 |
 <!-- bilingual-en:start -->
 | Logical form of the target | Preferred structure | What the proof must establish first | Most common failure mode |
 |---|---|---|---|
-| $P\Rightarrow Q$ | [[数学证明方法#命题、量词与否定|direct proof]] | Assume $P$ | Silently assumes $Q$; proves the converse instead |
-| $P\Rightarrow Q$, and $\neg Q$ is easier to use | [[数学证明方法#直接证明、逆否与反证|proof by contrapositive]] | Assume $\neg Q$ | Writes $\neg P\Rightarrow\neg Q$ instead |
-| A nonexistence claim, or an assumption that should lead to a conflict | [[数学证明方法#直接证明、逆否与反证|proof by contradiction]] | Assume the target statement is false | The contradiction does not actually depend on that assumption |
-| The domain naturally splits into exhaustive cases | [[数学证明方法#直接证明、逆否与反证|proof by cases]] | List cases covering every possibility | Omits $0$, the empty set, or a boundary case |
-| For each $n\in\mathbb N$ | [[数学证明方法#归纳法|mathematical induction]] | Proposition $P(n)$ and base case | Inductive step not connected to the next integer |
-| $P(n)$ relies on multiple smaller cases | [[数学证明方法#归纳法|strong induction]] | All $P(k),k<n$ | Too few base cases to start the recurrence |
-| Assuming a least counterexample makes descent easier | [[数学证明方法#良序与最小反例|well-ordering principle]] | Counterexample set $C\subseteq\mathbb N$ | The constructed smaller object does not belong to $C$ |
-| A program never reaches a bad state | [[数学证明方法#不变量与算法正确性|invariant]] | Establish it initially and prove every transition preserves it | Proves preservation but not the initial case |
-| All recursively generated objects | [[数学证明方法#归纳法|structural induction]] | Every base case and constructor | Omits a constructor |
+| $P\Rightarrow Q$ | [[直接证明|direct proof]] | Assume $P$ | Silently assumes $Q$; proves the converse instead |
+| $P\Rightarrow Q$, and $\neg Q$ is easier to use | [[逆否证明|proof by contrapositive]] | Assume $\neg Q$ | Writes $\neg P\Rightarrow\neg Q$ instead |
+| A nonexistence claim, or an assumption that should lead to a conflict | [[反证法|proof by contradiction]] | Assume the target statement is false | The contradiction does not actually depend on that assumption |
+| The domain naturally splits into exhaustive cases | [[分类证明的完备性|proof by cases]] | List cases covering every possibility | Omits $0$, the empty set, or a boundary case |
+| For each $n\in\mathbb N$ | [[普通数学归纳法|mathematical induction]] | Proposition $P(n)$ and base case | Inductive step not connected to the next integer |
+| $P(n)$ relies on multiple smaller cases | [[强数学归纳法|strong induction]] | All $P(k),k<n$ | Too few base cases to start the recurrence |
+| Assuming a least counterexample makes descent easier | [[良序原理适用域|well-ordering principle]] | Counterexample set $C\subseteq\mathbb N$ | The constructed smaller object does not belong to $C$ |
+| A program never reaches a bad state | [[不变量原理|invariant]] | Establish it initially and prove every transition preserves it | Proves preservation but not the initial case |
+| All recursively generated objects | [[结构归纳法|structural induction]] | Every base case and constructor | Omits a constructor |
 <!-- bilingual-en:end -->
 
 ---
@@ -152,14 +152,14 @@ No prior theorem is required. The central questions are what it means for a clai
 *1.1 Propositions, predicates, and proofs*
 <!-- bilingual-en:end -->
 
-[[数学证明方法#命题、量词与否定|命题（proposition）]]是一个具有确定真值的陈述；它要么真，要么假。例如“$2+3=5$”是命题，“$x+3=5$”在没有指定 $x$ 时不是命题。
+[[命题与谓词|命题（proposition）]]是一个具有确定真值的陈述；它要么真，要么假。例如“$2+3=5$”是命题，“$x+3=5$”在没有指定 $x$ 时不是命题。
 <!-- bilingual-en:start -->
-A [[数学证明方法#命题、量词与否定|proposition]] is a statement with a definite truth value: it is either true or false. For example, "$2+3=5$" is a proposition, whereas "$x+3=5$" is not a proposition unless $x$ is specified.
+A [[命题与谓词|proposition]] is a statement with a definite truth value: it is either true or false. For example, "$2+3=5$" is a proposition, whereas "$x+3=5$" is not a proposition unless $x$ is specified.
 <!-- bilingual-en:end -->
 
-[[数学证明方法#命题、量词与否定|谓词（predicate）]] $P(x)$ 是含自由变量的真假条件。给定论域并代入 $x$，或给变量加量词后，它才成为命题。例如
+[[命题与谓词|谓词（predicate）]] $P(x)$ 是含自由变量的真假条件。给定论域并代入 $x$，或给变量加量词后，它才成为命题。例如
 <!-- bilingual-en:start -->
-A [[数学证明方法#命题、量词与否定|predicate]] $P(x)$ is a truth-valued condition containing one or more free variables. Once a domain has been specified, substituting a value for $x$ or binding $x$ with a quantifier turns it into a proposition. For example,
+A [[命题与谓词|predicate]] $P(x)$ is a truth-valued condition containing one or more free variables. Once a domain has been specified, substituting a value for $x$ or binding $x$ with a quantifier turns it into a proposition. For example,
 <!-- bilingual-en:end -->
 
 $$
@@ -171,14 +171,14 @@ $$
 In the universe $\mathbb Z$, $P(2)$ is true, $P(1)$ is false, and $\exists x\,P(x)$ is a true proposition.
 <!-- bilingual-en:end -->
 
-[[数学证明方法#命题、量词与否定|公理（axiom）]]是在某个形式系统内接受为起点的命题；[[数学证明方法#命题、量词与否定|定理（theorem）]]是重要且已证明的命题；[[数学证明方法#命题、量词与否定|引理（lemma）]]为后续定理服务；[[数学证明方法#命题、量词与否定|推论（corollary）]]由已有定理经过很短推导得到。
+[[公理、定理、引理与推论|公理（axiom）]]是在某个形式系统内接受为起点的命题；[[公理、定理、引理与推论|定理（theorem）]]是重要且已证明的命题；[[公理、定理、引理与推论|引理（lemma）]]为后续定理服务；[[公理、定理、引理与推论|推论（corollary）]]由已有定理经过很短推导得到。
 <!-- bilingual-en:start -->
-An [[数学证明方法#命题、量词与否定|axiom]] is a proposition accepted as a starting point within a formal system; a [[数学证明方法#命题、量词与否定|theorem]] is an important proposition that has been proved; a [[数学证明方法#命题、量词与否定|lemma]] is a supporting result used to prove a later theorem; and a [[数学证明方法#命题、量词与否定|corollary]] follows from an established theorem in only a few steps.
+An [[公理、定理、引理与推论|axiom]] is a proposition accepted as a starting point within a formal system; a [[公理、定理、引理与推论|theorem]] is an important proposition that has been proved; a [[公理、定理、引理与推论|lemma]] is a supporting result used to prove a later theorem; and a [[公理、定理、引理与推论|corollary]] follows from an established theorem in only a few steps.
 <!-- bilingual-en:end -->
 
-[[数学证明方法#命题、量词与否定|证明（proof）]]是从定义、公理、假设及已经证明的结论出发，按有效推理规则得到目标命题的有限序列。这里有两个关键限定：
+[[数学证明的有效推理|证明（proof）]]是从定义、公理、假设及已经证明的结论出发，按有效推理规则得到目标命题的有限序列。这里有两个关键限定：
 <!-- bilingual-en:start -->
-A [[数学证明方法#命题、量词与否定|proof]] is a finite sequence of valid inferences that derives a target proposition from definitions, axioms, assumptions, and previously proved results. Two qualifications matter:
+A [[数学证明的有效推理|proof]] is a finite sequence of valid inferences that derives a target proposition from definitions, axioms, assumptions, and previously proved results. Two qualifications matter:
 <!-- bilingual-en:end -->
 
 - **结论真，不代表给出的论证有效。** 一个错误论证可能恰好得到真命题。
@@ -394,9 +394,9 @@ which is still odd. Therefore, odd $n$ implies odd $n^2$, so the original statem
 *2.2 Proof by contradiction*
 <!-- bilingual-en:end -->
 
-证明命题 $T$ 时，[[数学证明方法#直接证明、逆否与反证|反证法]]假设 $\neg T$，再推出某命题 $R$ 与 $\neg R$ 同时成立。逻辑骨架是
+证明命题 $T$ 时，[[反证法|反证法]]假设 $\neg T$，再推出某命题 $R$ 与 $\neg R$ 同时成立。逻辑骨架是
 <!-- bilingual-en:start -->
-To prove a statement $T$ by [[数学证明方法#直接证明、逆否与反证|contradiction]], assume $\neg T$ and derive both some statement $R$ and its negation $\neg R$. The logical skeleton is
+To prove a statement $T$ by [[反证法|contradiction]], assume $\neg T$ and derive both some statement $R$ and its negation $\neg R$. The logical skeleton is
 <!-- bilingual-en:end -->
 
 $$
@@ -424,9 +424,9 @@ The contradiction must depend on the assumption $\neg T$. If it can be derived w
 *2.3 Proof by cases*
 <!-- bilingual-en:end -->
 
-[[数学证明方法#直接证明、逆否与反证|分类证明]]把论域写成覆盖全部可能的若干情形 $C_1,\dots,C_k$，分别证明 $C_i\Rightarrow T$。分类不一定互斥，但必须穷尽：
+[[分类证明的完备性|分类证明]]把论域写成覆盖全部可能的若干情形 $C_1,\dots,C_k$，分别证明 $C_i\Rightarrow T$。分类不一定互斥，但必须穷尽：
 <!-- bilingual-en:start -->
-A [[数学证明方法#直接证明、逆否与反证|proof by cases]] divides the domain into cases $C_1,\dots,C_k$ that cover every possibility and proves $C_i\Rightarrow T$ for each case. The cases need not be mutually exclusive, but they must be exhaustive:
+A [[分类证明的完备性|proof by cases]] divides the domain into cases $C_1,\dots,C_k$ that cover every possibility and proves $C_i\Rightarrow T$ for each case. The cases need not be mutually exclusive, but they must be exhaustive:
 <!-- bilingual-en:end -->
 
 $$
@@ -523,9 +523,9 @@ How can “if a counterexample exists, choose the least one and construct a stil
 *3.1 The principle and the least-counterexample template*
 <!-- bilingual-en:end -->
 
-[[数学证明方法#良序与最小反例|良序原理（Well-Ordering Principle, WOP）]]：每个非空的非负整数集合 $S\subseteq\mathbb N$ 都有最小元素。
+[[良序原理适用域|良序原理（Well-Ordering Principle, WOP）]]：每个非空的非负整数集合 $S\subseteq\mathbb N$ 都有最小元素。
 <!-- bilingual-en:start -->
-The [[数学证明方法#良序与最小反例|Well-Ordering Principle (WOP)]] states that every nonempty set of nonnegative integers $S\subseteq\mathbb N$ has a least element.
+The [[良序原理适用域|Well-Ordering Principle (WOP)]] states that every nonempty set of nonnegative integers $S\subseteq\mathbb N$ has a least element.
 <!-- bilingual-en:end -->
 
 ![[98_attachment/mathematics_for_computer_science/mit6_042j/unit01-well-ordering-descent.png|900]]
@@ -720,9 +720,9 @@ How can natural-language specifications be translated into formulas that truth t
 *4.1 Logical operators*
 <!-- bilingual-en:end -->
 
-[[数学证明方法#命题、量词与否定|命题逻辑]]的基本运算：
+[[真值表等价检验|命题逻辑]]的基本运算：
 <!-- bilingual-en:start -->
-The basic operators of [[数学证明方法#命题、量词与否定|propositional logic]] are:
+The basic operators of [[真值表等价检验|propositional logic]] are:
 <!-- bilingual-en:end -->
 
 | 公式 | 何时为真 | 常用等价式 |
@@ -754,9 +754,9 @@ In natural language, “$P$ only if $Q$” means $P\Rightarrow Q$, “$P$ if $Q$
 *4.2 Truth tables, validity, satisfiability, and equivalence*
 <!-- bilingual-en:end -->
 
-有 $n$ 个命题变量时，[[数学证明方法#命题、量词与否定|真值表]]有 $2^n$ 行。两个公式在每个环境（truth assignment）下真值相同，称[[数学证明方法#命题、量词与否定|逻辑等价]]。
+有 $n$ 个命题变量时，[[真值表等价检验|真值表]]有 $2^n$ 行。两个公式在每个环境（truth assignment）下真值相同，称[[真值表等价检验|逻辑等价]]。
 <!-- bilingual-en:start -->
-With $n$ propositional variables, a [[数学证明方法#命题、量词与否定|truth table]] has $2^n$ rows. Two formulas are [[数学证明方法#命题、量词与否定|logically equivalent]] when they have the same truth value under every truth assignment.
+With $n$ propositional variables, a [[真值表等价检验|truth table]] has $2^n$ rows. Two formulas are [[真值表等价检验|logically equivalent]] when they have the same truth value under every truth assignment.
 <!-- bilingual-en:end -->
 
 - **valid / tautology：**每个环境都真；
@@ -1701,9 +1701,9 @@ How can a finite proof establish infinitely many statements about integers? Why 
 *8.1 Ordinary induction*
 <!-- bilingual-en:end -->
 
-[[数学证明方法#归纳法|普通归纳原理]]：若
+[[普通数学归纳法|普通归纳原理]]：若
 <!-- bilingual-en:start -->
-The [[数学证明方法#归纳法|ordinary induction principle]] states that if
+The [[普通数学归纳法|ordinary induction principle]] states that if
 <!-- bilingual-en:end -->
 
 $$
@@ -1750,9 +1750,9 @@ The induction hypothesis does not assume the whole theorem; it is a temporary as
 *8.2 Equivalence of strong and ordinary induction*
 <!-- bilingual-en:end -->
 
-[[数学证明方法#归纳法|强归纳]]的归纳步允许假设所有更小情形：
+[[强数学归纳法|强归纳]]的归纳步允许假设所有更小情形：
 <!-- bilingual-en:start -->
-The inductive step in [[数学证明方法#归纳法|strong induction]] may assume every strictly smaller case:
+The inductive step in [[强数学归纳法|strong induction]] may assume every strictly smaller case:
 <!-- bilingual-en:end -->
 
 $$
@@ -2027,9 +2027,9 @@ How do you prove that a process that may run for any length of time never reache
 *9.1 The state-machine model*
 <!-- bilingual-en:end -->
 
-[[数学证明方法#不变量与算法正确性|状态机（state machine）]]由状态集合 $Q$、开始状态 $q_0$、转移关系 $\delta\subseteq Q\times Q$ 构成。状态 $r$ **reachable**，若存在有限路径
+[[状态机与可达性|状态机（state machine）]]由状态集合 $Q$、开始状态 $q_0$、转移关系 $\delta\subseteq Q\times Q$ 构成。状态 $r$ **reachable**，若存在有限路径
 <!-- bilingual-en:start -->
-A [[数学证明方法#不变量与算法正确性|state machine]] consists of a state set $Q$, a start state $q_0$, and a transition relation $\delta\subseteq Q\times Q$. A state $r$ is **reachable** if there is a finite path
+A [[状态机与可达性|state machine]] consists of a state set $Q$, a start state $q_0$, and a transition relation $\delta\subseteq Q\times Q$. A state $r$ is **reachable** if there is a finite path
 <!-- bilingual-en:end -->
 
 $$
@@ -2088,14 +2088,14 @@ If a state is a vector $(x_1,\dots,x_k)$, first list the changes $\Delta x_i$ fo
 *9.4 Separating partial correctness from termination*
 <!-- bilingual-en:end -->
 
-**部分正确性（partial correctness）**只说“若算法停，则答案正确”；**全正确性**还要证一定停。
+**[[不变量与部分正确性|部分正确性（partial correctness）]]**只说“若算法停，则答案正确”；**[[全正确性构成|全正确性]]**还要证一定停。
 <!-- bilingual-en:start -->
-**Partial correctness** says only, “if the algorithm terminates, its answer is correct.” **Total correctness** additionally proves that the algorithm must terminate.
+**[[不变量与部分正确性|Partial correctness]]** says only, “if the algorithm terminates, its answer is correct.” **[[全正确性构成|Total correctness]]** additionally proves that the algorithm must terminate.
 <!-- bilingual-en:end -->
 
-[[数学证明方法#不变量与算法正确性|秩函数/derived variable]] $V:Q\to W$ 若每步严格下降，而 $W$ well-ordered，则不存在无限转移链。仅 weakly decreasing 不足，例如保持常数的过程可以永远运行。
+[[秩函数与终止证明|秩函数/derived variable]] $V:Q\to W$ 若每步严格下降，而 $W$ well-ordered，则不存在无限转移链。仅 weakly decreasing 不足，例如保持常数的过程可以永远运行。
 <!-- bilingual-en:start -->
-If a [[数学证明方法#不变量与算法正确性|rank function or derived variable]] $V:Q\to W$ decreases strictly at every step and $W$ is well ordered, then no infinite transition chain exists. Weak decrease alone is insufficient: a process can remain constant forever.
+If a [[秩函数与终止证明|rank function or derived variable]] $V:Q\to W$ decreases strictly at every step and $W$ is well ordered, then no infinite transition chain exists. Weak decrease alone is insufficient: a process can remain constant forever.
 <!-- bilingual-en:end -->
 
 ### 9.5 俄式整数乘法
@@ -2266,9 +2266,9 @@ How to read the diagram: base objects form the leaves, and constructors combine 
 *10.2 The structural-induction principle*
 <!-- bilingual-en:end -->
 
-[[数学证明方法#归纳法|结构归纳]]要求：对每个 base object 证明 $P$；对每个 constructor，假设直接子对象均满足 $P$，证明构造结果满足 $P$。证明依据是有限构造树，而不是表面的数值大小。若有 3 个 bases、4 个 constructors，就有 7 个逻辑分支。
+[[结构归纳法|结构归纳]]要求：对每个 base object 证明 $P$；对每个 constructor，假设直接子对象均满足 $P$，证明构造结果满足 $P$。证明依据是有限构造树，而不是表面的数值大小。若有 3 个 bases、4 个 constructors，就有 7 个逻辑分支。
 <!-- bilingual-en:start -->
-[[数学证明方法#归纳法|Structural induction]] requires proving $P$ for every base object and, for each constructor, assuming $P$ for its immediate subobjects and proving $P$ for the constructed result. The proof follows the finite construction tree rather than an object's superficial numerical size. Three base cases and four constructors therefore produce seven proof branches.
+[[结构归纳法|Structural induction]] requires proving $P$ for every base object and, for each constructor, assuming $P$ for its immediate subobjects and proving $P$ for the constructed result. The proof follows the finite construction tree rather than an object's superficial numerical size. Three base cases and four constructors therefore produce seven proof branches.
 <!-- bilingual-en:end -->
 
 ### 10.3 递归函数与良定义

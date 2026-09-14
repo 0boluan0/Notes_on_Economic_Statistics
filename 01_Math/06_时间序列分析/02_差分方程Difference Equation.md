@@ -4,6 +4,12 @@
 ==This course focuses on low-order difference equations; the exam covers at most second-order equations.==
 <!-- bilingual-en:end -->
 
+> [!info] 当前学习入口
+> 本页保留课堂顺序、图示与作业记录。要连续理解定义、推导、例子和边界，请从[[01_Math/06_时间序列分析/02_差分方程与算子|差分方程与滞后算子：从递推规则到可解释的动态路径]]开始；要查看全局关系，请打开[[差分方程与滞后算子.canvas|主题 Canvas]]。
+> <!-- bilingual-en:start -->
+> This page remains the lecture-order record. Use the [[01_Math/06_时间序列分析/02_差分方程与算子|continuous learning chapter]] for the corrected explanation and the [[差分方程与滞后算子.canvas|topic Canvas]] for the global relationships.
+> <!-- bilingual-en:end -->
+
 # 0. 回忆用问题
 <!-- bilingual-en:start -->
 *0. Recall questions*
@@ -36,14 +42,14 @@
 *1.1. Terminology: operator*
 <!-- bilingual-en:end -->
 
-从一个拓扑空间到另一个拓扑空间的映射.
+在本章语境中，算子是一条把输入序列映射为另一条序列的规则；例如滞后算子移动索引，差分算子比较相邻项。这里不需要先诉诸拓扑空间的一般定义。
 <!-- bilingual-en:start -->
-A mapping from one topological space to another.
+In this chapter, an operator is a rule that maps one sequence into another. The lag operator shifts indices, while the difference operator compares neighbouring terms.
 <!-- bilingual-en:end -->
 
-## 1.2. 术语：差分算子（[[差分方程与滞后算子|Difference]] operator）
+## 1.2. 术语：[[差分算子]]（Difference operator）
 <!-- bilingual-en:start -->
-*1.2. Terminology: difference operator ([[差分方程与滞后算子|difference]] operator)*
+*1.2. Terminology: [[差分算子|difference operator]]*
 <!-- bilingual-en:end -->
 
 >[!note] 差分算子 $\Delta$的定义
@@ -91,8 +97,8 @@ $$T_t = 1 + 0.1 t, \quad S_t = 1.6 \sin\left(\frac{t\pi}{6}\right), \quad I_t = 
 2. **季节成分（Seasonal component）$S_t$**
    季节项 $S_t = 1.6 \sin(t\pi/6)$ 采用正弦函数，表示 $y_t$ 随着时间 $t$ 具有周期性变化。周期为 $12$（因为 $\sin$ 函数的周期是 $2\pi$，即 $t\pi/6 = 2\pi$ 对应 $t=12$），说明该数据可能有**年度季节性**（比如按月变化的经济指标）。
 3. **不规则成分（Irregular component）$I_t$**
-   不规则项 $I_t$ 由一阶自回归模型（[[ARMA 模型：识别、估计、诊断与预测#AR、MA 与 ARMA|AR]](1) 过程）给出：$$I_t = 0.7 I_{t-1} + \varepsilon_t$$
-   其中 $\varepsilon_t$ 是随机扰动，表示无法预测的随机变化。这个方程表示 $I_t$ 依赖于其前一期值 $I_{t-1}$，并受到随机冲击的影响。这是一种**平稳时间序列模型**，如果 $|\phi| < 1$（这里 $\phi = 0.7$），则该过程是均值回归的，不会发散。
+   不规则项 $I_t$ 由一阶自回归模型（[[AR(p)模型|AR]](1) 过程）给出：$$I_t = 0.7 I_{t-1} + \varepsilon_t$$
+   其中 $\varepsilon_t$ 是随机扰动，表示无法预测的随机变化。这个方程表示 $I_t$ 依赖于其前一期值 $I_{t-1}$，并受到随机冲击的影响。若创新满足相应矩条件且选择由无限过去创新生成的因果解，$|\phi|<1$（这里 $\phi=0.7$）给出协方差平稳、均值回复的过程；任意有限初值只保证其影响渐渐消失，并不会让初始后的整段样本立刻平稳。
 <!-- bilingual-en:start -->
 Consider
 $$y_t=T_t+S_t+I_t,$$
@@ -101,15 +107,15 @@ $$T_t=1+0.1t,\quad S_t=1.6\sin\left(\frac{t\pi}{6}\right),\quad I_t=0.7I_{t-1}+\
 
 **1.** **Trend $T_t$:** a linear increase of $0.1$ per period.<br>
 **2.** **Seasonality $S_t$:** a sinusoid with period 12, which gives annual seasonality to monthly data.<br>
-**3.** **Irregular component $I_t$:** an [[ARMA 模型：识别、估计、诊断与预测#AR、MA 与 ARMA|AR(1) process]] driven by unpredictable innovations. Since $|0.7|<1$, it is stationary and mean-reverting.<br>
+**3.** **Irregular component $I_t$:** an [[AR(p)模型|AR(1) process]] driven by unpredictable innovations. With suitable innovation moments and the causal infinite-past construction, $|0.7|<1$ gives a covariance-stationary, mean-reverting solution; an arbitrary finite initialization only approaches that regime.<br>
 <!-- bilingual-en:end -->
 
-==差分方程最一般的形~~势~~式就是某个变量当前的取值可由自身的滞后项、时间以及其他变量的函数共同决定。==
+==[[差分方程]]的一般形式把变量当前值与自身滞后、时间及其他输入联系起来。==
 <!-- bilingual-en:start -->
 ==A difference equation makes a current value a function of its own lags, time, and other variables.==
 <!-- bilingual-en:end -->
 
-# 2. 线性差分方程和其解Linear [[差分方程与滞后算子|Difference Equation]] and Its Solution
+# 2. [[线性常系数差分方程|线性差分方程]]和其解 Linear Difference Equations and Their Solutions
 <!-- bilingual-en:start -->
 *2. Linear difference equations and their solutions*
 <!-- bilingual-en:end -->
@@ -257,19 +263,19 @@ $$y_t=a_0\sum_{i=0}^{t+m}a_1^i+\sum_{i=0}^{t+m}a_1^i\varepsilon_{t-i}+a_1^{t+m+1
 >      $$
 >      I_t = 0.7^k I_{t-k} + \sum_{i=0}^{k-1} 0.7^i \,\varepsilon_{t-i}.
 >      $$
-> 	此时由于 $|0.7|<1$ 且 $k \to \infty$，$0.7^k I_{t-k}$ 收敛为 0，最终得到
+> 	若选择由无限过去创新生成的因果解，并且 $I_{t-k}$ 与创新满足使初值项消失、级数收敛的条件，则 $|0.7|<1$ 使 $0.7^k I_{t-k}\to0$，从而得到
 >      $$ I_t = \sum_{i=0}^{\infty} 0.7^i \,\varepsilon_{t-i}$$
 > <!-- bilingual-en:start -->
 > For $I_t=0.7I_{t-1}+\varepsilon_t$, $k$ substitutions give
 > $$I_t=0.7^kI_{t-k}+\sum_{i=0}^{k-1}0.7^i\varepsilon_{t-i}.$$
-> Since $|0.7|<1$, the initial-condition term vanishes as $k\to\infty$, leaving
+> Under the causal infinite-past construction and conditions that make the initial term vanish and the series converge, $|0.7|<1$ leaves
 > $$I_t=\sum_{i=0}^{\infty}0.7^i\varepsilon_{t-i}.$$
 > <!-- bilingual-en:end -->
 
 >[!attention] 注意:稳定的特解
->和正向迭代不同,当 $m$ 趋于无穷大（即将初始时刻推至远过去）时，结果取决于 $a_1$ 的大小：如果 $|a_1|<1$，则 $a_1^{t+m} y_{t-m}$ 项随着 $m \to \infty$ 衰减为0 。此时我们得到**稳定的特解**（particular solution）：$$y_t = \frac{a_0}{1 - a_1} + \sum_{i=0}^{\infty} a_1^i\varepsilon_{t-i}$$
+>和正向迭代不同，把初始时刻推到无限过去是在选择另一类解。若 $|a_1|<1$，创新具有足够矩条件，并且远期初值项按所需意义消失，则可以得到由当前和过去创新生成的**稳定因果特解**：$$y_t = \frac{a_0}{1 - a_1} + \sum_{i=0}^{\infty} a_1^i\varepsilon_{t-i}$$
 > <!-- bilingual-en:start -->
-> If $|a_1|<1$, pushing the initial date into the remote past makes the initial-condition term vanish, leaving
+> If $|a_1|<1$ and the innovation and convergence conditions are satisfied, the causal infinite-past construction makes the initial-condition term vanish, leaving
 > $$y_t=\frac{a_0}{1-a_1}+\sum_{i=0}^{\infty}a_1^i\varepsilon_{t-i}.$$
 > <!-- bilingual-en:end -->
 
@@ -288,9 +294,9 @@ Without $y_0$, $A$ is arbitrary. A specified $y_0$ uniquely determines $A$ and t
 <!-- bilingual-en:end -->
 
 
-==$|a_1|<1$叫做平稳过程.$|a_1|=1$叫做单位根过程,$|a_1|>1$时叫做爆炸过程.==
+==$|a_1|<1$ 在适当创新条件下允许稳定因果的平稳解；$a_1=1$ 是通常的零频单位根，$a_1=-1$ 是另一个单位圆根；$|a_1|>1$ 时，一般有限初值的前向偏离会爆炸。这里必须同时说明解的构造与所称的稳定或平稳概念。==
 <!-- bilingual-en:start -->
-==$|a_1|<1$ gives a stationary process, $|a_1|=1$ a unit-root process, and $|a_1|>1$ an explosive process.==
+==$|a_1|<1$ permits a stable causal stationary solution under suitable innovation conditions; $a_1=1$ is the ordinary zero-frequency unit root, while $a_1=-1$ is another unit-circle root. For $|a_1|>1$, generic finite-initial-value deviations explode forward.==
 <!-- bilingual-en:end -->
 
 ### 2.3.2. 特征方程法（Characteristic Equation)
@@ -298,12 +304,12 @@ Without $y_0$, $A$ is arbitrary. A specified $y_0$ uniquely determines $A$ and t
 *2.3.2. Characteristic-equation method*
 <!-- bilingual-en:end -->
 
-迭代法在一阶和二阶的时候比较好使,高阶不好用.所以引出另一种方法,特征工程法.
+迭代法在一阶和二阶时比较直接，高阶时容易变得冗长，因此引出特征方程法。
 <!-- bilingual-en:start -->
 Iteration becomes unwieldy at higher orders, which motivates the characteristic-equation method.
 <!-- bilingual-en:end -->
 
->[!note] 方程的齐次部分
+>[!note] [[齐次差分方程|方程的齐次部分]]
 > 方程的右手边只保留和$y_t$的滞后项有关的部分,常数和扰动都扣掉.
 > <!-- bilingual-en:start -->
 > Retain only terms involving $y_t$ and its lags; remove constants and forcing terms.
@@ -346,7 +352,7 @@ Procedure:
 >
 > 其中 $A_1, A_2$ 为任意常数。
 >
-> **第2步（特解）：** 寻找原非齐次方程 $y_t = 0.9y_{t-1} - 0.2y_{t-2} + 3$ 的一个特解。观察驱动项为常数3，我们可以尝试令解为常数形式 $y_t^p = C$（即假设解不随时间变化）。将其代入方程左侧：$y_t^p = Cy_{t-1}^p = Cy_{t-2}^p = C$，代入原方程得到
+> **第2步（特解）：** 寻找原非齐次方程 $y_t = 0.9y_{t-1} - 0.2y_{t-2} + 3$ 的一个特解。观察驱动项为常数3，我们可以尝试令解为常数形式 $y_t^p = C$（即假设解不随时间变化）。于是 $y_t^p=y_{t-1}^p=y_{t-2}^p=C$，代入原方程得到
 > $$C = 0.9C - 0.2C + 3.$$
 > 即 $C = 0.7C + 3$。解得 $0.3C = 3$，于是 $C = 10$。因此 $y_t^p = 10$ 是原方程的一个特解 。_(验证：$0.9\cdot 10 - 0.2\cdot 10 + 3 = 9 - 2 + 3 = 10$，左等于右，成立。)_
 >
@@ -452,8 +458,8 @@ $$p_t = \frac{a - b}{\gamma + \beta}- \frac{1}{\gamma} \sum_{i=0}^{\infty} \Big(
 $$A = p_0 - \frac{a - b}{\gamma + \beta} + \frac{1}{\gamma} \sum_{i=0}^{\infty} \Big(-\frac{\beta}{\gamma}\Big)^i  \varepsilon_{-i}.$$
 	最终得到的方程为:$$p_t = \frac{a - b}{\,\gamma + \beta\,} \;-\; \frac{1}{\gamma} \sum_{i=0}^{\,t-1} \Big(-\frac{\beta}{\gamma}\Big)^i \, \varepsilon_{t-i} \;+\; \Big(-\frac{\beta}{\gamma}\Big)^t \Big(p_0 - \frac{a - b}{\,\gamma + \beta\,}\Big)$$
 	等式右侧的三部分都有其经济含义
-	• 第一部分 $\frac{a - b}{\gamma + \beta}$ 是**长期均衡价格**。它由供需基本面决定，具有常数值。如果满足稳定性条件$\beta/\gamma<1$，那么价格序列${p_t}$会趋向于该均衡值。
-	• 第二部分 $-\frac{1}{\gamma}\sum_{i=0}^{t-1}(-\frac{\beta}{\gamma})^i \varepsilon_{t-i}$ 是**冲击的短期影响**累积项。它捕捉了供给冲击对价格的即时和滞后影响。在稳定情形下，冲击的影响会逐步衰减（因为$|-\beta/\gamma|<1$时高次项很小），表示市场对供给扰动的短期调整过程。
+		• 第一部分 $\frac{a - b}{\gamma + \beta}$ 是**无冲击固定点**。若没有持续的新冲击且 $\beta/\gamma<1$，价格会趋向该值；若每期都有随机冲击，价格通常不会逐路径停在这个常数上。
+		• 第二部分 $-\frac{1}{\gamma}\sum_{i=0}^{t-1}(-\frac{\beta}{\gamma})^i \varepsilon_{t-i}$ 是**冲击的动态影响**累积项。稳定情形下，每一次既定冲击的权重会衰减；但新冲击持续进入时，整个随机项并不会因此消失。
 	• 第三部分 $\Big(-\frac{\beta}{\gamma}\Big)^t\Big(p_0 - \frac{a - b}{\gamma + \beta}\Big)$ 是**初始偏离的影响**。它代表了初始价格偏离均衡时，价格如何随着时间动态调整回归均衡。如果$\beta/\gamma<1$，这一项会随着$t$增大而衰减（因为$|-\beta/\gamma|<1$），表明初始条件的影响逐渐消失；如果$\beta/\gamma>1$，这一项将随时间放大，体现出市场不稳定性。
 <!-- bilingual-en:start -->
 
@@ -465,10 +471,10 @@ $$A = p_0 - \frac{a - b}{\gamma + \beta} + \frac{1}{\gamma} \sum_{i=0}^{\infty} 
 **3.** ==General solution:== add the equilibrium, shock filter, and homogeneous term.<br>
 **4.** ==Initial condition:== determine $A$ from $p_0$.<br>
 
-The resulting expression separates the long-run equilibrium, accumulated short-run supply shocks, and the initial deviation. Under stability, shock weights and the initial deviation decay.
+The expression separates the no-shock fixed point, accumulated supply shocks, and the initial deviation. Under stability, the initial deviation and each individual shock decay. With new shocks arriving every period, the sample path generally does not converge to the fixed point.
 <!-- bilingual-en:end -->
 
-# 4. 解二阶齐次微分方程Solving Second order Homogeneous [[差分方程与滞后算子|Difference]] Equations
+# 4. 解二阶[[齐次差分方程]] Solving Second-order Homogeneous Difference Equations
 <!-- bilingual-en:start -->
 *4. Solving second-order homogeneous difference equations*
 <!-- bilingual-en:end -->
@@ -508,22 +514,22 @@ $$y_t^h = A_1 {\alpha_1}^t + A_2t{\alpha_1}^t$$
 *4.2. Stability conditions*
 <!-- bilingual-en:end -->
 
-对于二阶差分方程，稳定性可以通过特征根的大小来判断。一般地，**稳定要求所有特征根的绝对值都小于1**（即根落在复平面的单位圆内）。复数根就看模是否大于1.$$|\lambda| = r = \sqrt{(\text{实部})^2 + (\text{虚部})^2}$$
+对于二阶差分方程，渐近稳定性可以通过特征根判断：**任意初始偏离都趋于零，当且仅当所有动态特征根的模都严格小于 1**。复根要看模，而不是只看实部：$$|\lambda| = r = \sqrt{(\text{实部})^2 + (\text{虚部})^2}$$
 <!-- bilingual-en:start -->
 Stability requires every characteristic root to have modulus below one. For a complex root,
 $$|\lambda|=\sqrt{(\text{real part})^2+(\text{imaginary part})^2}.$$
 <!-- bilingual-en:end -->
 
-更一般的: 一个$n$阶差分方程稳定（解不发散）当且仅当**所有特征根都位于单位圆内部**，即$|\alpha_i|<1$对于$i=1,\ldots,n$均成立。通常有一些快速判别稳定性的充分必要条件：
-• **必要条件：** 系数满足 $a_1 + a_2 + \cdots + a_n < 1$（所有滞后系数和小于1）。直观理解：如果系数和>=1，意味着单位根或爆炸根存在的可能性很大。
-• **充分条件：** $|a_1| + |a_2| + \cdots + |a_n| < 1$（所有系数绝对值之和小于1）则一定稳定。这是绝对收敛条件，保证特征根绝对值<1。
-• 特殊地，如果 $a_1 + \cdots + a_n = 1$，则特征多项式在$\alpha=1$处有根（即存在单位根），系统处于边界稳定（单位根过程）。例如一阶情况$a_1=1$就是单位根。
+更一般地，对 $y_t=a_1y_{t-1}+\cdots+a_ny_{t-n}$，所有动态特征根满足 $|\alpha_i|<1$ 才是精确的渐近稳定判据。下面的系数关系只能作为附属检查，不能替代求根：
+• **必要但不充分：** 稳定蕴含 $a_1+\cdots+a_n<1$；只检查系数和会漏掉负单位根、复根和其他不稳定模式。
+• **一个方便的充分条件：** $|a_1|+\cdots+|a_n|<1$ 保证稳定，但不满足它并不等于不稳定。
+• 若 $a_1+\cdots+a_n=1$，特征多项式在 $\alpha=1$ 有根；这是零频单位根，不能称为渐近稳定。
 <!-- bilingual-en:start -->
-For an $n$th-order recurrence, the roots remain the definitive stability test. The notes also give:
+For an $n$th-order recurrence, roots are the definitive asymptotic-stability test. The coefficient checks are subordinate:
 
-- $a_1+\cdots+a_n<1$ as a coefficient-sum check;
-- $|a_1|+\cdots+|a_n|<1$ as a sufficient condition;
-- $a_1+\cdots+a_n=1$ implies a unit root at 1.
+- stability implies $a_1+\cdots+a_n<1$, but the inequality is not sufficient;
+- $|a_1|+\cdots+|a_n|<1$ is sufficient, but not necessary;
+- $a_1+\cdots+a_n=1$ implies a unit root at 1 and therefore fails asymptotic stability.
 <!-- bilingual-en:end -->
 
 # 5. 找特解Finding Particular Solution
@@ -558,13 +564,13 @@ Match the trial solution to $x_t$, substitute it, and solve for its coefficients
 
 | **驱动 $x_t$ 类型**  | **特解猜测形式 $y_t^p$**                     | **注意事项**                             |
 | ---------------- | -------------------------------------- | ------------------------------------ |
-| 常数 $C$ 或 0       | 常数 $y_t^p = C$                         | 若 $\sum a_i = 1$（[[趋势、单位根与差分#确定性与随机趋势|单位根]]），改试 $C t$ 等     |
+| 常数 $C$ 或 0       | 常数 $y_t^p = C$                         | 若 $\sum a_i = 1$（[[单位根最小表示|单位根]]），改试 $C t$ 等     |
 | 指数 $B \lambda^t$ | 同形 $y_t^p = K \lambda^t$               | 若 $\lambda$ 是特征根，则改试 $K t \lambda^t$ |
 | $d$次多项式 $B t^d$  | 同次多项式 $y_t^p = C_0 + \cdots + C_d t^d$ | 若 $r=1$ 为特征根（单位根），需升高次数（乘$t$）        |
 <!-- bilingual-en:start -->
 | **Forcing** | **Trial** | **Overlap adjustment** |
 | --- | --- | --- |
-| Constant | $C$ | With a [[趋势、单位根与差分#确定性与随机趋势|unit root]], try $Ct$. |
+| Constant | $C$ | With a [[单位根最小表示|unit root]], try $Ct$. |
 | $B\lambda^t$ | $K\lambda^t$ | If $\lambda$ is a root, try $Kt\lambda^t$. |
 | $Bt^d$ | $C_0+\cdots+C_dt^d$ | With a root at 1, multiply by $t$. |
 <!-- bilingual-en:end -->
@@ -576,7 +582,7 @@ Match the trial solution to $x_t$, substitute it, and solve for its coefficients
 >
 > $$c = a_0 + a_1 c + a_2 c + \cdots + a_n c = a_0 + (a_1 + a_2 + \cdots + a_n) c.$$
 >
-> 解出$c = \frac{a_0}{,1 - (a_1 + \cdots + a_n),}$，前提是$1 - (a_1 + \cdots + a_n) \neq 0$。这个分母为零的情况意味着**单位根**存在（特征根$\alpha=1$导致齐次解中包含常数项），也就是$a_1 + \cdots + a_n = 1$，导致简单常数猜测失败。
+> 解出 $c = \frac{a_0}{1 - (a_1 + \cdots + a_n)}$，前提是 $1 - (a_1 + \cdots + a_n) \neq 0$。这个分母为零的情况意味着**单位根**存在（特征根 $\alpha=1$ 导致齐次解中包含常数项），也就是 $a_1 + \cdots + a_n = 1$，导致简单常数猜测失败。
 >
 > • 如果$1 - (a_1 + \cdots + a_n) = 0$（存在单位根），说明方程的齐次解本身有一个常数解分量，这时驱动为常数会产生一个**线性趋势特解**。换句话说，需要尝试$y_t^p = c , t$这样的形式。将$y_t^p = c t$代入方程：
 >
@@ -630,9 +636,9 @@ Match the trial solution to $x_t$, substitute it, and solve for its coefficients
 > **Polynomial forcing $Bt^d$:** try a degree-$d$ polynomial and equate coefficients; multiply by $t$ if the trial overlaps the homogeneous solution.
 > <!-- bilingual-en:end -->
 
-## 5.2. 随机过程的特解(Particular Solution for [[随机过程基础#随机过程的对象|Stochastic]] Process)
+## 5.2. 随机过程的特解 (Particular Solution for a [[随机过程|Stochastic Process]])
 <!-- bilingual-en:start -->
-*5.2. [[随机过程基础#随机过程的对象|Stochastic]] forcing*
+*5.2. [[随机过程|Stochastic-process]] forcing*
 <!-- bilingual-en:end -->
 
 ### (1) 待定系数法
@@ -707,13 +713,15 @@ $$\frac{1}{1-a_1L}=1+a_1L+a_1^2L^2+\cdots.$$
 # 6. 关联卡片
 
 - Time Series Analysis-hub
-- [[差分方程与滞后算子|Difference Equation]]
-- [[差分方程与滞后算子#滞后与差分算子|Difference Operator]]
-- [[差分方程与滞后算子#滞后与差分算子|Lag Operator]]
-- [[趋势、单位根与差分#差分与整合阶数|First Difference]]
-- [[ARMA 模型：识别、估计、诊断与预测#AR、MA 与 ARMA|Autoregressive Model]]
-- [[ARMA 模型：识别、估计、诊断与预测#AR、MA 与 ARMA|AR(1) stationarity]]
-- [[趋势、单位根与差分#确定性与随机趋势|Random Walk]]
+- [[01_Math/06_时间序列分析/02_差分方程与算子|连续学习路径]]
+- [[差分方程与滞后算子.canvas|主题 Canvas]]
+- [[差分方程|Difference Equation]]
+- [[差分算子|Difference Operator]]
+- [[滞后算子约定|Lag Operator]]
+- [[普通与季节差分|普通差分与季节差分]]
+- [[AR(p)模型|Autoregressive Model]]
+- [[AR因果根条件|AR(1) stationarity]]
+- [[无漂移随机游走|Random Walk]]
 
 # 7. 作业
 <!-- bilingual-en:start -->
@@ -725,15 +733,17 @@ $$\frac{1}{1-a_1L}=1+a_1L+a_1^2L^2+\cdots.$$
 *1. Question 1*
 <!-- bilingual-en:end -->
 
-1. Consider the [[差分方程与滞后算子|difference equation]] $y_t=a_0+a_1y_{t-1}$ with the initial condition $y_0$. Jill solved the difference equation by iterating backward:$$\begin{aligned}y_t &= a_0+a_1y_{t-1}\\   &= a_0+a_1(a_0+a_1y_{t-2})\\    &= a_0+a_0a_1+a_0a_1^2+\cdots+a_0a_1^{t-1}+a_1^ty_0\end{aligned}$$Bill added the homogeneous and particular solutions to obtain$$y_t=\frac{a_0}{1-a_1}+a_1^t\left[y_0-\frac{a_0}{1-a_1}\right].$$
+1. Consider the [[一阶仿射递推|difference equation]] $y_t=a_0+a_1y_{t-1}$ with the initial condition $y_0$. Jill solved the difference equation by iterating backward:$$\begin{aligned}y_t &= a_0+a_1y_{t-1}\\   &= a_0+a_1(a_0+a_1y_{t-2})\\    &= a_0+a_0a_1+a_0a_1^2+\cdots+a_0a_1^{t-1}+a_1^ty_0\end{aligned}$$Bill added the homogeneous and particular solutions to obtain$$y_t=\frac{a_0}{1-a_1}+a_1^t\left[y_0-\frac{a_0}{1-a_1}\right].$$
 	1. A. Show that the two solutions are identical for $|a_1|<1$.
 	2. B. Show that for $a_1=1$, Jill's solution is equivalent to $y_t=a_0t+y_0$. How would you use Bill's method to arrive at this same conclusion in the case $a_1=1$?
 
- a)很简单,就是一个等比数列求和公式的应用
- b)Jill那个就硬推就行了.bill是按照特解-齐次解-通解的过程来搞的.实际上也可以使用洛必达法则来处理.总之就是不太重要
+ a) 当 $a_1\ne1$ 时，有限等比和给出
+ $$a_0\sum_{j=0}^{t-1}a_1^j+a_1^ty_0=\frac{a_0}{1-a_1}+a_1^t\left(y_0-\frac{a_0}{1-a_1}\right),$$
+ 所以两种方法完全相同；题设的 $|a_1|<1$ 还保证初值偏离渐近衰减。
+ b) 当 $a_1=1$ 时，齐次根 1 与常数强迫重合，不能继续使用含 $1-a_1$ 的常数特解。按[[共振特解升阶]]改试 $y_t^p=Ct$，代入得 $C=a_0$；齐次解是常数 $A$，所以 $y_t=A+a_0t$，再由 $y_0$ 得 $A=y_0$。这里不需要洛必达法则。
 <!-- bilingual-en:start -->
-a) Apply the finite geometric-series formula.
-b) Jill uses direct iteration; Bill combines a particular and a homogeneous solution. The limiting case can also be handled with L’Hôpital's rule.
+a) For $a_1\ne1$, the finite geometric sum turns Jill's expression directly into Bill's; $|a_1|<1$ additionally makes the initial deviation decay.
+b) At $a_1=1$, the constant forcing resonates with the homogeneous root. Try $Ct$, obtain $C=a_0$, add the constant homogeneous solution, and impose $y_0$: $y_t=y_0+a_0t$. No limiting argument is needed.
 <!-- bilingual-en:end -->
 
 ## 3. 第 3 题
@@ -744,11 +754,18 @@ b) Jill uses direct iteration; Bill combines a particular and a homogeneous solu
 	1. A. Show that it is possible to express $m_{t+n}$ in terms of the known value $m_t$ and the sequence $\{\varepsilon_{t+1},\varepsilon_{t+2},\ldots,\varepsilon_{t+n}\}$.
 	2. B. Suppose that all values of $\varepsilon_{t+i}$ for $i>0$ have a mean value of zero. Explain how you could use your result in part A to forecast the money supply $n$ periods into the future.
 
-a)使用迭代法
-b)没看懂他要干嘛.总之就是不难
+a) 向前迭代 $n$ 次得到
+$$
+m_{t+n}=\rho^n m_t+m\frac{1-\rho^n}{1-\rho}+\sum_{j=1}^{n}\rho^{,n-j}\varepsilon_{t+j}.
+$$
+b) 若以 $t$ 时点信息作预测，且未来创新的条件均值为零，则
+$$
+\mathbb E_t[m_{t+n}]=\rho^n m_t+m\frac{1-\rho^n}{1-\rho}.
+$$
+它把当前偏离按 $\rho^n$ 衰减，并逐步趋向长期均值 $m/(1-\rho)$。
 <!-- bilingual-en:start -->
-a) Use iteration.
-b) I did not initially understand part B, but the calculation is straightforward.
+a) Iterating forward gives $m_{t+n}=\rho^n m_t+m(1-\rho^n)/(1-\rho)+\sum_{j=1}^n\rho^{n-j}\varepsilon_{t+j}$.
+b) Conditional on date-$t$ information, zero conditional means for future innovations remove the final sum, giving the $n$-step forecast $\rho^n m_t+m(1-\rho^n)/(1-\rho)$.
 <!-- bilingual-en:end -->
 
 ## 7. 第 7 题

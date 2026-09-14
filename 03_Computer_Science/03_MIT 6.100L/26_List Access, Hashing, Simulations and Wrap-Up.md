@@ -301,9 +301,9 @@ The lecture evaluates the hash-function and table pair by whether hashing is sta
 3. 统计结果
 4. 用相对频率或平均值近似真实概率 / 期望
 
-这部分很重要，因为它展示了 computation 在“解析解不好写”时的另一种力量。
+这部分很重要，因为它展示了 computation 在“解析解不好写”时的另一种力量。[[Monte Carlo估计]] 把“定义一次实验—重复—汇总”写成正式估计量；[[Monte Carlo均值标准误]] 给出独立有限方差样本均值的精确标准误，[[Monte Carlo平方根律]] 再把它转成路径数与精度的换算。本讲教授第一个框架，不把并行伪随机子流、统计误差理论或方差缩减算作课堂已经覆盖的内容。
 <!-- bilingual-en:start -->
-The lecture's final technical topic is simulation. Its general framework is to define one random trial, repeat it many times, record outcomes, and use relative frequencies or averages to approximate a probability or expectation. This provides a computational route when an analytic solution is difficult to derive.
+The lecture's final technical topic is simulation. Its general framework is to define one random trial, repeat it many times, record outcomes, and use relative frequencies or averages to approximate a probability or expectation. [[Monte Carlo估计|Monte Carlo estimation]] formalises that define–repeat–summarise framework; [[Monte Carlo均值标准误|the Monte Carlo sample-mean standard error]] gives the exact iid finite-variance benchmark, and [[Monte Carlo平方根律|the square-root law]] converts it into a path-count rule. The lecture teaches the first framework; it does not by itself teach parallel random streams, statistical error theory, or variance reduction.
 <!-- bilingual-en:end -->
 
 ### 13. 骰子例子：频率逼近概率

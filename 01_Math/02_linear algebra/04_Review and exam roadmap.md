@@ -16,16 +16,16 @@ tags:
 > 本页对应 MIT OCW 18.06SC Fall 2011 的 **Final Course Review** 与 **Final Exam**。它不是公式清单，而是把前三个 Unit 的结构压缩成一套可以实际用于判断、计算与验算的复习系统，并完整解答本地期末试卷的九道题。
 >
 > - 课程总览：[[01_Math/02_linear algebra/00_课程总览|MIT 18.06SC course map]]
-> - Unit I：[[线性方程组与四个基本子空间]]
-> - Unit II：[[正交投影与最小二乘]]
-> - Unit III：[[对称矩阵与正定二次型|对称矩阵、正定性]]与[[奇异值分解与低秩近似|奇异值分解]]
+> - Unit I：[[线性方程组与四个基本子空间.canvas|线性方程组与四个基本子空间]]
+> - Unit II：[[正交投影与最小二乘.canvas|正交投影与最小二乘]]
+> - Unit III：[[对称矩阵与正定二次型.canvas|对称矩阵、正定性]]与[[奇异值分解与低秩近似.canvas|奇异值分解]]
 > - 资料索引：[[MIT_OCW_18.06SC_PDF/index|MIT 18.06SC PDF index]]
 > <!-- bilingual-en:start -->
 > This page covers the **Final Course Review** and **Final Exam** for MIT OCW 18.06SC Fall 2011. It is not merely a formula sheet: it condenses the structure of the first three units into a practical system for choosing methods, carrying out calculations, and checking results, and it provides complete solutions to the nine questions in the locally stored final exam.
 > - Course Overview: [[01_Math/02_linear algebra/00_课程总览|MIT 18.06SC course map]]
-> - Unit I:[[线性方程组与四个基本子空间|Linear Equations and Four Basic Subspaces]]
-> - Unit II: [[正交投影与最小二乘|Orthogonal Projections and Least Squares]]
-> - Unit III: [[对称矩阵与正定二次型|Symmetric matrices and positive definiteness]], and [[奇异值分解与低秩近似|singular value decomposition]]
+> - Unit I:[[线性方程组与四个基本子空间.canvas|Linear Equations and Four Basic Subspaces]]
+> - Unit II: [[正交投影与最小二乘.canvas|Orthogonal Projections and Least Squares]]
+> - Unit III: [[对称矩阵与正定二次型.canvas|Symmetric matrices and positive definiteness]], and [[奇异值分解与低秩近似.canvas|singular value decomposition]]
 > - Resource index: [[MIT_OCW_18.06SC_PDF/index|MIT 18.06SC PDF index]]
 > <!-- bilingual-en:end -->
 
@@ -89,9 +89,9 @@ $$
 A\in\mathbb F^{m\times n},\qquad x\in\mathbb F^n,\qquad b\in\mathbb F^m,
 $$
 
-其中 $\mathbb F=\mathbb R$ 或 $\mathbb C$。[[线性方程组与四个基本子空间|线性方程组的解结构]]是
+其中 $\mathbb F=\mathbb R$ 或 $\mathbb C$。[[特解加零空间|线性方程组的解结构]]是
 <!-- bilingual-en:start -->
-where $\mathbb F=\mathbb R$ or $\mathbb C$. The [[线性方程组与四个基本子空间|solution structure of a linear system]] is
+where $\mathbb F=\mathbb R$ or $\mathbb C$. The [[特解加零空间|solution structure of a linear system]] is
 <!-- bilingual-en:end -->
 
 $$
@@ -113,13 +113,13 @@ $$
 Therefore:
 <!-- bilingual-en:end -->
 
-- [[线性方程组与四个基本子空间|列空间]] $C(A)\subseteq\mathbb F^m$ 控制哪些右端 $b$ 可以到达；
-- [[线性方程组与四个基本子空间|零空间]] $N(A)\subseteq\mathbb F^n$ 控制解是否唯一；
+- [[列空间]] $C(A)\subseteq\mathbb F^m$ 控制哪些右端 $b$ 可以到达；
+- [[零空间]] $N(A)\subseteq\mathbb F^n$ 控制解是否唯一；
 - 行空间 $C(A^*)\subseteq\mathbb F^n$ 与 $N(A)$ 正交；
 - 左零空间 $N(A^*)\subseteq\mathbb F^m$ 与 $C(A)$ 正交。
 <!-- bilingual-en:start -->
-- The [[线性方程组与四个基本子空间|column space]] $C(A)\subseteq\mathbb F^m$ determines which right-hand sides $b$ are attainable;
-- [[线性方程组与四个基本子空间|null space]] $N(A)\subseteq\mathbb F^n$ controls whether the solution is unique;
+- The [[列空间|column space]] $C(A)\subseteq\mathbb F^m$ determines which right-hand sides $b$ are attainable;
+- [[零空间|null space]] $N(A)\subseteq\mathbb F^n$ controls whether the solution is unique;
 - The row space $C(A^*)\subseteq\mathbb F^n$ is orthogonal to $N(A)$;
 - The left null space $N(A^*)\subseteq\mathbb F^m$ is orthogonal to $C(A)$.
 <!-- bilingual-en:end -->
@@ -153,13 +153,13 @@ Gaussian elimination reduces $A$ to row-echelon or reduced row-echelon form, fro
 
 - 从 RREF 读取主元位置、行空间与零空间；
 - 列空间的基必须回到**原矩阵**选主元列；
-- 若方阵每列都有主元，则 [[广义逆与最小范数解#左逆、右逆与可逆|逆矩阵]]存在；
-- 无换行消元可组织成 [[线性方程组与四个基本子空间|LU 分解]] $A=LU$；有换行时应写 $PA=LU$。
+- 若方阵每列都有主元，则该方阵[[逆矩阵|可逆]]；
+- 无换行消元可组织成 [[消元与LU分解|LU 分解]] $A=LU$；有换行时应写 $PA=LU$。
 <!-- bilingual-en:start -->
 - Read pivot positions, the row space, and the null space from the RREF;
 - To obtain a basis for the column space, take the corresponding pivot columns from the **original matrix**;
-- If a square matrix has a pivot in every column, its [[广义逆与最小范数解#左逆、右逆与可逆|inverse]] exists;
-- Elimination without row exchanges gives the [[线性方程组与四个基本子空间|LU factorization]] $A=LU$; with row exchanges, write $PA=LU$.
+- If a square matrix has a pivot in every column, it is [[逆矩阵|invertible]];
+- Elimination without row exchanges gives the [[消元与LU分解|LU factorization]] $A=LU$; with row exchanges, write $PA=LU$.
 <!-- bilingual-en:end -->
 
 可逆方阵的核心等价链为
@@ -184,13 +184,18 @@ $$
 When $Ax=b$ has no exact solution, seek the coefficient vector $\hat x$ that minimizes the error:
 <!-- bilingual-en:end -->
 
+下面按实矩阵写 $A^T$ 与 $Q^T$；若 $A$ 为复矩阵，应统一换成共轭转置 $A^*$ 与 $Q^*$。
+<!-- bilingual-en:start -->
+The formulas below use $A^T$ and $Q^T$ for real matrices. Over $\mathbb C$, replace them throughout by the conjugate transposes $A^*$ and $Q^*$.
+<!-- bilingual-en:end -->
+
 $$
 \min_x\|Ax-b\|^2.
 $$
 
-最近点 $p=A\hat x$ 是 $b$ 在 $C(A)$ 上的[[正交投影与最小二乘|正交投影]]，残差
+最近点 $p=A\hat x$ 是 $b$ 在 $C(A)$ 上的[[正交投影|正交投影]]，残差
 <!-- bilingual-en:start -->
-$p=A\hat x$ is the [[正交投影与最小二乘|orthogonal projection]] of $b$ onto $C(A)$, and the residual
+$p=A\hat x$ is the [[正交投影|orthogonal projection]] of $b$ onto $C(A)$, and the residual
 <!-- bilingual-en:end -->
 
 $$
@@ -234,32 +239,32 @@ $$
 *4. Determinants, eigenvalues, and dynamical systems*
 <!-- bilingual-en:end -->
 
-[[行列式#行列式的结构含义|行列式]]同时编码三件事：
+[[行列式.canvas|行列式]]把三个彼此相关、但不能混成一句口诀的判断连在一起：
 <!-- bilingual-en:start -->
-The [[行列式#行列式的结构含义|determinant]] encodes three things at once:
+The [[行列式.canvas|determinant map]] connects three related claims that should still be checked separately:
 <!-- bilingual-en:end -->
 
-- $\det A=0$ 表示空间被压扁，矩阵奇异；
-- $|\det A|$ 是有向体积缩放因子的绝对值；
-- $\det A$ 等于全部特征值之积（按代数重数计）。
+- [[可逆性与非零行列式|$\det A=0$ 表示空间被压扁，矩阵奇异]]；
+- [[行列式体积与取向|对实矩阵，$\lvert\det A\rvert$ 是普通 $n$ 维体积的缩放因子]]；
+- [[行列式与特征值乘积|$\det A$ 等于全部特征值之积（按代数重数计）]]。
 <!-- bilingual-en:start -->
-- $\det A=0$ means that the transformation collapses the space in at least one direction, so the matrix is singular;
-- $|\det A|$ is the absolute volume-scaling factor;
-- $\det A$ equals the product of all eigenvalues, counted with algebraic multiplicity.
+- [[可逆性与非零行列式|$\det A=0$ means that the transformation collapses the space in at least one direction, so the matrix is singular]];
+- [[行列式体积与取向|for a real matrix, $\lvert\det A\rvert$ is the ordinary $n$-dimensional volume-scaling factor]];
+- [[行列式与特征值乘积|$\det A$ equals the product of all eigenvalues, counted with algebraic multiplicity]].
 <!-- bilingual-en:end -->
 
-[[特征值、对角化与线性动力系统#特征值与特征向量|特征值]]与[[特征值、对角化与线性动力系统#特征值与特征向量|特征向量]]满足
+[[特征对|特征值]]与[[特征对|特征向量]]满足
 <!-- bilingual-en:start -->
-An [[特征值、对角化与线性动力系统#特征值与特征向量|eigenvalue]] and its [[特征值、对角化与线性动力系统#特征值与特征向量|eigenvector]] satisfy
+An [[特征对|eigenvalue]] and its [[特征对|eigenvector]] satisfy
 <!-- bilingual-en:end -->
 
 $$
 Av=\lambda v,\qquad v\ne0.
 $$
 
-若 $A=S\Lambda S^{-1}$，则
+若 $A$ 可[[对角化]]为 $A=S\Lambda S^{-1}$，则分别由[[对角化计算矩阵幂]]和[[对角化计算矩阵指数]]得到
 <!-- bilingual-en:start -->
-If $A=S\Lambda S^{-1}$,
+If $A$ is [[对角化|diagonalized]] as $A=S\Lambda S^{-1}$, the methods in [[对角化计算矩阵幂]] and [[对角化计算矩阵指数]] give
 <!-- bilingual-en:end -->
 
 $$
@@ -268,9 +273,9 @@ A^k=S\Lambda^kS^{-1},
 e^{At}=Se^{\Lambda t}S^{-1}.
 $$
 
-长期行为由模最大的特征值控制，但还必须检查：该特征值是否唯一、是否存在非平凡 Jordan 块，以及初值在对应广义特征空间中是否有非零分量。
+对 $A^k$，渐近指数尺度由[[谱半径]]决定，精确趋零条件见[[矩阵幂趋零判据]]；对 $e^{At}$，则由最大特征值实部决定，精确条件见[[连续系统谱稳定性]]。两种情形都必须继续检查并列的主导根、对应 Jordan 块大小，以及初值在相关广义特征空间中的分量；[[非正规矩阵瞬态|非正规矩阵的有限时放大]]还需另查。
 <!-- bilingual-en:start -->
-Long-run behavior is governed by the eigenvalues of largest modulus, but you must also check whether the dominant eigenvalue is unique, whether nontrivial Jordan blocks are present, and whether the initial state has a nonzero component in the corresponding generalized eigenspace.
+For $A^k$, the asymptotic exponential scale is set by the [[谱半径|spectral radius]], with the exact vanishing criterion in [[矩阵幂趋零判据]]. For $e^{At}$, it is set by the largest real part, with the exact criterion in [[连续系统谱稳定性]]. In both cases, also inspect tied dominant roots, their Jordan-block sizes, and the initial state's components in the relevant generalized eigenspaces. [[非正规矩阵瞬态|Finite-time amplification of a nonnormal matrix]] is a separate question.
 <!-- bilingual-en:end -->
 
 ### 5. 对称、正定、SVD 与伪逆
@@ -288,45 +293,45 @@ A=Q\Lambda Q^T,
 \qquad Q^TQ=I.
 $$
 
-若所有特征值为正，则 $A$ 是[[对称矩阵与正定二次型#二次型与正定性|正定矩阵]]，并且
+若所有特征值为正，则由[[正定与半正定的谱判据|特征值符号判据]]，$A$ 是正定矩阵，并且
 <!-- bilingual-en:start -->
-If all eigenvalues are positive, then $A$ is a [[对称矩阵与正定二次型#二次型与正定性|positive-definite matrix]], and
+If all eigenvalues are positive, then the [[正定与半正定的谱判据|eigenvalue sign criterion]] makes $A$ positive definite, and
 <!-- bilingual-en:end -->
 
 $$
 x^TAx>0\qquad(x\ne0).
 $$
 
-任意 $m\times n$ 矩阵都具有[[奇异值分解与低秩近似#SVD 的三层结构|奇异值分解]]
+由 [[SVD存在性|SVD 存在定理]]，任意 $m\times n$ 矩阵都具有奇异值分解
 <!-- bilingual-en:start -->
-Every $m\times n$ matrix has a [[奇异值分解与低秩近似#SVD 的三层结构|singular value decomposition]]
+[[SVD存在性|Every $m\times n$ matrix has a singular value decomposition]]
 <!-- bilingual-en:end -->
 
 $$
 A=U\Sigma V^T.
 $$
 
-它把输入空间中的正交方向 $v_i$ 映为输出空间中的正交方向 $u_i$：
+对每个正奇异值，它把输入空间中的正交方向 $v_i$ 映为输出空间中的正交方向 $u_i$：
 <!-- bilingual-en:start -->
-It maps the orthogonal direction $v_i$ in the input space to the orthogonal direction $u_i$ in the output space:
+For each positive singular value, it maps the orthogonal direction $v_i$ in the input space to the orthogonal direction $u_i$ in the output space:
 <!-- bilingual-en:end -->
 
 $$
 Av_i=\sigma_i u_i.
 $$
 
-非零奇异值的个数就是秩。[[广义逆与最小范数解#Moore–Penrose 伪逆|Moore--Penrose 伪逆]]为
+非零奇异值的个数就是秩。[[伪逆SVD公式|Moore--Penrose 伪逆的 SVD 公式]]为
 <!-- bilingual-en:start -->
-The number of non-zero singular values is the rank.  [[广义逆与最小范数解#Moore–Penrose 伪逆|Moore—Penrose pseudoinverse]] is
+The number of non-zero singular values is the rank. The [[伪逆SVD公式|SVD formula for the Moore—Penrose pseudoinverse]] is
 <!-- bilingual-en:end -->
 
 $$
 A^+=V\Sigma^+U^T,
 $$
 
-并统一给出相容系统的最小范数解与不相容系统的最小二乘解。
+并统一给出相容系统的最小范数精确解，以及不相容系统的所有最小二乘解中范数最小者。
 <!-- bilingual-en:start -->
-This formula gives both the minimum-norm solution of a consistent system and the least-squares solution of an inconsistent system.
+This formula gives the minimum-norm exact solution of a consistent system and the minimum-norm member of all least-squares solutions of an inconsistent system.
 <!-- bilingual-en:end -->
 
 ## 题型入口：看到什么就问什么
@@ -340,8 +345,11 @@ This formula gives both the minimum-norm solution of a consistent system and the
 | “四个基本子空间” | 每个空间位于 $\mathbb F^m$ 还是 $\mathbb F^n$ | pivot columns / RREF | 维数和正交性 |
 | “closest、best fit、error” | $b$ 是否在 $C(A)$ | projection / normal equations | $A^T(b-A\hat x)=0$ |
 | “orthonormal basis” | 向量是否独立 | Gram--Schmidt / QR | $Q^TQ=I$ |
-| “volume、singular、cofactor” | 是否方阵 | determinant | 行操作或特征值交叉检查 |
-| “powers、steady state、ODE” | 是否可对角化、谱半径 | eigen / Jordan / $e^{At}$ | 代回 $Av=\lambda v$ |
+| “volume、singular” | 是否方阵；问题问缩放还是可逆性 | [[行列式]]、[[行列式体积与取向]]或[[可逆性与非零行列式]] | 行操作或特征值交叉检查 |
+| “cofactor、adjugate、inverse formula” | 是否方阵；求逆时是否有 $\det A\ne0$ | [[余子式与代数余子式]]、[[余子式展开]]、[[伴随矩阵求逆]] | 检查 $(-1)^{i+j}$；代回 $AA^{-1}=I$ |
+| “powers” | 指数 $k$、是否可对角化、是否有 Jordan 块 | [[对角化计算矩阵幂]]或[[Jordan块的幂]] | 用 $k=0,1$ 核对；必要时直接乘一次 |
+| “steady state” | [[Markov矩阵左右约定|左右约定]]、非负性、归一化，以及题目问固定点还是收敛 | [[Markov稳态分布]]；若问长期极限再用[[Markov矩阵幂收敛判据]] | $P\pi=\pi$（或 $\pi^TP=\pi^T$）、$\pi\ge0$、$\mathbf1^T\pi=1$ |
+| “ODE” | 初值、矩阵指数，以及虚轴 Jordan 块 | [[常系数线性系统的矩阵指数解|矩阵指数]]、[[对角化计算矩阵指数]]或[[Jordan块的指数]] | $u(0)=u_0$ 且 $u'(t)=Au(t)$ |
 | “symmetric、minimum” | 是否实对称 | spectral theorem / quadratic form | 特征值、主子式或主元 |
 | “rectangular、compression” | 秩与形状 | SVD / pseudoinverse | $AA^+A=A$ |
 <!-- bilingual-en:start -->
@@ -351,8 +359,11 @@ This formula gives both the minimum-norm solution of a consistent system and the
 | "four fundamental subspaces" | Whether each space lies in $\mathbb F^m$ or $\mathbb F^n$ | pivot columns / RREF | Dimensions and orthogonality |
 | "closest, best fit, error" | whether $b$ is on $C(A)$ | projection / normal equations | $A^T(b-A\hat x)=0$ |
 | "orthonormal basis" | Whether the vectors are linearly independent | Gram--Schmidt / QR | $Q^TQ=I$ |
-| "volume, singular, cofactor" | Whether the matrix is square | determinant | Cross-check with row operations or eigenvalues |
-| "powers, steady state, ODE" | Diagonalizability and spectral radius | eigendecomposition / Jordan form / $e^{At}$ | Substitute into $Av=\lambda v$ |
+| "volume, singular" | Whether the matrix is square; whether the question asks about scaling or invertibility | [[行列式|determinant]], [[行列式体积与取向|volume and orientation]], or [[可逆性与非零行列式|the determinant criterion for invertibility]] | Cross-check with row operations or eigenvalues |
+| "cofactor, adjugate, inverse formula" | Whether the matrix is square; and, for inversion, whether $\det A\ne0$ | [[余子式与代数余子式|minors and cofactors]], [[余子式展开|cofactor expansion]], and [[伴随矩阵求逆|the adjugate inverse formula]] | Check $(-1)^{i+j}$; verify $AA^{-1}=I$ |
+| "powers" | The exponent $k$, diagonalizability, and Jordan blocks | [[对角化计算矩阵幂|diagonalized powers]] or [[Jordan块的幂|Jordan-block powers]] | Check $k=0,1$ and, when useful, multiply once directly |
+| "steady state" | The [[Markov矩阵左右约定|left-right convention]], nonnegativity, normalization, and whether the question asks for a fixed point or convergence | [[Markov稳态分布|stationary distribution]]; for a long-run limit, [[Markov矩阵幂收敛判据|the matrix-power convergence criterion]] | $P\pi=\pi$ (or $\pi^TP=\pi^T$), $\pi\ge0$, and $\mathbf1^T\pi=1$ |
+| "ODE" | The initial condition, matrix exponential, and imaginary-axis Jordan blocks | [[常系数线性系统的矩阵指数解|matrix exponential]], [[对角化计算矩阵指数|diagonalization]], or [[Jordan块的指数|Jordan-block exponential]] | $u(0)=u_0$ and $u'(t)=Au(t)$ |
 | "symmetric, minimum" | Whether the matrix is real symmetric | spectral theorem / quadratic form | Eigenvalues, principal minors, or pivots |
 | "rectangular, compression" | Rank and dimensions | SVD / pseudoinverse | $AA^+A=A$ |
 <!-- bilingual-en:end -->
@@ -1122,10 +1133,10 @@ The following questions are transcribed faithfully from the locally stored exam.
 > 0&0&1&0
 > \end{bmatrix}.
 > $$
-> 求 $C,C^2$ 的特征值，求其逆，并计算 $\det C$、$\det(C+I)$、$\det(C+2I)$。
+> 在复数域上求 $C,C^2$ 的特征值，求其逆，并计算 $\det C$、$\det(C+I)$、$\det(C+2I)$。
 > <!-- bilingual-en:start -->
 > Let
-> Find the eigenvalues of $C$ and $C^2$, find their inverses, and compute $\det C$, $\det(C+I)$, and $\det(C+2I)$.
+> Over $\mathbb C$, find the eigenvalues of $C$ and $C^2$, find their inverses, and compute $\det C$, $\det(C+I)$, and $\det(C+2I)$.
 > <!-- bilingual-en:end -->
 
 > [!success]- 完整解答
@@ -1137,7 +1148,13 @@ The following questions are transcribed faithfully from the locally stored exam.
 > $$
 > v=C^4v=\lambda^4v,
 > $$
-> 因 $v\ne0$，有 $\lambda^4=1$。四个特征值为
+> 因 $v\ne0$，有 $\lambda^4=1$。这一步只把特征值限制在四次单位根中，还不能单独证明四个根全部出现。
+>
+> 再看 $e_1$ 的轨道：
+> $$
+> \bigl(e_1,Ce_1,C^2e_1,C^3e_1\bigr)=\bigl(e_1,e_2,e_3,e_4\bigr).
+> $$
+> 这四个向量线性无关，所以不存在次数低于 $4$ 的非零多项式 $p$ 使 $p(C)=0$。结合 $C^4-I=0$，最小多项式必为 $t^4-1$；它与四阶特征多项式同为首一四次多项式，且前者整除后者，因此两者相等。四个特征值才由此确定为
 > $$
 > \boxed{1,-1,i,-i}.
 > $$
@@ -1166,7 +1183,7 @@ The following questions are transcribed faithfully from the locally stored exam.
 > <!-- bilingual-en:start -->
 > $C$ cyclically shifts the coordinates by one position, so four successive applications return every vector to its original position:
 > If $Cv=\lambda v$,
-> Since $v\ne0$, we have $\lambda^4=1$. The four eigenvalues are
+> Since $v\ne0$, we have $\lambda^4=1$. This only restricts the eigenvalues to fourth roots of unity; it does not yet prove that every root occurs. The orbit $(e_1,Ce_1,C^2e_1,C^3e_1)=(e_1,e_2,e_3,e_4)$ is a basis, so no nonzero polynomial of degree below four can annihilate $C$. Hence the minimal polynomial is $t^4-1$. It divides the monic degree-four characteristic polynomial, so the two polynomials are equal and all four roots occur:
 > The eigenvalues of $C^2$ are the squares of these numbers:
 > A permutation matrix is orthogonal, so
 > Taking the product of the eigenvalues gives
@@ -1363,13 +1380,13 @@ The following questions are transcribed faithfully from the locally stored exam.
 
 > [!success]- 自检答案
 > 1. $N(A)=\{0\}$ 等价于列独立、$r=n$；于是 $A^TA$ 正定可逆，每个最小二乘问题有唯一系数解，并存在左逆 $(A^TA)^{-1}A^T$。
-> 2. 特征分解 $A=S\Lambda S^{-1}$ 要求方阵且有完整特征向量组，描述同一空间中的不变方向；SVD 对任意矩形矩阵存在，$v_i$ 是输入方向、$u_i$ 是输出方向，二者由 $Av_i=\sigma_i u_i$ 相连。
+> 2. 特征分解 $A=S\Lambda S^{-1}$ 要求方阵且有完整特征向量组，描述同一空间中的不变方向；SVD 对任意矩形矩阵存在，对每个正奇异值，$v_i$ 是输入方向、$u_i$ 是输出方向，二者由 $Av_i=\sigma_i u_i$ 相连。
 > 3. 检查 $P^T=P$、$P^2=P$，并检查 $C(P)$ 是否等于目标子空间；还可检查特征值只能是 $0,1$。
 > <!-- bilingual-en:start -->
 >
 > &nbsp;
 > **1.** $N(A)=\{0\}$ is equivalent to linear independence of the columns and to $r=n$. Consequently, $A^TA$ is positive definite and invertible, every least-squares problem has a unique coefficient vector, and the left inverse $(A^TA)^{-1}A^T$ exists.<br>
-> **2.** The eigendecomposition $A=S\Lambda S^{-1}$ requires a square matrix with a complete set of eigenvectors and describes invariant directions within one space. An SVD exists for every rectangular matrix; $v_i$ is an input direction, $u_i$ is an output direction, and they are related by $Av_i=\sigma_i u_i$.<br>
+> **2.** The eigendecomposition $A=S\Lambda S^{-1}$ requires a square matrix with a complete set of eigenvectors and describes invariant directions within one space. An SVD exists for every rectangular matrix; for each positive singular value, $v_i$ is an input direction, $u_i$ is an output direction, and they are related by $Av_i=\sigma_i u_i$.<br>
 > **3.** Check $P^T=P$ and $P^2=P$, and verify that $C(P)$ is the intended target subspace. You can also check that every eigenvalue is either $0$ or $1$.<br>
 > <!-- bilingual-en:end -->
 

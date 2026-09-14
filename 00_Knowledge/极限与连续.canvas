@@ -1,0 +1,366 @@
+{
+  "nodes": [
+    {
+      "id": "lc-header",
+      "type": "text",
+      "x": 0,
+      "y": -360,
+      "width": 3290,
+      "height": 230,
+      "text": "# 极限与连续\n\n**它解决什么：** 用严格语言描述输入靠近某点时输出的趋势，再判断这种趋势能否接上点值。\n**具体锚点：** $(x^2-1)/(x-1)$ 在 $x=1$ 未定义，但极限仍是 $2$。\n**为什么重要：** 导数、积分、收敛、渐近近似和概率极限都从这里开始。\n\n左侧从定义进入连续性；右侧是极限计算工具。边界与定理分成独立节点，点击标题进入原子。"
+    },
+    {
+      "id": "lc-limit-definition",
+      "type": "text",
+      "x": 520,
+      "y": 0,
+      "width": 430,
+      "height": 200,
+      "text": "## [[函数极限|函数极限]]\n*Limit of a function*\n\n任意输出误差都能由足够小的非零输入距离保证。",
+      "color": "2"
+    },
+    {
+      "id": "lc-point-value",
+      "type": "text",
+      "x": 0,
+      "y": 340,
+      "width": 430,
+      "height": 170,
+      "text": "## [[点值不决定极限|点值不决定极限]]\n*Point values do not determine limits*\n\n极限只看去心邻域；改单点不会改变附近趋势。",
+      "color": "5"
+    },
+    {
+      "id": "lc-two-sided",
+      "type": "text",
+      "x": 1040,
+      "y": 340,
+      "width": 430,
+      "height": 170,
+      "text": "## [[双侧极限判定|双侧极限判定]]\n*Two-sided limit criterion*\n\n左右极限都存在且相等，有限双侧极限才存在。",
+      "color": "5"
+    },
+    {
+      "id": "lc-infinity",
+      "type": "text",
+      "x": 1560,
+      "y": 340,
+      "width": 450,
+      "height": 190,
+      "text": "## [[无穷极限与无穷远极限|两类“无穷”]]\n*Infinite limits vs. limits at infinity*\n\n一个描述输出发散，一个描述输入方向；无穷都不是可代入的实数。",
+      "color": "3"
+    },
+    {
+      "id": "lc-zero-zero",
+      "type": "text",
+      "x": 2080,
+      "y": 0,
+      "width": 430,
+      "height": 170,
+      "text": "## [[零比零未定式|0/0 未定式]]\n*Zero over zero*\n\n它只说明直接代入失效，不说明极限值或存在性。",
+      "color": "2"
+    },
+    {
+      "id": "lc-limit-laws",
+      "type": "text",
+      "x": 2600,
+      "y": 0,
+      "width": 430,
+      "height": 170,
+      "text": "## [[极限定律适用条件|极限定律的条件]]\n*Hypotheses of the limit laws*\n\n先确认各部分极限存在；商法则还要求分母极限非零。",
+      "color": "3"
+    },
+    {
+      "id": "lc-workflow",
+      "type": "text",
+      "x": 2340,
+      "y": 340,
+      "width": 490,
+      "height": 180,
+      "text": "## [[极限计算流程|极限计算判断顺序]]\n*Diagnostic workflow*\n\n先代入辨认形式，再化简或改写；最后才调用满足条件的定理。",
+      "color": "3"
+    },
+    {
+      "id": "lc-squeeze",
+      "type": "text",
+      "x": 1820,
+      "y": 680,
+      "width": 430,
+      "height": 180,
+      "text": "## [[夹逼定理|夹逼定理]]\n*Squeeze theorem*\n\n同一邻域内上下夹住，而且两个界趋向同一个值。",
+      "color": "4"
+    },
+    {
+      "id": "lc-lhopital",
+      "type": "text",
+      "x": 2340,
+      "y": 680,
+      "width": 430,
+      "height": 190,
+      "text": "## [[洛必达法则|洛必达法则]]\n*L'Hôpital's rule*\n\n满足定理假设时，原函数比与导数比具有同一有限或无穷极限。",
+      "color": "4"
+    },
+    {
+      "id": "lc-lhopital-boundary",
+      "type": "text",
+      "x": 2860,
+      "y": 680,
+      "width": 430,
+      "height": 200,
+      "text": "## [[洛必达适用边界|洛必达适用边界]]\n*Applicability boundary*\n\n只处理满足条件的 $0/0$ 或 $\\infty/\\infty$；每次使用都要重新检查。",
+      "color": "1"
+    },
+    {
+      "id": "lc-differentiable",
+      "type": "text",
+      "x": 0,
+      "y": 680,
+      "width": 430,
+      "height": 180,
+      "text": "## [[可导必连续|可导必连续]]\n*Differentiability implies continuity*\n\n有限差商极限存在，会强迫函数值接上附近趋势。",
+      "color": "4"
+    },
+    {
+      "id": "lc-continuity",
+      "type": "text",
+      "x": 520,
+      "y": 680,
+      "width": 430,
+      "height": 190,
+      "text": "## [[一点连续|一点连续]]\n*Continuity at a point*\n\n沿定义域趋近该点时，函数值趋于已经定义好的点值。",
+      "color": "2"
+    },
+    {
+      "id": "lc-discontinuity",
+      "type": "text",
+      "x": 1040,
+      "y": 680,
+      "width": 430,
+      "height": 190,
+      "text": "## [[间断类型判别|四类间断]]\n*Four types of discontinuity*\n\n按连续条件怎样失败，分为跳跃、可去、无穷与振荡。",
+      "color": "6"
+    },
+    {
+      "id": "lc-continuity-boundary",
+      "type": "text",
+      "x": 0,
+      "y": 1020,
+      "width": 430,
+      "height": 180,
+      "text": "## [[连续不必可导|连续不必可导]]\n*Continuity need not imply differentiability*\n\n连续没有排除尖角；$|x|$ 在 $0$ 就没有共同差商极限。",
+      "color": "1"
+    },
+    {
+      "id": "lc-ivt",
+      "type": "text",
+      "x": 520,
+      "y": 1020,
+      "width": 430,
+      "height": 190,
+      "text": "## [[介值定理|介值定理]]\n*Intermediate Value Theorem*\n\n闭区间上的连续函数会取遍两个端点值之间的每个值。",
+      "color": "4"
+    },
+    {
+      "id": "lc-removable",
+      "type": "text",
+      "x": 1040,
+      "y": 1020,
+      "width": 430,
+      "height": 190,
+      "text": "## [[可去间断的唯一补值|可去间断的唯一补值]]\n*Unique continuous extension*\n\n有限极限为 $L$ 时，只有把点值设为 $L$ 才能连续。",
+      "color": "4"
+    },
+    {
+      "id": "lc-jump",
+      "type": "text",
+      "x": 1560,
+      "y": 1020,
+      "width": 450,
+      "height": 190,
+      "text": "## [[跳跃间断不可补值|跳跃间断不可补值]]\n*A jump cannot be repaired at one point*\n\n左右极限不相等时，任何点值都无法制造双侧极限。",
+      "color": "1"
+    },
+    {
+      "id": "lc-ivt-boundary",
+      "type": "text",
+      "x": 520,
+      "y": 1360,
+      "width": 430,
+      "height": 200,
+      "text": "## [[介值定理只保证存在性|介值定理只保证存在性]]\n*Existence, not uniqueness or an algorithm*\n\n至少有一个，不等于只有一个；定理也没有给出计算步骤。",
+      "color": "1"
+    }
+  ],
+  "edges": [
+    {
+      "id": "le-limit-point",
+      "fromNode": "lc-limit-definition",
+      "fromSide": "bottom",
+      "toNode": "lc-point-value",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "去心条件排除目标点"
+    },
+    {
+      "id": "le-limit-two-sided",
+      "fromNode": "lc-limit-definition",
+      "fromSide": "bottom",
+      "toNode": "lc-two-sided",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "内点的双侧趋近分成左右"
+    },
+    {
+      "id": "le-point-continuity",
+      "fromNode": "lc-point-value",
+      "fromSide": "bottom",
+      "toNode": "lc-continuity",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "连续还要求趋势接上点值"
+    },
+    {
+      "id": "le-two-sided-continuity",
+      "fromNode": "lc-two-sided",
+      "fromSide": "bottom",
+      "toNode": "lc-continuity",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "左右一致才通过内点极限条件"
+    },
+    {
+      "id": "le-differentiable-continuity",
+      "fromNode": "lc-differentiable",
+      "fromSide": "right",
+      "toNode": "lc-continuity",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "有限差商极限强迫连续"
+    },
+    {
+      "id": "le-continuity-classification",
+      "fromNode": "lc-continuity",
+      "fromSide": "right",
+      "toNode": "lc-discontinuity",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "哪项失败决定间断类型"
+    },
+    {
+      "id": "le-continuity-converse",
+      "fromNode": "lc-continuity",
+      "fromSide": "bottom",
+      "toNode": "lc-continuity-boundary",
+      "toSide": "top",
+      "toEnd": "none",
+      "label": "连续仍不足以控制差商"
+    },
+    {
+      "id": "le-continuity-ivt",
+      "fromNode": "lc-continuity",
+      "fromSide": "bottom",
+      "toNode": "lc-ivt",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "区间连续使中间值不能被跳过"
+    },
+    {
+      "id": "le-classification-removable",
+      "fromNode": "lc-discontinuity",
+      "fromSide": "bottom",
+      "toNode": "lc-removable",
+      "toSide": "top",
+      "toEnd": "none",
+      "label": "可去间断能补点修复"
+    },
+    {
+      "id": "le-classification-jump",
+      "fromNode": "lc-discontinuity",
+      "fromSide": "bottom",
+      "toNode": "lc-jump",
+      "toSide": "top",
+      "toEnd": "none",
+      "label": "跳跃需要改变附近行为"
+    },
+    {
+      "id": "le-infinity-classification",
+      "fromNode": "lc-infinity",
+      "fromSide": "bottom",
+      "toNode": "lc-discontinuity",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "输出无界形成无穷间断"
+    },
+    {
+      "id": "le-ivt-boundary",
+      "fromNode": "lc-ivt",
+      "fromSide": "bottom",
+      "toNode": "lc-ivt-boundary",
+      "toSide": "top",
+      "toEnd": "none",
+      "label": "存在性结论不能自动加强"
+    },
+    {
+      "id": "le-zero-workflow",
+      "fromNode": "lc-zero-zero",
+      "fromSide": "bottom",
+      "toNode": "lc-workflow",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "代入未定后必须改写"
+    },
+    {
+      "id": "le-laws-workflow",
+      "fromNode": "lc-limit-laws",
+      "fromSide": "bottom",
+      "toNode": "lc-workflow",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "拆分前先核对运算条件"
+    },
+    {
+      "id": "le-workflow-squeeze",
+      "fromNode": "lc-workflow",
+      "fromSide": "bottom",
+      "toNode": "lc-squeeze",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "上下界同趋一值时选用"
+    },
+    {
+      "id": "le-workflow-lhopital",
+      "fromNode": "lc-workflow",
+      "fromSide": "bottom",
+      "toNode": "lc-lhopital",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "满足定理假设时选用"
+    },
+    {
+      "id": "le-tools-contrast",
+      "fromNode": "lc-squeeze",
+      "fromSide": "right",
+      "toNode": "lc-lhopital",
+      "toSide": "left",
+      "toEnd": "none",
+      "label": "结构不同，不能互相替代"
+    },
+    {
+      "id": "le-lhopital-boundary",
+      "fromNode": "lc-lhopital",
+      "fromSide": "right",
+      "toNode": "lc-lhopital-boundary",
+      "toSide": "left",
+      "toEnd": "none",
+      "label": "使用前逐项检查"
+    },
+    {
+      "id": "le-repair-contrast",
+      "fromNode": "lc-removable",
+      "fromSide": "right",
+      "toNode": "lc-jump",
+      "toSide": "left",
+      "toEnd": "none",
+      "label": "共同极限存在与否决定能否补值"
+    }
+  ]
+}

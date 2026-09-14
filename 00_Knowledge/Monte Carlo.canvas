@@ -1,0 +1,525 @@
+{
+  "nodes": [
+    {
+      "id": "mc-header",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 6000,
+      "height": 220,
+      "text": "# Monte Carlo · 学习总图\n\n从伪随机输入进入基本估计，再把抽样误差与模型、实现和数值误差分开；方差缩减按方法与失败条件展开。箭头表达使用或判断关系，不表示掌握度。"
+    },
+    {
+      "id": "mc-prng",
+      "type": "text",
+      "x": 0,
+      "y": 350,
+      "width": 520,
+      "height": 260,
+      "text": "## [[伪随机数生成器]]\n\n从有限内部状态出发，以确定性递推产生面向模拟的数列。\n\n**结构：** 初始化 · 状态转移 · 输出映射。"
+    },
+    {
+      "id": "mc-security",
+      "type": "text",
+      "x": 0,
+      "y": 650,
+      "width": 520,
+      "height": 240,
+      "text": "## [[伪随机与密码安全]]\n\n适合模拟的 PRNG 不因此适合密码用途。\n\n**原因：** 统计性质≠对手模型下不可预测。"
+    },
+    {
+      "id": "mc-replay",
+      "type": "text",
+      "x": 900,
+      "y": 350,
+      "width": 520,
+      "height": 260,
+      "text": "## [[伪随机复现]]\n\n重放需要固定算法、初始化与调用协议，并验证软件的流兼容条件。\n\n**边界：** seed 不是完整实验记录。"
+    },
+    {
+      "id": "mc-streams",
+      "type": "text",
+      "x": 1800,
+      "y": 350,
+      "width": 520,
+      "height": 260,
+      "text": "## [[并行伪随机子流]]\n\n从可记录根状态派生独立性有构造依据的子流。\n\n**边界：** 同算法和调用协议下复制 seed 会复制随机流。"
+    },
+    {
+      "id": "mc-estimator",
+      "type": "text",
+      "x": 0,
+      "y": 950,
+      "width": 520,
+      "height": 280,
+      "text": "## [[Monte Carlo估计]]\n\n从指定模型重复抽样，用样本平均近似目标期望。\n\n**结构：** 分布 P · 输出 g · 汇总估计量。"
+    },
+    {
+      "id": "mc-se",
+      "type": "text",
+      "x": 900,
+      "y": 950,
+      "width": 520,
+      "height": 280,
+      "text": "## [[Monte Carlo均值标准误]]\n\niid 且有限方差时，样本均值无偏，方差为 sigma²/N。\n\n**精确结果：** SE = sigma/sqrt(N)。"
+    },
+    {
+      "id": "mc-ci",
+      "type": "text",
+      "x": 900,
+      "y": 1300,
+      "width": 520,
+      "height": 280,
+      "text": "## [[Monte Carlo近似区间]]\n\n用样本标准差学生化，构造均值的大样本正态区间。\n\n**边界：** 近似覆盖率不是小样本保证。"
+    },
+    {
+      "id": "mc-cost",
+      "type": "text",
+      "x": 1800,
+      "y": 1300,
+      "width": 520,
+      "height": 280,
+      "text": "## [[Monte Carlo平方根律]]\n\n固定单次方差时，标准误缩小 k 倍需要 k² 倍独立样本。\n\n**例：** 四倍路径只把 SE 减半。"
+    },
+    {
+      "id": "mc-errors",
+      "type": "text",
+      "x": 1800,
+      "y": 950,
+      "width": 520,
+      "height": 280,
+      "text": "## [[Monte Carlo误差分层]]\n\n分开抽样、数值近似、实现与模型误差。\n\n**边界：** 四层不是通用的可加分解。"
+    },
+    {
+      "id": "mc-paths",
+      "type": "text",
+      "x": 2700,
+      "y": 950,
+      "width": 520,
+      "height": 280,
+      "text": "## [[路径数不修模型]]\n\n增加路径只收缩给定目标周围的抽样波动。\n\n**边界：** 错误极限仍然是错误。"
+    },
+    {
+      "id": "mc-verify",
+      "type": "text",
+      "x": 4500,
+      "y": 950,
+      "width": 520,
+      "height": 280,
+      "text": "## [[Monte Carlo实现验证]]\n\n解析特例 → 组件测试 → 分别改变随机子流、N 与步长。\n\n**目的：** 让失败能够定位。"
+    },
+    {
+      "id": "mc-viz",
+      "type": "text",
+      "x": 5400,
+      "y": 950,
+      "width": 520,
+      "height": 280,
+      "text": "## [[数据可视化.canvas|继续：数据可视化]]\n\n报告估计对象、区间口径与适用条件。\n\n**边界：** 稳定图形不等于正确模型。"
+    },
+    {
+      "id": "mc-compare",
+      "type": "text",
+      "x": 0,
+      "y": 1750,
+      "width": 520,
+      "height": 280,
+      "text": "## [[方差缩减比较口径]]\n\n固定目标与偏差口径，比较达到同等精度的总成本。\n\n**报告：** SE · 函数评估 · 墙钟成本。"
+    },
+    {
+      "id": "mc-vr",
+      "type": "text",
+      "x": 900,
+      "y": 1750,
+      "width": 520,
+      "height": 280,
+      "text": "## [[方差缩减]]\n\n重新设计估计量，提高单位计算成本精度。\n\n**边界：** 不修模型、代码或离散化。"
+    },
+    {
+      "id": "mc-risk",
+      "type": "text",
+      "x": 3600,
+      "y": 1750,
+      "width": 520,
+      "height": 280,
+      "text": "## [[风险模拟.canvas|继续：风险 Monte Carlo]]\n\n把联合风险因子情景映射为当前组合损失。\n\n**入口：** P/Q · 路径 · 估值。"
+    },
+    {
+      "id": "mc-risk-validate",
+      "type": "text",
+      "x": 4500,
+      "y": 1750,
+      "width": 520,
+      "height": 280,
+      "text": "## [[风险模型验证边界]]\n\n区分数值收敛、实现正确与模型适用。\n\n**边界：** 模拟运行成功只证明产生了输出。"
+    },
+    {
+      "id": "mc-crn",
+      "type": "text",
+      "x": 0,
+      "y": 2400,
+      "width": 520,
+      "height": 280,
+      "text": "## [[共同随机数]]\n\n用同一随机输入成对评估两个方案。\n\n**对象：** 估计两个方案输出的期望差。"
+    },
+    {
+      "id": "mc-anti",
+      "type": "text",
+      "x": 800,
+      "y": 2400,
+      "width": 520,
+      "height": 280,
+      "text": "## [[对偶变量]]\n\n把样本与保持同一边际分布的反向样本配对并平均。\n\n**边界：** 反向输入不保证输出负相关。"
+    },
+    {
+      "id": "mc-control",
+      "type": "text",
+      "x": 1800,
+      "y": 2400,
+      "width": 520,
+      "height": 280,
+      "text": "## [[控制变量]]\n\n利用已知期望构造零均值修正。\n\n**条件：** control 便宜、相关、均值确知。"
+    },
+    {
+      "id": "mc-is",
+      "type": "text",
+      "x": 3600,
+      "y": 2400,
+      "width": 520,
+      "height": 280,
+      "text": "## [[重要性抽样]]\n\n从 proposal q 抽样，以 p/q 恢复目标积分。\n\n**边界：** 换分布必须补权重。"
+    },
+    {
+      "id": "mc-pair-sign",
+      "type": "text",
+      "x": 700,
+      "y": 3000,
+      "width": 520,
+      "height": 280,
+      "text": "## [[配对方差缩减的协方差方向]]\n\n差值需要正协方差；平均需要负协方差。\n\n**原因：** 协方差项符号相反。"
+    },
+    {
+      "id": "mc-control-beta",
+      "type": "text",
+      "x": 1400,
+      "y": 3000,
+      "width": 520,
+      "height": 280,
+      "text": "## [[控制变量最优系数]]\n\nbeta* = Cov(Y,C)/Var(C)。\n\n**结果：** 理想方差比例为 1-rho²。"
+    },
+    {
+      "id": "mc-control-mean",
+      "type": "text",
+      "x": 2100,
+      "y": 3000,
+      "width": 520,
+      "height": 280,
+      "text": "## [[控制变量均值误设]]\n\n错误 control 均值直接改变估计目标。\n\n**偏差：** -beta(E[C]-m)。"
+    },
+    {
+      "id": "mc-control-fit",
+      "type": "text",
+      "x": 2800,
+      "y": 3000,
+      "width": 520,
+      "height": 280,
+      "text": "## [[同样本估计控制系数偏差]]\n\n估计并应用同一 beta-hat 会改变有限样本性质。\n\n**替代：** 独立 pilot 或明确偏差分析。"
+    },
+    {
+      "id": "mc-is-support",
+      "type": "text",
+      "x": 3500,
+      "y": 3000,
+      "width": 520,
+      "height": 280,
+      "text": "## [[重要性抽样支持条件]]\n\nq 应覆盖 h·p 非零区域。\n\n**精确边界：** 偏差等于遗漏积分的负值。"
+    },
+    {
+      "id": "mc-is-variance",
+      "type": "text",
+      "x": 4200,
+      "y": 3000,
+      "width": 520,
+      "height": 280,
+      "text": "## [[重要性抽样权重方差]]\n\n支持正确仍需 h·p/q 平方可积。\n\n**失败：** 极端权重可造成无限方差。"
+    },
+    {
+      "id": "mc-snis",
+      "type": "text",
+      "x": 4900,
+      "y": 3000,
+      "width": 520,
+      "height": 280,
+      "text": "## [[自归一化重要性抽样]]\n\n用加权和之比消去未知归一化常数。\n\n**对象：** 它是随机比率，不是普通加权均值。"
+    },
+    {
+      "id": "mc-snis-bias",
+      "type": "text",
+      "x": 4550,
+      "y": 3600,
+      "width": 520,
+      "height": 280,
+      "text": "## [[自归一抽样有限样本偏差]]\n\n随机比率通常没有有限样本无偏保证。\n\n**边界：** 特殊抵消仍可能精确。"
+    },
+    {
+      "id": "mc-snis-consistency",
+      "type": "text",
+      "x": 5250,
+      "y": 3600,
+      "width": 520,
+      "height": 280,
+      "text": "## [[自归一抽样强一致性]]\n\n支持覆盖与绝对可积使比率几乎必然收敛。\n\n**边界：** 一致不等于无偏或有限方差。"
+    },
+    {
+      "id": "mc-crn-sync",
+      "type": "text",
+      "x": 0,
+      "y": 3000,
+      "width": 520,
+      "height": 280,
+      "text": "## [[共同随机数输入同步]]\n\n两个方案必须把共享输入解释为同一冲击。\n\n**边界：** 相同 seed 不等于调用错位后仍是同一场景。"
+    }
+  ],
+  "edges": [
+    {
+      "id": "mc-e01",
+      "fromNode": "mc-prng",
+      "fromSide": "right",
+      "toNode": "mc-replay",
+      "toSide": "left",
+      "label": "状态→可重放"
+    },
+    {
+      "id": "mc-e02",
+      "fromNode": "mc-replay",
+      "fromSide": "right",
+      "toNode": "mc-streams",
+      "toSide": "left",
+      "label": "并行需派生子流"
+    },
+    {
+      "id": "mc-e03",
+      "fromNode": "mc-prng",
+      "fromSide": "bottom",
+      "toNode": "mc-security",
+      "toSide": "top",
+      "label": "模拟适用≠安全适用"
+    },
+    {
+      "id": "mc-e04",
+      "fromNode": "mc-streams",
+      "fromSide": "bottom",
+      "toNode": "mc-se",
+      "toSide": "top",
+      "label": "复制流破坏有效 N"
+    },
+    {
+      "id": "mc-e05",
+      "fromNode": "mc-estimator",
+      "fromSide": "right",
+      "toNode": "mc-se",
+      "toSide": "left",
+      "label": "估计量→抽样误差"
+    },
+    {
+      "id": "mc-e06",
+      "fromNode": "mc-se",
+      "fromSide": "right",
+      "toNode": "mc-errors",
+      "toSide": "left",
+      "label": "SE只覆盖一层"
+    },
+    {
+      "id": "mc-e07",
+      "fromNode": "mc-errors",
+      "fromSide": "right",
+      "toNode": "mc-paths",
+      "toSide": "left",
+      "label": "抽样误差≠模型误差"
+    },
+    {
+      "id": "mc-e08",
+      "fromNode": "mc-paths",
+      "fromSide": "right",
+      "toNode": "mc-verify",
+      "toSide": "left",
+      "label": "固定偏离需定位"
+    },
+    {
+      "id": "mc-e09",
+      "fromNode": "mc-verify",
+      "fromSide": "right",
+      "toNode": "mc-viz",
+      "toSide": "left",
+      "label": "验证后再报告"
+    },
+    {
+      "id": "mc-e10",
+      "fromNode": "mc-cost",
+      "fromSide": "bottom",
+      "toNode": "mc-vr",
+      "toSide": "top",
+      "label": "平方根成本→提效"
+    },
+    {
+      "id": "mc-e11",
+      "fromNode": "mc-vr",
+      "fromSide": "left",
+      "toNode": "mc-compare",
+      "toSide": "right",
+      "label": "先统一比较口径"
+    },
+    {
+      "id": "mc-e12",
+      "fromNode": "mc-vr",
+      "fromSide": "bottom",
+      "toNode": "mc-crn",
+      "toSide": "top",
+      "label": "方案差值"
+    },
+    {
+      "id": "mc-e13",
+      "fromNode": "mc-vr",
+      "fromSide": "bottom",
+      "toNode": "mc-anti",
+      "toSide": "top",
+      "label": "反向配对"
+    },
+    {
+      "id": "mc-e14",
+      "fromNode": "mc-vr",
+      "fromSide": "bottom",
+      "toNode": "mc-control",
+      "toSide": "top",
+      "label": "已知期望"
+    },
+    {
+      "id": "mc-e15",
+      "fromNode": "mc-vr",
+      "fromSide": "bottom",
+      "toNode": "mc-is",
+      "toSide": "top",
+      "label": "改变抽样分布"
+    },
+    {
+      "id": "mc-e16",
+      "fromNode": "mc-crn",
+      "fromSide": "bottom",
+      "toNode": "mc-pair-sign",
+      "toSide": "top",
+      "label": "差值需要正协方差"
+    },
+    {
+      "id": "mc-e17",
+      "fromNode": "mc-anti",
+      "fromSide": "bottom",
+      "toNode": "mc-pair-sign",
+      "toSide": "top",
+      "label": "平均需要负协方差"
+    },
+    {
+      "id": "mc-e18",
+      "fromNode": "mc-control",
+      "fromSide": "bottom",
+      "toNode": "mc-control-beta",
+      "toSide": "top",
+      "label": "最优固定系数"
+    },
+    {
+      "id": "mc-e19",
+      "fromNode": "mc-control",
+      "fromSide": "bottom",
+      "toNode": "mc-control-mean",
+      "toSide": "top",
+      "label": "错误均值→偏差"
+    },
+    {
+      "id": "mc-e20",
+      "fromNode": "mc-control",
+      "fromSide": "bottom",
+      "toNode": "mc-control-fit",
+      "toSide": "top",
+      "label": "估计系数≠固定系数"
+    },
+    {
+      "id": "mc-e21",
+      "fromNode": "mc-is",
+      "fromSide": "bottom",
+      "toNode": "mc-is-support",
+      "toSide": "top",
+      "label": "先保证目标正确"
+    },
+    {
+      "id": "mc-e22",
+      "fromNode": "mc-is",
+      "fromSide": "bottom",
+      "toNode": "mc-is-variance",
+      "toSide": "top",
+      "label": "再检查二阶矩"
+    },
+    {
+      "id": "mc-e23",
+      "fromNode": "mc-is",
+      "fromSide": "bottom",
+      "toNode": "mc-snis",
+      "toSide": "top",
+      "label": "未知常数→自归一"
+    },
+    {
+      "id": "mc-e24",
+      "fromNode": "mc-vr",
+      "fromSide": "right",
+      "toNode": "mc-risk",
+      "toSide": "left",
+      "label": "应用于风险估计"
+    },
+    {
+      "id": "mc-e25",
+      "fromNode": "mc-risk",
+      "fromSide": "right",
+      "toNode": "mc-risk-validate",
+      "toSide": "left",
+      "label": "数值收敛≠模型有效"
+    },
+    {
+      "id": "mc-e26",
+      "fromNode": "mc-snis",
+      "fromSide": "bottom",
+      "toNode": "mc-snis-bias",
+      "toSide": "top",
+      "label": "有限 N 的比率偏差"
+    },
+    {
+      "id": "mc-e27",
+      "fromNode": "mc-snis",
+      "fromSide": "bottom",
+      "toNode": "mc-snis-consistency",
+      "toSide": "top",
+      "label": "大样本收敛条件"
+    },
+    {
+      "id": "mc-e28",
+      "fromNode": "mc-se",
+      "fromSide": "bottom",
+      "toNode": "mc-ci",
+      "toSide": "top",
+      "label": "估计 sigma→近似区间"
+    },
+    {
+      "id": "mc-e29",
+      "fromNode": "mc-se",
+      "fromSide": "bottom",
+      "toNode": "mc-cost",
+      "toSide": "top",
+      "label": "N^{-1/2}→成本律"
+    },
+    {
+      "id": "mc-e30",
+      "fromNode": "mc-crn",
+      "fromSide": "bottom",
+      "toNode": "mc-crn-sync",
+      "toSide": "top",
+      "label": "共享输入必须同义对齐"
+    }
+  ]
+}

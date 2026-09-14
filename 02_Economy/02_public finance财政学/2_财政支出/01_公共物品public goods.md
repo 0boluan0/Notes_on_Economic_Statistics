@@ -12,10 +12,10 @@ a 王 提 Fx v= eS IN WAS RR 非 竞 争 性 有 线 电视 、 收 费 软 件 
 The last line is corrupted OCR contrasting examples such as cable television and paid software with wireless broadcasting and open-source software.
 <!-- bilingual-en:end -->
 ![[Pasted image 20240312133200.png]]
-* 纯公共物品(Pure [[公共品、搭便车与 Samuelson 条件#公共品分类|Public Goods]])：非竞争性，非排他性
+* 纯公共物品(Pure [[物品的竞争性与排他性|Public Goods]])：非竞争性，非排他性
 * 私人物品(Private Goods)：竞争性，排他性
-* [[公共品、搭便车与 Samuelson 条件#公共品分类|俱乐部物品]](Club Goods)：非竞争性，排他性
-* [[公共品、搭便车与 Samuelson 条件#公共品分类|公共资源]](Common Resources)：竞争性，非排他性
+* [[物品的竞争性与排他性|俱乐部物品]](Club Goods)：非竞争性，排他性
+* [[物品的竞争性与排他性|公共资源]](Common Resources)：竞争性，非排他性
 <!-- bilingual-en:start -->
 * Pure public goods are non-rival and non-excludable.
 * Private goods are rival and excludable.
@@ -97,9 +97,9 @@ Everyone consumes the same quantity, but individuals may have different MRS valu
 Markets have difficulty providing public goods efficiently.
 <!-- bilingual-en:end -->
 
-* 搭便车：隐藏自己的真实支付意愿，致使最终得到的公众支付意愿小于实际的支付意愿，使公共物品提供不足。
+* 搭便车：未付费者仍能受益时，个人有动机少贡献或低报支付意愿；私人决策没有计入给他人的全部边际收益，因此总供给可能低于有效量。
 * 完全的价格歧视很难实现。
 <!-- bilingual-en:start -->
-* Free riding: individuals conceal their true willingness to pay, so the revealed aggregate willingness to pay falls below the true amount and the public good is underprovided.
+* Free riding: when non-payers still benefit, individuals have an incentive to contribute less or understate willingness to pay. Private decisions omit some benefits to others, so total provision may fall below the efficient level.
 * Perfect price discrimination is difficult to implement.
 <!-- bilingual-en:end -->

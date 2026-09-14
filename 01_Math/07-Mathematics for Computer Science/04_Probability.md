@@ -94,9 +94,9 @@ This notebook follows the official MIT OCW Spring 2015 Unit 4 sequence: Session 
 **Learning questions**: How can a random experiment be represented as a mathematical object? Why are probabilities multiplied along a tree path and added across mutually exclusive leaves? How can double counting be avoided when events overlap?
 <!-- bilingual-en:end -->
 
-**前置知识**：集合、可数求和、乘法法则与容斥。核心卡片：[[概率空间、条件概率与 Bayes 法则#样本空间、事件与概率|离散概率空间]]、[[概率空间、条件概率与 Bayes 法则#建模步骤与失败诊断|概率四步法]]。
+**前置知识**：集合、可数求和、乘法法则与容斥。核心卡片：[[离散概率空间|离散概率空间]]、[[概率建模四步法|概率四步法]]。
 <!-- bilingual-en:start -->
-**Prerequisites**: sets, countable sums, the multiplication rule, and inclusion–exclusion. Core notes: [[概率空间、条件概率与 Bayes 法则#样本空间、事件与概率|discrete probability spaces]] and the [[概率空间、条件概率与 Bayes 法则#建模步骤与失败诊断|four-step probability workflow]].
+**Prerequisites**: sets, countable sums, the multiplication rule, and inclusion–exclusion. Core notes: [[离散概率空间|discrete probability spaces]] and the [[概率建模四步法|four-step probability workflow]].
 <!-- bilingual-en:end -->
 
 - Reading：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session28.pdf#page=1|Session 28 reading]]
@@ -397,9 +397,9 @@ $$
 > **3.** No; an infinite sample space can contain nonempty events of probability zero.<br>
 > <!-- bilingual-en:end -->
 
-**知识链**：[[概率空间、条件概率与 Bayes 法则#样本空间、事件与概率|离散概率空间]] → [[概率空间、条件概率与 Bayes 法则#建模步骤与失败诊断|概率四步法]] → sum/addition/complement rules → union bound → 条件概率。
+**知识链**：[[离散概率空间|离散概率空间]] → [[概率建模四步法|概率四步法]] → [[互斥事件加法|sum/addition rule]] → [[补事件法|complement rule]] → union bound → 条件概率。
 <!-- bilingual-en:start -->
-**Knowledge chain**: [[概率空间、条件概率与 Bayes 法则#样本空间、事件与概率|discrete probability space]] → [[概率空间、条件概率与 Bayes 法则#建模步骤与失败诊断|four-step probability workflow]] → sum, addition, and complement rules → union bound → conditional probability.
+**Knowledge chain**: [[离散概率空间|discrete probability space]] → [[概率建模四步法|four-step probability workflow]] → [[互斥事件加法|sum and addition rule]] → [[补事件法|complement rule]] → union bound → conditional probability.
 <!-- bilingual-en:end -->
 
 ---
@@ -416,9 +416,9 @@ $$
 **Learning questions**: Why does new information restrict the sample space? How can a diagnostic test's positive rate be converted into the posterior probability of disease? Why must the information-generating protocol be specified in both Monty Hall and the two-child problem?
 <!-- bilingual-en:end -->
 
-**前置知识**：事件交并、概率树与 partition。核心卡片：[[概率空间、条件概率与 Bayes 法则#条件概率与 Bayes 法则|条件概率与 Bayes 定理]]。
+**前置知识**：事件交并、概率树与 partition。核心卡片：[[条件概率]]、[[概率乘法法则]]、[[Bayes法则|Bayes 定理]]。
 <!-- bilingual-en:start -->
-**Prerequisites**: intersections and unions of events, probability trees, and partitions. Core note: [[概率空间、条件概率与 Bayes 法则#条件概率与 Bayes 法则|conditional probability and Bayes' theorem]].
+**Prerequisites**: intersections and unions of events, probability trees, and partitions. Core notes: [[条件概率|conditional probability]], [[概率乘法法则|the multiplication rule]], and [[Bayes法则|Bayes' theorem]].
 <!-- bilingual-en:end -->
 
 - Reading：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session29.pdf#page=1|Session 29 reading]]
@@ -676,9 +676,9 @@ To compute a posterior probability after observing exactly which door the host o
 > **3.** No; the likelihood implied by “the host always avoids the prize” has changed, so the probability tree must be rebuilt.<br>
 > <!-- bilingual-en:end -->
 
-**知识链**：条件空间 → multiplication rule → total probability → [[概率空间、条件概率与 Bayes 法则#条件概率与 Bayes 法则|Bayes]] → 信息协议 → independence。
+**知识链**：条件空间 → multiplication rule → total probability → [[Bayes法则|Bayes]] → 信息协议 → independence。
 <!-- bilingual-en:start -->
-**Knowledge chain**: conditional sample space → multiplication rule → law of total probability → [[概率空间、条件概率与 Bayes 法则#条件概率与 Bayes 法则|Bayes' rule]] → information protocol → independence.
+**Knowledge chain**: conditional sample space → multiplication rule → law of total probability → [[Bayes法则|Bayes' rule]] → information protocol → independence.
 <!-- bilingual-en:end -->
 
 ---
@@ -759,9 +759,9 @@ The following are unofficial independent solutions.
 **Learning questions**: How is the statement that two events “provide no information about one another” written mathematically? Why is pairwise independence insufficient? Why does statistical association not automatically imply causation?
 <!-- bilingual-en:end -->
 
-**前置知识**：条件概率、Bayes、乘法法则。核心卡片：[[概率空间、条件概率与 Bayes 法则#条件概率、独立与因果提醒|事件独立性]]、[[条件期望与独立性#独立、不相关与条件期望|相互独立]]。
+**前置知识**：条件概率、Bayes、乘法法则。核心卡片：[[事件独立]]、[[两两独立]]、[[相互独立]]与[[两两独立不推出相互独立|二者的边界]]。
 <!-- bilingual-en:start -->
-**Prerequisites**: conditional probability, Bayes' rule, and the multiplication rule. Core notes: [[概率空间、条件概率与 Bayes 法则#条件概率、独立与因果提醒|independence of events]] and [[条件期望与独立性#独立、不相关与条件期望|mutual independence]].
+**Prerequisites**: conditional probability, Bayes' rule, and the multiplication rule. Core notes: [[事件独立|event independence]], [[两两独立|pairwise independence]], [[相互独立|mutual independence]], and [[两两独立不推出相互独立|their boundary]].
 <!-- bilingual-en:end -->
 
 - Reading：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session30.pdf#page=1|Session 30 reading]]
@@ -957,9 +957,9 @@ Independence and conditional probability describe a joint distribution; they do 
 > **3.** Common causes, selection mechanisms, and reverse causality can all generate the same observed association.<br>
 > <!-- bilingual-en:end -->
 
-**知识链**：[[概率空间、条件概率与 Bayes 法则#条件概率与 Bayes 法则|条件概率]] → [[概率空间、条件概率与 Bayes 法则#条件概率、独立与因果提醒|两两独立]] → [[条件期望与独立性#独立、不相关与条件期望|相互独立]] → 随机变量独立 → 方差可加。
+**知识链**：[[条件概率]] → [[事件独立]] → [[两两独立]] / [[相互独立]] → [[两两独立不推出相互独立|层级边界]] → [[随机变量独立]] → 方差可加。
 <!-- bilingual-en:start -->
-**Knowledge chain**: [[概率空间、条件概率与 Bayes 法则#条件概率与 Bayes 法则|conditional probability]] → [[概率空间、条件概率与 Bayes 法则#条件概率、独立与因果提醒|pairwise independence]] → [[条件期望与独立性#独立、不相关与条件期望|mutual independence]] → independence of random variables → additivity of variance.
+**Knowledge chain**: [[条件概率|conditional probability]] → [[事件独立|event independence]] → [[两两独立|pairwise]] / [[相互独立|mutual independence]] → [[两两独立不推出相互独立|the hierarchy boundary]] → [[随机变量独立|independence of random variables]] → additivity of variance.
 <!-- bilingual-en:end -->
 
 ---
@@ -976,9 +976,9 @@ Independence and conditional probability describe a joint distribution; they do 
 **Learning questions**: How can a complex outcome be compressed into a single numerical value? How are a discrete PMF, a CDF, and event probabilities converted into one another? What exactly must be checked to establish independence of two random variables?
 <!-- bilingual-en:end -->
 
-**前置知识**：函数、条件概率、独立性、二项式系数。核心卡片：[[随机变量、分布与矩#随机变量与分布|随机变量]]、[[随机变量、分布与矩#随机变量与分布|概率质量函数]]、[[随机变量、分布与矩#随机变量与分布|概率密度函数]]。
+**前置知识**：函数、条件概率、独立性、二项式系数。核心卡片：[[随机变量]]、[[概率质量函数]]、[[概率密度函数]]。
 <!-- bilingual-en:start -->
-**Prerequisites**: functions, conditional probability, independence, and binomial coefficients. Core notes: [[随机变量、分布与矩#随机变量与分布|random variables]], [[随机变量、分布与矩#随机变量与分布|probability mass functions]], and [[随机变量、分布与矩#随机变量与分布|probability density functions]].
+**Prerequisites**: functions, conditional probability, independence, and binomial coefficients. Core notes: [[随机变量|random variables]], [[概率质量函数|probability mass functions]], and [[概率密度函数|probability density functions]].
 <!-- bilingual-en:end -->
 
 - Reading：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session31.pdf#page=1|Session 31 reading]]
@@ -1271,9 +1271,9 @@ First roll a die to obtain $X$, then toss $X$ fair coins and let $Y$ be the numb
 > **3.** Use $p_X(k)=F_X(k)-F_X(k^-)$; for integer support, this becomes $F_X(k)-F_X(k-1)$.<br>
 > <!-- bilingual-en:end -->
 
-**知识链**：[[随机变量、分布与矩#随机变量与分布|随机变量]] → [[随机变量、分布与矩#随机变量与分布|PMF]] / CDF → uniform 与 binomial → 随机变量独立 → [[随机变量、分布与矩#期望、方差与协方差|期望]]。
+**知识链**：[[随机变量]] → [[概率质量函数|PMF]] / [[累积分布函数|CDF]] → uniform 与 binomial → [[随机变量独立]] → [[期望]]。
 <!-- bilingual-en:start -->
-**Knowledge chain**: [[随机变量、分布与矩#随机变量与分布|random variable]] → [[随机变量、分布与矩#随机变量与分布|PMF]] / CDF → uniform and binomial distributions → independence of random variables → [[随机变量、分布与矩#期望、方差与协方差|expectation]].
+**Knowledge chain**: [[随机变量|random variable]] → [[概率质量函数|PMF]] / [[累积分布函数|CDF]] → uniform and binomial distributions → [[随机变量独立|independence of random variables]] → [[期望|expectation]].
 <!-- bilingual-en:end -->
 
 ---
@@ -1290,9 +1290,9 @@ First roll a die to obtain $X$, then toss $X$ fair coins and let $Y$ be the numb
 **Learning questions**: Why is expectation a probability-weighted average rather than the “most likely value”? Why can the expectation of a sum be separated without independence? How can indicators avoid deriving a full distribution?
 <!-- bilingual-en:end -->
 
-**前置知识**：离散随机变量、PMF、条件概率、无穷级数。核心卡片：[[随机变量、分布与矩#期望、方差与协方差|期望]]、[[指示变量与随机计数#从事件到 0/1 随机变量|指示随机变量]]、[[指示变量与随机计数#把“数量”写成 indicators 的和|期望线性性]]。
+**前置知识**：离散随机变量、PMF、条件概率、无穷级数。核心卡片：[[事件指示变量|指示随机变量]]、[[指示变量期望|指标期望等于事件概率]]、[[期望线性性]]与[[随机计数的指标和|随机计数]]。
 <!-- bilingual-en:start -->
-**Prerequisites**: discrete random variables, PMFs, conditional probability, and infinite series. Core notes: [[随机变量、分布与矩#期望、方差与协方差|expectation]], [[指示变量与随机计数#从事件到 0/1 随机变量|indicator random variables]], and [[指示变量与随机计数#把“数量”写成 indicators 的和|linearity of expectation]].
+**Prerequisites**: discrete random variables, PMFs, conditional probability, and infinite series. Core notes: [[事件指示变量|indicator random variables]], [[指示变量期望|indicator expectation]], [[期望线性性|linearity of expectation]], and [[随机计数的指标和|indicator-sum counting]].
 <!-- bilingual-en:end -->
 
 - Reading：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session32.pdf#page=1|Session 32 reading]]
@@ -1368,7 +1368,7 @@ This step does not require independence. Independence is needed when deriving th
 > The expected number of heads in 200 fair coin tosses is $\sum_{i=1}^{200}\mathbb E[I_i]=200/2=100$.
 > <!-- bilingual-en:end -->
 
-### 4.5.5 Total Expectation
+### 4.5.5 [[全期望公式|Total Expectation]]
 
 资源：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_TotalExpectatn.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/mqoDXWrSais.pdf#page=1|transcript]]
 
@@ -1620,9 +1620,9 @@ Let $X$ be uniform on $-n,\dots,n$ and let $Y=X^2$.
 > **3.** Each trial must have the same success probability $p>0$, and after a failure the remaining process must have the same law as the original one; independent trials are the usual sufficient condition.<br>
 > <!-- bilingual-en:end -->
 
-**知识链**：[[随机变量、分布与矩#随机变量与分布|PMF]] → [[随机变量、分布与矩#期望、方差与协方差|期望]] → [[指示变量与随机计数#从事件到 0/1 随机变量|indicator]] → [[指示变量与随机计数#把“数量”写成 indicators 的和|线性性]] → total expectation → [[随机变量、分布与矩#期望、方差与协方差|方差]]。
+**知识链**：[[概率质量函数|PMF]] → [[期望]] → [[事件指示变量|indicator 定义]] → [[指示变量期望|期望等于概率]] → [[随机计数的指标和|indicator sum]] → total expectation → [[方差]]。
 <!-- bilingual-en:start -->
-**Knowledge chain**: [[随机变量、分布与矩#随机变量与分布|PMF]] → [[随机变量、分布与矩#期望、方差与协方差|expectation]] → [[指示变量与随机计数#从事件到 0/1 随机变量|indicator]] → [[指示变量与随机计数#把“数量”写成 indicators 的和|linearity]] → law of total expectation → [[随机变量、分布与矩#期望、方差与协方差|variance]].
+**Knowledge chain**: [[概率质量函数|PMF]] → [[期望|expectation]] → [[事件指示变量|indicator definition]] → [[指示变量期望|expectation equals probability]] → [[随机计数的指标和|indicator sum]] → law of total expectation → [[方差|variance]].
 <!-- bilingual-en:end -->
 
 ---
@@ -1713,9 +1713,9 @@ The following are unofficial independent solutions.
 **Learning questions**: How strongly can the mean alone bound a tail probability? How much does knowing the variance improve the bound? Does variance additivity require full independence or only pairwise independence?
 <!-- bilingual-en:end -->
 
-**前置知识**：期望、indicator、独立性、平方展开。核心卡片：[[随机变量、分布与矩#期望、方差与协方差|方差]]、[[概率不等式与集中界#Markov：把均值当作尾部质量预算|Markov 不等式]]、[[概率不等式与集中界#Chebyshev：用 variance 控制双侧偏离|Chebyshev 不等式]]。
+**前置知识**：期望、indicator、独立性、平方展开。核心卡片：[[方差]]、[[Markov不等式|Markov 不等式]]、[[Chebyshev不等式|Chebyshev 不等式]]。
 <!-- bilingual-en:start -->
-**Prerequisites**: expectation, indicators, independence, and expansion of squares. Core notes: [[随机变量、分布与矩#期望、方差与协方差|variance]], [[概率不等式与集中界#Markov：把均值当作尾部质量预算|Markov's inequality]], and [[概率不等式与集中界#Chebyshev：用 variance 控制双侧偏离|Chebyshev's inequality]].
+**Prerequisites**: expectation, indicators, independence, and expansion of squares. Core notes: [[方差|variance]], [[Markov不等式|Markov's inequality]], and [[Chebyshev不等式|Chebyshev's inequality]].
 <!-- bilingual-en:end -->
 
 - Reading：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session33.pdf#page=1|Session 33 reading]]
@@ -1759,9 +1759,9 @@ The standard deviation $\sigma_R=\sqrt{\operatorname{Var}(R)}$ has the same unit
 
 资源：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_MarkovBounds.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/m07lrb7m0D0.pdf#page=1|transcript]]
 
-[[概率不等式与集中界#Markov：把均值当作尾部质量预算|Markov 不等式证明]]：若 $R\ge0$ 且 $a>0$，则
+[[Markov不等式|Markov 不等式证明]]：若 $R\ge0$ 且 $a>0$，则
 <!-- bilingual-en:start -->
-[[概率不等式与集中界#Markov：把均值当作尾部质量预算|Proof of Markov's inequality]]: If $R\ge0$ and $a>0$,
+[[Markov不等式|Proof of Markov's inequality]]: If $R\ge0$ and $a>0$,
 <!-- bilingual-en:end -->
 
 $$
@@ -1813,9 +1813,9 @@ Given $\mathbb E[R]=50$, find the smallest $x$ for which Markov's inequality gua
 
 资源：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_ChebyhevBouds.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/uaa4P-kkLrA.pdf#page=1|transcript]]
 
-[[概率不等式与集中界#Chebyshev：用 variance 控制双侧偏离|Chebyshev 不等式证明]]：若 $R$ 有有限均值 $\mu$ 与方差 $\sigma^2$，则对 $a>0$，
+[[Chebyshev不等式|Chebyshev 不等式证明]]：若 $R$ 有有限均值 $\mu$ 与方差 $\sigma^2$，则对 $a>0$，
 <!-- bilingual-en:start -->
-[[概率不等式与集中界#Chebyshev：用 variance 控制双侧偏离|Proof of Chebyshev's inequality]]: If $R$ has a finite mean $\mu$ and variance $\sigma^2$, then for $a>0$,
+[[Chebyshev不等式|Proof of Chebyshev's inequality]]: If $R$ has a finite mean $\mu$ and variance $\sigma^2$, then for $a>0$,
 <!-- bilingual-en:end -->
 
 $$
@@ -2049,9 +2049,9 @@ Let $X$ be a non-negative integer-valued random variable with $\mathbb E[X]=5$.
 > **3.** For a finite sum of variables with finite second moments, pairwise independence makes every cross-covariance zero.<br>
 > <!-- bilingual-en:end -->
 
-**知识链**：[[随机变量、分布与矩#期望、方差与协方差|均值]] → [[随机变量、分布与矩#期望、方差与协方差|方差]] → [[概率不等式与集中界#Markov：把均值当作尾部质量预算|Markov 证明]] → [[概率不等式与集中界#Chebyshev：用 variance 控制双侧偏离|Chebyshev 证明]] → sampling bounds。
+**知识链**：[[期望|均值]] → [[方差]] → [[Markov不等式|Markov 证明]] → [[Chebyshev不等式|Chebyshev 证明]] → sampling bounds。
 <!-- bilingual-en:start -->
-**Knowledge chain**: [[随机变量、分布与矩#期望、方差与协方差|mean]] → [[随机变量、分布与矩#期望、方差与协方差|variance]] → [[概率不等式与集中界#Markov：把均值当作尾部质量预算|proof of Markov's inequality]] → [[概率不等式与集中界#Chebyshev：用 variance 控制双侧偏离|proof of Chebyshev's inequality]] → sampling bounds.
+**Knowledge chain**: [[期望|mean]] → [[方差|variance]] → [[Markov不等式|proof of Markov's inequality]] → [[Chebyshev不等式|proof of Chebyshev's inequality]] → sampling bounds.
 <!-- bilingual-en:end -->
 
 ---
@@ -2068,9 +2068,9 @@ Let $X$ be a non-negative integer-valued random variable with $\mathbb E[X]=5$.
 **Learning questions**: Why does the sample mean concentrate around the population mean as $n$ grows? Is confidence a property of the fixed parameter or of the sampling procedure? Why is pairwise independence enough to calculate the variance of birthday-collision counts?
 <!-- bilingual-en:end -->
 
-**前置知识**：期望、方差、Chebyshev、pairwise independence。核心卡片：[[大数定律与中心极限定理#大数定律：稳定到什么|大数定律]]、[[大数定律与中心极限定理#大数定律：稳定到什么|弱大数定律证明]]、[[04_Probability#Session 34 — Sampling & Confidence|置信水平]]、[[04_Probability#Session 34 — Sampling & Confidence|置信区间]]。
+**前置知识**：期望、方差、Chebyshev、pairwise independence。核心卡片：[[有界方差弱大数定律|大数定律]]、[[有界方差弱大数定律|弱大数定律证明]]、[[04_Probability#Session 34 — Sampling & Confidence|置信水平]]、[[04_Probability#Session 34 — Sampling & Confidence|置信区间]]。
 <!-- bilingual-en:start -->
-**Prerequisites**: expectation, variance, Chebyshev's inequality, and pairwise independence. Core notes: [[大数定律与中心极限定理#大数定律：稳定到什么|law of large numbers]], [[大数定律与中心极限定理#大数定律：稳定到什么|weak law of large numbers]], [[04_Probability#Session 34 — Sampling & Confidence|confidence level]], and [[04_Probability#Session 34 — Sampling & Confidence|confidence interval]].
+**Prerequisites**: expectation, variance, Chebyshev's inequality, and pairwise independence. Core notes: [[有界方差弱大数定律|law of large numbers]], [[有界方差弱大数定律|weak law of large numbers]], [[04_Probability#Session 34 — Sampling & Confidence|confidence level]], and [[04_Probability#Session 34 — Sampling & Confidence|confidence interval]].
 <!-- bilingual-en:end -->
 
 - Reading：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session34.pdf#page=1|Session 34 reading]]
@@ -2110,9 +2110,9 @@ $$
 \le\frac{\sigma^2}{n\varepsilon^2}\longrightarrow0.
 $$
 
-这证明 $A_n$ [[大数定律与中心极限定理#极限定理入口|依概率收敛]]到 $\mu$，即 weak law；它不等同于“每条无限样本路径最终都收敛”的 strong law。
+这证明 $A_n$ [[依概率收敛]]到 $\mu$，即 weak law；它不等同于“每条无限样本路径最终都收敛”的 strong law。
 <!-- bilingual-en:start -->
-This proves that $A_n$ [[大数定律与中心极限定理#极限定理入口|converges in probability]] to $\mu$, which is the weak law. It is not the strong-law claim that convergence holds almost surely along the infinite sample path.
+This proves that $A_n$ [[依概率收敛|converges in probability]] to $\mu$, which is the weak law. It is not the strong-law claim that convergence holds almost surely along the infinite sample path.
 <!-- bilingual-en:end -->
 
 ### 4.7.2 Not So Strong — Online O34-01
@@ -2372,9 +2372,9 @@ With all other conditions fixed, 100 samples yield a 95% confidence interval wit
 > **3.** Every pair of indicators has a factorising joint distribution, but three indicators can be constrained: if the first two matching events occur, the third must occur as well.<br>
 > <!-- bilingual-en:end -->
 
-**知识链**：[[随机变量、分布与矩#期望、方差与协方差|样本方差缩放]] → [[大数定律与中心极限定理#大数定律：稳定到什么|弱大数定律]] → independent sampling → [[04_Probability#Session 34 — Sampling & Confidence|置信水平]] / [[04_Probability#Session 34 — Sampling & Confidence|置信区间]] → 选择偏差。
+**知识链**：[[和的方差协方差项|和的方差协方差展开]] → [[有界方差弱大数定律|弱大数定律]] → independent sampling → [[04_Probability#Session 34 — Sampling & Confidence|置信水平]] / [[04_Probability#Session 34 — Sampling & Confidence|置信区间]] → 选择偏差。
 <!-- bilingual-en:start -->
-**Knowledge chain:** [[随机变量、分布与矩#期望、方差与协方差|scaling of the sample-mean variance]] → [[大数定律与中心极限定理#大数定律：稳定到什么|weak law of large numbers]] → independent sampling → [[04_Probability#Session 34 — Sampling & Confidence|confidence level]] / [[04_Probability#Session 34 — Sampling & Confidence|confidence interval]] → selection bias.
+**Knowledge chain:** [[和的方差协方差项|variance-covariance expansion for a sum]] → [[有界方差弱大数定律|weak law of large numbers]] → independent sampling → [[04_Probability#Session 34 — Sampling & Confidence|confidence level]] / [[04_Probability#Session 34 — Sampling & Confidence|confidence interval]] → selection bias.
 <!-- bilingual-en:end -->
 
 ---
@@ -2391,9 +2391,9 @@ With all other conditions fixed, 100 samples yield a 95% confidence interval wit
 **Learning questions**: How can random movement on a graph be represented by a matrix? Are existence, uniqueness, and convergence of a stationary distribution the same issue? Why can PageRank be interpreted as a long-run visit probability?
 <!-- bilingual-en:end -->
 
-**前置知识**：有向图、矩阵乘法、条件概率、递推。核心卡片：[[离散时间马尔可夫链#Markov 性与转移矩阵|图上随机游走]]、[[离散时间马尔可夫链#Markov 性与转移矩阵|Markov 链]]、[[离散时间马尔可夫链#平稳分布与长期收敛|平稳分布]]、[[离散时间马尔可夫链#平稳分布与长期收敛|PageRank]]。
+**前置知识**：有向图、矩阵乘法、条件概率、递推。核心卡片：[[图上随机游走]]、[[离散时间Markov链|Markov 链]]、[[Markov稳态分布|平稳分布]]、[[PageRank随机传送|PageRank]]。
 <!-- bilingual-en:start -->
-**Prerequisites**: directed graphs, matrix multiplication, conditional probability, and recurrence relations. Core notes: [[离散时间马尔可夫链#Markov 性与转移矩阵|random walks on graphs]], [[离散时间马尔可夫链#Markov 性与转移矩阵|Markov chains]], [[离散时间马尔可夫链#平稳分布与长期收敛|stationary distributions]], and [[离散时间马尔可夫链#平稳分布与长期收敛|PageRank]].
+**Prerequisites**: directed graphs, matrix multiplication, conditional probability, and recurrence relations. Core notes: [[图上随机游走|random walks on graphs]], [[离散时间Markov链|Markov chains]], [[Markov稳态分布|stationary distributions]], and [[PageRank随机传送|PageRank]].
 <!-- bilingual-en:end -->
 
 - Reading：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session35.pdf#page=1|Session 35 reading]]
@@ -2463,9 +2463,9 @@ The deterministic two-state alternating chain has stationary distribution $(1/2,
 
 资源：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_Pagerank.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/QKO_2WQkZ0k.pdf#page=1|transcript]]
 
-在网页 digraph 上，基础 Google walk 从页面 $u$ 均匀选择一个 outgoing link，$P_{uv}=1/\operatorname{outdeg}(u)$。[[离散时间马尔可夫链#平稳分布与长期收敛|PageRank]] 把 stationary mass 解释为长期访问频率：被许多高质量页面指向的页面得到较大流入。
+在网页 digraph 上，[[图上随机游走|基础 Google walk]] 在页面 $u$ 有出链时从中均匀选择一个，$P_{uv}=1/\operatorname{outdeg}(u)$；没有出链的 dangling page 必须先按[[悬空节点转移]]另定合法转移。[[PageRank随机传送|PageRank]] 把修改后随机游走的 stationary mass 解释为长期访问频率：被许多高质量页面指向的页面得到较大流入。
 <!-- bilingual-en:start -->
-On the web's directed graph, the basic Google walk chooses one outgoing link from page $u$ uniformly, so $P_{uv}=1/\operatorname{outdeg}(u)$. [[离散时间马尔可夫链#平稳分布与长期收敛|PageRank]] interprets stationary mass as long-run visit frequency: pages linked by many high-quality pages receive more incoming mass.
+On the web's directed graph, the [[图上随机游走|basic Google walk]] chooses an outgoing link from page $u$ uniformly when one exists, so $P_{uv}=1/\operatorname{outdeg}(u)$; dangling pages first need the explicit rule in [[悬空节点转移|dangling-node transitions]]. [[PageRank随机传送|PageRank]] interprets the modified walk's stationary mass as long-run visit frequency: pages linked by many high-quality pages receive more incoming mass.
 <!-- bilingual-en:end -->
 
 实际模型加入 teleportation：
@@ -2477,9 +2477,9 @@ $$
 P_\alpha=\alpha P+(1-\alpha)\frac1n\mathbf1\mathbf1^\mathsf T,\qquad0<\alpha<1,
 $$
 
-并为 dangling pages 指定合法转移。正的 teleportation 使有限链 irreducible 且 aperiodic，因此 stationary distribution 唯一并从任意初值收敛。排名仍取决于链接图与 damping/teleportation 选择，不是网页“客观价值”的无假设度量。
+并为 dangling pages 指定合法转移。[[全支持传送收敛|全支持的 teleportation]] 使有限链 irreducible 且 aperiodic，因此 stationary distribution 唯一并从任意初值收敛。[[PageRank模型依赖|排名仍取决于链接图、damping、传送分布与悬空修补]]，不是网页“客观价值”的无假设度量。
 <!-- bilingual-en:start -->
-and assigns a valid transition rule to dangling pages. A positive teleportation probability makes the finite chain irreducible and aperiodic, so it has a unique stationary distribution and converges to it from every initial distribution. The ranking still depends on the link graph and the damping or teleportation choice; it is not an assumption-free measure of a page's “objective value.”
+and assigns a valid transition rule to dangling pages. [[全支持传送收敛|Full-support teleportation]] makes the finite chain irreducible and aperiodic, so it has a unique stationary distribution and converges to it from every initial distribution. [[PageRank模型依赖|The ranking still depends on the link graph, damping, teleportation distribution, and dangling-node repair]]; it is not an assumption-free measure of a page's “objective value.”
 <!-- bilingual-en:end -->
 
 ![[98_attachment/mathematics_for_computer_science/mit6_042j/unit04-random-walk-pagerank.png|900]]
@@ -2591,9 +2591,9 @@ Reading the diagram: the left side propagates the current probability along edge
 > **3.** Teleportation makes the finite chain irreducible and aperiodic, yielding a unique stationary distribution to which the chain converges.<br>
 > <!-- bilingual-en:end -->
 
-**知识链**：[[离散时间马尔可夫链#Markov 性与转移矩阵|图上随机游走]] → [[离散时间马尔可夫链#Markov 性与转移矩阵|转移矩阵]] → [[离散时间马尔可夫链#平稳分布与长期收敛|平稳分布]] → irreducibility/aperiodicity → [[离散时间马尔可夫链#平稳分布与长期收敛|PageRank]]。
+**知识链**：[[图上随机游走]] → [[悬空节点转移]] → [[Markov矩阵|转移矩阵]] → [[Markov稳态分布|平稳分布]] → [[PageRank随机传送|PageRank 传送]] → [[全支持传送收敛|唯一与收敛]] / [[PageRank模型依赖|模型依赖边界]]。
 <!-- bilingual-en:start -->
-**Knowledge chain**: [[离散时间马尔可夫链#Markov 性与转移矩阵|random walk on a graph]] → [[离散时间马尔可夫链#Markov 性与转移矩阵|transition matrix]] → [[离散时间马尔可夫链#平稳分布与长期收敛|stationary distribution]] → irreducibility and aperiodicity → [[离散时间马尔可夫链#平稳分布与长期收敛|PageRank]].
+**Knowledge chain**: [[图上随机游走|random walk on a graph]] → [[悬空节点转移|dangling-node repair]] → [[Markov矩阵|transition matrix]] → [[Markov稳态分布|stationary distribution]] → [[PageRank随机传送|PageRank teleportation]] → [[全支持传送收敛|uniqueness and convergence]] / [[PageRank模型依赖|model-dependence boundary]].
 <!-- bilingual-en:end -->
 
 ---

@@ -20,9 +20,20 @@ tags:
 >[!note]
 > 对应主笔记：[[the_missing_semester#第 5 讲 命令行环境]]
 > 
-> 官方来源：https://missing-semester-cn.github.io/2020/command-line/
+> MIT 原课程与题目：https://missing.csail.mit.edu/2020/command-line/
+>
+> 社区中文译文：https://missing-semester-cn.github.io/2020/command-line/
 > 
-> 官方解答：https://missing-semester-cn.github.io/missing-notes-and-solutions/2020/solutions//command-line-solution
+> 社区参考解答：https://missing-semester-cn.github.io/missing-notes-and-solutions/2020/solutions//command-line-solution
+> <!-- bilingual-en:start -->
+> The MIT page is the primary course source; translation and solutions are community materials.
+> <!-- bilingual-en:end -->
+
+> [!warning] 实验范围
+> 进程控制只针对你为练习创建并核实身份的任务；按名称结束进程可能命中其他同名任务。SSH 服务与配置迁移练习放在可恢复的实验虚拟机中，先验证新认证方式可用，再考虑关闭旧入口。发布 dotfiles 前移除密钥与凭据，并检查[[Git 历史中的 secret|整个待发布历史]]。
+> <!-- bilingual-en:start -->
+> Control only tasks created for the exercise whose identities you have checked; name matching can select unrelated processes. Use a recoverable VM for SSH-server and configuration changes, verify the new authentication route before disabling the old one, and inspect the [[Git 历史中的 secret|entire history to be published]] for credentials before sharing dotfiles.
+> <!-- bilingual-en:end -->
 
 ## 任务控制
 <!-- bilingual-en:start -->

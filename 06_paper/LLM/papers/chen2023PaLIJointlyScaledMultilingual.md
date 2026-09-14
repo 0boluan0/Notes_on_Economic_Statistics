@@ -15,10 +15,10 @@ aliases:
 # PaLI: A Jointly-Scaled Multilingual Language-Image Model
 
 ## 一句话位置
-这篇论文位于 `08 多模态`，第一版用于连接 Multimodal, Scaling Law 路线；此笔记暂作索引，不做精读摘要。
+这篇论文位于 `08 多模态`，核心位置是联合扩大视觉与语言组件，并用大规模多语言图文混合完成多模态预训练；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[多模态大模型]], 规模化、MoE 与分布式训练
+[[多模态大模型]], [[LLM 预训练.canvas|LLM 预训练]], [[数据混合]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/Z6DAT935)
@@ -30,4 +30,3 @@ aliases:
 ## Canvas
 - [[LLM Big Picture]]
 - [[08 多模态.canvas|08 多模态 Canvas]]
-

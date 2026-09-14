@@ -1,0 +1,309 @@
+{
+  "nodes": [
+    {
+      "id": "header",
+      "type": "text",
+      "text": "# 收敛与极限定理 · 学习总图\n\n先辨认极限是在路径、均方误差、偏离概率还是分布上成立，再读定理给出的具体结论。这里把收敛方式、它们之间的蕴含和产生这些极限的定理分成独立节点。",
+      "x": 40,
+      "y": 20,
+      "width": 1860,
+      "height": 180
+    },
+    {
+      "id": "mean-square-implication",
+      "type": "text",
+      "text": "## [[均方收敛推出概率收敛]]\n\n均方收敛必然推出依概率收敛；小概率的大误差使反向一般不成立。",
+      "x": 420,
+      "y": 650,
+      "width": 340,
+      "height": 210,
+      "color": "2"
+    },
+    {
+      "id": "almost-sure-implication",
+      "type": "text",
+      "text": "## [[几乎必然收敛推出概率收敛]]\n\n几乎必然收敛一定推出依概率收敛；逐时点偏离概率消失不能保证路径最终稳定。",
+      "x": 420,
+      "y": 300,
+      "width": 340,
+      "height": 210,
+      "color": "2"
+    },
+    {
+      "id": "almost-sure",
+      "type": "text",
+      "text": "## [[几乎必然收敛]]\n\n定义入口：在一个概率为 1 的事件上，每条样本路径都逐点收敛。",
+      "x": 40,
+      "y": 300,
+      "width": 340,
+      "height": 190,
+      "color": "4"
+    },
+    {
+      "id": "mean-square",
+      "type": "text",
+      "text": "## [[均方收敛]]\n\n定义入口：$E[(X_n-X)^2]\\to0$，直接控制平均平方误差。",
+      "x": 40,
+      "y": 650,
+      "width": 340,
+      "height": 190,
+      "color": "4"
+    },
+    {
+      "id": "in-probability",
+      "type": "text",
+      "text": "## [[依概率收敛]]\n\n定义入口：超过任意固定误差阈值的概率趋于零。",
+      "x": 800,
+      "y": 300,
+      "width": 340,
+      "height": 190,
+      "color": "4"
+    },
+    {
+      "id": "in-distribution",
+      "type": "text",
+      "text": "## [[依分布收敛]]\n\n定义入口：分布函数在极限 CDF 的每个连续点收敛。",
+      "x": 1180,
+      "y": 300,
+      "width": 340,
+      "height": 190,
+      "color": "4"
+    },
+    {
+      "id": "implications",
+      "type": "text",
+      "text": "## [[概率收敛推出分布收敛]]\n\n依概率收敛总能推出依分布收敛。",
+      "x": 800,
+      "y": 650,
+      "width": 340,
+      "height": 210,
+      "color": "2"
+    },
+    {
+      "id": "distribution-no-probability",
+      "type": "text",
+      "text": "## [[分布收敛不推概率收敛]]\n\n依分布收敛只比较概率律；一般不能推出与指定极限变量在同一结果上靠近。",
+      "x": 1180,
+      "y": 650,
+      "width": 340,
+      "height": 210,
+      "color": "2"
+    },
+    {
+      "id": "constant-limit-converse",
+      "type": "text",
+      "text": "## [[常数分布极限推出概率收敛]]\n\n当分布极限是常数时，依分布收敛可以反推依概率收敛。",
+      "x": 420,
+      "y": 900,
+      "width": 340,
+      "height": 210,
+      "color": "2"
+    },
+    {
+      "id": "continuous-mapping",
+      "type": "text",
+      "text": "## [[连续映射定理]]\n\n只要极限变量以概率 1 避开函数的不连续点，连续变换保持 a.s.、p 与 d 三种方式。",
+      "x": 1560,
+      "y": 650,
+      "width": 340,
+      "height": 210,
+      "color": "6"
+    },
+    {
+      "id": "strong-law",
+      "type": "text",
+      "text": "## [[强大数定律]]\n\n独立同分布且绝对可积时，样本均值几乎必然收敛到共同期望。",
+      "x": 40,
+      "y": 1450,
+      "width": 340,
+      "height": 200,
+      "color": "6"
+    },
+    {
+      "id": "weak-law",
+      "type": "text",
+      "text": "## [[弱大数定律]]\n\n概念入口：样本均值依概率收敛到目标均值的大数结论类型。",
+      "x": 420,
+      "y": 1150,
+      "width": 340,
+      "height": 200,
+      "color": "4"
+    },
+    {
+      "id": "bounded-variance-weak-law",
+      "type": "text",
+      "text": "## [[有界方差弱大数定律]]\n\n两两独立、共同均值且方差一致有界时，样本均值均方收敛，因而依概率收敛。",
+      "x": 40,
+      "y": 1150,
+      "width": 340,
+      "height": 200,
+      "color": "6"
+    },
+    {
+      "id": "clt",
+      "type": "text",
+      "text": "## [[经典中心极限定理]]\n\n中心化、标准化后的样本均值依分布收敛到标准正态。",
+      "x": 1180,
+      "y": 1150,
+      "width": 340,
+      "height": 200,
+      "color": "6"
+    },
+    {
+      "id": "slutsky",
+      "type": "text",
+      "text": "## [[Slutsky定理]]\n\n把依概率收敛到常数的一致估计量，安全地代入已有的分布极限。",
+      "x": 1560,
+      "y": 300,
+      "width": 340,
+      "height": 200,
+      "color": "6"
+    },
+    {
+      "id": "footer",
+      "type": "text",
+      "text": "颜色只区分本图中的语义角色：绿色是定义入口，紫色是定理，橙色是关系辨析。箭头指向逻辑后果、定理结论采用的收敛方式或直接推论；它不表示两条极限定理的假设彼此包含。",
+      "x": 40,
+      "y": 1750,
+      "width": 1860,
+      "height": 170
+    }
+  ],
+  "edges": [
+    {
+      "id": "e01",
+      "fromNode": "almost-sure",
+      "fromSide": "right",
+      "toNode": "almost-sure-implication",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "抽出强弱关系"
+    },
+    {
+      "id": "e01b",
+      "fromNode": "almost-sure-implication",
+      "fromSide": "right",
+      "toNode": "in-probability",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "由尾事件概率收缩推出"
+    },
+    {
+      "id": "e02",
+      "fromNode": "mean-square",
+      "fromSide": "right",
+      "toNode": "mean-square-implication",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "抽出强弱关系"
+    },
+    {
+      "id": "e02b",
+      "fromNode": "mean-square-implication",
+      "fromSide": "right",
+      "toNode": "in-probability",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "由 Markov 不等式推出"
+    },
+    {
+      "id": "e04",
+      "fromNode": "in-probability",
+      "fromSide": "bottom",
+      "toNode": "implications",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "正向蕴含"
+    },
+    {
+      "id": "e05",
+      "fromNode": "implications",
+      "fromSide": "right",
+      "toNode": "in-distribution",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "给出正向蕴含"
+    },
+    {
+      "id": "e05b",
+      "fromNode": "in-distribution",
+      "fromSide": "bottom",
+      "toNode": "distribution-no-probability",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "一般不能控制指定耦合"
+    },
+    {
+      "id": "e05c",
+      "fromNode": "constant-limit-converse",
+      "fromSide": "right",
+      "toNode": "in-probability",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "例外地恢复概率收敛"
+    },
+    {
+      "id": "e05d",
+      "fromNode": "distribution-no-probability",
+      "fromSide": "bottom",
+      "toNode": "constant-limit-converse",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "极限分布退化为常数时例外"
+    },
+    {
+      "id": "e06",
+      "fromNode": "strong-law",
+      "fromSide": "left",
+      "toNode": "almost-sure",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "结论是几乎必然收敛"
+    },
+    {
+      "id": "e07",
+      "fromNode": "bounded-variance-weak-law",
+      "fromSide": "top",
+      "toNode": "mean-square",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "同一方差计算给出"
+    },
+    {
+      "id": "e07b",
+      "fromNode": "weak-law",
+      "fromSide": "left",
+      "toNode": "bounded-variance-weak-law",
+      "toSide": "right",
+      "toEnd": "arrow",
+      "label": "一组明确充分条件"
+    },
+    {
+      "id": "e08",
+      "fromNode": "clt",
+      "fromSide": "right",
+      "toNode": "in-distribution",
+      "toSide": "right",
+      "toEnd": "arrow",
+      "label": "结论是依分布收敛"
+    },
+    {
+      "id": "e10",
+      "fromNode": "continuous-mapping",
+      "fromSide": "top",
+      "toNode": "slutsky",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "连续映射处理和、积与商"
+    },
+    {
+      "id": "e12",
+      "fromNode": "slutsky",
+      "fromSide": "left",
+      "toNode": "in-distribution",
+      "toSide": "right",
+      "toEnd": "arrow",
+      "label": "结论仍是分布极限"
+    }
+  ]
+}

@@ -76,8 +76,8 @@
       "x": 2070,
       "y": 0,
       "width": 290,
-      "height": 105,
-      "text": "**TruthfulQA: Measuring How Models Mimic Human Falsehoods**\n\n2022 · [[lin2022TruthfulQAMeasuringHow|note]]",
+      "height": 145,
+      "text": "**TruthfulQA: Measuring How Models Mimic Human Falsehoods**\n\n2022 · [[lin2022TruthfulQAMeasuringHow|note]]\n\n[[训练频率与真实性]]",
       "color": "1"
     },
     {

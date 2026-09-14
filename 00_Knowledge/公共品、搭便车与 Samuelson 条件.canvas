@@ -1,0 +1,124 @@
+{
+  "nodes": [
+    {
+      "id": "pg-header",
+      "type": "text",
+      "text": "# 公共品、搭便车与 Samuelson 条件\n*Public Goods, Free Riding, and the Samuelson Condition*\n\n上排先诊断物品属性与可行制度；下排从搭便车进入效率基准，再区分目标与实现。箭头是命题关系，不表示掌握度。",
+      "x": 0,
+      "y": -360,
+      "width": 1560,
+      "height": 220,
+      "color": "6"
+    },
+    {
+      "id": "pg-classify",
+      "type": "text",
+      "text": "## [[物品的竞争性与排他性]]\n\n有无竞争与能否以合理成本排他是两条独立轴；分类针对具体消费条件，不针对物品名称或生产者身份。",
+      "x": 0,
+      "y": 0,
+      "width": 480,
+      "height": 280,
+      "color": "5"
+    },
+    {
+      "id": "pg-shift",
+      "type": "text",
+      "text": "## [[公共品类别可变性]]\n\n容量、使用规模、认证收费和法律执行都会改变竞争性或排他性；同一物品可以随场景跨类。",
+      "x": 540,
+      "y": 0,
+      "width": 480,
+      "height": 280,
+      "color": "5"
+    },
+    {
+      "id": "pg-institution",
+      "type": "text",
+      "text": "## [[公共品的筹资、生产与治理]]\n\n筹资、生产、标准、监督与政府层级是不同决策；市场失灵不自动指定中央政府亲自生产。",
+      "x": 1080,
+      "y": 0,
+      "width": 480,
+      "height": 280,
+      "color": "4"
+    },
+    {
+      "id": "pg-free-ride",
+      "type": "text",
+      "text": "## [[公共品搭便车]]\n\n只按自身收益与成本贡献时会漏掉他人收益，使私人供给可能过低；这不意味私人供给必然为零。",
+      "x": 0,
+      "y": 420,
+      "width": 480,
+      "height": 280,
+      "color": "2"
+    },
+    {
+      "id": "pg-samuelson",
+      "type": "text",
+      "text": "## [[Samuelson 公共品条件]]\n\n同一公共品单位同时进入每个人的消费，因而有效内点满足个人 MRS 之和等于 MRT。",
+      "x": 540,
+      "y": 420,
+      "width": 480,
+      "height": 280,
+      "color": "3"
+    },
+    {
+      "id": "pg-boundary",
+      "type": "text",
+      "text": "## [[Samuelson 条件的实现缺口]]\n\n真实偏好下的效率条件不会自行揭示偏好、分配税费或聚合政治决策；目标不等于实现机制。",
+      "x": 1080,
+      "y": 420,
+      "width": 480,
+      "height": 280,
+      "color": "1"
+    }
+  ],
+  "edges": [
+    {
+      "id": "pg-edge-1",
+      "fromNode": "pg-classify",
+      "fromSide": "right",
+      "toNode": "pg-shift",
+      "toSide": "left",
+      "label": "边界随条件改变"
+    },
+    {
+      "id": "pg-edge-2",
+      "fromNode": "pg-shift",
+      "fromSide": "right",
+      "toNode": "pg-institution",
+      "toSide": "left",
+      "label": "技术改变可行收费"
+    },
+    {
+      "id": "pg-edge-3",
+      "fromNode": "pg-classify",
+      "fromSide": "bottom",
+      "toNode": "pg-free-ride",
+      "toSide": "top",
+      "label": "非排他导向激励问题"
+    },
+    {
+      "id": "pg-edge-4",
+      "fromNode": "pg-free-ride",
+      "fromSide": "right",
+      "toNode": "pg-samuelson",
+      "toSide": "left",
+      "label": "比较私人与社会边际条件"
+    },
+    {
+      "id": "pg-edge-5",
+      "fromNode": "pg-samuelson",
+      "fromSide": "right",
+      "toNode": "pg-boundary",
+      "toSide": "left",
+      "label": "效率目标不等于实现"
+    },
+    {
+      "id": "pg-edge-6",
+      "fromNode": "pg-boundary",
+      "fromSide": "top",
+      "toNode": "pg-institution",
+      "toSide": "bottom",
+      "label": "实现问题进入制度选择"
+    }
+  ]
+}

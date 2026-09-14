@@ -15,10 +15,10 @@ aliases:
 # ELECTRA: Pre-training Text Encoders as Discriminators Rather Than Generators
 
 ## 一句话位置
-这篇论文位于 `01 架构与预训练`，第一版用于连接 Transformer, Pretraining 路线；此笔记暂作索引，不做精读摘要。
+这篇论文位于 `01 架构与预训练`，核心位置是用替换 token 检测目标提高文本编码器的预训练效率；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[Transformer 与注意力机制]], 预训练、指令微调与偏好优化
+[[LLM 预训练.canvas|LLM 预训练]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/QM3MSN95)
@@ -30,4 +30,3 @@ aliases:
 ## Canvas
 - [[LLM Big Picture]]
 - [[01 架构与预训练.canvas|01 架构与预训练 Canvas]]
-

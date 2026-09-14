@@ -54,9 +54,9 @@ source: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/p
 
 ## Session 87：L’Hôpital’s Rule
 
-### [[极限与连续#极限存在的检查顺序|洛必达法则]]：未定式与使用条件
+### [[洛必达法则]]：定理与使用条件
 <!-- bilingual-en:start -->
-*[[极限与连续#极限存在的检查顺序|L’Hôpital’s rule]]: indeterminate forms and hypotheses*
+*[[洛必达法则|L’Hôpital’s rule]]: theorem and hypotheses*
 <!-- bilingual-en:end -->
 
 设 \(f,g\) 在 \(a\) 的穿孔邻域可导，\(g'(x)\ne0\)，并且
@@ -87,8 +87,10 @@ $$
 $$
 
 法则处理的是**比值的极限**，不是函数恒等式；一般不能写 \(f/g=f'/g'\)。
+详细误用边界见 [[洛必达适用边界]]。
 <!-- bilingual-en:start -->
 The rule concerns the **limit of a ratio**, not an identity between functions; in general, one may not write $f/g=f'/g'$.
+See [[洛必达适用边界|the applicability boundary]] for the full misuse checks.
 <!-- bilingual-en:end -->
 
 ### 为什么成立：Cauchy MVT
@@ -693,9 +695,9 @@ Dividing by $x^4$, or simply comparing the leading terms, gives $+\infty$ immedi
 *Infinite intervals*
 <!-- bilingual-en:end -->
 
-[[反常积分#反常积分|反常积分]]定义为
+[[反常积分]]定义为
 <!-- bilingual-en:start -->
-An [[反常积分#反常积分|improper integral]] over an infinite interval is defined by
+An [[反常积分|improper integral]] over an infinite interval is defined by
 <!-- bilingual-en:end -->
 
 $$
@@ -705,7 +707,7 @@ $$
 
 极限有限称收敛，否则发散。符号 \(\infty\) 只是极限方向，不能直接代入原函数。
 <!-- bilingual-en:start -->
-If the finite-endpoint limit exists, the improper integral converges; otherwise it diverges. The symbol \(\infty\) indicates only the direction of the limit and cannot be substituted directly into an antiderivative.
+If this truncation limit exists as a finite real number, the improper integral converges; otherwise it diverges. The symbol \(\infty\) indicates only the direction of the limit and cannot be substituted directly into an antiderivative.
 <!-- bilingual-en:end -->
 
 ### \(p\)-积分
@@ -732,7 +734,7 @@ $$
 - \(p=1\)：\(\ln b\to\infty\)，发散。
 <!-- bilingual-en:start -->
 - If $p>1$, then $b^{1-p}\to0$, and the integral converges to $1/(p-1)$;
-- if $p<1$, the nonnegative power of $b$ makes the integral diverge;
+- if $p<1$, the positive power $1-p$ of $b$ makes the integral diverge;
 - if $p=1$, then $\ln b\to\infty$, so the integral diverges.
 <!-- bilingual-en:end -->
 
@@ -851,9 +853,9 @@ This shows that an integrand tending to zero is not enough to make the tail area
 
 ## Session 92：Integral Comparison
 
-设 \(0\le f(x)\le g(x)\) 对充分大的 \(x\) 成立：
+设存在有限 $A$，使 $f,g$ 在每个 $[A,B]$（$B>A$ 且有限）上正常可积，并且对所有 $x\ge A$ 有 $0\le f(x)\le g(x)$：
 <!-- bilingual-en:start -->
-Suppose $0\le f(x)\le g(x)$ for all sufficiently large $x$:
+Suppose there is a finite $A$ such that $f$ and $g$ are properly integrable on every $[A,B]$ with finite $B>A$, and $0\le f(x)\le g(x)$ for all $x\ge A$:
 <!-- bilingual-en:end -->
 
 - 若 \(\int g\) 收敛，则 \(\int f\) 收敛；
@@ -873,9 +875,9 @@ The direction of each implication follows from the ordering of the areas and can
 *Limit comparison*
 <!-- bilingual-en:end -->
 
-若 \(f,g>0\) 且
+若存在有限 $A$，使 $f,g$ 在 $x\ge A$ 时为正、在每个有限区间 $[A,B]$ 上正常可积，且
 <!-- bilingual-en:start -->
-If \(f,g>0\) and
+If there is a finite $A$ such that $f$ and $g$ are positive for $x\ge A$, are properly integrable on every finite interval $[A,B]$, and
 <!-- bilingual-en:end -->
 
 $$
@@ -1145,7 +1147,7 @@ there is both an infinite endpoint and an interior singularity at $x=3$. Split t
 *Definition*
 <!-- bilingual-en:end -->
 
-[[无穷级数与幂级数#数项级数与必要条件|无穷级数]]
+[[无穷级数]]
 
 $$
 \sum_{n=1}^{\infty}a_n
@@ -1160,9 +1162,9 @@ $$
 S_N=\sum_{n=1}^Na_n
 $$
 
-的极限。若 \(S_N\to S\)，称级数收敛到 \(S\)。
+的极限。若 $S_N\to S$ 且 $S$ 有限，称级数收敛到 $S$。
 <!-- bilingual-en:start -->
-If $S_N\to S$, the series is said to converge to $S$.
+If $S_N\to S$ for a finite number $S$, the series is said to converge to $S$.
 <!-- bilingual-en:end -->
 
 ### 必要条件
@@ -1179,9 +1181,9 @@ $$
 a_n=S_n-S_{n-1}\to S-S=0.
 $$
 
-所以 \(a_n\not\to0\) 必发散；但 \(a_n\to0\) 不保证收敛。
+所以 $a_n\not\to0$ 必发散；但 $a_n\to0$ 不保证收敛。这是[[级数通项判别]]的单向结论。
 <!-- bilingual-en:start -->
-Therefore, if $a_n$ does not tend to zero, the series must diverge. The converse is false: $a_n\to0$ does not guarantee convergence.
+Therefore, if $a_n$ does not tend to zero, the series must diverge. The converse is false: $a_n\to0$ does not guarantee convergence. This is the one-way conclusion of the [[级数通项判别|nth-term test]].
 <!-- bilingual-en:end -->
 
 ### 几何级数
@@ -1191,7 +1193,7 @@ Therefore, if $a_n$ does not tend to zero, the series must diverge. The converse
 
 $$
 S_N=1+r+\cdots+r^N
-=\frac{1-r^{N+1}}{1-r}.
+=\frac{1-r^{N+1}}{1-r},\qquad r\ne1.
 $$
 
 因此
@@ -1203,19 +1205,19 @@ $$
 \boxed{\sum_{n=0}^{\infty}r^n=\frac1{1-r},\quad |r|<1}.
 $$
 
-有限和公式来自消项：$(1-r)S_N=1-r^{N+1}$。只有 $|r|<1$ 时余项 $r^{N+1}\to0$，才能得到无穷和。$r=1$ 时部分和无界，$r=-1$ 时在 $0,1$ 间振荡，$|r|>1$ 时单项不趋零；因此不能越过适用条件套用 $1/(1-r)$。
+[[几何和|有限和公式]]来自消项：$(1-r)S_N=1-r^{N+1}$，除以 $1-r$ 要求 $r\ne1$。只有 $|r|<1$ 时余项 $r^{N+1}\to0$，才能得到[[几何级数|无穷和]]。$r=1$ 时 $S_N=N+1$ 无界，$r=-1$ 时在 $0,1$ 间振荡，$|r|>1$ 时单项不趋零；因此不能越过适用条件套用 $1/(1-r)$。
 <!-- bilingual-en:start -->
-The finite-sum formula comes from cancellation in $(1-r)S_N=1-r^{N+1}$. An infinite sum follows only when $|r|<1$, because only then does the remainder $r^{N+1}$ tend to zero. At $r=1$ the partial sums are unbounded; at $r=-1$ they oscillate between $0$ and $1$; and when $|r|>1$ the terms do not tend to zero. Thus $1/(1-r)$ must not be used outside $|r|<1$.
+The [[几何和|finite-sum formula]] comes from cancellation in $(1-r)S_N=1-r^{N+1}$; dividing by $1-r$ requires $r\ne1$. An [[几何级数|infinite geometric sum]] follows only when $|r|<1$, because only then does the remainder $r^{N+1}$ tend to zero. At $r=1$, $S_N=N+1$ is unbounded; at $r=-1$ the partial sums oscillate between $0$ and $1$; and when $|r|>1$ the terms do not tend to zero. Thus $1/(1-r)$ must not be used outside $|r|<1$.
 <!-- bilingual-en:end -->
 
 ### 本地材料与练习
 
-- [[Ses94a_Lecture_Notes.pdf|94a Introduction]]
-- [[Ses94b_Lecture_Notes.pdf|94b Divergent Series]]
-- [[Ses94c_Lecture_Notes.pdf|94c Notation]]
-- [[Ses94d_Lecture_Notes.pdf|94d Examples]]
-- [[Exercise094_Problems.pdf|Exercise 94]]
-- [[Exercise094_Solutions.pdf|Exercise 94 Solutions]]
+- [[Ses94a_Lecture_Notes.pdf#page=1|94a Introduction — geometric partial sums, p. 1]]
+- [[Ses94b_Lecture_Notes.pdf#page=1|94b Divergent Series — unbounded or oscillating partial sums, p. 1]]
+- [[Ses94c_Lecture_Notes.pdf#page=1|94c Notation — convergence as a limit of partial sums, p. 1]]
+- [[Ses94d_Lecture_Notes.pdf#page=1|94d Examples — sums versus integrals, p. 1]]
+- [[Exercise094_Problems.pdf#page=1|Exercise 94 — induction and the geometric sum, p. 1]]
+- [[Exercise094_Solutions.pdf#page=1|Exercise 94 Solutions — induction then limit, pp. 1–3]]
 
 ![[98_attachment/MIT18.01SC/unit05-series-partial-sums.png]]
 
@@ -1263,26 +1265,26 @@ The finite-sum formula comes from cancellation in $(1-r)S_N=1-r^{N+1}$. An infin
 > **3.** The condition $a_n\to0$ is necessary but not sufficient; $\sum1/n$ still diverges.<br>
 > <!-- bilingual-en:end -->
 
-## Session 95：[[无穷级数与幂级数#判别与误差控制|级数收敛判别]]
+## Session 95：[[级数判别法选择|级数收敛判别]]
 <!-- bilingual-en:start -->
-*Session 95: [[无穷级数与幂级数#判别与误差控制|tests for series convergence]]*
+*Session 95: [[级数判别法选择|tests for series convergence]]*
 <!-- bilingual-en:end -->
 
-对非负项级数：
+对非负项级数，[[级数直接比较判别]]为（以下不等式从某个指标起成立即可）：
 <!-- bilingual-en:start -->
-For series with nonnegative terms:
+For series with nonnegative terms, the [[级数直接比较判别|direct comparison test]] states the following; the inequalities need only hold eventually:
 <!-- bilingual-en:end -->
 
-- \(0\le a_n\le b_n\)，若 \(\sum b_n\) 收敛，则 \(\sum a_n\) 收敛；
-- \(0\le b_n\le a_n\)，若 \(\sum b_n\) 发散，则 \(\sum a_n\) 发散。
+- $0\le a_n\le b_n$，若 $\sum b_n$ 收敛，则 $\sum a_n$ 收敛；
+- $0\le b_n\le a_n$，若 $\sum b_n$ 发散，则 $\sum a_n$ 发散。
 <!-- bilingual-en:start -->
-- \(0\le a_n\le b_n\), if \(\sum b_n\) converges, \(\sum a_n\) converges;
-- \(0\le b_n\le a_n\), if \(\sum b_n\) diverges, \(\sum a_n\) diverges.
+- $0\le a_n\le b_n$, if $\sum b_n$ converges, $\sum a_n$ converges;
+- $0\le b_n\le a_n$, if $\sum b_n$ diverges, $\sum a_n$ diverges.
 <!-- bilingual-en:end -->
 
-极限比较：若
+[[级数极限比较判别|极限比较]]：若 $a_n\ge0$、$b_n>0$ 从某个指标起成立，且
 <!-- bilingual-en:start -->
-Limit comparison: if
+[[级数极限比较判别|Limit comparison]]: if $a_n\ge0$ and $b_n>0$ eventually, and
 <!-- bilingual-en:end -->
 
 $$
@@ -1299,9 +1301,9 @@ the two series either both converge or both diverge.
 *The integral test*
 <!-- bilingual-en:end -->
 
-若 \(f\) 正、连续、递减且 \(a_n=f(n)\)，则
+[[级数积分判别]]：取正整数 $N$。若 $f$ 在 $[N,\infty)$ 上为正、连续、单调不增，且整数 $n\ge N$ 时 $a_n=f(n)$，则
 <!-- bilingual-en:start -->
-If \(f\) is positive, continuous, decreasing, and \(a_n=f(n)\), then
+The [[级数积分判别|integral test]] applies for a positive integer $N$ when $f$ is positive, continuous, and nonincreasing on $[N,\infty)$, with $a_n=f(n)$ for integers $n\ge N$. Then
 <!-- bilingual-en:end -->
 
 $$
@@ -1317,9 +1319,9 @@ $$
 \int_N^\infty f(x)dx
 $$
 
-同敛散。矩形图说明级数与面积互相夹住。
+同敛散。矩形图说明级数与面积互相夹住；有限个首项不影响敛散，所以条件只需在尾部成立。
 <!-- bilingual-en:start -->
-have the same convergence behaviour. A rectangle comparison shows how the sum and the integral bound one another.
+have the same convergence behaviour. A rectangle comparison shows how the sum and the integral bound one another. Finitely many initial terms do not affect convergence, so these conditions need only hold on a tail.
 <!-- bilingual-en:end -->
 
 因此
@@ -1331,46 +1333,51 @@ $$
 \boxed{\sum_{n=1}^{\infty}\frac1{n^p}\text{ 收敛}\iff p>1}.
 $$
 
+这里 $p\in\mathbb R$。$p>0$ 时可用积分判别；$p\le0$ 时通项不趋零，直接判发散。详见[[p级数判别]]。
+<!-- bilingual-en:start -->
+Here $p\in\mathbb R$. For $p>0$, apply the integral test; for $p\le0$, the terms fail to tend to zero, so the series diverges by the nth-term test. See the [[p级数判别|p-series test]].
+<!-- bilingual-en:end -->
+
 ### Riemann 和证明与比值判别
 <!-- bilingual-en:start -->
 *Riemann-sum bounds and the ratio test*
 <!-- bilingual-en:end -->
 
-对正递减 $f$，单位宽矩形给出积分与级数的上下夹逼。特别地，对调和部分和 $H_N$：
+对正递减 $f$，单位宽矩形给出积分与级数的上下夹逼。特别地，对[[调和数|调和部分和]] $H_N$，当整数 $N\ge2$ 时：
 <!-- bilingual-en:start -->
-For a positive decreasing function $f$, unit-width rectangles give upper and lower bounds relating its integral to the corresponding series. In particular, for the harmonic partial sum $H_N$:
+For a positive decreasing function $f$, unit-width rectangles give upper and lower bounds relating its integral to the corresponding series. In particular, for the [[调和数|harmonic partial sum]] $H_N$ and integers $N\ge2$:
 <!-- bilingual-en:end -->
 
 $$
 \ln N<H_N<\ln N+1,
 $$
 
-所以 $H_N\to\infty$，且增长量级为 $\ln N$。
+所以 $H_N\to\infty$，且增长量级为 $\ln N$；$N=1$ 时上界取等号。详见[[调和数对数增长]]。
 <!-- bilingual-en:start -->
-So $H_N\to\infty$, and the growth order is $\ln N$.
+So $H_N\to\infty$, with growth order $\ln N$; at $N=1$, the upper bound is an equality. See [[调和数对数增长|logarithmic growth of harmonic numbers]].
 <!-- bilingual-en:end -->
 
-比值判别对一般符号级数使用绝对值：
+[[级数比值判别|比值判别]]对一般符号级数使用绝对值。假设 $a_n$ 最终非零，且以下极限存在（允许 $L=\infty$）：
 <!-- bilingual-en:start -->
-For a series with terms of arbitrary sign, the ratio test uses absolute values:
+For a series with terms of arbitrary sign, the [[级数比值判别|ratio test]] uses absolute values. Assume that $a_n$ is eventually nonzero and that the following limit exists, allowing $L=\infty$:
 <!-- bilingual-en:end -->
 
 $$
 L=\lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|.
 $$
 
-$L<1$ 时绝对收敛，$L>1$ 时发散，$L=1$ 无结论。前者因为尾部可被公比 $q<1$ 的几何级数控制；后者因为单项不能趋零。
+$L<1$ 时[[绝对收敛]]，因而由[[绝对收敛推出收敛]]知原级数收敛；$L>1$（含 $\infty$）时发散；$L=1$ 无结论。前者因为尾部可被公比 $q<1$ 的几何级数控制；后者因为单项不能趋零。若比值极限不存在，这个极限版本不适用，可改用比较等方法，或检查[[级数根值判别]]的条件。
 <!-- bilingual-en:start -->
-The series converges absolutely when $L<1$, diverges when $L>1$, and the test is inconclusive when $L=1$. In the first case the tail is bounded by a geometric series with ratio $q<1$; in the second, the terms cannot tend to zero.
+The series is [[绝对收敛|absolutely convergent]] when $L<1$, and [[绝对收敛推出收敛|absolute convergence implies convergence]] of the original series. It diverges when $L>1$, including $L=\infty$; the test is inconclusive when $L=1$. In the first case the tail is bounded by a geometric series with ratio $q<1$; in the second, the terms cannot tend to zero. If the ratio limit does not exist, this limit version does not apply; use another method such as comparison, or check the assumptions of the [[级数根值判别|root test]].
 <!-- bilingual-en:end -->
 
 ### 本地材料与练习
 
-- [[Ses95a_Lecture_Notes.pdf|95a Harmonic Series]]
-- [[Ses95b_Lecture_Notes.pdf|95b Comparison Tests]]
-- [[Ses95c_Lecture_Notes.pdf|95c Examples]]
-- [[Exercise095_Problems.pdf|Exercise 95]]
-- [[Exercise095_Solutions.pdf|Exercise 95 Solutions]]
+- [[Ses95a_Lecture_Notes.pdf#page=1|95a Harmonic Series — rectangle bounds and logarithmic growth, pp. 1–2]]
+- [[Ses95b_Lecture_Notes.pdf#page=1|95b Comparison Tests — integral and limit comparison tests, p. 1]]
+- [[Ses95c_Lecture_Notes.pdf#page=1|95c Examples — limit comparison with p-series, p. 1]]
+- [[Exercise095_Problems.pdf#page=1|Exercise 95 — ratio-test problems, p. 1]]
+- [[Exercise095_Solutions.pdf#page=1|Exercise 95 Solutions — ratio-test conditions and three examples, pp. 1–3]]
 
 > [!example]- Exercise 095 完整题解：比值判别
 > **(a)** 原题的 $\sum1/\sqrt[3]n$ 应从 $n=1$ 开始。比值
@@ -1428,18 +1435,18 @@ The series converges absolutely when $L<1$, diverges when $L>1$, and the test is
 
 ## Session 96：Stacking Blocks
 
-把长度相同的砖逐层向外伸。第 \(n\) 块相对下一块最多伸出
+把长度、质量均归一化为 $1$ 的相同均匀砖逐层向外伸，并从顶部往下编号。在这套逐层临界平衡的单列构造中，第 $n$ 块右端点相对下一块右端点（最底层时为桌沿）的水平偏移为
 <!-- bilingual-en:start -->
-Stack identical bricks, shifting each layer outward. Brick \(n\) can extend beyond the brick below it by at most
+Stack identical uniform bricks, normalizing each brick's length and mass to $1$ and numbering from the top down. In this single-stack construction, each layer is placed at the limit of balance; the horizontal offset of brick $n$'s right edge beyond the next brick's right edge, or beyond the table edge for the bottom layer, is
 <!-- bilingual-en:end -->
 
 $$
 \frac1{2n}
 $$
 
-而不使上方 \(n\) 块的重心越过支点。总伸出量为
+而不使上方 $n$ 块的[[质心|重心]]越过支点。$N$ 块砖相对桌边的总伸出量为（最后一项来自最底砖与桌面的接触）：
 <!-- bilingual-en:start -->
-without allowing the center of mass of the upper \(n\) blocks to pass the support point. The total overhang is
+without allowing the [[质心|center of mass]] of the upper $n$ blocks to pass the support point. The total overhang of $N$ bricks beyond the table edge is as follows; the final term comes from the contact between the bottom brick and the table:
 <!-- bilingual-en:end -->
 
 $$
@@ -1451,14 +1458,29 @@ $$
 Because the harmonic series diverges, the overhang can in principle exceed any prescribed distance, although it grows extremely slowly.
 <!-- bilingual-en:end -->
 
-若砖长为 $1$，上方 $n$ 块总质量为 $n$；使它们的共同重心恰落在下一支点上，新增最大偏移为 $1/(2n)$。所以每一项来自力矩平衡，而不是经验猜测。
+每块质量为 $1$，上方 $n$ 块总质量为 $n$；由质量加权的重心计算使它们的共同重心恰落在下一支点上，得到这套构造的偏移 $1/(2n)$。所以每一项来自力矩平衡，而不是经验猜测。它证明任意大伸出量可实现，并未证明在所有可能的堆砖布局中最优；MIT 96b 使用砖长 $2$，其对应偏移和总伸出量是这里的两倍。
 <!-- bilingual-en:start -->
-If each brick has length $1$, the upper $n$ bricks have total mass $n$. Placing their combined centre of mass exactly above the next support gives a maximum additional offset of $1/(2n)$. Each term therefore comes from torque balance, not guesswork.
+With each brick's mass normalized to $1$, the upper $n$ bricks have total mass $n$. A mass-weighted center-of-mass calculation places their combined center exactly above the next support and gives the offset $1/(2n)$ in this construction. Each term comes from torque balance, not guesswork. This establishes that arbitrarily large overhangs are achievable, not that the arrangement is optimal among all possible stacks. MIT 96b uses bricks of length $2$, so its offsets and total overhang are twice those written here.
 <!-- bilingual-en:end -->
 
-### [[无穷级数与幂级数#数项级数与必要条件|调和级数发散证明]]：分组法
+具体地，记第 $n$ 块右端坐标为 $r_n$，上方 $n$ 块共同重心为 $C_n$。$n=1$ 时 $C_1=r_1-1/2$，偏移为 $1/2$。$n\ge2$ 时，上一层已处于临界平衡，所以 $C_{n-1}=r_n$，于是
 <!-- bilingual-en:start -->
-*[[无穷级数与幂级数#数项级数与必要条件|A grouping proof that the harmonic series diverges]]*
+More explicitly, let $r_n$ be the right-edge coordinate of brick $n$, and $C_n$ the combined center of mass of the upper $n$ bricks. For $n=1$, $C_1=r_1-1/2$, giving offset $1/2$. For $n\ge2$, the upper layer is already at limiting balance, so $C_{n-1}=r_n$. Therefore,
+<!-- bilingual-en:end -->
+
+$$
+C_n=\frac{(n-1)C_{n-1}+(r_n-1/2)}n
+   =r_n-\frac1{2n}.
+$$
+
+再令 $C_n=r_{n+1}$（把桌沿记作 $r_{N+1}$），便得 $r_n-r_{n+1}=1/(2n)$；将相邻偏移相加，得到顶部相对桌沿的总伸出量。
+<!-- bilingual-en:start -->
+Set $C_n=r_{n+1}$, writing the table edge as $r_{N+1}$, to obtain $r_n-r_{n+1}=1/(2n)$. Summing the adjacent offsets gives the top brick's total overhang beyond the table edge.
+<!-- bilingual-en:end -->
+
+### 调和级数发散证明：分组法
+<!-- bilingual-en:start -->
+*A grouping proof that the harmonic series diverges*
 <!-- bilingual-en:end -->
 
 $$
@@ -1467,18 +1489,18 @@ $$
 \left(\frac15+\cdots+\frac18\right)+\cdots
 $$
 
-第 \(k\) 组有 \(2^{k-1}\) 项，每项至少 \(1/2^k\)，所以每组和至少 \(1/2\)。组数无限，部分和无界。
+把首项 $1$ 单列后，第 $k$ 组（$k\ge1$）取 $n=2^{k-1}+1,\ldots,2^k$，有 $2^{k-1}$ 项，每项至少 $1/2^k$，所以每组和至少 $1/2$。组数无限，部分和无界。还可对照[[调和数对数增长|积分比较给出的增长界]]，从另一路证明发散并看出增长速度。
 <!-- bilingual-en:start -->
-The $k$th group contains $2^{k-1}$ terms, each at least $1/2^k$, so every group sums to at least $1/2$. Infinitely many such groups make the partial sums unbounded.
+After setting the first term $1$ aside, group $k$ ($k\ge1$) contains the indices $n=2^{k-1}+1,\ldots,2^k$. It has $2^{k-1}$ terms, each at least $1/2^k$, so every group sums to at least $1/2$. Infinitely many such groups make the partial sums unbounded. Compare this with the [[调和数对数增长|growth bounds from integral comparison]], which provide another proof of divergence and identify its growth rate.
 <!-- bilingual-en:end -->
 
 ### 本地材料
 
-- [[Ses96a_Lecture_Notes.pdf|96a Preview]]
-- [[Ses96b_Lecture_Notes.pdf|96b Stacking Blocks]]
+- [[Ses96a_Lecture_Notes.pdf#page=1|96a Preview — the overhang question, p. 1]]
+- [[Ses96b_Lecture_Notes.pdf#page=1|96b Stacking Blocks — center-of-mass recurrence and harmonic overhang, pp. 1–4]]
 
 > [!question]- 三问自检
-> 1. 项趋零为什么仍可发散？2. 每组下界为何 \(1/2\)？3. 发散是否意味着有限 \(N\) 时无限伸出？
+> 1. 项趋零为什么仍可发散？2. 每组下界为何 $1/2$？3. 发散是否意味着有限 $N$ 时无限伸出？
 >
 > 答：衰减太慢；项数乘最小项；不意味，任意有限块数伸出仍有限。
 > <!-- bilingual-en:start -->
@@ -1492,29 +1514,29 @@ The $k$th group contains $2^{k-1}$ terms, each at least $1/2^k$, so every group 
 
 ## Session 97：Power Series
 
-[[无穷级数与幂级数#幂级数与 Taylor 级数|幂级数]]：
+[[幂级数]]：
 
 $$
 \sum_{n=0}^{\infty}c_n(x-a)^n.
 $$
 
-固定 \(x\) 后它是数项级数。通常存在收敛半径 \(R\)：
+固定 $x$ 后它是数项级数。每个幂级数都有唯一的[[幂级数收敛半径|收敛半径]] $R\in[0,\infty]$：
 <!-- bilingual-en:start -->
-For each fixed $x$, this becomes a numerical series. A power series has a radius of convergence $R$:
+For each fixed $x$, this becomes a numerical series. Every power series has a unique [[幂级数收敛半径|radius of convergence]] $R\in[0,\infty]$:
 <!-- bilingual-en:end -->
 
-- \(|x-a|<R\)：绝对收敛；
-- \(|x-a|>R\)：发散；
-- 端点必须另查。
+- $|x-a|<R$：绝对收敛；
+- $|x-a|>R$：发散；
+- 当 $0<R<\infty$ 时，两个端点 $a\pm R$ 必须另查。
 <!-- bilingual-en:start -->
 - it converges absolutely when $|x-a|<R$;
 - it diverges when $|x-a|>R$;
-- the endpoints must be tested separately.
+- when $0<R<\infty$, the two endpoints $a\pm R$ must be tested separately.
 <!-- bilingual-en:end -->
 
-收敛区间以中心 $a$ 对称，是因为绝对收敛由 $|x-a|$ 控制；端点不在这段论证内，可能两端都收敛、都发散或只收敛一端。
+半径内部的开区间 $(a-R,a+R)$ 以中心 $a$ 对称，因为内部的绝对收敛由 $|x-a|$ 控制；含端点的完整收敛集合却未必对称。[[幂级数端点判别|端点必须分别判断]]：可能两端都收敛、都发散或只收敛一端。$R=0$ 时仅在中心 $x=a$ 收敛，$R=\infty$ 时在所有实数处收敛，没有有限端点需要检查。
 <!-- bilingual-en:start -->
-The interval of convergence is symmetric about $a$ because absolute convergence is controlled by $|x-a|$. The endpoint cases are not covered by that argument: both may converge, both may diverge, or exactly one may converge.
+The open interval $(a-R,a+R)$ inside the radius is symmetric about $a$, because interior absolute convergence is controlled by $|x-a|$. The full convergence set, including endpoints, need not be symmetric. [[幂级数端点判别|Test the endpoints separately]]: both may converge, both may diverge, or exactly one may converge. If $R=0$, convergence occurs only at the center $x=a$; if $R=\infty$, it occurs at every real number and there are no finite endpoints to test.
 <!-- bilingual-en:end -->
 
 ### 比值法求半径
@@ -1522,9 +1544,9 @@ The interval of convergence is symmetric about $a$ because absolute convergence 
 *Finding the radius with the ratio test*
 <!-- bilingual-en:end -->
 
-若极限存在：
+若系数 $c_n$ 最终非零，且 $L=\lim_{n\to\infty}|c_{n+1}/c_n|$ 存在于 $[0,\infty]$，则对 $x\ne a$：
 <!-- bilingual-en:start -->
-If the limit exists:
+If the coefficients $c_n$ are eventually nonzero and $L=\lim_{n\to\infty}|c_{n+1}/c_n|$ exists in $[0,\infty]$, then for $x\ne a$:
 <!-- bilingual-en:end -->
 
 $$
@@ -1534,9 +1556,9 @@ $$
 \to L|x-a|.
 $$
 
-要求小于 1，故 \(R=1/L\)。
+比值极限小于 $1$ 保证绝对收敛，大于 $1$ 保证发散，故 $R=1/L$，约定 $1/0=\infty$、$1/\infty=0$。等于 $1$ 时无结论，不能把“小于 $1$”当作端点收敛的必要条件。中心 $x=a$ 直接代入即可；若系数含无限多个零或比值极限不存在，可改用比较法或检查[[级数根值判别]]的条件。
 <!-- bilingual-en:start -->
-Convergence requires $L|x-a|<1$, so $R=1/L$.
+A ratio limit below $1$ guarantees absolute convergence, and one above $1$ guarantees divergence. Hence $R=1/L$, with $1/0=\infty$ and $1/\infty=0$. A limit equal to $1$ is inconclusive, so a ratio limit below $1$ is not a necessary condition for endpoint convergence. At the center $x=a$, substitute directly. If infinitely many coefficients vanish or the ratio limit does not exist, use comparison or check the assumptions of the [[级数根值判别|root test]].
 <!-- bilingual-en:end -->
 
 例：
@@ -1548,19 +1570,20 @@ $$
 \sum_{n=0}^{\infty}\frac{x^n}{n!}
 $$
 
-比值为 \(|x|/(n+1)\to0\)，对所有 \(x\) 收敛，\(R=\infty\)。
+当 $x\ne0$ 时，比值为 $|x|/(n+1)\to0$；$x=0$ 时级数直接等于 $1$。所以对所有 $x$ 收敛，$R=\infty$。这先证明级数收敛；它为何等于 $e^x$，还要用 Session 98 的余项证明，见[[指数函数幂级数]]。
 <!-- bilingual-en:start -->
-The ratio is $|x|/(n+1)\to0$, so the series converges for every $x$ and $R=\infty$.
+For $x\ne0$, the ratio is $|x|/(n+1)\to0$; at $x=0$, the series equals $1$ directly. Thus it converges for every $x$ and $R=\infty$. This proves convergence of the series; identifying its sum with $e^x$ still requires the remainder argument in Session 98. See the [[指数函数幂级数|power series for the exponential function]].
 <!-- bilingual-en:end -->
 
 ### 本地材料与练习
 
-- [[Ses97a_Lecture_Notes.pdf|97a Power Series]]
-- [[Ses97b_Lecture_Notes.pdf|97b General Power Series]]
-- [[Exercise097_Problems.pdf|Exercise 97]]
-- [[Exercise097_Solutions.pdf|Exercise 97 Solutions]]
+- [[Ses97a_Lecture_Notes.pdf#page=1|97a Power Series — the geometric model and conditional manipulations, p. 1]]
+- [[Ses97b_Lecture_Notes.pdf#page=1|97b General Power Series — radius and undetermined endpoint behavior, p. 1]]
+- [[Exercise097_Problems.pdf#page=1|Exercise 97 — radius of the series with coefficients 1/n, p. 1]]
+- [[Exercise097_Solutions.pdf#page=1|Exercise 97 Solutions — ratio computation and radius 1, p. 1]]
 
 > [!example]- Exercise 097 完整题解：$\sum_{n=1}^{\infty}x^n/n$
+> 当 $x=0$ 时和为 $0$；当 $x\ne0$ 时计算比值：
 > $$
 > \left|\frac{x^{n+1}/(n+1)}{x^n/n}\right|
 > =|x|\frac n{n+1}\to|x|.
@@ -1569,8 +1592,9 @@ The ratio is $|x|/(n+1)\to0$, so the series converges for every $x$ and $R=\inft
 > $$
 > \boxed{R=1.}
 > $$
-> 若进一步求区间：$x=1$ 为调和级数，发散；$x=-1$ 为交错调和级数，条件收敛，所以区间是 $[-1,1)$。
+> 若进一步求区间：$x=1$ 为调和级数，发散；$x=-1$ 时 $1/n$ 单调趋零，由[[交错级数判别]]收敛，而绝对值级数仍是发散的调和级数，所以是[[条件收敛]]。完整收敛区间为 $[-1,1)$，并不关于中心 $0$ 对称。
 > <!-- bilingual-en:start -->
+> At $x=0$, the sum is $0$. For $x\ne0$, compute the ratio:
 > $$
 > \left|\frac{x^{n+1}/(n+1)}{x^n/n}\right|
 > =|x|\frac n{n+1}\to|x|.
@@ -1579,19 +1603,19 @@ The ratio is $|x|/(n+1)\to0$, so the series converges for every $x$ and $R=\inft
 > $$
 > \boxed{R=1.}
 > $$
-> To find the full interval, check the endpoints separately. At $x=1$ the series is harmonic and diverges; at $x=-1$ it is the alternating harmonic series and converges conditionally. The interval of convergence is therefore $[-1,1)$.
+> To find the full interval, test the endpoints separately. At $x=1$, the series is harmonic and diverges. At $x=-1$, the magnitudes $1/n$ decrease to zero, so the [[交错级数判别|alternating-series test]] gives convergence; its absolute-value series is the divergent harmonic series, so convergence is [[条件收敛|conditional]]. The full interval of convergence is $[-1,1)$, which is not symmetric about its center $0$.
 > <!-- bilingual-en:end -->
 
 > [!question]- 三道自检题与答案
 > 1. $\sum x^n/n!$ 有 $R=\infty$。
 > 2. $\sum n!x^n$ 有 $R=0$。
-> 3. 求出半径后仍要逐个检查 $a\pm R$。
+> 3. 求出半径后，若 $0<R<\infty$，仍要逐个检查 $a\pm R$。
 > <!-- bilingual-en:start -->
 >
 > &nbsp;
 > **1.** $\sum x^n/n!$ has radius $R=\infty$.<br>
 > **2.** $\sum n!x^n$ has radius $R=0$.<br>
-> **3.** After finding the radius, test the endpoints $a-R$ and $a+R$ separately.<br>
+> **3.** After finding a radius with $0<R<\infty$, test the endpoints $a-R$ and $a+R$ separately.<br>
 > <!-- bilingual-en:end -->
 
 ## Session 98：Taylor’s Series
@@ -1610,9 +1634,9 @@ $$
 f(x)=\sum_{n=0}^{\infty}c_n(x-a)^n
 $$
 
-可逐项求导，代入 \(x=a\)：
+在 $|x-a|<R$（$R>0$）内成立，则由[[幂级数逐项求导]]可反复求导，再代入 $x=a$：
 <!-- bilingual-en:start -->
-Differentiate term by term and then set $x=a$:
+holds on $|x-a|<R$ for some $R>0$. The theorem on [[幂级数逐项求导|termwise differentiation of power series]] permits repeated differentiation. Then set $x=a$:
 <!-- bilingual-en:end -->
 
 $$
@@ -1630,9 +1654,9 @@ $$
 c_n=\frac{f^{(n)}(a)}{n!}.
 $$
 
-因此 [[无穷级数与幂级数#幂级数与 Taylor 级数|Taylor series]] 是
+因此，如果一个函数在中心附近有幂级数表示，它的系数只能取上述值。反过来，只要 $f$ 在 $a$ 处有所有阶导数，就可以写出它的 [[Taylor级数]]：
 <!-- bilingual-en:start -->
-Therefore, the [[无穷级数与幂级数#幂级数与 Taylor 级数|Taylor series]] is
+Thus, if a function has a power-series representation near its center, its coefficients must have the values above. Conversely, whenever all derivatives of $f$ exist at $a$, one can form its [[Taylor级数|Taylor series]]:
 <!-- bilingual-en:end -->
 
 $$
@@ -1641,6 +1665,11 @@ $$
 \frac{f^{(n)}(a)}{n!}(x-a)^n
 }.
 $$
+
+写出这个级数不代表它在 $a$ 以外收敛，更不代表其和等于 $f$；[[Taylor级数等于函数]]还需检验余项趋零。
+<!-- bilingual-en:start -->
+Forming this series does not establish convergence away from $a$, or equality of its sum with $f$. To establish [[Taylor级数等于函数|equality between a Taylor series and its function]], one must still show that the remainder tends to zero.
+<!-- bilingual-en:end -->
 
 ### Taylor 多项式与余项
 <!-- bilingual-en:start -->
@@ -1655,18 +1684,18 @@ $$
 P_n(x)=\sum_{k=0}^{n}\frac{f^{(k)}(a)}{k!}(x-a)^k.
 $$
 
-Lagrange 余项：
+这里 $P_n$ 是 [[Taylor多项式]]。使用 [[Taylor余项|Lagrange 余项]]的一组充分条件是：$f$ 在连接 $a$ 与 $x$ 的闭区间上属于 $C^{n+1}$（即直到 $n+1$ 阶的导数连续）。当 $x\ne a$ 时：
 <!-- bilingual-en:start -->
-Lagrange remainder:
+Here $P_n$ is the [[Taylor多项式|Taylor polynomial]]. A sufficient condition for the [[Taylor余项|Lagrange remainder]] is that $f$ belongs to $C^{n+1}$ on the closed interval joining $a$ and $x$: its derivatives through order $n+1$ are continuous there. For $x\ne a$:
 <!-- bilingual-en:end -->
 
 $$
 R_n(x)=\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-a)^{n+1}
 $$
 
-其中 \(\xi\) 位于 \(a,x\) 之间。若该区间上
+其中 $\xi$ 严格位于 $a,x$ 之间；$x=a$ 时 $R_n(a)=0$。若该区间上
 <!-- bilingual-en:start -->
-where $\xi$ lies between $a$ and $x$. If, throughout that interval,
+where $\xi$ lies strictly between $a$ and $x$; at $x=a$, $R_n(a)=0$. If, throughout that interval,
 <!-- bilingual-en:end -->
 
 $$
@@ -1682,15 +1711,26 @@ $$
 |R_n(x)|\le\frac{M|x-a|^{n+1}}{(n+1)!}.
 $$
 
+固定 $n$ 时这控制近似误差；令 $n\to\infty$ 时还必须证明右端趋零。一般上界 $M=M_n$ 会随阶数变化，不能只看到分母的阶乘就断言余项趋零。
+<!-- bilingual-en:start -->
+For fixed $n$, this bounds the approximation error. To pass to $n\to\infty$, one must additionally prove that the bound tends to zero. In general $M=M_n$ depends on the derivative order, so the factorial in the denominator alone does not establish vanishing remainder.
+<!-- bilingual-en:end -->
+
 ![[98_attachment/MIT18.01SC/unit05-taylor-error.png]]
 
 ### 本地材料与练习
 
-- [[Ses98a_Lecture_Notes.pdf|98a Introduction]]
-- [[Ses98b_Lecture_Notes.pdf|98b Taylor Formula]]
-- [[Ses98c_Lecture_Notes.pdf|98c Taylor Formula Continued]]
-- [[Exercise098_Problems.pdf|Exercise 98]]
-- [[Exercise098_Solutions.pdf|Exercise 98 Solutions]]
+- [[Ses98a_Lecture_Notes.pdf#page=1|98a Introduction — power-series operations and familiar examples, pp. 1–2]]
+- [[Ses98b_Lecture_Notes.pdf#page=1|98b Taylor Formula — derivative-based coefficient identification, p. 1]]
+- [[Ses98c_Lecture_Notes.pdf#page=1|98c Taylor Formula Continued — exponential, sine, and cosine coefficients, p. 1]]
+- [[Exercise098_Problems.pdf#page=1|Exercise 98 — equality with a Taylor series via remainder bounds, p. 1]]
+- [[Exercise098_Solutions.pdf#page=1|Exercise 98 Solutions — uniform derivative bound for exp and vanishing remainder, pp. 1–2]]
+
+> [!note] 回看原资料时的条件与排印核对
+> 98b 的系数计算以函数已有局部幂级数表示为前提；不能把“所有阶导数存在”直接当作级数等于函数的证明。Exercise 098 题解第 2 页最后单列 $e$ 的展开漏了 $1/1!$，正确为 $e=1+1+1/2!+1/3!+\cdots$；其上一行从 $n=0$ 开始的求和式是正确的。
+> <!-- bilingual-en:start -->
+> The coefficient calculation in 98b presupposes a local power-series representation; the existence of derivatives of every order does not by itself prove equality with the function. On page 2 of the Exercise 098 solutions, the final displayed expansion of $e$ omits $1/1!$. The correct expansion is $e=1+1+1/2!+1/3!+\cdots$; the preceding summation formula starting at $n=0$ is correct.
+> <!-- bilingual-en:end -->
 
 > [!example]- Exercise 098 完整题解：证明 $e^x$ 处处等于 Taylor 级数
 > 固定任意 $x$，取 $d>|x|$。在 $[-d,d]$ 上，所有阶导数仍为 $e^t$，故 $|f^{(N+1)}(t)|\le e^d$。Taylor 不等式给
@@ -1698,7 +1738,7 @@ $$
 > |R_N(x)|\le e^d\frac{|x|^{N+1}}{(N+1)!}
 > \le e^d\frac{d^{N+1}}{(N+1)!}.
 > $$
-> 右端数列相邻比为 $d/(N+2)\to0$，故趋零，夹逼得 $R_N(x)\to0$。由于 $x$ 任意，
+> 右端数列相邻比为 $d/(N+2)\to0$；取固定 $0<q<1$，从某个 $N$ 起相邻比不超过 $q$，故这一上界被某个趋零的几何数列控制，夹逼得 $R_N(x)\to0$。由于 $x$ 任意，
 > $$
 > \boxed{e^x=\sum_{n=0}^{\infty}\frac{x^n}{n!}\quad(x\in\mathbb R).}
 > $$
@@ -1709,7 +1749,7 @@ $$
 > |R_N(x)|\le e^d\frac{|x|^{N+1}}{(N+1)!}
 > \le e^d\frac{d^{N+1}}{(N+1)!}.
 > $$
-> The ratio of successive terms on the right is $d/(N+2)\to0$, so that bound tends to zero. By squeezing, $R_N(x)\to0$. Since $x$ was arbitrary,
+> The ratio of successive terms in the bound is $d/(N+2)\to0$. Choose a fixed $0<q<1$; from some $N$ onward the ratio is at most $q$, so the bound decays to zero at least geometrically. By squeezing, $R_N(x)\to0$. Since $x$ was arbitrary,
 > $$
 > \boxed{e^x=\sum_{n=0}^{\infty}\frac{x^n}{n!}\quad(x\in\mathbb R).}
 > $$
@@ -1747,47 +1787,69 @@ $$
 \cos x=\sum_{n=0}^{\infty}(-1)^n\frac{x^{2n}}{(2n)!}.
 $$
 
-从几何级数
+这三个等式对所有实数 $x$ 成立，收敛半径均为 $\infty$；等于原函数的理由是上一节的余项估计，而不只是通项趋零。复习入口：[[指数函数幂级数]]、[[正弦函数幂级数]]、[[余弦函数幂级数]]。
 <!-- bilingual-en:start -->
-the geometric series
+All three identities hold for every real $x$ and have radius of convergence $\infty$. Equality with the functions follows from the preceding remainder estimates, not merely from the terms tending to zero. Review the power series for the [[指数函数幂级数|exponential]], [[正弦函数幂级数|sine]], and [[余弦函数幂级数|cosine]] functions.
+<!-- bilingual-en:end -->
+
+作为 Session 100 逐项积分规则的预览，从[[几何级数]]
+<!-- bilingual-en:start -->
+As a preview of the termwise-integration rule in Session 100, start from the [[几何级数|geometric series]]
 <!-- bilingual-en:end -->
 
 $$
 \frac1{1+x}=1-x+x^2-x^3+\cdots,\qquad |x|<1,
 $$
 
-积分得到
+在连接 $0$ 与 $x$ 的闭区间上（$|x|<1$）一致收敛，可以从 $0$ 到 $x$ [[幂级数逐项积分|逐项积分]]得到
 <!-- bilingual-en:start -->
-Integrating term by term gives
+uniform convergence on the closed interval joining $0$ to $x$, for $|x|<1$, permits [[幂级数逐项积分|termwise integration]] from $0$ to $x$, giving
 <!-- bilingual-en:end -->
 
 $$
 \ln(1+x)
-=x-\frac{x^2}{2}+\frac{x^3}{3}-\cdots.
+=x-\frac{x^2}{2}+\frac{x^3}{3}-\cdots,\qquad -1<x<1.
 $$
+
+端点 $x=-1$ 为负的调和级数，发散；$x=1$ 是交错调和级数，收敛。若还要确认 $x=1$ 处的和是 $\ln2$，可积分有限几何恒等式：对 $N\ge1$，
+<!-- bilingual-en:start -->
+At $x=-1$ the series is the negative harmonic series and diverges; at $x=1$ it is alternating harmonic and converges. To additionally identify the sum at $x=1$ as $\ln2$, integrate the finite geometric identity. For $N\ge1$,
+<!-- bilingual-en:end -->
+
+$$
+\ln2=\sum_{k=1}^{N}\frac{(-1)^{k-1}}k
+       +(-1)^N\int_0^1\frac{t^N}{1+t}\,dt,
+\qquad
+\left|\int_0^1\frac{t^N}{1+t}\,dt\right|\le\frac1{N+1}\to0.
+$$
+
+故[[对数函数幂级数]]的完整实数适用区间是 $(-1,1]$；端点等式有独立的余项验证。
+<!-- bilingual-en:start -->
+The full real interval of validity for the [[对数函数幂级数|logarithm power series]] is therefore $(-1,1]$. The endpoint identity has been checked with a separate remainder argument.
+<!-- bilingual-en:end -->
 
 ### 级数不一定等于原函数
 <!-- bilingual-en:start -->
 *A Taylor series need not equal the function it comes from*
 <!-- bilingual-en:end -->
 
-Taylor 系数由所有导数决定，但还需证明余项 \(R_n(x)\to0\)。存在光滑函数所有导数在一点都为零，却不在附近恒为零；所以“可无限求导”本身不够。
+Taylor 系数由所有导数决定，但还需证明余项 $R_n(x)\to0$。存在光滑函数所有导数在一点都为零，却不在附近恒为零；所以“可无限求导”本身不够，即[[光滑不代表解析]]。例如令 $f(0)=0$，$x\ne0$ 时 $f(x)=e^{-1/x^2}$：它在 $0$ 的各阶导数都为零，Taylor 级数处处收敛到 $0$，但 $f(x)>0$ 对每个 $x\ne0$ 成立。
 <!-- bilingual-en:start -->
-The Taylor coefficients are determined by the derivatives, but equality with the function also requires proving that the remainder $R_n(x)$ tends to zero. A smooth function can have every derivative equal to zero at one point without being identically zero nearby, so infinite differentiability alone is not enough.
+The Taylor coefficients are determined by the derivatives, but equality with the function also requires proving that the remainder $R_n(x)$ tends to zero. A smooth function can have every derivative equal to zero at one point without being identically zero nearby: [[光滑不代表解析|smoothness does not imply analyticity]]. For example, set $f(0)=0$ and $f(x)=e^{-1/x^2}$ for $x\ne0$. All derivatives at $0$ vanish, so its Taylor series converges to $0$ everywhere, yet $f(x)>0$ for every $x\ne0$.
 <!-- bilingual-en:end -->
 
 ### 本地材料
 
-- [[Ses99a_Lecture_Notes.pdf|99a Review]]
-- [[Ses99b_Lecture_Notes.pdf|99b Series of \(1/(1+x)\)]]
-- [[Ses99c_Lecture_Notes.pdf|99c Series of \(\sin x\)]]
+- [[Ses99a_Lecture_Notes.pdf#page=1|99a Review — the Taylor coefficient formula, p. 1]]
+- [[Ses99b_Lecture_Notes.pdf#page=1|99b Series of 1/(1+x) — geometric radius and divergent endpoint, p. 1]]
+- [[Ses99c_Lecture_Notes.pdf#page=1|99c Series of sine — the four-derivative cycle, pp. 1–2]]
 
 > [!question]- 三道自检题与答案
-> 1. \(\sin x\) 的 \(x^5\) 项是什么？  
-> 2. \(\ln(1+x)\) 的级数为何只先保证 \(|x|<1\)？  
+> 1. $\sin x$ 的 $x^5$ 项是什么？
+> 2. $\ln(1+x)$ 的级数为何只先保证 $|x|<1$？
 > 3. “所有阶导数存在”是否自动保证 Taylor 级数等于函数？
 >
-> 答：\(x^5/5!\)；它从半径为 1 的几何级数逐项积分而来；不保证，还需证明余项趋零。
+> 答：$x^5/5!$；它从半径为 1 的几何级数逐项积分而来；不保证，还需证明余项趋零。
 > <!-- bilingual-en:start -->
 >
 > &nbsp;
@@ -1799,9 +1861,9 @@ The Taylor coefficients are determined by the derivatives, but equality with the
 
 ## Session 100：Operations on Power Series
 
-在共同收敛区间内部，可像多项式一样逐项运算。
+幂级数在收敛半径内部具有比一般函数级数更强的性质：在每个严格位于内部的闭区间上一致收敛。下面逐项导积在半径内部有效；同中心幂级数相乘，先在共同的绝对收敛区域内运算；代入则须使代入值落在外层级数的收敛范围内。
 <!-- bilingual-en:start -->
-Within their common interval of convergence, power series may be manipulated term by term like polynomials.
+Inside their radius of convergence, power series have stronger properties than general function series: they converge uniformly on every closed subinterval strictly inside that radius. The differentiation and integration formulas below hold in the interior. Products of series with the same center are first formed where both converge absolutely; substitution requires the substituted value to lie in the convergence region of the outer series.
 <!-- bilingual-en:end -->
 
 ### 乘法
@@ -1809,9 +1871,9 @@ Within their common interval of convergence, power series may be manipulated ter
 *Multiplication*
 <!-- bilingual-en:end -->
 
-Cauchy 乘积：
+[[幂级数乘法|Cauchy 乘积]]：设两级数以 $0$ 为中心，半径分别为 $R_a,R_b>0$。当 $|x|<\min(R_a,R_b)$ 时，两者绝对收敛，允许按总次数收集乘积项：
 <!-- bilingual-en:start -->
-Cauchy product:
+The [[幂级数乘法|Cauchy product]]: suppose the two series are centered at $0$ and have radii $R_a,R_b>0$. For $|x|<\min(R_a,R_b)$, both converge absolutely, so their product terms may be collected by total degree:
 <!-- bilingual-en:end -->
 
 $$
@@ -1821,9 +1883,19 @@ $$
 \left(\sum_{k=0}^{n}a_kb_{n-k}\right)x^n.
 $$
 
+乘积级数的半径至少是 $\min(R_a,R_b)$，可能因系数抵消而更大。例如 $(1-x)\sum_{n=0}^{\infty}x^n=1$ 在 $|x|<1$ 内成立，但收集后的常数级数半径为 $\infty$。[[Ses100a_Lecture_Notes.pdf#page=1|100a 第 1 页]]直接把乘积半径说成两者中较小者，这个一般断言不成立，应改为上述下界；讲义例子 $x\sin x$ 的半径确为 $\infty$。
+<!-- bilingual-en:start -->
+The product series has radius at least $\min(R_a,R_b)$; coefficient cancellation may enlarge it. For example, $(1-x)\sum_{n=0}^{\infty}x^n=1$ holds for $|x|<1$, but the collected constant series has radius $\infty$. The assertion on [[Ses100a_Lecture_Notes.pdf#page=1|100a, page 1]] that the product radius equals the smaller input radius is false in general and must be replaced by this lower bound. The lecture's example $x\sin x$ does have radius $\infty$.
+<!-- bilingual-en:end -->
+
 ### 求导与积分
 <!-- bilingual-en:start -->
 *Differentiation and integration*
+<!-- bilingual-en:end -->
+
+设原级数半径为 $R>0$。在 $|x|<R$ 内，[[幂级数逐项求导]]与[[幂级数逐项积分]]给出：
+<!-- bilingual-en:start -->
+Let the original series have radius $R>0$. For $|x|<R$, [[幂级数逐项求导|termwise differentiation]] and [[幂级数逐项积分|termwise integration]] give:
 <!-- bilingual-en:end -->
 
 $$
@@ -1836,9 +1908,9 @@ $$
 =C+\sum_{n=0}^{\infty}\frac{c_n}{n+1}x^{n+1}.
 $$
 
-收敛半径保持不变，但端点行为可能改变。
+收敛半径保持不变，但端点行为可能改变。这些交换极限与导数、积分的结论来自幂级数定理：导数级数也在内部闭区间上一致收敛；积分则可直接用原级数在这种区间上的一致收敛。不能仅凭某一点收敛就交换运算。[[Ses100b_Lecture_Notes.pdf#page=1|100b 第 1 页]]正弦逐项求导得到余弦后，关于半径的一句印作 $R=1$，应为 $R=\infty$。
 <!-- bilingual-en:start -->
-The radius of convergence remains the same, but the endpoint behavior may change.
+The radius of convergence remains the same, but endpoint behavior may change. These interchanges of limits with differentiation or integration follow from the power-series theorems: the derivative series also converges uniformly on interior closed subintervals, while integration uses uniform convergence of the original series on such intervals. Convergence at a single point is not enough to justify either interchange. After differentiating sine to obtain cosine, the radius statement on [[Ses100b_Lecture_Notes.pdf#page=1|100b, page 1]] prints $R=1$; it should read $R=\infty$.
 <!-- bilingual-en:end -->
 
 ### 代入与误差函数
@@ -1846,14 +1918,29 @@ The radius of convergence remains the same, but the endpoint behavior may change
 *Substitution and the error function*
 <!-- bilingual-en:end -->
 
+在 $e^u$ 的级数中代入 $u=-x^2$。外层指数级数半径为 $\infty$，所以此[[幂级数代入]]对每个实数 $x$ 都成立，得到的 $x$ 幂级数也有半径 $\infty$：
+<!-- bilingual-en:start -->
+Substitute $u=-x^2$ into the series for $e^u$. The outer exponential series has radius $\infty$, so this [[幂级数代入|power-series substitution]] is valid for every real $x$; the resulting power series in $x$ also has radius $\infty$:
+<!-- bilingual-en:end -->
+
 $$
 e^{-x^2}
-=\sum_{n=0}^{\infty}\frac{(-1)^nx^{2n}}{n!}.
+=\sum_{n=0}^{\infty}\frac{(-1)^nx^{2n}}{n!}
+=1-x^2+\frac{x^4}{2!}-\frac{x^6}{3!}+\cdots.
 $$
 
-逐项积分：
+[[误差函数]]定义为带固定归一化系数的累积积分：
 <!-- bilingual-en:start -->
-Integrating term by term gives
+The [[误差函数|error function]] is defined as an accumulated integral with a fixed normalization:
+<!-- bilingual-en:end -->
+
+$$
+\operatorname{erf}(x)=\frac2{\sqrt\pi}\int_0^x e^{-t^2}\,dt.
+$$
+
+对任何有限 $x$，在连接 $0$ 与 $x$ 的闭区间上逐项积分，得到[[误差函数幂级数]]：
+<!-- bilingual-en:start -->
+For every finite $x$, integrate term by term on the closed interval joining $0$ to $x$ to obtain the [[误差函数幂级数|power series of the error function]]:
 <!-- bilingual-en:end -->
 
 $$
@@ -1863,15 +1950,26 @@ $$
 \frac{(-1)^nx^{2n+1}}{n!(2n+1)}.
 $$
 
+它的半径为 $\infty$，且 $\operatorname{erf}(0)=0$、$\operatorname{erf}(-x)=-\operatorname{erf}(x)$。由[[积分求导定理]]，$\operatorname{erf}'(x)=2e^{-x^2}/\sqrt\pi>0$；归一化的意义是由[[高斯积分]]得到 $\operatorname{erf}(x)\to\pm1$ 当 $x\to\pm\infty$。此处的“误差函数”是函数名称，不是 Taylor 截断余项 $R_n$。
+<!-- bilingual-en:start -->
+Its radius is $\infty$, with $\operatorname{erf}(0)=0$ and $\operatorname{erf}(-x)=-\operatorname{erf}(x)$. The [[积分求导定理|differentiation theorem for accumulated integrals]] gives $\operatorname{erf}'(x)=2e^{-x^2}/\sqrt\pi>0$. The normalization is explained by the [[高斯积分|Gaussian integral]], which yields $\operatorname{erf}(x)\to\pm1$ as $x\to\pm\infty$. Here “error function” names a function; it is not a Taylor truncation remainder $R_n$.
+<!-- bilingual-en:end -->
+
 ### 本地材料与练习
 
-- [[Ses100a_Lecture_Notes.pdf|100a Multiplication]]
-- [[Ses100b_Lecture_Notes.pdf|100b Derivative]]
-- [[Ses100c_Lecture_Notes.pdf|100c Integral]]
-- [[Ses100d_Lecture_Notes.pdf|100d Substitution]]
-- [[Ses100e_Lecture_Notes.pdf|100e Error Function]]
-- [[MIT18_01SCF10_ex100prb.pdf|Exercise 100 Problems — misfiled]]
-- [[Exercise100_Solutions.pdf|Exercise 100 Solutions]]
+- [[Ses100a_Lecture_Notes.pdf#page=1|100a Multiplication — product coefficients and the x sin x example, p. 1]]
+- [[Ses100b_Lecture_Notes.pdf#page=1|100b Derivative — sine to cosine, with preserved radius, p. 1]]
+- [[Ses100c_Lecture_Notes.pdf#page=1|100c Integral — geometric series to logarithm, p. 1]]
+- [[Ses100d_Lecture_Notes.pdf#page=1|100d Substitution — the alternating even-power exponential expansion, p. 1]]
+- [[Ses100e_Lecture_Notes.pdf#page=1|100e Error Function — integral definition, normalization, and series, p. 1]]
+- [[MIT18_01SCF10_ex100prb.pdf#page=1|Exercise 100 Problems — arctangent and the integral of sin(x²), p. 1; misfiled]]
+- [[Exercise100_Solutions.pdf#page=1|Exercise 100 Solutions — substitution and termwise integration, pp. 1–2]]
+
+> [!note] Exercise 100 题解排印核对
+> 官方题解第 1 页逐项求导的显式多项式一行系数与幂次有排印错误，应为 $a_1+2a_2(x-c)+3a_3(x-c)^2+\cdots$；该行后面的求和式是正确的。第 2 页 $\sin(x^2)$ 的原函数第三项应为 $x^{11}/(11\cdot5!)$，不是 $x^{10}/(11\cdot5!)$；末尾两项近似一行的积分上下限应为 $0,1$，与原题及右侧代入一致。以下题解保留这些正确的求和式、区间和计算。
+> <!-- bilingual-en:start -->
+> On page 1 of the official solutions, the explicit polynomial line for termwise differentiation has incorrect coefficients and powers; it should read $a_1+2a_2(x-c)+3a_3(x-c)^2+\cdots$. The summation formula following it is correct. On page 2, the third antiderivative term for $\sin(x^2)$ should be $x^{11}/(11\cdot5!)$, not $x^{10}/(11\cdot5!)$. The integral limits in the final two-term approximation should be $0,1$, matching the question and the endpoint evaluation on the right. The solution below retains the correct summation formulas, interval, and calculation.
+> <!-- bilingual-en:end -->
 
 > [!example]- Exercise 100 完整题解
 > **(1) 展开 \(\arctan(5x)\)。**先求导并使用几何级数：
@@ -1887,7 +1985,13 @@ $$
 > =C+\sum_{n=0}^{\infty}
 > (-1)^n\frac{5^{2n+1}}{2n+1}x^{2n+1}.
 > $$
-> 代 \(x=0\) 得 \(C=0\)。几何级数要求 \(|25x^2|<1\)，所以初始收敛区间为 \(|x|<1/5\)；端点需另查。
+> 代 $x=0$ 得 $C=0$。几何级数要求 $|25x^2|<1$，所以上面的逐项运算先保证 $|x|<1/5$ 内的等式；所得级数的半径为 $1/5$。端点 $x=\pm1/5$ 都由交错级数判别收敛，但绝对值级数 $\sum_{n=0}^\infty1/(2n+1)$ 发散，所以两端均条件收敛。
+> 要确认端点的和仍等于反正切，令 $y=5x$，积分有限几何恒等式。在 $|y|\le1$ 上：
+> $$
+> \arctan y=\sum_{n=0}^{N}\frac{(-1)^ny^{2n+1}}{2n+1}+R_N(y),
+> \qquad R_N(y)=(-1)^{N+1}\int_0^y\frac{t^{2N+2}}{1+t^2}\,dt,
+> $$
+> 因而 $|R_N(y)|\le1/(2N+3)\to0$。所以完整等式区间为 $[-1/5,1/5]$，端点和分别为 $\pm\pi/4$。
 >
 > **(2) 近似 \(\int_0^1\sin(x^2)dx\)。**
 > $$
@@ -1895,7 +1999,7 @@ $$
 > =\sum_{n=0}^{\infty}
 > (-1)^n\frac{x^{4n+2}}{(2n+1)!}.
 > $$
-> 逐项积分：
+> 这个代入后的幂级数半径仍为 $\infty$，在 $[0,1]$ 上一致收敛，故可逐项积分：
 > $$
 > \int_0^1\sin(x^2)dx
 > =\sum_{n=0}^{\infty}
@@ -1906,7 +2010,7 @@ $$
 > \frac13-\frac1{7\cdot3!}
 > =\boxed{\frac{13}{42}\approx0.30952}.
 > $$
-> 下一项为 \(1/(11\cdot5!)=1/1320\)，交错级数误差不超过这一数；真实值约 \(0.31027\)。
+> 各项绝对值 $1/((4n+3)(2n+1)!)$ 单调趋零，下一项为 $1/(11\cdot5!)=1/1320$，由[[交错级数误差界]]知两项近似的误差不超过这一数；真实值约 $0.31027$。
 > <!-- bilingual-en:start -->
 > **(1) Expand $\arctan(5x)$.** Differentiate first and use the geometric series:
 > $$
@@ -1921,7 +2025,13 @@ $$
 > =C+\sum_{n=0}^{\infty}
 > (-1)^n\frac{5^{2n+1}}{2n+1}x^{2n+1}.
 > $$
-> Substituting $x=0$ gives $C=0$. The geometric series requires $|25x^2|<1$, so the initial interval of convergence is $|x|<1/5$; its endpoints must be checked separately.
+> Substituting $x=0$ gives $C=0$. The geometric series requires $|25x^2|<1$, so the termwise operations above initially establish the identity for $|x|<1/5$; the resulting series has radius $1/5$. At both endpoints $x=\pm1/5$, the alternating-series test gives convergence, but the absolute-value series $\sum_{n=0}^\infty1/(2n+1)$ diverges, so convergence is conditional at both ends.
+> To verify that the endpoint sums still equal the arctangent, put $y=5x$ and integrate the finite geometric identity. For $|y|\le1$,
+> $$
+> \arctan y=\sum_{n=0}^{N}\frac{(-1)^ny^{2n+1}}{2n+1}+R_N(y),
+> \qquad R_N(y)=(-1)^{N+1}\int_0^y\frac{t^{2N+2}}{1+t^2}\,dt.
+> $$
+> Hence $|R_N(y)|\le1/(2N+3)\to0$. The full interval of validity is $[-1/5,1/5]$, and the endpoint sums are $\pm\pi/4$, respectively.
 >
 > **(2) Approximate $\int_0^1\sin(x^2)dx$.**
 > $$
@@ -1929,7 +2039,7 @@ $$
 > =\sum_{n=0}^{\infty}
 > (-1)^n\frac{x^{4n+2}}{(2n+1)!}.
 > $$
-> Integrating term by term gives
+> The substituted power series still has radius $\infty$ and converges uniformly on $[0,1]$, so termwise integration gives
 > $$
 > \int_0^1\sin(x^2)dx
 > =\sum_{n=0}^{\infty}
@@ -1940,7 +2050,7 @@ $$
 > \frac13-\frac1{7\cdot3!}
 > =\boxed{\frac{13}{42}\approx0.30952}.
 > $$
-> The next term is $1/(11\cdot5!)=1/1320$, so the alternating-series error is at most this amount; the true value is approximately $0.31027$.
+> The magnitudes $1/((4n+3)(2n+1)!)$ decrease to zero. The next term is $1/(11\cdot5!)=1/1320$, so the [[交错级数误差界|alternating-series error bound]] places the error of the two-term approximation below this amount; the true value is approximately $0.31027$.
 > <!-- bilingual-en:end -->
 
 > [!warning] 易错点
@@ -1973,16 +2083,16 @@ $$
 
 1. 导数把函数局部线性化；
 2. 积分把局部贡献累计起来；
-3. FTC 说明二者互逆；
-4. Taylor 级数把局部导数信息组织成全阶多项式近似；
+3. FTC 在相应条件下连接二者：连续函数的累积积分由[[积分求导定理]]求导还原；定积分由[[Newton-Leibniz公式]]用原函数端点评价；
+4. [[Taylor多项式]]把局部导数信息组织成各阶近似；无穷阶的 [[Taylor级数等于函数|Taylor 级数等式]]还需余项趋零；
 5. 极限决定这些无限过程是否真正收敛。
 <!-- bilingual-en:start -->
 
 &nbsp;
 **1.** Derivatives linearize functions locally;<br>
 **2.** Integrals accumulate local contributions;<br>
-**3.** The FTC shows that differentiation and integration are inverse operations;<br>
-**4.** Taylor series organize local derivative information into polynomial approximations of all orders;<br>
+**3.** Under the appropriate assumptions, the FTC connects the two operations: the [[积分求导定理|differentiation theorem for accumulated integrals]] recovers a continuous integrand, while the [[Newton-Leibniz公式|Newton–Leibniz formula]] evaluates a definite integral by antiderivative endpoint values;<br>
+**4.** [[Taylor多项式|Taylor polynomials]] organize local derivative information into approximations of successive orders; [[Taylor级数等于函数|equality with the infinite Taylor series]] additionally requires the remainder to tend to zero;<br>
 **5.** Limits determine whether these infinite processes actually converge.<br>
 <!-- bilingual-en:end -->
 
@@ -2006,9 +2116,9 @@ $$
 
 ### 本地材料与练习
 
-- [[Ses101a_Lecture_Notes.pdf|101a Finale]]
-- [[Exercise101_Problems.pdf|Exercise 101]]
-- [[Exercise101_Solutions.pdf|Exercise 101 Solutions]]
+- [[Ses101a_Lecture_Notes.pdf#page=1|101a Finale — course conclusion and onward study, p. 1]]
+- [[Exercise101_Problems.pdf#page=1|Exercise 101 — hyperbolic sine, inverse function, and integration, p. 1]]
+- [[Exercise101_Solutions.pdf#page=1|Exercise 101 Solutions — graph, inverse, derivative, and scaled integral, pp. 1–5]]
 
 > [!example]- Exercise 101 完整题解：双曲正弦串联全课程
 > **(a) 描图。**由
@@ -2022,10 +2132,10 @@ $$
 > 因此无临界点且处处递增。二阶导数为 \(\sinh x\)，仅在 \(x=0\) 为零并变号，所以原点是拐点。两端极限分别为 \(\pm\infty\)。
 >
 > **(b) 定义反函数。**严格递增且值域为 \(\mathbb R\)，故
-> \[
+> $$
 > y=\operatorname{arsinh}x
 > \iff x=\sinh y
-> \]
+> $$
 > 对所有实数 \(x\) 有唯一定义；图像是 \(y=\sinh x\) 关于 \(y=x\) 的反射。
 >
 > **(c) 求导。**隐式求导：
@@ -2046,7 +2156,7 @@ $$
 > =\int\frac{du}{\sqrt{1+u^2}}
 > =\boxed{\operatorname{arsinh}(x/a)+C}.
 > $$
-> 等价的对数形式是
+> 由于 $a>0$，有 $\operatorname{arsinh}(x/a)=\ln(x+\sqrt{x^2+a^2})-\ln a$；常数 $-\ln a$ 可吸收到 $C$ 中，所以等价的对数原函数族是
 > $$
 > \ln\!\left|x+\sqrt{x^2+a^2}\right|+C.
 > $$
@@ -2062,10 +2172,10 @@ $$
 > so it has no critical points and is strictly increasing everywhere. Its second derivative is $\sinh x$, which vanishes and changes sign only at $x=0$, making the origin an inflection point. The limits at the two ends are $\pm\infty$.
 >
 > **(b) Define the inverse.** Because $\sinh$ is strictly increasing with range $\mathbb R$,
-> \[
+> $$
 > y=\operatorname{arsinh}x
 > \iff x=\sinh y
-> \]
+> $$
 > defines a unique value for every real $x$. Its graph is the reflection of $y=\sinh x$ across $y=x$.
 >
 > **(c) Differentiate.** Implicit differentiation gives
@@ -2086,7 +2196,7 @@ $$
 > =\int\frac{du}{\sqrt{1+u^2}}
 > =\boxed{\operatorname{arsinh}(x/a)+C}.
 > $$
-> The equivalent logarithmic form is
+> Since $a>0$, $\operatorname{arsinh}(x/a)=\ln(x+\sqrt{x^2+a^2})-\ln a$. The constant $-\ln a$ can be absorbed into $C$, so the equivalent logarithmic family of antiderivatives is
 > $$
 > \ln\!\left|x+\sqrt{x^2+a^2}\right|+C.
 > $$
@@ -2144,7 +2254,7 @@ $$
 1. L’Hôpital 是由 Cauchy MVT 支撑的条件性定理；
 2. 反常积分和无穷级数都通过有限对象的极限定义；
 3. 比较判别把未知对象与 \(p\)-积分、\(p\)-级数等基准比较；
-4. 幂级数在收敛区间内像无限多项式；
+4. 幂级数在收敛半径内部可按相应定理逐项导积、在共同绝对收敛区域相乘；端点另查；
 5. Taylor 系数由导数唯一决定，但等于原函数还需余项趋零；
 6. 任何“无穷运算”都必须明确极限对象、收敛条件与误差。
 <!-- bilingual-en:start -->
@@ -2153,7 +2263,7 @@ $$
 **1.** L’Hôpital's rule is a conditional theorem grounded in the Cauchy MVT.<br>
 **2.** Improper integrals and infinite series are both defined as limits of finite objects.<br>
 **3.** Comparison tests relate an unknown object to benchmarks such as $p$-integrals and $p$-series.<br>
-**4.** Within its interval of convergence, a power series behaves like an infinite polynomial.<br>
+**4.** Inside the radius of convergence, power series may be differentiated and integrated term by term under the corresponding theorems, and multiplied where both converge absolutely; endpoints require separate checks.<br>
 **5.** Taylor coefficients are uniquely determined by the derivatives, but equality with the underlying function still requires the remainder to tend to zero.<br>
 **6.** Every calculation involving infinity must specify what finite object is tending to a limit, the conditions for convergence, and the relevant error.<br>
 <!-- bilingual-en:end -->

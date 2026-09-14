@@ -1,0 +1,178 @@
+{
+  "nodes": [
+    {
+      "id": "0f1a2b3c4d5e6f70",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 2240,
+      "height": 180,
+      "text": "# 预测设计与评估 · 原子地图\n\n先把用途写成可执行任务，再固定 origin、horizon 与历史信息集；用匹配基准做保序外样本评价，随后分别处理点预测、区间与完整分布，最后以成熟结果驱动监控。颜色只区分语义角色，不表示掌握度；八张新卡均已完成来源复核并保持 `unassessed`，复用卡 `滚动起点评估` 保持原稳定身份。",
+      "color": "4"
+    },
+    {
+      "id": "1a2b3c4d5e6f7081",
+      "type": "text",
+      "x": 0,
+      "y": 260,
+      "width": 440,
+      "height": 240,
+      "text": "## [[预测任务定义]]\n*任务对象*\n\n固定变量、对象、粒度、更新频率、决策用途与点/分位数/分布输出；forecast 不等于 goal。",
+      "color": "4"
+    },
+    {
+      "id": "2b3c4d5e6f708192",
+      "type": "text",
+      "x": 580,
+      "y": 260,
+      "width": 460,
+      "height": 260,
+      "text": "## [[预测时点与信息集]]\n*历史可执行性*\n\n每个 origin 只使用当时发布的数据 vintage 与可得 predictor；target time 和 horizon 分开记录。",
+      "color": "5"
+    },
+    {
+      "id": "3c4d5e6f708192a3",
+      "type": "text",
+      "x": 1180,
+      "y": 260,
+      "width": 440,
+      "height": 260,
+      "text": "## [[预测基准]]\n*最低比较线*\n\n从 mean、naïve、seasonal naïve、drift 中选匹配结构者，并保持同 origin、horizon 与信息集。",
+      "color": "5"
+    },
+    {
+      "id": "4d5e6f708192a3b4",
+      "type": "text",
+      "x": 1780,
+      "y": 260,
+      "width": 460,
+      "height": 260,
+      "text": "## [[滚动起点评估]]\n*复用 · TS-ARMA-024*\n\n保留时间顺序；validation origins 用于选择，final holdout 在选择完成前保持未看，并按 horizon 评价。",
+      "color": "3"
+    },
+    {
+      "id": "5e6f708192a3b4c5",
+      "type": "text",
+      "x": 1180,
+      "y": 700,
+      "width": 440,
+      "height": 260,
+      "text": "## [[点预测损失]]\n*点预测分支*\n\n绝对损失对应可能不唯一的中位数；平方损失对应均值，RMSE 仅在同一 cases 上与 MSE 同排序。",
+      "color": "2"
+    },
+    {
+      "id": "6f708192a3b4c5d6",
+      "type": "text",
+      "x": 1180,
+      "y": 1080,
+      "width": 440,
+      "height": 260,
+      "text": "## [[尺度误差边界]]\n*跨尺度边界*\n\nMAPE 受零点与近零值限制；MASE 只用训练期 naïve 尺度，不能替代同测试期基准比较。",
+      "color": "1"
+    },
+    {
+      "id": "708192a3b4c5d6e7",
+      "type": "text",
+      "x": 1780,
+      "y": 700,
+      "width": 460,
+      "height": 260,
+      "text": "## [[区间预测评估]]\n*区间分支*\n\n按 horizon 检查 coverage，也检查 width、越界距离和关键条件分组；极宽区间不是好预测。",
+      "color": "6"
+    },
+    {
+      "id": "8192a3b4c5d6e7f8",
+      "type": "text",
+      "x": 1780,
+      "y": 1080,
+      "width": 460,
+      "height": 260,
+      "text": "## [[概率预测评分]]\n*分布分支*\n\n分位数用 pinball loss，完整分布可用 CRPS；proper score 鼓励诚实报告预测分布。",
+      "color": "6"
+    },
+    {
+      "id": "92a3b4c5d6e7f809",
+      "type": "text",
+      "x": 1480,
+      "y": 1460,
+      "width": 460,
+      "height": 280,
+      "text": "## [[预测监控与重校准]]\n*部署反馈*\n\n先对齐 origin、target time、horizon、数据与模型版本；结果成熟后再区分更新、重新估计、重校准和模型重选。",
+      "color": "4"
+    }
+  ],
+  "edges": [
+    {
+      "id": "a3b4c5d6e7f8091a",
+      "fromNode": "1a2b3c4d5e6f7081",
+      "fromSide": "right",
+      "toNode": "2b3c4d5e6f708192",
+      "toSide": "left",
+      "label": "把用途落到 origin 与 horizon"
+    },
+    {
+      "id": "b4c5d6e7f8091a2b",
+      "fromNode": "2b3c4d5e6f708192",
+      "fromSide": "right",
+      "toNode": "3c4d5e6f708192a3",
+      "toSide": "left",
+      "label": "固定同信息集基准"
+    },
+    {
+      "id": "c5d6e7f8091a2b3c",
+      "fromNode": "3c4d5e6f708192a3",
+      "fromSide": "right",
+      "toNode": "4d5e6f708192a3b4",
+      "toSide": "left",
+      "label": "在相同起点评价增益"
+    },
+    {
+      "id": "d6e7f8091a2b3c4d",
+      "fromNode": "4d5e6f708192a3b4",
+      "fromSide": "bottom",
+      "toNode": "5e6f708192a3b4c5",
+      "toSide": "top",
+      "label": "产生真实样本外点误差"
+    },
+    {
+      "id": "e7f8091a2b3c4d5e",
+      "fromNode": "4d5e6f708192a3b4",
+      "fromSide": "bottom",
+      "toNode": "708192a3b4c5d6e7",
+      "toSide": "top",
+      "label": "产生区间命中与宽度"
+    },
+    {
+      "id": "f8091a2b3c4d5e6f",
+      "fromNode": "5e6f708192a3b4c5",
+      "fromSide": "bottom",
+      "toNode": "6f708192a3b4c5d6",
+      "toSide": "top",
+      "label": "跨序列前检查缩放"
+    },
+    {
+      "id": "091a2b3c4d5e6f70",
+      "fromNode": "708192a3b4c5d6e7",
+      "fromSide": "bottom",
+      "toNode": "8192a3b4c5d6e7f8",
+      "toSide": "top",
+      "label": "从区间推进到完整分布"
+    },
+    {
+      "id": "1b2c3d4e5f607182",
+      "fromNode": "6f708192a3b4c5d6",
+      "fromSide": "bottom",
+      "toNode": "92a3b4c5d6e7f809",
+      "toSide": "top",
+      "label": "作为点预测监控证据"
+    },
+    {
+      "id": "2c3d4e5f60718293",
+      "fromNode": "8192a3b4c5d6e7f8",
+      "fromSide": "bottom",
+      "toNode": "92a3b4c5d6e7f809",
+      "toSide": "top",
+      "label": "作为分布监控证据"
+    }
+  ]
+}

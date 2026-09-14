@@ -15,10 +15,10 @@ aliases:
 # RRHF: Rank Responses to Align Language Models with Human Feedback without tears
 
 ## 一句话位置
-这篇论文位于 `03 对齐与偏好优化`，第一版用于连接 Instruction Tuning / RLHF, Preference Optimization 路线；此笔记暂作索引，不做精读摘要。
+这篇论文位于 `03 对齐与偏好优化`，核心位置是用候选回答排序构造对齐损失，不运行显式奖励模型加在线 RL 的管线；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-预训练、指令微调与偏好优化
+[[LLM 后训练.canvas|LLM 后训练]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/MATV8BMI)
@@ -30,4 +30,3 @@ aliases:
 ## Canvas
 - [[LLM Big Picture]]
 - [[03 对齐与偏好优化.canvas|03 对齐与偏好优化 Canvas]]
-

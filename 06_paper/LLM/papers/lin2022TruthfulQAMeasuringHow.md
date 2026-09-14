@@ -18,7 +18,7 @@ aliases:
 这篇论文位于 `07 评测与数据`，第一版用于连接 Evaluation 路线；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[LLM 评测]]
+[[LLM 评测]], [[训练频率与真实性]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/GJUI3334)
@@ -30,4 +30,3 @@ aliases:
 ## Canvas
 - [[LLM Big Picture]]
 - [[07 评测与数据.canvas|07 评测与数据 Canvas]]
-

@@ -1,0 +1,366 @@
+{
+  "nodes": [
+    {
+      "id": "sec-overview",
+      "type": "text",
+      "x": -2400,
+      "y": -300,
+      "width": 560,
+      "height": 220,
+      "text": "## 密码学原语与安全模型\n\n先限定保护目标与攻击能力，再区分原语的定义和边界；最后检查调用、密钥和恢复。箭头表示推理关系，不表示掌握度。"
+    },
+    {
+      "id": "sec-threat",
+      "type": "text",
+      "x": -2350,
+      "y": 20,
+      "width": 420,
+      "height": 220,
+      "text": "### [[威胁模型]]\n\n资产、目标、攻击者能力和信任边界共同限定一句安全主张究竟成立到哪里。"
+    },
+    {
+      "id": "sec-auth-title",
+      "type": "text",
+      "x": -1800,
+      "y": -300,
+      "width": 520,
+      "height": 120,
+      "text": "## 内容指纹与来源证据\n\n从公开摘要一路追问到共享密钥、公开验证、身份与时间。"
+    },
+    {
+      "id": "sec-hash-definition",
+      "type": "text",
+      "x": -1800,
+      "y": 20,
+      "width": 400,
+      "height": 220,
+      "text": "### [[密码学哈希]]\n\n把任意长度消息确定性地映射为固定长度摘要。"
+    },
+    {
+      "id": "sec-hash-boundary",
+      "type": "text",
+      "x": -1300,
+      "y": 20,
+      "width": 400,
+      "height": 220,
+      "text": "### [[密码学哈希的认证边界]]\n\n公开摘要只有接到攻击者不能同步替换的可信来源，才成为认证证据。"
+    },
+    {
+      "id": "sec-mac-definition",
+      "type": "text",
+      "x": -800,
+      "y": 20,
+      "width": 400,
+      "height": 220,
+      "text": "### [[消息认证码]]\n\n用共享秘密密钥校验消息完整性与持钥来源。"
+    },
+    {
+      "id": "sec-mac-boundary",
+      "type": "text",
+      "x": -300,
+      "y": 20,
+      "width": 400,
+      "height": 220,
+      "text": "### [[MAC 的来源边界]]\n\ntag 只能认证某个持钥者，不能在共享密钥持有者之间归责。"
+    },
+    {
+      "id": "sec-signature-definition",
+      "type": "text",
+      "x": 200,
+      "y": 20,
+      "width": 400,
+      "height": 220,
+      "text": "### [[数字签名]]\n\n私钥生成签名，对应公钥验证签名与消息是否匹配。"
+    },
+    {
+      "id": "sec-signature-identity",
+      "type": "text",
+      "x": 700,
+      "y": 20,
+      "width": 400,
+      "height": 220,
+      "text": "### [[数字签名与身份绑定]]\n\n数学验证接到公钥；证书路径或其他可信渠道才把公钥接到现实身份。"
+    },
+    {
+      "id": "sec-signature-time",
+      "type": "text",
+      "x": 1200,
+      "y": 20,
+      "width": 400,
+      "height": 220,
+      "text": "### [[签名时点与密钥状态]]\n\n今天数学有效，不足以证明签名发生时密钥仍可信。"
+    },
+    {
+      "id": "sec-aead-title",
+      "type": "text",
+      "x": -1800,
+      "y": 420,
+      "width": 520,
+      "height": 120,
+      "text": "## 认证加密的三个独立边界\n\nnonce、解密接口和防重放解决不同问题。"
+    },
+    {
+      "id": "sec-aead-definition",
+      "type": "text",
+      "x": -800,
+      "y": 580,
+      "width": 400,
+      "height": 220,
+      "text": "### [[认证加密]]\n\n一个构造同时保护明文机密性与消息认证性；AAD 可见但受认证。"
+    },
+    {
+      "id": "sec-gcm-iv",
+      "type": "text",
+      "x": -1400,
+      "y": 900,
+      "width": 400,
+      "height": 220,
+      "text": "### [[GCM IV 唯一性]]\n\n同一密钥下重复 IV 会破坏 GCM 的机密性与认证边界。"
+    },
+    {
+      "id": "sec-verify-before-use",
+      "type": "text",
+      "x": -800,
+      "y": 900,
+      "width": 400,
+      "height": 220,
+      "text": "### [[认证解密先验证后使用]]\n\ntag 成功前的候选明文不能进入解析器或业务逻辑。"
+    },
+    {
+      "id": "sec-replay",
+      "type": "text",
+      "x": -200,
+      "y": 900,
+      "width": 400,
+      "height": 220,
+      "text": "### [[认证不等于防重放]]\n\n旧消息整体仍可通过认证；接收方要认证新鲜性标识并保存状态。"
+    },
+    {
+      "id": "sec-password-title",
+      "type": "text",
+      "x": -1800,
+      "y": 1240,
+      "width": 520,
+      "height": 120,
+      "text": "## 低熵口令存储\n\n专用 password hash 是基础；可选 pepper 只有分离保存才增加一道边界。"
+    },
+    {
+      "id": "sec-password-storage",
+      "type": "text",
+      "x": -1500,
+      "y": 1420,
+      "width": 460,
+      "height": 220,
+      "text": "### [[口令哈希存储]]\n\n每份记录使用独立 salt、专用方案和可迁移的成本参数。"
+    },
+    {
+      "id": "sec-pepper",
+      "type": "text",
+      "x": -900,
+      "y": 1420,
+      "width": 460,
+      "height": 220,
+      "text": "### [[pepper 与验证器分离]]\n\n若采用 verifier-only secret，它必须与 password hashes 分开保存。"
+    },
+    {
+      "id": "sec-system-title",
+      "type": "text",
+      "x": 0,
+      "y": 1240,
+      "width": 520,
+      "height": 120,
+      "text": "## 从原语回到系统\n\n局部性质只有在密钥、权限和调用流程满足前提时才落地。"
+    },
+    {
+      "id": "sec-system",
+      "type": "text",
+      "x": 100,
+      "y": 1420,
+      "width": 460,
+      "height": 220,
+      "text": "### [[原语安全不等于系统安全]]\n\n算法没有被攻破，不代表系统没有越过原语的适用边界。"
+    },
+    {
+      "id": "sec-recovery-title",
+      "type": "text",
+      "x": -1200,
+      "y": 1800,
+      "width": 600,
+      "height": 120,
+      "text": "## 恢复能力\n\n先定义目标，再保住密钥，最后用真实恢复演练拿到证据。"
+    },
+    {
+      "id": "sec-rpo-rto",
+      "type": "text",
+      "x": -1200,
+      "y": 1980,
+      "width": 460,
+      "height": 220,
+      "text": "### [[RPO 与 RTO]]\n\nRPO 限定可接受的数据回退点，RTO 限定可接受的服务恢复时限。"
+    },
+    {
+      "id": "sec-backup-key",
+      "type": "text",
+      "x": -400,
+      "y": 1980,
+      "width": 460,
+      "height": 220,
+      "text": "### [[备份密钥恢复]]\n\n加密备份必须保留不被同一故障同时摧毁的密钥恢复路径。"
+    },
+    {
+      "id": "sec-restore-test",
+      "type": "text",
+      "x": -600,
+      "y": 2340,
+      "width": 460,
+      "height": 220,
+      "text": "### [[备份恢复需演练验证]]\n\n任务成功不是恢复证据；要从真实备份端到端重建并计时。"
+    }
+  ],
+  "edges": [
+    {
+      "id": "sec-e01",
+      "fromNode": "sec-overview",
+      "fromSide": "bottom",
+      "toNode": "sec-threat",
+      "toSide": "top",
+      "label": "先限定安全问题"
+    },
+    {
+      "id": "sec-e02",
+      "fromNode": "sec-threat",
+      "fromSide": "right",
+      "toNode": "sec-hash-definition",
+      "toSide": "left",
+      "label": "先问摘要保护什么"
+    },
+    {
+      "id": "sec-e03",
+      "fromNode": "sec-hash-definition",
+      "fromSide": "right",
+      "toNode": "sec-hash-boundary",
+      "toSide": "left",
+      "label": "再检查信任来源"
+    },
+    {
+      "id": "sec-e04",
+      "fromNode": "sec-hash-boundary",
+      "fromSide": "right",
+      "toNode": "sec-mac-definition",
+      "toSide": "left",
+      "label": "需要共享秘密认证"
+    },
+    {
+      "id": "sec-e05",
+      "fromNode": "sec-mac-definition",
+      "fromSide": "right",
+      "toNode": "sec-mac-boundary",
+      "toSide": "left",
+      "label": "共享密钥限制归责"
+    },
+    {
+      "id": "sec-e06",
+      "fromNode": "sec-mac-boundary",
+      "fromSide": "right",
+      "toNode": "sec-signature-definition",
+      "toSide": "left",
+      "label": "需要第三方独立验证"
+    },
+    {
+      "id": "sec-e07",
+      "fromNode": "sec-signature-definition",
+      "fromSide": "right",
+      "toNode": "sec-signature-identity",
+      "toSide": "left",
+      "label": "公钥还要绑定身份"
+    },
+    {
+      "id": "sec-e08",
+      "fromNode": "sec-signature-identity",
+      "fromSide": "right",
+      "toNode": "sec-signature-time",
+      "toSide": "left",
+      "label": "历史签名还要时间证据"
+    },
+    {
+      "id": "sec-e09",
+      "fromNode": "sec-aead-definition",
+      "fromSide": "bottom",
+      "toNode": "sec-gcm-iv",
+      "toSide": "top",
+      "label": "具体模式的调用前提"
+    },
+    {
+      "id": "sec-e10",
+      "fromNode": "sec-aead-definition",
+      "fromSide": "bottom",
+      "toNode": "sec-verify-before-use",
+      "toSide": "top",
+      "label": "解密接口契约"
+    },
+    {
+      "id": "sec-e11",
+      "fromNode": "sec-aead-definition",
+      "fromSide": "bottom",
+      "toNode": "sec-replay",
+      "toSide": "top",
+      "label": "认证之外的新鲜性"
+    },
+    {
+      "id": "sec-e12",
+      "fromNode": "sec-password-storage",
+      "fromSide": "right",
+      "toNode": "sec-pepper",
+      "toSide": "left",
+      "label": "可选的独立秘密边界"
+    },
+    {
+      "id": "sec-e13",
+      "fromNode": "sec-pepper",
+      "fromSide": "right",
+      "toNode": "sec-system",
+      "toSide": "left",
+      "label": "隔离依赖系统设计"
+    },
+    {
+      "id": "sec-e14",
+      "fromNode": "sec-verify-before-use",
+      "fromSide": "right",
+      "toNode": "sec-system",
+      "toSide": "left",
+      "label": "正确原语仍需正确调用"
+    },
+    {
+      "id": "sec-e15",
+      "fromNode": "sec-system",
+      "fromSide": "left",
+      "toNode": "sec-rpo-rto",
+      "toSide": "right",
+      "label": "系统还要定义恢复目标"
+    },
+    {
+      "id": "sec-e16",
+      "fromNode": "sec-system",
+      "fromSide": "bottom",
+      "toNode": "sec-backup-key",
+      "toSide": "top",
+      "label": "加密数据还要保住钥匙"
+    },
+    {
+      "id": "sec-e17",
+      "fromNode": "sec-rpo-rto",
+      "fromSide": "bottom",
+      "toNode": "sec-restore-test",
+      "toSide": "top",
+      "label": "按目标验收"
+    },
+    {
+      "id": "sec-e18",
+      "fromNode": "sec-backup-key",
+      "fromSide": "bottom",
+      "toNode": "sec-restore-test",
+      "toSide": "top",
+      "label": "演练包含密钥路径"
+    }
+  ]
+}

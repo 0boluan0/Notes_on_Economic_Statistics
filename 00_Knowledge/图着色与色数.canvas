@@ -1,0 +1,21 @@
+{
+  "nodes": [
+    {"id":"7c00000000000001","type":"text","x":0,"y":-390,"width":2420,"height":250,"text":"# 图着色与色数\n\n**它解决什么：** 把成对冲突的对象分进若干无冲突组，并判断最少需要多少组。\n**具体锚点：** 考试是顶点，共同学生形成冲突边，颜色是时段。\n**证明主线：** 先构造可行着色给上界，再用 clique、odd cycle 等障碍给下界；二者相遇才得到精确色数。\n\n第一行读定义、精确色数与 greedy 上界；第二行读二色判据、证书、matching 与模型边界。点击标题进入原子。颜色：青=定义，绿=定理/证明，紫=算法，红=边界，黄=相邻模型。"},
+    {"id":"7c00000000000002","type":"text","x":0,"y":0,"width":470,"height":200,"text":"## [[Proper 着色与独立集划分|proper coloring]]\n*Conflict-free partition*\n\n边表示不能共享资源；每个 color class 是一个 independent set。","color":"5"},
+    {"id":"7c00000000000003","type":"text","x":650,"y":0,"width":470,"height":200,"text":"## [[精确色数的上下界|精确色数]]\n*Exact chromatic number*\n\n具体着色给上界；结构障碍给下界；两者相遇才是等号。","color":"4"},
+    {"id":"7c00000000000004","type":"text","x":1300,"y":0,"width":470,"height":200,"text":"## [[贪心着色的 Δ+1 上界|greedy 上界]]\n*Order-dependent upper bound*\n\n任意顺序至多用 $\\Delta+1$ 色；合法结果未必最少。","color":"6"},
+    {"id":"7c00000000000005","type":"text","x":1950,"y":400,"width":470,"height":200,"text":"## [[顶点着色的建模边界|模型边界]]\n*Pairwise-conflict boundary*\n\n容量、时长、成本与偏好不会由普通 coloring 自动出现。","color":"1"},
+    {"id":"7c00000000000006","type":"text","x":0,"y":400,"width":470,"height":200,"text":"## [[二着色与奇环|二着色判据]]\n*Bipartite iff no odd cycle*\n\nbipartite、可二着色与不含 odd cycle 是同一条件。","color":"4"},
+    {"id":"7c00000000000007","type":"text","x":650,"y":400,"width":470,"height":200,"text":"## [[二着色与奇环证书|奇偶搜索]]\n*Coloring or certificate*\n\n搜索成功给二着色；同色边与 parent chains 给 odd cycle。","color":"6"},
+    {"id":"7c00000000000008","type":"text","x":1300,"y":400,"width":470,"height":200,"text":"## [[二分图配对关系|进入 matching]]\n*From two sides to assignment*\n\n二着色识别左右两侧；matching 才从允许边中选择配对。","color":"3"}
+  ],
+  "edges": [
+    {"id":"7ce0000000000001","fromNode":"7c00000000000002","fromSide":"right","toNode":"7c00000000000003","toSide":"left","toEnd":"arrow","label":"最少组数"},
+    {"id":"7ce0000000000002","fromNode":"7c00000000000004","fromSide":"left","toNode":"7c00000000000003","toSide":"right","toEnd":"arrow","label":"给上界"},
+    {"id":"7ce0000000000003","fromNode":"7c00000000000002","fromSide":"bottom","toNode":"7c00000000000006","toSide":"top","toEnd":"arrow","label":"限制为两色"},
+    {"id":"7ce0000000000004","fromNode":"7c00000000000006","fromSide":"right","toNode":"7c00000000000007","toSide":"left","toEnd":"arrow","label":"转为搜索"},
+    {"id":"7ce0000000000005","fromNode":"7c00000000000007","fromSide":"right","toNode":"7c00000000000008","toSide":"left","toEnd":"arrow","label":"进入配对"},
+    {"id":"7ce0000000000006","fromNode":"7c00000000000002","fromSide":"bottom","toNode":"7c00000000000005","toSide":"top","toEnd":"arrow","label":"检查承诺边界"},
+    {"id":"7ce0000000000007","fromNode":"7c00000000000005","fromSide":"left","toNode":"7c00000000000008","toSide":"right","toEnd":"arrow","label":"允许边改做匹配"}
+  ]
+}

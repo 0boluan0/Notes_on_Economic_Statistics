@@ -19,9 +19,14 @@ tags:
 >[!note]
 > 对应主笔记：[[the_missing_semester#第 3 讲 编辑器 (Vim)]]
 > 
-> 官方来源：https://missing-semester-cn.github.io/2020/editors/
+> MIT 原课程与题目：https://missing.csail.mit.edu/2020/editors/
+>
+> 社区中文译文：https://missing-semester-cn.github.io/2020/editors/
 > 
-> 官方解答：https://missing-semester-cn.github.io/missing-notes-and-solutions/2020/solutions//editors-solution
+> 社区参考解答：https://missing-semester-cn.github.io/missing-notes-and-solutions/2020/solutions//editors-solution
+> <!-- bilingual-en:start -->
+> The MIT page is the primary course source; translation and solutions are community materials.
+> <!-- bilingual-en:end -->
 
 ## 练习清单
 <!-- bilingual-en:start -->

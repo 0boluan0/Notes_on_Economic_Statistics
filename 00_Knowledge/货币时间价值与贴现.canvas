@@ -1,0 +1,299 @@
+{
+  "nodes": [
+    {
+      "id": "tv00000000000001",
+      "type": "text",
+      "x": 0,
+      "y": -430,
+      "width": 2520,
+      "height": 330,
+      "text": "# 货币时间价值与贴现\n\n**它解决什么：** 把不同日期、不同口径的现金流换到可比较的共同尺度。\n**具体锚点：** 一年期可比机会成本为 5% 时，今天 100 与一年后 105 等值，因为今天 100 可以增长为 105。\n**核心难点：** 日期、复利频率、期限、币种、风险、索取权及名义/实际口径都必须与贴现因子匹配。\n**继续：** 期限维度进入 [[利率、即期远期与期限结构.canvas|利率期限结构总图]]；项目应用进入 [[资本预算与投资决策.canvas]]。\n\n*Convert dated cash flows to a common, consistently defined scale.*\n**Continue with:** [[利率、即期远期与期限结构.canvas|the term-structure map]], then [[资本预算与投资决策.canvas|capital budgeting]].\n\n从左到右读每组关系；点击卡片标题进入中英双语原子。颜色只表示语义角色，不表示掌握状态。"
+    },
+    {
+      "id": "tv00000000000002",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 430,
+      "height": 210,
+      "text": "## [[现金流评价时点|共同评价时点]]\n*Common valuation date*\n\n不同日期的现金流先换到同一时点，差额才有经济含义。",
+      "color": "5"
+    },
+    {
+      "id": "tv00000000000003",
+      "type": "text",
+      "x": 520,
+      "y": 0,
+      "width": 430,
+      "height": 210,
+      "text": "## [[现金流时间线|先画时间线]]\n*Draw the timeline first*\n\n标出评价时点与准确支付日期，再数实际跨过的计息期。",
+      "color": "3"
+    },
+    {
+      "id": "tv00000000000004",
+      "type": "text",
+      "x": 1040,
+      "y": 0,
+      "width": 430,
+      "height": 210,
+      "text": "## [[复利与贴现|复利与贴现]]\n*Compounding and discounting*\n\n$FV_t=PV(1+r)^t$；贴现用同一积累因子反向换算。",
+      "color": "5"
+    },
+    {
+      "id": "tv00000000000005",
+      "type": "text",
+      "x": 1560,
+      "y": 0,
+      "width": 430,
+      "height": 210,
+      "text": "## [[现金流同点折现加总|逐笔折现后加总]]\n*Discount, then add*\n\n每笔现金流先用自己的日期与贴现因子换到共同时点。",
+      "color": "3"
+    },
+    {
+      "id": "tv00000000000006",
+      "type": "text",
+      "x": 2080,
+      "y": 0,
+      "width": 440,
+      "height": 210,
+      "text": "## [[净现值决策|净现值判断]]\n*NPV decision rule*\n\n全部增量现金流折现后的带符号总和决定是否创造价值。",
+      "color": "4"
+    },
+    {
+      "id": "tv00000000000007",
+      "type": "text",
+      "x": 0,
+      "y": 360,
+      "width": 430,
+      "height": 220,
+      "text": "## [[贴现率口径匹配|机会成本必须可比]]\n*Comparable opportunity cost*\n\n贴现率匹配现金流的风险、币种、流动性和索取权。",
+      "color": "5"
+    },
+    {
+      "id": "tv00000000000008",
+      "type": "text",
+      "x": 520,
+      "y": 360,
+      "width": 430,
+      "height": 220,
+      "text": "## [[期限匹配贴现因子|期限匹配]]\n*Maturity matching*\n\n单一利率只是平坦曲线简化；一般应按到期日选择贴现因子。",
+      "color": "1"
+    },
+    {
+      "id": "tv00000000000009",
+      "type": "text",
+      "x": 1040,
+      "y": 360,
+      "width": 430,
+      "height": 220,
+      "text": "## [[名义与实际贴现|名义/实际一致]]\n*Nominal-real consistency*\n\n名义配名义、实际配实际；交叉会重复或遗漏通胀。",
+      "color": "1"
+    },
+    {
+      "id": "tv0000000000000a",
+      "type": "text",
+      "x": 1560,
+      "y": 360,
+      "width": 430,
+      "height": 220,
+      "text": "## [[有效年利率|名义率转 EAR]]\n*Nominal rate to EAR*\n\n$EAR=(1+j/m)^m-1$；比较前先统一复利频率与期间。",
+      "color": "4"
+    },
+    {
+      "id": "tv0000000000000b",
+      "type": "text",
+      "x": 2080,
+      "y": 360,
+      "width": 440,
+      "height": 220,
+      "text": "## [[连续复利指数关系|连续复利]]\n*Continuous compounding*\n\n$FV=PV e^{rt}$，贴现因子为 $e^{-rt}$，对应 EAR 为 $e^r-1$。",
+      "color": "4"
+    },
+    {
+      "id": "tv0000000000000c",
+      "type": "text",
+      "x": 260,
+      "y": 730,
+      "width": 470,
+      "height": 230,
+      "text": "## [[普通年金|普通年金]]\n*Ordinary annuity*\n\n等额期末现金流的 PV 与 FV 是把同一几何级数移到起点或终点。",
+      "color": "4"
+    },
+    {
+      "id": "tv0000000000000d",
+      "type": "text",
+      "x": 820,
+      "y": 730,
+      "width": 470,
+      "height": 230,
+      "text": "## [[期初年金|期初年金]]\n*Annuity due*\n\n整串付款比普通年金早一期，所以 PV 与 FV 都乘 $(1+r)$。",
+      "color": "3"
+    },
+    {
+      "id": "tv0000000000000e",
+      "type": "text",
+      "x": 1380,
+      "y": 730,
+      "width": 470,
+      "height": 230,
+      "text": "## [[固定永续年金|固定永续年金]]\n*Level perpetuity*\n\n下一期起永久支付固定 $C$ 时，$PV=C/r$；没有有限终值。",
+      "color": "4"
+    },
+    {
+      "id": "tv0000000000000f",
+      "type": "text",
+      "x": 1940,
+      "y": 730,
+      "width": 470,
+      "height": 230,
+      "text": "## [[增长永续年金|增长永续年金]]\n*Growing perpetuity*\n\n$PV=C_1/(r-g)$；分子用下一期现金流，并要求 $r>g$。",
+      "color": "1"
+    }
+  ],
+  "edges": [
+    {
+      "id": "te00000000000001",
+      "fromNode": "tv00000000000002",
+      "fromSide": "right",
+      "toNode": "tv00000000000003",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "先固定评价时点与发生日期"
+    },
+    {
+      "id": "te00000000000002",
+      "fromNode": "tv00000000000003",
+      "fromSide": "right",
+      "toNode": "tv00000000000004",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "实际间隔决定复利或贴现指数"
+    },
+    {
+      "id": "te00000000000003",
+      "fromNode": "tv00000000000004",
+      "fromSide": "right",
+      "toNode": "tv00000000000005",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "单笔换算按价值可加性扩展到序列"
+    },
+    {
+      "id": "te00000000000004",
+      "fromNode": "tv00000000000005",
+      "fromSide": "right",
+      "toNode": "tv00000000000006",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "加入全部增量流入流出得到 NPV"
+    },
+    {
+      "id": "te00000000000005",
+      "fromNode": "tv00000000000002",
+      "fromSide": "bottom",
+      "toNode": "tv00000000000007",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "跨期换算因子来自可比机会成本"
+    },
+    {
+      "id": "te00000000000006",
+      "fromNode": "tv00000000000007",
+      "fromSide": "right",
+      "toNode": "tv00000000000008",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "期限维度要求到期日匹配"
+    },
+    {
+      "id": "te00000000000007",
+      "fromNode": "tv00000000000007",
+      "fromSide": "right",
+      "toNode": "tv00000000000009",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "通胀口径也是贴现率匹配的一部分"
+    },
+    {
+      "id": "te00000000000008",
+      "fromNode": "tv00000000000008",
+      "fromSide": "top",
+      "toNode": "tv00000000000005",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "逐笔加总时使用各自到期因子"
+    },
+    {
+      "id": "te00000000000009",
+      "fromNode": "tv00000000000009",
+      "fromSide": "top",
+      "toNode": "tv00000000000006",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "口径一致后 NPV 才可解释"
+    },
+    {
+      "id": "te0000000000000a",
+      "fromNode": "tv0000000000000a",
+      "fromSide": "top",
+      "toNode": "tv00000000000004",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "先换成与现金流期间一致的有效率"
+    },
+    {
+      "id": "te0000000000000b",
+      "fromNode": "tv0000000000000a",
+      "fromSide": "right",
+      "toNode": "tv0000000000000b",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "复利频率趋于无穷得到指数极限"
+    },
+    {
+      "id": "te0000000000000c",
+      "fromNode": "tv0000000000000b",
+      "fromSide": "top",
+      "toNode": "tv00000000000004",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "连续报价改用指数积累与贴现因子"
+    },
+    {
+      "id": "te0000000000000d",
+      "fromNode": "tv0000000000000c",
+      "fromSide": "right",
+      "toNode": "tv0000000000000d",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "整串付款提前一期使价值乘一加利率"
+    },
+    {
+      "id": "te0000000000000e",
+      "fromNode": "tv0000000000000c",
+      "fromSide": "right",
+      "toNode": "tv0000000000000e",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "期数趋于无穷且付款保持固定"
+    },
+    {
+      "id": "te0000000000000f",
+      "fromNode": "tv0000000000000e",
+      "fromSide": "right",
+      "toNode": "tv0000000000000f",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "允许现金流按固定 g 永久增长"
+    },
+    {
+      "id": "te00000000000010",
+      "fromNode": "tv00000000000007",
+      "fromSide": "top",
+      "toNode": "tv00000000000006",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "匹配的必要回报决定 NPV 门槛"
+    }
+  ]
+}

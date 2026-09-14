@@ -4,9 +4,9 @@
 <!-- bilingual-en:end -->
 
 >[!note] 本章主线
-> 本章把样本矩阵看成几何对象：每个变量是一根中心化后的偏差向量，协方差来自偏差向量内积，相关系数来自偏差向量夹角，广义方差来自这些向量张成的面积或体积。
+> 本章把样本矩阵看成几何对象：每个变量是一根中心化后的偏差向量，协方差来自偏差向量内积，相关系数来自偏差向量夹角，广义方差则对应这些向量张成的面积或体积的平方尺度。
 > <!-- bilingual-en:start -->
-> This chapter treats the sample matrix as a geometric object. Each variable becomes a centred deviation vector; covariance comes from inner products, correlation from angles between deviation vectors, and generalised variance from the area or volume spanned by those vectors.
+> This chapter treats the sample matrix as a geometric object. Each variable becomes a centred deviation vector; covariance comes from inner products, correlation from angles between deviation vectors, and generalised variance corresponds to a squared-area or squared-volume scale for the span of those vectors.
 > <!-- bilingual-en:end -->
 
 ## 1.1. 样本的几何结构
@@ -256,9 +256,9 @@ It simply adds the variables' own variances and does not penalise correlation am
 <!-- bilingual-en:end -->
 
 >[!note] 对比
-> $|S|$ 看联合体积，受相关性影响；$\operatorname{tr}(S)$ 看总方差，不直接看变量之间是否重叠。
+> $|S|$ 是受相关性影响的平方体积尺度，相应体积与 $\sqrt{|S|}$ 成正比；$\operatorname{tr}(S)$ 看总边际方差，不直接看变量之间是否重叠。
 > <!-- bilingual-en:start -->
-> $|S|$ measures joint volume and is affected by correlation; $\operatorname{tr}(S)$ measures total marginal variance without directly reflecting overlap among variables.
+> $|S|$ is a squared-volume scale affected by correlation, with the corresponding volume proportional to $\sqrt{|S|}$; $\operatorname{tr}(S)$ measures total marginal variance without directly reflecting overlap among variables.
 > <!-- bilingual-en:end -->
 
 ## 1.4. 广义方差的几何解释
@@ -468,10 +468,10 @@ $$
 *1.7. Related Cards*
 <!-- bilingual-en:end -->
 
-- [[多元数据、随机向量与样本协方差#样本协方差矩阵|Sample Mean Vector]]
-- [[多元数据、随机向量与样本协方差#样本协方差矩阵|Sample Covariance Matrix]]
-- [[多元数据、随机向量与样本协方差#广义方差与可视化|Generalized Variance]]
-- [[多元数据、随机向量与样本协方差#均值、协方差与相关|Correlation Matrix]]
-- [[主成分分析 PCA#标准化与成分选择|Choosing Covariance vs Correlation Matrix]]
-- [[主成分分析 PCA#PCA 的方差最大化|PCA]]
-- [[线性方程组与四个基本子空间#基、维数与秩|Matrix Rank]]
+- [[样本均值向量|Sample Mean Vector]]
+- [[样本协方差矩阵|Sample Covariance Matrix]]
+- [[广义方差|Generalized Variance]]
+- [[相关矩阵|Correlation Matrix]]
+- [[PCA尺度选择|Choosing Covariance vs Correlation Matrix]]
+- [[主成分分析.canvas|PCA]]
+- [[矩阵秩|Matrix Rank]]

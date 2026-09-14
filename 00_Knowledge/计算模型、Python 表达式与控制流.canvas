@@ -1,0 +1,286 @@
+{
+  "nodes": [
+    {
+      "id": "3c28974ec7f07d21",
+      "type": "text",
+      "x": 0,
+      "y": -360,
+      "width": 2480,
+      "height": 240,
+      "color": "3",
+      "text": "# 计算模型、Python 表达式与控制流\n\n沿折线路径读取：表达式求值 → 名称绑定 → 分组 → 布尔短路 → 条件分支 → `while` → `for`/`range` → 控制转移。纵向分支补上对象类型、身份与序列、输入解析和循环正确性边界。\n\n颜色只区分语义角色，不表示掌握度；点击标题打开对应 Markdown。"
+    },
+    {
+      "id": "e4bd07a79af40c80",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 500,
+      "height": 260,
+      "color": "5",
+      "text": "## [[表达式求值|Python 表达式求值产生带类型的结果]]\n*Expression evaluation*\n\n表达式在当前环境中收束为一个结果对象；结果可能是既有对象，也可能以异常结束。"
+    },
+    {
+      "id": "08693cd1c3c7862b",
+      "type": "text",
+      "x": 0,
+      "y": 420,
+      "width": 500,
+      "height": 260,
+      "color": "3",
+      "text": "## [[程序执行状态|手工追踪程序必须同时记录名称绑定、当前求值和下一控制位置]]\n*Program-state trace*\n\n环境、当前表达式与下一控制位置共同解释一次运行；同一最终输出不证明路径相同。"
+    },
+    {
+      "id": "3feffba28f0af3a2",
+      "type": "text",
+      "x": 660,
+      "y": 0,
+      "width": 500,
+      "height": 260,
+      "color": "5",
+      "text": "## [[名称绑定与赋值|Python 名称赋值先求右侧再把名称绑定到对象]]\n*Name binding and assignment*\n\n`=` 改变环境，不声明数学恒等；属性、下标与增强赋值另有对象修改边界。"
+    },
+    {
+      "id": "55d242f7138f79e7",
+      "type": "text",
+      "x": 1320,
+      "y": 0,
+      "width": 500,
+      "height": 260,
+      "color": "5",
+      "text": "## [[优先级与括号|运算符优先级决定表达式分组而括号可显式改写分组]]\n*Precedence and parentheses*\n\n优先级决定语法分组；它不替代带副作用表达式的求值顺序规则。"
+    },
+    {
+      "id": "c7a19edbae86afcf",
+      "type": "text",
+      "x": 1980,
+      "y": 0,
+      "width": 500,
+      "height": 260,
+      "color": "6",
+      "text": "## [[布尔短路|Python 的 and 与 or 按从左到右短路并返回实际操作数]]\n*Boolean short-circuiting*\n\n右侧可能不求值；`and`/`or` 返回操作数，不保证返回 `bool`。"
+    },
+    {
+      "id": "41b04621d5cfac83",
+      "type": "text",
+      "x": 1980,
+      "y": 420,
+      "width": 500,
+      "height": 260,
+      "color": "6",
+      "text": "## [[条件分支|if、elif 与 else 按顺序只执行首个为真的分支]]\n*Conditional branching*\n\n分支链只选一个 suite；多条独立 `if` 可能执行多块代码。"
+    },
+    {
+      "id": "4cd8c540e7c11e7b",
+      "type": "text",
+      "x": 1320,
+      "y": 420,
+      "width": 500,
+      "height": 260,
+      "color": "6",
+      "text": "## [[while循环|设计为结束的 while 循环需在保持不变量时推进终止度量]]\n*Condition-driven iteration*\n\n条件在每轮前重测；设计为结束的循环要覆盖所有重复路径的状态推进。"
+    },
+    {
+      "id": "b2d0148c00166294",
+      "type": "text",
+      "x": 660,
+      "y": 420,
+      "width": 500,
+      "height": 260,
+      "color": "6",
+      "text": "## [[for与range|for 逐项绑定 iterable 而 range 表示半开整数序列]]\n*Iteration and range boundaries*\n\n`for` 从 iterator 逐项绑定；`range` 包含 start、排除 stop，step 可为负但不可为零。"
+    },
+    {
+      "id": "23860b444d40d371",
+      "type": "text",
+      "x": 660,
+      "y": 840,
+      "width": 500,
+      "height": 260,
+      "color": "6",
+      "text": "## [[控制转移语句|break、continue 与 return 跳转到不同控制流边界]]\n*Control transfers*\n\n分别离开最近循环、进入最近循环下一轮、离开当前函数；嵌套与 `finally` 限定其边界。"
+    },
+    {
+      "id": "deaded361d8d47a5",
+      "type": "text",
+      "x": 0,
+      "y": 840,
+      "width": 500,
+      "height": 260,
+      "color": "5",
+      "text": "## [[动态类型边界|Python 的对象始终有类型而名称可在运行时改绑不同类型对象]]\n*Dynamic typing boundary*\n\n动态的是名称绑定与运行时检查，不是对象失去类型；注解默认也不由运行时强制。"
+    },
+    {
+      "id": "197a4de2d4d8973c",
+      "type": "text",
+      "x": 0,
+      "y": 1260,
+      "width": 500,
+      "height": 260,
+      "color": "1",
+      "text": "## [[对象身份与值相等|is 比较对象身份而双等号比较值是否相等]]\n*Identity versus equality*\n\n`is` 问是否同一对象；`==` 按类型规则比较值。不要依赖不可变对象被偶然复用。"
+    },
+    {
+      "id": "05bc37a30278b5f1",
+      "type": "text",
+      "x": 660,
+      "y": 1260,
+      "width": 500,
+      "height": 260,
+      "color": "1",
+      "text": "## [[序列共同接口|字符串序列、切片与不可变性]]\n*Sequences, slicing, and immutability*\n\n[[对象可变性]] · [[复制层级边界]]\n\n共同接口规定索引与半开切片；对象类型决定能否改写，复制层级决定嵌套引用是否继续共享。"
+    },
+    {
+      "id": "e6571abfa1a56409",
+      "type": "text",
+      "x": 1320,
+      "y": 840,
+      "width": 500,
+      "height": 260,
+      "color": "4",
+      "text": "## [[循环不变量与终止|循环的完全正确性由不变量与终止度量共同证明]]\n*Loop proof method*\n\n复用既有通用原子：初始化、保持、退出推出目标，再独立证明终止；不在 Python 卡内重复造卡。"
+    },
+    {
+      "id": "f7682bc0b2b6751a",
+      "type": "text",
+      "x": 1980,
+      "y": 840,
+      "width": 500,
+      "height": 260,
+      "color": "1",
+      "text": "## [[输入解析边界|input 返回字符串而数值语义需要显式解析并处理失败]]\n*Input trust boundary*\n\n先解析字符串，再验证业务范围；转换成功不等于输入有效，转换失败也应走明确异常路径。"
+    },
+    {
+      "id": "2a8b5ef3e5e9a84d",
+      "type": "text",
+      "x": 1320,
+      "y": 1260,
+      "width": 1160,
+      "height": 260,
+      "color": "2",
+      "text": "## [[问题分解与复用|程序设计先用示例固定输入输出再拆成可检查步骤并复用可靠现成操作]]\n*Decomposition and reuse*\n\n先固定输入、输出、边界与例子，再拆成可独立检查的步骤；内建或标准库已准确表达时，不重写复杂循环。"
+    }
+  ],
+  "edges": [
+    {
+      "id": "4cd8d6523d7876de",
+      "fromNode": "e4bd07a79af40c80",
+      "fromSide": "right",
+      "toNode": "3feffba28f0af3a2",
+      "toSide": "left",
+      "label": "结果可被名称绑定"
+    },
+    {
+      "id": "ea08182103d9bdc2",
+      "fromNode": "3feffba28f0af3a2",
+      "fromSide": "right",
+      "toNode": "55d242f7138f79e7",
+      "toSide": "left",
+      "label": "复杂右侧先确定分组"
+    },
+    {
+      "id": "59a976acb996eb25",
+      "fromNode": "55d242f7138f79e7",
+      "fromSide": "right",
+      "toNode": "c7a19edbae86afcf",
+      "toSide": "left",
+      "label": "布尔表达式也遵守分组"
+    },
+    {
+      "id": "0a3ea14d72b9edc9",
+      "fromNode": "c7a19edbae86afcf",
+      "fromSide": "bottom",
+      "toNode": "41b04621d5cfac83",
+      "toSide": "top",
+      "label": "短路改变条件求值"
+    },
+    {
+      "id": "63fd1789ca8f6b71",
+      "fromNode": "41b04621d5cfac83",
+      "fromSide": "left",
+      "toNode": "4cd8c540e7c11e7b",
+      "toSide": "right",
+      "label": "重复条件形成 while"
+    },
+    {
+      "id": "d0ad7f0dae5a85b5",
+      "fromNode": "4cd8c540e7c11e7b",
+      "fromSide": "left",
+      "toNode": "b2d0148c00166294",
+      "toSide": "right",
+      "label": "已有 iterable 时改用 for"
+    },
+    {
+      "id": "59353d1127a7f328",
+      "fromNode": "b2d0148c00166294",
+      "fromSide": "bottom",
+      "toNode": "23860b444d40d371",
+      "toSide": "top",
+      "label": "可改变默认循环路径"
+    },
+    {
+      "id": "468c5f1d2b39728e",
+      "fromNode": "e4bd07a79af40c80",
+      "fromSide": "bottom",
+      "toNode": "08693cd1c3c7862b",
+      "toSide": "top",
+      "label": "放进完整状态路径"
+    },
+    {
+      "id": "579d602e3c4a839f",
+      "fromNode": "08693cd1c3c7862b",
+      "fromSide": "bottom",
+      "toNode": "deaded361d8d47a5",
+      "toSide": "top",
+      "label": "对象类型限定操作"
+    },
+    {
+      "id": "68ae713f4d5b94a0",
+      "fromNode": "deaded361d8d47a5",
+      "fromSide": "bottom",
+      "toNode": "197a4de2d4d8973c",
+      "toSide": "top",
+      "label": "区分身份和值"
+    },
+    {
+      "id": "98f86cdbfb0e90ea",
+      "fromNode": "197a4de2d4d8973c",
+      "fromSide": "right",
+      "toNode": "05bc37a30278b5f1",
+      "toSide": "left",
+      "label": "对象图解释别名与可变性"
+    },
+    {
+      "id": "246a3dfb0f195069",
+      "fromNode": "4cd8c540e7c11e7b",
+      "fromSide": "bottom",
+      "toNode": "e6571abfa1a56409",
+      "toSide": "top",
+      "label": "正确性需要另证"
+    },
+    {
+      "id": "357b4e0c1a28617d",
+      "fromNode": "41b04621d5cfac83",
+      "fromSide": "bottom",
+      "toNode": "f7682bc0b2b6751a",
+      "toSide": "top",
+      "label": "先解析验证再分支"
+    },
+    {
+      "id": "79bf82405e6ca5b1",
+      "fromNode": "e6571abfa1a56409",
+      "fromSide": "bottom",
+      "toNode": "2a8b5ef3e5e9a84d",
+      "toSide": "top",
+      "label": "把正确性拆成可检查步骤"
+    },
+    {
+      "id": "8ac093516f7db6c2",
+      "fromNode": "f7682bc0b2b6751a",
+      "fromSide": "bottom",
+      "toNode": "2a8b5ef3e5e9a84d",
+      "toSide": "top",
+      "label": "先固定输入契约"
+    }
+  ]
+}

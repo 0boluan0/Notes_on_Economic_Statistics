@@ -15,10 +15,10 @@ aliases:
 # DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning
 
 ## 一句话位置
-这篇论文位于 `01 架构与预训练`，第一版用于连接 Transformer, Pretraining, Efficiency / MoE 路线；此笔记暂作索引，不做精读摘要。
+这篇论文位于 `01 架构与预训练`，核心位置是用强化学习塑造推理行为；它属于后训练与推理，而不是预训练或推理效率来源；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[Transformer 与注意力机制]], 预训练、指令微调与偏好优化, [[LLM 推理效率]]
+[[LLM 后训练.canvas|LLM 后训练]], [[LLM 推理与验证]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/KR7YGW25)
@@ -30,4 +30,3 @@ aliases:
 ## Canvas
 - [[LLM Big Picture]]
 - [[01 架构与预训练.canvas|01 架构与预训练 Canvas]]
-

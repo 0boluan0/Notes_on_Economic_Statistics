@@ -1,5 +1,37 @@
+# Personal learning records and course administration
+/99_学习情况记录/
 **/00_inbox/
-!/00_inbox/
-!/00_inbox/**
-reports/linking/.state.json
-tmp/
+/07_Programme/
+/01_Math/08_MathsCamp-EC400/
+/03_Computer_Science/99_Miscellaneous/SQL.md
+/98_attachment/vault-home/
+/98_attachment/dashboards/
+**/学习笔记/原始记录/
+
+# Local application state and personal workflow configuration
+/.obsidian/
+/.claude/settings.local.json
+/.claude/skills/today/
+/.claude/skills/weekly-review/
+/.claude/skills/tool/
+/.codex/skills/today/
+/.codex/skills/weekly-review/
+/.codex/skills/tool/
+/.codex/sessions/
+/.codex/logs/
+/.codex/.cache/
+/brightness
+
+# Generated artifacts and process records
+/tmp/
+/output/
+/reports/
+**/.DS_Store
+**/__pycache__/
+*.py[cod]
+
+# Local credentials
+.env
+.env.*
+!.env.example
+!.env.template

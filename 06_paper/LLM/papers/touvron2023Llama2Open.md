@@ -15,10 +15,10 @@ aliases:
 # Llama 2: Open Foundation and Fine-Tuned Chat Models
 
 ## 一句话位置
-这篇论文位于 `09 开源模型技术报告`，第一版用于连接 Open Models 路线；此笔记暂作索引，不做精读摘要。
+这篇论文位于 `09 开源模型技术报告`，连接开放模型、训练信号、SFT、成对偏好、Bradley–Terry 奖励建模与显式奖励模型 RLHF；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[开放模型生态]]
+[[开放模型生态]], [[训练信号差异]], [[SFT目标]], [[成对偏好模型]], [[Bradley–Terry模型]], [[显式奖励模型RLHF]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/YDGMM3BR)
@@ -29,5 +29,5 @@ aliases:
 
 ## Canvas
 - [[LLM Big Picture]]
+- [[03 对齐与偏好优化.canvas|03 对齐与偏好优化 Canvas]]
 - [[09 开源模型技术报告.canvas|09 开源模型技术报告 Canvas]]
-

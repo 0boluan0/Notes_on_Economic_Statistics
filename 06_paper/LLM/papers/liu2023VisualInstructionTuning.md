@@ -18,7 +18,7 @@ aliases:
 这篇论文位于 `08 多模态`，第一版用于连接 Multimodal, Instruction Tuning / RLHF 路线；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[多模态大模型]], 预训练、指令微调与偏好优化
+[[多模态大模型]], [[LLM 后训练.canvas|LLM 后训练]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/2FKFTWJZ)
@@ -30,4 +30,3 @@ aliases:
 ## Canvas
 - [[LLM Big Picture]]
 - [[08 多模态.canvas|08 多模态 Canvas]]
-

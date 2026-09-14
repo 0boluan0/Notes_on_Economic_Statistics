@@ -15,10 +15,10 @@ aliases:
 # RoBERTa: A Robustly Optimized BERT Pretraining Approach
 
 ## 一句话位置
-这篇论文位于 `09 开源模型技术报告`，第一版用于连接 Open Models, Pretraining 路线；此笔记暂作索引，不做精读摘要。
+这篇论文位于 `09 开源模型技术报告`，核心位置是比较训练时长、数据量、批量、动态掩码与 NSP 等预训练配方怎样改变 BERT 的结果；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[开放模型生态]], 预训练、指令微调与偏好优化
+[[LLM 预训练.canvas|LLM 预训练]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/KK4WCHZK)
@@ -28,4 +28,3 @@ aliases:
 ## Canvas
 - [[LLM Big Picture]]
 - [[09 开源模型技术报告.canvas|09 开源模型技术报告 Canvas]]
-

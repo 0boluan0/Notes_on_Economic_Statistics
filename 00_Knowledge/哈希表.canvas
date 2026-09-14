@@ -1,0 +1,289 @@
+{
+  "nodes": [
+    {
+      "id": "a510000000000001",
+      "type": "text",
+      "x": 0,
+      "y": -360,
+      "width": 1980,
+      "height": 260,
+      "text": "# 哈希表\n\n这张图沿着一条可推理的主线组织知识：**为什么压缩键空间 → 碰撞后如何保持正确 → 容量与分布怎样决定性能 → Python 把哪些语义暴露给使用者**。每张卡是一个可独立回忆或应用的判断；点击标题进入中英双语原子。\n\n**颜色图例：** 青＝模型与容量管理；紫＝关键区分与负载；绿＝不变量与语言语义；黄＝碰撞处理方法；红＝易错边界；橙＝诊断。颜色不表示掌握度；来源与掌握状态在 [[知识原子.base|知识原子 Base]] 中查询。"
+    },
+    {
+      "id": "a510000000000002",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 430,
+      "height": 180,
+      "text": "## [[哈希表槽位映射|为什么要哈希]]\n*Why hash?*\n\n不用为巨大键空间逐项开槽；$h(k)$ 只负责第一次定位。",
+      "color": "5"
+    },
+    {
+      "id": "a510000000000003",
+      "type": "text",
+      "x": 500,
+      "y": 0,
+      "width": 430,
+      "height": 180,
+      "text": "## [[哈希碰撞与完整键比较|碰撞不是相等]]\n*Collision is not equality*\n\n同哈希只表示进入同一候选区域，最终仍要比较完整键。",
+      "color": "6"
+    },
+    {
+      "id": "a510000000000004",
+      "type": "text",
+      "x": 1000,
+      "y": 0,
+      "width": 430,
+      "height": 180,
+      "text": "## [[哈希相等性契约|相等与哈希契约]]\n*Equality–hash contract*\n\n$a=b$ 必须推出 $h(a)=h(b)$，否则逻辑上的同一键会走向不同位置。",
+      "color": "4"
+    },
+    {
+      "id": "a510000000000005",
+      "type": "text",
+      "x": 1500,
+      "y": 0,
+      "width": 480,
+      "height": 180,
+      "text": "## [[哈希键语义稳定性|键必须稳定]]\n*Keys must remain stable*\n\n插入后改变参与哈希或相等的内容，会让查找路径与存放位置分离。",
+      "color": "4"
+    },
+    {
+      "id": "a510000000000006",
+      "type": "text",
+      "x": 0,
+      "y": 360,
+      "width": 430,
+      "height": 190,
+      "text": "## [[拉链法碰撞处理|拉链法]]\n*Separate chaining*\n\n同槽条目留在一个桶中；正确性由键比较保证，成本取决于桶长。",
+      "color": "3"
+    },
+    {
+      "id": "a510000000000007",
+      "type": "text",
+      "x": 500,
+      "y": 360,
+      "width": 430,
+      "height": 190,
+      "text": "## [[开放寻址碰撞处理|开放寻址]]\n*Open addressing*\n\n所有条目留在同一数组；插入与查找遵循兼容的探测序列。",
+      "color": "3"
+    },
+    {
+      "id": "a510000000000008",
+      "type": "text",
+      "x": 1000,
+      "y": 360,
+      "width": 430,
+      "height": 190,
+      "text": "## [[开放寻址删除标记|删除与墓碑]]\n*Deletion and tombstones*\n\n普通空槽会终止查找；删除必须保住后续键的探测路径。",
+      "color": "1"
+    },
+    {
+      "id": "a510000000000009",
+      "type": "text",
+      "x": 500,
+      "y": 740,
+      "width": 480,
+      "height": 190,
+      "text": "## [[哈希表负载因子|负载与填充率]]\n*Load and fill ratios*\n\n活负载 $α=n/m$ 决定桶长或空槽压力；有墓碑时还要看填充率 $β=(n+d)/m$。",
+      "color": "6"
+    },
+    {
+      "id": "a51000000000000a",
+      "type": "text",
+      "x": 500,
+      "y": 1120,
+      "width": 430,
+      "height": 190,
+      "text": "## [[哈希表几何扩容|扩容与摊还]]\n*Resizing and amortization*\n\n一次重建是线性的；按比例扩容只保证容量管理部分的摊还常数界。",
+      "color": "5"
+    },
+    {
+      "id": "a51000000000000b",
+      "type": "text",
+      "x": 1000,
+      "y": 1120,
+      "width": 430,
+      "height": 190,
+      "text": "## [[哈希表期望查找复杂度|三种成本语境]]\n*Expected, amortized, worst case*\n\n期望碰撞成本、摊还容量成本和单次最坏界回答的是不同问题。",
+      "color": "1"
+    },
+    {
+      "id": "a51000000000000c",
+      "type": "text",
+      "x": 1500,
+      "y": 740,
+      "width": 430,
+      "height": 190,
+      "text": "## [[哈希函数质量标准|什么是好哈希]]\n*What makes a useful hash?*\n\n目标不是零碰撞，而是低成本地控制真实或对抗性键的碰撞分布。",
+      "color": "5"
+    },
+    {
+      "id": "a51000000000000d",
+      "type": "text",
+      "x": 1500,
+      "y": 360,
+      "width": 480,
+      "height": 190,
+      "text": "## [[Python dict 顺序与查找|Python dict 的顺序]]\n*Python dict order*\n\n更新已有键不移动；删除后重插移到末尾。它仍不是按键排序。",
+      "color": "4"
+    },
+    {
+      "id": "a51000000000000e",
+      "type": "text",
+      "x": 250,
+      "y": 1500,
+      "width": 1480,
+      "height": 220,
+      "text": "## [[哈希表性能诊断|从慢请求回到机制]]\n*Diagnosing the mechanism behind latency*\n\n先排除键突变等正确性问题，再把延迟分位数与负载、桶长或探测长度、墓碑和扩容事件对齐。随机测试键不能替代真实键分布；修改阈值、哈希或碰撞策略后，要重新测量尾延迟。",
+      "color": "2"
+    }
+  ],
+  "edges": [
+    {
+      "id": "a5e0000000000001",
+      "fromNode": "a510000000000002",
+      "fromSide": "right",
+      "toNode": "a510000000000003",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "有限槽位压缩大键空间，因此必须允许碰撞"
+    },
+    {
+      "id": "a5e0000000000002",
+      "fromNode": "a510000000000003",
+      "fromSide": "right",
+      "toNode": "a510000000000004",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "碰撞允许存在，但相等键必须走同一路径"
+    },
+    {
+      "id": "a5e0000000000003",
+      "fromNode": "a510000000000004",
+      "fromSide": "right",
+      "toNode": "a510000000000005",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "契约还必须在键存储期间保持稳定"
+    },
+    {
+      "id": "a5e0000000000004",
+      "fromNode": "a510000000000003",
+      "fromSide": "bottom",
+      "toNode": "a510000000000006",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "碰撞方案一：同槽建立桶"
+    },
+    {
+      "id": "a5e0000000000005",
+      "fromNode": "a510000000000003",
+      "fromSide": "bottom",
+      "toNode": "a510000000000007",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "碰撞方案二：在数组中继续探测"
+    },
+    {
+      "id": "a5e0000000000006",
+      "fromNode": "a510000000000007",
+      "fromSide": "right",
+      "toNode": "a510000000000008",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "探测序列使删除不能截断后续路径"
+    },
+    {
+      "id": "a5e0000000000007",
+      "fromNode": "a510000000000006",
+      "fromSide": "bottom",
+      "toNode": "a510000000000009",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "拉链法中负载恰好等于平均桶长"
+    },
+    {
+      "id": "a5e0000000000008",
+      "fromNode": "a510000000000007",
+      "fromSide": "bottom",
+      "toNode": "a510000000000009",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "负载越高，空槽越难找到"
+    },
+    {
+      "id": "a5e0000000000009",
+      "fromNode": "a510000000000009",
+      "fromSide": "bottom",
+      "toNode": "a51000000000000a",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "容量边界触发重建以恢复可控负载"
+    },
+    {
+      "id": "a5e000000000000a",
+      "fromNode": "a51000000000000a",
+      "fromSide": "right",
+      "toNode": "a51000000000000b",
+      "toSide": "left",
+      "toEnd": "none",
+      "label": "摊还容量成本 ≠ 单次查找最坏界"
+    },
+    {
+      "id": "a5e000000000000b",
+      "fromNode": "a51000000000000c",
+      "fromSide": "bottom",
+      "toNode": "a51000000000000b",
+      "toSide": "right",
+      "toEnd": "arrow",
+      "label": "分布假设决定期望常数界是否可信"
+    },
+    {
+      "id": "a5e000000000000c",
+      "fromNode": "a510000000000008",
+      "fromSide": "bottom",
+      "toNode": "a510000000000009",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "墓碑使开放寻址还需看填充率"
+    },
+    {
+      "id": "a5e000000000000d",
+      "fromNode": "a510000000000005",
+      "fromSide": "bottom",
+      "toNode": "a51000000000000d",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "顺序保证不取消键的可哈希性要求"
+    },
+    {
+      "id": "a5e000000000000e",
+      "fromNode": "a510000000000009",
+      "fromSide": "left",
+      "toNode": "a51000000000000e",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "用负载和探测分布解释持续退化"
+    },
+    {
+      "id": "a5e000000000000f",
+      "fromNode": "a51000000000000a",
+      "fromSide": "bottom",
+      "toNode": "a51000000000000e",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "用扩容时间点解释偶发尖峰"
+    },
+    {
+      "id": "a5e0000000000010",
+      "fromNode": "a51000000000000b",
+      "fromSide": "bottom",
+      "toNode": "a51000000000000e",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "平均值正常仍要检查最坏与长尾"
+    }
+  ]
+}

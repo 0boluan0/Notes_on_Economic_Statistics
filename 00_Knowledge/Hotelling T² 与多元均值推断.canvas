@@ -1,0 +1,194 @@
+{
+  "nodes": [
+    {
+      "id": "hotelling-header",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 1520,
+      "height": 180,
+      "text": "# Hotelling T² 与多元均值推断\n\n从 Gaussian 抽样基础出发，先校准单样本精确检验，再沿“投影—线性约束—置信域”解释全局问题，并按设计分流到配对或两独立样本。\n\n本主题七张原子，另引入四张 Gaussian/Wishart 基础与边界卡。先认清抽样单位、协方差假设与维数门槛，再计算或定位差异。",
+      "color": "4"
+    },
+    {
+      "id": "hotelling-foundation",
+      "type": "text",
+      "x": 0,
+      "y": 300,
+      "width": 400,
+      "height": 220,
+      "text": "## 精确 F 的 Gaussian 地基\n\n[[样本协方差Wishart律|样本协方差律]]\n\n[[正态均值协方差独立|均值—协方差独立]]",
+      "color": "5"
+    },
+    {
+      "id": "hotelling-one-sample",
+      "type": "text",
+      "x": 560,
+      "y": 300,
+      "width": 400,
+      "height": 250,
+      "text": "## [[单样本Hotelling T²|单样本 Hotelling T²]]\n\n用 $S^{-1}$ 度量样本均值与目标向量的距离；iid 多元正态、$\\Sigma\\succ0$、$n>p$ 时可精确换算为 $F_{p,n-p}$。",
+      "color": "4"
+    },
+    {
+      "id": "hotelling-boundary",
+      "type": "text",
+      "x": 1120,
+      "y": 300,
+      "width": 400,
+      "height": 220,
+      "text": "## 精确模型与秩边界\n\n[[Wishart抽样假设|抽样假设边界]]\n\n[[Wishart秩与可逆性|整数自由度下的可逆门槛]]",
+      "color": "1"
+    },
+    {
+      "id": "hotelling-paired",
+      "type": "text",
+      "x": 0,
+      "y": 680,
+      "width": 400,
+      "height": 230,
+      "text": "## [[配对Hotelling T²|配对设计]]\n\n先取 $D_i=X_i-Y_i$，再对跨 pair iid 的差向量做单样本 $T^2$；同一 pair 内的相关性进入 $\\operatorname{Var}(D_i)$。",
+      "color": "3"
+    },
+    {
+      "id": "hotelling-projection",
+      "type": "text",
+      "x": 560,
+      "y": 680,
+      "width": 400,
+      "height": 230,
+      "text": "## [[Hotelling投影极值|最大投影解释]]\n\n$T^2=\\sup_{a\\ne0} n(a^Td)^2/(a^TSa)$。全局显著只保证某个线性方向偏离，不表示每个坐标都显著。",
+      "color": "6"
+    },
+    {
+      "id": "hotelling-two-sample",
+      "type": "text",
+      "x": 1120,
+      "y": 680,
+      "width": 400,
+      "height": 240,
+      "text": "## [[pooled Hotelling T²|两独立样本 pooled T²]]\n\n两组独立且共享 $\\Sigma$ 时合并 $S_p$；$m=n_1+n_2-2\\ge p$ 时，$\\frac{m-p+1}{pm}T^2\\sim F_{p,m-p+1}$。",
+      "color": "3"
+    },
+    {
+      "id": "hotelling-linear",
+      "type": "text",
+      "x": 0,
+      "y": 1060,
+      "width": 400,
+      "height": 270,
+      "text": "## [[线性约束Hotelling T²|线性约束化约]]\n\n先用行空间基把约束写成满行秩 $D\\in\\mathbb R^{m\\times p}$，再对 $DX_i$ 做 $m$ 维单样本 $T^2$。经典正态条件下只需 $n>m$；此时即使原始 $S$ 奇异，$DSD^T$ 仍几乎必然可逆。",
+      "color": "5"
+    },
+    {
+      "id": "hotelling-ellipsoid",
+      "type": "text",
+      "x": 560,
+      "y": 1060,
+      "width": 400,
+      "height": 240,
+      "text": "## [[Hotelling置信椭球|置信椭球]]\n\n反演检验得到均值参数的椭球；投影同一个椭球，可让所有 $a^T\\mu$ 区间同时成立。它不是个体预测椭球。",
+      "color": "6"
+    },
+    {
+      "id": "hotelling-bonferroni",
+      "type": "text",
+      "x": 1120,
+      "y": 1060,
+      "width": 400,
+      "height": 270,
+      "text": "## [[Bonferroni对比区间|预设有限对比]]\n\nBonferroni 把总错误率分配给事先固定的有限方向；依赖可任意且不求 $S^{-1}$，但不能看见结果后再选方向。",
+      "color": "2"
+    }
+  ],
+  "edges": [
+    {
+      "id": "hotelling-edge-header-one",
+      "fromNode": "hotelling-header",
+      "fromSide": "bottom",
+      "toNode": "hotelling-one-sample",
+      "toSide": "top",
+      "label": "核心统计量"
+    },
+    {
+      "id": "hotelling-edge-foundation-one",
+      "fromNode": "hotelling-foundation",
+      "fromSide": "right",
+      "toNode": "hotelling-one-sample",
+      "toSide": "left",
+      "label": "Wishart + 独立性"
+    },
+    {
+      "id": "hotelling-edge-boundary-one",
+      "fromNode": "hotelling-boundary",
+      "fromSide": "left",
+      "toNode": "hotelling-one-sample",
+      "toSide": "right",
+      "label": "假设 + 秩门槛"
+    },
+    {
+      "id": "hotelling-edge-one-projection",
+      "fromNode": "hotelling-one-sample",
+      "fromSide": "bottom",
+      "toNode": "hotelling-projection",
+      "toSide": "top",
+      "label": "最大投影"
+    },
+    {
+      "id": "hotelling-edge-one-paired",
+      "fromNode": "hotelling-one-sample",
+      "fromSide": "left",
+      "toNode": "hotelling-paired",
+      "toSide": "top",
+      "label": "差向量化约"
+    },
+    {
+      "id": "hotelling-edge-one-two",
+      "fromNode": "hotelling-one-sample",
+      "fromSide": "right",
+      "toNode": "hotelling-two-sample",
+      "toSide": "top",
+      "label": "合并组内协方差"
+    },
+    {
+      "id": "hotelling-edge-projection-linear",
+      "fromNode": "hotelling-projection",
+      "fromSide": "left",
+      "toNode": "hotelling-linear",
+      "toSide": "top",
+      "label": "限制到 D 的行空间"
+    },
+    {
+      "id": "hotelling-edge-projection-ellipsoid",
+      "fromNode": "hotelling-projection",
+      "fromSide": "bottom",
+      "toNode": "hotelling-ellipsoid",
+      "toSide": "top",
+      "label": "反演为置信域"
+    },
+    {
+      "id": "hotelling-edge-ellipsoid-bonferroni",
+      "fromNode": "hotelling-ellipsoid",
+      "fromSide": "right",
+      "toNode": "hotelling-bonferroni",
+      "toSide": "left",
+      "label": "全部方向 vs 有限 family"
+    },
+    {
+      "id": "hotelling-edge-paired-linear",
+      "fromNode": "hotelling-paired",
+      "fromSide": "bottom",
+      "toNode": "hotelling-linear",
+      "toSide": "top",
+      "label": "差均值的线性约束"
+    },
+    {
+      "id": "hotelling-edge-two-bonferroni",
+      "fromNode": "hotelling-two-sample",
+      "fromSide": "bottom",
+      "toNode": "hotelling-bonferroni",
+      "toSide": "top",
+      "label": "预设均值差对比"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "nodes": [
+    {"id":"det-header","type":"text","x":0,"y":-500,"width":5750,"height":220,"text":"# 行列式\n\n这张图从行列式的定义出发，分成四条可以独立回看的路线：**计算与可逆性**、**代数规律与谱**、**余子式与伴随矩阵**、**体积与 Jacobian**。箭头只表示确实用于下一步的前提或推导，不把相邻摆放误当成逻辑关系。"},
+    {"id":"det-legend","type":"text","x":5900,"y":-500,"width":500,"height":220,"text":"## 图例\n\n颜色区分定义、计算、定理、解释与边界，不表示掌握度。\n\n灰色小卡是来自其他主题的必要前置。"},
+    {"id":"det-root","type":"text","x":2925,"y":-150,"width":500,"height":190,"color":"5","text":"## [[行列式]]\n\n行列式是方阵上唯一的归一化交替多线性标量函数。计算规则、代数性质和体积解释都从这里生长出来。"},
+
+    {"id":"group-calc","type":"group","x":0,"y":300,"width":1200,"height":1650,"label":"① 计算与可逆性","color":"4"},
+    {"id":"det-rowops","type":"text","x":100,"y":500,"width":430,"height":180,"color":"4","text":"## [[行操作对行列式的影响]]\n\n换行变号；缩放一行会同倍缩放；给一行加另一行的倍数则保持不变。"},
+    {"id":"det-triangular","type":"text","x":100,"y":850,"width":430,"height":180,"color":"6","text":"## [[三角矩阵行列式]]\n\n三角矩阵的行列式等于全部对角元的乘积。"},
+    {"id":"det-elimination","type":"text","x":650,"y":850,"width":450,"height":190,"color":"4","text":"## [[消元计算行列式]]\n\n把矩阵化成三角形，同时逐步记回换行与缩放造成的变化。"},
+    {"id":"dep-inverse","type":"text","x":100,"y":1250,"width":430,"height":160,"text":"## 跨主题前置：[[逆矩阵]]\n\n先知道“存在双侧逆”意味着什么，再把它与非零行列式对应起来。"},
+    {"id":"det-invertible","type":"text","x":650,"y":1250,"width":450,"height":190,"color":"6","text":"## [[可逆性与非零行列式]]\n\n方阵可逆，当且仅当它的行列式非零。"},
+
+    {"id":"group-algebra","type":"group","x":1300,"y":300,"width":1200,"height":1650,"label":"② 代数规律与谱","color":"6"},
+    {"id":"det-scale","type":"text","x":1400,"y":500,"width":440,"height":180,"color":"3","text":"## [[整体缩放的行列式]]\n\n对 $n$ 阶矩阵，$\\det(cA)=c^n\\det A$。"},
+    {"id":"det-product","type":"text","x":1950,"y":500,"width":440,"height":180,"color":"6","text":"## [[行列式乘法性]]\n\n$\\det(AB)=\\det A\\det B$；复合线性映射的有向体积因子相乘。"},
+    {"id":"det-transpose","type":"text","x":1400,"y":850,"width":440,"height":190,"color":"6","text":"## [[行列式转置不变性]]\n\n$\\det(A^T)=\\det A$，因此全部行规则都能转成对应的列规则。"},
+    {"id":"dep-spectrum","type":"text","x":1950,"y":850,"width":450,"height":270,"text":"## 跨主题前置：特征多项式\n\n[[特征多项式]]把问题写成 $\\det(tI-A)$；[[特征多项式底层域]]说明应在哪个域计根；[[代数重数与几何重数]]区分重复根与特征空间维数。"},
+    {"id":"det-eigen-product","type":"text","x":1950,"y":1270,"width":450,"height":220,"color":"6","text":"## [[行列式与特征值乘积]]\n\n把特征多项式分解后令 $t=0$，再用 $\\det(-A)=(-1)^n\\det A$：行列式就是全部复特征值按代数重数计算的乘积。"},
+
+    {"id":"group-geometry","type":"group","x":2600,"y":300,"width":2200,"height":1500,"label":"③ 体积、数值边界与 Jacobian","color":"3"},
+    {"id":"det-volume","type":"text","x":2700,"y":500,"width":480,"height":190,"color":"3","text":"## [[行列式体积与取向]]\n\n对实方阵，$|\\det A|$ 是普通体积缩放，符号记录取向。"},
+    {"id":"det-simplex-volume","type":"text","x":2750,"y":760,"width":450,"height":160,"color":"6","text":"## [[单纯形行列式体积]]\n\n同顶点的 $n$ 条边向量张成单纯形，其体积为行列式绝对值除以 $n!$。"},
+    {"id":"dep-jacobian","type":"text","x":3350,"y":500,"width":500,"height":180,"text":"## 跨主题前置：[[Jacobian矩阵]]\n\n$J_\\phi$ 是导数线性映射在标准基下的矩阵；它可以是方阵，也可以是矩形。"},
+    {"id":"bridge-jacobian-volume","type":"text","x":4000,"y":700,"width":500,"height":180,"text":"**矩阵形状决定体积公式**\n\n输入与输出同维时取 determinant；低维参数化进入高维空间时改看切向列向量张成的低维体积。"},
+    {"id":"det-condition","type":"text","x":2700,"y":1100,"width":500,"height":210,"color":"1","text":"## [[行列式与条件数边界]]\n\n小 $|\\det A|$ 既不是病态的充分条件，也不是必要条件；总体乘积不能替代最大、最小奇异值之比。"},
+    {"id":"dep-svd","type":"text","x":3350,"y":900,"width":500,"height":180,"text":"## 跨主题前置：[[奇异值分解]]\n\n奇异值分别记录各方向的缩放，条件数比较最强与最弱方向。"},
+    {"id":"det-jacobian-square","type":"text","x":3350,"y":1200,"width":500,"height":200,"color":"5","text":"## [[Jacobian行列式|Jacobian 行列式]]\n\n方阵导数的 $\\det J_T(x)$ 给出一阶有向 $n$ 维体积缩放；绝对值给出普通体积缩放。"},
+    {"id":"det-jacobian-rect","type":"text","x":4000,"y":1200,"width":600,"height":220,"color":"6","text":"## [[矩形Jacobian体积因子|矩形 Jacobian 体积因子]]\n\n满列秩 $n\\times k$ Jacobian 的局部 $k$ 维体积因子是 $\\sqrt{\\det(J^TJ)}$；当 $k<n$ 时，矩形 $J$ 本身没有 determinant。"},
+
+    {"id":"group-cofactor","type":"group","x":4900,"y":300,"width":1500,"height":2250,"label":"④ 余子式、伴随矩阵与方程组","color":"2"},
+    {"id":"det-leibniz","type":"text","x":5000,"y":500,"width":460,"height":180,"color":"2","text":"## [[Leibniz 行列式公式]]\n\n按排列求和；每一项都从每行、每列各取一个元素，并带排列符号。"},
+    {"id":"det-minor","type":"text","x":5700,"y":500,"width":500,"height":200,"color":"5","text":"## [[余子式与代数余子式]]\n\n删去第 $i$ 行、第 $j$ 列后取行列式得到余子式；再乘 $(-1)^{i+j}$ 得代数余子式。"},
+    {"id":"det-cofactor-expansion","type":"text","x":5000,"y":900,"width":500,"height":190,"color":"4","text":"## [[余子式展开]]\n\n沿同一行或列，把元素乘相应代数余子式后求和。"},
+    {"id":"det-adjugate","type":"text","x":5700,"y":900,"width":500,"height":180,"color":"5","text":"## [[伴随矩阵]]\n\n$\\operatorname{adj}(A)$ 是代数余子式矩阵的转置。"},
+    {"id":"det-adjugate-identity","type":"text","x":5350,"y":1280,"width":500,"height":200,"color":"6","text":"## [[伴随矩阵恒等式]]\n\n$A\\operatorname{adj}(A)=\\operatorname{adj}(A)A=(\\det A)I$ 对任意方阵都成立。"},
+    {"id":"dep-inverse-second","type":"text","x":5000,"y":1660,"width":430,"height":160,"text":"## 跨主题前置：[[逆矩阵]]\n\n把矩阵乘积等于单位矩阵读成逆矩阵。"},
+    {"id":"det-adjugate-inverse","type":"text","x":5700,"y":1660,"width":500,"height":190,"color":"6","text":"## [[伴随矩阵求逆]]\n\n若 $\\det A\\ne0$，则 $A^{-1}=\\operatorname{adj}(A)/\\det A$。"},
+    {"id":"det-cramer","type":"text","x":5350,"y":2050,"width":500,"height":210,"color":"6","text":"## [[Cramer 法则]]\n\n$\\det A\\ne0$ 时，把第 $j$ 列换成 $b$ 后的行列式与 $\\det A$ 之比就是解分量 $x_j$。"}
+  ],
+  "edges": [
+    {"id":"edge-root-rowops","fromNode":"det-root","fromSide":"left","toNode":"det-rowops","toSide":"top","toEnd":"arrow","label":"定义决定三种行操作效应"},
+    {"id":"edge-root-product","fromNode":"det-root","fromSide":"bottom","toNode":"det-product","toSide":"top","toEnd":"arrow","label":"复合映射的缩放因子相乘"},
+    {"id":"edge-root-leibniz","fromNode":"det-root","fromSide":"right","toNode":"det-leibniz","toSide":"top","toEnd":"arrow","label":"把多线性展开为排列和"},
+    {"id":"edge-root-minor","fromNode":"det-root","fromSide":"right","toNode":"det-minor","toSide":"top","toEnd":"arrow","label":"删去一行一列后仍取行列式"},
+    {"id":"edge-root-volume","fromNode":"det-root","fromSide":"bottom","toNode":"det-volume","toSide":"top","toEnd":"arrow","label":"转成实线性映射的几何解释"},
+
+    {"id":"edge-rowops-triangular","fromNode":"det-rowops","fromSide":"bottom","toNode":"det-triangular","toSide":"top","toEnd":"arrow","label":"归纳读取对角乘积"},
+    {"id":"edge-rowops-elimination","fromNode":"det-rowops","fromSide":"bottom","toNode":"det-elimination","toSide":"top","toEnd":"arrow","label":"逐步记录变号与缩放"},
+    {"id":"edge-triangular-elimination","fromNode":"det-triangular","fromSide":"right","toNode":"det-elimination","toSide":"left","toEnd":"arrow","label":"终点用对角乘积"},
+    {"id":"edge-inverse-invertible","fromNode":"dep-inverse","fromSide":"right","toNode":"det-invertible","toSide":"left","toEnd":"arrow","label":"提供可逆性的定义"},
+    {"id":"edge-elimination-invertible","fromNode":"det-elimination","fromSide":"bottom","toNode":"det-invertible","toSide":"top","toEnd":"arrow","label":"主元全在 ⇔ 行列式非零"},
+
+    {"id":"edge-rowops-scale","fromNode":"det-rowops","fromSide":"right","toNode":"det-scale","toSide":"left","toEnd":"arrow","label":"n 行各贡献一次 c"},
+    {"id":"edge-elimination-transpose","fromNode":"det-elimination","fromSide":"right","toNode":"det-transpose","toSide":"left","toEnd":"arrow","label":"消元分解提供证明"},
+    {"id":"edge-product-transpose","fromNode":"det-product","fromSide":"bottom","toNode":"det-transpose","toSide":"top","toEnd":"arrow","label":"乘法性配合分解"},
+    {"id":"edge-spectrum-eigen","fromNode":"dep-spectrum","fromSide":"bottom","toNode":"det-eigen-product","toSide":"top","toEnd":"arrow","label":"按底层域和代数重数计根"},
+
+    {"id":"edge-product-volume","fromNode":"det-product","fromSide":"right","toNode":"det-volume","toSide":"left","toEnd":"arrow","label":"复合缩放验证体积解释"},
+    {"id":"edge-volume-simplex","fromNode":"det-volume","fromSide":"bottom","toNode":"det-simplex-volume","toSide":"top","toEnd":"arrow","label":"平行多面体体积除以 n!"},
+    {"id":"edge-volume-condition","fromNode":"det-volume","fromSide":"left","toNode":"det-condition","toSide":"left","toEnd":"arrow","label":"总体积乘积看不见最弱方向"},
+    {"id":"edge-product-condition","fromNode":"det-product","fromSide":"right","toNode":"det-condition","toSide":"left","toEnd":"arrow","label":"对 SVD 取行列式"},
+    {"id":"edge-svd-condition","fromNode":"dep-svd","fromSide":"left","toNode":"det-condition","toSide":"right","toEnd":"arrow","label":"比较最大与最小奇异值"},
+    {"id":"edge-volume-bridge","fromNode":"det-volume","fromSide":"bottom","toNode":"bridge-jacobian-volume","toSide":"left","toEnd":"arrow","label":"提供线性体积解释"},
+    {"id":"edge-jacobian-bridge","fromNode":"dep-jacobian","fromSide":"bottom","toNode":"bridge-jacobian-volume","toSide":"top","toEnd":"arrow","label":"先判断导数矩阵的形状"},
+    {"id":"edge-bridge-square","fromNode":"bridge-jacobian-volume","fromSide":"left","toNode":"det-jacobian-square","toSide":"right","toEnd":"arrow","label":"n 维到 n 维：det J"},
+    {"id":"edge-bridge-rect","fromNode":"bridge-jacobian-volume","fromSide":"bottom","toNode":"det-jacobian-rect","toSide":"top","toEnd":"arrow","label":"k 维到 n 维：√det(JᵀJ)"},
+
+    {"id":"edge-leibniz-cofactor","fromNode":"det-leibniz","fromSide":"bottom","toNode":"det-cofactor-expansion","toSide":"top","toEnd":"arrow","label":"按固定行列分组排列项"},
+    {"id":"edge-minor-cofactor","fromNode":"det-minor","fromSide":"bottom","toNode":"det-cofactor-expansion","toSide":"top","toEnd":"arrow","label":"提供带符号的代数余子式"},
+    {"id":"edge-minor-adjugate","fromNode":"det-minor","fromSide":"bottom","toNode":"det-adjugate","toSide":"top","toEnd":"arrow","label":"转置代数余子式矩阵"},
+    {"id":"edge-cofactor-identity","fromNode":"det-cofactor-expansion","fromSide":"bottom","toNode":"det-adjugate-identity","toSide":"top","toEnd":"arrow","label":"同列展开得到对角与零项"},
+    {"id":"edge-adjugate-identity","fromNode":"det-adjugate","fromSide":"bottom","toNode":"det-adjugate-identity","toSide":"top","toEnd":"arrow","label":"提供 adj(A) 的定义"},
+    {"id":"edge-identity-adjugate-inverse","fromNode":"det-adjugate-identity","fromSide":"bottom","toNode":"det-adjugate-inverse","toSide":"top","toEnd":"arrow","label":"det A 非零时两边同除"},
+    {"id":"edge-inverse-adjugate-inverse","fromNode":"dep-inverse-second","fromSide":"right","toNode":"det-adjugate-inverse","toSide":"left","toEnd":"arrow","label":"把乘积恒等式读成逆矩阵"},
+    {"id":"edge-adjugate-inverse-cramer","fromNode":"det-adjugate-inverse","fromSide":"bottom","toNode":"det-cramer","toSide":"top","toEnd":"arrow","label":"代入 x=A⁻¹b"}
+  ]
+}

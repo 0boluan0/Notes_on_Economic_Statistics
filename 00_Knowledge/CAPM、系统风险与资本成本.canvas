@@ -1,0 +1,211 @@
+{
+  "nodes": [
+    {
+      "id": "ca9d000000000001",
+      "type": "text",
+      "x": 0,
+      "y": -760,
+      "width": 1260,
+      "height": 230,
+      "text": "# CAPM、系统风险与资本成本\n\n这张图把模型前提、风险分解、定价关系、估计与估值应用分开。颜色只标示语义角色，不代表掌握度；所有原子目前均为 `unassessed`。"
+    },
+    {
+      "id": "ca9d000000000002",
+      "type": "text",
+      "x": 420,
+      "y": -430,
+      "width": 420,
+      "height": 250,
+      "text": "## [[CAPM假设|模型前提]]\n\n单期均值—方差选择、共同预期、无摩擦交易、同一无风险借贷条件和市场出清共同导出均衡结论。",
+      "color": "6"
+    },
+    {
+      "id": "ca9d000000000003",
+      "type": "text",
+      "x": -300,
+      "y": -40,
+      "width": 400,
+      "height": 250,
+      "text": "## [[无风险利率口径|无风险利率口径]]\n\n无违约还不够；币种、期限、零息/再投资以及名义或实际口径都要与现金流一致。",
+      "color": "3"
+    },
+    {
+      "id": "ca9d000000000004",
+      "type": "text",
+      "x": 180,
+      "y": -40,
+      "width": 400,
+      "height": 250,
+      "text": "## [[特有风险定价边界|为何只定价系统风险]]\n\n充分分散后，资产特有冲击可以抵消；均衡补偿来自资产对市场组合风险的边际贡献。",
+      "color": "2"
+    },
+    {
+      "id": "ca9d000000000005",
+      "type": "text",
+      "x": 660,
+      "y": -40,
+      "width": 400,
+      "height": 250,
+      "text": "## [[Beta与总波动|Beta 与总波动]]\n\nBeta 是相对市场的协方差斜率；总波动还包含残余风险，二者不能互换。",
+      "color": "2"
+    },
+    {
+      "id": "ca9d000000000006",
+      "type": "text",
+      "x": 180,
+      "y": 330,
+      "width": 400,
+      "height": 270,
+      "text": "## [[证券市场线|证券市场线]]\n\nSML 用 Beta 映射模型期望收益，适用于资产和组合；它不是用总波动画有效组合的 CML，也不是实际收益承诺。",
+      "color": "4"
+    },
+    {
+      "id": "ca9d000000000007",
+      "type": "text",
+      "x": 660,
+      "y": 330,
+      "width": 400,
+      "height": 270,
+      "text": "## [[市场代理联合检验|市场代理联合检验]]\n\n股票指数不自动等于真实市场组合；指数版 CAPM 同时检验模型与代理。",
+      "color": "1"
+    },
+    {
+      "id": "ca9d000000000008",
+      "type": "text",
+      "x": 1280,
+      "y": -40,
+      "width": 400,
+      "height": 270,
+      "text": "## [[Beta历史估计|历史 Beta 估计]]\n\n回归结果依赖代理、频率、窗口、交易同步和结构稳定性；标准误小不代表未来参数不变。",
+      "color": "5"
+    },
+    {
+      "id": "ca9d000000000009",
+      "type": "text",
+      "x": 1280,
+      "y": 330,
+      "width": 400,
+      "height": 270,
+      "text": "## [[权益Beta杠杆调整|权益 Beta 与杠杆]]\n\n先把经营资产风险与融资杠杆分开；Hamada 公式是带债务 beta、税盾与债务政策假设的近似。",
+      "color": "5"
+    },
+    {
+      "id": "ca9d00000000000a",
+      "type": "text",
+      "x": 1280,
+      "y": 700,
+      "width": 400,
+      "height": 270,
+      "text": "## [[项目Beta匹配|项目 Beta 匹配]]\n\n项目风险不同于公司平均业务时，用纯业务可比资产 beta 和目标杠杆，而不是机械套公司 WACC。",
+      "color": "4"
+    },
+    {
+      "id": "ca9d00000000000b",
+      "type": "text",
+      "x": 660,
+      "y": 700,
+      "width": 400,
+      "height": 270,
+      "text": "## [[Alpha基准依赖性|Alpha 的基准依赖]]\n\nAlpha 是指定模型、代理、样本与费用口径下的截距；单期异常收益和显著截距都不自动证明能力。",
+      "color": "1"
+    }
+  ],
+  "edges": [
+    {
+      "id": "ca9e000000000001",
+      "fromNode": "ca9d000000000001",
+      "fromSide": "bottom",
+      "toNode": "ca9d000000000002",
+      "toSide": "top",
+      "label": "先明确模型世界"
+    },
+    {
+      "id": "ca9e000000000002",
+      "fromNode": "ca9d000000000002",
+      "fromSide": "bottom",
+      "toNode": "ca9d000000000004",
+      "toSide": "top",
+      "label": "分散化均衡"
+    },
+    {
+      "id": "ca9e000000000003",
+      "fromNode": "ca9d000000000004",
+      "fromSide": "right",
+      "toNode": "ca9d000000000005",
+      "toSide": "left",
+      "label": "用协方差刻画系统暴露"
+    },
+    {
+      "id": "ca9e000000000004",
+      "fromNode": "ca9d000000000005",
+      "fromSide": "bottom",
+      "toNode": "ca9d000000000006",
+      "toSide": "top",
+      "label": "Beta 进入要求回报"
+    },
+    {
+      "id": "ca9e000000000005",
+      "fromNode": "ca9d000000000003",
+      "fromSide": "right",
+      "toNode": "ca9d000000000006",
+      "toSide": "left",
+      "label": "提供一致的截距"
+    },
+    {
+      "id": "ca9e000000000006",
+      "fromNode": "ca9d000000000006",
+      "fromSide": "right",
+      "toNode": "ca9d000000000007",
+      "toSide": "left",
+      "label": "实证时必须选市场代理"
+    },
+    {
+      "id": "ca9e000000000007",
+      "fromNode": "ca9d000000000005",
+      "fromSide": "right",
+      "toNode": "ca9d000000000008",
+      "toSide": "left",
+      "label": "从总体参数到样本估计"
+    },
+    {
+      "id": "ca9e000000000008",
+      "fromNode": "ca9d000000000007",
+      "fromSide": "top",
+      "toNode": "ca9d000000000008",
+      "toSide": "bottom",
+      "label": "代理选择改变估计"
+    },
+    {
+      "id": "ca9e000000000009",
+      "fromNode": "ca9d000000000008",
+      "fromSide": "bottom",
+      "toNode": "ca9d000000000009",
+      "toSide": "top",
+      "label": "分离经营与融资风险"
+    },
+    {
+      "id": "ca9e00000000000a",
+      "fromNode": "ca9d000000000009",
+      "fromSide": "bottom",
+      "toNode": "ca9d00000000000a",
+      "toSide": "top",
+      "label": "按项目目标杠杆重建"
+    },
+    {
+      "id": "ca9e00000000000b",
+      "fromNode": "ca9d000000000006",
+      "fromSide": "bottom",
+      "toNode": "ca9d00000000000b",
+      "toSide": "top",
+      "label": "把模型基准用于绩效"
+    },
+    {
+      "id": "ca9e00000000000c",
+      "fromNode": "ca9d000000000008",
+      "fromSide": "left",
+      "toNode": "ca9d00000000000b",
+      "toSide": "right",
+      "label": "估计误差进入 Alpha"
+    }
+  ]
+}

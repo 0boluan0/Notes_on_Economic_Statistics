@@ -1,0 +1,224 @@
+{
+  "nodes": [
+    {
+      "id": "header",
+      "type": "text",
+      "text": "# 线性映射与换基 · 学习地图\n\n主线从“线性映射是什么”走到“同一个算子怎样换坐标表示”。下方三条支线分别说明复合、基像指定的边界，以及正交基带来的简化。",
+      "x": 40,
+      "y": 20,
+      "width": 2700,
+      "height": 180
+    },
+    {
+      "id": "linear-map",
+      "type": "text",
+      "text": "## [[线性映射]]\n\n定义入口：同时保持向量加法和标量乘法的函数。",
+      "x": 40,
+      "y": 300,
+      "width": 340,
+      "height": 190,
+      "color": "4"
+    },
+    {
+      "id": "map-vs-matrix",
+      "type": "text",
+      "text": "## [[线性映射与矩阵表示]]\n\n映射是抽象对象；矩阵是选定两组基之后的坐标表示。",
+      "x": 420,
+      "y": 300,
+      "width": 340,
+      "height": 190,
+      "color": "2"
+    },
+    {
+      "id": "basis-images",
+      "type": "text",
+      "text": "## [[线性映射的基向量像]]\n\n任意指定一组基向量的像，都会唯一决定一个线性映射。",
+      "x": 800,
+      "y": 300,
+      "width": 340,
+      "height": 190,
+      "color": "6"
+    },
+    {
+      "id": "matrix-columns",
+      "type": "text",
+      "text": "## [[表示矩阵的列]]\n\n第 j 列就是第 j 个定义域基向量之像的陪域坐标。",
+      "x": 1180,
+      "y": 300,
+      "width": 340,
+      "height": 190,
+      "color": "4"
+    },
+    {
+      "id": "basis-direction",
+      "type": "text",
+      "text": "## [[换基矩阵的方向]]\n\n若列是新基向量的旧坐标，则 P 把新坐标变成旧坐标，P⁻¹ 反向转换。",
+      "x": 1560,
+      "y": 300,
+      "width": 340,
+      "height": 190,
+      "color": "5"
+    },
+    {
+      "id": "general-basis-change",
+      "type": "text",
+      "text": "## [[一般线性映射的换基]]\n\n定义域与陪域分别换基时，表示矩阵变为 Q⁻¹AP。",
+      "x": 1940,
+      "y": 300,
+      "width": 340,
+      "height": 190,
+      "color": "5"
+    },
+    {
+      "id": "similarity",
+      "type": "text",
+      "text": "## [[相似矩阵]]\n\n同一算子在同一空间的两组基下表示为 P⁻¹AP；它分别保持[[相似保持特征多项式|特征多项式]]和[[相似保持特征空间维数|特征空间维数]]。",
+      "x": 2320,
+      "y": 300,
+      "width": 340,
+      "height": 190,
+      "color": "2"
+    },
+    {
+      "id": "composition",
+      "type": "text",
+      "text": "## [[复合映射的表示矩阵]]\n\n中间空间使用同一组坐标基时，复合对应按作用顺序相乘。",
+      "x": 1180,
+      "y": 700,
+      "width": 340,
+      "height": 190,
+      "color": "6"
+    },
+    {
+      "id": "dependent-images",
+      "type": "text",
+      "text": "## [[相关向量像需保持关系]]\n\n若输入向量相关，它们的指定像必须保持同一线性关系。",
+      "x": 800,
+      "y": 700,
+      "width": 340,
+      "height": 190,
+      "color": "1"
+    },
+    {
+      "id": "nonspanning-images",
+      "type": "text",
+      "text": "## [[非张成集像不定全映射]]\n\n若输入集合不张成定义域且陪域含非零向量，其像不能唯一决定全映射。",
+      "x": 400,
+      "y": 700,
+      "width": 340,
+      "height": 190,
+      "color": "1"
+    },
+    {
+      "id": "orthonormal-change",
+      "type": "text",
+      "text": "## [[正交基换基矩阵]]\n\n两组标准正交基之间，换基矩阵在实数域上正交，在复数域上酉。",
+      "x": 1560,
+      "y": 700,
+      "width": 340,
+      "height": 190,
+      "color": "6"
+    },
+    {
+      "id": "footer",
+      "type": "text",
+      "text": "颜色只区分本图中的语义角色：绿色是定义入口，紫色是定理，青色是方法，红色是适用边界，橙色是辨析或跨主题连接。点击标题可打开对应的知识卡片。",
+      "x": 40,
+      "y": 1050,
+      "width": 2700,
+      "height": 130
+    }
+  ],
+  "edges": [
+    {
+      "id": "e01",
+      "fromNode": "linear-map",
+      "fromSide": "right",
+      "toNode": "map-vs-matrix",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "选基后才有矩阵"
+    },
+    {
+      "id": "e02",
+      "fromNode": "map-vs-matrix",
+      "fromSide": "right",
+      "toNode": "basis-images",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "用基像刻画映射"
+    },
+    {
+      "id": "e03",
+      "fromNode": "basis-images",
+      "fromSide": "right",
+      "toNode": "matrix-columns",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "把基像写成列"
+    },
+    {
+      "id": "e04",
+      "fromNode": "matrix-columns",
+      "fromSide": "right",
+      "toNode": "basis-direction",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "读列判断坐标方向"
+    },
+    {
+      "id": "e05",
+      "fromNode": "basis-direction",
+      "fromSide": "right",
+      "toNode": "general-basis-change",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "两端分别换基"
+    },
+    {
+      "id": "e06",
+      "fromNode": "general-basis-change",
+      "fromSide": "right",
+      "toNode": "similarity",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "同一空间同一换基时化为相似"
+    },
+    {
+      "id": "e07",
+      "fromNode": "matrix-columns",
+      "fromSide": "bottom",
+      "toNode": "composition",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "复合仍可用矩阵表示"
+    },
+    {
+      "id": "e08",
+      "fromNode": "basis-images",
+      "fromSide": "bottom",
+      "toNode": "dependent-images",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "换成相关集时先保关系"
+    },
+    {
+      "id": "e09",
+      "fromNode": "basis-images",
+      "fromSide": "bottom",
+      "toNode": "nonspanning-images",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "不张成时失去唯一性"
+    },
+    {
+      "id": "e10",
+      "fromNode": "basis-direction",
+      "fromSide": "bottom",
+      "toNode": "orthonormal-change",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "标准正交基使逆等于转置或共轭转置"
+    }
+  ]
+}

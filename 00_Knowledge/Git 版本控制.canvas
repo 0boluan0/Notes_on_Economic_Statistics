@@ -1,0 +1,299 @@
+{
+  "nodes": [
+    {
+      "id": "6100000000000001",
+      "type": "text",
+      "x": 0,
+      "y": -360,
+      "width": 1980,
+      "height": 220,
+      "text": "# Git 版本控制\n\nGit 的命令只有放回三层模型才不会互相打架：**不可变对象图保存历史 → references 与 HEAD 命名当前位置 → working tree 与 index 准备下一次状态**。恢复与协作决策都要先问命令会改哪一层。\n\n每张卡是一个可独立回忆或应用的判断；颜色只表示本图中的语义角色，不表示掌握度。来源与掌握状态在 [[知识原子.base|知识原子 Base]] 中查询。"
+    },
+    {
+      "id": "6100000000000002",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 430,
+      "height": 190,
+      "text": "## [[Git 对象图|对象图]]\n*Immutable object graph*\n\nblob、tree、commit 构成快照历史的核心图；annotated tag 是另一种对象。",
+      "color": "5"
+    },
+    {
+      "id": "6100000000000003",
+      "type": "text",
+      "x": 500,
+      "y": 0,
+      "width": 430,
+      "height": 190,
+      "text": "## [[Git commit 快照与父指针|commit 是快照]]\n*Commits are snapshots*\n\ncommit 指向完整 tree；diff 是选择两个端点后计算的视图。",
+      "color": "6"
+    },
+    {
+      "id": "6100000000000004",
+      "type": "text",
+      "x": 1000,
+      "y": 0,
+      "width": 430,
+      "height": 190,
+      "text": "## [[Git 分支引用|分支是引用]]\n*Branches are references*\n\n创建分支只增加一个可移动名字，不复制对象或历史。",
+      "color": "4"
+    },
+    {
+      "id": "6100000000000005",
+      "type": "text",
+      "x": 1500,
+      "y": 0,
+      "width": 480,
+      "height": 190,
+      "text": "## [[Git HEAD 与分离状态|HEAD 与 detached HEAD]]\n*HEAD and detached HEAD*\n\nHEAD 通常指向当前分支；脱离时直指 commit；unborn branch 还没有 tip。",
+      "color": "4"
+    },
+    {
+      "id": "6100000000000006",
+      "type": "text",
+      "x": 0,
+      "y": 380,
+      "width": 430,
+      "height": 200,
+      "text": "## [[Git 三棵状态|三个状态层]]\n*Working tree, index, HEAD*\n\n同一路径可以在 working tree、index 与 HEAD 中同时有三个版本。",
+      "color": "5"
+    },
+    {
+      "id": "6100000000000007",
+      "type": "text",
+      "x": 500,
+      "y": 380,
+      "width": 430,
+      "height": 200,
+      "text": "## [[Git 暂存区|暂存定义下一快照]]\n*The index defines the next snapshot*\n\n`git add` 更新候选提交；staged 仍不是已保存或共享历史。",
+      "color": "3"
+    },
+    {
+      "id": "6100000000000008",
+      "type": "text",
+      "x": 1000,
+      "y": 380,
+      "width": 430,
+      "height": 200,
+      "text": "## [[git diff 比较端点|diff 的端点]]\n*Diff endpoints*\n\n普通 diff、cached diff 与 commit 间 diff 回答不同问题。",
+      "color": "3"
+    },
+    {
+      "id": "6100000000000009",
+      "type": "text",
+      "x": 1500,
+      "y": 380,
+      "width": 480,
+      "height": 200,
+      "text": "## [[Git merge 与 rebase|merge 与 rebase]]\n*Merge versus rebase*\n\n最终文件可以相同；true merge 保留分叉，普通 rebase 重放为新的线性父链。",
+      "color": "6"
+    },
+    {
+      "id": "610000000000000a",
+      "type": "text",
+      "x": 0,
+      "y": 780,
+      "width": 430,
+      "height": 200,
+      "text": "## [[Git reset 三种模式|reset 改哪一层]]\n*Reset modes*\n\nsoft、mixed、hard 依次影响引用、index 和 working tree。",
+      "color": "1"
+    },
+    {
+      "id": "610000000000000b",
+      "type": "text",
+      "x": 500,
+      "y": 780,
+      "width": 430,
+      "height": 200,
+      "text": "## [[Git revert 与公开历史|共享历史用 revert]]\n*Revert shared history*\n\n追加反向 commit，保留协作者已经依赖的共同祖先图。",
+      "color": "4"
+    },
+    {
+      "id": "610000000000000c",
+      "type": "text",
+      "x": 1000,
+      "y": 780,
+      "width": 430,
+      "height": 200,
+      "text": "## [[Git reflog|reflog 的恢复边界]]\n*Reflog recovery boundary*\n\n存在 reflog 时可找旧引用位置；它只在本地、会过期，也不保证对象永久存在。",
+      "color": "5"
+    },
+    {
+      "id": "610000000000000d",
+      "type": "text",
+      "x": 1500,
+      "y": 780,
+      "width": 480,
+      "height": 200,
+      "text": "## [[Git 冲突解决|冲突是三方重建]]\n*Conflicts require reconstruction*\n\nours/theirs 是输入；最终内容由目标行为和验证决定。",
+      "color": "3"
+    },
+    {
+      "id": "610000000000000e",
+      "type": "text",
+      "x": 220,
+      "y": 1180,
+      "width": 700,
+      "height": 210,
+      "text": "## [[Git 历史中的 secret|secret 进入历史后]]\n*Secrets persist in history*\n\n先轮换凭据；删除当前文件或重写中央历史都不能召回已有副本。",
+      "color": "1"
+    },
+    {
+      "id": "610000000000000f",
+      "type": "text",
+      "x": 1060,
+      "y": 1180,
+      "width": 700,
+      "height": 210,
+      "text": "## [[本地仓库与异地备份|版本控制不是备份]]\n*Version control is not backup*\n\n未提交内容、本地 reflog 与同盘 `.git` 不会自动形成异地备份。",
+      "color": "1"
+    }
+  ],
+  "edges": [
+    {
+      "id": "61e0000000000001",
+      "fromNode": "6100000000000002",
+      "fromSide": "right",
+      "toNode": "6100000000000003",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "commit 用 tree 与父指针把对象组织成快照历史"
+    },
+    {
+      "id": "61e0000000000002",
+      "fromNode": "6100000000000002",
+      "fromSide": "right",
+      "toNode": "6100000000000004",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "引用为不可变对象图提供可移动入口"
+    },
+    {
+      "id": "61e0000000000003",
+      "fromNode": "6100000000000004",
+      "fromSide": "right",
+      "toNode": "6100000000000005",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "HEAD 通常通过当前分支间接定位 commit"
+    },
+    {
+      "id": "61e0000000000004",
+      "fromNode": "6100000000000005",
+      "fromSide": "bottom",
+      "toNode": "6100000000000006",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "HEAD 解析到 commit 时，提供三层比较的已提交端点"
+    },
+    {
+      "id": "61e0000000000005",
+      "fromNode": "6100000000000006",
+      "fromSide": "right",
+      "toNode": "6100000000000007",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "index 从三层中单独定义下一次快照"
+    },
+    {
+      "id": "61e0000000000006",
+      "fromNode": "6100000000000006",
+      "fromSide": "right",
+      "toNode": "6100000000000008",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "三层模型决定 diff 可以选择哪些端点"
+    },
+    {
+      "id": "61e0000000000007",
+      "fromNode": "6100000000000007",
+      "fromSide": "right",
+      "toNode": "6100000000000008",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "cached diff 专门审阅候选提交"
+    },
+    {
+      "id": "61e0000000000008",
+      "fromNode": "6100000000000003",
+      "fromSide": "bottom",
+      "toNode": "6100000000000009",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "整合方式改变的是提交父关系与图形"
+    },
+    {
+      "id": "61e0000000000009",
+      "fromNode": "6100000000000006",
+      "fromSide": "bottom",
+      "toNode": "610000000000000a",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "reset 的危险度取决于覆盖到三层中的哪一层"
+    },
+    {
+      "id": "61e000000000000a",
+      "fromNode": "610000000000000a",
+      "fromSide": "right",
+      "toNode": "610000000000000b",
+      "toSide": "left",
+      "toEnd": "none",
+      "label": "移动引用的本地重写 ≠ 追加公开可追踪撤销"
+    },
+    {
+      "id": "61e000000000000b",
+      "fromNode": "6100000000000004",
+      "fromSide": "bottom",
+      "toNode": "610000000000000c",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "存在对应 reflog 时，它记录 branch 引用曾经指向哪里"
+    },
+    {
+      "id": "61e000000000000c",
+      "fromNode": "6100000000000005",
+      "fromSide": "bottom",
+      "toNode": "610000000000000c",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "存在 HEAD reflog 时，切换与移动留下本地恢复线索"
+    },
+    {
+      "id": "61e000000000000d",
+      "fromNode": "6100000000000009",
+      "fromSide": "bottom",
+      "toNode": "610000000000000d",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "三方整合无法自动确定内容时进入冲突处理"
+    },
+    {
+      "id": "61e000000000000e",
+      "fromNode": "6100000000000003",
+      "fromSide": "bottom",
+      "toNode": "610000000000000e",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "旧快照保留已提交内容，包括后来删除的 secret"
+    },
+    {
+      "id": "61e000000000000f",
+      "fromNode": "6100000000000002",
+      "fromSide": "bottom",
+      "toNode": "610000000000000f",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "对象数据库仍需要独立副本与故障隔离"
+    },
+    {
+      "id": "61e0000000000010",
+      "fromNode": "610000000000000c",
+      "fromSide": "bottom",
+      "toNode": "610000000000000f",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "会过期的本地线索不能充当永久备份"
+    }
+  ]
+}

@@ -18,7 +18,7 @@ aliases:
 这篇论文位于 `01 架构与预训练`，第一版用于连接 Transformer, Pretraining 路线；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[Transformer 与注意力机制]], 预训练、指令微调与偏好优化
+[[Transformer]], [[Transformer自回归约束]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/XL4ZJTGL)
@@ -29,3 +29,6 @@ aliases:
 - [[LLM Big Picture]]
 - [[01 架构与预训练.canvas|01 架构与预训练 Canvas]]
 
+## 阅读讲解
+
+[[06_paper/LLM/Transformer课程|从输入表示到输出概率的连续学习]] · [[Transformer.canvas|计算关系图]]

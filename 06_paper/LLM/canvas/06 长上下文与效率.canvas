@@ -1,406 +1,46 @@
 {
-  "nodes": [
-    {
-      "id": "title",
-      "type": "text",
-      "x": 0,
-      "y": -180,
-      "width": 900,
-      "height": 120,
-      "text": "# 06 长上下文与效率\n\n[[LLM Big Picture]] · [[LLM Map Index]] · 12 papers",
-      "color": "2"
-    },
-    {
-      "id": "route-long-context",
-      "type": "text",
-      "x": 0,
-      "y": 0,
-      "width": 310,
-      "height": 100,
-      "text": "## Long Context\n\nRAG 与长上下文",
-      "color": "2"
-    },
-    {
-      "id": "route-transformer",
-      "type": "text",
-      "x": 0,
-      "y": 150,
-      "width": 310,
-      "height": 100,
-      "text": "## Transformer\n\n[[Transformer 与注意力机制]]",
-      "color": "5"
-    },
-    {
-      "id": "route-efficiency-moe",
-      "type": "text",
-      "x": 0,
-      "y": 300,
-      "width": 310,
-      "height": 100,
-      "text": "## Efficiency / MoE\n\n[[LLM 推理效率]]",
-      "color": "2"
-    },
-    {
-      "id": "route-scaling-law",
-      "type": "text",
-      "x": 0,
-      "y": 450,
-      "width": 310,
-      "height": 100,
-      "text": "## Scaling Law\n\n规模化、MoE 与分布式训练",
-      "color": "6"
-    },
-    {
-      "id": "paper-dai2019transformerxlattentivelanguage",
-      "type": "text",
-      "x": 1080,
-      "y": 0,
-      "width": 290,
-      "height": 105,
-      "text": "**Transformer-XL: Attentive Language Models Beyond a Fixed-Length Context**\n\n2019 · [[dai2019TransformerXLAttentiveLanguage|note]]",
-      "color": "2"
-    },
-    {
-      "id": "paper-beltagy2020longformerlongdocumenttransformer",
-      "type": "text",
-      "x": 1410,
-      "y": 0,
-      "width": 290,
-      "height": 105,
-      "text": "**Longformer: The Long-Document Transformer**\n\n2020 · [[beltagy2020LongformerLongDocumentTransformer|note]]",
-      "color": "2"
-    },
-    {
-      "id": "paper-kitaev2020reformerefficienttransformer",
-      "type": "text",
-      "x": 1410,
-      "y": 130,
-      "width": 290,
-      "height": 105,
-      "text": "**Reformer: The Efficient Transformer**\n\n2020 · [[kitaev2020ReformerEfficientTransformer|note]]",
-      "color": "2"
-    },
-    {
-      "id": "paper-zaheer2021bigbirdtransformers",
-      "type": "text",
-      "x": 1740,
-      "y": 0,
-      "width": 290,
-      "height": 105,
-      "text": "**Big Bird: Transformers for Longer Sequences**\n\n2021 · [[zaheer2021BigBirdTransformers|note]]",
-      "color": "2"
-    },
-    {
-      "id": "paper-dao2022flashattentionfastmemoryefficient",
-      "type": "text",
-      "x": 2070,
-      "y": 0,
-      "width": 290,
-      "height": 105,
-      "text": "**FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness**\n\n2022 · [[dao2022FlashAttentionFastMemoryEfficient|note]]",
-      "color": "2"
-    },
-    {
-      "id": "paper-dao2023flashattention2fasterattention",
-      "type": "text",
-      "x": 2400,
-      "y": 0,
-      "width": 290,
-      "height": 105,
-      "text": "**FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning**\n\n2023 · [[dao2023FlashAttention2FasterAttention|note]]",
-      "color": "2"
-    },
-    {
-      "id": "paper-ding2023longnetscalingtransformers",
-      "type": "text",
-      "x": 2400,
-      "y": 130,
-      "width": 290,
-      "height": 105,
-      "text": "**LongNet: Scaling Transformers to 1,000,000,000 Tokens**\n\n2023 · [[ding2023LongNetScalingTransformers|note]]",
-      "color": "2"
-    },
-    {
-      "id": "paper-su2023roformerenhancedtransformer",
-      "type": "text",
-      "x": 2400,
-      "y": 260,
-      "width": 290,
-      "height": 105,
-      "text": "**RoFormer: Enhanced Transformer with Rotary Position Embedding**\n\n2023 · [[su2023RoFormerEnhancedTransformer|note]]",
-      "color": "2"
-    },
-    {
-      "id": "paper-chen2024longloraefficientfinetuning",
-      "type": "text",
-      "x": 2730,
-      "y": 0,
-      "width": 290,
-      "height": 105,
-      "text": "**LongLoRA: Efficient Fine-tuning of Long-Context Large Language Models**\n\n2024 · [[chen2024LongLoRAEfficientFinetuning|note]]",
-      "color": "2"
-    },
-    {
-      "id": "paper-gu2024mambalineartimesequence",
-      "type": "text",
-      "x": 2730,
-      "y": 130,
-      "width": 290,
-      "height": 105,
-      "text": "**Mamba: Linear-Time Sequence Modeling with Selective State Spaces**\n\n2024 · [[gu2024MambaLinearTimeSequence|note]]",
-      "color": "2"
-    },
-    {
-      "id": "paper-dao2024transformersaressms",
-      "type": "text",
-      "x": 2730,
-      "y": 260,
-      "width": 290,
-      "height": 105,
-      "text": "**Transformers are SSMs: Generalized Models and Efficient Algorithms Through Stru...**\n\n2024 · [[dao2024TransformersAreSSMs|note]]",
-      "color": "2"
-    },
-    {
-      "id": "paper-peng2026yarnefficientcontext",
-      "type": "text",
-      "x": 3390,
-      "y": 0,
-      "width": 290,
-      "height": 105,
-      "text": "**YaRN: Efficient Context Window Extension of Large Language Models**\n\n2026 · [[peng2026YaRNEfficientContext|note]]",
-      "color": "2"
-    }
-  ],
-  "edges": [
-    {
-      "id": "e0001",
-      "fromNode": "route-long-context",
-      "fromSide": "right",
-      "toNode": "paper-dai2019transformerxlattentivelanguage",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "specializes",
-      "color": "2"
-    },
-    {
-      "id": "e0002",
-      "fromNode": "route-transformer",
-      "fromSide": "right",
-      "toNode": "paper-dai2019transformerxlattentivelanguage",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "specializes",
-      "color": "5"
-    },
-    {
-      "id": "e0003",
-      "fromNode": "route-long-context",
-      "fromSide": "right",
-      "toNode": "paper-beltagy2020longformerlongdocumenttransformer",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "specializes",
-      "color": "2"
-    },
-    {
-      "id": "e0004",
-      "fromNode": "route-transformer",
-      "fromSide": "right",
-      "toNode": "paper-beltagy2020longformerlongdocumenttransformer",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "specializes",
-      "color": "5"
-    },
-    {
-      "id": "e0005",
-      "fromNode": "route-long-context",
-      "fromSide": "right",
-      "toNode": "paper-kitaev2020reformerefficienttransformer",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "specializes",
-      "color": "2"
-    },
-    {
-      "id": "e0006",
-      "fromNode": "route-efficiency-moe",
-      "fromSide": "right",
-      "toNode": "paper-kitaev2020reformerefficienttransformer",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "specializes",
-      "color": "2"
-    },
-    {
-      "id": "e0007",
-      "fromNode": "route-long-context",
-      "fromSide": "right",
-      "toNode": "paper-zaheer2021bigbirdtransformers",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "specializes",
-      "color": "2"
-    },
-    {
-      "id": "e0008",
-      "fromNode": "route-transformer",
-      "fromSide": "right",
-      "toNode": "paper-zaheer2021bigbirdtransformers",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "specializes",
-      "color": "5"
-    },
-    {
-      "id": "e0009",
-      "fromNode": "route-long-context",
-      "fromSide": "right",
-      "toNode": "paper-dao2022flashattentionfastmemoryefficient",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "specializes",
-      "color": "2"
-    },
-    {
-      "id": "e0010",
-      "fromNode": "route-efficiency-moe",
-      "fromSide": "right",
-      "toNode": "paper-dao2022flashattentionfastmemoryefficient",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "specializes",
-      "color": "2"
-    },
-    {
-      "id": "e0011",
-      "fromNode": "route-long-context",
-      "fromSide": "right",
-      "toNode": "paper-dao2023flashattention2fasterattention",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "specializes",
-      "color": "2"
-    },
-    {
-      "id": "e0012",
-      "fromNode": "route-efficiency-moe",
-      "fromSide": "right",
-      "toNode": "paper-dao2023flashattention2fasterattention",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "specializes",
-      "color": "2"
-    },
-    {
-      "id": "e0013",
-      "fromNode": "route-long-context",
-      "fromSide": "right",
-      "toNode": "paper-ding2023longnetscalingtransformers",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "specializes",
-      "color": "2"
-    },
-    {
-      "id": "e0014",
-      "fromNode": "route-scaling-law",
-      "fromSide": "right",
-      "toNode": "paper-ding2023longnetscalingtransformers",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "specializes",
-      "color": "6"
-    },
-    {
-      "id": "e0015",
-      "fromNode": "route-long-context",
-      "fromSide": "right",
-      "toNode": "paper-su2023roformerenhancedtransformer",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "specializes",
-      "color": "2"
-    },
-    {
-      "id": "e0016",
-      "fromNode": "route-transformer",
-      "fromSide": "right",
-      "toNode": "paper-su2023roformerenhancedtransformer",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "specializes",
-      "color": "5"
-    },
-    {
-      "id": "e0017",
-      "fromNode": "route-long-context",
-      "fromSide": "right",
-      "toNode": "paper-chen2024longloraefficientfinetuning",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "specializes",
-      "color": "2"
-    },
-    {
-      "id": "e0018",
-      "fromNode": "route-efficiency-moe",
-      "fromSide": "right",
-      "toNode": "paper-chen2024longloraefficientfinetuning",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "specializes",
-      "color": "2"
-    },
-    {
-      "id": "e0019",
-      "fromNode": "route-long-context",
-      "fromSide": "right",
-      "toNode": "paper-gu2024mambalineartimesequence",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "specializes",
-      "color": "2"
-    },
-    {
-      "id": "e0020",
-      "fromNode": "route-efficiency-moe",
-      "fromSide": "right",
-      "toNode": "paper-gu2024mambalineartimesequence",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "specializes",
-      "color": "2"
-    },
-    {
-      "id": "e0021",
-      "fromNode": "route-long-context",
-      "fromSide": "right",
-      "toNode": "paper-dao2024transformersaressms",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "specializes",
-      "color": "2"
-    },
-    {
-      "id": "e0022",
-      "fromNode": "route-transformer",
-      "fromSide": "right",
-      "toNode": "paper-dao2024transformersaressms",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "specializes",
-      "color": "5"
-    },
-    {
-      "id": "e0023",
-      "fromNode": "route-long-context",
-      "fromSide": "right",
-      "toNode": "paper-peng2026yarnefficientcontext",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "specializes",
-      "color": "2"
-    }
-  ]
+	"nodes":[
+		{"id":"title","type":"text","x":0,"y":-180,"width":900,"height":120,"text":"# 06 长上下文与效率\n\n[[LLM Big Picture]] · [[LLM Map Index]] · 12 papers","color":"2"},
+		{"id":"route-long-context","type":"text","x":0,"y":0,"width":310,"height":100,"text":"## Long Context\n\nRAG 与长上下文","color":"2"},
+		{"id":"route-transformer","type":"text","x":0,"y":-1000,"width":600,"height":140,"text":"## [[Transformer]]\n\n[[Transformer.canvas|计算关系图]]","color":"5"},
+		{"id":"route-efficiency-moe","type":"text","x":0,"y":1300,"width":620,"height":170,"text":"## 序列计算与服务成本\n\n[[06_paper/LLM/LLM推理效率课程|LLM 推理效率]] · [[LLM 推理效率.canvas|机制图]]\n\n精确执行、近似读取、微调策略和模型架构，分别改变不同层次。","color":"2"},
+		{"id":"route-scaling-law","type":"text","x":0,"y":450,"width":310,"height":100,"text":"## Distributed Long Context\n\n[[大模型分布式训练]]","color":"6"},
+		{"id":"paper-dai2019transformerxlattentivelanguage","type":"text","x":1080,"y":0,"width":290,"height":105,"text":"**Transformer-XL: Attentive Language Models Beyond a Fixed-Length Context**\n\n2019 · [[dai2019TransformerXLAttentiveLanguage|note]]","color":"2"},
+		{"id":"paper-beltagy2020longformerlongdocumenttransformer","type":"text","x":1410,"y":0,"width":290,"height":105,"text":"**Longformer: The Long-Document Transformer**\n\n2020 · [[beltagy2020LongformerLongDocumentTransformer|note]]","color":"2"},
+		{"id":"paper-kitaev2020reformerefficienttransformer","type":"text","x":1400,"y":800,"width":900,"height":170,"text":"**[[kitaev2020ReformerEfficientTransformer|Reformer · 2020]]**\n\nLSH 读取；可逆层省训练激活。","color":"2"},
+		{"id":"paper-zaheer2021bigbirdtransformers","type":"text","x":1740,"y":0,"width":290,"height":105,"text":"**Big Bird: Transformers for Longer Sequences**\n\n2021 · [[zaheer2021BigBirdTransformers|note]]","color":"2"},
+		{"id":"paper-dao2022flashattentionfastmemoryefficient","type":"text","x":1400,"y":1140,"width":900,"height":170,"text":"**[[FlashAttention]] · 2022**\n\n[[dao2022FlashAttentionFastMemoryEfficient|论文记录]] · 精确分块、减少搬运。","color":"2"},
+		{"id":"paper-dao2023flashattention2fasterattention","type":"text","x":1400,"y":1480,"width":900,"height":170,"text":"**[[FlashAttention2|FlashAttention-2]] · 2023**\n\n[[dao2023FlashAttention2FasterAttention|论文记录]] · 改善 GPU 工作划分。","color":"2"},
+		{"id":"paper-ding2023longnetscalingtransformers","type":"text","x":2400,"y":130,"width":290,"height":105,"text":"**LongNet: Scaling Transformers to 1,000,000,000 Tokens**\n\n2023 · [[ding2023LongNetScalingTransformers|note]]","color":"2"},
+		{"id":"paper-su2023roformerenhancedtransformer","type":"text","x":2400,"y":260,"width":290,"height":105,"text":"**RoFormer: Enhanced Transformer with Rotary Position Embedding**\n\n2023 · [[su2023RoFormerEnhancedTransformer|note]]","color":"2"},
+		{"id":"paper-chen2024longloraefficientfinetuning","type":"text","x":1400,"y":1820,"width":900,"height":170,"text":"**[[chen2024LongLoRAEfficientFinetuning|LongLoRA · 2024]]**\n\n稀疏微调；推理仍用全注意力。","color":"2"},
+		{"id":"paper-gu2024mambalineartimesequence","type":"text","x":1400,"y":2160,"width":900,"height":170,"text":"**[[gu2024MambaLinearTimeSequence|Mamba · 2024]]**\n\n选择性状态空间，递推保留隐状态。","color":"2"},
+		{"id":"paper-dao2024transformersaressms","type":"text","x":2730,"y":260,"width":290,"height":105,"text":"**Transformers are SSMs: Generalized Models and Efficient Algorithms Through Stru...**\n\n2024 · [[dao2024TransformersAreSSMs|note]]","color":"2"},
+		{"id":"paper-peng2026yarnefficientcontext","type":"text","x":3390,"y":0,"width":290,"height":105,"text":"**YaRN: Efficient Context Window Extension of Large Language Models**\n\n2026 · [[peng2026YaRNEfficientContext|note]]","color":"2"}
+	],
+	"edges":[
+		{"id":"e0001","fromNode":"route-long-context","fromSide":"right","toNode":"paper-dai2019transformerxlattentivelanguage","toSide":"left","toEnd":"arrow","label":"specializes","color":"2"},
+		{"id":"e0002","fromNode":"route-transformer","fromSide":"bottom","toNode":"paper-dai2019transformerxlattentivelanguage","toSide":"top","toEnd":"arrow","label":"片段记忆与位置","color":"5"},
+		{"id":"e0003","fromNode":"route-long-context","fromSide":"right","toNode":"paper-beltagy2020longformerlongdocumenttransformer","toSide":"left","toEnd":"arrow","label":"specializes","color":"2"},
+		{"id":"e0004","fromNode":"route-transformer","fromSide":"bottom","toNode":"paper-beltagy2020longformerlongdocumenttransformer","toSide":"top","toEnd":"arrow","label":"局部与全局读取","color":"5"},
+		{"id":"e0005","fromNode":"route-long-context","fromSide":"right","toNode":"paper-kitaev2020reformerefficienttransformer","toSide":"left","toEnd":"arrow","label":"近似长序列读取","color":"2"},
+		{"id":"e0006","fromNode":"route-efficiency-moe","fromSide":"right","toNode":"paper-kitaev2020reformerefficienttransformer","toSide":"left","toEnd":"arrow","label":"LSH 改变读取集合","color":"2"},
+		{"id":"e0007","fromNode":"route-long-context","fromSide":"right","toNode":"paper-zaheer2021bigbirdtransformers","toSide":"left","toEnd":"arrow","label":"specializes","color":"2"},
+		{"id":"e0008","fromNode":"route-transformer","fromSide":"bottom","toNode":"paper-zaheer2021bigbirdtransformers","toSide":"top","toEnd":"arrow","label":"稀疏读取模式","color":"5"},
+		{"id":"e0009","fromNode":"route-long-context","fromSide":"right","toNode":"paper-dao2022flashattentionfastmemoryefficient","toSide":"left","toEnd":"arrow","label":"长序列减少临时显存","color":"2"},
+		{"id":"e0010","fromNode":"route-efficiency-moe","fromSide":"right","toNode":"paper-dao2022flashattentionfastmemoryefficient","toSide":"left","toEnd":"arrow","label":"减少 HBM 往返","color":"2"},
+		{"id":"e0011","fromNode":"route-long-context","fromSide":"right","toNode":"paper-dao2023flashattention2fasterattention","toSide":"left","toEnd":"arrow","label":"长序列执行优化","color":"2"},
+		{"id":"e0012","fromNode":"route-efficiency-moe","fromSide":"right","toNode":"paper-dao2023flashattention2fasterattention","toSide":"left","toEnd":"arrow","label":"优化 GPU 并行划分","color":"2"},
+		{"id":"e0013","fromNode":"route-long-context","fromSide":"right","toNode":"paper-ding2023longnetscalingtransformers","toSide":"left","toEnd":"arrow","label":"specializes","color":"2"},
+		{"id":"e0014","fromNode":"route-scaling-law","fromSide":"right","toNode":"paper-ding2023longnetscalingtransformers","toSide":"left","toEnd":"arrow","label":"用分布式训练扩展稀疏注意力的序列长度","color":"6"},
+		{"id":"e0015","fromNode":"route-long-context","fromSide":"right","toNode":"paper-su2023roformerenhancedtransformer","toSide":"left","toEnd":"arrow","label":"specializes","color":"2"},
+		{"id":"e0016","fromNode":"route-transformer","fromSide":"bottom","toNode":"paper-su2023roformerenhancedtransformer","toSide":"top","toEnd":"arrow","label":"旋转查询与键","color":"5"},
+		{"id":"e0017","fromNode":"route-long-context","fromSide":"right","toNode":"paper-chen2024longloraefficientfinetuning","toSide":"left","toEnd":"arrow","label":"扩展可微调长度","color":"2"},
+		{"id":"e0018","fromNode":"route-efficiency-moe","fromSide":"right","toNode":"paper-chen2024longloraefficientfinetuning","toSide":"left","toEnd":"arrow","label":"微调策略与推理实现","color":"2"},
+		{"id":"e0019","fromNode":"route-long-context","fromSide":"right","toNode":"paper-gu2024mambalineartimesequence","toSide":"left","toEnd":"arrow","label":"线性序列架构","color":"2"},
+		{"id":"e0020","fromNode":"route-efficiency-moe","fromSide":"right","toNode":"paper-gu2024mambalineartimesequence","toSide":"left","toEnd":"arrow","label":"状态空间替代注意力","color":"2"},
+		{"id":"e0021","fromNode":"route-long-context","fromSide":"right","toNode":"paper-dao2024transformersaressms","toSide":"left","toEnd":"arrow","label":"specializes","color":"2"},
+		{"id":"e0022","fromNode":"route-transformer","fromSide":"bottom","toNode":"paper-dao2024transformersaressms","toSide":"top","toEnd":"arrow","label":"状态空间结构对偶","color":"5"},
+		{"id":"e0023","fromNode":"route-long-context","fromSide":"right","toNode":"paper-peng2026yarnefficientcontext","toSide":"left","toEnd":"arrow","label":"specializes","color":"2"}
+	]
 }

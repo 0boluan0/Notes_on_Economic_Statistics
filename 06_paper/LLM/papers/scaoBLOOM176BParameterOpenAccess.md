@@ -15,7 +15,7 @@ aliases:
 # BLOOM: A 176B-Parameter Open-Access Multilingual Language Model
 
 ## 一句话位置
-这篇论文位于 `09 开源模型技术报告`，第一版用于连接 Open Models 路线；此笔记暂作索引，不做精读摘要。
+这篇论文位于 `09 开源模型技术报告`，核心职责是记录一个由国际协作构建的 176B 多语言开放访问模型，展示大模型开放研究与共享基础设施的组织方式；此笔记暂作索引，不做精读摘要。
 
 ## 路线
 [[开放模型生态]]
@@ -28,4 +28,3 @@ aliases:
 ## Canvas
 - [[LLM Big Picture]]
 - [[09 开源模型技术报告.canvas|09 开源模型技术报告 Canvas]]
-

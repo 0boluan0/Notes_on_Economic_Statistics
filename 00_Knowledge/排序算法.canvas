@@ -1,0 +1,279 @@
+{
+  "nodes": [
+    {
+      "id": "c510000000000001",
+      "type": "text",
+      "x": 0,
+      "y": -360,
+      "width": 1980,
+      "height": 240,
+      "text": "# 排序算法\n\n先把任务分成三层：**正确输出与语义要求 → 算法不变量与成本 → 模型下界与工程选择**。每张卡是可独立回忆或应用的判断；点击标题进入中英双语原子。\n\n颜色只表示本图中的语义角色，不表示掌握度；来源与掌握状态在 [[知识原子.base|知识原子 Base]] 中查询。"
+    },
+    {
+      "id": "c510000000000002",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 430,
+      "height": 200,
+      "text": "## [[排序正确性标准|排序正确性]]\n*Order and permutation*\n\n输出既要按键有序，也要一对一保留全部输入项目。",
+      "color": "4"
+    },
+    {
+      "id": "c510000000000003",
+      "type": "text",
+      "x": 500,
+      "y": 0,
+      "width": 430,
+      "height": 200,
+      "text": "## [[稳定排序|稳定性]]\n*Stability*\n\n相等键保留输入相对顺序；不推出时间或空间性质。",
+      "color": "6"
+    },
+    {
+      "id": "c510000000000004",
+      "type": "text",
+      "x": 1000,
+      "y": 0,
+      "width": 430,
+      "height": 200,
+      "text": "## [[原地排序空间约束|原地性]]\n*In-place boundary*\n\n算法辅助空间与 API 是否修改原对象是两个问题。",
+      "color": "6"
+    },
+    {
+      "id": "c510000000000005",
+      "type": "text",
+      "x": 1500,
+      "y": 0,
+      "width": 480,
+      "height": 200,
+      "text": "## [[自适应排序|自适应性]]\n*Adaptivity*\n\n成本随逆序对、已有有序段或位移等明确度量下降。",
+      "color": "6"
+    },
+    {
+      "id": "c510000000000006",
+      "type": "text",
+      "x": 0,
+      "y": 400,
+      "width": 430,
+      "height": 220,
+      "text": "## [[排序复杂度口径|复杂度陈述契约]]\n*Cost claim contract*\n\n规模、比较/移动/空间、算法变体，以及 best/expected/worst/amortized 必须写清。",
+      "color": "1"
+    },
+    {
+      "id": "c510000000000007",
+      "type": "text",
+      "x": 500,
+      "y": 400,
+      "width": 430,
+      "height": 220,
+      "text": "## [[冒泡排序不变量|冒泡排序]]\n*Bubble-sort invariant*\n\n相邻交换把最大未定项目推入后缀；提前停止才有线性最好情形。",
+      "color": "3"
+    },
+    {
+      "id": "c510000000000008",
+      "type": "text",
+      "x": 1000,
+      "y": 400,
+      "width": 430,
+      "height": 220,
+      "text": "## [[选择排序|选择排序]]\n*Selection-sort invariant*\n\n平方级比较但至多线性交换；稳定性属于具体变体。",
+      "color": "3"
+    },
+    {
+      "id": "c510000000000009",
+      "type": "text",
+      "x": 1500,
+      "y": 400,
+      "width": 480,
+      "height": 220,
+      "text": "## [[插入排序与逆序对|插入排序]]\n*Insertion-sort invariant*\n\n已处理前缀有序；标准实现成本随逆序对数量增加。",
+      "color": "3"
+    },
+    {
+      "id": "c51000000000000a",
+      "type": "text",
+      "x": 0,
+      "y": 820,
+      "width": 430,
+      "height": 220,
+      "text": "## [[有序区间线性归并|线性归并]]\n*Linear merge*\n\n两侧先各自有序，才可只比较首项并线性输出；平局规则决定稳定性。",
+      "color": "4"
+    },
+    {
+      "id": "c51000000000000b",
+      "type": "text",
+      "x": 500,
+      "y": 820,
+      "width": 430,
+      "height": 220,
+      "text": "## [[归并排序复杂度|归并排序]]\n*Merge sort*\n\n$2T(n/2)+\\Theta(n)$ 给出 $\\Theta(n\\log n)$；空间与稳定性看实现。",
+      "color": "5"
+    },
+    {
+      "id": "c51000000000000c",
+      "type": "text",
+      "x": 1000,
+      "y": 820,
+      "width": 430,
+      "height": 220,
+      "text": "## [[比较排序下界|比较排序下界]]\n*Comparison lower bound*\n\n$n!$ 个排列使确定性比较排序最坏需要 $\\Omega(n\\log n)$ 次比较。",
+      "color": "5"
+    },
+    {
+      "id": "c51000000000000d",
+      "type": "text",
+      "x": 1500,
+      "y": 820,
+      "width": 480,
+      "height": 240,
+      "text": "## [[排序算法选择|选择规则]]\n*Selection rule*\n\n先固定键域、稳定性、保证、已有顺序、空间与真正昂贵的操作，再用库契约和代表数据选实现。",
+      "color": "2"
+    }
+  ],
+  "edges": [
+    {
+      "id": "c5e0000000000001",
+      "fromNode": "c510000000000002",
+      "fromSide": "right",
+      "toNode": "c510000000000003",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "基本正确性允许任意平局次序；稳定性再增加相对顺序约束"
+    },
+    {
+      "id": "c5e0000000000002",
+      "fromNode": "c510000000000002",
+      "fromSide": "bottom",
+      "toNode": "c510000000000006",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "先固定正确输出，才有意义比较达到它的成本"
+    },
+    {
+      "id": "c5e0000000000003",
+      "fromNode": "c510000000000003",
+      "fromSide": "bottom",
+      "toNode": "c51000000000000a",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "归并在相等键时左侧优先，才能保留跨半区相对顺序"
+    },
+    {
+      "id": "c5e0000000000004",
+      "fromNode": "c510000000000004",
+      "fromSide": "bottom",
+      "toNode": "c51000000000000b",
+      "toSide": "top",
+      "toEnd": "none",
+      "label": "普通数组归并需要线性缓冲，不满足本图的常数辅助空间约定"
+    },
+    {
+      "id": "c5e0000000000005",
+      "fromNode": "c510000000000005",
+      "fromSide": "bottom",
+      "toNode": "c510000000000009",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "逆序对把已有顺序量化为 insertion sort 的额外移动"
+    },
+    {
+      "id": "c5e0000000000006",
+      "fromNode": "c510000000000006",
+      "fromSide": "right",
+      "toNode": "c510000000000007",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "提前停止变体必须分开报告最好与最坏情形"
+    },
+    {
+      "id": "c5e0000000000007",
+      "fromNode": "c510000000000006",
+      "fromSide": "right",
+      "toNode": "c510000000000008",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "selection sort 展示比较数与交换数可以不同阶"
+    },
+    {
+      "id": "c5e0000000000008",
+      "fromNode": "c510000000000006",
+      "fromSide": "right",
+      "toNode": "c510000000000009",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "insertion sort 的输入敏感成本必须连同逆序度量陈述"
+    },
+    {
+      "id": "c5e0000000000009",
+      "fromNode": "c510000000000006",
+      "fromSide": "bottom",
+      "toNode": "c51000000000000b",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "时间结论之外还要报告归并缓冲与递归栈"
+    },
+    {
+      "id": "c5e000000000000a",
+      "fromNode": "c51000000000000a",
+      "fromSide": "right",
+      "toNode": "c51000000000000b",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "线性归并给递归树每层提供 Θ(n) 工作"
+    },
+    {
+      "id": "c5e000000000000b",
+      "fromNode": "c51000000000000b",
+      "fromSide": "right",
+      "toNode": "c51000000000000c",
+      "toSide": "left",
+      "toEnd": "none",
+      "label": "Θ(n log n) 上界在比较模型中达到最坏渐近下界"
+    },
+    {
+      "id": "c5e000000000000c",
+      "fromNode": "c51000000000000c",
+      "fromSide": "right",
+      "toNode": "c51000000000000d",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "先判断是否受比较模型约束，还是可利用有界键域"
+    },
+    {
+      "id": "c5e000000000000d",
+      "fromNode": "c510000000000003",
+      "fromSide": "right",
+      "toNode": "c51000000000000d",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "业务若要求稳定，先过滤不满足的实现"
+    },
+    {
+      "id": "c5e000000000000e",
+      "fromNode": "c510000000000004",
+      "fromSide": "right",
+      "toNode": "c51000000000000d",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "内存预算必须按真实辅助空间而非 API 名称筛选"
+    },
+    {
+      "id": "c5e000000000000f",
+      "fromNode": "c510000000000005",
+      "fromSide": "bottom",
+      "toNode": "c51000000000000d",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "已有顺序决定自适应候选是否有优势"
+    },
+    {
+      "id": "c5e0000000000010",
+      "fromNode": "c510000000000008",
+      "fromSide": "bottom",
+      "toNode": "c51000000000000d",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "写入极贵时，少交换可能胜过少比较"
+    }
+  ]
+}

@@ -18,9 +18,14 @@ tags:
 >[!note]
 > 对应主笔记：[[the_missing_semester#第 1 讲 课程概览与 shell]]
 > 
-> 官方来源：https://missing-semester-cn.github.io/2020/course-shell/
+> MIT 原课程与题目：https://missing.csail.mit.edu/2020/course-shell/
+>
+> 社区中文译文：https://missing-semester-cn.github.io/2020/course-shell/
 > 
-> 官方解答：https://missing-semester-cn.github.io/missing-notes-and-solutions/2020/solutions//course-shell-solution
+> 社区参考解答：https://missing-semester-cn.github.io/missing-notes-and-solutions/2020/solutions//course-shell-solution
+> <!-- bilingual-en:start -->
+> The MIT page is the primary course source. The Chinese translation and solutions are community materials, not MIT-issued answers.
+> <!-- bilingual-en:end -->
 
 ## 练习清单
 <!-- bilingual-en:start -->
@@ -34,6 +39,13 @@ tags:
 &nbsp;
 **1.** Confirm that you are using a Unix-like shell. Check with `echo $SHELL`. On Windows, use WSL or a Linux virtual machine rather than `cmd` or PowerShell.<br>
 <!-- bilingual-en:end -->
+
+> [!note] 确认解释器
+> `$SHELL` 通常记录登录 Shell 路径，并不证明当前解释器。此处练习以 Bash 为准，可显式启动 `/bin/bash --noprofile --norc`；不需要修改默认 Shell。
+> <!-- bilingual-en:start -->
+> `$SHELL` usually identifies the login shell, not necessarily the current interpreter. Explicitly start Bash for these exercises without changing the login configuration.
+> <!-- bilingual-en:end -->
+
 2. 在 `/tmp` 下新建一个名为 `missing` 的文件夹。
 <!-- bilingual-en:start -->
 
@@ -70,6 +82,13 @@ curl --head --silent https://missing.csail.mit.edu
 &nbsp;
 **6.** Try to run `./semester` directly. If it does not execute, inspect its permission bits with `ls` and explain why it fails.<br>
 <!-- bilingual-en:end -->
+
+> [!question] 补充对照：MIT 原题第 7 问
+> 再尝试 `sh semester`。为什么没有直接执行权限时，它仍可能成功？分别说明[[脚本执行与载入|解释器读取脚本]]、[[Unix权限位|文件执行权限]]与[[Shebang]]在两种调用中的作用。
+> <!-- bilingual-en:start -->
+> Also try `sh semester`. Why can it work without direct execute permission? Separate [[脚本执行与载入|interpreter-driven execution]], [[Unix权限位|execute permissions]] and the [[Shebang|shebang]] in the two invocation forms. This restores question seven from the MIT source.
+> <!-- bilingual-en:end -->
+
 7. 查看 `chmod` 的手册，例如 `man chmod`。
 <!-- bilingual-en:start -->
 

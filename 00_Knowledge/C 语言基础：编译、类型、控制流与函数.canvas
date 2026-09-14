@@ -1,0 +1,291 @@
+{
+  "nodes": [
+    {
+      "id": "c100000000000001",
+      "type": "text",
+      "x": 0,
+      "y": -360,
+      "width": 1960,
+      "height": 260,
+      "text": "# C 语言基础：编译、类型、控制流与函数\n\n本图沿四条可独立进入的学习线组织：**构建与诊断 → 声明和接口 → 类型与表达式 → 控制流与正确性**。箭头说明一个判断为什么会影响下一个判断；每张卡都链接到一个可独立回忆、应用或出错的 Markdown 原子。\n\n颜色只表示本图中的语义角色，不表示掌握度。来源与掌握状态在 [[知识原子.base|知识原子 Base]] 中查询；数组、指针、字符串和动态内存继续见 [[C 指针、数组、字符串与动态内存.canvas|C 内存与边界知识图]]。"
+    },
+    {
+      "id": "c100000000000002",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 430,
+      "height": 210,
+      "text": "## [[C 编译链|C 构建流水线]]\n*C build pipeline*\n\n预处理、编译、汇编和链接接收不同形式，也暴露不同问题。",
+      "color": "5"
+    },
+    {
+      "id": "c100000000000003",
+      "type": "text",
+      "x": 500,
+      "y": 0,
+      "width": 430,
+      "height": 210,
+      "text": "## [[编译阶段与根因定位|按失败阶段缩小排查范围]]\n*Locate the first failing stage*\n\n发现位置不必等于根因位置，但能先排除一批不可能原因。",
+      "color": "1"
+    },
+    {
+      "id": "c100000000000004",
+      "type": "text",
+      "x": 1000,
+      "y": 0,
+      "width": 430,
+      "height": 210,
+      "text": "## [[C 声明与定义|声明与定义]]\n*Declaration versus definition*\n\n声明让代码认识接口；定义还提供对象或函数本身。",
+      "color": "4"
+    },
+    {
+      "id": "c100000000000005",
+      "type": "text",
+      "x": 1500,
+      "y": 0,
+      "width": 460,
+      "height": 210,
+      "text": "## [[函数原型与语义契约|函数原型的保证边界]]\n*Prototype boundary*\n\n原型检查类型；普通指针形参仍不表达实际长度、非空、范围或所有权。",
+      "color": "4"
+    },
+    {
+      "id": "c100000000000006",
+      "type": "text",
+      "x": 500,
+      "y": 380,
+      "width": 430,
+      "height": 210,
+      "text": "## [[作用域、存储期与链接|名字可见、对象存活与跨文件身份]]\n*Scope, duration, linkage*\n\n三个问题彼此相关，却不能用一个“局部/全局”标签代替。",
+      "color": "6"
+    },
+    {
+      "id": "c100000000000007",
+      "type": "text",
+      "x": 1000,
+      "y": 380,
+      "width": 430,
+      "height": 210,
+      "text": "## [[C 按值传参与指针|C 一律按值传参]]\n*Pass by value*\n\n指针参数复制的是指针值；能改所指对象，不会自动改调用者的指针变量。",
+      "color": "4"
+    },
+    {
+      "id": "c100000000000008",
+      "type": "text",
+      "x": 1500,
+      "y": 380,
+      "width": 460,
+      "height": 210,
+      "text": "## [[形参数组退化与边界|数组形参不携带边界]]\n*Array parameters do not carry bounds*\n\n形参数组会调整为指针；可访问范围须由长度、哨兵或其他接口契约表达。",
+      "color": "1"
+    },
+    {
+      "id": "c100000000000009",
+      "type": "text",
+      "x": 0,
+      "y": 760,
+      "width": 430,
+      "height": 210,
+      "text": "## [[有符号与无符号溢出|signed overflow 不会自动回绕]]\n*Signed versus unsigned overflow*\n\n有符号溢出未定义；无符号回绕虽有定义，也未必符合业务语义。",
+      "color": "1"
+    },
+    {
+      "id": "c10000000000000a",
+      "type": "text",
+      "x": 500,
+      "y": 760,
+      "width": 430,
+      "height": 210,
+      "text": "## [[C 整数范围与宽度|先确认整数值域]]\n*Integer ranges*\n\n`int`、`long` 的精确宽度不跨平台固定；类型选择从所需值域开始。",
+      "color": "5"
+    },
+    {
+      "id": "c10000000000000b",
+      "type": "text",
+      "x": 1000,
+      "y": 760,
+      "width": 430,
+      "height": 210,
+      "text": "## [[通常算术转换|混合运算先统一类型]]\n*Usual arithmetic conversions*\n\n比较或计算前的共同类型，可能已经改变操作数的数值含义。",
+      "color": "5"
+    },
+    {
+      "id": "c10000000000000c",
+      "type": "text",
+      "x": 1500,
+      "y": 760,
+      "width": 460,
+      "height": 210,
+      "text": "## [[C 整数除法|整数除法先截断]]\n*Integer division truncates first*\n\n需要实数商时，转换必须发生在除法之前。",
+      "color": "6"
+    },
+    {
+      "id": "c10000000000000d",
+      "type": "text",
+      "x": 0,
+      "y": 1140,
+      "width": 430,
+      "height": 210,
+      "text": "## [[switch 贯穿执行|switch 的 case 是入口标签]]\n*Switch entry and fallthrough*\n\n匹配后会继续向下执行；贯穿需要有意，控制转移或语句末尾才会结束。",
+      "color": "6"
+    },
+    {
+      "id": "c10000000000000e",
+      "type": "text",
+      "x": 500,
+      "y": 1140,
+      "width": 430,
+      "height": 210,
+      "text": "## [[C 条件与赋值表达式|条件真值与赋值表达式]]\n*Scalar truth and assignment*\n\n零为假、非零为真；`=` 合法但常不是作者想写的 `==`。",
+      "color": "5"
+    },
+    {
+      "id": "c10000000000000f",
+      "type": "text",
+      "x": 1000,
+      "y": 1140,
+      "width": 430,
+      "height": 210,
+      "text": "## [[C 三种循环结构|循环形式决定测试位置]]\n*Loop forms*\n\n`while` 可零次，`do while` 至少一次，`for` 并列初始化、条件与推进。",
+      "color": "5"
+    },
+    {
+      "id": "c100000000000010",
+      "type": "text",
+      "x": 1500,
+      "y": 1140,
+      "width": 460,
+      "height": 210,
+      "text": "## [[循环不变量与终止|不变量与终止度量]]\n*Invariant and termination*\n\n不变量证明部分正确性；完全正确性还要证明每条重复路径都趋向终止。",
+      "color": "3"
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1e0000000000001",
+      "fromNode": "c100000000000002",
+      "fromSide": "right",
+      "toNode": "c100000000000003",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "阶段模型先告诉我们故障最早在哪里暴露"
+    },
+    {
+      "id": "c1e0000000000002",
+      "fromNode": "c100000000000004",
+      "fromSide": "right",
+      "toNode": "c100000000000005",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "函数声明以原型固定可检查的类型接口"
+    },
+    {
+      "id": "c1e0000000000003",
+      "fromNode": "c100000000000004",
+      "fromSide": "bottom",
+      "toNode": "c100000000000006",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "声明位置与存储类共同决定作用域、链接和存储期"
+    },
+    {
+      "id": "c1e0000000000004",
+      "fromNode": "c100000000000005",
+      "fromSide": "bottom",
+      "toNode": "c100000000000007",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "调用按声明类型把实参值交给形参"
+    },
+    {
+      "id": "c1e0000000000005",
+      "fromNode": "c100000000000005",
+      "fromSide": "bottom",
+      "toNode": "c100000000000008",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "原型仍不能携带调用者数组的真实长度"
+    },
+    {
+      "id": "c1e0000000000006",
+      "fromNode": "c100000000000006",
+      "fromSide": "right",
+      "toNode": "c100000000000007",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "通过指针访问前，被指对象必须仍然存活"
+    },
+    {
+      "id": "c1e0000000000007",
+      "fromNode": "c100000000000007",
+      "fromSide": "right",
+      "toNode": "c100000000000008",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "数组形参得到的指针同样只是复制的值"
+    },
+    {
+      "id": "c1e0000000000008",
+      "fromNode": "c10000000000000a",
+      "fromSide": "left",
+      "toNode": "c100000000000009",
+      "toSide": "right",
+      "toEnd": "arrow",
+      "label": "有限范围决定何时越出可表示集合"
+    },
+    {
+      "id": "c1e0000000000009",
+      "fromNode": "c10000000000000a",
+      "fromSide": "right",
+      "toNode": "c10000000000000b",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "混合运算必须先由类型等级与范围确定共同类型"
+    },
+    {
+      "id": "c1e000000000000a",
+      "fromNode": "c10000000000000b",
+      "fromSide": "right",
+      "toNode": "c10000000000000c",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "除法发生时的共同类型决定是否保留小数"
+    },
+    {
+      "id": "c1e000000000000b",
+      "fromNode": "c10000000000000b",
+      "fromSide": "bottom",
+      "toNode": "c10000000000000e",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "转换后的标量值再按零与非零进入控制流"
+    },
+    {
+      "id": "c1e000000000000c",
+      "fromNode": "c10000000000000e",
+      "fromSide": "left",
+      "toNode": "c10000000000000d",
+      "toSide": "right",
+      "toEnd": "arrow",
+      "label": "if 按标量真值二分，而 switch 按提升后的离散整数匹配"
+    },
+    {
+      "id": "c1e000000000000d",
+      "fromNode": "c10000000000000e",
+      "fromSide": "right",
+      "toNode": "c10000000000000f",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "循环在每次测试点用标量条件决定是否继续"
+    },
+    {
+      "id": "c1e000000000000e",
+      "fromNode": "c10000000000000f",
+      "fromSide": "right",
+      "toNode": "c100000000000010",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "语法形式确定后仍须证明保持与终止"
+    }
+  ]
+}

@@ -1,34 +1,34 @@
 ---
 aliases:
   - MIT 18.06SC course map
-  - 线性代数课程总览
   - MIT OCW 18.06SC 课程地图
+  - MIT 18.06SC 官方课程顺序与资料地图
 tags:
   - 线性代数
   - mit-ocw
   - course-note
 ---
 
-# MIT OCW 18.06SC course map
+# MIT 18.06SC 官方课程顺序与资料地图
 
-> [!info] 课程来源
-> 本套笔记对应 MIT OpenCourseWare **18.06SC Linear Algebra, Fall 2011**，由 Gilbert Strang 教授主讲。
+> [!info] 本页定位与课程来源
+> 本页保留 MIT OpenCourseWare **18.06SC Linear Algebra, Fall 2011** 的官方 Session 顺序、原始资料入口与本地课程笔记对应关系；连续学习与概念地图的入口是 [[00_课程总览|线性代数课程总览]]。课程由 Gilbert Strang 教授主讲。
 >
 > - [Official syllabus](https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/syllabus/)
 > - [Official resource index](https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/resource-index/)
 > - [Official problem sets](https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/resources/problem-sets/)
 > - [Official exams](https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/resources/exams/)
 > <!-- bilingual-en:start -->
-> These notes correspond to MIT OpenCourseWare **18.06SC Linear Algebra, Fall 2011**, taught by Professor Gilbert Strang.
+> This page preserves the official session order, source links, and their correspondence with the local notes for MIT OpenCourseWare **18.06SC Linear Algebra, Fall 2011**, taught by Professor Gilbert Strang. Use the [[00_课程总览|Linear Algebra Course Overview]] for continuous study and concept maps.
 > <!-- bilingual-en:end -->
 
-## 从哪里开始
+## 如何使用这份资料地图
 <!-- bilingual-en:start -->
-*Where to begin*
+*How to use this source map*
 <!-- bilingual-en:end -->
 
-- 第一次学习：按 Unit I → Unit II → Unit III → Final 的顺序阅读，每个 Session 完成正文、自检和对应 Homework。
-- 复习某个主题：使用下方“题型入口”直接跳到对应 Unit。
+- 连续学习或按概念恢复：进入 [[00_课程总览|线性代数课程总览]]。
+- 对照 MIT 官方进度：按下方 Unit I → Unit II → Unit III → Final 的 Session 顺序查找课程笔记与 Homework。
 - 考前复习：进入 [[04_Review and exam roadmap|Final Course Review and Final Exam]]。
 - 查找原始资料：进入 [[MIT_OCW_18.06SC_PDF/index|PDF and transcript index]]。
 
@@ -79,7 +79,7 @@ N(A)=\{0\}
 \text{相容时解唯一}.
 $$
 
-消元负责计算，[[线性方程组与四个基本子空间#四个基本子空间|列空间]]与[[线性方程组与四个基本子空间#四个基本子空间|零空间]]负责解释。
+消元负责计算，[[列空间]]与[[零空间]]负责解释。
 <!-- bilingual-en:start -->
 Elimination performs the calculation; the column space and nullspace explain the result.
 <!-- bilingual-en:end -->
@@ -100,7 +100,7 @@ p=A\hat x,
 A^T(b-A\hat x)=0.
 $$
 
-这条线依次经过正交、投影、[[正交投影与最小二乘#最小二乘与正规方程|最小二乘]]、Gram--Schmidt 与 QR。
+这条线依次经过正交、投影、[[线性最小二乘|最小二乘]]、Gram--Schmidt 与 QR。
 <!-- bilingual-en:start -->
 This thread passes through orthogonality, projection, least squares, Gram--Schmidt, and QR in sequence.
 <!-- bilingual-en:end -->
@@ -110,9 +110,9 @@ This thread passes through orthogonality, projection, least squares, Gram--Schmi
 *Thread 3: repeated action and natural coordinates*
 <!-- bilingual-en:end -->
 
-[[特征值、对角化与线性动力系统#特征值与特征向量|特征值]]寻找在 $A$ 作用下方向不变的向量；对角化把矩阵幂和 $e^{At}$ 解耦。对称矩阵拥有正交特征基，缺陷方阵需要 Jordan 结构，而任意矩形矩阵最终都可使用 [[奇异值分解与低秩近似#SVD 的三层结构|SVD]]。
+[[特征对]]寻找被 $A$ 保持的一维子空间：$\lambda\ne0$ 时向量只被缩放或翻向，$\lambda=0$ 时整条方向被压到原点。当这些向量组成一组基时，[[对角化计算矩阵幂|矩阵幂]]和[[对角化计算矩阵指数|矩阵指数的对角化算法]]可以按特征模式解耦，而[[矩阵指数]]本身不依赖可对角化。对称矩阵拥有正交特征基，缺陷方阵的精确结构由[[广义特征向量]]与[[Jordan链]]记录，而任意矩形矩阵都由 [[SVD存在性|SVD 存在定理]]保证可以分解输入与输出的奇异方向。
 <!-- bilingual-en:start -->
-Eigenvalues identify vectors whose directions remain unchanged under $A$; diagonalization decouples matrix powers and $e^{At}$. Symmetric matrices have orthogonal eigenbases, defective square matrices require Jordan structure, and every rectangular matrix admits an SVD.
+[[特征对|Eigenpairs]] identify invariant one-dimensional subspaces: a nonzero eigenvalue rescales or reverses the vector, whereas a zero eigenvalue collapses the eigendirection to the origin. When the eigenvectors form a basis, [[对角化计算矩阵幂|matrix powers]] and the [[对角化计算矩阵指数|diagonalization method for $e^{At}$]] can be assembled mode by mode; the [[矩阵指数|matrix exponential]] itself remains defined even for defective matrices. Symmetric matrices have orthogonal eigenbases, [[广义特征向量|generalized eigenvectors]] and [[Jordan链|Jordan chains]] record defective structure, and [[SVD存在性|every rectangular matrix admits an SVD]].
 <!-- bilingual-en:end -->
 
 ### 主线 4：同一个矩阵的四种身份
@@ -265,10 +265,10 @@ Every transcript has been named semantically by unit, session, and lecture or re
 - Hub：[[线性代数 Course Atlas|Linear Algebra Hub]]
 - 题型选择：[[线性代数 Course Atlas|Linear Algebra Problem-Type Map]]
 - 分解选择：[[线性代数 Course Atlas|Choosing Matrix Decompositions]]
-- 解结构：[[线性方程组与四个基本子空间#可解性与完整解|Linear system solution structure]]
-- 四子空间读取：[[线性方程组与四个基本子空间#四个基本子空间|Reading the Four Fundamental Subspaces from RREF]]
-- 最小二乘：[[正交投影与最小二乘#最小二乘与正规方程|Least Squares via Normal Equations]]
-- 正定判别：[[对称矩阵与正定二次型#二次型与正定性|Testing Positive Definiteness]]
+- 解结构：[[特解加零空间|Linear system solution structure]]
+- 四子空间读取：[[RREF读取子空间基|Reading the Four Fundamental Subspaces from RREF]]
+- 最小二乘：[[OLS正规方程|Least Squares via Normal Equations]]
+- 正定判别：[[正定判据的选择|Testing Positive Definiteness]]
 
 **课程知识链：**线性组合 → $Ax=b$ → 消元与子空间 → 正交投影 → 行列式与特征结构 → 对称正定 → SVD 与伪逆。
 <!-- bilingual-en:start -->

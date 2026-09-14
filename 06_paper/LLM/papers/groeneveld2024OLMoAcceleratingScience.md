@@ -15,7 +15,7 @@ aliases:
 # OLMo: Accelerating the Science of Language Models
 
 ## 一句话位置
-这篇论文位于 `09 开源模型技术报告`，第一版用于连接 Open Models 路线；此笔记暂作索引，不做精读摘要。
+这篇论文位于 `09 开源模型技术报告`，核心职责是公开训练数据、代码、检查点和评测过程，为语言模型研究提供端到端可审计、可复现的开放基线；此笔记暂作索引，不做精读摘要。
 
 ## 路线
 [[开放模型生态]]
@@ -30,4 +30,3 @@ aliases:
 ## Canvas
 - [[LLM Big Picture]]
 - [[09 开源模型技术报告.canvas|09 开源模型技术报告 Canvas]]
-

@@ -39,6 +39,11 @@ lecture: 01
 > - `radius = radius + 1` and the closing swap bug emphasize the same model: `=` is assignment, not mathematical equality, and execution proceeds line by line without inferring the programmer's unstated intent.
 > <!-- bilingual-en:end -->
 
+> [!links] 原子化入口
+> 先看 [[计算模型、Python 表达式与控制流.canvas|基础执行语义总图]]；本讲先用 [[程序执行状态]] 建立 trace，再对应 [[表达式求值]]、[[名称绑定与赋值]]、[[对象身份与值相等]]、[[优先级与括号]]、[[动态类型边界]] 与 [[问题分解与复用]]。
+>
+> *Atomic path: program-state tracing, expression evaluation, name binding, identity versus equality, precedence, dynamic typing, and problem decomposition.*
+
 ## Lecture flow
 
 ### 1. 开场先说明这门课怎么学，而不是只说“学什么”

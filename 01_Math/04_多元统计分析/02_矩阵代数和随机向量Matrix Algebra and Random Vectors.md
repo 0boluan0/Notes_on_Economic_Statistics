@@ -363,9 +363,9 @@ $$
 $$
 
 >[!note] 后续用途
-> 协方差矩阵的行列式就是 [[多元数据、随机向量与样本协方差#广义方差与可视化|Generalized Variance]]；它衡量多维数据联合变异的体积。
+> 协方差矩阵的行列式就是[[广义方差]]。它是多维联合变异的平方体积尺度；[[广义方差与椭球体积|相应椭球的体积]]与行列式的平方根成正比。
 > <!-- bilingual-en:start -->
-> The determinant of a covariance matrix is the [[多元数据、随机向量与样本协方差#广义方差与可视化|Generalized Variance]]. It measures the volume of joint variation in multivariate data.
+> The determinant of a covariance matrix is the [[广义方差|generalised variance]]. It is a squared-volume scale for joint multivariate variation; the [[广义方差与椭球体积|corresponding ellipsoid volume]] is proportional to the square root of the determinant.
 > <!-- bilingual-en:end -->
 
 ## 1.4. 特征值与特征向量
@@ -448,12 +448,12 @@ $$
 > PCA performs a spectral decomposition of the covariance matrix: eigenvectors determine the directions, and eigenvalues give the variance along those directions.
 > <!-- bilingual-en:end -->
 
-### 1.4.4. 奇异值分解（SVD）
+### 1.4.4. [[奇异值分解|奇异值分解（SVD）]]
 <!-- bilingual-en:start -->
 *Singular Value Decomposition (SVD)*
 <!-- bilingual-en:end -->
 
-对任意矩阵 $A$，
+由 [[SVD存在性|SVD 存在定理]]，对任意矩阵 $A$，
 <!-- bilingual-en:start -->
 For any matrix $A$,
 <!-- bilingual-en:end -->
@@ -463,9 +463,9 @@ $$
 
 其中：
 
-- $V$ 给输入空间的正交方向；
-- $\Sigma$ 给非负奇异值；
-- $U$ 给输出空间的正交方向。
+- $V$ 给[[奇异向量|输入空间的正交方向]]；
+- $\Sigma$ 给非负[[奇异值]]；
+- $U$ 给[[奇异向量|输出空间的正交方向]]。
 <!-- bilingual-en:start -->
 Here:
 
@@ -482,7 +482,7 @@ $$
 \sigma_i=\sqrt{\lambda_i(A'A)}.
 $$
 
-SVD 可用于读秩、做低秩近似和处理不可逆问题。
+SVD 可用于[[奇异值与秩|读秩]]、构造[[低秩近似]]和处理不可逆问题。
 <!-- bilingual-en:start -->
 SVD can be used to determine rank, construct low-rank approximations, and handle problems involving noninvertible matrices.
 <!-- bilingual-en:end -->
@@ -587,9 +587,9 @@ $$
 A^{1/2}A^{1/2}=A.
 $$
 
-逆平方根为
+[[正定逆平方根|逆平方根]]为
 <!-- bilingual-en:start -->
-The inverse square root is
+The [[正定逆平方根|inverse square root]] is
 <!-- bilingual-en:end -->
 $$
 A^{-1/2}=Q\Lambda^{-1/2}Q'.
@@ -813,19 +813,20 @@ $$
 *Related Cards*
 <!-- bilingual-en:end -->
 
-- [[多元数据、随机向量与样本协方差#数据矩阵与随机向量|Matrix Operations]]
-- [[广义逆与最小范数解#左逆、右逆与可逆|Matrix Inverse]]
-- [[线性方程组与四个基本子空间#基、维数与秩|Matrix Rank]]
-- [[行列式#行列式的结构含义|Determinant]]
-- [[对称矩阵与正定二次型#对称矩阵与谱定理|Eigenvalues]]
-- [[对称矩阵与正定二次型#对称矩阵与谱定理|Eigenvectors]]
-- [[对称矩阵与正定二次型#对称矩阵与谱定理|Spectral Decomposition]]
-- [[奇异值分解与低秩近似#SVD 的三层结构|Singular Value Decomposition]]
-- [[对称矩阵与正定二次型#二次型与正定性|Positive Definite Matrix]]
-- [[对称矩阵与正定二次型#二次型与正定性|Matrix Square Root]]
-- [[对称矩阵与正定二次型#二次型与正定性|Quadratic Form]]
-- [[主成分分析 PCA#PCA 的方差最大化|Rayleigh Quotient]]
-- [[多元数据、随机向量与样本协方差#数据矩阵与随机向量|Random Vector]]
-- [[多元数据、随机向量与样本协方差#均值、协方差与相关|Mean Vector]]
-- [[多元数据、随机向量与样本协方差#均值、协方差与相关|Covariance Matrix]]
-- [[多元数据、随机向量与样本协方差#均值、协方差与相关|Correlation Matrix]]
+- [[#1.2.3. 矩阵运算|Matrix Operations]]
+- [[可逆性与非零行列式|Matrix invertibility criteria]]
+- [[矩阵秩|Matrix Rank]]
+- [[行列式.canvas|Determinant]]
+- [[特征对|Eigenvalues]]
+- [[特征对|Eigenvectors]]
+- [[实对称矩阵谱定理|Spectral Decomposition]]
+- [[奇异值分解与低秩近似.canvas|Singular Value Decomposition]]
+- [[正定矩阵|Positive Definite Matrix]]
+- [[半正定主平方根|Positive-Semidefinite Principal Square Root]]
+- [[正定逆平方根|Positive-Definite Inverse Square Root]]
+- [[二次型|Quadratic Form]]
+- [[主成分目标|Rayleigh Quotient in PCA]]
+- [[随机向量|Random Vector]]
+- [[均值向量|Mean Vector]]
+- [[协方差矩阵|Covariance Matrix]]
+- [[相关矩阵|Correlation Matrix]]

@@ -15,10 +15,10 @@ aliases:
 # ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT
 
 ## 一句话位置
-这篇论文位于 `05 RAG与知识增强`，第一版用于连接 RAG, Long Context, Pretraining 路线；此笔记暂作索引，不做精读摘要。
+这篇论文位于 `05 RAG与知识增强`，核心位置是用 late interaction 提高稠密段落检索的效果与可扩展性；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-RAG 与长上下文, 预训练、指令微调与偏好优化
+[[RAG（检索增强生成）]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/UK2DTXLV)
@@ -30,4 +30,3 @@ RAG 与长上下文, 预训练、指令微调与偏好优化
 ## Canvas
 - [[LLM Big Picture]]
 - [[05 RAG与知识增强.canvas|05 RAG与知识增强 Canvas]]
-

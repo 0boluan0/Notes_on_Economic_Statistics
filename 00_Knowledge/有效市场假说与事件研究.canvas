@@ -1,0 +1,315 @@
+{
+  "nodes": [
+    {
+      "id": "7ad643efeae9c00c",
+      "type": "text",
+      "x": 0,
+      "y": -300,
+      "width": 3220,
+      "height": 180,
+      "text": "# 有效市场假说与事件研究\n\n第一排是市场效率的定义与检验分支；第二排是预期—事件研究的测量链；第三排把时间、相关性、交易观测和因果解释作为并列边界。箭头表示学习或检验关系，不把事件研究等同于市场效率检验，也不把显著反应当作因果结论。颜色仅区分语义角色，不表示掌握度。"
+    },
+    {
+      "id": "13ea0a5f65cd0013",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 420,
+      "height": 260,
+      "color": "5",
+      "text": "## [[有效市场假说]]\n\n给定信息集，价格已充分反映其中当时可得的信息。它不是价格永远正确或不再变化。"
+    },
+    {
+      "id": "d81c83b914b1644b",
+      "type": "text",
+      "x": 560,
+      "y": 0,
+      "width": 420,
+      "height": 260,
+      "color": "5",
+      "text": "## [[有效市场三种形式]]\n\n弱式、半强式、强式逐步扩大信息范围，不是给市场质量打三档分数。"
+    },
+    {
+      "id": "2da2bbcb6fd7bf2f",
+      "type": "text",
+      "x": 1120,
+      "y": 0,
+      "width": 420,
+      "height": 260,
+      "color": "6",
+      "text": "## [[市场效率检验口径]]\n\n指定信息集、资产、时期、风险模型与实施成本，市场效率才成为可检验命题。"
+    },
+    {
+      "id": "6d119652b4079ae0",
+      "type": "text",
+      "x": 1680,
+      "y": 0,
+      "width": 420,
+      "height": 260,
+      "color": "1",
+      "text": "## [[市场效率联合假设]]\n\n异常收益同时依赖市场效率与正常收益模型；拒绝不能无条件归因于其中一个。"
+    },
+    {
+      "id": "c4029c96837e6122",
+      "type": "text",
+      "x": 2240,
+      "y": 0,
+      "width": 420,
+      "height": 260,
+      "color": "3",
+      "text": "## [[市场异象复核]]\n\n候选模式还要通过风险、成本、外样本、数据挖掘、多重检验与容量检查。"
+    },
+    {
+      "id": "40ae5e005c732b19",
+      "type": "text",
+      "x": 0,
+      "y": 500,
+      "width": 420,
+      "height": 280,
+      "color": "6",
+      "text": "## [[理性预期误差]]\n\n预测误差对当时信息集的条件均值为零；单次预测可以很错，也不自动推出市场有效。"
+    },
+    {
+      "id": "52699671f28ac200",
+      "type": "text",
+      "x": 560,
+      "y": 500,
+      "width": 420,
+      "height": 280,
+      "color": "6",
+      "text": "## [[意外信息定价]]\n\n价格反应取决于结果相对事前预期的意外成分，而不是新闻的绝对好坏。"
+    },
+    {
+      "id": "15ea0a5f65cd0015",
+      "type": "text",
+      "x": 1120,
+      "y": 500,
+      "width": 420,
+      "height": 280,
+      "color": "5",
+      "text": "## [[事件研究]]\n\n比较事件窗实际收益与正常收益反事实，估计模型相对的价格反应。"
+    },
+    {
+      "id": "f592e3e5af1ab080",
+      "type": "text",
+      "x": 1680,
+      "y": 500,
+      "width": 420,
+      "height": 280,
+      "color": "6",
+      "text": "## [[事件研究设计]]\n\n先冻结事件、事件日、样本、估计窗、事件窗、原假设和聚合方式。"
+    },
+    {
+      "id": "eef939e1eddbdb67",
+      "type": "text",
+      "x": 2240,
+      "y": 500,
+      "width": 420,
+      "height": 280,
+      "color": "5",
+      "text": "## [[异常收益]]\n\nAR 是实际收益减去正常收益模型给出的预期收益，是模型相对的当期残差。"
+    },
+    {
+      "id": "14ea0a5f65cd0014",
+      "type": "text",
+      "x": 2800,
+      "y": 500,
+      "width": 420,
+      "height": 280,
+      "color": "5",
+      "text": "## [[累计异常收益]]\n\nCAR 是同一证券在预先指定事件窗内逐期 AR 的总和，不等于跨证券平均。"
+    },
+    {
+      "id": "6dd90c5eea49af11",
+      "type": "text",
+      "x": 560,
+      "y": 1000,
+      "width": 420,
+      "height": 280,
+      "color": "1",
+      "text": "## [[事后改价边界]]\n\n新信息使价格改变，不证明旧价格未反映当时信息；检验必须回到事前可得信息。"
+    },
+    {
+      "id": "9516bf2122a19f0c",
+      "type": "text",
+      "x": 1680,
+      "y": 1000,
+      "width": 420,
+      "height": 280,
+      "color": "1",
+      "text": "## [[事件聚集与相关]]\n\n重叠事件共享冲击，推断必须保留横截面协方差；公司数不等于独立信息量。"
+    },
+    {
+      "id": "554027ac8f237881",
+      "type": "text",
+      "x": 2240,
+      "y": 1000,
+      "width": 420,
+      "height": 280,
+      "color": "1",
+      "text": "## [[薄交易与事件观测]]\n\n停牌、薄交易、非同步成交和事件日不确定会改变可观测反应的时间归属。"
+    },
+    {
+      "id": "31d1f717fae6d685",
+      "type": "text",
+      "x": 2800,
+      "y": 1000,
+      "width": 420,
+      "height": 280,
+      "color": "1",
+      "text": "## [[事件研究因果边界]]\n\n显著 AR/CAR 仍只是模型相对反应；因果解释需要能隔离目标事件增量信息的可信设计。"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e001000000000001",
+      "fromNode": "13ea0a5f65cd0013",
+      "fromSide": "right",
+      "fromEnd": "none",
+      "toNode": "d81c83b914b1644b",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "按信息范围分类"
+    },
+    {
+      "id": "e001000000000002",
+      "fromNode": "d81c83b914b1644b",
+      "fromSide": "right",
+      "fromEnd": "none",
+      "toNode": "2da2bbcb6fd7bf2f",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "把形式写成可检验命题"
+    },
+    {
+      "id": "e001000000000003",
+      "fromNode": "2da2bbcb6fd7bf2f",
+      "fromSide": "right",
+      "fromEnd": "none",
+      "toNode": "6d119652b4079ae0",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "识别受基准模型约束"
+    },
+    {
+      "id": "e001000000000004",
+      "fromNode": "6d119652b4079ae0",
+      "fromSide": "right",
+      "fromEnd": "none",
+      "toNode": "c4029c96837e6122",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "异常候选还要复核"
+    },
+    {
+      "id": "e001000000000005",
+      "fromNode": "40ae5e005c732b19",
+      "fromSide": "right",
+      "fromEnd": "none",
+      "toNode": "52699671f28ac200",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "实现值减去事前预期"
+    },
+    {
+      "id": "e001000000000006",
+      "fromNode": "52699671f28ac200",
+      "fromSide": "right",
+      "fromEnd": "none",
+      "toNode": "15ea0a5f65cd0015",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "解释反应中的意外成分"
+    },
+    {
+      "id": "e001000000000007",
+      "fromNode": "15ea0a5f65cd0015",
+      "fromSide": "right",
+      "fromEnd": "none",
+      "toNode": "f592e3e5af1ab080",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "落实为可复核设计"
+    },
+    {
+      "id": "e001000000000008",
+      "fromNode": "f592e3e5af1ab080",
+      "fromSide": "right",
+      "fromEnd": "none",
+      "toNode": "eef939e1eddbdb67",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "先计算单期反应"
+    },
+    {
+      "id": "e001000000000009",
+      "fromNode": "eef939e1eddbdb67",
+      "fromSide": "right",
+      "fromEnd": "none",
+      "toNode": "14ea0a5f65cd0014",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "沿事件时间求和"
+    },
+    {
+      "id": "e00100000000000a",
+      "fromNode": "52699671f28ac200",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "6dd90c5eea49af11",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "新信息允许改价"
+    },
+    {
+      "id": "e00100000000000b",
+      "fromNode": "f592e3e5af1ab080",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "9516bf2122a19f0c",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "聚合时保留共同冲击"
+    },
+    {
+      "id": "e00100000000000c",
+      "fromNode": "eef939e1eddbdb67",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "554027ac8f237881",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "先确认收益可被观察"
+    },
+    {
+      "id": "e00100000000000d",
+      "fromNode": "14ea0a5f65cd0014",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "31d1f717fae6d685",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "窗口反应仍不等于因果"
+    },
+    {
+      "id": "e00100000000000e",
+      "fromNode": "13ea0a5f65cd0013",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "52699671f28ac200",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "价格吸收的是新增信息"
+    },
+    {
+      "id": "e00100000000000f",
+      "fromNode": "6d119652b4079ae0",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "15ea0a5f65cd0015",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "用于效率检验时携带联合假设"
+    }
+  ]
+}

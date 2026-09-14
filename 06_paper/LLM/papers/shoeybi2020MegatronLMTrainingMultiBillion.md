@@ -15,10 +15,10 @@ aliases:
 # Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism
 
 ## 一句话位置
-这篇论文位于 `02 规模化与模型家族`，第一版用于连接 Scaling Law, Efficiency / MoE 路线；此笔记暂作索引，不做精读摘要。
+这篇论文位于 `02 规模化与模型家族`，核心位置是用层内 tensor parallelism 将巨型 Transformer 的矩阵计算拆到多张 GPU；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-规模化、MoE 与分布式训练, [[LLM 推理效率]]
+[[大模型分布式训练]], [[多头注意力]], [[逐位置前馈网络]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/6PAJYDRF)
@@ -30,4 +30,3 @@ aliases:
 ## Canvas
 - [[LLM Big Picture]]
 - [[02 规模化与模型家族.canvas|02 规模化与模型家族 Canvas]]
-

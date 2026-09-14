@@ -1,0 +1,186 @@
+{
+  "nodes": [
+    {
+      "id": "pcff-header",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 1870,
+      "height": 180,
+      "text": "# 公共选择与财政联邦主义\n*Public Choice and Fiscal Federalism*\n\n上排追踪个人偏好怎样经规则变成集体选择；下两排比较公共职能、收入工具与政府层级，最后落到学校财政。箭头只表示具体命题关系，不表示掌握度。"
+    },
+    {
+      "id": "pcff-001",
+      "type": "text",
+      "x": 0,
+      "y": 270,
+      "width": 470,
+      "height": 230,
+      "color": "4",
+      "text": "## [[公共选择分析]]\n\n政府结果来自参与者、信息、激励与规则的互动；这不要求所有人狭隘自私，也不预设政府一定失灵。"
+    },
+    {
+      "id": "pcff-002",
+      "type": "text",
+      "x": 700,
+      "y": 270,
+      "width": 470,
+      "height": 230,
+      "color": "4",
+      "text": "## [[中位选民定理条件]]\n\n共同的一维排序、单峰偏好与成对多数决使中位理想点成为 Condorcet winner；这不是效率定理。"
+    },
+    {
+      "id": "pcff-003",
+      "type": "text",
+      "x": 1400,
+      "y": 270,
+      "width": 470,
+      "height": 230,
+      "color": "4",
+      "text": "## [[多数循环与议程依赖]]\n\n多数关系不传递时，顺序式表决可能随议程改变赢家；循环是可能性，不是每个多维问题的必然结果。"
+    },
+    {
+      "id": "pcff-004",
+      "type": "text",
+      "x": 0,
+      "y": 680,
+      "width": 470,
+      "height": 230,
+      "color": "5",
+      "text": "## [[Oates 分权定理]]\n\n无中央成本节约、无跨区外部性时，地方有效数量不劣于中央统一数量；比较基准与条件都不能省略。"
+    },
+    {
+      "id": "pcff-005",
+      "type": "text",
+      "x": 700,
+      "y": 680,
+      "width": 470,
+      "height": 230,
+      "color": "5",
+      "text": "## [[政府层级配置框架]]\n\n把职能放到覆盖主要收益成本的最低可行层级，同时检查本地信息、规模经济、稳定与公平目标。"
+    },
+    {
+      "id": "pcff-006",
+      "type": "text",
+      "x": 1400,
+      "y": 680,
+      "width": 470,
+      "height": 230,
+      "color": "5",
+      "text": "## [[纵向财政缺口与横向差异]]\n\n收入能力与支出责任的纵向错配不同于同级辖区间差异；责任、税权、税基共享与转移都可调整。"
+    },
+    {
+      "id": "pcff-008",
+      "type": "text",
+      "x": 0,
+      "y": 1090,
+      "width": 470,
+      "height": 230,
+      "color": "3",
+      "text": "## [[Tiebout 流动匹配]]\n\n居民通过迁居匹配服务—税负组合需要充分信息、低成本流动、众多辖区、无外部性等强条件。"
+    },
+    {
+      "id": "pcff-009",
+      "type": "text",
+      "x": 700,
+      "y": 1090,
+      "width": 470,
+      "height": 230,
+      "color": "3",
+      "text": "## [[学校财政分层配置]]\n\n更高层最低标准与均等化、地方边际投入和具体提供可以分工；参与不等于重复，也不保证自动有效。"
+    },
+    {
+      "id": "pcff-007",
+      "type": "text",
+      "x": 1400,
+      "y": 1090,
+      "width": 470,
+      "height": 230,
+      "color": "3",
+      "text": "## [[软预算约束]]\n\n约束因可预期的事后救助或重谈而变软；事前确定且被视为有约束力的转移本身不等于软预算。"
+    }
+  ],
+  "edges": [
+    {
+      "id": "pcff-e01",
+      "fromNode": "pcff-001",
+      "fromSide": "right",
+      "toNode": "pcff-002",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "框架进入一维多数决"
+    },
+    {
+      "id": "pcff-e02",
+      "fromNode": "pcff-002",
+      "fromSide": "right",
+      "toNode": "pcff-003",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "条件失效时检查循环"
+    },
+    {
+      "id": "pcff-e03",
+      "fromNode": "pcff-004",
+      "fromSide": "right",
+      "toNode": "pcff-005",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "条件化定理转为层级配置"
+    },
+    {
+      "id": "pcff-e04",
+      "fromNode": "pcff-005",
+      "fromSide": "right",
+      "toNode": "pcff-006",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "责任配置产生收支缺口"
+    },
+    {
+      "id": "pcff-e05",
+      "fromNode": "pcff-006",
+      "fromSide": "bottom",
+      "toNode": "pcff-007",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "弥合缺口不等于事后兜底"
+    },
+    {
+      "id": "pcff-e06",
+      "fromNode": "pcff-004",
+      "fromSide": "bottom",
+      "toNode": "pcff-008",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "分权匹配的流动机制"
+    },
+    {
+      "id": "pcff-e07",
+      "fromNode": "pcff-005",
+      "fromSide": "bottom",
+      "toNode": "pcff-009",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "把配置原则用于学校"
+    },
+    {
+      "id": "pcff-e08",
+      "fromNode": "pcff-008",
+      "fromSide": "right",
+      "toNode": "pcff-009",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "流动选择揭示分选边界"
+    },
+    {
+      "id": "pcff-e09",
+      "fromNode": "pcff-007",
+      "fromSide": "left",
+      "toNode": "pcff-009",
+      "toSide": "right",
+      "toEnd": "arrow",
+      "label": "救助预期约束转移设计"
+    }
+  ]
+}

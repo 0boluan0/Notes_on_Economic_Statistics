@@ -1,0 +1,412 @@
+{
+  "nodes": [
+    {
+      "id": "b1ffffffffffffff",
+      "type": "text",
+      "text": "# 构建、依赖与 CI · 语义地图\n\n上层：构建规则如何形成可增量、可并行的依赖图。\n中层：外部依赖从兼容承诺走到锁定、可复现与密封。\n下层：CI 如何触发同一入口，以及如何区分 runner、cache、artifact 与失败来源。\n\n颜色只区分语义分支；22 个原子的学习证据目前均为 `unassessed`。",
+      "x": 0,
+      "y": -300,
+      "width": 3430,
+      "height": 190,
+      "color": "6"
+    },
+    {
+      "id": "b100000000000001",
+      "type": "text",
+      "text": "## [[构建规则三要素|构建规则三要素]]\n*Target · prerequisites · recipe*\n\n一条规则同时声明“依赖什么”和“怎样生成”。",
+      "x": 0,
+      "y": 0,
+      "width": 430,
+      "height": 190,
+      "color": "2"
+    },
+    {
+      "id": "b100000000000002",
+      "type": "text",
+      "text": "## [[传递依赖递归构建|传递依赖展开]]\n*Transitive dependency expansion*\n\n从请求目标递归先做中间目标；无关规则不运行。",
+      "x": 520,
+      "y": 0,
+      "width": 430,
+      "height": 190,
+      "color": "2"
+    },
+    {
+      "id": "b100000000000003",
+      "type": "text",
+      "text": "## [[Make 目标过期判断|Make 时间戳失效]]\n*Timestamp freshness*\n\n普通文件目标缺失或早于先决条件才重建；这不是内容哈希。",
+      "x": 1040,
+      "y": 0,
+      "width": 430,
+      "height": 190,
+      "color": "2"
+    },
+    {
+      "id": "b100000000000004",
+      "type": "text",
+      "text": "## [[构建依赖完整性|依赖边必须完整]]\n*Complete dependency edges*\n\n同一张图决定失效传播与安全并行；漏边会造成 stale 或 race。",
+      "x": 1560,
+      "y": 0,
+      "width": 430,
+      "height": 190,
+      "color": "2"
+    },
+    {
+      "id": "b100000000000020",
+      "type": "text",
+      "text": "## [[增量构建失效诊断|异常重建诊断]]\n*Unexpected rebuild diagnosis*\n\n用 null build、失效传播范围与时间戳定位过宽边或不稳定输出。",
+      "x": 2080,
+      "y": 0,
+      "width": 430,
+      "height": 190,
+      "color": "3"
+    },
+    {
+      "id": "b100000000000005",
+      "type": "text",
+      "text": "## [[Make phony target|Phony target]]\n*Action, not a file*\n\n`clean`、`test` 这类入口应避开同名文件的新旧判断。",
+      "x": 520,
+      "y": 270,
+      "width": 430,
+      "height": 180,
+      "color": "2"
+    },
+    {
+      "id": "b100000000000006",
+      "type": "text",
+      "text": "## [[Make 模式规则|Pattern rule]]\n*One stem, a family of rules*\n\n目标与先决条件模式共享 stem；`%` 不是 shell glob。",
+      "x": 1040,
+      "y": 270,
+      "width": 430,
+      "height": 180,
+      "color": "2"
+    },
+    {
+      "id": "b100000000000007",
+      "type": "text",
+      "text": "## [[构建系统与包管理器|构建与包管理的职责]]\n*Build system vs package manager*\n\n前者管内部转换，后者管外部组件来源与选择。",
+      "x": 0,
+      "y": 650,
+      "width": 430,
+      "height": 190,
+      "color": "4"
+    },
+    {
+      "id": "b100000000000008",
+      "type": "text",
+      "text": "## [[语义化版本|SemVer 兼容承诺]]\n*Major · minor · patch*\n\n版本号表达公开 API 承诺；`0.y.z` 与预发布有特殊边界。",
+      "x": 520,
+      "y": 650,
+      "width": 430,
+      "height": 190,
+      "color": "4"
+    },
+    {
+      "id": "b100000000000009",
+      "type": "text",
+      "text": "## [[版本要求范围|版本要求是范围]]\n*Requirement is a range*\n\nCargo 的 `1.3.7` 有下界；范围语法不能跨生态套用。",
+      "x": 1040,
+      "y": 650,
+      "width": 430,
+      "height": 190,
+      "color": "4"
+    },
+    {
+      "id": "b100000000000010",
+      "type": "text",
+      "text": "## [[锁文件解析结果|锁文件保存解析快照]]\n*Exact resolved selections*\n\nmanifest 给范围，resolver 做选择，lockfile 记录具体版本或 commit。",
+      "x": 1560,
+      "y": 650,
+      "width": 430,
+      "height": 190,
+      "color": "4"
+    },
+    {
+      "id": "b100000000000011",
+      "type": "text",
+      "text": "## [[锁文件与可复现构建|锁文件的保证边界]]\n*Resolution is not the whole build*\n\n工具链、平台、flags 与生成步骤仍可能改变产物。",
+      "x": 2080,
+      "y": 650,
+      "width": 430,
+      "height": 190,
+      "color": "4"
+    },
+    {
+      "id": "b100000000000012",
+      "type": "text",
+      "text": "## [[可复现构建|可复现构建判据]]\n*Bit-for-bit specified artifacts*\n\n相同源、环境与指令必须能重建逐字节相同的指定产物。",
+      "x": 2600,
+      "y": 650,
+      "width": 430,
+      "height": 190,
+      "color": "4"
+    },
+    {
+      "id": "b100000000000013",
+      "type": "text",
+      "text": "## [[密封构建|密封不等于已验证可复现]]\n*Hermeticity vs reproducibility*\n\n隔离隐式输入促进可复现，但仍需独立重建与字节比较。",
+      "x": 3120,
+      "y": 650,
+      "width": 430,
+      "height": 190,
+      "color": "4"
+    },
+    {
+      "id": "b100000000000014",
+      "type": "text",
+      "text": "## [[CI 工作流结构|CI workflow 层级]]\n*Trigger → jobs → runners → steps*\n\n先分清没触发、没排到、step 失败和检查通过。",
+      "x": 520,
+      "y": 1050,
+      "width": 430,
+      "height": 190,
+      "color": "5"
+    },
+    {
+      "id": "b100000000000015",
+      "type": "text",
+      "text": "## [[CI 与部署发布|CI 不等于部署发布]]\n*Integration is not deployment*\n\n绿色 CI 只覆盖已配置检查，不自动证明已经发布或投产。",
+      "x": 0,
+      "y": 1330,
+      "width": 430,
+      "height": 190,
+      "color": "5"
+    },
+    {
+      "id": "b100000000000018",
+      "type": "text",
+      "text": "## [[CI 缓存与 artifact|Cache 与 artifact]]\n*Acceleration vs retained output*\n\ncache miss 应可重建；需要保存或跨 job 传递的输出用 artifact。",
+      "x": 1040,
+      "y": 1330,
+      "width": 430,
+      "height": 190,
+      "color": "5"
+    },
+    {
+      "id": "b100000000000016",
+      "type": "text",
+      "text": "## [[本机与 CI 统一入口|本机与 CI 共用入口]]\n*One project-level command*\n\n把项目逻辑留在仓库入口，CI 负责 runner 与编排外壳。",
+      "x": 520,
+      "y": 1330,
+      "width": 430,
+      "height": 190,
+      "color": "5"
+    },
+    {
+      "id": "b100000000000017",
+      "type": "text",
+      "text": "## [[干净 CI runner 的边界|Fresh runner 的边界]]\n*Clean is not hermetic*\n\n新环境能暴露本机遗留状态，却仍可能读取 image、网络和时间。",
+      "x": 520,
+      "y": 1610,
+      "width": 430,
+      "height": 190,
+      "color": "5"
+    },
+    {
+      "id": "b100000000000019",
+      "type": "text",
+      "text": "## [[本机与 CI 差异诊断|本机通过、CI 失败]]\n*Align one input dimension at a time*\n\n先统一 commit 与入口，再查工具链、环境、生成物、服务和 cache。",
+      "x": 520,
+      "y": 1890,
+      "width": 430,
+      "height": 190,
+      "color": "3"
+    },
+    {
+      "id": "b100000000000021",
+      "type": "text",
+      "text": "## [[CI 验证管线|显式验证管线]]\n*Explicit verification pipeline*\n\n让安装、构建、检查与 artifact 交接暴露真实依赖和失败位置。",
+      "x": 1040,
+      "y": 1610,
+      "width": 430,
+      "height": 190,
+      "color": "5"
+    },
+    {
+      "id": "b100000000000022",
+      "type": "text",
+      "text": "## [[pre-commit 与 CI|本地 hook 不替代共享 CI]]\n*Early feedback is not shared evidence*\n\npre-commit 可复用项目入口，但不随 clone 自动复制且可绕过。",
+      "x": 0,
+      "y": 1610,
+      "width": 430,
+      "height": 190,
+      "color": "5"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e100000000000001",
+      "fromNode": "b100000000000001",
+      "fromSide": "right",
+      "toNode": "b100000000000002",
+      "toSide": "left",
+      "label": "请求目标后展开"
+    },
+    {
+      "id": "e100000000000002",
+      "fromNode": "b100000000000002",
+      "fromSide": "right",
+      "toNode": "b100000000000003",
+      "toSide": "left",
+      "label": "Make 用时间戳判失效"
+    },
+    {
+      "id": "e100000000000003",
+      "fromNode": "b100000000000003",
+      "fromSide": "right",
+      "toNode": "b100000000000004",
+      "toSide": "left",
+      "label": "正确性取决于完整边"
+    },
+    {
+      "id": "e100000000000004",
+      "fromNode": "b100000000000004",
+      "fromSide": "right",
+      "toNode": "b100000000000020",
+      "toSide": "left",
+      "label": "异常时反查图"
+    },
+    {
+      "id": "e100000000000005",
+      "fromNode": "b100000000000001",
+      "fromSide": "bottom",
+      "toNode": "b100000000000005",
+      "toSide": "top",
+      "label": "动作目标是例外"
+    },
+    {
+      "id": "e100000000000006",
+      "fromNode": "b100000000000001",
+      "fromSide": "bottom",
+      "toNode": "b100000000000006",
+      "toSide": "top",
+      "label": "将规则复用为族"
+    },
+    {
+      "id": "e100000000000007",
+      "fromNode": "b100000000000001",
+      "fromSide": "bottom",
+      "toNode": "b100000000000007",
+      "toSide": "top",
+      "label": "再区分外部依赖职责"
+    },
+    {
+      "id": "e100000000000008",
+      "fromNode": "b100000000000007",
+      "fromSide": "right",
+      "toNode": "b100000000000008",
+      "toSide": "left",
+      "label": "外部包发布版本"
+    },
+    {
+      "id": "e100000000000009",
+      "fromNode": "b100000000000008",
+      "fromSide": "right",
+      "toNode": "b100000000000009",
+      "toSide": "left",
+      "label": "兼容承诺约束范围"
+    },
+    {
+      "id": "e10000000000000a",
+      "fromNode": "b100000000000009",
+      "fromSide": "right",
+      "toNode": "b100000000000010",
+      "toSide": "left",
+      "label": "解析后固化选择"
+    },
+    {
+      "id": "e10000000000000b",
+      "fromNode": "b100000000000010",
+      "fromSide": "right",
+      "toNode": "b100000000000011",
+      "toSide": "left",
+      "label": "只覆盖部分输入"
+    },
+    {
+      "id": "e10000000000000c",
+      "fromNode": "b100000000000011",
+      "fromSide": "right",
+      "toNode": "b100000000000012",
+      "toSide": "left",
+      "label": "补全输出判据"
+    },
+    {
+      "id": "e10000000000000d",
+      "fromNode": "b100000000000012",
+      "fromSide": "right",
+      "toNode": "b100000000000013",
+      "toSide": "left",
+      "label": "用输入隔离促进"
+    },
+    {
+      "id": "e10000000000000e",
+      "fromNode": "b100000000000007",
+      "fromSide": "bottom",
+      "toNode": "b100000000000014",
+      "toSide": "top",
+      "label": "由 CI 重复验证组合流程"
+    },
+    {
+      "id": "e10000000000000f",
+      "fromNode": "b100000000000014",
+      "fromSide": "bottom",
+      "toNode": "b100000000000015",
+      "toSide": "top",
+      "label": "核心是构建与测试"
+    },
+    {
+      "id": "e100000000000010",
+      "fromNode": "b100000000000014",
+      "fromSide": "bottom",
+      "toNode": "b100000000000016",
+      "toSide": "top",
+      "label": "steps 调用项目入口"
+    },
+    {
+      "id": "e100000000000011",
+      "fromNode": "b100000000000014",
+      "fromSide": "bottom",
+      "toNode": "b100000000000018",
+      "toSide": "top",
+      "label": "workflow 中区分持久化角色"
+    },
+    {
+      "id": "e100000000000012",
+      "fromNode": "b100000000000016",
+      "fromSide": "bottom",
+      "toNode": "b100000000000017",
+      "toSide": "top",
+      "label": "在 fresh runner 重跑"
+    },
+    {
+      "id": "e100000000000013",
+      "fromNode": "b100000000000017",
+      "fromSide": "bottom",
+      "toNode": "b100000000000019",
+      "toSide": "top",
+      "label": "不一致时逐项对齐"
+    },
+    {
+      "id": "e100000000000014",
+      "fromNode": "b100000000000018",
+      "fromSide": "bottom",
+      "toNode": "b100000000000021",
+      "toSide": "top",
+      "label": "把正式交接写入管线"
+    },
+    {
+      "id": "e100000000000015",
+      "fromNode": "b100000000000021",
+      "fromSide": "bottom",
+      "toNode": "b100000000000019",
+      "toSide": "top",
+      "label": "失败时保留诊断边界"
+    },
+    {
+      "id": "e100000000000016",
+      "fromNode": "b100000000000016",
+      "fromSide": "left",
+      "toNode": "b100000000000022",
+      "toSide": "right",
+      "label": "同一入口也可提前调用"
+    }
+  ]
+}

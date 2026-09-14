@@ -218,9 +218,10 @@ $$
 *1.8. Related Cards*
 <!-- bilingual-en:end -->
 
-- [[多元线性回归#模型与维度|Multivariate Linear Regression]]
-- [[OLS 线性回归#模型、条件均值与线性投影|OLS Basics]]
-- [[多元线性回归#最小二乘估计|OLS Estimator]]
-- [[多元线性回归#诊断与边界|Residual]]
-- [[多元线性回归#线性假设与解释|F-test]]
-- [[多元线性回归#线性假设与解释|t Test]]
+- [[多响应线性回归|Multivariate Linear Regression with Multiple Responses]]
+- [[多响应与多解释变量回归|Multivariate versus Multiple Regression]]
+- [[条件均值与线性投影|Conditional Mean vs Best Linear Projection]]
+- [[满列秩与OLS唯一性|OLS Estimator]]
+- [[OLS正规方程|OLS Residual]]
+- [[嵌套模型F检验|F-test]]
+- [[回归t检验|t Test]]

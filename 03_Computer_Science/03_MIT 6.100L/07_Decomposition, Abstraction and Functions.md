@@ -39,6 +39,11 @@ lecture: 07
 > - The enduring lesson is not function syntax, but naming and encapsulating logic so that it can be reused.
 > <!-- bilingual-en:end -->
 
+> [!links] 原子化入口
+> 本讲从 [[问题分解与复用]] 进入 [[函数契约]]，再用 [[函数定义与调用]] 区分“建立函数对象”和“执行函数体”；最后由 [[返回值与打印]] 与 [[控制转移语句|return 的控制边界]] 说明结果怎样回到调用者。
+>
+> *Atomic path: [[问题分解与复用|contract-first decomposition]] → [[函数契约|function contracts]] → [[函数定义与调用|definition versus call]] → [[返回值与打印|return values versus printed output]], with [[控制转移语句|the exact control boundary of `return`]].*
+
 ## Lecture flow
 
 ### 1. 先从 smartphone 黑箱讲 abstraction

@@ -15,10 +15,10 @@ aliases:
 # Kimi K2: Open Agentic Intelligence
 
 ## 一句话位置
-这篇论文位于 `09 开源模型技术报告`，第一版用于连接 Open Models, Agent 路线；此笔记暂作索引，不做精读摘要。
+这篇论文位于 `09 开源模型技术报告`，连接开放模型生态与 LLM Agent、工具调用路线；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[开放模型生态]], 推理模型与 LLM Agent
+[[开放模型生态]], [[LLM Agent 与工具调用]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/DTNSFBKV)
@@ -30,4 +30,3 @@ aliases:
 ## Canvas
 - [[LLM Big Picture]]
 - [[09 开源模型技术报告.canvas|09 开源模型技术报告 Canvas]]
-

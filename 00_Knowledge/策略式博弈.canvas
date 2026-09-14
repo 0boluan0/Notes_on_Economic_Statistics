@@ -1,0 +1,375 @@
+{
+  "nodes": [
+    {
+      "id": "01a4d7c9e2b6358f",
+      "type": "text",
+      "text": "# 策略式博弈 · 关系图\n\n**16 个共享原子，均已完成来源核验。**\n\n先沿中轴读模型表示与最佳反应；上支辨认占优捷径，下支检查混合占优与理性筛选；右侧把 Nash、混合求解、存在性、奇数性和效率分开。边的文字说明关系，不把一切双链混成“相关”。",
+      "x": 0,
+      "y": -900,
+      "width": 5500,
+      "height": 250,
+      "color": "6"
+    },
+    {
+      "id": "12b5e8d0f3c7469a",
+      "type": "text",
+      "text": "## [[博弈模型]]\n\n参与者、可选行动、信息、时序、随机事件与收益共同决定这是哪个博弈。",
+      "x": 0,
+      "y": 0,
+      "width": 440,
+      "height": 200,
+      "color": "5"
+    },
+    {
+      "id": "23c6f9e1a4d8570b",
+      "type": "text",
+      "text": "## [[行动与策略]]\n\n行动是一个决策位置上的选择；策略是覆盖全部可能信息情形的完整计划。",
+      "x": 620,
+      "y": 0,
+      "width": 440,
+      "height": 200,
+      "color": "5"
+    },
+    {
+      "id": "34d70af2b5e9681c",
+      "type": "text",
+      "text": "## [[策略式博弈]]\n\n用玩家、完整策略集合和收益函数表示相互依赖的选择。",
+      "x": 1240,
+      "y": 0,
+      "width": 440,
+      "height": 200,
+      "color": "5"
+    },
+    {
+      "id": "45e81b03c6f0792d",
+      "type": "text",
+      "text": "## [[严格与弱占优]]\n\n逐一固定对手策略，比较同一玩家两项策略；严格与弱占优的等号边界不同。",
+      "x": 1860,
+      "y": -400,
+      "width": 440,
+      "height": 200,
+      "color": "2"
+    },
+    {
+      "id": "56f92c14d7018a3e",
+      "type": "text",
+      "text": "## [[最佳反应]]\n\n给定对手的策略或信念后，使自己的期望收益达到最大值的全部策略。",
+      "x": 1860,
+      "y": 0,
+      "width": 440,
+      "height": 200,
+      "color": "4"
+    },
+    {
+      "id": "670a3d25e8129b4f",
+      "type": "text",
+      "text": "## [[混合策略]]\n\n在自己的完整纯策略集合上选择概率分布；它不是事后随机挑一个局部行动。",
+      "x": 1860,
+      "y": 400,
+      "width": 440,
+      "height": 200,
+      "color": "1"
+    },
+    {
+      "id": "781b4e36f923ac50",
+      "type": "text",
+      "text": "## [[优势策略均衡]]\n\n若每个人都采用自己的优势策略，所得剖面自动是 Nash；反向一般不成立。",
+      "x": 2480,
+      "y": -400,
+      "width": 440,
+      "height": 200,
+      "color": "2"
+    },
+    {
+      "id": "892c5f470a34bd61",
+      "type": "text",
+      "text": "## [[混合占优]]\n\n某个纯策略即使不被任何单一纯策略支配，也可能被纯策略的概率组合严格支配。",
+      "x": 2480,
+      "y": 400,
+      "width": 440,
+      "height": 200,
+      "color": "2"
+    },
+    {
+      "id": "9a3d60581b45ce72",
+      "type": "text",
+      "text": "## [[可理性化策略]]\n\n能被一套任意高阶的理性信念链支持为最佳反应；不要求信念命中实际策略。",
+      "x": 3100,
+      "y": 100,
+      "width": 440,
+      "height": 200,
+      "color": "2"
+    },
+    {
+      "id": "ab4e71692c56df83",
+      "type": "text",
+      "text": "## [[劣势策略迭代删除]]\n\n每轮都在约化后的博弈中重新检验严格劣势；完整检验要允许混合策略作占优者。",
+      "x": 3100,
+      "y": 500,
+      "width": 440,
+      "height": 200,
+      "color": "2"
+    },
+    {
+      "id": "bc5f827a3d67e094",
+      "type": "text",
+      "text": "## [[纳什均衡]]\n\n每个人同时对其他人的实际策略作最佳反应，因此无人能靠单边偏离获益。",
+      "x": 3720,
+      "y": -100,
+      "width": 440,
+      "height": 200,
+      "color": "4"
+    },
+    {
+      "id": "cd60938b4e78f1a5",
+      "type": "text",
+      "text": "## [[均衡与效率]]\n\nNash 检查单边偏离；Pareto 效率另问能否让至少一人更好且无人更差。",
+      "x": 4340,
+      "y": -500,
+      "width": 440,
+      "height": 200,
+      "color": "3"
+    },
+    {
+      "id": "de71a49c5f8902b6",
+      "type": "text",
+      "text": "## [[混合策略均衡]]\n\n在混合策略空间满足 Nash；正概率支持内的纯策略必须同为最高收益。",
+      "x": 4340,
+      "y": 0,
+      "width": 440,
+      "height": 200,
+      "color": "4"
+    },
+    {
+      "id": "ef82b5ad609a13c7",
+      "type": "text",
+      "text": "## [[混合均衡求解]]\n\n先猜支持，再用对手无差异条件求概率，最后查支持内外最佳反应。",
+      "x": 4960,
+      "y": 0,
+      "width": 440,
+      "height": 200,
+      "color": "4"
+    },
+    {
+      "id": "f093c6be71ab24d8",
+      "type": "text",
+      "text": "## [[纳什存在性]]\n\n每个有限策略式博弈的混合扩展至少有一个 Nash 均衡；纯均衡不受此保证。",
+      "x": 4340,
+      "y": 500,
+      "width": 440,
+      "height": 200,
+      "color": "6"
+    },
+    {
+      "id": "01a4d7cf82bc35e9",
+      "type": "text",
+      "text": "## [[均衡奇数性]]\n\n有限、两人且非退化时，全部 Nash 均衡的个数有限且为奇数；退化博弈可能有连续统。",
+      "x": 4960,
+      "y": 500,
+      "width": 440,
+      "height": 200,
+      "color": "6"
+    },
+    {
+      "id": "12b5e8d093cd46fa",
+      "type": "text",
+      "text": "**混合 Nash = 混合策略空间 + Nash 的相互最佳反应条件。**",
+      "x": 3100,
+      "y": 950,
+      "width": 440,
+      "height": 120,
+      "color": "3"
+    }
+  ],
+  "edges": [
+    {
+      "id": "13c6f9e1a4d8570b",
+      "fromNode": "12b5e8d0f3c7469a",
+      "fromSide": "right",
+      "toNode": "23c6f9e1a4d8570b",
+      "toSide": "left",
+      "label": "辨认局部选择与完整计划",
+      "color": "5"
+    },
+    {
+      "id": "24d70af2b5e9681c",
+      "fromNode": "23c6f9e1a4d8570b",
+      "fromSide": "right",
+      "toNode": "34d70af2b5e9681c",
+      "toSide": "left",
+      "label": "完整计划组成策略集合",
+      "color": "5"
+    },
+    {
+      "id": "35e81b03c6f0792d",
+      "fromNode": "34d70af2b5e9681c",
+      "fromSide": "right",
+      "toNode": "45e81b03c6f0792d",
+      "toSide": "left",
+      "label": "逐情形比较同一玩家的策略",
+      "color": "2"
+    },
+    {
+      "id": "46f92c14d7018a3e",
+      "fromNode": "45e81b03c6f0792d",
+      "fromSide": "right",
+      "toNode": "781b4e36f923ac50",
+      "toSide": "left",
+      "label": "每个人都有优势策略",
+      "color": "2"
+    },
+    {
+      "id": "570a3d25e8129b4f",
+      "fromNode": "34d70af2b5e9681c",
+      "fromSide": "right",
+      "toNode": "56f92c14d7018a3e",
+      "toSide": "left",
+      "label": "给定对手选择求最优",
+      "color": "4"
+    },
+    {
+      "id": "681b4e36f923ac50",
+      "fromNode": "23c6f9e1a4d8570b",
+      "fromSide": "bottom",
+      "toNode": "670a3d25e8129b4f",
+      "toSide": "left",
+      "label": "在完整纯策略上随机化",
+      "color": "1"
+    },
+    {
+      "id": "792c5f470a34bd61",
+      "fromNode": "670a3d25e8129b4f",
+      "fromSide": "right",
+      "toNode": "892c5f470a34bd61",
+      "toSide": "left",
+      "label": "概率组合也可成为占优者",
+      "color": "2"
+    },
+    {
+      "id": "8a3d60581b45ce72",
+      "fromNode": "45e81b03c6f0792d",
+      "fromSide": "right",
+      "toNode": "892c5f470a34bd61",
+      "toSide": "left",
+      "label": "把纯策略比较扩展到混合策略",
+      "color": "2"
+    },
+    {
+      "id": "9b4e71692c56df83",
+      "fromNode": "892c5f470a34bd61",
+      "fromSide": "right",
+      "toNode": "ab4e71692c56df83",
+      "toSide": "left",
+      "label": "完整识别严格劣势策略",
+      "color": "2"
+    },
+    {
+      "id": "ac5f827a3d67e094",
+      "fromNode": "ab4e71692c56df83",
+      "fromSide": "top",
+      "toNode": "9a3d60581b45ce72",
+      "toSide": "bottom",
+      "label": "有限博弈中刻画理性幸存集",
+      "color": "2"
+    },
+    {
+      "id": "bd60938b4e78f1a5",
+      "fromNode": "56f92c14d7018a3e",
+      "fromSide": "right",
+      "toNode": "9a3d60581b45ce72",
+      "toSide": "left",
+      "label": "由高阶信念反复支持",
+      "color": "4"
+    },
+    {
+      "id": "ce71a49c5f8902b6",
+      "fromNode": "56f92c14d7018a3e",
+      "fromSide": "right",
+      "toNode": "bc5f827a3d67e094",
+      "toSide": "left",
+      "label": "所有玩家同时满足且信念命中实际策略",
+      "color": "4"
+    },
+    {
+      "id": "df82b5ad609a13c7",
+      "fromNode": "9a3d60581b45ce72",
+      "fromSide": "right",
+      "toNode": "bc5f827a3d67e094",
+      "toSide": "left",
+      "label": "再要求信念相互一致",
+      "color": "4"
+    },
+    {
+      "id": "e093c6be71ab24d8",
+      "fromNode": "781b4e36f923ac50",
+      "fromSide": "right",
+      "toNode": "bc5f827a3d67e094",
+      "toSide": "top",
+      "label": "更强的解概念必为 Nash",
+      "color": "4"
+    },
+    {
+      "id": "f1a4d7cf82bc35e9",
+      "fromNode": "bc5f827a3d67e094",
+      "fromSide": "right",
+      "toNode": "de71a49c5f8902b6",
+      "toSide": "left",
+      "label": "允许概率策略后继续检验 Nash",
+      "color": "4"
+    },
+    {
+      "id": "02b5e8d093cd46fa",
+      "fromNode": "bc5f827a3d67e094",
+      "fromSide": "right",
+      "toNode": "cd60938b4e78f1a5",
+      "toSide": "left",
+      "label": "转向共同改进这一评价维度",
+      "color": "3"
+    },
+    {
+      "id": "13c6f9e1a4de570b",
+      "fromNode": "670a3d25e8129b4f",
+      "fromSide": "right",
+      "toNode": "12b5e8d093cd46fa",
+      "toSide": "left",
+      "label": "提供随机化策略空间",
+      "color": "1"
+    },
+    {
+      "id": "24d70af2b5e9861c",
+      "fromNode": "12b5e8d093cd46fa",
+      "fromSide": "right",
+      "toNode": "de71a49c5f8902b6",
+      "toSide": "left",
+      "label": "与相互最佳反应条件合并",
+      "color": "4"
+    },
+    {
+      "id": "35e81b03c6f0972d",
+      "fromNode": "de71a49c5f8902b6",
+      "fromSide": "right",
+      "toNode": "ef82b5ad609a13c7",
+      "toSide": "left",
+      "label": "用支持条件转成计算",
+      "color": "4"
+    },
+    {
+      "id": "46f92c14d701a83e",
+      "fromNode": "de71a49c5f8902b6",
+      "fromSide": "bottom",
+      "toNode": "f093c6be71ab24d8",
+      "toSide": "top",
+      "label": "有限混合扩展保证至少一个",
+      "color": "6"
+    },
+    {
+      "id": "570a3d25e812b94f",
+      "fromNode": "ef82b5ad609a13c7",
+      "fromSide": "bottom",
+      "toNode": "01a4d7cf82bc35e9",
+      "toSide": "top",
+      "label": "求全后检查非退化计数",
+      "color": "6"
+    }
+  ]
+}

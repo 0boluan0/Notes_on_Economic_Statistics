@@ -1,0 +1,516 @@
+{
+  "nodes": [
+    {
+      "id": "pinv-header",
+      "type": "text",
+      "x": 40,
+      "y": 20,
+      "width": 3480,
+      "height": 180,
+      "text": "# 广义逆与最小范数解\n\n先分清左逆、右逆及其秩条件，再区分一般广义逆与唯一的 Moore–Penrose 伪逆。SVD 一方面给出精确公式与存在唯一性，另一方面暴露小奇异值造成的数值不稳定。\n\n**箭头只表示可辩护的定义、推出、特化或算法选择关系；颜色区分语义角色。**"
+    },
+    {
+      "id": "pinv-group-one-sided",
+      "type": "group",
+      "x": 40,
+      "y": 240,
+      "width": 1920,
+      "height": 830,
+      "label": "单侧逆：定义 → 秩等价 → 满秩闭式"
+    },
+    {
+      "id": "pinv-left-def-0010",
+      "type": "text",
+      "x": 120,
+      "y": 350,
+      "width": 320,
+      "height": 180,
+      "color": "4",
+      "text": "## [[左逆]]\nLA-PINV-010 · 定义入口\n\n若 $LA=I_n$，则 $L$ 是 $A$ 的左逆；它恢复输入，但不保证覆盖全部输出。"
+    },
+    {
+      "id": "pinv-left-rank-0001",
+      "type": "text",
+      "x": 500,
+      "y": 350,
+      "width": 320,
+      "height": 180,
+      "color": "2",
+      "text": "## [[左逆与满列秩]]\nLA-PINV-001 · 等价命题\n\n左逆存在当且仅当 $A$ 满列秩，也就是零空间只有零向量。"
+    },
+    {
+      "id": "pinv-fullcol-formula-0014",
+      "type": "text",
+      "x": 1420,
+      "y": 350,
+      "width": 320,
+      "height": 180,
+      "color": "5",
+      "text": "## [[满列秩伪逆公式]]\nLA-PINV-014 · 公式\n\n满列秩时 $A^+=(A^*A)^{-1}A^*$，它同时是一个左逆。"
+    },
+    {
+      "id": "pinv-right-def-0011",
+      "type": "text",
+      "x": 120,
+      "y": 640,
+      "width": 320,
+      "height": 180,
+      "color": "4",
+      "text": "## [[右逆]]\nLA-PINV-011 · 定义入口\n\n若 $AR=I_m$，则 $R$ 是 $A$ 的右逆；它覆盖全部输出，但输入可能不唯一。"
+    },
+    {
+      "id": "pinv-right-rank-0002",
+      "type": "text",
+      "x": 500,
+      "y": 640,
+      "width": 320,
+      "height": 180,
+      "color": "2",
+      "text": "## [[右逆与满行秩]]\nLA-PINV-002 · 等价命题\n\n右逆存在当且仅当 $A$ 满行秩，也就是列空间覆盖整个输出空间。"
+    },
+    {
+      "id": "pinv-fullrow-formula-0015",
+      "type": "text",
+      "x": 1420,
+      "y": 640,
+      "width": 320,
+      "height": 180,
+      "color": "5",
+      "text": "## [[满行秩伪逆公式]]\nLA-PINV-015 · 公式\n\n满行秩时 $A^+=A^*(AA^*)^{-1}$，它同时是一个右逆。"
+    },
+    {
+      "id": "pinv-underdetermined-0028",
+      "type": "text",
+      "x": 880,
+      "y": 850,
+      "width": 360,
+      "height": 180,
+      "color": "2",
+      "text": "## [[欠定不等于秩亏]]\nLA-PROJ-028 · 概念辨析\n\n$m<n$ 且满行秩时已达到形状最大秩；解不唯一不等于矩阵秩亏。"
+    },
+    {
+      "id": "pinv-square-0003",
+      "type": "text",
+      "x": 880,
+      "y": 495,
+      "width": 360,
+      "height": 190,
+      "color": "6",
+      "text": "## [[方阵单侧逆]]\nLA-PINV-003 · 定理\n\n有限维方阵中，任一侧逆都自动成为唯一的双侧逆。"
+    },
+    {
+      "id": "pinv-group-canonical",
+      "type": "group",
+      "x": 40,
+      "y": 1110,
+      "width": 1920,
+      "height": 940,
+      "label": "规范伪逆：定义 → SVD 公式 → 存在唯一性与投影几何"
+    },
+    {
+      "id": "pinv-general-0006",
+      "type": "text",
+      "x": 120,
+      "y": 1220,
+      "width": 320,
+      "height": 180,
+      "color": "4",
+      "text": "## [[广义逆]]\nLA-PINV-006 · 定义入口\n\n这里采用 $AGA=A$ 的口径；候选 $G$ 通常不唯一，也不自动给出正交投影。"
+    },
+    {
+      "id": "pinv-mp-0004",
+      "type": "text",
+      "x": 500,
+      "y": 1220,
+      "width": 320,
+      "height": 180,
+      "color": "4",
+      "text": "## [[Moore–Penrose 伪逆]]\nLA-PINV-004 · 定义入口\n\n四个 Penrose 方程从广义逆家族中选出唯一、与正交几何相容的 $A^+$。"
+    },
+    {
+      "id": "pinv-svd-formula-0016",
+      "type": "text",
+      "x": 880,
+      "y": 1220,
+      "width": 320,
+      "height": 180,
+      "color": "5",
+      "text": "## [[伪逆SVD公式]]\nLA-PINV-016 · 公式\n\n若 $A=U_r\\Sigma_rV_r^*$，则 $A^+=V_r\\Sigma_r^{-1}U_r^*$。"
+    },
+    {
+      "id": "pinv-existence-0007",
+      "type": "text",
+      "x": 880,
+      "y": 1510,
+      "width": 320,
+      "height": 180,
+      "color": "6",
+      "text": "## [[伪逆存在唯一性]]\nLA-PINV-007 · 定理\n\nSVD 公式满足四个 Penrose 方程，并由这些方程唯一确定。"
+    },
+    {
+      "id": "pinv-project-col",
+      "type": "text",
+      "x": 120,
+      "y": 1510,
+      "width": 320,
+      "height": 180,
+      "color": "5",
+      "text": "## [[AA+列空间投影]]\nLA-PROJ-008 · 输出投影\n\n$AA^+$ 正交投影到列空间，因此最小二乘拟合值唯一。"
+    },
+    {
+      "id": "pinv-project-row",
+      "type": "text",
+      "x": 500,
+      "y": 1510,
+      "width": 320,
+      "height": 180,
+      "color": "5",
+      "text": "## [[A+A行空间投影]]\nLA-PROJ-014 · 输入投影\n\n$A^+A$ 正交投影到行空间，删去不影响 $Ax$ 的零空间分量。"
+    },
+    {
+      "id": "pinv-minnorm",
+      "type": "text",
+      "x": 310,
+      "y": 1800,
+      "width": 360,
+      "height": 180,
+      "color": "3",
+      "text": "## [[最小范数最小二乘解]]\nLA-PROJ-017 · 定理\n\n$A^+b$ 是全部最小二乘解中唯一的 Euclidean 最小范数解。"
+    },
+    {
+      "id": "pinv-group-numerical",
+      "type": "group",
+      "x": 2040,
+      "y": 1110,
+      "width": 1480,
+      "height": 1280,
+      "label": "数值反演：噪声边界 → 有效秩 → 截断或连续收缩"
+    },
+    {
+      "id": "pinv-noise-0005",
+      "type": "text",
+      "x": 2160,
+      "y": 1220,
+      "width": 320,
+      "height": 180,
+      "color": "1",
+      "text": "## [[小奇异值放大噪声]]\nLA-PINV-005 · 数值边界\n\n伪逆沿第 $i$ 个正奇异方向按 $1/\\sigma_i$ 放大观测误差。"
+    },
+    {
+      "id": "pinv-numrank-0009",
+      "type": "text",
+      "x": 2540,
+      "y": 1220,
+      "width": 320,
+      "height": 180,
+      "color": "4",
+      "text": "## [[数值秩]]\nLA-PINV-009 · 定义入口\n\n只有给定容差后，被判为非零的奇异值个数才是可复核的数值秩。"
+    },
+    {
+      "id": "pinv-cpqr-boundary",
+      "type": "text",
+      "x": 2920,
+      "y": 1220,
+      "width": 360,
+      "height": 180,
+      "color": "1",
+      "text": "## [[CPQR秩揭示边界]]\nLA-PROJ-023 · 数值边界\n\nCPQR 对角衰减可作有效秩证据，但普通 CPQR 不自动具有强秩揭示误差界。"
+    },
+    {
+      "id": "pinv-ridge-0013",
+      "type": "text",
+      "x": 2160,
+      "y": 1510,
+      "width": 320,
+      "height": 180,
+      "color": "3",
+      "text": "## [[岭正则化]]\nLA-PINV-013 · 定义入口\n\n在最小二乘目标中加入二范数惩罚，以改变拟合与系数大小的取舍。"
+    },
+    {
+      "id": "pinv-ridge-filter-0017",
+      "type": "text",
+      "x": 2160,
+      "y": 1800,
+      "width": 320,
+      "height": 180,
+      "color": "5",
+      "text": "## [[岭的SVD滤波公式]]\nLA-PINV-017 · 公式\n\n把 $1/\\sigma_i$ 换成 $\\sigma_i/(\\sigma_i^2+\\lambda)$，连续收缩正奇异方向。"
+    },
+    {
+      "id": "pinv-tsvd-0012",
+      "type": "text",
+      "x": 2540,
+      "y": 1510,
+      "width": 320,
+      "height": 180,
+      "color": "3",
+      "text": "## [[截断SVD反演]]\nLA-PINV-012 · 过程\n\n只对高于阈值的奇异值取倒数，并删除被判为不可分辨的方向。"
+    },
+    {
+      "id": "pinv-compare-0008",
+      "type": "text",
+      "x": 2540,
+      "y": 1800,
+      "width": 360,
+      "height": 190,
+      "color": "3",
+      "text": "## [[截断SVD与岭正则化]]\nLA-PINV-008 · 方法辨析\n\nTSVD 是硬截断，岭是连续收缩；两者都改变精确伪逆的反演目标。"
+    },
+    {
+      "id": "pinv-cpqr-backsolve-0029",
+      "type": "text",
+      "x": 2920,
+      "y": 1510,
+      "width": 360,
+      "height": 190,
+      "color": "1",
+      "text": "## [[CPQR回代不保最小范数]]\nLA-PROJ-029 · 数值边界\n\n主元回代并把其余变量置零只选一个特解，未必删除零空间分量。"
+    },
+    {
+      "id": "pinv-rankdef-algorithm",
+      "type": "text",
+      "x": 2920,
+      "y": 1800,
+      "width": 380,
+      "height": 200,
+      "color": "3",
+      "text": "## [[秩亏最小二乘算法]]\nLA-PROJ-012 · 算法决策\n\n要保证最小范数，应使用完整正交分解或 SVD，并明确有效秩口径。"
+    },
+    {
+      "id": "pinv-footer",
+      "type": "text",
+      "x": 40,
+      "y": 2470,
+      "width": 3480,
+      "height": 150,
+      "text": "## 阅读路线\n\n判断单侧可逆性：定义 → 秩等价 → 满秩闭式，并分清欠定与秩亏。理解规范反解：一般广义逆 → Moore–Penrose 定义 → SVD 公式 → 存在唯一性与投影几何。做稳定反演：小奇异值放大 → 数值秩 → TSVD 或岭目标 → 岭滤波公式 → 明确算法保证。"
+    }
+  ],
+  "edges": [
+    {
+      "id": "pinv-edge-0001",
+      "fromNode": "pinv-left-def-0010",
+      "fromSide": "right",
+      "toNode": "pinv-left-rank-0001",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "存在性等价于满列秩"
+    },
+    {
+      "id": "pinv-edge-0002",
+      "fromNode": "pinv-left-rank-0001",
+      "fromSide": "right",
+      "toNode": "pinv-fullcol-formula-0014",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "满列秩使 Gram 矩阵可逆"
+    },
+    {
+      "id": "pinv-edge-0003",
+      "fromNode": "pinv-right-def-0011",
+      "fromSide": "right",
+      "toNode": "pinv-right-rank-0002",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "存在性等价于满行秩"
+    },
+    {
+      "id": "pinv-edge-0004",
+      "fromNode": "pinv-right-rank-0002",
+      "fromSide": "right",
+      "toNode": "pinv-fullrow-formula-0015",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "满行秩使 $AA^*$ 可逆"
+    },
+    {
+      "id": "pinv-edge-0023",
+      "fromNode": "pinv-right-rank-0002",
+      "fromSide": "bottom",
+      "toNode": "pinv-underdetermined-0028",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "满行秩欠定仍可能有非平凡零空间"
+    },
+    {
+      "id": "pinv-edge-0005",
+      "fromNode": "pinv-left-rank-0001",
+      "fromSide": "right",
+      "toNode": "pinv-square-0003",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "方阵中满列秩同时推出满行秩"
+    },
+    {
+      "id": "pinv-edge-0006",
+      "fromNode": "pinv-right-rank-0002",
+      "fromSide": "right",
+      "toNode": "pinv-square-0003",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "方阵中满行秩同时推出满列秩"
+    },
+    {
+      "id": "pinv-edge-0007",
+      "fromNode": "pinv-general-0006",
+      "fromSide": "right",
+      "toNode": "pinv-mp-0004",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "再加三个条件选出唯一规范逆"
+    },
+    {
+      "id": "pinv-edge-0008",
+      "fromNode": "pinv-mp-0004",
+      "fromSide": "right",
+      "toNode": "pinv-svd-formula-0016",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "SVD 给出可计算闭式"
+    },
+    {
+      "id": "pinv-edge-0009",
+      "fromNode": "pinv-svd-formula-0016",
+      "fromSide": "bottom",
+      "toNode": "pinv-existence-0007",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "验证四条件并证明唯一性"
+    },
+    {
+      "id": "pinv-edge-0010",
+      "fromNode": "pinv-mp-0004",
+      "fromSide": "bottom",
+      "toNode": "pinv-project-col",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "输出侧得到列空间正交投影"
+    },
+    {
+      "id": "pinv-edge-0011",
+      "fromNode": "pinv-mp-0004",
+      "fromSide": "bottom",
+      "toNode": "pinv-project-row",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "输入侧得到行空间正交投影"
+    },
+    {
+      "id": "pinv-edge-0012",
+      "fromNode": "pinv-project-col",
+      "fromSide": "bottom",
+      "toNode": "pinv-minnorm",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "固定唯一拟合值"
+    },
+    {
+      "id": "pinv-edge-0013",
+      "fromNode": "pinv-project-row",
+      "fromSide": "bottom",
+      "toNode": "pinv-minnorm",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "删除零空间分量"
+    },
+    {
+      "id": "pinv-edge-0014",
+      "fromNode": "pinv-svd-formula-0016",
+      "fromSide": "right",
+      "toNode": "pinv-noise-0005",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "取倒数暴露小奇异方向敏感性"
+    },
+    {
+      "id": "pinv-edge-0015",
+      "fromNode": "pinv-noise-0005",
+      "fromSide": "right",
+      "toNode": "pinv-numrank-0009",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "先声明哪些方向可分辨"
+    },
+    {
+      "id": "pinv-edge-0016",
+      "fromNode": "pinv-numrank-0009",
+      "fromSide": "right",
+      "toNode": "pinv-cpqr-boundary",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "CPQR 对角衰减只是秩证据"
+    },
+    {
+      "id": "pinv-edge-0017",
+      "fromNode": "pinv-noise-0005",
+      "fromSide": "bottom",
+      "toNode": "pinv-ridge-0013",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "引入二范数惩罚"
+    },
+    {
+      "id": "pinv-edge-0024",
+      "fromNode": "pinv-ridge-0013",
+      "fromSide": "bottom",
+      "toNode": "pinv-ridge-filter-0017",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "SVD 坐标给出连续滤波因子"
+    },
+    {
+      "id": "pinv-edge-0018",
+      "fromNode": "pinv-numrank-0009",
+      "fromSide": "bottom",
+      "toNode": "pinv-tsvd-0012",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "按容差作硬截断"
+    },
+    {
+      "id": "pinv-edge-0019",
+      "fromNode": "pinv-ridge-filter-0017",
+      "fromSide": "right",
+      "toNode": "pinv-compare-0008",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "连续收缩分支"
+    },
+    {
+      "id": "pinv-edge-0020",
+      "fromNode": "pinv-tsvd-0012",
+      "fromSide": "bottom",
+      "toNode": "pinv-compare-0008",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "硬截断分支"
+    },
+    {
+      "id": "pinv-edge-0021",
+      "fromNode": "pinv-cpqr-boundary",
+      "fromSide": "bottom",
+      "toNode": "pinv-cpqr-backsolve-0029",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "秩证据不等于规范解保证"
+    },
+    {
+      "id": "pinv-edge-0025",
+      "fromNode": "pinv-cpqr-backsolve-0029",
+      "fromSide": "bottom",
+      "toNode": "pinv-rankdef-algorithm",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "用 COD 或 SVD 删除零空间分量"
+    },
+    {
+      "id": "pinv-edge-0022",
+      "fromNode": "pinv-compare-0008",
+      "fromSide": "right",
+      "toNode": "pinv-rankdef-algorithm",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "恢复目标决定算法路径"
+    }
+  ]
+}

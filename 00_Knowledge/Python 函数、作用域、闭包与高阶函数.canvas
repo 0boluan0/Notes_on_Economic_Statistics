@@ -1,0 +1,395 @@
+{
+  "nodes": [
+    {
+      "id": "249c602ec64e8699",
+      "type": "text",
+      "x": 0,
+      "y": -300,
+      "width": 1630,
+      "height": 200,
+      "text": "# Python 函数、作用域、闭包与高阶函数\n\n按三条线阅读：**接口与调用** → **名称与定义环境** → **函数作为数据**。卡片正文保存完整命题与证据；这里的颜色只区分语义角色，不表示掌握程度。",
+      "color": "4"
+    },
+    {
+      "id": "5e31f852e3bfc16f",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 270,
+      "height": 170,
+      "text": "## 先固定问题边界\n\n[[问题分解与复用]]\n\n先写输入、输出、边界与可检查步骤。"
+    },
+    {
+      "id": "17bb163908235084",
+      "type": "text",
+      "x": 340,
+      "y": 0,
+      "width": 270,
+      "height": 170,
+      "text": "## 契约与实现分离\n\n[[函数契约]]\n\n调用者依赖输入、结果、异常与副作用，不依赖内部步骤。",
+      "color": "4"
+    },
+    {
+      "id": "f21c1fcabcbef619",
+      "type": "text",
+      "x": 680,
+      "y": 0,
+      "width": 270,
+      "height": 170,
+      "text": "## 定义不是调用\n\n[[函数定义与调用]]\n\n执行 `def` 建立函数对象；函数体到调用时才运行。",
+      "color": "4"
+    },
+    {
+      "id": "56fc6b0c28cd28d8",
+      "type": "text",
+      "x": 1020,
+      "y": 0,
+      "width": 270,
+      "height": 170,
+      "text": "## 每次调用的新环境\n\n[[函数调用帧]]\n\n先求值实参，再在独立局部 frame 中绑定形参。",
+      "color": "4"
+    },
+    {
+      "id": "aeda9dec40e90471",
+      "type": "text",
+      "x": 1360,
+      "y": 0,
+      "width": 270,
+      "height": 170,
+      "text": "## 结果与输出分开\n\n[[返回值与打印]]\n\n`return` 交值给调用者；`print` 产生输出副作用。",
+      "color": "4"
+    },
+    {
+      "id": "343e79145bdfe9ad",
+      "type": "text",
+      "x": 340,
+      "y": 250,
+      "width": 270,
+      "height": 120,
+      "text": "### 类型边界（复用）\n\n[[动态类型边界]]\n\n注解表达预期，但默认不执行契约验证。"
+    },
+    {
+      "id": "7ff2f356bb2d93fd",
+      "type": "text",
+      "x": 0,
+      "y": 250,
+      "width": 270,
+      "height": 120,
+      "text": "### 按规格选例（复用）\n\n[[黑盒测试]]\n\n按接口规格选择正常、边界与错误行为。"
+    },
+    {
+      "id": "cc369ee6d569e799",
+      "type": "text",
+      "x": 680,
+      "y": 250,
+      "width": 270,
+      "height": 160,
+      "text": "## 默认值的求值时点\n\n[[默认参数求值]]\n\n默认表达式在定义时求值一次；可变对象可能跨调用共享。",
+      "color": "2"
+    },
+    {
+      "id": "9da28f6fe1988d2d",
+      "type": "text",
+      "x": 1020,
+      "y": 250,
+      "width": 270,
+      "height": 120,
+      "text": "### 递归调用（复用）\n\n[[递归调用栈]]\n\n递归只是同一调用规则建立更多独立 frame。"
+    },
+    {
+      "id": "d3e96f9703b09d6b",
+      "type": "text",
+      "x": 1360,
+      "y": 250,
+      "width": 270,
+      "height": 120,
+      "text": "### 控制边界（复用）\n\n[[控制转移语句]]\n\n`return` 离开整个当前函数，而非只离开循环。"
+    },
+    {
+      "id": "eb2d128cb5672f6f",
+      "type": "text",
+      "x": 1020,
+      "y": 470,
+      "width": 270,
+      "height": 120,
+      "text": "### 对象共享（复用）\n\n[[对象别名]]\n\n新 frame 不会复制实参或默认对象。"
+    },
+    {
+      "id": "e8f65b5104c51701",
+      "type": "text",
+      "x": 0,
+      "y": 700,
+      "width": 270,
+      "height": 170,
+      "text": "## 绑定是作用域的起点\n\n[[名称绑定与赋值]]\n\n先区分名称改绑与对象原地修改。"
+    },
+    {
+      "id": "0ffbc77559c65545",
+      "type": "text",
+      "x": 340,
+      "y": 700,
+      "width": 270,
+      "height": 170,
+      "text": "## 局部名称怎样判定\n\n[[局部名称判定]]\n\n块内出现绑定，整块默认按局部名称解释。",
+      "color": "5"
+    },
+    {
+      "id": "69e95003eed792cf",
+      "type": "text",
+      "x": 510,
+      "y": 470,
+      "width": 270,
+      "height": 160,
+      "text": "## 改绑目标的显式声明\n\n[[global 与 nonlocal]]\n\n`global` 指向模块；`nonlocal` 指向最近已有的外层函数绑定。",
+      "color": "2"
+    },
+    {
+      "id": "a425c37c21cdeb9e",
+      "type": "text",
+      "x": 680,
+      "y": 700,
+      "width": 270,
+      "height": 170,
+      "text": "## 按定义处查自由名称\n\n[[词法作用域]]\n\n名称沿定义环境向外解析，不沿调用者局部环境解析。",
+      "color": "5"
+    },
+    {
+      "id": "159c7e7bd23c874f",
+      "type": "text",
+      "x": 1020,
+      "y": 700,
+      "width": 270,
+      "height": 170,
+      "text": "## 返回后仍可访问定义环境\n\n[[闭包环境保留]]\n\n返回的内层函数保留解析自由名称所需的环境。",
+      "color": "5"
+    },
+    {
+      "id": "3625db9a9c3bb68c",
+      "type": "text",
+      "x": 1360,
+      "y": 700,
+      "width": 270,
+      "height": 170,
+      "text": "## 保留绑定不等于冻结快照\n\n[[闭包晚绑定]]\n\n循环创建的函数可能在调用时读取同一最终绑定。",
+      "color": "2"
+    },
+    {
+      "id": "c20e60688f2f17ed",
+      "type": "text",
+      "x": 0,
+      "y": 1050,
+      "width": 270,
+      "height": 170,
+      "text": "## 函数也能作为值\n\n[[一等函数对象]]\n\n可绑定、存储、传入和返回；`f` 不等于 `f()`。",
+      "color": "3"
+    },
+    {
+      "id": "a35849ca82be50bc",
+      "type": "text",
+      "x": 340,
+      "y": 1050,
+      "width": 270,
+      "height": 170,
+      "text": "## 固定框架，替换行为\n\n[[高阶函数抽象]]\n\n接收或返回函数，把遍历等框架与 predicate/update 分开。",
+      "color": "3"
+    },
+    {
+      "id": "f88061d858c2a6e9",
+      "type": "text",
+      "x": 680,
+      "y": 1050,
+      "width": 270,
+      "height": 170,
+      "text": "## 简单匿名函数\n\n[[lambda 表达式]]\n\nlambda 产生单表达式函数对象，并服从同一作用域规则。",
+      "color": "3"
+    },
+    {
+      "id": "67390b1d813d0f7e",
+      "type": "text",
+      "x": 340,
+      "y": 1300,
+      "width": 270,
+      "height": 180,
+      "text": "## 从函数抽象迁移到数据表示\n\n[[数据抽象屏障]]\n\nconstructor 与 selector 隔离具体表示；类不是唯一实现。",
+      "color": "6"
+    }
+  ],
+  "edges": [
+    {
+      "id": "bc607d20a8dd73c4",
+      "fromNode": "5e31f852e3bfc16f",
+      "fromSide": "right",
+      "toNode": "17bb163908235084",
+      "toSide": "left",
+      "label": "把步骤边界写成接口承诺"
+    },
+    {
+      "id": "085c8ac24c4e097c",
+      "fromNode": "17bb163908235084",
+      "fromSide": "right",
+      "toNode": "f21c1fcabcbef619",
+      "toSide": "left",
+      "label": "契约不锁定函数体实现"
+    },
+    {
+      "id": "413b52d560b31ad3",
+      "fromNode": "f21c1fcabcbef619",
+      "fromSide": "right",
+      "toNode": "56fc6b0c28cd28d8",
+      "toSide": "left",
+      "label": "调用才执行函数体"
+    },
+    {
+      "id": "be6c09c15e90d4ef",
+      "fromNode": "56fc6b0c28cd28d8",
+      "fromSide": "right",
+      "toNode": "aeda9dec40e90471",
+      "toSide": "left",
+      "label": "调用结果交还调用者"
+    },
+    {
+      "id": "733b90b1a3f05ac5",
+      "fromNode": "343e79145bdfe9ad",
+      "fromSide": "top",
+      "toNode": "17bb163908235084",
+      "toSide": "bottom",
+      "label": "注解不自动执行语义契约"
+    },
+    {
+      "id": "debb5cfdca393f3d",
+      "fromNode": "7ff2f356bb2d93fd",
+      "fromSide": "top",
+      "toNode": "17bb163908235084",
+      "toSide": "bottom",
+      "label": "按契约选择测试"
+    },
+    {
+      "id": "f99140d1779e8c28",
+      "fromNode": "f21c1fcabcbef619",
+      "fromSide": "bottom",
+      "toNode": "cc369ee6d569e799",
+      "toSide": "top",
+      "label": "默认表达式随 def 求值"
+    },
+    {
+      "id": "4d427e59ed8abaa5",
+      "fromNode": "cc369ee6d569e799",
+      "fromSide": "top",
+      "toNode": "56fc6b0c28cd28d8",
+      "toSide": "bottom",
+      "label": "省略实参时填入默认对象"
+    },
+    {
+      "id": "92a0f537eb9f6c87",
+      "fromNode": "eb2d128cb5672f6f",
+      "fromSide": "left",
+      "toNode": "cc369ee6d569e799",
+      "toSide": "bottom",
+      "label": "可变性使共享状态可见"
+    },
+    {
+      "id": "57f6ea3f72b6a85f",
+      "fromNode": "9da28f6fe1988d2d",
+      "fromSide": "top",
+      "toNode": "56fc6b0c28cd28d8",
+      "toSide": "bottom",
+      "label": "递归复用同一调用机制"
+    },
+    {
+      "id": "752a429c5c7b210f",
+      "fromNode": "d3e96f9703b09d6b",
+      "fromSide": "top",
+      "toNode": "aeda9dec40e90471",
+      "toSide": "bottom",
+      "label": "return 离开当前函数"
+    },
+    {
+      "id": "6997c7bce7806f3f",
+      "fromNode": "e8f65b5104c51701",
+      "fromSide": "right",
+      "toNode": "0ffbc77559c65545",
+      "toSide": "left",
+      "label": "块内绑定决定局部名称"
+    },
+    {
+      "id": "b102df3b9b614cb7",
+      "fromNode": "0ffbc77559c65545",
+      "fromSide": "right",
+      "toNode": "a425c37c21cdeb9e",
+      "toSide": "left",
+      "label": "自由名称再沿外层查找"
+    },
+    {
+      "id": "65f50f7476048c70",
+      "fromNode": "0ffbc77559c65545",
+      "fromSide": "top",
+      "toNode": "69e95003eed792cf",
+      "toSide": "bottom",
+      "label": "声明改写默认绑定目标"
+    },
+    {
+      "id": "636f26a10ec37792",
+      "fromNode": "69e95003eed792cf",
+      "fromSide": "bottom",
+      "toNode": "a425c37c21cdeb9e",
+      "toSide": "top",
+      "label": "仍服从定义处作用域链"
+    },
+    {
+      "id": "2ad799342a0ccd6c",
+      "fromNode": "a425c37c21cdeb9e",
+      "fromSide": "right",
+      "toNode": "159c7e7bd23c874f",
+      "toSide": "left",
+      "label": "定义环境随函数保留"
+    },
+    {
+      "id": "f61062089e80ce3e",
+      "fromNode": "159c7e7bd23c874f",
+      "fromSide": "right",
+      "toNode": "3625db9a9c3bb68c",
+      "toSide": "left",
+      "label": "保留访问路径而非冻结值"
+    },
+    {
+      "id": "fd5a24b6c2caa6f3",
+      "fromNode": "c20e60688f2f17ed",
+      "fromSide": "right",
+      "toNode": "a35849ca82be50bc",
+      "toSide": "left",
+      "label": "函数可成为输入或输出"
+    },
+    {
+      "id": "b061f265db33ec26",
+      "fromNode": "a35849ca82be50bc",
+      "fromSide": "right",
+      "toNode": "f88061d858c2a6e9",
+      "toSide": "left",
+      "label": "短小局部行为可用 lambda"
+    },
+    {
+      "id": "ca57fce89e36a0e5",
+      "fromNode": "a35849ca82be50bc",
+      "fromSide": "top",
+      "toNode": "159c7e7bd23c874f",
+      "toSide": "bottom",
+      "label": "返回内层函数可形成闭包"
+    },
+    {
+      "id": "c31d879f9089d302",
+      "fromNode": "f88061d858c2a6e9",
+      "fromSide": "top",
+      "toNode": "3625db9a9c3bb68c",
+      "toSide": "bottom",
+      "label": "lambda 同样服从晚绑定"
+    },
+    {
+      "id": "2e3f4401928853cc",
+      "fromNode": "a35849ca82be50bc",
+      "fromSide": "bottom",
+      "toNode": "67390b1d813d0f7e",
+      "toSide": "top",
+      "label": "抽象原则迁移到数据表示"
+    }
+  ]
+}

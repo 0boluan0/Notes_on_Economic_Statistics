@@ -15,10 +15,10 @@ aliases:
 # PaLM: Scaling Language Modeling with Pathways
 
 ## 一句话位置
-这篇论文位于 `02 规模化与模型家族`，第一版用于连接 Scaling Law 路线；此笔记暂作索引，不做精读摘要。
+这篇论文位于 `02 规模化与模型家族`，核心位置是用 Pathways 将 540B dense 模型的训练扩展到多个 TPU Pod，并比较不同模型规模的少样本任务表现；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-规模化、MoE 与分布式训练
+[[大模型分布式训练]], [[任务表现缩放]], [[LLM 评测]], [[预训练分布]], [[数据混合]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/QDYEWCBX)
@@ -30,4 +30,3 @@ aliases:
 ## Canvas
 - [[LLM Big Picture]]
 - [[02 规模化与模型家族.canvas|02 规模化与模型家族 Canvas]]
-
