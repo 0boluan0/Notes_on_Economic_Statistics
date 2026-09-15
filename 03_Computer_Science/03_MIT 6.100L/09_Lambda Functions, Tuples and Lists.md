@@ -520,9 +520,9 @@ If you keep trying to split the task into two functions or print the length and 
 - Lecture code: [[MIT 6.100L-lecture-code/mit6_100l_lec09_code.py|Lecture 09 code (py)]]
 - Finger exercise: [[MIT 6.100L-finger-exercises/mit6_100l_ex09_sol.pdf|Lecture 09 finger exercise solution]]
 - Transcript: [[MIT 6.100L-transcripts/mit6_100l_lec09_transcript.pdf|Lecture 09 transcript]]
-- Recitation 4: [[MIT 6.100L-recitations/mit6_100l_rec04.zip|Recitation 04 materials]]
-- PS 2 out: [[MIT 6.100L-problem-sets/mit6_100l_ps2.pdf|PS2 statement]], [[MIT 6.100L-problem-sets/mit6_100l_ps2_code.zip|PS2 starter code]]
-- PS 1 due: [[MIT 6.100L-problem-sets/mit6_100l_ps1.pdf|PS1 statement]], [[MIT 6.100L-problem-sets/mit6_100l_ps1_code.zip|PS1 starter code]]
+- Recitation 4: [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_rec04.zip|Recitation 04 materials]]
+- PS 2 out: [[MIT 6.100L-problem-sets/mit6_100l_ps2.pdf|PS2 statement]], [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_ps2_code.zip|PS2 starter code]]
+- PS 1 due: [[MIT 6.100L-problem-sets/mit6_100l_ps1.pdf|PS1 statement]], [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_ps1_code.zip|PS1 starter code]]
 - Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (Ch 5.1-5.3)
 
 ## Review checklist

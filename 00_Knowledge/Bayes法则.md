@@ -49,6 +49,12 @@ $P(B\mid H_j)$ asks how likely the evidence is if the hypothesis is true, wherea
 A zero-prior partition element does not support the elementary conditional likelihood $P(B\mid H_\ell)$. In the finite elementary setting, omit that null element or write the formula using the joint probability $P(B\cap H_\ell)$ instead.
 <!-- bilingual-en:end -->
 
+用于统计推断时，[[似然函数]]把已观察数据固定、让候选参数变化；它通常不对参数归一化。只有结合[[先验分布]]并对全部候选参数求和或积分，才得到[[后验分布]]。例如两个候选模型对同一数据的似然为 0.729 和 0.001，相等先验得到后验 729/730；先验改为 0.01 和 0.99 则得到 81/92。似然相同而后验不同，直接显示了先验与归一化的作用。
+
+<!-- bilingual-en:start -->
+For statistical inference, the [[似然函数|likelihood]] fixes the observed data and varies candidate parameters; it need not normalise over them. Combining it with a [[先验分布|prior]] and summing or integrating across candidates yields a [[后验分布|posterior]]. Likelihoods 0.729 and 0.001 give posterior 729/730 with equal priors, but 81/92 with priors 0.01 and 0.99. The unchanged likelihood and changed posterior expose the roles of prior and normalisation.
+<!-- bilingual-en:end -->
+
 > [!question]- 自检
 > Bayes 法则的分母为什么不能只写 $P(B\mid H_j)$？
 > <!-- bilingual-en:start -->
@@ -67,4 +73,10 @@ A zero-prior partition element does not support the elementary conditional likel
 <!-- bilingual-en:start -->
 - [[01_Math/07-Mathematics for Computer Science/MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_BayesTheorm.pdf|MIT 6.042J Bayes' Theorem slides]] were checked for Bayes' rule, the total-probability denominator, and the odds interpretation.
 - [MIT 18.05 Class 3 preparation](https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_class03-prep.pdf) was checked for the direction of the prior, likelihood, and posterior.
+<!-- bilingual-en:end -->
+
+- [CMU 36-705 Lecture 24, pp.1–2](https://stat.cmu.edu/~larry/=stat705/Lecture24.pdf)：核对统计似然、先验与后验的角色；袋子例的归一化数值另行复算。
+
+<!-- bilingual-en:start -->
+- [CMU 36-705 Lecture 24, pp.1–2](https://stat.cmu.edu/~larry/=stat705/Lecture24.pdf) supports the likelihood, prior, and posterior distinction; the numerical normalisations are recalculated.
 <!-- bilingual-en:end -->

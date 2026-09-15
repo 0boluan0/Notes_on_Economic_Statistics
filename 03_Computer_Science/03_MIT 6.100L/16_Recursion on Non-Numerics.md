@@ -446,9 +446,9 @@ Compared with the simplified classroom version, it genuinely tests each element'
 - Lecture code: [[MIT 6.100L-lecture-code/mit6_100l_lec16_code.py|Lecture 16 code (py)]]
 - Finger exercise: [[MIT 6.100L-finger-exercises/mit6_100l_ex16_sol.pdf|Lecture 16 finger exercise solution]]
 - Transcript: [[MIT 6.100L-transcripts/mit6_100l_lec16_transcript.pdf|Lecture 16 transcript]]
-- Recitation 8: [[MIT 6.100L-recitations/mit6_100l_rec08.zip|Recitation 08 materials]]
-- PS 4 out: [[MIT 6.100L-problem-sets/mit6_100l_ps4.pdf|PS4 statement]], [[MIT 6.100L-problem-sets/mit6_100l_ps4_code.zip|PS4 starter code]]
-- PS 3 due: [[MIT 6.100L-problem-sets/mit6_100l_ps3.pdf|PS3 statement]], [[MIT 6.100L-problem-sets/mit6_100l_ps3_code.zip|PS3 starter code]]
+- Recitation 8: [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_rec08.zip|Recitation 08 materials]]
+- PS 4 out: [[MIT 6.100L-problem-sets/mit6_100l_ps4.pdf|PS4 statement]], [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_ps4_code.zip|PS4 starter code]]
+- PS 3 due: [[MIT 6.100L-problem-sets/mit6_100l_ps3.pdf|PS3 statement]], [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_ps3_code.zip|PS3 starter code]]
 - Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (Ch 6.2-6.4)
 
 ## Review checklist

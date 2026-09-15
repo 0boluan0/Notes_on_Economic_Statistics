@@ -487,7 +487,7 @@ An impulse to write `print(True)` or `print(False)` signals that the central pri
 - Lecture code: [[MIT 6.100L-lecture-code/mit6_100l_lec08_code.py|Lecture 08 code (py)]]
 - Finger exercise: [[MIT 6.100L-finger-exercises/mit6_100l_ex08_sol.pdf|Lecture 08 finger exercise solution]]
 - Transcript: [[MIT 6.100L-transcripts/mit6_100l_lec08_transcript.pdf|Lecture 08 transcript]]
-- Recitation 4: [[MIT 6.100L-recitations/mit6_100l_rec04.zip|Recitation 04 materials]]
+- Recitation 4: [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_rec04.zip|Recitation 04 materials]]
 - Problem set milestone: none directly scheduled on this lecture
 - Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (Ch 4.3-4.6)
 

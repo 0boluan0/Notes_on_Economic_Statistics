@@ -8,7 +8,7 @@ created_by: "tool"
 # Tools
 
 > [!summary] 导航
-> 共 10 个工具。摘要取自每篇工具笔记标题后的首段。
+> 共 11 个工具。摘要取自每篇工具笔记标题后的首段。
 
 > [!info] 字段说明
 > `待补` 表示对应章节仍含 `信息不足` 或 `TODO`。
@@ -20,9 +20,10 @@ created_by: "tool"
 
 | 工具 | 语言/平台 | 来源 | 安装 | 首次使用 | 待补 | 一句话总结 |
 |---|---|---|---|---|---|---|
+| [[Archify]] | JavaScript | tt-a1i/archify | 已记录 | 已记录 | 完整 | 让 AI 将代码库或系统描述转为可交互、可导出的技术图，支持架构、工作流、时序、数据流和生命周期。 |
 | [[Code Space]] | TypeScript | UNLINEARITY/Obsidian-CodeSpace | 已记录 | 待补 | 首次使用 | A comprehensive plugin for code file viewing, management, and editing in Obsidian. 在Obsidain 当中实现代码文件的查看、管理、编辑。 |
 | [[Codebase to Course]] | CSS | zarazhangrui/codebase-to-course | 待补 | 待补 | 安装, 首次使用, 后续使用 | A Claude Code skill that turns any codebase into a beautiful, interactive single-page HTML course for non-technical vibe coders. |
-| [[DeepTutor Lifelong Personalized Tutoring\|DeepTutor: Lifelong Personalized Tutoring]] | Python | HKUDS/DeepTutor | 已记录 | 已记录 | 完整 | 与现有 Obsidian + Codex 流程高度重叠，暂不长期部署；仅为掌握度学习、题库和长期记忆做隔离试用。 |
+| [[DeepTutor Lifelong Personalized Tutoring\|DeepTutor: Lifelong Personalized Tutoring]] | Python | HKUDS/DeepTutor | 已记录 | 已记录 | 完整 | DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/. |
 | [[FastAPI]] | Python | fastapi/fastapi | 已记录 | 已记录 | 完整 | FastAPI framework, high performance, easy to learn, fast to code, ready for production |
 | [[Install Pake CLI]] | Rust | tw93/Pake | 已记录 | 已记录 | 完整 | 🤱🏻 Turn any webpage into a desktop app with one command. |
 | [[labml.ai Deep Learning Paper Implementations]] | Python | labmlai/annotated_deep_learning_paper_implementations | 已记录 | 待补 | 首次使用, 后续使用 | 🧑‍🏫 60+ Implementations/tutorials of deep learning papers with side-by-side notes 📝; including transformers (original, xl, switch, feedback, vit, ...), optimizers (adam, adabelief, sophia, ...), gans(cyclegan, stylegan2, ...), 🎮 reinforcement learning (ppo, dqn), capsnet, distillation, ... 🧠 |

@@ -538,7 +538,7 @@ Beyond asking whether a problem is solvable, ask whether it has an order, a natu
 - Lecture code: [[MIT 6.100L-lecture-code/mit6_100l_lec06_code.py|Lecture 06 code (py)]]
 - Finger exercise: [[MIT 6.100L-finger-exercises/mit6_100l_ex06_sol.pdf|Lecture 06 finger exercise solution]]
 - Transcript: [[MIT 6.100L-transcripts/mit6_100l_lec06_transcript.pdf|Lecture 06 transcript]]
-- Recitation 3: [[MIT 6.100L-recitations/mit6_100l_rec03.zip|Recitation 03 materials]]
+- Recitation 3: [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_rec03.zip|Recitation 03 materials]]
 - Problem set milestone: none directly scheduled on this lecture
 - Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (Ch 3.4-3.5)
 

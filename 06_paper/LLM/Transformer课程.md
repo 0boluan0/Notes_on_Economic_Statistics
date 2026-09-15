@@ -17,7 +17,7 @@ aliases:
 The difficult part of reading a Transformer is often not an individual formula, but knowing where its inputs come from and where its output goes. This chapter follows the computation: token IDs become vectors, positions exchange information, each position is updated, and the resulting representations become probabilities over a vocabulary. Read straight through or open a shared atom to revisit one definition, derivation, or judgement.
 <!-- bilingual-en:end -->
 
-全局关系见 [[Transformer.canvas|Transformer 主题图]]。
+全局关系见 [[Transformer.canvas|Transformer 主题图]]。如果你正在读原论文，可以同时打开 [[06_paper/Attention 阅读样例/从注意力到 Transformer|四篇论文的阅读导引]]：那一页保留论文先后提出的问题、原图与实验语境，这一章负责把计算机制连起来。
 
 ## 1. 先看输入、计算和输出
 

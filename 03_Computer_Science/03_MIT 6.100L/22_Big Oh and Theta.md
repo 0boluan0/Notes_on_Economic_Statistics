@@ -523,7 +523,7 @@ This is the easiest part of the theory to gloss over, but also the part where pr
 - Lecture code: [[MIT 6.100L-lecture-code/mit6_100l_lec22_code.py|Lecture 22 code (py)]]
 - Finger exercise: [[MIT 6.100L-finger-exercises/mit6_100l_ex22_sol.pdf|Lecture 22 finger exercise solution]]
 - Transcript: [[MIT 6.100L-transcripts/mit6_100l_lec22_transcript.pdf|Lecture 22 transcript]]
-- Recitation 10: [[MIT 6.100L-recitations/mit6_100l_rec10.zip|Recitation 10 materials]]
+- Recitation 10: [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_rec10.zip|Recitation 10 materials]]
 - Problem set milestone: none directly scheduled on this lecture
 - Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (本地 Revised and Expanded Edition：Ch 9.1–9.3)
 

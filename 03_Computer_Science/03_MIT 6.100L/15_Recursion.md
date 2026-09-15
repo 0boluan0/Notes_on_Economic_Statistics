@@ -483,7 +483,7 @@ If your first impulse is still to reach for `for` or `while`, the recursive form
 - Lecture code: [[MIT 6.100L-lecture-code/mit6_100l_lec15_code.py|Lecture 15 code (py)]]
 - Finger exercise: [[MIT 6.100L-finger-exercises/mit6_100l_ex15_sol.pdf|Lecture 15 finger exercise solution]]
 - Transcript: [[MIT 6.100L-transcripts/mit6_100l_lec15_transcript.pdf|Lecture 15 transcript]]
-- Recitation 8: [[MIT 6.100L-recitations/mit6_100l_rec08.zip|Recitation 08 materials]]
+- Recitation 8: [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_rec08.zip|Recitation 08 materials]]
 - Problem set milestone: none directly scheduled on this lecture
 - Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (Ch 6.1)
 

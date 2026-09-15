@@ -1,0 +1,226 @@
+{
+  "nodes": [
+    {
+      "id": "target",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 440,
+      "height": 190,
+      "color": "5",
+      "text": "## [[估计对象三分|目标、规则、数值]]\n\n<!-- bilingual-en:start -->\n*Estimand, estimator, estimate*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "po",
+      "type": "text",
+      "x": 600,
+      "y": 0,
+      "width": 440,
+      "height": 190,
+      "color": "5",
+      "text": "## [[潜在结果反事实|潜在结果]]\n\n<!-- bilingual-en:start -->\n*Potential outcomes*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "ate",
+      "type": "text",
+      "x": 1200,
+      "y": -160,
+      "width": 440,
+      "height": 190,
+      "color": "5",
+      "text": "## [[平均处理效应|平均处理效应 ATE]]\n\n<!-- bilingual-en:start -->\n*Average treatment effect*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "att",
+      "type": "text",
+      "x": 1200,
+      "y": 160,
+      "width": 440,
+      "height": 190,
+      "color": "5",
+      "text": "## [[已处理者平均处理效应|处理组平均效应 ATET]]\n\n<!-- bilingual-en:start -->\n*Effect among treated units*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "diff",
+      "type": "text",
+      "x": 1800,
+      "y": 160,
+      "width": 440,
+      "height": 190,
+      "color": "6",
+      "text": "## [[均值差的因果分解|观测均值差 = ATET + SB]]\n\n<!-- bilingual-en:start -->\n*Observed contrast = ATET + selection bias*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "sb",
+      "type": "text",
+      "x": 1800,
+      "y": 480,
+      "width": 440,
+      "height": 190,
+      "color": "1",
+      "text": "## [[选择偏差|未处理基线差]]\n\n<!-- bilingual-en:start -->\n*Selection bias in the mean contrast*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "rct",
+      "type": "text",
+      "x": 2400,
+      "y": 0,
+      "width": 440,
+      "height": 190,
+      "color": "4",
+      "text": "## [[随机分配识别|随机分配识别]]\n\n<!-- bilingual-en:start -->\n*Identification by random assignment*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "sample",
+      "type": "text",
+      "x": 3000,
+      "y": 0,
+      "width": 440,
+      "height": 190,
+      "color": "5",
+      "text": "## [[二元回归的样本均值差|二元 OLS 的样本均值差]]\n\n<!-- bilingual-en:start -->\n*OLS as a sample mean difference*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "sampling",
+      "type": "text",
+      "x": 3600,
+      "y": 0,
+      "width": 440,
+      "height": 190,
+      "color": "5",
+      "text": "## [[抽样分布|抽样分布]]\n\n<!-- bilingual-en:start -->\n*Sampling distribution*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "conf",
+      "type": "text",
+      "x": 1200,
+      "y": 480,
+      "width": 440,
+      "height": 190,
+      "color": "5",
+      "text": "## [[混淆因子|处理与结果的共同原因]]\n\n<!-- bilingual-en:start -->\n*A common cause of treatment and outcome*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "did",
+      "type": "text",
+      "x": 2400,
+      "y": 480,
+      "width": 440,
+      "height": 190,
+      "color": "5",
+      "text": "## [[双重差分法|其他反事实比较：DID]]\n\n<!-- bilingual-en:start -->\n*Another counterfactual comparison: DID*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "match",
+      "type": "text",
+      "x": 3000,
+      "y": 480,
+      "width": 440,
+      "height": 190,
+      "color": "5",
+      "text": "## [[协变量匹配|协变量匹配]]\n\n<!-- bilingual-en:start -->\n*Covariate matching*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "rd",
+      "type": "text",
+      "x": 3600,
+      "y": 480,
+      "width": 440,
+      "height": 190,
+      "color": "5",
+      "text": "## [[断点回归设计|阈值附近的局部比较]]\n\n<!-- bilingual-en:start -->\n*A local comparison near a cutoff*\n<!-- bilingual-en:end -->"
+    }
+  ],
+  "edges": [
+    {
+      "id": "632b209b710a4b06",
+      "fromNode": "target",
+      "toNode": "po",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "因果目标需要定义干预 / Define intervention"
+    },
+    {
+      "id": "a72909156dbd47c7",
+      "fromNode": "po",
+      "toNode": "ate",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "总体平均 / Average over population"
+    },
+    {
+      "id": "e562e44621214f8f",
+      "fromNode": "po",
+      "toNode": "att",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "处理组条件平均 / Average among treated"
+    },
+    {
+      "id": "46dc73de265f4a7d",
+      "fromNode": "att",
+      "toNode": "diff",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "第一项 / First term"
+    },
+    {
+      "id": "905ff3e30eb1422a",
+      "fromNode": "sb",
+      "toNode": "diff",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "第二项 / Second term"
+    },
+    {
+      "id": "6133d357052248a9",
+      "fromNode": "conf",
+      "toNode": "sb",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "共同原因可造成差异 / May create baseline differences"
+    },
+    {
+      "id": "5b6955a7330c4b71",
+      "fromNode": "diff",
+      "toNode": "rct",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "独立分配使 SB = 0 且 ATET = ATE"
+    },
+    {
+      "id": "dd4c92d2fe974ece",
+      "fromNode": "rct",
+      "toNode": "sample",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "识别总体目标；样本规则另需抽样条件"
+    },
+    {
+      "id": "1cbdb0e4961b4c93",
+      "fromNode": "sample",
+      "toNode": "sampling",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "重复分配或抽样诱导分布 / Induces a distribution"
+    },
+    {
+      "id": "f47cc9b1c8634394",
+      "fromNode": "rct",
+      "toNode": "did",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "比较组也可由平行趋势支持"
+    }
+  ]
+}

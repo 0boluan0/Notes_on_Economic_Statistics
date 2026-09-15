@@ -31,4 +31,6 @@ aliases:
 
 ## 阅读讲解
 
+[[06_paper/Attention 阅读样例/从注意力到 Transformer#二、Transformer 改变了什么|Attention 精读]] · [[06_paper/Attention 阅读样例/从注意力到 Transformer|主题阅读入口]]
+
 [[06_paper/LLM/Transformer课程|从输入表示到输出概率的连续学习]] · [[Transformer.canvas|计算关系图]]

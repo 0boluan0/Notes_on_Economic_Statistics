@@ -681,12 +681,12 @@ It therefore reinforces behavioral specialization on top of a stable parent inte
 
 ## Links to follow-up practice
 - Slides: [[MIT 6.100L-slides/mit6_100l_lec20.pdf|Lecture 20 slides]]
-- Lecture code: [[MIT 6.100L-lecture-code/mit6_100l_lec20_code.zip|Lecture 20 code (zip)]]
+- Lecture code: [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_lec20_code.zip|Lecture 20 code (zip)]]
 - Finger exercise: [[MIT 6.100L-finger-exercises/mit6_100l_ex20_sol.pdf|Lecture 20 finger exercise solution]]
 - Transcript: [[MIT 6.100L-transcripts/mit6_100l_lec20_transcript.pdf|Lecture 20 transcript]]
-- Recitation 9: [[MIT 6.100L-recitations/mit6_100l_rec09.zip|Recitation 09 materials]]
-- PS 5 out: [[MIT 6.100L-problem-sets/mit6_100l_ps5.pdf|PS5 statement]], [[MIT 6.100L-problem-sets/mit6_100l_ps5_code.zip|PS5 starter code]]
-- PS 4 due: [[MIT 6.100L-problem-sets/mit6_100l_ps4.pdf|PS4 statement]], [[MIT 6.100L-problem-sets/mit6_100l_ps4_code.zip|PS4 starter code]]
+- Recitation 9: [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_rec09.zip|Recitation 09 materials]]
+- PS 5 out: [[MIT 6.100L-problem-sets/mit6_100l_ps5.pdf|PS5 statement]], [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_ps5_code.zip|PS5 starter code]]
+- PS 4 due: [[MIT 6.100L-problem-sets/mit6_100l_ps4.pdf|PS4 statement]], [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_ps4_code.zip|PS4 starter code]]
 - Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (Ch 10.4)
 
 ## Review checklist

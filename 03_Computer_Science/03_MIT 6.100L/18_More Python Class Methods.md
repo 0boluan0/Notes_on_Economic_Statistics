@@ -580,7 +580,7 @@ This shows that an overloaded operator can return a new object rather than mutat
 - Finger exercise: [[MIT 6.100L-finger-exercises/mit6_100l_ex18_sol.pdf|Lecture 18 finger exercise solution]]
 - Transcript: [[MIT 6.100L-transcripts/mit6_100l_lec18_transcript.pdf|Lecture 18 transcript]]
 - Recitation: none attached to this lecture week
-- PS 4 halfway hand-in due: [[MIT 6.100L-problem-sets/mit6_100l_ps4.pdf|PS4 statement]], [[MIT 6.100L-problem-sets/mit6_100l_ps4_code.zip|PS4 starter code]]
+- PS 4 halfway hand-in due: [[MIT 6.100L-problem-sets/mit6_100l_ps4.pdf|PS4 statement]], [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_ps4_code.zip|PS4 starter code]]
 - Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (Ch 10.1)
 
 ## Review checklist

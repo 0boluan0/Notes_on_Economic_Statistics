@@ -384,8 +384,8 @@ The two parts practice filtering keys by values and aggregating over `(key, valu
 - Lecture code: [[MIT 6.100L-lecture-code/mit6_100l_lec14_code.py|Lecture 14 code (py)]]
 - Finger exercise: [[MIT 6.100L-finger-exercises/mit6_100l_ex14_sol.pdf|Lecture 14 finger exercise solution]]
 - Transcript: [[MIT 6.100L-transcripts/mit6_100l_lec14_transcript.pdf|Lecture 14 transcript]]
-- Recitation 7: [[MIT 6.100L-recitations/mit6_100l_rec07.zip|Recitation 07 materials]]
-- PS 3 halfway hand-in due: [[MIT 6.100L-problem-sets/mit6_100l_ps3.pdf|PS3 statement]], [[MIT 6.100L-problem-sets/mit6_100l_ps3_code.zip|PS3 starter code]]
+- Recitation 7: [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_rec07.zip|Recitation 07 materials]]
+- PS 3 halfway hand-in due: [[MIT 6.100L-problem-sets/mit6_100l_ps3.pdf|PS3 statement]], [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_ps3_code.zip|PS3 starter code]]
 - Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (Ch 5.7)
 
 ## Review checklist

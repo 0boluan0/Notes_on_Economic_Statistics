@@ -366,11 +366,11 @@ Together these cover the lecture's core abilities: basic plotting, multi-series 
 
 ## Links to follow-up practice
 - Slides: [[MIT 6.100L-slides/mit6_100l_lec25.pdf|Lecture 25 slides]]
-- Lecture code: [[MIT 6.100L-lecture-code/mit6_100l_lec25_code.zip|Lecture 25 code (zip)]]
+- Lecture code: [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_lec25_code.zip|Lecture 25 code (zip)]]
 - Finger exercise: no official file for this lecture
 - Transcript: [[MIT 6.100L-transcripts/mit6_100l_lec25_transcript.pdf|Lecture 25 transcript]]
 - Recitation: none attached to this lecture week
-- PS 5 due: [[MIT 6.100L-problem-sets/mit6_100l_ps5.pdf|PS5 statement]], [[MIT 6.100L-problem-sets/mit6_100l_ps5_code.zip|PS5 starter code]]
+- PS 5 due: [[MIT 6.100L-problem-sets/mit6_100l_ps5.pdf|PS5 statement]], [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_ps5_code.zip|PS5 starter code]]
 - Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (Ch 13)
 
 ## Review checklist

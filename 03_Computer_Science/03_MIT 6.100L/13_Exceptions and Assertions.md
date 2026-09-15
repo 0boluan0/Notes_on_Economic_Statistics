@@ -625,7 +625,7 @@ Retain all three official examples: `["abcd", ["e", "fg"]]` returns `7`; `[12, [
 - Lecture code: [[MIT 6.100L-lecture-code/mit6_100l_lec13_code.py|Lecture 13 code (py)]]
 - Finger exercise: [[MIT 6.100L-finger-exercises/mit6_100l_ex13_sol.pdf|Lecture 13 finger exercise solution]]；[[MIT 6.100L-finger-exercises/mit6_100l_ex13_sol.pdf#page=1|pp. 1–2: the two-level input contract and solution]]
 - Transcript: [[MIT 6.100L-transcripts/mit6_100l_lec13_transcript.pdf|Lecture 13 transcript]]
-- Recitation 7: [[MIT 6.100L-recitations/mit6_100l_rec07.zip|Recitation 07 materials]]
+- Recitation 7: [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_rec07.zip|Recitation 07 materials]]
 - Problem set milestone: none directly scheduled on this lecture
 - Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]]；本地 2013 Revised and Expanded 版对应 [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf#page=101|Ch 7 Exceptions and Assertions，印刷 pp. 84–90 / PDF pp. 101–107]]。
   <!-- bilingual-en:start -->

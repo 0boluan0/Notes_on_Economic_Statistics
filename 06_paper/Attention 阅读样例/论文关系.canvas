@@ -1,0 +1,19 @@
+{
+	"nodes":[
+		{"id":"intro","type":"text","x":-500,"y":-320,"width":1050,"height":165,"text":"# 从注意力到 Transformer\n[[06_paper/Attention 阅读样例/从注意力到 Transformer|连续阅读全文]]\n卡片链接定位到同一篇文章里的对应段落。","color":"5"},
+		{"id":"before","type":"text","x":-500,"y":-80,"width":290,"height":265,"text":"## 2014 / 2015 · 前身\n[[06_paper/Attention 阅读样例/从注意力到 Transformer#一、先理解注意力解决什么问题|Bahdanau 注意力]]\n\n每生成一个目标词，动态汇总源句信息。\n\n**仍使用循环网络。**","color":"2"},
+		{"id":"center","type":"text","x":-50,"y":-80,"width":340,"height":330,"text":"## 2017 · 中心论文\n[[06_paper/Attention 阅读样例/从注意力到 Transformer#二、Transformer 改变了什么|Attention Is All You Need]]\n\n用 self-attention 组织序列内部的信息交互。\n\n编码器 + 因果解码器 + 跨序列注意力。\n\n**打开：原图、公式、证据与边界。**","color":"5"},
+		{"id":"relative","type":"text","x":470,"y":-100,"width":325,"height":260,"text":"## 2018 · 位置分支\n[[06_paper/Attention 阅读样例/从注意力到 Transformer#三、相对位置论文接着问了什么|Shaw：相对位置表示]]\n\n让注意力考虑两个位置之间的距离。\n\n改变的是**位置如何进入模型**。","color":"6"},
+		{"id":"bert","type":"text","x":470,"y":280,"width":325,"height":260,"text":"## 2018 / 2019 · BERT\n[[06_paper/Attention 阅读样例/从注意力到 Transformer#四、BERT 接着改变了什么|BERT]]\n\n采用双向 Transformer 编码器，学习可迁移的语言表示。\n\n改变的是**训练目标与应用方式**。","color":"6"},
+		{"id":"concept","type":"text","x":-460,"y":400,"width":305,"height":195,"text":"## 回到已有知识\n[[00_Knowledge/Transformer|Transformer 定义]]\n\n复习术语与基本定义，再返回论文。","color":"4"},
+		{"id":"causal","type":"text","x":-30,"y":480,"width":310,"height":195,"text":"## 澄清一个常见误读\n[[00_Knowledge/Transformer自回归约束|训练并行 ≠ 生成并行]]\n\n比较解码器的因果遮挡与编码器的双向上下文。","color":"4"}
+	],
+	"edges":[
+		{"id":"e1","fromNode":"before","fromSide":"right","toNode":"center","toSide":"left","toEnd":"arrow","label":"动态上下文的前身"},
+		{"id":"e2","fromNode":"center","fromSide":"right","toNode":"relative","toSide":"left","toEnd":"arrow","label":"扩展相对位置表示"},
+		{"id":"e3","fromNode":"center","fromSide":"right","toNode":"bert","toSide":"left","toEnd":"arrow","label":"采用编码器做预训练"},
+		{"id":"e4","fromNode":"center","fromSide":"bottom","toNode":"concept","toSide":"top","toEnd":"arrow","label":"补充基本概念"},
+		{"id":"e5","fromNode":"center","fromSide":"bottom","toNode":"causal","toSide":"top","toEnd":"arrow","label":"解释生成约束"},
+		{"id":"e6","fromNode":"bert","fromSide":"bottom","toNode":"causal","toSide":"right","toEnd":"arrow","label":"对照双向上下文"}
+	]
+}

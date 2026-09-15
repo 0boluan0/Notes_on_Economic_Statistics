@@ -1,0 +1,235 @@
+{
+  "nodes": [
+    {
+      "id": "sample",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 440,
+      "height": 190,
+      "color": "5",
+      "text": "## [[总体与样本|总体与样本]]\n\n<!-- bilingual-en:start -->\n*Population and sample*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "stat",
+      "type": "text",
+      "x": 600,
+      "y": 0,
+      "width": 440,
+      "height": 190,
+      "color": "5",
+      "text": "## [[统计量|统计量]]\n\n<!-- bilingual-en:start -->\n*Statistic*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "mean",
+      "type": "text",
+      "x": 1200,
+      "y": -320,
+      "width": 440,
+      "height": 190,
+      "color": "5",
+      "text": "## [[样本均值向量|样本均值]]\n\n<!-- bilingual-en:start -->\n*Sample mean*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "variance",
+      "type": "text",
+      "x": 1800,
+      "y": -320,
+      "width": 440,
+      "height": 190,
+      "color": "6",
+      "text": "## [[样本协方差无偏分母|样本方差与 n−1]]\n\n<!-- bilingual-en:start -->\n*Unbiased covariance divisor*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "order",
+      "type": "text",
+      "x": 1200,
+      "y": 0,
+      "width": 440,
+      "height": 190,
+      "color": "5",
+      "text": "## [[顺序统计量|顺序统计量]]\n\n<!-- bilingual-en:start -->\n*Order statistics*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "quant",
+      "type": "text",
+      "x": 1800,
+      "y": 0,
+      "width": 440,
+      "height": 190,
+      "color": "5",
+      "text": "## [[样本分位数|样本分位数]]\n\n<!-- bilingual-en:start -->\n*Sample quantiles*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "iqr",
+      "type": "text",
+      "x": 2400,
+      "y": 0,
+      "width": 440,
+      "height": 190,
+      "color": "5",
+      "text": "## [[四分位距|四分位距]]\n\n<!-- bilingual-en:start -->\n*Interquartile range*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "skew",
+      "type": "text",
+      "x": 1200,
+      "y": 320,
+      "width": 440,
+      "height": 190,
+      "color": "5",
+      "text": "## [[偏度|偏度]]\n\n<!-- bilingual-en:start -->\n*Skewness*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "kurt",
+      "type": "text",
+      "x": 1800,
+      "y": 320,
+      "width": 440,
+      "height": 190,
+      "color": "5",
+      "text": "## [[峰度|峰度]]\n\n<!-- bilingual-en:start -->\n*Kurtosis*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "dgp",
+      "type": "text",
+      "x": 600,
+      "y": 640,
+      "width": 440,
+      "height": 190,
+      "color": "5",
+      "text": "## [[数据生成过程|数据生成过程]]\n\n<!-- bilingual-en:start -->\n*Data-generating process*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "dist",
+      "type": "text",
+      "x": 1200,
+      "y": 640,
+      "width": 440,
+      "height": 190,
+      "color": "5",
+      "text": "## [[抽样分布|抽样分布]]\n\n<!-- bilingual-en:start -->\n*Sampling distribution*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "rn",
+      "type": "text",
+      "x": 1800,
+      "y": 640,
+      "width": 440,
+      "height": 190,
+      "color": "1",
+      "text": "## [[样本量与模拟重复次数|样本量 n 与重复数 R]]\n\n<!-- bilingual-en:start -->\n*Sample size n and repetitions R*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "meanvar",
+      "type": "text",
+      "x": 2400,
+      "y": 640,
+      "width": 440,
+      "height": 190,
+      "color": "6",
+      "text": "## [[样本均值协方差|样本均值方差]]\n\n<!-- bilingual-en:start -->\n*Variance of the sample mean*\n<!-- bilingual-en:end -->"
+    }
+  ],
+  "edges": [
+    {
+      "id": "3069ba03dc6d48c4",
+      "fromNode": "sample",
+      "toNode": "stat",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "观察输入计算规则 / Data enter the rule"
+    },
+    {
+      "id": "fe2b67b5f077414f",
+      "fromNode": "stat",
+      "toNode": "mean",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "位置汇总 / Location summary"
+    },
+    {
+      "id": "c0e7da6d47474a3e",
+      "fromNode": "mean",
+      "toNode": "variance",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "估计中心带来 n−1 修正"
+    },
+    {
+      "id": "662c58fb922046cd",
+      "fromNode": "stat",
+      "toNode": "order",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "排序后按秩取值 / Rank the sample"
+    },
+    {
+      "id": "08c36891e9af4ec0",
+      "fromNode": "order",
+      "toNode": "quant",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "取 ceil(np) 位置 / Select rank"
+    },
+    {
+      "id": "d12f6584f30c40b8",
+      "fromNode": "quant",
+      "toNode": "iqr",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "q.75 − q.25"
+    },
+    {
+      "id": "9dda477fa1804d58",
+      "fromNode": "stat",
+      "toNode": "skew",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "标准化三阶中心矩"
+    },
+    {
+      "id": "c9f3429b2b7f4ee6",
+      "fromNode": "dgp",
+      "toNode": "dist",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "给出输入的概率机制 / Specifies input randomness"
+    },
+    {
+      "id": "5c3c82b9d67949e3",
+      "fromNode": "stat",
+      "toNode": "dist",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "样本函数诱导分布 / Induces distribution"
+    },
+    {
+      "id": "f52a53c53bf94437",
+      "fromNode": "dist",
+      "toNode": "rn",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "模拟重复逼近该分布 / Simulation approximates it"
+    },
+    {
+      "id": "b1443850fcc74642",
+      "fromNode": "rn",
+      "toNode": "meanvar",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "iid 均值：方差 σ²/n，与 R 无关"
+    }
+  ]
+}

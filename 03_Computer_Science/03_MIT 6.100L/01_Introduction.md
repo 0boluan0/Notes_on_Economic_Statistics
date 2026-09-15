@@ -740,7 +740,7 @@ Python Tutor makes those changes visible one line at a time, which is its practi
 - Finger exercise: [[MIT 6.100L-finger-exercises/mit6_100l_ex01_sol.pdf|Lecture 01 finger exercise solution]]
 - Transcript: [[MIT 6.100L-transcripts/mit6_100l_lec01_transcript.pdf|Lecture 01 transcript]]
 - Recitation 1: [[MIT 6.100L-recitations/mit6_100l_rec01.pdf|Recitation 01 materials]]
-- PS 0 out (not graded): [[MIT 6.100L-problem-sets/mit6_100l_ps0.pdf|PS0 statement]], [[MIT 6.100L-problem-sets/mit6_100l_ps0_code.zip|PS0 starter code]]
+- PS 0 out (not graded): [[MIT 6.100L-problem-sets/mit6_100l_ps0.pdf|PS0 statement]], [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_ps0_code.zip|PS0 starter code]]
 - Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (Ch 1, Ch 2.1-2.2)
 
 ## Review checklist

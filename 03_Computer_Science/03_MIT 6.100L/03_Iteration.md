@@ -880,7 +880,7 @@ This is not absolute, but it is a useful beginner's design rule.
 - Lecture code: [[MIT 6.100L-lecture-code/mit6_100l_lec03_code.py|Lecture 03 code (py)]]
 - Finger exercise: [[MIT 6.100L-finger-exercises/mit6_100l_ex03_sol.pdf|Lecture 03 finger exercise solution]]
 - Transcript: [[MIT 6.100L-transcripts/mit6_100l_lec03_transcript.pdf|Lecture 03 transcript]]
-- Recitation 2: [[MIT 6.100L-recitations/mit6_100l_rec02.zip|Recitation 02 materials]]
+- Recitation 2: [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_rec02.zip|Recitation 02 materials]]
 - Problem set milestone: none directly scheduled on this lecture
 - Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (Ch 2.5-2.8)
 

@@ -46,7 +46,7 @@
       "y": 0,
       "width": 430,
       "height": 190,
-			"text": "## [[互斥事件加法]]\n*Addition rule for events*\n\n互斥保证并概率可直接相加；一般情形必须扣除重复交集。",
+      "text": "## [[互斥事件加法]]\n*Addition rule for events*\n\n互斥保证并概率可直接相加；一般情形必须扣除重复交集。",
       "color": "4"
     },
     {
@@ -218,6 +218,76 @@
       "height": 220,
       "text": "## [[概率依赖与因果|概率依赖不是因果识别]]\n*Dependence is not causal identification*\n\n观察分布中的依赖或后验不能单独识别干预效果。",
       "color": "1"
+    },
+    {
+      "id": "psi_space",
+      "type": "text",
+      "x": 0,
+      "y": 2200,
+      "width": 440,
+      "height": 190,
+      "color": "5",
+      "text": "## [[概率空间|概率空间 (Ω, F, P)]]\n\n<!-- bilingual-en:start -->\n*Probability space*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "psi_sigma",
+      "type": "text",
+      "x": 600,
+      "y": 2200,
+      "width": 440,
+      "height": 190,
+      "color": "5",
+      "text": "## [[σ-代数|σ-代数：合法事件族]]\n\n<!-- bilingual-en:start -->\n*Sigma-algebra of events*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "psi_axioms",
+      "type": "text",
+      "x": 1200,
+      "y": 2200,
+      "width": 440,
+      "height": 190,
+      "color": "5",
+      "text": "## [[概率三公理|概率三公理]]\n\n<!-- bilingual-en:start -->\n*Probability axioms*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "psi_prior",
+      "type": "text",
+      "x": 0,
+      "y": 2580,
+      "width": 440,
+      "height": 190,
+      "color": "5",
+      "text": "## [[先验分布|先验分布]]\n\n<!-- bilingual-en:start -->\n*Prior distribution*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "psi_like",
+      "type": "text",
+      "x": 600,
+      "y": 2580,
+      "width": 440,
+      "height": 190,
+      "color": "5",
+      "text": "## [[似然函数|似然函数]]\n\n<!-- bilingual-en:start -->\n*Likelihood function*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "psi_post",
+      "type": "text",
+      "x": 1200,
+      "y": 2580,
+      "width": 440,
+      "height": 190,
+      "color": "5",
+      "text": "## [[后验分布|后验分布]]\n\n<!-- bilingual-en:start -->\n*Posterior distribution*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "psi_framework",
+      "type": "text",
+      "x": 1800,
+      "y": 2580,
+      "width": 440,
+      "height": 190,
+      "color": "5",
+      "text": "## [[频率派与贝叶斯推断|推断框架与重复抽样评价]]\n\n<!-- bilingual-en:start -->\n*Inference and repeated-sampling assessment*\n<!-- bilingual-en:end -->"
     }
   ],
   "edges": [
@@ -418,6 +488,69 @@
       "toSide": "left",
       "toEnd": "none",
       "label": "后验仍不能识别干预"
+    },
+    {
+      "id": "df90ebd51f96457d",
+      "fromNode": "psi_space",
+      "toNode": "psi_sigma",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "中间分量：事件族"
+    },
+    {
+      "id": "ca4046df327540d4",
+      "fromNode": "psi_sigma",
+      "toNode": "psi_axioms",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "在事件族上定义概率测度"
+    },
+    {
+      "id": "1186b4208b834ca2",
+      "fromNode": "psi_space",
+      "toNode": "a000000000000002",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "离散空间的具体实现"
+    },
+    {
+      "id": "b00bfdde29574a34",
+      "fromNode": "psi_prior",
+      "toNode": "psi_post",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "与似然相乘并归一化"
+    },
+    {
+      "id": "c6fc946365a34cb1",
+      "fromNode": "psi_like",
+      "toNode": "psi_post",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "固定数据；比较参数"
+    },
+    {
+      "id": "8367130985714606",
+      "fromNode": "a000000000000009",
+      "toNode": "psi_post",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "Bayes 规则确定后验"
+    },
+    {
+      "id": "47607116a4524191",
+      "fromNode": "psi_post",
+      "toNode": "psi_framework",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "后验统计量也可做重复抽样评价"
     }
   ]
 }

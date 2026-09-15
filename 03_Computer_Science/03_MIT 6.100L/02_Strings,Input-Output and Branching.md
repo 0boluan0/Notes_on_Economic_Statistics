@@ -885,8 +885,8 @@ The closing questions are whether a condition belongs in `if` or `elif`, whether
 - Lecture code: [[MIT 6.100L-lecture-code/mit6_100l_lec02_code.py|Lecture 02 code (py)]]
 - Finger exercise: [[MIT 6.100L-finger-exercises/mit6_100l_ex02_sol.pdf|Lecture 02 finger exercise solution]]
 - Transcript: [[MIT 6.100L-transcripts/mit6_100l_lec02_transcript.pdf|Lecture 02 transcript]]
-- Recitation 2: [[MIT 6.100L-recitations/mit6_100l_rec02.zip|Recitation 02 materials]]
-- PS 1 out: [[MIT 6.100L-problem-sets/mit6_100l_ps1.pdf|PS1 statement]], [[MIT 6.100L-problem-sets/mit6_100l_ps1_code.zip|PS1 starter code]]
+- Recitation 2: [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_rec02.zip|Recitation 02 materials]]
+- PS 1 out: [[MIT 6.100L-problem-sets/mit6_100l_ps1.pdf|PS1 statement]], [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_ps1_code.zip|PS1 starter code]]
 - Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (Ch 2.3-2.4)
 
 ## Review checklist

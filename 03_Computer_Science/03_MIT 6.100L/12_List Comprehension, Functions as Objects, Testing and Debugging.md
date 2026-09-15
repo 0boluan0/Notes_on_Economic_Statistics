@@ -601,12 +601,12 @@ To extend the first half of the lecture, you can reinterpret or rewrite it in a 
 
 ## Links to follow-up practice
 - Slides: [[MIT 6.100L-slides/mit6_100l_lec12.pdf|Lecture 12 slides]]；[[MIT 6.100L-slides/mit6_100l_lec12.pdf#page=33|pp. 33–46: testing, black/glass-box cases, and debugging]]
-- Lecture code: [[MIT 6.100L-lecture-code/mit6_100l_lec12_code.zip|Lecture 12 code (zip)]]
+- Lecture code: [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_lec12_code.zip|Lecture 12 code (zip)]]
 - Finger exercise: [[MIT 6.100L-finger-exercises/mit6_100l_ex12_sol.pdf|Lecture 12 finger exercise solution]]；[[MIT 6.100L-finger-exercises/mit6_100l_ex12_sol.pdf#page=1|p. 1: count_sqrts specification and solution]]
 - Transcript: [[MIT 6.100L-transcripts/mit6_100l_lec12_transcript.pdf|Lecture 12 transcript]]
-- Recitation 6: [[MIT 6.100L-recitations/mit6_100l_rec06.zip|Recitation 06 materials]]
-- PS 3 out: [[MIT 6.100L-problem-sets/mit6_100l_ps3.pdf|PS3 statement]], [[MIT 6.100L-problem-sets/mit6_100l_ps3_code.zip|PS3 starter code]]
-- PS 2 due: [[MIT 6.100L-problem-sets/mit6_100l_ps2.pdf|PS2 statement]], [[MIT 6.100L-problem-sets/mit6_100l_ps2_code.zip|PS2 starter code]]
+- Recitation 6: [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_rec06.zip|Recitation 06 materials]]
+- PS 3 out: [[MIT 6.100L-problem-sets/mit6_100l_ps3.pdf|PS3 statement]], [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_ps3_code.zip|PS3 starter code]]
+- PS 2 due: [[MIT 6.100L-problem-sets/mit6_100l_ps2.pdf|PS2 statement]], [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_ps2_code.zip|PS2 starter code]]
 - Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]]；本地 2013 Revised and Expanded 版的对应阅读是 §4.1.2、§5.2.2、§5.3，以及 [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf#page=87|Ch 6 Testing and Debugging，印刷 pp. 70–83 / PDF pp. 87–100]]。
   <!-- bilingual-en:start -->
   In the local 2013 revised and expanded edition, the relevant sections are §4.1.2, §5.2.2, §5.3, and Chapter 6, printed pp. 70–83 / PDF pp. 87–100.

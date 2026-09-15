@@ -17,6 +17,10 @@
 - Store actual learning progress, mastery, review schedules, and personal evidence only in ignored private records; shared atoms and public course notes/Canvases contain general learning content rather than personal state.
 - Original papers remain in Zotero; the vault stores notes, relationships, navigation, and learning state.
 
+## Student operating system
+
+- Before personal planning, teaching, or learning-record work, read `99_学习情况记录/Student OS 规则.md` when present. Its private operating rules stay outside Git.
+
 ## Knowledge architecture
 
 - A **knowledge atom** is the canonical Markdown object for one independently recallable or applicable definition, proposition, distinction, decision rule, or procedural judgement. A same-named **Topic Canvas** integrates its atoms; a course-local **Course Atlas** shows the whole-course backbone; the global **Base** is query-only; `_hubs/` contains only genuinely dense cross-topic navigation.

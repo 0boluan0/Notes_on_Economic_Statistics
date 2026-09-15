@@ -30,3 +30,7 @@ aliases:
 ## Canvas
 - [[LLM Big Picture]]
 - [[01 架构与预训练.canvas|01 架构与预训练 Canvas]]
+
+## 阅读讲解
+
+[[06_paper/Attention 阅读样例/从注意力到 Transformer#四、BERT 接着改变了什么|BERT 路线]] · [[06_paper/Attention 阅读样例/从注意力到 Transformer|主题阅读入口]]

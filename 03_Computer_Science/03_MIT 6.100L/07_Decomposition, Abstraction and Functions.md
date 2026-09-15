@@ -606,7 +606,7 @@ If the second part feels awkward, the difficulty is often not quadratics but the
 - Lecture code: [[MIT 6.100L-lecture-code/mit6_100l_lec07_code.py|Lecture 07 code (py)]]
 - Finger exercise: [[MIT 6.100L-finger-exercises/mit6_100l_ex07_sol.pdf|Lecture 07 finger exercise solution]]
 - Transcript: [[MIT 6.100L-transcripts/mit6_100l_lec07_transcript.pdf|Lecture 07 transcript]]
-- Recitation 3: [[MIT 6.100L-recitations/mit6_100l_rec03.zip|Recitation 03 materials]]
+- Recitation 3: [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_rec03.zip|Recitation 03 materials]]
 - Problem set milestone: none directly scheduled on this lecture
 - Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (Ch 4.1-4.2)
 

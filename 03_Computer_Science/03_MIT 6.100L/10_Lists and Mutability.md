@@ -589,8 +589,8 @@ A list can contain behavior in the form of function objects, not only numbers an
 - Lecture code: [[MIT 6.100L-lecture-code/mit6_100l_lec10_code.py|Lecture 10 code (py)]]
 - Finger exercise: [[MIT 6.100L-finger-exercises/mit6_100l_ex10_sol.pdf|Lecture 10 finger exercise solution]]
 - Transcript: [[MIT 6.100L-transcripts/mit6_100l_lec10_transcript.pdf|Lecture 10 transcript]]
-- Recitation 5: [[MIT 6.100L-recitations/mit6_100l_rec05.zip|Recitation 05 materials]]
-- PS 2 halfway hand-in due: [[MIT 6.100L-problem-sets/mit6_100l_ps2.pdf|PS2 statement]], [[MIT 6.100L-problem-sets/mit6_100l_ps2_code.zip|PS2 starter code]]
+- Recitation 5: [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_rec05.zip|Recitation 05 materials]]
+- PS 2 halfway hand-in due: [[MIT 6.100L-problem-sets/mit6_100l_ps2.pdf|PS2 statement]], [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_ps2_code.zip|PS2 starter code]]
 - Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (Ch 5.3-5.5)
 
 ## Review checklist

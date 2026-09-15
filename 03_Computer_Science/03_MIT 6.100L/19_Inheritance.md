@@ -449,7 +449,7 @@ The exercise is not testing whether you can manipulate a list. It tests whether 
 - Lecture code: [[MIT 6.100L-lecture-code/mit6_100l_lec19_code.py|Lecture 19 code (py)]]
 - Finger exercise: [[MIT 6.100L-finger-exercises/mit6_100l_ex19_sol.pdf|Lecture 19 finger exercise solution]]
 - Transcript: [[MIT 6.100L-transcripts/mit6_100l_lec19_transcript.pdf|Lecture 19 transcript]]
-- Recitation 9: [[MIT 6.100L-recitations/mit6_100l_rec09.zip|Recitation 09 materials]]
+- Recitation 9: [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_rec09.zip|Recitation 09 materials]]
 - Problem set milestone: none directly scheduled on this lecture
 - Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (Ch 10.2)
 

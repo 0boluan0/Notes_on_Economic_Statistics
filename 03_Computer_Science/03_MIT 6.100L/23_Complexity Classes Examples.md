@@ -534,8 +534,8 @@ If you can explain each answer independently instead of merely choosing the righ
 - Lecture code: [[MIT 6.100L-lecture-code/mit6_100l_lec23_code.py|Lecture 23 code (py)]]
 - Finger exercise: [[MIT 6.100L-finger-exercises/mit6_100l_ex23_sol.pdf|Lecture 23 finger exercise solution]]
 - Transcript: [[MIT 6.100L-transcripts/mit6_100l_lec23_transcript.pdf|Lecture 23 transcript]]
-- Recitation 10: [[MIT 6.100L-recitations/mit6_100l_rec10.zip|Recitation 10 materials]]
-- PS 5 halfway hand-in due: [[MIT 6.100L-problem-sets/mit6_100l_ps5.pdf|PS5 statement]], [[MIT 6.100L-problem-sets/mit6_100l_ps5_code.zip|PS5 starter code]]
+- Recitation 10: [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_rec10.zip|Recitation 10 materials]]
+- PS 5 halfway hand-in due: [[MIT 6.100L-problem-sets/mit6_100l_ps5.pdf|PS5 statement]], [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_ps5_code.zip|PS5 starter code]]
 - Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (本地 Revised and Expanded Edition：Ch 9.3 与 10.1)
 
 ## Review checklist

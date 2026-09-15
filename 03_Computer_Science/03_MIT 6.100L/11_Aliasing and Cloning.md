@@ -526,7 +526,7 @@ The exercise tests more than removing the first `k` elements. It asks you to dis
 - Lecture code: [[MIT 6.100L-lecture-code/mit6_100l_lec11_code.py|Lecture 11 code (py)]]
 - Finger exercise: [[MIT 6.100L-finger-exercises/mit6_100l_ex11_sol.pdf|Lecture 11 finger exercise solution]]
 - Transcript: [[MIT 6.100L-transcripts/mit6_100l_lec11_transcript.pdf|Lecture 11 transcript]]
-- Recitation 6: [[MIT 6.100L-recitations/mit6_100l_rec06.zip|Recitation 06 materials]]
+- Recitation 6: [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_rec06.zip|Recitation 06 materials]]
 - Problem set milestone: none directly scheduled on this lecture
 - Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (Ch 5.3-5.5)
 

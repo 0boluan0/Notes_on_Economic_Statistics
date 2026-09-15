@@ -1,0 +1,244 @@
+{
+  "nodes": [
+    {
+      "id": "dist",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 440,
+      "height": 190,
+      "color": "5",
+      "text": "## [[抽样分布|抽样分布]]\n\n<!-- bilingual-en:start -->\n*Sampling distribution*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "bias",
+      "type": "text",
+      "x": 600,
+      "y": -320,
+      "width": 440,
+      "height": 190,
+      "color": "5",
+      "text": "## [[估计量偏差|偏差：中心减目标]]\n\n<!-- bilingual-en:start -->\n*Bias: centre minus target*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "unbiased",
+      "type": "text",
+      "x": 1200,
+      "y": -320,
+      "width": 440,
+      "height": 190,
+      "color": "5",
+      "text": "## [[估计量无偏性|无偏性]]\n\n<!-- bilingual-en:start -->\n*Unbiasedness*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "efficient",
+      "type": "text",
+      "x": 600,
+      "y": 0,
+      "width": 440,
+      "height": 190,
+      "color": "5",
+      "text": "## [[估计量有效性|有效性：限定比较类别]]\n\n<!-- bilingual-en:start -->\n*Efficiency within a stated class*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "consistent",
+      "type": "text",
+      "x": 600,
+      "y": 320,
+      "width": 440,
+      "height": 190,
+      "color": "5",
+      "text": "## [[估计量一致性|一致性]]\n\n<!-- bilingual-en:start -->\n*Consistency*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "mse",
+      "type": "text",
+      "x": 0,
+      "y": 640,
+      "width": 440,
+      "height": 190,
+      "color": "5",
+      "text": "## [[均方误差|均方误差]]\n\n<!-- bilingual-en:start -->\n*Mean squared error*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "decomp",
+      "type": "text",
+      "x": 600,
+      "y": 640,
+      "width": 440,
+      "height": 190,
+      "color": "6",
+      "text": "## [[MSE偏差方差分解|MSE = Bias² + Var]]\n\n<!-- bilingual-en:start -->\n*Bias–variance decomposition*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "counter1",
+      "type": "text",
+      "x": 1800,
+      "y": -320,
+      "width": 440,
+      "height": 190,
+      "color": "1",
+      "text": "## [[无偏不推出一致|只用 X₁：无偏但不一致]]\n\n<!-- bilingual-en:start -->\n*First observation: unbiased, inconsistent*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "counter2",
+      "type": "text",
+      "x": 1800,
+      "y": 320,
+      "width": 440,
+      "height": 190,
+      "color": "1",
+      "text": "## [[一致不推出无偏|均值 + 1/n：有偏但一致]]\n\n<!-- bilingual-en:start -->\n*Mean plus 1/n: biased, consistent*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "shift",
+      "type": "text",
+      "x": 1800,
+      "y": 640,
+      "width": 440,
+      "height": 190,
+      "color": "1",
+      "text": "## [[固定偏移破坏一致性|均值 + 5：集中到错误中心]]\n\n<!-- bilingual-en:start -->\n*Fixed shift: the wrong limit*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "blue",
+      "type": "text",
+      "x": 1200,
+      "y": 0,
+      "width": 440,
+      "height": 190,
+      "color": "6",
+      "text": "## [[经典 Gauss–Markov 定理|Gauss–Markov：BLUE]]\n\n<!-- bilingual-en:start -->\n*Best linear unbiased estimator*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "cr",
+      "type": "text",
+      "x": 1800,
+      "y": 0,
+      "width": 440,
+      "height": 190,
+      "color": "6",
+      "text": "## [[Cramér–Rao下界|Cramér–Rao 下界]]\n\n<!-- bilingual-en:start -->\n*Unbiased variance bound*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "conv",
+      "type": "text",
+      "x": 1200,
+      "y": 320,
+      "width": 440,
+      "height": 190,
+      "color": "5",
+      "text": "## [[依概率收敛|依概率收敛]]\n\n<!-- bilingual-en:start -->\n*Convergence in probability*\n<!-- bilingual-en:end -->"
+    }
+  ],
+  "edges": [
+    {
+      "id": "bd78b06e34b14a4c",
+      "fromNode": "dist",
+      "toNode": "bias",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "期望与目标之差"
+    },
+    {
+      "id": "70b3fb9f4dd64418",
+      "fromNode": "bias",
+      "toNode": "unbiased",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "对每个参数值偏差为 0"
+    },
+    {
+      "id": "06bbc8febc594c5e",
+      "fromNode": "dist",
+      "toNode": "efficient",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "比较同目标、同 n 的方差"
+    },
+    {
+      "id": "9ace7e80688b44d6",
+      "fromNode": "dist",
+      "toNode": "consistent",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "考察 n 增长的分布序列"
+    },
+    {
+      "id": "982db6f5eaaf4b80",
+      "fromNode": "mse",
+      "toNode": "decomp",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "有限二阶矩下恒等分解"
+    },
+    {
+      "id": "d19f42d3d3944975",
+      "fromNode": "decomp",
+      "toNode": "consistent",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "MSE → 0 是充分条件"
+    },
+    {
+      "id": "bce18a2f763947ca",
+      "fromNode": "unbiased",
+      "toNode": "counter1",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "反例：无偏不推出一致"
+    },
+    {
+      "id": "f6176ce8b44547c3",
+      "fromNode": "consistent",
+      "toNode": "conv",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "应用概率收敛定义"
+    },
+    {
+      "id": "cb54a57952a248db",
+      "fromNode": "conv",
+      "toNode": "counter2",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "有限偏差不妨碍此极限"
+    },
+    {
+      "id": "dbc863b630ef4901",
+      "fromNode": "decomp",
+      "toNode": "shift",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "方差 → 0 单独不够"
+    },
+    {
+      "id": "0c01946ec9de46b3",
+      "fromNode": "efficient",
+      "toNode": "blue",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "线性无偏类别"
+    },
+    {
+      "id": "7c748424998b423e",
+      "fromNode": "blue",
+      "toNode": "cr",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "另一个模型与比较范围"
+    }
+  ]
+}
