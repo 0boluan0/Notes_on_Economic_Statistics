@@ -6,7 +6,6 @@ const VIEW_TYPE = "learning-progress-dashboard-view";
 
 const OVERVIEW_PATH = "99_学习情况记录/Overview & Study Record.md";
 const WORKBENCH_PATH = "99_学习情况记录/workbench.md";
-const PLAN_FOLDER = "99_学习情况记录/学习计划";
 const DAILY_FOLDER = "99_学习情况记录";
 const DAILY_TEMPLATE = "00_inbox/日记模版.md";
 const CANONICAL_TASK_TAG = "#student-os/task";
@@ -30,6 +29,18 @@ function todayNotePath(date = new Date()) {
 
 function materializeTodayTemplate(template, date = new Date()) {
   return String(template).replace(/^date:\s*pending\s*$/m, `date: ${formatDate(date)}`);
+}
+
+function scopeTaskQueries(text, sourcePaths) {
+  const paths = [...new Set(sourcePaths)].sort().map((path) =>
+    path.replace(/[.*+?^${}()|[\]\\]/g, "\\$&").replace(/\//g, "\\/")
+  );
+  const scope = `# student-os:active-sources\npath regex matches /^(?:${paths.join("|") || "(?!)"})$/`;
+  return String(text).replace(/```tasks\n([\s\S]*?)```/g, (block, query) => {
+    if (!/^not done$/m.test(query) || !query.includes("/^#student-os\\/task$/")) return block;
+    const clean = query.replace(/^# student-os:active-sources\npath regex matches .*\n/gm, "");
+    return `\x60\x60\x60tasks\n${scope}\n${clean}\x60\x60\x60`;
+  });
 }
 
 function headingLevel(line) {
@@ -127,6 +138,7 @@ function cleanTaskText(value) {
 
 function normalizeStatus(value) {
   const status = String(value || "").toLowerCase();
+  if (["archived", "ended", "cancelled", "canceled"].includes(status) || status.includes("已归档") || status.includes("已结束")) return "archived";
   if (status === "completed" || status.includes("已完成")) return "completed";
   if (status === "paused" || status.includes("暂停")) return "paused";
   if (
@@ -140,9 +152,9 @@ function normalizeStatus(value) {
   return "active";
 }
 
-function parsePlanText(text, path) {
+function parsePlanText(text, path, defaults = null) {
   const frontmatter = parseFrontmatter(text);
-  if (frontmatter.student_os !== "learning-plan") return null;
+  if (frontmatter.student_os !== "learning-plan" && !defaults) return null;
   const lines = String(text || "").split("\n");
   const tasks = [];
   for (let index = 0; index < lines.length; index += 1) {
@@ -152,13 +164,13 @@ function parsePlanText(text, path) {
   }
   const completed = tasks.filter((task) => task.isDone).length;
   const next = tasks.find((task) => !task.isDone) || null;
-  let status = normalizeStatus(frontmatter.status);
-  if (tasks.length > 0 && completed === tasks.length) status = "completed";
+  const kind = frontmatter.kind || defaults?.kind || "finite-course";
+  const status = path.split("/").includes("archive") ? "archived" : normalizeStatus(frontmatter.status || defaults?.status);
   return {
-    title: frontmatter.title || path.split("/").pop().replace(/\.md$/, ""),
+    title: frontmatter.title || defaults?.title || path.split("/").pop().replace(/\.md$/, ""),
     path,
-    track: frontmatter.track || "self-directed",
-    kind: frontmatter.kind || "finite-course",
+    track: frontmatter.track || defaults?.track || "self-directed",
+    kind,
     status,
     tasks,
     completed,
@@ -193,7 +205,7 @@ function parseOverviewTracks(text) {
     if (!status) continue;
     const type = block.find((line) => /^-\s*类型：/.test(line.trim()))?.replace(/^\s*-\s*类型：\s*/, "") || "";
     const planTargets = block
-      .filter((line) => /^-\s*(?:真实计划|计划)：/.test(line.trim()))
+      .filter((line) => /^-\s*(?:真实计划|计划|课程入口)：/.test(line.trim()))
       .flatMap((line) =>
         [...line.matchAll(/\[\[([^\]|#]+)(?:#[^\]|]+)?(?:\|[^\]]+)?\]\]/g)].map((link) =>
           link[1].trim()
@@ -376,8 +388,25 @@ class WorkflowStore {
     if (existing) return existing;
     const template = (await this.readPath(DAILY_TEMPLATE)) || "# 今日\n";
     await this.ensureFolder(path);
-    const content = materializeTodayTemplate(template);
+    const data = await this.readDashboardData();
+    const content = scopeTaskQueries(materializeTodayTemplate(template), this.activeSourcePaths(data));
     return this.app.vault.create(path, content.endsWith("\n") ? content : `${content}\n`);
+  }
+
+  activeSourcePaths(data) {
+    return [WORKBENCH_PATH, ...data.active.map((track) => track.path).filter((path) => path !== OVERVIEW_PATH)];
+  }
+
+  async syncCurrentTaskViews() {
+    const data = await this.readDashboardData();
+    const paths = this.activeSourcePaths(data);
+    for (const path of [WORKBENCH_PATH, todayNotePath()]) {
+      const file = this.getFile(path);
+      if (!file) continue;
+      const current = await this.app.vault.cachedRead(file);
+      if (scopeTaskQueries(current, paths) === current) continue;
+      await this.app.vault.process(file, (text) => scopeTaskQueries(text, paths));
+    }
   }
 
   resolveOverviewLink(target) {
@@ -389,24 +418,19 @@ class WorkflowStore {
   }
 
   async readPlans(overviewTracks = []) {
-    const fileByPath = new Map(
-      this.app.vault
-        .getMarkdownFiles()
-        .filter((file) => file.path.startsWith(`${PLAN_FOLDER}/`))
-        .map((file) => [file.path, file])
-    );
+    const plans = new Map();
     for (const entry of overviewTracks) {
       for (const target of entry.planTargets || []) {
         const file = this.resolveOverviewLink(target);
-        if (file?.extension === "md") fileByPath.set(file.path, file);
+        if (file?.extension !== "md" || plans.has(file.path)) continue;
+        const plan = parsePlanText(await this.app.vault.cachedRead(file), file.path, {
+          ...entry,
+          kind: entry.track === "school" ? "course" : "multi-stage-project",
+        });
+        plans.set(file.path, plan);
       }
     }
-    const plans = [];
-    for (const file of fileByPath.values()) {
-      const plan = parsePlanText(await this.app.vault.cachedRead(file), file.path);
-      if (plan) plans.push(plan);
-    }
-    return plans;
+    return [...plans.values()];
   }
 
   async readDashboardData() {
@@ -416,8 +440,8 @@ class WorkflowStore {
     ]);
     const overviewTracks = parseOverviewTracks(overviewText);
     const plans = await this.readPlans(overviewTracks);
+    this.sourcePaths = new Set(plans.map((plan) => plan.path));
     const planByPath = new Map(plans.map((plan) => [plan.path, plan]));
-    const usedPlans = new Set();
     const tracks = overviewTracks.flatMap((entry) => {
       const linkedPlans = [...new Set(entry.planTargets || [])]
         .map((target) => this.resolveOverviewLink(target))
@@ -427,24 +451,15 @@ class WorkflowStore {
         return [{ ...entry, path: OVERVIEW_PATH, tasks: [], completed: 0, total: 0, next: null }];
       }
       return linkedPlans.map((plan) => {
-        usedPlans.add(plan.path);
         return {
           ...entry,
           ...plan,
           track: entry.track || plan.track,
           type: entry.type,
-          status: plan.status,
+          status: ["archived", "completed", "paused", "queued"]
+            .find((status) => [entry.status, plan.status].includes(status)) || "active",
         };
       });
-    });
-    plans.forEach((plan) => {
-      if (!usedPlans.has(plan.path)) {
-        tracks.push({
-          ...plan,
-          type: "",
-          section: plan.track === "school" ? "学校责任" : "自主成长",
-        });
-      }
     });
 
     const recent = [
@@ -468,16 +483,16 @@ class WorkflowStore {
     const data = await this.readDashboardData();
     const choices = [];
     const today = formatDate();
-    for (const track of data.tracks) {
+    const workbench = parsePlanText(await this.readPath(WORKBENCH_PATH), WORKBENCH_PATH, {
+      title: "Workbench", status: "active", kind: "operational", track: "unplanned",
+    });
+    for (const track of [...data.active, workbench]) {
       const open = (track.tasks || []).filter((task) => !task.isDone && !task.isCancelled);
-      const selected = new Set();
-      open.filter((task) => task.scheduledDate === today).forEach((task) => selected.add(task));
-      open.slice(0, track.status === "active" ? 2 : 1).forEach((task) => selected.add(task));
-      selected.forEach((task) => {
+      open.forEach((task) => {
         choices.push({
           ...task,
           source: track.title,
-          rank: task.scheduledDate === today ? 0 : track.status === "active" ? 2 : 3,
+          rank: task.scheduledDate === today ? 0 : 1,
         });
       });
     }
@@ -495,6 +510,11 @@ class WorkflowStore {
   }
 
   async completeCanonicalTask(task, note = "") {
+    const currentChoices = await this.taskChoices();
+    if (!currentChoices.some((current) => current.path === task.path && current.raw === task.raw)) {
+      new Notice("任务已退出当前队列，请重新打开面板");
+      return false;
+    }
     const file = this.getFile(task.path);
     if (!file) {
       new Notice("任务源文件不存在，未作修改");
@@ -698,11 +718,11 @@ class LearningProgressDashboardView extends ItemView {
       progress.setAttribute("aria-valuemax", String(track.total));
       progress.setAttribute("aria-valuenow", String(track.completed));
       progress.createDiv({ cls: "lpd-progress-fill", attr: { style: `width:${percent}%` } });
-      const unit = track.kind === "multi-stage-project" ? "个真实阶段" : "个真实单元";
+      const unit = track.kind === "course" ? "项记录任务" : track.kind === "multi-stage-project" ? "个真实阶段" : "个真实单元";
       card.createDiv({ cls: "lpd-progress-label", text: `${track.completed} / ${track.total} ${unit}` });
       card.createDiv({
         cls: "lpd-next",
-        text: track.next ? `下一项：${track.next.text}` : "这条学习线已经完成。",
+        text: track.next ? `下一项：${track.next.text}` : "当前任务已全部记录完成。",
       });
     } else if (isOngoingKind(track.kind)) {
       const recentCount = (track.tasks || []).filter(
@@ -790,8 +810,13 @@ class LearningProgressDashboardPlugin extends Plugin {
         if (this.isDashboardSource(file)) this.refreshViews();
       })
     );
+    for (const event of ["create", "rename", "delete"]) {
+      this.registerEvent(this.app.vault.on(event, (file) => {
+        if (file.extension === "md") void this.refreshViews();
+      }));
+    }
     this.app.workspace.onLayoutReady(() => {
-      void this.openToday();
+      void this.refreshViews().then(() => this.openToday());
     });
   }
 
@@ -802,7 +827,7 @@ class LearningProgressDashboardPlugin extends Plugin {
       file.extension === "md" &&
       (file.path === OVERVIEW_PATH ||
         file.path === WORKBENCH_PATH ||
-        file.path.startsWith(`${PLAN_FOLDER}/`) ||
+        this.store.sourcePaths?.has(file.path) ||
         frontmatter?.student_os === "learning-plan")
     );
   }
@@ -821,6 +846,7 @@ class LearningProgressDashboardPlugin extends Plugin {
   }
 
   async refreshViews() {
+    await this.store.syncCurrentTaskViews();
     for (const leaf of this.app.workspace.getLeavesOfType(VIEW_TYPE)) {
       if (leaf.view instanceof LearningProgressDashboardView) await leaf.view.refresh();
     }
@@ -863,6 +889,7 @@ class LearningProgressDashboardPlugin extends Plugin {
 
 module.exports = LearningProgressDashboardPlugin;
 module.exports.__test = {
+  WorkflowStore,
   isOngoingKind,
   locateTaskLine,
   materializeTodayTemplate,
@@ -871,4 +898,5 @@ module.exports.__test = {
   parseOverviewTracks,
   parsePlanText,
   parseTaskLine,
+  scopeTaskQueries,
 };
