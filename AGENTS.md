@@ -16,6 +16,7 @@
 - Preserve unrelated edits and all user-written daily-note text. Do not hand-edit `.obsidian/`, commit secrets, or break links when moving notes.
 - Store actual learning progress, mastery, review schedules, and personal evidence only in ignored private records; shared atoms and public course notes/Canvases contain general learning content rather than personal state.
 - Original papers remain in Zotero; the vault stores notes, relationships, navigation, and learning state.
+- Keep private quant notes, strategies, code, data, and outputs in root `08_quant/`, excluded from Git and public exports. General reusable atoms may live in `00_Knowledge/`, without private strategy details, results, or links into `08_quant/`.
 
 ## Student operating system
 
