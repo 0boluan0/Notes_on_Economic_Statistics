@@ -23,10 +23,10 @@ Differentiating a real quadratic form gives the symmetric sum of its representin
 
 ## 来源与核验
 
-- [[01_Math/08_MathsCamp-EC400/2026_Course_Materials/02_SOFP/Lectures/EC400 Slides Lecture 1.pdf#page=41|EC400 SOFP 原材料，PDF p.41]]：支持本卡的课程定义、判据或所用基础公式；文中补充推导和反例另按公式直接复核。
+- [[01_Math/08_MathsCamp-EC400/2026_Course_Materials/02_SOFP/Lectures/EC400 Slides Lecture 1.pdf#page=41|EC400 SOFP 原材料，PDF p.41]]：课件给出 Hessian 与二阶 Taylor 公式；本卡对二次型逐项求导，核对 A+Aᵀ 及对称时的 2A。
 - [[01_Math/08_MathsCamp-EC400/01_SOFP Lecture 1 - 二次型、Taylor 展开与凹凸性#4.8 二次型的 Hessian 为什么是两倍系数矩阵|SOFP Lecture 1 对应讲解]]：保留完整推导、条件、例子及课程语境。
 
 <!-- bilingual-en:start -->
-- The cited EC400 material supplies the course definition, criterion, or underlying formula; additional derivations and examples are checked directly.
+- The slide supplies the Hessian and Taylor notation; direct differentiation verifies the symmetric sum and the factor two.
 - The linked course exposition retains the detailed reasoning, assumptions, examples, and context.
 <!-- bilingual-en:end -->

@@ -31,7 +31,7 @@ part_of:
 > [!summary] 二阶检验的边界
 > 设 $f$ 在驻点 $x_*$ 附近为 $C^2$。若 $\nabla^2f(x_*)$ 半正定但非正定，或半负定但非负定，二阶检验一般没有结论：Hessian 的零方向会让二次项消失，而未显示的高阶项可能把该方向弯向上、弯向下，或造成鞍点。
 > <!-- bilingual-en:start -->
-> At a $C^2$ stationary point, a merely positive- or negative-semidefinite Hessian is generally inconclusive. The quadratic term vanishes along its null directions, leaving higher-order terms free to create a minimum, a maximum, or a saddle.
+> At a $C^2$ stationary point, a singular positive- or negative-semidefinite Hessian is generally inconclusive. The quadratic term vanishes along its null directions, leaving higher-order terms free to create a minimum, a maximum, or a saddle.
 > <!-- bilingual-en:end -->
 
 两个函数
@@ -53,7 +53,7 @@ The two displayed functions have the same positive-semidefinite Hessian $\operat
 
 严格定号时情况不同：正定 Hessian 推出严格局部极小，负定推出严格局部极大，不定推出鞍点。奇异半定不是“几乎通过”的弱结论，而是明确告诉你：必须继续检查高阶项、函数的特殊结构，或邻域内的直接符号。
 <!-- bilingual-en:start -->
-Strict signs are decisive: positive definiteness gives a strict local minimum, negative definiteness a strict local maximum, and indefiniteness a saddle. Semidefiniteness is not an almost-complete verdict; it is a signal to inspect higher-order terms, special structure, or direct signs in a neighbourhood.
+Strict signs are decisive: positive definiteness gives a strict local minimum, negative definiteness a strict local maximum, and indefiniteness a saddle. A singular semidefinite Hessian is not an almost-complete verdict; it is a signal to inspect higher-order terms, special structure, or direct signs in a neighbourhood.
 <!-- bilingual-en:end -->
 
 > [!question]- 自检
@@ -83,3 +83,7 @@ The inclusive definition of semidefiniteness requires the qualifier “singular�
 <!-- bilingual-en:end -->
 
 - [[01_Math/08_MathsCamp-EC400/2026_Course_Materials/02_SOFP/Lectures/EC400 Lecture Notes SOFP.pdf#page=21|SOFP 讲义 p.21]]：核对半定不充分与正负定充分的区别；[[01_Math/08_MathsCamp-EC400/01_SOFP Lecture 1 - 二次型、Taylor 展开与凹凸性#6.3 半定无结论不是“主子式算得还不够多”|本课两种同 Hessian 的例子]]直接展示缺少的高阶信息。
+
+<!-- bilingual-en:start -->
+The linked SOFP notes distinguish semidefinite necessity from definite sufficiency. The course examples share the same Hessian but have different higher-order behaviour.
+<!-- bilingual-en:end -->

@@ -27,10 +27,10 @@ Coordinate directions reveal only Hessian diagonal entries. The product example 
 
 ## 来源与核验
 
-- [[01_Math/08_MathsCamp-EC400/2026_Course_Materials/02_SOFP/Lectures/EC400 Slides Lecture 1.pdf#page=41|EC400 SOFP 原材料，PDF p.41]]：支持本卡的课程定义、判据或所用基础公式；文中补充推导和反例另按公式直接复核。
+- [[01_Math/08_MathsCamp-EC400/2026_Course_Materials/02_SOFP/Lectures/EC400 Slides Lecture 1.pdf#page=41|EC400 SOFP 原材料，PDF p.41]]：课件给出完整 Hessian 的混合偏导项；本卡用 xy 和极化计算直接检验坐标测量的不足及补充方向。
 - [[01_Math/08_MathsCamp-EC400/01_SOFP Lecture 1 - 二次型、Taylor 展开与凹凸性#4.7 再用一次链式法则，得到方向二阶导数|SOFP Lecture 1 对应讲解]]：保留完整推导、条件、例子及课程语境。
 
 <!-- bilingual-en:start -->
-- The cited EC400 material supplies the course definition, criterion, or underlying formula; additional derivations and examples are checked directly.
+- The slide includes mixed Hessian entries; the product example and polarization calculation check what coordinate measurements miss.
 - The linked course exposition retains the detailed reasoning, assumptions, examples, and context.
 <!-- bilingual-en:end -->

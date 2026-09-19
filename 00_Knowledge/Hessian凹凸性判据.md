@@ -25,10 +25,10 @@ The sign condition must hold at every point and in every direction. Restricting 
 
 ## 来源与核验
 
-- [[01_Math/08_MathsCamp-EC400/2026_Course_Materials/02_SOFP/Lectures/EC400 Slides Lecture 1.pdf#page=49|EC400 SOFP 原材料，PDF p.49]]：支持本卡的课程定义、判据或所用基础公式；文中补充推导和反例另按公式直接复核。
+- [[01_Math/08_MathsCamp-EC400/2026_Course_Materials/02_SOFP/Lectures/EC400 Slides Lecture 1.pdf#page=49|EC400 SOFP 原材料，PDF p.49]]：核对处处半负定与凹性的等价关系；正文明确开凸域和二阶连续可微条件，并用直线限制核对全方向要求。
 - [[01_Math/08_MathsCamp-EC400/01_SOFP Lecture 1 - 二次型、Taylor 展开与凹凸性#7.4 二阶判据：一点的曲率与处处的曲率|SOFP Lecture 1 对应讲解]]：保留完整推导、条件、例子及课程语境。
 
 <!-- bilingual-en:start -->
-- The cited EC400 material supplies the course definition, criterion, or underlying formula; additional derivations and examples are checked directly.
+- The source states the Hessian criterion; the text makes the open convex domain and C2 assumptions explicit and checks all directions through line restrictions.
 - The linked course exposition retains the detailed reasoning, assumptions, examples, and context.
 <!-- bilingual-en:end -->

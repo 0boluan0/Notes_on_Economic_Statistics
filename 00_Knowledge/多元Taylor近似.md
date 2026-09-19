@@ -145,3 +145,7 @@ All of these conclusions are local. A Taylor expansion at one point cannot rule 
 <!-- bilingual-en:end -->
 
 - [[01_Math/08_MathsCamp-EC400/2026_Course_Materials/02_SOFP/Lectures/EC400 Slides Lecture 1.pdf#page=41|EC400 SOFP Lecture 1 原材料]]：核对本次补充所用的二次型或 Taylor 公式；[[01_Math/08_MathsCamp-EC400/01_SOFP Lecture 1 - 二次型、Taylor 展开与凹凸性#5.4 为什么沿直线可以在参数一处取值|课程中的详细展开]]保留分步推导。
+
+<!-- bilingual-en:start -->
+The linked SOFP slide gives the second-order polynomial. The course exposition tracks the small displacement, the integral remainder, and the regularity needed for a third-order bound.
+<!-- bilingual-en:end -->

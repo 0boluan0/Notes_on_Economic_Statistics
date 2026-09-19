@@ -23,10 +23,10 @@ On a regular decreasing graph segment, convexity of the region above the indiffe
 
 ## 来源与核验
 
-- [[01_Math/08_MathsCamp-EC400/2026_Course_Materials/02_SOFP/Lectures/EC400 Slides Lecture 1.pdf#page=59|EC400 SOFP 原材料，PDF p.59]]：支持本卡的课程定义、判据或所用基础公式；文中补充推导和反例另按公式直接复核。
+- [[01_Math/08_MathsCamp-EC400/2026_Course_Materials/02_SOFP/Lectures/EC400 Slides Lecture 1.pdf#page=59|EC400 SOFP 原材料，PDF p.59]]：课件提供递减 MRS 的几何解释；正文补明正边际效用、正规曲线和凸上方区域条件，再由凸边界的非减导数推导。
 - [[01_Math/08_MathsCamp-EC400/01_SOFP Lecture 1 - 二次型、Taylor 展开与凹凸性#8.4 经济含义：喜欢混合究竟有多强|SOFP Lecture 1 对应讲解]]：保留完整推导、条件、例子及课程语境。
 
 <!-- bilingual-en:start -->
-- The cited EC400 material supplies the course definition, criterion, or underlying formula; additional derivations and examples are checked directly.
+- The slide gives the geometric interpretation; the text supplies positive marginal utilities, a regular graph, and a convex upper region before deriving nonincreasing MRS.
 - The linked course exposition retains the detailed reasoning, assumptions, examples, and context.
 <!-- bilingual-en:end -->
