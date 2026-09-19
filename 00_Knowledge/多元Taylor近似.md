@@ -6,7 +6,7 @@ student_os: knowledge-atom
 atom_id: CALC-MV-009
 atom_set: multivariable-differentiation
 atom_type: approximation-theorem
-status: source-checked
+status: needs-review
 mastery_state: unassessed
 requires:
   - "[[全微分]]"
@@ -85,6 +85,22 @@ $$
 For $f(x,y)=x^2y$ at $(1,2)$, the displayed perturbation gives a first-order change of $0.02$ and a second-order correction of $-0.0002$. Their sum, $0.0198$, differs from the exact increment $0.019798$ by only $-0.000002$, the cubic term $dx^2dy$ omitted by the quadratic approximation.
 <!-- bilingual-en:end -->
 
+## 沿线段推导时为什么可以取参数一
+<!-- bilingual-en:start -->
+*Why the line parameter may be evaluated at one*
+<!-- bilingual-en:end -->
+
+固定小扰动 $h$，令 $g_h(t)=f(a+th)$，用一元积分余项得到
+$$
+R_2(h)=\int_0^1(1-t)h^T[H(a+th)-H(a)]h\,dt.
+$$
+因此 $|R_2(h)|/\|h\|^2$ 不超过 $\tfrac12\sup_{t\in[0,1]}\|H(a+th)-H(a)\|$，由 Hessian 连续性趋零。真正缩小的是 $h$，所以 $t=1$ 对应的点仍趋于 $a$；并不是对固定函数在任意一步之外套用局部近似。
+
+$C^2$ 给出的通用保证是 $o(\|h\|^2)$。若要使用 $O(\|h\|^3)$，还需额外正则性，例如邻域中连续的三阶导数。
+<!-- bilingual-en:start -->
+The integral remainder controls the whole segment uniformly. As $h$ shrinks, every point on it approaches $a$, and continuity of the Hessian makes the displayed bound vanish. Evaluating at parameter one therefore remains local in the actual displacement. The standard $C^2$ guarantee is second-order small-o; a cubic big-O bound needs stronger regularity, such as continuous third derivatives nearby.
+<!-- bilingual-en:end -->
+
 ## 从 Taylor 到局部极值分类
 <!-- bilingual-en:start -->
 *From Taylor expansion to local-extremum classification*
@@ -127,3 +143,5 @@ All of these conclusions are local. A Taylor expansion at one point cannot rule 
 - EC400 Revision Maths Notes 7, §7.9, was checked directly for the multivariable quadratic Taylor formula, its vector-matrix form, and its derivation by restricting the function to a line.
 - MIT 18.S096 was used to cross-check the Hessian quadratic term, the second-order remainder, and its local-curvature interpretation.
 <!-- bilingual-en:end -->
+
+- [[01_Math/08_MathsCamp-EC400/2026_Course_Materials/02_SOFP/Lectures/EC400 Slides Lecture 1.pdf#page=41|EC400 SOFP Lecture 1 原材料]]：核对本次补充所用的二次型或 Taylor 公式；[[01_Math/08_MathsCamp-EC400/01_SOFP Lecture 1 - 二次型、Taylor 展开与凹凸性#5.4 为什么沿直线可以在参数一处取值|课程中的详细展开]]保留分步推导。

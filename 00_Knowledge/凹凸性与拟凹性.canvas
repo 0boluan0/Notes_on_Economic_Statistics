@@ -1,0 +1,408 @@
+{
+  "nodes": [
+    {
+      "id": "domain",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 350,
+      "height": 220,
+      "text": "## [[凸集]]\n\n任意两点之间的整条线段都留在集合内。\n\n<!-- bilingual-en:start -->\nEvery segment between two points remains in the set.\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "shape",
+      "type": "text",
+      "x": 470,
+      "y": 0,
+      "width": 350,
+      "height": 220,
+      "text": "## [[凹凸性]]\n\n比较混合输入的值与两端输出的加权平均。\n\n<!-- bilingual-en:start -->\nCompare the mixed input value with the weighted endpoint outputs.\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "level",
+      "type": "text",
+      "x": 940,
+      "y": 0,
+      "width": 350,
+      "height": 220,
+      "text": "## [[水平集]]\n\n等于同一个输出值的输入。\n\n<!-- bilingual-en:start -->\nInputs sharing the same output.\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "upper",
+      "type": "text",
+      "x": 1410,
+      "y": 0,
+      "width": 350,
+      "height": 220,
+      "text": "## [[上轮廓集]]\n\n函数值至少达到门槛的输入。\n\n<!-- bilingual-en:start -->\nInputs whose values meet a threshold.\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "lower",
+      "type": "text",
+      "x": 1880,
+      "y": 0,
+      "width": 350,
+      "height": 220,
+      "text": "## [[下轮廓集]]\n\n函数值不超过门槛的输入。\n\n<!-- bilingual-en:start -->\nInputs whose values do not exceed a threshold.\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "tangent",
+      "type": "text",
+      "x": 0,
+      "y": 370,
+      "width": 350,
+      "height": 220,
+      "text": "## [[凹性一阶判据]]\n\n开凸域可微：切平面是全域上界。\n\n<!-- bilingual-en:start -->\nOn an open convex domain, tangent planes are global upper bounds.\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "hessian",
+      "type": "text",
+      "x": 470,
+      "y": 370,
+      "width": 350,
+      "height": 220,
+      "text": "## [[Hessian凹凸性判据]]\n\nC2 开凸域：Hessian 在每一点半负定。\n\n<!-- bilingual-en:start -->\nOn an open convex domain, every Hessian is negative semidefinite.\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "implies",
+      "type": "text",
+      "x": 940,
+      "y": 370,
+      "width": 350,
+      "height": 220,
+      "text": "## [[凹性推出拟凹性]]\n\n凹性保住加权平均，因此保住共同门槛。\n\n<!-- bilingual-en:start -->\nA concave mixture stays above the weighted average and hence any shared threshold.\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "qc",
+      "type": "text",
+      "x": 1410,
+      "y": 370,
+      "width": 350,
+      "height": 220,
+      "text": "## [[拟凹函数]]\n\n每个上轮廓集都凸。\n\n<!-- bilingual-en:start -->\nEvery upper contour set is convex.\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "qv",
+      "type": "text",
+      "x": 1880,
+      "y": 370,
+      "width": 350,
+      "height": 220,
+      "text": "## [[拟凸函数]]\n\n每个下轮廓集都凸。\n\n<!-- bilingual-en:start -->\nEvery lower contour set is convex.\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "station",
+      "type": "text",
+      "x": 0,
+      "y": 740,
+      "width": 350,
+      "height": 220,
+      "text": "## [[凹函数驻点全局最优]]\n\n零梯度代入切平面上界，得到全局最大。\n\n<!-- bilingual-en:start -->\nA zero gradient reduces the tangent bound to the stationary value.\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "strict",
+      "type": "text",
+      "x": 470,
+      "y": 740,
+      "width": 350,
+      "height": 220,
+      "text": "## [[严格凹与负定Hessian]]\n\n处处负定足够；严格凹不要求处处负定。\n\n<!-- bilingual-en:start -->\nNegative definiteness everywhere is sufficient, not necessary.\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "sum",
+      "type": "text",
+      "x": 940,
+      "y": 740,
+      "width": 350,
+      "height": 220,
+      "text": "## [[凹函数非负加权和]]\n\n非负权重与仿射成本保留凹性。\n\n<!-- bilingual-en:start -->\nNonnegative weights and affine costs preserve concavity.\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "min",
+      "type": "text",
+      "x": 1410,
+      "y": 740,
+      "width": 350,
+      "height": 220,
+      "text": "## [[拟凹性线段判据]]\n\n混合值不低于较低的端点值。\n\n<!-- bilingual-en:start -->\nThe mixture is at least the lower endpoint value.\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "max",
+      "type": "text",
+      "x": 1880,
+      "y": 740,
+      "width": 350,
+      "height": 220,
+      "text": "## [[拟凸性线段判据]]\n\n混合值不超过较高的端点值。\n\n<!-- bilingual-en:start -->\nThe mixture does not exceed the higher endpoint value.\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "local",
+      "type": "text",
+      "x": 0,
+      "y": 1110,
+      "width": 350,
+      "height": 220,
+      "text": "## [[凸优化全局性]]\n\n凹目标加凸可行域：局部最大即全局最大。\n\n<!-- bilingual-en:start -->\nConcave objective and convex domain turn local maxima into global ones.\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "exist",
+      "type": "text",
+      "x": 470,
+      "y": 1110,
+      "width": 350,
+      "height": 220,
+      "text": "## [[严格凹不保证解存在]]\n\n至多一个最大点，不代表一定取得。\n\n<!-- bilingual-en:start -->\nAt most one maximizer does not ensure attainment.\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "mixture",
+      "type": "text",
+      "x": 940,
+      "y": 1110,
+      "width": 350,
+      "height": 220,
+      "text": "## [[拟凹效用与混合偏好]]\n\n同效用两端的混合不差于两端。\n\n<!-- bilingual-en:start -->\nA mixture of equally valued endpoints is weakly preferred to both.\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "transform",
+      "type": "text",
+      "x": 1410,
+      "y": 1110,
+      "width": 350,
+      "height": 220,
+      "text": "## [[单调变换保持拟凹性]]\n\n非减变换保留门槛几何；严格递增保留完整排序。\n\n<!-- bilingual-en:start -->\nNondecreasing transformations preserve the shape; strict increase preserves ordering.\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "station-bound",
+      "type": "text",
+      "x": 1880,
+      "y": 1110,
+      "width": 350,
+      "height": 220,
+      "text": "## [[拟凹驻点不保证最优]]\n\nx³ 在零点驻定，却没有极值。\n\n<!-- bilingual-en:start -->\nThe cubic is stationary at zero without an extremum.\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "mono",
+      "type": "text",
+      "x": 0,
+      "y": 1480,
+      "width": 350,
+      "height": 125,
+      "text": "## [[一维单调函数的拟凹拟凸性]]"
+    },
+    {
+      "id": "peak",
+      "type": "text",
+      "x": 470,
+      "y": 1480,
+      "width": 350,
+      "height": 125,
+      "text": "## [[一维单峰函数拟凹性]]"
+    },
+    {
+      "id": "mrs",
+      "type": "text",
+      "x": 940,
+      "y": 1480,
+      "width": 350,
+      "height": 125,
+      "text": "## [[边际替代率]]"
+    },
+    {
+      "id": "mrs-shape",
+      "type": "text",
+      "x": 1410,
+      "y": 1480,
+      "width": 350,
+      "height": 125,
+      "text": "## [[拟凹效用的递减MRS]]"
+    },
+    {
+      "id": "mono-bound",
+      "type": "text",
+      "x": 0,
+      "y": 1770,
+      "width": 350,
+      "height": 125,
+      "text": "## [[多元单调不推拟凹]]"
+    },
+    {
+      "id": "peak-bound",
+      "type": "text",
+      "x": 470,
+      "y": 1770,
+      "width": 350,
+      "height": 125,
+      "text": "## [[唯一峰值不推拟凹]]"
+    }
+  ],
+  "edges": [
+    {
+      "id": "domain-shape",
+      "fromNode": "domain",
+      "fromSide": "bottom",
+      "toNode": "shape",
+      "toSide": "top",
+      "label": "提供凸定义域"
+    },
+    {
+      "id": "shape-tangent",
+      "fromNode": "shape",
+      "fromSide": "bottom",
+      "toNode": "tangent",
+      "toSide": "top",
+      "label": "可微时等价"
+    },
+    {
+      "id": "shape-hessian",
+      "fromNode": "shape",
+      "fromSide": "bottom",
+      "toNode": "hessian",
+      "toSide": "top",
+      "label": "C2 时等价"
+    },
+    {
+      "id": "shape-implies",
+      "fromNode": "shape",
+      "fromSide": "bottom",
+      "toNode": "implies",
+      "toSide": "top",
+      "label": "弦不等式保住门槛"
+    },
+    {
+      "id": "implies-qc",
+      "fromNode": "implies",
+      "fromSide": "bottom",
+      "toNode": "qc",
+      "toSide": "top",
+      "label": "充分，反向不成立"
+    },
+    {
+      "id": "upper-qc",
+      "fromNode": "upper",
+      "fromSide": "bottom",
+      "toNode": "qc",
+      "toSide": "top",
+      "label": "要求每个门槛的集合凸"
+    },
+    {
+      "id": "lower-qv",
+      "fromNode": "lower",
+      "fromSide": "bottom",
+      "toNode": "qv",
+      "toSide": "top",
+      "label": "要求每个门槛的集合凸"
+    },
+    {
+      "id": "qc-min",
+      "fromNode": "qc",
+      "fromSide": "bottom",
+      "toNode": "min",
+      "toSide": "top",
+      "label": "等价刻画"
+    },
+    {
+      "id": "qv-max",
+      "fromNode": "qv",
+      "fromSide": "bottom",
+      "toNode": "max",
+      "toSide": "top",
+      "label": "等价刻画"
+    },
+    {
+      "id": "tangent-station",
+      "fromNode": "tangent",
+      "fromSide": "bottom",
+      "toNode": "station",
+      "toSide": "top",
+      "label": "梯度为零时推出"
+    },
+    {
+      "id": "hessian-strict",
+      "fromNode": "hessian",
+      "fromSide": "bottom",
+      "toNode": "strict",
+      "toSide": "top",
+      "label": "加强为处处负定"
+    },
+    {
+      "id": "shape-sum",
+      "fromNode": "shape",
+      "fromSide": "bottom",
+      "toNode": "sum",
+      "toSide": "top",
+      "label": "非负加权保持"
+    },
+    {
+      "id": "shape-local",
+      "fromNode": "shape",
+      "fromSide": "bottom",
+      "toNode": "local",
+      "toSide": "top",
+      "label": "凸可行域上排除更优远点"
+    },
+    {
+      "id": "strict-exist",
+      "fromNode": "strict",
+      "fromSide": "bottom",
+      "toNode": "exist",
+      "toSide": "top",
+      "label": "严格性排除多解但不保证取得"
+    },
+    {
+      "id": "min-mixture",
+      "fromNode": "min",
+      "fromSide": "bottom",
+      "toNode": "mixture",
+      "toSide": "top",
+      "label": "两端同效用时"
+    },
+    {
+      "id": "min-transform",
+      "fromNode": "min",
+      "fromSide": "bottom",
+      "toNode": "transform",
+      "toSide": "top",
+      "label": "应用非减实函数"
+    },
+    {
+      "id": "qc-station-bound",
+      "fromNode": "qc",
+      "fromSide": "bottom",
+      "toNode": "station-bound",
+      "toSide": "top",
+      "label": "单独不够保证驻点最优"
+    },
+    {
+      "id": "mono-mono-bound",
+      "fromNode": "mono",
+      "fromSide": "bottom",
+      "toNode": "mono-bound",
+      "toSide": "top",
+      "label": "不能直接推广到多维"
+    },
+    {
+      "id": "peak-peak-bound",
+      "fromNode": "peak",
+      "fromSide": "bottom",
+      "toNode": "peak-bound",
+      "toSide": "top",
+      "label": "唯一峰值不足以保证轮廓凸"
+    },
+    {
+      "id": "mrs-mrs-shape",
+      "fromNode": "mrs",
+      "fromSide": "bottom",
+      "toNode": "mrs-shape",
+      "toSide": "top",
+      "label": "正规曲线与正边际效用"
+    },
+    {
+      "id": "qc-mrs-shape",
+      "fromNode": "qc",
+      "fromSide": "bottom",
+      "toNode": "mrs-shape",
+      "toSide": "top",
+      "label": "凸上轮廓加光滑条件"
+    }
+  ]
+}

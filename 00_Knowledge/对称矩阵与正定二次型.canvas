@@ -417,6 +417,69 @@
       "height": 190,
       "color": "3",
       "text": "## [[协方差奇异性]]\n\n协方差奇异，当且仅当某个非零线性组合几乎处处为常数。"
+    },
+    {
+      "id": "sofp-nd",
+      "type": "text",
+      "x": 0,
+      "y": 2900,
+      "width": 350,
+      "height": 125,
+      "text": "## [[负定矩阵]]"
+    },
+    {
+      "id": "sofp-nsd",
+      "type": "text",
+      "x": 470,
+      "y": 2900,
+      "width": 350,
+      "height": 125,
+      "text": "## [[半负定矩阵]]"
+    },
+    {
+      "id": "sofp-indef",
+      "type": "text",
+      "x": 940,
+      "y": 2900,
+      "width": 350,
+      "height": 125,
+      "text": "## [[不定二次型]]"
+    },
+    {
+      "id": "sofp-complete",
+      "type": "text",
+      "x": 1410,
+      "y": 2900,
+      "width": 350,
+      "height": 125,
+      "text": "## [[二维二次型配方]]"
+    },
+    {
+      "id": "sofp-ndtest",
+      "type": "text",
+      "x": 0,
+      "y": 3170,
+      "width": 350,
+      "height": 125,
+      "text": "## [[负定顺序主子式判据]]"
+    },
+    {
+      "id": "sofp-nsdtest",
+      "type": "text",
+      "x": 470,
+      "y": 3170,
+      "width": 350,
+      "height": 125,
+      "text": "## [[半负定主子式判据]]"
+    },
+    {
+      "id": "sofp-qhessian",
+      "type": "text",
+      "x": 1410,
+      "y": 3170,
+      "width": 350,
+      "height": 125,
+      "text": "## [[二次型的Hessian]]"
     }
   ],
   "edges": [
@@ -707,6 +770,70 @@
       "toNode": "n035",
       "toSide": "top",
       "label": "零曲率方向使二阶检验退化；零方差方向使协方差奇异"
+    },
+    {
+      "id": "n010-sofp-nd",
+      "fromNode": "n010",
+      "fromSide": "bottom",
+      "toNode": "sofp-nd",
+      "toSide": "top",
+      "label": "对矩阵取负号"
+    },
+    {
+      "id": "n011-sofp-nsd",
+      "fromNode": "n011",
+      "fromSide": "bottom",
+      "toNode": "sofp-nsd",
+      "toSide": "top",
+      "label": "对矩阵取负号"
+    },
+    {
+      "id": "n025-sofp-indef",
+      "fromNode": "n025",
+      "fromSide": "bottom",
+      "toNode": "sofp-indef",
+      "toSide": "top",
+      "label": "存在两个相反符号方向"
+    },
+    {
+      "id": "n025-sofp-complete",
+      "fromNode": "n025",
+      "fromSide": "bottom",
+      "toNode": "sofp-complete",
+      "toSide": "top",
+      "label": "二维可逆坐标变换"
+    },
+    {
+      "id": "sofp-nd-sofp-ndtest",
+      "fromNode": "sofp-nd",
+      "fromSide": "bottom",
+      "toNode": "sofp-ndtest",
+      "toSide": "top",
+      "label": "对 -A 用 Sylvester"
+    },
+    {
+      "id": "sofp-nsd-sofp-nsdtest",
+      "fromNode": "sofp-nsd",
+      "fromSide": "bottom",
+      "toNode": "sofp-nsdtest",
+      "toSide": "top",
+      "label": "对 -A 检查全部主子式"
+    },
+    {
+      "id": "sofp-complete-n014",
+      "fromNode": "sofp-complete",
+      "fromSide": "bottom",
+      "toNode": "n014",
+      "toSide": "top",
+      "label": "给出二维充分必要条件"
+    },
+    {
+      "id": "n025-sofp-qhessian",
+      "fromNode": "n025",
+      "fromSide": "bottom",
+      "toNode": "sofp-qhessian",
+      "toSide": "top",
+      "label": "对称代表连续求导得到 2A"
     }
   ]
 }

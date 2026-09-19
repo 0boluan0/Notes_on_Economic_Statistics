@@ -344,6 +344,33 @@
       "width": 3500,
       "height": 150,
       "text": "## 阅读路线\n\n先用偏导与方向导数获取局部切片信息，再以全微分统一所有一阶扰动；Hessian 的方向二阶响应进入 Taylor 近似和驻点分类；最后根据 Jacobian 的形状与正则性区分隐式解支、局部逆和体积公式。"
+    },
+    {
+      "id": "sofp-cross",
+      "type": "text",
+      "x": 0,
+      "y": 3670,
+      "width": 350,
+      "height": 125,
+      "text": "## [[坐标二阶导数不确定Hessian]]"
+    },
+    {
+      "id": "sofp-linebound",
+      "type": "text",
+      "x": 470,
+      "y": 3670,
+      "width": 350,
+      "height": 125,
+      "text": "## [[逐条直线极小不推局部极小]]"
+    },
+    {
+      "id": "sofp-qhessian",
+      "type": "text",
+      "x": 940,
+      "y": 3670,
+      "width": 350,
+      "height": 125,
+      "text": "## [[二次型的Hessian]]"
     }
   ],
   "edges": [
@@ -580,6 +607,30 @@
       "toSide": "top",
       "toEnd": "arrow",
       "label": "矩形时改用 Gram 体积因子"
+    },
+    {
+      "id": "c200000000000023-sofp-cross",
+      "fromNode": "c200000000000023",
+      "fromSide": "bottom",
+      "toNode": "sofp-cross",
+      "toSide": "top",
+      "label": "坐标轴只测到对角项"
+    },
+    {
+      "id": "c300000000000002-sofp-linebound",
+      "fromNode": "c300000000000002",
+      "fromSide": "bottom",
+      "toNode": "sofp-linebound",
+      "toSide": "top",
+      "label": "零方向允许弯曲路径改号"
+    },
+    {
+      "id": "c200000000000008-sofp-qhessian",
+      "fromNode": "c200000000000008",
+      "fromSide": "bottom",
+      "toNode": "sofp-qhessian",
+      "toSide": "top",
+      "label": "纯二次型的具体计算"
     }
   ]
 }

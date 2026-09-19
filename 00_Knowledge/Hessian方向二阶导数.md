@@ -6,7 +6,7 @@ student_os: knowledge-atom
 atom_id: CALC-MV-023
 atom_set: multivariable-differentiation
 atom_type: identity
-status: source-checked
+status: needs-review
 mastery_state: unassessed
 requires:
   - "[[Hessian矩阵]]"
@@ -54,6 +54,20 @@ $$
 令 $t=0$ 就得到所述恒等式。它说明 Hessian 不是若干互不相干的二阶偏导表格，而是一个把方向映成二阶变化率的二次型。
 <!-- bilingual-en:start -->
 One application of the chain rule gives $\phi'(t)=\nabla f(a+tv)^Tv$. Differentiating again, with $v$ fixed and the Jacobian of the gradient equal to the Hessian, yields $\phi''(t)=v^T\nabla^2f(a+tv)v$. Setting $t=0$ proves the identity. The Hessian is therefore not merely a table of unrelated second partial derivatives; it is a quadratic form that assigns a second-order rate of change to each direction.
+<!-- bilingual-en:end -->
+
+## 二维展开中两个交叉项都来自链式法则
+<!-- bilingual-en:start -->
+*Both mixed terms arise from differentiating the line restriction*
+<!-- bilingual-en:end -->
+
+写 $\phi'(t)=f_1(a+tv)v_1+f_2(a+tv)v_2$，其中 $v_i$ 固定。分别对两个偏导沿路径再求导，得到
+$$
+\phi''(t)=(f_{11}v_1+f_{12}v_2)v_1+(f_{21}v_1+f_{22}v_2)v_2.
+$$
+右边的偏导都在 $a+tv$ 取值。展开有四项；在 $C^2$ 条件下才把两项交叉贡献合成 $2f_{12}v_1v_2$。只沿坐标轴求二阶导数会遗漏它们，见[[坐标二阶导数不确定Hessian]]。
+<!-- bilingual-en:start -->
+Differentiate each first partial along the path while holding the direction coefficients fixed. Four terms result; symmetry under the $C^2$ assumption combines the two mixed contributions. Coordinate-axis measurements miss these interactions, as explained by [[坐标二阶导数不确定Hessian|the coordinate-direction boundary]].
 <!-- bilingual-en:end -->
 
 ## 向量长度也会进入二阶变化率
@@ -110,3 +124,5 @@ For $f(x,y)=x^2+xy+y^2$ at the base point $a=(0,0)$, the Hessian is $\begin{bmat
 - EC400 Revision Maths Notes 7, Section 7.7, supports the course definition of the Hessian, mixed partial derivatives, and second-order local change.
 - MIT 18.S096 notes support the relation among the Hessian quadratic form, the second derivative along a direction, and the quadratic Taylor term.
 <!-- bilingual-en:end -->
+
+- [[01_Math/08_MathsCamp-EC400/2026_Course_Materials/02_SOFP/Lectures/EC400 Slides Lecture 1.pdf#page=41|EC400 SOFP Lecture 1 原材料]]：核对本次补充所用的二次型或 Taylor 公式；[[01_Math/08_MathsCamp-EC400/01_SOFP Lecture 1 - 二次型、Taylor 展开与凹凸性#4.7 再用一次链式法则，得到方向二阶导数|课程中的详细展开]]保留分步推导。
