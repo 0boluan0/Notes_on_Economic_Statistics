@@ -4,7 +4,7 @@ atom_id: OPT-TOOLS-034
 aliases:
   - "平滑正边际效用下凸上轮廓集使递减无差异曲线上的 MRS 非增"
   - "With smooth positive marginal utilities, convex upper contour sets make MRS nonincreasing along a decreasing regular indifference curve"
-status: needs-review
+status: source-checked
 ---
 
 # 平滑正边际效用下凸上轮廓集使递减无差异曲线上的 MRS 非增

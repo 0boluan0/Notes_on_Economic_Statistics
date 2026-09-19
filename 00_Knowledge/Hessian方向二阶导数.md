@@ -6,7 +6,7 @@ student_os: knowledge-atom
 atom_id: CALC-MV-023
 atom_set: multivariable-differentiation
 atom_type: identity
-status: needs-review
+status: source-checked
 mastery_state: unassessed
 requires:
   - "[[Hessian矩阵]]"

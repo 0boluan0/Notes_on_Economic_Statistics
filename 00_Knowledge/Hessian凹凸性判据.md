@@ -4,7 +4,7 @@ atom_id: OPT-TOOLS-015
 aliases:
   - "开凸域上的二阶连续可微函数凹当且仅当 Hessian 处处半负定"
   - "A C2 function on an open convex domain is concave exactly when its Hessian is everywhere negative semidefinite"
-status: needs-review
+status: source-checked
 ---
 
 # 开凸域上的二阶连续可微函数凹当且仅当 Hessian 处处半负定

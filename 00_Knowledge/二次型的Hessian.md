@@ -4,7 +4,7 @@ atom_id: OPT-TOOLS-010
 aliases:
   - "实二次型的 Hessian 等于其表示矩阵与转置之和"
   - "The Hessian of a real quadratic form is its representing matrix plus its transpose"
-status: needs-review
+status: source-checked
 ---
 
 # 实二次型的 Hessian 等于其表示矩阵与转置之和

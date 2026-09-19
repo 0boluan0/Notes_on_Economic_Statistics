@@ -638,7 +638,7 @@
       "fromSide": "bottom",
       "toNode": "sofp-global",
       "toSide": "top",
-      "label": "加上凹性才得全局最大"
+      "label": "凹时可推出全局最大"
     },
     {
       "id": "sofp-global-sofp-quasi",

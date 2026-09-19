@@ -4,7 +4,7 @@ atom_id: OPT-TOOLS-011
 aliases:
   - "只知道坐标方向二阶导数不能确定交叉曲率或完整 Hessian"
   - "Coordinate-direction second derivatives alone do not determine mixed curvature or the full Hessian"
-status: needs-review
+status: source-checked
 ---
 
 # 只知道坐标方向二阶导数不能确定交叉曲率或完整 Hessian

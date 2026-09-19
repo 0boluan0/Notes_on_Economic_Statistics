@@ -371,6 +371,15 @@
       "width": 350,
       "height": 125,
       "text": "## [[二次型的Hessian]]"
+    },
+    {
+      "id": "sofp-inner-bound",
+      "type": "text",
+      "x": 1410,
+      "y": 3670,
+      "width": 350,
+      "height": 125,
+      "text": "## [[Cauchy–Schwarz不等式]]"
     }
   ],
   "edges": [
@@ -631,6 +640,14 @@
       "toNode": "sofp-qhessian",
       "toSide": "top",
       "label": "纯二次型的具体计算"
+    },
+    {
+      "id": "sofp-taylor-bound",
+      "fromNode": "sofp-inner-bound",
+      "fromSide": "top",
+      "toNode": "c200000000000009",
+      "toSide": "bottom",
+      "label": "结合谱范数控制二次余项"
     }
   ]
 }

@@ -4,7 +4,7 @@ atom_id: OPT-TOOLS-016
 aliases:
   - "Hessian 处处负定足以保证严格凹而严格凹不要求 Hessian 处处负定"
   - "An everywhere negative-definite Hessian implies strict concavity but is not necessary for it"
-status: needs-review
+status: source-checked
 ---
 
 # Hessian 处处负定足以保证严格凹而严格凹不要求 Hessian 处处负定

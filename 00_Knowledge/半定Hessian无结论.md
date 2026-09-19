@@ -7,7 +7,7 @@ student_os: knowledge-atom
 atom_id: LA-SPD-029
 atom_set: symmetric-positive-definite
 atom_type: diagnostic-boundary
-status: needs-review
+status: source-checked
 mastery_state: unassessed
 requires:
   - "[[半正定矩阵]]"

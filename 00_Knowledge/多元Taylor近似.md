@@ -6,7 +6,7 @@ student_os: knowledge-atom
 atom_id: CALC-MV-009
 atom_set: multivariable-differentiation
 atom_type: approximation-theorem
-status: needs-review
+status: source-checked
 mastery_state: unassessed
 requires:
   - "[[全微分]]"
@@ -94,11 +94,11 @@ For $f(x,y)=x^2y$ at $(1,2)$, the displayed perturbation gives a first-order cha
 $$
 R_2(h)=\int_0^1(1-t)h^T[H(a+th)-H(a)]h\,dt.
 $$
-因此 $|R_2(h)|/\|h\|^2$ 不超过 $\tfrac12\sup_{t\in[0,1]}\|H(a+th)-H(a)\|$，由 Hessian 连续性趋零。真正缩小的是 $h$，所以 $t=1$ 对应的点仍趋于 $a$；并不是对固定函数在任意一步之外套用局部近似。
+因此 $|R_2(h)|/\|h\|^2$ 不超过 $\tfrac12\sup_{t\in[0,1]}\|H(a+th)-H(a)\|$，这里矩阵使用[[谱范数|诱导二范数]]，该上界由 Hessian 连续性趋零。真正缩小的是 $h$，所以 $t=1$ 对应的点仍趋于 $a$；并不是对固定函数在任意一步之外套用局部近似。
 
 $C^2$ 给出的通用保证是 $o(\|h\|^2)$。若要使用 $O(\|h\|^3)$，还需额外正则性，例如邻域中连续的三阶导数。
 <!-- bilingual-en:start -->
-The integral remainder controls the whole segment uniformly. As $h$ shrinks, every point on it approaches $a$, and continuity of the Hessian makes the displayed bound vanish. Evaluating at parameter one therefore remains local in the actual displacement. The standard $C^2$ guarantee is second-order small-o; a cubic big-O bound needs stronger regularity, such as continuous third derivatives nearby.
+The integral remainder controls the whole segment uniformly in the [[谱范数|induced Euclidean norm]]. As $h$ shrinks, every point on it approaches $a$, and continuity of the Hessian makes the displayed bound vanish. Evaluating at parameter one therefore remains local in the actual displacement. The standard $C^2$ guarantee is second-order small-o; a cubic big-O bound needs stronger regularity, such as continuous third derivatives nearby.
 <!-- bilingual-en:end -->
 
 ## 从 Taylor 到局部极值分类
