@@ -403,6 +403,22 @@
       "toNode": "mrs-shape",
       "toSide": "top",
       "label": "凸上轮廓加光滑条件"
+    },
+    {
+      "id": "level-to-upper",
+      "fromNode": "level",
+      "fromSide": "right",
+      "toNode": "upper",
+      "toSide": "left",
+      "label": "将等号放宽为大于等于"
+    },
+    {
+      "id": "level-to-lower",
+      "fromNode": "level",
+      "fromSide": "right",
+      "toNode": "lower",
+      "toSide": "left",
+      "label": "将等号放宽为小于等于"
     }
   ]
 }
