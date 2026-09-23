@@ -20,7 +20,7 @@
 
 ## Student operating system
 
-- Before personal planning, teaching, or learning-record work, read `99_学习情况记录/Student OS 规则.md` when present. Its private operating rules stay outside Git.
+- Before personal planning, teaching, learning-record work, or LSE programme/support decisions, read `99_学习情况记录/Student OS 规则.md` when present and follow its relevant resource routing. Its private operating rules stay outside Git.
 
 ## Knowledge architecture
 
