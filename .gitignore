@@ -21,6 +21,7 @@
 /.codex/sessions/
 /.codex/logs/
 /.codex/.cache/
+/.openclaw-weixin-local/
 /brightness
 
 # Generated artifacts and process records
