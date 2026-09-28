@@ -13,6 +13,8 @@
 /98_attachment/dashboards/
 **/学习笔记/原始记录/
 
+**/2026_Course_Materials/09_Books/
+
 # Local application state and personal workflow configuration
 /.obsidian/
 /.claude/settings.local.json
