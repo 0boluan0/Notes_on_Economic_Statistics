@@ -12,14 +12,14 @@ tags:
 # MIT 18.06SC 官方课程顺序与资料地图
 
 > [!info] 本页定位与课程来源
-> 本页保留 MIT OpenCourseWare **18.06SC Linear Algebra, Fall 2011** 的官方 Session 顺序、原始资料入口与本地课程笔记对应关系；连续学习与概念地图的入口是 [[00_课程总览|线性代数课程总览]]。课程由 Gilbert Strang 教授主讲。
+> 本页保留 MIT OpenCourseWare **18.06SC Linear Algebra, Fall 2011** 的官方 Session 顺序、原始资料入口与本地课程笔记对应关系；连续学习与概念地图的入口是 [[01_Math/02_linear algebra/00_课程总览|线性代数课程总览]]。课程由 Gilbert Strang 教授主讲。
 >
 > - [Official syllabus](https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/syllabus/)
 > - [Official resource index](https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/resource-index/)
 > - [Official problem sets](https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/resources/problem-sets/)
 > - [Official exams](https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/resources/exams/)
 > <!-- bilingual-en:start -->
-> This page preserves the official session order, source links, and their correspondence with the local notes for MIT OpenCourseWare **18.06SC Linear Algebra, Fall 2011**, taught by Professor Gilbert Strang. Use the [[00_课程总览|Linear Algebra Course Overview]] for continuous study and concept maps.
+> This page preserves the official session order, source links, and their correspondence with the local notes for MIT OpenCourseWare **18.06SC Linear Algebra, Fall 2011**, taught by Professor Gilbert Strang. Use the [[01_Math/02_linear algebra/00_课程总览|Linear Algebra Course Overview]] for continuous study and concept maps.
 > <!-- bilingual-en:end -->
 
 ## 如何使用这份资料地图
@@ -27,7 +27,7 @@ tags:
 *How to use this source map*
 <!-- bilingual-en:end -->
 
-- 连续学习或按概念恢复：进入 [[00_课程总览|线性代数课程总览]]。
+- 连续学习或按概念恢复：进入 [[01_Math/02_linear algebra/00_课程总览|线性代数课程总览]]。
 - 对照 MIT 官方进度：按下方 Unit I → Unit II → Unit III → Final 的 Session 顺序查找课程笔记与 Homework。
 - 考前复习：进入 [[04_Review and exam roadmap|Final Course Review and Final Exam]]。
 - 查找原始资料：进入 [[MIT_OCW_18.06SC_PDF/index|PDF and transcript index]]。

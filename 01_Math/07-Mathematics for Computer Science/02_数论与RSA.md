@@ -14,7 +14,7 @@ aliases:
 This path follows MIT 6.042J Sessions 12–15. It first computes gcds and inverses, then represents integers by residues, and finally explains recovery through two modular powers. Read continuously below, or open an atom to review one definition or proof. Full class problems, online feedback, and PS5 remain in the [[02_Structures#Session 12 — GCDs|Unit 2 course record]].
 <!-- bilingual-en:end -->
 
-[[数论与RSA.canvas|打开关系总图]] · [[00_课程总览#2. 数论、RSA 与图结构|在课程总览中展开全部原子]] · [[知识原子.base|检索共享原子]]
+[[数论与RSA.canvas|打开关系总图]] · [[01_Math/07-Mathematics for Computer Science/00_课程总览#2. 数论、RSA 与图结构|在课程总览中展开全部原子]] · [[知识原子.base|检索共享原子]]
 
 ## 1. 整除与余数：先确定问题中的整数关系
 <!-- bilingual-en:start -->

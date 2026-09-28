@@ -23,8 +23,8 @@ Strictly negative directional second derivatives on every nontrivial segment imp
 
 ## 来源与核验
 
-- [[01_Math/08_MathsCamp-EC400/2026_Course_Materials/02_SOFP/Lectures/EC400 Slides Lecture 1.pdf#page=49|EC400 SOFP 原材料，PDF p.49]]：课件提供普通凹性的 Hessian 判据；负定的充分性沿线段推导，严格凹不要求处处负定由 −x⁴ 及其导数直接验证。
-- [[01_Math/08_MathsCamp-EC400/01_SOFP Lecture 1 - 二次型、Taylor 展开与凹凸性#7.4 二阶判据：一点的曲率与处处的曲率|SOFP Lecture 1 对应讲解]]：保留完整推导、条件、例子及课程语境。
+- [[EC400 Slides Lecture 1.pdf#page=49|EC400 SOFP 原材料，PDF p.49]]：课件提供普通凹性的 Hessian 判据；负定的充分性沿线段推导，严格凹不要求处处负定由 −x⁴ 及其导数直接验证。
+- [[01_SOFP Lecture 1 - 二次型、Taylor 展开与凹凸性#7.4 二阶判据：一点的曲率与处处的曲率|SOFP Lecture 1 对应讲解]]：保留完整推导、条件、例子及课程语境。
 
 <!-- bilingual-en:start -->
 - The slide supplies the ordinary Hessian criterion; the strict sufficient condition follows along segments, and the quartic directly disproves necessity.

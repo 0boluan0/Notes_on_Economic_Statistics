@@ -125,7 +125,7 @@ For $f(x,y)=x^2+xy+y^2$ at the base point $a=(0,0)$, the Hessian is $\begin{bmat
 - MIT 18.S096 notes support the relation among the Hessian quadratic form, the second derivative along a direction, and the quadratic Taylor term.
 <!-- bilingual-en:end -->
 
-- [[01_Math/08_MathsCamp-EC400/2026_Course_Materials/02_SOFP/Lectures/EC400 Slides Lecture 1.pdf#page=41|EC400 SOFP Lecture 1 原材料]]：核对本次补充所用的二次型或 Taylor 公式；[[01_Math/08_MathsCamp-EC400/01_SOFP Lecture 1 - 二次型、Taylor 展开与凹凸性#4.7 再用一次链式法则，得到方向二阶导数|课程中的详细展开]]保留分步推导。
+- [[EC400 Slides Lecture 1.pdf#page=41|EC400 SOFP Lecture 1 原材料]]：核对本次补充所用的二次型或 Taylor 公式；[[01_SOFP Lecture 1 - 二次型、Taylor 展开与凹凸性#4.7 再用一次链式法则，得到方向二阶导数|课程中的详细展开]]保留分步推导。
 
 <!-- bilingual-en:start -->
 The linked SOFP slide establishes the Hessian notation; the course exposition derives all four terms by applying the chain rule twice and distinguishes coordinate measurements from full curvature.

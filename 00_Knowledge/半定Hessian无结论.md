@@ -82,7 +82,7 @@ The inclusive definition of semidefiniteness requires the qualifier “singular�
 - EC400 SOFP Slides Lecture 2 were checked for the course classification of definite, indefinite, and semidefinite Hessians.
 <!-- bilingual-en:end -->
 
-- [[01_Math/08_MathsCamp-EC400/2026_Course_Materials/02_SOFP/Lectures/EC400 Lecture Notes SOFP.pdf#page=21|SOFP 讲义 p.21]]：核对半定不充分与正负定充分的区别；[[01_Math/08_MathsCamp-EC400/01_SOFP Lecture 1 - 二次型、Taylor 展开与凹凸性#6.3 半定无结论不是“主子式算得还不够多”|本课两种同 Hessian 的例子]]直接展示缺少的高阶信息。
+- [[EC400 Lecture Notes SOFP.pdf#page=21|SOFP 讲义 p.21]]：核对半定不充分与正负定充分的区别；[[01_SOFP Lecture 1 - 二次型、Taylor 展开与凹凸性#6.3 半定无结论不是“主子式算得还不够多”|本课两种同 Hessian 的例子]]直接展示缺少的高阶信息。
 
 <!-- bilingual-en:start -->
 The linked SOFP notes distinguish semidefinite necessity from definite sufficiency. The course examples share the same Hessian but have different higher-order behaviour.

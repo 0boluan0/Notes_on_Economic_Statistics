@@ -33,7 +33,7 @@ Orthogonal vectors have zero inner product, while proportional vectors attain th
 ## 来源与核验
 
 - [Boyd–Vandenberghe, Convex Optimization, p.74 / PDF p.88](https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf#page=88)：明确写出平方形式并用于 Hessian 定号；本卡的配方证明、等号条件和两个例子直接展开核验。
-- [[01_Math/08_MathsCamp-EC400/01_SOFP Lecture 1 - 二次型、Taylor 展开与凹凸性#5.4 为什么沿直线可以在参数一处取值|SOFP Lecture 1 的余项推导]]：说明这一不等式如何把矩阵连续性转为统一误差界。
+- [[01_SOFP Lecture 1 - 二次型、Taylor 展开与凹凸性#5.4 为什么沿直线可以在参数一处取值|SOFP Lecture 1 的余项推导]]：说明这一不等式如何把矩阵连续性转为统一误差界。
 
 <!-- bilingual-en:start -->
 The textbook states the squared inequality in its Hessian examples. The completed-square proof, equality cases, and examples are checked directly. The linked course passage uses the inequality to convert Hessian continuity into a uniform remainder bound.

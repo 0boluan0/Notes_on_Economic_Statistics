@@ -21,7 +21,7 @@ tags:
 *Course sources, conventions, and navigation*
 <!-- bilingual-en:end -->
 
-- 官方课程：MIT OCW 18.06SC *Linear Algebra, Fall 2011*；连续学习入口见 [[00_课程总览|线性代数课程总览]]，官方 Session 顺序与资料对应见 [[00_MIT OCW 18.06SC course map|课程资料地图]]。
+- 官方课程：MIT OCW 18.06SC *Linear Algebra, Fall 2011*；连续学习入口见 [[01_Math/02_linear algebra/00_课程总览|线性代数课程总览]]，官方 Session 顺序与资料对应见 [[00_MIT OCW 18.06SC course map|课程资料地图]]。
 - 本地资料索引：[[MIT_OCW_18.06SC_PDF/index|MIT 18.06SC PDF 索引]]。
 - 本篇严格按官网逻辑顺序写：Geometry → Overview → Elimination → Inverse → LU → Vector Spaces → Column/Null Spaces → $Ax=0$ → $Ax=b$ → Basis/Dimension → Four Subspaces → Matrix Spaces → Graphs → Review → Exam 1。
 - **编号提醒**：官网第二讲 Overview 的本地 summary 是 `Ses1.13sum.pdf`；官网第三至第十三讲依次使用本地 `Ses1.2–Ses1.12` 资料。
