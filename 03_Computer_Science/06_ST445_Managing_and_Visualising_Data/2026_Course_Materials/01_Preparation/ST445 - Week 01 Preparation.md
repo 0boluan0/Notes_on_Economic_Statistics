@@ -1,7 +1,7 @@
 ---
 course: ST445
 academic_year: 2026/27
-updated: 2026-09-28
+updated: 2026-09-29
 source: https://moodle.lse.ac.uk/course/section.php?id=347354
 ---
 
@@ -15,10 +15,10 @@ Week 1 introduces data representation and how Git and GitHub support reproducibl
 
 ## 课前的三个任务
 
-**熟悉课程。** 浏览 Moodle 的 Start Here、Assessments 和 Preparation，并阅读本地 [[ST445 - Weekly Study Plan|Weekly Study Plan]] 与 [Assessment Map](ST445%20-%20Assessment%20Map.html)。Week 1 页面将这些列为 Essential。
+**熟悉课程。** 浏览 Moodle 的 Start Here、Assessments 和 Preparation，并阅读本地 [[ST445 - Weekly Study Plan|Weekly Study Plan]] 与 [Assessment Map](../00_Course_Info/ST445%20-%20Assessment%20Map.html)。Week 1 页面将这些列为 Essential。
 
 <!-- bilingual-en:start -->
-**Get familiar with the course.** Review Start Here, Assessments and Preparation, then read the local [Weekly Study Plan](ST445%20-%20Weekly%20Study%20Plan.md) and [Assessment Map](ST445%20-%20Assessment%20Map.html). The Week 1 page marks these as essential.
+**Get familiar with the course.** Review Start Here, Assessments and Preparation, then read the local [Weekly Study Plan](../00_Course_Info/ST445%20-%20Weekly%20Study%20Plan.md) and [Assessment Map](../00_Course_Info/ST445%20-%20Assessment%20Map.html). The Week 1 page marks these as essential.
 <!-- bilingual-en:end -->
 
 **完成 Preparation。** 教师要求准备 Google Colab、GitHub、Git 和 GitHub Desktop，并说明 Google／GitHub 账户使用 LSE 邮箱。按现有账户情况核对三份指南，确认 Colab 可打开并运行一个单元格、课程仓库操作可用。Python 基础不足或需要复习时，使用 [LSE Digital Skills Lab Python](https://info.lse.ac.uk/current-students/digital-skills-lab/python)。此处只准备资料，未确认账户及本机软件已配置好。
@@ -41,18 +41,18 @@ Week 1 introduces data representation and how Git and GitHub support reproducibl
 
 ## 上课时用什么
 
-使用 [Week 1 幻灯片](ST445%20-%20Week%2001%20-%20Lecture.pdf)：第 1–12 页为课程介绍，第 13–34 页讨论数据、结构、类型与标准，第 35–50 页介绍 GitHub 可复现工作流。seminar 带电脑，并在 seminar 前完成课前活动；讲义或练习中出现的操作示例需要自己实际尝试。
+使用 [Week 1 幻灯片](../02_Lecture_Notes/Week_01/ST445%20-%20Week%2001%20-%20Lecture.pdf)：2026-09-29 新版共 74 页，第 1–13 页为课程介绍，第 14–55 页讨论数据、结构、类型与标准，第 56–73 页介绍 GitHub 可复现工作流，第 74 页为参考文献。seminar 带电脑，并在 seminar 前完成课前活动；讲义或练习中出现的操作示例需要自己实际尝试。
 
 <!-- bilingual-en:start -->
-Use the [Week 1 slides](ST445%20-%20Week%2001%20-%20Lecture.pdf): pages 1–12 introduce the course, pages 13–34 cover data, structures, types and standards, and pages 35–50 introduce reproducible GitHub workflows. Bring a laptop to the seminar and finish the pre-class activities beforehand. Practise the operations in the teaching examples yourself.
+Use the [Week 1 slides](../02_Lecture_Notes/Week_01/ST445%20-%20Week%2001%20-%20Lecture.pdf): in the 74-page edition downloaded on 29 September 2026, pages 1–13 introduce the course, pages 14–55 cover data, structures, types and standards, pages 56–73 introduce reproducible GitHub workflows, and page 74 contains references. Bring a laptop to the seminar and finish the pre-class activities beforehand. Practise the operations in the teaching examples yourself.
 <!-- bilingual-en:end -->
 
 ## 课后整理需要的材料
 
-保留本周幻灯片、个人课堂记录、自己操作过的 notebook／代码和输出，以及随后发布的 seminar 与 post-class activities。先标注对应页码、操作结果和未理解的问题；当前下载包只有 lecture PDF，未发布的 seminar 或课后材料不能补写成教师原文。
+保留本周幻灯片、个人课堂记录、自己操作过的 notebook／代码和输出，以及随后发布的 seminar 与 post-class activities。先标注对应页码、操作结果和未理解的问题；现已保存 [Week 1 Seminar Lab 1 notebook](../03_Seminars/Week_01/st445_wk1_seminar_lab1.ipynb)；它来自 Preparation 页面链接的教师 GitHub 仓库，Moodle 的 Seminar 文件夹当前仍为空。
 
 <!-- bilingual-en:start -->
-Keep the slides, personal class notes, notebooks or code you have run, their outputs, and the seminar and post-class resources once released. Record page references, observed results and unresolved questions. The current download contains only the lecture PDF; unpublished resources cannot be reconstructed as instructor material.
+Keep the slides, personal class notes, notebooks or code you have run, their outputs, and the seminar and post-class resources once released. Record page references, observed results and unresolved questions. The [Week 1 Seminar Lab 1 notebook](../03_Seminars/Week_01/st445_wk1_seminar_lab1.ipynb) is now available locally from the instructor repository linked on Preparation; Moodle’s Seminar folder remains empty.
 <!-- bilingual-en:end -->
 
 ## 来源与核验
@@ -60,5 +60,6 @@ Keep the slides, personal class notes, notebooks or code you have run, their out
 - [Week 1](https://moodle.lse.ac.uk/course/section.php?id=347354)：三个 Essential 课前任务与当前附件。
 - [Preparation](https://moodle.lse.ac.uk/course/section.php?id=347355)：工具、账户和 Python 准备要求。
 - [2026-09-28 教师公告](https://moodle.lse.ac.uk/mod/forum/discuss.php?d=408928#p580632)：seminar 前完成活动、带电脑及资料发布节奏；通过原生 Mail 阅读。
-- [Lecture PDF 原文件](https://moodle.lse.ac.uk/pluginfile.php/6450103/mod_folder/content/0/Lecture/ST445_W1_Lecture.pdf)：50 页，已解析并抽查显示。
+- [Lecture PDF 原文件](https://moodle.lse.ac.uk/pluginfile.php/6450103/mod_folder/content/0/Lecture/ST445_W1_Lecture.pdf)：2026-09-29 版 74 页，已解析并抽查显示。
+- [教师仓库 — Week 1](https://github.com/LeonardooAlves/LSE-ST445/tree/main/Week%201)：Lab 1 notebook 原件。
 - [[ST445 资料索引|返回课程资料索引]]

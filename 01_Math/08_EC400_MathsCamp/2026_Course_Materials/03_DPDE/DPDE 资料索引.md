@@ -52,6 +52,11 @@ DPDE 是 **Dynamic Programming and Differential Equations（动态规划与微�
 - [[Solutions_2_upload2026.pdf|Marie's Notes — Class 2 solutions]]
 - [[Solutions_3_upload2026.pdf|Marie's Notes — Class 3 solutions]]
 
+## 2026 年考试资料（2026-09-29 新增）
+
+- [[DPDE Exam 2026.pdf|2026 Exam（3 页）]] · [[DPDE Exam 2026 Solutions.pdf|2026 Solutions（6 页）]]
+- [Moodle — EC400 Exam Papers and Solutions 2026](https://moodle.lse.ac.uk/mod/folder/view.php?id=2218698)
+
 ## 历年试题
 
 - [[DPDE Exam 2023.pdf|2023 Exam]] · [[DPDE Exam 2023 Solutions.pdf|Solutions]]

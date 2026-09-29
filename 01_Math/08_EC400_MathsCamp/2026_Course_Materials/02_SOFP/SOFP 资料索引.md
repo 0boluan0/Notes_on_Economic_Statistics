@@ -213,6 +213,11 @@ A shadow price is the envelope derivative with respect to a constraint parameter
 
 ![[EC400 Lecture Notes SOFP.pdf#height=620]]
 
+## 2026 年考试资料（2026-09-29 新增）
+
+- [[EC400 SOFP Exam 2026.pdf|2026 Exam（2 页）]] · [[EC400 SOFP Exam 2026 Solutions.pdf|2026 Solutions（5 页）]]
+- [Moodle — EC400 Exam Papers and Solutions 2026](https://moodle.lse.ac.uk/mod/folder/view.php?id=2218698)
+
 ## 历年试题
 
-`Past_Exams/` 已收齐 Moodle 当前开放的 2011、2012、2013、2016–2025 试题与 solutions，共 26 份 PDF。文件名保留 Moodle 原名，方便与课程页面核对。
+2026-09-25 归档：`Past_Exams/` 已收齐当时 Moodle 开放的 2011、2012、2013、2016–2025 试题与 solutions，共 26 份 PDF。文件名保留 Moodle 原名，方便与课程页面核对。

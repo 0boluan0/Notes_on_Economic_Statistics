@@ -1,0 +1,358 @@
+---
+title: "Apply functions in R"
+author:
+   - name: Andrew Moles
+     affiliation: Learning Developer, Digital Skills Lab
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  html_document: 
+    theme: readable
+    highlight: pygments
+    keep_md: no
+    code_download: true
+    toc: true
+    toc_float: 
+      collapsed: false
+---
+
+# Introduction
+
+In programming *looping* is a fundamental concept. When you *loop* in programming you are repeating your code a number of times. This is advantageous as it saves you typing the same code numerous times! 
+
+Often in order to loop (or iterate) your code you would write a for loop. However, in R you can use an apply function as an alternative to the for loop. 
+
+To demonstrate we will use the palmers penguins dataset. If you are running code in this example you will need to install the palmerpenguins library where the data is held. We will also be using the DT package so the tables we display are interactive.
+
+```{r eval=FALSE}
+install.packages("palmerpenguins")
+install.packages("DT")
+```
+
+The palmer penguins data were collected and made available by [Dr. Kristen Gorman](https://www.uaf.edu/cfos/people/faculty/detail/kristen-gorman.php) and the [Palmer Station, Antarctica LTER](https://pal.lternet.edu/), a member of the [Long Term Ecological Research Network](https://lternet.edu/).
+
+There are two datasets, we will just look at the cleaned up *penguins* data. 
+```{r message=FALSE}
+# load librarys
+library(palmerpenguins)
+library(DT)
+
+# interactive table of the data
+datatable(penguins)
+```
+
+# The Apply family of functions
+
+The apply family of functions eliminate common uses of the for loop in R and are part of the reason for loops are not seen as often in the R programming language compared to a language like Python. They simplify the process so it can be written in more concisely, often just one line of code. 
+
+There are four common apply functions:
+
+- `apply()` allows you to select your *margins* to decide if you want to work rowwise or columnwise
+- `lapply()` outputs lists and only works columnwise
+- `sapply()` is similar to lapply but will return a vector
+- `tapply()` breaks a vector into segments then applies a function to those segements
+
+There are other apply functions, such as vapply and mapply, that are beyond the scope of this tutorial to cover. Knowledge of how to use apply will enable you to be able to use the other apply functions. 
+
+We will begin with the apply function. The apply function can perform iterations across rows or columns. You decide this by adding either 1 or 2 into the `MARGIN` parameter. We select 1 to work across on rows, and 2 to work across on columns.
+
+Working across rows is often called working *rowwise*. By working *rowwise* we can perform a calculation or a function across several columns for each row. For example, in the penguins data we might want to find the average of the three columns bill_length_mm, bill_depth_mm and flipper_length_mm for each row of data we have.  
+
+The syntax for apply by default takes three arguments: the data, which margin (rowwise or columnwise) and the function you want to perform. If the function you are using needs to use a parameter ,like na.rm = TRUE, then you add that after a comma `apply(data, MARGIN = 1 or 2, function)`. 
+```{r}
+apply_rows <- apply(penguins[ ,3:5], MARGIN = 1, mean, na.rm = TRUE)
+
+# print first 5 
+apply_rows[1:5]
+```
+
+This technique is most useful if we were to add that data back into the data frame, making a new column with our averages. This can be really useful if you are working with survey data and need to calculate the sum or average of questions for each participant in your survey. 
+```{r}
+penguins$bill_flip_avg <- apply(penguins[ ,3:5], MARGIN = 1, mean, na.rm = TRUE)
+
+# view data frame with added column
+penguins[1:5, c(3:5, 9)]
+```
+
+An other option to doing rowwise calculations are to use the rowMeans or rowSums functions that come with R by default. They perform rowwise calculations faster than apply, but are limited to mean or sum calculations.  
+```{r}
+# mean of cols for first 5 rows
+rowMeans(penguins[1:5 ,3:5], na.rm = TRUE)
+# sum of cols for first 5 rows
+rowSums(penguins[1:5 ,3:5], na.rm = TRUE)
+```
+
+Other calculations such as min, max, interquartile range are available with the `matrixStats` package.
+
+To replicate what we did with our for loop earlier we would use apply over columns; this is known as working *columnwise*. We do this by setting the margin to 2. Notice how the output is nicer than the for loop as it gives us a named vector, which is easy to read. 
+```{r}
+apply_cols <- apply(penguins[ ,3:5], MARGIN = 2, mean, na.rm = TRUE)
+apply_cols
+```
+
+In order to run both mean and median on the selected columns we need to change the code a little. Within the apply function *we make a function* which finds the mean and median of x. X is the column to apply the functions too. The x in `function(x)` is just a reference we are using to refer to the column we are applying a function too, but you can use something else if you like, such as y. 
+```{r}
+apply_cols <- apply(penguins[ ,3:5], 
+                    MARGIN = 2,
+                    function(x) c(median(x, na.rm = TRUE),
+                                  mean(x, na.rm = TRUE)))
+
+apply_cols
+```
+
+To add rownames to the output we add them in after the c function, this makes the output clearer. To keep things simple we've called the rows median and mean. In R this concept is known as a *named vector*, to make a named vector you give the name then value `c(name = value)`. 
+```{r}
+# named vector example
+c(mean = 4.5, median = 4)
+
+# add rownames
+apply_cols <- apply(penguins[ ,3:5], 
+                    MARGIN = 2,
+                    function(x) c(median = median(x, na.rm = TRUE),
+                                  mean = mean(x, na.rm = TRUE)))
+
+apply_cols
+```
+
+Again, there are other options that come with R by default in the colMeans and colSums functions. 
+```{r}
+# mean values for selected columns
+colMeans(penguins[,3:5], na.rm = TRUE)
+# sum of values for selected columns
+colSums(penguins[,3:5], na.rm = TRUE)
+```
+
+Other calculations such as min, max, interquartile range are available with the `matrixStats` package.
+
+## Apply exercises
+
+For the exercises we will use data about [measles from the tidy Tuesday GitHub repository](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-02-25/readme.md).  
+
+We will look at the mmr vaccination rate, the overall vaccination rate, and the percentage of students exempted for medical (xmed) or personal (xper) reasons. 
+
+1) Have a look at the data using the `str()` and `View()` commands
+2) Using apply with a margin of 1, make a new column that is the mean of xmed and xper. Call the new column avg_exempt (or similar)
+3) Using apply with a margin of 2 find the median, mean, standard deviation, inter quartile range, min, and max for the following columns in the measles data: mmr, overall, xmed, xper, avg_exempt (or whatever you called the column you just made)
+4) Review the results of your summary table
+```{r}
+# load in data
+measles <- read.csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-02-25/measles.csv")
+
+# your code here
+
+```
+
+# lapply and sapply
+
+The main difference between apply and lapply is that the output is always a list with lapply. You also do not need to specify the margins with lapply as it assumes it will be working across columns. 
+```{r}
+lapply_penguins <- lapply(penguins[ ,3:5], mean, na.rm = TRUE)
+# print output
+lapply_penguins
+# check the class 
+class(lapply_penguins)
+```
+
+We can do just as we did with apply and use `function(x)` to run mean and median over our selected columns. Each of the columns we run the functions on become named vectors within a list. 
+```{r}
+lapply_penguins <- lapply(penguins[ ,3:5],
+                          function(x) c(median = median(x, na.rm = TRUE),
+                                        mean = mean(x, na.rm = TRUE)))
+
+# print output
+lapply_penguins
+
+# access just flipper_length_mm
+lapply_penguins$flipper_length_mm
+```
+
+The sapply function is very similar to the lapply function but outputs a vector instead of a list. We can run the exact same code as we did with lapply, but our output will be slightly different. 
+
+First we can run just the mean on our selected columns. We can see from the the `str()` command that the output is a named number, which means a named vector. 
+```{r}
+sapply_penguins <- sapply(penguins[ ,3:5], mean, na.rm = TRUE)
+
+sapply_penguins
+
+str(sapply_penguins)
+```
+
+Then we can run the mean and median on our columns. 
+```{r}
+sapply_penguins <- sapply(penguins[ ,3:5], 
+                          function(x) c(median = median(x, na.rm = TRUE),
+                                        mean = mean(x, na.rm = TRUE)))
+
+sapply_penguins
+```
+
+## lapply and sapply exercises
+
+Using the measles data we used for the apply exercise:
+
+1) Use lapply to find the range for the mmr, overall, xmed, xper, and avg_exempt columns
+2) Use sapply to find the range and quantiles for the same columns 
+3) We will convert all character data in the measles dataset to factors. Using sapply, make a vector called *char* which contains true or false if a column is character or not *hint: use is.character*
+4) Use lapply to convert the columns in the measles data that are true to a factor *hint 1: use conditional indexing data[, vector == TRUE]*, *hint 2: try as.factor*
+5) Run `str(measles)` to see if the columns have changed to a factor
+```{r}
+# your code here
+
+```
+
+# Using lapply to load in lots of data
+
+The list data type is very useful for efficient storage of data as it can hold any data type. For this reason lapply is a good choice for the bulk loading of data. If you have a lot of files or data from urls which you need to load, you can use lapply to load them all at once and store them into a list.
+
+We have two examples below, one of loading *local* files from your computer, and one of loading data from urls. 
+
+To make the local data example reproducible, we will first create three data frames and save them as csv files in a folder called data. This should make a directory called data, then save all the files there. *note: this is purely for reproducibility and demonstration purposes, usually you will already have your files saved on your computer*
+```{r}
+# set up pathway
+path <- "data/"
+
+# make data directory if it doesn't already exist
+if (dir.exists(path) == FALSE) {
+  dir.create(path)
+}
+# set seed for reproducibility 
+set.seed(2021)
+
+# vector for data frame names
+df_names <- vector()
+# empty list to put data frames
+df_list <- list()
+
+# make three data frames with random data and add to list
+for (i in 1:3) {
+  # create vectors
+  x <- runif(5)
+  y <- rnorm(5)
+  z <- sample(1:10, 5)
+  # add to a data frame
+  df <- data.frame(x, y, z)
+  # add df to a list
+  df_list[[i]] <- df
+  # make names and add to vector
+  name <- paste0("df_", i)
+  df_names[i] <- name
+}
+
+# add our data frame names to our list
+names(df_list) <- df_names
+
+# look at the created data frames
+str(df_list)
+
+# use for loop to write the files
+for (save_file in names(df_list)) {
+  write.csv(df_list[[save_file]], file = paste0("data/", save_file, ".csv"))
+}
+
+# print the files in data directory to show files
+list.files(path)
+```
+
+Now we have made the files we can load them back in. To do so we set up the path which tells R where to look for the data. Then we use list.files to make a vector with the file names of the data we want to load. Finally, we use lapply to load in all the files. You can add names to the data frames after loading. 
+```{r}
+# where you files are
+path <- "data"
+
+# use list files to find csv files from a directory
+files <- list.files(path = path, pattern = ".csv", full.names = TRUE)
+
+# print files
+files
+
+# load the files into a list
+load_data <- lapply(files, read.csv)
+
+# give names to the data frames you've loaded
+names(load_data) <- c("data_1", "data_2", "data_3")
+
+# see the data loaded
+str(load_data)
+```
+
+This process can also be done loading in data from the internet. Instead of having a list of files, we have a list of urls we want to load.
+
+In this example we will load in datasets from Github urls. The urls come from the [tidytuesday Github repository](https://github.com/rfordatascience/tidytuesday). The datasets are Lemurs, Scooby Doo, and Star Trek computer commands. 
+```{r}
+# make a vector of urls
+urls <- c("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-08-24/lemur_data.csv",
+          "https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-07-13/scoobydoo.csv",
+          "https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-08-17/computer.csv")
+
+# make a vector of names for the datasets
+data_names <- c("lemurs", "Scooby_Doo", "Star_Trek")
+
+# load in all the urls into a list
+url_load <- lapply(urls, read.csv)
+
+# add the names to the datasets
+names(url_load) <- data_names
+names(url_load)
+
+# view the scooby doo dataset
+datatable(url_load$Scooby_Doo)
+```
+
+## Lapply loading data exercise
+
+Using the examples above, load in the three datasets from urls listed below. Once loaded change the names of the data frames. Use `View()` to review your data once they are loaded and the names are changed. 
+
+The data is about tennis grand slams, and was from April 2019. 
+
+Urls:
+
+- player date of birth (dob): "https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-04-09/player_dob.csv"
+- grand slams: "https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-04-09/grand_slams.csv"
+- grand slam timeline: "https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-04-09/grand_slam_timeline.csv" 
+
+```{r}
+# your code here
+
+```
+
+# tapply
+
+The tapply function is quite different to the other apply functions in that it performs aggregations. To use tapply we need a factor (or dummy variable) to break up our average calculations by. We can use the `str()` function to see if we already have factors in our data. 
+```{r}
+str(penguins)
+```
+
+The species, island, and sex columns are factors so we can use one of these to break up our calculation. For this example we will just species with bill_lenght_mm. 
+```{r}
+# method 1
+tapply(penguins$bill_length_mm, factor(penguins$species), mean, na.rm = TRUE)
+
+# method 2
+penguins$species <- as.factor(penguins$species)
+penguins$island <- as.factor(penguins$island)
+
+tapply_penguins <- tapply(penguins$bill_length_mm, penguins$species, mean, na.rm = TRUE)
+tapply_penguins
+```
+
+As you can see you get a named vector back with the mean bill_length_mm for each species of penguin.
+
+If you want to add another factor, such as what island the penguins live on we put the factors in a list within the tapply function. 
+```{r}
+# adding multiple factors
+tapply(penguins$bill_depth_mm, 
+       list(penguins$species, penguins$island),
+       mean, na.rm = TRUE)
+```
+
+The main downside of tapply is that is only allows you to work on one vector (or column) of data at a time. There are several other options to allow you to do this but they are beyond the scope of this tutorial; the three main alternatives are the `aggregate()` function that comes with the base version of R, `group_by()` and `summarise()` that come with the dplyr package, and the data.table package. 
+
+## tapply exercises
+
+Using the measles data we used in previous exercises and using tapply, work out the following:
+
+- Find the median mmr rate per state in the measles data
+- Find the median mmr rate per year and type in the measles data
+
+```{r}
+# your code here
+
+```

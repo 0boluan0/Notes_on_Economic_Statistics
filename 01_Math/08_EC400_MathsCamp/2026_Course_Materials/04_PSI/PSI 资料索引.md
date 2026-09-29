@@ -72,9 +72,14 @@ Moodle 的以下五份文件均包含题目和答案，每份 3 页；2026-09-25
 - [[Sample Exam 1.pdf|Sample Exam 1]] · [[Sample Exam 1 Answers.pdf|Answers]]
 - [[Sample Exam 2.pdf|Sample Exam 2]] · [[Sample Exam 2 Answers.pdf|Answers]]
 
+## 2026 年考试资料（2026-09-29 新增）
+
+- [[EC400 PSI Exam 2026.pdf|2026 Exam（5 页）]] · [[EC400 PSI Exam 2026 Solutions.pdf|2026 Solutions（16 页）]]
+- [Moodle — EC400 Exam Papers and Solutions 2026](https://moodle.lse.ac.uk/mod/folder/view.php?id=2218698)
+
 ## 历年试题
 
-`Past_Exams/` 保存了 Moodle 当前开放的 2016–2025 资料。2017 和 2020 当前只提供 solutions；另有一份原名为 `EC400 - PS - Questions.pdf` 的题目文件。
+2026-09-25 归档：`Past_Exams/` 保存了当时 Moodle 开放的 2016–2025 资料。2017 和 2020 当前只提供 solutions；另有一份原名为 `EC400 - PS - Questions.pdf` 的题目文件。
 
 ### 2024 试题的两个来源版本
 
