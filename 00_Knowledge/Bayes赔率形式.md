@@ -1,7 +1,7 @@
 ---
 student_os: knowledge-atom
 atom_id: c826ad79-e17e-4102-8561-4b5cac2083df
-status: needs-review
+status: source-checked
 aliases:
   - "后验赔率等于先验赔率乘以证据的似然比"
   - "Bayes rule in odds form"

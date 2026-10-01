@@ -1,7 +1,7 @@
 ---
 student_os: knowledge-atom
 atom_id: 9d431e6c-099e-4b54-863e-4c047ab930df
-status: needs-review
+status: source-checked
 aliases:
   - "严格递减变换的 CDF 使用逆像处的左极限补概率"
   - "CDF of a decreasing transformation"

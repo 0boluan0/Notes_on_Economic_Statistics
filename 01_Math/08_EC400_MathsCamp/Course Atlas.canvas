@@ -1,374 +1,46 @@
 {
-  "nodes": [
-    {
-      "id": "SOFPlabel",
-      "type": "text",
-      "x": 0,
-      "y": -220,
-      "width": 440,
-      "height": 130,
-      "text": "# SOFP"
-    },
-    {
-      "id": "SOFP1",
-      "type": "text",
-      "x": 0,
-      "y": 0,
-      "width": 440,
-      "height": 220,
-      "color": "5",
-      "text": "## [[01_SOFP Lecture 1 - 二次型、Taylor 展开与凹凸性|SOFP Lecture 1]]\n\n二次型 → Taylor → 凹凸性与拟凹性\n\n<!-- bilingual-en:start -->\nQuadratic forms → Taylor → concavity and quasiconcavity\n<!-- bilingual-en:end -->"
-    },
-    {
-      "id": "SOFP2",
-      "type": "text",
-      "x": 0,
-      "y": 320,
-      "width": 440,
-      "height": 190,
-      "color": "5",
-      "text": "## [[EC400 Slides Lecture 2.pdf|SOFP Lecture 2]]\n\n<!-- bilingual-en:start -->\n*Optimisation*\n<!-- bilingual-en:end -->"
-    },
-    {
-      "id": "SOFP3",
-      "type": "text",
-      "x": 0,
-      "y": 640,
-      "width": 440,
-      "height": 190,
-      "color": "5",
-      "text": "## [[EC400 Slides Lecture 3.pdf|SOFP Lecture 3]]\n\n<!-- bilingual-en:start -->\n*Comparative Statics and Fixed Points*\n<!-- bilingual-en:end -->"
-    },
-    {
-      "id": "DPDElabel",
-      "type": "text",
-      "x": 680,
-      "y": -220,
-      "width": 440,
-      "height": 130,
-      "text": "# DPDE"
-    },
-    {
-      "id": "DPDE1",
-      "type": "text",
-      "x": 680,
-      "y": 0,
-      "width": 440,
-      "height": 190,
-      "color": "5",
-      "text": "## [[02_DPDE Lecture 1 - 消费储蓄与欧拉方程|DPDE Lecture 1]]\n\n<!-- bilingual-en:start -->\n*Dynamic Optimisation*\n<!-- bilingual-en:end -->"
-    },
-    {
-      "id": "DPDE2",
-      "type": "text",
-      "x": 680,
-      "y": 320,
-      "width": 440,
-      "height": 190,
-      "color": "5",
-      "text": "## [[Slides 2 - Dynamic Systems.pdf|DPDE Lecture 2]]\n\n<!-- bilingual-en:start -->\n*Dynamic Systems*\n<!-- bilingual-en:end -->"
-    },
-    {
-      "id": "DPDE3",
-      "type": "text",
-      "x": 680,
-      "y": 640,
-      "width": 440,
-      "height": 190,
-      "color": "5",
-      "text": "## [[Slides 3 - Dynamic Programming.pdf|DPDE Lecture 3]]\n\n<!-- bilingual-en:start -->\n*Dynamic Programming*\n<!-- bilingual-en:end -->"
-    },
-    {
-      "id": "PSIlabel",
-      "type": "text",
-      "x": 1360,
-      "y": -220,
-      "width": 440,
-      "height": 130,
-      "text": "# PSI"
-    },
-    {
-      "id": "PSI1",
-      "type": "text",
-      "x": 1360,
-      "y": 0,
-      "width": 440,
-      "height": 190,
-      "color": "5",
-      "text": "## [[03_PSI Lecture 1 - 识别、概率与估计|PSI Lecture 1]]\n\n<!-- bilingual-en:start -->\n*Foundations*\n<!-- bilingual-en:end -->"
-    },
-    {
-      "id": "PSI2",
-      "type": "text",
-      "x": 1360,
-      "y": 320,
-      "width": 440,
-      "height": 230,
-      "color": "5",
-      "text": "## [[04_PSI Lecture 2 - 随机变量、条件分布与独立性|PSI Lecture 2]]\n\n分布与矩 → 条件化 → 独立层次 → OLS\n\n<!-- bilingual-en:start -->\nDistributions and moments → conditioning → independence → OLS\n<!-- bilingual-en:end -->"
-    },
-    {
-      "id": "PSI3",
-      "type": "text",
-      "x": 1360,
-      "y": 640,
-      "width": 440,
-      "height": 190,
-      "color": "5",
-      "text": "## [[Lecture 3 - Statistics II.pdf|PSI Lecture 3]]\n\n<!-- bilingual-en:start -->\n*Statistics II*\n<!-- bilingual-en:end -->"
-    },
-    {
-      "id": "PSI4",
-      "type": "text",
-      "x": 1360,
-      "y": 960,
-      "width": 440,
-      "height": 190,
-      "color": "5",
-      "text": "## [[Lecture 4 - Hypothesis Testing.pdf|PSI Lecture 4]]\n\n<!-- bilingual-en:start -->\n*Hypothesis Testing*\n<!-- bilingual-en:end -->"
-    },
-    {
-      "id": "PSI5",
-      "type": "text",
-      "x": 1360,
-      "y": 1280,
-      "width": 440,
-      "height": 190,
-      "color": "5",
-      "text": "## [[Lecture 5 - OLS and Asymptotics.pdf|PSI Lecture 5]]\n\n<!-- bilingual-en:start -->\n*OLS and Asymptotics*\n<!-- bilingual-en:end -->"
-    },
-    {
-      "id": "bridge",
-      "type": "text",
-      "x": 2180,
-      "y": 0,
-      "width": 440,
-      "height": 190,
-      "color": "6",
-      "text": "## [[估计量性质.canvas|估计量性质]]\n\n<!-- bilingual-en:start -->\n*Estimator properties*\n<!-- bilingual-en:end -->"
-    },
-    {
-      "id": "prob",
-      "type": "text",
-      "x": 2180,
-      "y": 320,
-      "width": 440,
-      "height": 190,
-      "color": "6",
-      "text": "## [[概率空间、条件概率与 Bayes 法则.canvas|概率与 Bayes]]\n\n<!-- bilingual-en:start -->\n*Probability and Bayes*\n<!-- bilingual-en:end -->"
-    },
-    {
-      "id": "caus",
-      "type": "text",
-      "x": 2180,
-      "y": -320,
-      "width": 440,
-      "height": 190,
-      "color": "6",
-      "text": "## [[处理效应与均值比较.canvas|处理效应与均值比较]]\n\n<!-- bilingual-en:start -->\n*Treatment effects and mean contrasts*\n<!-- bilingual-en:end -->"
-    },
-    {
-      "id": "sofp-quadratic",
-      "type": "text",
-      "x": -570,
-      "y": 0,
-      "width": 440,
-      "height": 170,
-      "text": "## [[对称矩阵与正定二次型.canvas|二次项的方向符号]]"
-    },
-    {
-      "id": "sofp-calculus",
-      "type": "text",
-      "x": -570,
-      "y": 310,
-      "width": 440,
-      "height": 170,
-      "text": "## [[多元微分.canvas|方向变化与二阶近似]]"
-    },
-    {
-      "id": "sofp-shape",
-      "type": "text",
-      "x": -570,
-      "y": 620,
-      "width": 440,
-      "height": 170,
-      "text": "## [[凹凸性与拟凹性.canvas|局部条件与全域形状]]"
-    },
-    {
-      "id": "psi2dist",
-      "type": "text",
-      "x": 2840,
-      "y": 0,
-      "width": 500,
-      "height": 230,
-      "text": "## [[随机变量、分布与矩.canvas]]\n\n随机变量 → 矩 → 分布变换。\n\n<!-- bilingual-en:start -->\nRandom variables, moments, and transformations.\n<!-- bilingual-en:end -->"
-    },
-    {
-      "id": "psi2ce",
-      "type": "text",
-      "x": 2840,
-      "y": 430,
-      "width": 500,
-      "height": 230,
-      "text": "## [[条件期望.canvas]]\n\n条件分布 → 条件矩 → 全期望与全方差。\n\n<!-- bilingual-en:start -->\nConditional laws, moments, and decomposition.\n<!-- bilingual-en:end -->"
-    },
-    {
-      "id": "psi2ols",
-      "type": "text",
-      "x": 2840,
-      "y": 860,
-      "width": 500,
-      "height": 230,
-      "text": "## [[OLS 线性回归.canvas]]\n\n独立层次连接无偏与一致的不同条件。\n\n<!-- bilingual-en:start -->\nDependence restrictions lead to OLS conditions.\n<!-- bilingual-en:end -->"
-    }
-  ],
-  "edges": [
-    {
-      "id": "43dd89b28dcf483c",
-      "fromNode": "SOFP1",
-      "toNode": "SOFP2",
-      "fromSide": "bottom",
-      "toSide": "top",
-      "toEnd": "arrow",
-      "label": "课程顺序 / Lecture order"
-    },
-    {
-      "id": "36e96b8e1dbc4dbe",
-      "fromNode": "SOFP2",
-      "toNode": "SOFP3",
-      "fromSide": "bottom",
-      "toSide": "top",
-      "toEnd": "arrow",
-      "label": "课程顺序 / Lecture order"
-    },
-    {
-      "id": "8b845b306c214e53",
-      "fromNode": "DPDE1",
-      "toNode": "DPDE2",
-      "fromSide": "bottom",
-      "toSide": "top",
-      "toEnd": "arrow",
-      "label": "课程顺序 / Lecture order"
-    },
-    {
-      "id": "e160162f9e3145be",
-      "fromNode": "DPDE2",
-      "toNode": "DPDE3",
-      "fromSide": "bottom",
-      "toSide": "top",
-      "toEnd": "arrow",
-      "label": "课程顺序 / Lecture order"
-    },
-    {
-      "id": "c4874333df824190",
-      "fromNode": "PSI1",
-      "toNode": "PSI2",
-      "fromSide": "bottom",
-      "toSide": "top",
-      "toEnd": "arrow",
-      "label": "课程顺序 / Lecture order"
-    },
-    {
-      "id": "3e85bde05f844da7",
-      "fromNode": "PSI2",
-      "toNode": "PSI3",
-      "fromSide": "bottom",
-      "toSide": "top",
-      "toEnd": "arrow",
-      "label": "课程顺序 / Lecture order"
-    },
-    {
-      "id": "7208565dd49d4ae6",
-      "fromNode": "PSI3",
-      "toNode": "PSI4",
-      "fromSide": "bottom",
-      "toSide": "top",
-      "toEnd": "arrow",
-      "label": "课程顺序 / Lecture order"
-    },
-    {
-      "id": "2142f7368c104f94",
-      "fromNode": "PSI4",
-      "toNode": "PSI5",
-      "fromSide": "bottom",
-      "toSide": "top",
-      "toEnd": "arrow",
-      "label": "课程顺序 / Lecture order"
-    },
-    {
-      "id": "880ae77cb7504f68",
-      "fromNode": "PSI1",
-      "toNode": "bridge",
-      "fromSide": "right",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "估计量评价 / Assess estimators"
-    },
-    {
-      "id": "e333b43737524283",
-      "fromNode": "PSI1",
-      "toNode": "prob",
-      "fromSide": "right",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "概率工具 / Probability tools"
-    },
-    {
-      "id": "9a0599707010464d",
-      "fromNode": "PSI1",
-      "toNode": "caus",
-      "fromSide": "right",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "因果识别 / Identification"
-    },
-    {
-      "id": "sofp-quadratic-link",
-      "fromNode": "SOFP1",
-      "fromSide": "left",
-      "toNode": "sofp-quadratic",
-      "toSide": "right",
-      "label": "二次项的方向符号"
-    },
-    {
-      "id": "sofp-calculus-link",
-      "fromNode": "SOFP1",
-      "fromSide": "left",
-      "toNode": "sofp-calculus",
-      "toSide": "right",
-      "label": "方向变化与二阶近似"
-    },
-    {
-      "id": "sofp-shape-link",
-      "fromNode": "SOFP1",
-      "fromSide": "left",
-      "toNode": "sofp-shape",
-      "toSide": "right",
-      "label": "局部条件与全域形状"
-    },
-    {
-      "id": "psi2-e-0",
-      "fromNode": "PSI2",
-      "fromSide": "bottom",
-      "toNode": "psi2dist",
-      "toSide": "top",
-      "label": "分布与变换工具"
-    },
-    {
-      "id": "psi2-e-1",
-      "fromNode": "PSI2",
-      "fromSide": "bottom",
-      "toNode": "psi2ce",
-      "toSide": "top",
-      "label": "给定信息后的平均与波动"
-    },
-    {
-      "id": "psi2-e-2",
-      "fromNode": "psi2ce",
-      "fromSide": "bottom",
-      "toNode": "psi2ols",
-      "toSide": "top",
-      "label": "零条件均值与总体正交"
-    }
-  ]
+	"nodes":[
+		{"id":"SOFPlabel","type":"text","x":0,"y":-220,"width":440,"height":130,"text":"# SOFP"},
+		{"id":"SOFP1","type":"text","x":0,"y":0,"width":440,"height":220,"color":"5","text":"## [[01_SOFP Lecture 1 - 二次型、Taylor 展开与凹凸性|SOFP Lecture 1]]\n\n二次型 → Taylor → 凹凸性与拟凹性\n\n<!-- bilingual-en:start -->\nQuadratic forms → Taylor → concavity and quasiconcavity\n<!-- bilingual-en:end -->"},
+		{"id":"SOFP2","type":"text","x":0,"y":320,"width":440,"height":190,"color":"5","text":"## [[EC400 Slides Lecture 2.pdf|SOFP Lecture 2]]\n\n<!-- bilingual-en:start -->\n*Optimisation*\n<!-- bilingual-en:end -->"},
+		{"id":"SOFP3","type":"text","x":0,"y":640,"width":440,"height":190,"color":"5","text":"## [[EC400 Slides Lecture 3.pdf|SOFP Lecture 3]]\n\n<!-- bilingual-en:start -->\n*Comparative Statics and Fixed Points*\n<!-- bilingual-en:end -->"},
+		{"id":"DPDElabel","type":"text","x":680,"y":-220,"width":440,"height":130,"text":"# DPDE"},
+		{"id":"DPDE1","type":"text","x":680,"y":0,"width":440,"height":190,"color":"5","text":"## [[02_DPDE Lecture 1 - 消费储蓄与欧拉方程|DPDE Lecture 1]]\n\n<!-- bilingual-en:start -->\n*Dynamic Optimisation*\n<!-- bilingual-en:end -->"},
+		{"id":"DPDE2","type":"text","x":680,"y":320,"width":440,"height":190,"color":"5","text":"## [[Slides 2 - Dynamic Systems.pdf|DPDE Lecture 2]]\n\n<!-- bilingual-en:start -->\n*Dynamic Systems*\n<!-- bilingual-en:end -->"},
+		{"id":"DPDE3","type":"text","x":680,"y":640,"width":440,"height":190,"color":"5","text":"## [[Slides 3 - Dynamic Programming.pdf|DPDE Lecture 3]]\n\n<!-- bilingual-en:start -->\n*Dynamic Programming*\n<!-- bilingual-en:end -->"},
+		{"id":"PSIlabel","type":"text","x":1360,"y":-220,"width":440,"height":130,"text":"# PSI"},
+		{"id":"PSI1","type":"text","x":1360,"y":0,"width":440,"height":190,"color":"5","text":"## [[03_PSI Lecture 1 - 识别、概率与估计|PSI Lecture 1]]\n\n<!-- bilingual-en:start -->\n*Foundations*\n<!-- bilingual-en:end -->"},
+		{"id":"PSI2","type":"text","x":1360,"y":320,"width":440,"height":230,"color":"5","text":"## [[04_PSI Lecture 2 - 随机变量、条件分布与独立性|PSI Lecture 2]]\n\n分布与矩 → 条件化 → 独立层次 → OLS\n\n<!-- bilingual-en:start -->\nDistributions and moments → conditioning → independence → OLS\n<!-- bilingual-en:end -->"},
+		{"id":"PSI3","type":"text","x":1360,"y":640,"width":440,"height":190,"color":"5","text":"## [[Lecture 3 - Statistics II.pdf|PSI Lecture 3]]\n\n<!-- bilingual-en:start -->\n*Statistics II*\n<!-- bilingual-en:end -->"},
+		{"id":"PSI4","type":"text","x":1360,"y":960,"width":440,"height":190,"color":"5","text":"## [[Lecture 4 - Hypothesis Testing.pdf|PSI Lecture 4]]\n\n<!-- bilingual-en:start -->\n*Hypothesis Testing*\n<!-- bilingual-en:end -->"},
+		{"id":"PSI5","type":"text","x":1360,"y":1280,"width":440,"height":190,"color":"5","text":"## [[Lecture 5 - OLS and Asymptotics.pdf|PSI Lecture 5]]\n\n<!-- bilingual-en:start -->\n*OLS and Asymptotics*\n<!-- bilingual-en:end -->"},
+		{"id":"bridge","type":"text","x":2180,"y":0,"width":440,"height":190,"color":"6","text":"## [[估计量性质.canvas|估计量性质]]\n\n<!-- bilingual-en:start -->\n*Estimator properties*\n<!-- bilingual-en:end -->"},
+		{"id":"prob","type":"text","x":2180,"y":320,"width":440,"height":190,"color":"6","text":"## [[概率空间、条件概率与 Bayes 法则.canvas|概率与 Bayes]]\n\n<!-- bilingual-en:start -->\n*Probability and Bayes*\n<!-- bilingual-en:end -->"},
+		{"id":"caus","type":"text","x":2180,"y":-320,"width":440,"height":190,"color":"6","text":"## [[处理效应与均值比较.canvas|处理效应与均值比较]]\n\n<!-- bilingual-en:start -->\n*Treatment effects and mean contrasts*\n<!-- bilingual-en:end -->"},
+		{"id":"sofp-quadratic","type":"text","x":-570,"y":0,"width":440,"height":170,"text":"## [[对称矩阵与正定二次型.canvas|二次项的方向符号]]"},
+		{"id":"sofp-calculus","type":"text","x":-570,"y":310,"width":440,"height":170,"text":"## [[多元微分.canvas|方向变化与二阶近似]]"},
+		{"id":"sofp-shape","type":"text","x":-570,"y":620,"width":440,"height":170,"text":"## [[凹凸性与拟凹性.canvas|局部条件与全域形状]]"},
+		{"id":"psi2dist","type":"text","x":2840,"y":0,"width":500,"height":230,"text":"## [[随机变量、分布与矩.canvas]]\n\n随机变量 → 矩 → 分布变换。\n\n<!-- bilingual-en:start -->\nRandom variables, moments, and transformations.\n<!-- bilingual-en:end -->"},
+		{"id":"psi2ce","type":"text","x":2840,"y":430,"width":500,"height":230,"text":"## [[条件期望.canvas]]\n\n条件分布 → 条件矩 → 全期望与全方差。\n\n<!-- bilingual-en:start -->\nConditional laws, moments, and decomposition.\n<!-- bilingual-en:end -->"},
+		{"id":"psi2ols","type":"text","x":2840,"y":860,"width":500,"height":230,"text":"## [[OLS 线性回归.canvas]]\n\n独立层次连接无偏与一致的不同条件。\n\n<!-- bilingual-en:start -->\nDependence restrictions lead to OLS conditions.\n<!-- bilingual-en:end -->"}
+	],
+	"edges":[
+		{"id":"43dd89b28dcf483c","fromNode":"SOFP1","toNode":"SOFP2","fromSide":"bottom","toSide":"top","toEnd":"arrow","label":"课程顺序 / Lecture order"},
+		{"id":"36e96b8e1dbc4dbe","fromNode":"SOFP2","toNode":"SOFP3","fromSide":"bottom","toSide":"top","toEnd":"arrow","label":"课程顺序 / Lecture order"},
+		{"id":"8b845b306c214e53","fromNode":"DPDE1","toNode":"DPDE2","fromSide":"bottom","toSide":"top","toEnd":"arrow","label":"课程顺序 / Lecture order"},
+		{"id":"e160162f9e3145be","fromNode":"DPDE2","toNode":"DPDE3","fromSide":"bottom","toSide":"top","toEnd":"arrow","label":"课程顺序 / Lecture order"},
+		{"id":"c4874333df824190","fromNode":"PSI1","toNode":"PSI2","fromSide":"bottom","toSide":"top","toEnd":"arrow","label":"课程顺序 / Lecture order"},
+		{"id":"3e85bde05f844da7","fromNode":"PSI2","toNode":"PSI3","fromSide":"bottom","toSide":"top","toEnd":"arrow","label":"课程顺序 / Lecture order"},
+		{"id":"7208565dd49d4ae6","fromNode":"PSI3","toNode":"PSI4","fromSide":"bottom","toSide":"top","toEnd":"arrow","label":"课程顺序 / Lecture order"},
+		{"id":"2142f7368c104f94","fromNode":"PSI4","toNode":"PSI5","fromSide":"bottom","toSide":"top","toEnd":"arrow","label":"课程顺序 / Lecture order"},
+		{"id":"880ae77cb7504f68","fromNode":"PSI1","toNode":"bridge","fromSide":"right","toSide":"left","toEnd":"arrow","label":"估计量评价 / Assess estimators"},
+		{"id":"e333b43737524283","fromNode":"PSI1","toNode":"prob","fromSide":"right","toSide":"left","toEnd":"arrow","label":"概率工具 / Probability tools"},
+		{"id":"9a0599707010464d","fromNode":"PSI1","toNode":"caus","fromSide":"right","toSide":"left","toEnd":"arrow","label":"因果识别 / Identification"},
+		{"id":"sofp-quadratic-link","fromNode":"SOFP1","fromSide":"left","toNode":"sofp-quadratic","toSide":"right","label":"二次项的方向符号"},
+		{"id":"sofp-calculus-link","fromNode":"SOFP1","fromSide":"left","toNode":"sofp-calculus","toSide":"right","label":"方向变化与二阶近似"},
+		{"id":"sofp-shape-link","fromNode":"SOFP1","fromSide":"left","toNode":"sofp-shape","toSide":"right","label":"局部条件与全域形状"},
+		{"id":"psi2-e-0","fromNode":"PSI2","fromSide":"bottom","toNode":"psi2dist","toSide":"top","label":"分布与变换工具"},
+		{"id":"psi2-e-1","fromNode":"PSI2","fromSide":"bottom","toNode":"psi2ce","toSide":"top","label":"给定信息后的平均与波动"},
+		{"id":"psi2-e-2","fromNode":"psi2ce","fromSide":"bottom","toNode":"psi2ols","toSide":"top","label":"零条件均值与总体正交"}
+	]
 }

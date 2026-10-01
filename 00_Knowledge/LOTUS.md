@@ -1,7 +1,7 @@
 ---
 student_os: knowledge-atom
 atom_id: c6276dc5-7afe-4a2a-bea8-866ed6b6adb8
-status: needs-review
+status: source-checked
 aliases:
   - "可积函数的期望可以直接按原随机变量的分布加权"
   - "Law of the unconscious statistician"
