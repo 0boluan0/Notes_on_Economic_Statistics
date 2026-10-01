@@ -288,6 +288,42 @@
       "height": 190,
       "color": "5",
       "text": "## [[频率派与贝叶斯推断|推断框架与重复抽样评价]]\n\n<!-- bilingual-en:start -->\n*Inference and repeated-sampling assessment*\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "p2union",
+      "type": "text",
+      "x": 1800,
+      "y": 2200,
+      "width": 500,
+      "height": 230,
+      "text": "## [[并事件上界]]\n\n不要求独立，重叠只会让相加上界更松。\n\n<!-- bilingual-en:start -->\nNo independence is needed for the union bound.\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "p2odds",
+      "type": "text",
+      "x": 1800,
+      "y": 3040,
+      "width": 500,
+      "height": 230,
+      "text": "## [[Bayes赔率形式]]\n\n先验赔率乘似然比，得到后验赔率。\n\n<!-- bilingual-en:start -->\nMultiply prior odds by the likelihood ratio.\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "p2mono",
+      "type": "text",
+      "x": 2400,
+      "y": 2200,
+      "width": 500,
+      "height": 230,
+      "text": "## [[概率的单调性]]\n\n集合包含推出概率大小关系。\n\n<!-- bilingual-en:start -->\nSet inclusion orders probabilities.\n<!-- bilingual-en:end -->\n"
+    },
+    {
+      "id": "p2null",
+      "type": "text",
+      "x": 2400,
+      "y": 2580,
+      "width": 500,
+      "height": 230,
+      "text": "## [[零概率不等于不可能]]\n\n零质量事件仍可能非空。\n\n<!-- bilingual-en:start -->\nAn event without mass can still be nonempty.\n<!-- bilingual-en:end -->\n"
     }
   ],
   "edges": [
@@ -551,6 +587,38 @@
       "toSide": "left",
       "toEnd": "arrow",
       "label": "后验统计量也可做重复抽样评价"
+    },
+    {
+      "id": "psi2-e-0",
+      "fromNode": "psi_axioms",
+      "fromSide": "bottom",
+      "toNode": "p2union",
+      "toSide": "top",
+      "label": "交集概率非负"
+    },
+    {
+      "id": "psi2-e-1",
+      "fromNode": "a000000000000009",
+      "fromSide": "bottom",
+      "toNode": "p2odds",
+      "toSide": "top",
+      "label": "两个后验相除，分母抵消"
+    },
+    {
+      "id": "psi2-extra-0",
+      "fromNode": "psi_axioms",
+      "fromSide": "bottom",
+      "toNode": "p2mono",
+      "toSide": "top",
+      "label": "互斥分解与非负性"
+    },
+    {
+      "id": "psi2-extra-1",
+      "fromNode": "psi_axioms",
+      "fromSide": "bottom",
+      "toNode": "p2null",
+      "toSide": "top",
+      "label": "可数可加不能处理不可数单点和"
     }
   ]
 }

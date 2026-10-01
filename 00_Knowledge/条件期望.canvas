@@ -118,6 +118,96 @@
       "height": 400,
       "text": "# 向外应用\n\n- 用嵌套条件化把一步均值延伸到多期：[[鞅定义]]\n- 随机项数的波动分解：[[复合泊松过程]]\n- 未来随机利率与可锁定报价的区分：[[未来短率预期]]\n\n应用卡必须各自说明信息集、矩条件和概率测度。",
       "color": "6"
+    },
+    {
+      "id": "p2joint",
+      "type": "text",
+      "x": 0,
+      "y": 2200,
+      "width": 500,
+      "height": 230,
+      "text": "## [[联合分布]]\n\n描述两个变量同时取值的概率。\n\n<!-- bilingual-en:start -->\nAssign probabilities to simultaneous values.\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "p2marg",
+      "type": "text",
+      "x": 760,
+      "y": 2200,
+      "width": 500,
+      "height": 230,
+      "text": "## [[边际分布]]\n\n把其他变量求和或积分掉。\n\n<!-- bilingual-en:start -->\nSum or integrate out the other variable.\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "p2cond",
+      "type": "text",
+      "x": 1520,
+      "y": 2200,
+      "width": 500,
+      "height": 230,
+      "text": "## [[条件分布]]\n\n限制到给定信息并重新归一化。\n\n<!-- bilingual-en:start -->\nRestrict and renormalise given information.\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "p2const",
+      "type": "text",
+      "x": 2280,
+      "y": 2200,
+      "width": 500,
+      "height": 230,
+      "text": "## [[条件分布不变推出独立]]\n\n整张条件分布不变，才得到独立。\n\n<!-- bilingual-en:start -->\nA constant full conditional law gives independence.\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "p2condstd",
+      "type": "text",
+      "x": 3040,
+      "y": 2200,
+      "width": 500,
+      "height": 230,
+      "text": "## [[条件正态标准化]]\n\n逐组标准化得到共同 N(0,1) 分布。\n\n<!-- bilingual-en:start -->\nWithin-group normalisation gives a common normal law.\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "p2meanind",
+      "type": "text",
+      "x": 0,
+      "y": 2680,
+      "width": 500,
+      "height": 230,
+      "text": "## [[均值独立]]\n\n只固定条件均值，并且有方向。\n\n<!-- bilingual-en:start -->\nA directional restriction on the conditional mean.\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "p2hier",
+      "type": "text",
+      "x": 760,
+      "y": 2680,
+      "width": 500,
+      "height": 230,
+      "text": "## [[独立性强弱关系]]\n\n有限二阶矩下的两条单向蕴含。\n\n<!-- bilingual-en:start -->\nTwo forward implications with finite second moments.\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "p2notind",
+      "type": "text",
+      "x": 1520,
+      "y": 2680,
+      "width": 500,
+      "height": 230,
+      "text": "## [[均值独立不推独立]]\n\n条件均值相同，方差仍可变化。\n\n<!-- bilingual-en:start -->\nA common mean allows changing variance.\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "p2notmean",
+      "type": "text",
+      "x": 2280,
+      "y": 2680,
+      "width": 500,
+      "height": 230,
+      "text": "## [[零协方差不推均值独立]]\n\n平方关系可使乘积抵消而条件均值变化。\n\n<!-- bilingual-en:start -->\nSquaring can cancel covariance while changing means.\n<!-- bilingual-en:end -->"
+    },
+    {
+      "id": "p2known",
+      "type": "text",
+      "x": 3040,
+      "y": 2680,
+      "width": 500,
+      "height": 230,
+      "text": "## [[条件期望取出已知量]]\n\n给定信息已确定的因子可提出。\n\n<!-- bilingual-en:start -->\nA factor known from the conditioning information can be taken out.\n<!-- bilingual-en:end -->\n"
     }
   ],
   "edges": [
@@ -200,6 +290,94 @@
       "toNode": "ce0000000000000d",
       "toSide": "top",
       "label": "残差零条件均值"
+    },
+    {
+      "id": "psi2-e-0",
+      "fromNode": "p2joint",
+      "fromSide": "bottom",
+      "toNode": "p2marg",
+      "toSide": "top",
+      "label": "汇总互斥切片"
+    },
+    {
+      "id": "psi2-e-1",
+      "fromNode": "p2joint",
+      "fromSide": "bottom",
+      "toNode": "p2cond",
+      "toSide": "top",
+      "label": "切片除以边际总量"
+    },
+    {
+      "id": "psi2-e-2",
+      "fromNode": "p2cond",
+      "fromSide": "bottom",
+      "toNode": "ce00000000000003",
+      "toSide": "top",
+      "label": "按条件权重取均值"
+    },
+    {
+      "id": "psi2-e-3",
+      "fromNode": "p2cond",
+      "fromSide": "bottom",
+      "toNode": "p2const",
+      "toSide": "top",
+      "label": "比较全部条件分布"
+    },
+    {
+      "id": "psi2-e-4",
+      "fromNode": "p2condstd",
+      "fromSide": "bottom",
+      "toNode": "p2const",
+      "toSide": "top",
+      "label": "各组都为 N(0,1)"
+    },
+    {
+      "id": "psi2-e-5",
+      "fromNode": "ce00000000000003",
+      "fromSide": "bottom",
+      "toNode": "p2meanind",
+      "toSide": "top",
+      "label": "是否等于无条件均值"
+    },
+    {
+      "id": "psi2-e-6",
+      "fromNode": "p2meanind",
+      "fromSide": "bottom",
+      "toNode": "p2hier",
+      "toSide": "top",
+      "label": "全期望给出零协方差"
+    },
+    {
+      "id": "psi2-e-7",
+      "fromNode": "p2hier",
+      "fromSide": "bottom",
+      "toNode": "p2notind",
+      "toSide": "top",
+      "label": "否定均值独立⇒独立"
+    },
+    {
+      "id": "psi2-e-8",
+      "fromNode": "p2hier",
+      "fromSide": "bottom",
+      "toNode": "p2notmean",
+      "toSide": "top",
+      "label": "否定零协方差⇒均值独立"
+    },
+    {
+      "id": "psi2-extra-0",
+      "fromNode": "ce00000000000003",
+      "fromSide": "bottom",
+      "toNode": "p2known",
+      "toSide": "top",
+      "label": "可测性与乘积可积"
+    },
+    {
+      "id": "psi2-extra-1",
+      "fromNode": "p2known",
+      "fromSide": "bottom",
+      "toNode": "ce00000000000009",
+      "toSide": "top",
+      "label": "全方差交叉项为零"
     }
   ]
 }

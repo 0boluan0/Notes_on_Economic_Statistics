@@ -41,10 +41,13 @@ PSI 是 **Probability and Statistical Inference（概率与统计推断）**。
 - [[03_PSI Lecture 1 - 识别、概率与估计|Lecture 1 — 识别、概率与估计]]：按讲课顺序展开，含基础符号、完整运算、MSE 推导及 slides 42–47、62、68–69 原图。
 - [[PSI Lecture 1 - Foundations - 手写笔记.pdf|Lecture 1 手写原稿（9 页）]]
 - [[PSI Lecture 1 - Foundations - Claude课堂记录|Lecture 1 Claude 课堂记录原文]]
+- [[04_PSI Lecture 2 - 随机变量、条件分布与独立性|Lecture 2 — 随机变量、条件分布与独立性]]：按 slides 展开，含基础符号、完整推导、均匀与正态、递减换元、联合格子、条件矩、两条分组定律及独立性反例。
+- [[PSI Lecture 2 - Statistics I - 手写笔记 - 2026-09-30.pdf|Lecture 2 手写原稿（7 页）]]
+- [[PSI Lecture 2 - Statistics I - 课堂记录 - 2026-09-30|Lecture 2 课堂记录原文]]
 - [[01_Math/08_EC400_MathsCamp/00_课程总览|连续阅读路径]] · [[Course Atlas.canvas|Course Atlas]]
 
 <!-- bilingual-en:start -->
-*The Lecture 1 note follows teaching order with symbols, calculations, the MSE derivation, and original figures. The handwritten source and classroom record are retained alongside the reading path and Course Atlas.*
+*Both lecture notes follow teaching order with symbols, calculations, and source figures. Lecture 2 adds transformations, joint and conditional distributions, decomposition laws, and independence counterexamples. Original handwriting and classroom records remain available.*
 <!-- bilingual-en:end -->
 
 ## Problem Sets
