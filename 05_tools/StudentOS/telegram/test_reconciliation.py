@@ -73,6 +73,14 @@ class ReconciliationTests(unittest.TestCase):
         self.assertEqual(report["applied"], [])
         self.assertIn("部分完成", self.read(subject.LOG))
 
+    def test_not_started_is_recorded_without_marking_unknown_or_complete(self):
+        reply, report = self.process(text="python没开始呢", status="not_started")
+        self.assertEqual(report["items"][0]["result"], "not_started")
+        self.assertIn("尚未开始", self.read(subject.LOG))
+        self.assertIn("尚未开始", reply)
+        self.assertIn(self.raw, self.read(self.plan))
+        self.assertEqual(report["applied"], [])
+
     def test_replay_classifies_and_logs_only_once(self):
         with patch.object(subject, "classify_reply", side_effect=self.classify()) as classifier:
             first = subject.process_reply(self.vault, "做好了", "/fake/codex", self.state, 31)
@@ -183,6 +191,26 @@ class ReconciliationTests(unittest.TestCase):
             _, report = subject.process_reply(self.vault, "收到了", "/fake/codex", self.state, 1)
         self.assertEqual(report["applied"], [])
         self.assertIn(self.raw, self.read(self.plan))
+
+    def test_git_timeout_reports_access_failure_before_classification(self):
+        with patch.object(subject.subprocess, "run", side_effect=subprocess.TimeoutExpired("git", 10)), \
+             patch.object(subject, "classify_reply") as classifier:
+            reply, report = subject.process_reply(self.vault, "昨天参加那个讲座了，python没开始呢", "/fake/codex", self.state, 82)
+        classifier.assert_not_called()
+        self.assertEqual(report["failure_code"], "vault_check_timeout")
+        self.assertIn("访问检查超时", reply)
+        self.assertFalse(report["logged"])
+        self.assertIn(self.raw, self.read(self.plan))
+
+    def test_delayed_replay_uses_message_date(self):
+        received = NOW - dt.timedelta(days=2)
+        def fake(vault, text, codex_path, candidates, contexts, now):
+            self.assertEqual(now, received)
+            return self.classify(date="2026-09-26", phrase="昨天")(vault, text, codex_path, candidates, contexts, now)
+        with patch.object(subject, "classify_reply", side_effect=fake):
+            _, report = subject.process_reply(self.vault, "昨天做好了", "/fake/codex", self.state, 83,
+                                               received_at=received.timestamp())
+        self.assertEqual(report["applied"][0]["actual_date"], "2026-09-26")
 
     def test_cli_uses_read_only_stdin_no_model_override(self):
         rows, contexts = subject.load_candidates(self.vault)

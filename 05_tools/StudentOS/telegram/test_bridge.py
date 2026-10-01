@@ -102,6 +102,23 @@ class BridgeTests(unittest.TestCase):
             handle(self.inbox, row, config, API(), self.state, self.state, 'codex')
             self.assertEqual(transcribe.call_count, 1)
 
+    def test_failed_reconciliation_remains_visible_in_status(self):
+        class API:
+            def send_message(self, *args):
+                return {'message_id': 32}
+        config = {'owner_chat_id': 123}
+        self.inbox.receive([update(11, '昨天参加那个讲座了，python没开始呢')], config)
+        report = {'disposition': 'reconciliation_unavailable', 'failure_code': 'vault_check_timeout', 'logged': False}
+        with patch('reconciliation.process_reply', return_value=('学习库访问检查超时。', report)):
+            handle(self.inbox, self.inbox.pending()[0], config, API(), self.state, self.state, 'codex')
+        health = json.loads((self.state / 'reconciliation-health.json').read_text())
+        self.assertEqual(health['failure_code'], 'vault_check_timeout')
+        self.inbox.receive([update(12, '/status')], config)
+        handle(self.inbox, self.inbox.pending()[0], config, API(), self.state, self.state, 'codex')
+        reply = self.inbox.db.execute('SELECT reply FROM messages WHERE id=12').fetchone()[0]
+        self.assertIn('最近一次对账未完成', reply)
+        self.assertNotIn('进展会记入', reply)
+
     def test_unclear_voice_never_reaches_task_reconciliation(self):
         class API:
             def send_message(self, *args):

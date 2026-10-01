@@ -117,10 +117,16 @@ def handle(inbox, row, config, api, state, vault, codex):
     text = message.get('text', '')
     reply = row['reply']
     if reply is None:
+        report = None
         if text.startswith('/start') or text == '/help':
             reply = HELP
         elif text == '/status':
-            reply = '收信服务正在运行。你发来的进展会记入私有对账记录。\n' + schedule_description()
+            latest = state / 'reconciliation-health.json'
+            health = json.loads(latest.read_text()) if latest.exists() else {}
+            summary = ('最近一次对账已完成。' if health.get('logged') and not health.get('failure_code')
+                       else '最近一次对账未完成，请检查后台学习库访问或自动识别。' if health
+                       else '尚无对账结果。')
+            reply = '收信服务正在运行。' + summary + '\n' + schedule_description()
         elif text == '/today':
             latest = state / 'latest-morning.json'
             if latest.exists():
@@ -132,7 +138,7 @@ def handle(inbox, row, config, api, state, vault, codex):
             try:
                 transcript = transcribe_message(api, message, state, row['id'])
                 from reconciliation import process_reply
-                result, _report = process_reply(vault, '【语音转写】' + transcript, codex, state, row['id'])
+                result, report = process_reply(vault, '【语音转写】' + transcript, codex, state, row['id'], received_at=message.get('date'))
                 heard = transcript if len(transcript) <= 400 else transcript[:400] + '…'
                 reply = '听到的是：「' + heard + '」\n\n' + result
             except VoiceError as error:
@@ -141,7 +147,13 @@ def handle(inbox, row, config, api, state, vault, codex):
             reply = '可以直接发文字或语音，告诉我做了什么。文字请分成较短的几条发送。'
         else:
             from reconciliation import process_reply
-            reply, _report = process_reply(vault, text, codex, state, row['id'])
+            reply, report = process_reply(vault, text, codex, state, row['id'], received_at=message.get('date'))
+        if report is not None:
+            save_json(state / 'reconciliation-health.json', {
+                'checked_at': time.time(), 'update_id': row['id'],
+                'disposition': report.get('disposition'), 'failure_code': report.get('failure_code'),
+                'logged': report.get('logged', False),
+            })
         inbox.reply(row['id'], reply)
     receipt = SendOnce(api, state / 'sends.sqlite3', config['owner_chat_id']).send(
         f"reply:{row['id']}", reply, message['message_id'], retry_rejected=True)
@@ -210,6 +222,8 @@ def main():
     if args.command == 'status':
         config = json.loads(config_path.read_text()) if config_path.exists() else {}
         health = json.loads((state / 'health.json').read_text()) if (state / 'health.json').exists() else {}
+        latest = state / 'reconciliation-health.json'
+        health['reconciliation'] = json.loads(latest.read_text()) if latest.exists() else None
         print(json.dumps({'configured': bool(config), 'bot_username': config.get('bot_username'), 'paired': bool(config.get('owner_chat_id')), 'schedule': schedule_description(), 'health': health}, ensure_ascii=False))
         return
     config = json.loads(config_path.read_text())
