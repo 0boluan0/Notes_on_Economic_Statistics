@@ -1,11 +1,19 @@
 ---
 course: ST445
 academic_year: 2026/27
-updated: 2026-09-29
+updated: 2026-10-02
 source: https://moodle.lse.ac.uk/course/section.php?id=347354
 ---
 
 # ST445 Week 1 准备与资料使用顺序
+
+## 2026-10-02 资料补充
+
+Moodle 已发布 [30 页小班讲义](../03_Seminars/Week_01/ST445%20-%20Week%2001%20-%20GitHub%20and%20Colab%20Lab.pdf)及五项课后活动。教师仓库的 [Lab 1 新版](../03_Seminars/Week_01/1_st445_week1_lab1.ipynb)应优先与 seminar 小组完成；随后推荐 [Lab 2](../03_Seminars/Week_01/2_st445_week1_lab2.ipynb)。完整原要求见 [[ST445 - Week 01 Post-Class Activities|Week 1 课后活动]]。下方关于空文件夹及旧 notebook 的表述保留为 2026-09-29 归档记录。
+
+<!-- bilingual-en:start -->
+Moodle now provides the [30-page seminar guide](../03_Seminars/Week_01/ST445%20-%20Week%2001%20-%20GitHub%20and%20Colab%20Lab.pdf) and five post-class activities. Prioritise the [updated Lab 1](../03_Seminars/Week_01/1_st445_week1_lab1.ipynb) with your seminar group; [Lab 2](../03_Seminars/Week_01/2_st445_week1_lab2.ipynb) is recommended afterwards. See [[ST445 - Week 01 Post-Class Activities|Week 1 post-class activities]] for the complete requirements. References below to an empty folder and the previous notebook are retained as the 29 September archive record.
+<!-- bilingual-en:end -->
 
 本周先理解数据的表示方式，再认识 Git 与 GitHub 如何支持可复现工作流。以下是教师已发布要求的整理，供课前使用；个人完成情况另记学习记录。
 

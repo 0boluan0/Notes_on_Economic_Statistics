@@ -1,7 +1,7 @@
 ---
 course: ST445
 academic_year: 2026/27
-updated: 2026-09-28
+updated: 2026-10-02
 source: https://moodle.lse.ac.uk/course/section.php?id=347353
 ---
 
@@ -46,7 +46,7 @@ Slide 4 labels lectures as usually recorded and seminars as not recorded. No ded
 <!-- bilingual-en:end -->
 
 - [ST445 Moodle](https://moodle.lse.ac.uk/course/view.php?id=17025)
-- [官方 Reading List](https://readings.lse.ac.uk/leganto/public/44LSE_INST/lists/13076713740002021?auth=SAML)
+- [官方 Reading List](https://readings.lse.ac.uk/leganto/nui/lists/14818494390002021?institute=44LSE_INST&auth=SAML)
 - [Reading List — Moodle 入口](https://moodle.lse.ac.uk/mod/lti/view.php?id=2218077)
 
 ## AI 使用要求
