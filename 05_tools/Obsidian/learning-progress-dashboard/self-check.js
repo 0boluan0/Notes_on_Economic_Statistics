@@ -92,6 +92,7 @@ async function checkArchivedPlans() {
   const folder = "99_学习情况记录/学习计划";
   const overviewPath = "99_学习情况记录/Overview & Study Record.md";
   const workbenchPath = "99_学习情况记录/workbench.md";
+  const recordsPath = "99_学习情况记录/工作记录.md";
   const coursePath = "Courses/Current course.md";
   const overviewText = [
     "## 学校责任",
@@ -108,6 +109,7 @@ async function checkArchivedPlans() {
   const documents = new Map([
     [overviewPath, overviewText],
     [workbenchPath, "## 一次性任务\n- [ ] Current admin #student-os/task\n- [ ] Personal note"],
+    [recordsPath, "# 工作记录\n## 一次性任务\n- [ ] Recorded admin #student-os/task ^recorded\n## 计划外记录\n"],
     [coursePath, "# Course\n- [ ] Lecture review #student-os/task\n- [ ] Lecture notes #student-os/task\n- [ ] Later lecture #student-os/task"],
     [`${folder}/Current.md`, "---\nstudent_os: learning-plan\nstatus: active\n---\n- [ ] Current task #student-os/task"],
     [`${folder}/Archived.md`, "---\nstudent_os: learning-plan\nstatus: archived\n---\n- [ ] Old practice #student-os/task"],
@@ -124,12 +126,13 @@ async function checkArchivedPlans() {
       getMarkdownFiles: () => files,
       getFileByPath: (path) => files.find((file) => file.path === path),
       cachedRead: async (file) => documents.get(file.path),
+      process: async (file, transform) => documents.set(file.path, transform(documents.get(file.path))),
     },
     metadataCache: { getFirstLinkpathDest: (target) => files.find((file) => file.path === target) },
   });
   const choices = await store.taskChoices();
   assert.deepEqual(choices.map((task) => task.text).sort(),
-    ["Current task", "Current admin", "Lecture review", "Lecture notes", "Later lecture"].sort(),
+    ["Current task", "Current admin", "Recorded admin ^recorded", "Lecture review", "Lecture notes", "Later lecture"].sort(),
     "Quick record must use all current registered sources and exclude inactive or unregistered plans");
   const data = await store.readDashboardData();
   assert.deepEqual(data.active.map((track) => track.title).sort(), ["Current", "Current course"]);
@@ -144,10 +147,23 @@ async function checkArchivedPlans() {
   const allowed = new RegExp(pathPattern);
   assert.equal(allowed.test(coursePath), true);
   assert.equal(allowed.test(workbenchPath), true);
+  assert.equal(allowed.test(recordsPath), true);
   assert.equal(allowed.test(`${folder}/Current.md`), false, "A newly archived source must leave native task views too");
   assert.equal(allowed.test(`${folder}/Orphan.md`), false);
   assert.ok(scoped.startsWith('User writing stays here\n'));
   assert.ok(scoped.endsWith('```tasks\ndone\ntag regex matches /^#student-os\\/task$/\n```\n'));
+  const retention = '(not done) OR ((status.type is DONE) AND (done on or after yesterday) AND (done on or before today))';
+  const foldedView = `> [!todo]- Course\n>\n> \x60\x60\x60tasks\n> # student-os:active-sources\n> path regex matches /old/\n> ${retention}\n> tag regex matches /^#student-os\\/task$/\n> \x60\x60\x60\n`;
+  const refreshed = scopeTaskQueries(foldedView, [recordsPath, coursePath]);
+  assert.ok(refreshed.includes(`> ${retention}\n`), "Scope refresh must preserve retention in folded native views");
+  assert.ok(!refreshed.includes('/old/'));
+  assert.equal(scopeTaskQueries(refreshed, [recordsPath, coursePath]), refreshed);
+  const workbenchBeforeCapture = documents.get(workbenchPath);
+  await store.recordCompleted("New unplanned result");
+  await store.saveInput("A thought to clarify later");
+  assert.ok(documents.get(recordsPath).includes("- [x] New unplanned result #student-os/task ✅ "));
+  assert.ok(documents.get(recordsPath).includes("A thought to clarify later"));
+  assert.equal(documents.get(workbenchPath), workbenchBeforeCapture, "Capture must not append history or prose to Workbench");
   const archivedDone = parsePlanText(
     "---\nstudent_os: learning-plan\nstatus: archived\n---\n- [x] Historical result #student-os/task ✅ 2026-08-01",
     `${folder}/Archived done.md`

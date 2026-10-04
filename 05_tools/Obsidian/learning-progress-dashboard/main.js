@@ -6,6 +6,7 @@ const VIEW_TYPE = "learning-progress-dashboard-view";
 
 const OVERVIEW_PATH = "99_学习情况记录/Overview & Study Record.md";
 const WORKBENCH_PATH = "99_学习情况记录/workbench.md";
+const WORK_RECORDS_PATH = "99_学习情况记录/工作记录.md";
 const DAILY_FOLDER = "99_学习情况记录";
 const DAILY_TEMPLATE = "00_inbox/日记模版.md";
 const CANONICAL_TASK_TAG = "#student-os/task";
@@ -36,10 +37,12 @@ function scopeTaskQueries(text, sourcePaths) {
     path.replace(/[.*+?^${}()|[\]\\]/g, "\\$&").replace(/\//g, "\\/")
   );
   const scope = `# student-os:active-sources\npath regex matches /^(?:${paths.join("|") || "(?!)"})$/`;
-  return String(text).replace(/```tasks\n([\s\S]*?)```/g, (block, query) => {
-    if (!/^not done$/m.test(query) || !query.includes("/^#student-os\\/task$/")) return block;
+  return String(text).replace(/^([ \t]*(?:> ?)*)(```tasks)\n([\s\S]*?)^\1```/gm, (block, prefix, fence, body) => {
+    const query = body.split("\n").map((line) => line.startsWith(prefix) ? line.slice(prefix.length) : line).join("\n");
+    const managed = /^# student-os:active-sources$/m.test(query);
+    if ((!managed && !/^not done$/m.test(query)) || !query.includes("/^#student-os\\/task$/")) return block;
     const clean = query.replace(/^# student-os:active-sources\npath regex matches .*\n/gm, "");
-    return `\x60\x60\x60tasks\n${scope}\n${clean}\x60\x60\x60`;
+    return `${prefix}${fence}\n${(scope + "\n" + clean).trimEnd().split("\n").map((line) => prefix + line).join("\n")}\n${prefix}\x60\x60\x60`;
   });
 }
 
@@ -394,7 +397,7 @@ class WorkflowStore {
   }
 
   activeSourcePaths(data) {
-    return [WORKBENCH_PATH, ...data.active.map((track) => track.path).filter((path) => path !== OVERVIEW_PATH)];
+    return [WORKBENCH_PATH, WORK_RECORDS_PATH, ...data.active.map((track) => track.path).filter((path) => path !== OVERVIEW_PATH)];
   }
 
   async syncCurrentTaskViews() {
@@ -434,9 +437,10 @@ class WorkflowStore {
   }
 
   async readDashboardData() {
-    const [overviewText, workbenchText] = await Promise.all([
+    const [overviewText, workbenchText, recordsText] = await Promise.all([
       this.readPath(OVERVIEW_PATH),
       this.readPath(WORKBENCH_PATH),
+      this.readPath(WORK_RECORDS_PATH),
     ]);
     const overviewTracks = parseOverviewTracks(overviewText);
     const plans = await this.readPlans(overviewTracks);
@@ -469,6 +473,7 @@ class WorkflowStore {
           .map((task) => ({ ...task, source: track.title, track: track.track }))
       ),
       ...parseCompletedRecords(workbenchText).filter((task) => isRecentDate(task.doneDate)),
+      ...parseCompletedRecords(recordsText, WORK_RECORDS_PATH).filter((task) => isRecentDate(task.doneDate)),
     ].sort((a, b) => b.doneDate.localeCompare(a.doneDate));
     return {
       tracks,
@@ -486,7 +491,10 @@ class WorkflowStore {
     const workbench = parsePlanText(await this.readPath(WORKBENCH_PATH), WORKBENCH_PATH, {
       title: "Workbench", status: "active", kind: "operational", track: "unplanned",
     });
-    for (const track of [...data.active, workbench]) {
+    const records = parsePlanText(await this.readPath(WORK_RECORDS_PATH), WORK_RECORDS_PATH, {
+      title: "一次性任务", status: "active", kind: "operational", track: "unplanned",
+    });
+    for (const track of [...data.active, workbench, records]) {
       const open = (track.tasks || []).filter((task) => !task.isDone && !task.isCancelled);
       open.forEach((task) => {
         choices.push({
@@ -564,14 +572,14 @@ class WorkflowStore {
       new Notice("没有输入内容");
       return false;
     }
-    const file = this.getFile(WORKBENCH_PATH);
+    const file = this.getFile(WORK_RECORDS_PATH);
     if (!file) {
-      new Notice("未找到 Workbench，输入未保存");
+      new Notice("未找到工作记录，输入未保存");
       return false;
     }
     const entry = `- ${formatDate()} ${formatTime()}｜${input}`;
     await this.app.vault.process(file, (current) => insertIntoSection(current, "## 输入箱", entry));
-    new Notice("已保存到 Workbench → 输入箱");
+    new Notice("已保存到工作记录 → 输入箱");
     return true;
   }
 
@@ -581,9 +589,9 @@ class WorkflowStore {
       new Notice("没有输入内容");
       return false;
     }
-    const file = this.getFile(WORKBENCH_PATH);
+    const file = this.getFile(WORK_RECORDS_PATH);
     if (!file) {
-      new Notice("未找到 Workbench，完成记录未保存");
+      new Notice("未找到工作记录，完成记录未保存");
       return false;
     }
     const entry = `- [x] ${input} ${CANONICAL_TASK_TAG} ✅ ${formatDate()}`;
@@ -827,6 +835,7 @@ class LearningProgressDashboardPlugin extends Plugin {
       file.extension === "md" &&
       (file.path === OVERVIEW_PATH ||
         file.path === WORKBENCH_PATH ||
+        file.path === WORK_RECORDS_PATH ||
         this.store.sourcePaths?.has(file.path) ||
         frontmatter?.student_os === "learning-plan")
     );

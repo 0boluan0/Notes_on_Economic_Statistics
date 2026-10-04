@@ -21,6 +21,7 @@ from zoneinfo import ZoneInfo
 PRIVATE = "99_学习情况记录"
 OVERVIEW = f"{PRIVATE}/Overview & Study Record.md"
 WORKBENCH = f"{PRIVATE}/workbench.md"
+WORK_RECORDS = f"{PRIVATE}/工作记录.md"
 LOG = f"{PRIVATE}/Telegram 对账记录.md"
 TASK = re.compile(r"^(\s*[-*+]\s+)\[([^\]])\](\s+.+)$")
 TAG = re.compile(r"(?:^|\s)#student-os/task(?=\s|$)")
@@ -147,8 +148,9 @@ def active_sources(vault):
                 plan_state = _status(_frontmatter(text).get("status", "active"))
                 active = track_state == plan_state == "active" and "archive" not in Path(relative).parts
                 states[relative] = states.get(relative, True) and active
-    if _path(vault, WORKBENCH).is_file():
-        states[WORKBENCH] = _status(_frontmatter(_path(vault, WORKBENCH).read_text(encoding="utf-8")).get("status", "active")) == "active"
+    for relative in (WORKBENCH, WORK_RECORDS):
+        if _path(vault, relative).is_file():
+            states[relative] = _status(_frontmatter(_path(vault, relative).read_text(encoding="utf-8")).get("status", "active")) == "active"
     return sorted(relative for relative, active in states.items() if active)
 
 

@@ -361,3 +361,7 @@
     grid-template-columns: 1fr;
   }
 }
+.student-os-task-view .metadata-container,
+.student-os-task-view .inline-title {
+  display: none;
+}

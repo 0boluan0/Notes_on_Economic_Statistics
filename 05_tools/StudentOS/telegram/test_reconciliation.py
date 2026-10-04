@@ -66,6 +66,14 @@ class ReconciliationTests(unittest.TestCase):
         self.process(text="今天第一组都做完了", date="2026-09-29", phrase="今天")
         self.assertIn("📅 2026-10-01 ✅ 2026-09-29 ^python-core", self.read(self.plan))
 
+    def test_one_off_task_remains_writable_from_records_behind_workbench_view(self):
+        self.plan = subject.WORK_RECORDS
+        self.raw = "- [ ] 整理课堂练习 #student-os/task ^one-off"
+        self.write(self.plan, "# 工作记录\n\n## 一次性任务\n" + self.raw + "\n")
+        self.process(text="今天整理完课堂练习了", date="2026-09-29", phrase="今天")
+        self.assertIn("[x] 整理课堂练习 #student-os/task ✅ 2026-09-29 ^one-off", self.read(self.plan))
+        self.assertEqual(self.read(subject.WORKBENCH), "# Workbench\n")
+
     def test_partial_does_not_close_coarse_task(self):
         _, report = self.process(text="前两节做完了", status="partial")
         self.assertIn(self.raw, self.read(self.plan))
