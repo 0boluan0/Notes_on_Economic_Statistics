@@ -1,0 +1,12 @@
+---
+title : week2 r markdown
+author : Yihang Feng
+date : 2026.10.5
+output:
+  pdf_document:
+    latex_engine: xelatex
+CJKmainfont: "PingFang SC"
+CJKmonofont: "PingFang SC"
+---
+
+T
