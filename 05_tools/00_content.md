@@ -8,7 +8,7 @@ created_by: "tool"
 # Tools
 
 > [!summary] 导航
-> 共 11 个工具。摘要取自每篇工具笔记标题后的首段。
+> 共 12 个工具。摘要取自每篇工具笔记标题后的首段。
 
 > [!info] 字段说明
 > `待补` 表示对应章节仍含 `信息不足` 或 `TODO`。
@@ -25,6 +25,7 @@ created_by: "tool"
 | [[Codebase to Course]] | CSS | zarazhangrui/codebase-to-course | 待补 | 待补 | 安装, 首次使用, 后续使用 | A Claude Code skill that turns any codebase into a beautiful, interactive single-page HTML course for non-technical vibe coders. |
 | [[DeepTutor Lifelong Personalized Tutoring\|DeepTutor: Lifelong Personalized Tutoring]] | Python | HKUDS/DeepTutor | 已记录 | 已记录 | 完整 | DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/. |
 | [[FastAPI]] | Python | fastapi/fastapi | 已记录 | 已记录 | 完整 | FastAPI framework, high performance, easy to learn, fast to code, ready for production |
+| [[free-for.dev]] | Web / Markdown 资源目录 | ripienaar/free-for-dev | 已记录 | 已记录 | 完整 | 按用途整理提供免费套餐的开发服务，覆盖云基础设施、部署、数据库、API 与监控，适合作为寻找候选服务的入口。 |
 | [[Install Pake CLI]] | Rust | tw93/Pake | 已记录 | 已记录 | 完整 | 🤱🏻 Turn any webpage into a desktop app with one command. |
 | [[labml.ai Deep Learning Paper Implementations]] | Python | labmlai/annotated_deep_learning_paper_implementations | 已记录 | 待补 | 首次使用, 后续使用 | 🧑‍🏫 60+ Implementations/tutorials of deep learning papers with side-by-side notes 📝; including transformers (original, xl, switch, feedback, vit, ...), optimizers (adam, adabelief, sophia, ...), gans(cyclegan, stylegan2, ...), 🎮 reinforcement learning (ppo, dqn), capsnet, distillation, ... 🧠 |
 | [[Paper2Any]] | Python | OpenDCAI/Paper2Any | 已记录 | 已记录 | 完整 | Turn paper/text/topic into editable research figures, technical route diagrams, and presentation slides. |
