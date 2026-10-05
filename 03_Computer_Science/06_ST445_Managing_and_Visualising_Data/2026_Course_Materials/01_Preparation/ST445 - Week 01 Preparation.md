@@ -57,10 +57,10 @@ Use the [Week 1 slides](../02_Lecture_Notes/Week_01/ST445%20-%20Week%2001%20-%20
 
 ## 课后整理需要的材料
 
-保留本周幻灯片、个人课堂记录、自己操作过的 notebook／代码和输出，以及随后发布的 seminar 与 post-class activities。先标注对应页码、操作结果和未理解的问题；现已保存 [Week 1 Seminar Lab 1 notebook](../03_Seminars/Week_01/st445_wk1_seminar_lab1.ipynb)；它来自 Preparation 页面链接的教师 GitHub 仓库，Moodle 的 Seminar 文件夹当前仍为空。
+保留本周幻灯片、个人课堂记录、自己操作过的 notebook／代码和输出，以及随后发布的 seminar 与 post-class activities。先标注对应页码、操作结果和未理解的问题；现已保存 [Week 1 Seminar Lab 1 notebook](../03_Seminars/Week_01/YihangFeng_week1_lab1.ipynb)；它来自 Preparation 页面链接的教师 GitHub 仓库，Moodle 的 Seminar 文件夹当前仍为空。
 
 <!-- bilingual-en:start -->
-Keep the slides, personal class notes, notebooks or code you have run, their outputs, and the seminar and post-class resources once released. Record page references, observed results and unresolved questions. The [Week 1 Seminar Lab 1 notebook](../03_Seminars/Week_01/st445_wk1_seminar_lab1.ipynb) is now available locally from the instructor repository linked on Preparation; Moodle’s Seminar folder remains empty.
+Keep the slides, personal class notes, notebooks or code you have run, their outputs, and the seminar and post-class resources once released. Record page references, observed results and unresolved questions. The [Week 1 Seminar Lab 1 notebook](../03_Seminars/Week_01/YihangFeng_week1_lab1.ipynb) is now available locally from the instructor repository linked on Preparation; Moodle’s Seminar folder remains empty.
 <!-- bilingual-en:end -->
 
 ## 来源与核验
