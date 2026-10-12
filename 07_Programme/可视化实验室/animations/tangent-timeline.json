@@ -1,0 +1,58 @@
+{
+  "id": "tangent",
+  "duration": 36.40000000000026,
+  "chapters": [
+    {
+      "title": "斜率从两个点开始",
+      "en": "A secant measures change between two points.",
+      "start": 0.0
+    },
+    {
+      "title": "横向间隔变小，平均变化率怎样变？",
+      "en": "Shrink the interval while keeping the first point fixed.",
+      "start": 6.2
+    },
+    {
+      "title": "导数是局部线性近似的系数",
+      "en": "The derivative is the coefficient of a local linear approximation.",
+      "start": 27.433
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "two-points",
+      "time": 6.05
+    },
+    {
+      "name": "h-0.5",
+      "time": 11.717
+    },
+    {
+      "name": "h-0.2",
+      "time": 16.717
+    },
+    {
+      "name": "h-0.05",
+      "time": 21.717
+    },
+    {
+      "name": "limiting-direction",
+      "time": 26.717
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 33.25
+    },
+    {
+      "name": "closing",
+      "time": 36.25
+    }
+  ],
+  "params": {
+    "x": 1,
+    "h": 0.5,
+    "function": "cubic"
+  },
+  "method": "object-narrative",
+  "layout": []
+}

@@ -21,7 +21,7 @@ The items below follow Moodle’s Post-Class Activities in order and retain its 
 Review this week's lecture and class slides to consolidate what we covered.
 <!-- bilingual-en:end -->
 
-- [Lecture slides（74 页）](../../02_Lecture_Notes/Week_01/ST445%20-%20Week%2001%20-%20Lecture.pdf)
+- [Lecture slides（75 页）](../../02_Lecture_Notes/Week_01/ST445%20-%20Week%2001%20-%20Lecture.pdf)
 - [GitHub 与 Colab 小班讲义（30 页）](ST445%20-%20Week%2001%20-%20GitHub%20and%20Colab%20Lab.pdf)
 
 ## 2. GitHub Skills 延伸练习

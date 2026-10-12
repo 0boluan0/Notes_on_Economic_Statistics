@@ -1,0 +1,155 @@
+{
+  "knn": [
+    {
+      "path": "00_Knowledge/聚类尺度.md",
+      "title": "聚类尺度",
+      "support": "本页距离权重 s 的平方进入第二坐标距离，演示原子“缩放等价于重新加权”的同一恒等式；它跨任务应用于分类，未将 KNN 称为聚类。"
+    }
+  ],
+  "logistic": [
+    {
+      "path": "00_Knowledge/Logit模型.md",
+      "title": "Logit模型",
+      "support": "手动 w、b 经 sigmoid 映射为概率；模型曲线直接演示线性 log-odds 与概率效应的区别。"
+    },
+    {
+      "path": "00_Knowledge/二元响应MLE.md",
+      "title": "二元响应MLE",
+      "support": "平均交叉熵是 Bernoulli 对数似然的负值；本页显示该目标的切片，不声称已求 MLE。"
+    }
+  ],
+  "svm": [
+    {
+      "path": "00_Knowledge/梯度与水平集.md",
+      "title": "梯度与水平集",
+      "support": "f(x)=wᵀx+b 的 f=0、±1 三个水平集共享法向量 w；零法向控件显式展示正则条件边界。"
+    }
+  ],
+  "tree": [],
+  "ensemble": [
+    {
+      "path": "00_Knowledge/组合误差协方差.md",
+      "title": "组合误差协方差",
+      "support": "等权组合成员误差，实际改变共享误差相关性，直接演示固定单位和权重下组合方差由误差协方差决定。"
+    },
+    {
+      "path": "00_Knowledge/和的方差协方差项.md",
+      "title": "和的方差协方差项",
+      "support": "σ²[ρ+(1−ρ)/m] 是有限成员和的方差展开除以 m²；ρ=0 和 1 两个预设核验交叉项。"
+    }
+  ],
+  "boosting": [
+    {
+      "path": "00_Knowledge/回归残差.md",
+      "title": "回归残差",
+      "support": "每轮用观测减去当前拟合作为新树桩目标，直接展示残差是可观测拟合缺口；不将其等同生成噪声。"
+    },
+    {
+      "path": "00_Knowledge/点预测损失.md",
+      "title": "点预测损失",
+      "support": "最小二乘树桩的各叶以残差均值更新，且并列显示训练 MSE 与独立验证 MSE。"
+    }
+  ],
+  "kmeans": [
+    {
+      "path": "00_Knowledge/K-means目标.md",
+      "title": "K-means目标",
+      "support": "真实计算样本到所属中心的平方距离和。"
+    },
+    {
+      "path": "00_Knowledge/Lloyd算法.md",
+      "title": "Lloyd算法",
+      "support": "控件逐轮执行均值更新和最近中心重分配，显示实际中心轨迹。"
+    },
+    {
+      "path": "00_Knowledge/K-means初始化.md",
+      "title": "K-means初始化",
+      "support": "固定同一数据比较分散起点与集中起点。"
+    },
+    {
+      "path": "00_Knowledge/Lloyd局部收敛.md",
+      "title": "Lloyd局部收敛",
+      "support": "SSE 轨迹不增加；不同初始化可以落在不同结果，未宣称全局最优。"
+    },
+    {
+      "path": "00_Knowledge/K-means空簇.md",
+      "title": "K-means空簇",
+      "support": "独立边界测试触发空簇并验证保留旧中心的明确实现策略；默认画面不保证触发。"
+    }
+  ],
+  "gmm": [
+    {
+      "path": "00_Knowledge/Bayes法则.md",
+      "title": "Bayes法则",
+      "support": "责任度将 Gaussian 密度乘混合先验再对两个分量归一化；这是连续观测密度版本，非把点密度当点概率。"
+    },
+    {
+      "path": "00_Knowledge/似然函数.md",
+      "title": "似然函数",
+      "support": "观测数据固定后计算每轮混合模型 log likelihood；不把其当参数概率密度。"
+    },
+    {
+      "path": "00_Knowledge/聚类解释边界.md",
+      "title": "聚类解释边界",
+      "support": "分量交换不改变混合密度；责任度只是当前模型内软归属，不证明真实自然类别。"
+    }
+  ],
+  "kde": [
+    {
+      "path": "00_Knowledge/概率密度函数.md",
+      "title": "概率密度函数",
+      "support": "完整 KDE 在实线积分为 1，点高度不等于点概率，带宽可改变峰高。"
+    },
+    {
+      "path": "00_Knowledge/密度换元的尺度因子.md",
+      "title": "密度换元的尺度因子",
+      "support": "每个核的 1/h 来自线性缩放的逆导数，使各加权核面积固定 1/n。"
+    },
+    {
+      "path": "00_Knowledge/密度的局部概率解释.md",
+      "title": "密度的局部概率解释",
+      "support": "挑战通过 f(x)Δx 区分局部区间概率、密度高度与量纲。"
+    }
+  ],
+  "modelselection": [
+    {
+      "path": "00_Knowledge/训练验证测试划分.md",
+      "title": "训练验证测试划分",
+      "support": "固定候选在验证集上选择，然后以全新数据估计赢家风险，直接隔离两种信息角色。"
+    },
+    {
+      "path": "00_Knowledge/测试集自适应复用.md",
+      "title": "测试集自适应复用",
+      "support": "全等真实风险候选的择优产生乐观性，挑战明确测试反馈一旦调参便转为验证。"
+    },
+    {
+      "path": "00_Knowledge/验证管线隔离.md",
+      "title": "验证管线隔离",
+      "support": "本页候选已冻结，验证数据只择优；该选择分数不能同时作为独立最终表现。"
+    }
+  ],
+  "metrics": [
+    {
+      "path": "00_Knowledge/分类评估口径.md",
+      "title": "分类评估口径",
+      "support": "真实 TP/FP/FN/TN 计数对应 precision、recall、FPR 三种条件分母；逐阈值 ROC/PR 分开排序与行动。"
+    },
+    {
+      "path": "00_Knowledge/灵敏度与后验概率.md",
+      "title": "灵敏度与后验概率",
+      "support": "稀有正类挑战将 TPR/FPR 和基率转成 precision，说明条件方向与基率不可交换。"
+    }
+  ],
+  "likelihood": [
+    {
+      "path": "00_Knowledge/似然函数.md",
+      "title": "似然函数",
+      "support": "两幅图固定观测改变候选参数；峰值归一化不等于参数概率密度。"
+    },
+    {
+      "path": "00_Knowledge/极大似然估计.md",
+      "title": "极大似然估计",
+      "support": "Bernoulli s/n 与已知 σ Gaussian 样本均值最大化各自似然，边界例子不要求内点导数为零。"
+    }
+  ]
+}

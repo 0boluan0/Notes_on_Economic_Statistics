@@ -1,0 +1,59 @@
+{
+  "id": "causal",
+  "duration": 36.200000000000195,
+  "chapters": [
+    {
+      "title": "比较两组之前，先看组里都有谁",
+      "en": "Group composition can change an aggregate comparison.",
+      "start": 0.0
+    },
+    {
+      "title": "观察差异，使用两套不同的人群权重",
+      "en": "Observed groups can have different mixtures of Z.",
+      "start": 6.5
+    },
+    {
+      "title": "干预比较，保留同一套总体组成",
+      "en": "An intervention compares treatments in the same population.",
+      "start": 13.733
+    },
+    {
+      "title": "调整有效，需要因果假设支持",
+      "en": "Adjustment requires a justified causal model.",
+      "start": 27.233
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "confounding-path",
+      "time": 6.35
+    },
+    {
+      "name": "different-mixtures",
+      "time": 13.583
+    },
+    {
+      "name": "same-population-mixture",
+      "time": 20.25
+    },
+    {
+      "name": "different-questions",
+      "time": 26.517
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 33.05
+    },
+    {
+      "name": "closing",
+      "time": 36.05
+    }
+  ],
+  "params": {
+    "selection": 0.8,
+    "effect": 0.1,
+    "prevalence": 0.5
+  },
+  "method": "object-narrative",
+  "layout": []
+}

@@ -57,6 +57,12 @@ part_of:
 >
 > **答案：** 交换输入变量就是交换 Jacobian 的两列，因此有向体积反号；普通体积使用绝对值，所以不变。
 
+<!-- visual-lab:links:start -->
+## 交互理解
+
+- [[07_Programme/可视化实验室/实验/jacobian|非线性变形怎样被局部Jacobian近似]]
+<!-- visual-lab:links:end -->
+
 ## 来源与核验
 
 - [[01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses2.7sum.pdf|MIT 18.06SC Session 2.7 summary]]：核对线性映射中 determinant 对有向体积、绝对 determinant 对普通体积的缩放解释。

@@ -60,6 +60,12 @@ $A_k$ 保留前 $k$ 个正交秩一分量，残差只含尾部。它的最大伸
 >
 > **答案：** $4$ 与 $\sqrt{4^2+1^2}=\sqrt{17}$。
 
+<!-- visual-lab:links:start -->
+## 交互理解
+
+- [[07_Programme/可视化实验室/实验/svd|奇异值分解与低秩重构]]
+<!-- visual-lab:links:end -->
+
 ## 来源与核验
 
 - C. Eckart and G. Young (1936), [*The Approximation of One Matrix by Another of Lower Rank*](https://doi.org/10.1007/BF02288367)：原始最佳低秩近似结果。

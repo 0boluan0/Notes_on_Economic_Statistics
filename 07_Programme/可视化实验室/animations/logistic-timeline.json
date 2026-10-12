@@ -1,0 +1,65 @@
+{
+  "id": "logistic",
+  "duration": 41.1000000000001,
+  "chapters": [
+    {
+      "title": "先产生概率，再决定类别",
+      "en": "A probability model and a decision rule are separate.",
+      "start": 0.0
+    },
+    {
+      "title": "阈值只是把概率切成两边",
+      "en": "The threshold splits probabilities into decisions.",
+      "start": 11.6
+    },
+    {
+      "title": "训练看概率是否支持真实标签",
+      "en": "Log loss evaluates probability assigned to the observed label.",
+      "start": 25.333
+    },
+    {
+      "title": "分数、概率、决策，是三层不同对象",
+      "en": "Score, probability and decision are distinct objects.",
+      "start": 32.133
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "input",
+      "time": 1.85
+    },
+    {
+      "name": "probability-before-label",
+      "time": 11.45
+    },
+    {
+      "name": "threshold-half",
+      "time": 19.383
+    },
+    {
+      "name": "threshold-eight-tenths",
+      "time": 25.183
+    },
+    {
+      "name": "label-likelihood",
+      "time": 31.417
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 37.95
+    },
+    {
+      "name": "closing",
+      "time": 40.95
+    }
+  ],
+  "params": {
+    "weight": 2,
+    "intercept": 0,
+    "threshold": 0.5,
+    "n": 80,
+    "seed": 42
+  },
+  "method": "object-narrative",
+  "layout": []
+}

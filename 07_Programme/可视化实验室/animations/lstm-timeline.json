@@ -1,0 +1,59 @@
+{
+  "id": "lstm",
+  "duration": 46.53333333333348,
+  "chapters": [
+    {
+      "title": "记忆状态，和可见输出，是两条线",
+      "en": "Cell memory and hidden output are distinct states.",
+      "start": 0.0
+    },
+    {
+      "title": "输出门控制读出，不直接改写记忆",
+      "en": "The output gate controls exposure of the cell.",
+      "start": 17.967
+    },
+    {
+      "title": "只沿记忆直通路径，梯度怎么走？",
+      "en": "Follow the direct cell-state shortcut.",
+      "start": 24.5
+    },
+    {
+      "title": "直通路径的导数，不总是完整导数",
+      "en": "The direct-path derivative need not be the full derivative.",
+      "start": 37.567
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "cell-and-hidden",
+      "time": 17.817
+    },
+    {
+      "name": "readout",
+      "time": 23.783
+    },
+    {
+      "name": "direct-gradient-products",
+      "time": 36.85
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 43.383
+    },
+    {
+      "name": "closing",
+      "time": 46.383
+    }
+  ],
+  "params": {
+    "forget": 0.95,
+    "input": 0.4,
+    "output": 0.8,
+    "recurrent": 0,
+    "steps": 6,
+    "pattern": "zero",
+    "initial": 1
+  },
+  "method": "object-narrative",
+  "layout": []
+}

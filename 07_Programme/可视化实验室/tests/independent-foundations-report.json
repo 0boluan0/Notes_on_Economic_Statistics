@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "utc": "2026-10-06T22:39:38.565092+00:00",
+  "experimentCases": 29,
+  "coverage": {
+    "svd": 7,
+    "biasvariance": 4,
+    "kernel": 5,
+    "entropy": 5,
+    "softmax": 4,
+    "calibration": 4
+  },
+  "scientificChecks": 326,
+  "numpy": "2.5.3",
+  "sourceSHA256": "a2befb7e583249c01962d87aae87e2917d8f1ed5770f71c163fb64bc7c81f60b",
+  "methods": [
+    "NumPy LAPACK SVD and least-squares",
+    "Kernel dual/primal feature-space independent solves",
+    "SciPy categorical entropy and KL with infinity boundaries",
+    "SciPy stable softmax/logsumexp",
+    "Raw repeated-fit decomposition",
+    "Independent calibration bins and proper-score moments"
+  ]
+}

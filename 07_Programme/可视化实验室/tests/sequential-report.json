@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "utc": "2026-10-10T18:08:41.872Z",
+  "cases": 98,
+  "experimentCases": {
+    "rnn": 21,
+    "lstm": 20,
+    "contrastive": 14,
+    "jacobian": 15,
+    "uncertainty": 17,
+    "causal": 11
+  },
+  "assertions": 82337,
+  "coordinateAssertions": 67020,
+  "scientificAndStructuralAssertions": 15317,
+  "numpyStatus": "not requested (set LAB_NUMPY_PYTHON to a NumPy Python executable)",
+  "sourceSHA256": "3263d67bbae394d1612cfd8e6e9fb93349be9d368af75b15a7dcc39ef51737e4"
+}

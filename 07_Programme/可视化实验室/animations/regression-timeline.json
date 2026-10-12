@@ -1,0 +1,61 @@
+{
+  "id": "regression",
+  "duration": 39.433333333333564,
+  "chapters": [
+    {
+      "title": "线性预测，是几项贡献相加",
+      "en": "A linear prediction adds feature contributions.",
+      "start": 0.0
+    },
+    {
+      "title": "残差连接预测与真实观测",
+      "en": "A residual connects a prediction to the observed response.",
+      "start": 9.5
+    },
+    {
+      "title": "拟合目标，把所有残差平方汇总",
+      "en": "The fitting objective aggregates squared residuals.",
+      "start": 22.667
+    },
+    {
+      "title": "预测稳定，不代表每个系数都稳定",
+      "en": "Correlated predictors can destabilize individual coefficients.",
+      "start": 30.467
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "weighted-contributions",
+      "time": 3.85
+    },
+    {
+      "name": "one-prediction",
+      "time": 9.35
+    },
+    {
+      "name": "residuals",
+      "time": 22.517
+    },
+    {
+      "name": "least-squares-objective",
+      "time": 29.75
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 36.283
+    },
+    {
+      "name": "closing",
+      "time": 39.283
+    }
+  ],
+  "params": {
+    "rho": 0.8,
+    "lambda": 0,
+    "n": 60,
+    "noise": 0.7,
+    "seed": 42
+  },
+  "method": "object-narrative",
+  "layout": []
+}

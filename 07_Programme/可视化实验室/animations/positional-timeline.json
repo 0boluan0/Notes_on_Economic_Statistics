@@ -1,0 +1,60 @@
+{
+  "id": "positional",
+  "duration": 39.03333333333385,
+  "chapters": [
+    {
+      "title": "一对正弦余弦，把位置变成方向",
+      "en": "A sine-cosine pair represents position as an angle.",
+      "start": 0.0
+    },
+    {
+      "title": "位置增加，方向按固定角速度旋转",
+      "en": "A position shift adds a fixed angular increment.",
+      "start": 8.0
+    },
+    {
+      "title": "多对频率，提供多个位置尺度",
+      "en": "Several frequency pairs provide several scales.",
+      "start": 15.533
+    },
+    {
+      "title": "位置编码提供结构，不替模型理解顺序",
+      "en": "The encoding supplies structure for learned use.",
+      "start": 30.067
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "position-zero",
+      "time": 1.85
+    },
+    {
+      "name": "position-p",
+      "time": 7.85
+    },
+    {
+      "name": "position-shift",
+      "time": 14.817
+    },
+    {
+      "name": "multiple-frequencies",
+      "time": 29.35
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 35.883
+    },
+    {
+      "name": "closing",
+      "time": 38.883
+    }
+  ],
+  "params": {
+    "position": 8,
+    "shift": 3,
+    "pairs": 4,
+    "base": 10000
+  },
+  "method": "object-narrative",
+  "layout": []
+}

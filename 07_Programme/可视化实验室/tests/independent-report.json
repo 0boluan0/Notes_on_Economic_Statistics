@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "utc": "2026-10-06T22:39:38.074606+00:00",
+  "experimentCases": 49,
+  "helperCases": 95,
+  "assertions": 34748,
+  "plotCoordinateAssertions": 33954,
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "python": "3.14.3",
+  "coreSHA256": "b7a8a2b914a1a347e89a32e04b61f07b60ad0222879f59e494a13121e88884a6",
+  "coverage": {
+    "tangent": 4,
+    "linear": 4,
+    "projection": 4,
+    "gradient": 5,
+    "sampling": 4,
+    "confidence": 3,
+    "testing": 4,
+    "bayes": 5,
+    "regression": 4,
+    "overfit": 5,
+    "pca": 4,
+    "bootstrap": 3
+  },
+  "methods": [
+    "SciPy normal and Beta CDF/PPF",
+    "NumPy SVD augmented least squares",
+    "NumPy symmetric eigensystem",
+    "Raw data identities and exact distribution curves",
+    "Seed/prefix invariants and finite plot coordinates"
+  ],
+  "limits": [
+    "Bounded deterministic cases; not a proof for every real parameter",
+    "Random generator distribution quality is not exhaustively certified",
+    "UI content, accessibility, export wiring and scientific-source review require separate acceptance"
+  ]
+}

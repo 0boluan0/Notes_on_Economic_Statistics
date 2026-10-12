@@ -1,0 +1,70 @@
+{
+  "id": "normalization",
+  "duration": 38.66666666666703,
+  "chapters": [
+    {
+      "title": "先回答：哪些数一起算均值？",
+      "en": "Choose the statistical group before normalizing.",
+      "start": 0.0
+    },
+    {
+      "title": "同一组，减同一个均值、除同一个尺度",
+      "en": "Center and scale using that group only.",
+      "start": 14.6
+    },
+    {
+      "title": "仿射参数在标准化之后作用",
+      "en": "Apply the learned scale and shift afterward.",
+      "start": 22.267
+    },
+    {
+      "title": "Layer Norm 改的是分组方向",
+      "en": "Layer normalization uses features within each observation.",
+      "start": 29.7
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "input-matrix",
+      "time": 2.85
+    },
+    {
+      "name": "group-0",
+      "time": 6.35
+    },
+    {
+      "name": "group-1",
+      "time": 10.217
+    },
+    {
+      "name": "group-2",
+      "time": 14.083
+    },
+    {
+      "name": "standardized-matrix",
+      "time": 22.117
+    },
+    {
+      "name": "affine-output",
+      "time": 28.983
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 35.517
+    },
+    {
+      "name": "closing",
+      "time": 38.517
+    }
+  ],
+  "params": {
+    "mode": "batch",
+    "pattern": "mixed",
+    "scale": 1,
+    "shift": 0,
+    "gamma": 1.5,
+    "beta": 0.5
+  },
+  "method": "object-narrative",
+  "layout": []
+}

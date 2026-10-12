@@ -1,0 +1,60 @@
+{
+  "id": "optimizers",
+  "duration": 42.56666666666672,
+  "chapters": [
+    {
+      "title": "同一个起点，三种更新记忆",
+      "en": "Three update rules start at the same point.",
+      "start": 0.0
+    },
+    {
+      "title": "路径不同，因为状态不同",
+      "en": "Different internal states produce different updates.",
+      "start": 19.4
+    },
+    {
+      "title": "这张轨迹图不构成方法排名",
+      "en": "A single parameter setting is not a benchmark.",
+      "start": 33.6
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "common-start",
+      "time": 2.85
+    },
+    {
+      "name": "step-1",
+      "time": 5.717
+    },
+    {
+      "name": "step-5",
+      "time": 11.183
+    },
+    {
+      "name": "step-12",
+      "time": 19.25
+    },
+    {
+      "name": "optimizer-state",
+      "time": 32.883
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 39.417
+    },
+    {
+      "name": "closing",
+      "time": 42.417
+    }
+  ],
+  "params": {
+    "rate": 0.05,
+    "condition": 12,
+    "steps": 60,
+    "momentum": 0.9,
+    "angle": 25
+  },
+  "method": "object-narrative",
+  "layout": []
+}

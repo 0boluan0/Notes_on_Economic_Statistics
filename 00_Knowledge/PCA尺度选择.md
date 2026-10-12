@@ -43,6 +43,12 @@ related:
 >
 > **答案：** 不保证；该变量的方差会放大 $10^4$ 倍并可能主导结果。相关矩阵 PCA 对这种正尺度换算保持不变。
 
+<!-- visual-lab:links:start -->
+## 交互理解
+
+- [[07_Programme/可视化实验室/实验/pca|PCA、尺度与重构]]
+<!-- visual-lab:links:end -->
+
 ## 来源与核验
 
 - [Penn State STAT 505, Lesson 11](https://online.stat.psu.edu/stat505/Lesson11)：核对标准化数据的协方差矩阵等于原数据相关矩阵，以及两种 PCA 的操作区别。

@@ -1,0 +1,60 @@
+{
+  "id": "residual",
+  "duration": 38.93333333333375,
+  "chapters": [
+    {
+      "title": "一条捷径，怎样改变每一层？",
+      "en": "An identity path changes the layer, not just the diagram.",
+      "start": 0.0
+    },
+    {
+      "title": "梯度也沿两条路相加",
+      "en": "The two derivative paths meet at the addition.",
+      "start": 10.2
+    },
+    {
+      "title": "多层以后，仍要看实际的连乘",
+      "en": "Depth still multiplies the local factors.",
+      "start": 16.733
+    },
+    {
+      "title": "加上恒等路径，也不保证稳定",
+      "en": "Identity helps a path; it does not bound every product.",
+      "start": 29.967
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "input",
+      "time": 1.85
+    },
+    {
+      "name": "identity-path",
+      "time": 10.05
+    },
+    {
+      "name": "two-gradient-paths",
+      "time": 16.017
+    },
+    {
+      "name": "six-layers",
+      "time": 29.25
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 35.783
+    },
+    {
+      "name": "closing",
+      "time": 38.783
+    }
+  ],
+  "params": {
+    "weight": 0.2,
+    "depth": 20,
+    "x": 0.5,
+    "kind": "tanh"
+  },
+  "method": "object-narrative",
+  "layout": []
+}

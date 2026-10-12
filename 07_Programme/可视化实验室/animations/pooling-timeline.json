@@ -1,0 +1,71 @@
+{
+  "id": "pooling",
+  "duration": 39.60000000000034,
+  "chapters": [
+    {
+      "title": "从一个窗口，只留下一个摘要",
+      "en": "A pooling window produces one number.",
+      "start": 0.0
+    },
+    {
+      "title": "最大池化，让最大值留下来",
+      "en": "Max pooling selects an input value.",
+      "start": 7.2
+    },
+    {
+      "title": "从输出往回问：哪个输入有影响？",
+      "en": "Trace sensitivity back to the selected entry.",
+      "start": 14.267
+    },
+    {
+      "title": "平均池化，让每个输入分担",
+      "en": "Mean pooling shares both value and sensitivity.",
+      "start": 23.2
+    },
+    {
+      "title": "选择规则，决定梯度流向",
+      "en": "The reduction rule determines the backward route.",
+      "start": 30.633
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "window",
+      "time": 2.85
+    },
+    {
+      "name": "patch",
+      "time": 7.05
+    },
+    {
+      "name": "maximum-selected",
+      "time": 14.117
+    },
+    {
+      "name": "gradient-location",
+      "time": 23.05
+    },
+    {
+      "name": "mean-gradient",
+      "time": 29.917
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 36.45
+    },
+    {
+      "name": "closing",
+      "time": 39.45
+    }
+  ],
+  "params": {
+    "mode": "max",
+    "pattern": "peak",
+    "size": 2,
+    "stride": 2,
+    "row": 1,
+    "col": 1
+  },
+  "method": "object-narrative",
+  "layout": []
+}

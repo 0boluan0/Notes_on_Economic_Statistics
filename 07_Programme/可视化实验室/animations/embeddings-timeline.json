@@ -1,0 +1,59 @@
+{
+  "id": "embeddings",
+  "duration": 32.433333333333536,
+  "chapters": [
+    {
+      "title": "相似，是指方向还是长度？",
+      "en": "Alignment and magnitude are different properties.",
+      "start": 0.0
+    },
+    {
+      "title": "先除以各自长度，只保留方向",
+      "en": "Normalize both vectors to isolate direction.",
+      "start": 4.0
+    },
+    {
+      "title": "把长度放回来，才得到内积",
+      "en": "The dot product restores both magnitudes.",
+      "start": 15.933
+    },
+    {
+      "title": "零向量没有方向",
+      "en": "Cosine is undefined for a zero vector.",
+      "start": 23.467
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "two-vectors",
+      "time": 3.85
+    },
+    {
+      "name": "unit-vectors",
+      "time": 11.517
+    },
+    {
+      "name": "cosine",
+      "time": 15.217
+    },
+    {
+      "name": "dot-product-factors",
+      "time": 22.75
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 29.283
+    },
+    {
+      "name": "closing",
+      "time": 32.283
+    }
+  ],
+  "params": {
+    "angle": 45,
+    "normA": 1,
+    "normB": 2
+  },
+  "method": "object-narrative",
+  "layout": []
+}

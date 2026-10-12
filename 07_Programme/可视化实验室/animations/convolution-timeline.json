@@ -1,0 +1,74 @@
+{
+  "id": "convolution",
+  "duration": 60.86666666666636,
+  "chapters": [
+    {
+      "title": "一个输出格，是怎样算出来的？",
+      "en": "Follow one receptive field into one output.",
+      "start": 0.0
+    },
+    {
+      "title": "相同位置相乘，九项再相加",
+      "en": "Multiply corresponding entries, then add.",
+      "start": 10.1
+    },
+    {
+      "title": "把这个和，放回它的输出位置",
+      "en": "The sum belongs to one output position.",
+      "start": 33.367
+    },
+    {
+      "title": "现在再读卷积的求和式",
+      "en": "The indices now refer to visible objects.",
+      "start": 51.9
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "source-and-window",
+      "time": 3.85
+    },
+    {
+      "name": "patch-extracted",
+      "time": 9.95
+    },
+    {
+      "name": "partial-sum-3",
+      "time": 18.617
+    },
+    {
+      "name": "partial-sum-6",
+      "time": 25.117
+    },
+    {
+      "name": "nine-products-sum-to-three",
+      "time": 33.217
+    },
+    {
+      "name": "response-placed",
+      "time": 40.35
+    },
+    {
+      "name": "shared-kernel",
+      "time": 51.183
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 57.717
+    },
+    {
+      "name": "closing",
+      "time": 60.717
+    }
+  ],
+  "params": {
+    "pattern": "edge",
+    "kernel": "edge",
+    "stride": 1,
+    "padding": 0,
+    "row": 1,
+    "col": 1
+  },
+  "method": "object-narrative",
+  "layout": []
+}

@@ -70,6 +70,12 @@ P-value calibration also depends on the analysis path. Searching across many var
 > **Answer:** A valid statement is: “If the null, the stated model, and the reference-distribution conditions hold, a statistic at least this extreme has probability 3%.” The invalid statement reverses the conditional probability: a p-value is $P(\text{data at least this extreme}\mid H_0,\mathcal M)$, not $P(H_0\mid \text{data})$. The latter requires additional assumptions such as a prior distribution over hypotheses and a complete probability model.
 > <!-- bilingual-en:end -->
 
+<!-- visual-lab:links:start -->
+## 交互理解
+
+- [[07_Programme/可视化实验室/实验/testing|检验、p 值与统计功效]]
+<!-- visual-lab:links:end -->
+
 ## 来源与核验
 
 - [[02_Economy/01_Econometrics/02_一元线性回归.md#4.4.2. 参数检验|本地课程：p 值]]：核对“在原假设下得到当前或更极端统计量的概率”这一条件解释。

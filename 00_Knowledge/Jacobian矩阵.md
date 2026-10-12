@@ -116,6 +116,12 @@ A determinant is defined only when the Jacobian is square. For a regular paramet
 > **Answer:** The Jacobian is $2\times3$, and multiplying it by $h\in\mathbb R^3$ produces a first-order output perturbation in $\mathbb R^2$.
 > <!-- bilingual-en:end -->
 
+<!-- visual-lab:links:start -->
+## 交互理解
+
+- [[07_Programme/可视化实验室/实验/jacobian|非线性变形怎样被局部Jacobian近似]]
+<!-- visual-lab:links:end -->
+
 ## 来源与核验
 <!-- bilingual-en:start -->
 *Sources and verification*

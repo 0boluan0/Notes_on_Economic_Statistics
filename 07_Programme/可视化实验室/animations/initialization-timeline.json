@@ -1,0 +1,70 @@
+{
+  "id": "initialization",
+  "duration": 56.23333333333326,
+  "chapters": [
+    {
+      "title": "先追踪第一层的一个神经元",
+      "en": "Track one actual neuron before summarizing the network.",
+      "start": 0.0
+    },
+    {
+      "title": "初始化，先决定信号进入下一层的尺度",
+      "en": "Initialization sets the scale of transmitted signals.",
+      "start": 10.167
+    },
+    {
+      "title": "梯度从另一端回来，也有自己的尺度",
+      "en": "Backward signal scale deserves a separate check.",
+      "start": 28.233
+    },
+    {
+      "title": "为什么要按输入宽度缩放权重？",
+      "en": "Weight variance compensates for accumulated inputs.",
+      "start": 38.467
+    },
+    {
+      "title": "这是尺度分析，仍须检查具体网络",
+      "en": "A scaling argument is not a guarantee for every finite network.",
+      "start": 47.267
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "weighted-input-terms",
+      "time": 3.85
+    },
+    {
+      "name": "one-preactivation",
+      "time": 9.45
+    },
+    {
+      "name": "forward-scale",
+      "time": 28.083
+    },
+    {
+      "name": "backward-scale",
+      "time": 38.317
+    },
+    {
+      "name": "he-scale",
+      "time": 46.55
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 53.083
+    },
+    {
+      "name": "closing",
+      "time": 56.083
+    }
+  ],
+  "params": {
+    "depth": 6,
+    "mode": "he",
+    "kind": "relu",
+    "gain": 1,
+    "seed": 42
+  },
+  "method": "object-narrative",
+  "layout": []
+}

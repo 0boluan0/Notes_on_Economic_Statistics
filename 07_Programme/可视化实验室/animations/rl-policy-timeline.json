@@ -1,0 +1,58 @@
+{
+  "id": "rl-policy",
+  "duration": 42.90000000000009,
+  "chapters": [
+    {
+      "title": "参数先改变选动作的概率",
+      "en": "The parameter changes action probabilities.",
+      "start": 0.0
+    },
+    {
+      "title": "梯度问：稍微增加 θ，回报会怎样？",
+      "en": "The gradient asks how return changes with theta.",
+      "start": 10.6
+    },
+    {
+      "title": "沿梯度更新，再重新评估策略",
+      "en": "Update the parameter, then reevaluate the policy.",
+      "start": 16.833
+    },
+    {
+      "title": "更常选择哪个动作，取决于当前环境",
+      "en": "The beneficial update direction depends on the environment.",
+      "start": 33.933
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "policy-probability-return",
+      "time": 10.45
+    },
+    {
+      "name": "initial-policy-gradient",
+      "time": 16.683
+    },
+    {
+      "name": "policy-updates",
+      "time": 33.217
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 39.75
+    },
+    {
+      "name": "closing",
+      "time": 42.75
+    }
+  ],
+  "params": {
+    "theta": 0,
+    "gamma": 0.9,
+    "success": 0.5,
+    "cost": -0.2,
+    "rate": 0.5,
+    "steps": 30
+  },
+  "method": "object-narrative",
+  "layout": []
+}

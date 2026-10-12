@@ -1,0 +1,65 @@
+{
+  "id": "gradient",
+  "duration": 42.13333333333351,
+  "chapters": [
+    {
+      "title": "梯度给方向，步长给距离",
+      "en": "The gradient gives a direction; the step size gives distance.",
+      "start": 0.0
+    },
+    {
+      "title": "再算梯度，再迈下一步",
+      "en": "Recompute the gradient at every new point.",
+      "start": 11.5
+    },
+    {
+      "title": "陡峭方向，对步长更敏感",
+      "en": "The steep direction sets the stability limit.",
+      "start": 26.933
+    },
+    {
+      "title": "步子更大，不一定更快",
+      "en": "A larger step can oscillate or diverge.",
+      "start": 33.167
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "initial-point",
+      "time": 2.85
+    },
+    {
+      "name": "negative-gradient-step",
+      "time": 7.15
+    },
+    {
+      "name": "first-update",
+      "time": 11.35
+    },
+    {
+      "name": "descent-path",
+      "time": 26.217
+    },
+    {
+      "name": "two-factors",
+      "time": 32.45
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 38.983
+    },
+    {
+      "name": "closing",
+      "time": 41.983
+    }
+  ],
+  "params": {
+    "rate": 0.2,
+    "condition": 4,
+    "steps": 12,
+    "x0": 3,
+    "y0": 2
+  },
+  "method": "object-narrative",
+  "layout": []
+}

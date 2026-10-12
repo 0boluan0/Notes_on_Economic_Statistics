@@ -78,6 +78,12 @@ If $A=[a\ 2a]$ with $a\ne0$, then $z=(2,-1)^T$ lies in $N(A)$ and the Gram quadr
 > **Answer:** Invertibility requires $N(A^TA)=N(A)=\{0\}$, equivalently full column rank of $A$; being square only fixes the dimensions.
 > <!-- bilingual-en:end -->
 
+<!-- visual-lab:links:start -->
+## 交互理解
+
+- [[07_Programme/可视化实验室/实验/kernel|核矩阵如何产生非线性拟合]]
+<!-- visual-lab:links:end -->
+
 ## 来源与核验
 
 - [[01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses2.1sum.pdf|MIT 18.06SC Session 2.1 summary]]：核验 $N(A^TA)=N(A)$、$\operatorname{rank}(A^TA)=\operatorname{rank}(A)$ 以及满列秩时 $A^TA$ 可逆。

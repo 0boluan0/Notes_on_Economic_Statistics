@@ -1,0 +1,30 @@
+[
+  {
+    "notebook": "01_geometry_optimization.ipynb",
+    "codeCells": 5,
+    "figures": 4,
+    "errors": [],
+    "executed": true
+  },
+  {
+    "notebook": "02_sampling_inference.ipynb",
+    "codeCells": 4,
+    "figures": 3,
+    "errors": [],
+    "executed": true
+  },
+  {
+    "notebook": "03_bayes_bootstrap.ipynb",
+    "codeCells": 3,
+    "figures": 2,
+    "errors": [],
+    "executed": true
+  },
+  {
+    "notebook": "04_models_representation.ipynb",
+    "codeCells": 4,
+    "figures": 3,
+    "errors": [],
+    "executed": true
+  }
+]

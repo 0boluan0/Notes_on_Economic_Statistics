@@ -1,0 +1,56 @@
+{
+  "id": "contrastive",
+  "duration": 37.700000000000244,
+  "chapters": [
+    {
+      "title": "先把查询与各个候选方向摆出来",
+      "en": "Compare a query with positive and negative keys.",
+      "start": 0.0
+    },
+    {
+      "title": "相似度除以温度，再在候选间归一化",
+      "en": "Scale similarities, then normalize across candidates.",
+      "start": 9.6
+    },
+    {
+      "title": "目标只奖励分给正样本的概率",
+      "en": "The loss rewards probability assigned to the positive key.",
+      "start": 21.233
+    },
+    {
+      "title": "温度放大已有排序，不保证排序正确",
+      "en": "Temperature sharpens the existing ranking, including mistakes.",
+      "start": 28.733
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "query-key-geometry",
+      "time": 9.45
+    },
+    {
+      "name": "contrastive-softmax",
+      "time": 21.083
+    },
+    {
+      "name": "positive-log-loss",
+      "time": 28.017
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 34.55
+    },
+    {
+      "name": "closing",
+      "time": 37.55
+    }
+  ],
+  "params": {
+    "angle": 30,
+    "negativeAngle": 60,
+    "temperature": 0.5,
+    "negatives": 3
+  },
+  "method": "object-narrative",
+  "layout": []
+}

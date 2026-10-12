@@ -1,0 +1,66 @@
+[
+  {
+    "name": "01_geometry_optimization.html",
+    "math": 20,
+    "rendered": 20,
+    "mathErrors": [],
+    "figures": 4,
+    "brokenImages": 0,
+    "overflow": false,
+    "narrow": {
+      "overflow": false,
+      "mainWidth": 390
+    },
+    "errors": [],
+    "network": [],
+    "pass": true
+  },
+  {
+    "name": "02_sampling_inference.html",
+    "math": 12,
+    "rendered": 12,
+    "mathErrors": [],
+    "figures": 3,
+    "brokenImages": 0,
+    "overflow": false,
+    "narrow": {
+      "overflow": false,
+      "mainWidth": 390
+    },
+    "errors": [],
+    "network": [],
+    "pass": true
+  },
+  {
+    "name": "03_bayes_bootstrap.html",
+    "math": 11,
+    "rendered": 11,
+    "mathErrors": [],
+    "figures": 2,
+    "brokenImages": 0,
+    "overflow": false,
+    "narrow": {
+      "overflow": false,
+      "mainWidth": 390
+    },
+    "errors": [],
+    "network": [],
+    "pass": true
+  },
+  {
+    "name": "04_models_representation.html",
+    "math": 7,
+    "rendered": 7,
+    "mathErrors": [],
+    "figures": 3,
+    "brokenImages": 0,
+    "overflow": false,
+    "narrow": {
+      "overflow": false,
+      "mainWidth": 390
+    },
+    "errors": [],
+    "network": [],
+    "pass": true
+  }
+]

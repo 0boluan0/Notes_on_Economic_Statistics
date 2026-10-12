@@ -1,0 +1,146 @@
+{
+  "tangent": [
+    {
+      "path": "00_Knowledge/导数.md",
+      "title": "导数",
+      "support": "差商极限、切线与局部线性近似；实验把有限 h 和极限值并列。"
+    }
+  ],
+  "linear": [
+    {
+      "path": "00_Knowledge/行列式体积与取向.md",
+      "title": "行列式体积与取向",
+      "support": "面积倍率、取向翻转与奇异压缩；剪切预设检验面积保持不等于长度保持。"
+    }
+  ],
+  "projection": [
+    {
+      "path": "00_Knowledge/正交投影.md",
+      "title": "正交投影",
+      "support": "子空间分量和正交残差的定义。"
+    },
+    {
+      "path": "00_Knowledge/最佳逼近与正交残差.md",
+      "title": "最佳逼近与正交残差",
+      "support": "通过移动方向观察最近点，并用勾股分解核验唯一性。"
+    }
+  ],
+  "gradient": [
+    {
+      "path": "00_Knowledge/梯度最陡方向.md",
+      "title": "梯度最陡方向",
+      "support": "局部最陡下降的欧氏含义；本实验另行展示有限步长的稳定条件，不把方向定理当作收敛定理。"
+    }
+  ],
+  "sampling": [
+    {
+      "path": "00_Knowledge/抽样分布.md",
+      "title": "抽样分布",
+      "support": "均值直方图对应统计量在固定 n 下的分布。"
+    },
+    {
+      "path": "00_Knowledge/经典中心极限定理.md",
+      "title": "经典中心极限定理",
+      "support": "有限正方差、中心化与标准化边界；柯西为不适用例。"
+    },
+    {
+      "path": "00_Knowledge/弱大数定律.md",
+      "title": "弱大数定律",
+      "support": "累积均值路径提供直觉，不以单条路径证明依概率收敛。"
+    },
+    {
+      "path": "00_Knowledge/样本量与模拟重复次数.md",
+      "title": "样本量与模拟重复次数",
+      "support": "n 与 B 的不同作用通过独立控件比较。"
+    }
+  ],
+  "confidence": [
+    {
+      "path": "00_Knowledge/置信区间覆盖率.md",
+      "title": "置信区间覆盖率",
+      "support": "已知 σ 正态情形的精确长期覆盖，以及经验覆盖的 Monte Carlo 波动。"
+    }
+  ],
+  "testing": [
+    {
+      "path": "00_Knowledge/p值条件解释.md",
+      "title": "p值条件解释",
+      "support": "固定 H₀ 的双侧尾概率，与观测参数独立变化。"
+    },
+    {
+      "path": "00_Knowledge/显著性解释边界.md",
+      "title": "显著性解释边界",
+      "support": "功效依赖指定备择值、噪声和 n，显著性不等于效应大小。"
+    }
+  ],
+  "bayes": [
+    {
+      "path": "00_Knowledge/先验分布.md",
+      "title": "先验分布",
+      "support": "改变 Beta 先验参数，比较相同数据下的更新。"
+    },
+    {
+      "path": "00_Knowledge/后验分布.md",
+      "title": "后验分布",
+      "support": "条件分布、归一化和顺序更新；明确后验概率依赖先验和模型。"
+    }
+  ],
+  "regression": [
+    {
+      "path": "00_Knowledge/多重共线性.md",
+      "title": "多重共线性",
+      "support": "相关设计列导致弱识别；有限样本相关和生成参数区分。"
+    },
+    {
+      "path": "00_Knowledge/近似共线性精度.md",
+      "title": "近似共线性精度",
+      "support": "系数可能不稳定而拟合值较稳定；换种子观察不能替代重复样本证明。"
+    },
+    {
+      "path": "00_Knowledge/岭正则化.md",
+      "title": "岭正则化",
+      "support": "平方和损失加系数二范数惩罚，λ 正值改变估计目标。"
+    }
+  ],
+  "overfit": [
+    {
+      "path": "00_Knowledge/训练验证测试划分.md",
+      "title": "训练验证测试划分",
+      "support": "拟合与选择的角色区分；交互中反复查看的是验证数据。"
+    }
+  ],
+  "pca": [
+    {
+      "path": "00_Knowledge/主成分分析.md",
+      "title": "主成分分析",
+      "support": "中心化、主轴、得分和解释方差的整体对应。"
+    },
+    {
+      "path": "00_Knowledge/PCA低秩重构.md",
+      "title": "PCA低秩重构",
+      "support": "一维投影与丢弃特征值对应的平方误差。"
+    },
+    {
+      "path": "00_Knowledge/PCA尺度选择.md",
+      "title": "PCA尺度选择",
+      "support": "协方差与相关矩阵 PCA 的度量差异、正单位缩放不变性。"
+    }
+  ],
+  "bootstrap": [
+    {
+      "path": "00_Knowledge/抽样分布.md",
+      "title": "抽样分布",
+      "support": "对比总体重复抽样分布与给定样本后的 Bootstrap 条件分布。"
+    },
+    {
+      "path": "00_Knowledge/样本量与模拟重复次数.md",
+      "title": "样本量与模拟重复次数",
+      "support": "增加 B 不增加原始观测信息。"
+    },
+    {
+      "path": "00_Knowledge/历史模拟Bootstrap.md",
+      "title": "历史模拟Bootstrap",
+      "support": "迁移有放回重抽和无法创造未观测尾部的机制；本实验计算均值，不能替代 VaR/ES 的专门有效性检验。"
+    }
+  ]
+}

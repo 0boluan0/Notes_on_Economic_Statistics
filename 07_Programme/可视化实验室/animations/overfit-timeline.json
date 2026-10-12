@@ -1,0 +1,61 @@
+{
+  "id": "overfit",
+  "duration": 38.433333333333785,
+  "chapters": [
+    {
+      "title": "模型首先看见的是这批训练点",
+      "en": "The fit is chosen using these training observations.",
+      "start": 0.0
+    },
+    {
+      "title": "把没参与拟合的数据放进来",
+      "en": "Now reveal observations the fit did not use.",
+      "start": 10.5
+    },
+    {
+      "title": "复杂度变化，用两条误差曲线一起判断",
+      "en": "Track training and validation error across model complexity.",
+      "start": 16.967
+    },
+    {
+      "title": "拟合能力，是可以使用也可以误用的自由度",
+      "en": "Flexibility must be assessed using independent evidence.",
+      "start": 29.467
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "training-data",
+      "time": 3.85
+    },
+    {
+      "name": "fitted-to-training",
+      "time": 10.35
+    },
+    {
+      "name": "held-out-data",
+      "time": 16.817
+    },
+    {
+      "name": "complexity-errors",
+      "time": 28.75
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 35.283
+    },
+    {
+      "name": "closing",
+      "time": 38.283
+    }
+  ],
+  "params": {
+    "degree": 5,
+    "n": 20,
+    "noise": 0.25,
+    "lambda": 0.001,
+    "seed": 42
+  },
+  "method": "object-narrative",
+  "layout": []
+}

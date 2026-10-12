@@ -66,6 +66,12 @@ $$
 >
 > **答案：** 第一步在中心固定时，为每个样本选择平方距离最小的中心；第二步在分配固定时，用簇均值最小化该簇的平方距离和。两步分别精确优化一部分。
 
+<!-- visual-lab:links:start -->
+## 交互理解
+
+- [[07_Programme/可视化实验室/实验/kmeans|K-means 的分配与中心更新]]
+<!-- visual-lab:links:end -->
+
 ## 来源与核验
 
 - [scikit-learn, K-means](https://scikit-learn.org/stable/modules/clustering.html#k-means)：核对最近中心分配和簇均值更新的交替流程。

@@ -1,0 +1,76 @@
+{
+  "id": "tree",
+  "duration": 40.5000000000002,
+  "chapters": [
+    {
+      "title": "一棵树，先问一个能分开样本的问题",
+      "en": "A tree begins with one axis-aligned question.",
+      "start": 0.0
+    },
+    {
+      "title": "根节点先切一刀",
+      "en": "Split the root.",
+      "start": 4.0
+    },
+    {
+      "title": "只在自己的子区域内继续切分",
+      "en": "A child splits only its own region.",
+      "start": 10.467
+    },
+    {
+      "title": "只在自己的子区域内继续切分",
+      "en": "A child splits only its own region.",
+      "start": 16.933
+    },
+    {
+      "title": "到达叶子，就使用叶子内的频率",
+      "en": "A leaf predicts using the observations that reached it.",
+      "start": 23.4
+    },
+    {
+      "title": "路径上的问题，共同定义一个区域",
+      "en": "A decision path defines an intersection of regions.",
+      "start": 31.533
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "root-data",
+      "time": 3.85
+    },
+    {
+      "name": "split-0",
+      "time": 10.317
+    },
+    {
+      "name": "split-1",
+      "time": 16.783
+    },
+    {
+      "name": "split-2",
+      "time": 23.25
+    },
+    {
+      "name": "leaf-probabilities",
+      "time": 30.817
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 37.35
+    },
+    {
+      "name": "closing",
+      "time": 40.35
+    }
+  ],
+  "params": {
+    "dataset": "axis",
+    "depth": 2,
+    "minleaf": 4,
+    "n": 40,
+    "noise": 0.1,
+    "seed": 42
+  },
+  "method": "object-narrative",
+  "layout": []
+}

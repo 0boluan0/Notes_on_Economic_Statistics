@@ -1,0 +1,59 @@
+{
+  "id": "flow",
+  "duration": 35.966666666666896,
+  "chapters": [
+    {
+      "title": "先搬运位置，再问密度怎样变",
+      "en": "First move positions, then account for density.",
+      "start": 0.0
+    },
+    {
+      "title": "同一小段概率，铺到更长的区间",
+      "en": "Stretching a small interval spreads its probability mass.",
+      "start": 10.2
+    },
+    {
+      "title": "Jacobian 补偿的是局部体积变化",
+      "en": "The Jacobian corrects local volume change.",
+      "start": 27.0
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "original-positions",
+      "time": 3.55
+    },
+    {
+      "name": "mapped-positions",
+      "time": 10.05
+    },
+    {
+      "name": "small-mass-block",
+      "time": 15.283
+    },
+    {
+      "name": "equal-area-block",
+      "time": 21.583
+    },
+    {
+      "name": "density-adjustment",
+      "time": 26.283
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 32.817
+    },
+    {
+      "name": "closing",
+      "time": 35.817
+    }
+  ],
+  "params": {
+    "scale": 1,
+    "shift": 0,
+    "warp": 0.8,
+    "z": 1
+  },
+  "method": "object-narrative",
+  "layout": []
+}

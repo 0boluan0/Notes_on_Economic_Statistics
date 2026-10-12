@@ -1,0 +1,57 @@
+{
+  "id": "calibration",
+  "duration": 31.00000000000011,
+  "chapters": [
+    {
+      "title": "说“65%”，长期意味着什么？",
+      "en": "What should the reported probability mean over repeated cases?",
+      "start": 0.0
+    },
+    {
+      "title": "在这一组内，数真实发生了多少次",
+      "en": "Count actual outcomes within that probability group.",
+      "start": 4.0
+    },
+    {
+      "title": "每个组变成一个可靠性图上的点",
+      "en": "Each bin becomes one reliability-diagram point.",
+      "start": 10.233
+    },
+    {
+      "title": "频率估计也有抽样波动",
+      "en": "Reliability estimates themselves are noisy.",
+      "start": 22.033
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "probability-bin",
+      "time": 3.85
+    },
+    {
+      "name": "bin-frequency",
+      "time": 10.083
+    },
+    {
+      "name": "reliability-points",
+      "time": 21.317
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 27.85
+    },
+    {
+      "name": "closing",
+      "time": 30.85
+    }
+  ],
+  "params": {
+    "sharpness": 1,
+    "offset": 0,
+    "n": 1000,
+    "bins": 10,
+    "seed": 42
+  },
+  "method": "object-narrative",
+  "layout": []
+}

@@ -75,6 +75,14 @@ The score matrix in [[缩放点积注意力|scaled dot-product attention]] has $
 [[注意力掩码归一化|Masked attention normalization]] treats excluded positions as having score $-\infty$, with zero exponential understood as a limit. At least one finite score must remain for a valid normalized distribution. A row containing only $-\infty$ lies outside the finite-real definition above and cannot be normalized directly by that formula.
 <!-- bilingual-en:end -->
 
+<!-- visual-lab:links:start -->
+## 交互理解
+
+- [[07_Programme/可视化实验室/实验/attention|注意力从分数到读取向量]]
+- [[07_Programme/可视化实验室/实验/softmax|Softmax 温度与交叉熵梯度]]
+- [[07_Programme/可视化实验室/实验/contrastive|InfoNCE如何让正负样本竞争]]
+<!-- visual-lab:links:end -->
+
 ## 来源与核验
 
 <!-- bilingual-en:start -->

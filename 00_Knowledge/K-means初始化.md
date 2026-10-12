@@ -48,6 +48,12 @@ part_of:
 >
 > **答案：** 随机种子可以产生不同起始中心；Lloyd 迭代便从不同位置出发，并可能进入不同局部结果。
 
+<!-- visual-lab:links:start -->
+## 交互理解
+
+- [[07_Programme/可视化实验室/实验/kmeans|K-means 的分配与中心更新]]
+<!-- visual-lab:links:end -->
+
 ## 来源与核验
 
 - [scikit-learn, `KMeans`](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html)：核对初始化方法、`n_init` 使用多次运行中最低 inertia 的结果，以及随机种子的作用。

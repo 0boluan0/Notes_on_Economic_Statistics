@@ -1,0 +1,58 @@
+{
+  "id": "uncertainty",
+  "duration": 30.6333333333335,
+  "chapters": [
+    {
+      "title": "同一个位置，可以问两种不确定性",
+      "en": "At one location, distinguish mean uncertainty from response noise.",
+      "start": 0.0
+    },
+    {
+      "title": "先只保留参数不确定性",
+      "en": "Parameter uncertainty creates a latent-mean interval.",
+      "start": 7.1
+    },
+    {
+      "title": "预测新观测，还要加入观测噪声",
+      "en": "A new response adds another source of variation.",
+      "start": 14.533
+    },
+    {
+      "title": "增加数据，不能消除新观测的固有噪声",
+      "en": "More data do not remove irreducible response noise.",
+      "start": 21.667
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "regression-bands",
+      "time": 6.95
+    },
+    {
+      "name": "latent-interval",
+      "time": 14.383
+    },
+    {
+      "name": "predictive-interval",
+      "time": 20.95
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 27.483
+    },
+    {
+      "name": "closing",
+      "time": 30.483
+    }
+  ],
+  "params": {
+    "n": 12,
+    "sigma": 0.4,
+    "priorSD": 2,
+    "span": 1,
+    "query": 2.5,
+    "seed": 42
+  },
+  "method": "object-narrative",
+  "layout": []
+}

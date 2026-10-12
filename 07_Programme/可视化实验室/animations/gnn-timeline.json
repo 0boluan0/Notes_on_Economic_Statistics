@@ -1,0 +1,66 @@
+{
+  "id": "gnn",
+  "duration": 35.6333333333336,
+  "chapters": [
+    {
+      "title": "一层消息传递，只跨一条边",
+      "en": "One layer carries information across one edge.",
+      "start": 0.0
+    },
+    {
+      "title": "第 1 层：邻居先发送，再一起汇总",
+      "en": "Layer 1: send, then aggregate.",
+      "start": 4.0
+    },
+    {
+      "title": "第 2 层：邻居先发送，再一起汇总",
+      "en": "Layer 2: send, then aggregate.",
+      "start": 11.367
+    },
+    {
+      "title": "第 3 层：邻居先发送，再一起汇总",
+      "en": "Layer 3: send, then aggregate.",
+      "start": 18.733
+    },
+    {
+      "title": "传播范围，随层数逐步扩大",
+      "en": "The receptive field grows one hop per layer.",
+      "start": 26.667
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "initial-signal",
+      "time": 3.85
+    },
+    {
+      "name": "layer-1",
+      "time": 11.217
+    },
+    {
+      "name": "layer-2",
+      "time": 18.583
+    },
+    {
+      "name": "layer-3",
+      "time": 25.95
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 32.483
+    },
+    {
+      "name": "closing",
+      "time": 35.483
+    }
+  ],
+  "params": {
+    "graph": "chain",
+    "layers": 3,
+    "selfLoop": 1,
+    "normalization": "mean",
+    "residual": 0
+  },
+  "method": "object-narrative",
+  "layout": []
+}

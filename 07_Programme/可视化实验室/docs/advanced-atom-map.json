@@ -1,0 +1,45 @@
+{
+  "positional": [
+    {"path":"00_Knowledge/正弦位置编码.md","title":"正弦位置编码","support":"同一 sin/cos 频率定义；实验进一步核对共同平移下的内积不变与单频周期性。"}
+  ],
+  "gnn": [
+    {"path":"00_Knowledge/邻接矩阵幂计数游走.md","title":"邻接矩阵幂计数游走","support":"矩阵乘法沿图逐层传播的组合基础；实验加入度归一化后权重不再是原始游走条数。"},
+    {"path":"00_Knowledge/Markov矩阵幂收敛判据.md","title":"Markov矩阵幂收敛判据","support":"邻居平均为行随机矩阵；无自环二部图的奇偶振荡说明单位圆谱边界不可省略。"}
+  ],
+  "embeddings": [
+    {"path":"00_Knowledge/Token嵌入.md","title":"Token嵌入","support":"查表得到表示向量后，才可以比较其几何；实验不把 token ID 距离或合成箭头当作训练语义证据。"},
+    {"path":"00_Knowledge/正交.md","title":"正交","support":"内积为零的代数定义；区分非零向量的 90° 夹角和零向量的余弦未定义。"}
+  ],
+  "autoencoder": [
+    {"path":"00_Knowledge/PCA低秩重构.md","title":"PCA低秩重构","support":"线性平方损失下的最优秩一子空间；核对样本协方差 n−1 与每点重构误差 n 的分母。"}
+  ],
+  "vae": [
+    {"path":"00_Knowledge/正态分布.md","title":"正态分布","support":"明确 exp(logvar) 是方差，exp(logvar/2) 是标准差；不把标量 Gaussian 例子当作完整 VAE 训练。"},
+    {"path":"00_Knowledge/链式法则.md","title":"链式法则","support":"固定噪声 ε 后重参数化样本对均值、log variance 的路径导数。"}
+  ],
+  "gan": [
+    {"path":"00_Knowledge/链式法则.md","title":"链式法则","support":"sigmoid 判别器与两个生成目标的复合导数；零判别器斜率说明损失数值与参数梯度不同。"}
+  ],
+  "flow": [
+    {"path":"00_Knowledge/随机变量的分布变换.md","title":"随机变量的分布变换","support":"严格单调变换以逆 Jacobian 校正局部质量；展示有限绘图区间、逆函数与积分近似。"}
+  ],
+  "diffusion": [
+    {"path":"00_Knowledge/条件期望投影.md","title":"条件期望投影","support":"精确后验均值最小化条件平方误差，但未消除条件方差，不能逐样本恢复原始噪声。"},
+    {"path":"00_Knowledge/正态分布.md","title":"正态分布","support":"Gaussian 先验和独立 Gaussian 噪声的尺度约定；作为解析去噪参照而非图像生成器。"}
+  ],
+  "rl-bellman": [
+    {"path":"00_Knowledge/条件期望.md","title":"条件期望","support":"价值函数按当前状态条件化未来折扣回报；有限已知转移把条件期望化为加权求和。"}
+  ],
+  "rl-policy": [
+    {"path":"00_Knowledge/梯度最陡方向.md","title":"梯度最陡方向","support":"对解析期望回报作梯度上升；局部方向含义与有限步数达到确定性最优策略需区分。"},
+    {"path":"00_Knowledge/链式法则.md","title":"链式法则","support":"从 q=σ(θ) 到 J(q) 的导数，检查 sigmoid 饱和以及折扣访问权重。"}
+  ],
+  "double-descent": [
+    {"path":"00_Knowledge/最小范数最小二乘解.md","title":"最小范数最小二乘解","support":"过参数随机特征模型在多个插值解中选择完整系数欧氏范数最小者；零训练误差不能确定新点预测。"},
+    {"path":"00_Knowledge/岭正则化.md","title":"岭正则化","support":"平方损失中加入系数惩罚；本实验显式排除截距，故其 λ→0 极限与全系数最小范数选择需区分。"}
+  ],
+  "fairness": [
+    {"path":"00_Knowledge/Bayes法则.md","title":"Bayes法则","support":"从真实标签条件下的 TPR/FPR 反转为预测正类条件下的 PPV，必须使用组内基准率。"},
+    {"path":"00_Knowledge/条件概率.md","title":"条件概率","support":"混淆矩阵三个条件分母；没有正预测时 PPV 的条件事件概率为零，不能填作 0。"}
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "id": "gmm",
+  "duration": 41.800000000000196,
+  "chapters": [
+    {
+      "title": "一个点，不必硬归到某一组",
+      "en": "A point can share responsibility across components.",
+      "start": 0.0
+    },
+    {
+      "title": "E 步：相对密度，变成分担比例",
+      "en": "The E-step normalizes component support.",
+      "start": 6.9
+    },
+    {
+      "title": "M 步：用责任概率作权重，重算均值",
+      "en": "The M-step uses responsibilities as averaging weights.",
+      "start": 15.733
+    },
+    {
+      "title": "软分组，依然依赖模型与初始值",
+      "en": "Soft assignments still depend on assumptions and initialization.",
+      "start": 32.833
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "mixture-start",
+      "time": 6.75
+    },
+    {
+      "name": "soft-responsibilities",
+      "time": 15.583
+    },
+    {
+      "name": "weighted-mean-updates",
+      "time": 32.117
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 38.65
+    },
+    {
+      "name": "closing",
+      "time": 41.65
+    }
+  ],
+  "params": {
+    "steps": 4,
+    "initial": 1,
+    "separation": 2,
+    "sigma": 0.7,
+    "n": 40,
+    "seed": 42
+  },
+  "method": "object-narrative",
+  "layout": []
+}

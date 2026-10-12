@@ -1,0 +1,12 @@
+{
+  "observed_sample": 0.0,
+  "replacement": 17.567,
+  "resample_mean": 20.967,
+  "one_mean_one_point": 28.233,
+  "six_means": 38.9,
+  "bootstrap_distribution": 50.633,
+  "percentile_interval": 60.833,
+  "simulation_vs_information": 73.1,
+  "next_experiment": 77.867,
+  "duration": 81.167
+}

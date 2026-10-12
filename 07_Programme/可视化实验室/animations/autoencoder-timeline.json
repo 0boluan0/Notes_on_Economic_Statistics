@@ -1,0 +1,60 @@
+{
+  "id": "autoencoder",
+  "duration": 34.16666666666698,
+  "chapters": [
+    {
+      "title": "二维点，要经过一个一维瓶颈",
+      "en": "A two-dimensional point passes through a one-dimensional code.",
+      "start": 0.0
+    },
+    {
+      "title": "解码器只能沿一条方向画回来",
+      "en": "The decoder reconstructs on a line.",
+      "start": 9.2
+    },
+    {
+      "title": "对所有点重复，才得到重建误差",
+      "en": "Repeat over the dataset to measure reconstruction error.",
+      "start": 16.567
+    },
+    {
+      "title": "在线性约束下，瓶颈与 PCA 相遇",
+      "en": "A tied linear unit-gain projection connects to PCA.",
+      "start": 25.2
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "data-cloud",
+      "time": 2.85
+    },
+    {
+      "name": "encoded-point",
+      "time": 9.05
+    },
+    {
+      "name": "reconstruction-residual",
+      "time": 16.417
+    },
+    {
+      "name": "all-reconstructions",
+      "time": 24.483
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 31.017
+    },
+    {
+      "name": "closing",
+      "time": 34.017
+    }
+  ],
+  "params": {
+    "angle": 35,
+    "gain": 1,
+    "ratio": 3,
+    "seed": 42
+  },
+  "method": "object-narrative",
+  "layout": []
+}

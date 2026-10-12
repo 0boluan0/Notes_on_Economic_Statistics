@@ -1,0 +1,659 @@
+{
+  "criterion": "Removing only the managed navigation block leaves all preexisting bytes unchanged.",
+  "atoms": [
+    {
+      "file": "00_Knowledge/导数.md",
+      "experiments": [
+        "tangent"
+      ],
+      "preservedOriginalSha256": "86229674ab2622bc173d1fffd90db9a4b91d83b4be14522326fb97e19e5d74e1",
+      "updatedSha256": "35b49c2e07dabba05084ac49226806617ba4a2b8f98fdfeae87edaf178059e17"
+    },
+    {
+      "file": "00_Knowledge/行列式体积与取向.md",
+      "experiments": [
+        "linear"
+      ],
+      "preservedOriginalSha256": "dd9353df88dfc86abdf5dd839f7fa46d9a821a36955b823256fad44bc4c77541",
+      "updatedSha256": "3ecb4b3036515cf46893ed2463594ff925f0838cd8654ad161bd310ca11b82bf"
+    },
+    {
+      "file": "00_Knowledge/正交投影.md",
+      "experiments": [
+        "projection"
+      ],
+      "preservedOriginalSha256": "698410611bbc64724ad7918ed2a5e6329d42f5573b9b077ecde25e687986dd10",
+      "updatedSha256": "e443d4d7f423923c65639b1af15c02307d7cf461eaa1e79442c770997f198c28"
+    },
+    {
+      "file": "00_Knowledge/最佳逼近与正交残差.md",
+      "experiments": [
+        "projection"
+      ],
+      "preservedOriginalSha256": "94c97734bd02fb21e7a01377d32ac963c8b0db6969110d2e04471aee8fc1ffff",
+      "updatedSha256": "dca59eca8758a6a49601ad9117bd4b642bdd4c14aa284abe9832145c737794cf"
+    },
+    {
+      "file": "00_Knowledge/梯度最陡方向.md",
+      "experiments": [
+        "gradient",
+        "optimizers",
+        "rl-policy"
+      ],
+      "preservedOriginalSha256": "cd77a100ec72038808aa719f86c3d89733c9de5c780cec9bd1cbdbdee98cf665",
+      "updatedSha256": "c5b04846771bf1c3e3bb57c34f477ee5a8b890e2e3c5a1baa2416dbc686c4ffd"
+    },
+    {
+      "file": "00_Knowledge/抽样分布.md",
+      "experiments": [
+        "sampling",
+        "bootstrap"
+      ],
+      "preservedOriginalSha256": "2e4aaec761f4f7bdfc65b77673d8f13f14aec08b43a98e515d7d0647dbe5dcdb",
+      "updatedSha256": "a02914db76c14e8941ad34e29ae06b6b4deef64f512343dc74b301b8ba7006fa"
+    },
+    {
+      "file": "00_Knowledge/经典中心极限定理.md",
+      "experiments": [
+        "sampling"
+      ],
+      "preservedOriginalSha256": "1afc588843a18efa985a4c81f873e6d8eb8a79a5a19cc053a6eb98c3c44d060b",
+      "updatedSha256": "5d22ea051ae61c84da62d1bde8c61fff0eebed239611ec68135ec3b4368248b4"
+    },
+    {
+      "file": "00_Knowledge/弱大数定律.md",
+      "experiments": [
+        "sampling"
+      ],
+      "preservedOriginalSha256": "9603df11e973608e5955d8dc16a98bb17baad45f13447832e7030fcef83297d7",
+      "updatedSha256": "8cd9e62b10d92debda52d7f1f571c2a7e640ecf118b54453a42a3c84f84a6c92"
+    },
+    {
+      "file": "00_Knowledge/样本量与模拟重复次数.md",
+      "experiments": [
+        "sampling",
+        "bootstrap"
+      ],
+      "preservedOriginalSha256": "38205d43c277eb61a750d22ef9a7f78e64d5d48c6e452c1c3f4cea54217f8759",
+      "updatedSha256": "a3e4b17b6205402ecb1b27c37d9047f3f5a30a90a857ab8ddd2f573fbd030172"
+    },
+    {
+      "file": "00_Knowledge/置信区间覆盖率.md",
+      "experiments": [
+        "confidence"
+      ],
+      "preservedOriginalSha256": "886abce42b53fadb99c9d7e16febd2ef22472315dcc08552a5899c344e0e7993",
+      "updatedSha256": "89b60f363aa04de962c280f009966e8ebe576ceea2ae415235701d93ab304c24"
+    },
+    {
+      "file": "00_Knowledge/p值条件解释.md",
+      "experiments": [
+        "testing"
+      ],
+      "preservedOriginalSha256": "cb3df8d75cc88a5decb1732fd101d788b55c795ae88253b1d16a677d13d48433",
+      "updatedSha256": "98fff76be4d949dfb1f65e8e8bc6307fd86e7144888fed4e2832db5638fc11e4"
+    },
+    {
+      "file": "00_Knowledge/显著性解释边界.md",
+      "experiments": [
+        "testing"
+      ],
+      "preservedOriginalSha256": "59ed61dfe8452f21e5f8eb950737672cd8e6206bdb84f464f5e0ddad5d3879bb",
+      "updatedSha256": "fb7d1a55d07ba4a6fb345e5ac195e17aedcd85097280dd390401a484e4418fad"
+    },
+    {
+      "file": "00_Knowledge/先验分布.md",
+      "experiments": [
+        "bayes"
+      ],
+      "preservedOriginalSha256": "6db79c4c081b48338fce4ef92c7f71bb2d7376f1beae9b826287e15f181a7e69",
+      "updatedSha256": "36129e82b2c50e0a3b845c1d290bdc64be210bab5aab2929a1734dc32df0b218"
+    },
+    {
+      "file": "00_Knowledge/后验分布.md",
+      "experiments": [
+        "bayes",
+        "uncertainty"
+      ],
+      "preservedOriginalSha256": "6094240f06f47e4e2a340a7096ac8cfa284a3eedfe4c7bfb22bf3bf5d7411e85",
+      "updatedSha256": "43fff9cc8e890ba55d1e0f4a8a9527dfd60c5797323fd20628ba25286d049519"
+    },
+    {
+      "file": "00_Knowledge/多重共线性.md",
+      "experiments": [
+        "regression"
+      ],
+      "preservedOriginalSha256": "8f30f88efb0f420419355a390447f3307af69fa474a15a6b109013b3a8af015a",
+      "updatedSha256": "0b06be9b3827e1ccc1772115f4894c7a5a1c013220ac1c39e56d001a350c1b19"
+    },
+    {
+      "file": "00_Knowledge/近似共线性精度.md",
+      "experiments": [
+        "regression"
+      ],
+      "preservedOriginalSha256": "2225b1c3bea9314a00b61c6aea40545ef74493f8c2788e996f62f021190f89e5",
+      "updatedSha256": "482043b410c381b6e7330d292914e48312eeb7e4e293b722cc081ac630299d32"
+    },
+    {
+      "file": "00_Knowledge/岭正则化.md",
+      "experiments": [
+        "regression",
+        "double-descent",
+        "kernel"
+      ],
+      "preservedOriginalSha256": "a1b0fb88ab601fd2478a7d9aced68dc05ed141f11f56f1bbae524f569d1a90a3",
+      "updatedSha256": "747b659a65ae5b57b718fbf918c8e1fa264005c5335c66b5e4d464a1f6c2a77b"
+    },
+    {
+      "file": "00_Knowledge/训练验证测试划分.md",
+      "experiments": [
+        "overfit",
+        "modelselection"
+      ],
+      "preservedOriginalSha256": "25ca34b32e6d3d2f6f273918ea8cd14cc60684f49e9e4650f0f8bb17f1957403",
+      "updatedSha256": "b39dd0a6d731606e22acf5bc7523c71d4a8c12f7da853b3fb1c5599f13a1982b"
+    },
+    {
+      "file": "00_Knowledge/主成分分析.md",
+      "experiments": [
+        "pca"
+      ],
+      "preservedOriginalSha256": "3e16ebe5d1c01b30629768409f4c14adb2bdbd8c840bf9fed2447ac6b9c1a376",
+      "updatedSha256": "edbc14bb5c99f26474e12d60752f090b1862f271079e67d81decda9e464f60cc"
+    },
+    {
+      "file": "00_Knowledge/PCA低秩重构.md",
+      "experiments": [
+        "pca",
+        "autoencoder"
+      ],
+      "preservedOriginalSha256": "8e5727b1451273bb4543593b12718e9efb0da119691acbbb327346789e10830e",
+      "updatedSha256": "8bdda4adac9c3fbefe96adf0cc7353e1da53ba6fa0b9a5e400976439a91defe9"
+    },
+    {
+      "file": "00_Knowledge/PCA尺度选择.md",
+      "experiments": [
+        "pca"
+      ],
+      "preservedOriginalSha256": "23ae002b6aa5474cfbe3b8f21c1810f5b101bc9af39f0eee43d10e3820ee1b97",
+      "updatedSha256": "b548f5ea611d0196c3992650663f59f04e4e21afaf98c11a1d30d91b991bcdd0"
+    },
+    {
+      "file": "00_Knowledge/历史模拟Bootstrap.md",
+      "experiments": [
+        "bootstrap"
+      ],
+      "preservedOriginalSha256": "546e799153e7d56475e1e71030393af9c4c9e35fe78ed43c59a7bd7bc5eb94f2",
+      "updatedSha256": "915505fca498d0af913a267b252af976c2d9e0cdc9c5a57fa1d926677a8aa628"
+    },
+    {
+      "file": "00_Knowledge/聚类尺度.md",
+      "experiments": [
+        "knn"
+      ],
+      "preservedOriginalSha256": "869d167b059d35d0f0bd0039afc05ddd7219ce64dcc070b50ae1292e5b26f15f",
+      "updatedSha256": "4f519bb07a8415ed4c20f4b2e080460e1f0aab9401311ece21e377dc0c523229"
+    },
+    {
+      "file": "00_Knowledge/Logit模型.md",
+      "experiments": [
+        "logistic"
+      ],
+      "preservedOriginalSha256": "c68951ce54fb145c3eb850df26310c8b02159d18046a066a0370b135e499c6e2",
+      "updatedSha256": "3fe593acbefad2161df608e2b18c6859b375d48cf77952de08859d165884cb01"
+    },
+    {
+      "file": "00_Knowledge/二元响应MLE.md",
+      "experiments": [
+        "logistic"
+      ],
+      "preservedOriginalSha256": "552bd952e9785a0bcf791a8ba6a28ce8ca32496a4edf811ce8760cf80bf95e0e",
+      "updatedSha256": "1bae388c3090a2d8c4672b39199a11bdd6b748ef45e650aa8fefec9dc4bae4bf"
+    },
+    {
+      "file": "00_Knowledge/梯度与水平集.md",
+      "experiments": [
+        "svm"
+      ],
+      "preservedOriginalSha256": "66a7c4f24c58653cea080ca5cd2a7047fd429914880264d3409317eba20fa758",
+      "updatedSha256": "28c046d4830569f55d4d56c0e2a859b2fb9d0cc46ea32328cf0e6968cfe9a009"
+    },
+    {
+      "file": "00_Knowledge/组合误差协方差.md",
+      "experiments": [
+        "ensemble"
+      ],
+      "preservedOriginalSha256": "297c9a18d89ab7b72f9472ade0cb6fdf915abdc87396079195bfdf785fc0e658",
+      "updatedSha256": "d527bb6f09720321b73a73deeb58dae1410a51b9c2c970612623d32887497fb1"
+    },
+    {
+      "file": "00_Knowledge/和的方差协方差项.md",
+      "experiments": [
+        "ensemble"
+      ],
+      "preservedOriginalSha256": "8984f329f94c5609d423a7ff1d633b05a4728b79352974b8dcf5557aad44187d",
+      "updatedSha256": "37055d3c8de5f904e388acb9cc53a673bf051450d3a276d117b5ab131f4b5a94"
+    },
+    {
+      "file": "00_Knowledge/回归残差.md",
+      "experiments": [
+        "boosting"
+      ],
+      "preservedOriginalSha256": "9b2a928d6c3dd9f0abc4de0e6128553349c69ce128e458da71b353901d6323b9",
+      "updatedSha256": "11a737e29ddb576979275ce3d5fe3011f8cc50f32476ccc9632c4e40a865750b"
+    },
+    {
+      "file": "00_Knowledge/点预测损失.md",
+      "experiments": [
+        "boosting"
+      ],
+      "preservedOriginalSha256": "fae097c60a5cabeb3085fea750ae8f05985e55daf7698439144fd91ac2de1dbf",
+      "updatedSha256": "87e9613e722386f5aa46ba55b2c837948f1f1da7a2601ecb5a890c21e0241528"
+    },
+    {
+      "file": "00_Knowledge/K-means目标.md",
+      "experiments": [
+        "kmeans"
+      ],
+      "preservedOriginalSha256": "17290e960749ec193b86864b505eadec010e148b5b3b8e2a4d9b6b5c7510b513",
+      "updatedSha256": "b28e5ead75fcd72a17d1f211fd6e1bf6b1132b7a0125b474306742ceb65227ba"
+    },
+    {
+      "file": "00_Knowledge/Lloyd算法.md",
+      "experiments": [
+        "kmeans"
+      ],
+      "preservedOriginalSha256": "42e13b188008554e5cf7b2f2116a0ca32e586e24f81c2b33d24b06635fb5b74a",
+      "updatedSha256": "6d40a166c035188bb0de687676a1bd663ff6124cf8b3d42f24623ae2a4fb3789"
+    },
+    {
+      "file": "00_Knowledge/K-means初始化.md",
+      "experiments": [
+        "kmeans"
+      ],
+      "preservedOriginalSha256": "5d517d7a5b2bb7218c828cf37c53843dda71c77b9dbbee50b3adfab4cac00715",
+      "updatedSha256": "d9ad9383c4f95ec6cb504bbffa2bd7080254d2893cf82ba186874d7f715947bb"
+    },
+    {
+      "file": "00_Knowledge/Lloyd局部收敛.md",
+      "experiments": [
+        "kmeans"
+      ],
+      "preservedOriginalSha256": "e66148b30bf9e57cd9943aa276269aaf49efd73484ad4a6832be369105c6ac16",
+      "updatedSha256": "4884408d623ed120dd3f62ccc4d01d274f4644a1cb605b570dff767177bc0db4"
+    },
+    {
+      "file": "00_Knowledge/K-means空簇.md",
+      "experiments": [
+        "kmeans"
+      ],
+      "preservedOriginalSha256": "a2b2ad8316db07adbd5d00e7c55759f57a370fdf404f1fd52868d8dcb403e747",
+      "updatedSha256": "84c4d079dfcb91af79814a10ea30208b4d986ef2dcc15524b22825ed2e850817"
+    },
+    {
+      "file": "00_Knowledge/Bayes法则.md",
+      "experiments": [
+        "gmm",
+        "fairness"
+      ],
+      "preservedOriginalSha256": "99633f35993bb77157622e92d347e1489d9fd78e3ba74b3cf22b422f7e4abb59",
+      "updatedSha256": "7f882a6757c4ab4039825863460d25fd73161b5ee0458c962cb6061b062e469b"
+    },
+    {
+      "file": "00_Knowledge/似然函数.md",
+      "experiments": [
+        "gmm",
+        "likelihood"
+      ],
+      "preservedOriginalSha256": "34e2d3b4c968e9f95d3eabc85c95296ca5101a31a6c3e71eeca2a09fadb0a0b9",
+      "updatedSha256": "77178ad2c7a34effae58f2ecc665dd0355b9d192f6c05b3d7096421928df026e"
+    },
+    {
+      "file": "00_Knowledge/聚类解释边界.md",
+      "experiments": [
+        "gmm"
+      ],
+      "preservedOriginalSha256": "7ac39bbe2d42a5b582aacd5a372284a5b7afbb401354cee52227c1509e30b116",
+      "updatedSha256": "9e6b1e93d0725b50584c3adb6d9d41066972b811841accf03085c852d4fcc442"
+    },
+    {
+      "file": "00_Knowledge/概率密度函数.md",
+      "experiments": [
+        "kde"
+      ],
+      "preservedOriginalSha256": "fed7239e747078ca771574d75d405e5cbe44d0c080045b2da901e051abe9eab7",
+      "updatedSha256": "ad36046decd88a2d307ace6a6ebb3ae3f9011e3304b92a01df0030bdcd1f5862"
+    },
+    {
+      "file": "00_Knowledge/密度换元的尺度因子.md",
+      "experiments": [
+        "kde"
+      ],
+      "preservedOriginalSha256": "61c23806759bac9937aa40dc183fbb179675042e3a3f68f73bdbeefde2ff0869",
+      "updatedSha256": "fb3e508a39fb0e930e62ea6e8d36fe337fd147e4572222f4f97103994d1f5017"
+    },
+    {
+      "file": "00_Knowledge/密度的局部概率解释.md",
+      "experiments": [
+        "kde"
+      ],
+      "preservedOriginalSha256": "d1e99f6ff8004935ad644bd8a8ba5c157db67f3f89a7caec18c65d6573cc53d8",
+      "updatedSha256": "f40747762d6287db39936aabbb1739e31b1c4800fa02b7acf02e384c490d1d7e"
+    },
+    {
+      "file": "00_Knowledge/测试集自适应复用.md",
+      "experiments": [
+        "modelselection"
+      ],
+      "preservedOriginalSha256": "641fcb5215087b51b8979bcc1c2c5e3ce0c579cb8e400748a6f85d0ea5069ede",
+      "updatedSha256": "93216aa0acff53b8dc8a91f7e55d6b7ece5c3f6927b19352053600ebfa1158c7"
+    },
+    {
+      "file": "00_Knowledge/验证管线隔离.md",
+      "experiments": [
+        "modelselection"
+      ],
+      "preservedOriginalSha256": "2f676e6bd107560fd7acfaca08c232b0c6ef73276c3b8d412f888d7e896faee3",
+      "updatedSha256": "4ba4bbd05b3be166499324a8d5f298bce8ae97cdefa7780a730edbddb5672e87"
+    },
+    {
+      "file": "00_Knowledge/分类评估口径.md",
+      "experiments": [
+        "metrics"
+      ],
+      "preservedOriginalSha256": "fe094a6b2c29bc65e1dbe944a9fc3ce73ff2b6de9e0e54e7c082992d66e91b8a",
+      "updatedSha256": "c222c72096ef99b53385b0ff9ed6cf28905c51bceb4141ad926c38b9fbbd29c0"
+    },
+    {
+      "file": "00_Knowledge/灵敏度与后验概率.md",
+      "experiments": [
+        "metrics"
+      ],
+      "preservedOriginalSha256": "070f0096ab3ccd1e664edd35523572e48aab3ba6a80ec6611024d116d5c33fe4",
+      "updatedSha256": "799ec6f64b3b90043291d6b3fdaecbfce1a20c971d210b807290539bf0f708ce"
+    },
+    {
+      "file": "00_Knowledge/极大似然估计.md",
+      "experiments": [
+        "likelihood"
+      ],
+      "preservedOriginalSha256": "f4da2899f6ad26e9377ac750726896e02c8c9ee9651df66d716e90f1088f077e",
+      "updatedSha256": "06a70beac73cd64c7cfadfdec5311137397e7e460a53041cb14935bbd09652b9"
+    },
+    {
+      "file": "00_Knowledge/链式法则.md",
+      "experiments": [
+        "activations",
+        "backprop",
+        "vae",
+        "gan",
+        "rl-policy",
+        "lstm"
+      ],
+      "preservedOriginalSha256": "9eeaaae327a3e15b76b2cf60bd9cfa70a4eed45613ad00bfc545ad62d1624ba4",
+      "updatedSha256": "bf134fae8e0c53a577eb39152c494613e16da0f8a9104ee06854896ab8ea4c40"
+    },
+    {
+      "file": "00_Knowledge/逐位置前馈网络.md",
+      "experiments": [
+        "mlp"
+      ],
+      "preservedOriginalSha256": "47f5894a838361a7a9703410ac12906187efef32de1779e8e24da0b34687dccc",
+      "updatedSha256": "25e23cc6bb022afddf648708bda682d2598757f973f53bdbab4b9e23bac6ae27"
+    },
+    {
+      "file": "00_Knowledge/多元链式法则.md",
+      "experiments": [
+        "backprop",
+        "residual",
+        "rnn",
+        "lstm"
+      ],
+      "preservedOriginalSha256": "ad45d36d5e87b7495b2833b305844ac96c796806602277a39f2afb73c6577e1f",
+      "updatedSha256": "a992eac34a1dc59ad013e09739ffcaee06de6fdd399b8ad8a54828b915c6a2d9"
+    },
+    {
+      "file": "00_Knowledge/LayerNorm.md",
+      "experiments": [
+        "normalization"
+      ],
+      "preservedOriginalSha256": "6939ae100760d8e30517104328b3c6192f9657f5cfe33c903a4fc9c5443ed810",
+      "updatedSha256": "d975f582a671908a53c48937263738344d16b409be2e6d047cd8d9789a6a4f4e"
+    },
+    {
+      "file": "00_Knowledge/残差连接.md",
+      "experiments": [
+        "residual"
+      ],
+      "preservedOriginalSha256": "77f83cd20ccd56c7945a7ee5e3c76d3b1222d6d7b9e5693f5dd68c3af72b0ee0",
+      "updatedSha256": "062b7505bc7ae108bb71dce5dc4edb119143ae2c5ad8379e623242e4fe91b94a"
+    },
+    {
+      "file": "00_Knowledge/缩放点积注意力.md",
+      "experiments": [
+        "attention"
+      ],
+      "preservedOriginalSha256": "63b82ae6be54f1940a0536471a790f02c7272f0dda73464011bbca3298b31147",
+      "updatedSha256": "201fb916b821506db42b9ef494287c8359c9c82fbcd855466f58ece38a9c829b"
+    },
+    {
+      "file": "00_Knowledge/因果注意力掩码.md",
+      "experiments": [
+        "attention"
+      ],
+      "preservedOriginalSha256": "d5dd2e3de0f4a1053e045953196a1ac4d63713c3d70605e706ab8f0028f3255e",
+      "updatedSha256": "a2694e807d3b8648247057850a208811e589d575d06af77f058339fcef64a12b"
+    },
+    {
+      "file": "00_Knowledge/注意力掩码归一化.md",
+      "experiments": [
+        "attention"
+      ],
+      "preservedOriginalSha256": "afd55eb7b8044f5645dbfdc6d5525d448bc5832215e54293c9cf2a16c85ae5d5",
+      "updatedSha256": "da67f5ccfe3a76d92e525ecc0b91db7822195324aedd3a5f84c60dbe33eecdb9"
+    },
+    {
+      "file": "00_Knowledge/注意力权重解释边界.md",
+      "experiments": [
+        "attention"
+      ],
+      "preservedOriginalSha256": "d76f4b3fff6c3f27be908d1059122a80a0375a28429ac79b454e9a5635df3b6e",
+      "updatedSha256": "fb41734fcb15efa3e3c10b870aa62fcf1866a6ca35bdd9ed1623e15f7f878209"
+    },
+    {
+      "file": "00_Knowledge/Softmax.md",
+      "experiments": [
+        "attention",
+        "softmax",
+        "contrastive"
+      ],
+      "preservedOriginalSha256": "d5b2fad036e1ec5fc9db54edfa038cb36dfec6a896390810396606f8aece6095",
+      "updatedSha256": "bef2db6821c6cad01c55be97a3344abd5284ae0700ec88227df068ba55ee672b"
+    },
+    {
+      "file": "00_Knowledge/正弦位置编码.md",
+      "experiments": [
+        "positional"
+      ],
+      "preservedOriginalSha256": "dc2b3e87d0f4307dd865fdb9ec8271c6e7d6ba00e9740f6f4ef3f6fcf540d5a5",
+      "updatedSha256": "acd2f279b225a3e86553cc65953a7506c0d8d34adb8d00e5d9fd995ca6fdc934"
+    },
+    {
+      "file": "00_Knowledge/邻接矩阵幂计数游走.md",
+      "experiments": [
+        "gnn"
+      ],
+      "preservedOriginalSha256": "409752d4b2de05ddcadc94c7434a8ac0c00ce40bf0014f4fa0f019194b3da1c6",
+      "updatedSha256": "0e677bfee27aaa1e46bcb3a44f4e746c12570a030c214be4b5be174e79215f21"
+    },
+    {
+      "file": "00_Knowledge/Markov矩阵幂收敛判据.md",
+      "experiments": [
+        "gnn"
+      ],
+      "preservedOriginalSha256": "a7e68a9c2f3804f131a377293b3c18379f760c7f88ebd2ab2b7238e5f14b435a",
+      "updatedSha256": "b798ac262564e3c3705b8968e1217e0118fae9d1c4ea761993e8751c72446012"
+    },
+    {
+      "file": "00_Knowledge/Token嵌入.md",
+      "experiments": [
+        "embeddings"
+      ],
+      "preservedOriginalSha256": "241b10ed5c4e72ea3fd2bf5314b472dcbdb7757e5ff4c5d7363fc44c15793be0",
+      "updatedSha256": "8eb0d04134496804a0cc4ad3c581716b7628f1c5411bec8cb7c36af3cb491534"
+    },
+    {
+      "file": "00_Knowledge/正交.md",
+      "experiments": [
+        "embeddings"
+      ],
+      "preservedOriginalSha256": "98ba6481729130dc524c81e41a42aa7e92f145f84069f45ef899f42a07d98c06",
+      "updatedSha256": "29b7f3d2015b9fed97e1fb24ca0683931ab51d3323bdb1a9104dc99edc102bce"
+    },
+    {
+      "file": "00_Knowledge/正态分布.md",
+      "experiments": [
+        "vae",
+        "diffusion"
+      ],
+      "preservedOriginalSha256": "a3f02e8e2622cdc4cc70f0fe63ffca41e118dbc34554c2d6f84230767c5753a9",
+      "updatedSha256": "637996d6265d70bb3582e6609f755e353410652fa1a673e981930faf205217ea"
+    },
+    {
+      "file": "00_Knowledge/随机变量的分布变换.md",
+      "experiments": [
+        "flow"
+      ],
+      "preservedOriginalSha256": "13fab76255cf7870bdc2cd5a74120155755a16beac43560262ccf17e7542ac26",
+      "updatedSha256": "5de938fbc8a8fb7fc405a2f3a168e2df8b2ec2b1a1eda487f74f3b3070166b12"
+    },
+    {
+      "file": "00_Knowledge/条件期望投影.md",
+      "experiments": [
+        "diffusion"
+      ],
+      "preservedOriginalSha256": "3a19de032dc089347ac665dc2ca427b2fa6973812e1141a966629aab03ad12cc",
+      "updatedSha256": "5df632ac7deff78a8ad15704bbd526ab2e5965c2fd9f5d50fcf0e7e3f882320c"
+    },
+    {
+      "file": "00_Knowledge/条件期望.md",
+      "experiments": [
+        "rl-bellman"
+      ],
+      "preservedOriginalSha256": "905e873686951d67ae1af2f25001c9ca052900f6c52cdb528486ee6bacb25581",
+      "updatedSha256": "35bf670a2dec9c9ee460be75d3614be53b7738a3620f6babe3b5bf499f945d7d"
+    },
+    {
+      "file": "00_Knowledge/最小范数最小二乘解.md",
+      "experiments": [
+        "double-descent"
+      ],
+      "preservedOriginalSha256": "c3e2a64c70fb4c4f938a408b02c72aed4377c1636926e68f145ec5c6cd25068e",
+      "updatedSha256": "f1e81106ffb0e5f26556856ebfa0ad0c0218f0c153ac9c07231fc0321255d897"
+    },
+    {
+      "file": "00_Knowledge/条件概率.md",
+      "experiments": [
+        "fairness"
+      ],
+      "preservedOriginalSha256": "e04a14107cf17015b392b7a250dd0b3ced60b7a806a203f3dd7d2395fff526ca",
+      "updatedSha256": "713f3af6b3cd70059cd80314230395bdaf3c1d70a716de02185b8bb8b6929dd8"
+    },
+    {
+      "file": "00_Knowledge/奇异值分解.md",
+      "experiments": [
+        "svd"
+      ],
+      "preservedOriginalSha256": "701a83661de6aee1e135b7e672846b79acc905039f5da6ca66689680497ed811",
+      "updatedSha256": "8c5dbac3841050e0c211507cd70537c723d5f8ecbf3a1f63421798b677bbabc6"
+    },
+    {
+      "file": "00_Knowledge/奇异值与秩.md",
+      "experiments": [
+        "svd"
+      ],
+      "preservedOriginalSha256": "69c6bda68b4a2523ec5a612370ff72a64278d1e0988c3a3fca7657b7c443e664",
+      "updatedSha256": "2b0eed1665c5f5e326bc99589c117384e53ae9a478a66391e97c4e6dae398fc0"
+    },
+    {
+      "file": "00_Knowledge/截断SVD最佳低秩近似.md",
+      "experiments": [
+        "svd"
+      ],
+      "preservedOriginalSha256": "faf165686ea1d1d6afe7329dcd01fab37c58042b9e19b27ce6ef202b3d793560",
+      "updatedSha256": "ce48fbab47e9f3e4e8659e8b61fc722ea93e5fce8fd540c75773e2f662a4a971"
+    },
+    {
+      "file": "00_Knowledge/重奇异值下方向不唯一.md",
+      "experiments": [
+        "svd"
+      ],
+      "preservedOriginalSha256": "9fa48f9c86dbbec1a9e99cbcf3d9886c89a7812ed6c842063a345533df1d7a9e",
+      "updatedSha256": "c140ded36d0136336463edb82370b38dc3f7740ab03817c413df6b40211b209b"
+    },
+    {
+      "file": "00_Knowledge/MSE偏差方差分解.md",
+      "experiments": [
+        "biasvariance"
+      ],
+      "preservedOriginalSha256": "91eb4ccd310decdac3be6f6a98b030c9702c269cdae65e13479c892f22e41c16",
+      "updatedSha256": "81a10c7a44d6cff23583b1dc6dc684d43da17ffe4c8a1a806c5371b9482bd096"
+    },
+    {
+      "file": "00_Knowledge/Gram矩阵正定判据.md",
+      "experiments": [
+        "kernel"
+      ],
+      "preservedOriginalSha256": "100615cb452f688cd37423d38b4704f767f462df31e17de1cc8f18d461a03c45",
+      "updatedSha256": "badeecbfcce5f7b6293fa8434a96d5079378f4e634c3387b8b095de917072945"
+    },
+    {
+      "file": "00_Knowledge/KL参考约束.md",
+      "experiments": [
+        "entropy"
+      ],
+      "preservedOriginalSha256": "81a4d4e819ea3a1b011a3f142c5bc46f57a0c012955d3259e3a3e08f75805825",
+      "updatedSha256": "81f2413c567a54e7c8e24b9e56d7f16ecaa74a91112780bd1338a9bd96a76206"
+    },
+    {
+      "file": "00_Knowledge/分类概率校准.md",
+      "experiments": [
+        "calibration"
+      ],
+      "preservedOriginalSha256": "954f1fc99634fe195cf904e2ce7197738aa3705a9827da82efa69db3d42594cb",
+      "updatedSha256": "e1cda8453524285b8de72af49c8a0383fa89f437e32fa268d18c72053f5eae8b"
+    },
+    {
+      "file": "00_Knowledge/Jacobian矩阵.md",
+      "experiments": [
+        "jacobian"
+      ],
+      "preservedOriginalSha256": "25e79eff605857bff47ec9c89ce1d26cdcb479e2eaf71417fa2bc0db773fb601",
+      "updatedSha256": "5c92ea4c62aace22c16a06100d6085f3a11b1586ad38f37373a69f8e3d41cf4d"
+    },
+    {
+      "file": "00_Knowledge/Jacobian行列式.md",
+      "experiments": [
+        "jacobian"
+      ],
+      "preservedOriginalSha256": "211eb2eac2552294d0958d0634d508aa981cbdf448356b0272c5e136ae88d55f",
+      "updatedSha256": "08c6455c5e1d685907cdf9ec255a8bf3a44a68b304ecdddd2fe614a866f8d2bf"
+    },
+    {
+      "file": "00_Knowledge/概率依赖与因果.md",
+      "experiments": [
+        "causal"
+      ],
+      "preservedOriginalSha256": "ec3d004c0452d5163ffb92dc6d786949d4e6cf86b54e18a6938a2a8cd3f7309a",
+      "updatedSha256": "1d422225cbe92a431bf7a24f22c54c170d8c95843120a7bbdee4b2876e132bc6"
+    },
+    {
+      "file": "00_Knowledge/均值差的因果分解.md",
+      "experiments": [
+        "causal"
+      ],
+      "preservedOriginalSha256": "653c22f30a197f18c661fc164b3474e1902db110248d7b2bdd0862f2baaeb14d",
+      "updatedSha256": "eccf06f2a73e39eb3130b28ba602e9554010013274ed2d9dfdb8caa3400b478d"
+    }
+  ]
+}

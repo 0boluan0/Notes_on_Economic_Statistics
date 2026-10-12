@@ -1,0 +1,80 @@
+[
+  {
+    "file": "revisions.test.js",
+    "passed": true,
+    "output": "PASS: revised error slopes, nested fits, p-value tails and vector geometry.\n",
+    "error": ""
+  },
+  {
+    "file": "mechanisms.test.js",
+    "passed": true,
+    "output": "PASS: linked scene arithmetic, traced cell identities, pooling ties, normalization groups, stable softmax, support mismatch, dropout draw\n",
+    "error": ""
+  },
+  {
+    "file": "dl.test.js",
+    "passed": true,
+    "output": "ptimizers\": 15,\n    \"regularization\": 15,\n    \"normalization\": 17,\n    \"convolution\": 55,\n    \"pooling\": 55,\n    \"residual\": 13,\n    \"attention\": 15\n  },\n  \"sourceSHA256\": \"4c39c8909688c69d0f4dbc2288bbc7b7d8701b6d378becd49a67cfd640c7b5a6\",\n  \"methods\": [\n    \"Independent scalar finite differences\",\n    \"Exact ReLU tent and linear-collapse identities\",\n    \"Full initialized network perturbation\",\n    \"Exact enumeration of all 16 dropout masks\",\n    \"Independent input-index cross correlation\",\n    \"Direct normalization moments\",\n    \"Optimizer first-step and objective checks\",\n    \"Residual closed forms and perturbations\",\n    \"Attention row sums, masks, value linearity and convex hull\"\n  ]\n}\n",
+    "error": ""
+  },
+  {
+    "file": "foundations.test.js",
+    "passed": true,
+    "output": "{\"suite\":\"six foundations independent identities, derivatives, trained-model boundaries\",\"models\":6,\"checks\":126822,\"status\":\"passed\"}\n",
+    "error": ""
+  },
+  {
+    "file": "cross-advanced.test.js",
+    "passed": true,
+    "output": "{\"suite\":\"independent cross-review: six advanced models\",\"reviewed\":[\"positional\",\"gnn\",\"embeddings\",\"autoencoder\",\"vae\",\"gan\"],\"independentChecks\":70,\"status\":\"passed\"}\n",
+    "error": ""
+  },
+  {
+    "file": "ml.test.js",
+    "passed": true,
+    "output": "{\"suite\":\"classical ML independent invariants and control boundaries\",\"models\":12,\"checks\":332175,\"status\":\"passed\"}\n",
+    "error": ""
+  },
+  {
+    "file": "advanced.test.js",
+    "passed": true,
+    "output": "PASS advanced: 169 default/preset/boundary cases; 762117 numerical, content and plotted-data assertions.\n",
+    "error": ""
+  },
+  {
+    "file": "obsidian-plugin.test.js",
+    "passed": true,
+    "output": "PASS: plugin catalog/config, CSP ordering, isolated sandbox, message-source validation, exact source allowlist, safe note links and navigation scope.\nPASS: unavailable startup catalog does not block processor/view/command registration\nPASS: note embeds refresh the catalog before validating newly added IDs.\nPASS: command opens after delayed catalog arrival without reloading the plugin\nPASS: command opens a frame even while the catalog remains unavailable\n",
+    "error": ""
+  },
+  {
+    "file": "core.test.js",
+    "passed": true,
+    "output": "PASS: 73708 analytical, boundary, deterministic, and plot-contract checks across 12 labs.\n",
+    "error": ""
+  },
+  {
+    "file": "sequential.test.js",
+    "passed": true,
+    "output": "{\n  \"status\": \"passed\",\n  \"utc\": \"2026-10-10T18:08:41.872Z\",\n  \"cases\": 98,\n  \"experimentCases\": {\n    \"rnn\": 21,\n    \"lstm\": 20,\n    \"contrastive\": 14,\n    \"jacobian\": 15,\n    \"uncertainty\": 17,\n    \"causal\": 11\n  },\n  \"assertions\": 82337,\n  \"coordinateAssertions\": 67020,\n  \"scientificAndStructuralAssertions\": 15317,\n  \"numpyStatus\": \"not requested (set LAB_NUMPY_PYTHON to a NumPy Python executable)\",\n  \"sourceSHA256\": \"3263d67bbae394d1612cfd8e6e9fb93349be9d368af75b15a7dcc39ef51737e4\"\n}\n",
+    "error": ""
+  },
+  {
+    "file": "structure.test.js",
+    "passed": false,
+    "output": "FAIL structure: 60 entries; 79 mapped atoms; 573 wiki links; 12004 checks.\n",
+    "error": "[{\"name\": \"unexpected modified knowledge asset\", \"detail\": \"00_Knowledge/利率、即期远期与期限结构.canvas\"}]"
+  },
+  {
+    "file": "narrative.test.py",
+    "passed": true,
+    "output": "PASS: small signed values, nonempty curves, and equal physical axis units",
+    "error": ""
+  },
+  {
+    "file": "film_renderer.test.py",
+    "passed": true,
+    "output": "PASS: clipping, equal-unit viewport, near-constant scale, and unbroken numeric/Latin labels",
+    "error": ""
+  }
+]

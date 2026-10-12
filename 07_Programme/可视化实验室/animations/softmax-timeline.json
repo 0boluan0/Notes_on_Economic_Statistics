@@ -1,0 +1,58 @@
+{
+  "id": "softmax",
+  "duration": 34.03333333333366,
+  "chapters": [
+    {
+      "title": "三个分数，要共同分一份概率",
+      "en": "Three scores compete for one unit of probability.",
+      "start": 0.0
+    },
+    {
+      "title": "先指数化，再使用同一个分母",
+      "en": "Exponentiate, then divide by a shared denominator.",
+      "start": 4.0
+    },
+    {
+      "title": "一个概率变化，其他概率也要响应",
+      "en": "Normalization couples the three outputs.",
+      "start": 14.867
+    },
+    {
+      "title": "标签影响损失，分数决定预测",
+      "en": "Changing the label changes loss, not this prediction.",
+      "start": 25.067
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "scores",
+      "time": 3.85
+    },
+    {
+      "name": "denominator",
+      "time": 14.717
+    },
+    {
+      "name": "one-unit-probability",
+      "time": 24.35
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 30.883
+    },
+    {
+      "name": "closing",
+      "time": 33.883
+    }
+  ],
+  "params": {
+    "z1": 2,
+    "z2": 1,
+    "z3": 0,
+    "temperature": 1,
+    "shift": 0,
+    "target": 0
+  },
+  "method": "object-narrative",
+  "layout": []
+}

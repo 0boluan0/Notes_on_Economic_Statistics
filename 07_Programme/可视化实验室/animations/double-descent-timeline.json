@@ -1,0 +1,57 @@
+{
+  "id": "double-descent",
+  "duration": 32.70000000000016,
+  "chapters": [
+    {
+      "title": "先数清参数：宽度之外，还有截距",
+      "en": "Count parameters before locating interpolation.",
+      "start": 0.0
+    },
+    {
+      "title": "等参数数目附近，矩阵可能变得敏感",
+      "en": "The interpolation region can be ill-conditioned.",
+      "start": 4.0
+    },
+    {
+      "title": "沿真实计算结果，逐点看验证风险",
+      "en": "Inspect the actual validation curve, not a promised shape.",
+      "start": 10.233
+    },
+    {
+      "title": "容量曲线，也受正则化与数据影响",
+      "en": "Capacity curves depend on data and regularization.",
+      "start": 23.733
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "parameter-count",
+      "time": 3.85
+    },
+    {
+      "name": "interpolation-count",
+      "time": 10.083
+    },
+    {
+      "name": "actual-risk-curve",
+      "time": 23.017
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 29.55
+    },
+    {
+      "name": "closing",
+      "time": 32.55
+    }
+  ],
+  "params": {
+    "width": 20,
+    "n": 24,
+    "noise": 0.3,
+    "lambda": 0,
+    "seed": 42
+  },
+  "method": "object-narrative",
+  "layout": []
+}

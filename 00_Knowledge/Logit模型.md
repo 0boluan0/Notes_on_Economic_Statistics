@@ -61,6 +61,12 @@ Logit 保证模型内预测位于 $(0,1)$，但不保证函数形式正确、概
 Logit guarantees that predictions from the specified model lie in $(0,1)$, but it does not guarantee that the functional form is correct, the probabilities are calibrated, or the relationship is causal. The covariate support, specification, separation, and out-of-sample performance still require examination.
 <!-- bilingual-en:end -->
 
+<!-- visual-lab:links:start -->
+## 交互理解
+
+- [[07_Programme/可视化实验室/实验/logistic|概率、阈值与交叉熵]]
+<!-- visual-lab:links:end -->
+
 ## 来源与核验
 
 <!-- bilingual-en:start -->

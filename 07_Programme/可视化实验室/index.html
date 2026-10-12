@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="可以改变参数、观察结果、检验理解的离线可视化知识实验：数学、统计、机器学习与深度学习。">
+  <meta name="color-scheme" content="light">
+  <title>可视化实验室 · Visual Knowledge Lab</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="assets/vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/vendor/katex/katex.min.js"></script>
+  <script defer src="assets/math.js"></script>
+  <!-- extension-models -->
+  <script defer src="assets/content.js"></script>
+  <!-- extension-content -->
+  <script defer src="assets/atom-links.js"></script>
+  <!-- teaching-stories -->
+  <script defer src="assets/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#experiment">跳到实验</a>
+  <aside class="sidebar" id="lab-sidebar" aria-label="实验导航">
+    <a class="brand" href="#library"><span class="brand-symbol" aria-hidden="true">∿</span><span>可视化实验室<small>VISUAL KNOWLEDGE LAB</small></span></a>
+    <p class="collection-label">知识的可视化解释 <span id="lab-count"></span></p>
+    <nav id="navigation" aria-label="选择实验"></nav>
+    <div class="sidebar-footer"><a href="obsidian://open?vault=Academic&amp;file=07_Programme%2F可视化实验室%2F00_实验库入口.md" data-atom="07_Programme/可视化实验室/00_实验库入口.md">Obsidian 入口 ↗</a><p>改变一个条件，看看什么随之改变。</p></div>
+  </aside>
+  <div class="page">
+    <header class="topbar">
+      <button id="toggle-directory" aria-controls="lab-sidebar" aria-expanded="false">☰ 实验目录</button>
+      <label class="mobile-navigation">选择实验<select id="mobile-nav" aria-label="选择实验"></select></label>
+      <span class="section-label">07 PROGRAMME <span aria-hidden="true">/</span> 可视化与交互</span>
+      <span class="offline-mark"><span aria-hidden="true"></span>离线可用</span>
+    </header>
+    <main id="experiment">
+      <noscript><p class="error">请启用浏览器 JavaScript，以运行本地数学实验。</p></noscript>
+      <div id="application"><p>正在载入实验…</p></div>
+    </main>
+    <footer class="page-footer">图形来自当前参数的计算 · 所有随机实验使用可复现的种子</footer>
+  </div>
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

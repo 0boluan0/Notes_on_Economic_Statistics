@@ -1,0 +1,15 @@
+/* The drawing is the focal object; annotations and transport stay outside it. */
+#application[data-experiment="sampling"] #story-scene,#application[data-experiment="bootstrap"] #story-scene{padding:0;background:#101927;border:0;border-radius:16px}
+.stat-film{color:#eef3ff;padding:24px 26px 18px;border-radius:16px;overflow:hidden;background:#101927;font-variant-numeric:tabular-nums}
+.sf-heading{display:flex;justify-content:space-between;gap:14px;font:11px/1.4 ui-monospace,monospace;letter-spacing:.12em;color:#a9bbd2}
+.sf-heading i{font-style:normal;color:#687d99;margin:0 5px}
+.stat-film h2{font-size:clamp(17px,1.7vw,22px);font-weight:550;letter-spacing:.02em;line-height:1.5;margin:16px 0 4px;color:#eef3ff}
+.sf-formula{color:#ffcc7b;font-size:18px;min-height:55px;display:flex;align-items:center;justify-content:center;overflow:auto}
+.sf-formula .katex-display{margin:8px 0}.sf-stage{display:block;width:100%;height:auto;overflow:visible;font-family:inherit}
+.sf-key{min-height:24px;display:flex;gap:10px 24px;flex-wrap:wrap;align-items:center;font-size:12px;color:#c7d3e5;margin:10px 0 8px}
+.sf-key>span{display:inline-flex;align-items:center;gap:7px}.sf-key strong{font-weight:600;color:#ffcc7b}.sf-dot{height:7px;width:7px;background:#5be0c5;border-radius:50%}.sf-dot.gold{background:#ffcc7b}.sf-line{width:19px;height:2px;background:#5be0c5}.sf-line.gold{background:#ffcc7b}.sf-line.blue{background:repeating-linear-gradient(90deg,#91acff 0 5px,transparent 5px 8px)}
+.sf-note{min-height:36px;font-size:11px;line-height:1.7;color:#96a8c1;max-width:78ch}
+.sf-transport{display:flex;align-items:center;gap:16px;border-bottom:1px solid #2b374b;padding:8px 0 12px;margin:0 0 8px;min-height:53px}
+.sf-transport button{color:#e0eaff;background:#1b2a40;border:1px solid #3b506d;min-height:36px;font-size:12px;border-radius:7px;padding:7px 11px;white-space:nowrap}
+.sf-transport button:hover{background:#293d5b;border-color:#748cb0}.sf-time{display:flex;align-items:center;flex:1;min-width:40px}.sf-time input{width:100%;accent-color:#ffcc7b;min-height:26px}.sf-still{font-size:12px;color:#b4c2d6}.sf-transport .sf-another{background:transparent;border-color:transparent;font-size:11px;color:#afc2df}
+@media(max-width:680px){.stat-film{padding:20px 14px 15px}.sf-heading{font-size:10px;letter-spacing:.05em}.stat-film h2{font-size:17px}.sf-formula{font-size:16px}.sf-note{font-size:11px}.sf-key{font-size:11px;gap:8px 14px}.sf-transport{gap:8px;flex-wrap:wrap}.sf-transport .sf-another{margin-left:auto;padding-right:0}.sf-stage{min-height:220px}.sf-time{min-width:80px}}

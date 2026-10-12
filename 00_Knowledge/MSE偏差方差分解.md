@@ -29,6 +29,12 @@ $$E[(T-\theta)^2]=E[(T-m)^2]+2(m-\theta)E[T-m]+(m-\theta)^2.$$
 Add and subtract the estimator’s expectation, expand the square, and take expectations. The cross term vanishes because the centred estimator has mean zero. Bias 2 and variance 4 give MSE 8, better than an unbiased estimator with variance 16.
 <!-- bilingual-en:end -->
 
+<!-- visual-lab:links:start -->
+## 交互理解
+
+- [[07_Programme/可视化实验室/实验/biasvariance|真正的偏差—方差分解]]
+<!-- visual-lab:links:end -->
+
 ## 来源与核验
 
 <!-- bilingual-en:start -->

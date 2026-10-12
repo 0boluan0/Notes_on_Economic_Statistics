@@ -1,0 +1,63 @@
+{
+  "id": "activations",
+  "duration": 41.10000000000016,
+  "chapters": [
+    {
+      "title": "一个输入，怎样穿过激活函数？",
+      "en": "Follow a single input through the nonlinearity.",
+      "start": 0.0
+    },
+    {
+      "title": "相同的输入变化，不一定有相同的输出变化",
+      "en": "The slope changes the transmitted perturbation.",
+      "start": 18.0
+    },
+    {
+      "title": "激活值和导数，是两个不同的问题",
+      "en": "The output and its sensitivity answer different questions.",
+      "start": 32.133
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "far-left",
+      "time": 2.85
+    },
+    {
+      "name": "input-0",
+      "time": 7.85
+    },
+    {
+      "name": "input-1",
+      "time": 12.85
+    },
+    {
+      "name": "input-3.5",
+      "time": 17.85
+    },
+    {
+      "name": "slope-0",
+      "time": 24.717
+    },
+    {
+      "name": "slope-4",
+      "time": 31.017
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 37.95
+    },
+    {
+      "name": "closing",
+      "time": 40.95
+    }
+  ],
+  "params": {
+    "kind": "sigmoid",
+    "gain": 1,
+    "bias": 0,
+    "x": 1
+  },
+  "method": "object-narrative",
+  "layout": []
+}

@@ -13,6 +13,7 @@
 - Root `00_inbox/` is durable, private, user-owned workspace and stays outside Git. Never bulk-empty, move, reorganize, or delete it during knowledge or course processing; deleting an item there requires explicit, file-specific authorization.
 - A course-local `00_inbox/` is ephemeral. Empty it only after usable content has been incorporated successfully and any authoritative source needed later has been moved into durable course storage; report what was retained and deleted and whether deletion is recoverable.
 - Course notes are permanent source records even when atoms or Canvases cover the same material. Deleting one requires explicit, file-specific authorization.
+- Course-material updates keep only the latest teacher-issued version; move superseded files to Trash instead of archiving previous versions.
 - Preserve unrelated edits and all user-written daily-note text. Do not hand-edit `.obsidian/`, commit secrets, or break links when moving notes.
 - Store actual learning progress, mastery, review schedules, and personal evidence only in ignored private records; shared atoms and public course notes/Canvases contain general learning content rather than personal state.
 - Original papers remain in Zotero; the vault stores notes, relationships, navigation, and learning state.

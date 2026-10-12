@@ -66,6 +66,13 @@ For statistical inference, the [[似然函数|likelihood]] fixes the observed da
 > **Answer:** The denominator must include the total probability of evidence $B$ across all exhaustive hypotheses so that the posterior is normalised.
 > <!-- bilingual-en:end -->
 
+<!-- visual-lab:links:start -->
+## 交互理解
+
+- [[07_Programme/可视化实验室/实验/gmm|EM 怎样做软分配]]
+- [[07_Programme/可视化实验室/实验/fairness|相同错误率为何仍有不同 PPV]]
+<!-- visual-lab:links:end -->
+
 ## 来源与核验
 
 - [[01_Math/07-Mathematics for Computer Science/MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_BayesTheorm.pdf|MIT 6.042J Bayes' Theorem slides]]：核对 Bayes 法则、全概率分母以及 odds 解释。

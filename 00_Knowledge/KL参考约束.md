@@ -93,6 +93,12 @@ An implementation must state the KL direction, whether it uses a sequence-level 
 > **Answer:** Divergence from the reference becomes more expensive, normally keeping the current policy closer to it. Truthfulness is not read by the KL formula; [[KL不保证奖励有效|the guarantee boundary]] treats what this constraint cannot establish.
 > <!-- bilingual-en:end -->
 
+<!-- visual-lab:links:start -->
+## 交互理解
+
+- [[07_Programme/可视化实验室/实验/entropy|熵、交叉熵与 KL 的区别]]
+<!-- visual-lab:links:end -->
+
 ## 来源与核验
 <!-- bilingual-en:start -->
 *Sources and verification*

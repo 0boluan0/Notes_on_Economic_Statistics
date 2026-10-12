@@ -56,6 +56,12 @@ Classical MLE standard errors rely on the probability specification and independ
 An optimizer reporting “convergence” means only that it has reached the neighborhood of a numerical stationary point; it does not establish identification, adequate support, or correct specification. Under [[完全分离|complete separation]], both the logit and probit likelihoods can keep improving along a direction without attaining a finite maximum. Changing starting values or allowing more iterations does not solve the underlying problem.
 <!-- bilingual-en:end -->
 
+<!-- visual-lab:links:start -->
+## 交互理解
+
+- [[07_Programme/可视化实验室/实验/logistic|概率、阈值与交叉熵]]
+<!-- visual-lab:links:end -->
+
 ## 来源与核验
 
 <!-- bilingual-en:start -->

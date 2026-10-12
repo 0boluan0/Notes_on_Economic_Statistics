@@ -44,6 +44,12 @@ part_of:
 >
 > **答案：** 不能。空集合没有这个算术均值。必须明确选择一个额外修复规则，记录实现口径，并重新检查它对优化路径的影响。
 
+<!-- visual-lab:links:start -->
+## 交互理解
+
+- [[07_Programme/可视化实验室/实验/kmeans|K-means 的分配与中心更新]]
+<!-- visual-lab:links:end -->
+
 ## 来源与核验
 
 - [scikit-learn, K-means](https://scikit-learn.org/stable/modules/clustering.html#k-means)：核对均值更新、局部优化与重启动语境。

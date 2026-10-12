@@ -49,6 +49,12 @@ Semisimplicity at one leaves a fixed-point spectral projection. Every other spec
 >
 > **答案：** 收敛，因为 $P^k=I_2$；但稳态不唯一，每个二维概率向量都是固定点。极限是二维固定点空间上的恒等投影，而不是秩一投影。
 
+<!-- visual-lab:links:start -->
+## 交互理解
+
+- [[07_Programme/可视化实验室/实验/gnn|图神经网络的邻居聚合]]
+<!-- visual-lab:links:end -->
+
 ## 来源与核验
 
 - [Nick Higham, What Is a Stochastic Matrix?](https://nhigham.com/2022/12/13/what-is-a-stochastic-a-matrix/)：核对随机矩阵幂收敛的单位圆谱条件。

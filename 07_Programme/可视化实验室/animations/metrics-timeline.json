@@ -1,0 +1,61 @@
+{
+  "id": "metrics",
+  "duration": 35.53333333333357,
+  "chapters": [
+    {
+      "title": "先划阈值，才产生四种结果",
+      "en": "A threshold turns scores into four types of outcomes.",
+      "start": 0.0
+    },
+    {
+      "title": "按真实与预测两个维度，整理同一批样本",
+      "en": "Cross-tabulate true and predicted classes.",
+      "start": 4.7
+    },
+    {
+      "title": "分母不同，问题就不同",
+      "en": "Changing the denominator changes the question.",
+      "start": 12.633
+    },
+    {
+      "title": "阈值是取舍，指标要对应使用问题",
+      "en": "Threshold choice expresses a tradeoff.",
+      "start": 26.567
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "threshold-splits-scores",
+      "time": 4.55
+    },
+    {
+      "name": "confusion-table",
+      "time": 12.483
+    },
+    {
+      "name": "precision-denominator",
+      "time": 19.15
+    },
+    {
+      "name": "recall-denominator",
+      "time": 25.85
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 32.383
+    },
+    {
+      "name": "closing",
+      "time": 35.383
+    }
+  ],
+  "params": {
+    "threshold": 0.5,
+    "prevalence": 0.2,
+    "separation": 2,
+    "n": 200,
+    "seed": 42
+  },
+  "method": "object-narrative",
+  "layout": []
+}

@@ -1,0 +1,86 @@
+{
+  "activations": [
+    {
+      "path": "00_Knowledge/链式法则.md",
+      "title": "链式法则",
+      "support": "仿射输入后接激活，对原输入求导须乘输入增益；普通导数不存在的拐点另行标示。"
+    }
+  ],
+  "neuron": [],
+  "mlp": [
+    {
+      "path": "00_Knowledge/逐位置前馈网络.md",
+      "title": "逐位置前馈网络",
+      "support": "两层仿射变换夹非线性激活的组合机制；本实验为一维构造，不演示token间作用。"
+    }
+  ],
+  "backprop": [
+    {
+      "path": "00_Knowledge/链式法则.md",
+      "title": "链式法则",
+      "support": "沿标量计算图连乘局部导数。"
+    },
+    {
+      "path": "00_Knowledge/多元链式法则.md",
+      "title": "多元链式法则",
+      "support": "同一损失分别对输入、权重和偏置求导；完整向量反传是雅可比复合。"
+    }
+  ],
+  "initialization": [],
+  "optimizers": [
+    {
+      "path": "00_Knowledge/梯度最陡方向.md",
+      "title": "梯度最陡方向",
+      "support": "欧氏最陡下降只解释GD当前方向；有限步长、动量记忆和Adam缩放需要另行分析。"
+    }
+  ],
+  "regularization": [],
+  "normalization": [
+    {
+      "path": "00_Knowledge/LayerNorm.md",
+      "title": "LayerNorm",
+      "support": "同一个样本沿特征维计算统计；epsilon、逐特征仿射与批次归一化轴的区别。"
+    }
+  ],
+  "convolution": [],
+  "pooling": [],
+  "residual": [
+    {
+      "path": "00_Knowledge/残差连接.md",
+      "title": "残差连接",
+      "support": "恒等捷径与同形分支逐元素相加；标量实验展示局部导数1+F′。"
+    },
+    {
+      "path": "00_Knowledge/多元链式法则.md",
+      "title": "多元链式法则",
+      "support": "多层复合的雅可比乘积，包含抵消和放大边界。"
+    }
+  ],
+  "attention": [
+    {
+      "path": "00_Knowledge/缩放点积注意力.md",
+      "title": "缩放点积注意力",
+      "support": "QKᵀ/√d、沿Key维归一化及Value加权读取。"
+    },
+    {
+      "path": "00_Knowledge/因果注意力掩码.md",
+      "title": "因果注意力掩码",
+      "support": "按查询行保留自身和过去位置，屏蔽未来位置。"
+    },
+    {
+      "path": "00_Knowledge/注意力掩码归一化.md",
+      "title": "注意力掩码归一化",
+      "support": "先确定可见Key集合，再在该集合做Softmax；每行集合非空。"
+    },
+    {
+      "path": "00_Knowledge/注意力权重解释边界.md",
+      "title": "注意力权重解释边界",
+      "support": "改变Value尺度不改变权重，权重不能独立说明输出贡献。"
+    },
+    {
+      "path": "00_Knowledge/Softmax.md",
+      "title": "Softmax",
+      "support": "平移稳定的指数归一化与温度控制；输出总和1不是校准证明。"
+    }
+  ]
+}

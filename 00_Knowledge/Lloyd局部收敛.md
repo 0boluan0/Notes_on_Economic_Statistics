@@ -44,6 +44,12 @@ part_of:
 >
 > **答案：** 不能。这只证明交替更新没有把该目标推高。运行可能停在依赖初值的 fixed point，也可能因容差或迭代上限提前停止。
 
+<!-- visual-lab:links:start -->
+## 交互理解
+
+- [[07_Programme/可视化实验室/实验/kmeans|K-means 的分配与中心更新]]
+<!-- visual-lab:links:end -->
+
 ## 来源与核验
 
 - [scikit-learn, K-means](https://scikit-learn.org/stable/modules/clustering.html#k-means)：核对交替更新、局部最小与初值依赖。

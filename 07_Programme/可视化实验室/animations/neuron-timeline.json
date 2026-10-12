@@ -1,0 +1,56 @@
+{
+  "id": "neuron",
+  "duration": 33.366666666666966,
+  "chapters": [
+    {
+      "title": "神经元先把贡献加起来",
+      "en": "Inputs make weighted contributions.",
+      "start": 0.0
+    },
+    {
+      "title": "再把加权和，送进非线性函数",
+      "en": "The sigmoid turns a score into a probability.",
+      "start": 15.4
+    },
+    {
+      "title": "一个权重控制一条局部影响路径",
+      "en": "A local derivative follows the weighted path.",
+      "start": 24.4
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "inputs",
+      "time": 2.85
+    },
+    {
+      "name": "three-contributions",
+      "time": 10.95
+    },
+    {
+      "name": "sum",
+      "time": 15.25
+    },
+    {
+      "name": "sigmoid-mapping",
+      "time": 23.683
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 30.217
+    },
+    {
+      "name": "closing",
+      "time": 33.217
+    }
+  ],
+  "params": {
+    "w1": 1,
+    "w2": -1,
+    "bias": 0,
+    "x1": 1,
+    "x2": 0.5
+  },
+  "method": "object-narrative",
+  "layout": []
+}

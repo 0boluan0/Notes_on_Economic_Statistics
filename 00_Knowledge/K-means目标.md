@@ -66,6 +66,12 @@ $$
 >
 > **答案：** 平方和分解显示，任何偏离簇均值的中心都会额外增加 $|C_k|\lVert m-\bar x_k\rVert^2$。均值无需是实际样本；若中心必须取自样本，问题会变成 medoid 类目标，而不是标准 K-means。
 
+<!-- visual-lab:links:start -->
+## 交互理解
+
+- [[07_Programme/可视化实验室/实验/kmeans|K-means 的分配与中心更新]]
+<!-- visual-lab:links:end -->
+
 ## 来源与核验
 
 - [scikit-learn, K-means](https://scikit-learn.org/stable/modules/clustering.html#k-means)：核对 inertia/WCSS、簇均值中心、最近中心分配、Voronoi 解释及凸、各向同性偏好。

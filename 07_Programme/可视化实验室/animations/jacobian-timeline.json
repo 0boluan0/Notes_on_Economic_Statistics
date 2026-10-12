@@ -1,0 +1,56 @@
+{
+  "id": "jacobian",
+  "duration": 34.76666666666698,
+  "chapters": [
+    {
+      "title": "非线性地图，在一点附近像什么？",
+      "en": "A nonlinear map has a local linear action.",
+      "start": 0.0
+    },
+    {
+      "title": "小网格的真实弯曲，与线性预测对照",
+      "en": "Compare the actual curved grid with its tangent grid.",
+      "start": 14.0
+    },
+    {
+      "title": "缩小邻域，才能检验局部近似",
+      "en": "Shrink the neighborhood to test a local approximation.",
+      "start": 25.8
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "fixed-centers",
+      "time": 2.85
+    },
+    {
+      "name": "column-0",
+      "time": 8.35
+    },
+    {
+      "name": "column-1",
+      "time": 13.85
+    },
+    {
+      "name": "curved-versus-linear",
+      "time": 25.083
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 31.617
+    },
+    {
+      "name": "closing",
+      "time": 34.617
+    }
+  ],
+  "params": {
+    "alpha": 0.8,
+    "beta": 0.4,
+    "x": 0.5,
+    "y": 0.5,
+    "radius": 0.5
+  },
+  "method": "object-narrative",
+  "layout": []
+}

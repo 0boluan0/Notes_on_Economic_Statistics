@@ -1,0 +1,64 @@
+{
+  "id": "diffusion",
+  "duration": 40.333333333333506,
+  "chapters": [
+    {
+      "title": "信号与噪声，先分别缩放再相加",
+      "en": "Scale signal and noise before adding them.",
+      "start": 0.0
+    },
+    {
+      "title": "看到 xₜ 后，反过来推断可能的 x₀",
+      "en": "Condition on the noisy observation to infer the clean variable.",
+      "start": 9.5
+    },
+    {
+      "title": "去噪估计，不是恢复唯一真值",
+      "en": "A denoised estimate does not determine a unique original.",
+      "start": 25.133
+    },
+    {
+      "title": "这个精确小模型解释去噪的条件推断",
+      "en": "This exact toy model isolates conditional denoising.",
+      "start": 31.367
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "signal-and-noise",
+      "time": 3.85
+    },
+    {
+      "name": "one-noisy-observation",
+      "time": 9.35
+    },
+    {
+      "name": "prior-clean-distribution",
+      "time": 17.283
+    },
+    {
+      "name": "posterior-clean-distribution",
+      "time": 24.983
+    },
+    {
+      "name": "remaining-uncertainty",
+      "time": 30.65
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 37.183
+    },
+    {
+      "name": "closing",
+      "time": 40.183
+    }
+  ],
+  "params": {
+    "alpha": 0.5,
+    "mu": 2,
+    "sigma": 1,
+    "observed": 1
+  },
+  "method": "object-narrative",
+  "layout": []
+}

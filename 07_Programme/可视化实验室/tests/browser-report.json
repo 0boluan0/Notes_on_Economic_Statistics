@@ -1,0 +1,370 @@
+{
+  "time": "2026-10-10T18:16:34.170Z",
+  "build": "cb37a70929c17bde5b236ddf3ddcd80c8fce14ef55febf3e575c01d3270573c9",
+  "checks": 7401,
+  "failures": [],
+  "errors": [],
+  "outcomes": [
+    {
+      "id": "tangent",
+      "plots": 2,
+      "controls": 3,
+      "presets": 3
+    },
+    {
+      "id": "linear",
+      "plots": 1,
+      "controls": 4,
+      "presets": 4
+    },
+    {
+      "id": "projection",
+      "plots": 1,
+      "controls": 3,
+      "presets": 3
+    },
+    {
+      "id": "gradient",
+      "plots": 2,
+      "controls": 5,
+      "presets": 4
+    },
+    {
+      "id": "sampling",
+      "plots": 2,
+      "controls": 4,
+      "presets": 3
+    },
+    {
+      "id": "confidence",
+      "plots": 1,
+      "controls": 5,
+      "presets": 3
+    },
+    {
+      "id": "testing",
+      "plots": 2,
+      "controls": 4,
+      "presets": 3
+    },
+    {
+      "id": "bayes",
+      "plots": 2,
+      "controls": 4,
+      "presets": 4
+    },
+    {
+      "id": "regression",
+      "plots": 3,
+      "controls": 5,
+      "presets": 4
+    },
+    {
+      "id": "overfit",
+      "plots": 2,
+      "controls": 5,
+      "presets": 4
+    },
+    {
+      "id": "pca",
+      "plots": 3,
+      "controls": 6,
+      "presets": 4
+    },
+    {
+      "id": "bootstrap",
+      "plots": 2,
+      "controls": 4,
+      "presets": 3
+    },
+    {
+      "id": "knn",
+      "plots": 2,
+      "controls": 7,
+      "presets": 4
+    },
+    {
+      "id": "logistic",
+      "plots": 2,
+      "controls": 5,
+      "presets": 4
+    },
+    {
+      "id": "svm",
+      "plots": 2,
+      "controls": 6,
+      "presets": 4
+    },
+    {
+      "id": "tree",
+      "plots": 2,
+      "controls": 6,
+      "presets": 4
+    },
+    {
+      "id": "ensemble",
+      "plots": 2,
+      "controls": 6,
+      "presets": 4
+    },
+    {
+      "id": "boosting",
+      "plots": 3,
+      "controls": 5,
+      "presets": 4
+    },
+    {
+      "id": "kmeans",
+      "plots": 2,
+      "controls": 5,
+      "presets": 4
+    },
+    {
+      "id": "gmm",
+      "plots": 3,
+      "controls": 6,
+      "presets": 4
+    },
+    {
+      "id": "kde",
+      "plots": 2,
+      "controls": 4,
+      "presets": 4
+    },
+    {
+      "id": "modelselection",
+      "plots": 2,
+      "controls": 5,
+      "presets": 4
+    },
+    {
+      "id": "metrics",
+      "plots": 3,
+      "controls": 5,
+      "presets": 4
+    },
+    {
+      "id": "likelihood",
+      "plots": 2,
+      "controls": 6,
+      "presets": 4
+    },
+    {
+      "id": "activations",
+      "plots": 2,
+      "controls": 4,
+      "presets": 4
+    },
+    {
+      "id": "neuron",
+      "plots": 2,
+      "controls": 5,
+      "presets": 4
+    },
+    {
+      "id": "mlp",
+      "plots": 3,
+      "controls": 5,
+      "presets": 4
+    },
+    {
+      "id": "backprop",
+      "plots": 3,
+      "controls": 5,
+      "presets": 4
+    },
+    {
+      "id": "initialization",
+      "plots": 3,
+      "controls": 5,
+      "presets": 4
+    },
+    {
+      "id": "optimizers",
+      "plots": 2,
+      "controls": 5,
+      "presets": 4
+    },
+    {
+      "id": "regularization",
+      "plots": 3,
+      "controls": 5,
+      "presets": 4
+    },
+    {
+      "id": "normalization",
+      "plots": 3,
+      "controls": 6,
+      "presets": 4
+    },
+    {
+      "id": "convolution",
+      "plots": 4,
+      "controls": 6,
+      "presets": 4
+    },
+    {
+      "id": "pooling",
+      "plots": 3,
+      "controls": 6,
+      "presets": 4
+    },
+    {
+      "id": "residual",
+      "plots": 2,
+      "controls": 4,
+      "presets": 4
+    },
+    {
+      "id": "attention",
+      "plots": 3,
+      "controls": 5,
+      "presets": 4
+    },
+    {
+      "id": "positional",
+      "plots": 3,
+      "controls": 4,
+      "presets": 4
+    },
+    {
+      "id": "gnn",
+      "plots": 2,
+      "controls": 5,
+      "presets": 4
+    },
+    {
+      "id": "embeddings",
+      "plots": 2,
+      "controls": 3,
+      "presets": 4
+    },
+    {
+      "id": "autoencoder",
+      "plots": 2,
+      "controls": 4,
+      "presets": 4
+    },
+    {
+      "id": "vae",
+      "plots": 2,
+      "controls": 6,
+      "presets": 4
+    },
+    {
+      "id": "gan",
+      "plots": 3,
+      "controls": 5,
+      "presets": 4
+    },
+    {
+      "id": "flow",
+      "plots": 3,
+      "controls": 4,
+      "presets": 4
+    },
+    {
+      "id": "diffusion",
+      "plots": 3,
+      "controls": 4,
+      "presets": 4
+    },
+    {
+      "id": "rl-bellman",
+      "plots": 3,
+      "controls": 4,
+      "presets": 4
+    },
+    {
+      "id": "rl-policy",
+      "plots": 3,
+      "controls": 6,
+      "presets": 4
+    },
+    {
+      "id": "double-descent",
+      "plots": 3,
+      "controls": 5,
+      "presets": 4
+    },
+    {
+      "id": "fairness",
+      "plots": 3,
+      "controls": 4,
+      "presets": 4
+    },
+    {
+      "id": "svd",
+      "plots": 3,
+      "controls": 6,
+      "presets": 4
+    },
+    {
+      "id": "biasvariance",
+      "plots": 3,
+      "controls": 7,
+      "presets": 4
+    },
+    {
+      "id": "kernel",
+      "plots": 3,
+      "controls": 7,
+      "presets": 4
+    },
+    {
+      "id": "entropy",
+      "plots": 2,
+      "controls": 5,
+      "presets": 4
+    },
+    {
+      "id": "softmax",
+      "plots": 3,
+      "controls": 6,
+      "presets": 4
+    },
+    {
+      "id": "calibration",
+      "plots": 3,
+      "controls": 5,
+      "presets": 4
+    },
+    {
+      "id": "rnn",
+      "plots": 3,
+      "controls": 7,
+      "presets": 4
+    },
+    {
+      "id": "lstm",
+      "plots": 3,
+      "controls": 7,
+      "presets": 4
+    },
+    {
+      "id": "contrastive",
+      "plots": 3,
+      "controls": 4,
+      "presets": 4
+    },
+    {
+      "id": "jacobian",
+      "plots": 3,
+      "controls": 5,
+      "presets": 4
+    },
+    {
+      "id": "uncertainty",
+      "plots": 3,
+      "controls": 6,
+      "presets": 4
+    },
+    {
+      "id": "causal",
+      "plots": 3,
+      "controls": 3,
+      "presets": 4
+    }
+  ],
+  "passed": true
+}

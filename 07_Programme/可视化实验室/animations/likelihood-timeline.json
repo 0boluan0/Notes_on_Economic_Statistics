@@ -1,0 +1,70 @@
+{
+  "id": "likelihood",
+  "duration": 39.63333333333357,
+  "chapters": [
+    {
+      "title": "数据已经固定，移动的是参数假设",
+      "en": "The data stay fixed while the candidate parameter varies.",
+      "start": 0.0
+    },
+    {
+      "title": "一个候选概率，给整份数据一个相对支持度",
+      "en": "A candidate probability assigns support to the whole dataset.",
+      "start": 4.0
+    },
+    {
+      "title": "最大似然选择最支持这份数据的参数",
+      "en": "Maximum likelihood selects the best-supported candidate.",
+      "start": 24.433
+    },
+    {
+      "title": "把概率看作数据的函数，和看作参数的函数，要分清",
+      "en": "Likelihood is a function of the parameter for fixed observations.",
+      "start": 30.667
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "fixed-outcomes",
+      "time": 3.85
+    },
+    {
+      "name": "likelihood-curve",
+      "time": 12.283
+    },
+    {
+      "name": "candidate-0.3",
+      "time": 15.983
+    },
+    {
+      "name": "candidate-0.5",
+      "time": 19.983
+    },
+    {
+      "name": "candidate-0.7",
+      "time": 23.983
+    },
+    {
+      "name": "maximum-likelihood",
+      "time": 29.95
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 36.483
+    },
+    {
+      "name": "closing",
+      "time": 39.483
+    }
+  ],
+  "params": {
+    "n": 40,
+    "observedRate": 0.7,
+    "candidateP": 0.5,
+    "candidateMu": 0,
+    "sigma": 1,
+    "seed": 42
+  },
+  "method": "object-narrative",
+  "layout": []
+}

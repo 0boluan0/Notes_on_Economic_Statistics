@@ -1,0 +1,84 @@
+{
+  "id": "boosting",
+  "duration": 44.6666666666669,
+  "chapters": [
+    {
+      "title": "第一轮先给每个输入同一个预测",
+      "en": "Begin with a constant prediction.",
+      "start": 0.0
+    },
+    {
+      "title": "下一棵小树，学习的是当前没解释的部分",
+      "en": "The next weak learner fits the current residuals.",
+      "start": 4.0
+    },
+    {
+      "title": "第 1 次修正：只加一小步",
+      "en": "Correction 1: add a shrunken residual fit.",
+      "start": 10.467
+    },
+    {
+      "title": "第 2 次修正：只加一小步",
+      "en": "Correction 2: add a shrunken residual fit.",
+      "start": 16.633
+    },
+    {
+      "title": "第 3 次修正：只加一小步",
+      "en": "Correction 3: add a shrunken residual fit.",
+      "start": 22.8
+    },
+    {
+      "title": "第 4 次修正：只加一小步",
+      "en": "Correction 4: add a shrunken residual fit.",
+      "start": 28.967
+    },
+    {
+      "title": "Boosting 保留旧模型，再累加新的修正",
+      "en": "Boosting preserves previous learners and adds corrections.",
+      "start": 35.7
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "constant-start",
+      "time": 3.85
+    },
+    {
+      "name": "current-residuals",
+      "time": 10.317
+    },
+    {
+      "name": "additive-update-0",
+      "time": 16.483
+    },
+    {
+      "name": "additive-update-1",
+      "time": 22.65
+    },
+    {
+      "name": "additive-update-2",
+      "time": 28.817
+    },
+    {
+      "name": "additive-update-3",
+      "time": 34.983
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 41.517
+    },
+    {
+      "name": "closing",
+      "time": 44.517
+    }
+  ],
+  "params": {
+    "steps": 12,
+    "rate": 0.2,
+    "n": 60,
+    "noise": 0.25,
+    "seed": 42
+  },
+  "method": "object-narrative",
+  "layout": []
+}

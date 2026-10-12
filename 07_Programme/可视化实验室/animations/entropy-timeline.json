@@ -1,0 +1,56 @@
+{
+  "id": "entropy",
+  "duration": 36.76666666666688,
+  "chapters": [
+    {
+      "title": "预测概率，决定遇到事件时付出多少损失",
+      "en": "A reported probability sets the surprise of an event.",
+      "start": 0.0
+    },
+    {
+      "title": "真正经常发生的事件，占更大的平均权重",
+      "en": "True event frequencies weight the average loss.",
+      "start": 11.7
+    },
+    {
+      "title": "真实不确定性，加上报告错误的代价",
+      "en": "Cross-entropy includes irreducible uncertainty and mismatch.",
+      "start": 27.8
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "reported-probabilities",
+      "time": 2.85
+    },
+    {
+      "name": "event-losses",
+      "time": 11.55
+    },
+    {
+      "name": "weighted-losses",
+      "time": 21.683
+    },
+    {
+      "name": "cross-entropy",
+      "time": 27.083
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 33.617
+    },
+    {
+      "name": "closing",
+      "time": 36.617
+    }
+  ],
+  "params": {
+    "p1": 0.5,
+    "p2": 0.6,
+    "q1": 0.3,
+    "q2": 0.5,
+    "unit": "nats"
+  },
+  "method": "object-narrative",
+  "layout": []
+}

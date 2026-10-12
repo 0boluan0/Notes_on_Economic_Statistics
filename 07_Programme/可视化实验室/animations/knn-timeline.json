@@ -1,0 +1,59 @@
+{
+  "id": "knn",
+  "duration": 32.566666666666876,
+  "chapters": [
+    {
+      "title": "一个新点，先找谁离它最近",
+      "en": "A new query first needs a neighborhood.",
+      "start": 0.0
+    },
+    {
+      "title": "按距离，选出同一批 K 个邻居",
+      "en": "Select the K nearest observations by distance.",
+      "start": 4.0
+    },
+    {
+      "title": "把邻居标签平均，得到局部正类比例",
+      "en": "Average the selected labels into a local class proportion.",
+      "start": 16.8
+    },
+    {
+      "title": "距离的定义，决定谁有投票权",
+      "en": "The distance metric determines who votes.",
+      "start": 23.6
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "query-and-data",
+      "time": 3.85
+    },
+    {
+      "name": "nearest-neighbor-votes",
+      "time": 16.65
+    },
+    {
+      "name": "local-proportion",
+      "time": 22.883
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 29.417
+    },
+    {
+      "name": "closing",
+      "time": 32.417
+    }
+  ],
+  "params": {
+    "n": 20,
+    "k": 5,
+    "scale": 1,
+    "noise": 0.1,
+    "qx": 0.5,
+    "qy": 0.3,
+    "seed": 42
+  },
+  "method": "object-narrative",
+  "layout": []
+}

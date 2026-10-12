@@ -1,0 +1,7 @@
+{
+  "name": "katex",
+  "version": "0.16.22",
+  "source": "https://registry.npmjs.org/katex/-/katex-0.16.22.tgz",
+  "integrity": "sha512-XCHRdUw4lf3SKBaJe4EvgqIuWwkPSo9XoeO8GjQW94Bp7TWv9hNhzZjZ+OH9yf1UmLygb7DIT5GSFQiyt16zYg==",
+  "license": "MIT"
+}

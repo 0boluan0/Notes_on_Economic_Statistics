@@ -74,6 +74,12 @@ $$
 This example fixes the affine parameters to isolate centering and scaling. Learned $\gamma,\beta$ subsequently adjust each output feature. In [[Transformer后归一化|original Transformer post-normalization]], LayerNorm receives the vector produced by [[残差连接|residual addition]] and computes along the same feature axis.
 <!-- bilingual-en:end -->
 
+<!-- visual-lab:links:start -->
+## 交互理解
+
+- [[07_Programme/可视化实验室/实验/normalization|BatchNorm与LayerNorm沿哪个轴统计]]
+<!-- visual-lab:links:end -->
+
 ## 来源与核验
 
 <!-- bilingual-en:start -->

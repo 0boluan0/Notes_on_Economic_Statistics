@@ -1,0 +1,59 @@
+{
+  "id": "projection",
+  "duration": 33.43333333333355,
+  "chapters": [
+    {
+      "title": "在一条直线上，找离向量最近的点",
+      "en": "Find the closest point on a one-dimensional subspace.",
+      "start": 0.0
+    },
+    {
+      "title": "最短残差，正好垂直于这条线",
+      "en": "At the minimum, the residual is orthogonal.",
+      "start": 11.0
+    },
+    {
+      "title": "把原向量分成两部分",
+      "en": "The vector is projection plus residual.",
+      "start": 18.233
+    },
+    {
+      "title": "垂直性，让平方长度可以相加",
+      "en": "Orthogonality gives the Pythagorean identity.",
+      "start": 24.467
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "vector-and-subspace",
+      "time": 3.85
+    },
+    {
+      "name": "closest-point",
+      "time": 10.85
+    },
+    {
+      "name": "perpendicular-residual",
+      "time": 17.517
+    },
+    {
+      "name": "decomposition",
+      "time": 23.75
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 30.283
+    },
+    {
+      "name": "closing",
+      "time": 33.283
+    }
+  ],
+  "params": {
+    "angle": 60,
+    "vx": 2,
+    "vy": 1
+  },
+  "method": "object-narrative",
+  "layout": []
+}

@@ -1,0 +1,67 @@
+{
+  "id": "rnn",
+  "duration": 44.53333333333346,
+  "chapters": [
+    {
+      "title": "把同一个单元，沿时间展开",
+      "en": "One recurrent cell is reused over time.",
+      "start": 0.0
+    },
+    {
+      "title": "旧输入的影响，要穿过后续每一步",
+      "en": "Sensitivity travels through every intervening step.",
+      "start": 17.3
+    },
+    {
+      "title": "共享参数，收到的是各次使用的总贡献",
+      "en": "A shared parameter receives a sum across its uses.",
+      "start": 23.833
+    },
+    {
+      "title": "前向递推，反向连乘，参数贡献相加",
+      "en": "Recurrence, products along paths, sums into shared parameters.",
+      "start": 35.567
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "initial-state",
+      "time": 1.85
+    },
+    {
+      "name": "unrolled-forward",
+      "time": 17.15
+    },
+    {
+      "name": "local-factors",
+      "time": 23.117
+    },
+    {
+      "name": "weight-contributions",
+      "time": 29.35
+    },
+    {
+      "name": "shared-gradient",
+      "time": 34.85
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 41.383
+    },
+    {
+      "name": "closing",
+      "time": 44.383
+    }
+  ],
+  "params": {
+    "weight": 0.8,
+    "inputWeight": 0.8,
+    "steps": 6,
+    "kind": "tanh",
+    "pattern": "pulse",
+    "initial": 0,
+    "target": 0.5
+  },
+  "method": "object-narrative",
+  "layout": []
+}

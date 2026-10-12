@@ -1,0 +1,60 @@
+{
+  "id": "testing",
+  "duration": 32.53333333333356,
+  "chapters": [
+    {
+      "title": "先假设零假设成立，再放入观测",
+      "en": "Locate the observation under the null model.",
+      "start": 0.0
+    },
+    {
+      "title": "两侧更极端的区域，加起来是 p 值",
+      "en": "A two-sided p-value counts both extreme tails.",
+      "start": 8.7
+    },
+    {
+      "title": "显著性阈值，先于这次数据规定",
+      "en": "The significance level specifies a rejection rule.",
+      "start": 16.767
+    },
+    {
+      "title": "p 值不是零假设为真的概率",
+      "en": "A p-value is not the probability that the null is true.",
+      "start": 23.567
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "null-distribution",
+      "time": 3.85
+    },
+    {
+      "name": "observed-statistic",
+      "time": 8.55
+    },
+    {
+      "name": "two-tail-probability",
+      "time": 16.617
+    },
+    {
+      "name": "p-versus-alpha",
+      "time": 22.85
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 29.383
+    },
+    {
+      "name": "closing",
+      "time": 32.383
+    }
+  ],
+  "params": {
+    "n": 30,
+    "effect": 0.5,
+    "alpha": 0.05,
+    "observed": 0.3
+  },
+  "method": "object-narrative",
+  "layout": []
+}

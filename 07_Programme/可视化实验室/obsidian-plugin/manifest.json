@@ -1,0 +1,9 @@
+{
+  "id": "visual-knowledge-lab",
+  "name": "Visual Knowledge Lab",
+  "version": "1.0.1",
+  "minAppVersion": "1.5.0",
+  "description": "Embed the vault's offline visual experiments in notes and a dedicated Obsidian view.",
+  "author": "Academic Vault",
+  "isDesktopOnly": false
+}

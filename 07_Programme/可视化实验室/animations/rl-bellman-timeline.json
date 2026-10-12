@@ -1,0 +1,72 @@
+{
+  "id": "rl-bellman",
+  "duration": 50.533333333333324,
+  "chapters": [
+    {
+      "title": "先把奖励与转移概率分开读",
+      "en": "Rewards and transition probabilities are different quantities.",
+      "start": 0.0
+    },
+    {
+      "title": "把后续价值折现，再回传到当前状态",
+      "en": "Discount future value before backing it up.",
+      "start": 9.4
+    },
+    {
+      "title": "每次都用上一轮的价值做下一轮更新",
+      "en": "Synchronous backups use the previous value vector.",
+      "start": 16.933
+    },
+    {
+      "title": "取最大值，才从评估走向最优控制",
+      "en": "The maximum chooses the best available action.",
+      "start": 41.567
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "mdp-options",
+      "time": 9.25
+    },
+    {
+      "name": "risky-backup",
+      "time": 16.783
+    },
+    {
+      "name": "backup-1",
+      "time": 23.117
+    },
+    {
+      "name": "backup-2",
+      "time": 27.483
+    },
+    {
+      "name": "backup-3",
+      "time": 31.85
+    },
+    {
+      "name": "backup-4",
+      "time": 36.217
+    },
+    {
+      "name": "backup-5",
+      "time": 40.583
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 47.383
+    },
+    {
+      "name": "closing",
+      "time": 50.383
+    }
+  ],
+  "params": {
+    "gamma": 0.9,
+    "success": 0.5,
+    "cost": -0.2,
+    "iterations": 12
+  },
+  "method": "object-narrative",
+  "layout": []
+}

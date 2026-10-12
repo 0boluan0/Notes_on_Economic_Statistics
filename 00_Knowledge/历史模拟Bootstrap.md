@@ -71,6 +71,12 @@ When history is dependent, iid row resampling destroys volatility clustering and
 - Interval validity still depends on the statistic and resampling design.
 <!-- bilingual-en:end -->
 
+<!-- visual-lab:links:start -->
+## 交互理解
+
+- [[07_Programme/可视化实验室/实验/bootstrap|Bootstrap 能告诉我们什么]]
+<!-- visual-lab:links:end -->
+
 ## 来源与核验
 
 - Efron, [*Bootstrap Methods: Another Look at the Jackknife*](https://doi.org/10.1214/aos/1176344552)：核对经验分布有放回重抽与抽样分布估计。

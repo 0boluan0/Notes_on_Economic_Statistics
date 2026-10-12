@@ -1,0 +1,62 @@
+{
+  "id": "pca",
+  "duration": 33.1666666666669,
+  "chapters": [
+    {
+      "title": "把点云压到一条线上，会丢掉什么？",
+      "en": "Project the centered cloud onto one direction.",
+      "start": 0.0
+    },
+    {
+      "title": "在线上的位置，只需要一个坐标",
+      "en": "A score is a coordinate along that direction.",
+      "start": 11.5
+    },
+    {
+      "title": "保留方差，也是在减少重建误差",
+      "en": "Retained variance and reconstruction error are complementary.",
+      "start": 17.167
+    },
+    {
+      "title": "尺度选择，会改变你认为重要的方向",
+      "en": "Feature scaling changes the PCA problem.",
+      "start": 24.2
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "centered-cloud",
+      "time": 3.85
+    },
+    {
+      "name": "each-point-projects",
+      "time": 11.35
+    },
+    {
+      "name": "score",
+      "time": 17.017
+    },
+    {
+      "name": "retained-variation",
+      "time": 23.483
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 30.017
+    },
+    {
+      "name": "closing",
+      "time": 33.017
+    }
+  ],
+  "params": {
+    "angle": 35,
+    "ratio": 4,
+    "scale": 1,
+    "n": 40,
+    "standardize": 0,
+    "seed": 42
+  },
+  "method": "object-narrative",
+  "layout": []
+}

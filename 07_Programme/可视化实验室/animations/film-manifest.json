@@ -1,0 +1,4309 @@
+{
+  "tangent": {
+    "title": "割线如何变成切线",
+    "en": "Derivatives & finite differences",
+    "method": "object-narrative",
+    "params": {
+      "x": 1,
+      "h": 0.5,
+      "function": "cubic"
+    },
+    "chapters": [
+      {
+        "title": "斜率从两个点开始",
+        "en": "A secant measures change between two points.",
+        "start": 0
+      },
+      {
+        "title": "横向间隔变小，平均变化率怎样变？",
+        "en": "Shrink the interval while keeping the first point fixed.",
+        "start": 6.2
+      },
+      {
+        "title": "导数是局部线性近似的系数",
+        "en": "The derivative is the coefficient of a local linear approximation.",
+        "start": 27.433
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "two-points",
+        "time": 6.05
+      },
+      {
+        "name": "h-0.5",
+        "time": 11.717
+      },
+      {
+        "name": "h-0.2",
+        "time": 16.717
+      },
+      {
+        "name": "h-0.05",
+        "time": 21.717
+      },
+      {
+        "name": "limiting-direction",
+        "time": 26.717
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 33.25
+      },
+      {
+        "name": "closing",
+        "time": 36.25
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · Calculus Volume 1",
+        "url": "https://openstax.org/books/calculus-volume-1/pages/3-1-defining-the-derivative",
+        "section": "§3.1 Tangent Lines; The Derivative of a Function at a Point",
+        "support": "差商、导数极限和切线；本实验的三次函数误差式为直接代数推导。"
+      }
+    ]
+  },
+  "linear": {
+    "title": "矩阵怎样改变空间",
+    "en": "Linear maps & signed area",
+    "method": "object-narrative",
+    "params": {
+      "a": 1.2,
+      "b": 0.8,
+      "c": 0.4,
+      "d": 1
+    },
+    "chapters": [
+      {
+        "title": "先问两个基向量去了哪里",
+        "en": "Two basis vectors determine the linear map.",
+        "start": 0
+      },
+      {
+        "title": "同样的线性组合，也决定其他点的去向",
+        "en": "The same coefficients combine the transformed basis.",
+        "start": 12
+      },
+      {
+        "title": "一个单位方格，变成一个平行四边形",
+        "en": "The unit square becomes a parallelogram.",
+        "start": 19.367
+      },
+      {
+        "title": "矩阵不是一张孤立的数字表",
+        "en": "Columns specify actions on directions.",
+        "start": 27.6
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "basis-before",
+        "time": 2.85
+      },
+      {
+        "name": "first-column",
+        "time": 7.35
+      },
+      {
+        "name": "second-column",
+        "time": 11.85
+      },
+      {
+        "name": "sum-of-images",
+        "time": 19.217
+      },
+      {
+        "name": "area-transformed",
+        "time": 26.883
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 33.417
+      },
+      {
+        "name": "closing",
+        "time": 36.417
+      }
+    ],
+    "sources": [
+      {
+        "label": "Georgia Tech · Interactive Linear Algebra",
+        "url": "https://textbooks.math.gatech.edu/ila/determinants-volumes.html",
+        "section": "§4.3 Determinants and Volumes",
+        "support": "行列式绝对值给出面积缩放；二维公式的符号记录有向面积。"
+      }
+    ]
+  },
+  "projection": {
+    "title": "投影、残差与最短距离",
+    "en": "Orthogonal projection & residuals",
+    "method": "object-narrative",
+    "params": {
+      "angle": 60,
+      "vx": 2,
+      "vy": 1
+    },
+    "chapters": [
+      {
+        "title": "在一条直线上，找离向量最近的点",
+        "en": "Find the closest point on a one-dimensional subspace.",
+        "start": 0
+      },
+      {
+        "title": "最短残差，正好垂直于这条线",
+        "en": "At the minimum, the residual is orthogonal.",
+        "start": 11
+      },
+      {
+        "title": "把原向量分成两部分",
+        "en": "The vector is projection plus residual.",
+        "start": 18.233
+      },
+      {
+        "title": "垂直性，让平方长度可以相加",
+        "en": "Orthogonality gives the Pythagorean identity.",
+        "start": 24.467
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "vector-and-subspace",
+        "time": 3.85
+      },
+      {
+        "name": "closest-point",
+        "time": 10.85
+      },
+      {
+        "name": "perpendicular-residual",
+        "time": 17.517
+      },
+      {
+        "name": "decomposition",
+        "time": 23.75
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 30.283
+      },
+      {
+        "name": "closing",
+        "time": 33.283
+      }
+    ],
+    "sources": [
+      {
+        "label": "Georgia Tech · Interactive Linear Algebra",
+        "url": "https://textbooks.math.gatech.edu/ila/projections.html",
+        "section": "§6.3.1 Orthogonal Decomposition; Recipe: Orthogonal projection onto a line",
+        "support": "正交分解、最近点及投影公式；勾股恒等式由正交性展开。"
+      }
+    ]
+  },
+  "gradient": {
+    "title": "梯度下降何时收敛",
+    "en": "Gradient descent & conditioning",
+    "method": "object-narrative",
+    "params": {
+      "rate": 0.2,
+      "condition": 4,
+      "steps": 12,
+      "x0": 3,
+      "y0": 2
+    },
+    "chapters": [
+      {
+        "title": "梯度给方向，步长给距离",
+        "en": "The gradient gives a direction; the step size gives distance.",
+        "start": 0
+      },
+      {
+        "title": "再算梯度，再迈下一步",
+        "en": "Recompute the gradient at every new point.",
+        "start": 11.5
+      },
+      {
+        "title": "陡峭方向，对步长更敏感",
+        "en": "The steep direction sets the stability limit.",
+        "start": 26.933
+      },
+      {
+        "title": "步子更大，不一定更快",
+        "en": "A larger step can oscillate or diverge.",
+        "start": 33.167
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "initial-point",
+        "time": 2.85
+      },
+      {
+        "name": "negative-gradient-step",
+        "time": 7.15
+      },
+      {
+        "name": "first-update",
+        "time": 11.35
+      },
+      {
+        "name": "descent-path",
+        "time": 26.217
+      },
+      {
+        "name": "two-factors",
+        "time": 32.45
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 38.983
+      },
+      {
+        "name": "closing",
+        "time": 41.983
+      }
+    ],
+    "sources": [
+      {
+        "label": "MIT · Foundations of Computer Vision",
+        "url": "https://visionbook.mit.edu/gradient_descent.html",
+        "section": "§10.3 Basic Gradient Descent; §10.4 Learning Rate Schedules",
+        "support": "梯度迭代和学习率作用；本实验严格稳定界由二次函数递推自行推导，不外推到任意损失。"
+      }
+    ]
+  },
+  "sampling": {
+    "title": "抽样均值、大数与中心极限定理",
+    "en": "Sampling means, LLN & CLT",
+    "method": "object-narrative",
+    "params": {
+      "n": 8,
+      "reps": 500,
+      "distribution": "exponential",
+      "seed": 42
+    },
+    "chapters": [
+      {
+        "title": "八个观测，只产生一个样本均值",
+        "en": "Eight observations produce one sample mean.",
+        "start": 0
+      },
+      {
+        "title": "换一整份样本，才得到下一个均值",
+        "en": "A new sample gives the next sample mean.",
+        "start": 9.5
+      },
+      {
+        "title": "很多个均值，才形成抽样分布",
+        "en": "The distribution is built from repeated sample means.",
+        "start": 31.733
+      },
+      {
+        "title": "n 控制每个均值，B 控制模拟精细度",
+        "en": "Sample size and repetition count play different roles.",
+        "start": 42.533
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "one-sample",
+        "time": 3.85
+      },
+      {
+        "name": "one-mean",
+        "time": 9.35
+      },
+      {
+        "name": "five-independent-means",
+        "time": 31.583
+      },
+      {
+        "name": "mean-distribution",
+        "time": 41.817
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 48.35
+      },
+      {
+        "name": "closing",
+        "time": 51.35
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · Introductory Statistics 2e",
+        "url": "https://openstax.org/books/introductory-statistics-2e/pages/7-1-the-central-limit-theorem-for-sample-means-averages",
+        "section": "§7.1 The Central Limit Theorem for Sample Means",
+        "support": "样本均值的抽样分布与标准误；实验补足 IID 与有限方差条件，正态总体的结果为精确分布。"
+      },
+      {
+        "label": "Rick Durrett · Probability: Theory and Examples, 5th ed.",
+        "url": "https://math.duke.edu/~rtd/PTE/PTE5_011119.pdf",
+        "section": "Theorem 2.2.14, printed p.64 (PDF p.72); Theorem 3.4.1, printed p.144 (PDF p.152)",
+        "support": "IID 且一阶绝对矩有限的弱大数定律；IID 且正有限方差的标准化 CLT。"
+      },
+      {
+        "label": "NIST/SEMATECH · Cauchy Distribution",
+        "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda3663.htm",
+        "section": "§1.3.6.6.3; Common Statistics",
+        "support": "标准柯西的均值、标准差未定义；对称中心不是期望。"
+      }
+    ]
+  },
+  "confidence": {
+    "title": "置信区间的覆盖率",
+    "en": "Confidence intervals & coverage",
+    "method": "object-narrative",
+    "params": {
+      "n": 25,
+      "level": 0.95,
+      "reps": 30,
+      "sigma": 1,
+      "seed": 7
+    },
+    "chapters": [
+      {
+        "title": "先抽样，才有一个会变的区间",
+        "en": "A random sample produces a random interval.",
+        "start": 0
+      },
+      {
+        "title": "重复整个抽样过程，再看覆盖频率",
+        "en": "Repeat sampling to assess the interval procedure.",
+        "start": 10.4
+      },
+      {
+        "title": "95% 描述的是这种造区间的方法",
+        "en": "Coverage is a property of the procedure.",
+        "start": 29.2
+      },
+      {
+        "title": "固定参数，随机区间",
+        "en": "A fixed parameter and a random interval.",
+        "start": 35.433
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "fixed-parameter",
+        "time": 3.55
+      },
+      {
+        "name": "one-interval",
+        "time": 10.25
+      },
+      {
+        "name": "intervals-1",
+        "time": 14.683
+      },
+      {
+        "name": "intervals-5",
+        "time": 17.483
+      },
+      {
+        "name": "intervals-15",
+        "time": 21.483
+      },
+      {
+        "name": "all-intervals",
+        "time": 28.483
+      },
+      {
+        "name": "coverage-count",
+        "time": 34.717
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 41.25
+      },
+      {
+        "name": "closing",
+        "time": 44.25
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · Introductory Statistics 2e",
+        "url": "https://openstax.org/books/introductory-statistics-2e/pages/8-1-a-single-population-mean-using-the-normal-distribution",
+        "section": "§8.1; known population standard deviation and error bound",
+        "support": "已知总体标准差的 z 区间与宽度；本实验额外固定正态总体以保证有限样本精确覆盖。"
+      },
+      {
+        "label": "NIST/SEMATECH · Confidence Limits for the Mean",
+        "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda352.htm",
+        "section": "§1.3.5.2; Purpose and confidence interpretation",
+        "support": "置信水平属于重复构造区间的方法；该页主要 t 区间公式不作为本实验 z 公式来源。"
+      }
+    ]
+  },
+  "testing": {
+    "title": "检验、p 值与统计功效",
+    "en": "Two-sided z tests & power",
+    "method": "object-narrative",
+    "params": {
+      "n": 30,
+      "effect": 0.5,
+      "alpha": 0.05,
+      "observed": 0.3
+    },
+    "chapters": [
+      {
+        "title": "先假设零假设成立，再放入观测",
+        "en": "Locate the observation under the null model.",
+        "start": 0
+      },
+      {
+        "title": "两侧更极端的区域，加起来是 p 值",
+        "en": "A two-sided p-value counts both extreme tails.",
+        "start": 8.7
+      },
+      {
+        "title": "显著性阈值，先于这次数据规定",
+        "en": "The significance level specifies a rejection rule.",
+        "start": 16.767
+      },
+      {
+        "title": "p 值不是零假设为真的概率",
+        "en": "A p-value is not the probability that the null is true.",
+        "start": 23.567
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "null-distribution",
+        "time": 3.85
+      },
+      {
+        "name": "observed-statistic",
+        "time": 8.55
+      },
+      {
+        "name": "two-tail-probability",
+        "time": 16.617
+      },
+      {
+        "name": "p-versus-alpha",
+        "time": 22.85
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 29.383
+      },
+      {
+        "name": "closing",
+        "time": 32.383
+      }
+    ],
+    "sources": [
+      {
+        "label": "NIST/SEMATECH · Test of a Process Mean",
+        "url": "https://www.itl.nist.gov/div898/handbook/prc/section2/prc22.htm",
+        "section": "§7.2.2; test statistic and rejection region",
+        "support": "已知标准差时的 z 统计量与双侧拒绝域。"
+      },
+      {
+        "label": "NIST/SEMATECH · Critical Values and p Values",
+        "url": "https://www.itl.nist.gov/div898/handbook/prc/section1/prc131.htm",
+        "section": "§7.1.3.1 Critical values and p values",
+        "support": "p 值是在零假设与参考分布下的尾概率，和预先指定显著性水平比较。"
+      },
+      {
+        "label": "NIST/SEMATECH · Sample Sizes Required",
+        "url": "https://www.itl.nist.gov/div898/handbook/prc/section2/prc222.htm",
+        "section": "§7.2.2.2; Type II error and power",
+        "support": "功效取决于指定备择效应与样本量；本实验双侧精确功效由正态尾概率自行计算。"
+      }
+    ]
+  },
+  "bayes": {
+    "title": "先验与数据怎样形成后验",
+    "en": "Beta–Binomial updating",
+    "method": "object-narrative",
+    "params": {
+      "a": 2,
+      "b": 2,
+      "success": 3,
+      "failure": 1
+    },
+    "chapters": [
+      {
+        "title": "先验是更新之前的分布",
+        "en": "A prior describes uncertainty before these observations.",
+        "start": 0
+      },
+      {
+        "title": "每个新观测，贡献一个似然因子",
+        "en": "Each observation contributes a likelihood factor.",
+        "start": 4.7
+      },
+      {
+        "title": "相乘后，再归一化成新的分布",
+        "en": "Multiply prior and likelihood, then normalize.",
+        "start": 21.5
+      },
+      {
+        "title": "后验，仍然表达不确定性",
+        "en": "Updating changes uncertainty; it does not eliminate it.",
+        "start": 39.867
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "prior",
+        "time": 4.55
+      },
+      {
+        "name": "likelihood-factors",
+        "time": 17.05
+      },
+      {
+        "name": "combined-likelihood",
+        "time": 21.35
+      },
+      {
+        "name": "posterior-update",
+        "time": 29.783
+      },
+      {
+        "name": "updated-distribution",
+        "time": 39.15
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 45.683
+      },
+      {
+        "name": "closing",
+        "time": 48.683
+      }
+    ],
+    "sources": [
+      {
+        "label": "Holmes & Huber · Modern Statistics for Modern Biology",
+        "url": "https://web.stanford.edu/class/bios221/book/02-chap.html",
+        "section": "§2.9.3–2.9.6; especially §2.9.5 The posterior distribution is also a Beta",
+        "support": "Beta 先验与二项数据更新；先验参数加成功/失败次数，允许顺序更新。"
+      },
+      {
+        "label": "NIST/SEMATECH · Beta Distribution",
+        "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda366h.htm",
+        "section": "§1.3.6.6.17; density, CDF, percent point function, mean",
+        "support": "Beta 密度和均值；分位数需数值求逆，实验区间为中央等尾区间。"
+      }
+    ]
+  },
+  "regression": {
+    "title": "共线性与岭回归",
+    "en": "Multicollinearity & ridge regression",
+    "method": "object-narrative",
+    "params": {
+      "rho": 0.8,
+      "lambda": 0,
+      "n": 60,
+      "noise": 0.7,
+      "seed": 42
+    },
+    "chapters": [
+      {
+        "title": "线性预测，是几项贡献相加",
+        "en": "A linear prediction adds feature contributions.",
+        "start": 0
+      },
+      {
+        "title": "残差连接预测与真实观测",
+        "en": "A residual connects a prediction to the observed response.",
+        "start": 9.5
+      },
+      {
+        "title": "拟合目标，把所有残差平方汇总",
+        "en": "The fitting objective aggregates squared residuals.",
+        "start": 22.667
+      },
+      {
+        "title": "预测稳定，不代表每个系数都稳定",
+        "en": "Correlated predictors can destabilize individual coefficients.",
+        "start": 30.467
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "weighted-contributions",
+        "time": 3.85
+      },
+      {
+        "name": "one-prediction",
+        "time": 9.35
+      },
+      {
+        "name": "residuals",
+        "time": 22.517
+      },
+      {
+        "name": "least-squares-objective",
+        "time": 29.75
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 36.283
+      },
+      {
+        "name": "closing",
+        "time": 39.283
+      }
+    ],
+    "sources": [
+      {
+        "label": "Georgia Tech · Interactive Linear Algebra",
+        "url": "https://textbooks.math.gatech.edu/ila/least-squares.html",
+        "section": "§6.5.1 Least-Squares Solutions",
+        "support": "最小二乘与正交投影、正规方程、系数解唯一性的满列秩条件。"
+      },
+      {
+        "label": "Ryan Tibshirani · CMU Modern Regression 1",
+        "url": "https://stat.cmu.edu/~ryantibs/datamining/lectures/16-modr1.pdf",
+        "section": "slides 3–8; Important details (slide 7)",
+        "support": "岭回归的平方和目标、闭式解、标准化和不惩罚截距；方差讨论属于重复样本层面。"
+      }
+    ]
+  },
+  "overfit": {
+    "title": "模型复杂度与泛化",
+    "en": "Polynomial fitting & generalization",
+    "method": "object-narrative",
+    "params": {
+      "degree": 5,
+      "n": 20,
+      "noise": 0.25,
+      "lambda": 0.001,
+      "seed": 42
+    },
+    "chapters": [
+      {
+        "title": "模型首先看见的是这批训练点",
+        "en": "The fit is chosen using these training observations.",
+        "start": 0
+      },
+      {
+        "title": "把没参与拟合的数据放进来",
+        "en": "Now reveal observations the fit did not use.",
+        "start": 10.5
+      },
+      {
+        "title": "复杂度变化，用两条误差曲线一起判断",
+        "en": "Track training and validation error across model complexity.",
+        "start": 16.967
+      },
+      {
+        "title": "拟合能力，是可以使用也可以误用的自由度",
+        "en": "Flexibility must be assessed using independent evidence.",
+        "start": 29.467
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "training-data",
+        "time": 3.85
+      },
+      {
+        "name": "fitted-to-training",
+        "time": 10.35
+      },
+      {
+        "name": "held-out-data",
+        "time": 16.817
+      },
+      {
+        "name": "complexity-errors",
+        "time": 28.75
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 35.283
+      },
+      {
+        "name": "closing",
+        "time": 38.283
+      }
+    ],
+    "sources": [
+      {
+        "label": "Cosma Shalizi · CMU Optimism and Over-Fitting",
+        "url": "https://www.stat.cmu.edu/~cshalizi/sml/21/lectures/04/lecture-04.html",
+        "section": "Lecture 4; Estimating the true risk; The moral: approximation-estimation trade-off",
+        "support": "训练误差的乐观性、嵌套模型类训练误差不增，以及逼近误差与估计误差的交换。"
+      },
+      {
+        "label": "Ryan Tibshirani · CMU Modern Regression 1",
+        "url": "https://stat.cmu.edu/~ryantibs/datamining/lectures/16-modr1.pdf",
+        "section": "slides 3–8; Important details (slide 7)",
+        "support": "岭回归的平方和目标、闭式解、标准化和不惩罚截距；方差讨论属于重复样本层面。"
+      },
+      {
+        "label": "Cawley & Talbot · JMLR 11 (2010)",
+        "url": "https://jmlr.csail.mit.edu/papers/volume11/cawley10a/cawley10a.pdf",
+        "section": "Abstract; §5.1 An Unbiased Performance Evaluation Methodology; §5.3 Another Example of Biased Evaluation Methodology",
+        "support": "对有限样本的模型选择准则也会过拟合；评估需隔离选择过程。"
+      }
+    ]
+  },
+  "pca": {
+    "title": "PCA、尺度与重构",
+    "en": "PCA, scaling & reconstruction",
+    "method": "object-narrative",
+    "params": {
+      "angle": 35,
+      "ratio": 4,
+      "scale": 1,
+      "n": 40,
+      "standardize": 0,
+      "seed": 42
+    },
+    "chapters": [
+      {
+        "title": "把点云压到一条线上，会丢掉什么？",
+        "en": "Project the centered cloud onto one direction.",
+        "start": 0
+      },
+      {
+        "title": "在线上的位置，只需要一个坐标",
+        "en": "A score is a coordinate along that direction.",
+        "start": 11.5
+      },
+      {
+        "title": "保留方差，也是在减少重建误差",
+        "en": "Retained variance and reconstruction error are complementary.",
+        "start": 17.167
+      },
+      {
+        "title": "尺度选择，会改变你认为重要的方向",
+        "en": "Feature scaling changes the PCA problem.",
+        "start": 24.2
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "centered-cloud",
+        "time": 3.85
+      },
+      {
+        "name": "each-point-projects",
+        "time": 11.35
+      },
+      {
+        "name": "score",
+        "time": 17.017
+      },
+      {
+        "name": "retained-variation",
+        "time": 23.483
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 30.017
+      },
+      {
+        "name": "closing",
+        "time": 33.017
+      }
+    ],
+    "sources": [
+      {
+        "label": "Cosma Shalizi · CMU Principal Components Analysis",
+        "url": "https://stat.cmu.edu/~cshalizi/dm/19/lectures/05/lecture-05.html",
+        "section": "Lecture 5; Finding the principal component; Low-rank approximation; Backup: Gory details",
+        "support": "最大投影方差、最小重构误差和特征向量；本实验用样本协方差 n−1 约定。"
+      },
+      {
+        "label": "NIST/SEMATECH · Properties of Principal Components",
+        "url": "https://www.itl.nist.gov/div898/handbook/pmc/section5/pmc551.htm",
+        "section": "§6.5.5.1; Roadmap to solve the V matrix",
+        "support": "标准化数据的协方差对应相关矩阵，特征分解给出方向和解释方差。"
+      }
+    ]
+  },
+  "knn": {
+    "title": "最近邻如何决定分类",
+    "en": "KNN, local votes & distance",
+    "method": "object-narrative",
+    "params": {
+      "n": 20,
+      "k": 5,
+      "scale": 1,
+      "noise": 0.1,
+      "qx": 0.5,
+      "qy": 0.3,
+      "seed": 42
+    },
+    "chapters": [
+      {
+        "title": "一个新点，先找谁离它最近",
+        "en": "A new query first needs a neighborhood.",
+        "start": 0
+      },
+      {
+        "title": "按距离，选出同一批 K 个邻居",
+        "en": "Select the K nearest observations by distance.",
+        "start": 4
+      },
+      {
+        "title": "把邻居标签平均，得到局部正类比例",
+        "en": "Average the selected labels into a local class proportion.",
+        "start": 16.8
+      },
+      {
+        "title": "距离的定义，决定谁有投票权",
+        "en": "The distance metric determines who votes.",
+        "start": 23.6
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "query-and-data",
+        "time": 3.85
+      },
+      {
+        "name": "nearest-neighbor-votes",
+        "time": 16.65
+      },
+      {
+        "name": "local-proportion",
+        "time": 22.883
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 29.417
+      },
+      {
+        "name": "closing",
+        "time": 32.417
+      }
+    ],
+    "sources": [
+      {
+        "label": "scikit-learn · Nearest Neighbors",
+        "url": "https://scikit-learn.org/stable/modules/neighbors.html",
+        "section": "§1.6.2 Nearest Neighbors Classification; §1.6.1 tie warning",
+        "support": "近邻多数投票、距离选择与等距边界；本项目独立实现穷举距离计算。"
+      }
+    ]
+  },
+  "logistic": {
+    "title": "概率、阈值与交叉熵",
+    "en": "Logistic probabilities & decisions",
+    "method": "object-narrative",
+    "params": {
+      "weight": 2,
+      "intercept": 0,
+      "threshold": 0.5,
+      "n": 80,
+      "seed": 42
+    },
+    "chapters": [
+      {
+        "title": "先产生概率，再决定类别",
+        "en": "A probability model and a decision rule are separate.",
+        "start": 0
+      },
+      {
+        "title": "阈值只是把概率切成两边",
+        "en": "The threshold splits probabilities into decisions.",
+        "start": 11.6
+      },
+      {
+        "title": "训练看概率是否支持真实标签",
+        "en": "Log loss evaluates probability assigned to the observed label.",
+        "start": 25.333
+      },
+      {
+        "title": "分数、概率、决策，是三层不同对象",
+        "en": "Score, probability and decision are distinct objects.",
+        "start": 32.133
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "input",
+        "time": 1.85
+      },
+      {
+        "name": "probability-before-label",
+        "time": 11.45
+      },
+      {
+        "name": "threshold-half",
+        "time": 19.383
+      },
+      {
+        "name": "threshold-eight-tenths",
+        "time": 25.183
+      },
+      {
+        "name": "label-likelihood",
+        "time": 31.417
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 37.95
+      },
+      {
+        "name": "closing",
+        "time": 40.95
+      }
+    ],
+    "sources": [
+      {
+        "label": "scikit-learn · Logistic Regression",
+        "url": "https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression",
+        "section": "§1.1.11.1 Binary Case",
+        "support": "sigmoid 条件概率与二元负对数似然；本页探索手动参数，不使用文档软件求解器。"
+      }
+    ]
+  },
+  "svm": {
+    "title": "软间隔与 hinge 损失",
+    "en": "Linear margins & hinge loss",
+    "method": "object-narrative",
+    "params": {
+      "angle": 0,
+      "norm": 1,
+      "offset": 0,
+      "C": 1,
+      "noise": 0.5,
+      "seed": 42
+    },
+    "chapters": [
+      {
+        "title": "分类边界之外，还要看离边界多远",
+        "en": "A separator also defines a margin.",
+        "start": 0
+      },
+      {
+        "title": "把真实类别乘进去，正确一侧才是正",
+        "en": "A signed margin includes the true class label.",
+        "start": 6
+      },
+      {
+        "title": "大间隔与违例代价，需要一起权衡",
+        "en": "The objective trades margin width against violations.",
+        "start": 19.533
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "separator-and-margins",
+        "time": 5.85
+      },
+      {
+        "name": "margin-case-9",
+        "time": 10.517
+      },
+      {
+        "name": "margin-case-38",
+        "time": 14.517
+      },
+      {
+        "name": "margin-case-37",
+        "time": 18.517
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 25.35
+      },
+      {
+        "name": "closing",
+        "time": 28.35
+      }
+    ],
+    "sources": [
+      {
+        "label": "scikit-learn · Support Vector Machines",
+        "url": "https://scikit-learn.org/stable/modules/svm.html",
+        "section": "§1.4.7.1 Mathematical formulation; LinearSVC primal form",
+        "support": "½‖w‖²+C∑max(0,1−y f) 的线性软间隔目标；最优性与支持向量需另行求解。"
+      }
+    ]
+  },
+  "tree": {
+    "title": "决策树怎样划分空间",
+    "en": "Greedy CART partitions",
+    "method": "object-narrative",
+    "params": {
+      "dataset": "axis",
+      "depth": 2,
+      "minleaf": 4,
+      "n": 40,
+      "noise": 0.1,
+      "seed": 42
+    },
+    "chapters": [
+      {
+        "title": "一棵树，先问一个能分开样本的问题",
+        "en": "A tree begins with one axis-aligned question.",
+        "start": 0
+      },
+      {
+        "title": "根节点先切一刀",
+        "en": "Split the root.",
+        "start": 4
+      },
+      {
+        "title": "只在自己的子区域内继续切分",
+        "en": "A child splits only its own region.",
+        "start": 10.467
+      },
+      {
+        "title": "只在自己的子区域内继续切分",
+        "en": "A child splits only its own region.",
+        "start": 16.933
+      },
+      {
+        "title": "到达叶子，就使用叶子内的频率",
+        "en": "A leaf predicts using the observations that reached it.",
+        "start": 23.4
+      },
+      {
+        "title": "路径上的问题，共同定义一个区域",
+        "en": "A decision path defines an intersection of regions.",
+        "start": 31.533
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "root-data",
+        "time": 3.85
+      },
+      {
+        "name": "split-0",
+        "time": 10.317
+      },
+      {
+        "name": "split-1",
+        "time": 16.783
+      },
+      {
+        "name": "split-2",
+        "time": 23.25
+      },
+      {
+        "name": "leaf-probabilities",
+        "time": 30.817
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 37.35
+      },
+      {
+        "name": "closing",
+        "time": 40.35
+      }
+    ],
+    "sources": [
+      {
+        "label": "scikit-learn · Decision Trees",
+        "url": "https://scikit-learn.org/stable/modules/tree.html",
+        "section": "§1.10.7 Mathematical formulation; §1.10.7.1 Classification criteria",
+        "support": "加权节点不纯度、递归贪心划分、Gini 与叶内类别比例。"
+      }
+    ]
+  },
+  "ensemble": {
+    "title": "平均集成为何受相关性限制",
+    "en": "Ensemble averaging & correlated errors",
+    "method": "object-narrative",
+    "params": {
+      "members": 20,
+      "rho": 0.3,
+      "sigma": 1,
+      "bias": 0.3,
+      "reps": 400,
+      "seed": 42
+    },
+    "chapters": [
+      {
+        "title": "平均多个预测，会抵消多少误差？",
+        "en": "Averaging can cancel errors that disagree.",
+        "start": 0
+      },
+      {
+        "title": "独有误差被平均，共同误差留在原地",
+        "en": "Independent noise shrinks; common noise remains.",
+        "start": 15
+      },
+      {
+        "title": "模型数量，不能替代误差多样性",
+        "en": "More members do not guarantee independent errors.",
+        "start": 30.7
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "one-model",
+        "time": 2.85
+      },
+      {
+        "name": "growing-average",
+        "time": 14.85
+      },
+      {
+        "name": "correlation-floor",
+        "time": 25.283
+      },
+      {
+        "name": "shared-component",
+        "time": 29.983
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 36.517
+      },
+      {
+        "name": "closing",
+        "time": 39.517
+      }
+    ],
+    "sources": [
+      {
+        "label": "scikit-learn · Ensemble Methods",
+        "url": "https://scikit-learn.org/stable/modules/ensemble.html",
+        "section": "§1.11.3 Bagging meta-estimator; §1.11.2 Random forests and other randomized tree ensembles",
+        "support": "平均多个学习器减少方差的机制与随机化；本实验等相关方差公式自行推导，不把模拟误差冒充森林训练。"
+      }
+    ]
+  },
+  "boosting": {
+    "title": "提升算法怎样逐轮修正残差",
+    "en": "Residual stump boosting",
+    "method": "object-narrative",
+    "params": {
+      "steps": 12,
+      "rate": 0.2,
+      "n": 60,
+      "noise": 0.25,
+      "seed": 42
+    },
+    "chapters": [
+      {
+        "title": "第一轮先给每个输入同一个预测",
+        "en": "Begin with a constant prediction.",
+        "start": 0
+      },
+      {
+        "title": "下一棵小树，学习的是当前没解释的部分",
+        "en": "The next weak learner fits the current residuals.",
+        "start": 4
+      },
+      {
+        "title": "第 1 次修正：只加一小步",
+        "en": "Correction 1: add a shrunken residual fit.",
+        "start": 10.467
+      },
+      {
+        "title": "第 2 次修正：只加一小步",
+        "en": "Correction 2: add a shrunken residual fit.",
+        "start": 16.633
+      },
+      {
+        "title": "第 3 次修正：只加一小步",
+        "en": "Correction 3: add a shrunken residual fit.",
+        "start": 22.8
+      },
+      {
+        "title": "第 4 次修正：只加一小步",
+        "en": "Correction 4: add a shrunken residual fit.",
+        "start": 28.967
+      },
+      {
+        "title": "Boosting 保留旧模型，再累加新的修正",
+        "en": "Boosting preserves previous learners and adds corrections.",
+        "start": 35.7
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "constant-start",
+        "time": 3.85
+      },
+      {
+        "name": "current-residuals",
+        "time": 10.317
+      },
+      {
+        "name": "additive-update-0",
+        "time": 16.483
+      },
+      {
+        "name": "additive-update-1",
+        "time": 22.65
+      },
+      {
+        "name": "additive-update-2",
+        "time": 28.817
+      },
+      {
+        "name": "additive-update-3",
+        "time": 34.983
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 41.517
+      },
+      {
+        "name": "closing",
+        "time": 44.517
+      }
+    ],
+    "sources": [
+      {
+        "label": "scikit-learn · Gradient Boosting",
+        "url": "https://scikit-learn.org/stable/modules/ensemble.html",
+        "section": "§1.11.1.2.3 Mathematical formulation; §1.11.1.2.4 Loss Functions; §1.11.1.2.5 Shrinkage",
+        "support": "加法模型、负梯度拟合和收缩学习率；本页只实现平方损失与深度一树桩。"
+      }
+    ]
+  },
+  "kmeans": {
+    "title": "K-means 的分配与中心更新",
+    "en": "Lloyd iterations & local optima",
+    "method": "object-narrative",
+    "params": {
+      "k": 3,
+      "steps": 4,
+      "n": 30,
+      "initialization": "spread",
+      "seed": 42
+    },
+    "chapters": [
+      {
+        "title": "先放中心，还没有决定谁属于谁",
+        "en": "Start with centers before assigning observations.",
+        "start": 0
+      },
+      {
+        "title": "先按最近中心分组",
+        "en": "Assign each observation to its nearest center.",
+        "start": 4
+      },
+      {
+        "title": "再把中心移到组内平均位置",
+        "en": "Move each center to its assigned cluster mean.",
+        "start": 10.767
+      },
+      {
+        "title": "先按最近中心分组",
+        "en": "Assign each observation to its nearest center.",
+        "start": 17.733
+      },
+      {
+        "title": "再把中心移到组内平均位置",
+        "en": "Move each center to its assigned cluster mean.",
+        "start": 24.5
+      },
+      {
+        "title": "两步交替，可能停在不同的局部解",
+        "en": "Alternating improvements need not find a global optimum.",
+        "start": 32.033
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "initial-centers",
+        "time": 3.85
+      },
+      {
+        "name": "assignment-1",
+        "time": 10.617
+      },
+      {
+        "name": "center-update-1",
+        "time": 17.583
+      },
+      {
+        "name": "assignment-2",
+        "time": 24.35
+      },
+      {
+        "name": "center-update-2",
+        "time": 31.317
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 37.85
+      },
+      {
+        "name": "closing",
+        "time": 40.85
+      }
+    ],
+    "sources": [
+      {
+        "label": "scikit-learn · K-means",
+        "url": "https://scikit-learn.org/stable/modules/clustering.html#k-means",
+        "section": "§2.3.2 K-means; Lloyd algorithm",
+        "support": "最近中心分配、均值更新与簇内平方距离目标；初始化影响局部结果。"
+      }
+    ]
+  },
+  "gmm": {
+    "title": "EM 怎样做软分配",
+    "en": "Gaussian mixtures & EM",
+    "method": "object-narrative",
+    "params": {
+      "steps": 4,
+      "initial": 1,
+      "separation": 2,
+      "sigma": 0.7,
+      "n": 40,
+      "seed": 42
+    },
+    "chapters": [
+      {
+        "title": "一个点，不必硬归到某一组",
+        "en": "A point can share responsibility across components.",
+        "start": 0
+      },
+      {
+        "title": "E 步：相对密度，变成分担比例",
+        "en": "The E-step normalizes component support.",
+        "start": 6.9
+      },
+      {
+        "title": "M 步：用责任概率作权重，重算均值",
+        "en": "The M-step uses responsibilities as averaging weights.",
+        "start": 15.733
+      },
+      {
+        "title": "软分组，依然依赖模型与初始值",
+        "en": "Soft assignments still depend on assumptions and initialization.",
+        "start": 32.833
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "mixture-start",
+        "time": 6.75
+      },
+      {
+        "name": "soft-responsibilities",
+        "time": 15.583
+      },
+      {
+        "name": "weighted-mean-updates",
+        "time": 32.117
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 38.65
+      },
+      {
+        "name": "closing",
+        "time": 41.65
+      }
+    ],
+    "sources": [
+      {
+        "label": "scikit-learn · Gaussian Mixture Models",
+        "url": "https://scikit-learn.org/stable/modules/mixture.html",
+        "section": "§2.1.1; Estimation algorithm expectation-maximization; Singularities",
+        "support": "软分配与 EM 交替、初始化与协方差退化风险；本页固定共同方差，只更新权重和均值。"
+      }
+    ]
+  },
+  "kde": {
+    "title": "带宽怎样改变密度估计",
+    "en": "Kernel density & bandwidth",
+    "method": "object-narrative",
+    "params": {
+      "n": 10,
+      "bandwidth": 0.35,
+      "distribution": "mixture",
+      "seed": 42
+    },
+    "chapters": [
+      {
+        "title": "一个观测，先放上一座小山",
+        "en": "Place one kernel at each observation.",
+        "start": 0
+      },
+      {
+        "title": "在同一个 x，把所有小山的高度相加",
+        "en": "Sum the kernel heights at the same evaluation point.",
+        "start": 15.5
+      },
+      {
+        "title": "带宽改变的是每座小山的宽窄",
+        "en": "Bandwidth changes the scale of smoothing.",
+        "start": 23.967
+      },
+      {
+        "title": "平滑曲线，不等于已经发现真实结构",
+        "en": "A smooth estimate is still a smoothing choice.",
+        "start": 29.767
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "observations",
+        "time": 2.85
+      },
+      {
+        "name": "individual-kernels",
+        "time": 15.35
+      },
+      {
+        "name": "sum-of-kernels",
+        "time": 23.817
+      },
+      {
+        "name": "shared-bandwidth",
+        "time": 29.05
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 35.583
+      },
+      {
+        "name": "closing",
+        "time": 38.583
+      }
+    ],
+    "sources": [
+      {
+        "label": "scikit-learn · Density Estimation",
+        "url": "https://scikit-learn.org/stable/modules/density.html",
+        "section": "§2.8.2 Kernel Density Estimation",
+        "support": "核平均与带宽平滑；本项目使用一维 Euclidean Gaussian 核的解析归一化。"
+      }
+    ]
+  },
+  "modelselection": {
+    "title": "验证集怎样被选择过程过拟合",
+    "en": "Validation selection optimism",
+    "method": "object-narrative",
+    "params": {
+      "candidates": 20,
+      "nval": 30,
+      "scale": 1,
+      "reps": 60,
+      "seed": 42
+    },
+    "chapters": [
+      {
+        "title": "验证分数也会带着噪声",
+        "en": "Validation scores contain sampling noise.",
+        "start": 0
+      },
+      {
+        "title": "挑最小值，也挑中了有利的噪声",
+        "en": "Selecting the minimum selects favorable noise.",
+        "start": 6.8
+      },
+      {
+        "title": "用独立测试，重新衡量这个赢家",
+        "en": "Evaluate the selected model on independent data.",
+        "start": 17.467
+      },
+      {
+        "title": "反复看测试集，也会把它变成选择集",
+        "en": "Repeated test-driven selection destroys that independence.",
+        "start": 25.267
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "noisy-scores",
+        "time": 6.65
+      },
+      {
+        "name": "selected-winner",
+        "time": 12.617
+      },
+      {
+        "name": "truth-versus-winner",
+        "time": 17.317
+      },
+      {
+        "name": "independent-evaluation",
+        "time": 24.55
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 31.083
+      },
+      {
+        "name": "closing",
+        "time": 34.083
+      }
+    ],
+    "sources": [
+      {
+        "label": "Cawley & Talbot · JMLR (2010)",
+        "url": "https://jmlr.csail.mit.edu/papers/volume11/cawley10a/cawley10a.pdf",
+        "section": "Abstract; §5.1 and §5.3 Performance evaluation protocols",
+        "support": "有限模型选择准则也会过拟合；选择必须作为完整拟合流程的一部分被独立评价。"
+      },
+      {
+        "label": "scikit-learn · Nested versus non-nested CV",
+        "url": "https://scikit-learn.org/stable/auto_examples/model_selection/plot_nested_cross_validation_iris.html",
+        "section": "Opening explanation and experiment comparison",
+        "support": "在用于选择的同一证据上报告性能会偏乐观；嵌套评价隔离选择。当前实验不是交叉验证实现。"
+      }
+    ]
+  },
+  "metrics": {
+    "title": "阈值、混淆矩阵与 ROC/PR",
+    "en": "Confusion matrix, ROC & precision–recall",
+    "method": "object-narrative",
+    "params": {
+      "threshold": 0.5,
+      "prevalence": 0.2,
+      "separation": 2,
+      "n": 200,
+      "seed": 42
+    },
+    "chapters": [
+      {
+        "title": "先划阈值，才产生四种结果",
+        "en": "A threshold turns scores into four types of outcomes.",
+        "start": 0
+      },
+      {
+        "title": "按真实与预测两个维度，整理同一批样本",
+        "en": "Cross-tabulate true and predicted classes.",
+        "start": 4.7
+      },
+      {
+        "title": "分母不同，问题就不同",
+        "en": "Changing the denominator changes the question.",
+        "start": 12.633
+      },
+      {
+        "title": "阈值是取舍，指标要对应使用问题",
+        "en": "Threshold choice expresses a tradeoff.",
+        "start": 26.567
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "threshold-splits-scores",
+        "time": 4.55
+      },
+      {
+        "name": "confusion-table",
+        "time": 12.483
+      },
+      {
+        "name": "precision-denominator",
+        "time": 19.15
+      },
+      {
+        "name": "recall-denominator",
+        "time": 25.85
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 32.383
+      },
+      {
+        "name": "closing",
+        "time": 35.383
+      }
+    ],
+    "sources": [
+      {
+        "label": "scikit-learn · Metrics and Scoring",
+        "url": "https://scikit-learn.org/stable/modules/model_evaluation.html",
+        "section": "Classification metrics: precision, recall, ROC and average precision",
+        "support": "混淆计数、ROC、PR、Average Precision 的定义与零分母问题。"
+      }
+    ]
+  },
+  "likelihood": {
+    "title": "似然曲线与最大似然估计",
+    "en": "Likelihood & boundary MLEs",
+    "method": "object-narrative",
+    "params": {
+      "n": 40,
+      "observedRate": 0.7,
+      "candidateP": 0.5,
+      "candidateMu": 0,
+      "sigma": 1,
+      "seed": 42
+    },
+    "chapters": [
+      {
+        "title": "数据已经固定，移动的是参数假设",
+        "en": "The data stay fixed while the candidate parameter varies.",
+        "start": 0
+      },
+      {
+        "title": "一个候选概率，给整份数据一个相对支持度",
+        "en": "A candidate probability assigns support to the whole dataset.",
+        "start": 4
+      },
+      {
+        "title": "最大似然选择最支持这份数据的参数",
+        "en": "Maximum likelihood selects the best-supported candidate.",
+        "start": 24.433
+      },
+      {
+        "title": "把概率看作数据的函数，和看作参数的函数，要分清",
+        "en": "Likelihood is a function of the parameter for fixed observations.",
+        "start": 30.667
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "fixed-outcomes",
+        "time": 3.85
+      },
+      {
+        "name": "likelihood-curve",
+        "time": 12.283
+      },
+      {
+        "name": "candidate-0.3",
+        "time": 15.983
+      },
+      {
+        "name": "candidate-0.5",
+        "time": 19.983
+      },
+      {
+        "name": "candidate-0.7",
+        "time": 23.983
+      },
+      {
+        "name": "maximum-likelihood",
+        "time": 29.95
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 36.483
+      },
+      {
+        "name": "closing",
+        "time": 39.483
+      }
+    ],
+    "sources": [
+      {
+        "label": "NIST/SEMATECH · Maximum Likelihood",
+        "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda3652.htm",
+        "section": "§1.3.6.5.2 Maximum Likelihood",
+        "support": "给定观测后的参数似然、独立密度乘积及优化含义；两个具体 MLE 由本项目独立推导。"
+      }
+    ]
+  },
+  "activations": {
+    "title": "激活函数与局部梯度",
+    "en": "Activation functions & local derivatives",
+    "method": "object-narrative",
+    "params": {
+      "kind": "sigmoid",
+      "gain": 1,
+      "bias": 0,
+      "x": 1
+    },
+    "chapters": [
+      {
+        "title": "一个输入，怎样穿过激活函数？",
+        "en": "Follow a single input through the nonlinearity.",
+        "start": 0
+      },
+      {
+        "title": "相同的输入变化，不一定有相同的输出变化",
+        "en": "The slope changes the transmitted perturbation.",
+        "start": 18
+      },
+      {
+        "title": "激活值和导数，是两个不同的问题",
+        "en": "The output and its sensitivity answer different questions.",
+        "start": 32.133
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "far-left",
+        "time": 2.85
+      },
+      {
+        "name": "input-0",
+        "time": 7.85
+      },
+      {
+        "name": "input-1",
+        "time": 12.85
+      },
+      {
+        "name": "input-3.5",
+        "time": 17.85
+      },
+      {
+        "name": "slope-0",
+        "time": 24.717
+      },
+      {
+        "name": "slope-4",
+        "time": 31.017
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 37.95
+      },
+      {
+        "name": "closing",
+        "time": 40.95
+      }
+    ],
+    "sources": [
+      {
+        "label": "Dive into Deep Learning",
+        "url": "https://d2l.ai/chapter_multilayer-perceptrons/mlp.html",
+        "section": "§5.1.1 Hidden Layers; §5.1.2 Activation Functions",
+        "support": "仿射层的组合、非线性激活、ReLU/sigmoid/tanh及其导数；本实验权重为显式构造。"
+      }
+    ]
+  },
+  "neuron": {
+    "title": "一个神经元怎样划分输入空间",
+    "en": "A single affine–sigmoid neuron",
+    "method": "object-narrative",
+    "params": {
+      "w1": 1,
+      "w2": -1,
+      "bias": 0,
+      "x1": 1,
+      "x2": 0.5
+    },
+    "chapters": [
+      {
+        "title": "神经元先把贡献加起来",
+        "en": "Inputs make weighted contributions.",
+        "start": 0
+      },
+      {
+        "title": "再把加权和，送进非线性函数",
+        "en": "The sigmoid turns a score into a probability.",
+        "start": 15.4
+      },
+      {
+        "title": "一个权重控制一条局部影响路径",
+        "en": "A local derivative follows the weighted path.",
+        "start": 24.4
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "inputs",
+        "time": 2.85
+      },
+      {
+        "name": "three-contributions",
+        "time": 10.95
+      },
+      {
+        "name": "sum",
+        "time": 15.25
+      },
+      {
+        "name": "sigmoid-mapping",
+        "time": 23.683
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 30.217
+      },
+      {
+        "name": "closing",
+        "time": 33.217
+      }
+    ],
+    "sources": [
+      {
+        "label": "Dive into Deep Learning",
+        "url": "https://d2l.ai/chapter_multilayer-perceptrons/mlp.html",
+        "section": "§5.1.1 Hidden Layers; §5.1.2 Activation Functions",
+        "support": "仿射层的组合、非线性激活、ReLU/sigmoid/tanh及其导数；本实验权重为显式构造。"
+      }
+    ]
+  },
+  "mlp": {
+    "title": "隐藏单元怎样组合出新形状",
+    "en": "Hidden units & piecewise-linear expression",
+    "method": "object-narrative",
+    "params": {
+      "width": 3,
+      "kind": "relu",
+      "gain": 1,
+      "shift": 0,
+      "offset": 0
+    },
+    "chapters": [
+      {
+        "title": "先做出几个有转折点的部件",
+        "en": "Hidden units create reusable pieces.",
+        "start": 0
+      },
+      {
+        "title": "同一个 x，先读取每个部件的贡献",
+        "en": "Read every contribution at the same input.",
+        "start": 13.5
+      },
+      {
+        "title": "对每个 x 重复，得到整条输出曲线",
+        "en": "Pointwise addition creates the full function.",
+        "start": 24.167
+      },
+      {
+        "title": "宽度增加的是可组合的部件",
+        "en": "More hidden units provide more pieces to combine.",
+        "start": 34.967
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "unit-0",
+        "time": 4.35
+      },
+      {
+        "name": "unit-1",
+        "time": 8.85
+      },
+      {
+        "name": "unit-2",
+        "time": 13.35
+      },
+      {
+        "name": "one-input-contributions",
+        "time": 19.717
+      },
+      {
+        "name": "sum-at-input",
+        "time": 24.017
+      },
+      {
+        "name": "network-function",
+        "time": 34.25
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 40.783
+      },
+      {
+        "name": "closing",
+        "time": 43.783
+      }
+    ],
+    "sources": [
+      {
+        "label": "Dive into Deep Learning",
+        "url": "https://d2l.ai/chapter_multilayer-perceptrons/mlp.html",
+        "section": "§5.1.1 Hidden Layers; §5.1.2 Activation Functions",
+        "support": "仿射层的组合、非线性激活、ReLU/sigmoid/tanh及其导数；本实验权重为显式构造。"
+      }
+    ]
+  },
+  "backprop": {
+    "title": "反向传播把局部导数串起来",
+    "en": "Backpropagation & finite-difference checking",
+    "method": "object-narrative",
+    "params": {
+      "x": 1,
+      "w": 0.5,
+      "bias": 0,
+      "v": 2,
+      "target": 1
+    },
+    "chapters": [
+      {
+        "title": "先让一个输入走到损失",
+        "en": "One input, four operations, one loss.",
+        "start": 0
+      },
+      {
+        "title": "局部导数，把上游变化传回来",
+        "en": "Upstream sensitivity × local derivative.",
+        "start": 14.3
+      },
+      {
+        "title": "同一个节点，还要把梯度交给参数",
+        "en": "Branch from z into its trainable parameters.",
+        "start": 30.867
+      },
+      {
+        "title": "链式法则是在组合敏感度",
+        "en": "The chain rule composes local sensitivities.",
+        "start": 43.467
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "input",
+        "time": 1.85
+      },
+      {
+        "name": "forward-values",
+        "time": 14.15
+      },
+      {
+        "name": "backward-edge-0",
+        "time": 18.817
+      },
+      {
+        "name": "backward-edge-1",
+        "time": 22.717
+      },
+      {
+        "name": "backward-edge-2",
+        "time": 26.617
+      },
+      {
+        "name": "backward-edge-3",
+        "time": 30.517
+      },
+      {
+        "name": "parameter-branches",
+        "time": 42.75
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 49.283
+      },
+      {
+        "name": "closing",
+        "time": 52.283
+      }
+    ],
+    "sources": [
+      {
+        "label": "Dive into Deep Learning",
+        "url": "https://d2l.ai/chapter_multilayer-perceptrons/backprop.html",
+        "section": "§5.3 Forward Propagation, Backward Propagation, and Computational Graphs",
+        "support": "计算图缓存前向中间量并按链式法则反向传播；标量例及数值差分由本实验独立推导。"
+      }
+    ]
+  },
+  "initialization": {
+    "title": "初始化如何改变信号与梯度尺度",
+    "en": "Initialization & actual signal propagation",
+    "method": "object-narrative",
+    "params": {
+      "depth": 6,
+      "mode": "he",
+      "kind": "relu",
+      "gain": 1,
+      "seed": 42
+    },
+    "chapters": [
+      {
+        "title": "先追踪第一层的一个神经元",
+        "en": "Track one actual neuron before summarizing the network.",
+        "start": 0
+      },
+      {
+        "title": "初始化，先决定信号进入下一层的尺度",
+        "en": "Initialization sets the scale of transmitted signals.",
+        "start": 10.167
+      },
+      {
+        "title": "梯度从另一端回来，也有自己的尺度",
+        "en": "Backward signal scale deserves a separate check.",
+        "start": 28.233
+      },
+      {
+        "title": "为什么要按输入宽度缩放权重？",
+        "en": "Weight variance compensates for accumulated inputs.",
+        "start": 38.467
+      },
+      {
+        "title": "这是尺度分析，仍须检查具体网络",
+        "en": "A scaling argument is not a guarantee for every finite network.",
+        "start": 47.267
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "weighted-input-terms",
+        "time": 3.85
+      },
+      {
+        "name": "one-preactivation",
+        "time": 9.45
+      },
+      {
+        "name": "forward-scale",
+        "time": 28.083
+      },
+      {
+        "name": "backward-scale",
+        "time": 38.317
+      },
+      {
+        "name": "he-scale",
+        "time": 46.55
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 53.083
+      },
+      {
+        "name": "closing",
+        "time": 56.083
+      }
+    ],
+    "sources": [
+      {
+        "label": "Glorot & Bengio (AISTATS 2010)",
+        "url": "https://proceedings.mlr.press/v9/glorot10a/glorot10a.pdf",
+        "section": "§4.2.1; Eq. (10)–(12), PDF p.5",
+        "support": "初始化的层间信号和梯度尺度；等宽Xavier方差1/fan-in。"
+      },
+      {
+        "label": "He et al. (ICCV 2015)",
+        "url": "https://arxiv.org/pdf/1502.01852",
+        "section": "§2.2; Eq. (6)–(10)",
+        "support": "ReLU情形的二阶矩传播与方差2/fan-in；独立性和对称性假设下的尺度分析。"
+      }
+    ]
+  },
+  "optimizers": {
+    "title": "GD、动量与Adam实际走哪条路",
+    "en": "Gradient descent, momentum & Adam",
+    "method": "object-narrative",
+    "params": {
+      "rate": 0.05,
+      "condition": 12,
+      "steps": 60,
+      "momentum": 0.9,
+      "angle": 25
+    },
+    "chapters": [
+      {
+        "title": "同一个起点，三种更新记忆",
+        "en": "Three update rules start at the same point.",
+        "start": 0
+      },
+      {
+        "title": "路径不同，因为状态不同",
+        "en": "Different internal states produce different updates.",
+        "start": 19.4
+      },
+      {
+        "title": "这张轨迹图不构成方法排名",
+        "en": "A single parameter setting is not a benchmark.",
+        "start": 33.6
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "common-start",
+        "time": 2.85
+      },
+      {
+        "name": "step-1",
+        "time": 5.717
+      },
+      {
+        "name": "step-5",
+        "time": 11.183
+      },
+      {
+        "name": "step-12",
+        "time": 19.25
+      },
+      {
+        "name": "optimizer-state",
+        "time": 32.883
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 39.417
+      },
+      {
+        "name": "closing",
+        "time": 42.417
+      }
+    ],
+    "sources": [
+      {
+        "label": "Kingma & Ba · Adam (ICLR 2015)",
+        "url": "https://arxiv.org/pdf/1412.6980",
+        "section": "Algorithm 1, p.2; §2–3",
+        "support": "一阶/二阶矩指数平均、偏差修正、epsilon在平方根之外的更新式。"
+      }
+    ]
+  },
+  "regularization": {
+    "title": "Dropout保留均值，却怎样改变损失",
+    "en": "Inverted dropout & exact conditional moments",
+    "method": "object-narrative",
+    "params": {
+      "dropout": 0.5,
+      "scale": 1,
+      "target": 1,
+      "reps": 500,
+      "seed": 42
+    },
+    "chapters": [
+      {
+        "title": "一次 Dropout，究竟丢掉了什么？",
+        "en": "Follow one actual dropout mask.",
+        "start": 0
+      },
+      {
+        "title": "保留下来的项，还要除以保留概率",
+        "en": "Inverted dropout rescales the survivors.",
+        "start": 10
+      },
+      {
+        "title": "一次会变，平均值保持什么？",
+        "en": "Random outputs can have a stable expectation.",
+        "start": 20.733
+      },
+      {
+        "title": "保持期望，不等于每次保持输出",
+        "en": "Preserving the mean does not preserve each realization.",
+        "start": 26.967
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "contributions",
+        "time": 2.85
+      },
+      {
+        "name": "actual-mask",
+        "time": 9.85
+      },
+      {
+        "name": "scaled-survivors",
+        "time": 16.317
+      },
+      {
+        "name": "one-output",
+        "time": 20.583
+      },
+      {
+        "name": "random-outputs",
+        "time": 26.25
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 32.783
+      },
+      {
+        "name": "closing",
+        "time": 35.783
+      }
+    ],
+    "sources": [
+      {
+        "label": "Srivastava et al. · Dropout (JMLR 2014)",
+        "url": "https://www.jmlr.org/papers/volume15/srivastava14a/srivastava14a.pdf",
+        "section": "§4 Model Description; Fig. 2（训练/测试缩放）",
+        "support": "独立随机保留及训练/测试缩放；原论文p表示保留率，本页p表示丢弃率。固定线性读出的倒置缩放、方差和平方损失分解为直接推导。"
+      }
+    ]
+  },
+  "normalization": {
+    "title": "BatchNorm与LayerNorm沿哪个轴统计",
+    "en": "Batch normalization vs layer normalization",
+    "method": "object-narrative",
+    "params": {
+      "mode": "batch",
+      "pattern": "mixed",
+      "scale": 1,
+      "shift": 0,
+      "gamma": 1.5,
+      "beta": 0.5
+    },
+    "chapters": [
+      {
+        "title": "先回答：哪些数一起算均值？",
+        "en": "Choose the statistical group before normalizing.",
+        "start": 0
+      },
+      {
+        "title": "同一组，减同一个均值、除同一个尺度",
+        "en": "Center and scale using that group only.",
+        "start": 14.6
+      },
+      {
+        "title": "仿射参数在标准化之后作用",
+        "en": "Apply the learned scale and shift afterward.",
+        "start": 22.267
+      },
+      {
+        "title": "Layer Norm 改的是分组方向",
+        "en": "Layer normalization uses features within each observation.",
+        "start": 29.7
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "input-matrix",
+        "time": 2.85
+      },
+      {
+        "name": "group-0",
+        "time": 6.35
+      },
+      {
+        "name": "group-1",
+        "time": 10.217
+      },
+      {
+        "name": "group-2",
+        "time": 14.083
+      },
+      {
+        "name": "standardized-matrix",
+        "time": 22.117
+      },
+      {
+        "name": "affine-output",
+        "time": 28.983
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 35.517
+      },
+      {
+        "name": "closing",
+        "time": 38.517
+      }
+    ],
+    "sources": [
+      {
+        "label": "Ioffe & Szegedy · Batch Normalization (ICML 2015)",
+        "url": "https://proceedings.mlr.press/v37/ioffe15.pdf",
+        "section": "§3; Algorithm 1; Algorithm 2",
+        "support": "当前批次均值/方差、epsilon、gamma/beta；训练态与使用固定统计的推理态不同。"
+      },
+      {
+        "label": "Ba, Kiros & Hinton · Layer Normalization (2016)",
+        "url": "https://arxiv.org/pdf/1607.06450",
+        "section": "§3 Layer normalization; Eq. (3)",
+        "support": "同一样本内跨特征的归一化统计，区别于跨样本的BatchNorm。"
+      }
+    ]
+  },
+  "convolution": {
+    "title": "卷积窗口如何逐项生成响应",
+    "en": "Spatial cross-correlation, padding & stride",
+    "method": "object-narrative",
+    "params": {
+      "pattern": "edge",
+      "kernel": "edge",
+      "stride": 1,
+      "padding": 0,
+      "row": 1,
+      "col": 1
+    },
+    "chapters": [
+      {
+        "title": "一个输出格，是怎样算出来的？",
+        "en": "Follow one receptive field into one output.",
+        "start": 0
+      },
+      {
+        "title": "相同位置相乘，九项再相加",
+        "en": "Multiply corresponding entries, then add.",
+        "start": 10.1
+      },
+      {
+        "title": "把这个和，放回它的输出位置",
+        "en": "The sum belongs to one output position.",
+        "start": 33.367
+      },
+      {
+        "title": "现在再读卷积的求和式",
+        "en": "The indices now refer to visible objects.",
+        "start": 51.9
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "source-and-window",
+        "time": 3.85
+      },
+      {
+        "name": "patch-extracted",
+        "time": 9.95
+      },
+      {
+        "name": "partial-sum-3",
+        "time": 18.617
+      },
+      {
+        "name": "partial-sum-6",
+        "time": 25.117
+      },
+      {
+        "name": "nine-products-sum-to-three",
+        "time": 33.217
+      },
+      {
+        "name": "response-placed",
+        "time": 40.35
+      },
+      {
+        "name": "shared-kernel",
+        "time": 51.183
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 57.717
+      },
+      {
+        "name": "closing",
+        "time": 60.717
+      }
+    ],
+    "sources": [
+      {
+        "label": "Dive into Deep Learning",
+        "url": "https://d2l.ai/chapter_convolutional-neural-networks/conv-layer.html",
+        "section": "§7.2.1 The Cross-Correlation Operation; §7.2.6 Convolution",
+        "support": "核与窗口逐项乘加；深度学习通常实现互相关，严格卷积需反转核。"
+      },
+      {
+        "label": "Dive into Deep Learning",
+        "url": "https://d2l.ai/chapter_convolutional-neural-networks/padding-and-strides.html",
+        "section": "§7.3.1 Padding; §7.3.2 Stride",
+        "support": "填充、步幅和输出空间尺寸；本实验只含单通道3×3核。"
+      }
+    ]
+  },
+  "pooling": {
+    "title": "池化留下什么，又丢掉什么",
+    "en": "Max/average pooling & local gradients",
+    "method": "object-narrative",
+    "params": {
+      "mode": "max",
+      "pattern": "peak",
+      "size": 2,
+      "stride": 2,
+      "row": 1,
+      "col": 1
+    },
+    "chapters": [
+      {
+        "title": "从一个窗口，只留下一个摘要",
+        "en": "A pooling window produces one number.",
+        "start": 0
+      },
+      {
+        "title": "最大池化，让最大值留下来",
+        "en": "Max pooling selects an input value.",
+        "start": 7.2
+      },
+      {
+        "title": "从输出往回问：哪个输入有影响？",
+        "en": "Trace sensitivity back to the selected entry.",
+        "start": 14.267
+      },
+      {
+        "title": "平均池化，让每个输入分担",
+        "en": "Mean pooling shares both value and sensitivity.",
+        "start": 23.2
+      },
+      {
+        "title": "选择规则，决定梯度流向",
+        "en": "The reduction rule determines the backward route.",
+        "start": 30.633
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "window",
+        "time": 2.85
+      },
+      {
+        "name": "patch",
+        "time": 7.05
+      },
+      {
+        "name": "maximum-selected",
+        "time": 14.117
+      },
+      {
+        "name": "gradient-location",
+        "time": 23.05
+      },
+      {
+        "name": "mean-gradient",
+        "time": 29.917
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 36.45
+      },
+      {
+        "name": "closing",
+        "time": 39.45
+      }
+    ],
+    "sources": [
+      {
+        "label": "Dive into Deep Learning",
+        "url": "https://d2l.ai/chapter_convolutional-neural-networks/pooling.html",
+        "section": "§7.5.1 Maximum Pooling and Average Pooling",
+        "support": "窗口最大/平均聚合与对局部位移的敏感度；不声称任意平移不变。"
+      }
+    ]
+  },
+  "residual": {
+    "title": "残差捷径怎样改变梯度乘积",
+    "en": "Residual connections & Jacobian products",
+    "method": "object-narrative",
+    "params": {
+      "weight": 0.2,
+      "depth": 20,
+      "x": 0.5,
+      "kind": "tanh"
+    },
+    "chapters": [
+      {
+        "title": "一条捷径，怎样改变每一层？",
+        "en": "An identity path changes the layer, not just the diagram.",
+        "start": 0
+      },
+      {
+        "title": "梯度也沿两条路相加",
+        "en": "The two derivative paths meet at the addition.",
+        "start": 10.2
+      },
+      {
+        "title": "多层以后，仍要看实际的连乘",
+        "en": "Depth still multiplies the local factors.",
+        "start": 16.733
+      },
+      {
+        "title": "加上恒等路径，也不保证稳定",
+        "en": "Identity helps a path; it does not bound every product.",
+        "start": 29.967
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "input",
+        "time": 1.85
+      },
+      {
+        "name": "identity-path",
+        "time": 10.05
+      },
+      {
+        "name": "two-gradient-paths",
+        "time": 16.017
+      },
+      {
+        "name": "six-layers",
+        "time": 29.25
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 35.783
+      },
+      {
+        "name": "closing",
+        "time": 38.783
+      }
+    ],
+    "sources": [
+      {
+        "label": "He et al. · Deep Residual Learning (CVPR 2016)",
+        "url": "https://arxiv.org/pdf/1512.03385",
+        "section": "§3.1 Residual Learning; §3.2 Identity Mapping by Shortcuts; Eq. (1)",
+        "support": "恒等捷径与残差分支相加；仅展示相加子模块。原论文完整残差块还包含其他层和相加后激活，标量迭代及Jacobian边界为本实验推导。"
+      }
+    ]
+  },
+  "attention": {
+    "title": "注意力从分数到读取向量",
+    "en": "Scaled dot-product attention & causal masking",
+    "method": "object-narrative",
+    "params": {
+      "query": 2,
+      "strength": 1,
+      "temperature": 1,
+      "causal": 0,
+      "valueScale": 1
+    },
+    "chapters": [
+      {
+        "title": "一个 Query，先逐个比较 Key",
+        "en": "A query scores each key before reading any value.",
+        "start": 0
+      },
+      {
+        "title": "把分数变成共享总量的权重",
+        "en": "Normalize across the same query row.",
+        "start": 13.2
+      },
+      {
+        "title": "每个权重，都作用在一个 Value 上",
+        "en": "The same weights mix the value vectors.",
+        "start": 26.1
+      },
+      {
+        "title": "第 3 个 Query，不能读第 4 个位置",
+        "en": "Mask future scores before normalization.",
+        "start": 42.467
+      },
+      {
+        "title": "可见范围改变，加权读取也随之改变",
+        "en": "Visibility changes the weighted read.",
+        "start": 56.4
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "query-and-keys",
+        "time": 2.85
+      },
+      {
+        "name": "four-dot-products",
+        "time": 13.05
+      },
+      {
+        "name": "common-denominator",
+        "time": 21.25
+      },
+      {
+        "name": "weights",
+        "time": 25.95
+      },
+      {
+        "name": "weighted-values",
+        "time": 36.25
+      },
+      {
+        "name": "one-output-vector",
+        "time": 41.75
+      },
+      {
+        "name": "future-score-masked",
+        "time": 48.183
+      },
+      {
+        "name": "renormalized-visible-keys",
+        "time": 55.683
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 62.217
+      },
+      {
+        "name": "closing",
+        "time": 65.217
+      }
+    ],
+    "sources": [
+      {
+        "label": "Vaswani et al. · Attention Is All You Need (NeurIPS 2017)",
+        "url": "https://papers.nips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf",
+        "section": "§3.2.1 Eq. (1); §3.2.3 decoder masking",
+        "support": "QKᵀ/√dₖ、对key轴softmax、Value加权；解码器屏蔽未来位置。温度是本实验显式扩展参数。"
+      }
+    ]
+  },
+  "positional": {
+    "title": "位置编码如何表达相对距离",
+    "en": "Sinusoidal positions & relative geometry",
+    "method": "object-narrative",
+    "params": {
+      "position": 8,
+      "shift": 3,
+      "pairs": 4,
+      "base": 10000
+    },
+    "chapters": [
+      {
+        "title": "一对正弦余弦，把位置变成方向",
+        "en": "A sine-cosine pair represents position as an angle.",
+        "start": 0
+      },
+      {
+        "title": "位置增加，方向按固定角速度旋转",
+        "en": "A position shift adds a fixed angular increment.",
+        "start": 8
+      },
+      {
+        "title": "多对频率，提供多个位置尺度",
+        "en": "Several frequency pairs provide several scales.",
+        "start": 15.533
+      },
+      {
+        "title": "位置编码提供结构，不替模型理解顺序",
+        "en": "The encoding supplies structure for learned use.",
+        "start": 30.067
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "position-zero",
+        "time": 1.85
+      },
+      {
+        "name": "position-p",
+        "time": 7.85
+      },
+      {
+        "name": "position-shift",
+        "time": 14.817
+      },
+      {
+        "name": "multiple-frequencies",
+        "time": 29.35
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 35.883
+      },
+      {
+        "name": "closing",
+        "time": 38.883
+      }
+    ],
+    "sources": [
+      {
+        "label": "Vaswani et al. · Attention Is All You Need",
+        "url": "https://arxiv.org/html/1706.03762v7",
+        "section": "§3.5 Positional Encoding",
+        "support": "固定 sin/cos 频率及位置平移可由线性映射表示；本页从公式另行推导范数和相对内积。"
+      }
+    ]
+  },
+  "gnn": {
+    "title": "图神经网络的邻居聚合",
+    "en": "Graph aggregation & repeated propagation",
+    "method": "object-narrative",
+    "params": {
+      "graph": "chain",
+      "layers": 3,
+      "selfLoop": 1,
+      "normalization": "mean",
+      "residual": 0
+    },
+    "chapters": [
+      {
+        "title": "一层消息传递，只跨一条边",
+        "en": "One layer carries information across one edge.",
+        "start": 0
+      },
+      {
+        "title": "第 1 层：邻居先发送，再一起汇总",
+        "en": "Layer 1: send, then aggregate.",
+        "start": 4
+      },
+      {
+        "title": "第 2 层：邻居先发送，再一起汇总",
+        "en": "Layer 2: send, then aggregate.",
+        "start": 11.367
+      },
+      {
+        "title": "第 3 层：邻居先发送，再一起汇总",
+        "en": "Layer 3: send, then aggregate.",
+        "start": 18.733
+      },
+      {
+        "title": "传播范围，随层数逐步扩大",
+        "en": "The receptive field grows one hop per layer.",
+        "start": 26.667
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "initial-signal",
+        "time": 3.85
+      },
+      {
+        "name": "layer-1",
+        "time": 11.217
+      },
+      {
+        "name": "layer-2",
+        "time": 18.583
+      },
+      {
+        "name": "layer-3",
+        "time": 25.95
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 32.483
+      },
+      {
+        "name": "closing",
+        "time": 35.483
+      }
+    ],
+    "sources": [
+      {
+        "label": "Kipf & Welling · Semi-Supervised Classification with GCNs",
+        "url": "https://arxiv.org/pdf/1609.02907",
+        "section": "§2, Eq. (2); §2.2",
+        "support": "加自环与对称度归一化的层传播；本页明确取单位权重、恒等激活，另作邻居平均和残差比较。"
+      }
+    ]
+  },
+  "embeddings": {
+    "title": "嵌入向量的角度、长度与相似度",
+    "en": "Embedding geometry without semantic shortcuts",
+    "method": "object-narrative",
+    "params": {
+      "angle": 45,
+      "normA": 1,
+      "normB": 2
+    },
+    "chapters": [
+      {
+        "title": "相似，是指方向还是长度？",
+        "en": "Alignment and magnitude are different properties.",
+        "start": 0
+      },
+      {
+        "title": "先除以各自长度，只保留方向",
+        "en": "Normalize both vectors to isolate direction.",
+        "start": 4
+      },
+      {
+        "title": "把长度放回来，才得到内积",
+        "en": "The dot product restores both magnitudes.",
+        "start": 15.933
+      },
+      {
+        "title": "零向量没有方向",
+        "en": "Cosine is undefined for a zero vector.",
+        "start": 23.467
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "two-vectors",
+        "time": 3.85
+      },
+      {
+        "name": "unit-vectors",
+        "time": 11.517
+      },
+      {
+        "name": "cosine",
+        "time": 15.217
+      },
+      {
+        "name": "dot-product-factors",
+        "time": 22.75
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 29.283
+      },
+      {
+        "name": "closing",
+        "time": 32.283
+      }
+    ],
+    "sources": [
+      {
+        "label": "Mikolov et al. · Efficient Estimation of Word Representations",
+        "url": "https://arxiv.org/pdf/1301.3781",
+        "section": "§4.1 Task Description",
+        "support": "学习到的词向量可用余弦寻找邻近表示；本页仅解释合成向量的几何，不重现词向量训练或语义评价。"
+      },
+      {
+        "label": "CMU · Information Retrieval and Similarity Search",
+        "url": "https://stat.cmu.edu/~cshalizi/dm/20/lectures/24/lecture-24.html",
+        "section": "§4 Measuring Similarity; §4.1 normalizing vectors",
+        "support": "向量距离、长度归一化及表示选择的限制。"
+      }
+    ]
+  },
+  "autoencoder": {
+    "title": "线性自编码器与秩一重构",
+    "en": "Linear bottlenecks & PCA reconstruction",
+    "method": "object-narrative",
+    "params": {
+      "angle": 35,
+      "gain": 1,
+      "ratio": 3,
+      "seed": 42
+    },
+    "chapters": [
+      {
+        "title": "二维点，要经过一个一维瓶颈",
+        "en": "A two-dimensional point passes through a one-dimensional code.",
+        "start": 0
+      },
+      {
+        "title": "解码器只能沿一条方向画回来",
+        "en": "The decoder reconstructs on a line.",
+        "start": 9.2
+      },
+      {
+        "title": "对所有点重复，才得到重建误差",
+        "en": "Repeat over the dataset to measure reconstruction error.",
+        "start": 16.567
+      },
+      {
+        "title": "在线性约束下，瓶颈与 PCA 相遇",
+        "en": "A tied linear unit-gain projection connects to PCA.",
+        "start": 25.2
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "data-cloud",
+        "time": 2.85
+      },
+      {
+        "name": "encoded-point",
+        "time": 9.05
+      },
+      {
+        "name": "reconstruction-residual",
+        "time": 16.417
+      },
+      {
+        "name": "all-reconstructions",
+        "time": 24.483
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 31.017
+      },
+      {
+        "name": "closing",
+        "time": 34.017
+      }
+    ],
+    "sources": [
+      {
+        "label": "Goodfellow, Bengio & Courville · Deep Learning",
+        "url": "https://www.deeplearningbook.org/contents/autoencoders.html",
+        "section": "§14.1 Undercomplete Autoencoders",
+        "support": "线性解码、平方误差下的 PCA 子空间关系；模型容量过大可能只记忆输入。"
+      }
+    ]
+  },
+  "vae": {
+    "title": "VAE 的重参数化与 KL 代价",
+    "en": "Gaussian reparameterization & ELBO terms",
+    "method": "object-narrative",
+    "params": {
+      "mu": 1,
+      "logvar": 0,
+      "decoder": 1,
+      "x": 2,
+      "beta": 1,
+      "epsilon": 0.5
+    },
+    "chapters": [
+      {
+        "title": "把随机性放在一个独立的噪声变量里",
+        "en": "Put randomness in a separate noise variable.",
+        "start": 0
+      },
+      {
+        "title": "抽样点的变化，可以沿确定性路径求导",
+        "en": "The sampled value has a differentiable parameter path.",
+        "start": 12.6
+      },
+      {
+        "title": "重建与先验匹配，分别计算再相加",
+        "en": "Reconstruction and prior matching are distinct terms.",
+        "start": 20.833
+      },
+      {
+        "title": "改噪声样本，和改分布参数，是两种操作",
+        "en": "Changing a draw differs from changing its distribution.",
+        "start": 33.133
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "noise-draw",
+        "time": 2.85
+      },
+      {
+        "name": "scaled-noise",
+        "time": 7.15
+      },
+      {
+        "name": "latent-sample",
+        "time": 12.45
+      },
+      {
+        "name": "reparameterized-derivatives",
+        "time": 20.683
+      },
+      {
+        "name": "two-objective-terms",
+        "time": 26.917
+      },
+      {
+        "name": "vae-objective",
+        "time": 32.417
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 38.95
+      },
+      {
+        "name": "closing",
+        "time": 41.95
+      }
+    ],
+    "sources": [
+      {
+        "label": "Kingma & Welling · Auto-Encoding Variational Bayes",
+        "url": "https://arxiv.org/pdf/1312.6114",
+        "section": "§2.2 variational bound; §2.4 Gaussian reparameterization; Appendix B",
+        "support": "重参数化、ELBO 与对角 Gaussian 对标准正态的解析 KL；本页是一维指定似然的解析特例。"
+      }
+    ]
+  },
+  "gan": {
+    "title": "GAN 生成器为什么会遇到梯度饱和",
+    "en": "GAN generator objectives under a frozen discriminator",
+    "method": "object-narrative",
+    "params": {
+      "theta": -2,
+      "weight": 1,
+      "bias": 0,
+      "rate": 0.2,
+      "steps": 20
+    },
+    "chapters": [
+      {
+        "title": "先冻结判别器，只移动一个生成点",
+        "en": "Freeze the discriminator and move one generated point.",
+        "start": 0
+      },
+      {
+        "title": "同一个低分，会产生不同强度的更新",
+        "en": "The same low score gives different generator gradients.",
+        "start": 4.7
+      },
+      {
+        "title": "沿各自梯度走，比较实际位置更新",
+        "en": "Follow the two actual update sequences.",
+        "start": 11.933
+      },
+      {
+        "title": "这段只隔离生成器损失的影响",
+        "en": "This isolates generator objectives under a frozen discriminator.",
+        "start": 30.133
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "fixed-discriminator",
+        "time": 4.55
+      },
+      {
+        "name": "two-gradients",
+        "time": 11.783
+      },
+      {
+        "name": "饱和-updates",
+        "time": 21.717
+      },
+      {
+        "name": "非饱和-updates",
+        "time": 29.417
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 35.95
+      },
+      {
+        "name": "closing",
+        "time": 38.95
+      }
+    ],
+    "sources": [
+      {
+        "label": "Goodfellow et al. · Generative Adversarial Nets",
+        "url": "https://arxiv.org/pdf/1406.2661",
+        "section": "§3 Adversarial nets; Eq. (1) and non-saturating alternative",
+        "support": "原始 minimax 目标及生成器改用最大化 log D 的梯度动机；本页冻结判别器以隔离差异。"
+      }
+    ]
+  },
+  "flow": {
+    "title": "可逆变换如何搬运概率密度",
+    "en": "Normalizing flows & Jacobian mass conservation",
+    "method": "object-narrative",
+    "params": {
+      "scale": 1,
+      "shift": 0,
+      "warp": 0.8,
+      "z": 1
+    },
+    "chapters": [
+      {
+        "title": "先搬运位置，再问密度怎样变",
+        "en": "First move positions, then account for density.",
+        "start": 0
+      },
+      {
+        "title": "同一小段概率，铺到更长的区间",
+        "en": "Stretching a small interval spreads its probability mass.",
+        "start": 10.2
+      },
+      {
+        "title": "Jacobian 补偿的是局部体积变化",
+        "en": "The Jacobian corrects local volume change.",
+        "start": 27
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "original-positions",
+        "time": 3.55
+      },
+      {
+        "name": "mapped-positions",
+        "time": 10.05
+      },
+      {
+        "name": "small-mass-block",
+        "time": 15.283
+      },
+      {
+        "name": "equal-area-block",
+        "time": 21.583
+      },
+      {
+        "name": "density-adjustment",
+        "time": 26.283
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 32.817
+      },
+      {
+        "name": "closing",
+        "time": 35.817
+      }
+    ],
+    "sources": [
+      {
+        "label": "Rezende & Mohamed · Variational Inference with Normalizing Flows",
+        "url": "https://arxiv.org/pdf/1505.05770",
+        "section": "§3 Normalizing Flows; change-of-variables formula",
+        "support": "可逆映射的密度变换和 Jacobian 修正；本页自定义单调一维 tanh 变换。"
+      }
+    ]
+  },
+  "diffusion": {
+    "title": "扩散加噪与精确 Gaussian 去噪",
+    "en": "Gaussian diffusion & conditional uncertainty",
+    "method": "object-narrative",
+    "params": {
+      "alpha": 0.5,
+      "mu": 2,
+      "sigma": 1,
+      "observed": 1
+    },
+    "chapters": [
+      {
+        "title": "信号与噪声，先分别缩放再相加",
+        "en": "Scale signal and noise before adding them.",
+        "start": 0
+      },
+      {
+        "title": "看到 xₜ 后，反过来推断可能的 x₀",
+        "en": "Condition on the noisy observation to infer the clean variable.",
+        "start": 9.5
+      },
+      {
+        "title": "去噪估计，不是恢复唯一真值",
+        "en": "A denoised estimate does not determine a unique original.",
+        "start": 25.133
+      },
+      {
+        "title": "这个精确小模型解释去噪的条件推断",
+        "en": "This exact toy model isolates conditional denoising.",
+        "start": 31.367
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "signal-and-noise",
+        "time": 3.85
+      },
+      {
+        "name": "one-noisy-observation",
+        "time": 9.35
+      },
+      {
+        "name": "prior-clean-distribution",
+        "time": 17.283
+      },
+      {
+        "name": "posterior-clean-distribution",
+        "time": 24.983
+      },
+      {
+        "name": "remaining-uncertainty",
+        "time": 30.65
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 37.183
+      },
+      {
+        "name": "closing",
+        "time": 40.183
+      }
+    ],
+    "sources": [
+      {
+        "label": "Ho et al. · Denoising Diffusion Probabilistic Models",
+        "url": "https://arxiv.org/pdf/2006.11239",
+        "section": "§2, Eqs. (2), (4), (6)–(7)",
+        "support": "前向 Gaussian 加噪与累计信号比例；本页 x₀|xₜ 使用另行指定 Gaussian 数据先验推导，不把它混同论文的 xₜ₋₁|xₜ,x₀。"
+      }
+    ]
+  },
+  "rl-bellman": {
+    "title": "Bellman 备份如何传播未来奖励",
+    "en": "Finite MDPs & value iteration",
+    "method": "object-narrative",
+    "params": {
+      "gamma": 0.9,
+      "success": 0.5,
+      "cost": -0.2,
+      "iterations": 12
+    },
+    "chapters": [
+      {
+        "title": "先把奖励与转移概率分开读",
+        "en": "Rewards and transition probabilities are different quantities.",
+        "start": 0
+      },
+      {
+        "title": "把后续价值折现，再回传到当前状态",
+        "en": "Discount future value before backing it up.",
+        "start": 9.4
+      },
+      {
+        "title": "每次都用上一轮的价值做下一轮更新",
+        "en": "Synchronous backups use the previous value vector.",
+        "start": 16.933
+      },
+      {
+        "title": "取最大值，才从评估走向最优控制",
+        "en": "The maximum chooses the best available action.",
+        "start": 41.567
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "mdp-options",
+        "time": 9.25
+      },
+      {
+        "name": "risky-backup",
+        "time": 16.783
+      },
+      {
+        "name": "backup-1",
+        "time": 23.117
+      },
+      {
+        "name": "backup-2",
+        "time": 27.483
+      },
+      {
+        "name": "backup-3",
+        "time": 31.85
+      },
+      {
+        "name": "backup-4",
+        "time": 36.217
+      },
+      {
+        "name": "backup-5",
+        "time": 40.583
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 47.383
+      },
+      {
+        "name": "closing",
+        "time": 50.383
+      }
+    ],
+    "sources": [
+      {
+        "label": "Sutton & Barto · Reinforcement Learning（作者教材草稿）",
+        "url": "https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf",
+        "section": "Ch.3 Bellman equations; §4.4 Value Iteration, Eq. (4.10)",
+        "support": "有限 MDP、折扣价值与 Bellman 最优备份。实验中的三状态 MDP 和解析式为独立构造。"
+      }
+    ]
+  },
+  "rl-policy": {
+    "title": "策略梯度如何改变行动概率",
+    "en": "Exact policy gradients with recurrent decisions",
+    "method": "object-narrative",
+    "params": {
+      "theta": 0,
+      "gamma": 0.9,
+      "success": 0.5,
+      "cost": -0.2,
+      "rate": 0.5,
+      "steps": 30
+    },
+    "chapters": [
+      {
+        "title": "参数先改变选动作的概率",
+        "en": "The parameter changes action probabilities.",
+        "start": 0
+      },
+      {
+        "title": "梯度问：稍微增加 θ，回报会怎样？",
+        "en": "The gradient asks how return changes with theta.",
+        "start": 10.6
+      },
+      {
+        "title": "沿梯度更新，再重新评估策略",
+        "en": "Update the parameter, then reevaluate the policy.",
+        "start": 16.833
+      },
+      {
+        "title": "更常选择哪个动作，取决于当前环境",
+        "en": "The beneficial update direction depends on the environment.",
+        "start": 33.933
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "policy-probability-return",
+        "time": 10.45
+      },
+      {
+        "name": "initial-policy-gradient",
+        "time": 16.683
+      },
+      {
+        "name": "policy-updates",
+        "time": 33.217
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 39.75
+      },
+      {
+        "name": "closing",
+        "time": 42.75
+      }
+    ],
+    "sources": [
+      {
+        "label": "Sutton & Barto · Reinforcement Learning（作者教材草稿）",
+        "url": "https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf",
+        "section": "Ch.3 Bellman equations; §4.4 Value Iteration, Eq. (4.10)",
+        "support": "有限 MDP、折扣价值与 Bellman 最优备份。实验中的三状态 MDP 和解析式为独立构造。"
+      },
+      {
+        "label": "Sutton, McAllester, Singh & Mansour · Policy Gradient Methods",
+        "url": "https://proceedings.neurips.cc/paper/1999/file/464d828b85b0bed98e80ade0a5c43b0f-Paper.pdf",
+        "section": "§1 Theorem 1, start-state formulation; Appendix Eq. (7)",
+        "support": "指定起点的折扣状态访问权重与策略梯度；本页使用真实折扣访问次数，与直接微分解析回报互相核验。"
+      }
+    ]
+  },
+  "double-descent": {
+    "title": "随机特征的插值与经验双降",
+    "en": "Random features, interpolation & empirical double descent",
+    "method": "object-narrative",
+    "params": {
+      "width": 20,
+      "n": 24,
+      "noise": 0.3,
+      "lambda": 0,
+      "seed": 42
+    },
+    "chapters": [
+      {
+        "title": "先数清参数：宽度之外，还有截距",
+        "en": "Count parameters before locating interpolation.",
+        "start": 0
+      },
+      {
+        "title": "等参数数目附近，矩阵可能变得敏感",
+        "en": "The interpolation region can be ill-conditioned.",
+        "start": 4
+      },
+      {
+        "title": "沿真实计算结果，逐点看验证风险",
+        "en": "Inspect the actual validation curve, not a promised shape.",
+        "start": 10.233
+      },
+      {
+        "title": "容量曲线，也受正则化与数据影响",
+        "en": "Capacity curves depend on data and regularization.",
+        "start": 23.733
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "parameter-count",
+        "time": 3.85
+      },
+      {
+        "name": "interpolation-count",
+        "time": 10.083
+      },
+      {
+        "name": "actual-risk-curve",
+        "time": 23.017
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 29.55
+      },
+      {
+        "name": "closing",
+        "time": 32.55
+      }
+    ],
+    "sources": [
+      {
+        "label": "Belkin et al. · Reconciling modern ML practice and the bias–variance trade-off",
+        "url": "https://arxiv.org/pdf/1812.11118",
+        "section": "§2 Random Fourier features; Appendix C.1",
+        "support": "随机特征、插值附近风险变化、欠定时最小范数选择。当前五维合成回归数据不是论文 MNIST 结果的复制。"
+      }
+    ]
+  },
+  "fairness": {
+    "title": "相同错误率为何仍有不同 PPV",
+    "en": "Base rates, equalized odds & predictive values",
+    "method": "object-narrative",
+    "params": {
+      "baseA": 0.2,
+      "baseB": 0.6,
+      "tpr": 0.8,
+      "fpr": 0.2
+    },
+    "chapters": [
+      {
+        "title": "同样的错误率，会给出同样的预测可靠性吗？",
+        "en": "Equal error rates need not imply equal predictive value.",
+        "start": 0
+      },
+      {
+        "title": "现在只看“预测为正”的那一列",
+        "en": "Condition on positive predictions in each group.",
+        "start": 5.7
+      },
+      {
+        "title": "先说清分母，再讨论公平约束",
+        "en": "Specify the conditioning event before comparing fairness metrics.",
+        "start": 19.1
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "two-populations",
+        "time": 5.55
+      },
+      {
+        "name": "predicted-positive-columns",
+        "time": 12.117
+      },
+      {
+        "name": "unequal-predictive-values",
+        "time": 18.383
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 24.917
+      },
+      {
+        "name": "closing",
+        "time": 27.917
+      }
+    ],
+    "sources": [
+      {
+        "label": "Hardt, Price & Srebro · Equality of Opportunity in Supervised Learning",
+        "url": "https://arxiv.org/pdf/1610.02413",
+        "section": "§2 Definition 2.1; binary equalized odds; §2.1",
+        "support": "相同真实标签下的跨组条件预测率；本页 PPV 差异由 Bayes 公式自行推导，未把其称为所有公平定义的一般不可能定理。"
+      }
+    ]
+  },
+  "svd": {
+    "title": "奇异值分解与低秩重构",
+    "en": "SVD geometry & low-rank reconstruction",
+    "method": "object-narrative",
+    "params": {
+      "left": 30,
+      "right": 20,
+      "scale": 2,
+      "ratio": 0.35,
+      "retained": 1,
+      "shared": 0
+    },
+    "chapters": [
+      {
+        "title": "一个矩阵，可以拆成三次动作",
+        "en": "A matrix acts as rotate, stretch, rotate.",
+        "start": 0
+      },
+      {
+        "title": "先用 Vᵀ 改变输入方向",
+        "en": "Rotate the input directions with Vᵀ.",
+        "start": 4.7
+      },
+      {
+        "title": "再按两个奇异值分别伸缩",
+        "en": "Stretch the aligned axes by the singular values.",
+        "start": 12.667
+      },
+      {
+        "title": "最后用 U 放到输出方向",
+        "en": "Finally rotate the result with U.",
+        "start": 20.633
+      },
+      {
+        "title": "秩一近似，把第二个方向压到零",
+        "en": "Rank-one truncation removes the second singular direction.",
+        "start": 28.6
+      },
+      {
+        "title": "截断误差，对应被舍弃的方向",
+        "en": "Truncation error comes from the discarded direction.",
+        "start": 38.833
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "circle",
+        "time": 3.85
+      },
+      {
+        "name": "先用 Vᵀ 改变输入方向",
+        "time": 12.517
+      },
+      {
+        "name": "再按两个奇异值分别伸缩",
+        "time": 20.483
+      },
+      {
+        "name": "最后用 U 放到输出方向",
+        "time": 28.45
+      },
+      {
+        "name": "ellipse-to-rank-one-line",
+        "time": 38.117
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 44.65
+      },
+      {
+        "name": "closing",
+        "time": 47.65
+      }
+    ],
+    "sources": [
+      {
+        "label": "LAPACK Users’ Guide · SVD",
+        "url": "https://www.netlib.org/lapack/lug/node32.html",
+        "section": "Singular Value Decomposition",
+        "support": "核对 UΣV* 的尺寸、正交性与非负奇异值。"
+      },
+      {
+        "label": "Murray et al. · Randomized Numerical Linear Algebra",
+        "url": "https://www.netlib.org/utk/people/JackDongarra/PAPERS/rand-templates.pdf",
+        "section": "§4.1.1 Spectral decompositions, eqs.(4.2)–(4.6), printed pp.65–66",
+        "support": "支持截断 SVD 的谱/Frobenius 误差与最佳秩约束近似；二维算例独立复算。"
+      }
+    ]
+  },
+  "biasvariance": {
+    "title": "真正的偏差—方差分解",
+    "en": "Repeated-fit bias–variance decomposition",
+    "method": "object-narrative",
+    "params": {
+      "degree": 3,
+      "n": 20,
+      "noise": 0.4,
+      "lambda": 0.01,
+      "reps": 100,
+      "x0": 0.5,
+      "seed": 42
+    },
+    "chapters": [
+      {
+        "title": "数据换一次，拟合曲线也换一次",
+        "en": "A fitted function varies across datasets.",
+        "start": 0
+      },
+      {
+        "title": "固定一个 x，看预测值如何散开",
+        "en": "Fix one input and inspect the distribution of predictions.",
+        "start": 14.5
+      },
+      {
+        "title": "平均值的偏移，和围绕平均值的波动，要分开",
+        "en": "Bias is displacement; variance is spread.",
+        "start": 29.2
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "different-fits",
+        "time": 14.35
+      },
+      {
+        "name": "prediction-distribution",
+        "time": 23.083
+      },
+      {
+        "name": "bias-is-displacement",
+        "time": 28.483
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 35.017
+      },
+      {
+        "name": "closing",
+        "time": 38.017
+      }
+    ],
+    "sources": [
+      {
+        "label": "Stanford CS229 · Lecture Notes",
+        "url": "https://cs229.stanford.edu/notes2022fall/main_notes.pdf",
+        "section": "§8.1.1, printed pp.110–111; PDF pp.111–112",
+        "support": "支持固定测试点处训练随机性、偏差平方、方差与不可约噪声的分解；有限 R 版本由平方和恒等式独立推导。"
+      }
+    ]
+  },
+  "kernel": {
+    "title": "核矩阵如何产生非线性拟合",
+    "en": "Trained kernel ridge regression",
+    "method": "object-narrative",
+    "params": {
+      "kernel": "rbf",
+      "bandwidth": 0.4,
+      "lambda": 0.05,
+      "n": 25,
+      "noise": 0.15,
+      "anchor": 0,
+      "seed": 42
+    },
+    "chapters": [
+      {
+        "title": "把一个观测，当作相似度的中心",
+        "en": "An observation anchors a similarity function.",
+        "start": 0
+      },
+      {
+        "title": "每座小山，乘上一个拟合系数",
+        "en": "Each similarity function is scaled by a fitted coefficient.",
+        "start": 18.4
+      },
+      {
+        "title": "把所有贡献，在同一个 x 上相加",
+        "en": "Sum all weighted kernels at the same query location.",
+        "start": 39.033
+      },
+      {
+        "title": "系数不是随手定的，来自同一组线性方程",
+        "en": "The coefficients solve a regularized linear system.",
+        "start": 48.767
+      },
+      {
+        "title": "局部相似度，经组合产生全局预测",
+        "en": "Local similarities combine into a global predictor.",
+        "start": 57.567
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "kernel-center-0",
+        "time": 4.45
+      },
+      {
+        "name": "kernel-center-1",
+        "time": 9.05
+      },
+      {
+        "name": "kernel-center-2",
+        "time": 13.65
+      },
+      {
+        "name": "kernel-center-3",
+        "time": 18.25
+      },
+      {
+        "name": "weighted-kernel-0",
+        "time": 25.083
+      },
+      {
+        "name": "weighted-kernel-1",
+        "time": 29.683
+      },
+      {
+        "name": "weighted-kernel-2",
+        "time": 34.283
+      },
+      {
+        "name": "weighted-kernel-3",
+        "time": 38.883
+      },
+      {
+        "name": "full-kernel-prediction",
+        "time": 48.617
+      },
+      {
+        "name": "kernel-linear-system",
+        "time": 56.85
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 63.383
+      },
+      {
+        "name": "closing",
+        "time": 66.383
+      }
+    ],
+    "sources": [
+      {
+        "label": "Stanford CS229 · Kernel methods",
+        "url": "https://cs229.stanford.edu/notes2022fall/main_notes.pdf",
+        "section": "§5.1–§5.4, printed pp.49–59",
+        "support": "核作为特征内积、kernel trick 与半正定 Gram 条件。"
+      },
+      {
+        "label": "scikit-learn · Kernel ridge regression",
+        "url": "https://scikit-learn.org/stable/modules/kernel_ridge.html",
+        "section": "§1.3 Kernel ridge regression",
+        "support": "支持平方损失加 L2/RKHS 正则、核空间线性与闭式训练；本页求和口径线性系统独立推导。"
+      }
+    ]
+  },
+  "entropy": {
+    "title": "熵、交叉熵与 KL 的区别",
+    "en": "Entropy, cross-entropy & support boundaries",
+    "method": "object-narrative",
+    "params": {
+      "p1": 0.5,
+      "p2": 0.6,
+      "q1": 0.3,
+      "q2": 0.5,
+      "unit": "nats"
+    },
+    "chapters": [
+      {
+        "title": "预测概率，决定遇到事件时付出多少损失",
+        "en": "A reported probability sets the surprise of an event.",
+        "start": 0
+      },
+      {
+        "title": "真正经常发生的事件，占更大的平均权重",
+        "en": "True event frequencies weight the average loss.",
+        "start": 11.7
+      },
+      {
+        "title": "真实不确定性，加上报告错误的代价",
+        "en": "Cross-entropy includes irreducible uncertainty and mismatch.",
+        "start": 27.8
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "reported-probabilities",
+        "time": 2.85
+      },
+      {
+        "name": "event-losses",
+        "time": 11.55
+      },
+      {
+        "name": "weighted-losses",
+        "time": 21.683
+      },
+      {
+        "name": "cross-entropy",
+        "time": 27.083
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 33.617
+      },
+      {
+        "name": "closing",
+        "time": 36.617
+      }
+    ],
+    "sources": [
+      {
+        "label": "Dive into Deep Learning · Information Theory",
+        "url": "https://d2l.ai/chapter_appendix-mathematics-for-deep-learning/information-theory.html",
+        "section": "§22.11.2.2; §22.11.4.1–4.2; §22.11.5.1–5.2",
+        "support": "核对离散熵、KL、交叉熵定义、恒等式与正质量对零支持产生∞；未复制示例代码中的 abs/nansum 处理。"
+      }
+    ]
+  },
+  "softmax": {
+    "title": "Softmax 温度与交叉熵梯度",
+    "en": "Multiclass softmax, temperature & Jacobian",
+    "method": "object-narrative",
+    "params": {
+      "z1": 2,
+      "z2": 1,
+      "z3": 0,
+      "temperature": 1,
+      "shift": 0,
+      "target": 0
+    },
+    "chapters": [
+      {
+        "title": "三个分数，要共同分一份概率",
+        "en": "Three scores compete for one unit of probability.",
+        "start": 0
+      },
+      {
+        "title": "先指数化，再使用同一个分母",
+        "en": "Exponentiate, then divide by a shared denominator.",
+        "start": 4
+      },
+      {
+        "title": "一个概率变化，其他概率也要响应",
+        "en": "Normalization couples the three outputs.",
+        "start": 14.867
+      },
+      {
+        "title": "标签影响损失，分数决定预测",
+        "en": "Changing the label changes loss, not this prediction.",
+        "start": 25.067
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "scores",
+        "time": 3.85
+      },
+      {
+        "name": "denominator",
+        "time": 14.717
+      },
+      {
+        "name": "one-unit-probability",
+        "time": 24.35
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 30.883
+      },
+      {
+        "name": "closing",
+        "time": 33.883
+      }
+    ],
+    "sources": [
+      {
+        "label": "Blanchard, Higham & Higham · Stable Softmax",
+        "url": "https://webhomes.maths.ed.ac.uk/~dhigham/Publications/P149.pdf",
+        "section": "§1 equations (1.1)–(1.2); shifted algorithms",
+        "support": "核对 log-sum-exp、softmax 与减最大分数的稳定计算。"
+      },
+      {
+        "label": "Dive into Deep Learning · Softmax Regression",
+        "url": "https://d2l.ai/chapter_linear-classification/softmax-regression.html",
+        "section": "§4.1.2; §4.1.3 Loss Function and likelihood/gradient subsections",
+        "support": "核对多类交叉熵及 p−y 导数；温度 1/T 因子由链式法则独立核算。"
+      }
+    ]
+  },
+  "calibration": {
+    "title": "准确率之外的概率校准",
+    "en": "Reliability, bin counts & probability calibration",
+    "method": "object-narrative",
+    "params": {
+      "sharpness": 1,
+      "offset": 0,
+      "n": 1000,
+      "bins": 10,
+      "seed": 42
+    },
+    "chapters": [
+      {
+        "title": "说“65%”，长期意味着什么？",
+        "en": "What should the reported probability mean over repeated cases?",
+        "start": 0
+      },
+      {
+        "title": "在这一组内，数真实发生了多少次",
+        "en": "Count actual outcomes within that probability group.",
+        "start": 4
+      },
+      {
+        "title": "每个组变成一个可靠性图上的点",
+        "en": "Each bin becomes one reliability-diagram point.",
+        "start": 10.233
+      },
+      {
+        "title": "频率估计也有抽样波动",
+        "en": "Reliability estimates themselves are noisy.",
+        "start": 22.033
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "probability-bin",
+        "time": 3.85
+      },
+      {
+        "name": "bin-frequency",
+        "time": 10.083
+      },
+      {
+        "name": "reliability-points",
+        "time": 21.317
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 27.85
+      },
+      {
+        "name": "closing",
+        "time": 30.85
+      }
+    ],
+    "sources": [
+      {
+        "label": "scikit-learn · Probability calibration",
+        "url": "https://scikit-learn.org/stable/modules/calibration.html",
+        "section": "§1.16; §1.16.1 Calibration curves; §1.16.2",
+        "support": "核对可靠性图、分箱、概率评分与独立校准拟合。"
+      },
+      {
+        "label": "Guo et al. · On Calibration of Modern Neural Networks",
+        "url": "https://proceedings.mlr.press/v70/guo17a/guo17a.pdf",
+        "section": "§2 Reliability diagrams / Expected Calibration Error; §4.2 Temperature scaling",
+        "support": "核对有限分箱 ECE 与置信变换动机；本页明确采用正类频率版本，不冒充论文的 top-label ECE。"
+      }
+    ]
+  },
+  "rnn": {
+    "title": "RNN怎样在时间中保留状态与梯度",
+    "en": "Scalar recurrence & full backpropagation through time",
+    "method": "object-narrative",
+    "params": {
+      "weight": 0.8,
+      "inputWeight": 0.8,
+      "steps": 6,
+      "kind": "tanh",
+      "pattern": "pulse",
+      "initial": 0,
+      "target": 0.5
+    },
+    "chapters": [
+      {
+        "title": "把同一个单元，沿时间展开",
+        "en": "One recurrent cell is reused over time.",
+        "start": 0
+      },
+      {
+        "title": "旧输入的影响，要穿过后续每一步",
+        "en": "Sensitivity travels through every intervening step.",
+        "start": 17.3
+      },
+      {
+        "title": "共享参数，收到的是各次使用的总贡献",
+        "en": "A shared parameter receives a sum across its uses.",
+        "start": 23.833
+      },
+      {
+        "title": "前向递推，反向连乘，参数贡献相加",
+        "en": "Recurrence, products along paths, sums into shared parameters.",
+        "start": 35.567
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "initial-state",
+        "time": 1.85
+      },
+      {
+        "name": "unrolled-forward",
+        "time": 17.15
+      },
+      {
+        "name": "local-factors",
+        "time": 23.117
+      },
+      {
+        "name": "weight-contributions",
+        "time": 29.35
+      },
+      {
+        "name": "shared-gradient",
+        "time": 34.85
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 41.383
+      },
+      {
+        "name": "closing",
+        "time": 44.383
+      }
+    ],
+    "sources": [
+      {
+        "label": "Dive into Deep Learning",
+        "url": "https://d2l.ai/chapter_recurrent-neural-networks/rnn.html",
+        "section": "§9.4.2 Recurrent Networks with Hidden States",
+        "support": "共享参数、隐藏状态递归；本页为手工指定的标量特例。"
+      },
+      {
+        "label": "Dive into Deep Learning",
+        "url": "https://d2l.ai/chapter_recurrent-neural-networks/bptt.html",
+        "section": "§9.7.1，式(9.7.7)；§9.7.2",
+        "support": "时间路径梯度求和、完整反传与截断的区别。"
+      }
+    ]
+  },
+  "lstm": {
+    "title": "LSTM记忆路径不等于完整梯度",
+    "en": "Gated cell memory & total derivatives",
+    "method": "object-narrative",
+    "params": {
+      "forget": 0.95,
+      "input": 0.4,
+      "output": 0.8,
+      "recurrent": 0,
+      "steps": 6,
+      "pattern": "zero",
+      "initial": 1
+    },
+    "chapters": [
+      {
+        "title": "记忆状态，和可见输出，是两条线",
+        "en": "Cell memory and hidden output are distinct states.",
+        "start": 0
+      },
+      {
+        "title": "输出门控制读出，不直接改写记忆",
+        "en": "The output gate controls exposure of the cell.",
+        "start": 17.967
+      },
+      {
+        "title": "只沿记忆直通路径，梯度怎么走？",
+        "en": "Follow the direct cell-state shortcut.",
+        "start": 24.5
+      },
+      {
+        "title": "直通路径的导数，不总是完整导数",
+        "en": "The direct-path derivative need not be the full derivative.",
+        "start": 37.567
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "cell-and-hidden",
+        "time": 17.817
+      },
+      {
+        "name": "readout",
+        "time": 23.783
+      },
+      {
+        "name": "direct-gradient-products",
+        "time": 36.85
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 43.383
+      },
+      {
+        "name": "closing",
+        "time": 46.383
+      }
+    ],
+    "sources": [
+      {
+        "label": "Dive into Deep Learning",
+        "url": "https://d2l.ai/chapter_recurrent-modern/lstm.html",
+        "section": "§10.1.1.2–10.1.1.5，式(10.1.1)–(10.1.4)",
+        "support": "遗忘/输入/输出门、候选、细胞与隐藏状态；本页固定门值以分开检验路径和完整导数。"
+      }
+    ]
+  },
+  "contrastive": {
+    "title": "InfoNCE如何让正负样本竞争",
+    "en": "Finite-vector InfoNCE & temperature",
+    "method": "object-narrative",
+    "params": {
+      "angle": 30,
+      "negativeAngle": 60,
+      "temperature": 0.5,
+      "negatives": 3
+    },
+    "chapters": [
+      {
+        "title": "先把查询与各个候选方向摆出来",
+        "en": "Compare a query with positive and negative keys.",
+        "start": 0
+      },
+      {
+        "title": "相似度除以温度，再在候选间归一化",
+        "en": "Scale similarities, then normalize across candidates.",
+        "start": 9.6
+      },
+      {
+        "title": "目标只奖励分给正样本的概率",
+        "en": "The loss rewards probability assigned to the positive key.",
+        "start": 21.233
+      },
+      {
+        "title": "温度放大已有排序，不保证排序正确",
+        "en": "Temperature sharpens the existing ranking, including mistakes.",
+        "start": 28.733
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "query-key-geometry",
+        "time": 9.45
+      },
+      {
+        "name": "contrastive-softmax",
+        "time": 21.083
+      },
+      {
+        "name": "positive-log-loss",
+        "time": 28.017
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 34.55
+      },
+      {
+        "name": "closing",
+        "time": 37.55
+      }
+    ],
+    "sources": [
+      {
+        "label": "van den Oord, Li & Vinyals · CPC (2018)",
+        "url": "https://arxiv.org/pdf/1807.03748",
+        "section": "§2.3，式(4)",
+        "support": "包含一个正样本及多个负样本的归一化对比损失；本页手工候选不用于声称互信息估计。"
+      }
+    ]
+  },
+  "jacobian": {
+    "title": "非线性变形怎样被局部Jacobian近似",
+    "en": "Local Jacobian maps & Taylor remainder",
+    "method": "object-narrative",
+    "params": {
+      "alpha": 0.8,
+      "beta": 0.4,
+      "x": 0.5,
+      "y": 0.5,
+      "radius": 0.5
+    },
+    "chapters": [
+      {
+        "title": "非线性地图，在一点附近像什么？",
+        "en": "A nonlinear map has a local linear action.",
+        "start": 0
+      },
+      {
+        "title": "小网格的真实弯曲，与线性预测对照",
+        "en": "Compare the actual curved grid with its tangent grid.",
+        "start": 14
+      },
+      {
+        "title": "缩小邻域，才能检验局部近似",
+        "en": "Shrink the neighborhood to test a local approximation.",
+        "start": 25.8
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "fixed-centers",
+        "time": 2.85
+      },
+      {
+        "name": "column-0",
+        "time": 8.35
+      },
+      {
+        "name": "column-1",
+        "time": 13.85
+      },
+      {
+        "name": "curved-versus-linear",
+        "time": 25.083
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 31.617
+      },
+      {
+        "name": "closing",
+        "time": 34.617
+      }
+    ],
+    "sources": [
+      {
+        "label": "MIT 18.S096 · Matrix Calculus",
+        "url": "https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/pages/lecture-notes-and-readings/",
+        "section": "Lecture 1 Part 2；Lecture 2 Part 1；Lecture 3 Part 2",
+        "support": "导数作为线性映射、Jacobian形状、局部扰动与有限差分；具体映射和二阶上界独立推导。"
+      }
+    ]
+  },
+  "uncertainty": {
+    "title": "参数不确定性与新观测噪声怎样分开",
+    "en": "Bayesian linear posterior & predictive uncertainty",
+    "method": "object-narrative",
+    "params": {
+      "n": 12,
+      "sigma": 0.4,
+      "priorSD": 2,
+      "span": 1,
+      "query": 2.5,
+      "seed": 42
+    },
+    "chapters": [
+      {
+        "title": "同一个位置，可以问两种不确定性",
+        "en": "At one location, distinguish mean uncertainty from response noise.",
+        "start": 0
+      },
+      {
+        "title": "先只保留参数不确定性",
+        "en": "Parameter uncertainty creates a latent-mean interval.",
+        "start": 7.1
+      },
+      {
+        "title": "预测新观测，还要加入观测噪声",
+        "en": "A new response adds another source of variation.",
+        "start": 14.533
+      },
+      {
+        "title": "增加数据，不能消除新观测的固有噪声",
+        "en": "More data do not remove irreducible response noise.",
+        "start": 21.667
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "regression-bands",
+        "time": 6.95
+      },
+      {
+        "name": "latent-interval",
+        "time": 14.383
+      },
+      {
+        "name": "predictive-interval",
+        "time": 20.95
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 27.483
+      },
+      {
+        "name": "closing",
+        "time": 30.483
+      }
+    ],
+    "sources": [
+      {
+        "label": "Rasmussen & Williams · Gaussian Processes for Machine Learning",
+        "url": "https://gaussianprocess.org/gpml/chapters/RW2.pdf",
+        "section": "§2.1，式(2.8)–(2.11)；§2.2 noisy predictions",
+        "support": "Gaussian线性模型权重后验、潜在函数预测及加上观测噪声的预测分布。"
+      }
+    ]
+  },
+  "causal": {
+    "title": "混杂怎样让观察关联与干预效应反向",
+    "en": "Known structural model, Simpson reversal & intervention",
+    "method": "object-narrative",
+    "params": {
+      "selection": 0.8,
+      "effect": 0.1,
+      "prevalence": 0.5
+    },
+    "chapters": [
+      {
+        "title": "比较两组之前，先看组里都有谁",
+        "en": "Group composition can change an aggregate comparison.",
+        "start": 0
+      },
+      {
+        "title": "观察差异，使用两套不同的人群权重",
+        "en": "Observed groups can have different mixtures of Z.",
+        "start": 6.5
+      },
+      {
+        "title": "干预比较，保留同一套总体组成",
+        "en": "An intervention compares treatments in the same population.",
+        "start": 13.733
+      },
+      {
+        "title": "调整有效，需要因果假设支持",
+        "en": "Adjustment requires a justified causal model.",
+        "start": 27.233
+      }
+    ],
+    "checkpoints": [
+      {
+        "name": "confounding-path",
+        "time": 6.35
+      },
+      {
+        "name": "different-mixtures",
+        "time": 13.583
+      },
+      {
+        "name": "same-population-mixture",
+        "time": 20.25
+      },
+      {
+        "name": "different-questions",
+        "time": 26.517
+      },
+      {
+        "name": "meaning-and-boundary",
+        "time": 33.05
+      },
+      {
+        "name": "closing",
+        "time": 36.05
+      }
+    ],
+    "sources": [
+      {
+        "label": "Pearl · Causal inference in statistics: An overview (2009)",
+        "url": "https://ftp.cs.ucla.edu/pub/stat_ser/r350.pdf",
+        "section": "§2.2；§3.2.1；§3.3.1，式(25)",
+        "support": "观察和干预的区别、替换结构方程、满足后门条件时的协变量调整。具体二元SCM及所有概率为本实验设定。"
+      }
+    ]
+  }
+}

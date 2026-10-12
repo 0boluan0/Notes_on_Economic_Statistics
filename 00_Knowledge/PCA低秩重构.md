@@ -50,6 +50,13 @@ related:
 >
 > **答案：** 不能。普通 PCA 围绕样本均值分析变异；未中心化 SVD 强制低秩子空间穿过原点，目标不同。
 
+<!-- visual-lab:links:start -->
+## 交互理解
+
+- [[07_Programme/可视化实验室/实验/pca|PCA、尺度与重构]]
+- [[07_Programme/可视化实验室/实验/autoencoder|线性自编码器与秩一重构]]
+<!-- visual-lab:links:end -->
+
 ## 来源与核验
 
 - [scikit-learn, Decomposing signals in components](https://scikit-learn.org/stable/modules/decomposition.html#pca)：核对 PCA 先中心化、再以 SVD 获得正交成分，以及中心化矩阵的 truncated SVD 与 PCA 的对应。

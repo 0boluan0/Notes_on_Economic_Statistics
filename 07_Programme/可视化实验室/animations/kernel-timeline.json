@@ -1,0 +1,92 @@
+{
+  "id": "kernel",
+  "duration": 66.53333333333302,
+  "chapters": [
+    {
+      "title": "把一个观测，当作相似度的中心",
+      "en": "An observation anchors a similarity function.",
+      "start": 0.0
+    },
+    {
+      "title": "每座小山，乘上一个拟合系数",
+      "en": "Each similarity function is scaled by a fitted coefficient.",
+      "start": 18.4
+    },
+    {
+      "title": "把所有贡献，在同一个 x 上相加",
+      "en": "Sum all weighted kernels at the same query location.",
+      "start": 39.033
+    },
+    {
+      "title": "系数不是随手定的，来自同一组线性方程",
+      "en": "The coefficients solve a regularized linear system.",
+      "start": 48.767
+    },
+    {
+      "title": "局部相似度，经组合产生全局预测",
+      "en": "Local similarities combine into a global predictor.",
+      "start": 57.567
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "kernel-center-0",
+      "time": 4.45
+    },
+    {
+      "name": "kernel-center-1",
+      "time": 9.05
+    },
+    {
+      "name": "kernel-center-2",
+      "time": 13.65
+    },
+    {
+      "name": "kernel-center-3",
+      "time": 18.25
+    },
+    {
+      "name": "weighted-kernel-0",
+      "time": 25.083
+    },
+    {
+      "name": "weighted-kernel-1",
+      "time": 29.683
+    },
+    {
+      "name": "weighted-kernel-2",
+      "time": 34.283
+    },
+    {
+      "name": "weighted-kernel-3",
+      "time": 38.883
+    },
+    {
+      "name": "full-kernel-prediction",
+      "time": 48.617
+    },
+    {
+      "name": "kernel-linear-system",
+      "time": 56.85
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 63.383
+    },
+    {
+      "name": "closing",
+      "time": 66.383
+    }
+  ],
+  "params": {
+    "kernel": "rbf",
+    "bandwidth": 0.4,
+    "lambda": 0.05,
+    "n": 25,
+    "noise": 0.15,
+    "anchor": 0,
+    "seed": 42
+  },
+  "method": "object-narrative",
+  "layout": []
+}

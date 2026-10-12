@@ -1,0 +1,57 @@
+{
+  "id": "svm",
+  "duration": 28.50000000000013,
+  "chapters": [
+    {
+      "title": "分类边界之外，还要看离边界多远",
+      "en": "A separator also defines a margin.",
+      "start": 0.0
+    },
+    {
+      "title": "把真实类别乘进去，正确一侧才是正",
+      "en": "A signed margin includes the true class label.",
+      "start": 6.0
+    },
+    {
+      "title": "大间隔与违例代价，需要一起权衡",
+      "en": "The objective trades margin width against violations.",
+      "start": 19.533
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "separator-and-margins",
+      "time": 5.85
+    },
+    {
+      "name": "margin-case-9",
+      "time": 10.517
+    },
+    {
+      "name": "margin-case-38",
+      "time": 14.517
+    },
+    {
+      "name": "margin-case-37",
+      "time": 18.517
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 25.35
+    },
+    {
+      "name": "closing",
+      "time": 28.35
+    }
+  ],
+  "params": {
+    "angle": 0,
+    "norm": 1,
+    "offset": 0,
+    "C": 1,
+    "noise": 0.5,
+    "seed": 42
+  },
+  "method": "object-narrative",
+  "layout": []
+}

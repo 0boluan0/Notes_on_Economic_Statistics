@@ -1,0 +1,65 @@
+{
+  "id": "regularization",
+  "duration": 35.93333333333359,
+  "chapters": [
+    {
+      "title": "一次 Dropout，究竟丢掉了什么？",
+      "en": "Follow one actual dropout mask.",
+      "start": 0.0
+    },
+    {
+      "title": "保留下来的项，还要除以保留概率",
+      "en": "Inverted dropout rescales the survivors.",
+      "start": 10.0
+    },
+    {
+      "title": "一次会变，平均值保持什么？",
+      "en": "Random outputs can have a stable expectation.",
+      "start": 20.733
+    },
+    {
+      "title": "保持期望，不等于每次保持输出",
+      "en": "Preserving the mean does not preserve each realization.",
+      "start": 26.967
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "contributions",
+      "time": 2.85
+    },
+    {
+      "name": "actual-mask",
+      "time": 9.85
+    },
+    {
+      "name": "scaled-survivors",
+      "time": 16.317
+    },
+    {
+      "name": "one-output",
+      "time": 20.583
+    },
+    {
+      "name": "random-outputs",
+      "time": 26.25
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 32.783
+    },
+    {
+      "name": "closing",
+      "time": 35.783
+    }
+  ],
+  "params": {
+    "dropout": 0.5,
+    "scale": 1,
+    "target": 1,
+    "reps": 500,
+    "seed": 42
+  },
+  "method": "object-narrative",
+  "layout": []
+}

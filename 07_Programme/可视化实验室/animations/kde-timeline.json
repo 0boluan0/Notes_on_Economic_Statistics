@@ -1,0 +1,60 @@
+{
+  "id": "kde",
+  "duration": 38.73333333333369,
+  "chapters": [
+    {
+      "title": "一个观测，先放上一座小山",
+      "en": "Place one kernel at each observation.",
+      "start": 0.0
+    },
+    {
+      "title": "在同一个 x，把所有小山的高度相加",
+      "en": "Sum the kernel heights at the same evaluation point.",
+      "start": 15.5
+    },
+    {
+      "title": "带宽改变的是每座小山的宽窄",
+      "en": "Bandwidth changes the scale of smoothing.",
+      "start": 23.967
+    },
+    {
+      "title": "平滑曲线，不等于已经发现真实结构",
+      "en": "A smooth estimate is still a smoothing choice.",
+      "start": 29.767
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "observations",
+      "time": 2.85
+    },
+    {
+      "name": "individual-kernels",
+      "time": 15.35
+    },
+    {
+      "name": "sum-of-kernels",
+      "time": 23.817
+    },
+    {
+      "name": "shared-bandwidth",
+      "time": 29.05
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 35.583
+    },
+    {
+      "name": "closing",
+      "time": 38.583
+    }
+  ],
+  "params": {
+    "n": 10,
+    "bandwidth": 0.35,
+    "distribution": "mixture",
+    "seed": 42
+  },
+  "method": "object-narrative",
+  "layout": []
+}

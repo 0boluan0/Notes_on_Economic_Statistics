@@ -1,0 +1,61 @@
+{
+  "id": "gan",
+  "duration": 39.10000000000037,
+  "chapters": [
+    {
+      "title": "先冻结判别器，只移动一个生成点",
+      "en": "Freeze the discriminator and move one generated point.",
+      "start": 0.0
+    },
+    {
+      "title": "同一个低分，会产生不同强度的更新",
+      "en": "The same low score gives different generator gradients.",
+      "start": 4.7
+    },
+    {
+      "title": "沿各自梯度走，比较实际位置更新",
+      "en": "Follow the two actual update sequences.",
+      "start": 11.933
+    },
+    {
+      "title": "这段只隔离生成器损失的影响",
+      "en": "This isolates generator objectives under a frozen discriminator.",
+      "start": 30.133
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "fixed-discriminator",
+      "time": 4.55
+    },
+    {
+      "name": "two-gradients",
+      "time": 11.783
+    },
+    {
+      "name": "饱和-updates",
+      "time": 21.717
+    },
+    {
+      "name": "非饱和-updates",
+      "time": 29.417
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 35.95
+    },
+    {
+      "name": "closing",
+      "time": 38.95
+    }
+  ],
+  "params": {
+    "theta": -2,
+    "weight": 1,
+    "bias": 0,
+    "rate": 0.2,
+    "steps": 20
+  },
+  "method": "object-narrative",
+  "layout": []
+}

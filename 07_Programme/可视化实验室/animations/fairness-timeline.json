@@ -1,0 +1,51 @@
+{
+  "id": "fairness",
+  "duration": 28.06666666666678,
+  "chapters": [
+    {
+      "title": "同样的错误率，会给出同样的预测可靠性吗？",
+      "en": "Equal error rates need not imply equal predictive value.",
+      "start": 0.0
+    },
+    {
+      "title": "现在只看“预测为正”的那一列",
+      "en": "Condition on positive predictions in each group.",
+      "start": 5.7
+    },
+    {
+      "title": "先说清分母，再讨论公平约束",
+      "en": "Specify the conditioning event before comparing fairness metrics.",
+      "start": 19.1
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "two-populations",
+      "time": 5.55
+    },
+    {
+      "name": "predicted-positive-columns",
+      "time": 12.117
+    },
+    {
+      "name": "unequal-predictive-values",
+      "time": 18.383
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 24.917
+    },
+    {
+      "name": "closing",
+      "time": 27.917
+    }
+  ],
+  "params": {
+    "baseA": 0.2,
+    "baseB": 0.6,
+    "tpr": 0.8,
+    "fpr": 0.2
+  },
+  "method": "object-narrative",
+  "layout": []
+}

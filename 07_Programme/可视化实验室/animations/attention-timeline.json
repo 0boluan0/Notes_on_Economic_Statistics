@@ -1,0 +1,82 @@
+{
+  "id": "attention",
+  "duration": 65.3666666666664,
+  "chapters": [
+    {
+      "title": "一个 Query，先逐个比较 Key",
+      "en": "A query scores each key before reading any value.",
+      "start": 0.0
+    },
+    {
+      "title": "把分数变成共享总量的权重",
+      "en": "Normalize across the same query row.",
+      "start": 13.2
+    },
+    {
+      "title": "每个权重，都作用在一个 Value 上",
+      "en": "The same weights mix the value vectors.",
+      "start": 26.1
+    },
+    {
+      "title": "第 3 个 Query，不能读第 4 个位置",
+      "en": "Mask future scores before normalization.",
+      "start": 42.467
+    },
+    {
+      "title": "可见范围改变，加权读取也随之改变",
+      "en": "Visibility changes the weighted read.",
+      "start": 56.4
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "query-and-keys",
+      "time": 2.85
+    },
+    {
+      "name": "four-dot-products",
+      "time": 13.05
+    },
+    {
+      "name": "common-denominator",
+      "time": 21.25
+    },
+    {
+      "name": "weights",
+      "time": 25.95
+    },
+    {
+      "name": "weighted-values",
+      "time": 36.25
+    },
+    {
+      "name": "one-output-vector",
+      "time": 41.75
+    },
+    {
+      "name": "future-score-masked",
+      "time": 48.183
+    },
+    {
+      "name": "renormalized-visible-keys",
+      "time": 55.683
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 62.217
+    },
+    {
+      "name": "closing",
+      "time": 65.217
+    }
+  ],
+  "params": {
+    "query": 2,
+    "strength": 1,
+    "temperature": 1,
+    "causal": 0,
+    "valueScale": 1
+  },
+  "method": "object-narrative",
+  "layout": []
+}

@@ -1,0 +1,59 @@
+{
+  "rnn": [
+    {
+      "path": "00_Knowledge/多元链式法则.md",
+      "title": "多元链式法则",
+      "support": "共享参数的多个时间路径求导后求和；状态敏感度由复合导数给出。"
+    }
+  ],
+  "lstm": [
+    {
+      "path": "00_Knowledge/链式法则.md",
+      "title": "链式法则",
+      "support": "细胞到隐藏输出经过tanh和输出门，保存细胞不等于输出梯度为1。"
+    },
+    {
+      "path": "00_Knowledge/多元链式法则.md",
+      "title": "多元链式法则",
+      "support": "候选反馈增加依赖路径，完整导数不能只保留细胞直通路径。"
+    }
+  ],
+  "contrastive": [
+    {
+      "path": "00_Knowledge/Softmax.md",
+      "title": "Softmax",
+      "support": "正负候选共用指数归一化分母；温度改变分数差异，不自动构成校准概率。"
+    }
+  ],
+  "jacobian": [
+    {
+      "path": "00_Knowledge/Jacobian矩阵.md",
+      "title": "Jacobian矩阵",
+      "support": "导数把相对中心的输入扰动映为一阶输出扰动；矩阵行列对应输出/输入。"
+    },
+    {
+      "path": "00_Knowledge/Jacobian行列式.md",
+      "title": "Jacobian行列式",
+      "support": "局部一阶面积和取向；奇异导数不能单独推断原非线性映射的全局性质。"
+    }
+  ],
+  "uncertainty": [
+    {
+      "path": "00_Knowledge/后验分布.md",
+      "title": "后验分布",
+      "support": "后验是给定模型、先验和数据的条件分布；本页解析计算Gaussian参数后验及其预测推送。"
+    }
+  ],
+  "causal": [
+    {
+      "path": "00_Knowledge/概率依赖与因果.md",
+      "title": "概率依赖与因果",
+      "support": "观察条件关系不等于替换结构方程的干预关系，需要因果结构与识别假设。"
+    },
+    {
+      "path": "00_Knowledge/均值差的因果分解.md",
+      "title": "均值差的因果分解",
+      "support": "已知同质组内均值效应的合成模型中，观察组均值差含选择组成偏差。"
+    }
+  ]
+}

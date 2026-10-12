@@ -1,0 +1,73 @@
+{
+  "id": "confidence",
+  "duration": 44.40000000000019,
+  "chapters": [
+    {
+      "title": "先抽样，才有一个会变的区间",
+      "en": "A random sample produces a random interval.",
+      "start": 0.0
+    },
+    {
+      "title": "重复整个抽样过程，再看覆盖频率",
+      "en": "Repeat sampling to assess the interval procedure.",
+      "start": 10.4
+    },
+    {
+      "title": "95% 描述的是这种造区间的方法",
+      "en": "Coverage is a property of the procedure.",
+      "start": 29.2
+    },
+    {
+      "title": "固定参数，随机区间",
+      "en": "A fixed parameter and a random interval.",
+      "start": 35.433
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "fixed-parameter",
+      "time": 3.55
+    },
+    {
+      "name": "one-interval",
+      "time": 10.25
+    },
+    {
+      "name": "intervals-1",
+      "time": 14.683
+    },
+    {
+      "name": "intervals-5",
+      "time": 17.483
+    },
+    {
+      "name": "intervals-15",
+      "time": 21.483
+    },
+    {
+      "name": "all-intervals",
+      "time": 28.483
+    },
+    {
+      "name": "coverage-count",
+      "time": 34.717
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 41.25
+    },
+    {
+      "name": "closing",
+      "time": 44.25
+    }
+  ],
+  "params": {
+    "n": 25,
+    "level": 0.95,
+    "reps": 30,
+    "sigma": 1,
+    "seed": 7
+  },
+  "method": "object-narrative",
+  "layout": []
+}

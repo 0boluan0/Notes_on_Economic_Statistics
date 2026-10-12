@@ -1,0 +1,70 @@
+{
+  "id": "vae",
+  "duration": 42.10000000000002,
+  "chapters": [
+    {
+      "title": "把随机性放在一个独立的噪声变量里",
+      "en": "Put randomness in a separate noise variable.",
+      "start": 0.0
+    },
+    {
+      "title": "抽样点的变化，可以沿确定性路径求导",
+      "en": "The sampled value has a differentiable parameter path.",
+      "start": 12.6
+    },
+    {
+      "title": "重建与先验匹配，分别计算再相加",
+      "en": "Reconstruction and prior matching are distinct terms.",
+      "start": 20.833
+    },
+    {
+      "title": "改噪声样本，和改分布参数，是两种操作",
+      "en": "Changing a draw differs from changing its distribution.",
+      "start": 33.133
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "noise-draw",
+      "time": 2.85
+    },
+    {
+      "name": "scaled-noise",
+      "time": 7.15
+    },
+    {
+      "name": "latent-sample",
+      "time": 12.45
+    },
+    {
+      "name": "reparameterized-derivatives",
+      "time": 20.683
+    },
+    {
+      "name": "two-objective-terms",
+      "time": 26.917
+    },
+    {
+      "name": "vae-objective",
+      "time": 32.417
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 38.95
+    },
+    {
+      "name": "closing",
+      "time": 41.95
+    }
+  ],
+  "params": {
+    "mu": 1,
+    "logvar": 0,
+    "decoder": 1,
+    "x": 2,
+    "beta": 1,
+    "epsilon": 0.5
+  },
+  "method": "object-narrative",
+  "layout": []
+}

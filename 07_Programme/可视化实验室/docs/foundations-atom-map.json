@@ -1,0 +1,64 @@
+{
+  "svd": [
+    {
+      "path": "00_Knowledge/奇异值分解.md",
+      "title": "奇异值分解",
+      "support": "实际 UΣVᵀ 与输入/输出正交基对应，矩阵元素随控件重新计算。"
+    },
+    {
+      "path": "00_Knowledge/奇异值与秩.md",
+      "title": "奇异值与秩",
+      "support": "σ₂=0 或两奇异值全零直接改变原矩阵秩；保留项数与秩显式区分。"
+    },
+    {
+      "path": "00_Knowledge/截断SVD最佳低秩近似.md",
+      "title": "截断SVD最佳低秩近似",
+      "support": "实际 A−Aₖ Frobenius 误差与尾部奇异值公式核对，同时显示谱误差。"
+    },
+    {
+      "path": "00_Knowledge/重奇异值下方向不唯一.md",
+      "title": "重奇异值下方向不唯一",
+      "support": "两奇异值相等时共同旋转 U、V，基改变而 A 不变；该不唯一性有直接控件。"
+    }
+  ],
+  "biasvariance": [
+    {
+      "path": "00_Knowledge/MSE偏差方差分解.md",
+      "title": "MSE偏差方差分解",
+      "support": "实际重新拟合 R 次，把固定目标 f(x₀) 的经验 MSE 精确分成分母 R 的方差与经验偏差平方；新响应噪声另列，避免与固定目标恒等式混淆。"
+    }
+  ],
+  "kernel": [
+    {
+      "path": "00_Knowledge/岭正则化.md",
+      "title": "岭正则化",
+      "support": "核空间中的平方误差加二范数正则，通过实际训练演示 λ 改变目标与拟合；线性核有显式特征空间对照，常数特征也受罚。"
+    },
+    {
+      "path": "00_Knowledge/Gram矩阵正定判据.md",
+      "title": "Gram矩阵正定判据",
+      "support": "线性/二次核矩阵是特征向量的 Gram，半正定不自动可逆；实际用 K+λI 保证正定，避免把方阵当可逆。"
+    }
+  ],
+  "entropy": [
+    {
+      "path": "00_Knowledge/KL参考约束.md",
+      "title": "KL参考约束",
+      "support": "只关联“约束读取概率比”段中正向离散 KL 的公式与方向：本页真实计算 ∑P log(P/Q)，帮助读懂该惩罚项；没有实现策略优化、奖励或 β 调节。"
+    }
+  ],
+  "softmax": [
+    {
+      "path": "00_Knowledge/Softmax.md",
+      "title": "Softmax",
+      "support": "真实三类指数归一化、共同平移不变性、概率比和相互耦合；新增温度与导数由同一定义推出。"
+    }
+  ],
+  "calibration": [
+    {
+      "path": "00_Knowledge/分类概率校准.md",
+      "title": "分类概率校准",
+      "support": "可靠性图、分箱计数、有限样本频率误差、Brier 混合含义与准确率/概率质量分离均直接实现。"
+    }
+  ]
+}

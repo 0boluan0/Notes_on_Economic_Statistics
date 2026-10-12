@@ -1,0 +1,75 @@
+{
+  "id": "kmeans",
+  "duration": 41.00000000000018,
+  "chapters": [
+    {
+      "title": "先放中心，还没有决定谁属于谁",
+      "en": "Start with centers before assigning observations.",
+      "start": 0.0
+    },
+    {
+      "title": "先按最近中心分组",
+      "en": "Assign each observation to its nearest center.",
+      "start": 4.0
+    },
+    {
+      "title": "再把中心移到组内平均位置",
+      "en": "Move each center to its assigned cluster mean.",
+      "start": 10.767
+    },
+    {
+      "title": "先按最近中心分组",
+      "en": "Assign each observation to its nearest center.",
+      "start": 17.733
+    },
+    {
+      "title": "再把中心移到组内平均位置",
+      "en": "Move each center to its assigned cluster mean.",
+      "start": 24.5
+    },
+    {
+      "title": "两步交替，可能停在不同的局部解",
+      "en": "Alternating improvements need not find a global optimum.",
+      "start": 32.033
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "initial-centers",
+      "time": 3.85
+    },
+    {
+      "name": "assignment-1",
+      "time": 10.617
+    },
+    {
+      "name": "center-update-1",
+      "time": 17.583
+    },
+    {
+      "name": "assignment-2",
+      "time": 24.35
+    },
+    {
+      "name": "center-update-2",
+      "time": 31.317
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 37.85
+    },
+    {
+      "name": "closing",
+      "time": 40.85
+    }
+  ],
+  "params": {
+    "k": 3,
+    "steps": 4,
+    "n": 30,
+    "initialization": "spread",
+    "seed": 42
+  },
+  "method": "object-narrative",
+  "layout": []
+}

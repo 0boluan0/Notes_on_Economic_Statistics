@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "utc": "2026-10-10T18:08:40.933Z",
+  "cases": 264,
+  "assertions": 169307,
+  "coordinateAssertions": 162311,
+  "experimentCases": {
+    "activations": 15,
+    "neuron": 15,
+    "mlp": 17,
+    "backprop": 15,
+    "initialization": 17,
+    "optimizers": 15,
+    "regularization": 15,
+    "normalization": 17,
+    "convolution": 55,
+    "pooling": 55,
+    "residual": 13,
+    "attention": 15
+  },
+  "sourceSHA256": "4c39c8909688c69d0f4dbc2288bbc7b7d8701b6d378becd49a67cfd640c7b5a6",
+  "methods": [
+    "Independent scalar finite differences",
+    "Exact ReLU tent and linear-collapse identities",
+    "Full initialized network perturbation",
+    "Exact enumeration of all 16 dropout masks",
+    "Independent input-index cross correlation",
+    "Direct normalization moments",
+    "Optimizer first-step and objective checks",
+    "Residual closed forms and perturbations",
+    "Attention row sums, masks, value linearity and convex hull"
+  ]
+}

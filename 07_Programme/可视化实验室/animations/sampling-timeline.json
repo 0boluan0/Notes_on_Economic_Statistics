@@ -1,0 +1,60 @@
+{
+  "id": "sampling",
+  "duration": 51.49999999999987,
+  "chapters": [
+    {
+      "title": "八个观测，只产生一个样本均值",
+      "en": "Eight observations produce one sample mean.",
+      "start": 0.0
+    },
+    {
+      "title": "换一整份样本，才得到下一个均值",
+      "en": "A new sample gives the next sample mean.",
+      "start": 9.5
+    },
+    {
+      "title": "很多个均值，才形成抽样分布",
+      "en": "The distribution is built from repeated sample means.",
+      "start": 31.733
+    },
+    {
+      "title": "n 控制每个均值，B 控制模拟精细度",
+      "en": "Sample size and repetition count play different roles.",
+      "start": 42.533
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "one-sample",
+      "time": 3.85
+    },
+    {
+      "name": "one-mean",
+      "time": 9.35
+    },
+    {
+      "name": "five-independent-means",
+      "time": 31.583
+    },
+    {
+      "name": "mean-distribution",
+      "time": 41.817
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 48.35
+    },
+    {
+      "name": "closing",
+      "time": 51.35
+    }
+  ],
+  "params": {
+    "n": 8,
+    "reps": 500,
+    "distribution": "exponential",
+    "seed": 42
+  },
+  "method": "object-narrative",
+  "layout": []
+}

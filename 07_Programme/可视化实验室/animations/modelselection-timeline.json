@@ -1,0 +1,61 @@
+{
+  "id": "modelselection",
+  "duration": 34.23333333333356,
+  "chapters": [
+    {
+      "title": "验证分数也会带着噪声",
+      "en": "Validation scores contain sampling noise.",
+      "start": 0.0
+    },
+    {
+      "title": "挑最小值，也挑中了有利的噪声",
+      "en": "Selecting the minimum selects favorable noise.",
+      "start": 6.8
+    },
+    {
+      "title": "用独立测试，重新衡量这个赢家",
+      "en": "Evaluate the selected model on independent data.",
+      "start": 17.467
+    },
+    {
+      "title": "反复看测试集，也会把它变成选择集",
+      "en": "Repeated test-driven selection destroys that independence.",
+      "start": 25.267
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "noisy-scores",
+      "time": 6.65
+    },
+    {
+      "name": "selected-winner",
+      "time": 12.617
+    },
+    {
+      "name": "truth-versus-winner",
+      "time": 17.317
+    },
+    {
+      "name": "independent-evaluation",
+      "time": 24.55
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 31.083
+    },
+    {
+      "name": "closing",
+      "time": 34.083
+    }
+  ],
+  "params": {
+    "candidates": 20,
+    "nval": 30,
+    "scale": 1,
+    "reps": 60,
+    "seed": 42
+  },
+  "method": "object-narrative",
+  "layout": []
+}

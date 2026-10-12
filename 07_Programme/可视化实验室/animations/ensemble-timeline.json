@@ -1,0 +1,57 @@
+{
+  "id": "ensemble",
+  "duration": 39.666666666666956,
+  "chapters": [
+    {
+      "title": "平均多个预测，会抵消多少误差？",
+      "en": "Averaging can cancel errors that disagree.",
+      "start": 0.0
+    },
+    {
+      "title": "独有误差被平均，共同误差留在原地",
+      "en": "Independent noise shrinks; common noise remains.",
+      "start": 15.0
+    },
+    {
+      "title": "模型数量，不能替代误差多样性",
+      "en": "More members do not guarantee independent errors.",
+      "start": 30.7
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "one-model",
+      "time": 2.85
+    },
+    {
+      "name": "growing-average",
+      "time": 14.85
+    },
+    {
+      "name": "correlation-floor",
+      "time": 25.283
+    },
+    {
+      "name": "shared-component",
+      "time": 29.983
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 36.517
+    },
+    {
+      "name": "closing",
+      "time": 39.517
+    }
+  ],
+  "params": {
+    "members": 20,
+    "rho": 0.3,
+    "sigma": 1,
+    "bias": 0.3,
+    "reps": 400,
+    "seed": 42
+  },
+  "method": "object-narrative",
+  "layout": []
+}

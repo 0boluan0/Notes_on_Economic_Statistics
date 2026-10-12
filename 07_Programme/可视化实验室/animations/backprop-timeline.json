@@ -1,0 +1,73 @@
+{
+  "id": "backprop",
+  "duration": 52.4333333333332,
+  "chapters": [
+    {
+      "title": "先让一个输入走到损失",
+      "en": "One input, four operations, one loss.",
+      "start": 0.0
+    },
+    {
+      "title": "局部导数，把上游变化传回来",
+      "en": "Upstream sensitivity × local derivative.",
+      "start": 14.3
+    },
+    {
+      "title": "同一个节点，还要把梯度交给参数",
+      "en": "Branch from z into its trainable parameters.",
+      "start": 30.867
+    },
+    {
+      "title": "链式法则是在组合敏感度",
+      "en": "The chain rule composes local sensitivities.",
+      "start": 43.467
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "input",
+      "time": 1.85
+    },
+    {
+      "name": "forward-values",
+      "time": 14.15
+    },
+    {
+      "name": "backward-edge-0",
+      "time": 18.817
+    },
+    {
+      "name": "backward-edge-1",
+      "time": 22.717
+    },
+    {
+      "name": "backward-edge-2",
+      "time": 26.617
+    },
+    {
+      "name": "backward-edge-3",
+      "time": 30.517
+    },
+    {
+      "name": "parameter-branches",
+      "time": 42.75
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 49.283
+    },
+    {
+      "name": "closing",
+      "time": 52.283
+    }
+  ],
+  "params": {
+    "x": 1,
+    "w": 0.5,
+    "bias": 0,
+    "v": 2,
+    "target": 1
+  },
+  "method": "object-narrative",
+  "layout": []
+}

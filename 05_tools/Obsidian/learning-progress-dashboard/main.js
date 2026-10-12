@@ -281,12 +281,11 @@ function isRecentDate(value, cutoff = recentCutoff()) {
 }
 
 class RecordProgressModal extends Modal {
-  constructor(app, tasks, onComplete, onSaveInput, onRecordCompleted) {
+  constructor(app, tasks, onComplete, onSaveInput) {
     super(app);
     this.tasks = tasks;
     this.onComplete = onComplete;
     this.onSaveInput = onSaveInput;
-    this.onRecordCompleted = onRecordCompleted;
   }
 
   onOpen() {
@@ -297,7 +296,7 @@ class RecordProgressModal extends Modal {
 
     const completeForm = contentEl.createEl("form", { cls: "lpd-modal-form" });
     const taskField = completeForm.createEl("label", { cls: "lpd-field" });
-    taskField.createSpan({ text: "完成一个当前任务" });
+    taskField.createSpan({ text: "核验一个当前任务" });
     const select = taskField.createEl("select");
     this.tasks.forEach((task) => {
       select.createEl("option", {
@@ -311,11 +310,11 @@ class RecordProgressModal extends Modal {
     }
 
     const noteField = completeForm.createEl("label", { cls: "lpd-field" });
-    noteField.createSpan({ text: "完成说明（可选）" });
+    noteField.createSpan({ text: "实际完成范围（带入核验面板）" });
     const noteInput = noteField.createEl("input", { attr: { type: "text", placeholder: "一句话即可" } });
     const completeButton = completeForm.createEl("button", {
       cls: "lpd-primary",
-      text: "标记完成",
+      text: "进入完成核验",
       attr: { type: "submit" },
     });
     completeButton.disabled = this.tasks.length === 0;
@@ -332,7 +331,7 @@ class RecordProgressModal extends Modal {
     const captureField = captureForm.createEl("label", { cls: "lpd-field" });
     captureField.createSpan({ text: "输入一件事" });
     const captureInput = captureField.createEl("textarea", {
-      attr: { placeholder: "还没想清楚就存到输入箱；刚做完的事直接记为完成" },
+      attr: { placeholder: "临时想法存到输入箱；已完成的任务从上方选择并核验" },
     });
     const captureActions = captureForm.createDiv({ cls: "lpd-capture-actions" });
     const saveInputButton = captureActions.createEl("button", {
@@ -340,17 +339,8 @@ class RecordProgressModal extends Modal {
       text: "保存到输入箱",
       attr: { type: "button" },
     });
-    const recordCompletedButton = captureActions.createEl("button", {
-      cls: "lpd-primary",
-      text: "记录为刚完成",
-      attr: { type: "button" },
-    });
     saveInputButton.addEventListener("click", async () => {
       const captured = await this.onSaveInput(captureInput.value);
-      if (captured) this.close();
-    });
-    recordCompletedButton.addEventListener("click", async () => {
-      const captured = await this.onRecordCompleted(captureInput.value);
       if (captured) this.close();
     });
 
@@ -401,7 +391,10 @@ class WorkflowStore {
   }
 
   async syncCurrentTaskViews() {
+    if (!this.app.metadataCache.initialized) return;
     const data = await this.readDashboardData();
+    // A cold link cache must not remove registered courses from Today/Workbench.
+    if (data.active.some(track => (track.planTargets || []).some(target => !this.resolveOverviewLink(target)))) return;
     const paths = this.activeSourcePaths(data);
     for (const path of [WORKBENCH_PATH, todayNotePath()]) {
       const file = this.getFile(path);
@@ -511,57 +504,6 @@ class WorkflowStore {
       .map((task) => ({ ...task, id: `${task.path}:${task.line}:${task.raw}` }));
   }
 
-  tasksApi() {
-    const plugin =
-      this.app.plugins.getPlugin?.(TASKS_PLUGIN_ID) || this.app.plugins.plugins?.[TASKS_PLUGIN_ID];
-    return plugin?.apiV1 || null;
-  }
-
-  async completeCanonicalTask(task, note = "") {
-    const currentChoices = await this.taskChoices();
-    if (!currentChoices.some((current) => current.path === task.path && current.raw === task.raw)) {
-      new Notice("任务已退出当前队列，请重新打开面板");
-      return false;
-    }
-    const file = this.getFile(task.path);
-    if (!file) {
-      new Notice("任务源文件不存在，未作修改");
-      return false;
-    }
-    const api = this.tasksApi();
-    if (!api?.executeToggleTaskDoneCommand) {
-      new Notice("Tasks 插件尚未就绪，未作修改");
-      return false;
-    }
-    let outcome = "missing";
-    await this.app.vault.process(file, (current) => {
-      const lines = current.split("\n");
-      const located = locateTaskLine(lines, task.line, task.raw);
-      if (located.index < 0) {
-        outcome = located.reason;
-        return current;
-      }
-      const currentTask = parseTaskLine(lines[located.index], task.path, located.index);
-      if (!currentTask || currentTask.isDone || currentTask.isCancelled) {
-        outcome = "stale";
-        return current;
-      }
-      const toggled = api.executeToggleTaskDoneCommand(lines[located.index], task.path);
-      const replacement = String(toggled).split("\n");
-      if (note) replacement.splice(1, 0, `${currentTask.indent}  - ${formatTime()}｜${note}`);
-      lines.splice(located.index, 1, ...replacement);
-      outcome = "completed";
-      return lines.join("\n");
-    });
-    if (outcome !== "completed") {
-      const reason = outcome === "ambiguous" ? "任务出现重复，无法安全定位" : "任务已变化或已完成";
-      new Notice(`${reason}，请重新打开面板`);
-      return false;
-    }
-    new Notice("已完成；原任务与完成日期已同步");
-    return true;
-  }
-
   normalizeInput(text) {
     return String(text || "").replace(/\s+/g, " ").trim();
   }
@@ -583,22 +525,6 @@ class WorkflowStore {
     return true;
   }
 
-  async recordCompleted(text) {
-    const input = this.normalizeInput(text);
-    if (!input) {
-      new Notice("没有输入内容");
-      return false;
-    }
-    const file = this.getFile(WORK_RECORDS_PATH);
-    if (!file) {
-      new Notice("未找到工作记录，完成记录未保存");
-      return false;
-    }
-    const entry = `- [x] ${input} ${CANONICAL_TASK_TAG} ✅ ${formatDate()}`;
-    await this.app.vault.process(file, (current) => insertIntoSection(current, "## 计划外记录", entry));
-    new Notice("已记录为刚完成；Today 与看板会自动汇总");
-    return true;
-  }
 }
 
 class LearningProgressDashboardView extends ItemView {
@@ -796,8 +722,18 @@ class LearningProgressDashboardView extends ItemView {
 class LearningProgressDashboardPlugin extends Plugin {
   async onload() {
     this.store = new WorkflowStore(this.app);
+    if (typeof this.app.vault.adapter.getBasePath === "function") {
+      const { STEWARD_VIEW, StewardBridge, StewardView, installCompletionGuard } = require("./steward-view");
+      this.steward = new StewardBridge(this);
+      installCompletionGuard(this);
+      this.stewardViewType = STEWARD_VIEW;
+      this.registerView(STEWARD_VIEW, (leaf) => new StewardView(leaf, this));
+      this.addRibbonIcon("bot", "Student OS 管家", () => this.openSteward());
+      this.addCommand({ id: "open-student-os-steward", name: "打开 Student OS 管家", callback: () => this.openSteward() });
+      this.registerInterval(setInterval(() => this.steward.start().catch(() => {}), 60000));
+    }
     this.registerView(VIEW_TYPE, (leaf) => new LearningProgressDashboardView(leaf, this));
-    this.addRibbonIcon("sprout", "Learning Progress Dashboard", () => this.openDashboard());
+    if (!this.steward) this.addRibbonIcon("sprout", "Learning Progress Dashboard", () => this.openDashboard());
     this.addCommand({
       id: "open-learning-progress-dashboard",
       name: "Open Learning Progress Dashboard",
@@ -810,21 +746,34 @@ class LearningProgressDashboardPlugin extends Plugin {
     });
     this.addCommand({
       id: "open-today-note",
-      name: "Open today note",
-      callback: () => this.openToday(),
+      name: "Open Student OS home",
+      callback: () => this.steward ? this.openSteward() : this.openToday(),
     });
     this.registerEvent(
       this.app.vault.on("modify", (file) => {
+        this.steward?.sourceChanged(file.path);
         if (this.isDashboardSource(file)) this.refreshViews();
       })
     );
     for (const event of ["create", "rename", "delete"]) {
-      this.registerEvent(this.app.vault.on(event, (file) => {
+      this.registerEvent(this.app.vault.on(event, (file, oldPath) => {
+        this.steward?.sourceChanged(file.path);
+        if (oldPath) this.steward?.sourceChanged(oldPath);
         if (file.extension === "md") void this.refreshViews();
       }));
     }
+    this.registerEvent(this.app.metadataCache.on("resolved", () => {
+      void this.refreshViews().then(() => this.steward?.refresh()).catch(error => new Notice(error.message));
+    }));
+    this.registerEvent(this.app.workspace.on("active-leaf-change", leaf => {
+      if (this.steward && leaf && (leaf.view.getViewType() === "claudian-view"
+        || [WORKBENCH_PATH, "99_学习情况记录/deadlines.md", todayNotePath()].includes(leaf.view.file?.path))) this.addStewardReturn(leaf);
+    }));
     this.app.workspace.onLayoutReady(() => {
-      void this.refreshViews().then(() => this.openToday());
+      // Legacy task projections must not block the independently readable home.
+      void this.refreshViews().catch(error => new Notice(error.message));
+      void (this.steward ? this.openSteward() : this.openToday());
+      if (this.steward) void this.steward.start().catch(error => new Notice(error.message));
     });
   }
 
@@ -842,7 +791,30 @@ class LearningProgressDashboardPlugin extends Plugin {
   }
 
   onunload() {
+    this.steward?.stop();
+    if (this.stewardViewType) this.app.workspace.detachLeavesOfType(this.stewardViewType);
     this.app.workspace.detachLeavesOfType(VIEW_TYPE);
+  }
+
+  addStewardReturn(leaf) {
+    if (!leaf.view.addAction || leaf.view.containerEl.querySelector(".sos-return-steward")) return;
+    const action = leaf.view.addAction("bot", "返回学习管家，保留当前页面和课堂", () => {
+      if (leaf.view.getViewType() === "claudian-view" && leaf.getRoot() === this.app.workspace.rightSplit) this.app.workspace.rightSplit.collapse();
+      return this.openSteward();
+    });
+    action.addClass("sos-return-steward");
+    action.createSpan({ text: "学习管家" });
+    this.register(() => action.remove());
+  }
+
+  async openSteward() {
+    const existing = this.app.workspace.getLeavesOfType(this.stewardViewType);
+    if (existing.length) {
+      await this.app.workspace.revealLeaf(existing[0]);
+      this.app.workspace.setActiveLeaf(existing[0], { focus: true });
+      return;
+    }
+    await this.app.workspace.getLeaf("tab").setViewState({ type: this.stewardViewType, active: true });
   }
 
   async openDashboard() {
@@ -872,16 +844,11 @@ class LearningProgressDashboardPlugin extends Plugin {
       this.app,
       tasks,
       async (task, note) => {
-        const completed = await this.store.completeCanonicalTask(task, note);
-        if (completed) await this.refreshViews();
-        return completed;
+        if (!this.openCompletion) { new Notice("完成核验需要桌面管家，请在 MacBook 打开。"); return false; }
+        this.openCompletion(task, note);
+        return true;
       },
-      (text) => this.store.saveInput(text),
-      async (text) => {
-        const recorded = await this.store.recordCompleted(text);
-        if (recorded) await this.refreshViews();
-        return recorded;
-      }
+      (text) => this.store.saveInput(text)
     ).open();
   }
 

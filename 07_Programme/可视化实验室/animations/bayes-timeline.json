@@ -1,0 +1,64 @@
+{
+  "id": "bayes",
+  "duration": 48.83333333333342,
+  "chapters": [
+    {
+      "title": "先验是更新之前的分布",
+      "en": "A prior describes uncertainty before these observations.",
+      "start": 0.0
+    },
+    {
+      "title": "每个新观测，贡献一个似然因子",
+      "en": "Each observation contributes a likelihood factor.",
+      "start": 4.7
+    },
+    {
+      "title": "相乘后，再归一化成新的分布",
+      "en": "Multiply prior and likelihood, then normalize.",
+      "start": 21.5
+    },
+    {
+      "title": "后验，仍然表达不确定性",
+      "en": "Updating changes uncertainty; it does not eliminate it.",
+      "start": 39.867
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "prior",
+      "time": 4.55
+    },
+    {
+      "name": "likelihood-factors",
+      "time": 17.05
+    },
+    {
+      "name": "combined-likelihood",
+      "time": 21.35
+    },
+    {
+      "name": "posterior-update",
+      "time": 29.783
+    },
+    {
+      "name": "updated-distribution",
+      "time": 39.15
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 45.683
+    },
+    {
+      "name": "closing",
+      "time": 48.683
+    }
+  ],
+  "params": {
+    "a": 2,
+    "b": 2,
+    "success": 3,
+    "failure": 1
+  },
+  "method": "object-narrative",
+  "layout": []
+}

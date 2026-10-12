@@ -1,0 +1,76 @@
+{
+  "id": "svd",
+  "duration": 47.80000000000015,
+  "chapters": [
+    {
+      "title": "一个矩阵，可以拆成三次动作",
+      "en": "A matrix acts as rotate, stretch, rotate.",
+      "start": 0.0
+    },
+    {
+      "title": "先用 Vᵀ 改变输入方向",
+      "en": "Rotate the input directions with Vᵀ.",
+      "start": 4.7
+    },
+    {
+      "title": "再按两个奇异值分别伸缩",
+      "en": "Stretch the aligned axes by the singular values.",
+      "start": 12.667
+    },
+    {
+      "title": "最后用 U 放到输出方向",
+      "en": "Finally rotate the result with U.",
+      "start": 20.633
+    },
+    {
+      "title": "秩一近似，把第二个方向压到零",
+      "en": "Rank-one truncation removes the second singular direction.",
+      "start": 28.6
+    },
+    {
+      "title": "截断误差，对应被舍弃的方向",
+      "en": "Truncation error comes from the discarded direction.",
+      "start": 38.833
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "circle",
+      "time": 3.85
+    },
+    {
+      "name": "先用 Vᵀ 改变输入方向",
+      "time": 12.517
+    },
+    {
+      "name": "再按两个奇异值分别伸缩",
+      "time": 20.483
+    },
+    {
+      "name": "最后用 U 放到输出方向",
+      "time": 28.45
+    },
+    {
+      "name": "ellipse-to-rank-one-line",
+      "time": 38.117
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 44.65
+    },
+    {
+      "name": "closing",
+      "time": 47.65
+    }
+  ],
+  "params": {
+    "left": 30,
+    "right": 20,
+    "scale": 2,
+    "ratio": 0.35,
+    "retained": 1,
+    "shared": 0
+  },
+  "method": "object-narrative",
+  "layout": []
+}

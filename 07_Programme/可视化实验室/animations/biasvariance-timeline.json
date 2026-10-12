@@ -1,0 +1,54 @@
+{
+  "id": "biasvariance",
+  "duration": 38.166666666667,
+  "chapters": [
+    {
+      "title": "数据换一次，拟合曲线也换一次",
+      "en": "A fitted function varies across datasets.",
+      "start": 0.0
+    },
+    {
+      "title": "固定一个 x，看预测值如何散开",
+      "en": "Fix one input and inspect the distribution of predictions.",
+      "start": 14.5
+    },
+    {
+      "title": "平均值的偏移，和围绕平均值的波动，要分开",
+      "en": "Bias is displacement; variance is spread.",
+      "start": 29.2
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "different-fits",
+      "time": 14.35
+    },
+    {
+      "name": "prediction-distribution",
+      "time": 23.083
+    },
+    {
+      "name": "bias-is-displacement",
+      "time": 28.483
+    },
+    {
+      "name": "meaning-and-boundary",
+      "time": 35.017
+    },
+    {
+      "name": "closing",
+      "time": 38.017
+    }
+  ],
+  "params": {
+    "degree": 3,
+    "n": 20,
+    "noise": 0.4,
+    "lambda": 0.01,
+    "reps": 100,
+    "x0": 0.5,
+    "seed": 42
+  },
+  "method": "object-narrative",
+  "layout": []
+}

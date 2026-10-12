@@ -67,6 +67,12 @@ Suppose a tokenizer has encoded a text as $[7,3,7]$. Positions 1 and 3 both retr
 The original Transformer multiplies its lookup embeddings by $\sqrt{d_{\mathrm{model}}}$. This is that model's choice of embedding scale. [[点积缩放|Attention-score scaling]] divides by $\sqrt{d_k}$ and operates on a different quantity.
 <!-- bilingual-en:end -->
 
+<!-- visual-lab:links:start -->
+## 交互理解
+
+- [[07_Programme/可视化实验室/实验/embeddings|嵌入向量的角度、长度与相似度]]
+<!-- visual-lab:links:end -->
+
 ## 来源与核验
 
 <!-- bilingual-en:start -->
