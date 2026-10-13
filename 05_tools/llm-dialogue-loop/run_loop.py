@@ -172,7 +172,8 @@ class DeepSeekProvider:
             sys.exit("缺少 DEEPSEEK_API_KEY（用 export 传入）")
         self.session = requests.Session()
         self.session.headers.update({"Authorization": f"Bearer {key}",
-                                     "Content-Type": "application/json"})
+                                     "Content-Type": "application/json",
+                                     "Connection": "close"})   # 不复用连接：本地代理会重置长连接
         self.model = model
 
     def __call__(self, messages: list, cfg: dict) -> dict:
@@ -185,7 +186,7 @@ class DeepSeekProvider:
             "stream": False,
         }
         last_err = None
-        for attempt in range(6):
+        for attempt in range(10):
             try:
                 t0 = time.time()
                 r = self.session.post(f"{BASE_URL}/chat/completions", json=payload, timeout=300)
@@ -206,12 +207,12 @@ class DeepSeekProvider:
                 }
             except SystemExit:
                 raise
-            except Exception as e:  # 限流/网络抖动：指数退避
+            except Exception as e:  # 限流/网络抖动/连接被代理重置：指数退避后重试
                 last_err = e
-                wait = min(60, 2 ** attempt) + random.random()
-                print(f"    [retry {attempt+1}/6] {type(e).__name__}: {e} -> {wait:.1f}s", flush=True)
+                wait = min(30, 2 ** attempt) + random.random()
+                print(f"    [retry {attempt+1}/10] {type(e).__name__}: {e} -> {wait:.1f}s", flush=True)
                 time.sleep(wait)
-        raise RuntimeError(f"6 次重试仍失败: {last_err}")
+        raise RuntimeError(f"10 次重试仍失败: {last_err}")
 
 
 class MockProvider:
