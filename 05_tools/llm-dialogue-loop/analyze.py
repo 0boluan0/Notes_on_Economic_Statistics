@@ -224,7 +224,7 @@ def main():
         topic = (meta.get("config", {}) or {}).get("topic", "")
         cond = (meta.get("config", {}) or {}).get("condition", p.name)
         m = metrics(recs, topic)
-        label = f"{cond} ({len(recs)} msgs)"
+        label = f"{p.name} · {cond} · {len(recs)}条"
         runs.append((label, p, recs, meta, m))
         all_m.append((label, m))
 
