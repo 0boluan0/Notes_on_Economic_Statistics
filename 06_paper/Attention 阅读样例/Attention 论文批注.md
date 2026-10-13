@@ -18,3 +18,7 @@ Equation (1) in Section 3.2.1 describes three steps: compute compatibility score
 
 ## 原文定位
 
+> [!PDF|yellow] [[06_paper/Attention 阅读样例/Attention Is All You Need.pdf#page=4&selection=28,0,28,9&color=yellow|§3.2.1 · 式 (1) · 第 4 页]]
+> Attention
+>
+> [[缩放点积注意力|对应知识原子：缩放点积注意力]]
