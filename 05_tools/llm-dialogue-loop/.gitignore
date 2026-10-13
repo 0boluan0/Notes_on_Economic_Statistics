@@ -1,3 +1,0 @@
-# 不要把 API key 写进这个目录（vault 在 git 里），用环境变量传入。
-.env
-runs/
