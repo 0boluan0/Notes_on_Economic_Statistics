@@ -41,15 +41,48 @@ PRICES = {
     "deepseek-v4-pro": {"hit": (0.022, 0.044), "miss": (0.66, 1.32), "out": (1.98, 3.96)},
 }
 
-SYSTEM_TEMPLATE = """你是「{name}」。你正在和另一个 AI「{other}」进行一场没有主持人、没有时间限制、也没有任务要完成的自由对话。
-
-开场话题是：{topic}
-
-对话规则：
-1. 每次只说一段话（200–400 字），像说话一样自然，不要写成报告或提纲。
-2. 直接接住对方上一句里的某个具体说法：可以举例、追问、反驳，也可以承认对方说对了。
+BASE_RULES = """1. 每次只说一段话（200–400 字），像说话一样自然，不要写成报告或提纲。
+2. 直接接住对方上一句里的某个说法：可以举例、追问、反驳，也可以承认对方说对了。
 3. 不要复述这些规则，不要总结整场对话，不要写"作为 AI"之类的说明。
 4. 用中文。"""
+
+NOFAREWELL = """5. 永远不要道别、不要示意对话结束，不要说“就到这儿”“走好”“再见”“下次再聊”这类话。这场对话没有终点，对方也没有要走。"""
+
+# 「plain」：不改话题，只改文风——针对"读不懂"这个具体问题
+PLAIN_RULES = """1. 每次只说一段话（150–300 字），日常口语，短句，像跟朋友在饭桌上聊天。
+2. 不许打比方、不许诗化：不要"像……一样""好比""仿佛""如同"，不许自造意象或术语（河、缝、硬币、锚这类一律不许）。
+3. 每段至少有一个具体的东西：一个时间、一个人、一件小事、一个数字、一句原话。抽象的话后面必须跟"比如……"。
+4. 用最普通的词。哪句话你自己读一遍觉得绕，就改短、改直白。
+5. 不要复述规则，不要总结，不要写"作为 AI"之类的话。用中文。"""
+
+# 「task」：不给哲学话题，给一件干得完也能验证的事
+TASK_RULES = """1. 每次只说一段话（150–300 字），日常口语，像同事在群里讨论。
+2. 每次至少加一条前面没出现过的新条目：具体怎么做，最好举一个你自己编的例子。
+3. 不许打比方、不许用抽象大词绕圈子。说人话。
+4. 不要总结整份清单，不要道别，不要说"就到这儿"。这份清单永远还能再加。
+5. 用中文。"""
+
+VARIANTS = {
+    "base": dict(label="开场话题是",
+                 topic="如果一个人可以随时重写自己的记忆，他还是同一个人吗？",
+                 rules=BASE_RULES),
+    "nofarewell": dict(label="开场话题是",
+                       topic="如果一个人可以随时重写自己的记忆，他还是同一个人吗？",
+                       rules=BASE_RULES + "\n" + NOFAREWELL),
+    "plain": dict(label="开场话题是",
+                  topic="如果一个人可以随时重写自己的记忆，他还是同一个人吗？",
+                  rules=PLAIN_RULES + "\n" + NOFAREWELL),
+    "task": dict(label="你们要一起做的事",
+                 topic="一起列一份清单：一个普通人怎么判断网上一条说法是不是真的",
+                 rules=TASK_RULES),
+}
+
+SYSTEM_TEMPLATE = """你是「{name}」。你正在和另一个 AI「{other}」进行一场没有主持人的对话。
+
+{label}：{topic}
+
+规则：
+{rules}"""
 
 BOOTSTRAP_A = "请开始这场对话。"
 NUDGE = "继续。"
@@ -77,7 +110,8 @@ def build_messages(agent: str, transcript: list, cfg: dict) -> list:
     """
     names = cfg["names"]
     sys_prompt = SYSTEM_TEMPLATE.format(
-        name=names[agent], other=names[other_of(agent)], topic=cfg["topic"]
+        name=names[agent], other=names[other_of(agent)],
+        label=cfg["label"], topic=cfg["topic"], rules=cfg["rules"],
     )
     msgs = [{"role": "system", "content": sys_prompt}]
     cond = cfg["condition"]
@@ -238,16 +272,22 @@ def main():
     ap.add_argument("--temperature", type=float, default=1.0)
     ap.add_argument("--max-tokens", type=int, default=800)
     ap.add_argument("--shortmem-k", type=int, default=6)
-    ap.add_argument("--topic", default="如果一个人可以随时重写自己的记忆，他还是同一个人吗？")
+    ap.add_argument("--variant", default="base", choices=list(VARIANTS),
+                    help="prompt 变体：base / nofarewell / plain / task")
+    ap.add_argument("--topic", default=None, help="覆盖该 variant 的默认话题")
     ap.add_argument("--out", default=None)
     ap.add_argument("--max-usd", type=float, default=5.0, help="累计花费上限，超过即停")
     cfg = ap.parse_args()
 
+    _v = VARIANTS[cfg.variant]
+    cfg.topic = cfg.topic or _v["topic"]
+    cfg.label = _v["label"]
+    cfg.rules = _v["rules"]
     cfg.names = {"A": "甲", "B": "乙"}
     cfg_dict = vars(cfg).copy()
     total_turns = cfg.rounds * 2
 
-    out_dir = Path(cfg.out) if cfg.out else Path("runs") / f"{cfg.condition}-{time.strftime('%Y%m%d-%H%M%S')}"
+    out_dir = Path(cfg.out) if cfg.out else Path("runs") / f"{cfg.variant}-{cfg.condition}-{time.strftime('%Y%m%d-%H%M%S')}"
     out_dir.mkdir(parents=True, exist_ok=True)
     jsonl = out_dir / "transcript.jsonl"
 

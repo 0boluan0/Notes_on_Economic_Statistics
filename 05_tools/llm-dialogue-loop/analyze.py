@@ -188,6 +188,10 @@ def make_figure(runs, metrics_by_run, out_png: Path, cjk: bool):
         ("meta", L("元话语密度（每千字）", "meta-discourse density (per 1k chars)"), False),
     ]
     fig, axes = plt.subplots(4, 2, figsize=(14, 14))
+    # 按变体上色：同一条 prompt 的两次独立采样用同样的颜色、不同的线型
+    palette = {"loop": "#888888", "solo": "#cccccc", "nofarewell": "tab:orange",
+               "plain": "tab:green", "task": "tab:red"}
+    seen_name = {}
     for ax, (key, title, _) in zip(axes.ravel(), panels):
         for (label, m) in metrics_by_run:
             if key == "agree_ratio_roll":
@@ -197,13 +201,18 @@ def make_figure(runs, metrics_by_run, out_png: Path, cjk: bool):
             else:
                 y = rolling([x.get(key, np.nan) for x in m])
             x = np.linspace(0, 1, len(y))
-            ax.plot(x, y, lw=1.8, label=label)
+            name = label.split(" · ")[0]
+            variant = next((v for v in palette if name.startswith(v)), "loop")
+            k = seen_name.setdefault(variant, 0)
+            seen_name[variant] += 1
+            ax.plot(x, y, lw=1.6, color=palette[variant], alpha=.85,
+                    ls="-" if k == 0 else "--", label=name if ax is axes.ravel()[0] else None)
         ax.set_title(title, fontsize=10)
         ax.set_xlabel(L("对话进度", "progress"))
         if key == "chars":
             ax.set_yscale("log")          # 长度从 400 字塌到 3 字，线性轴看不出来
         ax.grid(alpha=.25)
-    axes.ravel()[0].legend(fontsize=9)
+    axes.ravel()[0].legend(fontsize=8, ncol=2)
     n_msg = max(len(m) for _, m in metrics_by_run)
     fig.suptitle(L(f"两个 LLM 的对话（{n_msg} 条消息）：交流模式漂移",
                    f"Two-LLM dialogue ({n_msg} messages): interaction drift"), fontsize=13)
