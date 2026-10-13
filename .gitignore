@@ -3,19 +3,19 @@
 **/00_inbox/
 /07_Programme/*
 !/07_Programme/可视化实验室/
-/01_Math/09_ST447_Data_Analysis_and_Statistical_Methods/2026_Course_Materials/
 /01_Math/10_ST300_Regression_and_Generalised_Linear_Models/
-/03_Computer_Science/05_ST445_Managing_and_Visualising_Data/2026_Course_Materials/
 /08_quant/
 /01_Math/08_MathsCamp-EC400/
-/01_Math/08_EC400_MathsCamp/2026_Course_Materials/EC400 2026 资料索引.md
 /03_Computer_Science/04_Linux/课件/
 /03_Computer_Science/99_Miscellaneous/SQL.md
 /98_attachment/vault-home/
 /98_attachment/dashboards/
 **/学习笔记/原始记录/
 
-**/2026_Course_Materials/09_Books/
+# Restricted course materials stay local; notes cite them
+**/2026_Course_Materials/
+/01_Math/08_EC400_MathsCamp/00_General/EC400_Timetable_2026.pdf
+/01_Math/08_EC400_MathsCamp/01_Revision_Mathematics/Notes/
 
 # Local application state and personal workflow configuration
 /.obsidian/
