@@ -10,6 +10,7 @@
 |---|---|
 | `run_loop.py` | 跑对话循环，逐条落盘，支持断点续跑 |
 | `analyze.py` | 计算漂移指标、出 CSV/报告/图 |
+| `readability.py` | 可读性测量：离线指标 + LLM 评审打分 |
 | `runs/<run_id>/transcript.jsonl` | 每轮的正文 + token + 延迟 + 成本 |
 | `runs/<run_id>/transcript.md` | 人类可读的完整对话 |
 | `runs/summary.md`、`runs/drift.png` | 多条件对比报告与图 |
@@ -23,7 +24,11 @@ export DEEPSEEK_API_KEY=$(python3 -c "import yaml,pathlib;print(yaml.safe_load((
 
 python3 run_loop.py --condition loop --rounds 100      # 主条件：共享完整历史
 python3 run_loop.py --condition solo --rounds 100      # 对照：只看自己说过的话
-python3 analyze.py runs/loop-a runs/loop-b runs/solo
+python3 run_loop.py --variant plain --rounds 100       # 只改文风：口语、禁比喻、必须具体
+python3 run_loop.py --variant task  --rounds 100       # 换成"一起列清单"，有外部可扩展的产出
+python3 run_loop.py --variant nofarewell --rounds 100  # 只加"不许道别/结束"
+python3 analyze.py runs/loop-a runs/plain-1 runs/task-1
+python3 readability.py runs/* --judge 15
 ```
 
 `--rounds 100` = 甲乙各说 100 次 = 200 条消息。中途 Ctrl-C 后重跑同一条命令会自动续跑。

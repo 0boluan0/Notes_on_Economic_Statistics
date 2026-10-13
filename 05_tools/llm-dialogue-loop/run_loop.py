@@ -189,7 +189,7 @@ class DeepSeekProvider:
         for attempt in range(10):
             try:
                 t0 = time.time()
-                r = self.session.post(f"{BASE_URL}/chat/completions", json=payload, timeout=300)
+                r = self.session.post(f"{BASE_URL}/chat/completions", json=payload, timeout=90)
                 if r.status_code != 200:
                     if r.status_code in self.FATAL:
                         raise SystemExit(f"API 拒绝请求 HTTP {r.status_code}: {r.text[:300]}")
