@@ -200,6 +200,8 @@ def make_figure(runs, metrics_by_run, out_png: Path, cjk: bool):
             ax.plot(x, y, lw=1.8, label=label)
         ax.set_title(title, fontsize=10)
         ax.set_xlabel(L("对话进度", "progress"))
+        if key == "chars":
+            ax.set_yscale("log")          # 长度从 400 字塌到 3 字，线性轴看不出来
         ax.grid(alpha=.25)
     axes.ravel()[0].legend(fontsize=9)
     n_msg = max(len(m) for _, m in metrics_by_run)
