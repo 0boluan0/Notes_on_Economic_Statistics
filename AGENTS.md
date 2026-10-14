@@ -22,6 +22,7 @@
 ## Student operating system
 
 - Before personal planning, teaching, learning-record work, or LSE programme/support decisions, read `99_学习情况记录/Student OS 规则.md` when present and follow its relevant resource routing. Its private operating rules stay outside Git.
+- Before any Hanvon transfer, classification, cleanup, or handwriting return, read `99_学习情况记录/手写接收/汉王/传输与归档规则.md`; delivery requires the intended native entry point and classification, not file copying alone.
 
 ## Knowledge architecture
 
