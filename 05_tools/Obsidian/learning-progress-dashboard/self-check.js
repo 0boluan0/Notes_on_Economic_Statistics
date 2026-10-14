@@ -28,7 +28,7 @@ const {
   scopeTaskQueries,
 } = require("./main.js").__test;
 
-const { homeModel, StewardBridge, StewardView, renderedTask, positionFor, agendaFor, todayNotices, deadlineNotices, sameRef, sectionForPath, titleForDeadline, deadlineTime } = require("./steward-view.js");
+const { homeModel, StewardBridge, StewardView, CompletionModal, renderedTask, positionFor, agendaFor, todayNotices, deadlineNotices, sameRef, sectionForPath, titleForDeadline, deadlineTime } = require("./steward-view.js");
 
 const renderNode = (path, anchor, title) => ({ querySelector: selector => selector.includes("data-code-space-source-path")
   ? { dataset: { codeSpaceSourcePath: path } } : selector === ".task-block-link" ? (anchor ? { textContent: anchor } : null) : { textContent: title } });
@@ -372,7 +372,27 @@ async function checkWorkspaceContext() {
   assert.equal(view.input.value, ""); assert.equal(view.chatContext, null);
 }
 
-Promise.all([checkArchivedPlans(), checkStewardLifecycle(), checkAutomaticRefresh(), checkWorkspaceContext()]).then(() => {
+async function checkTaskClosure() {
+  const control = value => ({ value, setText(text) { this.text = text; } });
+  const modal = { task: boundTask, resumeKey: "old-incomplete-check", reportInput: control(""), dateInput: control("2026-10-09"),
+    files: ["unused-evidence.md"], submit: control(), closeTask: control(), stop: control(), restartButton: control(), resultEl: control(),
+    lockForm() {}, showResult() {}, plugin: { refreshViews: async () => {}, steward: { run: async (command, input) => {
+      assert.equal(command, "completion-check");
+      assert.notEqual(input.key, "old-incomplete-check", "Closing must not resume the previous completion argument");
+      assert.equal(input.request.intent, "close");
+      assert.equal(input.request.date, "");
+      assert.deepEqual(input.request.evidence, []);
+      assert.ok(input.request.report);
+      return { phase: "closed", message: "Closed" };
+    } } } };
+  await CompletionModal.prototype.check.call(modal, "close");
+  assert.equal(modal.terminalPhase, "closed");
+  assert.equal(modal.submit.disabled, true);
+  assert.equal(modal.closeTask.disabled, true);
+  assert.equal(modal.stop.hidden, true);
+}
+
+Promise.all([checkArchivedPlans(), checkStewardLifecycle(), checkAutomaticRefresh(), checkWorkspaceContext(), checkTaskClosure()]).then(() => {
   console.log("learning-progress-dashboard self-check: ok");
 }).catch((error) => {
   console.error(error);

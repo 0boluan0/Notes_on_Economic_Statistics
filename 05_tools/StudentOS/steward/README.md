@@ -26,6 +26,13 @@ against that one task; sufficient evidence updates the original checkbox, while
 insufficient evidence stays **待核验** with a specific missing item. **记录停点**
 continues to save partial progress without claiming completion.
 
+**不再需要，关闭任务** records the user's decision immediately without a model
+or completion evidence. Clear cancellation intent in the form or steward chat
+uses the same path. Closure preserves the original checkbox, dates and anchor,
+replaces the active task/deadline tag with `#student-os/archived`, and saves a
+private `closed` receipt. It removes the task from active views without counting
+it as completed or submitted. Elapsed deadlines alone never authorize closure.
+
 `completion.py` stores the original claim, task version, bounded evidence content,
 file hashes, native check turn and result. Citations must occur in the supplied
 evidence; submission receipts must identify the matching course/assignment and

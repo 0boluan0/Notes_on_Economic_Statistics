@@ -26,7 +26,7 @@ from completion import CompletionChecks
 ZONE = ZoneInfo("Europe/London")
 PRIVATE = "99_学习情况记录/管家"
 MODEL = "gpt-6-astra"
-ACTION_NAMES = ["set_focus", "prepare_classroom", "record_progress", "cancel_classroom", "save_commitment", "cancel_commitment"]
+ACTION_NAMES = ["set_focus", "prepare_classroom", "record_progress", "close_task", "cancel_classroom", "save_commitment", "cancel_commitment"]
 FIELDS = ["task_id", "job_key", "summary", "next_step", "source_quote", "starts_at", "ends_at", "daily_time", "commitment_id"]
 ACTION_SCHEMA = {"type": "object", "additionalProperties": False,
     "properties": {"kind": {"type": "string", "enum": ACTION_NAMES},
@@ -47,6 +47,7 @@ INSTRUCTIONS = """你是用户在 Obsidian 中的 Student OS 管家，负责安�
 用户说做了什么，用 record_progress 保存实际范围和 next_step；保留 source_quote，证据为现有 vault 相对路径。
 record_progress 仅记录本人报告，不代表掌握或提交已核验，不关闭原任务。不要伪造完成、独立掌握或收据。
 用户要勾选完成时，说明可点每周任务前的圆框或 Workbench 勾选，填写实际范围并关联证据发起完成核验；证据不足会保留待核验。已有核验记录的状态以 completion_checks 为准。
+用户明确决定某项任务不再需要、取消、不再做或不要再追旧准备，用 close_task，task_id 可来自 tasks 或 obligations，source_quote 引用本轮决定。关闭按本人意愿退出待办，不要求完成证据，也不声称已完成、已提交或学校取消了义务。不能因截止时间过去或只说课上完了就自动关闭；目标不明确或只是在询问是否取消时先澄清。关闭记录 phase=closed。
 只有用户明确表达要保存一个有期限的约定，才 save_commitment：starts_at/ends_at 必须含 UTC offset；daily_time 为当地 HH:MM。
 例如连续 21 个自然日的结束边界是开始日加 21 日的当地 00:00，不默认无限期。频率仅每日一次管家内提示。
 约定提示只在 Obsidian 打开时可用；不要说已设置系统通知、Telegram、晨间自动化或电脑关闭时也会提醒。
@@ -452,6 +453,16 @@ class Service:
 
     def apply(self, key, action, parent):
         kind = action["kind"]
+        if kind == "close_task":
+            closure_key = "close-" + digest(key)[:32]
+            if self.db.execute("SELECT 1 FROM completion_checks WHERE key=?", (closure_key,)).fetchone():
+                return self.completion.run(closure_key)
+            state = self.source_state()
+            matches = [t for t in state["tasks"] + state["obligations"] if t["id"] == text(action.get("task_id"), "task ID")]
+            if len(matches) != 1:
+                raise ValueError("关闭目标已变化或不唯一，请刷新后选择原任务。")
+            task = matches[0]
+            return self.completion.run(closure_key, {"path": task["path"], "raw": task["raw"], "report": action["source_quote"], "date": "", "evidence": [], "intent": "close"})
         if kind == "prepare_classroom":
             return self.prepare_classroom(text(action.get("task_id"), "task ID"), parent, action.get("job_key", ""))
         if kind == "cancel_classroom":

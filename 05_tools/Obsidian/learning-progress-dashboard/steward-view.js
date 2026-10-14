@@ -263,11 +263,11 @@ class EvidencePicker extends FuzzySuggestModal {
 class CompletionModal extends Modal {
   constructor(plugin, task, report = "") { super(plugin.app); this.plugin = plugin; this.task = task; this.report = report; this.files = []; }
   async onOpen() {
-    this.titleEl.setText("完成核验"); this.contentEl.addClass("sos-completion-modal");
+    this.titleEl.setText("任务处理"); this.contentEl.addClass("sos-completion-modal");
     this.contentEl.createEl("p", { cls: "sos-completion-task", text: displayText(this.task.title || this.task.text || this.task.raw) });
-    const intro = this.contentEl.createEl("p", { cls: "sos-muted", text: "先核对原任务与证据；通过后写回完成，证据不足则保留待核验。" });
-    const reportLabel = this.contentEl.createEl("label", { cls: "sos-field", text: "实际完成了哪些内容" });
-    this.reportInput = reportLabel.createEl("textarea", { attr: { rows: "3", placeholder: "例如：完成 Exercise 1 第 1–4 题，输出在下方关联的 Rmd。若只是学到一半，请用“记录停点”。" } });
+    const intro = this.contentEl.createEl("p", { cls: "sos-muted", text: "完成后核验并记录；不再需要的任务可直接关闭，保留原因并退出待办。" });
+    const reportLabel = this.contentEl.createEl("label", { cls: "sos-field", text: "完成情况／关闭原因" });
+    this.reportInput = reportLabel.createEl("textarea", { attr: { rows: "3", placeholder: "例如：完成 Exercise 1 第 1–4 题；或：这节课已经上完，不再需要这项预习。部分进度可用“记录停点”。" } });
     this.reportInput.value = this.report;
     const dateLabel = this.contentEl.createEl("label", { cls: "sos-field", text: "实际完成日期（不确定就留空）" });
     this.dateInput = dateLabel.createEl("input", { attr: { type: "date", max: londonClock().date } });
@@ -284,6 +284,8 @@ class CompletionModal extends Modal {
     const actions = this.contentEl.createDiv({ cls: "sos-actions" });
     this.submit = actions.createEl("button", { cls: "mod-cta", text: "核验并记录完成" });
     this.submit.disabled = true;
+    this.closeTask = actions.createEl("button", { text: "不再需要，关闭任务" }); this.closeTask.disabled = true;
+    this.closeTask.addEventListener("click", () => this.check("close"));
     this.stop = actions.createEl("button", { text: "停止核验" }); this.stop.hidden = true;
     this.stop.addEventListener("click", () => this.plugin.steward.cancelActive().catch(e => new Notice(e.message)));
     this.restartButton = actions.createEl("button", { text: "补充后另开核验", cls: "sos-quiet" }); this.restartButton.hidden = true;
@@ -298,18 +300,18 @@ class CompletionModal extends Modal {
     try {
       const context = await this.plugin.steward.call("completion-context", { path: this.task.path, raw: this.task.raw });
       if (!this.contentEl.isConnected) return;
-      if (context.required_external) intro.setText("此项涉及提交或其他外部结果。需要与本任务匹配的成功凭证；已有作业文件不能证明已提交。");
+      if (context.required_external) intro.setText("记录提交成功需要匹配的凭证；也可按本人决定关闭任务，关闭不会记作已提交。");
       const latest = context.latest;
       this.files = latest?.request.evidence || context.suggested_evidence;
       if (latest && !this.report) this.reportInput.value = latest.request.report;
       this.dateInput.value = latest?.request.date || "";
       if (latest) this.showResult({ ...latest, path: latest.export_path });
-      if (latest && !["complete", "insufficient", "cancelled"].includes(latest.phase)) {
+      if (latest && !["complete", "closed", "insufficient", "cancelled"].includes(latest.phase)) {
         this.resumeKey = latest.key; this.submit.setText("继续原核验");
         this.restartButton.hidden = false;
         this.reportInput.disabled = this.dateInput.disabled = add.disabled = today.disabled = true;
       }
-      this.renderFiles(); this.submit.disabled = false;
+      this.renderFiles(); this.submit.disabled = this.closeTask.disabled = false;
     } catch (error) { this.resultEl.setText(error.message); }
   }
   renderFiles() {
@@ -324,41 +326,44 @@ class CompletionModal extends Modal {
   }
   showResult(result) {
     this.resultEl.empty();
-    const labels = { complete: "✓ 完成已记录", insufficient: "待核验 · 需要补充", cancelled: "核验已停止" };
+    const labels = { complete: "✓ 完成已记录", closed: "已关闭 · 不再需要", insufficient: "待核验 · 需要补充", cancelled: "核验已停止" };
     this.resultEl.createEl("strong", { text: labels[result.phase] || "核验尚未完成，可继续原请求" });
     const verdict = result.verdict;
     if (verdict) {
       this.resultEl.createEl("p", { text: verdict.reason });
       if (verdict.missing) this.resultEl.createEl("p", { text: "还缺：" + verdict.missing });
-      this.resultEl.createEl("small", { text: { user_report: "依据：本人明确报告", artifact: "依据：已读取的产物内容", external: "依据：已读取的外部结果凭证" }[verdict.basis] });
+      this.resultEl.createEl("small", { text: result.phase === "closed" ? "依据：本人决定。已退出待办，未计为完成。" : { user_report: "依据：本人明确报告", artifact: "依据：已读取的产物内容", external: "依据：已读取的外部结果凭证" }[verdict.basis] });
     }
     if (result.error) this.resultEl.createEl("p", { text: result.error });
     if (result.path) {
-      const link = this.resultEl.createEl("button", { text: "查看核验记录 ↗", cls: "sos-quiet" });
+      const link = this.resultEl.createEl("button", { text: "查看处理记录 ↗", cls: "sos-quiet" });
       link.addEventListener("click", () => this.app.workspace.openLinkText(result.path, "", true));
     }
   }
-  async check() {
-    if (!this.resumeKey && !this.reportInput.value.trim()) { new Notice("请说明这项任务实际完成的范围。"); this.reportInput.focus(); return; }
-    this.submit.disabled = true; this.stop.hidden = false; this.lockForm(true);
+  async check(intent = "complete") {
+    const resumeKey = intent === "close" ? null : this.resumeKey;
+    if (intent !== "close" && !resumeKey && !this.reportInput.value.trim()) { new Notice("请说明这项任务实际完成的范围。"); this.reportInput.focus(); return; }
+    this.submit.disabled = this.closeTask.disabled = true; this.stop.hidden = false; this.lockForm(true);
     this.restartButton.hidden = true;
-    const key = this.resumeKey || id();
-    const request = { path: this.task.path, raw: this.task.raw, report: this.reportInput.value.trim(), date: this.dateInput.value, evidence: this.files };
-    this.resultEl.setText("正在核对任务范围与证据内容…可关闭面板，结果会保存在任务中。");
+    const key = resumeKey || id();
+    const request = intent === "close"
+      ? { path: this.task.path, raw: this.task.raw, report: this.reportInput.value.trim() || "不再需要，关闭这项任务。", date: "", evidence: [], intent: "close" }
+      : { path: this.task.path, raw: this.task.raw, report: this.reportInput.value.trim(), date: this.dateInput.value, evidence: this.files };
+    this.resultEl.setText(intent === "close" ? "正在保存关闭决定…" : "正在核对任务意图与证据内容…可关闭面板，结果会保存在任务中。");
     try {
-      const result = await this.plugin.steward.run("completion-check", this.resumeKey ? { key } : { key, request });
+      const result = await this.plugin.steward.run("completion-check", resumeKey ? { key } : { key, request });
       await this.plugin.refreshViews(); this.showResult(result);
-      if (result.phase === "complete") { this.submit.setText("已记录完成"); new Notice(result.message); }
+      if (["complete", "closed"].includes(result.phase)) { this.terminalPhase = result.phase; this.submit.setText(result.phase === "closed" ? "已关闭" : "已记录完成"); new Notice(result.message); }
       else { this.resumeKey = null; this.submit.disabled = false; this.submit.setText("补充后重新核验"); this.lockForm(false); this.renderFiles(); }
     } catch (error) {
-      this.resultEl.setText(error.message + "；原任务未被直接勾选，可继续原核验。");
+      this.resultEl.setText(error.message + "；请刷新查看原任务或继续原请求。");
       const current = (this.plugin.steward.lastState?.completion_checks || []).find(c => c.key === key);
-      const resumable = current && !["complete", "insufficient", "cancelled"].includes(current.phase);
+      const resumable = current && !["complete", "closed", "insufficient", "cancelled"].includes(current.phase);
       this.resumeKey = resumable ? key : null;
       this.restartButton.hidden = !resumable;
       this.submit.disabled = false; this.submit.setText(resumable ? "继续原核验" : "重新核验");
       this.lockForm(!!resumable);
-    } finally { this.stop.hidden = true; }
+    } finally { this.stop.hidden = true; this.closeTask.disabled = !!this.terminalPhase; }
   }
   lockForm(locked) {
     for (const control of [this.reportInput, this.dateInput, this.addFile, this.todayButton, ...this.fileList.querySelectorAll("button")]) control.disabled = locked;
