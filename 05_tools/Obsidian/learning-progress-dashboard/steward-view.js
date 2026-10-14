@@ -833,7 +833,7 @@ class StewardView extends ItemView {
       button.setAttribute("aria-pressed", String(key === value));
     }
     const inWeek = plan.tasks.filter(t => (!course || t.course_id === course) && (key === "all" || t.week === key) && t.state !== "cancelled");
-    const tasks = inWeek.filter(t => filter === "all" || (filter === "verification" ? t.completion_check && !["complete", "cancelled"].includes(t.completion_check.phase) && t.state !== "done" : t.state === filter));
+    const tasks = inWeek.filter(t => filter === "all" || (filter === "verification" ? t.completion_check && !["complete", "closed", "cancelled"].includes(t.completion_check.phase) && t.state !== "done" : t.state === filter));
     const selected = plan.weeks.find(w => w.key === key);
     const caption = panel.createDiv({ cls: "sos-week-caption" });
     caption.createEl("strong", { text: selected ? `第 ${selected.number} 周 · ${selected.start.slice(5).replace("-", "/")}–${selected.end.slice(5).replace("-", "/")}` : key === "all" ? "全部周次" : key === "unassigned" ? "未分周的任务" : "其他日期的记录" });
@@ -860,7 +860,7 @@ class StewardView extends ItemView {
         text.createSpan({ text: taskCaption(task) });
         const meta = [task.kind === "obligation" ? "截止／必到" : "", task.date ? `${task.date.slice(5).replace("-", "/")} · ${task.date_basis}` : ""].filter(Boolean).join(" · ");
         if (meta) text.createEl("small", { text: meta });
-        summary.createSpan({ cls: "sos-task-state", text: task.state !== "done" && check && !["complete", "cancelled"].includes(check.phase) ? "待核验" : states[task.state][1] });
+        summary.createSpan({ cls: "sos-task-state", text: task.state !== "done" && check && !["complete", "closed", "cancelled"].includes(check.phase) ? "待核验" : states[task.state][1] });
         const detail = row.createDiv({ cls: "sos-week-task-detail" });
         detail.createEl("p", { text: displayText(task.title || task.raw) });
         if (task.record) detail.createEl("p", { cls: "sos-recorded-evidence", text: "已有记录：" + task.record });

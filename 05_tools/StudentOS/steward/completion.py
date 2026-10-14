@@ -216,30 +216,29 @@ class CompletionChecks:
         closing = json.loads(row["verdict"])["verdict"] == "close_requested"
         path = rules._path(self.vault, request["path"])
         before, after = request["raw"], closed_line(request["raw"]) if closing else checked_line(request["raw"], request["date"])
+        content = path.read_text()
+        lines = content.splitlines(keepends=True)
+        already_applied = sum(line.rstrip("\r\n") == after for line in lines) == 1 and not any(line.rstrip("\r\n") == before for line in lines)
+        if not already_applied:
+            self.locate(request["path"], before)
+            for evidence in ([] if closing else context["evidence"]):
+                if hashlib.sha256(rules._path(self.vault, evidence["path"]).read_bytes()).hexdigest() != evidence["sha256"]:
+                    raise ValueError("核验期间证据已变化，请补充后重新核验")
+            if not closing and rules._source_context(content) != context["requirements"]:
+                raise ValueError("任务完成要求已变化，请重新核验")
+            index = next(i for i,line in enumerate(lines) if line.rstrip("\r\n") == before)
+            lines[index] = after + lines[index][len(before):]
+            if path.read_text() != content:
+                raise ValueError("任务文件正在被修改，请继续原核验请求")
+            rules._atomic_write(path, "".join(lines))
+            if after not in path.read_text().splitlines():
+                raise RuntimeError("任务写回后校验失败，请继续原请求")
         if closing:
-            # The same lock guards all writes; an older interrupted check must not revive this task.
+            # Also recover a crash after the canonical write but before stopping an older check.
             for previous in self.records():
                 if previous["key"] != row["key"] and previous["path"] == request["path"] and previous["raw"] == before and previous["phase"] not in ("complete", "closed", "insufficient", "cancelled"):
                     self.update(previous["key"], phase="cancelled")
                     self.export(self.row(previous["key"]))
-        content = path.read_text()
-        lines = content.splitlines(keepends=True)
-        if sum(line.rstrip("\r\n") == after for line in lines) == 1 and not any(line.rstrip("\r\n") == before for line in lines):
-            return  # Recover a crash between the canonical write and its receipt.
-        self.locate(request["path"], before)
-        for evidence in ([] if closing else context["evidence"]):
-            if hashlib.sha256(rules._path(self.vault, evidence["path"]).read_bytes()).hexdigest() != evidence["sha256"]:
-                raise ValueError("核验期间证据已变化，请补充后重新核验")
-        current_requirements = rules._source_context(content)
-        if not closing and current_requirements != context["requirements"]:
-            raise ValueError("任务完成要求已变化，请重新核验")
-        index = next(i for i,line in enumerate(lines) if line.rstrip("\r\n") == before)
-        lines[index] = after + lines[index][len(before):]
-        if path.read_text() != content:
-            raise ValueError("任务文件正在被修改，请继续原核验请求")
-        rules._atomic_write(path, "".join(lines))
-        if after not in path.read_text().splitlines():
-            raise RuntimeError("完成写回后校验失败，请继续原请求")
 
     def run(self, key, request=None):
         if not re.fullmatch(r"[A-Za-z0-9_-]{1,100}", key):
