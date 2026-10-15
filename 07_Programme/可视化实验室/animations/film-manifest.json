@@ -1926,114 +1926,114 @@
       {
         "title": "干预：跟着一个小改动走",
         "index": 5,
-        "start": 74.04166666666667,
+        "start": 86.375,
         "en": "Intervention: trace a small change"
       },
       {
         "title": "反向：逐段累计影响",
         "index": 10,
-        "start": 145.5,
+        "start": 181,
         "en": "Backward: accumulate sensitivity"
       },
       {
         "title": "更新：改变参数后重新算",
         "index": 15,
-        "start": 227.12500000000003,
+        "start": 282.5833333333333,
         "en": "Update, then recompute"
       },
       {
         "title": "边界：饱和与零权重",
         "index": 16,
-        "start": 245.20833333333337,
+        "start": 302.5833333333333,
         "en": "Saturation and a zero output weight"
       },
       {
         "title": "回顾：自己解释一个改动",
         "index": 19,
-        "start": 293.79166666666674,
+        "start": 362.5,
         "en": "Recap: explain a change yourself"
       }
     ],
     "checkpoints": [
       {
         "name": "causal-0",
-        "time": 12
+        "time": 12.360000000000001
       },
       {
         "name": "causal-1",
-        "time": 27.766666666666666
+        "time": 30.576666666666668
       },
       {
         "name": "causal-2",
-        "time": 42.25333333333334
+        "time": 48.90166666666667
       },
       {
         "name": "causal-3",
-        "time": 54.51833333333333
+        "time": 64.11
       },
       {
         "name": "causal-4",
-        "time": 69.48
+        "time": 81.24166666666667
       },
       {
         "name": "causal-5",
-        "time": 84.63166666666667
+        "time": 101.195
       },
       {
         "name": "causal-6",
-        "time": 98.62
+        "time": 120.33833333333332
       },
       {
         "name": "causal-7",
-        "time": 111.96833333333333
+        "time": 137.15166666666664
       },
       {
         "name": "causal-8",
-        "time": 125.92666666666666
+        "time": 156.39666666666665
       },
       {
         "name": "causal-9",
-        "time": 141.13666666666666
+        "time": 175.715
       },
       {
         "name": "causal-10",
-        "time": 159.51
+        "time": 195.49
       },
       {
         "name": "causal-11",
-        "time": 175.99833333333333
+        "time": 215.525
       },
       {
         "name": "causal-12",
-        "time": 191.33166666666668
+        "time": 236.155
       },
       {
         "name": "causal-13",
-        "time": 206.81500000000003
+        "time": 257.09
       },
       {
         "name": "causal-14",
-        "time": 222.6566666666667
+        "time": 277.0883333333333
       },
       {
         "name": "causal-15",
-        "time": 240.14500000000004
+        "time": 296.9833333333333
       },
       {
         "name": "causal-16",
-        "time": 257.35833333333335
+        "time": 316.0833333333333
       },
       {
         "name": "causal-17",
-        "time": 272.46333333333337
+        "time": 335.1333333333333
       },
       {
         "name": "causal-18",
-        "time": 288.95000000000005
+        "time": 356.34
       },
       {
         "name": "causal-19",
-        "time": 306.90166666666676
+        "time": 379.24
       }
     ],
     "sources": [

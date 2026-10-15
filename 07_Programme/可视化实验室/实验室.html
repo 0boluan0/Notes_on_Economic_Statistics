@@ -2111,32 +2111,33 @@ globalThis.BackpropInstrument={"svg":"<svg xmlns=\"http://www.w3.org/2000/svg\" 
   const p={x:2,w:.25,bias:0,v:2,target:1.5};
   const beat=(mode,focus,from,to,caption,narration,extra={})=>({mode,focus,from,to,caption,narration,params:{...p},stage:[0,2,1,3][mode],cursor:mode===2?4-focus:focus+1,en:'Follow one dependency from a weight to loss, then accumulate its sensitivity.',...extra});
   const frames=[
-    beat(0,0,0,0,'前向先算结果；反向再问：谁怎样影响了结果？','先抓住两件事。前向传播，用当前参数算出预测和损失。反向传播，问的是每个参数轻轻动一下，最终损失会怎样变。我们追踪第一层权重，走完同一条路径。'),
-    beat(0,0,0,.25,'这一步的输出，成为下一步的输入。','输入固定为二，第一层权重是零点二五。两者相乘，再加偏置，得到零点五。沿横轴找到权重，抬到这条直线上，再向左读数，就是乘加的结果。'),
-    beat(0,1,.25,.5,'激活函数是一条输入到输出的曲线。','下一步，把零点五送进激活函数。还是同样的读图方法：横轴找到输入，抬到曲线上，读出输出。曲线的形状决定了输入怎样变成隐藏值。'),
-    beat(0,2,.5,.75,'输出权重将隐藏值变成预测。','然后乘输出权重二，得到预测，大约零点九二。到这里，网络只是计算出了一个答案，还不知道参数该往哪边调。'),
-    beat(0,3,.75,1,'预测低于目标；向右靠近目标，损失下降。','目标是一点五，预测还偏低。平方损失把这个偏差变成一个非负的数。看曲线，当前点在谷底左边：预测向右增加一点，损失就会向下。这个方向稍后很关键。'),
-    beat(1,0,0,.25,'只推一下 w，其他条件保持不变。','现在保留灰色的原位置，只把第一层权重增加零点零五。乘加这一步的斜率是二，所以输入改一点，输出改两倍。这就是一个局部运算如何传递变化。'),
-    beat(1,1,.25,.5,'同样的横向移动，经过曲线后变成纵向移动。','改动到达激活函数。横向移动零点一，但纵向只移动大约零点零七五。这一段曲线把变化压小了。变化的比例，来自当前位置的曲线形状。'),
-    beat(1,2,.5,.75,'再经过输出权重，变化被放大。','改动继续往前走。输出权重是二，所以隐藏值的变化又被放大两倍。注意我们一直只改了最初那个权重，后面的变化都是运算带来的。'),
-    beat(1,3,.75,1,'预测增加，损失反而减少：符号由这一段翻转。','最后，预测变大，却更靠近目标，损失因此变小。为什么最初的正向改动能让损失下降？因为这条链的最后一段，是一条向下倾斜的曲线。'),
-    beat(1,3,1,1,'有限改动可以实测；梯度预测的是附近的变化。','现在比较真实变化和梯度给出的预测。两者接近，但不完全相同，因为曲线会弯。把改动再缩小十倍，两者会更接近。梯度描述的是当前位置附近的变化。',{delta:.005}),
-    beat(2,3,0,0,'反向时，前向的值保持原样。','刚才我们真的改了一次权重，重新算了一遍。反向传播用更系统的方法得到敏感度。先把原来的前向值固定下来，从损失自身开始：损失增加一小份，损失当然也增加同样一份，所以起点是一。'),
-    beat(2,3,0,.25,'收到的敏感度 × 当前局部斜率。','向左走过损失函数。橙色切线向下，斜率为负。所以预测增加一点，损失会减少。把收到的敏感度一，乘上这个局部斜率，就得到损失对预测的梯度。'),
-    beat(2,2,.25,.5,'两段影响接起来，比例就相乘。','再问隐藏值的影响。隐藏值先被放大两倍，才到达预测；预测再按刚才的梯度影响损失。所以把已经算好的梯度再乘二。这就是为什么链式法则要相乘。'),
-    beat(2,1,.5,.75,'反向复用前向的位置，读出那里的斜率。','经过激活函数时，使用的还是刚才那个点。这里的局部斜率约为零点七九。把它乘进去，敏感度就缩小一些。我们没有倒着计算激活函数，而是在追溯影响。'),
-    beat(2,0,.75,1,'每一段都贡献一个局部比例。','最后回到第一层权重。乘加这一步再贡献一个二。于是，权重对损失的梯度，就是沿途这些局部比例的乘积。结果为负，表示权重小幅增加时，损失会下降。'),
-    beat(3,0,0,1,'算梯度结束后，才更新参数。','有了方向，才轮到更新。梯度为负，减去梯度就会增加权重。这里用零点一的学习率，同时更新三个参数，再重新前向计算，核对损失。求梯度和改参数，是两个不同的动作。'),
-    beat(1,1,0,1,'换到饱和区：输入动了，输出几乎不动。','再看一个边界情境。把第一层权重移到二，激活点进入曲线很平的区域。做同样的小改动，横向仍然移动，纵向却几乎不动。图的坐标尺度保持相同，所以可以直接比较。',{params:{...p,w:2}}),
-    beat(2,1,.5,.75,'输出接近 1，并不代表梯度大。','反向经过同一个位置，乘上的局部斜率也就接近零。隐藏值虽然接近一，对更早参数的敏感度却很小。这是激活值很大，但梯度仍然很小的原因。',{params:{...p,w:2}}),
-    beat(1,2,.5,.75,'v = 0 时，这一段完全不传递 w 的变化。','再把输出权重设为零。无论隐藏值怎样变，预测都是零，曲线是一条水平线。第一层权重的改动被挡在这里，所以它对损失的梯度为零。不过输出权重自己仍然可能有梯度。',{params:{...p,v:0}}),
-    beat(2,0,0,1,'回到同一条链：前向传数值，反向累计敏感度。','回到标准情境。前向，沿计算链得到数值。反向，沿依赖回来，复用这些数值，把局部斜率逐段相乘。现在暂停视频，亲自改动一次权重，再用反向的梯度解释你看到的方向。')
+    beat(0,0,0,0,'先算结果，再回答：权重往哪边调，损失才会下降？','今天只回答一个问题。第一个权重，应该增大还是减小，才能让损失下降？先把当前结果算出来，再顺着同一条路径，看看一个小改动怎样影响最后的损失。'),
+    beat(0,0,0,.25,'每一步的输出，接着成为下一步的输入。','先看第一步。输入固定为二，权重是零点二五，相乘再加偏置，得到零点五。图上先沿横轴找到权重，再到直线上读取输出。这个输出，就是下一步的输入。'),
+    beat(0,1,.25,.5,'激活函数：在曲线上，把输入的位置换成输出的位置。','再看激活这一段。把刚才的零点五放到横轴上，沿曲线读出隐藏值，大约零点四六。曲线在哪里陡、在哪里平，稍后就决定了变化在哪里传得多、哪里传得少。'),
+    beat(0,2,.5,.75,'隐藏值 × 输出权重，得到预测。','接着算预测。隐藏值乘输出权重二，得到大约零点九二。到这里，前向传播只是按当前参数，把一个答案算了出来。'),
+    beat(0,3,.75,1,'预测在目标左边：往右靠近目标，损失就下降。','现在把预测和目标放在一起。目标是一点五，预测还在它左边。看损失曲线，点向右靠近谷底，损失就向下。因此，眼下提高一点预测值，是有帮助的。'),
+    beat(1,0,0,.25,'蓝色横向改动 → 绿色纵向响应。','保留灰点，只推动第一个权重。权重增加零点零五，乘加结果就增加零点一。右侧把这次改动放大了：蓝色横线是我们推了多少，绿色竖线是输出响应了多少。这一步放大两倍。'),
+    beat(1,1,.25,.5,'同一份改动经过激活，响应缩小了。','让改动继续到激活函数。输入增加零点一，输出只增加大约零点零七五。看右侧的小三角形，横着推了一段，纵向响应更小。这里的曲线，把变化压小了一些。'),
+    beat(1,2,.5,.75,'放大两倍，是这一段运算自身的作用。','再经过输出权重。它等于二，所以隐藏值的改动，在预测这里放大两倍。我们始终只动了最初那个权重，后面的变化，是沿途运算依次造成的。'),
+    beat(1,3,.75,1,'蓝线向右，绿线向下：这里翻转了影响方向。','最后看损失这一段。预测增加，蓝线向右；损失减少，绿线向下。这就解释了最初那个问题：在当前的位置，增大第一层权重，会让损失下降。负号来自这一段向下的曲线。'),
+    beat(1,3,1,1,'梯度是当前位置的比例；改动越小，预测越贴近实测。','把最初的改动再缩小十倍。实际损失变化，和下面的梯度预测，更接近了。因为在很小的一段范围里，弯曲的曲线看起来接近直线。梯度描述的，就是这个局部比例。',{delta:.005}),
+    beat(2,3,0,0,'回到改动前的灰点：反向期间，所有前向值固定。','现在回到改动前的灰点。反向传播不需要真的推动每个参数，而是在这些固定位置上计算影响比例。从损失自己开始：它变化一小份，最终损失也变化一小份，所以起点是一。'),
+    beat(2,3,0,.25,'微小改动 → 本段输出变化 → 最终损失变化。','先反向走过损失函数。右边用一个小符号，代表很小的改动。预测增加这一小份，损失就按切线的负斜率减少。收到的影响比例是一，乘本段斜率，就得到损失对预测的梯度。'),
+    beat(2,2,.25,.5,'两个关系接起来：先乘局部斜率，再传到损失。','再问隐藏值的影响。右边第一格，给隐藏值一个微小改动。第二格，预测先变化两倍。第三格，这份预测变化，再按已知比例影响损失。两个连续的缩放接起来，比例就要相乘。'),
+    beat(2,1,.5,.75,'沿用前向的位置，读取此处的局部斜率。','接着经过激活函数。还是原来那个灰点，这里的斜率大约是零点七九。一个微小改动先缩小到零点七九倍，再影响最终损失。所以已有的梯度，再乘零点七九；前向值始终没有改变。'),
+    beat(2,0,.75,1,'负号给方向；绝对值给当前位置的影响强度。','最后回到第一层权重。它先把改动放大两倍，后面的影响刚才已经算好，所以再乘二就够了。得到的梯度大约是负一点八一。负号告诉我们：权重小幅增加，损失会减少。'),
+    beat(3,0,0,1,'先求完梯度，再更新参数，最后重新前向计算。','现在才真正更新参数。刚才为了看清，只追踪了第一个权重；训练时，其余参数也各自有梯度。这里用零点一的学习率，一起更新三个参数，再做一次前向计算，核对新的损失。'),
+    beat(1,1,0,1,'饱和区：横向仍在动，纵向响应几乎消失。','把激活点移到曲线很平的地方。仍然给权重相同的改动，右侧蓝线照样向右，绿色竖线却几乎看不见了。两幅图的缩放规则保持一致：这次是输出真的几乎不变。',{params:{...p,w:2}}),
+    beat(2,1,.5,.75,'激活值接近 1，局部斜率却接近 0。','再沿原路反向看。这个位置的局部斜率接近零，乘进来以后，更早处的梯度也很小。请区分两件事：隐藏值接近一，说的是点有多高；梯度很小，说的是曲线有多平。',{params:{...p,w:2}}),
+    beat(1,2,.5,.75,'输出权重为 0，这条路径就无法传递变化。','把输出权重设为零。隐藏值怎么变，预测都等于零。图上只剩横向移动，没有纵向响应，所以最初那个权重对损失的梯度为零。这只说明这条路径不传递影响，输出权重自己仍可能需要调整。',{params:{...p,v:0}}),
+    beat(2,0,0,1,'前向保存位置；反向复用比例；更新才改变参数。','把这三件事连起来。前向，算出并保存每一步的位置。反向，在这些位置读局部斜率，复用后面已经算好的影响，一路乘回来。最后才更新参数。你可以暂停，换一个情境，先判断方向，再用图来核对。')
   ];
-  const timing=[16.666666666666668,15.416666666666666,14.125,11.541666666666666,16.291666666666668,14.708333333333334,13.708333333333334,13.208333333333334,14.25,15.583333333333334,19.458333333333332,15.333333333333334,15.333333333333334,15.541666666666666,15.958333333333334,18.083333333333332,16.875,14.416666666666666,17.291666666666668,18.208333333333332]; // generated audio durations
-  let time=0;frames.forEach((f,i)=>{f.duration=timing[i]||14;f.start=time;time+=f.duration;});
+  const timing=[17.166666666666668,18.625,18.208333333333332,14.041666666666666,18.333333333333332,20.583333333333332,18.583333333333332,16.125,20.458333333333332,18.875,20.125,20,20.875,20.958333333333332,19.625,20,18.75,19.166666666666668,22,23.25]; // generated audio durations
+  const motion=[[3.063,16.151],[2.411,14.385],[2.628,17.184],[2.37,13.013],[3.824,12.591],[4.041,17.415000000000003],[3.552,14.017999999999999],[2.846,15.091],[3.185,16.151],[3.783,14.426],[3.362,19.072000000000003],[3.389,12.51],[3.022,10.01],[2.982,13.828],[3.131,13.61],[3.376,18.964000000000002],[4.109,17.741],[2.846,18.135],[3.172,14.167],[2.846,14.072]]; // generated action timings
+  let time=0;frames.forEach((f,i)=>{f.duration=timing[i]||14;f.start=time;f.motion=motion[i]||[1,10];time+=f.duration;});
   const chapterEntries=[['前向：计算一个结果',0,'Forward: compute a result'],['干预：跟着一个小改动走',5,'Intervention: trace a small change'],['反向：逐段累计影响',10,'Backward: accumulate sensitivity'],['更新：改变参数后重新算',15,'Update, then recompute'],['边界：饱和与零权重',16,'Saturation and a zero output weight'],['回顾：自己解释一个改动',19,'Recap: explain a change yourself']];
   const chapters=chapterEntries.map(([title,index,en])=>({title,index,start:frames[index].start,en}));
-  root.BackpropFilm={frames,chapters,duration:time,narration:{language:'zh-CN',voice:'Tingting',kind:'synthetic',rate:190}};
+  root.BackpropFilm={frames,chapters,duration:time,narration:{language:'zh-CN',voice:'zh-CN-XiaoxiaoNeural',provider:'Microsoft Edge neural TTS',kind:'synthetic',rate:'-8%'}};
 })(globalThis);
 </script>
 <script data-bundled-source="assets/story-backprop-03-causal.js">/* One numerical scene for the live explanation and the narrated movie. */
@@ -2169,9 +2170,9 @@ globalThis.BackpropInstrument={"svg":"<svg xmlns=\"http://www.w3.org/2000/svg\" 
     const box=(x,y,w,h,fill='#fff',stroke='#dce5ea',rx=16)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${rx}" fill="${fill}" stroke="${stroke}"/>`;
     const arrow=(x1,y1,x2,y2,color,width=3)=>{const angle=Math.atan2(y2-y1,x2-x1),len=Math.min(8,Math.hypot(x2-x1,y2-y1)*.4),x=x2-len*Math.cos(angle),y=y2-len*Math.sin(angle);return `<path d="M${x1} ${y1}L${x2} ${y2}M${x-4*Math.sin(angle)} ${y+4*Math.cos(angle)}L${x2} ${y2}L${x+4*Math.sin(angle)} ${y-4*Math.cos(angle)}" stroke="${color}" stroke-width="${width}" fill="none" stroke-linejoin="round"/>`;};
     const lines=(x,y,rows,size=20,color=ink,gap=31)=>rows.map((r,i)=>text(x,y+i*gap,r,size,color)).join('');
-    out+=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-label="${escape(titles[mode])}：权重经过乘加、激活、输出和损失四个运算。"><defs>${[[blue,'blue'],[orange,'orange']].map(([c,id])=>`<marker id="${id}-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 1L8 5L0 9" fill="none" stroke="${c}" stroke-width="1.5"/></marker>`).join('')}<clipPath id="curve-clip"><rect x="86" y="390" width="598" height="196"/></clipPath></defs><rect width="1200" height="700" rx="20" fill="#f6f9fb"/><g font-family="Arial, Hiragino Sans GB, PingFang SC, sans-serif">`;
+    out+=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-label="${escape(titles[mode])}：权重经过乘加、激活、输出和损失四个运算。"><defs>${[[blue,'blue'],[orange,'orange']].map(([c,id])=>`<marker id="${id}-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 1L8 5L0 9" fill="none" stroke="${c}" stroke-width="1.5"/></marker>`).join('')}<clipPath id="curve-clip"><rect x="86" y="390" width="598" height="196"/></clipPath><clipPath id="delta-clip"><rect x="792" y="424" width="344" height="142"/></clipPath></defs><rect width="1200" height="700" rx="20" fill="#f6f9fb"/><g font-family="Arial, Hiragino Sans GB, PingFang SC, sans-serif">`;
     out+=text(36,45,titles[mode],29,ink,700);
-    out+=text(36,78,['输入 x 固定，追踪 w 这条依赖：每一步的输出，都是下一步的输入。','灰色留在原处；蓝色显示只改变 w 后的新位置。','前向值留在原处。橙色表示损失对各个量的敏感度。','反向求出梯度后，才执行参数更新，再重新前向计算。'][mode],19,muted);
+    out+=text(36,78,['输入 x 固定，追踪 w 这条依赖：每一步的输出，都是下一步的输入。','灰色为基准；蓝色为只改变 w 后的试探结果。','回到灰色基准点。橙色表示损失对各个量的敏感度。','反向求出梯度后，才执行参数更新，再重新前向计算。'][mode],19,muted);
     for(let i=0;i<4;i++){
       const x1=xPositions[i]+66,x2=xPositions[i+1]-66,y=166;
       out+=`<path d="M${x1} ${y}H${x2}" stroke="#c4d0d8" stroke-width="2"/>`;
@@ -2187,10 +2188,10 @@ globalThis.BackpropInstrument={"svg":"<svg xmlns=\"http://www.w3.org/2000/svg\" 
       out+=box(x-65,141,130,88,selected?'#edf5fa':'#fff',selected?blue:'#dce5ea',13);
       out+=text(x,163,names[i],17,muted,400,'middle');out+=text(x,199,known?n(vals[i]):'···',30,known?ink:muted,600,'middle');
       if(mode===1){const change=vals[i]-old.values[i];out+=text(x,253,`Δ ${n(change)}`,18,Math.abs(change)>1e-10?blue:muted,600,'middle');}
-      if(reverse&&travel>=4-i){out+=box(x-58,247,116,39,'#fff0e6','#edd1bc',9);out+=text(x,273,n(old.grads[i]),22,orange,700,'middle');}
+      if(reverse&&travel>=4-i){out+=box(x-58,247,116,48,'#fff0e6','#edd1bc',9);out+=text(x,259,`∂L/∂${symbols[i]}`,11,orange,400,'middle');out+=text(x,282,n(old.grads[i]),20,orange,700,'middle');}
       out+='</g>';
     }
-    out+=text(36,311,mode===3?`更新进度 ${Math.round(progress*100)}% · 输入与目标保持 · w、b、v 改变时重新计算顶部数值`:`固定条件：输入 x=${n(p.x)} · 偏置 b=${n(p.bias)} · 输出权重 v=${n(p.v)} · 目标 t=${n(p.target)}`,16,muted);
+    out+=text(36,311,mode===3?`更新进度 ${Math.round(progress*100)}% · 输入与目标保持 · w、b、v 改变时重新计算顶部数值`:`基准 w=${n(p.w)} · 固定输入 x=${n(p.x)} · 偏置 b=${n(p.bias)} · 输出权重 v=${n(p.v)} · 目标 t=${n(p.target)}`,16,muted);
     out+=box(30,336,704,296);out+=text(52,365,`${mode===3?'更新前的局部关系':'放大看这一段'}：${symbols[focus]} → ${symbols[focus+1]}`,21,ink,600);
     const left=87,right=680,top=395,bottom=585,span=focus===1?Math.max(1.2,Math.abs(a)*.45):Math.max(.45,Math.abs(a)*.5);
     let xmin=focus===1?Math.min(-3,a-.8):focus===3?Math.min(a,p.target)-.5:a-span;
@@ -2209,22 +2210,41 @@ globalThis.BackpropInstrument={"svg":"<svg xmlns=\"http://www.w3.org/2000/svg\" 
     if(reverse)out+=`<path d="M${sx(tx1)} ${sy(b+g*(tx1-a))}L${sx(tx2)} ${sy(b+g*(tx2-a))}" stroke="${orange}" stroke-width="3" stroke-dasharray="8 6" clip-path="url(#curve-clip)"/>`;
     out+=`<path d="M${sx(a)} ${bottom}V${sy(b)}H${left}" fill="none" stroke="#a3b3bd" stroke-dasharray="4 5"/><circle cx="${sx(a)}" cy="${sy(b)}" r="7" fill="#fff" stroke="#8194a1" stroke-width="3"/>`;
     if(mode===0){const t=clamp(travel-focus);if(t>0){const first=clamp(t*2),second=clamp(t*2-1);out+=`<path d="M${sx(a)} ${bottom}V${bottom+(sy(b)-bottom)*first}${second?'H'+(sx(a)+(left-sx(a))*second):''}" stroke="${blue}" stroke-width="4" fill="none"/><circle cx="${second?sx(a)+(left-sx(a))*second:sx(a)}" cy="${bottom+(sy(b)-bottom)*first}" r="6" fill="${blue}"/>`;}}
-    if(mode===1){const f=fractions[focus+1],nx=a+da*f,ny=fn(nx);out+=`<path d="M${sx(nx)} ${bottom}V${sy(ny)}H${left}" fill="none" stroke="${blue}" stroke-dasharray="4 5"/><circle cx="${sx(nx)}" cy="${sy(ny)}" r="8" fill="${blue}"/>`;if(Math.abs(da*f)>.00001){out+=arrow(sx(a),sy(b),sx(nx),sy(b),blue,2);out+=arrow(sx(nx),sy(b),sx(nx),sy(ny),blue,2);}out+=text(sx(a)-8,sy(b)-16,'原位置',14,muted,400,'end');}
+    if(mode===1){const f=fractions[focus+1],nx=a+da*f,ny=fn(nx);out+=`<path d="M${sx(nx)} ${bottom}V${sy(ny)}H${left}" fill="none" stroke="${blue}" stroke-dasharray="4 5"/><circle cx="${sx(nx)}" cy="${sy(ny)}" r="8" fill="${blue}"/>`;if(Math.abs(da*f)>.00001){out+=arrow(sx(a),sy(b),sx(nx),sy(b),blue,3);out+=arrow(sx(nx),sy(b),sx(nx),sy(ny),green,3);}out+=text(sx(a)-8,sy(b)-16,'原位置',14,muted,400,'end');}
     out+=text(left+12,bottom+35,mode===1?'沿横轴移一点 → 在曲线上读出纵向变化':reverse?'○ 当前前向值    ┄ 当前局部斜率':'横轴：这一步的输入     纵轴：这一步的输出',15,muted);
     out+=box(754,336,416,296,reverse?'#fff8f1':'#fff');
     if(reverse){
       const upstream=old.grads[focus+1],product=old.grads[focus];
-      out+=text(778,369,'为什么在这里相乘？',21,ink,700);
-      out+=lines(778,405,[`${symbols[focus]} 每变一点，${symbols[focus+1]} 先按斜率变化；`,`${symbols[focus+1]} 的变化，再影响最终损失。`],18,muted,29);
-      out+=text(778,480,`${n(upstream)} × ${n(g)} = ${n(product)}`,27,orange,700);
-      out+=lines(778,514,['收到的损失梯度 × 这一步的局部斜率',`得到损失对 ${symbols[focus]} 的梯度。`],17,muted,27);
-      out+=text(778,595,Math.abs(g)<.01?'这一段很平，前面的改动很难传过去。':g<0?'这一段翻转了影响的方向。':'这一段按局部斜率缩放影响。',17,ink);
+      out+=text(778,369,'一个微小改动 ε，怎样到损失？',21,ink,700);
+      const centers=[829,962,1095],labels=[`δ${symbols[focus]}`,`δ${symbols[focus+1]}`,'δL'],amounts=['ε',`${n(g)} ε`,`${n(product)} ε`];
+      for(let i=0;i<3;i++){
+        out+=text(centers[i],403,labels[i],18,muted,400,'middle');
+        out+=box(centers[i]-53,417,106,42,i===2?'#fff0e6':'#edf5fa',i===2?'#edd1bc':'#dce5ea',8);
+        out+=text(centers[i],444,amounts[i],18,i===2?orange:blue,600,'middle');
+        if(i<2)out+=arrow(centers[i]+55,438,centers[i+1]-56,438,i===0?blue:orange,2);
+      }
+      out+=text(778,486,'按当前位置的斜率作局部近似。',16,muted);
+      out+=text(778,524,`${n(upstream)} × ${n(g)} = ${n(product)}`,25,orange,700);
+      out+=text(778,554,'已知的累计影响 × 本段斜率 = 更早处的梯度',16,muted);
+      out+=text(778,601,Math.abs(g)<.01?'这一段很平，前面的改动很难传过去。':product===0?'这条路径对损失的局部影响为零。':`${symbols[focus]} 增加一点，损失会${product<0?'减少':'增加'}。`,18,ink,500);
     }else if(mode===1){
-      out+=text(778,369,'一个改动，经过一个运算',21,ink,700);
+      out+=text(778,369,'只看改变量：把小三角形放大',21,ink,700);
       const shown=fractions[focus+1],inputChange=da*shown,outputChange=fn(a+inputChange)-b;
-      out+=text(778,414,`${symbols[focus]} 改变 ${n(inputChange)}`,25,blue,600);
-      out+=text(778,460,`${symbols[focus+1]} 改变 ${n(outputChange)}`,25,blue,600);
-      out+=lines(778,508,[Math.abs(inputChange)<1e-10?'等待改动传到这一段。':`这次变化比例：${n(outputChange/inputChange)}`,`当前位置的局部斜率：${n(g)}`,'缩小改动，变化比例趋近局部斜率。'],17,muted,29);
+      out+=text(778,404,`Δ${symbols[focus]} = ${n(inputChange)}`,19,blue,600);
+      out+=text(985,404,`Δ${symbols[focus+1]} = ${n(outputChange)}`,19,green,600);
+      const radius=Math.max(.018,Math.abs(da)*1.2,Math.abs(db)*1.2),scale=55/radius,cx=958,cy=496,px=x=>cx+x*scale,py=y=>cy-y*scale;
+      out+=`<path d="M800 ${cy}H1124M${cx} 427V565" stroke="#c6d1d9" fill="none"/>`;
+      const zoom=Array.from({length:61},(_,i)=>{const x=-radius+2*radius*i/60;return[x,fn(a+x)-b];});
+      out+=`<path d="${zoom.map(([x,y],i)=>(i?'L':'M')+px(x).toFixed(2)+' '+py(y).toFixed(2)).join('')}" fill="none" stroke="#8aa1af" stroke-width="2" clip-path="url(#delta-clip)"/>`;
+      out+=`<circle cx="${cx}" cy="${cy}" r="5" fill="#fff" stroke="#8194a1" stroke-width="2"/>`;
+      if(Math.abs(inputChange)>1e-12)out+=arrow(cx,cy,px(inputChange),cy,blue,4);
+      if(Math.abs(outputChange)>1e-12)out+=arrow(px(inputChange),cy,px(inputChange),py(outputChange),green,4);
+      out+=`<circle cx="${px(inputChange)}" cy="${py(outputChange)}" r="5" fill="${blue}"/>`;
+      out+=text(1128,cy+21,`Δ${symbols[focus]}`,15,blue,400,'end')+text(cx+9,433,`Δ${symbols[focus+1]}`,15,green);
+      out+=`<path d="M${px(radius)} ${cy-4}v8M${cx-4} ${py(radius)}h8" stroke="#8aa1af"/>`;
+      out+=text(px(radius),cy+19,n(radius),12,muted,400,'middle')+text(cx-9,py(radius)+4,n(radius),12,muted,400,'end');
+      out+=text(778,582,'横纵轴同一单位长度；灰点是零改动。',15,muted);
+      out+=text(778,610,Math.abs(inputChange)<1e-12?'等待改动传到这一段。':`响应比例 ${n(outputChange/inputChange)}；局部斜率 ${n(g)}`,17,muted);
     }else if(mode===3){
       const u=root.BackpropLesson.update(p,.1);
       out+=text(778,369,'梯度给方向，更新改变参数',21,ink,700);
@@ -3300,7 +3320,7 @@ globalThis.LabFilmExamples={"tangent":[{"title":"两点决定割线","caption":"
 })();
 
 });</script>
-<meta name="visual-lab-build" content="bda56478791ac74721f58a8d2cf2f5ca7162dfa6f29a9a623995935b29e326b8">
+<meta name="visual-lab-build" content="d5a342123049bf1683ccf6a1ff7ea3e8d3eb894a39b68561b2d975401286e0ca">
 </head>
 <body>
   <a class="skip-link" href="#experiment">跳到实验</a>

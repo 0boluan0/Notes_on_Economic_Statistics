@@ -24,13 +24,13 @@ node tests/dl.test.js
 
 ## 生成有声影片
 
-使用 macOS 自带的 Tingting 中文合成语音。需要 Node、已安装的 `@napi-rs/canvas`、FFmpeg，以及系统 Arial Unicode 字体。模块路径通过 `NODE_PATH` 指向已安装依赖即可。
+使用微软 `zh-CN-XiaoxiaoNeural` 中文神经语音，语速设为 −8%。生成器通过 [edge-tts 7.3.1](https://github.com/rany2/edge-tts) 获取逐段 MP3 与句子时间戳。需要 uv、Node、已安装的 `@napi-rs/canvas`、FFmpeg，以及系统 Arial Unicode 字体。模块路径通过 `NODE_PATH` 指向已安装依赖即可。首次生成配音需联网；命中缓存后可离线重绘，成片始终可离线播放。
 
 ```sh
 node anatomy/backprop/render-causal-film.cjs /tmp/backprop-causal-render
 ```
 
-脚本缓存逐段音频，以实际语音时长安排动作；连续渲染共享 SVG 场景的 24 fps 帧，加入 AAC 讲解，验证完整解码、音轨、画幅和时长。20 张复核图用于检查结果，不用来合成幻灯片。语音为合成讲解；交互本身由用户控制，不自动播放语音。
+脚本按讲稿与声线参数的哈希缓存逐段音频，并读取句子时间戳。每段先讲清观看位置，再启动动作，结束后留出观察时间；连续渲染共享 SVG 场景的 24 fps 帧，加入 AAC 讲解，验证完整解码、音轨、画幅和时长。20 张复核图用于检查结果，不用来合成幻灯片。语音为合成讲解；交互本身由用户控制，不自动播放语音。
 
 检查生成影片、复核图和媒体信息后，将库外输出的 `backprop.mp4` 替换到 `media/`，配套 `backprop-timeline.json` 放入 `animations/`，再执行：
 

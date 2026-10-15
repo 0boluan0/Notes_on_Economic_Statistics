@@ -34,6 +34,18 @@
       "passed": true
     },
     {
+      "name": "magnified changes retain equal unit lengths",
+      "passed": true
+    },
+    {
+      "name": "reverse readouts identify the differentiated variable",
+      "passed": true
+    },
+    {
+      "name": "reverse explains local and cumulative effects of the same infinitesimal",
+      "passed": true
+    },
+    {
       "name": "small change remains directly explorable",
       "passed": true
     },
@@ -110,12 +122,21 @@
       "passed": true
     },
     {
+      "name": "all narrated scenes fit text inside drawing and numeric nodes",
+      "passed": true
+    },
+    {
       "name": "mathematical notation renders",
+      "passed": true
+    },
+    {
+      "name": "narration cues precede motion and leave time to inspect the result",
       "passed": true
     },
     {
       "name": "navigation disposes animation",
       "passed": true
     }
-  ]
+  ],
+  "errors": []
 }

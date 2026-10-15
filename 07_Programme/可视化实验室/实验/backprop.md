@@ -19,26 +19,26 @@
 
 ![[07_Programme/可视化实验室/media/backprop.mp4]]
 
-约 312 秒，中文合成讲解与中文字幕。可暂停、点击进度条定位或全屏观看。
+约 386 秒，中文合成讲解与中文字幕。可暂停、点击进度条定位或全屏观看。
 
 <!-- bilingual-en:start -->
-About 312 seconds, with Chinese synthetic narration and Chinese captions. Pause, seek on the timeline or watch full screen.
+About 386 seconds, with Chinese synthetic narration and Chinese captions. Pause, seek on the timeline or watch full screen.
 <!-- bilingual-en:end -->
 
 - **0:00** 前向：计算一个结果
-- **1:14** 干预：跟着一个小改动走
-- **2:25** 反向：逐段累计影响
-- **3:47** 更新：改变参数后重新算
-- **4:05** 边界：饱和与零权重
-- **4:53** 回顾：自己解释一个改动
+- **1:26** 干预：跟着一个小改动走
+- **3:01** 反向：逐段累计影响
+- **4:42** 更新：改变参数后重新算
+- **5:02** 边界：饱和与零权重
+- **6:02** 回顾：自己解释一个改动
 
 <!-- bilingual-en:start -->
 - **0:00** Forward: compute a result
-- **1:14** Intervention: trace a small change
-- **2:25** Backward: accumulate sensitivity
-- **3:47** Update, then recompute
-- **4:05** Saturation and a zero output weight
-- **4:53** Recap: explain a change yourself
+- **1:26** Intervention: trace a small change
+- **3:01** Backward: accumulate sensitivity
+- **4:42** Update, then recompute
+- **5:02** Saturation and a zero output weight
+- **6:02** Recap: explain a change yourself
 <!-- bilingual-en:end -->
 
 ## 亲手实验
@@ -47,10 +47,10 @@ About 312 seconds, with Chinese synthetic narration and Chinese captions. Pause,
 *Try it yourself*
 <!-- bilingual-en:end -->
 
-先播放“前向计算”，再进入“追踪一个改动”：灰点留在原处，蓝点沿曲线移动。接着切到反向，观察前向值保持、敏感度逐段相乘。可暂停、拖动进度或选择一个局部运算。影片与交互共用计算与画面；“从影片继续”可载入片中情境。
+先播放“前向计算”，再进入“追踪一个改动”：灰点留在原处，蓝点沿曲线移动。右侧放大图中，蓝色横线表示改动，绿色竖线表示响应。接着切到反向，沿三格解释追踪同一个微小改动如何影响损失；前向值保持不变。可暂停、拖动进度或选择一个局部运算。影片与交互共用计算与画面；“从影片继续”可载入片中情境。
 
 <!-- bilingual-en:start -->
-Play the forward pass, then trace a small weight change: the gray point stays at its original position while the blue point moves along the curve. Switch to the backward pass to see fixed forward values and accumulated sensitivities. Pause, scrub or inspect a local operation. The film and interaction share the same calculation and scene.
+Play the forward pass, then trace a small weight change: the gray point stays at its original position while the blue point moves along the curve. In the magnified view, blue horizontal motion shows the input change and green vertical motion shows its response. In the backward pass, follow the same infinitesimal change through three boxes to the loss while forward values stay fixed. Pause, scrub or inspect a local operation. The film and interaction share the same calculation and scene.
 <!-- bilingual-en:end -->
 
 <!-- visual-lab:film:end -->

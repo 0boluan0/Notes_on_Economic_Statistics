@@ -28,9 +28,9 @@
     const box=(x,y,w,h,fill='#fff',stroke='#dce5ea',rx=16)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${rx}" fill="${fill}" stroke="${stroke}"/>`;
     const arrow=(x1,y1,x2,y2,color,width=3)=>{const angle=Math.atan2(y2-y1,x2-x1),len=Math.min(8,Math.hypot(x2-x1,y2-y1)*.4),x=x2-len*Math.cos(angle),y=y2-len*Math.sin(angle);return `<path d="M${x1} ${y1}L${x2} ${y2}M${x-4*Math.sin(angle)} ${y+4*Math.cos(angle)}L${x2} ${y2}L${x+4*Math.sin(angle)} ${y-4*Math.cos(angle)}" stroke="${color}" stroke-width="${width}" fill="none" stroke-linejoin="round"/>`;};
     const lines=(x,y,rows,size=20,color=ink,gap=31)=>rows.map((r,i)=>text(x,y+i*gap,r,size,color)).join('');
-    out+=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-label="${escape(titles[mode])}：权重经过乘加、激活、输出和损失四个运算。"><defs>${[[blue,'blue'],[orange,'orange']].map(([c,id])=>`<marker id="${id}-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 1L8 5L0 9" fill="none" stroke="${c}" stroke-width="1.5"/></marker>`).join('')}<clipPath id="curve-clip"><rect x="86" y="390" width="598" height="196"/></clipPath></defs><rect width="1200" height="700" rx="20" fill="#f6f9fb"/><g font-family="Arial, Hiragino Sans GB, PingFang SC, sans-serif">`;
+    out+=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-label="${escape(titles[mode])}：权重经过乘加、激活、输出和损失四个运算。"><defs>${[[blue,'blue'],[orange,'orange']].map(([c,id])=>`<marker id="${id}-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 1L8 5L0 9" fill="none" stroke="${c}" stroke-width="1.5"/></marker>`).join('')}<clipPath id="curve-clip"><rect x="86" y="390" width="598" height="196"/></clipPath><clipPath id="delta-clip"><rect x="792" y="424" width="344" height="142"/></clipPath></defs><rect width="1200" height="700" rx="20" fill="#f6f9fb"/><g font-family="Arial, Hiragino Sans GB, PingFang SC, sans-serif">`;
     out+=text(36,45,titles[mode],29,ink,700);
-    out+=text(36,78,['输入 x 固定，追踪 w 这条依赖：每一步的输出，都是下一步的输入。','灰色留在原处；蓝色显示只改变 w 后的新位置。','前向值留在原处。橙色表示损失对各个量的敏感度。','反向求出梯度后，才执行参数更新，再重新前向计算。'][mode],19,muted);
+    out+=text(36,78,['输入 x 固定，追踪 w 这条依赖：每一步的输出，都是下一步的输入。','灰色为基准；蓝色为只改变 w 后的试探结果。','回到灰色基准点。橙色表示损失对各个量的敏感度。','反向求出梯度后，才执行参数更新，再重新前向计算。'][mode],19,muted);
     for(let i=0;i<4;i++){
       const x1=xPositions[i]+66,x2=xPositions[i+1]-66,y=166;
       out+=`<path d="M${x1} ${y}H${x2}" stroke="#c4d0d8" stroke-width="2"/>`;
@@ -46,10 +46,10 @@
       out+=box(x-65,141,130,88,selected?'#edf5fa':'#fff',selected?blue:'#dce5ea',13);
       out+=text(x,163,names[i],17,muted,400,'middle');out+=text(x,199,known?n(vals[i]):'···',30,known?ink:muted,600,'middle');
       if(mode===1){const change=vals[i]-old.values[i];out+=text(x,253,`Δ ${n(change)}`,18,Math.abs(change)>1e-10?blue:muted,600,'middle');}
-      if(reverse&&travel>=4-i){out+=box(x-58,247,116,39,'#fff0e6','#edd1bc',9);out+=text(x,273,n(old.grads[i]),22,orange,700,'middle');}
+      if(reverse&&travel>=4-i){out+=box(x-58,247,116,48,'#fff0e6','#edd1bc',9);out+=text(x,259,`∂L/∂${symbols[i]}`,11,orange,400,'middle');out+=text(x,282,n(old.grads[i]),20,orange,700,'middle');}
       out+='</g>';
     }
-    out+=text(36,311,mode===3?`更新进度 ${Math.round(progress*100)}% · 输入与目标保持 · w、b、v 改变时重新计算顶部数值`:`固定条件：输入 x=${n(p.x)} · 偏置 b=${n(p.bias)} · 输出权重 v=${n(p.v)} · 目标 t=${n(p.target)}`,16,muted);
+    out+=text(36,311,mode===3?`更新进度 ${Math.round(progress*100)}% · 输入与目标保持 · w、b、v 改变时重新计算顶部数值`:`基准 w=${n(p.w)} · 固定输入 x=${n(p.x)} · 偏置 b=${n(p.bias)} · 输出权重 v=${n(p.v)} · 目标 t=${n(p.target)}`,16,muted);
     out+=box(30,336,704,296);out+=text(52,365,`${mode===3?'更新前的局部关系':'放大看这一段'}：${symbols[focus]} → ${symbols[focus+1]}`,21,ink,600);
     const left=87,right=680,top=395,bottom=585,span=focus===1?Math.max(1.2,Math.abs(a)*.45):Math.max(.45,Math.abs(a)*.5);
     let xmin=focus===1?Math.min(-3,a-.8):focus===3?Math.min(a,p.target)-.5:a-span;
@@ -68,22 +68,41 @@
     if(reverse)out+=`<path d="M${sx(tx1)} ${sy(b+g*(tx1-a))}L${sx(tx2)} ${sy(b+g*(tx2-a))}" stroke="${orange}" stroke-width="3" stroke-dasharray="8 6" clip-path="url(#curve-clip)"/>`;
     out+=`<path d="M${sx(a)} ${bottom}V${sy(b)}H${left}" fill="none" stroke="#a3b3bd" stroke-dasharray="4 5"/><circle cx="${sx(a)}" cy="${sy(b)}" r="7" fill="#fff" stroke="#8194a1" stroke-width="3"/>`;
     if(mode===0){const t=clamp(travel-focus);if(t>0){const first=clamp(t*2),second=clamp(t*2-1);out+=`<path d="M${sx(a)} ${bottom}V${bottom+(sy(b)-bottom)*first}${second?'H'+(sx(a)+(left-sx(a))*second):''}" stroke="${blue}" stroke-width="4" fill="none"/><circle cx="${second?sx(a)+(left-sx(a))*second:sx(a)}" cy="${bottom+(sy(b)-bottom)*first}" r="6" fill="${blue}"/>`;}}
-    if(mode===1){const f=fractions[focus+1],nx=a+da*f,ny=fn(nx);out+=`<path d="M${sx(nx)} ${bottom}V${sy(ny)}H${left}" fill="none" stroke="${blue}" stroke-dasharray="4 5"/><circle cx="${sx(nx)}" cy="${sy(ny)}" r="8" fill="${blue}"/>`;if(Math.abs(da*f)>.00001){out+=arrow(sx(a),sy(b),sx(nx),sy(b),blue,2);out+=arrow(sx(nx),sy(b),sx(nx),sy(ny),blue,2);}out+=text(sx(a)-8,sy(b)-16,'原位置',14,muted,400,'end');}
+    if(mode===1){const f=fractions[focus+1],nx=a+da*f,ny=fn(nx);out+=`<path d="M${sx(nx)} ${bottom}V${sy(ny)}H${left}" fill="none" stroke="${blue}" stroke-dasharray="4 5"/><circle cx="${sx(nx)}" cy="${sy(ny)}" r="8" fill="${blue}"/>`;if(Math.abs(da*f)>.00001){out+=arrow(sx(a),sy(b),sx(nx),sy(b),blue,3);out+=arrow(sx(nx),sy(b),sx(nx),sy(ny),green,3);}out+=text(sx(a)-8,sy(b)-16,'原位置',14,muted,400,'end');}
     out+=text(left+12,bottom+35,mode===1?'沿横轴移一点 → 在曲线上读出纵向变化':reverse?'○ 当前前向值    ┄ 当前局部斜率':'横轴：这一步的输入     纵轴：这一步的输出',15,muted);
     out+=box(754,336,416,296,reverse?'#fff8f1':'#fff');
     if(reverse){
       const upstream=old.grads[focus+1],product=old.grads[focus];
-      out+=text(778,369,'为什么在这里相乘？',21,ink,700);
-      out+=lines(778,405,[`${symbols[focus]} 每变一点，${symbols[focus+1]} 先按斜率变化；`,`${symbols[focus+1]} 的变化，再影响最终损失。`],18,muted,29);
-      out+=text(778,480,`${n(upstream)} × ${n(g)} = ${n(product)}`,27,orange,700);
-      out+=lines(778,514,['收到的损失梯度 × 这一步的局部斜率',`得到损失对 ${symbols[focus]} 的梯度。`],17,muted,27);
-      out+=text(778,595,Math.abs(g)<.01?'这一段很平，前面的改动很难传过去。':g<0?'这一段翻转了影响的方向。':'这一段按局部斜率缩放影响。',17,ink);
+      out+=text(778,369,'一个微小改动 ε，怎样到损失？',21,ink,700);
+      const centers=[829,962,1095],labels=[`δ${symbols[focus]}`,`δ${symbols[focus+1]}`,'δL'],amounts=['ε',`${n(g)} ε`,`${n(product)} ε`];
+      for(let i=0;i<3;i++){
+        out+=text(centers[i],403,labels[i],18,muted,400,'middle');
+        out+=box(centers[i]-53,417,106,42,i===2?'#fff0e6':'#edf5fa',i===2?'#edd1bc':'#dce5ea',8);
+        out+=text(centers[i],444,amounts[i],18,i===2?orange:blue,600,'middle');
+        if(i<2)out+=arrow(centers[i]+55,438,centers[i+1]-56,438,i===0?blue:orange,2);
+      }
+      out+=text(778,486,'按当前位置的斜率作局部近似。',16,muted);
+      out+=text(778,524,`${n(upstream)} × ${n(g)} = ${n(product)}`,25,orange,700);
+      out+=text(778,554,'已知的累计影响 × 本段斜率 = 更早处的梯度',16,muted);
+      out+=text(778,601,Math.abs(g)<.01?'这一段很平，前面的改动很难传过去。':product===0?'这条路径对损失的局部影响为零。':`${symbols[focus]} 增加一点，损失会${product<0?'减少':'增加'}。`,18,ink,500);
     }else if(mode===1){
-      out+=text(778,369,'一个改动，经过一个运算',21,ink,700);
+      out+=text(778,369,'只看改变量：把小三角形放大',21,ink,700);
       const shown=fractions[focus+1],inputChange=da*shown,outputChange=fn(a+inputChange)-b;
-      out+=text(778,414,`${symbols[focus]} 改变 ${n(inputChange)}`,25,blue,600);
-      out+=text(778,460,`${symbols[focus+1]} 改变 ${n(outputChange)}`,25,blue,600);
-      out+=lines(778,508,[Math.abs(inputChange)<1e-10?'等待改动传到这一段。':`这次变化比例：${n(outputChange/inputChange)}`,`当前位置的局部斜率：${n(g)}`,'缩小改动，变化比例趋近局部斜率。'],17,muted,29);
+      out+=text(778,404,`Δ${symbols[focus]} = ${n(inputChange)}`,19,blue,600);
+      out+=text(985,404,`Δ${symbols[focus+1]} = ${n(outputChange)}`,19,green,600);
+      const radius=Math.max(.018,Math.abs(da)*1.2,Math.abs(db)*1.2),scale=55/radius,cx=958,cy=496,px=x=>cx+x*scale,py=y=>cy-y*scale;
+      out+=`<path d="M800 ${cy}H1124M${cx} 427V565" stroke="#c6d1d9" fill="none"/>`;
+      const zoom=Array.from({length:61},(_,i)=>{const x=-radius+2*radius*i/60;return[x,fn(a+x)-b];});
+      out+=`<path d="${zoom.map(([x,y],i)=>(i?'L':'M')+px(x).toFixed(2)+' '+py(y).toFixed(2)).join('')}" fill="none" stroke="#8aa1af" stroke-width="2" clip-path="url(#delta-clip)"/>`;
+      out+=`<circle cx="${cx}" cy="${cy}" r="5" fill="#fff" stroke="#8194a1" stroke-width="2"/>`;
+      if(Math.abs(inputChange)>1e-12)out+=arrow(cx,cy,px(inputChange),cy,blue,4);
+      if(Math.abs(outputChange)>1e-12)out+=arrow(px(inputChange),cy,px(inputChange),py(outputChange),green,4);
+      out+=`<circle cx="${px(inputChange)}" cy="${py(outputChange)}" r="5" fill="${blue}"/>`;
+      out+=text(1128,cy+21,`Δ${symbols[focus]}`,15,blue,400,'end')+text(cx+9,433,`Δ${symbols[focus+1]}`,15,green);
+      out+=`<path d="M${px(radius)} ${cy-4}v8M${cx-4} ${py(radius)}h8" stroke="#8aa1af"/>`;
+      out+=text(px(radius),cy+19,n(radius),12,muted,400,'middle')+text(cx-9,py(radius)+4,n(radius),12,muted,400,'end');
+      out+=text(778,582,'横纵轴同一单位长度；灰点是零改动。',15,muted);
+      out+=text(778,610,Math.abs(inputChange)<1e-12?'等待改动传到这一段。':`响应比例 ${n(outputChange/inputChange)}；局部斜率 ${n(g)}`,17,muted);
     }else if(mode===3){
       const u=root.BackpropLesson.update(p,.1);
       out+=text(778,369,'梯度给方向，更新改变参数',21,ink,700);

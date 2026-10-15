@@ -1,20 +1,72 @@
 {
   "date": "2026-10-15",
-  "bundle_sha256": "dd35b3193abd1ef2a8a4a2962fcf89581bc0c25ee841049b85426a384fa8505b",
-  "video_sha256": "f6a4663a0ea9e65d7a178111986d6dde186f72ca935bffaaea990ef412f873ad",
-  "browser_checks": 39,
-  "browser_passed": true,
-  "structure_checks": 12211,
-  "structure_passed": true,
+  "recorded_at": "2026-10-15T12:28:41.959499+00:00",
+  "scope": "backprop neural voice and clearer local effects",
+  "bundle_sha256": "08947b2afdf29088d092a7c261ce09b337d8b89595f4b722c884bd59509e27d6",
+  "video_sha256": "ca4baa32c349747bd7c67a9818799d748856fef1190b44ffd6cbfed7f413d51a",
+  "scene_sha256": "9883ede2012d22f6917c15e774dab62b1ce4096e2b5ef3fbff3b7b987d38f33f",
+  "player_sha256": "6dc108dbf952d8a4b684a02c102b0f652923ec8eaf2c3c9ae568f43460b7200a",
+  "video": {
+    "duration_seconds": 385.75,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "frames": 9258,
+    "fps": "24/1",
+    "codec": "h264",
+    "pixel_format": "yuv420p",
+    "full_decode_passed": true,
+    "size_bytes": 12369057
+  },
+  "audio": {
+    "duration_seconds": 385.75,
+    "codec": "aac",
+    "sample_rate": 48000,
+    "channels": 1,
+    "narration": "zh-CN-XiaoxiaoNeural",
+    "voice_rate": "-8%",
+    "mean_volume_db": -18.5,
+    "max_volume_db": -1.9,
+    "provider": "Microsoft Edge neural TTS",
+    "quality_review": "Voice samples provided for user preference; perceptual naturalness not independently rated."
+  },
+  "tests": {
+    "causal_numerical_checks": 179,
+    "causal_numerical_passed": true,
+    "previous_numerical_pilot_passed": true,
+    "model_regression_cases": 264,
+    "model_regression_assertions": 169307,
+    "model_regression_passed": true,
+    "causal_browser_checks": 34,
+    "causal_browser_passed": true,
+    "workshop_browser_checks": 40,
+    "workshop_browser_passed": true,
+    "structure_checks": 12231,
+    "structure_passed": true,
+    "speech_motion_timing_checks": 20,
+    "speech_motion_timing_passed": true,
+    "model_regression_scope": "Prior successful run; numerical model unchanged in this revision."
+  },
   "native_app": "Obsidian 1.14.4",
   "native_actions": [
-    "play",
-    "pause",
-    "seek to 1:03 of 1:54",
-    "switch to backward",
-    "inspect tanh derivative at step 4"
+    "play final neural-narrated video from beginning and pause at 0:19",
+    "seek final video to 3:30 and play to 3:45, then pause",
+    "native player unmuted at volume 100",
+    "trace one weight change to tanh and inspect magnified equal-scale delta plot",
+    "switch to backward and step to tanh, inspect three infinitesimal-effect boxes"
   ],
-  "scope": "backprop pilot",
-  "learning_effectiveness": "not yet user evaluated",
-  "other_devices": "not tested"
+  "evidence": {
+    "causal_browser_report": "causal-browser-report.json",
+    "workshop_browser_report": "browser-report.json",
+    "video_probe": "video-probe.json",
+    "native_interaction": "obsidian-interaction.png",
+    "native_video": "obsidian-video.png",
+    "native_reverse": "obsidian-reverse.png",
+    "voice_preview": "voice-preview.mp3"
+  },
+  "learning_effectiveness": "awaiting user evaluation; numerical and interface checks do not establish learning outcomes",
+  "other_devices": "not tested",
+  "film_script_sha256": "5424f069d62112db3085afe1bd95599a15ea03293e18c6d75d2a650016bc37a6",
+  "renderer_sha256": "8ce635fa44f51d2add91a93883eb6033bb6a0609226571af3e5e38da0726477a"
 }

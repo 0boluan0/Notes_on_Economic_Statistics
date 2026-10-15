@@ -9,6 +9,11 @@ document.querySelector('button').onclick=async()=>{
   for(const mode of [1,2,3,0]){click(`[data-bc-mode="${mode}"]`);ok(JSON.stringify(state().params)===initial,`mode ${mode} preserves parameters`);}
   click('[data-bc-mode="1"]');for(let i=0;i<4;i++)click('[data-bc-action="step"]');ok(state().progress===1,'four operations complete intervention');
   ok(d.querySelector('.bc-scene').textContent.includes('损失实际改变 −0.07506'),'completed intervention shows independent actual loss change');
+  ok(d.querySelector('.bc-scene').textContent.includes('横纵轴同一单位长度'),'magnified changes retain equal unit lengths');
+  click('[data-bc-mode="2"]');for(let i=0;i<3;i++)click('[data-bc-action="step"]');
+  ok(d.querySelector('.bc-scene').textContent.includes('∂L/∂z'),'reverse readouts identify the differentiated variable');
+  ok(d.querySelector('.bc-scene').textContent.includes('0.7864 ε')&&d.querySelector('.bc-scene').textContent.includes('−0.9056 ε'),'reverse explains local and cumulative effects of the same infinitesimal');
+  click('[data-bc-mode="1"]');
   change('[data-bc-delta]',.005,'input');ok(state().delta===.005&&state().progress===1,'small change remains directly explorable');
   click('[data-bc-action="replay"]');click('[data-bc-action="play"]');await sleep(350);ok(state().progress>0&&state().progress<1,'time-driven motion advances continuously');click('[data-bc-action="play"]');const paused=state().progress;await sleep(100);ok(state().progress===paused&&!state().playing,'pause holds process');
   change('[data-bc-case]',1);click('[data-bc-mode="2"]');click('[data-bc-focus="1"]');ok(w.BackpropCausal.model(state().params).gains[1]<.002,'saturated case has small local slope');
@@ -22,12 +27,13 @@ document.querySelector('button').onclick=async()=>{
   const overflow=[];
   for(const [index,f] of w.BackpropFilm.frames.entries()){
    w.BackpropConceptPlayer.set(f);
-   for(const text of d.querySelectorAll('.bc-scene svg text')){const b=text.getBBox();if(b.x<0||b.x+b.width>1200||b.y<0||b.y+b.height>700)overflow.push({index,text:text.textContent});}
+   for(const text of d.querySelectorAll('.bc-scene svg text')){const b=text.getBBox();if(b.x<0||b.x+b.width>1200||b.y<0||b.y+b.height>700||(b.x>=754&&b.y>=336&&b.y<632&&b.x+b.width>1158))overflow.push({index,text:text.textContent});}
    for(const text of d.querySelectorAll('.bc-scene [data-causal-node] text[font-size="30"]'))if(text.getBBox().width>124)overflow.push({index,node:text.textContent});
   }
   ok(!overflow.length,'all narrated scenes fit text inside drawing and numeric nodes');
   if(overflow.length)errors.push(JSON.stringify(overflow));
   ok(d.querySelectorAll('.formula-error,.katex-error').length===0,'mathematical notation renders');
+  ok(w.BackpropFilm.frames.every(f=>f.motion[0]>0&&f.motion[0]<f.motion[1]&&f.motion[1]<f.duration),'narration cues precede motion and leave time to inspect the result');
   w.VisualLab.navigate('attention');ok(w.BackpropConceptPlayer.state()===null,'navigation disposes animation');w.VisualLab.navigate('backprop');
   report.textContent=JSON.stringify({passed:!errors.length,checks,errors},null,2);document.body.dataset.passed=String(!errors.length);
  }catch(e){report.textContent=e.stack;document.body.dataset.passed='false';}

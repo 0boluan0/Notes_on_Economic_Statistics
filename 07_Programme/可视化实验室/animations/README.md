@@ -1,9 +1,9 @@
 # 数学动画
 
-60 个实验笔记各嵌入一份当前 MP4。反向传播为 312 秒、1080p、24 fps，包含中文合成讲解音轨与中文字幕，连续渲染共享交互场景；构建见 [[07_Programme/可视化实验室/anatomy/backprop/README|反向传播构建说明]]。其余 59 项沿用 30 fps、H.264/yuv420p、中英字幕、无音轨版本，其中 Bootstrap 为 81 秒。观看成片无需安装 Manim。
+60 个实验笔记各嵌入一份当前 MP4。反向传播为 约 386 秒、1080p、24 fps，包含中文合成讲解音轨与中文字幕，连续渲染共享交互场景；构建见 [[07_Programme/可视化实验室/anatomy/backprop/README|反向传播构建说明]]。其余 59 项沿用 30 fps、H.264/yuv420p、中英字幕、无音轨版本，其中 Bootstrap 为 81 秒。观看成片无需安装 Manim。
 
 <!-- bilingual-en:start -->
-Each of the 60 experiment notes embeds one current MP4. Backpropagation is a 312-second, 1080p, 24 fps film with Chinese synthetic narration and Chinese captions, rendered continuously from the shared interactive scene. The other 59 films retain their silent, 30 fps, H.264/yuv420p versions with Chinese and English captions. Bootstrap remains 81 seconds. Playback does not require Manim.
+Each of the 60 experiment notes embeds one current MP4. Backpropagation is a 386-second, 1080p, 24 fps film with Chinese synthetic narration and Chinese captions, rendered continuously from the shared interactive scene. The other 59 films retain their silent, 30 fps, H.264/yuv420p versions with Chinese and English captions. Bootstrap remains 81 seconds. Playback does not require Manim.
 <!-- bilingual-en:end -->
 
 反向传播试点的构建与更新见 [[07_Programme/可视化实验室/anatomy/backprop/README|共享场景影片说明]]。
