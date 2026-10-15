@@ -1,0 +1,100 @@
+Browser tab: 1, Title: "Softmax 温度与交叉熵梯度 · 可视化实验室", URL: "http://127.0.0.1:8767/%E5%AE%9E%E9%AA%8C%E5%AE%A4.html#softmax?z1=0&z2=0&z3=0&temperature=1&shift=0&target=0".
+0 AXWebArea Softmax 温度与交叉熵梯度 · 可视化实验室, URL: 127.0.0.1:8767/%E5%AE%9E%E9%AA%8C%E5%AE%A4.html#softmax?z1=4&z2=0&z3=0&temperature=1&shift=0&target=0
+	1 link Description: 跳到实验, Value: 127.0.0.1:8767/%E5%AE%9E%E9%AA%8C%E5%AE%A4.html#experiment
+	2 container
+		3 button (collapsed) ☰ 实验目录, ID: toggle-directory, Secondary Actions: Expand
+		4 text 07 PROGRAMME   可视化与交互 离线可用
+	5 container application
+		89 container
+			90 heading Softmax 温度与交叉熵梯度, Value: 1
+				91 text Softmax 温度与交叉熵梯度
+			92 text Multiclass softmax, temperature & Jacobian
+			93 button 复制双链, ID: copy-link
+			94 button (collapsed) 导出 ⌄, Secondary Actions: Expand
+				95 text 导出
+				96 text ⌄
+		97 text 把所有 logits 同时加 100，为什么模型概率和梯度都不会变？
+		98 container 分步探索
+			99 button 01 一个分数变大，会挤走其他类别的份额
+				100 text 01
+				101 text 一个分数变大，会挤走其他类别的份额
+			102 button 02 共同加一个数，份额不变
+				103 text 02
+				104 text 共同加一个数，份额不变
+			105 button 03 很自信，也可能错得很远
+				106 text 03
+				107 text 很自信，也可能错得很远
+		108 button (collapsed) 影片参数与延伸对照, Secondary Actions: Expand
+			109 text 影片参数与延伸对照
+		110 container 交互讲解
+			239 container 先变成正数，再共享同一个分母
+				240 heading 2
+				241 container
+					242 checkbox 1
+					243 checkbox 0
+					244 checkbox 0
+			245 text 第 1 步 / 3
+			180 heading 一个分数变大，会挤走其他类别的份额, Value: 2, ID: story-title
+				246 text 一个分数变大，会挤走其他类别的份额
+			247 text 三个分数相同时各占三分之一。只提高A的分数，无论原先是否相等，其他两类概率都会下降。
+			183 text 动手试一试
+			248 text 只拖动 z₁，看三根概率柱怎样共同变化。
+			249 container stage-example
+				250 button 载入本步示例 ↺
+			185 container 实验参数
+				186 container
+					187 text 类别 A 的 logit
+					188 container 类别 A 的 logit 4, ID: value-z1
+						251 text 4
+					190 slider (settable, integer) Value: 4, ID: control-z1
+				191 button (collapsed) 全部参数（另 5 项） +, ID: toggle-controls, Secondary Actions: Expand
+			192 button (disabled) Description: 上一步, ID: story-previous
+			193 button 下一步 →, ID: story-next
+		194 container
+			195 text 本实验的模型 三类别、单样本、有限 logits、正温度；没有训练网络或估计温度。
+		196 text 换个情境，检验刚才的解释
+		197 button 三个类别一样大
+		198 button 自信且目标正确
+		199 button 同样自信，目标却是 C
+		200 button 共同平移 100
+		201 button 恢复初始参数 ↺, ID: reset-params
+		202 button (collapsed) 完整图表与数学细节 展开数值、误差图、公式与适用边界 +, Secondary Actions: Expand
+			203 text 完整图表与数学细节
+			204 text 展开数值、误差图、公式与适用边界
+			205 text +
+		206 container 实验解释与检验
+			207 tab group 阅读实验说明
+				208 tab (selected, settable, boolean) 操作路线, Value: 1, ID: tab-observe
+				209 tab (selectable, settable, boolean) 原理与边界, Value: 0, ID: tab-explain
+				210 tab (selectable, settable, boolean) 检验理解, Value: 0, ID: tab-challenge
+				211 tab (selectable, settable, boolean) 来源与双链, Value: 0, ID: tab-source
+			212 container Description: 操作路线, ID: panel-observe
+				213 text 在真正的三类别向量上计算概率、交叉熵和全部 Jacobian，分开观察共同平移、温度与目标标签。
+				214 content list
+					215 container
+						216 AXListMarker 1. 
+						217 text 把三个 logits 设相同，预测概率与交叉熵；之后只改变真实类别看输出概率是否变化。
+					218 container
+						219 AXListMarker 2. 
+						220 text 保持 logits，改变温度，观察概率尖锐程度、损失与梯度。
+					221 container
+						222 AXListMarker 3. 
+						223 text 共同 shift 加 100 或减 100，核对概率、损失与 Jacobian 不变。
+					224 container
+						225 AXListMarker 4. 
+						226 text 读 Jacobian 第 j 列：提高 zⱼ 会提高自己的概率，并压低另外两类。
+				227 heading 开始前，明确这些条件, Value: 3
+					228 text 开始前，明确这些条件
+				229 content list
+					230 container
+						231 AXListMarker • 
+						232 text 三类别、单样本、有限 logits、正温度；没有训练网络或估计温度。
+					233 container
+						234 AXListMarker • 
+						235 text 梯度和 Jacobian 均对原始未除温度的 z 求导。
+					236 container
+						237 AXListMarker • 
+						238 text 真实标签为 one-hot；未加入 label smoothing、类别权重或掩码。
+	88 text 图形来自当前参数的计算 · 所有随机实验使用可复现的种子
+
+The focused UI element is 190 slider (settable, integer) Value: 4, ID: control-z1

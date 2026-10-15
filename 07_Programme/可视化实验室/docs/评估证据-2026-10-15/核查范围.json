@@ -1,0 +1,1767 @@
+{
+  "date": "2026-10-15",
+  "purpose": "教学体验评估与改造优先级；非全量数学或学习效果验收",
+  "entry": "实验室.html",
+  "entry_sha256": "ca7bfd99977e923a90609a98aae6d07eab2b7a6fe6afb9908073865ee3e2308b",
+  "entry_matches_build_manifest": true,
+  "source_hash_mismatches": [],
+  "experiments": 60,
+  "custom_story_ids": [
+    "tangent",
+    "sampling",
+    "bootstrap",
+    "backprop",
+    "attention"
+  ],
+  "mechanism_view_ids": [
+    "neuron",
+    "regularization",
+    "normalization",
+    "convolution",
+    "pooling",
+    "entropy",
+    "softmax"
+  ],
+  "chart_guide_only_count": 48,
+  "parameter_presets_after_first_step_count": 44,
+  "browser_interaction_ids": [
+    "backprop",
+    "attention",
+    "convolution",
+    "normalization",
+    "bootstrap",
+    "optimizers",
+    "pca",
+    "rnn",
+    "causal",
+    "softmax",
+    "rl-bellman",
+    "diffusion",
+    "confidence"
+  ],
+  "browser_viewport": [
+    1280,
+    720
+  ],
+  "native_host": "Obsidian 1.14.4",
+  "native_checked": [
+    "backprop film seek to 19 seconds",
+    "backprop embedded forward view",
+    "backprop switch to reverse stage and nested scroll"
+  ],
+  "per_topic": [
+    {
+      "id": "tangent",
+      "story_type": "custom",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "先看两个测量点",
+          "parameter_changes": {
+            "function": "cubic",
+            "x": 1,
+            "h": 0.5
+          }
+        },
+        {
+          "title": "一段变化，除以一段间隔",
+          "parameter_changes": {}
+        },
+        {
+          "title": "让第二点靠近",
+          "parameter_changes": {}
+        },
+        {
+          "title": "两侧都测一次",
+          "parameter_changes": {
+            "h": 0.5
+          }
+        }
+      ],
+      "controls": 3,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "linear",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "追踪两条基向量",
+          "parameter_changes": {}
+        },
+        {
+          "title": "看面积怎样改变",
+          "parameter_changes": {}
+        },
+        {
+          "title": "压成线，或压成点",
+          "parameter_changes": {}
+        }
+      ],
+      "controls": 4,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "projection",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "把向量投到直线上",
+          "parameter_changes": {}
+        },
+        {
+          "title": "为什么一定垂直",
+          "parameter_changes": {}
+        },
+        {
+          "title": "检查长度的分解",
+          "parameter_changes": {}
+        }
+      ],
+      "controls": 3,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "gradient",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "一步朝哪里走",
+          "parameter_changes": {}
+        },
+        {
+          "title": "步子大也会走远",
+          "parameter_changes": {
+            "x0": 3,
+            "y0": 2,
+            "condition": 4
+          }
+        },
+        {
+          "title": "更窄的谷地",
+          "parameter_changes": {}
+        }
+      ],
+      "controls": 5,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "sampling",
+      "story_type": "custom",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "一份样本，一个均值",
+          "parameter_changes": {
+            "n": 6,
+            "distribution": "exponential",
+            "reps": 500
+          }
+        },
+        {
+          "title": "均值也有分布",
+          "parameter_changes": {}
+        },
+        {
+          "title": "让每份样本更大",
+          "parameter_changes": {
+            "n": 30
+          }
+        },
+        {
+          "title": "一条路径，不是许多均值",
+          "parameter_changes": {}
+        }
+      ],
+      "controls": 4,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "confidence",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "每条线是一份样本",
+          "parameter_changes": {}
+        },
+        {
+          "title": "更有把握，要付出什么",
+          "parameter_changes": {}
+        },
+        {
+          "title": "收窄区间的另一条路",
+          "parameter_changes": {}
+        }
+      ],
+      "controls": 5,
+      "challenges": 3,
+      "interaction_observed": true
+    },
+    {
+      "id": "testing",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "两种世界，两种分布",
+          "parameter_changes": {}
+        },
+        {
+          "title": "p 值数哪一块面积",
+          "parameter_changes": {}
+        },
+        {
+          "title": "更容易发现多大的效应",
+          "parameter_changes": {}
+        }
+      ],
+      "controls": 4,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "bayes",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "先表达原有的不确定性",
+          "parameter_changes": {}
+        },
+        {
+          "title": "把这次数据乘进来",
+          "parameter_changes": {}
+        },
+        {
+          "title": "形状相似，身份不同",
+          "parameter_changes": {}
+        }
+      ],
+      "controls": 4,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "regression",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "两个变量长得太像",
+          "parameter_changes": {}
+        },
+        {
+          "title": "收缩系数的代价",
+          "parameter_changes": {}
+        },
+        {
+          "title": "预测好，不等于解释可靠",
+          "parameter_changes": {}
+        }
+      ],
+      "controls": 5,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "overfit",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "曲线开始追逐观测点",
+          "parameter_changes": {}
+        },
+        {
+          "title": "用另一批数据检验",
+          "parameter_changes": {}
+        },
+        {
+          "title": "约束复杂度",
+          "parameter_changes": {}
+        }
+      ],
+      "controls": 5,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "pca",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "寻找最分散的方向",
+          "parameter_changes": {}
+        },
+        {
+          "title": "留下一个坐标",
+          "parameter_changes": {}
+        },
+        {
+          "title": "单位改变，主方向也可能变",
+          "parameter_changes": {}
+        }
+      ],
+      "controls": 6,
+      "challenges": 3,
+      "interaction_observed": true
+    },
+    {
+      "id": "bootstrap",
+      "story_type": "custom",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "固定手里的样本",
+          "parameter_changes": {
+            "n": 8,
+            "distribution": "exponential",
+            "reps": 500
+          }
+        },
+        {
+          "title": "有放回地重新抽取",
+          "parameter_changes": {}
+        },
+        {
+          "title": "每轮留下一个均值",
+          "parameter_changes": {}
+        },
+        {
+          "title": "从分布读取区间",
+          "parameter_changes": {}
+        }
+      ],
+      "controls": 4,
+      "challenges": 3,
+      "interaction_observed": true
+    },
+    {
+      "id": "knn",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "先问身边最近的一个点",
+          "parameter_changes": {
+            "k": 1,
+            "scale": 1
+          }
+        },
+        {
+          "title": "让更多邻居一起投票",
+          "parameter_changes": {
+            "k": 7
+          }
+        },
+        {
+          "title": "距离的单位也会改变邻居",
+          "parameter_changes": {
+            "scale": 1
+          }
+        }
+      ],
+      "controls": 7,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "logistic",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "先看模型报了多大概率",
+          "parameter_changes": {
+            "weight": 1.8,
+            "intercept": -0.3,
+            "threshold": 0.5
+          }
+        },
+        {
+          "title": "概率相同，行动规则可以不同",
+          "parameter_changes": {
+            "threshold": 0.5
+          }
+        },
+        {
+          "title": "用损失评价这条概率曲线",
+          "parameter_changes": {
+            "intercept": 0,
+            "weight": -3
+          }
+        }
+      ],
+      "controls": 5,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "svm",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "先看一条分类线",
+          "parameter_changes": {
+            "norm": 1,
+            "angle": 0,
+            "offset": 0,
+            "C": 1
+          }
+        },
+        {
+          "title": "分对了，也可能仍有惩罚",
+          "parameter_changes": {}
+        },
+        {
+          "title": "C 改变惩罚的价格",
+          "parameter_changes": {
+            "C": 0.1
+          }
+        }
+      ],
+      "controls": 6,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "tree",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "一次只能沿一个坐标切一刀",
+          "parameter_changes": {
+            "dataset": "axis",
+            "depth": 0,
+            "minleaf": 4,
+            "noise": 0
+          }
+        },
+        {
+          "title": "再切几刀，区域更细",
+          "parameter_changes": {
+            "depth": 3
+          }
+        },
+        {
+          "title": "没有眼前收益，贪心树就停住",
+          "parameter_changes": {
+            "dataset": "balancedxor",
+            "depth": 5,
+            "minleaf": 4,
+            "n": 100,
+            "noise": 0
+          }
+        }
+      ],
+      "controls": 6,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "ensemble",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "一个预测器也会左右波动",
+          "parameter_changes": {
+            "members": 1,
+            "rho": 0,
+            "bias": 0,
+            "sigma": 1
+          }
+        },
+        {
+          "title": "独立的波动可以互相抵消",
+          "parameter_changes": {
+            "members": 20,
+            "rho": 0
+          }
+        },
+        {
+          "title": "大家共同犯的错，平均不掉",
+          "parameter_changes": {
+            "members": 100,
+            "rho": 0.7
+          }
+        }
+      ],
+      "controls": 6,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "boosting",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "先只报一个平均数",
+          "parameter_changes": {
+            "steps": 0,
+            "rate": 0.2
+          }
+        },
+        {
+          "title": "下一棵树只补当前的差",
+          "parameter_changes": {
+            "steps": 1,
+            "rate": 0.2
+          }
+        },
+        {
+          "title": "许多小修正累积成曲线",
+          "parameter_changes": {
+            "steps": 12,
+            "rate": 0.2
+          }
+        }
+      ],
+      "controls": 5,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "kmeans",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "先放中心，再认最近的中心",
+          "parameter_changes": {
+            "k": 3,
+            "steps": 0,
+            "initialization": "spread"
+          }
+        },
+        {
+          "title": "把中心移到成员的平均位置",
+          "parameter_changes": {
+            "steps": 1
+          }
+        },
+        {
+          "title": "下降不等于找到了唯一答案",
+          "parameter_changes": {
+            "steps": 10
+          }
+        }
+      ],
+      "controls": 5,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "gmm",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "一个点可以部分属于两个分量",
+          "parameter_changes": {
+            "steps": 0,
+            "initial": 1
+          }
+        },
+        {
+          "title": "用软分配重新估计分量",
+          "parameter_changes": {
+            "steps": 6,
+            "initial": 1
+          }
+        },
+        {
+          "title": "完全重合的起点不会自动分开",
+          "parameter_changes": {
+            "initial": 0,
+            "steps": 10
+          }
+        }
+      ],
+      "controls": 6,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "kde",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "每个观测放一个小山包",
+          "parameter_changes": {
+            "n": 60,
+            "distribution": "mixture",
+            "bandwidth": 0.35
+          }
+        },
+        {
+          "title": "把所有观测的小山包加起来",
+          "parameter_changes": {
+            "bandwidth": 0.05
+          }
+        },
+        {
+          "title": "更平滑，也可能丢掉真实结构",
+          "parameter_changes": {
+            "bandwidth": 1.5
+          }
+        }
+      ],
+      "controls": 4,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "modelselection",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "先从两个候选中挑低分",
+          "parameter_changes": {
+            "candidates": 2,
+            "nval": 30,
+            "scale": 1
+          }
+        },
+        {
+          "title": "多挑几次，更容易碰到幸运低分",
+          "parameter_changes": {
+            "candidates": 80
+          }
+        },
+        {
+          "title": "到新数据上重新检查",
+          "parameter_changes": {
+            "nval": 30
+          }
+        }
+      ],
+      "controls": 5,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "metrics",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "先看谁被判成正类",
+          "parameter_changes": {
+            "prevalence": 0.5,
+            "threshold": 0.5
+          }
+        },
+        {
+          "title": "移动阈值，只在同一条 ROC 上走",
+          "parameter_changes": {}
+        },
+        {
+          "title": "正类很少时，误报会更显眼",
+          "parameter_changes": {
+            "prevalence": 0.05,
+            "threshold": 0.5
+          }
+        }
+      ],
+      "controls": 5,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "likelihood",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "数据固定，比较不同参数解释",
+          "parameter_changes": {
+            "n": 40,
+            "observedRate": 0.7,
+            "candidateP": 0.5
+          }
+        },
+        {
+          "title": "更多同样比例的数据，让曲线更尖",
+          "parameter_changes": {
+            "n": 100,
+            "candidateP": 0.7
+          }
+        },
+        {
+          "title": "最优值也可能在边界",
+          "parameter_changes": {
+            "n": 40,
+            "observedRate": 1,
+            "candidateP": 1
+          }
+        }
+      ],
+      "controls": 6,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "activations",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "一个输入，变成什么输出？",
+          "parameter_changes": {}
+        },
+        {
+          "title": "放大输入，梯度反而变小？",
+          "parameter_changes": {
+            "kind": "sigmoid",
+            "x": 2,
+            "bias": 0,
+            "gain": 1
+          }
+        },
+        {
+          "title": "拐点处，为什么断开？",
+          "parameter_changes": {
+            "kind": "relu",
+            "gain": 1,
+            "bias": 0,
+            "x": 0
+          }
+        }
+      ],
+      "controls": 4,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "neuron",
+      "story_type": "guide",
+      "has_mechanism_view": true,
+      "stages": [
+        {
+          "title": "权重怎样改变输入的贡献？",
+          "parameter_changes": {}
+        },
+        {
+          "title": "偏置怎样改变最后的输出？",
+          "parameter_changes": {
+            "w1": 1,
+            "w2": -1,
+            "bias": 0
+          }
+        },
+        {
+          "title": "同一个点，哪个输入更敏感？",
+          "parameter_changes": {
+            "w1": 2,
+            "w2": 0,
+            "bias": -1,
+            "x1": 0.5,
+            "x2": 1
+          }
+        }
+      ],
+      "controls": 5,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "mlp",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "先认出各个隐藏单元",
+          "parameter_changes": {}
+        },
+        {
+          "title": "带符号相加，拼出帐篷",
+          "parameter_changes": {
+            "width": 3,
+            "kind": "relu",
+            "gain": 1,
+            "shift": 0,
+            "offset": 0
+          }
+        },
+        {
+          "title": "去掉非线性，拐点还在吗？",
+          "parameter_changes": {
+            "width": 3,
+            "kind": "linear",
+            "gain": 1,
+            "shift": 0,
+            "offset": 0
+          }
+        }
+      ],
+      "controls": 5,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "backprop",
+      "story_type": "custom",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "前向：从输入算到预测",
+          "parameter_changes": {
+            "x": 1,
+            "w": 0,
+            "bias": 0,
+            "v": 2,
+            "target": 1
+          }
+        },
+        {
+          "title": "损失：预测离目标多远？",
+          "parameter_changes": {}
+        },
+        {
+          "title": "反向：沿每条依赖相乘",
+          "parameter_changes": {}
+        },
+        {
+          "title": "核对：只把 w 改一点",
+          "parameter_changes": {}
+        }
+      ],
+      "controls": 5,
+      "challenges": 3,
+      "interaction_observed": true
+    },
+    {
+      "id": "initialization",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "信号过一层，会剩下多少？",
+          "parameter_changes": {}
+        },
+        {
+          "title": "输出有界，梯度就安全吗？",
+          "parameter_changes": {
+            "mode": "large",
+            "kind": "tanh",
+            "gain": 2
+          }
+        },
+        {
+          "title": "理论尺度，不是逐层守恒",
+          "parameter_changes": {
+            "mode": "he",
+            "kind": "relu",
+            "gain": 1
+          }
+        }
+      ],
+      "controls": 5,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "optimizers",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "同一起点，沿哪条路走？",
+          "parameter_changes": {}
+        },
+        {
+          "title": "没有历史，动量退化成什么？",
+          "parameter_changes": {
+            "momentum": 0
+          }
+        },
+        {
+          "title": "离开画面之后，损失怎样了？",
+          "parameter_changes": {
+            "condition": 20,
+            "rate": 0.05,
+            "momentum": 0.9
+          }
+        }
+      ],
+      "controls": 5,
+      "challenges": 3,
+      "interaction_observed": true
+    },
+    {
+      "id": "regularization",
+      "story_type": "guide",
+      "has_mechanism_view": true,
+      "stages": [
+        {
+          "title": "每次随机保留哪些贡献？",
+          "parameter_changes": {}
+        },
+        {
+          "title": "均值保持，单次输出会散开",
+          "parameter_changes": {}
+        },
+        {
+          "title": "均值正确，损失为什么仍大于零？",
+          "parameter_changes": {
+            "scale": 1,
+            "target": 2,
+            "dropout": 0.5
+          }
+        }
+      ],
+      "controls": 5,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "normalization",
+      "story_type": "guide",
+      "has_mechanism_view": true,
+      "stages": [
+        {
+          "title": "先看输入的行与列",
+          "parameter_changes": {}
+        },
+        {
+          "title": "换统计轴，会牵动谁？",
+          "parameter_changes": {}
+        },
+        {
+          "title": "标准化之后，还要做仿射变换",
+          "parameter_changes": {
+            "gamma": 0,
+            "beta": 1
+          }
+        }
+      ],
+      "controls": 6,
+      "challenges": 3,
+      "interaction_observed": true
+    },
+    {
+      "id": "convolution",
+      "story_type": "guide",
+      "has_mechanism_view": true,
+      "stages": [
+        {
+          "title": "一个输出，只看一个窗口",
+          "parameter_changes": {}
+        },
+        {
+          "title": "九项乘积，怎样合成一个数？",
+          "parameter_changes": {}
+        },
+        {
+          "title": "步幅与补零，改变输出形状",
+          "parameter_changes": {}
+        }
+      ],
+      "controls": 6,
+      "challenges": 3,
+      "interaction_observed": true
+    },
+    {
+      "id": "pooling",
+      "story_type": "guide",
+      "has_mechanism_view": true,
+      "stages": [
+        {
+          "title": "这一格输出，看了哪些输入？",
+          "parameter_changes": {}
+        },
+        {
+          "title": "最大值与平均值，留下什么？",
+          "parameter_changes": {}
+        },
+        {
+          "title": "梯度分给谁？",
+          "parameter_changes": {}
+        }
+      ],
+      "controls": 6,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "residual",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "每层多加一个原输入",
+          "parameter_changes": {}
+        },
+        {
+          "title": "分支为零，哪条路还在？",
+          "parameter_changes": {
+            "weight": 0,
+            "kind": "tanh"
+          }
+        },
+        {
+          "title": "捷径也可能被抵消",
+          "parameter_changes": {
+            "kind": "linear",
+            "weight": -1,
+            "depth": 5
+          }
+        }
+      ],
+      "controls": 4,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "attention",
+      "story_type": "custom",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "匹配：我在找什么？",
+          "parameter_changes": {
+            "causal": 0
+          }
+        },
+        {
+          "title": "分配：每个位置读多少？",
+          "parameter_changes": {
+            "causal": 0
+          }
+        },
+        {
+          "title": "读取：把内容加起来",
+          "parameter_changes": {
+            "causal": 0
+          }
+        },
+        {
+          "title": "遮挡：未来还不能读",
+          "parameter_changes": {
+            "causal": 1
+          }
+        }
+      ],
+      "controls": 5,
+      "challenges": 3,
+      "interaction_observed": true
+    },
+    {
+      "id": "positional",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "先看一对相位",
+          "parameter_changes": {}
+        },
+        {
+          "title": "距离更远，相似度未必更低",
+          "parameter_changes": {
+            "pairs": 1
+          }
+        },
+        {
+          "title": "多种频率一起记录位置",
+          "parameter_changes": {
+            "pairs": 4,
+            "base": 10000
+          }
+        }
+      ],
+      "controls": 4,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "gnn",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "一层能把信息送多远？",
+          "parameter_changes": {}
+        },
+        {
+          "title": "为什么会来回振荡？",
+          "parameter_changes": {
+            "graph": "star",
+            "normalization": "mean",
+            "selfLoop": 0,
+            "residual": 0,
+            "layers": 4
+          }
+        },
+        {
+          "title": "归一化改变最终形状",
+          "parameter_changes": {
+            "graph": "star",
+            "normalization": "symmetric",
+            "selfLoop": 1,
+            "residual": 0,
+            "layers": 20
+          }
+        }
+      ],
+      "controls": 5,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "embeddings",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "方向和长度，分别影响什么",
+          "parameter_changes": {}
+        },
+        {
+          "title": "把长度因素拿掉",
+          "parameter_changes": {
+            "normA": 1,
+            "normB": 1
+          }
+        },
+        {
+          "title": "零向量为什么是边界？",
+          "parameter_changes": {
+            "normA": 0,
+            "normB": 2
+          }
+        }
+      ],
+      "controls": 3,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "autoencoder",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "一个数怎样重构一个点？",
+          "parameter_changes": {}
+        },
+        {
+          "title": "寻找最少丢失的方向",
+          "parameter_changes": {
+            "gain": 1
+          }
+        },
+        {
+          "title": "放大解码，为什么也会出错？",
+          "parameter_changes": {}
+        }
+      ],
+      "controls": 4,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "vae",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "样本移动，分布未必改变",
+          "parameter_changes": {}
+        },
+        {
+          "title": "KL 在惩罚哪种差异？",
+          "parameter_changes": {
+            "mu": 0,
+            "logvar": 0
+          }
+        },
+        {
+          "title": "重构与先验怎样折中？",
+          "parameter_changes": {
+            "mu": 1,
+            "logvar": 0,
+            "decoder": 1,
+            "x": 2,
+            "beta": 1
+          }
+        }
+      ],
+      "controls": 6,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "gan",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "判别器怎样评价生成点？",
+          "parameter_changes": {}
+        },
+        {
+          "title": "同样被拒绝，两种梯度不同",
+          "parameter_changes": {
+            "theta": -4,
+            "weight": 2,
+            "bias": -2
+          }
+        },
+        {
+          "title": "沿梯度更新会走到哪里？",
+          "parameter_changes": {}
+        }
+      ],
+      "controls": 5,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "flow",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "先追踪一个样本",
+          "parameter_changes": {}
+        },
+        {
+          "title": "附近的小区间被拉多长？",
+          "parameter_changes": {
+            "scale": 1,
+            "shift": 0,
+            "warp": 0,
+            "z": 0
+          }
+        },
+        {
+          "title": "质量不变，密度要反向调整",
+          "parameter_changes": {}
+        }
+      ],
+      "controls": 4,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "diffusion",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "先分清观测在哪条轴上",
+          "parameter_changes": {}
+        },
+        {
+          "title": "同一个观测对应哪些原值？",
+          "parameter_changes": {}
+        },
+        {
+          "title": "噪声越多，能恢复的信息越少",
+          "parameter_changes": {}
+        }
+      ],
+      "controls": 4,
+      "challenges": 3,
+      "interaction_observed": true
+    },
+    {
+      "id": "rl-bellman",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "一次选择会发生什么？",
+          "parameter_changes": {}
+        },
+        {
+          "title": "未来价值逐轮传回来",
+          "parameter_changes": {
+            "gamma": 0.9,
+            "success": 0.5,
+            "cost": -0.2,
+            "iterations": 1
+          }
+        },
+        {
+          "title": "停止时离答案还有多远？",
+          "parameter_changes": {}
+        }
+      ],
+      "controls": 4,
+      "challenges": 3,
+      "interaction_observed": true
+    },
+    {
+      "id": "rl-policy",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "先把参数变成动作概率",
+          "parameter_changes": {}
+        },
+        {
+          "title": "好动作的概率逐步增加",
+          "parameter_changes": {
+            "theta": 0,
+            "gamma": 0.9,
+            "success": 0.5,
+            "cost": -0.2,
+            "rate": 0.5,
+            "steps": 30
+          }
+        },
+        {
+          "title": "环境变了，更新方向也该变",
+          "parameter_changes": {
+            "theta": 0,
+            "gamma": 0.9,
+            "success": 0.1,
+            "cost": -1,
+            "rate": 0.5,
+            "steps": 30
+          }
+        }
+      ],
+      "controls": 6,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "double-descent",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "训练误差何时可能归零？",
+          "parameter_changes": {}
+        },
+        {
+          "title": "只看这次实际的验证风险",
+          "parameter_changes": {
+            "width": 23,
+            "n": 24,
+            "noise": 0.3,
+            "lambda": 0,
+            "seed": 42
+          }
+        },
+        {
+          "title": "误差背后是哪一些预测？",
+          "parameter_changes": {}
+        }
+      ],
+      "controls": 5,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "fairness",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "先找到 PPV 的分母",
+          "parameter_changes": {}
+        },
+        {
+          "title": "相同错误率，为何 PPV 不同？",
+          "parameter_changes": {
+            "baseA": 0.2,
+            "baseB": 0.6,
+            "tpr": 0.8,
+            "fpr": 0.2
+          }
+        },
+        {
+          "title": "边界要单独判断",
+          "parameter_changes": {
+            "baseA": 0.2,
+            "baseB": 0.6,
+            "tpr": 0.8,
+            "fpr": 0
+          }
+        }
+      ],
+      "controls": 4,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "svd",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "先找输入里的两个特殊方向",
+          "parameter_changes": {
+            "left": 30,
+            "right": 20,
+            "scale": 2,
+            "ratio": 0.35,
+            "retained": 2,
+            "shared": 0
+          }
+        },
+        {
+          "title": "两个方向可以被拉伸不同倍数",
+          "parameter_changes": {}
+        },
+        {
+          "title": "只保留一个方向，会丢掉什么",
+          "parameter_changes": {
+            "ratio": 0.35,
+            "retained": 1
+          }
+        }
+      ],
+      "controls": 6,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "biasvariance",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "同样的训练位置，重采噪声再拟合",
+          "parameter_changes": {
+            "degree": 3,
+            "n": 20,
+            "noise": 0.4,
+            "lambda": 0.01,
+            "x0": 0.5
+          }
+        },
+        {
+          "title": "在一个固定位置，分清偏离与分散",
+          "parameter_changes": {}
+        },
+        {
+          "title": "预测新响应，还要面对新的噪声",
+          "parameter_changes": {}
+        }
+      ],
+      "controls": 7,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "kernel",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "先看核怎样衡量附近的相似性",
+          "parameter_changes": {
+            "kernel": "rbf",
+            "anchor": 0,
+            "bandwidth": 0.4,
+            "lambda": 0.05
+          }
+        },
+        {
+          "title": "把许多核组合成实际预测",
+          "parameter_changes": {}
+        },
+        {
+          "title": "贴近训练点，也要付复杂度代价",
+          "parameter_changes": {
+            "bandwidth": 0.4,
+            "lambda": 3
+          }
+        }
+      ],
+      "controls": 7,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "entropy",
+      "story_type": "guide",
+      "has_mechanism_view": true,
+      "stages": [
+        {
+          "title": "真实会发生什么，你又报了什么",
+          "parameter_changes": {
+            "p1": 0.5,
+            "p2": 0.6,
+            "q1": 0.5,
+            "q2": 0.6,
+            "unit": "nats"
+          }
+        },
+        {
+          "title": "报告偏离，平均对数损失会增加",
+          "parameter_changes": {
+            "q1": 0.8,
+            "q2": 0.5
+          }
+        },
+        {
+          "title": "把可能事件报成零，并非有限大错",
+          "parameter_changes": {
+            "q1": 0
+          }
+        }
+      ],
+      "controls": 5,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "softmax",
+      "story_type": "guide",
+      "has_mechanism_view": true,
+      "stages": [
+        {
+          "title": "一个分数变大，会挤走其他类别的份额",
+          "parameter_changes": {
+            "z1": 0,
+            "z2": 0,
+            "z3": 0,
+            "temperature": 1,
+            "shift": 0,
+            "target": 0
+          }
+        },
+        {
+          "title": "共同加一个数，份额不变",
+          "parameter_changes": {
+            "shift": 100
+          }
+        },
+        {
+          "title": "很自信，也可能错得很远",
+          "parameter_changes": {
+            "z1": 3,
+            "z2": 0,
+            "z3": -1,
+            "temperature": 0.5,
+            "shift": 0,
+            "target": 2
+          }
+        }
+      ],
+      "controls": 6,
+      "challenges": 3,
+      "interaction_observed": true
+    },
+    {
+      "id": "calibration",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "分类结果相同，信心可以不同",
+          "parameter_changes": {
+            "sharpness": 1,
+            "offset": 0
+          }
+        },
+        {
+          "title": "说八成会发生，实际有几成",
+          "parameter_changes": {
+            "sharpness": 3,
+            "offset": 0
+          }
+        },
+        {
+          "title": "先看每个箱里有多少证据",
+          "parameter_changes": {
+            "sharpness": 1,
+            "offset": 0
+          }
+        }
+      ],
+      "controls": 5,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "rnn",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "输入过去之后，状态还剩多少？",
+          "parameter_changes": {}
+        },
+        {
+          "title": "早期状态还能影响末态吗？",
+          "parameter_changes": {
+            "kind": "linear",
+            "inputWeight": 0,
+            "pattern": "zero",
+            "initial": 0.5,
+            "weight": 0.8
+          }
+        },
+        {
+          "title": "同一个参数，要累加所有时间路径",
+          "parameter_changes": {}
+        }
+      ],
+      "controls": 7,
+      "challenges": 3,
+      "interaction_observed": true
+    },
+    {
+      "id": "lstm",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "内部记忆与对外输出不是同一个量",
+          "parameter_changes": {}
+        },
+        {
+          "title": "直通记忆，只是梯度的一条路径",
+          "parameter_changes": {
+            "recurrent": 0,
+            "input": 0.8,
+            "output": 0.9,
+            "forget": 0.9,
+            "initial": 0.1,
+            "pattern": "zero"
+          }
+        },
+        {
+          "title": "关闭输出，记忆仍可保留",
+          "parameter_changes": {
+            "forget": 1,
+            "input": 0,
+            "output": 0,
+            "recurrent": 0,
+            "initial": 1,
+            "pattern": "zero"
+          }
+        }
+      ],
+      "controls": 7,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "contrastive",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "哪个候选与 Query 更对齐？",
+          "parameter_changes": {}
+        },
+        {
+          "title": "所有候选竞争同一个分母",
+          "parameter_changes": {}
+        },
+        {
+          "title": "正负向量相同，低温能救吗？",
+          "parameter_changes": {
+            "negativeAngle": 0,
+            "negatives": 1,
+            "angle": 0,
+            "temperature": 0.5
+          }
+        }
+      ],
+      "controls": 4,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "jacobian",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "先圈定一个局部邻域",
+          "parameter_changes": {}
+        },
+        {
+          "title": "弯曲网格与直线近似差在哪里？",
+          "parameter_changes": {}
+        },
+        {
+          "title": "剩下的误差怎样随距离缩小？",
+          "parameter_changes": {}
+        }
+      ],
+      "controls": 5,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "uncertainty",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "同一个均值，为什么有两种区间？",
+          "parameter_changes": {}
+        },
+        {
+          "title": "更多数据，能减少哪一部分？",
+          "parameter_changes": {}
+        },
+        {
+          "title": "截距与斜率也有联合不确定性",
+          "parameter_changes": {}
+        }
+      ],
+      "controls": 6,
+      "challenges": 3,
+      "interaction_observed": false
+    },
+    {
+      "id": "causal",
+      "story_type": "guide",
+      "has_mechanism_view": false,
+      "stages": [
+        {
+          "title": "组内趋势与总体趋势可能反向",
+          "parameter_changes": {}
+        },
+        {
+          "title": "总体比较，究竟换了哪些人？",
+          "parameter_changes": {}
+        },
+        {
+          "title": "有关联，也可能没有干预效应",
+          "parameter_changes": {
+            "effect": 0,
+            "selection": 0.8,
+            "prevalence": 0.5
+          }
+        }
+      ],
+      "controls": 3,
+      "challenges": 3,
+      "interaction_observed": true
+    }
+  ],
+  "limits": [
+    "全部影片为抽帧和章节检查，未完整观看每部",
+    "13项实际交互，深度不同，其余为教学配置与影片抽帧",
+    "未重做全部数学核验或跨设备测试",
+    "无用户学习增益测量"
+  ]
+}

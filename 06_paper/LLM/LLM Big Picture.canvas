@@ -20,21 +20,21 @@
 		{"id":"4ffc3fd069b1d398","type":"text","x":1920,"y":1720,"width":500,"height":160,"text":"多模态能力只是选型的一维；真正部署还要同时核验权重、许可证、数据透明度、硬件和任务评测。","color":"3"}
 	],
 	"edges":[
-		{"id":"ea24137cffcfee64","fromNode":"5e0349e340408544","toNode":"690c7eeeebd48e9b"},
-		{"id":"7f3c586030a6765f","fromNode":"690c7eeeebd48e9b","toNode":"41edeb623d804233"},
-		{"id":"7e47422b12cbebae","fromNode":"5e0349e340408544","toNode":"5da95554eabf3746"},
-		{"id":"096b45562183cb75","fromNode":"5da95554eabf3746","toNode":"1e2c87511acca4f6"},
-		{"id":"76871a02c8de339d","fromNode":"5e0349e340408544","toNode":"c76f2532d11468ee"},
-		{"id":"473390812bc9be00","fromNode":"c76f2532d11468ee","toNode":"f90490bd78fb3060"},
-		{"id":"0b2c7f2b2148bb06","fromNode":"5e0349e340408544","toNode":"a23a093680fe564d"},
-		{"id":"1f48ef32297cbc95","fromNode":"a23a093680fe564d","toNode":"97e77e14ced22868"},
-		{"id":"8b0b14c411dc3262","fromNode":"41edeb623d804233","toNode":"72c890ef1a212c96"},
-		{"id":"a1545ec306023710","fromNode":"72c890ef1a212c96","toNode":"4826db22ff87c994"},
-		{"id":"7ee50b96001d1254","fromNode":"1e2c87511acca4f6","toNode":"dd2c1f80bf77071e"},
-		{"id":"f475961433eae738","fromNode":"dd2c1f80bf77071e","toNode":"0344ef4c27818f14"},
-		{"id":"0c3917608eb40d95","fromNode":"f90490bd78fb3060","toNode":"13e7613a000ddbe0"},
-		{"id":"30f0d1f1446b596a","fromNode":"13e7613a000ddbe0","toNode":"6dd9a211d2da0461"},
-		{"id":"76bffbedf64de963","fromNode":"97e77e14ced22868","toNode":"4ffc3fd069b1d398"},
-		{"id":"e0a0e9c118a4d901","fromNode":"4ffc3fd069b1d398","toNode":"e2b814aa3ee004f9"}
+		{"id":"ea24137cffcfee64","fromNode":"5e0349e340408544","toNode":"690c7eeeebd48e9b","fromSide":"top","toSide":"bottom"},
+		{"id":"7f3c586030a6765f","fromNode":"690c7eeeebd48e9b","toNode":"41edeb623d804233","fromSide":"right","toSide":"left"},
+		{"id":"7e47422b12cbebae","fromNode":"5e0349e340408544","toNode":"5da95554eabf3746","fromSide":"right","toSide":"left"},
+		{"id":"096b45562183cb75","fromNode":"5da95554eabf3746","toNode":"1e2c87511acca4f6","fromSide":"right","toSide":"left"},
+		{"id":"76871a02c8de339d","fromNode":"5e0349e340408544","toNode":"c76f2532d11468ee","fromSide":"bottom","toSide":"top"},
+		{"id":"473390812bc9be00","fromNode":"c76f2532d11468ee","toNode":"f90490bd78fb3060","fromSide":"right","toSide":"left"},
+		{"id":"0b2c7f2b2148bb06","fromNode":"5e0349e340408544","toNode":"a23a093680fe564d","fromSide":"bottom","toSide":"top"},
+		{"id":"1f48ef32297cbc95","fromNode":"a23a093680fe564d","toNode":"97e77e14ced22868","fromSide":"right","toSide":"left"},
+		{"id":"8b0b14c411dc3262","fromNode":"41edeb623d804233","toNode":"72c890ef1a212c96","fromSide":"right","toSide":"left"},
+		{"id":"a1545ec306023710","fromNode":"72c890ef1a212c96","toNode":"4826db22ff87c994","fromSide":"right","toSide":"left"},
+		{"id":"7ee50b96001d1254","fromNode":"1e2c87511acca4f6","toNode":"dd2c1f80bf77071e","fromSide":"right","toSide":"left"},
+		{"id":"f475961433eae738","fromNode":"dd2c1f80bf77071e","toNode":"0344ef4c27818f14","fromSide":"right","toSide":"left"},
+		{"id":"0c3917608eb40d95","fromNode":"f90490bd78fb3060","toNode":"13e7613a000ddbe0","fromSide":"right","toSide":"left"},
+		{"id":"30f0d1f1446b596a","fromNode":"13e7613a000ddbe0","toNode":"6dd9a211d2da0461","fromSide":"right","toSide":"left"},
+		{"id":"76bffbedf64de963","fromNode":"97e77e14ced22868","toNode":"4ffc3fd069b1d398","fromSide":"right","toSide":"left"},
+		{"id":"e0a0e9c118a4d901","fromNode":"4ffc3fd069b1d398","toNode":"e2b814aa3ee004f9","fromSide":"right","toSide":"left"}
 	]
 }

@@ -1,0 +1,1082 @@
+[
+  {
+    "id": "tangent",
+    "duration": 36.399349,
+    "sample_times": [
+      13.1,
+      26.21
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "8386560/279547"
+      }
+    ],
+    "sha256": "74cf7099d4fa2ba1f60ba8d11702e959df31f8cd2d9f60d122ec9b51dbb150c3"
+  },
+  {
+    "id": "linear",
+    "duration": 36.566016,
+    "sample_times": [
+      13.16,
+      26.33
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "2808320/93609"
+      }
+    ],
+    "sha256": "87b9deca995ac3291a5a5b04b7f6137c69cc47364b5cbe7cda5b9cad3a376ebe"
+  },
+  {
+    "id": "projection",
+    "duration": 33.432682,
+    "sample_times": [
+      12.04,
+      24.07
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "7703040/256763"
+      }
+    ],
+    "sha256": "c105007d79e2cde599679bd632f86b683a098043348553b5ed8929241d2dbdca"
+  },
+  {
+    "id": "gradient",
+    "duration": 42.132682,
+    "sample_times": [
+      15.17,
+      30.34
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "9707520/323579"
+      }
+    ],
+    "sha256": "879efbbc3aa79f689c247ccaaa17cc4c58a3d9ca2e814823f03ac623981c5688"
+  },
+  {
+    "id": "sampling",
+    "duration": 51.498698,
+    "sample_times": [
+      18.54,
+      37.08
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "1186560/39551"
+      }
+    ],
+    "sha256": "741c89b39940d957568d98f9ae40e181c574f694bed50ed8e1fb4c784dc7c9a9"
+  },
+  {
+    "id": "confidence",
+    "duration": 44.398047,
+    "sample_times": [
+      15.98,
+      31.97
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "3409920/113659"
+      }
+    ],
+    "sha256": "47bf8f528149633fd5255b3837d85e633a0fc0484286454f71c763423ed16d94"
+  },
+  {
+    "id": "testing",
+    "duration": 32.532031,
+    "sample_times": [
+      11.71,
+      23.42
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "1249280/41641"
+      }
+    ],
+    "sha256": "d0f7aea17bd5e068b280bd66401deee1bed375635f84e1179fba04f981ed0bd5"
+  },
+  {
+    "id": "bayes",
+    "duration": 48.830729,
+    "sample_times": [
+      17.58,
+      35.16
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "562560/18751"
+      }
+    ],
+    "sha256": "53dbaeaa63a83d65b1b64e2272f97044ced476f3f9e90e444c6e6684065f66da"
+  },
+  {
+    "id": "regression",
+    "duration": 39.432031,
+    "sample_times": [
+      14.2,
+      28.39
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "1514240/50473"
+      }
+    ],
+    "sha256": "32852bdd30e2718305d2bd662c77572fde50685314b44122eb18a9f347e2e016"
+  },
+  {
+    "id": "overfit",
+    "duration": 38.432031,
+    "sample_times": [
+      13.84,
+      27.67
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "1475840/49193"
+      }
+    ],
+    "sha256": "5e51f959629141974eeaf1777dcb9294bb2b138714d8ff7b7dd7c1db56e99345"
+  },
+  {
+    "id": "pca",
+    "duration": 33.166016,
+    "sample_times": [
+      11.94,
+      23.88
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "509440/16981"
+      }
+    ],
+    "sha256": "4710e922c7ff9fd454ef20ddbad0315b40a00620e550323ce5a8cee2f725caed"
+  },
+  {
+    "id": "bootstrap",
+    "duration": 81.159505,
+    "sample_times": [
+      29.22,
+      58.43
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "3740160/124661"
+      }
+    ],
+    "sha256": "7b4277551b9a5d0256f49c35e28d625eb081d99780db0312127c2e41c41675c2"
+  },
+  {
+    "id": "knn",
+    "duration": 32.566016,
+    "sample_times": [
+      11.72,
+      23.45
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "2501120/83369"
+      }
+    ],
+    "sha256": "c25bf51c8571a13c50c85a08bcc709c4d1536a8eaefd44f0e046121f1c9e5845"
+  },
+  {
+    "id": "logistic",
+    "duration": 41.098047,
+    "sample_times": [
+      14.8,
+      29.59
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "3156480/105211"
+      }
+    ],
+    "sha256": "557e3fd1529ee52479932703bfcdf1a53ed96ca06cd2ed6c04d8204004168707"
+  },
+  {
+    "id": "svm",
+    "duration": 28.499349,
+    "sample_times": [
+      10.26,
+      20.52
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "262656/8755"
+      }
+    ],
+    "sha256": "52ac9eb8a3a84b063f2e7a5105dcbef39d4259e60c768cba50ad23d82c135326"
+  },
+  {
+    "id": "tree",
+    "duration": 40.499349,
+    "sample_times": [
+      14.58,
+      29.16
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "1866240/62207"
+      }
+    ],
+    "sha256": "76156cf03d4f40a9d6d7f9ff978fa4e8f213becb49e5d3c86a79b572e68de459"
+  },
+  {
+    "id": "ensemble",
+    "duration": 39.665365,
+    "sample_times": [
+      14.28,
+      28.56
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "913920/30463"
+      }
+    ],
+    "sha256": "41271937726f31e0dece80572c61a42068e064f01f956e638cb66ba2811509ce"
+  },
+  {
+    "id": "boosting",
+    "duration": 44.664063,
+    "sample_times": [
+      16.08,
+      32.16
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "171520/5717"
+      }
+    ],
+    "sha256": "496c5675888db36b7686ddadd7e5c4c23694d5cb46b97f91d9ab765b9a304f5d"
+  },
+  {
+    "id": "kmeans",
+    "duration": 40.999349,
+    "sample_times": [
+      14.76,
+      29.52
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "377856/12595"
+      }
+    ],
+    "sha256": "331daf9f31c4bd96b9b750df8b6620cdbc9f1e9344aeb56e2a2d94c8905debcf"
+  },
+  {
+    "id": "gmm",
+    "duration": 41.798698,
+    "sample_times": [
+      15.05,
+      30.1
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "4815360/160507"
+      }
+    ],
+    "sha256": "8f731590c424e65412eb4dd48b8ea3a016fe0eb50c09256f452f52990ebdfbba"
+  },
+  {
+    "id": "kde",
+    "duration": 38.732682,
+    "sample_times": [
+      13.94,
+      27.89
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "8924160/297467"
+      }
+    ],
+    "sha256": "53b9aafaeaf0de779a58d6b8a2804d208225f2d122998e967f73309d82eecf5c"
+  },
+  {
+    "id": "modelselection",
+    "duration": 34.232031,
+    "sample_times": [
+      12.32,
+      24.65
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "1314560/43817"
+      }
+    ],
+    "sha256": "3a81358fb7381400c2aeed844783f55fa8a4ccc173d7de7fc29c349424afbc62"
+  },
+  {
+    "id": "metrics",
+    "duration": 35.532031,
+    "sample_times": [
+      12.79,
+      25.58
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "1364480/45481"
+      }
+    ],
+    "sha256": "64471f883c526a7b8ea916d3b87d35686b4e11fe585913bb3809cca1d22d3f75"
+  },
+  {
+    "id": "likelihood",
+    "duration": 39.632031,
+    "sample_times": [
+      14.27,
+      28.54
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "1521920/50729"
+      }
+    ],
+    "sha256": "72d59244541f0bcbce8550a74705b1392913d7f38dbeaa739d4ac8233beca3a0"
+  },
+  {
+    "id": "activations",
+    "duration": 41.099349,
+    "sample_times": [
+      14.8,
+      29.59
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "9469440/315643"
+      }
+    ],
+    "sha256": "a12e944ef5b822f3da3f0849c3c626b4434f1935f435b1d672f68c2f7f04fe14"
+  },
+  {
+    "id": "neuron",
+    "duration": 33.366016,
+    "sample_times": [
+      12.01,
+      24.02
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "2562560/85417"
+      }
+    ],
+    "sha256": "0b3e6f6b753d511405741f7899f95e83595f9161c90f3b6fd318903cee34cbd5"
+  },
+  {
+    "id": "mlp",
+    "duration": 43.932031,
+    "sample_times": [
+      15.82,
+      31.63
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "1687040/56233"
+      }
+    ],
+    "sha256": "8d2db65813ec22b0319f80f1514362461a6c7557fd02fd99de706efadc0f4da6"
+  },
+  {
+    "id": "backprop",
+    "duration": 52.432031,
+    "sample_times": [
+      18.88,
+      37.75
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "2013440/67113"
+      }
+    ],
+    "sha256": "7ff3aa5b0fd15cb96b21051737d4d1b23ce56427b36f59333030aa337d5d66ca"
+  },
+  {
+    "id": "initialization",
+    "duration": 56.230729,
+    "sample_times": [
+      20.24,
+      40.49
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "3239040/107963"
+      }
+    ],
+    "sha256": "784c3930111ff694502174e2593e81e54d5889b880220b6a56c654729d83e7b2"
+  },
+  {
+    "id": "optimizers",
+    "duration": 42.565365,
+    "sample_times": [
+      15.32,
+      30.65
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "4903680/163451"
+      }
+    ],
+    "sha256": "6c2932a718079ba51e492bf440684a26eeb38ac9305e0e19fd384963e466ce5d"
+  },
+  {
+    "id": "regularization",
+    "duration": 35.932031,
+    "sample_times": [
+      12.94,
+      25.87
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "1379840/45993"
+      }
+    ],
+    "sha256": "c909c313f42d739cf2f49ddce5a98dc86304d82cee4c7386fcbb2d32d3c704a7"
+  },
+  {
+    "id": "normalization",
+    "duration": 38.665365,
+    "sample_times": [
+      13.92,
+      27.84
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "178176/5939"
+      }
+    ],
+    "sha256": "7e97e1bdd9889ba41a084188381773a59bb8e11ef7621e53c750e7b7a88caa4d"
+  },
+  {
+    "id": "convolution",
+    "duration": 60.865365,
+    "sample_times": [
+      21.91,
+      43.82
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "7011840/233723"
+      }
+    ],
+    "sha256": "7443511abb933bd5b5504aa3a745f376d15ed9e5091bbf0b0e219b861eead5ef"
+  },
+  {
+    "id": "pooling",
+    "duration": 39.598698,
+    "sample_times": [
+      14.26,
+      28.51
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "4561920/152059"
+      }
+    ],
+    "sha256": "d832e10f5f5ade18f1c4267689bf8d034100fe19aab420495c4d9ab0d52070fe"
+  },
+  {
+    "id": "residual",
+    "duration": 38.932682,
+    "sample_times": [
+      14.02,
+      28.03
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "8970240/299003"
+      }
+    ],
+    "sha256": "a2b8084abeaa3807ceb26b46a43b6af8cc732ccd109601309b0876c9dcff890b"
+  },
+  {
+    "id": "attention",
+    "duration": 65.364063,
+    "sample_times": [
+      23.53,
+      47.06
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "1255040/41833"
+      }
+    ],
+    "sha256": "86e1cb21424f9817c3737f97ca25e8b498707d4d85be6f1b14d27d7e58d35424"
+  },
+  {
+    "id": "positional",
+    "duration": 39.032031,
+    "sample_times": [
+      14.05,
+      28.1
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "1498880/49961"
+      }
+    ],
+    "sha256": "7f1e429a63b97832b7b5f5e2bebebf1c171b1367ae0e5533c2c41e6e18edcbad"
+  },
+  {
+    "id": "gnn",
+    "duration": 35.632682,
+    "sample_times": [
+      12.83,
+      25.66
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "8209920/273659"
+      }
+    ],
+    "sha256": "42aeac2679127f162969e87118675fa5b8da9c0607604ef8490899d9a2a5da45"
+  },
+  {
+    "id": "embeddings",
+    "duration": 32.432682,
+    "sample_times": [
+      11.68,
+      23.35
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "7472640/249083"
+      }
+    ],
+    "sha256": "b6ac9e9645465dc1366fa1b38b296b96259d4aef44e57377ccde941b1ebf3e8e"
+  },
+  {
+    "id": "autoencoder",
+    "duration": 34.166016,
+    "sample_times": [
+      12.3,
+      24.6
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "524800/17493"
+      }
+    ],
+    "sha256": "36e503272f7b3329ed20cbc072a4cae5a4f4b5f8a0c3d36bff1e701cd0995567"
+  },
+  {
+    "id": "vae",
+    "duration": 42.098047,
+    "sample_times": [
+      15.16,
+      30.31
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "3233280/107771"
+      }
+    ],
+    "sha256": "7ddcd4913f3eb25f79f31419cef53820b84423a3668a148f29b1e26630d85def"
+  },
+  {
+    "id": "gan",
+    "duration": 39.098047,
+    "sample_times": [
+      14.08,
+      28.15
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "3002880/100091"
+      }
+    ],
+    "sha256": "d87f3f9f48187b943b05d05ed4449d7e262c3bfb49cf306423bc3618d47e4883"
+  },
+  {
+    "id": "flow",
+    "duration": 35.966016,
+    "sample_times": [
+      12.95,
+      25.9
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "2762240/92073"
+      }
+    ],
+    "sha256": "63789eaf92d37340d498dad2ffc963ac92fdcce18ef5d00ad6fbbacc53b9b0b9"
+  },
+  {
+    "id": "diffusion",
+    "duration": 40.332031,
+    "sample_times": [
+      14.52,
+      29.04
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "61952/2065"
+      }
+    ],
+    "sha256": "bbd65812db84b0fb58e6710676d3546abdf424b986d7ec99651ca4d8fe21d91f"
+  },
+  {
+    "id": "rl-bellman",
+    "duration": 50.532031,
+    "sample_times": [
+      18.19,
+      36.38
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "1940480/64681"
+      }
+    ],
+    "sha256": "5252a0ed1ba62a2f97462d0338333e1a2e4607884d3cc4712bb2efb7fd51489b"
+  },
+  {
+    "id": "rl-policy",
+    "duration": 42.898698,
+    "sample_times": [
+      15.44,
+      30.89
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "4942080/164731"
+      }
+    ],
+    "sha256": "bdc7953055756a2b31a92202f76c6bfd092c9837cc016f9cab0a2669358a06f1"
+  },
+  {
+    "id": "double-descent",
+    "duration": 32.698047,
+    "sample_times": [
+      11.77,
+      23.54
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "2511360/83707"
+      }
+    ],
+    "sha256": "b72d25e072bf7ec08f633f1bb393822ca0a4ea1bdebb97791b8b738bda927b96"
+  },
+  {
+    "id": "fairness",
+    "duration": 28.065365,
+    "sample_times": [
+      10.1,
+      20.21
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "3233280/107771"
+      }
+    ],
+    "sha256": "ecf76f0050f4600b595f140965219aad247f496ca2c981c544025ffdc4e54cc1"
+  },
+  {
+    "id": "svd",
+    "duration": 47.8,
+    "sample_times": [
+      17.21,
+      34.42
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "30/1"
+      }
+    ],
+    "sha256": "8645e05d2b80f889952cb90a5d962e242944fc0d2b0c042db8a3ae295531418e"
+  },
+  {
+    "id": "biasvariance",
+    "duration": 38.165365,
+    "sample_times": [
+      13.74,
+      27.48
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "879360/29311"
+      }
+    ],
+    "sha256": "4a59afd15e02e39909a42672a3ee517bc87ff07682dc2d51982718133b0874f1"
+  },
+  {
+    "id": "kernel",
+    "duration": 66.53138,
+    "sample_times": [
+      23.95,
+      47.9
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "15329280/510961"
+      }
+    ],
+    "sha256": "da86024270c37d8eef31cd1b966a06e31254bfb1b0dae0581f0172f432723eca"
+  },
+  {
+    "id": "entropy",
+    "duration": 36.765365,
+    "sample_times": [
+      13.24,
+      26.47
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "4235520/141179"
+      }
+    ],
+    "sha256": "33c2f70fbeab0250bc23480ebd2598bb2a7db9b8286631570f80130c7801390d"
+  },
+  {
+    "id": "softmax",
+    "duration": 34.032031,
+    "sample_times": [
+      12.25,
+      24.5
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "1306880/43561"
+      }
+    ],
+    "sha256": "21063962cd52d8ea5c342bffc2dc5016af13484b22ff8e21afe9367c5865167d"
+  },
+  {
+    "id": "calibration",
+    "duration": 30.998698,
+    "sample_times": [
+      11.16,
+      22.32
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "714240/23807"
+      }
+    ],
+    "sha256": "0f81650b933f1c1b5ba08f66290d11bba54841c2da68e936c04f574033ee8a2d"
+  },
+  {
+    "id": "rnn",
+    "duration": 44.533333,
+    "sample_times": [
+      16.03,
+      32.06
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "30/1"
+      }
+    ],
+    "sha256": "bdcaeb9d37f8a705041e0e766e1d3d45d3b92ed4060e60050f5c2e883d1ca730"
+  },
+  {
+    "id": "lstm",
+    "duration": 46.532682,
+    "sample_times": [
+      16.75,
+      33.5
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "10721280/357371"
+      }
+    ],
+    "sha256": "9422c5f0809dc4df2d3b88cdfa8a7b374957bf65854ddb4ba214b6657016925d"
+  },
+  {
+    "id": "contrastive",
+    "duration": 37.697396,
+    "sample_times": [
+      13.57,
+      27.14
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "2171520/72379"
+      }
+    ],
+    "sha256": "ab27c576cd8aa2fb589bff02d617a5726c04fee136cf968abe641f9b765c467f"
+  },
+  {
+    "id": "jacobian",
+    "duration": 34.765365,
+    "sample_times": [
+      12.52,
+      25.03
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "4005120/133499"
+      }
+    ],
+    "sha256": "760c1b3bcfb899c72ee00fbe529eb729e6b26be8ffc36b1ad2ae4dd84f3dfd72"
+  },
+  {
+    "id": "uncertainty",
+    "duration": 30.632031,
+    "sample_times": [
+      11.03,
+      22.06
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "1176320/39209"
+      }
+    ],
+    "sha256": "223f44b0f7f38935ae42e24b07d6511252bcdd2040aab8aeca92a9699b41e2a4"
+  },
+  {
+    "id": "causal",
+    "duration": 36.198047,
+    "sample_times": [
+      13.03,
+      26.06
+    ],
+    "audio_streams": 0,
+    "video_streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "codec_name": "h264",
+        "avg_frame_rate": "926720/30889"
+      }
+    ],
+    "sha256": "0a9415b337a5426950f74ade1febdf43a0bc6ee15889b58af92407b89a9eb7e6"
+  }
+]

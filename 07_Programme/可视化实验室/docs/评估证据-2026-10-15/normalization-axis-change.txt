@@ -1,0 +1,14 @@
+Browser tab: 1, Title: "BatchNorm与LayerNorm沿哪个轴统计 · 可视化实验室", URL: "http://127.0.0.1:8767/%E5%AE%9E%E9%AA%8C%E5%AE%A4.html#normalization?mode=batch&pattern=mixed&scale=1&shift=0&gamma=1&beta=0".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 278-383
+~0 AXWebArea BatchNorm与LayerNorm沿哪个轴统计 · 可视化实验室, URL: 127.0.0.1:8767/%E5%AE%9E%E9%AA%8C%E5%AE%A4.html#normalization?mode=layer&pattern=mixed&scale=1&shift=0&gamma=1&beta=0
++			390 container 沿行统计：同一样本的特征一起变化
++				391 heading 2
++			392 text 第 2 步 / 3
++				393 text 换统计轴，会牵动谁？
++			394 text BN 每列跨样本统计；LN 每行跨特征统计。同样改第三列，受影响的标准化值不同。
++			395 text 先用 BN 改偏移，再换 LN 重做，观察同一行其他特征是否变化。
+~					386 pop up button (collapsed, settable) 统计分组, Value: LayerNorm：每行跨特征, ID: control-mode, Secondary Actions: Expand
+~							388 BatchNorm：每列跨样本
+~							389 (selected) LayerNorm：每行跨特征
+The focused UI element is 102 button 02 换统计轴，会牵动谁？

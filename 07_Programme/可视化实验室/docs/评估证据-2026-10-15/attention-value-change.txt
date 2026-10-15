@@ -1,0 +1,22 @@
+Browser tab: 1, Title: "注意力从分数到读取向量 · 可视化实验室", URL: "http://127.0.0.1:8767/%E5%AE%9E%E9%AA%8C%E5%AE%A4.html#attention?query=2&strength=1&temperature=1&causal=0&valueScale=1".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 213-272, 276
+~0 AXWebArea 注意力从分数到读取向量 · 可视化实验室, URL: 127.0.0.1:8767/%E5%AE%9E%E9%AA%8C%E5%AE%A4.html#attention?query=2&strength=1&temperature=1&causal=0&valueScale=3
++			278 container 单 Query 注意力计算
++				279 container
++					280 checkbox 0
++					281 checkbox 0
++					282 checkbox 1
++					283 checkbox 0
++				284 container
++					285 heading 3
++					286 image
++					287 image
++			288 text 第 3 步 / 4
++				289 text 读取：把内容加起来
++			290 text 权重决定读多少，Value 决定读什么。将每个 Value 乘自己的权重，再逐坐标相加。
++			291 text 放大 Value，观察权重不动、贡献和输出按相同比例缩放。
+~					275 container Value共同尺度 3, ID: value-valueScale
++						292 text 3
+~					277 slider (settable, integer) Value: 3, ID: control-valueScale
+The focused UI element is 277 slider (settable, integer) Value: 3, ID: control-valueScale
