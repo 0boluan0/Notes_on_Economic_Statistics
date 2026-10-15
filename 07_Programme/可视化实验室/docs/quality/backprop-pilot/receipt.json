@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-15",
+  "bundle_sha256": "dd35b3193abd1ef2a8a4a2962fcf89581bc0c25ee841049b85426a384fa8505b",
+  "video_sha256": "f6a4663a0ea9e65d7a178111986d6dde186f72ca935bffaaea990ef412f873ad",
+  "browser_checks": 39,
+  "browser_passed": true,
+  "structure_checks": 12211,
+  "structure_passed": true,
+  "native_app": "Obsidian 1.14.4",
+  "native_actions": [
+    "play",
+    "pause",
+    "seek to 1:03 of 1:54",
+    "switch to backward",
+    "inspect tanh derivative at step 4"
+  ],
+  "scope": "backprop pilot",
+  "learning_effectiveness": "not yet user evaluated",
+  "other_devices": "not tested"
+}

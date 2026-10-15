@@ -5,7 +5,7 @@ for(const f of ['math','ml-math','dl-math','advanced-math','foundations-math','s
 const specs=require('./film-specs.cjs'),catalog={},examples={};
 for(const [id,steps]of Object.entries(specs)){
  const c=ctx.LabContent[id],timeline=JSON.parse(fs.readFileSync(path.join(__dirname,id+'-timeline.json'),'utf8'));
- assert.equal(timeline.method,'object-narrative',id+' must have a current narrative before assembly');
+ assert(['object-narrative','shared-interactive-scene'].includes(timeline.method),id+' must have a current narrative before assembly');
  assert(timeline.chapters.length>=3&&timeline.checkpoints.length>=4&&!timeline.layout.length,id+' incomplete review record');
  assert(fs.existsSync(path.join(root,'media',id+'.mp4')),id);
  const canonical=ctx.LabMath.validate(id,timeline.params);assert.deepEqual(JSON.parse(JSON.stringify(canonical)),timeline.params,id+' exact film parameters');

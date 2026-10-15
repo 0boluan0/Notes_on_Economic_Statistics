@@ -1,0 +1,177 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "live slider stays attached",
+      "passed": true
+    },
+    {
+      "name": "stage 1 preserves parameters",
+      "passed": true
+    },
+    {
+      "name": "stage 2 preserves parameters",
+      "passed": true
+    },
+    {
+      "name": "stage 3 preserves parameters",
+      "passed": true
+    },
+    {
+      "name": "stage 0 preserves parameters",
+      "passed": true
+    },
+    {
+      "name": "zero v retains its own gradient",
+      "passed": true
+    },
+    {
+      "name": "update restores v",
+      "passed": true
+    },
+    {
+      "name": "recomputed loss decreases",
+      "passed": true
+    },
+    {
+      "name": "completed update stays visible before next preview",
+      "passed": true
+    },
+    {
+      "name": "update undo restores parameters",
+      "passed": true
+    },
+    {
+      "name": "prediction reveals recomputation",
+      "passed": true
+    },
+    {
+      "name": "probe leaves original parameters unchanged",
+      "passed": true
+    },
+    {
+      "name": "wrong transfer answer has explanation",
+      "passed": true
+    },
+    {
+      "name": "correct transfer answer recognized",
+      "passed": true
+    },
+    {
+      "name": "film chapter 0 restores stage",
+      "passed": true
+    },
+    {
+      "name": "film chapter 5 restores stage",
+      "passed": true
+    },
+    {
+      "name": "film chapter 10 restores stage",
+      "passed": true
+    },
+    {
+      "name": "film chapter 15 restores stage",
+      "passed": true
+    },
+    {
+      "name": "film chapter 16 restores stage",
+      "passed": true
+    },
+    {
+      "name": "film chapter 19 restores stage",
+      "passed": true
+    },
+    {
+      "name": "stage 0 fits 390px",
+      "passed": true
+    },
+    {
+      "name": "stage 1 fits 390px",
+      "passed": true
+    },
+    {
+      "name": "stage 2 fits 390px",
+      "passed": true
+    },
+    {
+      "name": "stage 3 fits 390px",
+      "passed": true
+    },
+    {
+      "name": "stage 0 fits 768px",
+      "passed": true
+    },
+    {
+      "name": "stage 1 fits 768px",
+      "passed": true
+    },
+    {
+      "name": "stage 2 fits 768px",
+      "passed": true
+    },
+    {
+      "name": "stage 3 fits 768px",
+      "passed": true
+    },
+    {
+      "name": "stage 0 fits 840px",
+      "passed": true
+    },
+    {
+      "name": "stage 1 fits 840px",
+      "passed": true
+    },
+    {
+      "name": "stage 2 fits 840px",
+      "passed": true
+    },
+    {
+      "name": "stage 3 fits 840px",
+      "passed": true
+    },
+    {
+      "name": "stage 0 fits 1200px",
+      "passed": true
+    },
+    {
+      "name": "stage 1 fits 1200px",
+      "passed": true
+    },
+    {
+      "name": "stage 2 fits 1200px",
+      "passed": true
+    },
+    {
+      "name": "stage 3 fits 1200px",
+      "passed": true
+    },
+    {
+      "name": "Anatomy light line ends: zero floating ends",
+      "passed": true
+    },
+    {
+      "name": "Anatomy dark line ends: zero floating ends",
+      "passed": true
+    },
+    {
+      "name": "reduced motion advances once without autoplay",
+      "passed": true
+    },
+    {
+      "name": "all formulas render",
+      "passed": true
+    }
+  ],
+  "lines": {
+    "light": {
+      "ends": 140,
+      "lines": 70,
+      "problems": []
+    },
+    "dark": {
+      "ends": 140,
+      "lines": 70,
+      "problems": []
+    }
+  }
+}

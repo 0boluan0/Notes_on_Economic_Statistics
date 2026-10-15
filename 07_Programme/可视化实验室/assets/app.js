@@ -63,6 +63,7 @@
   }
   function navigate(id, routeParams) {
     globalThis.LabStories?.[activeId]?.dispose?.($('#story-scene'));
+    globalThis.BackpropConceptPlayer?.dispose();
     clearInterval(playTimer);playTimer=null;
     if (activeId && activeId !== 'library') stateCache.set(activeId, { ...params });
     activeId = ids.includes(id) ? id : 'library';
@@ -137,7 +138,7 @@
       <section class="learning-area" aria-label="实验解释与检验"><div class="learning-tabs" role="tablist" aria-label="阅读实验说明">${[['observe','操作路线'],['explain','原理与边界'],['challenge','检验理解'],['source','来源与双链']].map(([id,label])=>`<button class="learning-tab" id="tab-${id}" role="tab" aria-selected="${id===activePanel}" aria-controls="panel-${id}" data-panel="${id}" tabindex="${id===activePanel?0:-1}">${label}</button>`).join('')}</div>${learningPanels(c)}</section><input id="import-snapshot" type="file" accept="application/json" hidden>`;
     $$('.story-step').forEach(b=>b.addEventListener('click',()=>setStoryStep(Number(b.dataset.storyStep))));
     const examples=globalThis.LabFilmExamples?.[activeId];
-    if(examples){
+    if(examples&&!story().ownsControls){
       const panel=document.createElement('details');panel.className='film-examples';
       panel.innerHTML=`<summary>影片参数与延伸对照</summary><p>用“载入本片的模型与数据”复现实例；其他项目提供延伸对照。点击上方步骤可回到常规探索。</p>${examples.map((s,i)=>`<div><span>${escape(s.title)}</span><button data-film-example="${i}" data-endpoint="from">${s.single?'载入':activeId==='bootstrap'?'影片参数':'起点'}</button>${s.single?'':`<button data-film-example="${i}" data-endpoint="to">${activeId==='bootstrap'?'只增加 B':'终点'}</button>`}</div>`).join('')}`;
       $('.story-steps').after(panel);
@@ -146,7 +147,7 @@
     $('#story-next').addEventListener('click',()=>{if(storyStep<stages.length-1)setStoryStep(storyStep+1);else{switchPanel('challenge');$('.learning-area').scrollIntoView({behavior:'smooth',block:'start'});}});
     $('#story-previous').addEventListener('click',()=>setStoryStep(storyStep-1));
     $('#toggle-controls').addEventListener('click',()=>{showAllControls=!showAllControls;syncStory();});
-    $('#stage-example').addEventListener('click',e=>{if(e.target.closest('button'))setStoryStep(storyStep);});
+    $('#stage-example').addEventListener('click',e=>{if(e.target.closest('button'))setStoryStep(storyStep,true);});
     $('.advanced-results').addEventListener('toggle',()=>{if($('.advanced-results').open)renderPlots();});
     for (const control of c.controls) {
       const input=$(`#control-${control.key}`); input.value=String(params[control.key]);
@@ -174,15 +175,22 @@
       if(!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;e.preventDefault();const tabs=$$('.learning-tab'),i=tabs.indexOf(tab);const next=e.key==='Home'?0:e.key==='End'?tabs.length-1:(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length; switchPanel(tabs[next].dataset.panel);tabs[next].focus();
     });});
     if(c.animation){const key=c.animation.key,ctl=c.controls.find(x=>x.key===key);$('#play-steps').addEventListener('click',()=>{if(playTimer){clearInterval(playTimer);playTimer=null;$('#play-steps').textContent='逐步播放 ▶';return;}const end=Number(params[key])>ctl.min?Number(params[key]):ctl.max;params[key]=ctl.min;syncControls();compute();$('#play-steps').textContent='暂停 ❚❚';playTimer=setInterval(()=>{params[key]=Math.min(end,Number(params[key])+ctl.step);syncControls();compute();if(params[key]>=end){clearInterval(playTimer);playTimer=null;$('#play-steps').textContent='逐步播放 ▶';}},450);});$('#next-step').addEventListener('click',()=>{clearInterval(playTimer);playTimer=null;$('#play-steps').textContent='逐步播放 ▶';params[key]=Math.min(ctl.max,Number(params[key])+ctl.step);syncControls();compute();});}
+    if(activeId==='backprop'&&globalThis.BackpropConceptPlayer){
+      const panel=document.createElement('section');panel.id='backprop-intuition';panel.setAttribute('aria-label','理解前向与反向传播');
+      $('.story-steps').before(panel);
+      const numerical=document.createElement('details');numerical.className='backprop-numerical';numerical.innerHTML='<summary>进一步：逐项核算、分支与矩阵形式</summary>';
+      panel.after(numerical);
+      for(const selector of ['.story-steps','.story-layout','.model-context','.toolbar','.advanced-results'])numerical.append($(selector));
+    }
     compute();
   }
   function controlHTML(c) {
     const value=params[c.key];
     // Every integer accepted by the model must also survive the native range input.
-    const inputStep=math.schemas[activeId]?.[c.key]?.[3]?1:c.step;
+    const inputStep=story().ownsControls?'any':math.schemas[activeId]?.[c.key]?.[3]?1:c.step;
     if(c.type==='select')return `<label class="control"><span class="control-line"><span class="control-name">${escape(c.label)}</span></span><select id="control-${c.key}" data-key="${c.key}">${c.options.map(o=>`<option value="${escape(o.value)}" ${String(o.value)===String(value)?'selected':''}>${escape(o.label)}</option>`).join('')}</select></label>`;
     if(c.key==='seed')return `<div class="control"><label class="control-line" for="control-seed"><span class="control-name">${escape(c.label)}</span></label><div class="seed-row"><input type="number" id="control-seed" data-key="seed" min="${c.min}" max="${c.max}" step="1" value="${value}"><button id="reseed" aria-label="更换随机种子，生成另一组样本">换一组</button></div><p class="seed-help">保持种子不变，比较参数的影响。</p></div>`;
-    return `<label class="control"><span class="control-line"><span class="control-name">${escape(c.label)}</span><output class="control-value" id="value-${c.key}" for="control-${c.key}">${number(value,c.step<.01?3:2)}</output></span><input type="range" id="control-${c.key}" data-key="${c.key}" min="${c.min}" max="${c.max}" step="${inputStep}" value="${value}"><span class="range-endpoints" aria-hidden="true"><span>${c.min}</span><span>${c.max}</span></span></label>`;
+    return `<label class="control" for="control-${c.key}"><span class="control-line"><span class="control-name">${escape(c.label)}</span><output class="control-value" id="value-${c.key}" for="control-${c.key}">${number(value,c.step<.01?3:2)}</output></span><input type="range" id="control-${c.key}" data-key="${c.key}" min="${c.min}" max="${c.max}" step="${inputStep}" value="${value}"><span class="range-endpoints" aria-hidden="true"><span>${c.min}</span><span>${c.max}</span></span></label>`;
   }
   function syncControls(){ for(const c of content[activeId].controls){$(`#control-${c.key}`).value=String(params[c.key]);const output=$(`#value-${c.key}`);if(output)output.textContent=number(params[c.key],c.step<.01?3:2);}}
   function learningPanels(c){
@@ -203,12 +211,12 @@
       root.dataset.experiment=activeId;root.dataset.ready='true';
     }catch(error){console.error(error);$('#dynamic-notes').innerHTML=`<p class="error" role="alert">无法计算这个参数组合：${escape(error.message)}</p>`;root.dataset.ready='error';}
   }
-  function setStoryStep(index){
+  function setStoryStep(index,loadExample=false){
     filmExample=null;
     clearInterval(playTimer);playTimer=null;if($('#play-steps'))$('#play-steps').textContent='逐步播放 ▶';
     storyStep=Math.max(0,Math.min(story().steps.length-1,index));showAllControls=false;
     const changes=story().steps[storyStep].params;
-    if(changes){params={...params,...changes};syncControls();}
+    if(changes&&(!story().preserveParams||loadExample)){params={...params,...changes};syncControls();}
     compute();
   }
   function syncStory(){
@@ -225,8 +233,9 @@
   function renderStory(){
     if(!result||activeId==='library'||!$('#story-scene'))return;
     syncStory();const custom=filmExample?null:globalThis.LabStories?.[activeId],step=filmExample||story().steps[storyStep];
+    if(activeId==='backprop')globalThis.BackpropConceptPlayer?.mount({el:$('#backprop-intuition'),params:{...params},onParams:values=>{params=math.compute(activeId,{...params,...values}).params;syncControls();compute();}});
     if(globalThis.LabMechanisms?.ids.includes(activeId)&&globalThis.LabMechanisms.scene(activeId,params,result,step.plot||0)){globalThis.LabMechanisms.render({el:$('#story-scene'),params:{...params},result,id:activeId,plot:step.plot||0});$('#story-readout').innerHTML='';}
-    else if(custom?.render){custom.render({el:$('#story-scene'),params:{...params},result,step:storyStep,onParam:(key,value)=>{const c=content[activeId].controls.find(c=>c.key===key);if(!c)return;params[key]=value;syncControls();compute();},format:number});$('#story-readout').innerHTML='';}
+    else if(custom?.render){custom.render({el:$('#story-scene'),params:{...params},result,step:storyStep,onStep:setStoryStep,onParams:values=>{params=math.compute(activeId,{...params,...values}).params;syncControls();compute();},onParam:(key,value)=>{const c=content[activeId].controls.find(c=>c.key===key);if(!c)return;params[key]=value;syncControls();compute();},format:number});$('#story-readout').innerHTML='';}
     else{
       const index=Math.max(0,Math.min(result.plots.length-1,step.plot||0));let p=result.plots[index];
       if(activeId==='confidence'){const shown=Math.min(40,params.reps);p={...p,title:`前 ${shown} 条置信区间 · 覆盖率按全部 ${params.reps} 次计算`,height:370,yDomain:[0,shown+1],series:p.series.map(s=>s.type==='segments'?{...s,points:s.points.filter(q=>q[1]<=shown)}:s)};}
@@ -343,6 +352,8 @@
   window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>{renderPlots();renderStory();},100);});
   window.addEventListener('message',e=>{if(e.source!==window.parent)return;if(e.data?.type==='visual-lab:copied')announce('实验双链已复制');if(e.data?.type==='visual-lab:navigate' && ids.includes(e.data.id))navigate(e.data.id);});
   navigation();const initial=readRoute();navigate(initial.id,initial.params);
+  const filmFrame=new URLSearchParams(location.search).get('backprop-frame');
+  if(activeId==='backprop'&&filmFrame!==null&&/^\d+$/.test(filmFrame)&&globalThis.BackpropFilm?.frames[Number(filmFrame)]){document.body.classList.add('bp-film-mode');globalThis.BackpropConceptPlayer.set(globalThis.BackpropFilm.frames[Number(filmFrame)]);}
   // Observable deterministic state for the separate in-browser verification page.
   globalThis.VisualLab={navigate,drawChart,getState:()=>({id:activeId,params:{...params},result}),number,version:'2.0.0',getStoryState:()=>({step:storyStep,steps:activeId==='library'?[]:story().steps})};
 })();

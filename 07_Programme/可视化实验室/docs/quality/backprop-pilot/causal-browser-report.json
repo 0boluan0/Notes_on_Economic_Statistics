@@ -1,0 +1,121 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "same example as narrated film",
+      "passed": true
+    },
+    {
+      "name": "numerical workshop starts collapsed",
+      "passed": true
+    },
+    {
+      "name": "mode 1 preserves parameters",
+      "passed": true
+    },
+    {
+      "name": "mode 2 preserves parameters",
+      "passed": true
+    },
+    {
+      "name": "mode 3 preserves parameters",
+      "passed": true
+    },
+    {
+      "name": "mode 0 preserves parameters",
+      "passed": true
+    },
+    {
+      "name": "four operations complete intervention",
+      "passed": true
+    },
+    {
+      "name": "completed intervention shows independent actual loss change",
+      "passed": true
+    },
+    {
+      "name": "small change remains directly explorable",
+      "passed": true
+    },
+    {
+      "name": "time-driven motion advances continuously",
+      "passed": true
+    },
+    {
+      "name": "pause holds process",
+      "passed": true
+    },
+    {
+      "name": "saturated case has small local slope",
+      "passed": true
+    },
+    {
+      "name": "saturated curve receives causal explanation",
+      "passed": true
+    },
+    {
+      "name": "v=0 blocks sensitivity to w",
+      "passed": true
+    },
+    {
+      "name": "update returns to fresh forward pass",
+      "passed": true
+    },
+    {
+      "name": "actual update recomputes lower loss",
+      "passed": true
+    },
+    {
+      "name": "chapter 0 restores its scene and model",
+      "passed": true
+    },
+    {
+      "name": "chapter 5 restores its scene and model",
+      "passed": true
+    },
+    {
+      "name": "chapter 10 restores its scene and model",
+      "passed": true
+    },
+    {
+      "name": "chapter 15 restores its scene and model",
+      "passed": true
+    },
+    {
+      "name": "chapter 16 restores its scene and model",
+      "passed": true
+    },
+    {
+      "name": "chapter 19 restores its scene and model",
+      "passed": true
+    },
+    {
+      "name": "reduced motion advances one operation",
+      "passed": true
+    },
+    {
+      "name": "page fits 390px; narrow scene scrolls internally",
+      "passed": true
+    },
+    {
+      "name": "page fits 768px; narrow scene scrolls internally",
+      "passed": true
+    },
+    {
+      "name": "page fits 840px; narrow scene scrolls internally",
+      "passed": true
+    },
+    {
+      "name": "page fits 1200px; narrow scene scrolls internally",
+      "passed": true
+    },
+    {
+      "name": "mathematical notation renders",
+      "passed": true
+    },
+    {
+      "name": "navigation disposes animation",
+      "passed": true
+    }
+  ]
+}

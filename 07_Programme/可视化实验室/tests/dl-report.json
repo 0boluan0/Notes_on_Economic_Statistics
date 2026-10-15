@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "utc": "2026-10-10T18:08:40.933Z",
+  "utc": "2026-10-15T10:51:26.467Z",
   "cases": 264,
   "assertions": 169307,
   "coordinateAssertions": 162311,
@@ -18,7 +18,7 @@
     "residual": 13,
     "attention": 15
   },
-  "sourceSHA256": "4c39c8909688c69d0f4dbc2288bbc7b7d8701b6d378becd49a67cfd640c7b5a6",
+  "sourceSHA256": "a732671af0a79017231123389212363a7d9bfc532d22ce9af02764c8c344f688",
   "methods": [
     "Independent scalar finite differences",
     "Exact ReLU tent and linear-collapse identities",

@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><title>反传试点检查</title><style>body{font:16px system-ui;margin:20px}iframe{border:1px solid #ccc;width:1200px;height:1000px}pre{white-space:pre-wrap}button{padding:12px}</style><h1>反传试点检查</h1><button id="run">运行交互与绘图检查</button><pre id="report">等待启动</pre><iframe id="subject" src="../实验室.html#backprop"></iframe><script type="module">
+import {LINE_ENDS} from '../anatomy/kit/line-ends.mjs';
+const frame=document.getElementById('subject'),report=document.getElementById('report');
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+document.getElementById('run').onclick=async()=>{
+ const checks=[],errors=[],w=frame.contentWindow,d=w.document;
+ const ok=(value,name)=>{checks.push({name,passed:!!value});if(!value)errors.push(name);};
+ const click=selector=>d.querySelector(selector).click(),stage=n=>click(`[data-story-step="${n}"]`);
+ const change=(selector,value,type='change')=>{const el=d.querySelector(selector);el.value=value;el.dispatchEvent(new w.Event(type,{bubbles:true}));};
+ const keyOf=p=>JSON.stringify(Object.entries(p));
+ try{
+  w.VisualLab.navigate('backprop');d.querySelector('.backprop-numerical').open=true;await sleep(100);
+  change('[data-bp-param="w"]','1.23','input');const input=d.querySelector('[data-bp-param="w"]');
+  change('[data-bp-param="w"]','1.24','input');ok(d.querySelector('[data-bp-param="w"]')===input,'live slider stays attached');
+  const params=keyOf(w.VisualLab.getState().params);for(const n of [1,2,3,0]){stage(n);ok(keyOf(w.VisualLab.getState().params)===params,'stage '+n+' preserves parameters');}
+  change('[data-bp-preset]','2');stage(1);click('[data-bp-cursor="4"]');ok(d.querySelector('.bp-parameter-gradients').textContent.includes('−0.76159'),'zero v retains its own gradient');
+  stage(3);click('[data-bp-action="update"]');ok(w.VisualLab.getState().params.v>0,'update restores v');ok(w.VisualLab.getState().result.data.forward.loss<.5,'recomputed loss decreases');
+  ok(!!d.querySelector('[data-bp-action="prepare-update"]'),'completed update stays visible before next preview');
+  click('[data-bp-action="undo"]');ok(w.VisualLab.getState().params.v===0,'update undo restores parameters');
+  change('[data-bp-preset]','0');stage(2);click('[data-bp-predict="down"]');click('[data-bp-action="reveal"]');ok(!!d.querySelector('.bp-compare'),'prediction reveals recomputation');
+  const old=w.VisualLab.getState().params.w;ok(old===.25,'probe leaves original parameters unchanged');
+  d.querySelector('.bp-transfer').open=true;change('[data-bp-answer]','.5','input');click('[data-bp-action="check"]');ok(d.querySelector('.bp-transfer').textContent.includes('需要再检查'),'wrong transfer answer has explanation');change('[data-bp-answer]','1','input');click('[data-bp-action="check"]');ok(d.querySelector('.bp-transfer').textContent.includes('数值正确'),'correct transfer answer recognized');
+  for(const chapter of w.BackpropFilm.chapters){change('[data-bp-chapter]',String(chapter.index));ok(w.BackpropPlayer.state().stage===w.BackpropFilm.frames[chapter.index].stage,'film chapter '+chapter.index+' restores stage');}
+  stage(0);
+  for(const width of [390,768,840,1200]){frame.style.width=width+'px';await sleep(180);for(const n of [0,1,2,3]){stage(n);ok(d.documentElement.scrollWidth<=d.documentElement.clientWidth+2,`stage ${n} fits ${width}px`);}}
+  frame.style.width='1200px';stage(1);click('[data-bp-cursor="3"]');await sleep(200);
+  const scan=w.eval('('+LINE_ENDS+')');const lines={};
+  for(const theme of ['light','dark']){d.querySelector('.bp-anatomy').dataset.theme=theme;lines[theme]=scan({select:'.bp-anatomy'});ok(lines[theme].problems.length===0,'Anatomy '+theme+' line ends: zero floating ends');}
+  d.querySelector('.bp-anatomy').dataset.theme='light';
+  const matchMedia=w.matchMedia;w.matchMedia=q=>q==='(prefers-reduced-motion: reduce)'?{matches:true}:matchMedia.call(w,q);
+  stage(0);click('[data-bp-action="play"]');ok(!w.BackpropPlayer.state().playing&&w.BackpropPlayer.state().cursor===1,'reduced motion advances once without autoplay');w.matchMedia=matchMedia;
+  ok(d.querySelectorAll('.formula-error,.katex-error').length===0,'all formulas render');
+  report.textContent=JSON.stringify({passed:!errors.length,checks,lines},null,2);document.body.dataset.passed=String(!errors.length);
+ }catch(e){report.textContent=e.stack;document.body.dataset.passed='false';}
+};
+</script></html>

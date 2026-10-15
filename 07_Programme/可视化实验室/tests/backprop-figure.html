@@ -1,0 +1,14 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><title>反传装置绘图检查</title>
+<link rel="stylesheet" href="../assets/story-backprop-01-geometry.css"><link rel="stylesheet" href="../assets/story-backprop.css">
+<style>body{margin:16px;font:16px system-ui}button{padding:10px;margin-right:10px}#figure{width:4000px!important;max-width:none!important;height:1000px!important;padding:0;margin:15px 0;background:#f7f8f2}#figure[data-theme=dark]{background:#151719;color:#eff2ee}#figure svg{width:4000px!important;height:1000px!important;max-height:none!important;display:block}iframe{display:none}</style>
+<button data-theme="light" data-side="min">明 · 负端</button><button data-theme="light" data-side="max">明 · 正端</button><button data-theme="dark" data-side="min">暗 · 负端</button><button data-theme="dark" data-side="max">暗 · 正端</button>
+<div id="figure" class="bp-anatomy" data-theme="light"></div><iframe src="../实验室.html#backprop" id="subject"></iframe>
+<script>
+for(const button of document.querySelectorAll('button'))button.onclick=()=>{
+ const frame=document.getElementById('subject'),w=frame.contentWindow,figure=document.getElementById('figure');
+ const side=button.dataset.side==='min'?-1:1;
+ w.BackpropPlayer.set({stage:1,cursor:4,params:{x:2*side,w:3,bias:3*side,v:3,target:-2*side}});
+ figure.dataset.theme=button.dataset.theme;
+ figure.innerHTML=frame.contentDocument.querySelector('.bp-anatomy').innerHTML;
+};
+</script></html>

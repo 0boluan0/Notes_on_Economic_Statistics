@@ -15,10 +15,16 @@ ROOT=Path(__file__).resolve().parents[1]
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--work',required=True);p.add_argument('--review');p.add_argument('--ids',nargs='*');p.add_argument('--workers',type=int,default=3);args=p.parse_args()
+    shared={f.name.removesuffix('-timeline.json') for f in (ROOT/'animations').glob('*-timeline.json') if json.loads(f.read_text()).get('method')=='shared-interactive-scene'}
+    if args.ids and shared.intersection(args.ids):
+        p.error('Shared interactive films use anatomy/backprop/README.md: '+', '.join(sorted(shared.intersection(args.ids))))
     work=Path(args.work).resolve();work.mkdir(parents=True,exist_ok=True)
     assert not work.is_relative_to(ROOT),'Render cache must be outside the vault'
     data=work/'data';subprocess.run(['node',str(ROOT/'animations/export-narratives.cjs'),str(data)],check=True)
     ids=args.ids or sorted(f.stem for f in data.glob('*.json'));assert len(ids)==len(set(ids)) and 'bootstrap' not in ids
+    if not args.ids and shared:
+        print('Retaining shared interactive films: '+', '.join(sorted(shared)),flush=True)
+        ids=[id for id in ids if id not in shared]
     review=work/args.review if args.review else None
     logdir=work/'logs';logdir.mkdir(exist_ok=True)
     receipt=work/((args.review or 'final')+'-report.json');results=[]

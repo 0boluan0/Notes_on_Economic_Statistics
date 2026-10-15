@@ -1,0 +1,19 @@
+#backprop-intuition{container-type:inline-size;color:#193446;margin:20px 0 26px;font-family:inherit}
+#backprop-intuition *{box-sizing:border-box}
+#backprop-intuition button,#backprop-intuition select,#backprop-intuition input{font:inherit}
+#backprop-intuition button,#backprop-intuition select{border:1px solid #cbd8e1;border-radius:8px;background:#fff;color:#234155;min-height:40px;padding:9px 13px;cursor:pointer}
+#backprop-intuition button:focus-visible,#backprop-intuition select:focus-visible,#backprop-intuition input:focus-visible,#backprop-intuition [data-causal-node]:focus-visible{outline:3px solid #ba591c;outline-offset:3px}
+#backprop-intuition button[aria-pressed=true]{background:#eaf3fa;border-color:#2374b9;color:#154e7a}
+#backprop-intuition button:disabled{opacity:.45;cursor:default}
+#backprop-intuition .bc-primary{background:#236a9d;color:white;border-color:#236a9d}
+.bc-modes{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px;font-size:14px}
+.bc-context{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px;font-size:12px;color:#5b7182}
+.bc-context label{display:flex;align-items:center;gap:10px;min-width:0}.bc-context select{max-width:100%;font-size:12px!important}
+.bc-scene{background:#f6f9fb;border:1px solid #dce5ea;border-radius:16px;overflow:hidden}.bc-scene svg{display:block;width:100%;height:auto}.bc-scene [data-causal-node]{cursor:pointer}
+.bc-local{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}.bc-local button{font-size:12px!important;flex:1;white-space:nowrap;padding:7px!important;min-height:36px!important}
+.bc-transport{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13px}.bc-transport label{display:flex;align-items:center;gap:9px;flex:1;min-width:190px;color:#5b7182}.bc-transport input{flex:1;min-width:70px;accent-color:#2374b9}
+.bc-probe,.bc-update{padding:18px 20px;background:#eef5fa;border-radius:9px;margin-top:16px;font-size:14px}.bc-probe label{display:flex;gap:15px;align-items:center}.bc-probe input{flex:1;accent-color:#2374b9;min-width:80px}.bc-probe output{min-width:65px;font-variant-numeric:tabular-nums}.bc-probe p{color:#536f82;font-size:13px;line-height:1.75;margin:12px 0 0}.bc-update span{display:inline-block;margin:10px 12px;font-size:12px;color:#536f82}
+.bc-status{font-size:13px;line-height:1.7;color:#355f7b;min-height:23px;margin:16px 0 5px}.bc-boundary{font-size:12px;line-height:1.8;color:#718392;margin:6px 0}
+.backprop-numerical{border-top:1px solid #dce5ea;padding-top:20px;margin-top:24px}.backprop-numerical>summary{cursor:pointer;color:#35596b;font-size:15px;font-weight:600;margin-bottom:18px}
+@container(max-width:650px){.bc-modes{grid-template-columns:repeat(2,1fr);font-size:13px}.bc-context{display:block}.bc-context label{margin:8px 0}.bc-local button{flex:1 1 28%}.bc-transport label{flex-basis:100%;margin-top:8px}.bc-probe{padding:14px}.bc-scene{overflow-x:auto}.bc-scene svg{min-width:760px}.bc-boundary:before{content:'窄屏可左右滚动过程图，保留文字与曲线的可读尺寸。';display:block}}
+body.bp-film-mode .backprop-numerical,body.bp-film-mode #backprop-intuition>*:not(.bc-scene){display:none}body.bp-film-mode #backprop-intuition{margin:0}body.bp-film-mode .bc-scene{border:0}body.bp-film-mode #application{background:#f6f9fb!important;padding:0!important;width:1920px!important;height:1120px!important}

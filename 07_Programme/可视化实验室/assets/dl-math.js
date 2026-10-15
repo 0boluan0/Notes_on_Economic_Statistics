@@ -22,7 +22,7 @@ const schemas={
  activations:{kind:['sigmoid',['sigmoid','tanh','relu','leaky']],gain:[1,.25,4],bias:[0,-3,3],x:[1,-3,3]},
  neuron:{w1:[1,-3,3],w2:[-1,-3,3],bias:[0,-3,3],x1:[1,-2,2],x2:[.5,-2,2]},
  mlp:{width:[3,[3,5,7]],kind:['relu',['relu','tanh','linear']],gain:[1,.25,3],shift:[0,-1,1],offset:[0,-1,1]},
- backprop:{x:[1,-2,2],w:[1,-3,3],bias:[0,-3,3],v:[1,-3,3],target:[1,-2,2]},
+ backprop:{x:[2,-2,2],w:[.25,-3,3],bias:[0,-3,3],v:[2,-3,3],target:[1.5,-2,2]},
  initialization:{depth:[12,1,20,true],mode:['he',['small','xavier','he','large']],kind:['relu',['relu','tanh']],gain:[1,.5,2],seed},
  optimizers:{rate:[.05,.005,.5],condition:[12,1,20,true],steps:[60,10,100,true],momentum:[.9,0,.95],angle:[25,0,75]},
  regularization:{dropout:[.5,0,.8],scale:[1,.25,2],target:[1,-2,3],reps:[500,100,1500,true],seed},

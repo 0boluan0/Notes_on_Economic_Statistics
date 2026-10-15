@@ -1,73 +1,544 @@
 {
   "id": "backprop",
-  "duration": 52.4333333333332,
+  "method": "shared-interactive-scene",
+  "animation": "continuous-shared-svg",
+  "narration": {
+    "language": "zh-CN",
+    "voice": "Tingting",
+    "kind": "synthetic",
+    "rate": 190
+  },
+  "duration": 312.00000000000006,
+  "params": {
+    "x": 2,
+    "w": 0.25,
+    "bias": 0,
+    "v": 2,
+    "target": 1.5
+  },
   "chapters": [
     {
-      "title": "先让一个输入走到损失",
-      "en": "One input, four operations, one loss.",
-      "start": 0.0
+      "title": "前向：计算一个结果",
+      "index": 0,
+      "start": 0,
+      "en": "Forward: compute a result"
     },
     {
-      "title": "局部导数，把上游变化传回来",
-      "en": "Upstream sensitivity × local derivative.",
-      "start": 14.3
+      "title": "干预：跟着一个小改动走",
+      "index": 5,
+      "start": 74.04166666666667,
+      "en": "Intervention: trace a small change"
     },
     {
-      "title": "同一个节点，还要把梯度交给参数",
-      "en": "Branch from z into its trainable parameters.",
-      "start": 30.867
+      "title": "反向：逐段累计影响",
+      "index": 10,
+      "start": 145.5,
+      "en": "Backward: accumulate sensitivity"
     },
     {
-      "title": "链式法则是在组合敏感度",
-      "en": "The chain rule composes local sensitivities.",
-      "start": 43.467
+      "title": "更新：改变参数后重新算",
+      "index": 15,
+      "start": 227.12500000000003,
+      "en": "Update, then recompute"
+    },
+    {
+      "title": "边界：饱和与零权重",
+      "index": 16,
+      "start": 245.20833333333337,
+      "en": "Saturation and a zero output weight"
+    },
+    {
+      "title": "回顾：自己解释一个改动",
+      "index": 19,
+      "start": 293.79166666666674,
+      "en": "Recap: explain a change yourself"
     }
   ],
   "checkpoints": [
     {
-      "name": "input",
-      "time": 1.85
+      "name": "causal-0",
+      "time": 12
     },
     {
-      "name": "forward-values",
-      "time": 14.15
+      "name": "causal-1",
+      "time": 27.766666666666666
     },
     {
-      "name": "backward-edge-0",
-      "time": 18.817
+      "name": "causal-2",
+      "time": 42.25333333333334
     },
     {
-      "name": "backward-edge-1",
-      "time": 22.717
+      "name": "causal-3",
+      "time": 54.51833333333333
     },
     {
-      "name": "backward-edge-2",
-      "time": 26.617
+      "name": "causal-4",
+      "time": 69.48
     },
     {
-      "name": "backward-edge-3",
-      "time": 30.517
+      "name": "causal-5",
+      "time": 84.63166666666667
     },
     {
-      "name": "parameter-branches",
-      "time": 42.75
+      "name": "causal-6",
+      "time": 98.62
     },
     {
-      "name": "meaning-and-boundary",
-      "time": 49.283
+      "name": "causal-7",
+      "time": 111.96833333333333
     },
     {
-      "name": "closing",
-      "time": 52.283
+      "name": "causal-8",
+      "time": 125.92666666666666
+    },
+    {
+      "name": "causal-9",
+      "time": 141.13666666666666
+    },
+    {
+      "name": "causal-10",
+      "time": 159.51
+    },
+    {
+      "name": "causal-11",
+      "time": 175.99833333333333
+    },
+    {
+      "name": "causal-12",
+      "time": 191.33166666666668
+    },
+    {
+      "name": "causal-13",
+      "time": 206.81500000000003
+    },
+    {
+      "name": "causal-14",
+      "time": 222.6566666666667
+    },
+    {
+      "name": "causal-15",
+      "time": 240.14500000000004
+    },
+    {
+      "name": "causal-16",
+      "time": 257.35833333333335
+    },
+    {
+      "name": "causal-17",
+      "time": 272.46333333333337
+    },
+    {
+      "name": "causal-18",
+      "time": 288.95000000000005
+    },
+    {
+      "name": "causal-19",
+      "time": 306.90166666666676
     }
   ],
-  "params": {
-    "x": 1,
-    "w": 0.5,
-    "bias": 0,
-    "v": 2,
-    "target": 1
-  },
-  "method": "object-narrative",
-  "layout": []
+  "frames": [
+    {
+      "mode": 0,
+      "focus": 0,
+      "from": 0,
+      "to": 0,
+      "caption": "前向先算结果；反向再问：谁怎样影响了结果？",
+      "narration": "先抓住两件事。前向传播，用当前参数算出预测和损失。反向传播，问的是每个参数轻轻动一下，最终损失会怎样变。我们追踪第一层权重，走完同一条路径。",
+      "params": {
+        "x": 2,
+        "w": 0.25,
+        "bias": 0,
+        "v": 2,
+        "target": 1.5
+      },
+      "stage": 0,
+      "cursor": 1,
+      "en": "Follow one dependency from a weight to loss, then accumulate its sensitivity.",
+      "duration": 16.666666666666668,
+      "start": 0
+    },
+    {
+      "mode": 0,
+      "focus": 0,
+      "from": 0,
+      "to": 0.25,
+      "caption": "这一步的输出，成为下一步的输入。",
+      "narration": "输入固定为二，第一层权重是零点二五。两者相乘，再加偏置，得到零点五。沿横轴找到权重，抬到这条直线上，再向左读数，就是乘加的结果。",
+      "params": {
+        "x": 2,
+        "w": 0.25,
+        "bias": 0,
+        "v": 2,
+        "target": 1.5
+      },
+      "stage": 0,
+      "cursor": 1,
+      "en": "Follow one dependency from a weight to loss, then accumulate its sensitivity.",
+      "duration": 15.416666666666666,
+      "start": 16.666666666666668
+    },
+    {
+      "mode": 0,
+      "focus": 1,
+      "from": 0.25,
+      "to": 0.5,
+      "caption": "激活函数是一条输入到输出的曲线。",
+      "narration": "下一步，把零点五送进激活函数。还是同样的读图方法：横轴找到输入，抬到曲线上，读出输出。曲线的形状决定了输入怎样变成隐藏值。",
+      "params": {
+        "x": 2,
+        "w": 0.25,
+        "bias": 0,
+        "v": 2,
+        "target": 1.5
+      },
+      "stage": 0,
+      "cursor": 2,
+      "en": "Follow one dependency from a weight to loss, then accumulate its sensitivity.",
+      "duration": 14.125,
+      "start": 32.083333333333336
+    },
+    {
+      "mode": 0,
+      "focus": 2,
+      "from": 0.5,
+      "to": 0.75,
+      "caption": "输出权重将隐藏值变成预测。",
+      "narration": "然后乘输出权重二，得到预测，大约零点九二。到这里，网络只是计算出了一个答案，还不知道参数该往哪边调。",
+      "params": {
+        "x": 2,
+        "w": 0.25,
+        "bias": 0,
+        "v": 2,
+        "target": 1.5
+      },
+      "stage": 0,
+      "cursor": 3,
+      "en": "Follow one dependency from a weight to loss, then accumulate its sensitivity.",
+      "duration": 11.541666666666666,
+      "start": 46.208333333333336
+    },
+    {
+      "mode": 0,
+      "focus": 3,
+      "from": 0.75,
+      "to": 1,
+      "caption": "预测低于目标；向右靠近目标，损失下降。",
+      "narration": "目标是一点五，预测还偏低。平方损失把这个偏差变成一个非负的数。看曲线，当前点在谷底左边：预测向右增加一点，损失就会向下。这个方向稍后很关键。",
+      "params": {
+        "x": 2,
+        "w": 0.25,
+        "bias": 0,
+        "v": 2,
+        "target": 1.5
+      },
+      "stage": 0,
+      "cursor": 4,
+      "en": "Follow one dependency from a weight to loss, then accumulate its sensitivity.",
+      "duration": 16.291666666666668,
+      "start": 57.75
+    },
+    {
+      "mode": 1,
+      "focus": 0,
+      "from": 0,
+      "to": 0.25,
+      "caption": "只推一下 w，其他条件保持不变。",
+      "narration": "现在保留灰色的原位置，只把第一层权重增加零点零五。乘加这一步的斜率是二，所以输入改一点，输出改两倍。这就是一个局部运算如何传递变化。",
+      "params": {
+        "x": 2,
+        "w": 0.25,
+        "bias": 0,
+        "v": 2,
+        "target": 1.5
+      },
+      "stage": 2,
+      "cursor": 1,
+      "en": "Follow one dependency from a weight to loss, then accumulate its sensitivity.",
+      "duration": 14.708333333333334,
+      "start": 74.04166666666667
+    },
+    {
+      "mode": 1,
+      "focus": 1,
+      "from": 0.25,
+      "to": 0.5,
+      "caption": "同样的横向移动，经过曲线后变成纵向移动。",
+      "narration": "改动到达激活函数。横向移动零点一，但纵向只移动大约零点零七五。这一段曲线把变化压小了。变化的比例，来自当前位置的曲线形状。",
+      "params": {
+        "x": 2,
+        "w": 0.25,
+        "bias": 0,
+        "v": 2,
+        "target": 1.5
+      },
+      "stage": 2,
+      "cursor": 2,
+      "en": "Follow one dependency from a weight to loss, then accumulate its sensitivity.",
+      "duration": 13.708333333333334,
+      "start": 88.75
+    },
+    {
+      "mode": 1,
+      "focus": 2,
+      "from": 0.5,
+      "to": 0.75,
+      "caption": "再经过输出权重，变化被放大。",
+      "narration": "改动继续往前走。输出权重是二，所以隐藏值的变化又被放大两倍。注意我们一直只改了最初那个权重，后面的变化都是运算带来的。",
+      "params": {
+        "x": 2,
+        "w": 0.25,
+        "bias": 0,
+        "v": 2,
+        "target": 1.5
+      },
+      "stage": 2,
+      "cursor": 3,
+      "en": "Follow one dependency from a weight to loss, then accumulate its sensitivity.",
+      "duration": 13.208333333333334,
+      "start": 102.45833333333333
+    },
+    {
+      "mode": 1,
+      "focus": 3,
+      "from": 0.75,
+      "to": 1,
+      "caption": "预测增加，损失反而减少：符号由这一段翻转。",
+      "narration": "最后，预测变大，却更靠近目标，损失因此变小。为什么最初的正向改动能让损失下降？因为这条链的最后一段，是一条向下倾斜的曲线。",
+      "params": {
+        "x": 2,
+        "w": 0.25,
+        "bias": 0,
+        "v": 2,
+        "target": 1.5
+      },
+      "stage": 2,
+      "cursor": 4,
+      "en": "Follow one dependency from a weight to loss, then accumulate its sensitivity.",
+      "duration": 14.25,
+      "start": 115.66666666666666
+    },
+    {
+      "mode": 1,
+      "focus": 3,
+      "from": 1,
+      "to": 1,
+      "caption": "有限改动可以实测；梯度预测的是附近的变化。",
+      "narration": "现在比较真实变化和梯度给出的预测。两者接近，但不完全相同，因为曲线会弯。把改动再缩小十倍，两者会更接近。梯度描述的是当前位置附近的变化。",
+      "params": {
+        "x": 2,
+        "w": 0.25,
+        "bias": 0,
+        "v": 2,
+        "target": 1.5
+      },
+      "stage": 2,
+      "cursor": 4,
+      "en": "Follow one dependency from a weight to loss, then accumulate its sensitivity.",
+      "delta": 0.005,
+      "duration": 15.583333333333334,
+      "start": 129.91666666666666
+    },
+    {
+      "mode": 2,
+      "focus": 3,
+      "from": 0,
+      "to": 0,
+      "caption": "反向时，前向的值保持原样。",
+      "narration": "刚才我们真的改了一次权重，重新算了一遍。反向传播用更系统的方法得到敏感度。先把原来的前向值固定下来，从损失自身开始：损失增加一小份，损失当然也增加同样一份，所以起点是一。",
+      "params": {
+        "x": 2,
+        "w": 0.25,
+        "bias": 0,
+        "v": 2,
+        "target": 1.5
+      },
+      "stage": 1,
+      "cursor": 1,
+      "en": "Follow one dependency from a weight to loss, then accumulate its sensitivity.",
+      "duration": 19.458333333333332,
+      "start": 145.5
+    },
+    {
+      "mode": 2,
+      "focus": 3,
+      "from": 0,
+      "to": 0.25,
+      "caption": "收到的敏感度 × 当前局部斜率。",
+      "narration": "向左走过损失函数。橙色切线向下，斜率为负。所以预测增加一点，损失会减少。把收到的敏感度一，乘上这个局部斜率，就得到损失对预测的梯度。",
+      "params": {
+        "x": 2,
+        "w": 0.25,
+        "bias": 0,
+        "v": 2,
+        "target": 1.5
+      },
+      "stage": 1,
+      "cursor": 1,
+      "en": "Follow one dependency from a weight to loss, then accumulate its sensitivity.",
+      "duration": 15.333333333333334,
+      "start": 164.95833333333334
+    },
+    {
+      "mode": 2,
+      "focus": 2,
+      "from": 0.25,
+      "to": 0.5,
+      "caption": "两段影响接起来，比例就相乘。",
+      "narration": "再问隐藏值的影响。隐藏值先被放大两倍，才到达预测；预测再按刚才的梯度影响损失。所以把已经算好的梯度再乘二。这就是为什么链式法则要相乘。",
+      "params": {
+        "x": 2,
+        "w": 0.25,
+        "bias": 0,
+        "v": 2,
+        "target": 1.5
+      },
+      "stage": 1,
+      "cursor": 2,
+      "en": "Follow one dependency from a weight to loss, then accumulate its sensitivity.",
+      "duration": 15.333333333333334,
+      "start": 180.29166666666669
+    },
+    {
+      "mode": 2,
+      "focus": 1,
+      "from": 0.5,
+      "to": 0.75,
+      "caption": "反向复用前向的位置，读出那里的斜率。",
+      "narration": "经过激活函数时，使用的还是刚才那个点。这里的局部斜率约为零点七九。把它乘进去，敏感度就缩小一些。我们没有倒着计算激活函数，而是在追溯影响。",
+      "params": {
+        "x": 2,
+        "w": 0.25,
+        "bias": 0,
+        "v": 2,
+        "target": 1.5
+      },
+      "stage": 1,
+      "cursor": 3,
+      "en": "Follow one dependency from a weight to loss, then accumulate its sensitivity.",
+      "duration": 15.541666666666666,
+      "start": 195.62500000000003
+    },
+    {
+      "mode": 2,
+      "focus": 0,
+      "from": 0.75,
+      "to": 1,
+      "caption": "每一段都贡献一个局部比例。",
+      "narration": "最后回到第一层权重。乘加这一步再贡献一个二。于是，权重对损失的梯度，就是沿途这些局部比例的乘积。结果为负，表示权重小幅增加时，损失会下降。",
+      "params": {
+        "x": 2,
+        "w": 0.25,
+        "bias": 0,
+        "v": 2,
+        "target": 1.5
+      },
+      "stage": 1,
+      "cursor": 4,
+      "en": "Follow one dependency from a weight to loss, then accumulate its sensitivity.",
+      "duration": 15.958333333333334,
+      "start": 211.16666666666669
+    },
+    {
+      "mode": 3,
+      "focus": 0,
+      "from": 0,
+      "to": 1,
+      "caption": "算梯度结束后，才更新参数。",
+      "narration": "有了方向，才轮到更新。梯度为负，减去梯度就会增加权重。这里用零点一的学习率，同时更新三个参数，再重新前向计算，核对损失。求梯度和改参数，是两个不同的动作。",
+      "params": {
+        "x": 2,
+        "w": 0.25,
+        "bias": 0,
+        "v": 2,
+        "target": 1.5
+      },
+      "stage": 3,
+      "cursor": 1,
+      "en": "Follow one dependency from a weight to loss, then accumulate its sensitivity.",
+      "duration": 18.083333333333332,
+      "start": 227.12500000000003
+    },
+    {
+      "mode": 1,
+      "focus": 1,
+      "from": 0,
+      "to": 1,
+      "caption": "换到饱和区：输入动了，输出几乎不动。",
+      "narration": "再看一个边界情境。把第一层权重移到二，激活点进入曲线很平的区域。做同样的小改动，横向仍然移动，纵向却几乎不动。图的坐标尺度保持相同，所以可以直接比较。",
+      "params": {
+        "x": 2,
+        "w": 2,
+        "bias": 0,
+        "v": 2,
+        "target": 1.5
+      },
+      "stage": 2,
+      "cursor": 2,
+      "en": "Follow one dependency from a weight to loss, then accumulate its sensitivity.",
+      "duration": 16.875,
+      "start": 245.20833333333337
+    },
+    {
+      "mode": 2,
+      "focus": 1,
+      "from": 0.5,
+      "to": 0.75,
+      "caption": "输出接近 1，并不代表梯度大。",
+      "narration": "反向经过同一个位置，乘上的局部斜率也就接近零。隐藏值虽然接近一，对更早参数的敏感度却很小。这是激活值很大，但梯度仍然很小的原因。",
+      "params": {
+        "x": 2,
+        "w": 2,
+        "bias": 0,
+        "v": 2,
+        "target": 1.5
+      },
+      "stage": 1,
+      "cursor": 3,
+      "en": "Follow one dependency from a weight to loss, then accumulate its sensitivity.",
+      "duration": 14.416666666666666,
+      "start": 262.08333333333337
+    },
+    {
+      "mode": 1,
+      "focus": 2,
+      "from": 0.5,
+      "to": 0.75,
+      "caption": "v = 0 时，这一段完全不传递 w 的变化。",
+      "narration": "再把输出权重设为零。无论隐藏值怎样变，预测都是零，曲线是一条水平线。第一层权重的改动被挡在这里，所以它对损失的梯度为零。不过输出权重自己仍然可能有梯度。",
+      "params": {
+        "x": 2,
+        "w": 0.25,
+        "bias": 0,
+        "v": 0,
+        "target": 1.5
+      },
+      "stage": 2,
+      "cursor": 3,
+      "en": "Follow one dependency from a weight to loss, then accumulate its sensitivity.",
+      "duration": 17.291666666666668,
+      "start": 276.50000000000006
+    },
+    {
+      "mode": 2,
+      "focus": 0,
+      "from": 0,
+      "to": 1,
+      "caption": "回到同一条链：前向传数值，反向累计敏感度。",
+      "narration": "回到标准情境。前向，沿计算链得到数值。反向，沿依赖回来，复用这些数值，把局部斜率逐段相乘。现在暂停视频，亲自改动一次权重，再用反向的梯度解释你看到的方向。",
+      "params": {
+        "x": 2,
+        "w": 0.25,
+        "bias": 0,
+        "v": 2,
+        "target": 1.5
+      },
+      "stage": 1,
+      "cursor": 4,
+      "en": "Follow one dependency from a weight to loss, then accumulate its sensitivity.",
+      "duration": 18.208333333333332,
+      "start": 293.79166666666674
+    }
+  ],
+  "layout": [],
+  "sha256": "6644643bbd7f775fb5fc8f7572e6b01a9bac75ad9c216e8a5911c50a996b4faa"
 }

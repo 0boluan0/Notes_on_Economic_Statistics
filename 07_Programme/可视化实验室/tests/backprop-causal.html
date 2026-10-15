@@ -1,0 +1,35 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><title>传播因果演示检查</title><style>body{font:15px system-ui;margin:20px}iframe{width:1200px;height:1100px;border:1px solid #ccd}button{padding:12px}pre{white-space:pre-wrap}</style><h1>传播因果演示检查</h1><button id="run">运行因果演示检查</button><pre id="report">等待启动</pre><iframe id="subject" src="../实验室.html#backprop"></iframe><script>
+const frame=document.querySelector('iframe'),report=document.querySelector('pre'),sleep=ms=>new Promise(r=>setTimeout(r,ms));
+document.querySelector('button').onclick=async()=>{
+ const w=frame.contentWindow,d=w.document,checks=[],errors=[],ok=(x,name)=>{checks.push({name,passed:!!x});if(!x)errors.push(name);},click=q=>d.querySelector(q).click(),change=(q,value,event='change')=>{const el=d.querySelector(q);el.value=value;el.dispatchEvent(new w.Event(event,{bubbles:true}));},state=()=>w.BackpropConceptPlayer.state();
+ try{
+  w.VisualLab.navigate('backprop');change('[data-bc-case]',0);const initial=JSON.stringify(state().params);
+  ok(state().params.w===.25&&state().params.target===1.5,'same example as narrated film');
+  ok(!d.querySelector('.backprop-numerical').open,'numerical workshop starts collapsed');
+  for(const mode of [1,2,3,0]){click(`[data-bc-mode="${mode}"]`);ok(JSON.stringify(state().params)===initial,`mode ${mode} preserves parameters`);}
+  click('[data-bc-mode="1"]');for(let i=0;i<4;i++)click('[data-bc-action="step"]');ok(state().progress===1,'four operations complete intervention');
+  ok(d.querySelector('.bc-scene').textContent.includes('损失实际改变 −0.07506'),'completed intervention shows independent actual loss change');
+  change('[data-bc-delta]',.005,'input');ok(state().delta===.005&&state().progress===1,'small change remains directly explorable');
+  click('[data-bc-action="replay"]');click('[data-bc-action="play"]');await sleep(350);ok(state().progress>0&&state().progress<1,'time-driven motion advances continuously');click('[data-bc-action="play"]');const paused=state().progress;await sleep(100);ok(state().progress===paused&&!state().playing,'pause holds process');
+  change('[data-bc-case]',1);click('[data-bc-mode="2"]');click('[data-bc-focus="1"]');ok(w.BackpropCausal.model(state().params).gains[1]<.002,'saturated case has small local slope');
+  ok(d.querySelector('.bc-scene').textContent.includes('这一段很平'),'saturated curve receives causal explanation');
+  change('[data-bc-case]',2);for(let i=0;i<4;i++)click('[data-bc-action="step"]');ok(w.BackpropCausal.model(state().params).grads[0]===0,'v=0 blocks sensitivity to w');
+  change('[data-bc-case]',0);click('[data-bc-mode="3"]');const before=w.VisualLab.getState().result.data.forward.loss;click('[data-bc-action="update"]');ok(state().mode===0&&state().progress===0,'update returns to fresh forward pass');ok(w.VisualLab.getState().result.data.forward.loss<before,'actual update recomputes lower loss');
+  for(const c of w.BackpropFilm.chapters){change('[data-bc-chapter]',c.index);const f=w.BackpropFilm.frames[c.index];ok(state().mode===f.mode&&JSON.stringify(state().params)===JSON.stringify(f.params),`chapter ${c.index} restores its scene and model`);}
+  change('[data-bc-case]',0);click('[data-bc-mode="0"]');const original=w.matchMedia;w.matchMedia=q=>q==='(prefers-reduced-motion: reduce)'?{matches:true}:original.call(w,q);click('[data-bc-action="play"]');ok(state().progress===.25&&!state().playing,'reduced motion advances one operation');w.matchMedia=original;
+  for(const width of [390,768,840,1200]){frame.style.width=width+'px';await sleep(100);ok(d.documentElement.scrollWidth<=d.documentElement.clientWidth+2,`page fits ${width}px; narrow scene scrolls internally`);}
+  frame.style.width='840px';click('[data-bc-mode="1"]');for(let i=0;i<4;i++)click('[data-bc-action="step"]');
+  const overflow=[];
+  for(const [index,f] of w.BackpropFilm.frames.entries()){
+   w.BackpropConceptPlayer.set(f);
+   for(const text of d.querySelectorAll('.bc-scene svg text')){const b=text.getBBox();if(b.x<0||b.x+b.width>1200||b.y<0||b.y+b.height>700)overflow.push({index,text:text.textContent});}
+   for(const text of d.querySelectorAll('.bc-scene [data-causal-node] text[font-size="30"]'))if(text.getBBox().width>124)overflow.push({index,node:text.textContent});
+  }
+  ok(!overflow.length,'all narrated scenes fit text inside drawing and numeric nodes');
+  if(overflow.length)errors.push(JSON.stringify(overflow));
+  ok(d.querySelectorAll('.formula-error,.katex-error').length===0,'mathematical notation renders');
+  w.VisualLab.navigate('attention');ok(w.BackpropConceptPlayer.state()===null,'navigation disposes animation');w.VisualLab.navigate('backprop');
+  report.textContent=JSON.stringify({passed:!errors.length,checks,errors},null,2);document.body.dataset.passed=String(!errors.length);
+ }catch(e){report.textContent=e.stack;document.body.dataset.passed='false';}
+};
+</script></html>

@@ -260,7 +260,8 @@
       "group": "神经网络：表达与学习",
       "note": "07_Programme/可视化实验室/实验/backprop.md",
       "sources": [
-        "https://d2l.ai/chapter_multilayer-perceptrons/backprop.html"
+        "https://d2l.ai/chapter_multilayer-perceptrons/backprop.html",
+        "https://cs231n.github.io/optimization-2/"
       ]
     },
     {
