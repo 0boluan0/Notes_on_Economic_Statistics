@@ -88,6 +88,26 @@ class CurriculumTests(unittest.TestCase):
         self.assertEqual(c.references(self.vault, [ref])[0]["status"], "section_missing_or_ambiguous")
         self.assertEqual(c.references(self.vault, [{"path": "../outside.md#Course"}])[0]["status"], "missing")
 
+    def test_live_finite_replay_overrides_stale_not_started_without_mixing_history(self):
+        self.write("python.md", "---\nkind: finite-course\nstatus: active\n---\n")
+        self.write(c.POSITION, {"courses": [{"id": "Python", "plan": "python.md", "group": "queued",
+            "personal": {"summary": "按 Overall，尚未开始"}, "school": {"summary": "未启动"}}]})
+        self.state["tasks"] = [{"id": "replay", "path": "python.md", "title": "Python｜本轮重看 Lecture 01 Introduction，理解后关闭", "status": "recorded_complete"}]
+        self.state["tasks"].extend({"id": str(i), "path": "python.md", "title": f"Python｜Lecture {i:02}",
+            "status": "recorded_complete" if i <= 3 else "completion_unknown"} for i in range(1, 27))
+        course = self.view()["courses"][-1]
+        self.assertEqual(course["group"], "other")
+        self.assertIn("本轮重看已完成：Lecture 01", course["personal"]["summary"])
+        self.assertEqual(course["unit_progress"], {"completed": 3, "total": 26})
+        self.assertEqual(course["replay_progress"], {"completed": 1, "registered": 1})
+        self.assertIsNone(course["next_task"], "Historical Lecture 04 is not the next replay")
+        self.assertNotIn("未启动", course["school"]["summary"])
+
+    def test_live_completion_replaces_old_personal_description(self):
+        self.state["tasks"][0].update(status="recorded_complete", raw="- [x] Done ✅ 2026-10-09")
+        self.write(c.POSITION, {"courses": [{"id": "ST445", "personal": {"summary": "Not started", "as_of": "2026-10-01"}}]})
+        self.assertIn("最近完成", self.view()["courses"][0]["personal"]["summary"])
+
     def test_unavailable_inputs_keep_registered_courses_visible(self):
         (self.vault / c.POSITION).write_text("broken JSON")
         view = self.view()

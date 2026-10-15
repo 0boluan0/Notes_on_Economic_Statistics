@@ -70,7 +70,29 @@ def belongs(task, course):
     return bool(course.get("plan") and task.get("path") == course["plan"])
 
 
-def overview(vault, state, progress, current):
+def replay_successor(tasks, after_id):
+    """Use the original course order, never historical completion as replay progress."""
+    after = next((t for t in tasks if t["id"] == after_id), None)
+    if not after or "本轮重看" not in after["title"] or after["status"] != "recorded_complete":
+        return None
+    def number(task):
+        match = re.search(r"\bLecture\s+(\d+)\b", task["title"], re.I)
+        return int(match[1]) if match else None
+    units = [t for t in tasks if "本轮重看" not in t["title"]]
+    numbers = [number(t) for t in units]
+    if None in numbers or len(set(numbers)) != len(numbers) or number(after) not in numbers:
+        return None
+    following = next((t for t in units[numbers.index(number(after)) + 1:] if t["status"] != "cancelled"), None)
+    if not following:
+        return None
+    existing = [t for t in tasks if "本轮重看" in t["title"] and number(t) == number(following)]
+    if len(existing) > 1:
+        return None
+    anchor = "replay-" + hashlib.sha256((after_id + "\n" + following["id"]).encode()).hexdigest()[:24]
+    return {"after_task_id": after_id, "source": following, "existing": existing[0] if existing else None, "anchor": anchor}
+
+
+def overview(vault, state, progress, current, resumptions=None):
     issues = []
     table = read_json(vault, TIMETABLE, {}, issues)
     events = read_json(vault, EVENTS, [], issues)
@@ -93,6 +115,18 @@ def overview(vault, state, progress, current):
                 "group": "future" if future else "degree" if is_degree else spec.get("group", "other"),
                 "task_prefix": spec.get("task_prefix", code if is_degree else None)}
         own_tasks = [t for t in state["tasks"] if belongs(t, item)]
+        item["active"] = bool(own_tasks)
+        if own_tasks and item["group"] == "queued":
+            item["group"] = "other"
+        plan_text = ""
+        if spec.get("plan"):
+            try:
+                plan_text = source_bytes(vault, spec["plan"]).decode("utf-8")
+                front = plan_text.split("---", 2)[1] if plan_text.startswith("---\n") else ""
+                if re.search(r"^kind:\s*finite-course\s*$", front, re.M):
+                    item["mode"] = "finite"
+            except (OSError, ValueError):
+                pass  # The canonical snapshot reports missing active plans.
         own_events = sorted((e for e in events if e["course"] == code), key=lambda e: e["start_iso"])
         past = [e for e in own_events if dt.datetime.fromisoformat(e["end_iso"]) <= current]
         upcoming = [e for e in own_events if dt.datetime.fromisoformat(e["end_iso"]) > current]
@@ -100,6 +134,30 @@ def overview(vault, state, progress, current):
         following = upcoming[0] if upcoming else None
         item["schedule"] = {"last": latest, "next": following, "source": TIMETABLE_NOTE,
                             "verified_at": table.get("verified_at"), "meaning": "已保存的课表安排，不代表出席或实际授课范围"}
+        item["week_events"] = {}
+        for event in own_events:
+            if event.get("term") != term or event.get("type") not in ("Lecture", "Seminar"):
+                continue
+            key = str(event["week"])
+            item["week_events"].setdefault(key, [])
+            group = event["type"].lower()
+            if group not in item["week_events"][key]:
+                item["week_events"][key].append(group)
+        item["week_scopes"] = {}
+        for key, value in spec.get("week_scopes", {}).items():
+            if not key.isdigit() or not isinstance(value, dict) or not isinstance(value.get("reviewed", False), bool):
+                raise ValueError("Invalid weekly scope record")
+            item["week_scopes"][key] = fact(vault, value, day)
+        for layout in item.get("task_layout", {}).values():
+            if not isinstance(layout.get("week"), int) or not 1 <= layout["week"] <= 52 or not layout.get("basis"):
+                raise ValueError("Invalid task week mapping")
+        item["task_details"] = {}
+        for ref, value in spec.get("task_details", {}).items():
+            if not isinstance(value, dict) or not isinstance(value.get("checkpoints", []), list):
+                raise ValueError("Invalid task checkpoint record")
+            if any(not isinstance(point, dict) or not point.get("label") or not point.get("condition") for point in value.get("checkpoints", [])):
+                raise ValueError("Invalid task checkpoint")
+            item["task_details"][ref] = fact(vault, value, day)
         school = fact(vault, spec.get("school"), day)
         if not school.get("summary"):
             school["summary"] = f"冬季开课 · {following['date']} 首次安排" if future and following else "实际授课主题尚无核验记录"
@@ -111,19 +169,59 @@ def overview(vault, state, progress, current):
         open_tasks = [t for t in own_tasks if t["status"] not in ("recorded_complete", "cancelled")]
         if not spec.get("next_ref") and len(open_tasks) == 1:
             next_task = open_tasks[0]
-        if spec.get("mode") == "finite":
-            units = [t for t in own_tasks if t["status"] != "cancelled"]
+        if item.get("mode") == "finite":
+            replay = [t for t in own_tasks if "本轮重看" in t["title"] and t["status"] != "cancelled"]
+            units = [t for t in own_tasks if t["status"] != "cancelled" and t not in replay]
             item["unit_progress"] = {"completed": sum(t["status"] == "recorded_complete" for t in units), "total": len(units)}
             consecutive = []
-            for task in own_tasks:
+            for task in units:
                 if task["status"] != "recorded_complete":
                     break
                 consecutive.append(task)
             next_task = next((t for t in own_tasks if t["status"] not in ("recorded_complete", "cancelled")), None)
             personal = {"summary": "原计划连续完成至 " + consecutive[-1]["title"] if consecutive else "原计划尚无连续完成记录；实际学过范围待核对",
-                        "sources": [{"path": spec["plan"], "label": "任务原件", "status": "live"}], "needs_review": False}
+                        "sources": [{"path": spec["plan"], "label": "任务原件", "status": "live"}], "needs_review": False, "label": "原计划完成记录"}
             next_step = next_task["title"] if next_task else "原计划没有开放任务，按记录核对接续" if own_tasks else "原计划未读到可核验任务"
-        reports = [r for r in progress if belongs({"title": r["payload"]["task_title"], "path": r["payload"]["task_path"]}, item)]
+            if replay:
+                done = [t for t in replay if t["status"] == "recorded_complete"]
+                item["replay_progress"] = {"completed": len(done), "registered": len(replay)}
+                latest = done[-1] if done else replay[0]
+                unit = re.search(r"Lecture\s*\d+(?:\s+[^，；]+)?", latest["title"])
+                personal.update(summary=("本轮重看已完成：" if done else "本轮重看进行中：") + (unit[0] if unit else latest["title"]), label="本轮重看")
+                next_task = next((t for t in replay if t["status"] == "completion_unknown"), None)
+                next_step = next_task["title"] if next_task else "本轮已登记的重看任务已完成；下一讲按本轮重看计划接续。"
+                following = replay_successor(own_tasks, replay[-1]["id"]) if not next_task else None
+                criterion = re.search(r"^完成标准[：:]\s*(.+)$", plan_text, re.M) if spec.get("plan") else None
+                if (following and not following["existing"] and criterion and "^" + following["anchor"] not in plan_text
+                        and following["source"]["status"] in ("completion_unknown", "recorded_complete")):
+                    item["continuation"] = {"after_task_id": following["after_task_id"], "source_task_id": following["source"]["id"],
+                        "title": following["source"]["title"], "done_when": criterion[1]}
+                    next_step = "接着学：" + following["source"]["title"]
+                resumption = (resumptions or {}).get(code, {})
+                if resumption.get("after_task_id") == replay[-1]["id"]:
+                    # Rejoining an unfinished original ends the replay prefix, without duplicating it.
+                    start = next((i for i, t in enumerate(units) if t["title"] == resumption.get("source_title")), None)
+                    item.pop("continuation", None)
+                    next_task = next((t for t in units[start:] if t["status"] == "completion_unknown"), None) if start is not None else None
+                    next_step = next_task["title"] if next_task else "课程清单已没有开放学习项。" if start is not None else "课程顺序有变化，接续点待核对。"
+                    item["replay_resumed"] = True
+                    recent = [(m[1], t) for t in units[start:] if t["status"] == "recorded_complete"
+                              and (m := re.search(r"✅\s*(\d{4}-\d{2}-\d{2})", t.get("raw", "")))
+                              and resumption.get("joined_on") and m[1] >= resumption["joined_on"]] if start is not None else []
+                    if recent:
+                        date, finished = max(recent, key=lambda pair: pair[0])
+                        personal.update(summary="最近完成：" + finished["title"], as_of=date, label="原任务完成记录")
+            school = {"summary": f"{len(units)} 讲有限课程 · 按个人节奏学习", "sources": personal["sources"], "needs_review": False}
+        else:
+            completed = [(m[1], t) for t in own_tasks if t["status"] == "recorded_complete"
+                         and (m := re.search(r"✅\s*(\d{4}-\d{2}-\d{2})", t.get("raw", "")))]
+            if completed:
+                date, task = max(completed, key=lambda pair: pair[0])
+                if date >= personal.get("as_of", ""):
+                    personal = {"summary": "最近完成：" + task["title"], "as_of": date, "label": "原任务完成记录",
+                                "sources": [{"path": task.get("ref") or task["path"], "label": "任务原件", "status": "live"}], "needs_review": False}
+        reports = [r for r in progress if r["task_id"] in {t["id"] for t in open_tasks}
+                   and belongs({"title": r["payload"]["task_title"], "path": r["payload"]["task_path"]}, item)]
         reports.sort(key=lambda r: r["created_at"], reverse=True)
         report_day = dt.datetime.fromisoformat(reports[0]["created_at"].replace("Z", "+00:00")).astimezone(current.tzinfo).date().isoformat() if reports else ""
         if reports and report_day >= personal.get("as_of", ""):
@@ -141,8 +239,10 @@ def overview(vault, state, progress, current):
         courses.append(item)
     plan = weekly.project(courses, state["tasks"], state.get("obligations", []), progress,
                           table.get("term_starts", {}).get(term), table.get("term_ends", {}).get(term), current, specifications)
+    scope_paths = list(dict.fromkeys(ref["path"].split("#", 1)[0] for course in courses
+                                    for scope in [*course["week_scopes"].values(), *course["task_details"].values()] for ref in scope.get("sources", [])))
     return {"stage": stage, "term": term, "week": week, "term_weeks": term_weeks, "as_of": day, "courses": courses, "weekly": plan,
-            "reconciled_at": dossier.get("reconciled_at"), "issues": issues, "source_paths": [POSITION, TIMETABLE, EVENTS],
+            "reconciled_at": dossier.get("reconciled_at"), "issues": issues, "source_paths": [POSITION, TIMETABLE, EVENTS, *scope_paths],
             "note_path": PRIVATE + "/课程总览.md", "dossier_path": POSITION,
             "boundary": "学校列区分课表与已核验材料；我的进度只按学习记录。没有记录不等于没学。"}
 
@@ -163,6 +263,25 @@ def markdown(data):
             personal = ("来源有更新，待对账：" if c["personal"].get("needs_review") else "") + c["personal"]["summary"]
             lines.append("| " + " | ".join(cell(x) for x in (c["id"] + " · " + c["title"], school, personal, c["next_step"])) + " |")
         lines.append("")
+    lines.extend(["## 每周收尾", "", "核心事项与推荐内容分别计数。完成只读取原任务；没有记录不等于没有做过。", ""])
+    tasks = {t["id"]: t for t in data.get("weekly", {}).get("tasks", [])}
+    for entry in data.get("weekly", {}).get("bundles", []):
+        if not entry["week"].isdigit() or int(entry["week"]) > (data.get("week") or 0):
+            continue
+        lines.extend([f"### {entry['course_id']} · Week {entry['week']}", "",
+                      f"{entry['status']} · 核心 {entry['core']['done']}/{entry['core']['total']} · 推荐 {entry['recommended']['done']}/{entry['recommended']['total']}", ""])
+        if not entry["scope_verified"]:
+            lines.extend(["本周完整要求仍待核对，不能仅凭已列任务宣称整周完成。", ""])
+        for group in entry["groups"]:
+            lines.append(f"**{group['label']}** — {group['condition']}")
+            if group["missing"]:
+                lines.append("- 已有课表安排，实际练习／要求尚未整理。")
+            for task_id in group["task_ids"]:
+                task = tasks[task_id]
+                status = "已完成" if task["state"] == "done" else "有学习记录" if task["state"] == "recorded" else "待核验"
+                label = task["title"].replace("|", "／").replace("]", "")
+                lines.append(f"- {status}：[[{task.get('ref') or task['path']}|{label}]]")
+            lines.append("")
     lines.extend(["## 依据与核验时间", ""])
     for c in data["courses"]:
         lines.extend(["### " + c["id"], ""])

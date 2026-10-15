@@ -240,7 +240,7 @@ class CompletionChecks:
                     self.update(previous["key"], phase="cancelled")
                     self.export(self.row(previous["key"]))
 
-    def run(self, key, request=None):
+    def run(self, key, request=None, cancelled=lambda: False):
         if not re.fullmatch(r"[A-Za-z0-9_-]{1,100}", key):
             raise ValueError("核验标识无效")
         with self.s.lock("completion.lock"):
@@ -277,12 +277,15 @@ class CompletionChecks:
                 self.export(row)
                 return self.result(row)
             try:
+                if row["phase"] != "applying" and cancelled():
+                    self.cancel(key)
+                    raise Cancelled("核验已停止")
                 self.export(row)
                 if not row["verdict"]:
                     if not row["thread_id"] and row["phase"] != "queued":
                         raise RuntimeError("核验会话创建结果不明，保留原请求供检查")
                     self.s.progress("正在对照原任务、本人报告与证据内容…")
-                    with self.s.client_factory(lambda: self.row(key)["phase"] == "cancelled") as client:
+                    with self.s.client_factory(lambda: cancelled() or self.row(key)["phase"] == "cancelled") as client:
                         if row["thread_id"]:
                             client.resume(row["thread_id"])
                         else:
@@ -296,6 +299,9 @@ class CompletionChecks:
                             turn = client.start(row["thread_id"], INSTRUCTIONS + "\n事实输入：\n" + row["context"], SCHEMA)
                             self.update(key, turn_id=turn)
                             turn, raw = completed_turn(client.finish(row["thread_id"], turn), turn)
+                        if cancelled():
+                            self.cancel(key)
+                            raise Cancelled("核验已停止")
                         verdict = self.validate(json.loads(raw), json.loads(row["context"]))
                         self.update(key, verdict=packed(verdict), phase="insufficient" if verdict["verdict"] == "insufficient" else "applying", error=None)
                 row = self.row(key)
@@ -306,6 +312,7 @@ class CompletionChecks:
                 self.export(self.row(key))
                 return self.result(self.row(key))
             except Cancelled:
+                self.cancel(key)
                 self.export(self.row(key))
                 return self.result(self.row(key))
             except Exception as error:

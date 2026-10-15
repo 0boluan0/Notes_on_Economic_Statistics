@@ -181,37 +181,48 @@ def prepare(store, key, client_factory):
 def register_claudian(vault, thread_id, title, model):
     payload = packed({"threadId": thread_id, "title": title, "model": model})
     # Use the plugin's API, never hand-edit Obsidian settings or session metadata.
-    code = """(async()=>{
+    code = """(()=>{
       const p=PAYLOAD;
-      const plugin=app.plugins.plugins.realclaudian;
-      const h=plugin?.chatHost;
-      if(!h?.createConversation || !h?.getConversationById) throw Error('Claudian adapter unavailable');
-      await h.ensureConversationMetadataLoaded?.([p.threadId]);
-      if(!h.getConversationList().some(c=>c.id===p.threadId)) {
-        await h.createConversation({providerId:'codex',sessionId:p.threadId,selectedModel:'openai-codex/'+p.model});
-      }
-      const c=await h.getConversationById(p.threadId);
-      if(c?.sessionId!==p.threadId || !c.messages?.length) throw Error('Native session or history mismatch');
-      await h.renameConversation(c.id,p.title);
-      return JSON.stringify({conversation_id:c.id,thread_id:c.sessionId,message_count:c.messages.length,plugin_version:plugin.manifest.version});
+      const pending=window.studentOsRegistrations??=new Map();
+      if(pending.get(p.threadId)?.state==='pending') return 'pending';
+      const entry={state:'pending'};pending.set(p.threadId,entry);
+      (async()=>{
+        const h=app.plugins.plugins.realclaudian?.chatHost;
+        if(!h?.createConversation || !h?.getConversationById) throw Error('Claudian adapter unavailable');
+        await h.ensureConversationMetadataLoaded?.([p.threadId]);
+        if(!h.getConversationList().some(c=>c.id===p.threadId)) {
+          await h.createConversation({providerId:'codex',sessionId:p.threadId,selectedModel:'openai-codex/'+p.model});
+        }
+        const c=await h.getConversationById(p.threadId);
+        if(c?.sessionId!==p.threadId || !c.messages?.length) throw Error('Native session or history mismatch');
+        await h.renameConversation(c.id,p.title);
+        entry.state='done';
+      })().catch(error=>{entry.state='failed';entry.error=error.message});
+      return 'pending';
     })()""".replace("PAYLOAD", payload)
-    subprocess.run(["obsidian", "eval", "code=" + code], cwd=vault, capture_output=True, text=True, timeout=30)
+    submitted = subprocess.run(["obsidian", "eval", "code=" + code], cwd=vault, capture_output=True, text=True, timeout=30)
+    if submitted.returncode:
+        raise RuntimeError("Obsidian 未接收课堂接续请求；原课堂已保留。")
     readback = """(()=>{
       const p=PAYLOAD, plugin=app.plugins.plugins.realclaudian;
+      const operation=window.studentOsRegistrations?.get(p.threadId);
+      if(operation?.error) return JSON.stringify({error:operation.error});
       const c=plugin?.chatHost?.getConversationSync(p.threadId);
       return JSON.stringify(c?{conversation_id:c.id,thread_id:c.sessionId,title:c.title,message_count:c.messages?.length||0,plugin_version:plugin.manifest.version}:null);
     })()""".replace("PAYLOAD", payload)
     # The CLI can return no stdout after an asynchronous mutation that actually succeeded.
-    for attempt in range(3):
+    for attempt in range(40):
         result = subprocess.run(["obsidian", "eval", "code=" + readback], cwd=vault, capture_output=True, text=True, timeout=10)
         lines = [line[3:] for line in result.stdout.splitlines() if line.startswith("=> ")]
         if result.returncode == 0 and lines:
             reply = json.loads(lines[-1])
+            if reply and reply.get("error"):
+                raise RuntimeError("课堂接续失败：" + reply["error"])
             if reply and reply.get("thread_id") == thread_id and reply.get("title") == title and reply.get("message_count", 0) >= 2:
                 return reply
-        if attempt < 2:
-            time.sleep(0.1)
-    raise RuntimeError("Claudian registration not confirmed by independent readback; retry the same operation ID")
+        if attempt < 39:
+            time.sleep(0.5)
+    raise RuntimeError("课堂内容已备好，接入仍未确认；点击‘恢复课堂’继续同一会话。")
 
 
 def attach(store, key, vault, register=register_claudian):

@@ -225,6 +225,16 @@ class SnapshotTests(unittest.TestCase):
 
 
 class AdapterTests(unittest.TestCase):
+    def test_slow_registration_waits_for_same_session_without_resubmitting(self):
+        reply = {"conversation_id": "native", "thread_id": "native", "title": "Class", "message_count": 2}
+        pending = SimpleNamespace(returncode=0, stdout="=> null")
+        with patch("steward.subprocess.run", side_effect=[
+            SimpleNamespace(returncode=0, stdout=""), pending, pending, pending,
+            SimpleNamespace(returncode=0, stdout="=> " + json.dumps(reply)),
+        ]) as run, patch("steward.time.sleep"):
+            self.assertEqual(register_claudian(Path("/tmp"), "native", "Class", "test-model"), reply)
+        self.assertEqual(sum("createConversation(" in c.args[0][-1] for c in run.call_args_list), 1)
+
     def test_empty_write_reply_requires_independent_native_history_readback(self):
         reply = {"conversation_id": "native", "thread_id": "native", "title": "Class", "message_count": 2}
         with patch("steward.subprocess.run", side_effect=[
@@ -238,6 +248,12 @@ class AdapterTests(unittest.TestCase):
         reply = {"thread_id": "different", "title": "Class", "message_count": 2}
         with patch("steward.subprocess.run", return_value=SimpleNamespace(returncode=0, stdout="=> " + json.dumps(reply))), patch("steward.time.sleep"):
             with self.assertRaises(RuntimeError):
+                register_claudian(Path("/tmp"), "native", "Class", "test-model")
+
+    def test_async_registration_failure_keeps_actual_reason(self):
+        with patch("steward.subprocess.run", side_effect=[SimpleNamespace(returncode=0, stdout=""),
+            SimpleNamespace(returncode=0, stdout='=> {"error":"Claudian adapter unavailable"}')]):
+            with self.assertRaisesRegex(RuntimeError, "Claudian adapter unavailable"):
                 register_claudian(Path("/tmp"), "native", "Class", "test-model")
 
 

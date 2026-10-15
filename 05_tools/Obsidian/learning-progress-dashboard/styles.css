@@ -403,9 +403,10 @@
 .sos-due-time { flex: 0 0 62px; color: var(--sos-learner); font-weight: 650; font-variant-numeric: tabular-nums; }
 .sos-nav, .sos-actions, .sos-shortcuts { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
 .sos-status { font-size: 11px; color: var(--text-muted); max-width: 260px; }
-.sos-grid { display: grid; grid-template-columns: minmax(0, 1fr) 310px; gap: 28px; align-items: start; }
+.sos-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; align-items: start; }
 .sos-board { min-width: 0; container: student-board / inline-size; }
-.sos-side { display: grid; gap: 18px; min-width: 0; }
+.sos-grid.has-steward { grid-template-columns: minmax(0, 1fr) 310px; }
+.sos-side { display: grid; gap: 18px; min-width: 0; position: sticky; top: 16px; max-height: calc(100vh - 100px); overflow: auto; scrollbar-width: thin; }
 .sos-icon { display: inline-flex; align-items: center; flex-shrink: 0; }
 .sos-icon svg { width: 18px; height: 18px; }
 .sos-muted { color: var(--text-muted); font-size: 13px; line-height: 1.6; }
@@ -459,22 +460,71 @@
 .sos-home .sos-filter-button[aria-pressed="true"] { color: var(--text-normal); background: var(--background-modifier-hover); }
 .sos-week-extra { display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 12px; }
 .sos-week-extra .sos-quiet[aria-pressed="true"] { color: var(--sos-accent); text-decoration: underline; text-underline-offset: 4px; }
-.sos-week-caption { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; font-size: 12px; padding: 13px 16px; border: 1px solid var(--sos-line); border-radius: 9px 9px 0 0; background: var(--sos-surface); }
+.sos-week-caption { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; font-size: 12px; padding: 13px 16px; border: 1px solid var(--sos-line); border-radius: 9px; background: var(--sos-surface); }
 .sos-week-caption strong { font-size: 15px; }
 .sos-week-caption > span { color: var(--text-muted); }
-.sos-week-course { border-inline: 1px solid var(--sos-line); padding: 10px 16px 3px; }
-.sos-week-course:last-of-type { border-bottom: 1px solid var(--sos-line); border-radius: 0 0 9px 9px; padding-bottom: 9px; }
+.sos-week-course { border: 1px solid var(--sos-line); border-radius: 12px; padding: 16px; margin-top: 16px; }
 .sos-week-course-heading { display: flex; justify-content: space-between; gap: 10px; align-items: center; margin: 6px 0; }
-.sos-week-course-heading h3 { font-size: 13px; color: var(--text-muted); font-weight: 600; margin: 0; }
+.sos-week-course-heading h3 { font-size: 16px; color: var(--text-normal); font-weight: 650; margin: 0; }
 .sos-week-course-heading .sos-quiet { font-size: 10px; }
-.sos-week-task { border-top: 1px solid var(--sos-line); }
-.sos-week-task > summary { list-style: none; display: flex; align-items: center; gap: 11px; padding: 12px 0; cursor: pointer; }
-.sos-week-task > summary::-webkit-details-marker { display: none; }
+.sos-task-row { border-top: 1px solid var(--sos-line); }
+.sos-task-row > summary { list-style: none; display: flex; align-items: center; gap: 11px; padding: 12px 0; cursor: pointer; }
+.sos-task-row > summary::-webkit-details-marker { display: none; }
 .sos-task-indicator { flex: 0 0 21px; font-size: 21px; line-height: 1; color: var(--text-muted); text-align: center; }
 .sos-check-task { padding: 0; width: 23px; height: 25px; background: transparent; box-shadow: none; border: 1px solid var(--background-modifier-border); border-radius: 6px; }
 .sos-check-task:hover, .sos-check-task:focus-visible { color: var(--sos-accent); border-color: var(--sos-accent); }
-.sos-completion-modal { max-width: 640px; }
+.sos-task-dialog { width: min(900px, calc(100vw - 36px)); max-width: 900px; --sos-detail-accent: #53b99b; }
+.sos-task-dialog .modal-title { color: var(--text-muted); font-size: 12px; font-weight: 500; }
+.sos-task-dialog .modal-content { font-size: 14px; line-height: 1.6; }
+.sos-completion-modal { max-width: none; }
 .sos-completion-modal [hidden] { display: none !important; }
+.sos-detail-header { padding-bottom: 19px; }
+.sos-detail-eyebrow { font-size: 11px; letter-spacing: .06em; color: var(--text-muted); }
+.sos-detail-header h2 { font-size: 25px; line-height: 1.3; margin: 8px 0 12px; font-weight: 650; }
+.sos-detail-meta { display: flex; gap: 10px 18px; align-items: center; flex-wrap: wrap; color: var(--text-muted); font-size: 12px; }
+.sos-detail-status { padding: 3px 9px; border-radius: 6px; background: var(--background-modifier-hover); color: var(--text-normal); }
+.sos-detail-stop { padding: 12px 16px; border-left: 3px solid var(--sos-detail-accent); background: color-mix(in srgb, var(--sos-detail-accent) 7%, transparent); border-radius: 4px; margin-bottom: 18px; }
+.sos-detail-stop small { color: var(--sos-detail-accent); }
+.sos-detail-stop p { margin: 5px 0; }
+.sos-detail-stop > div { color: var(--text-muted); font-size: 12px; }
+.sos-detail-route { display: grid; grid-template-columns: minmax(0, 1.85fr) minmax(0, 1fr); gap: 25px; align-items: start; }
+.sos-detail-steps h3 { margin: 0 0 13px; font-size: 14px; }
+.sos-detail-checkpoints { list-style: none; padding: 0 !important; margin: 0 0 8px; }
+.sos-detail-checkpoints li { display: grid; grid-template-columns: 26px minmax(0, 1fr) auto; gap: 10px; align-items: start; position: relative; padding: 0 0 18px; }
+.sos-detail-checkpoints li:not(:last-child)::before { content: ""; position: absolute; border-left: 1px solid var(--background-modifier-border); left: 12px; top: 28px; bottom: 4px; }
+.sos-step-number { display: grid; place-items: center; border: 1px solid var(--background-modifier-border); border-radius: 50%; width: 25px; height: 25px; font-size: 11px; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+.sos-detail-checkpoints strong { display: block; font-size: 14px; font-weight: 600; }
+.sos-detail-checkpoints p { margin: 4px 0 0; line-height: 1.55; font-size: 12px; color: var(--text-muted); overflow-wrap: anywhere; }
+.sos-task-dialog button.sos-step-record { box-shadow: none; border: 0; background: transparent; font-size: 11px; padding: 3px 4px; height: auto; color: var(--text-muted); }
+.sos-task-dialog button.sos-step-record:hover { color: var(--sos-detail-accent); background: var(--background-modifier-hover); }
+.sos-detail-hint { color: var(--text-muted); font-size: 11px; }
+.sos-detail-finish { padding: 17px; border: 1px solid color-mix(in srgb, var(--sos-detail-accent) 30%, var(--background-modifier-border)); background: color-mix(in srgb, var(--sos-detail-accent) 5%, var(--background-secondary)); border-radius: 10px; font-size: 13px; }
+.sos-detail-finish > small { color: var(--sos-detail-accent); font-size: 11px; font-weight: 600; }
+.sos-detail-finish > p { margin: 9px 0 16px; overflow-wrap: anywhere; }
+.sos-detail-boundary { padding-top: 12px; border-top: 1px solid var(--background-modifier-border); color: var(--text-muted); font-size: 11px; }
+.sos-detail-original { margin: 17px 0 0; font-size: 12px; color: var(--text-muted); }
+.sos-detail-original summary { cursor: pointer; padding: 7px 0; }
+.sos-detail-original p { overflow-wrap: anywhere; }
+.sos-task-dialog .sos-quiet { background: transparent; border: 0; box-shadow: none; color: var(--text-muted); font-size: 12px; }
+.sos-detail-actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; padding: 18px 0 3px; margin-top: 10px; border-top: 1px solid var(--background-modifier-border); }
+.sos-task-dialog button { white-space: normal; height: auto; min-height: 31px; padding: 6px 12px; font-size: 13px; }
+.sos-task-dialog .sos-primary { background: var(--sos-detail-accent); color: #132f27; box-shadow: none; border: 1px solid transparent; font-weight: 600; }
+.sos-detail-actions .sos-close-option { margin-left: auto; font-size: 11px; }
+.sos-detail-actions [aria-pressed="true"] { outline: 2px solid var(--sos-detail-accent); outline-offset: 2px; }
+.sos-detail-editor { border-top: 1px solid var(--background-modifier-border); margin-top: 16px; padding-top: 2px; }
+.sos-detail-editor .sos-field { font-size: 12px; font-weight: 500; margin: 12px 0; }
+.sos-task-dialog textarea { font-size: 13px; line-height: 1.6; padding: 10px 12px; border-radius: 8px; background: var(--background-primary); min-height: 68px; width: 100%; resize: vertical; }
+.sos-detail-editor .sos-muted { font-size: 12px; color: var(--text-muted); }
+.sos-completion-modal .sos-detail-date { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.sos-completion-modal .sos-detail-date input { font-size: 12px; margin: 0; }
+.sos-detail-date button { min-height: 27px; padding: 3px 8px; }
+@media (max-width: 650px) {
+  .sos-detail-route { grid-template-columns: 1fr; gap: 18px; }
+  .sos-detail-header h2 { font-size: 22px; }
+  .sos-detail-finish { padding: 13px; }
+  .sos-detail-actions { gap: 8px; }
+  .sos-detail-actions .sos-close-option { margin-left: 0; }
+}
 .sos-completion-task { font-weight: 600; line-height: 1.6; }
 .sos-completion-modal .sos-field input { display: block; margin: 8px 0; }
 .sos-evidence-files > div { display: flex; gap: 8px; align-items: center; justify-content: space-between; padding: 6px 0; }
@@ -485,10 +535,187 @@
 .sos-task-caption { flex: 1; min-width: 0; font-size: 14px; line-height: 1.55; }
 .sos-task-caption small { display: block; font-size: 10px; color: var(--text-muted); margin-top: 3px; }
 .sos-task-state { flex: 0 0 auto; font-size: 11px; color: var(--text-muted); }
-.sos-week-task.is-done .sos-task-indicator, .sos-week-task.is-done .sos-task-state { color: var(--sos-accent); }
-.sos-week-task.is-recorded .sos-task-indicator, .sos-week-task.is-recorded .sos-task-state { color: var(--sos-learner); }
+.sos-task-row.is-done .sos-task-indicator, .sos-task-row.is-done .sos-task-state { color: var(--sos-accent); }
+.sos-task-row.is-recorded .sos-task-indicator, .sos-task-row.is-recorded .sos-task-state { color: var(--sos-learner); }
 .sos-week-task-detail { margin: 0 0 13px 32px; padding: 11px 14px; background: var(--sos-surface); border-radius: 7px; font-size: 13px; line-height: 1.7; }
 .sos-week-task-detail p { margin: 0 0 10px; }
+.sos-week-closure { display: flex; justify-content: space-between; gap: 18px; align-items: center; padding: 14px; border-radius: 8px; margin: 12px 0 7px; background: var(--sos-surface); }
+.sos-week-closure strong { font-size: 16px; font-weight: 600; }
+.sos-week-closure.is-ready { color: var(--sos-accent); }
+.sos-week-closure progress { width: 100px; height: 8px; flex-shrink: 1; accent-color: var(--sos-accent); }
+.sos-week-next { display: flex; align-items: baseline; gap: 9px; padding: 3px 14px; font-size: 12px; color: var(--text-muted); }
+.sos-week-next button { text-align: left; height: auto; white-space: normal; }
+.sos-week-conditions { font-size: 12px; color: var(--text-muted); padding: 4px 14px 10px; }
+.sos-week-conditions summary { cursor: pointer; }
+.sos-week-lane { margin: 15px 0 8px; padding: 0 12px; border-left: 2px solid var(--sos-line); }
+.sos-week-lane.is-lecture { border-left-color: var(--sos-accent); }
+.sos-week-lane.is-seminar { border-left-color: var(--sos-learner); }
+.sos-lane-heading { display: flex; justify-content: space-between; gap: 8px; margin: 0; padding: 0 0 10px; font-size: 13px; cursor: pointer; }
+.sos-lane-heading > span { font-weight: 400; color: var(--text-muted); font-size: 11px; }
+.sos-lane-condition { margin: 0 0 8px; font-size: 11px; color: var(--text-muted); }
+.sos-week-lane .sos-empty { padding: 12px 0; border: 0; }
+.sos-week-lane.is-recommended { background: var(--sos-surface); border: 0; padding: 12px; border-radius: 8px; }
+.sos-week-lane.is-recommended:not([open]) > summary { padding-bottom: 0; }
+.sos-checkpoints { padding-left: 20px; }
+.sos-checkpoints li { padding: 3px 0; }
+.sos-task-dialog.sos-task-detail-panel { width: 100%; max-width: none; border: 1px solid var(--sos-line); border-radius: 10px; padding: 20px; background: var(--background-primary); margin: 12px 0; }
+.sos-task-detail-panel .modal-content { overflow: visible; margin: 0; }
+.sos-inline-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.sos-inline-heading .modal-title { margin: 0; }
+.sos-inline-task-slot[hidden] { display: none; }
+.sos-task-detail-panel .sos-detail-route { grid-template-columns: 1fr; gap: 18px; }
+.sos-task-detail-panel .sos-detail-finish { padding: 12px 15px; }
+.sos-task-detail-panel .sos-detail-finish > p { margin: 5px 0 10px; }
+.sos-task-detail-panel .sos-detail-header h2 { font-size: 22px; }
+.sos-learning-track { border: 1px solid var(--sos-line); border-radius: 12px; overflow: hidden; }
+.sos-learning-track > summary { list-style: none; padding: 18px; cursor: pointer; }
+.sos-learning-track > summary::-webkit-details-marker { display: none; }
+.sos-learning-track > summary:focus-visible { outline: 2px solid var(--sos-accent); outline-offset: -3px; }
+.sos-learning-track > summary:hover { background: color-mix(in srgb, var(--sos-accent) 4%, transparent); }
+.sos-track-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 7px; }
+.sos-track-code { color: var(--text-muted); font-size: 11px; font-weight: 650; letter-spacing: .04em; }
+.sos-track-badge { color: var(--sos-accent); background: color-mix(in srgb, var(--sos-accent) 9%, transparent); font-size: 10px; padding: 3px 6px; border-radius: 5px; }
+.sos-track-badge.has-record { color: var(--sos-learner); background: color-mix(in srgb, var(--sos-learner) 8%, transparent); }
+.sos-learning-track h3 { font-size: 18px; font-weight: 650; line-height: 1.45; margin: 10px 0 14px; overflow-wrap: anywhere; }
+.sos-track-position small, .sos-track-next small { font-size: 10px; color: var(--text-muted); }
+.sos-track-position p { font-size: 13px; line-height: 1.65; margin: 4px 0 12px; overflow-wrap: anywhere; }
+.sos-track-count { display: flex; align-items: baseline; flex-wrap: wrap; gap: 5px; font-size: 11px; color: var(--text-muted); }
+.sos-track-count strong { font-size: 17px; font-weight: 650; color: var(--text-normal); font-variant-numeric: tabular-nums; }
+.sos-track-segments { display: flex; gap: 3px; height: 5px; margin: 8px 0 13px; }
+.sos-track-segments > span { flex: 1; min-width: 0; border-radius: 2px; background: color-mix(in srgb, var(--text-muted) 28%, transparent); }
+.sos-track-segments > .is-done { background: var(--sos-accent); }
+.sos-track-segments > .is-recorded { background: var(--sos-learner); }
+.sos-track-next { display: flex; align-items: baseline; gap: 8px; font-size: 12px; line-height: 1.6; overflow-wrap: anywhere; }
+.sos-track-next small { flex: 0 0 auto; }
+.sos-track-footer { display: flex; justify-content: space-between; align-items: center; color: var(--sos-accent); margin-top: 14px; font-size: 11px; }
+.sos-track-chevron { display: flex; }
+.sos-track-chevron svg { width: 15px; height: 15px; }
+.sos-learning-track[open] .sos-track-chevron { transform: rotate(180deg); }
+.sos-learning-track[open] > summary { padding-bottom: 13px; }
+.sos-learning-track[open] > summary .sos-track-position, .sos-learning-track[open] > summary .sos-track-next { display: none; }
+.sos-learning-track[open] > summary h3 { margin-bottom: 8px; }
+.sos-learning-track[open] > summary .sos-track-footer { margin-top: 6px; }
+.sos-learning-track.is-practice { grid-column: 1 / -1; }
+.sos-study-toolbar { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; justify-content: space-between; border-top: 1px solid var(--sos-line); padding: 13px 0; }
+.sos-study-track-tabs { display: flex; flex-wrap: wrap; gap: 5px; min-width: 0; }
+.sos-study-track-tabs > strong { font-size: 12px; }
+.sos-home .sos-study-track-tab { height: auto; padding: 6px 9px; font-size: 12px; border: 1px solid transparent; background: transparent; box-shadow: none; color: var(--text-muted); }
+.sos-home .sos-study-track-tab[aria-pressed="true"] { background: color-mix(in srgb, var(--sos-accent) 12%, transparent); color: var(--sos-accent); border-color: color-mix(in srgb, var(--sos-accent) 24%, transparent); }
+.sos-study-workspace { display: grid; gap: 14px; }
+.sos-study-inspector { min-width: 0; padding: 18px; border: 1px solid var(--sos-line); border-radius: 9px; background: var(--background-primary); }
+.sos-study-unit-top { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; justify-content: space-between; font-size: 11px; color: var(--text-muted); }
+.sos-study-unit-state.is-done { color: var(--sos-accent); }
+.sos-study-unit-state.is-recorded { color: var(--sos-learner); }
+.sos-study-inspector h3 { font-size: 21px; line-height: 1.4; font-weight: 600; margin: 9px 0 14px; overflow-wrap: anywhere; }
+.sos-study-stop { padding: 11px 13px; margin: 12px 0; border-radius: 7px; background: color-mix(in srgb, var(--sos-learner) 7%, transparent); border-left: 2px solid var(--sos-learner); }
+.sos-study-stop small { color: var(--sos-learner); font-size: 10px; }
+.sos-study-stop p { font-size: 12px; line-height: 1.7; margin: 5px 0 0; }
+.sos-study-complete { display: flex; align-items: center; gap: 10px; padding: 12px; background: color-mix(in srgb, var(--sos-accent) 9%, transparent); color: var(--sos-accent); border-radius: 7px; margin: 12px 0; }
+.sos-study-complete strong { display: block; font-size: 13px; }
+.sos-study-complete div > span { display: block; color: var(--text-muted); margin-top: 4px; font-size: 11px; }
+.sos-study-scope > small, .sos-study-scope > summary { font-size: 11px; color: var(--text-muted); font-weight: 600; }
+.sos-study-scope > summary { cursor: pointer; }
+.sos-study-scope p, .sos-study-scope li { font-size: 13px; line-height: 1.7; overflow-wrap: anywhere; }
+.sos-study-scope > p { margin: 6px 0; }
+.sos-study-scope ol { padding-left: 20px; }
+.sos-study-scope li > p { font-size: 12px; color: var(--text-muted); }
+.sos-study-unit-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; padding-top: 12px; margin-top: 12px; border-top: 1px solid var(--sos-line); }
+.sos-home .sos-study-unit-actions button { font-size: 12px; height: auto; min-height: 33px; white-space: normal; padding: 7px 11px; }
+.sos-study-unit-actions > p { flex-basis: 100%; margin: 0 0 5px; }
+.sos-study-inspector:has(.sos-task-detail > *) { padding: 0; }
+.sos-study-inspector:has(.sos-task-detail > *) > .sos-unit-preview { display: none; }
+.sos-study-inspector .sos-task-detail-panel { border: 0; margin: 0; }
+.sos-study-editing { border-top: 1px solid var(--sos-line); margin-top: 16px; padding-top: 12px; }
+.sos-study-editing-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 12px; color: var(--sos-learner); }
+.sos-study-navigation { min-width: 0; }
+.sos-route-peek { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.sos-home .sos-route-peek-item { display: block; text-align: left; height: auto; white-space: normal; padding: 11px; border: 1px solid var(--sos-line); background: transparent; box-shadow: none; border-radius: 8px; min-width: 0; }
+.sos-route-peek-item small { display: block; font-size: 10px; color: var(--text-muted); }
+.sos-route-peek-item > small:first-child { margin-bottom: 8px; }
+.sos-route-peek-item div > span { display: block; font-size: 12px; line-height: 1.5; margin: 4px 0 7px; overflow-wrap: anywhere; }
+.sos-home .sos-route-peek-item[aria-pressed="true"] { border-color: var(--sos-accent); background: color-mix(in srgb, var(--sos-accent) 7%, transparent); }
+.sos-route-peek-item.is-done .sos-unit-mark, .sos-unit-node.is-done .sos-unit-mark { color: var(--sos-accent); }
+.sos-route-peek-item.is-recorded .sos-unit-mark, .sos-unit-node.is-recorded .sos-unit-mark { color: var(--sos-learner); }
+.sos-study-allunits { margin-top: 12px; font-size: 12px; color: var(--text-muted); }
+.sos-study-allunits > summary { cursor: pointer; padding-block: 5px; }
+.sos-unit-map { display: grid; gap: 6px; max-height: 320px; overflow: auto; padding: 8px 3px; }
+.sos-home .sos-unit-node { display: grid; grid-template-columns: 26px minmax(0, 1fr) auto; align-items: center; gap: 10px; height: auto; min-width: 0; padding: 10px; text-align: left; white-space: normal; color: var(--text-normal); background: var(--background-primary); border: 1px solid var(--sos-line); box-shadow: none; }
+.sos-unit-order { font-size: 14px; color: var(--text-muted); }
+.sos-unit-node div > small { display: block; font-size: 10px; color: var(--text-muted); margin-bottom: 3px; }
+.sos-unit-node div > span { font-size: 12px; line-height: 1.5; overflow-wrap: anywhere; }
+.sos-unit-mark { font-size: 10px; color: var(--text-muted); }
+.sos-home .sos-unit-node[aria-pressed="true"] { border-color: var(--sos-accent); }
+.sos-study-map-hint { color: var(--text-muted); font-size: 11px; line-height: 1.7; margin: 10px 0 0; }
+@container student-board (max-width: 430px) {
+  .sos-route-peek { grid-template-columns: 1fr; }
+  .sos-home .sos-unit-node { grid-template-columns: 22px minmax(0, 1fr); }
+  .sos-unit-node > .sos-unit-mark { grid-column: 2; }
+}
+.sos-week-record-tools { margin: 8px 0 15px; font-size: 11px; color: var(--text-muted); }
+.sos-week-record-tools > summary { cursor: pointer; }
+.sos-week-record-tools .sos-week-extra { margin: 6px 0 0; }
+.sos-week-position { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; padding: 12px 0; border-bottom: 1px solid var(--sos-line); }
+.sos-week-position small { color: var(--text-muted); font-size: 10px; }
+.sos-week-position p { font-size: 12px; line-height: 1.6; margin: 4px 0; }
+.sos-week-lanes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 15px 0 0; }
+.sos-week-lanes > .sos-week-lane { margin: 0; padding: 14px; border: 1px solid var(--sos-line); border-top: 3px solid var(--sos-line); border-radius: 10px; background: var(--sos-surface); min-width: 0; }
+.sos-week-lanes > .is-lecture { border-top-color: var(--sos-accent); }
+.sos-week-lanes > .is-seminar { border-top-color: var(--sos-learner); }
+.sos-week-lanes > .is-recommended, .sos-week-lane:has(.sos-task-detail > *) { grid-column: 1 / -1; }
+.sos-self-study { margin-top: 32px; padding-top: 25px; border-top: 1px solid var(--sos-line); }
+.sos-learning-tracks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.sos-learning-tracks > .sos-learning-track { margin: 0; background: var(--sos-surface); min-width: 0; }
+.sos-learning-tracks > .sos-learning-track[open] { grid-column: 1 / -1; border-color: color-mix(in srgb, var(--sos-accent) 50%, var(--sos-line)); }
+.sos-deadline-board > .sos-section-heading h2 { font-size: 26px; }
+.sos-deadline-board > .sos-section-heading > span { margin-left: auto; font-size: 12px; }
+.sos-deadline-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 20px 0 28px; }
+.sos-deadline-metric { padding: 17px; border: 1px solid var(--sos-line); border-radius: 12px; background: var(--sos-surface); min-width: 0; }
+.sos-deadline-metric strong { display: block; font-size: 28px; font-weight: 650; line-height: 1.2; }
+.sos-deadline-metric span { display: block; color: var(--text-muted); font-size: 11px; margin-top: 7px; }
+.sos-deadline-metric.is-upcoming strong { color: var(--sos-accent); }
+.sos-deadline-metric.is-past strong { color: var(--sos-learner); }
+.sos-deadline-section { margin: 24px 0; }
+.sos-deadline-section-heading { display: flex; gap: 10px; align-items: center; font-size: 15px; margin-bottom: 12px; }
+details > .sos-deadline-section-heading { cursor: pointer; }
+details > .sos-deadline-section-heading::before { content: "＋"; color: var(--text-muted); }
+details[open] > .sos-deadline-section-heading::before { content: "−"; }
+.sos-deadline-section-heading > span { font-size: 11px; color: var(--text-muted); margin-left: auto; }
+.sos-deadline-list { display: grid; gap: 9px; }
+.sos-deadline-task, .sos-deadline-note { border: 1px solid var(--sos-line); border-radius: 11px; background: var(--sos-surface); min-width: 0; }
+.sos-deadline-task > summary, .sos-deadline-note > summary { display: grid; grid-template-columns: 72px minmax(0, 1fr) auto; align-items: center; gap: 16px; padding: 17px; list-style: none; cursor: pointer; }
+.sos-deadline-task > summary::-webkit-details-marker, .sos-deadline-note > summary::-webkit-details-marker { display: none; }
+.sos-deadline-note > summary { grid-template-columns: 72px minmax(0, 1fr); }
+.sos-deadline-task > summary:focus-visible, .sos-deadline-note > summary:focus-visible, .sos-task-row > summary:focus-visible { outline: 2px solid var(--sos-accent); outline-offset: 2px; border-radius: 7px; }
+.sos-deadline-task[open] { border-color: var(--sos-accent); }
+.sos-deadline-date { font-variant-numeric: tabular-nums; border-right: 1px solid var(--sos-line); padding-right: 12px; }
+.sos-deadline-date strong { display: block; font-size: 21px; font-weight: 650; }
+.sos-deadline-date span, .sos-deadline-date small { display: block; margin-top: 4px; color: var(--text-muted); font-size: 11px; }
+.sos-deadline-description { min-width: 0; overflow-wrap: anywhere; }
+.sos-deadline-description > strong { display: block; font-size: 15px; font-weight: 600; line-height: 1.55; }
+.sos-deadline-description > small { display: block; font-size: 11px; color: var(--text-muted); margin-top: 4px; line-height: 1.6; }
+.sos-deadline-tags { display: flex; gap: 8px; margin-bottom: 6px; font-size: 10px; color: var(--text-muted); }
+.sos-deadline-tags > span:first-child { font-weight: 650; color: var(--sos-accent); }
+.sos-deadline-state { display: grid; gap: 7px; text-align: right; color: var(--text-muted); font-size: 11px; }
+.is-upcoming .sos-deadline-state > span { color: var(--sos-accent); }
+.is-past .sos-deadline-state > span { color: var(--sos-learner); }
+.sos-deadline-task > .sos-task-detail:not(:empty), .sos-deadline-note-body { padding: 5px 17px 17px; }
+.sos-deadline-note-body { font-size: 13px; line-height: 1.7; }
+.sos-inline-course { padding: 0 22px 22px; font-size: 13px; }
+.sos-course-positions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.sos-position-card { background: var(--sos-surface); padding: 12px; border-radius: 8px; overflow-wrap: anywhere; }
+.sos-position-card > small { font-size: 11px; color: var(--text-muted); }
+.sos-position-card p { margin: 7px 0 0; }
+.sos-course-sources { margin-top: 10px; color: var(--text-muted); font-size: 11px; }
+.sos-home .sos-inline-task-link { background: transparent; border: 0; box-shadow: none; height: auto; text-align: left; white-space: normal; color: var(--text-normal); padding: 5px; font-size: 13px; }
+@container student-board (max-width: 520px) {
+  .sos-learning-tracks { grid-template-columns: 1fr; }
+  .sos-learning-track.is-practice > summary { display: block; }
+  .is-practice .sos-track-resume { border-top: 1px solid var(--sos-line); padding-top: 15px; }
+  .sos-week-lanes, .sos-week-position { grid-template-columns: 1fr; }
+  .sos-course-positions { grid-template-columns: 1fr; }
+  .sos-task-dialog.sos-task-detail-panel { padding: 12px; }
+  .sos-week-task-detail:has(.sos-task-detail-panel) { margin-left: 0; padding: 0; }
+}
 .sos-recorded-evidence { color: var(--sos-learner); }
 .sos-plan-basis { color: var(--text-muted); font-size: 11px; line-height: 1.7; margin: 12px 0; }
 .sos-empty { padding: 25px 16px; margin: 0; border: 1px solid var(--sos-line); border-top: 0; font-size: 13px; color: var(--text-muted); }
@@ -524,13 +751,18 @@
 .sos-shortcuts button { font-size: 11px; border: 1px solid var(--sos-line); border-radius: 5px; background: transparent; box-shadow: none; }
 .sos-composer textarea { width: 100%; resize: vertical; min-height: 80px; border-radius: 7px; font-size: 13px; padding: 10px; line-height: 1.6; background: var(--background-primary); margin-bottom: 8px; }
 .sos-composer button { font-size: 12px; border-radius: 6px; }
-.sos-messages { max-height: 300px; overflow: auto; margin-top: 13px; }
+.sos-messages { max-height: 260px; overflow: auto; margin-top: 13px; }
 .sos-messages:empty { display: none; }
 .sos-message { padding: 11px; border-radius: 7px; font-size: 13px; line-height: 1.7; overflow-wrap: anywhere; margin: 9px 0; }
 .sos-message p { margin: 0 0 8px; }
 .sos-message p:last-child { margin-bottom: 0; }
 .sos-user { background: color-mix(in srgb, var(--sos-accent) 9%, var(--background-primary)); margin-left: 10px; white-space: pre-wrap; }
 .sos-assistant { background: var(--background-primary); }
+.sos-outcome { border: 1px solid color-mix(in srgb, var(--sos-accent) 35%, transparent); background: color-mix(in srgb, var(--sos-accent) 7%, var(--background-primary)); }
+.sos-outcome > small { display: block; color: var(--sos-accent); font-weight: 650; margin-bottom: 7px; }
+.sos-outcome-row + .sos-outcome-row { margin-top: 10px; }
+.sos-outcome-row button { margin-top: 5px; }
+.sos-chat-working { color: var(--text-muted); font-size: 12px; padding: 8px 2px; }
 .sos-assistant table { font-size: 11px; }
 .sos-assistant th, .sos-assistant td { padding: 5px; }
 .sos-chat-history summary, .sos-chat-full summary { font-size: 12px; color: var(--text-muted); cursor: pointer; line-height: 1.8; }
@@ -551,12 +783,9 @@
 .sos-details { border-bottom: 1px solid var(--sos-line, var(--background-modifier-border)); padding: 12px 0; }
 .sos-details summary { cursor: pointer; color: var(--text-muted); font-size: 12px; }
 .sos-details[open] { max-height: 480px; overflow: auto; }
-.sos-task-row, .sos-history-row { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--sos-line, var(--background-modifier-border)); font-size: 12px; line-height: 1.7; }
-.sos-task-row span, .sos-history-row > span, .sos-history-row > p, .sos-other-position { flex: 1; min-width: 0; }
-.sos-other-position strong { font-size: 13px; font-weight: 600; }
-.sos-other-position progress { width: 130px; height: 6px; accent-color: var(--sos-accent); margin: 8px 8px 0 0; }
-.sos-unit-count { color: var(--text-muted); font-size: 11px; }
-.sos-task-row button, .sos-history-row button { flex-shrink: 0; font-size: 11px; }
+.sos-history-row { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--sos-line, var(--background-modifier-border)); font-size: 12px; line-height: 1.7; }
+.sos-history-row > span, .sos-history-row > p { flex: 1; min-width: 0; }
+.sos-history-row button { flex-shrink: 0; font-size: 11px; }
 .sos-record-links { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 10px; }
 .sos-field { display: block; margin: 16px 0; }
 .sos-field textarea { display: block; width: 100%; margin-top: 8px; }
@@ -565,13 +794,15 @@
 .sos-evidence-warning { color: var(--text-warning); font-size: 12px; }
 .sos-course-modal { max-width: 760px; }
 .sos-course-modal p { line-height: 1.8; }
-@container student-home (max-width: 1080px) {
-  .sos-grid { grid-template-columns: minmax(0, 1fr); }
-  .sos-side { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@container student-home (max-width: 900px) {
+  .sos-grid, .sos-grid.has-steward { grid-template-columns: minmax(0, 1fr); }
+  .sos-side { order: -1; grid-template-columns: repeat(2, minmax(0, 1fr)); position: static; max-height: none; overflow: visible; }
   .sos-radar { grid-column: 1 / -1; }
 }
-@container student-board (max-width: 900px) {
+@container student-board (max-width: 1200px) {
   .sos-progress-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@container student-board (max-width: 900px) {
   .sos-week-selector { grid-template-columns: repeat(6, minmax(0, 1fr)); }
 }
 @container student-board (max-width: 680px) {
@@ -584,6 +815,13 @@
   .sos-week-course { padding-inline: 12px; }
 }
 @container student-board (max-width: 430px) {
+  .sos-learning-tracks { grid-template-columns: 1fr; }
+  .sos-deadline-metrics { gap: 6px; }
+  .sos-deadline-metric { padding: 12px 9px; }
+  .sos-deadline-metric strong { font-size: 24px; }
+  .sos-deadline-task > summary, .sos-deadline-note > summary { grid-template-columns: 60px minmax(0, 1fr); padding: 12px; gap: 12px; }
+  .sos-deadline-date strong { font-size: 18px; }
+  .sos-deadline-state { grid-column: 2; display: flex; align-items: center; justify-content: space-between; text-align: left; }
   .sos-week-selector { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .sos-home .sos-progress-card { padding: 13px; }
   .sos-progress-card h3 { font-size: 15px; }
@@ -595,3 +833,41 @@
   .sos-header h1 { font-size: 26px; }
 }
 @media (max-width: 760px) { .sos-home { padding: 18px !important; } }
+
+/* Shared orientation and resumption for school and self-directed work. */
+.sos-board > .sos-classroom { margin-bottom: 24px; }
+.sos-classroom.is-launch { padding: 17px 20px; border-radius: 12px; }
+.sos-classroom.is-launch .sos-classroom-heading h2 { font-size: 13px; }
+.sos-classroom.is-launch .sos-classroom-unit { margin: 0 0 0 auto; font-size: 11px; }
+.sos-classroom.is-launch h3 { font-size: 20px; margin: 9px 0 4px; }
+.sos-launch-main { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.sos-launch-main > div { min-width: 0; }
+.sos-classroom.is-launch .sos-enter { width: auto; flex-shrink: 0; padding: 10px 22px; }
+.sos-entry-feedback { margin-top: 8px; font-size: 13px; color: var(--text-muted); }
+.sos-entry-feedback[data-phase="error"] { color: var(--text-error); }
+.sos-launch-position { margin: 0; color: var(--text-muted); font-size: 12px; line-height: 1.65; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+.sos-launch-next { display: flex; gap: 12px; margin-top: 12px; font-size: 13px; line-height: 1.65; }
+.sos-launch-next > small { color: var(--text-muted); font-size: 11px; flex-shrink: 0; padding-top: 1px; }
+.sos-launch-next > span { overflow-wrap: anywhere; }
+.sos-launch-handoff { padding: 11px 0; }
+.sos-launch-handoff small { color: var(--text-muted); font-size: 11px; }
+.sos-launch-handoff p { margin: 4px 0 0; font-size: 13px; line-height: 1.7; overflow-wrap: anywhere; }
+.sos-classroom.is-launch .sos-classroom-actions { justify-content: flex-start; }
+.sos-due-today.is-upcoming { flex-direction: row; align-items: baseline; flex-wrap: wrap; gap: 6px 15px; padding: 0; margin-bottom: 14px; border: 0; background: transparent; }
+.sos-due-today.is-upcoming > strong { font-size: 11px; color: var(--text-muted); }
+.sos-home .sos-due-today.is-upcoming .sos-due-item { width: auto; font-size: 12px; }
+.sos-due-today.is-upcoming .sos-due-time { flex-basis: auto; color: var(--text-muted); }
+.sos-course-group-label { margin: 0 0 11px; color: var(--text-muted); font-size: 12px; }
+.sos-course-positions { display: grid; gap: 9px; border-top: 1px solid var(--sos-line); padding-top: 12px; margin-top: 13px; }
+.sos-course-positions > div { min-width: 0; }
+.sos-course-positions small { color: var(--text-muted); display: block; font-size: 10px; margin-bottom: 3px; }
+.sos-course-positions span { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; color: var(--text-normal); font-size: 12px; line-height: 1.6; }
+.sos-weekly { scroll-margin-top: 18px; margin-top: 30px; padding-top: 25px; border-top: 1px solid var(--sos-line); }
+.sos-self-study, .sos-progress-cards { scroll-margin-top: 20px; }
+@container student-board (max-width: 430px) {
+  .sos-classroom.is-launch { padding: 16px; }
+  .sos-classroom.is-launch h3 { font-size: 20px; }
+  .sos-launch-main { flex-wrap: wrap; gap: 10px; }
+  .sos-classroom.is-launch .sos-enter { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { .sos-home * { scroll-behavior: auto !important; } }

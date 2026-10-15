@@ -4,6 +4,7 @@ from pathlib import Path
 import subprocess
 import tempfile
 import unittest
+from unittest.mock import patch
 
 from service import Service, PRIVATE, ZONE
 from state import RULES, DEADLINES, rules
@@ -69,6 +70,119 @@ class ServiceTests(unittest.TestCase):
     def progress(self, **extra):
         return dict(kind="record_progress", task_id=self.task_id, job_key="", summary="I tried exercise 2, still uncertain.",
                     next_step="Reopen exercise 2 and compare the output.", source_quote="I tried exercise 2", evidence=[], **extra)
+
+    def replay_course(self):
+        from curriculum import POSITION, TIMETABLE, EVENTS
+        self.replay_path = "99_学习情况记录/学习计划/Python.md"
+        self.write(rules.OVERVIEW, f"# Overall\n## Python\n- 状态：active\n- 真实计划：[[{self.replay_path}]]\n")
+        self.write(POSITION, json.dumps({"courses": [{"id": "MIT 6.100L", "plan": self.replay_path, "group": "other"}]}))
+        self.write(TIMETABLE, "{}")
+        self.write(EVENTS, "[]")
+        self.write(self.replay_path, "---\nkind: finite-course\n---\n\n完成标准：看完这一讲，并且你自己判断已经理解。\n\n"
+                   "## 本轮重启\n\n- [x] MIT 6.100L｜本轮重看 Lecture 01 Introduction，理解后关闭 #student-os/task ✅ 2026-10-08 ^replay-01\n\n"
+                   "## 课程清单\n\n- [x] MIT 6.100L｜Lecture 01: [[01|Introduction]] #student-os/task ✅ 2026-08-07\n"
+                   "- [x] MIT 6.100L｜Lecture 02: [[02|Strings, Input-Output and Branching]] #student-os/task ✅ 2026-08-07\n"
+                   "- [x] MIT 6.100L｜Lecture 03: [[03|Iteration]] #student-os/task ✅ 2026-08-10\n"
+                   "- [ ] MIT 6.100L｜Lecture 04: [[04|Loops]] #student-os/task\n")
+        self.write("01.md", "# Introduction\nOLD INTRODUCTION MATERIAL\n")
+        self.write("02.md", "# Strings\nCURRENT STRINGS MATERIAL\n")
+        self.write("03.md", "# Iteration\nFUTURE ITERATION MATERIAL\n")
+        return self.service.source_state()["tasks"]
+
+    def continuation_action(self, tasks):
+        return {"kind": "continue_course", "course_id": "MIT 6.100L", "task_id": tasks[0]["id"], "source_quote": "继续下一讲"}
+
+    def test_direct_course_continuation_never_calls_a_model_and_deduplicates(self):
+        tasks = self.replay_course()
+        self.reopen(lambda *_: self.fail("Navigation must not call a model"))
+        action = self.continuation_action(tasks)
+        before = (self.vault / self.replay_path).read_text()
+        projected = self.service.view()["curriculum"]["courses"][0]
+        self.assertIn("Lecture 02", projected["continuation"]["title"])
+        self.assertEqual((self.vault / self.replay_path).read_text(), before, "Projection must not register planned work")
+        first = self.service.execute("direct-1", action, action["source_quote"])
+        self.reopen(lambda *_: self.fail("Recovery must not call a model"))
+        again = self.service.execute("direct-2", action, action["source_quote"])
+        self.assertEqual(first["task_id"], again["task_id"])
+        self.assertEqual((self.vault / self.replay_path).read_text().count("本轮重看 Lecture 02"), 1)
+        view = self.service.view()
+        self.assertEqual(view["curriculum"]["courses"][0]["next_task"]["id"], first["task_id"])
+        self.assertEqual(view["focus"]["task"]["id"], first["task_id"])
+        self.assertEqual(len(self.service.learning_records()), 0, "Choosing a lecture is not learning evidence")
+        materials = self.service.material_context(first["task"])
+        self.assertIn("02.md", [s["path"] for s in materials])
+        self.assertNotIn("01.md", [s["path"] for s in materials])
+        self.assertNotIn("03.md", [s["path"] for s in materials])
+
+    def test_replay_registration_recovers_a_crash_after_writing_without_duplicates(self):
+        tasks = self.replay_course()
+        action = self.continuation_action(tasks)
+        original = rules._atomic_write
+        def crash_after_write(path, value):
+            original(path, value)
+            raise SystemExit("receipt lost")
+        with patch.object(rules, "_atomic_write", crash_after_write), self.assertRaises(SystemExit):
+            self.service.execute("crash-step", action, action["source_quote"])
+        self.reopen(lambda *_: self.fail("Recovery must not call a model"))
+        result = self.service.execute("crash-step", action, action["source_quote"])
+        self.assertEqual(result["task"]["status"], "completion_unknown")
+        self.assertEqual((self.vault / self.replay_path).read_text().count("本轮重看 Lecture 02"), 1)
+
+    def test_closed_replay_is_never_recreated_by_a_stale_next_button(self):
+        tasks = self.replay_course()
+        action = self.continuation_action(tasks)
+        result = self.service.execute("create-next", action, action["source_quote"])
+        self.service.execute("close-next", {"kind": "close_task", "task_id": result["task_id"], "source_quote": "不再重看这一讲"}, "不再重看这一讲")
+        with self.assertRaisesRegex(ValueError, "关闭|取消"):
+            self.service.execute("stale-click", action, action["source_quote"])
+        self.assertEqual((self.vault / self.replay_path).read_text().count("本轮重看 Lecture 02"), 1)
+        self.assertNotIn("continuation", self.service.view()["curriculum"]["courses"][0])
+
+    def test_replay_meets_unfinished_original_without_creating_a_second_checkbox(self):
+        tasks = self.replay_course()
+        plan = self.vault / self.replay_path
+        plan.write_text(plan.read_text().replace("- [x] MIT 6.100L｜Lecture 02", "- [ ] MIT 6.100L｜Lecture 02").replace(" #student-os/task ✅ 2026-08-07\n- [x] MIT 6.100L｜Lecture 03", " #student-os/task\n- [x] MIT 6.100L｜Lecture 03"))
+        before = plan.read_bytes()
+        action = self.continuation_action(tasks)
+        result = self.service.execute("join-original", action, action["source_quote"])
+        self.assertNotIn("本轮重看", result["task"]["title"])
+        self.assertEqual(plan.read_bytes(), before)
+        self.reopen(lambda *_: self.fail("Projection must not call a model"))
+        course = self.service.view()["curriculum"]["courses"][0]
+        self.assertEqual(course["next_task"]["id"], result["task_id"])
+        # Once that original is complete, the normal course sequence continues past historical entries.
+        plan.write_text(plan.read_text().replace(result["task"]["raw"], result["task"]["raw"].replace("[ ]", "[x]", 1) + " ✅ 2026-10-08"))
+        course = self.service.view()["curriculum"]["courses"][0]
+        self.assertIn("Lecture 04", course["next_task"]["title"])
+        self.assertIn("Lecture 02", course["personal"]["summary"], "After joining the original, completion must not fall back to the old replay position")
+
+    def test_saved_next_replay_request_recovers_without_another_manager_turn(self):
+        tasks = self.replay_course()
+        history = (self.vault / self.replay_path).read_text().split("## 课程清单", 1)[1]
+        body = ("MIT 6.100L 这一讲的本轮重看已完成。请按本轮学习计划确认下一讲的范围和收工条件，并准备接续课堂。\n\n"
+                f"讨论的原任务：MIT 6.100L · 本轮重看下一讲\n原记录：[[{self.replay_path}]]")
+        planner = Planner({"reply": "接续 Lecture 02。", "actions": [{"kind": "prepare_classroom", "task_id": tasks[2]["id"],
+                           "source_quote": "请按本轮学习计划确认下一讲的范围和收工条件，并准备接续课堂。"}]})
+        self.reopen(planner)
+        # Replay the persisted decision from the screenshot, including its exact failure.
+        self.store.db.execute("INSERT INTO requests(key,body,phase,plan,error,created_at,updated_at) VALUES (?,?,?,?,?,?,?)",
+            ("next-replay", body, "needs_attention", json.dumps(planner.plan),
+             "这个任务已记录完成或取消，请选择当前学习单元。", self.current.isoformat(), self.current.isoformat()))
+        self.store.db.commit()
+        result = self.service.chat("next-replay")
+        self.assertEqual(result["phase"], "done", result)
+        after = (self.vault / self.replay_path).read_text()
+        self.assertEqual(after.split("## 课程清单", 1)[1], history)
+        self.assertEqual(after.count("- [ ] MIT 6.100L｜本轮重看 Lecture 02"), 1)
+        self.assertEqual(planner.starts, 1, "Only the independent teacher may use a model; no manager planning turn")
+        current = self.service.view()["focus"]["task"]
+        self.assertIn("本轮重看 Lecture 02", current["title"])
+        self.assertEqual(current["status"], "completion_unknown")
+        self.reopen(planner)
+        self.assertEqual(self.service.chat("next-replay")["phase"], "done")
+        self.assertEqual(planner.starts, 1)
+        self.assertEqual(self.service.chat("same-click-new-request", body)["phase"], "done")
+        self.assertEqual(planner.starts, 1, "A repeated built-in request reuses the teacher without asking a planner")
 
     def test_record_replay_restart_and_no_fabricated_completion(self):
         before = (self.vault / "active.md").read_bytes()
@@ -183,6 +297,28 @@ class ServiceTests(unittest.TestCase):
         self.assertEqual((planner.creates, planner.starts), (1, 1))
         self.assertIn("持久记录", planner.prompt)
 
+    def test_manager_can_reconcile_live_course_progress_with_a_receipt(self):
+        from curriculum import POSITION, TIMETABLE, EVENTS
+        self.write(POSITION, json.dumps({"courses": [{"id": "Demo", "plan": "active.md", "group": "foundation"}]}))
+        self.write(TIMETABLE, "{}")
+        self.write(EVENTS, "[]")
+        self.service.view()
+        self.write("active.md", "- [x] Demo unit: practise and save a result #student-os/task ✅ 2026-10-08 ^demo\n")
+        before = (self.vault / "active.md").read_bytes()
+        quote = "已完成但看板还没更新，请核对同步"
+        planner = Planner({"reply": "正在核对课程进度。", "actions": [{"kind": "refresh_dashboard", "source_quote": quote}]})
+        self.reopen(planner)
+        result = self.service.chat("refresh-course", quote)
+        self.assertEqual(result["phase"], "done", result)
+        self.assertEqual(result["receipts"][0]["courses"][0]["done"], 1)
+        self.assertIn("已同步", result["reply"])
+        self.assertEqual((self.vault / "active.md").read_bytes(), before)
+        self.assertEqual(planner.starts, 1)
+        self.reopen(planner)
+        saved = self.service.view()["chat"][-1]
+        self.assertEqual(saved["receipts"][0]["kind"], "refresh_dashboard")
+        self.assertEqual(saved["receipts"][0]["result"], result["receipts"][0])
+
     def test_chat_crash_after_model_result_resumes_same_turn(self):
         planner = Planner({"reply": "Saved decision", "actions": []})
         planner.crash = "after_turn"
@@ -231,6 +367,22 @@ class ServiceTests(unittest.TestCase):
         stored = self.store.get(first["job_key"])
         self.assertEqual(stored["request"]["scope"], "learning")
         self.assertEqual(stored["request"]["task"]["version"], self.service.task(self.task_id)["version"])
+
+    def test_preparation_resumes_from_durable_learning_handoff(self):
+        from curriculum import POSITION, TIMETABLE, EVENTS
+        self.write(POSITION, json.dumps({"courses": [{"id": "Demo", "plan": "active.md", "group": "foundation"}]}))
+        self.write(TIMETABLE, "{}")
+        self.write(EVENTS, "[]")
+        action = self.progress()
+        before = (self.vault / "active.md").read_bytes()
+        self.service.execute("handoff", action, action["source_quote"])
+        self.reopen(FakeServer())
+        lesson = self.service.prepare_classroom(self.task_id)
+        prompt = self.store.get(lesson["job_key"])["request"]["prompt"]
+        self.assertIn(action["summary"], prompt)
+        self.assertIn(action["next_step"], prompt)
+        self.assertIn('"record_next"', prompt)
+        self.assertEqual(before, (self.vault / "active.md").read_bytes())
 
     def test_due_notices_stop_at_expiry_and_cannot_revive_after_cancel(self):
         action = {"kind": "save_commitment", "summary": "Daily practice", "source_quote": "Practise for 21 days",

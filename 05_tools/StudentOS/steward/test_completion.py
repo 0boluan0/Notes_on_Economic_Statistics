@@ -163,6 +163,56 @@ class CompletionTests(unittest.TestCase):
         self.restart()
         self.assertEqual(self.service.execute("close-via-chat", action, action["source_quote"]), result)
 
+    def test_chat_completion_uses_evidence_check_and_recovers_after_restart(self):
+        task = self.service.source_state()["tasks"][0]
+        action = {"kind": "check_completion", "task_id": task["id"], "source_quote": self.claim,
+                  "completed_on": "", "evidence": []}
+        result = self.service.execute("complete-via-chat", action, self.claim)
+        self.assertEqual(result["phase"], "complete")
+        self.assertIn("[x]", (self.vault / self.plan).read_text())
+        self.assertNotIn("✅", (self.vault / self.plan).read_text(), "Unknown completion date must stay unknown")
+        self.restart()
+        self.assertEqual(self.service.execute("complete-via-chat", action, self.claim), result)
+        self.assertEqual(self.server.starts, 1)
+
+    def test_chat_submission_stays_pending_without_receipt(self):
+        task = self.service.source_state()["obligations"][0]
+        action = {"kind": "check_completion", "task_id": task["id"], "source_quote": self.claim,
+                  "completed_on": "", "evidence": []}
+        before = (self.vault / DEADLINES).read_bytes()
+        result = self.service.execute("submission-via-chat", action, self.claim)
+        self.assertEqual(result["phase"], "insufficient")
+        self.assertEqual(before, (self.vault / DEADLINES).read_bytes())
+
+    def test_cancel_chat_stops_its_inflight_completion(self):
+        task = self.service.source_state()["tasks"][0]
+        action = {"kind": "check_completion", "task_id": task["id"], "source_quote": self.claim}
+        self.store.db.execute("INSERT INTO requests(key,body,phase,created_at,updated_at) VALUES ('parent',?,'executing','','')", (self.claim,))
+        self.store.db.commit()
+        self.server.crash = "after_turn"
+        with self.assertRaises(SystemExit):
+            self.service.execute("parent-a0", action, self.claim, parent="parent")
+        self.service.cancel_request("parent")
+        check = self.service.get_value("active_check:parent")
+        self.assertEqual(self.checks.row(check)["phase"], "cancelled")
+        self.assertIn(self.raw, (self.vault / self.plan).read_text())
+
+    def test_cancel_chat_before_check_creation_prevents_model_and_write(self):
+        task = self.service.source_state()["tasks"][0]
+        action = {"kind": "check_completion", "task_id": task["id"], "source_quote": self.claim}
+        self.store.db.execute("INSERT INTO requests(key,body,phase,created_at,updated_at) VALUES ('parent',?,'executing','','')", (self.claim,))
+        self.store.db.commit()
+        context = self.checks.context
+        def cancel_during_context(*args):
+            result = context(*args)
+            self.service.cancel_request("parent")
+            return result
+        with patch.object(self.checks, "context", side_effect=cancel_during_context):
+            result = self.service.execute("parent-a0", action, self.claim, parent="parent")
+        self.assertEqual(result["phase"], "cancelled")
+        self.assertEqual(self.server.starts, 0)
+        self.assertIn(self.raw, (self.vault / self.plan).read_text())
+
     def test_external_result_cannot_be_closed_from_claim(self):
         result = self.checks.run("submission", self.request(path=DEADLINES, raw=self.deadline))
         self.assertEqual(result["phase"], "insufficient")

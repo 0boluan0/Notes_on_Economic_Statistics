@@ -721,6 +721,7 @@ class LearningProgressDashboardView extends ItemView {
 
 class LearningProgressDashboardPlugin extends Plugin {
   async onload() {
+    this.savedData = (await this.loadData()) || {};
     this.store = new WorkflowStore(this.app);
     if (typeof this.app.vault.adapter.getBasePath === "function") {
       const { STEWARD_VIEW, StewardBridge, StewardView, installCompletionGuard } = require("./steward-view");
@@ -791,9 +792,24 @@ class LearningProgressDashboardPlugin extends Plugin {
   }
 
   onunload() {
+    const view = this.app.workspace.getLeavesOfType(this.stewardViewType || "student-os-steward-view")[0]?.view;
+    if (view) void this.saveStewardState(view.getState()).catch(error => new Notice("界面位置尚未保存：" + error.message));
     this.steward?.stop();
     if (this.stewardViewType) this.app.workspace.detachLeavesOfType(this.stewardViewType);
     this.app.workspace.detachLeavesOfType(VIEW_TYPE);
+  }
+
+  saveStewardState(state) {
+    const data = { ...this.savedData, stewardWorkspace: state };
+    if (!this.workspaceSaveFailed && JSON.stringify(data) === JSON.stringify(this.savedData)) return this.workspaceSave || Promise.resolve();
+    this.savedData = data;
+    this.workspaceSaveFailed = false;
+    const pending = (this.workspaceSave || Promise.resolve()).catch(() => {}).then(() => this.saveData(data)).catch(error => {
+      if (this.workspaceSave === pending) this.workspaceSaveFailed = true;
+      throw error;
+    });
+    this.workspaceSave = pending;
+    return this.workspaceSave;
   }
 
   addStewardReturn(leaf) {
@@ -814,7 +830,7 @@ class LearningProgressDashboardPlugin extends Plugin {
       this.app.workspace.setActiveLeaf(existing[0], { focus: true });
       return;
     }
-    await this.app.workspace.getLeaf("tab").setViewState({ type: this.stewardViewType, active: true });
+    await this.app.workspace.getLeaf("tab").setViewState({ type: this.stewardViewType, active: true, state: this.savedData?.stewardWorkspace || {} });
   }
 
   async openDashboard() {

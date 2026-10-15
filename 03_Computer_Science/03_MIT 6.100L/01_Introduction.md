@@ -119,6 +119,12 @@ Before computer science proper, the instructor distinguishes two kinds of knowle
 - `imperative knowledge` gives a procedure.
 <!-- bilingual-en:end -->
 
+这里的 `imperative` 取“指令式、给出步骤”的意思。`recipe` 可以先想成菜谱：每一步做什么，条件变了怎么办，做到什么程度停下。放回本课，就是把“怎么得到答案”交代清楚。对应视频约 **05:23–05:30**、PPT **第 7 页**。
+
+<!-- bilingual-en:start -->
+Here, `imperative` means giving instructions. Think of a recipe as specifying each action, what to do when conditions change, and when to stop. In this course, it describes how to obtain an answer. See approximately **05:23–05:30** and slide **7**.
+<!-- bilingual-en:end -->
+
 数学里你很常见的是 declarative knowledge。例如：
 
 > square root of x is y such that `y*y = x`
@@ -152,7 +158,10 @@ The instructor immediately turns the declarative square-root statement into an e
 > 2. 否则把新猜测更新成 `(g + x/g) / 2`。
 > 3. 用新 guess 重复这个过程。  
 >
+> <!-- bilingual-en:start -->
 > To find `sqrt(16)` without knowing that the answer is 4, begin with a guess such as `g = 3`:
+>
+> &nbsp;
 > **1.** Stop if `g*g` is sufficiently close to 16.<br>
 > **2.** Otherwise update the guess to `(g + x/g) / 2`.<br>
 > **3.** Repeat using the new guess.<br>
@@ -353,6 +362,12 @@ Syntax combines primitives legally: `noun verb noun` resembles an English senten
 Static semantics concerns combinations that have valid form but invalid relationships, like the English sentence `"I are hungry"` or a Python operation applied to incompatible types.
 <!-- bilingual-en:end -->
 
+这里沿用课件的分类。实际运行 Python 时，`"hi" + 5` 会报 `TypeError`；不能因为课件用了 static semantics 这个词，就以为 Python 一定会在运行前发现这种类型错误。
+
+<!-- bilingual-en:start -->
+This follows the lecture's terminology. In Python, evaluating `"hi" + 5` raises `TypeError` at runtime; the label “static semantics” does not mean that Python necessarily checks such type errors before execution.
+<!-- bilingual-en:end -->
+
 最后是 semantics。这里老师特别强调，程序没有自然语言那种“模糊多义”。程序只有一个确定含义，只不过那个含义经常不是你原本想要的。
 <!-- bilingual-en:start -->
 Semantics gives a valid program its determined meaning. Unlike natural language, the program does not resolve ambiguity according to human intent; its meaning may simply differ from the intended one.
@@ -438,10 +453,10 @@ The scalar types introduced are `int`, `float`, `bool`, and `NoneType`.
 <!-- bilingual-en:end -->
 
 > [!warning]
-> `true` 不是布尔值，而是 `NameError`。  
+> `true` 不是 Python 的布尔字面量。没有给这个名字赋值时，使用它会报 `NameError`。
 > 这类错误在第一周就出现，是为了尽早让你习惯 Python 对大小写非常敏感。
 > <!-- bilingual-en:start -->
-> `true` is not a Boolean literal; it is treated as an undefined name and raises `NameError`. Python is case-sensitive from the outset.
+> `true` is not a Boolean literal. If that name has not been bound, using it raises `NameError`. Python is case-sensitive.
 > <!-- bilingual-en:end -->
 
 ### 11. cast 不是修改原对象，而是拿到另一个新对象
@@ -475,6 +490,36 @@ Two points are easy to confuse: `int(5.9)` truncates rather than rounds, and a c
 The original `3` remains the same integer; `float(3)` additionally produces the floating-point value `3.0`.
 <!-- bilingual-en:end -->
 
+先把“值是多少”和“类型是什么”分开看：`float(3)` 的值是 `3.0`，类型是 `float`；`int(5.9)` 的值是 `5`，类型是 `int`。`int()` 对这里的浮点数是朝零截断，所以 `int(-5.9)` 得到 `-5`。`round()` 才是在做舍入；不传第二个参数时，这些例子的结果是整数。恰好在中间的情况会取最近的偶数，例如 `round(2.5)` 是 `2`，`round(3.5)` 是 `4`。
+
+<!-- bilingual-en:start -->
+Keep value and type separate: `float(3)` has value `3.0` and type `float`; `int(5.9)` has value `5` and type `int`. For these floating-point inputs, `int()` truncates toward zero, so `int(-5.9)` is `-5`. `round()` performs rounding and returns an integer for these examples when its second argument is omitted. Exact halfway cases go to the nearest even integer: `round(2.5)` is `2`, while `round(3.5)` is `4`.
+<!-- bilingual-en:end -->
+
+遇到 `float(round(7.2))` 这样的套层写法，就从里面往外算：`round(7.2)` 先得到 `7`，再用 `float(7)` 得到 `7.0`。外面的类型转换不会重新决定里面该舍入到哪个整数。PPT 第 39 页问的是 **type**，所以练习时最好把值和类型都写出来：
+
+<!-- bilingual-en:start -->
+Evaluate nested calls from the inside out: `round(7.2)` gives `7`, then `float(7)` gives `7.0`. The outer conversion does not reconsider the rounding decision. Slide 39 asks for the **type**, so write both the value and its type when checking these examples:
+<!-- bilingual-en:end -->
+
+| 表达式 | 值 | 类型 |
+| --- | --- | --- |
+| `float(123)` | `123.0` | `float` |
+| `round(7.9)` | `8` | `int` |
+| `float(round(7.2))` | `7.0` | `float` |
+| `int(7.2)` | `7` | `int` |
+| `int(7.9)` | `7` | `int` |
+
+<!-- bilingual-en:start -->
+| Expression | Value | Type |
+| --- | --- | --- |
+| `float(123)` | `123.0` | `float` |
+| `round(7.9)` | `8` | `int` |
+| `float(round(7.2))` | `7.0` | `float` |
+| `int(7.2)` | `7` | `int` |
+| `int(7.9)` | `7` | `int` |
+<!-- bilingual-en:end -->
+
 ### 12. expressions 会被求值成一个 value，Python 存的是 value 不是表达式
 <!-- bilingual-en:start -->
 *12. Expressions Evaluate to Values; Python Stores the Value, Not the Expression*
@@ -499,32 +544,70 @@ The central statement is:
 <!-- bilingual-en:end -->
 
 > [!note]
-> Python reads an expression, evaluates it to one value, and stores the value.  
-> 它不会把整条表达式原样“存起来”。
+> 第一个 Big Idea：**表达式可以包含很多步运算，但这次求值最后得到一个值。**
+> 读代码时，先算出一个小表达式的结果，再把那部分换成结果，继续往下算。
 > <!-- bilingual-en:start -->
-> Python reads an expression, evaluates it to one value, and stores that value rather than preserving the unevaluated expression.
+> The first Big Idea: **an expression may involve many operations, but its evaluation produces one value.** Work through a subexpression, replace that part with its result, and continue.
 > <!-- bilingual-en:end -->
 
-这就是为什么右边可以放很复杂的东西，最后左边拿到的仍然只是一个结果值。
+以课堂里的 `(4 + 2) * 6 - 1` 为例，下面是推算过程，不是需要逐行输入的程序：
+
 <!-- bilingual-en:start -->
-The right-hand side may therefore be complex while the left-hand name receives only its resulting value.
+For the lecture's `(4 + 2) * 6 - 1`, the following is an evaluation trace, not a program to enter line by line:
+<!-- bilingual-en:end -->
+
+```text
+(4 + 2) * 6 - 1
+      6 * 6 - 1
+         36 - 1
+             35
+```
+
+整个表达式的值是 `35`，类型是 `int`。如果外面再套一层 `float(...)`，先算出里面的 `35`，再转换成 `35.0`。`type(4 * 3)` 也是表达式：先得到 `12`，再得到它的类型对象 `int`，在 Python 中通常显示为 `<class 'int'>`。所以“一个值”也可以是类型对象，不限于一个数字。
+
+<!-- bilingual-en:start -->
+The expression has value `35` and type `int`. Wrapping it in `float(...)` first evaluates the inner expression to `35`, then converts that result to `35.0`. `type(4 * 3)` is also an expression: evaluate `4 * 3` to `12`, then obtain its type object, `int`, usually displayed as `<class 'int'>`. A single value need not be a number.
+<!-- bilingual-en:end -->
+
+同样的方法也能检查普通算术。`5 / 3` 得到约 `1.6667`，类型是 `float`。PPT 第 43 页的 `(13 - 4) / (12 * 12)`，先分别算分子和分母，得到 `9 / 144`，最后是 `0.0625`，类型也是 `float`。中间步骤写出来，就容易发现是运算顺序、某一步算术，还是类型判断出了问题。
+
+<!-- bilingual-en:start -->
+Use the same method to check arithmetic. `5 / 3` gives approximately `1.6667`, of type `float`. On slide 43, `(13 - 4) / (12 * 12)` first becomes `9 / 144`, then `0.0625`, also a `float`. Showing the intermediate steps separates errors in operation order, arithmetic, and type identification.
+<!-- bilingual-en:end -->
+
+课件说 Python“存值，不存表达式”，是在帮助理解求值和后面的赋值：变量拿到的是这次算出的结果，不会因此记住一条随输入变化而自动重算的公式。代码文件当然仍然可以保存这条表达式的写法。对应视频约 **32:45–33:50**、PPT **40–43 页**。
+
+<!-- bilingual-en:start -->
+The slide's “store values, not expressions” wording explains evaluation and assignment: a variable receives the result of this evaluation, not a formula that automatically recalculates when its inputs change. The source-code file can still contain the expression itself. See approximately **32:45–33:50** in the video and slides **40–43**.
 <!-- bilingual-en:end -->
 
 老师也顺带讲了几个运算规则：
 
 - 纯整数的 `+ - *` 结果还是 `int`
 - 只要混入 `float`，很多结果会变成 `float`
-- `/` 在 Python 里总是给 `float`
-- `//` 是整除后的整数部分
+- 本课 `int`、`float` 之间的 `/` 运算结果是 `float`，例如 `6 / 3` 是 `2.0`
+- `//` 是向下取整除法，例如 `5 // 3` 是 `1`，`-5 // 3` 是 `-2`
 - `%` 是 remainder
 - `**` 表示乘方
 <!-- bilingual-en:start -->
 - Integer-only `+`, `-`, and `*` operations produce integers.
 - Introducing a float commonly produces a float result.
-- `/` always produces a float in Python.
-- `//` gives the integer quotient.
+- Division with `/` between the `int` and `float` values used here produces a float; `6 / 3` is `2.0`.
+- `//` performs floor division: `5 // 3` is `1`, and `-5 // 3` is `-2`.
 - `%` gives the remainder.
 - `**` denotes exponentiation.
+<!-- bilingual-en:end -->
+
+`//` 的结果也不一定是 `int`：`5.0 // 3` 得到 `1.0`。先看运算做了什么，再看结果的类型，可以避免把“结果是整数大小”和“类型是 `int`”混在一起。负数的例子是对课堂正数例子的补充，用来区分向下取整和朝零截断。
+
+<!-- bilingual-en:start -->
+The result of `//` is not necessarily of type `int`: `5.0 // 3` gives `1.0`. Distinguish an integral numerical value from the `int` type. The negative example extends the lecture's positive examples to distinguish flooring from truncation toward zero.
+<!-- bilingual-en:end -->
+
+本课算术运算的优先级是：先处理括号中的部分，再处理 `**`，接着是 `* / // %`，最后是 `+ -`。同一级的乘除、取余和加减按从左到右处理。比如 `2 + 3 * 4` 先变成 `2 + 12`，再得到 `14`；写成 `(2 + 3) * 4` 就会得到 `20`。
+
+<!-- bilingual-en:start -->
+For the arithmetic used here, evaluate parenthesized parts first, followed by `**`, then `* / // %`, and finally `+ -`. Multiplicative and additive operations at the same level group from left to right. Thus `2 + 3 * 4` becomes `2 + 12`, then `14`, whereas `(2 + 3) * 4` gives `20`.
 <!-- bilingual-en:end -->
 
 ### 13. variable 是 binding，不是数学里的未知数
@@ -560,12 +643,18 @@ x * y = 3 + 4
 The former statements are valid assignments; the latter are not.
 <!-- bilingual-en:end -->
 
+`xy` 是一个完整的变量名，就像 `radius` 一样。Python 不会把挨在一起的字母自动理解成相乘，所以 `xy = 3 + 4` 可以直接把 `7` 绑定给名字 `xy`，即使之前从没定义过 `x` 或 `y`。要表示两者相乘，必须写 `x * y`。对应视频约 **46:06–46:58**、PPT **第 49 页**。
+
+<!-- bilingual-en:start -->
+`xy` is one variable name, just like `radius`. Adjacent letters do not imply multiplication in Python. Thus `xy = 3 + 4` binds `7` to `xy` even if neither `x` nor `y` has been defined. Multiplication must be written explicitly as `x * y`. See approximately **46:06–46:58** and slide **49**.
+<!-- bilingual-en:end -->
+
 因为 assignment 的格式是：
 
-- 左边只能是一个 variable name
+- 本课这种简单赋值，左边放一个 variable name
 - 右边必须先被求值成某个 value
 <!-- bilingual-en:start -->
-The left side of assignment must be an assignable name, while the right side is evaluated to a value before that value is bound to the name.
+In the simple assignments introduced here, the left side is a variable name. The right side is evaluated before its result is bound to that name.
 <!-- bilingual-en:end -->
 
 然后这个 value 才会被 bind 到左边的名字上。
@@ -653,6 +742,44 @@ The old value has not been altered mysteriously; the name simply no longer refer
 At this stage, programs execute line by line without branching, repetition, or automatic propagation of earlier calculations.
 <!-- bilingual-en:end -->
 
+第二个 Big Idea 是：**这节课的程序从上往下一行一行执行，每一行都使用当时的值。** 可以用 PPT 第 54 页的例子检查这一点：
+
+<!-- bilingual-en:start -->
+The second Big Idea is that **the programs in this lecture execute from top to bottom, one line at a time, using the values available at that point.** Slide 54 provides a short example:
+<!-- bilingual-en:end -->
+
+```python
+meters = 100
+feet = 3.2808 * meters
+meters = 200
+```
+
+| 刚执行完的行 | `meters` 的值 | `feet` 的值 |
+| --- | --- | --- |
+| `meters = 100` | `100` | 还没有绑定 |
+| `feet = 3.2808 * meters` | `100` | 约 `328.08` |
+| `meters = 200` | `200` | 仍约为 `328.08` |
+
+<!-- bilingual-en:start -->
+| After executing | Value of `meters` | Value of `feet` |
+| --- | --- | --- |
+| `meters = 100` | `100` | Not yet bound |
+| `feet = 3.2808 * meters` | `100` | Approximately `328.08` |
+| `meters = 200` | `200` | Still approximately `328.08` |
+<!-- bilingual-en:end -->
+
+表中沿用课件的近似值；直接运行时，浮点数可能显示为 `328.08000000000004`。这里要追踪的是赋值之后哪些变量改变了。
+
+<!-- bilingual-en:start -->
+The table follows the slides' rounded value; Python may display the floating-point result as `328.08000000000004`. The point here is to track which variables change after each assignment.
+<!-- bilingual-en:end -->
+
+第三行只给 `meters` 重新赋值。要让 `feet` 也变成按 200 米换算的结果，就需要再执行一次第二行的计算。把两个 Big Idea 连起来看：先在一行里面把表达式算成值，再看执行完这一行后，哪些名字的绑定变了。对应视频约 **50:41–56:36**、PPT **52–54 页**。
+
+<!-- bilingual-en:start -->
+The third line only rebinds `meters`. To convert 200 meters into feet, execute the calculation from the second line again. The two Big Ideas work together: evaluate the expression within a line, then track which name bindings change after that line executes. See approximately **50:41–56:36** and slides **52–54**.
+<!-- bilingual-en:end -->
+
 ### 16. 最后的 swap bug：为什么需要 temporary variable
 <!-- bilingual-en:start -->
 *16. The Closing Swap Bug: Why a Temporary Variable Is Necessary*
@@ -688,6 +815,38 @@ temp = y
 y = x
 x = temp
 ```
+
+这三步的顺序不能随便换：`temp = y` 先保住原来的 `2`；`y = x` 把 `y` 改绑到 `1`；最后 `x = temp` 才能把保存的 `2` 交给 `x`。检查时可以在每一行旁边写下当前的 `x`、`y`、`temp`，这样就能看出是哪一步丢掉了旧值。对应视频约 **56:44–61:24**、PPT **55 页**。
+
+<!-- bilingual-en:start -->
+The order matters: `temp = y` preserves the original `2`; `y = x` rebinds `y` to `1`; finally, `x = temp` binds `x` to the saved `2`. Writing the current values of `x`, `y`, and `temp` beside each line reveals exactly where a previous value would otherwise be lost. See approximately **56:44–61:24** and slide **55**.
+<!-- bilingual-en:end -->
+
+也可以先保存 `x`。仍从 `x = 1`、`y = 2` 开始，下面的顺序同样能完成交换；关键是先保住即将被覆盖的旧值。
+
+<!-- bilingual-en:start -->
+Saving `x` first also works. Starting again from `x = 1` and `y = 2`, the sequence below swaps them successfully because it preserves the value about to be overwritten.
+<!-- bilingual-en:end -->
+
+```python
+temp = x
+x = y
+y = temp
+```
+
+| 刚执行完的行 | `x` | `y` | `temp` |
+| --- | --- | --- | --- |
+| `temp = x` | `1` | `2` | `1` |
+| `x = y` | `2` | `2` | `1` |
+| `y = temp` | `2` | `1` | `1` |
+
+<!-- bilingual-en:start -->
+| After executing | `x` | `y` | `temp` |
+| --- | --- | --- | --- |
+| `temp = x` | `1` | `2` | `1` |
+| `x = y` | `2` | `2` | `1` |
+| `y = temp` | `2` | `1` | `1` |
+<!-- bilingual-en:end -->
 
 > [!example]
 > 这个例子表面上在教“交换两个变量”，实际是在教更底层的事情：  
@@ -741,7 +900,20 @@ Python Tutor makes those changes visible one line at a time, which is its practi
 - Transcript: [[MIT 6.100L-transcripts/mit6_100l_lec01_transcript.pdf|Lecture 01 transcript]]
 - Recitation 1: [[MIT 6.100L-recitations/mit6_100l_rec01.pdf|Recitation 01 materials]]
 - PS 0 out (not graded): [[MIT 6.100L-problem-sets/mit6_100l_ps0.pdf|PS0 statement]], [[MIT 6.100L-OCW-offline-site/static_resources/mit6_100l_f22_ps0_code.zip|PS0 starter code]]
-- Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (Ch 1, Ch 2.1-2.2)
+- Textbook: [[Introduction to Computation and Programming Using Python, Third Edition - John V. Guttag (2021).pdf|Guttag 第三版教材]]（第 1 章、§2.1–2.2；本地 PDF 第 25–44 页，读到 §2.3 前）
+- [Lecture 1 视频](https://ocw.mit.edu/courses/6-100l-introduction-to-cs-and-programming-using-python-fall-2022/resources/6100l-lecture-1-version-2_mp4/)
+
+## 来源与核验
+
+- [[MIT 6.100L-slides/mit6_100l_lec01.pdf|PPT]]：核对课程范围、两张 Big Idea、求值例子、变量绑定和交换变量。
+- [[MIT 6.100L-transcripts/mit6_100l_lec01_captions.webvtt|官方视频字幕]]：核对讲解语境与上文回放时间，尤其是 32:45、50:41、54:30 和 56:44 附近。
+- [[MIT 6.100L-lecture-code/mit6_100l_lec01_code.py|课堂代码]]：核对 `(4 + 2) * 6 - 1` 等例子的写法。
+- [Python 数值类型文档](https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex)：核对 `//` 向下取整、`int()` 截断及结果类型。[内置函数文档](https://docs.python.org/3/library/functions.html#round)：核对 `round()` 的中点取偶规则。这些边界说明是补充，课堂演示主要使用正数。
+- [Python 名称规则](https://docs.python.org/3/reference/lexical_analysis.html#identifiers)：核对多字母名字是单个标识符。PPT 第 39、43、49 页的补充例子已用 Python 运行，核对值、类型与赋值是否合法；交换变量的两种顺序也已运行核对。
+
+<!-- bilingual-en:start -->
+- [Python name rules](https://docs.python.org/3/reference/lexical_analysis.html#identifiers) support treating a multi-letter name as one identifier. The examples from slides 39, 43, and 49 were executed to check their values, types, and assignment validity; both swap sequences were also checked.
+<!-- bilingual-en:end -->
 
 ## Review checklist
 - [ ] 我能复述为什么这门课把 lecture、finger exercise、problem set 看成不同训练，而不是同一件事的重复。
