@@ -63,8 +63,8 @@ The familiar diagonal mnemonic for a $3\times3$ determinant is only a special ca
 ## 来源与核验
 
 - [[01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses2.6sum.pdf|MIT 18.06SC Session 2.6 summary]]：核对排列公式、符号和项数。
-- [[01_Math/02_linear algebra/02_Least Squares, Determinants and Eigenvalues.md#Lecture：排列大公式|课程排列大公式]]：核对每行每列各取一次及计算边界。
+- [[02_Least Squares, Determinants and Eigenvalues#Lecture：排列大公式|课程排列大公式]]：核对每行每列各取一次及计算边界。
 <!-- bilingual-en:start -->
 - [[01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses2.6sum.pdf|MIT 18.06SC Session 2.6 summary]] was checked for the permutation formula, signs, and number of terms.
-- [[01_Math/02_linear algebra/02_Least Squares, Determinants and Eigenvalues.md#Lecture：排列大公式|The course Leibniz-formula section]] was checked for the one-per-row-and-column condition and computational boundary.
+- [[02_Least Squares, Determinants and Eigenvalues#Lecture：排列大公式|The course Leibniz-formula section]] was checked for the one-per-row-and-column condition and computational boundary.
 <!-- bilingual-en:end -->

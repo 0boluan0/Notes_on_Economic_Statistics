@@ -105,7 +105,7 @@ In vertex coordinates, $L_{ii}$ is the sum of conductances incident to $i$, whil
   <!-- bilingual-en:start -->
   The end of the lecture verifies the symmetric structure of $A^TCA$ and $A^TA$.
   <!-- bilingual-en:end -->
-- [[01_Math/02_linear algebra/01_Ax = b and the Four Subspaces.md#Session 1.13 Graphs, networks, and incidence matrices|Session 1.13 course note]]：核对符号约定、energy identity、nullspace、grounding 与注入总和边界。
+- [[01_Ax = b and the Four Subspaces#Session 1.13 Graphs, networks, and incidence matrices|Session 1.13 course note]]：核对符号约定、energy identity、nullspace、grounding 与注入总和边界。
   <!-- bilingual-en:start -->
   The course note verifies the sign convention, energy identity, nullspace, grounding, and zero-total-injection boundary.
   <!-- bilingual-en:end -->

@@ -77,4 +77,4 @@ $$
 ## 来源与核验
 
 - [[01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.3sum.pdf|MIT 18.06SC Session 1.3 summary]]：核对 $[A\mid I]\to[I\mid A^{-1}]$ 的消元求逆方法。
-- [[01_Math/02_linear algebra/01_Ax = b and the Four Subspaces.md#Session 1.4 Multiplication and inverse matrices|课程 Gauss–Jordan 部分]]：核对初等矩阵乘积解释与失败判据。
+- [[01_Ax = b and the Four Subspaces#Session 1.4 Multiplication and inverse matrices|课程 Gauss–Jordan 部分]]：核对初等矩阵乘积解释与失败判据。

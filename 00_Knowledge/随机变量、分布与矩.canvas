@@ -13,12 +13,12 @@
     {"id":"6d7e8f9012345678","type":"text","x":0,"y":1800,"width":500,"height":230,"text":"## [[Bernoulli和的二项分布]]\n*When a Bernoulli sum is Binomial*\n\n共同 $p$ 与相互独立是标准充分条件；缺少条件时不能只凭边际推出二项分布。","color":"1"},
     {"id":"7e8f90123456789a","type":"text","x":600,"y":1100,"width":500,"height":220,"text":"## [[期望]]\n*Expectation*\n\n可积随机变量相对于其分布的加权平均。","color":"5"},
     {"id":"8f90123456789abc","type":"text","x":600,"y":1450,"width":500,"height":220,"text":"## [[期望线性性]]\n*Linearity of expectation*\n\n有限个可积变量的期望线性性不要求独立。","color":"3"},
-    {"id":"90123456789abcde","type":"text","x":1200,"y":1450,"width":500,"height":220,"text":"## [[方差]]\n*Variance*\n\n相对均值的平方偏离的期望。","color":"5"},
-    {"id":"0123456789abcdef","type":"text","x":1200,"y":1800,"width":500,"height":220,"text":"## [[方差的仿射变换]]\n*Affine scaling of variance*\n\n平移不改变方差，尺度 $a$ 使方差乘以 $a^2$。","color":"3"},
+    {"id":"90123456789abcde","type":"text","x":1200,"y":1450,"width":500,"height":250,"text":"<!-- bilingual-en:start -->\n## [[方差|Variance]]\n<!-- bilingual-en:end -->\n*方差*\n\n<!-- bilingual-en:start -->\nWith $E[X^2]<\\infty$, variance is the mean squared deviation from the mean.\n<!-- bilingual-en:end -->\n\n有限方差要求二阶矩有限；它平均相对均值的平方偏离。","color":"5"},
+    {"id":"0123456789abcdef","type":"text","x":1200,"y":1800,"width":500,"height":250,"text":"<!-- bilingual-en:start -->\n## [[方差的仿射变换|Affine variance rule]]\n<!-- bilingual-en:end -->\n*方差的仿射变换*\n\n<!-- bilingual-en:start -->\nFor fixed $a,b$ and finite variance:\n$\\operatorname{Var}(aX+b)=a^2\\operatorname{Var}(X)$.\n<!-- bilingual-en:end -->\n\n固定平移不改变方差；乘数按平方缩放。","color":"3"},
     {"id":"123456789abcdef0","type":"text","x":1800,"y":1100,"width":500,"height":220,"text":"## [[协方差]]\n*Covariance*\n\n两个变量中心化乘积的期望，数值受单位影响。","color":"5"},
     {"id":"a0b1c2d3e4f50617","type":"text","x":3000,"y":1100,"width":500,"height":220,"text":"## [[协方差矩阵半正定性]]\n*Covariance matrices are positive semidefinite*\n\n实随机向量任意线性投影的方差都非负，因此协方差矩阵对称半正定。","color":"3"},
     {"id":"b1c2d3e4f5061728","type":"text","x":3000,"y":1450,"width":500,"height":220,"text":"## [[协方差奇异性]]\n*Covariance singularity*\n\n某个非零线性组合几乎处处为常数，当且仅当协方差矩阵奇异。","color":"6"},
-    {"id":"23456789abcdef01","type":"text","x":2400,"y":1450,"width":500,"height":220,"text":"## [[相关系数]]\n*Pearson correlation*\n\n用两个标准差标准化协方差，得到无量纲线性度量。","color":"5"},
+    {"id":"23456789abcdef01","type":"text","x":2400,"y":1450,"width":500,"height":280,"text":"<!-- bilingual-en:start -->\n## [[相关系数|Pearson correlation]]\n<!-- bilingual-en:end -->\n*Pearson 相关系数*\n\n<!-- bilingual-en:start -->\nFor finite, strictly positive variances, divide covariance by both standard deviations to measure linear co-movement without units.\n<!-- bilingual-en:end -->\n\n方差有限且严格为正时，用两个标准差归一化协方差，衡量无量纲的线性共同变化。","color":"5"},
     {"id":"3456789abcdef012","type":"text","x":2400,"y":1800,"width":500,"height":220,"text":"## [[零协方差不推独立]]\n*Zero covariance is not independence*\n\n零协方差仍可能隐藏确定而强烈的非线性关系。","color":"1"},
     {"id":"456789abcdef0123","type":"text","x":1800,"y":1800,"width":500,"height":220,"text":"## [[矩存在性的使用边界]]\n*Moment-existence boundary*\n\n归一化不保证矩有限；先查绝对矩收敛，再调用相关定理。","color":"1"},
     {"id":"p2mom","type":"text","x":0,"y":2230,"width":500,"height":230,"text":"## [[原点矩与中心矩]]\n\n幂作用在原值还是中心化值上。\n\n<!-- bilingual-en:start -->\nPowers of values or of centred values.\n<!-- bilingual-en:end -->"},
@@ -29,11 +29,12 @@
     {"id":"p2std","type":"text","x":3000,"y":2230,"width":500,"height":230,"text":"## [[正态标准化]]\n\n完整密度换元给出标准正态。\n\n<!-- bilingual-en:start -->\nA full density transformation gives the standard normal.\n<!-- bilingual-en:end -->"},
     {"id":"p2local","type":"text","x":0,"y":2710,"width":500,"height":230,"text":"## [[密度的局部概率解释]]\n\n连续点附近，密度乘长度近似区间概率。\n\n<!-- bilingual-en:start -->\nAt continuity points, height times width approximates probability.\n<!-- bilingual-en:end -->"},
     {"id":"p2mix","type":"text","x":600,"y":2710,"width":500,"height":230,"text":"## [[混合分布]]\n\n点质量与连续成分都须计入概率。\n\n<!-- bilingual-en:start -->\nAccount for both atoms and continuous mass.\n<!-- bilingual-en:end -->"},
-    {"id":"p2q","type":"text","x":1200,"y":2710,"width":500,"height":230,"text":"## [[总体分位数]]\n\nCDF 达到指定概率的最左阈值。\n\n<!-- bilingual-en:start -->\nThe leftmost threshold where a CDF reaches a probability.\n<!-- bilingual-en:end -->"},
+    {"id":"p2q","type":"text","x":1200,"y":2710,"width":500,"height":270,"text":"<!-- bilingual-en:start -->\n## [[总体分位数|Population quantile]]\n<!-- bilingual-en:end -->\n*总体分位数*\n\n<!-- bilingual-en:start -->\nFor $0<p<1$, the leftmost threshold where the CDF is at least $p$; a jump may pass over $p$.\n<!-- bilingual-en:end -->\n\n对 $0<p<1$，CDF 至少达到 $p$ 的最左阈值；跳跃可以越过 $p$。"},
     {"id":"p2pit","type":"text","x":1800,"y":2710,"width":500,"height":230,"text":"## [[概率积分变换]]\n\n自己的连续 CDF 把变量变成均匀分布。\n\n<!-- bilingual-en:start -->\nA continuous CDF maps its own variable to a uniform law.\n<!-- bilingual-en:end -->"},
     {"id":"p2dec","type":"text","x":2400,"y":2710,"width":500,"height":230,"text":"## [[递减变换的CDF]]\n\n有点质量时，补概率必须使用左极限。\n\n<!-- bilingual-en:start -->\nAtoms require the complementary left limit.\n<!-- bilingual-en:end -->"},
     {"id":"p2jac","type":"text","x":3000,"y":2710,"width":500,"height":230,"text":"## [[密度换元的尺度因子]]\n\n逆导数绝对值保持区间概率。\n\n<!-- bilingual-en:start -->\nThe absolute inverse derivative preserves interval probability.\n<!-- bilingual-en:end -->"},
-    {"id":"p2nonlin","type":"text","x":0,"y":3150,"width":500,"height":230,"text":"## [[期望与非线性变换不可交换]]\n\n平均之后再变换通常会改变结果。\n\n<!-- bilingual-en:start -->\nTransforming after averaging generally changes the result.\n<!-- bilingual-en:end -->\n"}
+    {"id":"p2nonlin","type":"text","x":0,"y":3150,"width":500,"height":230,"text":"## [[期望与非线性变换不可交换]]\n\n平均之后再变换通常会改变结果。\n\n<!-- bilingual-en:start -->\nTransforming after averaging generally changes the result.\n<!-- bilingual-en:end -->\n"},
+    {"id":"stddev-definition","type":"text","x":1800,"y":1450,"width":500,"height":250,"text":"<!-- bilingual-en:start -->\n## [[标准差|Standard deviation]]\n<!-- bilingual-en:end -->\n*标准差*\n\n$\\sigma_X=\\sqrt{\\operatorname{Var}(X)}$\n\n<!-- bilingual-en:start -->\nThe square root returns spread to the original units.\n<!-- bilingual-en:end -->\n\n对方差开平方，让散布回到原变量的单位。","color":"5"}
   ],
   "edges": [
     {"id":"56789abcdef01234","fromNode":"c3d4e5f60718293a","fromSide":"bottom","toNode":"e5f60718293a4b5c","toSide":"top","toEnd":"arrow","label":"随机变量诱导自己的分布"},
@@ -70,6 +71,7 @@
     {"id":"psi2-e-8","fromNode":"3a4b5c6d7e8f9012","fromSide":"bottom","toNode":"p2dec","toSide":"top","label":"递减方向的端点条件"},
     {"id":"psi2-e-9","fromNode":"3a4b5c6d7e8f9012","fromSide":"bottom","toNode":"p2jac","toSide":"top","label":"密度守恒的尺度校正"},
     {"id":"psi2-e-10","fromNode":"p2jac","fromSide":"bottom","toNode":"p2std","toSide":"top","label":"正尺度 σ 的换元"},
-    {"id":"psi2-extra-0","fromNode":"p2lot","fromSide":"bottom","toNode":"p2nonlin","toSide":"top","label":"值变换，权重仍来自原分布"}
+    {"id":"psi2-extra-0","fromNode":"p2lot","fromSide":"bottom","toNode":"p2nonlin","toSide":"top","label":"值变换，权重仍来自原分布"},
+    {"id":"variance-to-standard-deviation","fromNode":"90123456789abcde","fromSide":"right","toNode":"stddev-definition","toSide":"left","label":"square root · 开平方","toEnd":"arrow"}
   ]
 }

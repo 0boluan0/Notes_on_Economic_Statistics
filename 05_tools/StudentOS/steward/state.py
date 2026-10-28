@@ -64,7 +64,8 @@ def snapshot(vault):
             if fenced:
                 continue
             match = rules.TASK.match(raw)
-            is_deadline = bool(rules.DEADLINE.search(raw))
+            optional = bool(re.search(r"(?:^|\s)#student-os/submission-window(?=\s|$)", raw))
+            is_deadline = bool(rules.DEADLINE.search(raw)) or optional
             if not match or not (is_deadline or rules.TAG.search(raw)):
                 continue
             if re.search(r"(?:^|\s)#student-os/archived(?=\s|$)", raw):
@@ -74,6 +75,8 @@ def snapshot(vault):
             status = {" ": "completion_unknown", "x": "recorded_complete", "X": "recorded_complete", "-": "cancelled"}.get(match[2], "custom_status")
             item = {"ref": ref, "path": relative, "line": number, "raw": raw,
                     "version": digest(raw), "status": status, "checkbox": match[2]}
+            if optional:
+                item["optional"] = True
             if ref:
                 anchors.setdefault(ref, []).append(item)
             if is_deadline:

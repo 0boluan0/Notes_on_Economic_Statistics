@@ -16,7 +16,7 @@ related:
   - "[[随机计数的指标和]]"
   - "[[条件独立不等于边际独立]]"
   - "[[边际分布不定联合分布]]"
-  - "[[普通生成函数]]"
+  - "[[概率生成函数]]"
   - "[[CreditMetrics估值]]"
   - "[[ASRF颗粒性]]"
 part_of:
@@ -78,7 +78,7 @@ $$
 *Computational boundary of the PGF and recursion*
 <!-- bilingual-en:end -->
 
-条件于 $\mathbf S$，整数损失单位数 $M=L/L_0$ 的[[普通生成函数|概率生成函数]]为
+条件于 $\mathbf S$，整数损失单位数 $M=L/L_0$ 的[[概率生成函数]]为
 $$
 G(z\mid\mathbf S)
 =\exp\!\left[\sum_i\lambda_i(\mathbf S)(z^{\nu_i}-1)\right].

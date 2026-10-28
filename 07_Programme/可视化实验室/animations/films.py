@@ -1,12 +1,10 @@
 """Shared chart geometry and typography helpers."""
 import math
 import re
-from pathlib import Path
 
 import numpy as np
 from manim import *
 
-ROOT = Path(__file__).resolve().parents[1]
 BG, INK, MUTED, RULE = '#10171F', '#F3F0E9', '#A6B2BF', '#334353'
 COLORS = ['#85D7BE', '#F0B084', '#88BCF5', '#DFA5CC', '#D8D792', '#BAACF3', '#687887', '#83CDD8']
 LEFT_X, RIGHT_X, BOTTOM_Y, TOP_Y = -5.90, 6.12, -1.11, 2.15
@@ -41,10 +39,6 @@ def wrap(s, units):
     if line:
         lines.append(line.strip())
     return '\n'.join(lines)
-
-
-def at(t, x, y):
-    return t.move_to([x, y, 0], aligned_edge=UL)
 
 
 def finite(p):
@@ -201,63 +195,3 @@ def chart(p, domains, zlimits):
         back=BackgroundRectangle(t,color=BG,fill_opacity=.9,buff=.045,stroke_width=0)
         group.add(back,t)
     return group
-
-
-def legend(p,zlimits):
-    rows=VGroup(); items=[]
-    for j,s in enumerate(p['series']):
-        if not s.get('label'):continue
-        color=COLORS[s.get('color',j)%8]
-        label=s['label']
-        if s['type']=='heatmap':
-            zd=zlimits.get(j) or s.get('zDomain');label+='  '+(' → '.join(fmt(z) for z in zd) if zd else '')
-        mark=Line([0,0,0],[.22,0,0],color=color,stroke_width=3)
-        if s.get('dashed'):mark=DashedVMobject(mark,num_dashes=3)
-        item=VGroup(mark,text(label,17,MUTED,width=3.3)).arrange(RIGHT,buff=.1)
-        items.append(item)
-    # Every series remains identified; long legends wrap into compact columns.
-    for start in range(0,len(items),3):
-        row=VGroup(*items[start:start+3]).arrange(RIGHT,buff=.32,aligned_edge=UP)
-        rows.add(row)
-    rows.arrange(DOWN,buff=.10,aligned_edge=LEFT)
-    if rows.height>.36:rows.scale_to_fit_height(.36)
-    if rows.width>12:rows.scale_to_fit_width(12)
-    return at(rows,LEFT_X,-1.86)
-
-
-def mechanism(scene, term=None):
-    group=VGroup()
-    bound=max(1,max(abs(v) for p in scene['panels'] for row in p['values'] for v in row if isinstance(v,(int,float)) and math.isfinite(v)))
-    for j,p in enumerate(scene['panels']):
-        left=-6.05+j*4.25; width=3.7; color=COLORS[[2,1,0][j]]
-        group.add(Line([left,2.45,0],[left+width,2.45,0],color=color,stroke_width=2))
-        group.add(at(text(p['label'],20,color,width=width),left,2.28))
-        matrix=p['values']; rows=len(matrix); cols=len(matrix[0])
-        cell=min(.78,3.2/cols,2.8/rows); x0=left+(width-cell*cols)/2; y0=1.80
-        selection=p.get('selection'); traced=(scene.get('terms') or [])[term]['cells'] if term is not None else []
-        for r,row in enumerate(matrix):
-            if p.get('rowLabels'):
-                group.add(text(p['rowLabels'][r],16,MUTED,width=.72).move_to([x0-.43,y0-(r+.5)*cell,0]))
-            for c,v in enumerate(row):
-                inside=selection and selection[0]<=r<selection[0]+selection[2] and selection[1]<=c<selection[1]+selection[3]
-                active=[j,r,c] in traced
-                fill=interpolate_color(ManimColor('#1B2632'),ManimColor(COLORS[1] if isinstance(v,(int,float)) and v<0 else COLORS[2]),min(.55,abs(v)/bound*.55)) if isinstance(v,(int,float)) and math.isfinite(v) else ManimColor('#1B2632')
-                edge=COLORS[1] if active else color if inside else '#30404E'
-                if p.get('groupAxis'):edge=COLORS[(r if p['groupAxis']=='row' else c)%4]
-                box=RoundedRectangle(width=cell-.025,height=cell-.025,corner_radius=.035,stroke_width=2 if active else 1,stroke_color=edge,fill_color='#4B3C29' if active else fill,fill_opacity=1).move_to([x0+(c+.5)*cell,y0-(r+.5)*cell,0])
-                group.add(box,text('∞' if v is None else fmt(v),min(26,cell*43),COLORS[1] if active else INK,width=cell*.85).move_to(box))
-                if p.get('bars') and isinstance(v,(int,float)) and v>0:
-                    group.add(Line(box.get_corner(DL)+[.025,.04,0],box.get_corner(DL)+[.025+(cell-.075)*min(1,v),.04,0],color=COLORS[0],stroke_width=3))
-        if selection:
-            r,c,n,m=selection
-            group.add(Rectangle(width=cell*m+.055,height=cell*n+.055,color=COLORS[1],stroke_width=2.5).move_to([x0+(c+m/2)*cell,y0-(r+n/2)*cell,0]))
-        if j<2:group.add(Arrow([left+3.85,.3,0],[left+4.14,.3,0],color=MUTED,buff=0,stroke_width=2,max_tip_length_to_length_ratio=.3))
-        group.add(at(text(p.get('note',''),17,MUTED,width=width),left,-1.30))
-    if term is not None:
-        t=scene['terms'][term]
-        group.add(text(t['label']+'   '+t['expression']+('    ·    前 '+str(term+1)+' 项之和 '+fmt(sum(t['value'] for t in scene['terms'][:term+1])) if scene.get('accumulate',True) else ''),27,COLORS[1],width=12).move_to([0,-2.00,0]))
-    else:
-        value=scene['result']; value=fmt(value) if isinstance(value,(int,float)) else '∞' if value is None else value
-        group.add(text(scene['resultLabel']+'   '+str(value),26,COLORS[0],width=12).move_to([0,-2.00,0]))
-    return group
-

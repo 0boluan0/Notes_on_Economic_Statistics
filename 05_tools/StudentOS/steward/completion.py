@@ -60,7 +60,20 @@ def checked_line(raw, date):
 
 def closed_line(raw):
     checked_line(raw, "")  # Validate the open checkbox while preserving it and its dates.
-    return re.sub(r"(?<!\S)#student-os/(?:task|deadline)(?=\s|$)", "#student-os/archived", raw)
+    return re.sub(r"(?<!\S)#student-os/(?:task|deadline|submission-window)(?=\s|$)", "#student-os/archived", raw)
+
+
+def reopened_line(raw):
+    match = rules.TASK.match(raw)
+    if not match or match[2].lower() != "x":
+        raise ValueError("原任务不处于已完成状态")
+    return re.sub(r"\s*✅\s*\d{4}-\d{2}-\d{2}", "", re.sub(r"^(\s*[-*+]\s+)\[[xX]\]", r"\1[ ]", raw, count=1))
+
+
+def changed_line(request, verdict):
+    if request.get("intent") == "reopen":
+        return reopened_line(request["raw"])
+    return closed_line(request["raw"]) if verdict and verdict["verdict"] == "close_requested" else checked_line(request["raw"], request["date"])
 
 
 class CompletionChecks:
@@ -86,7 +99,7 @@ class CompletionChecks:
     def cancel(self, key):
         self.row(key)
         with self.db:
-            changed = self.db.execute("UPDATE completion_checks SET phase='cancelled' WHERE key=? AND phase NOT IN ('complete','closed','applying','insufficient')", (key,)).rowcount
+            changed = self.db.execute("UPDATE completion_checks SET phase='cancelled' WHERE key=? AND phase NOT IN ('complete','reopened','closed','applying','insufficient')", (key,)).rowcount
         self.export(self.row(key))
         return {"phase": self.row(key)["phase"], "message": "核验已停止，原任务保持原状态。" if changed else "核验已结束或已进入写回阶段，请查看原记录。"}
 
@@ -96,16 +109,16 @@ class CompletionChecks:
             request = json.loads(row["request"])
             verdict = json.loads(row["verdict"]) if row["verdict"] else None
             result.append({"key": row["key"], "path": request["path"], "raw": request["raw"],
-                "after": closed_line(request["raw"]) if verdict and verdict["verdict"] == "close_requested" else checked_line(request["raw"], request["date"]), "phase": row["phase"], "verdict": verdict,
+                "after": changed_line(request, verdict), "phase": row["phase"], "verdict": verdict,
                 "error": row["error"], "export_path": row["export_path"], "request": request})
         return result
 
-    def locate(self, path, raw):
+    def locate(self, path, raw, completed=False):
         state = self.s.source_state()
         if state["issues"]:
             raise ValueError("任务来源尚未完整读取，请刷新后核验")
         matches = [t for t in state["tasks"] + state["obligations"] if t["path"] == path and t["raw"] == raw]
-        if len(matches) != 1 or matches[0]["status"] != "completion_unknown":
+        if len(matches) != 1 or matches[0]["status"] != ("recorded_complete" if completed else "completion_unknown"):
             raise ValueError("原任务已变化、归档或不唯一，请刷新后重新选择")
         if not rules._ignored(self.vault, path):
             raise ValueError("个人完成状态只能写入私有任务原件")
@@ -196,6 +209,14 @@ class CompletionChecks:
     def export(self, row):
         request, context = json.loads(row["request"]), json.loads(row["context"])
         verdict = json.loads(row["verdict"]) if row["verdict"] else {}
+        if context.get("manual"):
+            label = {"complete": "本人标记完成", "reopened": "本人取消完成", "closed": "本人关闭任务"}.get(row["phase"], "正在保存本人决定")
+            quoted = request["raw"].replace("#student-os/task", "").replace("#student-os/deadline", "").replace("#student-os/submission-window", "")
+            self.s.write_private(row["export_path"], f"---\ntype: manual-task-status\nstatus: {row['phase']}\n---\n\n# {label}\n\n"
+                f"原任务：[[{request['path']}]]\n\n> {quoted}\n\n记录时间：{row['created_at']}\n\n完成日期：{request['date'] or '未填写'}\n\n"
+                f"## 本人说明\n\n{request['report'] or '通过看板手动修改状态。'}\n\n依据：本人确认（user_report）。\n\n"
+                + "".join(f"- 关联记录：[[{path}]]\n" for path in request["evidence"]))
+            return
         closing = verdict.get("verdict") == "close_requested"
         label = {"complete": "完成已写回", "closed": "已关闭 · 不再需要", "cancelled": "核验已停止", "insufficient": "待补充证据", "applying": "等待写回关闭决定" if closing else "核验通过，等待写回"}.get(row["phase"], "核验尚未完成")
         content = (f"---\ntype: completion-check\ncheck_id: {row['key']}\nstatus: {row['phase']}\n---\n\n"
@@ -208,23 +229,23 @@ class CompletionChecks:
             + "\n## 核验引用\n\n" + "".join(f"- `{c['source']}`：{c['quote']}\n" for c in verdict.get("citations", []))
             + ("\n按本人决定退出待办；未记录任务完成、知识掌握或外部提交成功。\n" if closing else "\n依据本人陈述与所列文件内容；未实时登录外部平台，不把完成状态解释为全面掌握。\n"))
         # A quoted original is evidence, never a second editable checkbox.
-        content = content.replace("\n" + request["raw"] + "\n", "\n> " + request["raw"].replace("#student-os/task", "").replace("#student-os/deadline", "") + "\n", 1)
+        content = content.replace("\n" + request["raw"] + "\n", "\n> " + request["raw"].replace("#student-os/task", "").replace("#student-os/deadline", "").replace("#student-os/submission-window", "") + "\n", 1)
         self.s.write_private(row["export_path"], content)
 
     def apply(self, row):
         request, context = json.loads(row["request"]), json.loads(row["context"])
         closing = json.loads(row["verdict"])["verdict"] == "close_requested"
         path = rules._path(self.vault, request["path"])
-        before, after = request["raw"], closed_line(request["raw"]) if closing else checked_line(request["raw"], request["date"])
+        before, after = request["raw"], changed_line(request, json.loads(row["verdict"]))
         content = path.read_text()
         lines = content.splitlines(keepends=True)
         already_applied = sum(line.rstrip("\r\n") == after for line in lines) == 1 and not any(line.rstrip("\r\n") == before for line in lines)
         if not already_applied:
-            self.locate(request["path"], before)
+            self.locate(request["path"], before, completed=request.get("intent") == "reopen")
             for evidence in ([] if closing else context["evidence"]):
                 if hashlib.sha256(rules._path(self.vault, evidence["path"]).read_bytes()).hexdigest() != evidence["sha256"]:
                     raise ValueError("核验期间证据已变化，请补充后重新核验")
-            if not closing and rules._source_context(content) != context["requirements"]:
+            if not closing and not context.get("manual") and rules._source_context(content) != context["requirements"]:
                 raise ValueError("任务完成要求已变化，请重新核验")
             index = next(i for i,line in enumerate(lines) if line.rstrip("\r\n") == before)
             lines[index] = after + lines[index][len(before):]
@@ -233,12 +254,56 @@ class CompletionChecks:
             rules._atomic_write(path, "".join(lines))
             if after not in path.read_text().splitlines():
                 raise RuntimeError("任务写回后校验失败，请继续原请求")
-        if closing:
+        if closing or context.get("manual"):
             # Also recover a crash after the canonical write but before stopping an older check.
             for previous in self.records():
-                if previous["key"] != row["key"] and previous["path"] == request["path"] and previous["raw"] == before and previous["phase"] not in ("complete", "closed", "insufficient", "cancelled"):
+                if previous["key"] != row["key"] and previous["path"] == request["path"] and previous["raw"] in (before, after) and previous["phase"] not in ("complete", "reopened", "closed", "insufficient", "cancelled"):
                     self.update(previous["key"], phase="cancelled")
                     self.export(self.row(previous["key"]))
+
+    def record(self, key, request=None):
+        """Persist an explicit checkbox decision without calling a model."""
+        if not isinstance(key, str) or not re.fullmatch(r"[A-Za-z0-9_-]{1,100}", key):
+            raise ValueError("记录标识无效")
+        with self.s.lock("completion.lock"):
+            existing = self.db.execute("SELECT * FROM completion_checks WHERE key=?", (key,)).fetchone()
+            if existing:
+                if not json.loads(existing["context"]).get("manual"):
+                    raise ValueError("旧核验记录保留在历史中，请另行记录本次决定")
+                if request is not None and packed(request) != existing["request"]:
+                    raise ValueError("这次记录内容已改变，请重新操作")
+            else:
+                if not isinstance(request, dict) or set(request) != {"path", "raw", "report", "date", "evidence", "intent"}:
+                    raise ValueError("状态记录不完整")
+                if request["intent"] not in ("complete", "reopen", "close"):
+                    raise ValueError("状态无效")
+                if any(not isinstance(request[k], str) for k in ("path", "raw", "report", "date")) or len(request["report"]) > 8000:
+                    raise ValueError("状态记录格式无效")
+                if request["date"] and (not re.fullmatch(r"\d{4}-\d{2}-\d{2}", request["date"]) or dt.date.fromisoformat(request["date"]) > self.s.clock().date()):
+                    raise ValueError("完成日期无效或在未来")
+                if request["intent"] != "complete" and request["date"]:
+                    raise ValueError("取消完成或关闭不填写完成日期")
+                if not isinstance(request["evidence"], list) or len(request["evidence"]) > 6:
+                    raise ValueError("最多关联 6 份记录")
+                for path in request["evidence"]:
+                    if not isinstance(path, str):
+                        raise ValueError("关联记录路径无效")
+                    rules._path(self.vault, path)
+                task = self.locate(request["path"], request["raw"], completed=request["intent"] == "reopen")
+                verdict = {"verdict": "close_requested" if request["intent"] == "close" else "supported", "basis": "user_report",
+                    "reason": "本人手动确认任务状态。", "missing": "", "citations": [], "receipt_source": "", "receipt_subject": "", "receipt_status": ""}
+                changed_line(request, verdict)
+                context = {"manual": True, "task": task, "report": request["report"], "evidence": []}
+                with self.db:
+                    self.db.execute("INSERT INTO completion_checks(key,request,context,phase,created_at,export_path,verdict) VALUES (?,?,?,?,?,?,?)",
+                        (key, packed(request), packed(context), "applying", now(), f"99_学习情况记录/管家/状态记录/{key}.md", packed(verdict)))
+            row = self.row(key)
+            if row["phase"] == "applying":
+                self.apply(row)
+                self.update(key, phase={"complete": "complete", "reopen": "reopened", "close": "closed"}[json.loads(row["request"])["intent"]], error=None)
+            self.export(self.row(key))
+            result = self.result(self.row(key))
+            return {**result, "message": {"complete": "已标记完成。", "reopened": "已取消完成。", "closed": "已关闭任务。"}.get(result["phase"], "状态已保存。")}
 
     def run(self, key, request=None, cancelled=lambda: False):
         if not re.fullmatch(r"[A-Za-z0-9_-]{1,100}", key):

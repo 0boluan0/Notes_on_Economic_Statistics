@@ -64,9 +64,9 @@
       "x": 0,
       "y": 100,
       "width": 400,
-      "height": 190,
+      "height": 260,
       "color": "5",
-      "text": "## [[实对称矩阵]]\n\n实方阵满足 $A=A^T$；它只是结构条件，本身不保证正定。"
+      "text": "<!-- bilingual-en:start -->\n## [[实对称矩阵|Real symmetric matrices]]\n\nA real square matrix satisfies $A^T=A$: entries mirrored across the diagonal agree. Symmetry alone does not imply positive definiteness.\n<!-- bilingual-en:end -->\n\n实方阵转置不变：主对角线两侧镜像位置相等。仅对称不保证正定。"
     },
     {
       "id": "n002",

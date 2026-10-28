@@ -56,8 +56,8 @@
       "x": 2480,
       "y": 0,
       "width": 520,
-      "height": 150,
-      "text": "## 恒等式与存在性证明\n双重计数证明两式相等；鸽巢原理只保证某个盒子过载。",
+      "height": 190,
+      "text": "<!-- bilingual-en:start -->\n## Identities and existence\n\nDouble counting equates two totals; pigeonhole forces one box to contain enough objects.\n<!-- bilingual-en:end -->\n\n恒等式与存在性：双重计数比较同一总量，鸽巢原理保证至少一个盒子达到一定数量。",
       "color": "6"
     },
     {
@@ -77,7 +77,7 @@
       "y": 250,
       "width": 520,
       "height": 220,
-      "text": "## [[计数对象]]\nMCS-COUNT-001 · 建模原则\n\n先说明标签、顺序、重复、约束与相等标准。",
+      "text": "<!-- bilingual-en:start -->\n## [[计数对象|Objects being counted]]\n\nDefine when two outcomes count as the same: labels, order, repetition and constraints.\n<!-- bilingual-en:end -->\n\n计数对象：先明确标签、顺序、重复、约束，以及怎样才算同一个结果。",
       "color": "6"
     },
     {
@@ -87,7 +87,7 @@
       "y": 580,
       "width": 520,
       "height": 220,
-      "text": "## [[加法法则]]\nMCS-COUNT-002 · 计数规则\n\n有限不交并的基数等于各部分基数之和。",
+      "text": "<!-- bilingual-en:start -->\n## [[加法法则|Sum rule]]\n\nSplit a finite set into disjoint cases, then add their sizes.\n<!-- bilingual-en:end -->\n\n有限结果分成互不重叠的类别，再把各类数量相加。",
       "color": "2"
     },
     {
@@ -97,7 +97,7 @@
       "y": 910,
       "width": 520,
       "height": 220,
-      "text": "## [[容斥原理]]\nMCS-COUNT-012 · 精确规则\n\n完整交替和使每个并集元素最终只计一次。",
+      "text": "<!-- bilingual-en:start -->\n## [[容斥原理|Inclusion–exclusion]]\n\nFor finitely many sets, correct all overlaps so each union member contributes once. The probability version does not require equally likely outcomes.\n<!-- bilingual-en:end -->\n\n容斥原理：对有限多个集合逐层修正重叠，让并集元素各计一次；概率版本不要求结果等可能。",
       "color": "2"
     },
     {
@@ -106,8 +106,8 @@
       "x": 0,
       "y": 1240,
       "width": 520,
-      "height": 220,
-      "text": "## [[Bonferroni界]]\nMCS-COUNT-023 · 定理\n\n奇数阶截断给上界，偶数阶截断给下界。",
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[Bonferroni界|Bonferroni bounds]]\n\nTruncate inclusion–exclusion: odd orders give upper bounds and even orders lower bounds. Higher orders need not improve the same-side bound.\n<!-- bilingual-en:end -->\n\n奇数阶上界、偶数阶下界；有时提前精确，更高阶未必比同侧旧界更紧。",
       "color": "1"
     },
     {
@@ -117,7 +117,7 @@
       "y": 250,
       "width": 520,
       "height": 220,
-      "text": "## [[乘法法则]]\nMCS-COUNT-003 · 计数规则\n\n每个同层前缀有固定延伸数时分阶段相乘。",
+      "text": "<!-- bilingual-en:start -->\n## [[乘法法则|Product rule]]\n\nWhen every prefix at a stage has the same number of extensions, multiply the counts across stages.\n<!-- bilingual-en:end -->\n\n同一阶段的每个合法前缀都有固定延伸数时，可按阶段相乘。",
       "color": "2"
     },
     {
@@ -127,7 +127,7 @@
       "y": 580,
       "width": 520,
       "height": 220,
-      "text": "## [[排列]]\nMCS-COUNT-007 · 定义入口\n\n从不同对象中形成有序且无重复的 k 元序列。",
+      "text": "<!-- bilingual-en:start -->\n## [[排列|Permutations]]\n\nOrdered selections without repetition from distinct objects. Empty selection counts once.\n<!-- bilingual-en:end -->\n\n排列：从不同对象中作有序、无重复选择；空选择计一种。",
       "color": "5"
     },
     {
@@ -157,7 +157,7 @@
       "y": 250,
       "width": 520,
       "height": 220,
-      "text": "## [[双射计数]]\nMCS-COUNT-004 · 证明方法\n\n可逆映射同时排除重复和遗漏。",
+      "text": "<!-- bilingual-en:start -->\n## [[双射计数|Counting by bijection]]\n\nAn explicit inverse shows no outcomes are lost or duplicated.\n<!-- bilingual-en:end -->\n\n构造可逆对应，说明计数既不遗漏，也不重复。",
       "color": "3"
     },
     {
@@ -167,7 +167,7 @@
       "y": 580,
       "width": 520,
       "height": 220,
-      "text": "## [[除法法则]]\nMCS-COUNT-005 · 计数规则\n\n每个目标有固定数量表示时除去等纤维重数。",
+      "text": "<!-- bilingual-en:start -->\n## [[除法法则|Division rule]]\n\nIf every target has exactly $k>0$ representations, divide the representation count by $k$.\n<!-- bilingual-en:end -->\n\n先证明每个目标恰有 $k$ 个表示，再除以这个共同重数。",
       "color": "3"
     },
     {
@@ -177,7 +177,7 @@
       "y": 910,
       "width": 520,
       "height": 220,
-      "text": "## [[组合数]]\nMCS-COUNT-008 · 定义入口\n\n计数无序、无重复的 k 元子集。",
+      "text": "<!-- bilingual-en:start -->\n## [[组合数|Binomial coefficients]]\n\nCount k-element subsets of n distinct objects. Each subset has k! orderings.\n<!-- bilingual-en:end -->\n\n组合数：计数 n 个不同对象的 k 元子集；每个子集对应 k! 种排列。",
       "color": "5"
     },
     {
@@ -187,7 +187,7 @@
       "y": 1240,
       "width": 520,
       "height": 220,
-      "text": "## [[组合数对称性]]\nMCS-COUNT-017 · 恒等式\n\n选 k 个与选出未选的 n-k 个由补集双射连接。",
+      "text": "<!-- bilingual-en:start -->\n## [[组合数对称性|Symmetry of binomial coefficients]]\n\nTaking the complement pairs each k-subset with an (n−k)-subset; constraints must transform too.\n<!-- bilingual-en:end -->\n\n组合数对称性：取补集将 k 元与 n−k 元子集配对；附加条件也必须随之转换。",
       "color": "3"
     },
     {
@@ -196,8 +196,8 @@
       "x": 1240,
       "y": 1570,
       "width": 520,
-      "height": 220,
-      "text": "## [[Pascal恒等式]]\nMCS-COUNT-018 · 恒等式\n\n按一个固定元素是否入选做不交分类。",
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[Pascal恒等式|Pascal’s identity]]\n\nFor $n\\ge1$, split $k$-subsets by whether they contain one chosen element. The two disjoint counts add.\n<!-- bilingual-en:end -->\n\n对非负整数大小的子集，按是否包含一个指定元素分成两类，再相加。",
       "color": "3"
     },
     {
@@ -206,8 +206,8 @@
       "x": 1240,
       "y": 1900,
       "width": 520,
-      "height": 220,
-      "text": "## [[二项式定理]]\nMCS-COUNT-019 · 定理\n\n组合数给出二项式非负整数次幂的展开系数。",
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[二项式定理|Binomial theorem]]\n\nFor integer $n\\ge0$, choosing which factors supply each term gives the coefficients in $(x+y)^n$.\n<!-- bilingual-en:end -->\n\n非负整数次幂中，选择哪些因子贡献哪一项，得到展开系数。",
       "color": "3"
     },
     {
@@ -216,8 +216,8 @@
       "x": 1860,
       "y": 250,
       "width": 520,
-      "height": 220,
-      "text": "## [[多项式系数]]\nMCS-COUNT-009 · 定义入口\n\n把 n 个位置分成给定大小的多个有标签组。",
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[多项式系数|Multinomial coefficients]]\n\nCount allocations of distinct objects into labelled groups of prescribed nonnegative integer sizes.\n<!-- bilingual-en:end -->\n\n计数不同对象分入有标签组、且各组大小预先给定的分配。",
       "color": "5"
     },
     {
@@ -226,8 +226,8 @@
       "x": 1860,
       "y": 580,
       "width": 520,
-      "height": 220,
-      "text": "## [[多项式定理]]\nMCS-COUNT-020 · 定理\n\n多项式系数给出多个项之和的展开系数。",
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[多项式定理|Multinomial theorem]]\n\nFor a nonnegative integer power, group products by how often each summand is selected.\n<!-- bilingual-en:end -->\n\n对非负整数次幂，按每个加数被选中的次数归并乘积。",
       "color": "3"
     },
     {
@@ -236,8 +236,8 @@
       "x": 1860,
       "y": 910,
       "width": 520,
-      "height": 220,
-      "text": "## [[隔板法]]\nMCS-COUNT-010 · 双射方法\n\n把定和非负整数解编码成星与隔板的位置。",
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[隔板法|Stars and bars]]\n\nEncode $k\\ge1$ labelled nonnegative counts summing to $n\\ge0$ by $n$ stars and $k-1$ bars.\n<!-- bilingual-en:end -->\n\n把有标签的非负整数计数编码为星与隔板；空组允许相邻隔板。",
       "color": "3"
     },
     {
@@ -247,7 +247,7 @@
       "y": 250,
       "width": 520,
       "height": 220,
-      "text": "## [[双重计数]]\nMCS-COUNT-006 · 证明方法\n\n对同一有限集合做两种完备分组，得到恒等式。",
+      "text": "<!-- bilingual-en:start -->\n## [[双重计数|Double counting]]\n\nCount the same finite set in two complete ways to prove an identity.\n<!-- bilingual-en:end -->\n\n对同一个有限集合，用两种完整的计数方式得到恒等式。",
       "color": "4"
     },
     {
@@ -257,7 +257,7 @@
       "y": 580,
       "width": 520,
       "height": 220,
-      "text": "## [[鸽巢原理]]\nMCS-COUNT-011 · 存在性原理\n\n总容量不足时至少有一个纤维过载。",
+      "text": "<!-- bilingual-en:start -->\n## [[鸽巢原理|Pigeonhole principle]]\n\n$N$ objects in $k\\ge1$ boxes: some box has at least $\\lceil N/k\\rceil$ objects.\n<!-- bilingual-en:end -->\n\n保证某个盒子达到这个数量，不指定哪个盒子，也不要求等概率。",
       "color": "4"
     },
     {
@@ -266,8 +266,8 @@
       "x": 3100,
       "y": 250,
       "width": 520,
-      "height": 220,
-      "text": "## [[普通生成函数]]\nMCS-COUNT-013 · 定义入口\n\n以数列为系数的形式幂级数。",
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[普通生成函数|Ordinary generating function]]\n\nIn $A(x)=\\sum a_nx^n$, the power records an index and the coefficient stores its value. Formal operations need no numerical substitution.\n<!-- bilingual-en:end -->\n\n次数记录索引，系数记录数列项；形式运算与数值收敛分开。",
       "color": "5"
     },
     {
@@ -276,8 +276,8 @@
       "x": 3100,
       "y": 580,
       "width": 520,
-      "height": 220,
-      "text": "## [[生成函数乘积与卷积]]\nMCS-COUNT-021 · 恒等式\n\n乘积的第 n 个系数遍历全部规模拆分。",
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[生成函数乘积与卷积|Coefficient convolution]]\n\n$[x^n](AB)=\\sum_{k=0}^n a_kb_{n-k}$. Counting completed objects requires a unique valid component decomposition.\n<!-- bilingual-en:end -->\n\n固定总次数，累加全部规模拆分；解释为完成品计数还需要唯一合法分解。",
       "color": "3"
     },
     {
@@ -329,29 +329,214 @@
       "height": 220,
       "text": "## [[渐近记号与算法复杂度.canvas|渐近记号与算法复杂度]]\n跨主题出口\n\n在对象与公式固定后，比较它们随规模怎样增长。",
       "color": "4"
+    },
+    {
+      "id": "p0012-pgf",
+      "type": "text",
+      "x": 3720,
+      "y": 250,
+      "width": 520,
+      "height": 280,
+      "color": "4",
+      "text": "<!-- bilingual-en:start -->\n## [[概率生成函数|Probability generating function]]\n\nFor a nonnegative integer count, $G(s)=\\sum P(N=n)s^n$. Its coefficients are nonnegative and sum to one.\n<!-- bilingual-en:end -->\n\n用概率作系数，记录非负整数计数分布；单位圆盘内保证绝对收敛。"
     }
   ],
   "edges": [
-    {"id":"count-e001","fromNode":"count-group-classify","fromSide":"bottom","toNode":"count-object","toSide":"top","toEnd":"arrow","label":"先固定对象"},
-    {"id":"count-e002","fromNode":"count-object","fromSide":"bottom","toNode":"count-add","toSide":"top","toEnd":"arrow","label":"能分成不交类别时"},
-    {"id":"count-e003","fromNode":"count-add","fromSide":"bottom","toNode":"count-inclusion","toSide":"top","toEnd":"arrow","label":"类别重叠时修正"},
-    {"id":"count-e004","fromNode":"count-inclusion","fromSide":"bottom","toNode":"count-bonferroni","toSide":"top","toEnd":"arrow","label":"无法算完全部交集时保留一侧界"},
-    {"id":"count-e005","fromNode":"count-group-product","fromSide":"bottom","toNode":"count-product","toSide":"top","toEnd":"arrow","label":"分阶段构造"},
-    {"id":"count-e006","fromNode":"count-product","fromSide":"bottom","toNode":"count-permutation","toSide":"top","toEnd":"arrow","label":"有序且无重复"},
-    {"id":"count-e007","fromNode":"count-permutation","fromSide":"bottom","toNode":"count-stirling","toSide":"top","toEnd":"arrow","label":"阶乘规模进入渐近"},
-    {"id":"count-e008","fromNode":"count-stirling","fromSide":"bottom","toNode":"count-robbins","toSide":"top","toEnd":"arrow","label":"需要有限 n 的显式误差时"},
-    {"id":"count-e009","fromNode":"count-group-choice","fromSide":"bottom","toNode":"count-bijection","toSide":"top","toEnd":"arrow","label":"先找可逆编码"},
-    {"id":"count-e010","fromNode":"count-bijection","fromSide":"bottom","toNode":"count-division","toSide":"top","toEnd":"arrow","label":"固定重数表示时"},
-    {"id":"count-e011","fromNode":"count-division","fromSide":"bottom","toNode":"count-combination","toSide":"top","toEnd":"arrow","label":"除去 k! 个内部顺序"},
-    {"id":"count-e012","fromNode":"count-combination","fromSide":"bottom","toNode":"count-symmetry","toSide":"top","toEnd":"arrow","label":"取补集得到对称性"},
-    {"id":"count-e015","fromNode":"count-group-multi","fromSide":"bottom","toNode":"count-multinomial","toSide":"top","toEnd":"arrow","label":"先定义有标签多组计数"},
-    {"id":"count-e016","fromNode":"count-multinomial","fromSide":"bottom","toNode":"count-multitheorem","toSide":"top","toEnd":"arrow","label":"再成为展开系数"},
-    {"id":"count-e017","fromNode":"count-group-proof","fromSide":"bottom","toNode":"count-double","toSide":"top","toEnd":"arrow","label":"同一集合两次分组"},
-    {"id":"count-e019","fromNode":"count-group-series","fromSide":"bottom","toNode":"count-ogf","toSide":"top","toEnd":"arrow","label":"把整列计数编码为系数"},
-    {"id":"count-e020","fromNode":"count-ogf","fromSide":"bottom","toNode":"count-convolution","toSide":"top","toEnd":"arrow","label":"相乘后系数卷积"},
-    {"id":"count-e021","fromNode":"count-convolution","fromSide":"bottom","toNode":"count-geometric","toSide":"top","label":"几何级数是最基本的形式例"},
-    {"id":"count-e022","fromNode":"count-geometric","fromSide":"right","toNode":"count-weighted-geometric","toSide":"left","toEnd":"arrow","label":"逐项求导后乘回公比"},
-    {"id":"count-e023","fromNode":"count-harmonic","fromSide":"bottom","toNode":"count-harmonic-growth","toSide":"top","toEnd":"arrow","label":"积分比较确定增长速度"},
-    {"id":"count-e024","fromNode":"count-asymptotic","fromSide":"left","toNode":"count-harmonic-growth","toSide":"right","toEnd":"arrow","label":"用渐近记号表述增长阶"}
+    {
+      "id": "count-e001",
+      "fromNode": "count-group-classify",
+      "fromSide": "bottom",
+      "toNode": "count-object",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "先固定对象"
+    },
+    {
+      "id": "count-e002",
+      "fromNode": "count-object",
+      "fromSide": "bottom",
+      "toNode": "count-add",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "能分成不交类别时"
+    },
+    {
+      "id": "count-e003",
+      "fromNode": "count-add",
+      "fromSide": "bottom",
+      "toNode": "count-inclusion",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "类别重叠时修正"
+    },
+    {
+      "id": "count-e004",
+      "fromNode": "count-inclusion",
+      "fromSide": "bottom",
+      "toNode": "count-bonferroni",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "无法算完全部交集时保留一侧界"
+    },
+    {
+      "id": "count-e005",
+      "fromNode": "count-group-product",
+      "fromSide": "bottom",
+      "toNode": "count-product",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "分阶段构造"
+    },
+    {
+      "id": "count-e006",
+      "fromNode": "count-product",
+      "fromSide": "bottom",
+      "toNode": "count-permutation",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "有序且无重复"
+    },
+    {
+      "id": "count-e007",
+      "fromNode": "count-permutation",
+      "fromSide": "bottom",
+      "toNode": "count-stirling",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "阶乘规模进入渐近"
+    },
+    {
+      "id": "count-e008",
+      "fromNode": "count-stirling",
+      "fromSide": "bottom",
+      "toNode": "count-robbins",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "需要有限 n 的显式误差时"
+    },
+    {
+      "id": "count-e009",
+      "fromNode": "count-group-choice",
+      "fromSide": "bottom",
+      "toNode": "count-bijection",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "先找可逆编码"
+    },
+    {
+      "id": "count-e010",
+      "fromNode": "count-bijection",
+      "fromSide": "bottom",
+      "toNode": "count-division",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "固定重数表示时"
+    },
+    {
+      "id": "count-e011",
+      "fromNode": "count-division",
+      "fromSide": "bottom",
+      "toNode": "count-combination",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "除去 k! 个内部顺序"
+    },
+    {
+      "id": "count-e012",
+      "fromNode": "count-combination",
+      "fromSide": "bottom",
+      "toNode": "count-symmetry",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "取补集得到对称性"
+    },
+    {
+      "id": "count-e015",
+      "fromNode": "count-group-multi",
+      "fromSide": "bottom",
+      "toNode": "count-multinomial",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "先定义有标签多组计数"
+    },
+    {
+      "id": "count-e016",
+      "fromNode": "count-multinomial",
+      "fromSide": "bottom",
+      "toNode": "count-multitheorem",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "再成为展开系数"
+    },
+    {
+      "id": "count-e017",
+      "fromNode": "count-group-proof",
+      "fromSide": "bottom",
+      "toNode": "count-double",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "同一集合两次分组"
+    },
+    {
+      "id": "count-e019",
+      "fromNode": "count-group-series",
+      "fromSide": "bottom",
+      "toNode": "count-ogf",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "把整列计数编码为系数"
+    },
+    {
+      "id": "count-e020",
+      "fromNode": "count-ogf",
+      "fromSide": "bottom",
+      "toNode": "count-convolution",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "相乘后系数卷积"
+    },
+    {
+      "id": "count-e021",
+      "fromNode": "count-convolution",
+      "fromSide": "bottom",
+      "toNode": "count-geometric",
+      "toSide": "top",
+      "label": "Finite geometric factors give convolution examples · 有限几何因子提供卷积例子"
+    },
+    {
+      "id": "count-e022",
+      "fromNode": "count-geometric",
+      "fromSide": "right",
+      "toNode": "count-weighted-geometric",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "逐项求导后乘回公比"
+    },
+    {
+      "id": "count-e023",
+      "fromNode": "count-harmonic",
+      "fromSide": "bottom",
+      "toNode": "count-harmonic-growth",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "积分比较确定增长速度"
+    },
+    {
+      "id": "count-e024",
+      "fromNode": "count-asymptotic",
+      "fromSide": "left",
+      "toNode": "count-harmonic-growth",
+      "toSide": "right",
+      "toEnd": "arrow",
+      "label": "用渐近记号表述增长阶"
+    },
+    {
+      "id": "p0012-ogf-pgf",
+      "fromNode": "count-ogf",
+      "fromSide": "right",
+      "toNode": "p0012-pgf",
+      "toSide": "left",
+      "label": "Specialise coefficients to a count PMF · 系数取计数变量PMF"
+    }
   ]
 }

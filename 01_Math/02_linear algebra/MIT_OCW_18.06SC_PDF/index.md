@@ -87,7 +87,7 @@ tags:
 - [ ] [[07_Recitation_Transcripts/FINAL_Recitation_Final_Exam_Problem_Solving.pdf#page=1|Final Exam problem-solving transcript]]
 - [ ] [[01_Exams/MIT18_06SCF11_final_ex.pdf#page=1|Final Exam]]
 - [ ] [[01_Exams/MIT18_06SCF11_final_exs.pdf#page=1|Final Exam official solutions]]
-- 完整题解：[[../04_Review and exam roadmap|Final Course Review and Final Exam]]
+- 完整题解：[[04_Review and exam roadmap|Final Course Review and Final Exam]]
 
 ## Supplementary transcripts
 

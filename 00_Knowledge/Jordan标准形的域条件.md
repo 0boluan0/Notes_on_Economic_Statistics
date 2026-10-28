@@ -53,4 +53,4 @@ A real matrix may require real $2\times2$ blocks for a conjugate pair even thoug
 
 - [[01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.4sum.pdf|MIT 18.06SC Session 3.4 summary]]：核对 Jordan 块直和的课程范围。
 - [[01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U3_S04_Lecture_Lecture_28_Similar_Matrices_and_Jordan_Form.pdf|MIT Lecture 28 transcript]]：核对 Jordan 形式与特征值所在域。
-- [[01_Math/02_linear algebra/03_Positive Definite Matrices and Applications.md#Session 3.4 Similar matrices and Jordan form|课程 Session 3.4]]：核对底层域与实 $2\times2$ 块边界。
+- [[03_Positive Definite Matrices and Applications#Session 3.4 Similar matrices and Jordan form|课程 Session 3.4]]：核对底层域与实 $2\times2$ 块边界。

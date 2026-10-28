@@ -62,11 +62,11 @@
     {
       "id": "binomial-boundary",
       "type": "text",
-      "text": "## [[Bernoulli和的二项分布]]\n\n只有同一成功概率并且相互独立时，指标和才由这些条件推出 Binomial。",
+      "text": "<!-- bilingual-en:start -->\n## [[Bernoulli和的二项分布|A binomial sum]]\n<!-- bilingual-en:end -->\n*Bernoulli 和的二项分布*\n\n<!-- bilingual-en:start -->\nA common $p$ and mutual independence suffice; marginal laws alone need not determine the sum.\n<!-- bilingual-en:end -->\n\n共同成功率与相互独立足以推出二项分布；缺少这些条件时须另查联合机制。",
       "x": 1180,
       "y": 650,
       "width": 340,
-      "height": 190,
+      "height": 260,
       "color": "1"
     },
     {
@@ -142,7 +142,7 @@
     {
       "id": "footer",
       "type": "text",
-      "text": "颜色只区分本图中的语义角色：绿色是定义入口，紫色是定理或恒等式，青色是方法，红色是适用边界。掌握状态仍由 Base 与 YAML 管理；点击节点名会打开对应的 Markdown 原子。",
+      "text": "<!-- bilingual-en:start -->\nColours distinguish roles: green for definitions, purple for theorems or identities, cyan for methods, and red for applicability boundaries. Click a node title to open its knowledge card.\n<!-- bilingual-en:end -->\n\n颜色区分语义角色：绿色为定义，紫色为定理或恒等式，青色为方法，红色为适用边界。点击节点名打开对应知识卡片。",
       "x": 40,
       "y": 1750,
       "width": 1860,

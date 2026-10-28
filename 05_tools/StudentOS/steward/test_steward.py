@@ -213,6 +213,14 @@ class SnapshotTests(unittest.TestCase):
         self.assertEqual(result["status"], "partial")
         self.assertTrue(any(i.get("path") == DEADLINES for i in result["issues"]))
 
+    def test_optional_submission_window_is_visible_without_claiming_submission(self):
+        self.write(DEADLINES, "- [ ] 2026-10-24 23:59｜ST445｜提交 Formative PS1（可选、不计分） #student-os/submission-window 📅 2026-10-24 ^optional\n")
+        result = snapshot(self.vault)
+        item, = result["obligations"]
+        self.assertTrue(item["optional"])
+        self.assertEqual((item["date"], item["local_time"], item["status"]), ("2026-10-24", "23:59", "completion_unknown"))
+        self.assertEqual(len(result["tasks"]), 1, "A submission window is not a second learning task")
+
     def test_missing_registered_source_is_not_silent(self):
         (self.vault / "active.md").unlink()
         self.assertTrue(any(i["code"] == "unresolved_registered_source" for i in snapshot(self.vault)["issues"]))

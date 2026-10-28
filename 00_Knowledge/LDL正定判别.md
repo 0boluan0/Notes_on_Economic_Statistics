@@ -66,7 +66,7 @@ If every leading principal submatrix is nonsingular, the unpivoted factorization
 ## 来源与核验
 
 - [[01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U3_S03_Lecture_Lecture_27_Positive_Definite_Matrices_and_Minima.pdf|MIT Lecture 27 transcript]]：核对配方、主元与二次型的对应。
-- [[01_Math/02_linear algebra/03_Positive Definite Matrices and Applications.md#3.3.2 配方就是 $LDL^T$|课程 3.3.2]]：核对 $LDL^T$ 推导及不做行交换时的边界。
+- [[03_Positive Definite Matrices and Applications#3.3.2 配方就是 $LDL^T$|课程 3.3.2]]：核对 $LDL^T$ 推导及不做行交换时的边界。
 - [UCLA, *Symmetric factorizations*](https://math.ucla.edu/~njhu/notes/nla/lin-direct/symfact.pdf)：核对非零顺序主子式下的存在唯一性、零主元失败与分块置换边界。
 <!-- bilingual-en:start -->
 - The MIT Lecture 27 transcript was checked for the link among completing the square, pivots, and quadratic forms.

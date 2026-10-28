@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "domains": [
+    {
+      "id": "math",
+      "title": "数学基础"
+    }
+  ],
+  "outcomes": [
+    {
+      "id": "la.column-space",
+      "title": "列空间与张成",
+      "family": "linear-algebra",
+      "scope": "列空间、线性组合与相容性；不包含基的独立性证明",
+      "notes": [
+        "LA-SYS-002"
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "id": "mit-1806sc",
+      "code": "18.06SC",
+      "title": "Linear Algebra",
+      "titleZh": "线性代数",
+      "school": "MIT",
+      "version": "Fall 2011",
+      "domain": "math",
+      "stage": 1,
+      "role": "core",
+      "tracks": [
+        "research",
+        "engineering",
+        "data"
+      ],
+      "purpose": "为机器学习与数值方法提供线性代数基础",
+      "url": "https://...",
+      "syllabus": "https://...",
+      "checked": "2026-10-22",
+      "materials": [
+        "video",
+        "notes",
+        "exercises",
+        "solutions"
+      ],
+      "coverage": "full-outline",
+      "summary": [
+        "向量空间",
+        "最小二乘"
+      ],
+      "prerequisites": [
+        {
+          "id": "mit-1801sc",
+          "kind": "official",
+          "reason": "官方列出...",
+          "source": "https://..."
+        }
+      ],
+      "requirements": [
+        {
+          "title": "矩阵运算",
+          "outcomes": [
+            "la.matrix-multiplication"
+          ],
+          "source": "https://..."
+        }
+      ],
+      "units": [
+        {
+          "id": "1.7",
+          "title": "Column Space and Nullspace",
+          "module": "Ax = b 与四个子空间",
+          "source": "https://...",
+          "outcomes": [
+            "la.column-space"
+          ],
+          "mapping": "reviewed-outline",
+          "note": "本节实际讲授这些主题；只记录已学范围，非独立掌握"
+        }
+      ]
+    }
+  ]
+}

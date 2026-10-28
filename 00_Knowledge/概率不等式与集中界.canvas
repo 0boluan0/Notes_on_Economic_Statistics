@@ -4,10 +4,10 @@
       "id": "c100000000000001",
       "type": "text",
       "x": 0,
-      "y": -260,
+      "y": -320,
       "width": 2520,
-      "height": 180,
-      "text": "# 概率不等式与集中界\n*Probability inequalities and concentration bounds*\n\n先读清 tail bound 的含义，再按已知信息选路：nonnegativity + mean 走 Markov；finite variance 走 Chebyshev；independence + boundedness 走 exponential bounds。随机量还是 event count 时，先到 [[指示变量与随机计数.canvas|indicator 建模]]。"
+      "height": 220,
+      "text": "<!-- bilingual-en:start -->\n## Probability inequalities and concentration bounds\n\nRead the target event and interpret its upper guarantee. A nonnegative variable and its mean support Markov; a finite variance supports Chebyshev; finite exponential moments support exponential Markov. Independent bounded sums give useful exponential-moment bounds. For event counts, begin with [[指示变量与随机计数.canvas|indicator modelling]].\n<!-- bilingual-en:end -->\n\n概率不等式与集中界：先写事件并读懂上界保证。非负性与均值支持 Markov，有限方差支持 Chebyshev，有限指数矩支持指数 Markov；独立有界和便于控制指数矩。事件计数先使用指示变量建模。"
     },
     {
       "id": "c100000000000002",
@@ -15,9 +15,9 @@
       "x": 0,
       "y": 0,
       "width": 420,
-      "height": 180,
+      "height": 250,
       "color": "3",
-      "text": "## 先读结果\n\n[[尾界含义|尾界是保证，不是概率等号]]\n\n数值超过 1 时只剩平凡界。"
+      "text": "<!-- bilingual-en:start -->\n## [[尾界含义|Interpreting a tail bound]]\n\nAn upper bound limits the probability; it does not estimate its location. Compare valid bounds with one.\n<!-- bilingual-en:end -->\n\n尾界含义：上界限制概率，并不定位真值；有效的界还应与 1 取最小值。"
     },
     {
       "id": "c100000000000003",
@@ -25,9 +25,9 @@
       "x": 620,
       "y": 0,
       "width": 500,
-      "height": 180,
+      "height": 250,
       "color": "3",
-      "text": "## 再选工具\n\n[[概率界选择|写 target event、threshold 与条件]]\n\n没有满足 assumptions，就没有使用公式的资格。"
+      "text": "<!-- bilingual-en:start -->\n## [[概率界选择|Choosing a probability bound]]\n\nFix the event, threshold and available assumptions before comparing valid candidates.\n<!-- bilingual-en:end -->\n\n概率界选择：先固定事件、阈值与已知条件，再比较条件成立的候选界。"
     },
     {
       "id": "c100000000000004",
@@ -35,9 +35,9 @@
       "x": 0,
       "y": 300,
       "width": 420,
-      "height": 180,
+      "height": 260,
       "color": "5",
-      "text": "## 均值入口\n\n[[Markov不等式|Markov：非负 + mean 控制右尾]]\n\n证明来自逐点比较。"
+      "text": "<!-- bilingual-en:start -->\n## [[Markov不等式|Markov's inequality]]\n<!-- bilingual-en:end -->\n\n*Markov 不等式*\n\n<!-- bilingual-en:start -->\nAn almost-sure indicator comparison turns a nonnegative variable’s mean into an upper-tail bound.\n<!-- bilingual-en:end -->\n\n用几乎处处成立的指示变量比较，把非负变量的均值转为右尾上界。"
     },
     {
       "id": "c100000000000005",
@@ -82,42 +82,52 @@
     {
       "id": "c100000000000009",
       "type": "text",
-			"x": 1320,
-			"y": 600,
+      "x": 1320,
+      "y": 600,
       "width": 500,
-      "height": 200,
+      "height": 250,
       "color": "5",
-      "text": "## 指数入口\n\n[[指数Markov法|exponential Markov：优化 MGF 上界]]\n\n[[相互独立|Mutual independence]] 保证联合乘积分解；[[两两独立]]一般不够。"
+      "text": "<!-- bilingual-en:start -->\n## [[指数Markov法|Exponential Markov method]]\n\nApply Markov to an exponential transform, then optimise over positive parameters with finite MGF. Mutual independence permits product factorisation for sums.\n<!-- bilingual-en:end -->\n\n指数 Markov：对指数变换用 Markov，再在 MGF 有限的正参数中优化。相互独立保证和的矩母函数乘积分解。"
     },
     {
       "id": "c10000000000000a",
       "type": "text",
-			"x": 2020,
-			"y": 600,
+      "x": 2020,
+      "y": 600,
       "width": 500,
-      "height": 220,
+      "height": 250,
       "color": "4",
-      "text": "## 相对偏差\n\n[[乘法Chernoff上界|multiplicative Chernoff]]\n\n独立 $[0,1]$ 变量和的 relative upper tail。"
+      "text": "<!-- bilingual-en:start -->\n## [[乘法Chernoff上界|Multiplicative Chernoff]]\n\nIndependent $[0,1]$ contributions; a threshold $(1+\\delta)\\mu$, $\\delta\\ge0$.\n<!-- bilingual-en:end -->\n\n独立的零到一贡献之和，控制相对均值的上尾。"
     },
     {
       "id": "c10000000000000b",
       "type": "text",
-			"x": 1320,
-			"y": 900,
+      "x": 1320,
+      "y": 900,
       "width": 500,
-      "height": 220,
+      "height": 250,
       "color": "4",
-      "text": "## 加性偏差\n\n[[Hoeffding不等式|general Hoeffding]]\n\n常数来自每个 support interval 的长度。"
+      "text": "<!-- bilingual-en:start -->\n## [[Hoeffding不等式|Hoeffding's inequality]]\n\nIndependent bounded terms; squared interval widths control $S-E[S]$.\n<!-- bilingual-en:end -->\n\n相互独立、有界的加数：用各区间宽度平方之和控制加性偏差。"
     },
     {
       "id": "c10000000000000c",
       "type": "text",
-			"x": 2020,
-			"y": 900,
+      "x": 2020,
+      "y": 900,
       "width": 500,
-      "height": 220,
+      "height": 250,
       "color": "4",
-      "text": "## 样本均值\n\n[[样本均值Hoeffding界|令 $t=n\\varepsilon$]]\n\n$[0,1]$ 时得到 $2e^{-2n\\varepsilon^2}$。"
+      "text": "<!-- bilingual-en:start -->\n## [[样本均值Hoeffding界|Hoeffding for an average]]\n\nFor independent $[0,1]$ observations and $\\varepsilon>0$, bound $P(|\\bar Y-E[\\bar Y]|\\ge\\varepsilon)$ by $\\min\\{1,2e^{-2n\\varepsilon^2}\\}$. Set $t=n\\varepsilon$.\n<!-- bilingual-en:end -->\n\n以平均值自身的期望为中心；用 $t=n\\varepsilon$ 换算总偏差。"
+    },
+    {
+      "id": "p0009-mgf",
+      "type": "text",
+      "x": 1320,
+      "y": 0,
+      "width": 650,
+      "height": 280,
+      "color": "5",
+      "text": "<!-- bilingual-en:start -->\n## [[矩母函数|Moment-generating function]]\n\n$M_X(s)=E[e^{sX}]$ averages exponentially transformed values. Check its finite domain; a neighbourhood of zero permits derivatives to generate moments.\n<!-- bilingual-en:end -->\n\n矩母函数：先指数变换，再按概率平均。要核对有限定义域；零附近有限时可求导得到矩。"
     }
   ],
   "edges": [
@@ -173,23 +183,23 @@
       "toNode": "c100000000000006",
       "toSide": "bottom",
       "toEnd": "arrow",
-      "label": "pairwise 已够二阶相加"
+      "label": "Pairwise independence + finite variances remove covariances · 两两独立且方差有限时交叉项为零"
     },
     {
       "id": "d100000000000007",
       "fromNode": "c100000000000004",
-			"fromSide": "bottom",
-			"toNode": "c100000000000009",
-			"toSide": "top",
+      "fromSide": "bottom",
+      "toNode": "c100000000000009",
+      "toSide": "top",
       "toEnd": "arrow",
       "label": "指数变换后仍用 Markov"
     },
     {
       "id": "d100000000000008",
-			"fromNode": "c100000000000008",
-			"fromSide": "right",
-			"toNode": "c100000000000009",
-			"toSide": "bottom",
+      "fromNode": "c100000000000008",
+      "fromSide": "right",
+      "toNode": "c100000000000009",
+      "toSide": "bottom",
       "toEnd": "arrow",
       "label": "mutual 保证 MGF 分解"
     },
@@ -205,9 +215,9 @@
     {
       "id": "d10000000000000a",
       "fromNode": "c100000000000009",
-			"fromSide": "bottom",
-			"toNode": "c10000000000000b",
-			"toSide": "top",
+      "fromSide": "bottom",
+      "toNode": "c10000000000000b",
+      "toSide": "top",
       "toEnd": "arrow",
       "label": "区间长度给加性偏差"
     },
@@ -219,6 +229,15 @@
       "toSide": "left",
       "toEnd": "arrow",
       "label": "取 t=nε"
+    },
+    {
+      "id": "p0009-mgf-exp",
+      "fromNode": "p0009-mgf",
+      "fromSide": "bottom",
+      "toNode": "c100000000000009",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "A finite MGF at a positive parameter supplies the numerator · 正参数处有限的 MGF 提供分子"
     }
   ]
 }

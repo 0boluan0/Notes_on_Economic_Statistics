@@ -12,91 +12,91 @@
     {
       "id": "mean-square-implication",
       "type": "text",
-      "text": "## [[均方收敛推出概率收敛]]\n\n均方收敛必然推出依概率收敛；小概率的大误差使反向一般不成立。",
+      "text": "<!-- bilingual-en:start -->\n## [[均方收敛推出概率收敛|Mean-square to probability]]\n\nMarkov bounds each fixed-tolerance error probability by $E[(X_n-X)^2]/\\varepsilon^2$.\n<!-- bilingual-en:end -->\n\n用平均平方误差控制固定阈值的超差概率；反向会被罕见大误差破坏。",
       "x": 420,
       "y": 650,
       "width": 340,
-      "height": 210,
+      "height": 230,
       "color": "2"
     },
     {
       "id": "almost-sure-implication",
       "type": "text",
-      "text": "## [[几乎必然收敛推出概率收敛]]\n\n几乎必然收敛一定推出依概率收敛；逐时点偏离概率消失不能保证路径最终稳定。",
+      "text": "<!-- bilingual-en:start -->\n## [[几乎必然收敛推出概率收敛|Almost sure to probability]]\n\nOn almost every path, errors beyond a fixed tolerance eventually stop; the tail-event probabilities vanish.\n<!-- bilingual-en:end -->\n\n几乎每条路径的固定阈值超差最终停止，因而剩余尾事件的概率趋零。",
       "x": 420,
       "y": 300,
       "width": 340,
-      "height": 210,
+      "height": 280,
       "color": "2"
     },
     {
       "id": "almost-sure",
       "type": "text",
-      "text": "## [[几乎必然收敛]]\n\n定义入口：在一个概率为 1 的事件上，每条样本路径都逐点收敛。",
+      "text": "<!-- bilingual-en:start -->\n## [[几乎必然收敛|Almost sure convergence]]\n\nOn one probability-one event, each path approaches its target on that same outcome. The cutoff may depend on the path.\n<!-- bilingual-en:end -->\n\n在同一个概率为一的事件上，各路径趋近同一结果下的目标；起始时刻可因路径而异。",
       "x": 40,
       "y": 300,
       "width": 340,
-      "height": 190,
+      "height": 290,
       "color": "4"
     },
     {
       "id": "mean-square",
       "type": "text",
-      "text": "## [[均方收敛]]\n\n定义入口：$E[(X_n-X)^2]\\to0$，直接控制平均平方误差。",
+      "text": "<!-- bilingual-en:start -->\n## [[均方收敛|Mean-square convergence]]\n\nFor square-integrable variables on one space, $E[(X_n-X)^2]\\to0$. Rare large errors still matter.\n<!-- bilingual-en:end -->\n\n同一空间内各变量平方可积，平均平方误差趋零；罕见大误差仍有影响。",
       "x": 40,
       "y": 650,
       "width": 340,
-      "height": 190,
+      "height": 290,
       "color": "4"
     },
     {
       "id": "in-probability",
       "type": "text",
-      "text": "## [[依概率收敛]]\n\n定义入口：超过任意固定误差阈值的概率趋于零。",
+      "text": "<!-- bilingual-en:start -->\n## [[依概率收敛|Convergence in probability]]\n\nFor every fixed $\\varepsilon>0$, $P(\\lvert X_n-X\\rvert>\\varepsilon)\\to0$. Compare values on the same outcome.\n<!-- bilingual-en:end -->\n\n对每个固定正容忍值，超差概率趋零；比较同一个结果下的取值。",
       "x": 800,
       "y": 300,
       "width": 340,
-      "height": 190,
+      "height": 290,
       "color": "4"
     },
     {
       "id": "in-distribution",
       "type": "text",
-      "text": "## [[依分布收敛]]\n\n定义入口：分布函数在极限 CDF 的每个连续点收敛。",
+      "text": "<!-- bilingual-en:start -->\n## [[依分布收敛|Convergence in distribution]]\n\nCDFs approach the limiting CDF at each of its continuity points. Only the laws are compared.\n<!-- bilingual-en:end -->\n\nCDF 在极限 CDF 的每个连续点收敛；这里只比较概率律。",
       "x": 1180,
       "y": 300,
       "width": 340,
-      "height": 190,
+      "height": 290,
       "color": "4"
     },
     {
       "id": "implications",
       "type": "text",
-      "text": "## [[概率收敛推出分布收敛]]\n\n依概率收敛总能推出依分布收敛。",
+      "text": "<!-- bilingual-en:start -->\n## [[概率收敛推出分布收敛|Probability to distribution]]\n\nA fixed margin sandwiches the CDFs at continuity points of the limiting CDF.\n<!-- bilingual-en:end -->\n\n先固定误差余量，再在极限CDF的连续点夹逼；极限可以随机。",
       "x": 800,
       "y": 650,
       "width": 340,
-      "height": 210,
+      "height": 230,
       "color": "2"
     },
     {
       "id": "distribution-no-probability",
       "type": "text",
-      "text": "## [[分布收敛不推概率收敛]]\n\n依分布收敛只比较概率律；一般不能推出与指定极限变量在同一结果上靠近。",
+      "text": "<!-- bilingual-en:start -->\n## [[分布收敛不推概率收敛|Laws do not fix a pairing]]\n\n$X_n=1-X$ and a fair Bernoulli $X$ have the same law but always differ by one.\n<!-- bilingual-en:end -->\n\n公平Bernoulli变量与其互补值分布相同，但指定配对始终相差一。",
       "x": 1180,
       "y": 650,
       "width": 340,
-      "height": 210,
+      "height": 230,
       "color": "2"
     },
     {
       "id": "constant-limit-converse",
       "type": "text",
-      "text": "## [[常数分布极限推出概率收敛]]\n\n当分布极限是常数时，依分布收敛可以反推依概率收敛。",
+      "text": "<!-- bilingual-en:start -->\n## [[常数分布极限推出概率收敛|A constant limiting value]]\n\nIf $X_n\\Rightarrow c$, both tails outside a fixed neighbourhood of $c$ vanish, giving $X_n\\xrightarrow p c$.\n<!-- bilingual-en:end -->\n\n常数极限下，两侧尾概率趋零，恢复依概率收敛。",
       "x": 420,
       "y": 900,
       "width": 340,
-      "height": 210,
+      "height": 230,
       "color": "2"
     },
     {
@@ -167,6 +167,16 @@
       "y": 1750,
       "width": 1860,
       "height": 170
+    },
+    {
+      "id": "p0012-portmanteau",
+      "type": "text",
+      "x": 800,
+      "y": 900,
+      "width": 720,
+      "height": 220,
+      "color": "6",
+      "text": "<!-- bilingual-en:start -->\n## [[Portmanteau定理|Portmanteau theorem]]\n\nFixed closed sets give upper-limit bounds; sets with zero limiting boundary mass have converging probabilities.\n<!-- bilingual-en:end -->\n\n固定闭集给出上极限界；极限分布在集合边界无质量时，事件概率收敛。"
     }
   ],
   "edges": [
@@ -177,7 +187,7 @@
       "toNode": "almost-sure-implication",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "抽出强弱关系"
+      "label": "Path control supplies the premise · 路径收敛作为假设"
     },
     {
       "id": "e01b",
@@ -186,7 +196,7 @@
       "toNode": "in-probability",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "由尾事件概率收缩推出"
+      "label": "Decreasing tail events control each index · 递减尾事件控制逐点概率"
     },
     {
       "id": "e02",
@@ -195,7 +205,7 @@
       "toNode": "mean-square-implication",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "抽出强弱关系"
+      "label": "Squared-error control supplies the premise · 均方误差作为假设"
     },
     {
       "id": "e02b",
@@ -204,7 +214,7 @@
       "toNode": "in-probability",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "由 Markov 不等式推出"
+      "label": "Markov at epsilon squared · 对平方误差应用Markov"
     },
     {
       "id": "e04",
@@ -213,7 +223,7 @@
       "toNode": "implications",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "正向蕴含"
+      "label": "Same-outcome error controls CDF margins · 同结果误差控制CDF余量"
     },
     {
       "id": "e05",
@@ -222,7 +232,7 @@
       "toNode": "in-distribution",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "给出正向蕴含"
+      "label": "CDF convergence at limit continuity points · 极限连续点上CDF收敛"
     },
     {
       "id": "e05b",
@@ -231,7 +241,7 @@
       "toNode": "distribution-no-probability",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "一般不能控制指定耦合"
+      "label": "Marginal laws leave coupling unspecified · 边际概率律不指定配对"
     },
     {
       "id": "e05c",
@@ -240,7 +250,7 @@
       "toNode": "in-probability",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "例外地恢复概率收敛"
+      "label": "Both fixed tails vanish · 两侧固定尾部趋零"
     },
     {
       "id": "e05d",
@@ -249,7 +259,7 @@
       "toNode": "constant-limit-converse",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "极限分布退化为常数时例外"
+      "label": "Constant limit removes the pairing ambiguity · 常数极限没有随机配对歧义"
     },
     {
       "id": "e06",
@@ -304,6 +314,22 @@
       "toSide": "right",
       "toEnd": "arrow",
       "label": "结论仍是分布极限"
+    },
+    {
+      "id": "p0012-dist-portmanteau",
+      "fromNode": "in-distribution",
+      "fromSide": "bottom",
+      "toNode": "p0012-portmanteau",
+      "toSide": "right",
+      "label": "Equivalent event criteria · 等价的事件判据"
+    },
+    {
+      "id": "p0012-portmanteau-constant",
+      "fromNode": "p0012-portmanteau",
+      "fromSide": "left",
+      "toNode": "constant-limit-converse",
+      "toSide": "right",
+      "label": "Closed tails excluding c have zero limiting mass · 不含c的闭尾部极限质量为零"
     }
   ]
 }

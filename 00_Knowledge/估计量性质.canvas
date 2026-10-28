@@ -126,9 +126,9 @@
       "x": 1200,
       "y": 320,
       "width": 440,
-      "height": 190,
+      "height": 260,
       "color": "5",
-      "text": "## [[依概率收敛|依概率收敛]]\n\n<!-- bilingual-en:start -->\n*Convergence in probability*\n<!-- bilingual-en:end -->"
+      "text": "<!-- bilingual-en:start -->\n## [[依概率收敛|Convergence in probability]]\n\nAt every fixed positive error tolerance, the probability of exceeding it tends to zero.\n<!-- bilingual-en:end -->\n\n对每个固定的正误差容忍值，超差概率趋于零。"
     }
   ],
   "edges": [

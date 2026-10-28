@@ -1,0 +1,229 @@
+{
+  "nodes": [
+    {
+      "id": "title",
+      "type": "text",
+      "x": 0,
+      "y": -170,
+      "width": 2050,
+      "height": 120,
+      "text": "# R analysis: values → selection → data → description → saved work\n\nR 数据分析：值 → 选择 → 数据 → 描述 → 保存\n\nOpen a card for its precise rule and example. / 打开卡片查看准确规则及示例。"
+    },
+    {
+      "id": "assign",
+      "type": "file",
+      "file": "00_Knowledge/R 赋值与相等比较.md",
+      "x": 0,
+      "y": 0,
+      "width": 330,
+      "height": 150
+    },
+    {
+      "id": "types",
+      "type": "file",
+      "file": "00_Knowledge/R 数值与字符字面量.md",
+      "x": 0,
+      "y": 220,
+      "width": 330,
+      "height": 150
+    },
+    {
+      "id": "atomic",
+      "type": "file",
+      "file": "00_Knowledge/R 原子向量.md",
+      "x": 0,
+      "y": 440,
+      "width": 330,
+      "height": 150
+    },
+    {
+      "id": "position",
+      "type": "file",
+      "file": "00_Knowledge/R 向量位置索引.md",
+      "x": 430,
+      "y": 0,
+      "width": 330,
+      "height": 150
+    },
+    {
+      "id": "filter",
+      "type": "file",
+      "file": "00_Knowledge/R 逻辑筛选.md",
+      "x": 430,
+      "y": 220,
+      "width": 330,
+      "height": 150
+    },
+    {
+      "id": "recycle",
+      "type": "file",
+      "file": "00_Knowledge/R 向量回收.md",
+      "x": 430,
+      "y": 440,
+      "width": 330,
+      "height": 150
+    },
+    {
+      "id": "import",
+      "type": "file",
+      "file": "00_Knowledge/R 导入表头与行名.md",
+      "x": 860,
+      "y": 0,
+      "width": 330,
+      "height": 150
+    },
+    {
+      "id": "frame",
+      "type": "file",
+      "file": "00_Knowledge/R 数据框列选择.md",
+      "x": 860,
+      "y": 220,
+      "width": 330,
+      "height": 150
+    },
+    {
+      "id": "factor",
+      "type": "file",
+      "file": "00_Knowledge/R 因子与水平.md",
+      "x": 860,
+      "y": 440,
+      "width": 330,
+      "height": 150
+    },
+    {
+      "id": "convert",
+      "type": "file",
+      "file": "00_Knowledge/R 因子标签转数值.md",
+      "x": 860,
+      "y": 660,
+      "width": 330,
+      "height": 150
+    },
+    {
+      "id": "proportion",
+      "type": "file",
+      "file": "00_Knowledge/R 列联表条件比例.md",
+      "x": 1290,
+      "y": 0,
+      "width": 330,
+      "height": 150
+    },
+    {
+      "id": "bar",
+      "type": "file",
+      "file": "00_Knowledge/R 矩阵条形图.md",
+      "x": 1290,
+      "y": 220,
+      "width": 330,
+      "height": 150
+    },
+    {
+      "id": "hist",
+      "type": "file",
+      "file": "00_Knowledge/R 直方图分组比较.md",
+      "x": 1290,
+      "y": 440,
+      "width": 330,
+      "height": 150
+    },
+    {
+      "id": "save",
+      "type": "file",
+      "file": "00_Knowledge/R 工作区历史与脚本.md",
+      "x": 1720,
+      "y": 0,
+      "width": 330,
+      "height": 150
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0",
+      "fromNode": "types",
+      "toNode": "atomic",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "Elements share a type / 元素共享类型"
+    },
+    {
+      "id": "e1",
+      "fromNode": "assign",
+      "toNode": "position",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "Bind a vector before selecting / 绑定向量后选择"
+    },
+    {
+      "id": "e2",
+      "fromNode": "atomic",
+      "toNode": "recycle",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "Arithmetic pairs vector entries / 算术配对元素"
+    },
+    {
+      "id": "e3",
+      "fromNode": "position",
+      "toNode": "filter",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "Choose by position or condition / 按位置或条件选取"
+    },
+    {
+      "id": "e4",
+      "fromNode": "import",
+      "toNode": "frame",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "Import determines columns available / 导入决定可选列"
+    },
+    {
+      "id": "e5",
+      "fromNode": "frame",
+      "toNode": "factor",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "A selected column may represent categories / 列可表示类别"
+    },
+    {
+      "id": "e6",
+      "fromNode": "factor",
+      "toNode": "convert",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "Distinguish codes before numeric export / 导出前辨明编码"
+    },
+    {
+      "id": "e7",
+      "fromNode": "factor",
+      "toNode": "proportion",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "Count categories, then choose a denominator / 类别计数后选择分母"
+    },
+    {
+      "id": "e8",
+      "fromNode": "proportion",
+      "toNode": "bar",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "Choose counts or shares for bar heights / 决定柱高用计数或份额"
+    },
+    {
+      "id": "e9",
+      "fromNode": "frame",
+      "toNode": "hist",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "Select numeric columns for distributions / 数值列用于分布描述"
+    },
+    {
+      "id": "e10",
+      "fromNode": "proportion",
+      "toNode": "save",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "Preserve the analysis steps and inputs / 保存步骤与输入"
+    }
+  ]
+}

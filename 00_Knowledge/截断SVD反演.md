@@ -88,7 +88,7 @@ For $A=\operatorname{diag}(1,10^{-4})$ and $\tau=10^{-3}$, TSVD retains the firs
 
 - P. C. Hansen, [*Intro to Inverse Problems*, Chapter 4](https://www2.imm.dtu.dk/~pcha/DIP/chap4.pdf#page=16)：核验截断 SVD 的滤波因子展开、噪声抑制与偏差边界。
 - [LAPACK Users’ Guide: Linear Least Squares Problems](https://www.netlib.org/lapack/lug/node27.html)：核验 `RCOND`、有效秩与 SVD 最小范数求解的关系。
-- [[01_Math/02_linear algebra/03_Positive Definite Matrices and Applications.md#3.8.8 边界、反例与易错点|课程 3.8.8]]：核对小奇异值与阈值化反演的使用边界。
+- [[03_Positive Definite Matrices and Applications#3.8.8 边界、反例与易错点|课程 3.8.8]]：核对小奇异值与阈值化反演的使用边界。
 <!-- bilingual-en:start -->
 - Hansen, *Intro to Inverse Problems*, Chapter 4, supports the filter-factor expansion, noise suppression, and bias boundary of truncated SVD inversion.
 - The LAPACK Users’ Guide supports the relation among `RCOND`, effective rank, and SVD-based minimum-norm solving.

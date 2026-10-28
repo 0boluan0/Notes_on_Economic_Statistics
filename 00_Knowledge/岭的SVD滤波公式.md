@@ -98,7 +98,7 @@ If a source writes the penalty as $\lambda^2\|x\|_2^2$, the denominator becomes 
 ## 来源与核验
 
 - P. C. Hansen, [Intro to Inverse Problems, Chapter 4](https://www2.imm.dtu.dk/~pcha/DIP/chap4.pdf#page=16)：核对 Tikhonov 的奇异方向滤波展开、连续收缩及参数化差异。
-- [[01_Math/02_linear algebra/03_Positive Definite Matrices and Applications.md#3.8.8 边界、反例与易错点|课程 3.8.8]]：核对正则化改变原精确反演算子的边界。
+- [[03_Positive Definite Matrices and Applications#3.8.8 边界、反例与易错点|课程 3.8.8]]：核对正则化改变原精确反演算子的边界。
 <!-- bilingual-en:start -->
 - Hansen, Chapter 4, supports the filtered SVD expansion of Tikhonov regularisation, continuous shrinkage, and the parameterisation convention.
 - Course Section 3.8.8 supports the boundary that regularisation changes the exact inverse operator.

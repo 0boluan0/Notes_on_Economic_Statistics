@@ -296,7 +296,7 @@ class RecordProgressModal extends Modal {
 
     const completeForm = contentEl.createEl("form", { cls: "lpd-modal-form" });
     const taskField = completeForm.createEl("label", { cls: "lpd-field" });
-    taskField.createSpan({ text: "核验一个当前任务" });
+    taskField.createSpan({ text: "完成一个当前任务" });
     const select = taskField.createEl("select");
     this.tasks.forEach((task) => {
       select.createEl("option", {
@@ -310,11 +310,11 @@ class RecordProgressModal extends Modal {
     }
 
     const noteField = completeForm.createEl("label", { cls: "lpd-field" });
-    noteField.createSpan({ text: "实际完成范围（带入核验面板）" });
+    noteField.createSpan({ text: "完成说明（可选）" });
     const noteInput = noteField.createEl("input", { attr: { type: "text", placeholder: "一句话即可" } });
     const completeButton = completeForm.createEl("button", {
       cls: "lpd-primary",
-      text: "进入完成核验",
+      text: "标记完成",
       attr: { type: "submit" },
     });
     completeButton.disabled = this.tasks.length === 0;
@@ -331,7 +331,7 @@ class RecordProgressModal extends Modal {
     const captureField = captureForm.createEl("label", { cls: "lpd-field" });
     captureField.createSpan({ text: "输入一件事" });
     const captureInput = captureField.createEl("textarea", {
-      attr: { placeholder: "临时想法存到输入箱；已完成的任务从上方选择并核验" },
+      attr: { placeholder: "临时想法存到输入箱；已完成的任务从上方选择并勾选" },
     });
     const captureActions = captureForm.createDiv({ cls: "lpd-capture-actions" });
     const saveInputButton = captureActions.createEl("button", {
@@ -724,13 +724,13 @@ class LearningProgressDashboardPlugin extends Plugin {
     this.savedData = (await this.loadData()) || {};
     this.store = new WorkflowStore(this.app);
     if (typeof this.app.vault.adapter.getBasePath === "function") {
-      const { STEWARD_VIEW, StewardBridge, StewardView, installCompletionGuard } = require("./steward-view");
+      const { STEWARD_VIEW, StewardBridge, StewardView, installTaskControls } = require("./steward-view");
       this.steward = new StewardBridge(this);
-      installCompletionGuard(this);
+      installTaskControls(this);
       this.stewardViewType = STEWARD_VIEW;
       this.registerView(STEWARD_VIEW, (leaf) => new StewardView(leaf, this));
-      this.addRibbonIcon("bot", "Student OS 管家", () => this.openSteward());
-      this.addCommand({ id: "open-student-os-steward", name: "打开 Student OS 管家", callback: () => this.openSteward() });
+      this.addRibbonIcon("layout-dashboard", "Student OS 看板", () => this.openSteward());
+      this.addCommand({ id: "open-student-os-steward", name: "打开 Student OS 看板", callback: () => this.openSteward() });
       this.registerInterval(setInterval(() => this.steward.start().catch(() => {}), 60000));
     }
     this.registerView(VIEW_TYPE, (leaf) => new LearningProgressDashboardView(leaf, this));
@@ -767,8 +767,7 @@ class LearningProgressDashboardPlugin extends Plugin {
       void this.refreshViews().then(() => this.steward?.refresh()).catch(error => new Notice(error.message));
     }));
     this.registerEvent(this.app.workspace.on("active-leaf-change", leaf => {
-      if (this.steward && leaf && (leaf.view.getViewType() === "claudian-view"
-        || [WORKBENCH_PATH, "99_学习情况记录/deadlines.md", todayNotePath()].includes(leaf.view.file?.path))) this.addStewardReturn(leaf);
+      if (this.steward && leaf && [WORKBENCH_PATH, "99_学习情况记录/deadlines.md", todayNotePath()].includes(leaf.view.file?.path)) this.addStewardReturn(leaf);
     }));
     this.app.workspace.onLayoutReady(() => {
       // Legacy task projections must not block the independently readable home.
@@ -796,6 +795,7 @@ class LearningProgressDashboardPlugin extends Plugin {
     if (view) void this.saveStewardState(view.getState()).catch(error => new Notice("界面位置尚未保存：" + error.message));
     this.steward?.stop();
     if (this.stewardViewType) this.app.workspace.detachLeavesOfType(this.stewardViewType);
+    if (this.reviewViewType) this.app.workspace.detachLeavesOfType(this.reviewViewType);
     this.app.workspace.detachLeavesOfType(VIEW_TYPE);
   }
 
@@ -814,12 +814,9 @@ class LearningProgressDashboardPlugin extends Plugin {
 
   addStewardReturn(leaf) {
     if (!leaf.view.addAction || leaf.view.containerEl.querySelector(".sos-return-steward")) return;
-    const action = leaf.view.addAction("bot", "返回学习管家，保留当前页面和课堂", () => {
-      if (leaf.view.getViewType() === "claudian-view" && leaf.getRoot() === this.app.workspace.rightSplit) this.app.workspace.rightSplit.collapse();
-      return this.openSteward();
-    });
+    const action = leaf.view.addAction("layout-dashboard", "返回学习看板", () => this.openSteward());
     action.addClass("sos-return-steward");
-    action.createSpan({ text: "学习管家" });
+    action.createSpan({ text: "学习看板" });
     this.register(() => action.remove());
   }
 
@@ -860,8 +857,8 @@ class LearningProgressDashboardPlugin extends Plugin {
       this.app,
       tasks,
       async (task, note) => {
-        if (!this.openCompletion) { new Notice("完成核验需要桌面管家，请在 MacBook 打开。"); return false; }
-        this.openCompletion(task, note);
+        if (!this.setTaskCompletion) { new Notice("请在 MacBook 看板或原笔记中勾选。"); return false; }
+        await this.setTaskCompletion(task, true, { report: note });
         return true;
       },
       (text) => this.store.saveInput(text)

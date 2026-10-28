@@ -56,6 +56,8 @@ tags:
 
 ## Session 1.1 The geometry of linear equations
 
+[[01_Math/02_linear algebra/01.1_The Geometry of Linear Equations|Lecture 1 formal note · 第一讲正式笔记]]
+
 ### 本节问题与前置知识
 <!-- bilingual-en:start -->
 *Questions and Prerequisites for This Section*
@@ -66,9 +68,9 @@ tags:
 **Question**: Why can the same system of equations be regarded as both the intersection of geometric objects and the linear combination of column vectors?
 <!-- bilingual-en:end -->
 
-**前置知识**：二元一次方程、向量加法与数乘。本节首次建立 [[线性代数 Course Atlas|线性代数]] 的三个视角。
+**前置知识**：二元一次方程、向量加法与数乘。本节首次建立 线性代数 的三个视角。
 <!-- bilingual-en:start -->
-**Prerequisites**: systems of two linear equations, vector addition, and scalar multiplication. This section introduces the course's three complementary views of [[线性代数 Course Atlas|linear algebra]].
+**Prerequisites**: systems of two linear equations, vector addition, and scalar multiplication. This section introduces the course's three complementary views of linear algebra.
 <!-- bilingual-en:end -->
 
 **本地资料**：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.1sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S01_Lecture_The_Geometry_of_Linear_Equations.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S01_Recitation_Geometry_of_Linear_Algebra.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.1prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.1sol.pdf#page=1|official solution p.1]]
@@ -364,6 +366,8 @@ Intersection of equations → combinations of columns → $b\in C(A)$ determines
 
 ## Session 1.2 An overview of key ideas
 
+[[01_Math/02_linear algebra/01.2_An Overview of Key Ideas|Session 1.2 formal note · 第二讲正式笔记]]
+
 ### 本节问题与前置知识
 <!-- bilingual-en:start -->
 *Questions and Prerequisites for This Section*
@@ -604,6 +608,8 @@ $Ax=b$ → the input-side nullspace $N(A)$ and output-side column space $C(A)$ �
 <!-- bilingual-en:end -->
 
 ## Session 1.3 Elimination with matrices
+
+[[01_Math/02_linear algebra/01.3_Elimination with Matrices|Session 1.3 formal note · 第三讲正式笔记]]
 
 ### 本节问题与前置知识
 <!-- bilingual-en:start -->
@@ -894,6 +900,8 @@ Invertible row operations → upper triangular form → pivots and rank → back
 <!-- bilingual-en:end -->
 
 ## Session 1.4 Multiplication and inverse matrices
+
+[[01_Math/02_linear algebra/01.4_Multiplication and Inverse Matrices|Session 1.4 classroom note · 第四讲正式笔记]]
 
 ### 本节问题与前置知识
 <!-- bilingual-en:start -->
@@ -1213,6 +1221,8 @@ Matrix multiplication represents composition → elementary matrices represent i
 
 ## Session 1.5 Factorization into A = LU
 
+[[01_Math/02_linear algebra/01.5_Factorization into A = LU|Session 1.5 classroom note · 第五讲正式笔记]]
+
 ### 本节问题与前置知识
 <!-- bilingual-en:start -->
 *Questions and Prerequisites for This Section*
@@ -1507,6 +1517,8 @@ Elimination matrix $E$ → $EA=U$ → undo elimination to recover $A=LU$ → mul
 
 ## Session 1.6 Transposes, permutations, vector spaces
 
+[[01_Math/02_linear algebra/01.6_Transposes, Permutations, Vector Spaces|Session 1.6 classroom note · 第六讲正式笔记]]
+
 ### 本节问题与前置知识
 <!-- bilingual-en:start -->
 *Questions and Prerequisites for This Section*
@@ -1732,6 +1744,8 @@ Transposition swaps rows and columns → permutation matrices perform invertible
 
 ## Session 1.7 Column space and nullspace
 
+[[01_Math/02_linear algebra/01.7_Column Space and Nullspace|Lecture 7 formal note · 第七讲正式笔记]]
+
 ### 本节问题与前置知识
 <!-- bilingual-en:start -->
 *Questions and Prerequisites for This Section*
@@ -1956,6 +1970,8 @@ $C(A)$ describes the reachable outputs → $N(A)$ describes input directions los
 <!-- bilingual-en:end -->
 
 ## Session 1.8 Solving Ax = 0: pivot variables and special solutions
+
+[[01_Math/02_linear algebra/01.8_Solving Ax = 0|Classroom note: Solving Ax = 0]]
 
 ### 本节问题与前置知识
 <!-- bilingual-en:start -->
@@ -2202,6 +2218,8 @@ RREF preserves $N(A)$ → separate pivot and free variables → construct specia
 <!-- bilingual-en:end -->
 
 ## Session 1.9 Solving Ax = b: row reduced form R
+
+[[01_Math/02_linear algebra/01.9_Solving Ax = b|Session 1.9 formal note · 第九讲正式笔记]]
 
 ### 本节问题与前置知识
 <!-- bilingual-en:start -->
@@ -2465,6 +2483,8 @@ Augmented elimination tests consistency → a particular solution locates the af
 
 ## Session 1.10 Independence, basis, and dimension
 
+[[01_Math/02_linear algebra/01.10_Independence, Basis and Dimension|Session 1.10 classroom note · 第十讲正式笔记]]
+
 ### 本节问题与前置知识
 <!-- bilingual-en:start -->
 *Questions and Prerequisites for This Section*
@@ -2714,6 +2734,8 @@ Independence means no redundancy → a basis is both nonredundant and complete �
 
 ## Session 1.11 [[四个基本子空间|The four fundamental subspaces]]
 
+[[01_Math/02_linear algebra/01.11_The Four Fundamental Subspaces|Formal notes · 第十一讲正式笔记]]
+
 ### 本节问题与前置知识
 <!-- bilingual-en:start -->
 *Questions and Prerequisites for This Section*
@@ -2952,6 +2974,8 @@ Column space and nullspace → transposition produces row space and left nullspa
 <!-- bilingual-en:end -->
 
 ## Session 1.12 Matrix spaces, rank 1, and small world graphs
+
+[[01_Math/02_linear algebra/01.12_Matrix Spaces, Rank 1, Small World Graphs|Formal bilingual note · 正式双语笔记]]
 
 ### 本节问题与前置知识
 <!-- bilingual-en:start -->

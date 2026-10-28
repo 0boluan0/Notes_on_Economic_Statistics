@@ -56,7 +56,7 @@ Normality is not another name for having real eigenvalues; the definition itself
 ## 来源与核验
 
 - [MIT RES.18-011 Algebra I Lecture 27–28 notes](https://ocw.mit.edu/courses/res-18-011-algebra-i-student-notes-fall-2021/mit18_701f21_full_lec_new.pdf#page=136)：核对 normal 定义及 Hermitian/unitary 子类。
-- [[01_Math/02_linear algebra/03_Positive Definite Matrices and Applications.md#3.2.1 复向量的长度与 Hermitian 内积|课程复内积约定]]：核对本库使用的共轭转置记号。
+- [[03_Positive Definite Matrices and Applications#3.2.1 复向量的长度与 Hermitian 内积|课程复内积约定]]：核对本库使用的共轭转置记号。
 <!-- bilingual-en:start -->
 - MIT RES.18-011 Lecture 27–28 notes were checked for the definition of normality and the Hermitian/unitary subclasses.
 - The local course convention was checked for conjugate-transpose notation.

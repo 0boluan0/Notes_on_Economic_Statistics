@@ -2,9 +2,10 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
-from unittest.mock import patch
+from unittest.mock import Mock, patch
+from types import SimpleNamespace
 
-from bridge import Inbox, handle, private_state, schedule_description
+from bridge import Inbox, handle, private_state, schedule_description, serve
 from telegram_api import TelegramError
 from voice import VoiceError
 
@@ -82,6 +83,34 @@ class BridgeTests(unittest.TestCase):
         self.assertTrue(self.inbox.pending()[0]['reply'])
         handle(self.inbox, self.inbox.pending()[0], config, api, self.state, self.state, 'codex')
         self.assertEqual(api.calls, 1)
+
+    def test_processing_failure_rate_limit_keeps_fallback_pending(self):
+        config = {'owner_chat_id': 123, 'token': '123:test'}
+        self.inbox.receive([update(12, 'done')], config)
+        api = Mock()
+        api.get_webhook_info.return_value = {}
+        api.get_updates.side_effect = [[], [], KeyboardInterrupt()]
+        api.send_message.side_effect = TelegramError('rejected', 429, 30)
+        with patch('bridge.TelegramAPI', return_value=api), \
+             patch('bridge.Inbox', return_value=self.inbox), \
+             patch('bridge.handle', side_effect=RuntimeError('processing failure')), \
+             patch('telegram_api.time.time', return_value=100):
+            with self.assertRaises(KeyboardInterrupt):
+                serve(SimpleNamespace(codex='codex'), self.state, self.state, config)
+        self.assertEqual(len(self.inbox.pending()), 1)
+        reply = self.inbox.pending()[0]['reply']
+        self.assertTrue(reply)
+        with patch('telegram_api.time.time', return_value=110):
+            handle(self.inbox, self.inbox.pending()[0], config, api, self.state, self.state, 'codex')
+        self.assertEqual(api.send_message.call_count, 1)
+        api.send_message.side_effect = None
+        api.send_message.return_value = {'message_id': 20}
+        with patch('telegram_api.time.time', return_value=131), \
+             patch('reconciliation.process_reply', side_effect=AssertionError('must reuse fallback')):
+            handle(self.inbox, self.inbox.pending()[0], config, api, self.state, self.state, 'codex')
+        self.assertEqual(len(self.inbox.pending()), 0)
+        self.assertEqual(api.send_message.call_count, 2)
+        self.assertEqual(api.send_message.call_args.args[1], reply)
 
     def test_voice_is_transcribed_then_reconciled_and_replay_is_cached(self):
         class API:

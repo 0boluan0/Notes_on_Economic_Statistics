@@ -78,7 +78,7 @@ The four equations above give the definition. The statement that every real or c
   <!-- bilingual-en:start -->
   *English:* Checked the SVD construction and the interpretation of $AA^+$ and $A^+A$ as orthogonal projectors.
   <!-- bilingual-en:end -->
-- [[01_Math/02_linear algebra/03_Positive Definite Matrices and Applications.md#3.8.4 Moore–Penrose 四条件|课程 3.8.4]]：核对课程使用的四条件、记号与实矩阵形式。
+- [[03_Positive Definite Matrices and Applications#3.8.4 Moore–Penrose 四条件|课程 3.8.4]]：核对课程使用的四条件、记号与实矩阵形式。
   <!-- bilingual-en:start -->
-  *English:* Checked the course's four conditions, notation, and real-matrix formulation in [[01_Math/02_linear algebra/03_Positive Definite Matrices and Applications.md#3.8.4 Moore–Penrose 四条件|Section 3.8.4]].
+  *English:* Checked the course's four conditions, notation, and real-matrix formulation in [[03_Positive Definite Matrices and Applications#3.8.4 Moore–Penrose 四条件|Section 3.8.4]].
   <!-- bilingual-en:end -->

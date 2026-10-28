@@ -61,7 +61,7 @@ The term unitary matrix is reserved for square matrices. If a rectangular comple
 ## 来源与核验
 
 - [[01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.2sum.pdf|MIT 18.06SC Session 3.2 summary]]：核对 unitary 条件与长度保持。
-- [[01_Math/02_linear algebra/03_Positive Definite Matrices and Applications.md#3.2.1 复向量的长度与 Hermitian 内积|课程 3.2.1]]：核对 $U^{-1}=U^*$ 及其与正交矩阵的关系。
+- [[03_Positive Definite Matrices and Applications#3.2.1 复向量的长度与 Hermitian 内积|课程 3.2.1]]：核对 $U^{-1}=U^*$ 及其与正交矩阵的关系。
 <!-- bilingual-en:start -->
 - The MIT 18.06SC Session 3.2 summary was checked for the unitary condition and norm preservation.
 - Course Section 3.2.1 was checked for $U^{-1}=U^*$ and the relation to orthogonal matrices.

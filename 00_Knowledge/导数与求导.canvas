@@ -1,72 +1,574 @@
 {
-	"nodes":[
-		{"id":"header","type":"text","x":0,"y":-360,"width":3280,"height":220,"text":"# 导数与求导\n\n从差商极限建立局部变化率，再由函数结构选择规则；指数、对数与双曲函数沿反函数和链式法则接入。\n\n**连续阅读：** [[01_Math/01_calculus/01_导数与求导|导数与求导：从差商极限到指数与对数]]","color":"4"},
-		{"id":"group-definition","type":"group","x":-80,"y":0,"width":3280,"height":500,"label":"1 · 什么是导数，它何时存在","color":"4"},
-		{"id":"limit","type":"text","x":0,"y":100,"width":400,"height":220,"text":"## [[函数极限]]\n\n先有趋近语言，才能询问差商在增量趋零时是否稳定。","color":"6"},
-		{"id":"derivative","type":"text","x":480,"y":100,"width":400,"height":220,"text":"## [[导数]]\n\n$ f'(x_0)=\\lim_{h\\to0}[f(x_0+h)-f(x_0)]/h $；切线、瞬时率与局部线性系数是同一对象。","color":"4"},
-		{"id":"diff-cont","type":"text","x":960,"y":100,"width":400,"height":220,"text":"## [[可导必连续]]\n\n有限差商极限迫使函数增量趋零；这是必要条件。","color":"5"},
-		{"id":"cont-not-diff","type":"text","x":1440,"y":100,"width":400,"height":220,"text":"## [[连续不必可导]]\n\n$|x|$ 在零点连续，但左右差商不同；必要条件不能反向。","color":"1"},
-
-		{"id":"group-rules","type":"group","x":-80,"y":620,"width":3280,"height":580,"label":"2 · 差商如何压缩成求导规则","color":"6"},
-		{"id":"linear","type":"text","x":0,"y":730,"width":380,"height":230,"text":"## [[导数线性法则]]\n\n有限和与常数倍可逐项求导；不自动推广到乘积或无穷和。","color":"6"},
-		{"id":"power-int","type":"text","x":450,"y":730,"width":380,"height":230,"text":"## [[整数幂求导]]\n\n二项展开给 $D x^n=nx^{n-1}$；负整数幂保留 $x\\ne0$。","color":"5"},
-		{"id":"sine-limit","type":"text","x":900,"y":730,"width":380,"height":230,"text":"## [[正弦基本极限]]\n\n弧度制下 $\\sin h/h\\to1$；度数会多出比例因子。","color":"5"},
-		{"id":"trig-derivative","type":"text","x":1350,"y":730,"width":380,"height":230,"text":"## [[正弦余弦求导]]\n\n和角公式与小角极限给 $D\\sin=\\cos$、$D\\cos=-\\sin$。","color":"3"},
-		{"id":"product","type":"text","x":1800,"y":730,"width":380,"height":230,"text":"## [[乘积法则]]\n\n乘积有两个一阶变化来源：$(uv)'=u'v+uv'$。","color":"4"},
-		{"id":"quotient","type":"text","x":2250,"y":730,"width":380,"height":230,"text":"## [[商法则]]\n\n先求倒数再乘积；$v\\ne0$ 是原函数定义条件。","color":"4"},
-		{"id":"chain","type":"text","x":2700,"y":730,"width":380,"height":230,"text":"## [[链式法则]]\n\n复合把两层局部缩放相乘；每一层都保留定义域。","color":"3"},
-
-		{"id":"group-extensions","type":"group","x":-80,"y":1320,"width":3280,"height":590,"label":"3 · 反复求导、隐式关系与反函数","color":"5"},
-		{"id":"higher","type":"text","x":0,"y":1430,"width":420,"height":230,"text":"## [[高阶导数]]\n\n把导函数继续求导；存在一阶不自动保证存在下一阶。","color":"5"},
-		{"id":"higher-product","type":"text","x":500,"y":1430,"width":420,"height":230,"text":"## [[高阶乘积法则]]\n\n二项系数记录 $n$ 次求导怎样分配到两个因子。","color":"6"},
-		{"id":"implicit","type":"text","x":1000,"y":1430,"width":420,"height":230,"text":"## [[隐式求导]]\n\n沿已有解支对关系求导；每个 $y(x)$ 项都由链式法则带出 $y'$。","color":"4"},
-		{"id":"implicit-formula","type":"text","x":1500,"y":1430,"width":420,"height":230,"text":"## [[隐函数导数公式]]\n\n定理确认解支后，$Dg=-(D_vF)^{-1}D_uF$；奇异块只使公式失效。","color":"5"},
-		{"id":"inverse","type":"text","x":2000,"y":1430,"width":420,"height":230,"text":"## [[反函数导数]]\n\n局部可逆且原斜率非零时，对应斜率互为倒数。","color":"3"},
-		{"id":"inverse-trig","type":"text","x":2500,"y":1430,"width":420,"height":230,"text":"## [[反三角函数求导]]\n\n主值分支决定 $\\arcsin$、$\\arccos$、$\\arctan$ 的符号与定义域。","color":"6"},
-
-		{"id":"group-explog","type":"group","x":-80,"y":2030,"width":3280,"height":1120,"label":"4 · 指数、对数、实数幂与双曲函数","color":"3"},
-		{"id":"exponential","type":"text","x":0,"y":2140,"width":400,"height":230,"text":"## [[指数函数]]\n\n固定 $a>0$，连续扩展 $a^x$ 并保持指数加法律。","color":"4"},
-		{"id":"natural-exp","type":"text","x":480,"y":2140,"width":400,"height":230,"text":"## [[自然指数函数]]\n\n选择斜率常数为 $1$ 的底数 $e$；于是 $E(0)=1$、$E'=E$。","color":"4"},
-		{"id":"natural-log","type":"text","x":960,"y":2140,"width":400,"height":230,"text":"## [[自然对数]]\n\n$\\ln$ 是 $e^x$ 从正实数到实数的反函数。","color":"4"},
-		{"id":"exp-derivative","type":"text","x":1440,"y":2140,"width":400,"height":230,"text":"## [[指数函数求导]]\n\n固定底数时 $D(a^x)=(\\ln a)a^x$；变底数需另处理。","color":"5"},
-		{"id":"log-derivative","type":"text","x":1920,"y":2140,"width":400,"height":230,"text":"## [[对数函数求导]]\n\n$D\\ln x=1/x$，且定义域 $x>0$ 属于公式。","color":"5"},
-		{"id":"log-diff","type":"text","x":2400,"y":2140,"width":400,"height":230,"text":"## [[对数求导]]\n\n先用对数拆开乘积和移动指数，再从 $y'/y$ 求回 $y'$。","color":"3"},
-		{"id":"real-power","type":"text","x":0,"y":2630,"width":400,"height":230,"text":"## [[实数幂求导]]\n\n固定 $r\\in\\mathbb R$ 且 $x>0$ 时，$D x^r=rx^{r-1}$。","color":"5"},
-		{"id":"e-limit","type":"text","x":480,"y":2630,"width":400,"height":230,"text":"## [[自然常数极限]]\n\n取对数把 $(1+1/n)^n$ 化成 $\\ln$ 在 $1$ 处的差商。","color":"6"},
-		{"id":"hyperbolic","type":"text","x":960,"y":2630,"width":400,"height":230,"text":"## [[双曲函数]]\n\n$\\sinh$ 与 $\\cosh$ 是 $e^x$、$e^{-x}$ 的奇偶组合。","color":"4"},
-		{"id":"hyperbolic-derivative","type":"text","x":1440,"y":2630,"width":400,"height":230,"text":"## [[双曲函数求导]]\n\n逐项求导得 $D\\sinh=\\cosh$、$D\\cosh=\\sinh$。","color":"5"}
-	],
-	"edges":[
-		{"id":"e01","fromNode":"limit","toNode":"derivative","fromSide":"right","toSide":"left","label":"差商极限定义"},
-		{"id":"e02","fromNode":"derivative","toNode":"diff-cont","fromSide":"right","toSide":"left","label":"有限导数迫使连续"},
-		{"id":"e03","fromNode":"diff-cont","toNode":"cont-not-diff","fromSide":"right","toSide":"left","label":"逆命题由尖角否定"},
-		{"id":"e04","fromNode":"derivative","toNode":"linear","fromSide":"bottom","toSide":"top","label":"差商线性重排"},
-		{"id":"e05","fromNode":"linear","toNode":"power-int","fromSide":"right","toSide":"left","label":"逐项处理多项式"},
-		{"id":"e06","fromNode":"sine-limit","toNode":"trig-derivative","fromSide":"right","toSide":"left","label":"小角极限决定斜率"},
-		{"id":"e07","fromNode":"derivative","toNode":"product","fromSide":"bottom","toSide":"top","label":"乘积差商加零分解"},
-		{"id":"e08","fromNode":"product","toNode":"quotient","fromSide":"right","toSide":"left","label":"先由乘积求倒数"},
-		{"id":"e09","fromNode":"derivative","toNode":"chain","fromSide":"bottom","toSide":"top","label":"复合局部线性化"},
-		{"id":"e10","fromNode":"derivative","toNode":"higher","fromSide":"bottom","toSide":"top","label":"导函数继续求导"},
-		{"id":"e11","fromNode":"higher","toNode":"higher-product","fromSide":"right","toSide":"left","label":"反复应用乘积法则"},
-		{"id":"e12","fromNode":"product","toNode":"higher-product","fromSide":"bottom","toSide":"top","label":"二项路径计数"},
-		{"id":"e13","fromNode":"chain","toNode":"implicit","fromSide":"bottom","toSide":"top","label":"沿解支求导"},
-		{"id":"e14","fromNode":"implicit","toNode":"implicit-formula","fromSide":"right","toSide":"left","label":"定理条件下解出导数"},
-		{"id":"e15","fromNode":"chain","toNode":"inverse","fromSide":"bottom","toSide":"top","label":"对逆恒等式求导"},
-		{"id":"e16","fromNode":"implicit","toNode":"inverse","fromSide":"right","toSide":"left","label":"反函数是隐式特例"},
-		{"id":"e17","fromNode":"inverse","toNode":"inverse-trig","fromSide":"right","toSide":"left","label":"倒数斜率加主值分支"},
-		{"id":"e18","fromNode":"trig-derivative","toNode":"inverse-trig","fromSide":"bottom","toSide":"top","label":"原三角导数"},
-		{"id":"e19","fromNode":"exponential","toNode":"natural-exp","fromSide":"right","toSide":"left","label":"把比例斜率标准化为一"},
-		{"id":"e20","fromNode":"natural-exp","toNode":"natural-log","fromSide":"right","toSide":"left","label":"互为反函数"},
-		{"id":"e21","fromNode":"inverse","toNode":"natural-log","fromSide":"bottom","toSide":"top","label":"反函数导数给 $1/x$"},
-		{"id":"e22","fromNode":"natural-log","toNode":"exp-derivative","fromSide":"right","toSide":"left","label":"换写为 $e^{x\\ln a}$"},
-		{"id":"e23","fromNode":"natural-log","toNode":"log-derivative","fromSide":"bottom","toSide":"top","label":"对 $e^y=x$ 求导"},
-		{"id":"e24","fromNode":"log-derivative","toNode":"log-diff","fromSide":"right","toSide":"left","label":"利用 $D\\ln y=y'/y$"},
-		{"id":"e25","fromNode":"exp-derivative","toNode":"real-power","fromSide":"bottom","toSide":"top","label":"写成 $e^{r\\ln x}$"},
-		{"id":"e26","fromNode":"log-diff","toNode":"real-power","fromSide":"bottom","toSide":"top","label":"固定指数的统一证明"},
-		{"id":"e27","fromNode":"natural-exp","toNode":"e-limit","fromSide":"bottom","toSide":"top","label":"同一常数的序列刻画"},
-		{"id":"e28","fromNode":"log-derivative","toNode":"e-limit","fromSide":"bottom","toSide":"top","label":"识别 $\\ln$ 在一处差商"},
-		{"id":"e29","fromNode":"natural-exp","toNode":"hyperbolic","fromSide":"bottom","toSide":"top","label":"增长与衰减配对"},
-		{"id":"e30","fromNode":"hyperbolic","toNode":"hyperbolic-derivative","fromSide":"right","toSide":"left","label":"按指数定义逐项求导"},
-		{"id":"e31","fromNode":"exp-derivative","toNode":"hyperbolic-derivative","fromSide":"bottom","toSide":"top","label":"指数与链式法则"}
-	]
+  "nodes": [
+    {
+      "id": "header",
+      "type": "text",
+      "x": 0,
+      "y": -360,
+      "width": 3280,
+      "height": 220,
+      "text": "# 导数与求导\n\n从差商极限建立局部变化率，再由函数结构选择规则；指数、对数与双曲函数沿反函数和链式法则接入。\n\n**连续阅读：** [[01_Math/01_calculus/01_导数与求导|导数与求导：从差商极限到指数与对数]]",
+      "color": "4"
+    },
+    {
+      "id": "group-definition",
+      "type": "group",
+      "x": -80,
+      "y": 0,
+      "width": 3280,
+      "height": 500,
+      "label": "1 · 什么是导数，它何时存在",
+      "color": "4"
+    },
+    {
+      "id": "limit",
+      "type": "text",
+      "x": 0,
+      "y": 100,
+      "width": 400,
+      "height": 220,
+      "text": "## [[函数极限]]\n\n先有趋近语言，才能询问差商在增量趋零时是否稳定。",
+      "color": "6"
+    },
+    {
+      "id": "derivative",
+      "type": "text",
+      "x": 480,
+      "y": 100,
+      "width": 400,
+      "height": 220,
+      "text": "## [[导数]]\n\n$ f'(x_0)=\\lim_{h\\to0}[f(x_0+h)-f(x_0)]/h $；切线、瞬时率与局部线性系数是同一对象。",
+      "color": "4"
+    },
+    {
+      "id": "diff-cont",
+      "type": "text",
+      "x": 960,
+      "y": 100,
+      "width": 400,
+      "height": 220,
+      "text": "## [[可导必连续]]\n\n有限差商极限迫使函数增量趋零；这是必要条件。",
+      "color": "5"
+    },
+    {
+      "id": "cont-not-diff",
+      "type": "text",
+      "x": 1440,
+      "y": 100,
+      "width": 400,
+      "height": 220,
+      "text": "## [[连续不必可导]]\n\n$|x|$ 在零点连续，但左右差商不同；必要条件不能反向。",
+      "color": "1"
+    },
+    {
+      "id": "group-rules",
+      "type": "group",
+      "x": -80,
+      "y": 620,
+      "width": 3280,
+      "height": 580,
+      "label": "2 · 差商如何压缩成求导规则",
+      "color": "6"
+    },
+    {
+      "id": "linear",
+      "type": "text",
+      "x": 0,
+      "y": 730,
+      "width": 380,
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[导数线性法则|Linearity of differentiation]]\n\nFor differentiable functions and constant coefficients, finite linear combinations differentiate term by term.\n<!-- bilingual-en:end -->\n\n有限个可导函数的常系数线性组合可逐项求导；无穷和需要额外条件。",
+      "color": "6"
+    },
+    {
+      "id": "power-int",
+      "type": "text",
+      "x": 450,
+      "y": 730,
+      "width": 380,
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[整数幂求导|Integer powers]]\n\nPositive integer powers differentiate on all real inputs. Negative integer powers exclude zero. The constant function $1$ has derivative zero.\n<!-- bilingual-en:end -->\n\n正整数幂在全实域求导，负整数幂排除零；常数函数 1 的导数单独为零。",
+      "color": "5"
+    },
+    {
+      "id": "sine-limit",
+      "type": "text",
+      "x": 900,
+      "y": 730,
+      "width": 380,
+      "height": 230,
+      "text": "## [[正弦基本极限]]\n\n弧度制下 $\\sin h/h\\to1$；度数会多出比例因子。",
+      "color": "5"
+    },
+    {
+      "id": "trig-derivative",
+      "type": "text",
+      "x": 1350,
+      "y": 730,
+      "width": 380,
+      "height": 230,
+      "text": "## [[正弦余弦求导]]\n\n和角公式与小角极限给 $D\\sin=\\cos$、$D\\cos=-\\sin$。",
+      "color": "3"
+    },
+    {
+      "id": "product",
+      "type": "text",
+      "x": 1800,
+      "y": 730,
+      "width": 380,
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[乘积法则|Product rule]]\n\nFor differentiable $u,v$, $(uv)'=u'v+uv'$: each factor contributes one first-order change.\n<!-- bilingual-en:end -->\n\n两个因子各贡献一项一阶变化；高阶交叉变化在差商极限中消失。",
+      "color": "4"
+    },
+    {
+      "id": "quotient",
+      "type": "text",
+      "x": 2250,
+      "y": 730,
+      "width": 380,
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[商法则|Quotient rule]]\n\nFor differentiable $u,v$ with $v\\ne0$, prove the reciprocal differentiable by its difference quotient, then apply the product rule.\n<!-- bilingual-en:end -->\n\n先由差商证明非零分母的倒数可导，再使用乘积法则。",
+      "color": "4"
+    },
+    {
+      "id": "chain",
+      "type": "text",
+      "x": 2700,
+      "y": 730,
+      "width": 380,
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[链式法则|Chain rule]]\n\nIf $u=g(x)$ and $y=f(u)$ are differentiable at the corresponding inputs, multiply $f'(g(x))$ by $g'(x)$.\n<!-- bilingual-en:end -->\n\n内外两层在对应输入处可导，外导数在内层取值处计算，再乘以内导数。",
+      "color": "3"
+    },
+    {
+      "id": "group-extensions",
+      "type": "group",
+      "x": -80,
+      "y": 1320,
+      "width": 3280,
+      "height": 590,
+      "label": "3 · 反复求导、隐式关系与反函数",
+      "color": "5"
+    },
+    {
+      "id": "higher",
+      "type": "text",
+      "x": 0,
+      "y": 1430,
+      "width": 420,
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[高阶导数|Higher derivatives]]\n\n$f^{(n)}$ means $n$ successive differentiations, with $f^{(0)}=f$. One derivative does not guarantee the next.\n<!-- bilingual-en:end -->\n\n上标括号表示求导次数，不是函数幂；每增加一阶都需确认存在。",
+      "color": "5"
+    },
+    {
+      "id": "higher-product",
+      "type": "text",
+      "x": 500,
+      "y": 1430,
+      "width": 420,
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[高阶乘积法则|Leibniz rule]]\n\nIf both factors have derivatives through order $n$, binomial coefficients count how $n$ differentiations are allocated.\n<!-- bilingual-en:end -->\n\n两个因子都需有直到n阶的导数；二项系数记录各阶导数如何配对。",
+      "color": "6"
+    },
+    {
+      "id": "implicit",
+      "type": "text",
+      "x": 1000,
+      "y": 1430,
+      "width": 420,
+      "height": 230,
+      "text": "## [[隐式求导]]\n\n沿已有解支对关系求导；每个 $y(x)$ 项都由链式法则带出 $y'$。",
+      "color": "4"
+    },
+    {
+      "id": "implicit-formula",
+      "type": "text",
+      "x": 1500,
+      "y": 1430,
+      "width": 420,
+      "height": 230,
+      "text": "## [[隐函数导数公式]]\n\n定理确认解支后，$Dg=-(D_vF)^{-1}D_uF$；奇异块只使公式失效。",
+      "color": "5"
+    },
+    {
+      "id": "inverse",
+      "type": "text",
+      "x": 2000,
+      "y": 1430,
+      "width": 420,
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[反函数导数|Inverse derivatives]]\n\nFor a continuous local inverse of a function differentiable with nonzero derivative, the inverse derivative is its reciprocal at the matching point.\n<!-- bilingual-en:end -->\n\n原函数在该点可导且导数非零，局部反函数连续时，反函数导数是对应点原导数的倒数。",
+      "color": "3"
+    },
+    {
+      "id": "inverse-trig",
+      "type": "text",
+      "x": 2500,
+      "y": 1430,
+      "width": 420,
+      "height": 230,
+      "text": "## [[反三角函数求导]]\n\n主值分支决定 $\\arcsin$、$\\arccos$、$\\arctan$ 的符号与定义域。",
+      "color": "6"
+    },
+    {
+      "id": "group-explog",
+      "type": "group",
+      "x": -80,
+      "y": 2030,
+      "width": 3280,
+      "height": 1120,
+      "label": "4 · 指数、对数、实数幂与双曲函数",
+      "color": "3"
+    },
+    {
+      "id": "exponential",
+      "type": "text",
+      "x": 0,
+      "y": 2140,
+      "width": 400,
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[指数函数|Exponential function]]\n\nFor fixed $a>0$, $a^x$ extends repeated multiplication to real $x$. Equal input increments multiply output by a fixed factor.\n<!-- bilingual-en:end -->\n\n底数 $a>0$ 固定：输入等量增加，输出乘以固定倍数。",
+      "color": "4"
+    },
+    {
+      "id": "natural-exp",
+      "type": "text",
+      "x": 480,
+      "y": 2140,
+      "width": 400,
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[自然指数函数|Natural exponential]]\n\n$E(x)=e^x$ has $E(0)=1$ and $E'=E$: its slope equals its current value.\n<!-- bilingual-en:end -->\n\n自然指数的斜率等于当前函数值，且零处取一。",
+      "color": "4"
+    },
+    {
+      "id": "natural-log",
+      "type": "text",
+      "x": 960,
+      "y": 2140,
+      "width": 400,
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[自然对数|Natural logarithm]]\n\n$\\ln:(0,\\infty)\\to\\mathbb R$ reverses $\\exp:\\mathbb R\\to(0,\\infty)$. It gives the exponent needed to reach a positive value.\n<!-- bilingual-en:end -->\n\n自然对数把正的指数结果还原成所需指数。",
+      "color": "4"
+    },
+    {
+      "id": "exp-derivative",
+      "type": "text",
+      "x": 1440,
+      "y": 2140,
+      "width": 400,
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[指数函数求导|Differentiating exponentials]]\n\nFor fixed $a>0$, $\\frac{d}{dx}a^x=(\\ln a)a^x$. A differentiable exponent $u(x)$ adds the factor $u'(x)$.\n<!-- bilingual-en:end -->\n\n底数固定时乘以 $\\ln a$；复合指数要求内层可导，再乘内层导数。",
+      "color": "5"
+    },
+    {
+      "id": "log-derivative",
+      "type": "text",
+      "x": 1920,
+      "y": 2140,
+      "width": 400,
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[对数函数求导|Differentiating logarithms]]\n\n$\\frac{d}{dx}\\ln x=1/x$ on $x>0$. For differentiable $u$ with $u(x)>0$, $\\frac{d}{dx}\\ln u(x)=u'(x)/u(x)$.\n<!-- bilingual-en:end -->\n\n定义域随公式一起检查；复合对数要求内层可导，再乘内层导数。",
+      "color": "5"
+    },
+    {
+      "id": "log-diff",
+      "type": "text",
+      "x": 2400,
+      "y": 2140,
+      "width": 400,
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[对数求导|Logarithmic differentiation]]\n\nFor differentiable $y\\ne0$ on an interval, differentiate $\\ln\\lvert y\\rvert$ to obtain $y'/y$, then multiply by $y$.\n<!-- bilingual-en:end -->\n\n在函数可导且非零的区间上，先对绝对值取对数并求导，再乘回原函数。",
+      "color": "3"
+    },
+    {
+      "id": "real-power",
+      "type": "text",
+      "x": 0,
+      "y": 2630,
+      "width": 400,
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[实数幂求导|Real powers]]\n\nFor fixed real $r$ and $x>0$, define $x^r=e^{r\\ln x}$ and differentiate to get $rx^{r-1}$.\n<!-- bilingual-en:end -->\n\n固定实数指数且输入为正时，用指数与对数定义实幂并求导；负输入另查实根分支。",
+      "color": "5"
+    },
+    {
+      "id": "e-limit",
+      "type": "text",
+      "x": 480,
+      "y": 2630,
+      "width": 400,
+      "height": 230,
+      "text": "## [[自然常数极限]]\n\n取对数把 $(1+1/n)^n$ 化成 $\\ln$ 在 $1$ 处的差商。",
+      "color": "6"
+    },
+    {
+      "id": "hyperbolic",
+      "type": "text",
+      "x": 960,
+      "y": 2630,
+      "width": 400,
+      "height": 230,
+      "text": "## [[双曲函数]]\n\n$\\sinh$ 与 $\\cosh$ 是 $e^x$、$e^{-x}$ 的奇偶组合。",
+      "color": "4"
+    },
+    {
+      "id": "hyperbolic-derivative",
+      "type": "text",
+      "x": 1440,
+      "y": 2630,
+      "width": 400,
+      "height": 230,
+      "text": "## [[双曲函数求导]]\n\n逐项求导得 $D\\sinh=\\cosh$、$D\\cosh=\\sinh$。",
+      "color": "5"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e01",
+      "fromNode": "limit",
+      "toNode": "derivative",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "差商极限定义"
+    },
+    {
+      "id": "e02",
+      "fromNode": "derivative",
+      "toNode": "diff-cont",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "有限导数迫使连续"
+    },
+    {
+      "id": "e03",
+      "fromNode": "diff-cont",
+      "toNode": "cont-not-diff",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "逆命题由尖角否定"
+    },
+    {
+      "id": "e04",
+      "fromNode": "derivative",
+      "toNode": "linear",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "差商线性重排"
+    },
+    {
+      "id": "e05",
+      "fromNode": "linear",
+      "toNode": "power-int",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "逐项处理多项式"
+    },
+    {
+      "id": "e06",
+      "fromNode": "sine-limit",
+      "toNode": "trig-derivative",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "小角极限决定斜率"
+    },
+    {
+      "id": "e07",
+      "fromNode": "derivative",
+      "toNode": "product",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "乘积差商加零分解"
+    },
+    {
+      "id": "e08",
+      "fromNode": "product",
+      "toNode": "quotient",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "Apply product rule after proving reciprocal differentiability · 倒数差商成立后用积法则"
+    },
+    {
+      "id": "e09",
+      "fromNode": "derivative",
+      "toNode": "chain",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "复合局部线性化"
+    },
+    {
+      "id": "e10",
+      "fromNode": "derivative",
+      "toNode": "higher",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "导函数继续求导"
+    },
+    {
+      "id": "e11",
+      "fromNode": "higher",
+      "toNode": "higher-product",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "反复应用乘积法则"
+    },
+    {
+      "id": "e12",
+      "fromNode": "product",
+      "toNode": "higher-product",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "二项路径计数"
+    },
+    {
+      "id": "e13",
+      "fromNode": "chain",
+      "toNode": "implicit",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "沿解支求导"
+    },
+    {
+      "id": "e14",
+      "fromNode": "implicit",
+      "toNode": "implicit-formula",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "定理条件下解出导数"
+    },
+    {
+      "id": "e15",
+      "fromNode": "chain",
+      "toNode": "inverse",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "Once inverse differentiability holds, differentiate the identity · 可导后对逆恒等式求导"
+    },
+    {
+      "id": "e16",
+      "fromNode": "implicit",
+      "toNode": "inverse",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "反函数是隐式特例"
+    },
+    {
+      "id": "e17",
+      "fromNode": "inverse",
+      "toNode": "inverse-trig",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "倒数斜率加主值分支"
+    },
+    {
+      "id": "e18",
+      "fromNode": "trig-derivative",
+      "toNode": "inverse-trig",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "原三角导数"
+    },
+    {
+      "id": "e19",
+      "fromNode": "exponential",
+      "toNode": "natural-exp",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "把比例斜率标准化为一"
+    },
+    {
+      "id": "e20",
+      "fromNode": "natural-exp",
+      "toNode": "natural-log",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "Inverse functions · 互为反函数"
+    },
+    {
+      "id": "e21",
+      "fromNode": "inverse",
+      "toNode": "log-derivative",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "Inverse rule gives log derivative · 反函数法则给出对数导数"
+    },
+    {
+      "id": "e22",
+      "fromNode": "natural-log",
+      "toNode": "exp-derivative",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "换写为 $e^{x\\ln a}$"
+    },
+    {
+      "id": "e23",
+      "fromNode": "natural-log",
+      "toNode": "log-derivative",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "对 $e^y=x$ 求导"
+    },
+    {
+      "id": "e24",
+      "fromNode": "log-derivative",
+      "toNode": "log-diff",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "For differentiable $y\\ne0$, $D\\ln|y|=y'/y$ · 非零区间"
+    },
+    {
+      "id": "e25",
+      "fromNode": "exp-derivative",
+      "toNode": "real-power",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "写成 $e^{r\\ln x}$"
+    },
+    {
+      "id": "e26",
+      "fromNode": "log-diff",
+      "toNode": "real-power",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "固定指数的统一证明"
+    },
+    {
+      "id": "e27",
+      "fromNode": "natural-exp",
+      "toNode": "e-limit",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "同一常数的序列刻画"
+    },
+    {
+      "id": "e28",
+      "fromNode": "log-derivative",
+      "toNode": "e-limit",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "识别 $\\ln$ 在一处差商"
+    },
+    {
+      "id": "e29",
+      "fromNode": "natural-exp",
+      "toNode": "hyperbolic",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "增长与衰减配对"
+    },
+    {
+      "id": "e30",
+      "fromNode": "hyperbolic",
+      "toNode": "hyperbolic-derivative",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "按指数定义逐项求导"
+    },
+    {
+      "id": "e31",
+      "fromNode": "exp-derivative",
+      "toNode": "hyperbolic-derivative",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "指数与链式法则"
+    }
+  ]
 }

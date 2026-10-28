@@ -43,7 +43,7 @@
       "y": 360,
       "width": 560,
       "height": 300,
-      "text": "## [[累积分布函数]]\n\n把每个变量转换到边际概率尺度。\n\n**边界：** 连续边际的 PIT 才直接得到连续均匀变量。"
+      "text": "<!-- bilingual-en:start -->\n## [[概率积分变换|Probability integral transform]]\n\nFor a continuous marginal [[累积分布函数|CDF]] $F_X$, the value $U=F_X(X)$ is uniform on $[0,1]$.\n<!-- bilingual-en:end -->\n\n*概率积分变换*\n\n用变量自身的连续边际 CDF，把取值转成均匀的概率尺度。离散边际不能直接套用这个结论。"
     },
     {
       "id": "5d81000000000006",

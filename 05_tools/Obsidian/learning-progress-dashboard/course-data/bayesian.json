@@ -1,0 +1,1687 @@
+{
+  "schema_version": 1,
+  "domains": [
+    {
+      "id": "bayesian",
+      "title": "贝叶斯与概率建模"
+    }
+  ],
+  "outcomes": [
+    {
+      "id": "bayes.model-specification",
+      "title": "贝叶斯模型的组成",
+      "family": "bayesian",
+      "scope": "用观测模型、参数与先验表达不确定性；限有限维参数模型的构建。",
+      "notes": []
+    },
+    {
+      "id": "bayes.conjugate-models",
+      "title": "基本共轭模型",
+      "family": "bayesian",
+      "scope": "Beta–Binomial、Normal 等基本模型的后验更新；不代表一般模型均有闭式后验。",
+      "notes": []
+    },
+    {
+      "id": "bayes.posterior-summaries",
+      "title": "后验摘要",
+      "family": "bayesian",
+      "scope": "由后验分布获得点估计、区间与事件概率；区分参数不确定性和数据变异。",
+      "notes": []
+    },
+    {
+      "id": "bayes.posterior-prediction",
+      "title": "后验预测",
+      "family": "bayesian",
+      "scope": "将参数后验积分进新观测的预测分布；不包含时间序列预测体系。",
+      "notes": []
+    },
+    {
+      "id": "bayes.marginalization",
+      "title": "多参数后验与边缘化",
+      "family": "bayesian",
+      "scope": "从联合后验通过积分或抽样消除 nuisance parameters；限基本多参数推断。",
+      "notes": []
+    },
+    {
+      "id": "bayes.monte-carlo",
+      "title": "Monte Carlo 积分",
+      "family": "bayesian",
+      "scope": "用抽样均值近似后验期望并讨论模拟误差；不包含 MCMC 收敛理论。",
+      "notes": []
+    },
+    {
+      "id": "bayes.importance-sampling",
+      "title": "重要性抽样",
+      "family": "bayesian",
+      "scope": "用提议分布和权重近似目标期望，识别权重不稳定；不含序贯 Monte Carlo。",
+      "notes": []
+    },
+    {
+      "id": "bayes.markov-chain-monte-carlo",
+      "title": "MCMC 基本原理",
+      "family": "bayesian",
+      "scope": "用以目标分布为平稳分布的 Markov 链近似后验；只到算法原理，不含一般混合时间证明。",
+      "notes": []
+    },
+    {
+      "id": "bayes.metropolis-hastings",
+      "title": "Metropolis–Hastings",
+      "family": "bayesian",
+      "scope": "提议与接受拒绝更新、对称和非对称提议；不含自适应算法的完整理论。",
+      "notes": []
+    },
+    {
+      "id": "bayes.mcmc-diagnostics",
+      "title": "MCMC 诊断",
+      "family": "bayesian",
+      "scope": "链轨迹、多链比较、有效样本量等诊断及其局限；诊断通过并非收敛证明。",
+      "notes": []
+    },
+    {
+      "id": "bayes.hamiltonian-monte-carlo",
+      "title": "Hamiltonian Monte Carlo",
+      "family": "bayesian",
+      "scope": "动量、Hamiltonian 轨迹与数值积分构成的抽样机制；不含完整几何遍历性证明。",
+      "notes": []
+    },
+    {
+      "id": "bayes.probabilistic-programming",
+      "title": "概率编程建模",
+      "family": "bayesian",
+      "scope": "在 Stan 等概率编程工具中声明模型并运行后验推断；不等同实现推断引擎。",
+      "notes": []
+    },
+    {
+      "id": "bayes.hierarchical-models",
+      "title": "层级模型",
+      "family": "bayesian",
+      "scope": "局部参数、群体分布与超参数的联合建模；限基本层级结构。",
+      "notes": []
+    },
+    {
+      "id": "bayes.partial-pooling",
+      "title": "部分汇聚",
+      "family": "bayesian",
+      "scope": "区分完全汇聚、不汇聚与部分汇聚，解释群组估计的收缩；不含全部渐近风险理论。",
+      "notes": []
+    },
+    {
+      "id": "bayes.posterior-predictive-checks",
+      "title": "后验预测检查",
+      "family": "bayesian",
+      "scope": "从拟合模型生成复制数据并比较有意义的摘要；用于发现模型失配，不证明模型为真。",
+      "notes": []
+    },
+    {
+      "id": "bayes.predictive-comparison",
+      "title": "预测性能与交叉验证",
+      "family": "bayesian",
+      "scope": "以留出或交叉验证预测表现比较模型，关注估计不确定性；不等同 Bayes factor。",
+      "notes": []
+    },
+    {
+      "id": "bayes.bayes-factors",
+      "title": "边际似然与 Bayes factor",
+      "family": "bayesian",
+      "scope": "用边际似然比较模型或假设，并识别对先验的依赖；不泛化为所有模型选择方法。",
+      "notes": []
+    },
+    {
+      "id": "bayes.model-averaging",
+      "title": "贝叶斯模型平均",
+      "family": "bayesian",
+      "scope": "对模型不确定性加权整合预测或参数摘要；不等同任意集成学习。",
+      "notes": []
+    },
+    {
+      "id": "bayes.decision-theory",
+      "title": "贝叶斯决策",
+      "family": "bayesian",
+      "scope": "以损失或效用和后验期望选择行动；不包含一般序贯决策理论。",
+      "notes": []
+    },
+    {
+      "id": "bayes.laplace-approximation",
+      "title": "Laplace 后验近似",
+      "family": "bayesian",
+      "scope": "在后验众数附近作二阶近似并识别近似可能失效的情况；不声称已证明渐近正态性。",
+      "notes": []
+    },
+    {
+      "id": "bayes.prior-sensitivity",
+      "title": "先验与似然敏感性",
+      "family": "bayesian",
+      "scope": "比较合理先验或观测模型改变对推断的影响；不包含全部鲁棒贝叶斯理论。",
+      "notes": []
+    },
+    {
+      "id": "bayes.prior-predictive-checks",
+      "title": "先验预测检查",
+      "family": "bayesian",
+      "scope": "在拟合前模拟模型允许的数据以检查先验与量纲；不等同后验预测检查。",
+      "notes": []
+    },
+    {
+      "id": "bayes.gibbs-sampling",
+      "title": "Gibbs 抽样",
+      "family": "bayesian",
+      "scope": "从全条件分布轮流更新参数或参数块；不包含通用收敛速度结论。",
+      "notes": []
+    },
+    {
+      "id": "bayes.data-augmentation",
+      "title": "数据增广",
+      "family": "bayesian",
+      "scope": "引入潜变量使条件推断或抽样更易处理；限基本建模与计算用途。",
+      "notes": []
+    },
+    {
+      "id": "bayes.bayesian-linear-regression",
+      "title": "贝叶斯线性回归",
+      "family": "bayesian",
+      "scope": "对线性回归系数及噪声设定先验，获得后验与预测；不覆盖一般 GLM。",
+      "notes": []
+    },
+    {
+      "id": "bayes.variable-selection",
+      "title": "贝叶斯变量选择",
+      "family": "bayesian",
+      "scope": "对预测变量集合或稀疏结构表达不确定性并比较选择；不包含任意高维一致性结论。",
+      "notes": []
+    },
+    {
+      "id": "bayes.robust-models",
+      "title": "鲁棒贝叶斯回归",
+      "family": "bayesian",
+      "scope": "使用替代误差分布或异常值模型降低极端观测的影响；限建模层面。",
+      "notes": []
+    },
+    {
+      "id": "bayes.missing-data",
+      "title": "缺失数据的贝叶斯建模",
+      "family": "bayesian",
+      "scope": "对未观测值联合建模和积分，明确缺失机制假设；不默认缺失可忽略。",
+      "notes": []
+    },
+    {
+      "id": "bayes.gaussian-processes",
+      "title": "Gaussian process 回归",
+      "family": "bayesian",
+      "scope": "用函数先验与条件 Gaussian 分布得到回归预测；不含 GP 理论收敛率。",
+      "notes": []
+    },
+    {
+      "id": "bayes.kernel-covariance",
+      "title": "协方差核与函数假设",
+      "family": "bayesian",
+      "scope": "用协方差核表达函数平滑性与相似性；限 GP 建模，不包含 RKHS 泛化证明。",
+      "notes": []
+    },
+    {
+      "id": "bayes.bayesian-neural-networks",
+      "title": "贝叶斯神经网络",
+      "family": "bayesian",
+      "scope": "对网络权重设先验与后验，区分点估计和参数积分；不代表精确求解一般网络后验。",
+      "notes": []
+    },
+    {
+      "id": "bayes.neural-predictive-uncertainty",
+      "title": "神经网络的后验预测",
+      "family": "bayesian",
+      "scope": "用权重后验或近似后验得到预测分布；不保证校准或分布外可靠性。",
+      "notes": []
+    },
+    {
+      "id": "bayes.directed-graph-factorization",
+      "title": "有向概率图的分解",
+      "family": "bayesian",
+      "scope": "用 DAG 的局部条件分布分解联合分布；不自动赋予边以因果含义。",
+      "notes": []
+    },
+    {
+      "id": "bayes.conditional-independence",
+      "title": "概率图与条件独立",
+      "family": "bayesian",
+      "scope": "从图结构判断模型表达的条件独立关系；因果解释另需假设。",
+      "notes": []
+    },
+    {
+      "id": "bayes.undirected-graph-factorization",
+      "title": "无向概率图的分解",
+      "family": "bayesian",
+      "scope": "势函数、团与归一化常数表示联合分布；不含一般相变理论。",
+      "notes": []
+    },
+    {
+      "id": "bayes.exact-graphical-inference",
+      "title": "图模型精确推断",
+      "family": "bayesian",
+      "scope": "通过消元计算边缘或条件分布并识别计算代价；不保证大图可行。",
+      "notes": []
+    },
+    {
+      "id": "bayes.message-passing",
+      "title": "图模型消息传递",
+      "family": "bayesian",
+      "scope": "在树或适当图结构中传递局部信息求边缘；区分精确情形和近似情形。",
+      "notes": []
+    },
+    {
+      "id": "bayes.variational-inference",
+      "title": "变分推断",
+      "family": "bayesian",
+      "scope": "以可处理分布族优化后验近似与证据下界；不包含全部近似误差界。",
+      "notes": []
+    },
+    {
+      "id": "bayes.graphical-parameter-learning",
+      "title": "图模型参数学习",
+      "family": "bayesian",
+      "scope": "给定结构时估计局部概率或势函数参数；不等同学习图结构。",
+      "notes": []
+    },
+    {
+      "id": "bayes.graph-structure-learning",
+      "title": "概率图结构学习",
+      "family": "bayesian",
+      "scope": "从数据比较候选图结构及学习原则；观察数据一般不能唯一确定因果结构。",
+      "notes": []
+    },
+    {
+      "id": "bayes.map-inference",
+      "title": "图模型 MAP 推断",
+      "family": "bayesian",
+      "scope": "寻找最高后验配置并区分边缘推断与整体最优配置；不含所有组合优化算法。",
+      "notes": []
+    },
+    {
+      "id": "bayes.exponential-families",
+      "title": "指数族的概率建模形式",
+      "family": "bayesian",
+      "scope": "自然参数、充分统计量和对数配分函数的表示及推断用途；不含完整统计渐近理论。",
+      "notes": []
+    },
+    {
+      "id": "bayes.count-models",
+      "title": "贝叶斯计数模型",
+      "family": "bayesian",
+      "scope": "Binomial、Poisson 等计数观测模型与链接函数的建模解释；不含所有计数过程。",
+      "notes": []
+    },
+    {
+      "id": "bayes.ordinal-models",
+      "title": "有序分类模型",
+      "family": "bayesian",
+      "scope": "以阈值和累积概率建模有顺序的类别；不等同无序多分类。",
+      "notes": []
+    },
+    {
+      "id": "bayes.correlated-effects",
+      "title": "相关的群组效应",
+      "family": "bayesian",
+      "scope": "用联合群组分布表达截距或斜率等效应的相关性；不含任意复杂协方差估计。",
+      "notes": []
+    },
+    {
+      "id": "bayes.measurement-error",
+      "title": "测量误差模型",
+      "family": "bayesian",
+      "scope": "区分潜在真实量与带误差的观测，并传播测量不确定性；不假设误差参数总可识别。",
+      "notes": []
+    },
+    {
+      "id": "bayes.scientific-model-checking",
+      "title": "科学模型与统计模型",
+      "family": "bayesian",
+      "scope": "将研究问题、生成假设与可检验预测连接；拟合优度本身不建立因果解释。",
+      "notes": []
+    },
+    {
+      "id": "bayes.nonparametric-regression",
+      "title": "贝叶斯非参数回归概览",
+      "family": "bayesian",
+      "scope": "用灵活函数模型表达回归关系及不确定性；仅主题级，不声称掌握任意特定非参数算法。",
+      "notes": []
+    },
+    {
+      "id": "bayes.multiple-testing",
+      "title": "贝叶斯多重检验",
+      "family": "bayesian",
+      "scope": "用层级或混合先验表达多个信号的存在性，并根据后验纳入概率作决策；不等同频率学派 FDR 控制。",
+      "notes": []
+    },
+    {
+      "id": "ml.maximum-margin-classifier",
+      "title": "最大间隔分类器",
+      "family": "machine-learning",
+      "scope": "以几何间隔确定分离超平面并建立约束优化问题；本范围不包含核化、软间隔与完整支持向量机。",
+      "notes": []
+    },
+    {
+      "id": "ml.classifier-comparison",
+      "title": "分类器性能比较",
+      "family": "machine-learning",
+      "scope": "区分评估单个分类器与比较分类器，使用测试误差及统计不确定性解释差异；不把测试集调参视为有效比较。",
+      "notes": []
+    }
+  ],
+  "courses": [
+    {
+      "id": "aalto-bda",
+      "code": "BDA",
+      "title": "Bayesian Data Analysis",
+      "titleZh": "贝叶斯数据分析",
+      "school": "Aalto",
+      "version": "2025 course archive",
+      "domain": "bayesian",
+      "stage": 3,
+      "role": "branch",
+      "tracks": [
+        "research",
+        "data"
+      ],
+      "purpose": "从概率基础进入计算贝叶斯与完整建模流程；可与 Rethinking 互补",
+      "url": "https://avehtari.github.io/BDA_course_Aalto/Aalto2025.html",
+      "syllabus": "https://avehtari.github.io/BDA_course_Aalto/Aalto2025.html",
+      "checked": "2026-10-26",
+      "materials": [
+        "video",
+        "notes",
+        "code",
+        "exercises"
+      ],
+      "coverage": "full-outline",
+      "summary": [
+        "后验建模",
+        "Monte Carlo 与 Stan",
+        "层级模型",
+        "检查、比较与决策"
+      ],
+      "prerequisites": [
+        {
+          "id": "mit-6041sc",
+          "kind": "inferred",
+          "reason": "可补官方要求的概率基础；不是 Aalto 指定课程，也无需先修完整 STA601。",
+          "source": "https://avehtari.github.io/BDA_course_Aalto/Aalto2025.html"
+        }
+      ],
+      "requirements": [
+        {
+          "title": "官方要求概率、密度、Bayes 规则、期望与方差",
+          "outcomes": [
+            "prob.event-conditioning",
+            "prob.event-independence-pair",
+            "prob.density-cdf",
+            "prob.uniform-distribution",
+            "prob.normal-distribution",
+            "prob.exponential-memoryless",
+            "prob.expectation",
+            "prob.variance-covariance"
+          ],
+          "source": "https://avehtari.github.io/BDA_course_Aalto/Aalto2025.html"
+        },
+        {
+          "title": "代数、微积分和基础编程；能够画直方图、密度图、散点图",
+          "outcomes": [],
+          "source": "https://avehtari.github.io/BDA_course_Aalto/Aalto2025.html"
+        }
+      ],
+      "units": [
+        {
+          "id": "lec01",
+          "label": "1",
+          "title": "Introduction and course practicalities",
+          "titleZh": "导论与课程安排",
+          "module": "贝叶斯推断基础",
+          "source": "https://avehtari.github.io/BDA_course_Aalto/slides/BDA_lecture_1a.pdf",
+          "kind": "overview",
+          "mapping": "reviewed-outline",
+          "outcomes": [],
+          "mappingEvidence": [
+            "https://avehtari.github.io/BDA_course_Aalto/Aalto2025.html",
+            "https://avehtari.github.io/BDA_course_Aalto/slides/BDA_lecture_1a.pdf"
+          ],
+          "note": "按官方一整讲计数；本讲分段视频共同组成这一学习单元。导论与安排不自动新增知识标记；基础推断从第 2 讲计算。",
+          "resources": [
+            {
+              "label": "2025 Lecture 1.1 Introduction",
+              "url": "https://aalto.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c33e83b9-8413-4650-a6a6-b34b00b998ba"
+            },
+            {
+              "label": "2025 Lecture 1.2 Course practicalities",
+              "url": "https://aalto.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c6a5a5f8-6934-4bd3-a56d-b34b00ca7ffa"
+            }
+          ]
+        },
+        {
+          "id": "lec02",
+          "label": "2",
+          "title": "Basics of Bayesian inference",
+          "titleZh": "贝叶斯推断基础",
+          "module": "贝叶斯推断基础",
+          "source": "https://avehtari.github.io/BDA_course_Aalto/slides/BDA_lecture_2.pdf",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.model-specification",
+            "bayes.conjugate-models",
+            "bayes.posterior-summaries",
+            "bayes.posterior-prediction"
+          ],
+          "mappingEvidence": [
+            "https://avehtari.github.io/BDA_course_Aalto/Aalto2025.html",
+            "https://avehtari.github.io/BDA_course_Aalto/slides/BDA_lecture_2.pdf"
+          ],
+          "note": "按官方一整讲计数；本讲分段视频共同组成这一学习单元。",
+          "resources": [
+            {
+              "label": "2025 Lecture 2.1",
+              "url": "https://aalto.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=67ac8899-7b24-4645-b348-b35200ba1264"
+            },
+            {
+              "label": "2025 Lecture 2.2",
+              "url": "https://aalto.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=daf245cc-eb4d-4a0c-9d68-b35200c9df6b"
+            }
+          ]
+        },
+        {
+          "id": "lec03",
+          "label": "3",
+          "title": "Multidimensional posterior",
+          "titleZh": "多参数后验",
+          "module": "贝叶斯推断基础",
+          "source": "https://avehtari.github.io/BDA_course_Aalto/slides/BDA_lecture_3.pdf",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.marginalization"
+          ],
+          "mappingEvidence": [
+            "https://avehtari.github.io/BDA_course_Aalto/Aalto2025.html",
+            "https://avehtari.github.io/BDA_course_Aalto/slides/BDA_lecture_3.pdf"
+          ],
+          "note": "按官方一整讲计数；本讲分段视频共同组成这一学习单元。",
+          "resources": [
+            {
+              "label": "2025 Lecture 3.1",
+              "url": "https://aalto.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=3ab53b1f-20fc-4de5-b5e3-b35900ba70a4"
+            },
+            {
+              "label": "2025 Lecture 3.2",
+              "url": "https://aalto.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=52afd37f-a3cb-40bb-93ed-b35900cb58f0"
+            }
+          ]
+        },
+        {
+          "id": "lec04",
+          "label": "4",
+          "title": "Monte Carlo",
+          "titleZh": "Monte Carlo 积分与重要性抽样",
+          "module": "计算与抽样",
+          "source": "https://avehtari.github.io/BDA_course_Aalto/slides/BDA_lecture_4.pdf",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.monte-carlo",
+            "bayes.importance-sampling"
+          ],
+          "mappingEvidence": [
+            "https://avehtari.github.io/BDA_course_Aalto/Aalto2025.html",
+            "https://avehtari.github.io/BDA_course_Aalto/slides/BDA_lecture_4.pdf"
+          ],
+          "note": "按官方一整讲计数；本讲分段视频共同组成这一学习单元。",
+          "resources": [
+            {
+              "label": "2025 Lecture 4.1",
+              "url": "https://aalto.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=95828315-d6c6-42fb-b22d-b36000b97b44"
+            },
+            {
+              "label": "2025 Lecture 4.2",
+              "url": "https://aalto.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=85dfdf09-cd99-4946-bd22-b36000c8d0f2"
+            }
+          ]
+        },
+        {
+          "id": "lec05",
+          "label": "5",
+          "title": "Markov chain Monte Carlo",
+          "titleZh": "MCMC、Gibbs 与收敛诊断",
+          "module": "计算与抽样",
+          "source": "https://avehtari.github.io/BDA_course_Aalto/slides/BDA_lecture_5.pdf",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.markov-chain-monte-carlo",
+            "bayes.gibbs-sampling",
+            "bayes.mcmc-diagnostics"
+          ],
+          "mappingEvidence": [
+            "https://avehtari.github.io/BDA_course_Aalto/Aalto2025.html",
+            "https://avehtari.github.io/BDA_course_Aalto/slides/BDA_lecture_5.pdf"
+          ],
+          "note": "按官方一整讲计数；本讲分段视频共同组成这一学习单元。官方描述为 Metropolis；未将一般非对称提议的完整 Metropolis–Hastings 范围记在本讲。",
+          "resources": [
+            {
+              "label": "2025 Lecture 5.1",
+              "url": "https://aalto.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=59d0aadb-9483-469c-a3f4-b36700b96f74"
+            },
+            {
+              "label": "2025 Lecture 5.2",
+              "url": "https://aalto.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=cc5e5900-b30b-4ebd-84d0-b36700c85cc4"
+            }
+          ]
+        },
+        {
+          "id": "lec06",
+          "label": "6",
+          "title": "Stan, HMC and probabilistic programming",
+          "titleZh": "HMC 与 Stan 概率编程",
+          "module": "计算与抽样",
+          "source": "https://avehtari.github.io/BDA_course_Aalto/slides/BDA_lecture_6.pdf",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.hamiltonian-monte-carlo",
+            "bayes.probabilistic-programming"
+          ],
+          "mappingEvidence": [
+            "https://avehtari.github.io/BDA_course_Aalto/Aalto2025.html",
+            "https://avehtari.github.io/BDA_course_Aalto/slides/BDA_lecture_6.pdf"
+          ],
+          "note": "按官方一整讲计数；本讲分段视频共同组成这一学习单元。",
+          "resources": [
+            {
+              "label": "2025 Lecture 6.1",
+              "url": "https://aalto.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=bffeedc7-36d4-4778-ab1b-b36e00b9a812"
+            },
+            {
+              "label": "Lecture 6.2",
+              "url": "https://aalto.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=02ad3174-ae8b-478c-862f-b36e00ca9659"
+            }
+          ]
+        },
+        {
+          "id": "lec07",
+          "label": "7",
+          "title": "Hierarchical models and exchangeability",
+          "titleZh": "层级模型与可交换性",
+          "module": "层级模型与模型检查",
+          "source": "https://avehtari.github.io/BDA_course_Aalto/slides/BDA_lecture_7.pdf",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.hierarchical-models",
+            "bayes.partial-pooling"
+          ],
+          "mappingEvidence": [
+            "https://avehtari.github.io/BDA_course_Aalto/Aalto2025.html",
+            "https://avehtari.github.io/BDA_course_Aalto/slides/BDA_lecture_7.pdf"
+          ],
+          "note": "按官方一整讲计数；本讲分段视频共同组成这一学习单元。",
+          "resources": [
+            {
+              "label": "2025 Lecture 7.1",
+              "url": "https://aalto.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=91379f62-583c-410b-a509-b37c00bb9609"
+            },
+            {
+              "label": "2025 Lecture 7.2",
+              "url": "https://aalto.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=a19532c2-c3d6-4688-a96d-b37c00cb1f42"
+            }
+          ]
+        },
+        {
+          "id": "lec08",
+          "label": "8",
+          "title": "Model checking and cross-validation",
+          "titleZh": "模型检查与交叉验证",
+          "module": "层级模型与模型检查",
+          "source": "https://avehtari.github.io/BDA_course_Aalto/slides/BDA_lecture_8a.pdf",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.posterior-predictive-checks",
+            "bayes.prior-predictive-checks",
+            "bayes.predictive-comparison"
+          ],
+          "mappingEvidence": [
+            "https://avehtari.github.io/BDA_course_Aalto/Aalto2025.html",
+            "https://avehtari.github.io/BDA_course_Aalto/slides/BDA_lecture_8a.pdf"
+          ],
+          "note": "按官方一整讲计数；本讲分段视频共同组成这一学习单元。官方 2025 目录仍引用 2024 年的 8.2 录播。",
+          "resources": [
+            {
+              "label": "2025 Lecture 8.1",
+              "url": "https://aalto.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=fc3c9220-cd04-4b17-b6f4-b38300ca5e12"
+            },
+            {
+              "label": "2024 Lecture 8.2",
+              "url": "https://aalto.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=f25a56b5-492b-4c5d-974f-b38300da456a"
+            }
+          ]
+        },
+        {
+          "id": "lec09",
+          "label": "9",
+          "title": "Model comparison, selection and hypothesis testing",
+          "titleZh": "模型比较、选择与假设检验",
+          "module": "模型选择与决策",
+          "source": "https://avehtari.github.io/BDA_course_Aalto/slides/BDA_lecture_9.pdf",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.predictive-comparison"
+          ],
+          "mappingEvidence": [
+            "https://avehtari.github.io/BDA_course_Aalto/Aalto2025.html",
+            "https://avehtari.github.io/BDA_course_Aalto/slides/BDA_lecture_9.pdf"
+          ],
+          "note": "按官方一整讲计数；本讲分段视频共同组成这一学习单元。",
+          "resources": [
+            {
+              "label": "2025 Lecture 9.1",
+              "url": "https://aalto.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=8ff95182-0a49-4f53-a2c4-b38a00caa423"
+            },
+            {
+              "label": "2025 Lecture 9.2",
+              "url": "https://aalto.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=04350ffd-4379-4ada-87ce-b38a00d925e8"
+            }
+          ]
+        },
+        {
+          "id": "lec10",
+          "label": "10",
+          "title": "Decision analysis, R2D2 prior and normal approximation",
+          "titleZh": "决策分析、R2D2 先验与正态近似",
+          "module": "模型选择与决策",
+          "source": "https://avehtari.github.io/BDA_course_Aalto/slides/BDA_lecture_10a.pdf",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.decision-theory",
+            "bayes.laplace-approximation"
+          ],
+          "mappingEvidence": [
+            "https://avehtari.github.io/BDA_course_Aalto/Aalto2025.html",
+            "https://avehtari.github.io/BDA_course_Aalto/slides/BDA_lecture_10a.pdf"
+          ],
+          "note": "按官方一整讲计数；本讲分段视频共同组成这一学习单元。",
+          "resources": [
+            {
+              "label": "2025 Lecture 10.1",
+              "url": "https://aalto.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=f5e55c11-c090-4c7e-92d3-b39100ca289d"
+            },
+            {
+              "label": "2025 Lecture 10.2",
+              "url": "https://aalto.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=40fdc2d7-2d31-4e73-bcde-b39100ddd864"
+            }
+          ]
+        },
+        {
+          "id": "lec11",
+          "label": "11",
+          "title": "Prior-likelihood sensitivity, variable selection and Bayesian Python packages",
+          "titleZh": "先验敏感性、变量选择与 Python 工具",
+          "module": "模型选择与决策",
+          "source": "https://avehtari.github.io/BDA_course_Aalto/slides/BDA_lecture_11a.pdf",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.prior-sensitivity",
+            "bayes.variable-selection"
+          ],
+          "mappingEvidence": [
+            "https://avehtari.github.io/BDA_course_Aalto/Aalto2025.html",
+            "https://avehtari.github.io/BDA_course_Aalto/slides/BDA_lecture_11a.pdf"
+          ],
+          "note": "按官方一整讲计数；本讲分段视频共同组成这一学习单元。",
+          "resources": [
+            {
+              "label": "2025 Lecture 11.1",
+              "url": "https://aalto.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=d3cc9d13-1dcb-4b9b-8d14-b39800ca2caf"
+            },
+            {
+              "label": "2025 Lecture 11.2",
+              "url": "https://aalto.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=a505ac2d-a3f6-4b39-b670-b39800d1c38b"
+            }
+          ]
+        },
+        {
+          "id": "lec12",
+          "label": "12",
+          "title": "Project presentation advice and Q&A",
+          "titleZh": "项目展示建议与答疑",
+          "module": "项目收尾",
+          "source": "https://avehtari.github.io/BDA_course_Aalto/project_work/BDA_presentation_example.pdf",
+          "kind": "overview",
+          "mapping": "reviewed-outline",
+          "outcomes": [],
+          "mappingEvidence": [
+            "https://avehtari.github.io/BDA_course_Aalto/Aalto2025.html",
+            "https://avehtari.github.io/BDA_course_Aalto/project_work/BDA_presentation_example.pdf"
+          ],
+          "note": "项目展示建议与答疑；不新增学科知识标记。",
+          "resources": [
+            {
+              "label": "2025 Project presentation advice",
+              "url": "https://aalto.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=eb7dc122-8cb2-4a2a-a019-b39f00cb55e8"
+            }
+          ]
+        }
+      ],
+      "materialNote": "公开讲义与录播；2025 课程目录部分沿用旧年录播，按官方链接注明年份。课程平台作业提交需要校方账号。",
+      "coverageNote": "官方 12 讲，分段录播合并在对应讲内；第 12 讲为项目展示建议。9 次作业和项目评审不计为讲次。",
+      "outlineSource": "https://avehtari.github.io/BDA_course_Aalto/Aalto2025.html",
+      "outlineCount": 12,
+      "outlineVerified": "2026-10-26",
+      "outlineUnit": "lecture",
+      "unitLabel": "讲",
+      "outlineComplete": true,
+      "outlineNotes": "官方 12 讲，分段录播合并在对应讲内；第 12 讲为项目展示建议。9 次作业和项目评审不计为讲次。",
+      "progressCountNote": "官方 12 讲，分段录播合并在对应讲内；第 12 讲为项目展示建议。9 次作业和项目评审不计为讲次。"
+    },
+    {
+      "id": "duke-sta601",
+      "code": "STA601",
+      "title": "Bayesian and Modern Statistics",
+      "titleZh": "贝叶斯与现代统计",
+      "school": "Duke",
+      "version": "Fall 2021",
+      "domain": "bayesian",
+      "stage": 3,
+      "role": "branch",
+      "tracks": [
+        "research",
+        "data"
+      ],
+      "purpose": "有数理统计与 R 基础后的贝叶斯理论和计算桥梁",
+      "url": "https://www2.stat.duke.edu/courses/Fall21/sta601.001/",
+      "syllabus": "https://www2.stat.duke.edu/courses/Fall21/sta601.001/syllabus/",
+      "checked": "2026-10-26",
+      "materials": [
+        "notes",
+        "exercises",
+        "code"
+      ],
+      "coverage": "full-outline",
+      "summary": [
+        "损失与预测",
+        "MCMC",
+        "层级和回归",
+        "模型比较"
+      ],
+      "prerequisites": [
+        {
+          "id": "mit-6041sc",
+          "kind": "inferred",
+          "reason": "可准备概率能力，但单独修完不足以满足 STA601 的数学统计门槛。",
+          "source": "https://www2.stat.duke.edu/courses/Fall21/sta601.001/policies/"
+        },
+        {
+          "id": "mit-18650",
+          "kind": "inferred",
+          "reason": "可补数学统计准备；并非 Duke 官方等价认证。",
+          "source": "https://www2.stat.duke.edu/courses/Fall21/sta601.001/policies/"
+        }
+      ],
+      "requirements": [
+        {
+          "title": "官方要求概率与数理统计；以下仅列其中入门能力，不能代表全部门槛",
+          "outcomes": [
+            "prob.joint-distributions",
+            "prob.expectation",
+            "stat.likelihood-mle-basic",
+            "stat.hypothesis-testing-basic"
+          ],
+          "source": "https://www2.stat.duke.edu/courses/Fall21/sta601.001/policies/"
+        },
+        {
+          "title": "线性代数与多元微积分，含矩阵和偏导",
+          "outcomes": [
+            "la.matrix-multiplication",
+            "math.partial-definition",
+            "math.multivariable-linear-approximation",
+            "math.double-integral-basic",
+            "math.integral-order",
+            "math.jacobian-substitution"
+          ],
+          "source": "https://www2.stat.duke.edu/courses/Fall21/sta601.001/policies/"
+        },
+        {
+          "title": "熟悉 R；实验使用 R/knitr 或 R Markdown",
+          "outcomes": [],
+          "source": "https://www2.stat.duke.edu/courses/Fall21/sta601.001/policies/"
+        }
+      ],
+      "units": [
+        {
+          "id": "lec00",
+          "label": "0",
+          "title": "Course Overview and Introduction",
+          "titleZh": "课程概览与导论",
+          "module": "基础推断",
+          "source": "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/00-course-overview.html",
+          "kind": "overview",
+          "mapping": "reviewed-outline",
+          "outcomes": [],
+          "mappingEvidence": [
+            "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/00-course-overview.html"
+          ],
+          "note": ""
+        },
+        {
+          "id": "lec01",
+          "label": "1",
+          "title": "Basics of Bayesian Inference",
+          "titleZh": "贝叶斯推断基础",
+          "module": "基础推断",
+          "source": "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/01-basics-of-bayes.html",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.model-specification",
+            "bayes.conjugate-models"
+          ],
+          "mappingEvidence": [
+            "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/01-basics-of-bayes.html"
+          ],
+          "note": ""
+        },
+        {
+          "id": "lec02",
+          "label": "2",
+          "title": "Loss Functions and Summaries",
+          "titleZh": "损失函数与后验摘要",
+          "module": "基础推断",
+          "source": "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/02-loss-functions.html",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.decision-theory",
+            "bayes.posterior-summaries"
+          ],
+          "mappingEvidence": [
+            "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/02-loss-functions.html"
+          ],
+          "note": ""
+        },
+        {
+          "id": "lec03",
+          "label": "3",
+          "title": "Normal Model and Predictive Distributions",
+          "titleZh": "正态模型与预测分布",
+          "module": "基础推断",
+          "source": "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/03-normal-predictive-distributions.html",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.conjugate-models",
+            "bayes.posterior-prediction",
+            "bayes.marginalization"
+          ],
+          "mappingEvidence": [
+            "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/03-normal-predictive-distributions.html"
+          ],
+          "note": ""
+        },
+        {
+          "id": "lec04",
+          "label": "4",
+          "title": "Predictive Checks",
+          "titleZh": "预测检查",
+          "module": "模型检查与假设检验",
+          "source": "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/04-predictive-checks.html",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.posterior-predictive-checks"
+          ],
+          "mappingEvidence": [
+            "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/04-predictive-checks.html"
+          ],
+          "note": ""
+        },
+        {
+          "id": "lec05",
+          "label": "5",
+          "title": "Basics of Bayesian Hypothesis Testing",
+          "titleZh": "贝叶斯假设检验基础",
+          "module": "模型检查与假设检验",
+          "source": "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/05-hypothesis-testing.html",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.bayes-factors",
+            "bayes.decision-theory"
+          ],
+          "mappingEvidence": [
+            "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/05-hypothesis-testing.html"
+          ],
+          "note": ""
+        },
+        {
+          "id": "lec06",
+          "label": "6",
+          "title": "Bayesian Hypothesis Testing Continued",
+          "titleZh": "贝叶斯假设检验续讲",
+          "module": "模型检查与假设检验",
+          "source": "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/06-hypothesis-testing-cont.html",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.bayes-factors",
+            "bayes.model-averaging",
+            "bayes.prior-sensitivity"
+          ],
+          "mappingEvidence": [
+            "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/06-hypothesis-testing-cont.html"
+          ],
+          "note": ""
+        },
+        {
+          "id": "lec07",
+          "label": "7",
+          "title": "Introduction to Hierarchical Models, Empirical Bayes and Metropolis",
+          "titleZh": "层级模型、经验贝叶斯与 Metropolis",
+          "module": "层级模型与 MCMC",
+          "source": "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/07-hierarchical-models.html",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.hierarchical-models",
+            "bayes.partial-pooling",
+            "bayes.markov-chain-monte-carlo"
+          ],
+          "mappingEvidence": [
+            "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/07-hierarchical-models.html"
+          ],
+          "note": ""
+        },
+        {
+          "id": "lec08",
+          "label": "8",
+          "title": "Metropolis Algorithms and Diagnostics",
+          "titleZh": "Metropolis 算法与诊断",
+          "module": "层级模型与 MCMC",
+          "source": "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/08-metropolis-diagnostics.html",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.markov-chain-monte-carlo",
+            "bayes.mcmc-diagnostics"
+          ],
+          "mappingEvidence": [
+            "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/08-metropolis-diagnostics.html"
+          ],
+          "note": ""
+        },
+        {
+          "id": "lec09",
+          "label": "9",
+          "title": "Adaptive Metropolis and Metropolis–Hastings",
+          "titleZh": "自适应 Metropolis 与 Metropolis–Hastings",
+          "module": "层级模型与 MCMC",
+          "source": "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/09-adaptive-metropolis.html",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.metropolis-hastings",
+            "bayes.mcmc-diagnostics"
+          ],
+          "mappingEvidence": [
+            "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/09-adaptive-metropolis.html"
+          ],
+          "note": ""
+        },
+        {
+          "id": "lec10",
+          "label": "10",
+          "title": "Blocked Samplers and Gibbs",
+          "titleZh": "分块抽样与 Gibbs",
+          "module": "层级模型与 MCMC",
+          "source": "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/10-gibbs.html",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.gibbs-sampling",
+            "bayes.bayesian-linear-regression"
+          ],
+          "mappingEvidence": [
+            "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/10-gibbs.html"
+          ],
+          "note": ""
+        },
+        {
+          "id": "lec11",
+          "label": "11",
+          "title": "Data Augmentation",
+          "titleZh": "数据增广",
+          "module": "层级模型与 MCMC",
+          "source": "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/11-gibbs-data-augmentation.html",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.data-augmentation",
+            "bayes.gibbs-sampling"
+          ],
+          "mappingEvidence": [
+            "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/11-gibbs-data-augmentation.html"
+          ],
+          "note": ""
+        },
+        {
+          "id": "lec12",
+          "label": "12",
+          "title": "Multiple Testing and Hierarchical Models",
+          "titleZh": "多重检验与层级模型",
+          "module": "多重检验与模型选择",
+          "source": "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/12-multiple-testing.html",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.hierarchical-models",
+            "bayes.partial-pooling"
+          ],
+          "mappingEvidence": [
+            "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/12-multiple-testing.html"
+          ],
+          "note": ""
+        },
+        {
+          "id": "lec13",
+          "label": "13",
+          "title": "Bayesian Multiple Testing and Hierarchical Models",
+          "titleZh": "贝叶斯多重检验与层级模型",
+          "module": "多重检验与模型选择",
+          "source": "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/13-Bayes-multiple-testing.html",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.multiple-testing",
+            "bayes.hierarchical-models"
+          ],
+          "mappingEvidence": [
+            "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/13-Bayes-multiple-testing.html"
+          ],
+          "note": ""
+        },
+        {
+          "id": "lec14",
+          "label": "14",
+          "title": "Bayesian Model Choice in Linear Regression",
+          "titleZh": "线性回归中的贝叶斯模型选择",
+          "module": "多重检验与模型选择",
+          "source": "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/14-model-selection.html",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.bayesian-linear-regression",
+            "bayes.variable-selection",
+            "bayes.bayes-factors"
+          ],
+          "mappingEvidence": [
+            "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/14-model-selection.html"
+          ],
+          "note": ""
+        },
+        {
+          "id": "lec15",
+          "label": "15",
+          "title": "Bayesian Model Averaging",
+          "titleZh": "贝叶斯模型平均",
+          "module": "多重检验与模型选择",
+          "source": "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/15-BMA.html",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.model-averaging"
+          ],
+          "mappingEvidence": [
+            "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/15-BMA.html"
+          ],
+          "note": ""
+        },
+        {
+          "id": "lec16",
+          "label": "16",
+          "title": "Prior Choice and BMA: Implementation",
+          "titleZh": "先验选择与模型平均实现",
+          "module": "多重检验与模型选择",
+          "source": "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/16-prior-bma/16-prior-bma.pdf",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.prior-sensitivity",
+            "bayes.model-averaging"
+          ],
+          "mappingEvidence": [
+            "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/16-prior-bma/16-prior-bma.pdf"
+          ],
+          "note": ""
+        },
+        {
+          "id": "lec17",
+          "label": "17",
+          "title": "Outliers and Robust Bayesian Regression",
+          "titleZh": "异常值与稳健贝叶斯回归",
+          "module": "复杂回归与缺失数据",
+          "source": "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/17-outliers/17-outliers.pdf",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.robust-models"
+          ],
+          "mappingEvidence": [
+            "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/17-outliers/17-outliers.pdf"
+          ],
+          "note": ""
+        },
+        {
+          "id": "lec18",
+          "label": "18",
+          "title": "Random Effects and Hierarchical Models",
+          "titleZh": "随机效应与层级模型",
+          "module": "复杂回归与缺失数据",
+          "source": "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/18-random-effects.pdf",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.hierarchical-models",
+            "bayes.partial-pooling"
+          ],
+          "mappingEvidence": [
+            "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/18-random-effects.pdf"
+          ],
+          "note": ""
+        },
+        {
+          "id": "lec19",
+          "label": "19",
+          "title": "Linear Mixed Effect Models",
+          "titleZh": "线性混合效应模型",
+          "module": "复杂回归与缺失数据",
+          "source": "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/19-mixed-effects.pdf",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.correlated-effects",
+            "bayes.gibbs-sampling"
+          ],
+          "mappingEvidence": [
+            "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/19-mixed-effects.pdf"
+          ],
+          "note": ""
+        },
+        {
+          "id": "lec20",
+          "label": "20",
+          "title": "Missing Data",
+          "titleZh": "缺失数据与插补",
+          "module": "复杂回归与缺失数据",
+          "source": "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/20-missing-data.pdf",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.missing-data",
+            "bayes.data-augmentation"
+          ],
+          "mappingEvidence": [
+            "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/20-missing-data.pdf"
+          ],
+          "note": ""
+        },
+        {
+          "id": "lec21",
+          "label": "21",
+          "title": "Hamiltonian Monte Carlo",
+          "titleZh": "Hamiltonian Monte Carlo",
+          "module": "高级计算与非参数模型",
+          "source": "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/21-HMC.pdf",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.hamiltonian-monte-carlo"
+          ],
+          "mappingEvidence": [
+            "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/21-HMC.pdf"
+          ],
+          "note": ""
+        },
+        {
+          "id": "lec22",
+          "label": "22",
+          "title": "Nonparametric Regression",
+          "titleZh": "非参数回归：贝叶斯自适应回归核",
+          "module": "高级计算与非参数模型",
+          "source": "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/22-BARK/svm.pdf",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.nonparametric-regression"
+          ],
+          "mappingEvidence": [
+            "https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/22-BARK/svm.pdf"
+          ],
+          "note": ""
+        },
+        {
+          "id": "continuation-hmc",
+          "label": "续讲",
+          "title": "Hamiltonian Monte Carlo — continuation",
+          "titleZh": "HMC 续讲（官方未编号）",
+          "module": "高级计算与非参数模型",
+          "source": "https://www2.stat.duke.edu/courses/Fall21/sta601.001/syllabus/",
+          "kind": "lecture",
+          "mapping": "syllabus",
+          "outcomes": [],
+          "mappingEvidence": [
+            "https://www2.stat.duke.edu/courses/Fall21/sta601.001/syllabus/"
+          ],
+          "note": "11 月 22 日目录只写 continue HMC，没有独立材料或内容边界；可记录课次，不据此新增知识。"
+        },
+        {
+          "id": "lec24",
+          "label": "24",
+          "title": "Midterm II Review",
+          "titleZh": "第二次期中考试复习",
+          "module": "复习",
+          "source": "https://www2.stat.duke.edu/courses/Fall21/sta601.001/syllabus/",
+          "kind": "review",
+          "mapping": "reviewed-outline",
+          "outcomes": [],
+          "mappingEvidence": [
+            "https://www2.stat.duke.edu/courses/Fall21/sta601.001/syllabus/"
+          ],
+          "note": "按官方编号保留 24；官方没有编号 23，不补造讲次。"
+        }
+      ],
+      "materialNote": "公开讲义与阅读材料可直接打开；授课视频位于 Sakai，不能当作免登录公开视频。未编号 HMC 续讲知识范围待核对。",
+      "coverageNote": "官方 24 个编号讲次（0–22、24），加 11 月 22 日未编号 HMC 续讲，共 25 个教学单元；不包含独立实验、作业、考试。 11 月 8 日实验时段的未编号期中复习未计入。",
+      "outlineSource": "https://www2.stat.duke.edu/courses/Fall21/sta601.001/syllabus/",
+      "outlineCount": 25,
+      "outlineVerified": "2026-10-26",
+      "outlineUnit": "session",
+      "unitLabel": "节",
+      "outlineComplete": true,
+      "outlineNotes": "官方 24 个编号讲次（0–22、24），加 11 月 22 日未编号 HMC 续讲，共 25 个教学单元；不包含独立实验、作业、考试。 11 月 8 日实验时段的未编号期中复习未计入。",
+      "progressCountNote": "官方 24 个编号讲次（0–22、24），加 11 月 22 日未编号 HMC 续讲，共 25 个教学单元；不包含独立实验、作业、考试。 11 月 8 日实验时段的未编号期中复习未计入。"
+    },
+    {
+      "id": "cambridge-ml-bayes",
+      "code": "MLBayInfer",
+      "title": "Machine Learning and Bayesian Inference",
+      "titleZh": "机器学习与贝叶斯推断",
+      "school": "Cambridge",
+      "version": "2020–21 public video lectures",
+      "domain": "bayesian",
+      "stage": 3,
+      "role": "alternative",
+      "tracks": [
+        "research",
+        "data"
+      ],
+      "purpose": "连接概率式机器学习、Gaussian process 与图模型；兼作 CS229/CS228 之间的概览",
+      "url": "https://www.cl.cam.ac.uk/teaching/2021/MLBayInfer/",
+      "syllabus": "https://www.cl.cam.ac.uk/teaching/2021/MLBayInfer/",
+      "checked": "2026-10-26",
+      "materials": [
+        "video",
+        "notes"
+      ],
+      "coverage": "full-outline",
+      "summary": [
+        "概率分类与核方法",
+        "Gaussian process",
+        "贝叶斯网络",
+        "近似推断"
+      ],
+      "prerequisites": [
+        {
+          "id": "mit-6041sc",
+          "kind": "inferred",
+          "reason": "概率准备的可选来源；官方要求的 Cambridge Data Science 并不等同此课。",
+          "source": "https://www.cl.cam.ac.uk/teaching/2021/MLBayInfer/"
+        },
+        {
+          "id": "mit-6042j",
+          "kind": "inferred",
+          "reason": "离散数学准备的可选来源；不是 Cambridge Discrete Mathematics 的官方等价认证。",
+          "source": "https://www.cl.cam.ac.uk/teaching/2021/MLBayInfer/"
+        }
+      ],
+      "requirements": [
+        {
+          "title": "官方先修 Data Science 与 Discrete Mathematics；本图未收录这两门 Cambridge 原课",
+          "outcomes": [],
+          "source": "https://www.cl.cam.ac.uk/teaching/2021/MLBayInfer/"
+        },
+        {
+          "title": "概率与矩阵基础（按材料推断的准备项）",
+          "outcomes": [
+            "prob.event-conditioning",
+            "prob.event-independence-pair",
+            "prob.joint-distributions",
+            "la.matrix-multiplication"
+          ],
+          "source": "https://www.cl.cam.ac.uk/teaching/2021/MLBayInfer/"
+        }
+      ],
+      "units": [
+        {
+          "id": "lec01",
+          "label": "1",
+          "title": "Lecture 1: Probability as knowledge representation",
+          "titleZh": "用概率表达知识与推断",
+          "module": "概率学习基础",
+          "source": "https://www.youtube.com/watch?v=U4soCBgohhE",
+          "kind": "overview",
+          "mapping": "reviewed-outline",
+          "outcomes": [],
+          "mappingEvidence": [
+            "https://www.youtube.com/watch?v=U4soCBgohhE",
+            "https://www.cl.cam.ac.uk/teaching/2021/MLBayInfer/"
+          ],
+          "note": "按教师本人发布的 2020–21 录播及每讲说明对齐。本讲为整体导论，不新增知识标记。"
+        },
+        {
+          "id": "lec02",
+          "label": "2",
+          "title": "Lecture 2: Learning paradigms, revision and notation",
+          "titleZh": "学习范式、复习与记号",
+          "module": "概率学习基础",
+          "source": "https://www.youtube.com/watch?v=Xx_rxz5t1ec",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "ml.supervised-formulation"
+          ],
+          "mappingEvidence": [
+            "https://www.youtube.com/watch?v=Xx_rxz5t1ec",
+            "https://www.cl.cam.ac.uk/teaching/2021/MLBayInfer/"
+          ],
+          "note": "按教师本人发布的 2020–21 录播及每讲说明对齐。"
+        },
+        {
+          "id": "lec03",
+          "label": "3",
+          "title": "Lecture 3: Maximum likelihood and maximum a posteriori learning",
+          "titleZh": "最大似然与最大后验学习",
+          "module": "概率学习基础",
+          "source": "https://www.youtube.com/watch?v=Vt97mfjCvHM",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "ml.maximum-likelihood-map"
+          ],
+          "mappingEvidence": [
+            "https://www.youtube.com/watch?v=Vt97mfjCvHM",
+            "https://www.cl.cam.ac.uk/teaching/2021/MLBayInfer/"
+          ],
+          "note": "按教师本人发布的 2020–21 录播及每讲说明对齐。"
+        },
+        {
+          "id": "lec04",
+          "label": "4",
+          "title": "Lecture 4: Generalization and the Bayes optimal classifier",
+          "titleZh": "泛化与贝叶斯最优分类器",
+          "module": "概率学习基础",
+          "source": "https://www.youtube.com/watch?v=ntqP9c8ab5Y",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.decision-theory"
+          ],
+          "mappingEvidence": [
+            "https://www.youtube.com/watch?v=ntqP9c8ab5Y",
+            "https://www.cl.cam.ac.uk/teaching/2021/MLBayInfer/"
+          ],
+          "note": "按教师本人发布的 2020–21 录播及每讲说明对齐。"
+        },
+        {
+          "id": "lec05",
+          "label": "5",
+          "title": "Lecture 5: Linear classifiers and the kernel trick",
+          "titleZh": "线性分类器与核技巧",
+          "module": "线性与核方法",
+          "source": "https://www.youtube.com/watch?v=0mltp13wYzA",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "ml.linear-classifiers",
+            "ml.kernel-trick"
+          ],
+          "mappingEvidence": [
+            "https://www.youtube.com/watch?v=0mltp13wYzA",
+            "https://www.cl.cam.ac.uk/teaching/2021/MLBayInfer/"
+          ],
+          "note": "按教师本人发布的 2020–21 录播及每讲说明对齐。"
+        },
+        {
+          "id": "lec06",
+          "label": "6",
+          "title": "Lecture 6: Maximum-margin classification",
+          "titleZh": "最大间隔分类",
+          "module": "线性与核方法",
+          "source": "https://www.youtube.com/watch?v=_aFzHVk-oL8",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "ml.maximum-margin-classifier"
+          ],
+          "mappingEvidence": [
+            "https://www.youtube.com/watch?v=_aFzHVk-oL8",
+            "https://www.cl.cam.ac.uk/teaching/2021/MLBayInfer/"
+          ],
+          "note": "按教师本人发布的 2020–21 录播及每讲说明对齐。"
+        },
+        {
+          "id": "lec07",
+          "label": "7",
+          "title": "Lecture 7: Support vector machines and practical issues",
+          "titleZh": "支持向量机与实际应用",
+          "module": "线性与核方法",
+          "source": "https://www.youtube.com/watch?v=NgLfGyxF54U",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "ml.support-vector-machines"
+          ],
+          "mappingEvidence": [
+            "https://www.youtube.com/watch?v=NgLfGyxF54U",
+            "https://www.cl.cam.ac.uk/teaching/2021/MLBayInfer/"
+          ],
+          "note": "按教师本人发布的 2020–21 录播及每讲说明对齐。"
+        },
+        {
+          "id": "lec08",
+          "label": "8",
+          "title": "Lecture 8: Cross-validation and classifier comparison",
+          "titleZh": "交叉验证与分类器比较",
+          "module": "模型评估",
+          "source": "https://www.youtube.com/watch?v=5XA98e_MczI",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "ml.cross-validation",
+            "ml.model-selection"
+          ],
+          "mappingEvidence": [
+            "https://www.youtube.com/watch?v=5XA98e_MczI",
+            "https://www.cl.cam.ac.uk/teaching/2021/MLBayInfer/"
+          ],
+          "note": "按教师本人发布的 2020–21 录播及每讲说明对齐。"
+        },
+        {
+          "id": "lec09",
+          "label": "9",
+          "title": "Lecture 9: Assessing and comparing classifiers",
+          "titleZh": "分类器评估与比较",
+          "module": "模型评估",
+          "source": "https://www.youtube.com/watch?v=vNXTF7WcfRA",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "ml.classifier-comparison"
+          ],
+          "mappingEvidence": [
+            "https://www.youtube.com/watch?v=vNXTF7WcfRA",
+            "https://www.cl.cam.ac.uk/teaching/2021/MLBayInfer/"
+          ],
+          "note": "按教师本人发布的 2020–21 录播及每讲说明对齐。"
+        },
+        {
+          "id": "lec10",
+          "label": "10",
+          "title": "Lecture 10: Bayesian supervised learning",
+          "titleZh": "贝叶斯监督学习",
+          "module": "贝叶斯回归与高斯过程",
+          "source": "https://www.youtube.com/watch?v=tNblB7kpsqo",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.bayesian-neural-networks"
+          ],
+          "mappingEvidence": [
+            "https://www.youtube.com/watch?v=tNblB7kpsqo",
+            "https://www.cl.cam.ac.uk/teaching/2021/MLBayInfer/",
+            "https://www.youtube.com/watch?v=tNblB7kpsqo&t=450",
+            "https://www.youtube.com/watch?v=tNblB7kpsqo&t=638",
+            "https://www.youtube.com/watch?v=tNblB7kpsqo&t=1658"
+          ],
+          "note": "按教师本人发布的 2020–21 录播及每讲说明对齐。 同版教师录像字幕：07:30 引入神经网络，10:38 与 27:38 讨论权重后验。"
+        },
+        {
+          "id": "lec11",
+          "label": "11",
+          "title": "Lecture 11: Bayesian regression, hyperparameters and Gaussian processes",
+          "titleZh": "贝叶斯回归、超参数与高斯过程导论",
+          "module": "贝叶斯回归与高斯过程",
+          "source": "https://www.youtube.com/watch?v=7FG6tVh4tdw",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.neural-predictive-uncertainty",
+            "bayes.markov-chain-monte-carlo"
+          ],
+          "mappingEvidence": [
+            "https://www.youtube.com/watch?v=7FG6tVh4tdw",
+            "https://www.cl.cam.ac.uk/teaching/2021/MLBayInfer/",
+            "https://www.youtube.com/watch?v=7FG6tVh4tdw&t=26",
+            "https://www.youtube.com/watch?v=7FG6tVh4tdw&t=858",
+            "https://www.youtube.com/watch?v=7FG6tVh4tdw&t=1090",
+            "https://www.youtube.com/watch?v=7FG6tVh4tdw&t=1856"
+          ],
+          "note": "按教师本人发布的 2020–21 录播及每讲说明对齐。 同版教师录像字幕：00:26 明确使用神经网络作贝叶斯回归；14:18 后验预测，18–19 分钟解释权重与预测不确定性。 23:54–38:50 讲解 MCMC/Metropolis（30:56 算法，34:35 接受概率），计入 MCMC 基础；不授予一般非对称提议的完整 MH 范围。"
+        },
+        {
+          "id": "lec12",
+          "label": "12",
+          "title": "Lecture 12: Gaussian process regression and unsupervised learning",
+          "titleZh": "高斯过程回归与无监督学习",
+          "module": "贝叶斯回归与高斯过程",
+          "source": "https://www.youtube.com/watch?v=y7a0tv9IxFI",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.gaussian-processes",
+            "bayes.kernel-covariance",
+            "ml.kmeans"
+          ],
+          "mappingEvidence": [
+            "https://www.youtube.com/watch?v=y7a0tv9IxFI",
+            "https://www.cl.cam.ac.uk/teaching/2021/MLBayInfer/",
+            "https://www.youtube.com/watch?v=y7a0tv9IxFI&t=2554",
+            "https://www.youtube.com/watch?v=y7a0tv9IxFI&t=2815",
+            "https://www.youtube.com/watch?v=y7a0tv9IxFI&t=2967"
+          ],
+          "note": "按教师本人发布的 2020–21 录播及每讲说明对齐。 同版教师录像字幕：42:34 引入 K-means，46:55–49:27 解释算法；K-means 记在本讲。"
+        },
+        {
+          "id": "lec13",
+          "label": "13",
+          "title": "Lecture 13: Probabilistic clustering and expectation-maximization",
+          "titleZh": "概率聚类与 EM 算法",
+          "module": "无监督学习",
+          "source": "https://www.youtube.com/watch?v=V5R3FnusEWc",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "ml.expectation-maximization"
+          ],
+          "mappingEvidence": [
+            "https://www.youtube.com/watch?v=V5R3FnusEWc",
+            "https://www.cl.cam.ac.uk/teaching/2021/MLBayInfer/",
+            "https://www.youtube.com/watch?v=V5R3FnusEWc&t=56",
+            "https://www.youtube.com/watch?v=V5R3FnusEWc&t=84"
+          ],
+          "note": "按教师本人发布的 2020–21 录播及每讲说明对齐。 同版教师录像字幕：00:56 回顾上一讲的 K-means，01:24 开始 EM；本讲只新增 EM 范围。"
+        },
+        {
+          "id": "lec14",
+          "label": "14",
+          "title": "Lecture 14: Bayesian networks for probability distributions",
+          "titleZh": "用贝叶斯网络表示概率分布",
+          "module": "图模型与推断",
+          "source": "https://www.youtube.com/watch?v=RnzANolyhU4",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.directed-graph-factorization"
+          ],
+          "mappingEvidence": [
+            "https://www.youtube.com/watch?v=RnzANolyhU4",
+            "https://www.cl.cam.ac.uk/teaching/2021/MLBayInfer/"
+          ],
+          "note": "按教师本人发布的 2020–21 录播及每讲说明对齐。"
+        },
+        {
+          "id": "lec15",
+          "label": "15",
+          "title": "Lecture 15: Bayesian network semantics and exact inference",
+          "titleZh": "贝叶斯网络语义与精确推断",
+          "module": "图模型与推断",
+          "source": "https://www.youtube.com/watch?v=2BN5JAv6bB4",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.conditional-independence",
+            "bayes.exact-graphical-inference"
+          ],
+          "mappingEvidence": [
+            "https://www.youtube.com/watch?v=2BN5JAv6bB4",
+            "https://www.cl.cam.ac.uk/teaching/2021/MLBayInfer/"
+          ],
+          "note": "按教师本人发布的 2020–21 录播及每讲说明对齐。"
+        },
+        {
+          "id": "lec16",
+          "label": "16",
+          "title": "Lecture 16: Approximate inference and Markov random fields",
+          "titleZh": "近似推断与马尔可夫随机场",
+          "module": "图模型与推断",
+          "source": "https://www.youtube.com/watch?v=gJHJWp0ItjA",
+          "kind": "lecture",
+          "mapping": "reviewed-outline",
+          "outcomes": [
+            "bayes.markov-chain-monte-carlo",
+            "bayes.undirected-graph-factorization"
+          ],
+          "mappingEvidence": [
+            "https://www.youtube.com/watch?v=gJHJWp0ItjA",
+            "https://www.cl.cam.ac.uk/teaching/2021/MLBayInfer/"
+          ],
+          "note": "按教师本人发布的 2020–21 录播及每讲说明对齐。"
+        }
+      ],
+      "materialNote": "16 讲公开视频可直接打开；教师个人主页确认录播所属版本。",
+      "coverageNote": "采用教师本人公开的 2020–21 完整 16 讲录播；按视频实际顺序对齐，不使用 2025–26 大纲猜测分讲边界。",
+      "outlineSource": "https://www.youtube.com/playlist?list=PLdLk2RYEiAhp9Slj6F_LCMXUv7_Fi3V_Y",
+      "outlineCount": 16,
+      "outlineVerified": "2026-10-26",
+      "outlineUnit": "lecture",
+      "unitLabel": "讲",
+      "outlineComplete": true,
+      "outlineNotes": "采用教师本人公开的 2020–21 完整 16 讲录播；按视频实际顺序对齐，不使用 2025–26 大纲猜测分讲边界。",
+      "progressCountNote": "采用教师本人公开的 2020–21 完整 16 讲录播；按视频实际顺序对齐，不使用 2025–26 大纲猜测分讲边界。"
+    }
+  ]
+}

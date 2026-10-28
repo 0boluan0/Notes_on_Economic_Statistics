@@ -5,8 +5,8 @@ import hashlib
 import re
 
 GROUPS = {
-    "lecture": ("Lecture", "正式笔记与独立复盘分别核验；笔记完成不代替独立理解。"),
-    "seminar": ("Seminar 与课后练习", "按下面的题目范围、实际产物和协作步骤逐项核验。"),
+    "lecture": ("Lecture", "正式笔记与独立复盘分别记录；笔记完成不代替独立理解。"),
+    "seminar": ("Seminar 与课后练习", "按下面的题目范围、实际产物和协作步骤逐项完成。"),
     "other": ("准备、提交与其他要求", "按原要求验收；正式提交须有对应凭证。"),
     "recommended": ("推荐内容", "单独记录进度，不计入本周核心收工条件。"),
 }
@@ -14,6 +14,8 @@ GROUPS = {
 
 def task_group(task):
     text = task.get("title", task.get("raw", ""))
+    if task.get("optional"):
+        return "recommended"
     if task.get("kind") != "obligation" and re.search(r"(?:^|[｜|])\s*(?:教师)?(?:推荐|建议练习|可选|选做|延伸|optional\b|recommended\b)", text, re.I):
         return "recommended"
     if task.get("kind") == "obligation" or re.search(r"课前|准备|bootcamp", text, re.I):
@@ -40,6 +42,25 @@ def counts(tasks):
             for key in ("done", "recorded", "unknown", "planned")}}
 
 
+def project_milestones(plan, tasks):
+    """Project an authored sequence onto canonical tasks, without owning their status."""
+    items = plan.get("items", [])
+    refs = [item.get("ref") for item in items]
+    if not items or None in refs or len(set(refs)) != len(refs):
+        raise ValueError("Project milestones require unique canonical references")
+    result = []
+    for item in items:
+        matches = [task for task in tasks if task.get("ref") == item["ref"] and task["state"] != "cancelled"]
+        result.append({**item, "task": matches[0] if len(matches) == 1 else None})
+    following = next((i for i, item in enumerate(result) if not item["task"] or item["task"]["state"] != "done"), len(result))
+    for i, item in enumerate(result):
+        state = item["task"]["state"] if item["task"] else "unknown"
+        item["state"] = state if state in ("done", "recorded") else "unknown" if i <= following else "planned"
+    return {**plan, "items": result, "counts": counts(result),
+            "next": result[following] if following < len(result) else None,
+            "missing": [item["ref"] for item in result if not item["task"]]}
+
+
 def task_position(task, start, end):
     raw = task.get("raw", task.get("title", ""))
     title = task.get("title", raw)
@@ -49,7 +70,7 @@ def task_position(task, start, end):
         number = int(explicit[1])
         return str(number), "原任务 Week " + str(number), None
     if date:
-        value, basis = date[0], "截止／必到日期" if task.get("kind") == "obligation" else "课堂／任务日期"
+        value, basis = date[0], "可选提交截止" if task.get("optional") else "截止／必到日期" if task.get("kind") == "obligation" else "课堂／任务日期"
     else:
         mark = re.search(r"⏳\s*(\d{4}-\d{2}-\d{2})", raw) or re.search(r"📅\s*(\d{4}-\d{2}-\d{2})", raw) or re.search(r"✅\s*(\d{4}-\d{2}-\d{2})", raw)
         value, basis = (mark[1], {"⏳": "原计划日期", "📅": "截止日期", "✅": "完成记录日期"}[mark[0][0]]) if mark else (None, "原任务未标周次或日期")
@@ -64,6 +85,12 @@ def bundle(course, week, tasks):
     scope = course.get("week_scopes", {}).get(week, {})
     groups = []
     expected = course.get("week_events", {}).get(week, [])
+    # A sourced briefing or fieldwork week can differ from its timetable's generic type.
+    event_groups = scope.get("event_groups")
+    if (scope.get("reviewed") and scope.get("sources") and not scope.get("needs_review")
+            and not scope.get("historical") and isinstance(event_groups, list)
+            and all(group in GROUPS for group in event_groups)):
+        expected = event_groups
     for key, (label, condition) in GROUPS.items():
         own = [t for t in tasks if t["group"] == key and t["state"] != "cancelled"]
         if own or key in expected:
@@ -95,7 +122,7 @@ def bundle(course, week, tasks):
             "ready": ready, "scope": scope, "scope_verified": verified,
             "missing": missing,
             "status": "本周已登记任务完成" if complete and not academic else "本周核心已收工" if ready else "已列核心完成 · 范围待核对" if complete else
-                      f"还需核验 {len(remaining)} 项核心事项" if remaining else "本周要求待补齐"}
+                      f"还有 {len(remaining)} 项核心事项" if remaining else "本周要求待补齐"}
 
 
 def project(courses, tasks, obligations, progress, start, end, current, observations=None):

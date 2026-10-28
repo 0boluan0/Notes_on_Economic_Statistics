@@ -262,9 +262,7 @@ Every transcript has been named semantically by unit, session, and lecture or re
 
 ## 配套知识卡入口
 
-- Hub：[[线性代数 Course Atlas|Linear Algebra Hub]]
-- 题型选择：[[线性代数 Course Atlas|Linear Algebra Problem-Type Map]]
-- 分解选择：[[线性代数 Course Atlas|Choosing Matrix Decompositions]]
+
 - 解结构：[[特解加零空间|Linear system solution structure]]
 - 四子空间读取：[[RREF读取子空间基|Reading the Four Fundamental Subspaces from RREF]]
 - 最小二乘：[[OLS正规方程|Least Squares via Normal Equations]]

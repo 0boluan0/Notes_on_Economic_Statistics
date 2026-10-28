@@ -83,7 +83,7 @@ Because $AA^+$ acts on the output space, $AA^+=I_m$ exactly when $C(A)=\mathbb R
 ## 来源与核验
 
 - [[01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.8sum.pdf|MIT 18.06SC Session 3.8 summary]]：支持用 SVD 构造 $A^+$、行空间到列空间的可逆对应以及投影解释。
-- [[01_Math/02_linear algebra/03_Positive Definite Matrices and Applications.md#3.8.3 SVD 定义伪逆|课程 3.8.3]] 与 [[01_Math/02_linear algebra/03_Positive Definite Matrices and Applications.md#3.8.5 伪逆同时解决两类“最佳解”|课程 3.8.5]]：支持 $AA^+$ 的目标空间、唯一拟合值及其满秩边界。
+- [[03_Positive Definite Matrices and Applications#3.8.3 SVD 定义伪逆|课程 3.8.3]] 与 [[03_Positive Definite Matrices and Applications#3.8.5 伪逆同时解决两类“最佳解”|课程 3.8.5]]：支持 $AA^+$ 的目标空间、唯一拟合值及其满秩边界。
 - [[最小二乘解唯一性]]：支持秩亏时拟合值唯一而系数可能不唯一的通用线性代数表述。
 <!-- bilingual-en:start -->
 - The MIT 18.06SC Session 3.8 summary supports the SVD construction of $A^+$, the invertible correspondence from row space to column space, and the projection interpretation.

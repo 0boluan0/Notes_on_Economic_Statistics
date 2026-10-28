@@ -4,10 +4,27 @@ import hashlib
 import unittest
 from zoneinfo import ZoneInfo
 
-from weekly import project, task_position, task_group, bundle
+from weekly import project, task_position, task_group, bundle, project_milestones
 
 
 class WeeklyTests(unittest.TestCase):
+    def test_project_milestones_share_canonical_tasks_and_exclude_auxiliary_work(self):
+        plan = {"items": [{"ref": "d#briefing", "title": "Briefing"}, {"ref": "p#preference", "title": "Preferences"},
+                          {"ref": "d#final", "title": "Final reports"}]}
+        tasks = [{"ref": "d#briefing", "state": "done"}, {"ref": "p#preference", "state": "recorded"},
+                 {"ref": "d#final", "state": "unknown"}, {"ref": "p#reading", "state": "done"}]
+        result = project_milestones(plan, tasks)
+        self.assertEqual(result["counts"], {"total": 3, "done": 1, "recorded": 1, "unknown": 0, "planned": 1})
+        self.assertEqual(result["next"]["ref"], "p#preference")
+        tasks[1]["state"] = "done"
+        self.assertEqual(project_milestones(plan, tasks)["counts"]["done"], 2)
+        tasks[1]["state"] = "unknown"
+        self.assertEqual(project_milestones(plan, tasks)["counts"]["done"], 1)
+        tasks.pop(0)
+        missing = project_milestones(plan, tasks)
+        self.assertEqual(missing["counts"]["total"], 3)
+        self.assertEqual(missing["missing"], ["d#briefing"])
+
     def setUp(self):
         self.current = dt.datetime(2026, 10, 9, 12, tzinfo=ZoneInfo("Europe/London"))
         self.start = dt.date(2026, 9, 28)
@@ -34,6 +51,8 @@ class WeeklyTests(unittest.TestCase):
                              ("ST445｜Week 1 大课：复盘", "lecture"), ("ST445｜Week 2 课前准备", "other")]:
             self.assertEqual(task_group({"title": title}), group)
         self.assertEqual(task_group({"title": "ST447｜可选提交", "kind": "obligation"}), "other")
+        self.assertEqual(task_group({"title": "ST447｜提交 Exercise 2", "kind": "obligation", "optional": True}), "recommended")
+        self.assertEqual(task_position({"title": "2026-10-26｜ST447｜提交 Exercise 2", "kind": "obligation", "optional": True}, self.start, self.end)[:2], ("5", "可选提交截止"))
 
     def test_closure_requires_complete_current_scope_but_not_recommendations(self):
         tasks = [{"id": "a", "ref": "p#a", "group": "lecture", "state": "done"},
@@ -73,6 +92,18 @@ class WeeklyTests(unittest.TestCase):
         self.assertEqual(view()["tasks"][0]["checkpoints"], [])
         task["status"] = "recorded_complete"
         self.assertEqual(view()["counts"]["done"], 1)
+
+    def test_sourced_briefing_scope_replaces_generic_lecture_expectation(self):
+        task = {"id": "briefing", "ref": "d#briefing", "group": "other", "state": "done"}
+        scope = {"reviewed": True, "sources": [{"path": "meeting.md"}],
+                 "event_groups": ["other"], "task_refs": [task["ref"]]}
+        course = {"id": "ST498", "week_events": {"4": ["lecture"]}, "week_scopes": {"4": scope}}
+        self.assertTrue(bundle(course, "4", [task])["ready"])
+        scope["needs_review"] = True
+        self.assertIn("Lecture", bundle(course, "4", [task])["missing"])
+        scope["needs_review"] = False
+        task["state"] = "unknown"
+        self.assertFalse(bundle(course, "4", [task])["ready"])
 
     def test_completion_reports_plans_and_unknowns_are_not_conflated(self):
         def task(i, title, status):

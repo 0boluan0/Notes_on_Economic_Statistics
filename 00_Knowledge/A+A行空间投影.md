@@ -87,7 +87,7 @@ For $A=[1\ 0]$, one has $A^+=(1,0)^T$ and $A^+A=\operatorname{diag}(1,0)$. It se
 ## 来源与核验
 
 - [[01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.8sum.pdf|MIT 18.06SC Session 3.8 summary]]：支持用紧 SVD 构造 $A^+$，以及 $A^+A$ 投影到行空间并去掉零空间分量。
-- [[01_Math/02_linear algebra/03_Positive Definite Matrices and Applications.md#3.8.3 SVD 定义伪逆|课程 3.8.3]]：支持 $A^+A=V_rV_r^T$、其值域和零空间。
+- [[03_Positive Definite Matrices and Applications#3.8.3 SVD 定义伪逆|课程 3.8.3]]：支持 $A^+A=V_rV_r^T$、其值域和零空间。
 <!-- bilingual-en:start -->
 - The MIT 18.06SC Session 3.8 summary supports the compact-SVD construction of $A^+$ and the fact that $A^+A$ projects onto the row space while removing the null-space component.
 - Course Section 3.8.3 supports $A^+A=V_rV_r^T$ and its range and kernel.

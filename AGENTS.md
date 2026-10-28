@@ -22,16 +22,17 @@
 ## Student operating system
 
 - Before personal planning, teaching, learning-record work, or LSE programme/support decisions, read `99_学习情况记录/Student OS 规则.md` when present and follow its relevant resource routing. Its private operating rules stay outside Git.
-- Before any Hanvon transfer, classification, cleanup, or handwriting return, read `99_学习情况记录/手写接收/汉王/传输与归档规则.md`; delivery requires the intended native entry point and classification, not file copying alone.
+- Course-material updates include the linked Hanvon learning books and computer code/data entries. Before updates or any Hanvon transfer, classification, cleanup, or handwriting return, read `99_学习情况记录/手写接收/汉王/传输与归档规则.md`; delivery requires the intended native entry point and classification, not file copying alone.
 
 ## Knowledge architecture
 
+- Do not use Dataview or DataviewJS in vault notes or templates; use ordinary Markdown links and tables for navigation and summaries.
 - A **knowledge atom** is the canonical Markdown object for one independently recallable or applicable definition, proposition, distinction, decision rule, or procedural judgement. A same-named **Topic Canvas** integrates its atoms; a course-local **Course Atlas** shows the whole-course backbone; the global **Base** is query-only; `_hubs/` contains only genuinely dense cross-topic navigation.
 - Store shared atoms and Topic Canvases directly in `00_Knowledge/`, Course Atlases beside their course notes, and scarce Hubs in `00_Knowledge/_hubs/`. Express many-to-many membership through links and projections, not subject subfolders or duplicated content.
-- Give each atom one semantic responsibility. A reusable theorem, condition, boundary, counterexample, distinction, or decision step gets its own atom even if a lecture grouped it with others. Keep only the explanation, conditions, boundary, minimal rationale, and smallest useful example or contrast needed to use that item.
+- Give each atom one semantic responsibility. A reusable theorem, condition, boundary, counterexample, distinction, or decision step gets its own atom even if a lecture grouped it with others. Atomicity limits the topic, not explanatory depth: explain that item fully enough for a reader encountering it for the first time.
 - Every atom requires `student_os: knowledge-atom`, a stable unique `atom_id`, semantically reviewed `aliases`, and `status: needs-review | source-checked`. Do not add subject/course/type/date classification by default. If `atom_type` exists, it must match the atom's actual responsibility; use `definition` for reviewed concept entries.
-- Use three identity layers: a short recognizable filename; a complete proposition as H1 and `aliases[0]`; and stable `atom_id`. A concept-entry filename may be short, but its H1 and first body block must directly define the concept rather than open on a narrow property.
-- Keep learner-facing Properties hidden while retaining YAML. Start the visible body with the core statement and use condition; end with `## 来源与核验`. Add a recall/application prompt only when it genuinely tests the atom.
+- Use a short recognizable filename and a natural H1 naming the concept, theorem, or question. Keep `atom_id` stable and use genuine alternative names as aliases. A concept entry opens by explaining what the concept means in ordinary language; introduce formal notation and conditions after establishing their meaning.
+- Keep learner-facing Properties hidden while retaining YAML. Write a coherent explanation whose headings and sequence fit the concept. Use callouts selectively to distinguish examples, key results, and pitfalls while keeping the explanation continuous. Explain new symbols and reasoning with concrete examples. Introduce needed prerequisites in the prose with a brief orientation and an inline wikilink to the exact definition atom, so a newcomer can follow the explanation and open any missing background. End with `## 来源与核验`; add a recall/application prompt only when it helps understanding.
 - Source reliability, learner mastery, and review scheduling are independent. `status` records source verification only; Canvases, Atlases, overviews, and Bases may project these states but never own another editable copy.
 - Author aliases, atom boundaries, relationship meanings, and link destinations semantically. Scripts may inventory references and validate syntax, IDs, and targets, but must not make those judgements. Link only where opening the exact target helps the reader.
 - Course `00_课程总览.md` is a continuous course-order reading path: preserve bridge prose and embed the exact required atoms inline. It complements rather than replaces permanent classroom, assessment, exercise, and source-context notes.
@@ -42,8 +43,8 @@
 
 ## Bilingual preservation
 
-- Course notes and atoms are Chinese-first bilingual. When adding English, preserve the existing Chinese layer byte-for-byte, including embedded English terms; do not delete, paraphrase, reorder, or translate it away.
-- Add idiomatic English immediately after each Chinese semantic block and wrap every inserted block with `<!-- bilingual-en:start -->` and `<!-- bilingual-en:end -->`. Keep Chinese headings unchanged and add English subtitles without creating another heading.
+- Course notes and atoms are bilingual, with English as the primary reading language and Chinese as support. Preserve existing content in both languages verbatim, including embedded terms.
+- Wrap English semantic blocks with `<!-- bilingual-en:start -->` and `<!-- bilingual-en:end -->`. New notes and reading layouts present English first (left of Chinese in parallel layouts), with English headings and Chinese subtitles. Carry existing section numbering into the English headings. Changes to existing notes must preserve heading anchors and link targets.
 - Do not duplicate pure navigation, contents, local-material, or link-only blocks. English prose must render English-only: retain Chinese link targets but add English display labels.
 - Keep translated callout lines and blank lines inside the original callout prefix. To prevent list-number continuation, precede English numbering with a blank line and `&nbsp;`, render numbers as `**1.** ...<br>`, and mark nesting with visible `↳`.
 - Keep YAML, code, standalone formulas, block IDs, link targets, and embeds structurally unchanged. Treat bilingual insertion and later link migration as separate, independently verifiable operations.

@@ -1,0 +1,687 @@
+{
+  "schema_version": 1,
+  "title": "知识与课程",
+  "scope": "首个专题：线性代数、最小二乘与 PCA。全库笔记可检索；课程映射持续补充。",
+  "reviewed": "2026-10-22",
+  "domains": [
+    {
+      "id": "algebra",
+      "title": "线性结构",
+      "english": "Linear structures",
+      "color": "#5d7787"
+    },
+    {
+      "id": "geometry",
+      "title": "正交几何",
+      "english": "Geometry",
+      "color": "#168173"
+    },
+    {
+      "id": "spectral",
+      "title": "谱与分解",
+      "english": "Spectral methods",
+      "color": "#79659c"
+    },
+    {
+      "id": "statistics",
+      "title": "统计学习",
+      "english": "Statistical learning",
+      "color": "#af7651"
+    },
+    {
+      "id": "optimization",
+      "title": "微分与优化",
+      "english": "Optimization",
+      "color": "#637953"
+    }
+  ],
+  "topics": [
+    {
+      "id": "combinations",
+      "title": "矩阵与线性组合",
+      "english": "Matrices & combinations",
+      "domain": "algebra",
+      "summary": "把 Ax 读成列向量的线性组合，理解矩阵能产生的输出。",
+      "atom_ids": [
+        "LA-MUL-001",
+        "LA-SYS-001",
+        "LA-SYS-019"
+      ]
+    },
+    {
+      "id": "subspaces",
+      "title": "向量空间与子空间",
+      "english": "Vector spaces",
+      "domain": "algebra",
+      "summary": "先明确集合与运算，再检查对任意线性组合是否封闭。",
+      "atom_ids": [
+        "LA-SYS-032",
+        "LA-SYS-002"
+      ]
+    },
+    {
+      "id": "column-space",
+      "title": "列空间与基",
+      "english": "Column space & basis",
+      "domain": "algebra",
+      "summary": "列空间收集全部可能输出；基给出独立的坐标方向。",
+      "atom_ids": [
+        "LA-SYS-033",
+        "LA-SYS-009"
+      ]
+    },
+    {
+      "id": "orthogonality",
+      "title": "正交与标准正交组",
+      "english": "Orthogonality",
+      "domain": "geometry",
+      "summary": "内积为零定义正交；标准正交组同时固定每个方向的长度。",
+      "atom_ids": [
+        "LA-PROJ-001",
+        "LA-PROJ-022",
+        "LA-PROJ-020"
+      ]
+    },
+    {
+      "id": "decomposition",
+      "title": "正交补与分解",
+      "english": "Orthogonal decomposition",
+      "domain": "geometry",
+      "summary": "有限维中，把向量唯一拆成子空间分量和正交分量。",
+      "atom_ids": [
+        "LA-PROJ-002",
+        "LA-PROJ-003"
+      ]
+    },
+    {
+      "id": "projection",
+      "title": "正交投影",
+      "english": "Orthogonal projection",
+      "domain": "geometry",
+      "summary": "保留子空间中的分量；残差正交刻画子空间中的最近点。",
+      "atom_ids": [
+        "LA-PROJ-013",
+        "LA-PROJ-004"
+      ]
+    },
+    {
+      "id": "least-squares",
+      "title": "线性最小二乘",
+      "english": "Least squares",
+      "domain": "geometry",
+      "summary": "在所有 Ax 中找到离 b 最近的向量，并区分拟合值与系数是否唯一。",
+      "atom_ids": [
+        "LA-PROJ-018",
+        "LA-PROJ-024"
+      ]
+    },
+    {
+      "id": "eigenvalues",
+      "title": "特征值与特征向量",
+      "english": "Eigenpairs",
+      "domain": "spectral",
+      "summary": "寻找矩阵作用下保持在同一条直线上的非零向量。",
+      "atom_ids": [
+        "LA-EIG-001"
+      ]
+    },
+    {
+      "id": "spectral",
+      "title": "对称矩阵谱分解",
+      "english": "Spectral decomposition",
+      "domain": "spectral",
+      "summary": "实对称矩阵可在标准正交特征基中表示为对角矩阵。",
+      "atom_ids": [
+        "LA-SPD-007"
+      ]
+    },
+    {
+      "id": "svd",
+      "title": "奇异值分解",
+      "english": "Singular value decomposition",
+      "domain": "spectral",
+      "summary": "用输入与输出两侧的正交方向，描述矩阵的伸缩和零空间。",
+      "atom_ids": [
+        "LA-SVD-001",
+        "LA-SVD-014"
+      ]
+    },
+    {
+      "id": "covariance",
+      "title": "中心化与协方差",
+      "english": "Centering & covariance",
+      "domain": "statistics",
+      "summary": "用样本均值中心化数据，用协方差矩阵概括二阶变化结构。",
+      "atom_ids": [
+        "STAT-MVD-004",
+        "STAT-MVD-007"
+      ]
+    },
+    {
+      "id": "regression",
+      "title": "线性回归与 OLS",
+      "english": "Linear regression",
+      "domain": "statistics",
+      "summary": "用平方残差拟合线性模型；优化解本身不保证无偏或因果解释。",
+      "atom_ids": [
+        "ECON-OLS-003"
+      ]
+    },
+    {
+      "id": "pca",
+      "title": "主成分分析",
+      "english": "Principal component analysis",
+      "domain": "statistics",
+      "summary": "从中心化数据中找最大方差方向，并解释低维坐标和重构误差。",
+      "atom_ids": [
+        "STAT-PCA-013",
+        "STAT-PCA-004"
+      ]
+    },
+    {
+      "id": "gradient",
+      "title": "方向导数与梯度",
+      "english": "Directional derivatives",
+      "domain": "optimization",
+      "summary": "梯度用内积描述局部变化，最陡方向依赖所选度量。",
+      "atom_ids": [
+        "CALC-MV-014",
+        "CALC-MV-006"
+      ]
+    },
+    {
+      "id": "gradient-descent",
+      "title": "梯度下降",
+      "english": "Gradient descent",
+      "domain": "optimization",
+      "summary": "用局部导数迭代减小目标函数；步长与收敛条件需要另外检查。",
+      "atom_ids": []
+    }
+  ],
+  "relations": [
+    {
+      "id": "subspaces--column-space",
+      "from": "subspaces",
+      "to": "column-space",
+      "kind": "prerequisite",
+      "label": "张成与基",
+      "evidence": {
+        "statement": "列空间是列向量张成的子空间；基还需要线性无关。",
+        "url": "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/ax-b-and-the-four-subspaces/column-space-and-nullspace/",
+        "note": "00_Knowledge/列空间.md",
+        "reviewed": "2026-10-22"
+      }
+    },
+    {
+      "id": "combinations--column-space",
+      "from": "combinations",
+      "to": "column-space",
+      "kind": "prerequisite",
+      "label": "Ax 收集所有输出",
+      "evidence": {
+        "statement": "矩阵的全部可能输出恰好组成列空间。",
+        "url": "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/ax-b-and-the-four-subspaces/the-geometry-of-linear-equations/",
+        "note": "00_Knowledge/Ax的列组合解释.md",
+        "reviewed": "2026-10-22"
+      }
+    },
+    {
+      "id": "orthogonality--decomposition",
+      "from": "orthogonality",
+      "to": "decomposition",
+      "kind": "prerequisite",
+      "label": "正交补与标准正交基",
+      "evidence": {
+        "statement": "正交分解的构造使用正交补与标准正交基；此处是局部数学依赖。",
+        "note": "00_Knowledge/正交分解定理.md",
+        "reviewed": "2026-10-22"
+      }
+    },
+    {
+      "id": "decomposition--projection",
+      "from": "decomposition",
+      "to": "projection",
+      "kind": "prerequisite",
+      "label": "取子空间分量",
+      "evidence": {
+        "statement": "正交投影由唯一的正交分解定义。",
+        "note": "00_Knowledge/正交投影.md",
+        "reviewed": "2026-10-22"
+      }
+    },
+    {
+      "id": "column-space--projection",
+      "from": "column-space",
+      "to": "projection",
+      "kind": "prerequisite",
+      "label": "投影到列空间",
+      "evidence": {
+        "statement": "本图讨论把向量投影到矩阵列空间的具体公式。",
+        "url": "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/least-squares-determinants-and-eigenvalues/projections-onto-subspaces/",
+        "reviewed": "2026-10-22"
+      }
+    },
+    {
+      "id": "projection--least-squares",
+      "from": "projection",
+      "to": "least-squares",
+      "kind": "prerequisite",
+      "label": "最近点与正交残差",
+      "evidence": {
+        "statement": "最小二乘把列空间最近点问题写成系数上的优化问题。勾股关系支撑最近点证明。",
+        "url": "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/least-squares-determinants-and-eigenvalues/projection-matrices-and-least-squares/",
+        "note": "00_Knowledge/线性最小二乘.md",
+        "reviewed": "2026-10-22"
+      }
+    },
+    {
+      "id": "least-squares--regression",
+      "from": "least-squares",
+      "to": "regression",
+      "kind": "application",
+      "label": "用于回归拟合",
+      "evidence": {
+        "statement": "OLS 将线性最小二乘用于样本回归；统计解释需要额外模型假设。",
+        "url": "https://see.stanford.edu/materials/aimlcs229/cs229-notes1.pdf",
+        "note": "00_Knowledge/普通最小二乘.md",
+        "reviewed": "2026-10-22"
+      }
+    },
+    {
+      "id": "combinations--eigenvalues",
+      "from": "combinations",
+      "to": "eigenvalues",
+      "kind": "prerequisite",
+      "label": "理解矩阵作用",
+      "evidence": {
+        "statement": "特征对用 Av=λv 描述非零向量；求解时还用到线性方程与行列式。",
+        "url": "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/least-squares-determinants-and-eigenvalues/eigenvalues-and-eigenvectors/",
+        "note": "00_Knowledge/特征对.md",
+        "reviewed": "2026-10-22"
+      }
+    },
+    {
+      "id": "eigenvalues--spectral",
+      "from": "eigenvalues",
+      "to": "spectral",
+      "kind": "prerequisite",
+      "label": "正交特征基",
+      "evidence": {
+        "statement": "实谱定理在特征值与特征向量的概念上建立正交对角化。",
+        "url": "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/positive-definite-matrices-and-applications/symmetric-matrices-and-positive-definiteness/",
+        "note": "00_Knowledge/实对称矩阵谱定理.md",
+        "reviewed": "2026-10-22"
+      }
+    },
+    {
+      "id": "orthogonality--spectral",
+      "from": "orthogonality",
+      "to": "spectral",
+      "kind": "prerequisite",
+      "label": "标准正交方向",
+      "evidence": {
+        "statement": "实对称矩阵谱分解使用标准正交特征基。",
+        "url": "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/positive-definite-matrices-and-applications/symmetric-matrices-and-positive-definiteness/",
+        "reviewed": "2026-10-22"
+      }
+    },
+    {
+      "id": "spectral--svd",
+      "from": "spectral",
+      "to": "svd",
+      "kind": "prerequisite",
+      "label": "分解 AᵀA",
+      "evidence": {
+        "statement": "18.06SC 的这一推导通过对称矩阵 AᵀA 的谱分解构造 SVD。",
+        "url": "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/positive-definite-matrices-and-applications/singular-value-decomposition/",
+        "reviewed": "2026-10-22"
+      }
+    },
+    {
+      "id": "covariance--pca",
+      "from": "covariance",
+      "to": "pca",
+      "kind": "prerequisite",
+      "label": "度量投影方差",
+      "evidence": {
+        "statement": "PCA 讲义先中心化，再用协方差矩阵描述投影后的方差。",
+        "url": "https://see.stanford.edu/materials/aimlcs229/cs229-notes10.pdf",
+        "note": "00_Knowledge/主成分分析.md",
+        "reviewed": "2026-10-22"
+      }
+    },
+    {
+      "id": "projection--pca",
+      "from": "projection",
+      "to": "pca",
+      "kind": "prerequisite",
+      "label": "投影得到低维坐标",
+      "evidence": {
+        "statement": "PCA 的主成分得分与重构使用正交投影。",
+        "url": "https://see.stanford.edu/materials/aimlcs229/cs229-notes10.pdf",
+        "reviewed": "2026-10-22"
+      }
+    },
+    {
+      "id": "eigenvalues--pca",
+      "from": "eigenvalues",
+      "to": "pca",
+      "kind": "prerequisite",
+      "label": "选最大方差方向",
+      "evidence": {
+        "statement": "协方差矩阵的前 k 个特征向量给出 PCA 方向。",
+        "url": "https://see.stanford.edu/materials/aimlcs229/cs229-notes10.pdf",
+        "reviewed": "2026-10-22"
+      }
+    },
+    {
+      "id": "svd--pca",
+      "from": "svd",
+      "to": "pca",
+      "kind": "method",
+      "label": "另一种计算方式",
+      "evidence": {
+        "statement": "中心化数据的 SVD 与协方差谱分解对应，是计算及低秩重构关系；不表示学习 PCA 必须先学完整 SVD。",
+        "note": "00_Knowledge/PCA低秩重构.md",
+        "reviewed": "2026-10-22"
+      }
+    },
+    {
+      "id": "gradient--gradient-descent",
+      "from": "gradient",
+      "to": "gradient-descent",
+      "kind": "prerequisite",
+      "label": "局部导数给方向",
+      "evidence": {
+        "statement": "CS229 notes1 的 LMS / 梯度下降更新使用目标对参数的偏导数。",
+        "url": "https://see.stanford.edu/materials/aimlcs229/cs229-notes1.pdf",
+        "reviewed": "2026-10-22"
+      }
+    },
+    {
+      "id": "gradient-descent--regression",
+      "from": "gradient-descent",
+      "to": "regression",
+      "kind": "method",
+      "label": "迭代拟合",
+      "evidence": {
+        "statement": "平方损失可用梯度下降优化；OLS 也可用直接分解方法求解。",
+        "url": "https://see.stanford.edu/materials/aimlcs229/cs229-notes1.pdf",
+        "reviewed": "2026-10-22"
+      }
+    }
+  ],
+  "courses": [
+    {
+      "id": "mit-1806sc",
+      "title": "18.06SC · Linear Algebra",
+      "institution": "MIT",
+      "version": "Fall 2011 · OCW Scholar",
+      "url": "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/",
+      "description": "几何直觉、矩阵方法与配套问题求解。",
+      "color": "#17695c"
+    },
+    {
+      "id": "stanford-cs229-see",
+      "title": "CS229 · Machine Learning",
+      "institution": "Stanford",
+      "version": "SEE 固定公开版",
+      "url": "https://see.stanford.edu/Course/CS229",
+      "description": "从模型与优化走向统计学习；使用 SEE 固定公开版讲义。",
+      "color": "#9a4f3c"
+    },
+    {
+      "id": "mit-6036-oll",
+      "title": "6.036 · Introduction to ML",
+      "institution": "MIT",
+      "version": "OLL 2019 公开讲义",
+      "url": "https://openlearninglibrary.mit.edu/courses/course-v1:MITx%2B6.036%2B1T2019/about",
+      "description": "本图使用 OLL 2019 回归讲义。OCW 2020 条目链接到此材料，两者年份保持区分。",
+      "color": "#6363a8"
+    }
+  ],
+  "mappings": [
+    {
+      "id": "source-01",
+      "topic_id": "combinations",
+      "course_id": "mit-1806sc",
+      "title": "1.1 · The Geometry of Linear Equations",
+      "url": "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/ax-b-and-the-four-subspaces/the-geometry-of-linear-equations/",
+      "role": "teach",
+      "statement": "从行、列和矩阵三个视角理解 Ax=b；含视频、摘要与练习。",
+      "verification": "official",
+      "reviewed": "2026-10-22"
+    },
+    {
+      "id": "source-02",
+      "topic_id": "subspaces",
+      "course_id": "mit-1806sc",
+      "title": "1.6 · Transposes, Permutations, Vector Spaces",
+      "url": "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/ax-b-and-the-four-subspaces/transposes-permutations-vector-spaces/",
+      "role": "teach",
+      "statement": "引入向量空间、子空间与封闭性。",
+      "verification": "official",
+      "reviewed": "2026-10-22"
+    },
+    {
+      "id": "source-03",
+      "topic_id": "column-space",
+      "course_id": "mit-1806sc",
+      "title": "1.7 · Column Space and Nullspace",
+      "url": "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/ax-b-and-the-four-subspaces/column-space-and-nullspace/",
+      "role": "teach",
+      "statement": "列空间与方程可解性；零空间与齐次方程。",
+      "verification": "official",
+      "reviewed": "2026-10-22"
+    },
+    {
+      "id": "source-04",
+      "topic_id": "column-space",
+      "course_id": "mit-1806sc",
+      "title": "1.10 · Independence, Basis and Dimension",
+      "url": "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/ax-b-and-the-four-subspaces/independence-basis-and-dimension/",
+      "role": "teach",
+      "statement": "线性无关、张成与坐标方向。",
+      "verification": "official",
+      "reviewed": "2026-10-22"
+    },
+    {
+      "id": "source-05",
+      "topic_id": "orthogonality",
+      "course_id": "mit-1806sc",
+      "title": "2.1 · Orthogonal Vectors and Subspaces",
+      "url": "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/least-squares-determinants-and-eigenvalues/orthogonal-vectors-and-subspaces/",
+      "role": "teach",
+      "statement": "正交基与四个基本子空间的正交关系。",
+      "verification": "official",
+      "reviewed": "2026-10-22"
+    },
+    {
+      "id": "source-06",
+      "topic_id": "decomposition",
+      "course_id": "mit-1806sc",
+      "title": "2.2 · Projections onto Subspaces",
+      "url": "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/least-squares-determinants-and-eigenvalues/projections-onto-subspaces/",
+      "role": "use",
+      "statement": "使用子空间分量与正交残差来推导投影；此映射不声称完整讲授抽象分解定理。",
+      "verification": "official",
+      "reviewed": "2026-10-22"
+    },
+    {
+      "id": "source-07",
+      "topic_id": "projection",
+      "course_id": "mit-1806sc",
+      "title": "2.2 · Projections onto Subspaces",
+      "url": "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/least-squares-determinants-and-eigenvalues/projections-onto-subspaces/",
+      "role": "teach",
+      "statement": "从直线最近点推广到列空间投影与正规方程。",
+      "verification": "official",
+      "reviewed": "2026-10-22"
+    },
+    {
+      "id": "source-08",
+      "topic_id": "least-squares",
+      "course_id": "mit-1806sc",
+      "title": "2.3 · Projection Matrices and Least Squares",
+      "url": "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/least-squares-determinants-and-eigenvalues/projection-matrices-and-least-squares/",
+      "role": "teach",
+      "statement": "直线拟合与平方残差，及满列秩下 Gram 矩阵可逆性。",
+      "verification": "official",
+      "reviewed": "2026-10-22"
+    },
+    {
+      "id": "source-09",
+      "topic_id": "eigenvalues",
+      "course_id": "mit-1806sc",
+      "title": "2.8 · Eigenvalues and Eigenvectors",
+      "url": "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/least-squares-determinants-and-eigenvalues/eigenvalues-and-eigenvectors/",
+      "role": "teach",
+      "statement": "用矩阵作用保持方向理解特征对。",
+      "verification": "official",
+      "reviewed": "2026-10-22"
+    },
+    {
+      "id": "source-10",
+      "topic_id": "spectral",
+      "course_id": "mit-1806sc",
+      "title": "3.1 · Symmetric Matrices and Positive Definiteness",
+      "url": "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/positive-definite-matrices-and-applications/symmetric-matrices-and-positive-definiteness/",
+      "role": "teach",
+      "statement": "实对称矩阵的正交特征基与谱分解。",
+      "verification": "official",
+      "reviewed": "2026-10-22"
+    },
+    {
+      "id": "source-11",
+      "topic_id": "svd",
+      "course_id": "mit-1806sc",
+      "title": "3.5 · Singular Value Decomposition",
+      "url": "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/positive-definite-matrices-and-applications/singular-value-decomposition/",
+      "role": "teach",
+      "statement": "从 AᵀA 的特征分解构造奇异方向与奇异值。",
+      "verification": "official",
+      "reviewed": "2026-10-22"
+    },
+    {
+      "id": "source-12",
+      "topic_id": "regression",
+      "course_id": "stanford-cs229-see",
+      "title": "Notes 1 · Linear Regression · pp. 2–11",
+      "url": "https://see.stanford.edu/materials/aimlcs229/cs229-notes1.pdf#page=2",
+      "role": "teach",
+      "statement": "线性模型与平方损失；§2 给出正规方程，§3 另谈概率解释。",
+      "verification": "official",
+      "reviewed": "2026-10-22"
+    },
+    {
+      "id": "source-13",
+      "topic_id": "least-squares",
+      "course_id": "stanford-cs229-see",
+      "title": "Notes 1 · §2 The normal equations",
+      "url": "https://see.stanford.edu/materials/aimlcs229/cs229-notes1.pdf#page=7",
+      "role": "teach",
+      "statement": "从回归损失推导闭式解；公式需相应的秩条件。",
+      "verification": "official",
+      "reviewed": "2026-10-22"
+    },
+    {
+      "id": "source-14",
+      "topic_id": "gradient",
+      "course_id": "stanford-cs229-see",
+      "title": "Notes 1 · §1 LMS algorithm",
+      "url": "https://see.stanford.edu/materials/aimlcs229/cs229-notes1.pdf#page=4",
+      "role": "use",
+      "statement": "优化推导使用偏导数；此段不替代完整的多元微分入门。",
+      "verification": "official",
+      "reviewed": "2026-10-22"
+    },
+    {
+      "id": "source-15",
+      "topic_id": "gradient-descent",
+      "course_id": "stanford-cs229-see",
+      "title": "Notes 1 · §1 LMS / gradient descent",
+      "url": "https://see.stanford.edu/materials/aimlcs229/cs229-notes1.pdf#page=4",
+      "role": "teach",
+      "statement": "用平方损失的导数构造迭代更新。",
+      "verification": "official",
+      "reviewed": "2026-10-22"
+    },
+    {
+      "id": "source-16",
+      "topic_id": "pca",
+      "course_id": "stanford-cs229-see",
+      "title": "Notes 10 · Principal Components Analysis",
+      "url": "https://see.stanford.edu/materials/aimlcs229/cs229-notes10.pdf",
+      "role": "teach",
+      "statement": "中心化、投影方差、特征向量与低维重构。",
+      "verification": "official",
+      "reviewed": "2026-10-22"
+    },
+    {
+      "id": "source-17",
+      "topic_id": "covariance",
+      "course_id": "stanford-cs229-see",
+      "title": "Notes 10 · Preprocessing & covariance · pp. 2–5",
+      "url": "https://see.stanford.edu/materials/aimlcs229/cs229-notes10.pdf#page=2",
+      "role": "use",
+      "statement": "使用中心化数据与协方差来选择主成分；讲义取 1/n 口径，笔记定义的无偏样本协方差取 1/(n−1)。",
+      "verification": "official",
+      "reviewed": "2026-10-22"
+    },
+    {
+      "id": "source-18",
+      "topic_id": "projection",
+      "course_id": "stanford-cs229-see",
+      "title": "Notes 10 · Projection & reconstruction · pp. 5–6",
+      "url": "https://see.stanford.edu/materials/aimlcs229/cs229-notes10.pdf#page=5",
+      "role": "use",
+      "statement": "用正交投影得到主成分坐标，并联系重构误差。",
+      "verification": "official",
+      "reviewed": "2026-10-22"
+    },
+    {
+      "id": "source-19",
+      "topic_id": "eigenvalues",
+      "course_id": "stanford-cs229-see",
+      "title": "Notes 10 · Covariance eigenvectors · p. 5",
+      "url": "https://see.stanford.edu/materials/aimlcs229/cs229-notes10.pdf#page=5",
+      "role": "use",
+      "statement": "选择协方差矩阵的前 k 个特征向量；不是特征值概念的入门讲解。",
+      "verification": "official",
+      "reviewed": "2026-10-22"
+    },
+    {
+      "id": "source-20",
+      "topic_id": "regression",
+      "course_id": "mit-6036-oll",
+      "title": "Week 5 · Chapter 7: Regression",
+      "url": "https://openlearninglibrary.mit.edu/courses/course-v1:MITx%2B6.036%2B1T2019/courseware/Week5/regression/",
+      "role": "teach",
+      "statement": "OLS、岭回归、不可逆情况与学习检查问题；材料页眉为 Fall 2019。",
+      "verification": "official",
+      "reviewed": "2026-10-22"
+    },
+    {
+      "id": "source-21",
+      "topic_id": "least-squares",
+      "course_id": "mit-6036-oll",
+      "title": "Chapter 7 · §1 Ordinary least squares",
+      "url": "https://openlearninglibrary.mit.edu/courses/course-v1:MITx%2B6.036%2B1T2019/courseware/Week5/regression/",
+      "role": "teach",
+      "statement": "平方损失与闭式解；与正则化情形区分。",
+      "verification": "official",
+      "reviewed": "2026-10-22"
+    },
+    {
+      "id": "source-22",
+      "topic_id": "gradient-descent",
+      "course_id": "mit-6036-oll",
+      "title": "Chapter 7 · Regression optimization",
+      "url": "https://openlearninglibrary.mit.edu/courses/course-v1:MITx%2B6.036%2B1T2019/courseware/Week5/regression/",
+      "role": "teach",
+      "statement": "用梯度下降优化回归目标，并比较正规方程。",
+      "verification": "official",
+      "reviewed": "2026-10-22"
+    }
+  ]
+}

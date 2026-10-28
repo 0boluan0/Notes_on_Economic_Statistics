@@ -76,7 +76,7 @@
       "y": 1000,
       "width": 520,
       "height": 380,
-      "text": "## [[条件期望投影]]\n\n平方可积时，条件期望是给定信息下唯一的最小均方误差预测；残差与信息空间正交。\n\n**先修：** [[条件期望]]、[[全期望公式]]与[[矩存在性的使用边界|平方可积条件]]。\n\n**边界：** 这是全部可测平方可积函数中的投影。",
+      "text": "<!-- bilingual-en:start -->\n## [[条件期望投影|Conditional expectation as a projection]]\n<!-- bilingual-en:end -->\n\n*条件期望投影*\n\n<!-- bilingual-en:start -->\nFor a square-integrable target, its conditional mean uniquely minimises mean squared error up to probability-zero differences, among predictors using the same information. The residual is orthogonal to all square-integrable functions of that information.\n<!-- bilingual-en:end -->\n\n目标平方可积时，条件均值在使用相同信息的预测中使均方误差最小，唯一性允许零概率差异；残差与该信息的所有平方可积函数正交。\n\n<!-- bilingual-en:start -->\nStart from [[条件期望|conditional expectation]], [[全期望公式|total expectation]] and [[矩存在性的使用边界|finite second moments]].\n<!-- bilingual-en:end -->\n\n先读条件期望、全期望与有限二阶矩。",
       "color": "5"
     },
     {
@@ -106,7 +106,7 @@
       "y": 1600,
       "width": 520,
       "height": 310,
-      "text": "## [[条件均值与线性投影]]\n\n条件均值允许全部可测函数；线性投影只在指定线性张成空间中优化。\n\n**边界：** 二者只有在额外结构下才会重合。",
+      "text": "<!-- bilingual-en:start -->\n## [[条件均值与线性投影|Conditional mean and linear prediction]]\n\nWith finite second moments, compare all square-integrable functions of the information with the span of selected regressors. They agree exactly when the conditional mean belongs to that span almost surely.\n<!-- bilingual-en:end -->\n\n有限二阶矩下，比较信息的所有平方可积函数与选定回归量的张成空间。条件均值几乎处处属于该空间时，两个预测相同。",
       "color": "3"
     },
     {
@@ -171,7 +171,7 @@
       "y": 2680,
       "width": 500,
       "height": 230,
-      "text": "## [[均值独立]]\n\n只固定条件均值，并且有方向。\n\n<!-- bilingual-en:start -->\nA directional restriction on the conditional mean.\n<!-- bilingual-en:end -->"
+      "text": "<!-- bilingual-en:start -->\n## [[均值独立|Mean independence]]\n\n$E[Y\\mid X]=E[Y]$ a.s. requires integrable $Y$ and has a direction.\n<!-- bilingual-en:end -->\n\n要求 Y 可积；知道 X 后，Y 的条件均值保持不变，反向未必成立。"
     },
     {
       "id": "p2hier",
@@ -189,7 +189,7 @@
       "y": 2680,
       "width": 500,
       "height": 230,
-      "text": "## [[均值独立不推独立]]\n\n条件均值相同，方差仍可变化。\n\n<!-- bilingual-en:start -->\nA common mean allows changing variance.\n<!-- bilingual-en:end -->"
+      "text": "<!-- bilingual-en:start -->\n## [[均值独立不推独立|Mean independence without independence]]\n\nA common conditional mean permits different conditional variances and event probabilities.\n<!-- bilingual-en:end -->\n\n条件均值相同，条件方差与事件概率仍可变化。"
     },
     {
       "id": "p2notmean",
@@ -198,7 +198,7 @@
       "y": 2680,
       "width": 500,
       "height": 230,
-      "text": "## [[零协方差不推均值独立]]\n\n平方关系可使乘积抵消而条件均值变化。\n\n<!-- bilingual-en:start -->\nSquaring can cancel covariance while changing means.\n<!-- bilingual-en:end -->"
+      "text": "<!-- bilingual-en:start -->\n## [[零协方差不推均值独立|Zero covariance without mean independence]]\n\nA symmetric $X$ and $Y=X^2$ can have zero covariance but a changing $E[Y\\mid X]$.\n<!-- bilingual-en:end -->\n\n对称 X 与 Y=X² 可使协方差为零，但 Y 的条件均值随 X 变化。"
     },
     {
       "id": "p2known",
@@ -206,8 +206,8 @@
       "x": 3040,
       "y": 2680,
       "width": 500,
-      "height": 230,
-      "text": "## [[条件期望取出已知量]]\n\n给定信息已确定的因子可提出。\n\n<!-- bilingual-en:start -->\nA factor known from the conditioning information can be taken out.\n<!-- bilingual-en:end -->\n"
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[条件期望取出已知量|Taking out a known factor]]\n<!-- bilingual-en:end -->\n\n*条件期望取出已知量*\n\n<!-- bilingual-en:start -->\nIf W is known from the information and Y and WY are integrable, W can be taken outside the conditional expectation.\n<!-- bilingual-en:end -->\n\n若 W 能由已知信息确定，且 Y 与 WY 可积，就可以将 W 提出条件期望。"
     }
   ],
   "edges": [
@@ -265,7 +265,7 @@
       "fromSide": "bottom",
       "toNode": "ce00000000000008",
       "toSide": "top",
-      "label": "全函数类 vs 线性类"
+      "label": "Restrict the L2 prediction class to chosen regressors · 将平方可积预测限制到所选回归量"
     },
     {
       "id": "cee0000000000008",
@@ -345,7 +345,7 @@
       "fromSide": "bottom",
       "toNode": "p2hier",
       "toSide": "top",
-      "label": "全期望给出零协方差"
+      "label": "Integrable X, Y, XY permit the zero-covariance implication · X、Y、XY 可积时推出零协方差"
     },
     {
       "id": "psi2-e-7",

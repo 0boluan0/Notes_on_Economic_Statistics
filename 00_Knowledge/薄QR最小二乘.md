@@ -87,7 +87,7 @@ This procedure requires nonsingular $R$, equivalently full column rank of $A$. U
 ## 来源与核验
 
 - [[01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses2.4sum.pdf|MIT 18.06SC Session 2.4 summary]]：支持 $A=QR$、$Q^TQ=I$ 与上三角 $R$。
-- [[01_Math/02_linear algebra/02_Least Squares, Determinants and Eigenvalues.md#从 Gram–Schmidt 到 QR 分解|课程：从 Gram–Schmidt 到 QR]]：支持薄 QR 尺寸、$R\hat x=Q^Tb$ 与满列秩边界。
+- [[02_Least Squares, Determinants and Eigenvalues#从 Gram–Schmidt 到 QR 分解|课程：从 Gram–Schmidt 到 QR]]：支持薄 QR 尺寸、$R\hat x=Q^Tb$ 与满列秩边界。
 - [LAPACK Users’ Guide: Linear Least Squares Problems](https://www.netlib.org/lapack/lug/node27.html)：支持 full-rank least squares 使用 QR/LQ，而秩亏问题转向完整正交分解或 SVD。
 <!-- bilingual-en:start -->
 - The MIT 18.06SC Session 2.4 summary supports $A=QR$, $Q^TQ=I$, and upper-triangular $R$.

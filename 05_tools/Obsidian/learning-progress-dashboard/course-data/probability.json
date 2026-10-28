@@ -1,0 +1,2438 @@
+{
+  "schema_version": 1,
+  "domains": [
+    {
+      "id": "probability",
+      "title": "概率与随机过程"
+    },
+    {
+      "id": "statistics",
+      "title": "统计推断"
+    }
+  ],
+  "outcomes": [
+    {
+      "id": "prob.conditional-independence",
+      "title": "条件独立",
+      "family": "probability",
+      "scope": "用条件分布或条件概率因式分解判断条件独立，并区别无条件独立；限基本离散或密度模型。",
+      "notes": []
+    },
+    {
+      "id": "prob.hypergeometric-negative-binomial",
+      "title": "超几何与负二项模型",
+      "family": "probability",
+      "scope": "分别以不放回抽样和等待指定成功次数构造 Hypergeometric 与 Negative Binomial 分布。",
+      "notes": []
+    },
+    {
+      "id": "prob.moment-generating-functions",
+      "title": "矩母函数",
+      "family": "probability",
+      "scope": "在存在的区间内用 MGF 求矩、处理独立和并识别分布；不假设所有分布都有 MGF。",
+      "notes": []
+    },
+    {
+      "id": "prob.distribution-transformations",
+      "title": "随机变量的分布变换",
+      "family": "probability",
+      "scope": "用 CDF 法或可逆变换的 Jacobian 求函数或向量的分布，并核对支持集。",
+      "notes": []
+    },
+    {
+      "id": "prob.convolution-distributions",
+      "title": "独立和的卷积",
+      "family": "probability",
+      "scope": "从独立变量的 PMF 或 PDF 通过卷积求和的分布；不含一般分布或 Lp 卷积理论。",
+      "notes": []
+    },
+    {
+      "id": "prob.beta-gamma",
+      "title": "Beta 与 Gamma 分布",
+      "family": "probability",
+      "scope": "识别 Beta 和 Gamma 的密度、参数及常见概率解释，并理解相应变量变换关系。",
+      "notes": []
+    },
+    {
+      "id": "prob.order-statistics",
+      "title": "次序统计量",
+      "family": "probability",
+      "scope": "从样本排序构造最小、最大及一般次序统计量，并由独立样本分布计算其基本分布。",
+      "notes": []
+    },
+    {
+      "id": "prob.jensen-cauchy-schwarz",
+      "title": "Jensen 与 Cauchy–Schwarz 不等式",
+      "family": "probability",
+      "scope": "在凸性和可积条件下界定期望，或用二阶矩界控制乘积期望。",
+      "notes": []
+    },
+    {
+      "id": "prob.multivariate-normal-basic",
+      "title": "多元正态入门",
+      "family": "probability",
+      "scope": "用均值和协方差描述多元正态，理解线性组合仍为正态以及正态情形的不相关与独立关系。",
+      "notes": []
+    },
+    {
+      "id": "prob.chi-square-student-t",
+      "title": "卡方与 Student t 分布",
+      "family": "probability",
+      "scope": "从独立标准正态的平方和或标准化比值构造卡方和 t 分布，并识别自由度。",
+      "notes": []
+    },
+    {
+      "id": "prob.reversible-markov",
+      "title": "可逆 Markov 链",
+      "family": "stochastic-processes",
+      "scope": "用详细平衡条件验证平稳分布，分析无向图随机游走中的可逆性。",
+      "notes": []
+    },
+    {
+      "id": "prob.pi-lambda",
+      "title": "pi–lambda 唯一性方法",
+      "family": "probability-theory",
+      "scope": "用 Dynkin 的 pi–lambda 定理把生成类上的一致性扩张到整个 sigma 代数。",
+      "notes": []
+    },
+    {
+      "id": "prob.infinite-product-measures",
+      "title": "无限乘积与过程构造",
+      "family": "probability-theory",
+      "scope": "从一致的有限维边缘构造无限维概率模型，核对 Kolmogorov 扩张定理所需空间和正则条件。",
+      "notes": []
+    },
+    {
+      "id": "prob.independence-sigmafields",
+      "title": "sigma 代数与独立性",
+      "family": "probability-theory",
+      "scope": "用事件族或 sigma 代数表达随机变量族独立性，并联系联合分布的乘积结构。",
+      "notes": []
+    },
+    {
+      "id": "prob.lln-proof",
+      "title": "大数定律的理论论证",
+      "family": "probability-theory",
+      "scope": "在明确矩和独立性条件下论证弱/强大数定律，使用概率界、截断或收敛工具；不泛指任意相关过程。",
+      "notes": [],
+      "extends": [
+        "prob.limit-laws-basic"
+      ]
+    },
+    {
+      "id": "prob.chernoff-bounds",
+      "title": "指数矩与 Chernoff 界",
+      "family": "probability-theory",
+      "scope": "当指数矩存在时优化指数 Markov 界，控制样本和的大偏差概率。",
+      "notes": []
+    },
+    {
+      "id": "prob.cramer-large-deviations",
+      "title": "Cramér 大偏差定理",
+      "family": "probability-theory",
+      "scope": "以累积量生成函数及其凸共轭描述独立同分布样本均值的大偏差率，并核对指数矩条件。",
+      "notes": [],
+      "extends": [
+        "prob.chernoff-bounds"
+      ]
+    },
+    {
+      "id": "prob.characteristic-functions",
+      "title": "特征函数",
+      "family": "probability-theory",
+      "scope": "以 Fourier 变换表示概率分布，利用独立和对应乘积及矩存在时的局部性质。",
+      "notes": []
+    },
+    {
+      "id": "prob.fourier-inversion",
+      "title": "概率分布的 Fourier 反演",
+      "family": "probability-theory",
+      "scope": "在相应可积或连续性条件下由特征函数恢复分布，理解唯一性及反演边界项。",
+      "notes": []
+    },
+    {
+      "id": "prob.weak-convergence",
+      "title": "概率测度的弱收敛",
+      "family": "probability-theory",
+      "scope": "以有界连续测试函数刻画弱收敛，联系分布函数、连续映射及紧性等判据。",
+      "notes": []
+    },
+    {
+      "id": "prob.clt-proof",
+      "title": "中心极限定理的特征函数方法",
+      "family": "probability-theory",
+      "scope": "以特征函数展开与连续性定理论证独立同分布有限方差 CLT；不覆盖所有非同分布或依赖情形。",
+      "notes": [],
+      "extends": [
+        "prob.limit-laws-basic"
+      ]
+    },
+    {
+      "id": "prob.conditional-expectation-measure",
+      "title": "测度论条件期望",
+      "family": "probability-theory",
+      "scope": "对任意子 sigma 代数以可测性和积分一致性刻画条件期望，研究存在性、唯一性和基本性质。",
+      "notes": [],
+      "extends": [
+        "prob.conditional-expectation-basic"
+      ]
+    },
+    {
+      "id": "prob.martingale-convergence-theory",
+      "title": "鞅收敛理论",
+      "family": "probability-theory",
+      "scope": "以最大/上穿不等式建立次鞅和鞅的几乎处处及 Lp 收敛结论，区分各自有界性条件。",
+      "notes": [],
+      "extends": [
+        "prob.martingale-convergence-basic"
+      ]
+    },
+    {
+      "id": "prob.uniform-integrability",
+      "title": "一致可积与 L1 收敛",
+      "family": "probability-theory",
+      "scope": "检查一致可积性，解释它在几乎处处或依概率收敛提升至 L1 收敛中的作用。",
+      "notes": []
+    },
+    {
+      "id": "prob.optional-stopping-theory",
+      "title": "可选停止定理及其条件",
+      "family": "probability-theory",
+      "scope": "利用有界停止、一致可积或适当可积性条件论证停止后的鞅关系，并辨别无界停止的失效情形。",
+      "notes": [],
+      "extends": [
+        "prob.optional-stopping-basic"
+      ]
+    },
+    {
+      "id": "prob.zero-one-laws",
+      "title": "零一律与反向鞅",
+      "family": "probability-theory",
+      "scope": "用反向鞅等工具研究 Kolmogorov 尾事件及 Hewitt–Savage 对称事件的零一律与条件。",
+      "notes": []
+    },
+    {
+      "id": "math.radon-nikodym",
+      "title": "Radon–Nikodym 导数",
+      "family": "measure-theory",
+      "scope": "在适用的绝对连续与 sigma 有限条件下以密度表示一个测度相对于另一个测度，并联系条件期望/鞅构造。",
+      "notes": []
+    },
+    {
+      "id": "prob.branching-martingales",
+      "title": "分枝过程与鞅",
+      "family": "probability-theory",
+      "scope": "把归一化分枝过程构造为鞅，分析极限及 Kesten–Stigum 的 L log L 条件。",
+      "notes": []
+    },
+    {
+      "id": "prob.random-assignment",
+      "title": "随机指派问题的概率方法",
+      "family": "probability-theory",
+      "scope": "理解随机代价指派问题的模型与期望最优代价的 ζ(2) 极限论证；限本课专题。",
+      "notes": []
+    },
+    {
+      "id": "stat.simulation-inference",
+      "title": "模拟抽样分布",
+      "family": "statistical-inference",
+      "scope": "从指定概率模型重复生成数据，近似统计量抽样分布并比较理论近似。",
+      "notes": []
+    },
+    {
+      "id": "stat.continuous-mapping-basic",
+      "title": "连续映射与渐近近似",
+      "family": "statistical-inference",
+      "scope": "在收敛条件下用连续映射定理把统计量的已知极限分布转为函数的极限分布。",
+      "notes": []
+    },
+    {
+      "id": "stat.neyman-pearson",
+      "title": "Neyman–Pearson 方法",
+      "family": "statistical-inference",
+      "scope": "对简单原假设与简单备择构造似然比最强检验，明确检验水平及必要时的随机化。",
+      "notes": [],
+      "extends": [
+        "stat.hypothesis-testing-basic"
+      ]
+    },
+    {
+      "id": "stat.t-tests",
+      "title": "均值的 t 检验",
+      "family": "statistical-inference",
+      "scope": "在相应正态或大样本条件下进行单样本、配对或两样本均值 t 检验，并区别方差假设。",
+      "notes": []
+    },
+    {
+      "id": "stat.rank-permutation-tests",
+      "title": "秩与置换检验",
+      "family": "statistical-inference",
+      "scope": "理解符号秩、秩和及置换检验统计量，用交换性或分布假设确定有效性。",
+      "notes": []
+    },
+    {
+      "id": "stat.experimental-design-basic",
+      "title": "实验设计入门",
+      "family": "statistical-inference",
+      "scope": "区分随机分配、配对与独立样本设计，解释设计如何影响比较和不确定性；不含完整因果推断体系。",
+      "notes": []
+    },
+    {
+      "id": "stat.multiple-testing-basic",
+      "title": "多重检验",
+      "family": "statistical-inference",
+      "scope": "区分逐项错误、族错误率与错误发现率，理解多重比较需要调整及基本控制思路。",
+      "notes": []
+    },
+    {
+      "id": "stat.cramer-rao",
+      "title": "Cramér–Rao 下界",
+      "family": "statistical-inference",
+      "scope": "在正则无偏估计框架中用 Fisher 信息给出方差下界，理解可达性及其限制。",
+      "notes": []
+    },
+    {
+      "id": "stat.misspecified-mle",
+      "title": "模型误设下的 MLE",
+      "family": "statistical-inference",
+      "scope": "在模型族未包含真实分布时解释伪真参数与 KL 投影，以及渐近协方差不再简单等于逆 Fisher 信息。",
+      "notes": [],
+      "extends": [
+        "stat.mle-asymptotics"
+      ]
+    },
+    {
+      "id": "stat.delta-method",
+      "title": "代入估计与 Delta 方法",
+      "family": "statistical-inference",
+      "scope": "通过可微函数局部线性化传播估计量的渐近分布，计算函数参数的渐近方差。",
+      "notes": []
+    },
+    {
+      "id": "stat.prior-choice-basic",
+      "title": "先验选择与非正常先验",
+      "family": "statistical-inference",
+      "scope": "解释共轭先验参数的有效样本量和后验影响，识别 improper prior 并检查后验可归一化。",
+      "notes": []
+    },
+    {
+      "id": "stat.posterior-normal-approximation",
+      "title": "后验正态近似入门",
+      "family": "statistical-inference",
+      "scope": "在常规有限维正则情形用局部似然展开解释后验的大样本正态近似；不声称无条件成立。",
+      "notes": [],
+      "extends": [
+        "stat.bayesian-updating-basic"
+      ]
+    },
+    {
+      "id": "stat.contingency-tests",
+      "title": "列联表检验",
+      "family": "statistical-inference",
+      "scope": "以类别频数建立列联表的独立性或同质性检验，计算期望频数和相应自由度。",
+      "notes": []
+    },
+    {
+      "id": "stat.bradley-terry",
+      "title": "Bradley–Terry 比较模型",
+      "family": "statistical-inference",
+      "scope": "用项目能力参数建模成对胜负概率，构造似然并注意参数可辨识性。",
+      "notes": []
+    },
+    {
+      "id": "stat.proportional-hazards-basic",
+      "title": "比例风险模型入门",
+      "family": "statistical-inference",
+      "scope": "用基线风险与协变量相对风险表达生存模型，认识删失和部分似然的作用；不含完整生存分析课程。",
+      "notes": []
+    },
+    {
+      "id": "stat.gaussian-linear-model-known-variance",
+      "title": "已知误差方差的 Gaussian 线性模型",
+      "family": "statistical-inference",
+      "scope": "在固定设计矩阵和已知独立同方差 Gaussian 误差下构造线性模型，求系数 MLE/最小二乘及其协方差；不包含未知方差下完整 t/F 推断。",
+      "notes": []
+    },
+    {
+      "id": "prob.event-conditioning",
+      "title": "Event conditioning and Bayes rule",
+      "family": "probability",
+      "scope": "用事件条件概率、乘法公式、全概率公式与 Bayes 公式计算更新；不包含条件独立或条件密度。",
+      "notes": []
+    },
+    {
+      "id": "prob.event-independence",
+      "title": "Independence of events",
+      "family": "probability",
+      "scope": "用概率乘积判据判断两个或一族事件的独立性，并区分两两独立与共同独立。",
+      "notes": []
+    },
+    {
+      "id": "prob.bernoulli-binomial",
+      "title": "Bernoulli and Binomial distributions",
+      "family": "probability",
+      "scope": "以一次成功指标及固定次数独立试验成功数建立 Bernoulli 和 Binomial 分布。",
+      "notes": []
+    },
+    {
+      "id": "prob.geometric",
+      "title": "Geometric distribution",
+      "family": "probability",
+      "scope": "以独立试验首次成功等待时间建立 Geometric 分布及其无记忆性。",
+      "notes": []
+    },
+    {
+      "id": "prob.hypergeometric",
+      "title": "Hypergeometric distribution",
+      "family": "probability",
+      "scope": "以有限总体不放回抽样建立 Hypergeometric 计数概率。",
+      "notes": []
+    },
+    {
+      "id": "prob.negative-binomial",
+      "title": "Negative Binomial distribution",
+      "family": "probability",
+      "scope": "以独立试验等待指定成功次数建立 Negative Binomial 分布。",
+      "notes": []
+    },
+    {
+      "id": "prob.poisson-distribution",
+      "title": "Poisson distribution",
+      "family": "probability",
+      "scope": "使用 Poisson 质量函数及参数解释计数概率；不包含连续时间过程。",
+      "notes": []
+    },
+    {
+      "id": "prob.density-cdf",
+      "title": "Densities and cumulative distributions",
+      "family": "probability",
+      "scope": "用密度积分计算连续随机变量的事件概率，并联系 PDF 与 CDF；不自动包含所有连续分布族。",
+      "notes": []
+    },
+    {
+      "id": "prob.normal-distribution",
+      "title": "Normal distribution",
+      "family": "probability",
+      "scope": "使用 Normal 密度、均值方差参数与标准化计算概率。",
+      "notes": []
+    },
+    {
+      "id": "prob.uniform-distribution",
+      "title": "Uniform distribution",
+      "family": "probability",
+      "scope": "由区间上的常密度构造 Uniform 分布及其概率计算。",
+      "notes": []
+    },
+    {
+      "id": "prob.exponential-memoryless",
+      "title": "Exponential distribution and memorylessness",
+      "family": "probability",
+      "scope": "使用 Exponential 密度与生存概率，并理解连续等待时间的无记忆性。",
+      "notes": []
+    },
+    {
+      "id": "prob.variance-definition",
+      "title": "Variance and second moments",
+      "family": "probability",
+      "scope": "计算方差、标准差及 E[X²]−E[X]²；不含协方差与一般随机变量和。",
+      "notes": []
+    },
+    {
+      "id": "prob.weak-law-basic",
+      "title": "Weak law of large numbers",
+      "family": "probability",
+      "scope": "在独立同分布及有限方差等基本条件下使用样本均值依概率收敛；不含强大数定律。",
+      "notes": []
+    },
+    {
+      "id": "prob.clt-basic",
+      "title": "Central limit theorem",
+      "family": "probability",
+      "scope": "在独立同分布有限方差情形标准化样本和或均值并使用正态近似。",
+      "notes": []
+    },
+    {
+      "id": "prob.markov-transitions",
+      "title": "Markov transitions and stationary distributions",
+      "family": "probability",
+      "scope": "用转移矩阵计算多步转移和求解平稳分布；不包含完整状态分类及收敛定理。",
+      "notes": []
+    },
+    {
+      "id": "prob.markov-state-classification",
+      "title": "Classification of Markov states",
+      "family": "probability",
+      "scope": "区分有限或可数链的沟通、不可约、常返与暂留状态；不自动包括稳态收敛定理。",
+      "notes": []
+    },
+    {
+      "id": "prob.markov-absorption",
+      "title": "Markov absorption probabilities and times",
+      "family": "probability",
+      "scope": "由首次转移分解建立线性方程计算吸收概率与平均吸收时间。",
+      "notes": []
+    },
+    {
+      "id": "prob.conditional-mean",
+      "title": "Conditional mean in elementary models",
+      "family": "probability",
+      "scope": "在离散或密度模型中从条件分布计算条件期望；不含全方差公式或测度论存在性。",
+      "notes": []
+    },
+    {
+      "id": "prob.random-sums",
+      "title": "Sums of a random number of variables",
+      "family": "probability",
+      "scope": "在独立计数与独立同分布加数条件下用条件期望和条件方差计算随机和的均值与方差。",
+      "notes": []
+    },
+    {
+      "id": "prob.beta-distribution",
+      "title": "Beta distribution",
+      "family": "probability",
+      "scope": "识别 Beta 密度、参数及其在单位区间概率建模中的作用。",
+      "notes": []
+    },
+    {
+      "id": "prob.gamma-distribution",
+      "title": "Gamma distribution",
+      "family": "probability",
+      "scope": "识别 Gamma 密度及其作为指数等待时间之和的解释。",
+      "notes": []
+    },
+    {
+      "id": "stat.bayes-discrete-update",
+      "title": "Bayesian updating with discrete priors",
+      "family": "statistical-inference",
+      "scope": "将离散参数先验与数据似然相乘并归一化为后验。",
+      "notes": []
+    },
+    {
+      "id": "stat.bayes-continuous-update",
+      "title": "Bayesian updating with continuous priors",
+      "family": "statistical-inference",
+      "scope": "用连续参数先验密度与似然构造可归一化后验密度。",
+      "notes": []
+    },
+    {
+      "id": "stat.bayes-squared-error",
+      "title": "Bayesian estimation under squared error",
+      "family": "statistical-inference",
+      "scope": "以条件均值最小化后验均方误差，并区别 MAP 与均方误差目标。",
+      "notes": []
+    },
+    {
+      "id": "stat.linear-lms",
+      "title": "Linear least mean squares estimation",
+      "family": "statistical-inference",
+      "scope": "在仿射估计器类中利用均值、方差和协方差最小化均方误差。",
+      "notes": []
+    },
+    {
+      "id": "stat.logistic-regression",
+      "title": "Logistic regression",
+      "family": "statistical-inference",
+      "scope": "以 logit 连接建模二元响应，解释回归系数并构造 Bernoulli 似然。",
+      "notes": []
+    },
+    {
+      "id": "stat.poisson-regression",
+      "title": "Poisson regression",
+      "family": "statistical-inference",
+      "scope": "以 log 连接建模计数响应，解释回归系数并构造 Poisson 似然。",
+      "notes": []
+    },
+    {
+      "id": "math.lebesgue-stieltjes",
+      "title": "Lebesgue–Stieltjes measures",
+      "family": "mathematics",
+      "scope": "由单调右连续函数在半开区间上规定增量并构造实线上的 Lebesgue–Stieltjes 测度。",
+      "notes": []
+    },
+    {
+      "id": "prob.submartingale-upcrossing",
+      "title": "Submartingale upcrossing and almost sure convergence",
+      "family": "probability",
+      "scope": "用上穿不等式及相应一阶矩有界条件论证次鞅的几乎处处收敛；不包含 Lp 收敛。",
+      "notes": []
+    },
+    {
+      "id": "prob.martingale-lp-convergence",
+      "title": "Lp martingale convergence",
+      "family": "probability",
+      "scope": "在 p>1 的 Lp 有界条件下建立鞅的 Lp 与几乎处处收敛。",
+      "notes": []
+    },
+    {
+      "id": "prob.event-independence-pair",
+      "title": "Independence of two events",
+      "family": "probability",
+      "scope": "以 P(A∩B)=P(A)P(B) 判断两个事件独立，并联系非零概率下的条件概率；不包含一族事件的共同独立性。",
+      "notes": []
+    }
+  ],
+  "courses": [
+    {
+      "id": "harvard-stat110",
+      "code": "STAT 110",
+      "title": "Introduction to Probability",
+      "titleZh": "概率论导论",
+      "school": "Harvard",
+      "version": "Fall 2011 公开讲座；官方自学 syllabus",
+      "domain": "probability",
+      "stage": 2,
+      "role": "alternative",
+      "tracks": [
+        "research",
+        "engineering",
+        "data"
+      ],
+      "purpose": "补概率基础的主替代路线：从条件思考、分布与期望进入极限定理和 Markov 链。可与 6.041SC 选择一条主线，为贝叶斯统计和机器学习建立基础。",
+      "url": "https://stat110.hsites.harvard.edu/",
+      "syllabus": "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+      "checked": "2026-10-26",
+      "materials": [
+        "video",
+        "textbook",
+        "exercises",
+        "solutions"
+      ],
+      "coverage": "full-outline",
+      "summary": [
+        "条件概率与 Bayes 公式",
+        "随机变量、联合分布与条件期望",
+        "极限定理与 Markov 链"
+      ],
+      "prerequisites": [
+        {
+          "id": "mit-1801sc",
+          "kind": "inferred",
+          "reason": "官方要求一元微积分；18.01SC 是本图提供这一知识基础的替代课程，非 Harvard 指定课号。",
+          "source": "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf"
+        }
+      ],
+      "requirements": [
+        {
+          "title": "官方要求一元微积分与熟悉矩阵；矩阵熟悉度不等于先完成整门 18.06。",
+          "outcomes": [
+            "math.power-derivative",
+            "math.trig-derivative",
+            "math.product-rule",
+            "math.quotient-rule",
+            "math.chain-rule-scalar",
+            "math.exponential-derivative",
+            "math.integrals",
+            "la.matrix-multiplication"
+          ],
+          "source": "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf"
+        }
+      ],
+      "materialNote": "官方列出 34 个公开讲座视频，并提供约 250 道自学练习及详细解答；官网另提供第二版免费教材作配套参考。目录锚定 2011 讲座版，Stat110x 的动画与互动内容属于互补资源。",
+      "coverageNote": "已核对该版本完整官方课次目录；知识点仅在对应课次范围核实后映射。",
+      "resourceLinks": [
+        {
+          "title": "官方视频目录",
+          "url": "https://stat110.hsites.harvard.edu/youtube"
+        },
+        {
+          "title": "官方教材入口",
+          "url": "https://probabilitybook.net/"
+        }
+      ],
+      "units": [
+        {
+          "id": "lec01",
+          "label": "Lecture 1",
+          "title": "Sample spaces, naive definition of probability, counting, sampling",
+          "module": "Probability and conditioning",
+          "source": "https://www.youtube.com/watch?v=KbB0FjPg0mw",
+          "outcomes": [
+            "prob.combinatorial-counting"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "课次已核实；现有材料不足以把本次内容与完整规范知识范围精确对齐，待进一步核对。",
+          "mappingEvidence": [
+            "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+            "https://stat110.hsites.harvard.edu/youtube"
+          ],
+          "resources": [
+            {
+              "label": "Lecture 1: Probability and Counting | Statistics 110",
+              "url": "https://www.youtube.com/watch?v=KbB0FjPg0mw"
+            }
+          ]
+        },
+        {
+          "id": "lec02",
+          "label": "Lecture 2",
+          "title": "Bose-Einstein, story proofs, Vandermonde identity, axioms of probability",
+          "module": "Probability and conditioning",
+          "source": "https://www.youtube.com/watch?v=FJd_1H3rZGg",
+          "outcomes": [
+            "prob.probability-models"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "mappingEvidence": [
+            "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+            "https://stat110.hsites.harvard.edu/youtube"
+          ],
+          "resources": [
+            {
+              "label": "Lecture 2: Story Proofs, Axioms of Probability | Statistics 110",
+              "url": "https://www.youtube.com/watch?v=FJd_1H3rZGg"
+            }
+          ]
+        },
+        {
+          "id": "lec03",
+          "label": "Lecture 3",
+          "title": "Birthday problem, properties of probability, inclusion-exclusion, matching problem",
+          "module": "Probability and conditioning",
+          "source": "https://www.youtube.com/watch?v=LZ5Wergp_PA",
+          "outcomes": [
+            "prob.inclusion-exclusion"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "mappingEvidence": [
+            "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+            "https://stat110.hsites.harvard.edu/youtube"
+          ],
+          "resources": [
+            {
+              "label": "Lecture 3: Birthday Problem, Properties of Probability | Statistics 110",
+              "url": "https://www.youtube.com/watch?v=LZ5Wergp_PA"
+            }
+          ]
+        },
+        {
+          "id": "lec04",
+          "label": "Lecture 4",
+          "title": "Independence, Newton-Pepys, conditional probability, Bayes’ rule",
+          "module": "Probability and conditioning",
+          "source": "https://www.youtube.com/watch?v=P7NE4WF8j-Q",
+          "outcomes": [
+            "prob.event-independence-pair"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按官方本讲主题核对事件独立的基本乘积判据；一族事件的共同独立性仅在明确讲授时单独映射。",
+          "mappingEvidence": [
+            "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+            "https://stat110.hsites.harvard.edu/youtube"
+          ],
+          "resources": [
+            {
+              "label": "Lecture 4: Conditional Probability | Statistics 110",
+              "url": "https://www.youtube.com/watch?v=P7NE4WF8j-Q"
+            }
+          ]
+        },
+        {
+          "id": "lec05",
+          "label": "Lecture 5",
+          "title": "Law of total probability, conditional probability examples, conditional independence",
+          "module": "Probability and conditioning",
+          "source": "https://www.youtube.com/watch?v=JzDvVgNDxo8",
+          "outcomes": [
+            "prob.event-conditioning",
+            "prob.conditional-independence"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "mappingEvidence": [
+            "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+            "https://stat110.hsites.harvard.edu/youtube"
+          ],
+          "resources": [
+            {
+              "label": "Lecture 5: Conditioning Continued, Law of Total Probability | Statistics 110",
+              "url": "https://www.youtube.com/watch?v=JzDvVgNDxo8"
+            }
+          ]
+        },
+        {
+          "id": "lec06",
+          "label": "Lecture 6",
+          "title": "Monty Hall problem, Simpson’s paradox",
+          "module": "Probability and conditioning",
+          "source": "https://www.youtube.com/watch?v=fDcjhAKuhqQ",
+          "outcomes": [
+            "prob.event-conditioning"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "mappingEvidence": [
+            "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+            "https://stat110.hsites.harvard.edu/youtube"
+          ],
+          "resources": [
+            {
+              "label": "Lecture 6: Monty Hall, Simpson's Paradox | Statistics 110",
+              "url": "https://www.youtube.com/watch?v=fDcjhAKuhqQ"
+            }
+          ]
+        },
+        {
+          "id": "lec07",
+          "label": "Lecture 7",
+          "title": "Gambler’s ruin, first step analysis, random variables, Bernoulli, Binomial",
+          "module": "Random variables and distributions",
+          "source": "https://www.youtube.com/watch?v=PNrqCdslGi4",
+          "outcomes": [
+            "prob.bernoulli-binomial"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "mappingEvidence": [
+            "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+            "https://stat110.hsites.harvard.edu/youtube"
+          ],
+          "resources": [
+            {
+              "label": "Lecture 7: Gambler's Ruin and Random Variables | Statistics 110",
+              "url": "https://www.youtube.com/watch?v=PNrqCdslGi4"
+            }
+          ]
+        },
+        {
+          "id": "lec08",
+          "label": "Lecture 8",
+          "title": "Random variables, CDFs, PMFs, discrete vs. continuous, Hypergeometric",
+          "module": "Random variables and distributions",
+          "source": "https://www.youtube.com/watch?v=k2BB0p8byGA",
+          "outcomes": [
+            "prob.discrete-rv",
+            "prob.hypergeometric"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "mappingEvidence": [
+            "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+            "https://stat110.hsites.harvard.edu/youtube"
+          ],
+          "resources": [
+            {
+              "label": "Lecture 8: Random Variables and Their Distributions | Statistics 110",
+              "url": "https://www.youtube.com/watch?v=k2BB0p8byGA"
+            }
+          ]
+        },
+        {
+          "id": "lec09",
+          "label": "Lecture 9",
+          "title": "Independence, Geometric, expected values, indicator r.v.s, linearity, symmetry, fundamental bridge",
+          "module": "Random variables and distributions",
+          "source": "https://www.youtube.com/watch?v=LX2q356N2rU",
+          "outcomes": [
+            "prob.geometric",
+            "prob.discrete-expectation"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "mappingEvidence": [
+            "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+            "https://stat110.hsites.harvard.edu/youtube"
+          ],
+          "resources": [
+            {
+              "label": "Lecture 9: Expectation, Indicator Random Variables, Linearity | Statistics 110",
+              "url": "https://www.youtube.com/watch?v=LX2q356N2rU"
+            }
+          ]
+        },
+        {
+          "id": "lec10",
+          "label": "Lecture 10",
+          "title": "Linearity, Putnam problem, Negative Binomial, St. Petersburg paradox",
+          "module": "Random variables and distributions",
+          "source": "https://www.youtube.com/watch?v=P1fSFvhPf7Q",
+          "outcomes": [
+            "prob.negative-binomial",
+            "prob.discrete-expectation"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "mappingEvidence": [
+            "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+            "https://stat110.hsites.harvard.edu/youtube"
+          ],
+          "resources": [
+            {
+              "label": "Lecture 10: Expectation Continued | Statistics 110",
+              "url": "https://www.youtube.com/watch?v=P1fSFvhPf7Q"
+            }
+          ]
+        },
+        {
+          "id": "lec11",
+          "label": "Lecture 11",
+          "title": "Sympathetic magic, Poisson distribution, Poisson approximation",
+          "module": "Random variables and distributions",
+          "source": "https://www.youtube.com/watch?v=TD1N4hxqMzY",
+          "outcomes": [
+            "prob.poisson-distribution"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "mappingEvidence": [
+            "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+            "https://stat110.hsites.harvard.edu/youtube"
+          ],
+          "resources": [
+            {
+              "label": "Lecture 11: The Poisson distribution | Statistics 110",
+              "url": "https://www.youtube.com/watch?v=TD1N4hxqMzY"
+            }
+          ]
+        },
+        {
+          "id": "lec12",
+          "label": "Lecture 12",
+          "title": "Discrete vs. continuous distributions, PDFs, variance, standard deviation, Uniform, universality",
+          "module": "Random variables and distributions",
+          "source": "https://www.youtube.com/watch?v=Tci---bVs60",
+          "outcomes": [
+            "prob.density-cdf",
+            "prob.variance-definition",
+            "prob.uniform-distribution"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "mappingEvidence": [
+            "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+            "https://stat110.hsites.harvard.edu/youtube"
+          ],
+          "resources": [
+            {
+              "label": "Lecture 12: Discrete vs. Continuous, the Uniform | Statistics 110",
+              "url": "https://www.youtube.com/watch?v=Tci---bVs60"
+            }
+          ]
+        },
+        {
+          "id": "lec13",
+          "label": "Lecture 13",
+          "title": "Standard Normal, Normal normalizing constant",
+          "module": "Random variables and distributions",
+          "source": "https://www.youtube.com/watch?v=72QjzHnYvL0",
+          "outcomes": [],
+          "mapping": "syllabus",
+          "kind": "lecture",
+          "note": "课次已核实；现有材料不足以把本次内容与完整规范知识范围精确对齐，待进一步核对。",
+          "mappingEvidence": [
+            "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+            "https://stat110.hsites.harvard.edu/youtube"
+          ],
+          "resources": [
+            {
+              "label": "Lecture 13: Normal distribution | Statistics 110",
+              "url": "https://www.youtube.com/watch?v=72QjzHnYvL0"
+            }
+          ]
+        },
+        {
+          "id": "lec14",
+          "label": "Lecture 14",
+          "title": "Normal distribution, standardization, LOTUS",
+          "module": "Random variables and distributions",
+          "source": "https://www.youtube.com/watch?v=9vp1Ll2NpRw",
+          "outcomes": [
+            "prob.normal-distribution",
+            "prob.expectation"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "mappingEvidence": [
+            "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+            "https://stat110.hsites.harvard.edu/youtube"
+          ],
+          "resources": [
+            {
+              "label": "Lecture 14: Location, Scale, and LOTUS | Statistics 110",
+              "url": "https://www.youtube.com/watch?v=9vp1Ll2NpRw"
+            }
+          ]
+        },
+        {
+          "id": "lec15",
+          "label": "Lecture 15",
+          "title": "Midterm review, extra examples",
+          "module": "Random variables and distributions",
+          "source": "https://www.youtube.com/watch?v=yFRZf81sB5k",
+          "outcomes": [],
+          "mapping": "reviewed-outline",
+          "kind": "review",
+          "note": "本课次为复习、考试或概览，不由此点亮全课知识。",
+          "mappingEvidence": [
+            "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+            "https://stat110.hsites.harvard.edu/youtube"
+          ],
+          "resources": [
+            {
+              "label": "Lecture 15: Midterm Review | Statistics 110",
+              "url": "https://www.youtube.com/watch?v=yFRZf81sB5k"
+            }
+          ]
+        },
+        {
+          "id": "lec16",
+          "label": "Lecture 16",
+          "title": "Exponential distribution, memoryless property",
+          "module": "Joint distributions and transforms",
+          "source": "https://www.youtube.com/watch?v=bM6nFDjvEns",
+          "outcomes": [
+            "prob.exponential-memoryless"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "mappingEvidence": [
+            "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+            "https://stat110.hsites.harvard.edu/youtube"
+          ],
+          "resources": [
+            {
+              "label": "Lecture 16: Exponential Distribution | Statistics 110",
+              "url": "https://www.youtube.com/watch?v=bM6nFDjvEns"
+            }
+          ]
+        },
+        {
+          "id": "lec17",
+          "label": "Lecture 17",
+          "title": "Moment generating functions (MGFs), hybrid Bayes’ rule, Laplace’s rule of succession",
+          "module": "Joint distributions and transforms",
+          "source": "https://www.youtube.com/watch?v=N8O6zd6vTZ8",
+          "outcomes": [
+            "stat.bayes-continuous-update"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "mappingEvidence": [
+            "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+            "https://stat110.hsites.harvard.edu/youtube"
+          ],
+          "resources": [
+            {
+              "label": "Lecture 17: Moment Generating Functions | Statistics 110",
+              "url": "https://www.youtube.com/watch?v=N8O6zd6vTZ8"
+            }
+          ]
+        },
+        {
+          "id": "lec18",
+          "label": "Lecture 18",
+          "title": "MGFs to get moments of Expo and Normal, sums of Poissons, joint distributions",
+          "module": "Joint distributions and transforms",
+          "source": "https://www.youtube.com/watch?v=tVDdx6xUOcs",
+          "outcomes": [
+            "prob.moment-generating-functions"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "mappingEvidence": [
+            "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+            "https://stat110.hsites.harvard.edu/youtube"
+          ],
+          "resources": [
+            {
+              "label": "Lecture 18: MGFs Continued | Statistics 110",
+              "url": "https://www.youtube.com/watch?v=tVDdx6xUOcs"
+            }
+          ]
+        },
+        {
+          "id": "lec19",
+          "label": "Lecture 19",
+          "title": "Joint, conditional, and marginal distributions, 2-D LOTUS, expected distance between Uniforms, chicken-egg",
+          "module": "Joint distributions and transforms",
+          "source": "https://www.youtube.com/watch?v=J70dP_AECzQ",
+          "outcomes": [
+            "prob.joint-distributions"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "mappingEvidence": [
+            "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+            "https://stat110.hsites.harvard.edu/youtube"
+          ],
+          "resources": [
+            {
+              "label": "Lecture 19: Joint, Conditional, and Marginal Distributions | Statistics 110",
+              "url": "https://www.youtube.com/watch?v=J70dP_AECzQ"
+            }
+          ]
+        },
+        {
+          "id": "lec20",
+          "label": "Lecture 20",
+          "title": "Expected distance between Normals, Multinomial, Cauchy",
+          "module": "Joint distributions and transforms",
+          "source": "https://www.youtube.com/watch?v=xiVWNkQUqKk",
+          "outcomes": [],
+          "mapping": "syllabus",
+          "kind": "lecture",
+          "note": "课次已核实；现有材料不足以把本次内容与完整规范知识范围精确对齐，待进一步核对。",
+          "mappingEvidence": [
+            "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+            "https://stat110.hsites.harvard.edu/youtube"
+          ],
+          "resources": [
+            {
+              "label": "Lecture 20: Multinomial and Cauchy | Statistics 110",
+              "url": "https://www.youtube.com/watch?v=xiVWNkQUqKk"
+            }
+          ]
+        },
+        {
+          "id": "lec21",
+          "label": "Lecture 21",
+          "title": "Covariance, correlation, variance of a sum, variance of Hypergeometric",
+          "module": "Joint distributions and transforms",
+          "source": "https://www.youtube.com/watch?v=IujCYxtpszU",
+          "outcomes": [
+            "prob.variance-covariance"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "mappingEvidence": [
+            "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+            "https://stat110.hsites.harvard.edu/youtube"
+          ],
+          "resources": [
+            {
+              "label": "Lecture 21: Covariance and Correlation | Statistics 110",
+              "url": "https://www.youtube.com/watch?v=IujCYxtpszU"
+            }
+          ]
+        },
+        {
+          "id": "lec22",
+          "label": "Lecture 22",
+          "title": "Transformations, LogNormal, convolutions, proving existence",
+          "module": "Joint distributions and transforms",
+          "source": "https://www.youtube.com/watch?v=yXwPUAIvFyg",
+          "outcomes": [
+            "prob.distribution-transformations",
+            "prob.convolution-distributions"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "mappingEvidence": [
+            "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+            "https://stat110.hsites.harvard.edu/youtube"
+          ],
+          "resources": [
+            {
+              "label": "Lecture 22: Transformations and Convolutions | Statistics 110",
+              "url": "https://www.youtube.com/watch?v=yXwPUAIvFyg"
+            }
+          ]
+        },
+        {
+          "id": "lec23",
+          "label": "Lecture 23",
+          "title": "Beta distribution, Bayes’ billiards, finance preview and examples",
+          "module": "Conditional expectation and inequalities",
+          "source": "https://www.youtube.com/watch?v=UZjlBQbV1KU",
+          "outcomes": [
+            "prob.beta-distribution"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "mappingEvidence": [
+            "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+            "https://stat110.hsites.harvard.edu/youtube"
+          ],
+          "resources": [
+            {
+              "label": "Lecture 23: Beta distribution | Statistics 110",
+              "url": "https://www.youtube.com/watch?v=UZjlBQbV1KU"
+            }
+          ]
+        },
+        {
+          "id": "lec24",
+          "label": "Lecture 24",
+          "title": "Gamma distribution, Poisson processes",
+          "module": "Conditional expectation and inequalities",
+          "source": "https://www.youtube.com/watch?v=Qjeswpm0cWY",
+          "outcomes": [
+            "prob.gamma-distribution",
+            "prob.poisson-process-basic"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "mappingEvidence": [
+            "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+            "https://stat110.hsites.harvard.edu/youtube"
+          ],
+          "resources": [
+            {
+              "label": "Lecture 24: Gamma distribution and Poisson process | Statistics 110",
+              "url": "https://www.youtube.com/watch?v=Qjeswpm0cWY"
+            }
+          ]
+        },
+        {
+          "id": "lec25",
+          "label": "Lecture 25",
+          "title": "Beta-Gamma (bank-post office), order statistics, conditional expectation, two envelope paradox",
+          "module": "Conditional expectation and inequalities",
+          "source": "https://www.youtube.com/watch?v=2LR5JYbhyjg",
+          "outcomes": [
+            "prob.beta-gamma",
+            "prob.order-statistics",
+            "prob.conditional-mean"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "mappingEvidence": [
+            "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+            "https://stat110.hsites.harvard.edu/youtube"
+          ],
+          "resources": [
+            {
+              "label": "Lecture 25: Order Statistics and Conditional Expectation | Statistics 110",
+              "url": "https://www.youtube.com/watch?v=2LR5JYbhyjg"
+            }
+          ]
+        },
+        {
+          "id": "lec26",
+          "label": "Lecture 26",
+          "title": "Two envelope paradox (cont.), conditional expectation (cont.), waiting for HT vs. waiting for HH",
+          "module": "Conditional expectation and inequalities",
+          "source": "https://www.youtube.com/watch?v=PgawcWisb0I",
+          "outcomes": [
+            "prob.conditional-mean"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "mappingEvidence": [
+            "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+            "https://stat110.hsites.harvard.edu/youtube"
+          ],
+          "resources": [
+            {
+              "label": "Lecture 26: Conditional Expectation Continued | Statistics 110",
+              "url": "https://www.youtube.com/watch?v=PgawcWisb0I"
+            }
+          ]
+        },
+        {
+          "id": "lec27",
+          "label": "Lecture 27",
+          "title": "Conditional expectation (cont.), taking out what’s known, Adam’s law, Eve’s law, projection picture",
+          "module": "Conditional expectation and inequalities",
+          "source": "https://www.youtube.com/watch?v=gjBvCiRt8QA",
+          "outcomes": [
+            "prob.conditional-expectation-basic"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "mappingEvidence": [
+            "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+            "https://stat110.hsites.harvard.edu/youtube"
+          ],
+          "resources": [
+            {
+              "label": "Lecture 27: Conditional Expectation given an R.V. | Statistics 110",
+              "url": "https://www.youtube.com/watch?v=gjBvCiRt8QA"
+            }
+          ]
+        },
+        {
+          "id": "lec28",
+          "label": "Lecture 28",
+          "title": "Sum of a random number of random variables, inequalities (Cauchy-Schwarz, Jensen, Markov, Chebyshev)",
+          "module": "Conditional expectation and inequalities",
+          "source": "https://www.youtube.com/watch?v=UtXK_EQ3Pow",
+          "outcomes": [
+            "prob.random-sums",
+            "prob.jensen-cauchy-schwarz",
+            "prob.markov-chebyshev"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "mappingEvidence": [
+            "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+            "https://stat110.hsites.harvard.edu/youtube"
+          ],
+          "resources": [
+            {
+              "label": "Lecture 28: Inequalities | Statistics 110",
+              "url": "https://www.youtube.com/watch?v=UtXK_EQ3Pow"
+            }
+          ]
+        },
+        {
+          "id": "lec29",
+          "label": "Lecture 29",
+          "title": "Law of large numbers, central limit theorem",
+          "module": "Limit laws and Markov chains",
+          "source": "https://www.youtube.com/watch?v=OprNqnHsVIA",
+          "outcomes": [
+            "prob.weak-law-basic",
+            "prob.clt-basic",
+            "prob.limit-laws-basic"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "mappingEvidence": [
+            "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+            "https://stat110.hsites.harvard.edu/youtube"
+          ],
+          "resources": [
+            {
+              "label": "Lecture 29: Law of Large Numbers and Central Limit Theorem | Statistics 110",
+              "url": "https://www.youtube.com/watch?v=OprNqnHsVIA"
+            }
+          ]
+        },
+        {
+          "id": "lec30",
+          "label": "Lecture 30",
+          "title": "Chi-Square, Student-t, Multivariate Normal",
+          "module": "Limit laws and Markov chains",
+          "source": "https://www.youtube.com/watch?v=MF-XSJOsGqw",
+          "outcomes": [
+            "prob.chi-square-student-t",
+            "prob.multivariate-normal-basic"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "mappingEvidence": [
+            "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+            "https://stat110.hsites.harvard.edu/youtube"
+          ],
+          "resources": [
+            {
+              "label": "Lecture 30: Chi-Square, Student-t, Multivariate Normal | Statistics 110",
+              "url": "https://www.youtube.com/watch?v=MF-XSJOsGqw"
+            }
+          ]
+        },
+        {
+          "id": "lec31",
+          "label": "Lecture 31",
+          "title": "Markov chains, transition matrix, stationary distribution",
+          "module": "Limit laws and Markov chains",
+          "source": "https://www.youtube.com/watch?v=8AJPs3gvNlY",
+          "outcomes": [
+            "prob.markov-transitions"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "mappingEvidence": [
+            "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+            "https://stat110.hsites.harvard.edu/youtube"
+          ],
+          "resources": [
+            {
+              "label": "Lecture 31: Markov Chains | Statistics 110",
+              "url": "https://www.youtube.com/watch?v=8AJPs3gvNlY"
+            }
+          ]
+        },
+        {
+          "id": "lec32",
+          "label": "Lecture 32",
+          "title": "Markov chains (cont.), irreducibility, recurrence, transience, reversibility, random walk on an undirected network",
+          "module": "Limit laws and Markov chains",
+          "source": "https://www.youtube.com/watch?v=aBGOyZv2pZE",
+          "outcomes": [
+            "prob.markov-state-classification",
+            "prob.reversible-markov"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "mappingEvidence": [
+            "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+            "https://stat110.hsites.harvard.edu/youtube"
+          ],
+          "resources": [
+            {
+              "label": "Lecture 32: Markov Chains Continued | Statistics 110",
+              "url": "https://www.youtube.com/watch?v=aBGOyZv2pZE"
+            }
+          ]
+        },
+        {
+          "id": "lec33",
+          "label": "Lecture 33",
+          "title": "Markov chains (cont.), Google PageRank as a Markov chain",
+          "module": "Limit laws and Markov chains",
+          "source": "https://www.youtube.com/watch?v=Q-pCzTpwPBU",
+          "outcomes": [
+            "prob.markov-transitions"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "mappingEvidence": [
+            "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+            "https://stat110.hsites.harvard.edu/youtube"
+          ],
+          "resources": [
+            {
+              "label": "Lecture 33: Markov Chains Continued Further | Statistics 110",
+              "url": "https://www.youtube.com/watch?v=Q-pCzTpwPBU"
+            }
+          ]
+        },
+        {
+          "id": "lec34",
+          "label": "Lecture 34",
+          "title": "A look ahead, final review, other statistics courses, regression example, sampling from a finite population example",
+          "module": "Limit laws and Markov chains",
+          "source": "https://www.youtube.com/watch?v=ChS3K2O-h7o",
+          "outcomes": [],
+          "mapping": "reviewed-outline",
+          "kind": "review",
+          "note": "本课次为复习、考试或概览，不由此点亮全课知识。",
+          "mappingEvidence": [
+            "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+            "https://stat110.hsites.harvard.edu/youtube"
+          ],
+          "resources": [
+            {
+              "label": "Lecture 34: A Look Ahead | Statistics 110",
+              "url": "https://www.youtube.com/watch?v=ChS3K2O-h7o"
+            }
+          ]
+        }
+      ],
+      "outlineSource": "https://stat110.hsites.harvard.edu/sites/g/files/omnuum10111/files/stat110/files/stat110harvarditunesusyllabus.pdf",
+      "outlineCount": 34,
+      "outlineComplete": true,
+      "outlineVerified": "2026-10-26",
+      "outlineUnit": "lecture",
+      "outlineNotes": "官方 Fall 2011 自学 syllabus 的全部 34 次编号讲座，含第 15、34 讲复习；另列 SP/HW、期中/期末试卷是配套练习，不计成额外讲座。34 次讲座并不等于 34 个全新知识模块。",
+      "unitLabel": "讲",
+      "progressCountNote": "官方 Fall 2011 自学 syllabus 的全部 34 次编号讲座，含第 15、34 讲复习；另列 SP/HW、期中/期末试卷是配套练习，不计成额外讲座。34 次讲座并不等于 34 个全新知识模块。"
+    },
+    {
+      "id": "mit-18675",
+      "code": "18.675",
+      "title": "Theory of Probability",
+      "titleZh": "概率论：测度与极限理论",
+      "school": "MIT",
+      "version": "Fall 2019 · Nike Sun",
+      "domain": "probability",
+      "stage": 4,
+      "role": "branch",
+      "tracks": [
+        "research"
+      ],
+      "purpose": "为概率、统计和机器学习理论研究建立测度概率、极限定理与鞅的证明框架；适合完成实分析准备后进入。",
+      "url": "https://math.mit.edu/~nsun/f19-18675.html",
+      "syllabus": "https://math.mit.edu/~nsun/f19-18675.html",
+      "checked": "2026-10-26",
+      "materials": [
+        "notes",
+        "textbook"
+      ],
+      "coverage": "full-outline",
+      "summary": [
+        "测度、积分与概率空间",
+        "大数定律、大偏差与弱收敛",
+        "条件期望与鞅"
+      ],
+      "prerequisites": [
+        {
+          "id": "mit-18100a",
+          "kind": "official",
+          "reason": "官方列出的实分析先修包括 18.100A、18.100B、18.100P 或 18.100Q；本图已有 18.100A。",
+          "source": "https://math.mit.edu/~nsun/f19-18675.html"
+        },
+        {
+          "id": "mit-6041sc",
+          "kind": "inferred",
+          "reason": "官方强烈推荐先接触概率（例举 18.600）；6.041SC 可作为基础概率准备路线，不能代替实分析要求，也不声称与 18.600 完全等价。",
+          "source": "https://math.mit.edu/~nsun/f19-18675.html"
+        }
+      ],
+      "requirements": [
+        {
+          "title": "必须具备实分析的严谨证明、完备性和极限收敛基础；完成入门概率不会自动满足。",
+          "outcomes": [
+            "math.real-completeness",
+            "math.sequence-limits",
+            "math.subsequences-limsup",
+            "math.continuity-proof",
+            "math.uniform-convergence"
+          ],
+          "source": "https://math.mit.edu/~nsun/f19-18675.html"
+        },
+        {
+          "title": "官方强烈推荐已有概率经验；需能处理随机变量、独立性、分布与期望。",
+          "outcomes": [
+            "prob.event-conditioning",
+            "prob.event-independence-pair",
+            "prob.joint-distributions",
+            "prob.expectation"
+          ],
+          "source": "https://math.mit.edu/~nsun/f19-18675.html"
+        }
+      ],
+      "materialNote": "公开教师材料为 21 页主题摘要及阅读指引，配有 Durrett 作者公开教材链接；作业和答案放在 Stellar。未找到该版本完整公开视频。官网另链 Andrew Lin 学生课堂笔记，并明确教师未核验；此处目录依据教师主题摘要，不把学生笔记计作教师讲义。",
+      "coverageNote": "已核对该版本完整官方课次目录；知识点仅在对应课次范围核实后映射。",
+      "resourceLinks": [
+        {
+          "title": "教师主题摘要与阅读指引",
+          "url": "https://math.mit.edu/~nsun/f19-18675-sch.pdf"
+        },
+        {
+          "title": "Durrett 作者公开教材（2019 版）",
+          "url": "https://services.math.duke.edu/~rtd/PTE/PTE5_011119.pdf"
+        }
+      ],
+      "units": [
+        {
+          "id": "lec01",
+          "label": "Lecture 1",
+          "title": "Introduction to measure theory",
+          "module": "Measure-theoretic foundations",
+          "source": "https://math.mit.edu/~nsun/f19-18675-sch.pdf",
+          "outcomes": [
+            "math.sigma-algebras-measures"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "sourceType": "outline",
+          "mappingEvidence": [
+            "https://math.mit.edu/~nsun/f19-18675-sch.pdf"
+          ]
+        },
+        {
+          "id": "lec02",
+          "label": "Lecture 2",
+          "title": "Lebesgue–Stieltjes measures on the real line",
+          "module": "Measure-theoretic foundations",
+          "source": "https://math.mit.edu/~nsun/f19-18675-sch.pdf",
+          "outcomes": [
+            "math.lebesgue-stieltjes"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "sourceType": "outline",
+          "mappingEvidence": [
+            "https://math.mit.edu/~nsun/f19-18675-sch.pdf"
+          ]
+        },
+        {
+          "id": "lec03",
+          "label": "Lecture 3",
+          "title": "Lebesgue–Stieltjes measures on the real line, continued",
+          "module": "Measure-theoretic foundations",
+          "source": "https://math.mit.edu/~nsun/f19-18675-sch.pdf",
+          "outcomes": [
+            "math.measure-extension",
+            "prob.pi-lambda"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "sourceType": "outline",
+          "mappingEvidence": [
+            "https://math.mit.edu/~nsun/f19-18675-sch.pdf"
+          ]
+        },
+        {
+          "id": "lec04",
+          "label": "Lecture 4",
+          "title": "Random variables (measurable functions) and expectation (Lebesgue integral)",
+          "module": "Measure-theoretic foundations",
+          "source": "https://math.mit.edu/~nsun/f19-18675-sch.pdf",
+          "outcomes": [
+            "math.measurable-functions",
+            "math.lebesgue-integral"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "sourceType": "outline",
+          "mappingEvidence": [
+            "https://math.mit.edu/~nsun/f19-18675-sch.pdf"
+          ]
+        },
+        {
+          "id": "lec05",
+          "label": "Lecture 5",
+          "title": "Integral convergence theorems, change of variables formula",
+          "module": "Measure-theoretic foundations",
+          "source": "https://math.mit.edu/~nsun/f19-18675-sch.pdf",
+          "outcomes": [
+            "math.integral-convergence"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "sourceType": "outline",
+          "mappingEvidence": [
+            "https://math.mit.edu/~nsun/f19-18675-sch.pdf"
+          ]
+        },
+        {
+          "id": "lec06",
+          "label": "Lecture 6",
+          "title": "Product measures; Tonelli and Fubini theorems",
+          "module": "Measure-theoretic foundations",
+          "source": "https://math.mit.edu/~nsun/f19-18675-sch.pdf",
+          "outcomes": [
+            "math.product-measures",
+            "math.fubini-tonelli"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "sourceType": "outline",
+          "mappingEvidence": [
+            "https://math.mit.edu/~nsun/f19-18675-sch.pdf"
+          ]
+        },
+        {
+          "id": "lec07",
+          "label": "Lecture 7",
+          "title": "Measures on infinite product spaces",
+          "module": "Measure-theoretic foundations",
+          "source": "https://math.mit.edu/~nsun/f19-18675-sch.pdf",
+          "outcomes": [
+            "prob.infinite-product-measures"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "sourceType": "outline",
+          "mappingEvidence": [
+            "https://math.mit.edu/~nsun/f19-18675-sch.pdf"
+          ]
+        },
+        {
+          "id": "lec08",
+          "label": "Lecture 8",
+          "title": "Independence; basic moment inequalities; L² weak law of large numbers",
+          "module": "Laws of large numbers and deviations",
+          "source": "https://math.mit.edu/~nsun/f19-18675-sch.pdf",
+          "outcomes": [
+            "prob.independence-sigmafields",
+            "prob.weak-law-basic"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "sourceType": "outline",
+          "mappingEvidence": [
+            "https://math.mit.edu/~nsun/f19-18675-sch.pdf"
+          ]
+        },
+        {
+          "id": "lec09",
+          "label": "Lecture 9",
+          "title": "Laws of large numbers",
+          "module": "Laws of large numbers and deviations",
+          "source": "https://math.mit.edu/~nsun/f19-18675-sch.pdf",
+          "outcomes": [
+            "prob.lln-proof"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "sourceType": "outline",
+          "mappingEvidence": [
+            "https://math.mit.edu/~nsun/f19-18675-sch.pdf"
+          ]
+        },
+        {
+          "id": "lec10",
+          "label": "Lecture 10",
+          "title": "Introduction to large deviations theory",
+          "module": "Laws of large numbers and deviations",
+          "source": "https://math.mit.edu/~nsun/f19-18675-sch.pdf",
+          "outcomes": [
+            "prob.chernoff-bounds"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "sourceType": "outline",
+          "mappingEvidence": [
+            "https://math.mit.edu/~nsun/f19-18675-sch.pdf"
+          ]
+        },
+        {
+          "id": "lec11",
+          "label": "Lecture 11",
+          "title": "Large deviations for the empirical mean: Cramér’s theorem",
+          "module": "Laws of large numbers and deviations",
+          "source": "https://math.mit.edu/~nsun/f19-18675-sch.pdf",
+          "outcomes": [
+            "prob.cramer-large-deviations"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "sourceType": "outline",
+          "mappingEvidence": [
+            "https://math.mit.edu/~nsun/f19-18675-sch.pdf"
+          ]
+        },
+        {
+          "id": "lec12",
+          "label": "Lecture 12",
+          "title": "Convolutions; introduction to the Fourier transform",
+          "module": "Fourier analysis and weak convergence",
+          "source": "https://math.mit.edu/~nsun/f19-18675-sch.pdf",
+          "outcomes": [
+            "prob.characteristic-functions"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "sourceType": "outline",
+          "mappingEvidence": [
+            "https://math.mit.edu/~nsun/f19-18675-sch.pdf"
+          ]
+        },
+        {
+          "id": "lec13",
+          "label": "Lecture 13",
+          "title": "Fourier inversion for probability measures on the real line",
+          "module": "Fourier analysis and weak convergence",
+          "source": "https://math.mit.edu/~nsun/f19-18675-sch.pdf",
+          "outcomes": [
+            "prob.fourier-inversion"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "sourceType": "outline",
+          "mappingEvidence": [
+            "https://math.mit.edu/~nsun/f19-18675-sch.pdf"
+          ]
+        },
+        {
+          "id": "lec14",
+          "label": "Lecture 14",
+          "title": "Weak convergence and the central limit theorem",
+          "module": "Fourier analysis and weak convergence",
+          "source": "https://math.mit.edu/~nsun/f19-18675-sch.pdf",
+          "outcomes": [
+            "prob.clt-proof"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "sourceType": "outline",
+          "mappingEvidence": [
+            "https://math.mit.edu/~nsun/f19-18675-sch.pdf"
+          ]
+        },
+        {
+          "id": "lec15",
+          "label": "Lecture 15",
+          "title": "Weak convergence: some more examples and theory",
+          "module": "Fourier analysis and weak convergence",
+          "source": "https://math.mit.edu/~nsun/f19-18675-sch.pdf",
+          "outcomes": [
+            "prob.weak-convergence"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "sourceType": "outline",
+          "mappingEvidence": [
+            "https://math.mit.edu/~nsun/f19-18675-sch.pdf"
+          ]
+        },
+        {
+          "id": "lec16",
+          "label": "Lecture 16",
+          "title": "Conclusion of weak convergence; introduction to conditional expectation",
+          "module": "Fourier analysis and weak convergence",
+          "source": "https://math.mit.edu/~nsun/f19-18675-sch.pdf",
+          "outcomes": [
+            "prob.weak-convergence"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "sourceType": "outline",
+          "mappingEvidence": [
+            "https://math.mit.edu/~nsun/f19-18675-sch.pdf"
+          ]
+        },
+        {
+          "id": "lec17",
+          "label": "Lecture 17",
+          "title": "Conditional expectation; introduction to martingales",
+          "module": "Conditional expectation and martingales",
+          "source": "https://math.mit.edu/~nsun/f19-18675-sch.pdf",
+          "outcomes": [
+            "prob.conditional-expectation-measure",
+            "prob.martingale-definition"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "sourceType": "outline",
+          "mappingEvidence": [
+            "https://math.mit.edu/~nsun/f19-18675-sch.pdf"
+          ]
+        },
+        {
+          "id": "lec18",
+          "label": "Lecture 18",
+          "title": "Upcrossing inequality, submartingale convergence theorem",
+          "module": "Conditional expectation and martingales",
+          "source": "https://math.mit.edu/~nsun/f19-18675-sch.pdf",
+          "outcomes": [
+            "prob.submartingale-upcrossing"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "sourceType": "outline",
+          "mappingEvidence": [
+            "https://math.mit.edu/~nsun/f19-18675-sch.pdf"
+          ]
+        },
+        {
+          "id": "lec19",
+          "label": "Lecture 19",
+          "title": "Lp martingale convergence theorem, branching processes example",
+          "module": "Conditional expectation and martingales",
+          "source": "https://math.mit.edu/~nsun/f19-18675-sch.pdf",
+          "outcomes": [
+            "prob.martingale-lp-convergence"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "sourceType": "outline",
+          "mappingEvidence": [
+            "https://math.mit.edu/~nsun/f19-18675-sch.pdf"
+          ]
+        },
+        {
+          "id": "lec20",
+          "label": "Lecture 20",
+          "title": "Uniform integrability and L¹ convergence; Doob martingales",
+          "module": "Conditional expectation and martingales",
+          "source": "https://math.mit.edu/~nsun/f19-18675-sch.pdf",
+          "outcomes": [
+            "prob.uniform-integrability"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "sourceType": "outline",
+          "mappingEvidence": [
+            "https://math.mit.edu/~nsun/f19-18675-sch.pdf"
+          ]
+        },
+        {
+          "id": "lec21",
+          "label": "Lecture 21",
+          "title": "Optional stopping theorems",
+          "module": "Conditional expectation and martingales",
+          "source": "https://math.mit.edu/~nsun/f19-18675-sch.pdf",
+          "outcomes": [
+            "prob.optional-stopping-theory"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "sourceType": "outline",
+          "mappingEvidence": [
+            "https://math.mit.edu/~nsun/f19-18675-sch.pdf"
+          ]
+        },
+        {
+          "id": "lec22",
+          "label": "Lecture 22",
+          "title": "Reverse martingales; Kolmogorov and Hewitt–Savage zero-one laws",
+          "module": "Conditional expectation and martingales",
+          "source": "https://math.mit.edu/~nsun/f19-18675-sch.pdf",
+          "outcomes": [
+            "prob.zero-one-laws"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "sourceType": "outline",
+          "mappingEvidence": [
+            "https://math.mit.edu/~nsun/f19-18675-sch.pdf"
+          ]
+        },
+        {
+          "id": "lec23",
+          "label": "Lecture 23",
+          "title": "Martingale perspective on Radon–Nikodym derivatives",
+          "module": "Conditional expectation and martingales",
+          "source": "https://math.mit.edu/~nsun/f19-18675-sch.pdf",
+          "outcomes": [
+            "math.radon-nikodym"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "sourceType": "outline",
+          "mappingEvidence": [
+            "https://math.mit.edu/~nsun/f19-18675-sch.pdf"
+          ]
+        },
+        {
+          "id": "lec24",
+          "label": "Lecture 24",
+          "title": "Martingale-based proof of the Kesten–Stigum “L log L criterion”",
+          "module": "Conditional expectation and martingales",
+          "source": "https://math.mit.edu/~nsun/f19-18675-sch.pdf",
+          "outcomes": [
+            "prob.branching-martingales"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "sourceType": "outline",
+          "mappingEvidence": [
+            "https://math.mit.edu/~nsun/f19-18675-sch.pdf"
+          ]
+        },
+        {
+          "id": "lec25",
+          "label": "Lecture 25",
+          "title": "The ζ(2) limit in the random assignment problem",
+          "module": "Conditional expectation and martingales",
+          "source": "https://math.mit.edu/~nsun/f19-18675-sch.pdf",
+          "outcomes": [
+            "prob.random-assignment"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。",
+          "sourceType": "outline",
+          "mappingEvidence": [
+            "https://math.mit.edu/~nsun/f19-18675-sch.pdf"
+          ]
+        }
+      ],
+      "outlineSource": "https://math.mit.edu/~nsun/f19-18675-sch.pdf",
+      "outlineCount": 25,
+      "outlineComplete": true,
+      "outlineVerified": "2026-10-26",
+      "outlineUnit": "lecture",
+      "outlineNotes": "Nike Sun Fall 2019 官方 Lecture topics PDF 的全部 25 次编号讲座。PDF 是教师的简要主题和定理记录，并自行说明并非详尽讲义；学生笔记不当作教师材料。课程没有官方完整视频系列。",
+      "unitLabel": "讲",
+      "progressCountNote": "Nike Sun Fall 2019 官方 Lecture topics PDF 的全部 25 次编号讲座。PDF 是教师的简要主题和定理记录，并自行说明并非详尽讲义；学生笔记不当作教师材料。课程没有官方完整视频系列。"
+    },
+    {
+      "id": "stanford-stats200",
+      "code": "STATS 200",
+      "title": "Introduction to Statistical Inference",
+      "titleZh": "统计推断导论",
+      "school": "Stanford",
+      "version": "Autumn 2016 · Zhou Fan",
+      "domain": "statistics",
+      "stage": 3,
+      "role": "alternative",
+      "tracks": [
+        "research",
+        "data"
+      ],
+      "purpose": "作为 18.650 的理论统计替代路线，把概率连接到估计、检验、渐近理论和贝叶斯分析；适合用简洁讲义补推断框架。",
+      "url": "https://web.stanford.edu/class/stats200/",
+      "syllabus": "https://web.stanford.edu/class/stats200/",
+      "checked": "2026-10-26",
+      "materials": [
+        "notes",
+        "exercises",
+        "solutions"
+      ],
+      "coverage": "full-outline",
+      "summary": [
+        "检验与估计",
+        "渐近推断与 bootstrap",
+        "贝叶斯分析与统计模型"
+      ],
+      "prerequisites": [
+        {
+          "id": "mit-6041sc",
+          "kind": "inferred",
+          "reason": "2016 官方要求 STATS 116 概率基础；6.041SC 是本图的准备路径，不是官方指定等价课程。",
+          "source": "https://web.stanford.edu/class/stats200/"
+        },
+        {
+          "id": "mit-1802sc",
+          "kind": "inferred",
+          "reason": "2016 官方要求 MATH 52 多变量微积分；18.02SC 提供相关微积分准备，仍须按所需内容补齐。",
+          "source": "https://web.stanford.edu/class/stats200/"
+        }
+      ],
+      "requirements": [
+        {
+          "title": "官方 STATS 116 要求对应的概率准备",
+          "outcomes": [
+            "prob.event-conditioning",
+            "prob.event-independence-pair",
+            "prob.joint-distributions",
+            "prob.expectation",
+            "prob.variance-covariance"
+          ],
+          "source": "https://web.stanford.edu/class/stats200/"
+        },
+        {
+          "title": "官方 MATH 52 要求对应的多变量微积分准备",
+          "outcomes": [
+            "math.partial-definition",
+            "math.multivariable-linear-approximation",
+            "math.double-integral-basic",
+            "math.integral-order",
+            "math.jacobian-substitution"
+          ],
+          "source": "https://web.stanford.edu/class/stats200/"
+        },
+        {
+          "title": "基本编程或愿意边学边补；作业包含模拟和数据分析，此处不自动判定编程能力。",
+          "outcomes": [],
+          "source": "https://web.stanford.edu/class/stats200/"
+        }
+      ],
+      "materialNote": "官方站公开 29 讲的 PDF 讲义及 8 次作业、答案；已抽查贝叶斯分析、先验、MLE、期末复习与第 8 次作业答案可读取。部分教材阅读链接指向 Canvas；本目录使用公开讲义与作业。该站未列公开讲课视频。",
+      "coverageNote": "已核对该版本完整官方课次目录；知识点仅在对应课次范围核实后映射。",
+      "resourceLinks": [
+        {
+          "title": "官方讲义与授课日程",
+          "url": "https://web.stanford.edu/class/stats200/lectures.html"
+        },
+        {
+          "title": "官方作业与答案",
+          "url": "https://web.stanford.edu/class/stats200/homework.html"
+        },
+        {
+          "title": "贝叶斯分析讲义",
+          "url": "https://web.stanford.edu/class/stats200/Lecture20.pdf"
+        },
+        {
+          "title": "先验分布讲义",
+          "url": "https://web.stanford.edu/class/stats200/Lecture21.pdf"
+        }
+      ],
+      "units": [
+        {
+          "id": "lec01",
+          "label": "Lecture 1",
+          "title": "Course introduction, polling",
+          "module": "Unit 0 — Introduction and tools",
+          "source": "https://web.stanford.edu/class/stats200/Lecture01.pdf",
+          "outcomes": [],
+          "mapping": "syllabus",
+          "kind": "lecture",
+          "note": "课次已核实；现有材料不足以把本次内容与完整规范知识范围精确对齐，待进一步核对。"
+        },
+        {
+          "id": "lec02",
+          "label": "Lecture 2",
+          "title": "Probability review",
+          "module": "Unit 0 — Introduction and tools",
+          "source": "https://web.stanford.edu/class/stats200/Lecture02.pdf",
+          "outcomes": [],
+          "mapping": "reviewed-outline",
+          "kind": "review",
+          "note": "本课次为复习、考试或概览，不由此点亮全课知识。"
+        },
+        {
+          "id": "lec03",
+          "label": "Lecture 3",
+          "title": "Probability review (cont'd)",
+          "module": "Unit 0 — Introduction and tools",
+          "source": "https://web.stanford.edu/class/stats200/Lecture03.pdf",
+          "outcomes": [],
+          "mapping": "reviewed-outline",
+          "kind": "review",
+          "note": "本课次为复习、考试或概览，不由此点亮全课知识。"
+        },
+        {
+          "id": "lec04",
+          "label": "Lecture 4",
+          "title": "Asymptotics and simulation",
+          "module": "Unit 0 — Introduction and tools",
+          "source": "https://web.stanford.edu/class/stats200/Lecture04.pdf",
+          "outcomes": [
+            "stat.continuous-mapping-basic",
+            "stat.simulation-inference"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。"
+        },
+        {
+          "id": "lec05",
+          "label": "Lecture 5",
+          "title": "Testing a simple null hypothesis",
+          "module": "Unit 1 — Hypothesis testing",
+          "source": "https://web.stanford.edu/class/stats200/Lecture05.pdf",
+          "outcomes": [
+            "stat.hypothesis-testing-basic"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。"
+        },
+        {
+          "id": "lec06",
+          "label": "Lecture 6",
+          "title": "Simple alternatives, Neyman-Pearson lemma",
+          "module": "Unit 1 — Hypothesis testing",
+          "source": "https://web.stanford.edu/class/stats200/Lecture06.pdf",
+          "outcomes": [
+            "stat.neyman-pearson"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。"
+        },
+        {
+          "id": "lec07",
+          "label": "Lecture 7",
+          "title": "Composite hypotheses and the t-test",
+          "module": "Unit 1 — Hypothesis testing",
+          "source": "https://web.stanford.edu/class/stats200/Lecture07.pdf",
+          "outcomes": [
+            "stat.one-sample-t"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。"
+        },
+        {
+          "id": "lec08",
+          "label": "Lecture 8",
+          "title": "Two-sample t-test and signed rank test",
+          "module": "Unit 1 — Hypothesis testing",
+          "source": "https://web.stanford.edu/class/stats200/Lecture08.pdf",
+          "outcomes": [
+            "stat.two-sample-t",
+            "stat.signed-rank-test"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。"
+        },
+        {
+          "id": "lec09",
+          "label": "Lecture 9",
+          "title": "Rank sum test and permutation tests",
+          "module": "Unit 1 — Hypothesis testing",
+          "source": "https://web.stanford.edu/class/stats200/Lecture09.pdf",
+          "outcomes": [
+            "stat.rank-sum-permutation"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。"
+        },
+        {
+          "id": "lec10",
+          "label": "Lecture 10",
+          "title": "Experimental design",
+          "module": "Unit 1 — Hypothesis testing",
+          "source": "https://web.stanford.edu/class/stats200/Lecture10.pdf",
+          "outcomes": [
+            "stat.experimental-design-basic"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。"
+        },
+        {
+          "id": "lec11",
+          "label": "Lecture 11",
+          "title": "Testing multiple hypotheses",
+          "module": "Unit 1 — Hypothesis testing",
+          "source": "https://web.stanford.edu/class/stats200/Lecture11.pdf",
+          "outcomes": [
+            "stat.multiple-testing-basic"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。"
+        },
+        {
+          "id": "lec12",
+          "label": "Lecture 12",
+          "title": "Parametric models, method of moments estimation",
+          "module": "Unit 2 — Parametric inference",
+          "source": "https://web.stanford.edu/class/stats200/Lecture12.pdf",
+          "outcomes": [
+            "stat.parametric-models",
+            "stat.method-of-moments"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。"
+        },
+        {
+          "id": "lec13",
+          "label": "Lecture 13",
+          "title": "Maximum likelihood estimation",
+          "module": "Unit 2 — Parametric inference",
+          "source": "https://web.stanford.edu/class/stats200/Lecture13.pdf",
+          "outcomes": [
+            "stat.likelihood-mle-basic"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。"
+        },
+        {
+          "id": "lec14",
+          "label": "Lecture 14",
+          "title": "Consistency and asymptotic normality of the MLE",
+          "module": "Unit 2 — Parametric inference",
+          "source": "https://web.stanford.edu/class/stats200/Lecture14.pdf",
+          "outcomes": [
+            "stat.mle-asymptotics"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。"
+        },
+        {
+          "id": "lec15",
+          "label": "Lecture 15",
+          "title": "Fisher information, the Cramer-Rao lower bound",
+          "module": "Unit 2 — Parametric inference",
+          "source": "https://web.stanford.edu/class/stats200/Lecture15.pdf",
+          "outcomes": [
+            "stat.fisher-information",
+            "stat.cramer-rao"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。"
+        },
+        {
+          "id": "lec16",
+          "label": "Lecture 16",
+          "title": "MLE under model misspecification",
+          "module": "Unit 2 — Parametric inference",
+          "source": "https://web.stanford.edu/class/stats200/Lecture16.pdf",
+          "outcomes": [
+            "stat.misspecified-mle"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。"
+        },
+        {
+          "id": "lec17",
+          "label": "Lecture 17",
+          "title": "Plug-in estimators, the delta method",
+          "module": "Unit 2 — Parametric inference",
+          "source": "https://web.stanford.edu/class/stats200/Lecture17.pdf",
+          "outcomes": [
+            "stat.delta-method"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。"
+        },
+        {
+          "id": "lec18",
+          "label": "Lecture 18",
+          "title": "Confidence intervals",
+          "module": "Unit 2 — Parametric inference",
+          "source": "https://web.stanford.edu/class/stats200/Lecture18.pdf",
+          "outcomes": [
+            "stat.confidence-intervals-basic"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。"
+        },
+        {
+          "id": "lec19",
+          "label": "Lecture 19",
+          "title": "The bootstrap",
+          "module": "Unit 2 — Parametric inference",
+          "source": "https://web.stanford.edu/class/stats200/Lecture19.pdf",
+          "outcomes": [
+            "stat.bootstrap-basic"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。"
+        },
+        {
+          "id": "lec20",
+          "label": "Lecture 20",
+          "title": "Bayesian analysis",
+          "module": "Unit 2 — Parametric inference",
+          "source": "https://web.stanford.edu/class/stats200/Lecture20.pdf",
+          "outcomes": [
+            "stat.bayesian-updating-basic"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。"
+        },
+        {
+          "id": "lec21",
+          "label": "Lecture 21",
+          "title": "Prior distributions",
+          "module": "Unit 2 — Parametric inference",
+          "source": "https://web.stanford.edu/class/stats200/Lecture21.pdf",
+          "outcomes": [
+            "stat.prior-choice-basic"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。"
+        },
+        {
+          "id": "lec22",
+          "label": "Lecture 22",
+          "title": "Generalized likelihood ratio test",
+          "module": "Unit 2 — Parametric inference",
+          "source": "https://web.stanford.edu/class/stats200/Lecture22.pdf",
+          "outcomes": [
+            "stat.likelihood-ratio-tests"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。"
+        },
+        {
+          "id": "lec23",
+          "label": "Lecture 23",
+          "title": "Testing in contingency tables",
+          "module": "Unit 2 — Parametric inference",
+          "source": "https://web.stanford.edu/class/stats200/Lecture23.pdf",
+          "outcomes": [
+            "stat.contingency-tests"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。"
+        },
+        {
+          "id": "lec24",
+          "label": "Lecture 24",
+          "title": "The Bradley-Terry model",
+          "module": "Unit 3 — Statistical models",
+          "source": "https://web.stanford.edu/class/stats200/Lecture24.pdf",
+          "outcomes": [
+            "stat.bradley-terry"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。"
+        },
+        {
+          "id": "lec25",
+          "label": "Lecture 25",
+          "title": "The linear model",
+          "module": "Unit 3 — Statistical models",
+          "source": "https://web.stanford.edu/class/stats200/Lecture25.pdf",
+          "outcomes": [
+            "stat.gaussian-linear-model-known-variance"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。"
+        },
+        {
+          "id": "lec26",
+          "label": "Lecture 26",
+          "title": "Logistic regression",
+          "module": "Unit 3 — Statistical models",
+          "source": "https://web.stanford.edu/class/stats200/Lecture26.pdf",
+          "outcomes": [
+            "stat.logistic-regression"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。"
+        },
+        {
+          "id": "lec27",
+          "label": "Lecture 27",
+          "title": "Poisson regression",
+          "module": "Unit 3 — Statistical models",
+          "source": "https://web.stanford.edu/class/stats200/Lecture27.pdf",
+          "outcomes": [
+            "stat.poisson-regression"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。"
+        },
+        {
+          "id": "lec28",
+          "label": "Lecture 28",
+          "title": "The proportional hazards model",
+          "module": "Unit 3 — Statistical models",
+          "source": "https://web.stanford.edu/class/stats200/Lecture28.pdf",
+          "outcomes": [
+            "stat.proportional-hazards-basic"
+          ],
+          "mapping": "reviewed-outline",
+          "kind": "lecture",
+          "note": "按本课次官方主题核对所列范围；未列出的细节不计为跨课覆盖。"
+        },
+        {
+          "id": "lec29",
+          "label": "Lecture 29",
+          "title": "Course review, looking ahead",
+          "module": "Unit 3 — Statistical models",
+          "source": "https://web.stanford.edu/class/stats200/Lecture29.pdf",
+          "outcomes": [],
+          "mapping": "reviewed-outline",
+          "kind": "review",
+          "note": "本课次为复习、考试或概览，不由此点亮全课知识。"
+        }
+      ],
+      "outlineSource": "https://web.stanford.edu/class/stats200/lectures.html",
+      "outlineCount": 29,
+      "outlineComplete": true,
+      "outlineVerified": "2026-10-26",
+      "outlineUnit": "lecture",
+      "outlineNotes": "Autumn 2016 官方页面的 29 份 Lecture01–Lecture29 PDF，含概率复习及课程复习；课外 R 入门、考试、节假日不作为编号讲座。网页仍保留 tentative 字样，因此以实际公开的逐讲 PDF 为完成目录的依据。",
+      "unitLabel": "讲",
+      "progressCountNote": "Autumn 2016 官方页面的 29 份 Lecture01–Lecture29 PDF，含概率复习及课程复习；课外 R 入门、考试、节假日不作为编号讲座。网页仍保留 tentative 字样，因此以实际公开的逐讲 PDF 为完成目录的依据。"
+    }
+  ]
+}

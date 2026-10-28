@@ -60,7 +60,7 @@ The conjugate transpose cannot be replaced by the plain transpose. A nonzero com
 ## 来源与核验
 
 - [[01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.2sum.pdf|MIT 18.06SC Session 3.2 summary]]：核对 Hermitian 谱分解与实特征值。
-- [[01_Math/02_linear algebra/03_Positive Definite Matrices and Applications.md#3.2.1 复向量的长度与 Hermitian 内积|课程 3.2.1]]：核对 $A=U\Lambda U^*$ 与共轭转置边界。
+- [[03_Positive Definite Matrices and Applications#3.2.1 复向量的长度与 Hermitian 内积|课程 3.2.1]]：核对 $A=U\Lambda U^*$ 与共轭转置边界。
 <!-- bilingual-en:start -->
 - The MIT 18.06SC Session 3.2 summary was checked for Hermitian spectral decomposition and real eigenvalues.
 - Course Section 3.2.1 was checked for $A=U\Lambda U^*$ and the conjugate-transpose boundary.

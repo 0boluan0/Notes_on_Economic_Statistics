@@ -36,7 +36,7 @@
       "y": 0,
       "width": 430,
       "height": 190,
-      "text": "## [[古典概型等可能条件|计数公式的等可能条件]]\n*Equiprobable counting rule*\n\n“有利个数除以总数”只适用于有限且等可能的基本结果。",
+      "text": "## [[古典概型等可能条件|计数公式的等可能条件]]\n*Equiprobable counting rule*\n\n要让“有利个数除以总数”对所有事件通用，基本结果须有限且等可能。",
       "color": "1"
     },
     {
@@ -65,8 +65,8 @@
       "x": 520,
       "y": 400,
       "width": 430,
-      "height": 200,
-      "text": "## [[条件概率]]\n*Conditional probability*\n\n已知 $B$ 后，把概率空间限制在 $B$ 并重新归一化。",
+      "height": 240,
+      "text": "<!-- bilingual-en:start -->\n## [[条件概率|Conditional probability]]\n\nFor $P(B)>0$, restrict attention to $B$ and rescale its probability to one.\n<!-- bilingual-en:end -->\n\n*条件概率*\n\n当 $P(B)>0$ 时，把考虑范围限制在 $B$，再把其概率重新缩放到一。",
       "color": "5"
     },
     {
@@ -424,7 +424,7 @@
       "toNode": "a00000000000000c",
       "toSide": "top",
       "toEnd": "none",
-      "label": "互斥是反向边界"
+      "label": "正概率互斥：交集为零，边际乘积为正"
     },
     {
       "id": "b00000000000000c",

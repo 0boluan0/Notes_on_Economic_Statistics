@@ -1,0 +1,1906 @@
+{
+  "lesson_id": "st445-lecture-1",
+  "title": "ST445 Lecture 1 · 数据表示与分析前的判断",
+  "version": 2,
+  "source_refs": [
+    {
+      "id": "lecture_pdf",
+      "path": "03_Computer_Science/06_ST445_Managing_and_Visualising_Data/2026_Course_Materials/02_Lecture_Notes/Week_01/ST445 - Week 01 - Lecture.pdf",
+      "sha256": "7cbb19c028e016a83bce6353e95d143c587db589d7eeb34d8960411c6979df55"
+    },
+    {
+      "id": "formal_note",
+      "path": "03_Computer_Science/06_ST445_Managing_and_Visualising_Data/01_数据、数据类型与结构.md",
+      "sha256": "173800a6399f7697e585754fb65585da392de06660e0fc521f80be5863f8e6ae"
+    }
+  ],
+  "objectives": [
+    {
+      "id": "data-contract",
+      "label": "按问题与字段含义解释混合数据",
+      "scope": "对应讲义第3页LO1及LO4：识别数据结构、标识符、字段缺失约定与未知条件；主要依据pp.16–18、29–32、45–46、49–52。"
+    },
+    {
+      "id": "representation",
+      "label": "判断数值和文本表示会怎样改变结果",
+      "scope": "对应LO1及LO4：固定宽度整数、浮点比较、字符与字节、编码；主要依据pp.34–40、48、50。仅检查题设操作，不推断所有库函数行为。"
+    },
+    {
+      "id": "preserve-records",
+      "label": "保留观测单位、次数、顺序与连接关系",
+      "scope": "对应LO1及LO4：容器、原地操作与返回值、缺失含义、表格单位和键；依据pp.41–46、53–54。pp.53–54在正式笔记中属于讲义补充，未声称已定位课堂口述。"
+    },
+    {
+      "id": "workflow",
+      "label": "围绕分析问题核对上下文、标准与来源",
+      "scope": "对应LO1及LO4：数据/信息、流程回返、三个V、时间/代码标准、来源与使用条件；依据pp.10–11、16–18、25、47–55。"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "data-contract-diagnostic",
+      "family_id": "data-contract",
+      "phase": "diagnostic",
+      "scenario": "你接手一份就诊记录。id 为 \"00731\"；country_code 为 \"NA\"，数据字典明确表示 Namibia；temp_c 为 \"NA\"，该列字典明确表示未测量；admitted_at 为 \"05/10/2026 10:05\"，来源没有说明日/月顺序。",
+      "prompt": "根据这条记录及来源说明，给出你的处理决定和依据。",
+      "objective_ids": [
+        "data-contract"
+      ],
+      "items": [
+        {
+          "id": "id",
+          "kind": "text_exact",
+          "prompt": "id这一列应保存什么值？只写值，不加引号。",
+          "accepted": [
+            "00731"
+          ],
+          "explanation": "ID 用于识别，保留前导零；外观像数字不代表需要算术。"
+        },
+        {
+          "id": "missing",
+          "kind": "choice",
+          "prompt": "哪一种缺失处理符合给定数据字典？",
+          "options": [
+            {
+              "value": "both",
+              "label": "两个 NA 都置为缺失"
+            },
+            {
+              "value": "temperature",
+              "label": "保留国家代码 NA，只将温度 NA 置为缺失"
+            },
+            {
+              "value": "neither",
+              "label": "两个 NA 都保留为有效测量"
+            },
+            {
+              "value": "unknown",
+              "label": "暂时无法判断"
+            }
+          ],
+          "accepted": [
+            "temperature"
+          ],
+          "explanation": "相同字符串在不同字段有不同含义；全局替换会丢掉国家信息。"
+        },
+        {
+          "id": "date",
+          "kind": "choice",
+          "prompt": "这条日期最可靠的处理是什么？",
+          "options": [
+            {
+              "value": "uk",
+              "label": "直接按英国日/月顺序解析"
+            },
+            {
+              "value": "us",
+              "label": "直接按美国月/日顺序解析"
+            },
+            {
+              "value": "clarify",
+              "label": "保留原值并标记待确认来源格式"
+            },
+            {
+              "value": "unknown",
+              "label": "暂时无法判断"
+            }
+          ],
+          "accepted": [
+            "clarify"
+          ],
+          "explanation": "两个日期都合法；没有来源约定时，程序能解析也不等于理解正确。"
+        },
+        {
+          "id": "reason",
+          "kind": "explain_self",
+          "prompt": "用两三句话解释你的各项处理决定，并说明依据是什么。",
+          "rubric": [
+            "把 ID 的识别用途与数值运算区分开。",
+            "按字段说明缺失语义，并保留原始值和转换规则。",
+            "指出日期约定仍未知，而不是用所在地替代证据。"
+          ],
+          "explanation": "标识符、国家代码、测量值和日期各有自己的语义；读取规则应分别处理，并保留未确认的日期约定。"
+        }
+      ],
+      "error_routes": [
+        {
+          "item_id": "id",
+          "source_ref": "lecture_pdf",
+          "page": 32,
+          "note_heading": "五、类型要按含义来选",
+          "repair_prompt": "回看类型选择和前导零例子。说清这个字段的用途，再决定是否转换。"
+        },
+        {
+          "item_id": "missing",
+          "source_ref": "lecture_pdf",
+          "page": 51,
+          "note_heading": "十二、标准让不同来源的数据能对得上",
+          "repair_prompt": "回看 Namibia 与默认缺失解析例子。分别写 country_code 和 temp_c 的规则，不使用全局替换表。"
+        },
+        {
+          "item_id": "date",
+          "source_ref": "lecture_pdf",
+          "page": 49,
+          "note_heading": "十二、标准让不同来源的数据能对得上",
+          "repair_prompt": "读 ISO 8601 页，列出本字符串两种可能日期。先确认约定，再规范化。"
+        },
+        {
+          "item_id": "reason",
+          "source_ref": "lecture_pdf",
+          "page": 45,
+          "note_heading": "五、类型要按含义来选",
+          "repair_prompt": "对照类型表，给每个字段写“用途—有效值—未知条件”；合上材料后重述。"
+        }
+      ],
+      "title": "审查一条就诊记录"
+    },
+    {
+      "id": "data-contract-retest",
+      "family_id": "data-contract",
+      "phase": "retest",
+      "scenario": "你审查一次问卷清理。原始记录R1是 respondent_id=\"00082\", response=\"0\", age=\"0\", device={\"os\":\"Android\"}；R2是 respondent_id=\"00083\", response=\"\", age=\"19\", device={\"os\":\"iOS\",\"browser\":\"Safari\"}。数据字典规定：response的0是有效最低评分，空白是未回答；age的0是未回答。清理脚本把ID转成整数，把所有列的0和空白都改成None，并只保留device中预设的os键。清理后R1的response与age都是None，R2的response是None、age是19。原始文件仍有备份。",
+      "prompt": "对照原始记录、字段规则与清理结果，评价处理方案。",
+      "objective_ids": [
+        "data-contract"
+      ],
+      "items": [
+        {
+          "id": "lost-response",
+          "kind": "choice",
+          "prompt": "仅检查response，哪条清理结果未遵循给定字段规则？",
+          "options": [
+            {
+              "value": "r1",
+              "label": "R1"
+            },
+            {
+              "value": "r2",
+              "label": "R2"
+            },
+            {
+              "value": "both",
+              "label": "R1和R2"
+            },
+            {
+              "value": "unknown",
+              "label": "暂时无法判断"
+            }
+          ],
+          "accepted": [
+            "r1"
+          ],
+          "explanation": "R1的0是有效评分，却被改成缺失；R2原本空白，按规则记为缺失是正确的。"
+        },
+        {
+          "id": "minimal-fix",
+          "kind": "choice",
+          "prompt": "重新读取备份时，哪套处理方案符合这份资料的要求？",
+          "options": [
+            {
+              "value": "fill",
+              "label": "把所有None填回0，继续用整数ID和预设的os键"
+            },
+            {
+              "value": "rules",
+              "label": "按字段应用缺失规则，保留原ID，并保留或完整解析device的键值"
+            },
+            {
+              "value": "drop",
+              "label": "删除含None的记录，再去重"
+            },
+            {
+              "value": "unknown",
+              "label": "暂时无法判断"
+            }
+          ],
+          "accepted": [
+            "rules"
+          ],
+          "explanation": "修复应纠正造成信息损失的读取规则：字段分别解释、ID保留原值、可变JSON键不无故丢弃。"
+        },
+        {
+          "id": "recover",
+          "kind": "choice",
+          "prompt": "如果原始备份也丢失，仅凭处理后的response=None，能否区分它原来是有效0还是未回答空白？",
+          "options": [
+            {
+              "value": "yes",
+              "label": "能，所有None都必然来自0"
+            },
+            {
+              "value": "no",
+              "label": "不能，这两种原始值已被合并成同一个结果"
+            },
+            {
+              "value": "age",
+              "label": "只要查看age就一定能恢复"
+            },
+            {
+              "value": "unknown",
+              "label": "暂时无法判断"
+            }
+          ],
+          "accepted": [
+            "no"
+          ],
+          "explanation": "同一个None可能来自不同原值；没有原始记录或额外证据，就无法可靠逆转这个多对一转换。"
+        },
+        {
+          "id": "reason",
+          "kind": "explain_self",
+          "prompt": "给提交者写两三句审核意见：用具体记录支持你的判断，并说明接下来应怎样处理。",
+          "rubric": [
+            "用R1的有效0与R2的空白作对照，说明全局缺失规则会误伤。",
+            "从原始备份重新读取；不把所有None统一补0。",
+            "分别保留ID原值、按列解释缺失，并保留JSON中有意义的可变键。"
+          ],
+          "explanation": "清理规则把有效评分0与真正未回答的空白都映射成None，丢掉了二者的区别。修复要回到原始值，并按列重新应用规则。"
+        }
+      ],
+      "error_routes": [
+        {
+          "item_id": "lost-response",
+          "source_ref": "lecture_pdf",
+          "page": 46,
+          "note_heading": "十一、没有记录，不能直接当成零",
+          "repair_prompt": "给R1与R2分别写出原始response的含义，再比较它们变成None后丢掉的区别。"
+        },
+        {
+          "item_id": "minimal-fix",
+          "source_ref": "lecture_pdf",
+          "page": 31,
+          "note_heading": "四、先看记录的结构，再看文件放在哪里",
+          "repair_prompt": "回看混合问卷结构。分别为固定字段、ID与device键值写一条保留信息的读取规则；再结合第32和46页核对类型与缺失约定。"
+        },
+        {
+          "item_id": "recover",
+          "source_ref": "lecture_pdf",
+          "page": 46,
+          "note_heading": "十一、没有记录，不能直接当成零",
+          "repair_prompt": "把有效0和未回答空白分别代入旧规则，画出两条箭头；说明为什么只看共同的输出不能恢复原值。"
+        },
+        {
+          "item_id": "reason",
+          "source_ref": "lecture_pdf",
+          "page": 46,
+          "note_heading": "十一、没有记录，不能直接当成零",
+          "repair_prompt": "先构造一条会被旧规则误删的有效记录，再写按列读取规则。用原始备份核对修复结果。"
+        }
+      ],
+      "title": "核查问卷清理结果"
+    },
+    {
+      "id": "data-contract-delayed1",
+      "family_id": "data-contract",
+      "phase": "delayed",
+      "scenario": "一份清理后的档案只剩 id=731；原始文件暂未提供。另一列 reading 的来源规则已知：\"0\" 是真实测量，\"N/A\" 与 \"-999\" 是缺失。其四条原始值是 [\"0\", \"N/A\", \"-999\", \"2.5\"]。你要审计上游清理是否丢失信息。",
+      "prompt": "根据现有档案，作出处理与审计决定，并解释依据。",
+      "objective_ids": [
+        "data-contract"
+      ],
+      "items": [
+        {
+          "id": "recover",
+          "kind": "choice",
+          "prompt": "仅凭整数 731，能否确认原 ID 恰好是 00731？",
+          "options": [
+            {
+              "value": "yes",
+              "label": "能，固定补两个零即可"
+            },
+            {
+              "value": "no",
+              "label": "不能，需要原始值或明确的固定宽度约定"
+            },
+            {
+              "value": "float",
+              "label": "先转浮点数就能还原"
+            },
+            {
+              "value": "unknown",
+              "label": "暂时无法判断"
+            }
+          ],
+          "accepted": [
+            "no"
+          ],
+          "explanation": "前导零被删除后，单凭剩余整数无法知道原宽度；不能自行编造。"
+        },
+        {
+          "id": "missing-count",
+          "kind": "number",
+          "prompt": "四条 reading 中，按给定规则有多少条缺失？",
+          "accepted": [
+            2
+          ],
+          "tolerance": 0,
+          "explanation": "N/A 和 -999 是缺失；0 与2.5是有效测量。"
+        },
+        {
+          "id": "audit",
+          "kind": "choice",
+          "prompt": "要复现这次转换，最需要保留哪组记录？",
+          "options": [
+            {
+              "value": "pretty",
+              "label": "只有清理后的表和截图"
+            },
+            {
+              "value": "rules",
+              "label": "原始值、字段规则、转换步骤与来源版本"
+            },
+            {
+              "value": "type",
+              "label": "只有最终 dtype"
+            },
+            {
+              "value": "unknown",
+              "label": "暂时无法判断"
+            }
+          ],
+          "accepted": [
+            "rules"
+          ],
+          "explanation": "可复现的处理要能追溯转换依据；最终类型不能解释值为何变化。"
+        },
+        {
+          "id": "reason",
+          "kind": "explain_self",
+          "prompt": "解释你对这份档案的处理决定，并列出执行前还需核实的事项。",
+          "rubric": [
+            "明确区分 reading 已知规则与 ID 宽度未知。",
+            "不擅自补零，也不把真实零删除。",
+            "提出找回原始来源/宽度约定，并保存可复现转换依据。"
+          ],
+          "explanation": "reading有明确缺失规则，可以据此清理；ID原宽度未知，必须补来源证据。审计记录还需保留原始值、规则及转换过程。"
+        }
+      ],
+      "error_routes": [
+        {
+          "item_id": "recover",
+          "source_ref": "lecture_pdf",
+          "page": 32,
+          "note_heading": "五、类型要按含义来选",
+          "repair_prompt": "把 731、0731、00731 都转为整数，考虑它们是否可区分。"
+        },
+        {
+          "item_id": "missing-count",
+          "source_ref": "lecture_pdf",
+          "page": 46,
+          "note_heading": "十一、没有记录，不能直接当成零",
+          "repair_prompt": "逐条按本列数据字典标注，不用 Python 真值规则代替缺失规则。"
+        },
+        {
+          "item_id": "audit",
+          "source_ref": "lecture_pdf",
+          "page": 55,
+          "note_heading": "十四、使用数据前，还要问来源和使用条件",
+          "repair_prompt": "围绕“谁提供、何时、做过什么变更”补一条能让别人复查的记录。"
+        },
+        {
+          "item_id": "reason",
+          "source_ref": "lecture_pdf",
+          "page": 55,
+          "note_heading": "十四、使用数据前，还要问来源和使用条件",
+          "repair_prompt": "回看 provenance，再写一个最小索取清单；每项说明它解决哪一个不确定性。"
+        }
+      ],
+      "delay_index": 1,
+      "title": "审计一份清理后的档案"
+    },
+    {
+      "id": "data-contract-delayed2",
+      "family_id": "data-contract",
+      "phase": "delayed",
+      "scenario": "你要合并两套实验室记录。文件 A 的 sample_id=\"0012\"；stage=\"unknown\" 是协议允许的状态类别。文件 B 的 result=\"unknown\" 在说明中代表结果缺失。文件 A 的元数据是可变键的 JSON；结果数值另存固定列。",
+      "prompt": "根据两套资料给出的说明，提出合并前的处理方案。",
+      "objective_ids": [
+        "data-contract"
+      ],
+      "items": [
+        {
+          "id": "sample",
+          "kind": "text_exact",
+          "prompt": "应保留的 sample_id 是什么？",
+          "accepted": [
+            "0012"
+          ],
+          "explanation": "识别键应保留来源形式，除非有明确且可追溯的转换约定。"
+        },
+        {
+          "id": "unknown",
+          "kind": "choice",
+          "prompt": "怎样处理两个 unknown？",
+          "options": [
+            {
+              "value": "all-missing",
+              "label": "两个都置为缺失"
+            },
+            {
+              "value": "split",
+              "label": "A 保留状态类别；B 按约定记为缺失"
+            },
+            {
+              "value": "all-text",
+              "label": "两个都当有效结果字符串"
+            },
+            {
+              "value": "unknown",
+              "label": "暂时无法判断"
+            }
+          ],
+          "accepted": [
+            "split"
+          ],
+          "explanation": "语义来自各字段协议；合法类别与缺失标记不能混在一个全局规则中。"
+        },
+        {
+          "id": "json",
+          "kind": "choice",
+          "prompt": "A 的可变键、可嵌套 JSON 元数据属于哪一种结构？",
+          "options": [
+            {
+              "value": "semi",
+              "label": "半结构化"
+            },
+            {
+              "value": "flat",
+              "label": "固定模式的同型数值数组"
+            },
+            {
+              "value": "raw",
+              "label": "必须完全当成无结构自由文本"
+            },
+            {
+              "value": "unknown",
+              "label": "暂时无法判断"
+            }
+          ],
+          "accepted": [
+            "semi"
+          ],
+          "explanation": "JSON 的键给出部分结构，记录仍可不同和嵌套。"
+        },
+        {
+          "id": "reason",
+          "kind": "explain_self",
+          "prompt": "说明你的合并前检查方案，并解释每项检查与任务的关系。",
+          "rubric": [
+            "检查标识符格式/语义，避免错配与丢前导零。",
+            "核对每列缺失与合法类别约定。",
+            "区分 JSON 内容解析与固定结果列的类型验证；不声称合并成功就证明语义正确。"
+          ],
+          "explanation": "合并要先确认键的含义和表示，再核对各列允许的类别与缺失标记；JSON内部结构也需要按其键和值解释。"
+        }
+      ],
+      "error_routes": [
+        {
+          "item_id": "sample",
+          "source_ref": "lecture_pdf",
+          "page": 32,
+          "note_heading": "五、类型要按含义来选",
+          "repair_prompt": "说明 sample_id 用来连接还是计算，并检查前导零的作用。"
+        },
+        {
+          "item_id": "unknown",
+          "source_ref": "lecture_pdf",
+          "page": 46,
+          "note_heading": "十一、没有记录，不能直接当成零",
+          "repair_prompt": "分别写出 stage 和 result 所允许的值，解释 unknown 在各列的意思。"
+        },
+        {
+          "item_id": "json",
+          "source_ref": "lecture_pdf",
+          "page": 29,
+          "note_heading": "四、先看记录的结构，再看文件放在哪里",
+          "repair_prompt": "说出一个可变键例子和一个固定列例子，比较读取步骤。"
+        },
+        {
+          "item_id": "reason",
+          "source_ref": "lecture_pdf",
+          "page": 52,
+          "note_heading": "十二、标准让不同来源的数据能对得上",
+          "repair_prompt": "回看工具猜类型的失败例子，再为当前两个文件写检查，不复述上一场景。"
+        }
+      ],
+      "delay_index": 2,
+      "title": "约定两套实验室记录的合并规则"
+    },
+    {
+      "id": "representation-diagnostic",
+      "family_id": "representation",
+      "phase": "diagnostic",
+      "scenario": "传感器计数存为 NumPy int8 数组。已知 int8 范围是 -128 到127，代码 np.array([120], dtype=np.int8) + 10。另一个测量检查用 6.14 - 3.14 == 3.0；测量允许绝对误差0.01。",
+      "prompt": "预测代码结果，并判断这些表示与检查方式是否满足题设要求。",
+      "objective_ids": [
+        "representation"
+      ],
+      "items": [
+        {
+          "id": "wrap",
+          "kind": "number",
+          "prompt": "第一个数组结果中的数是多少？",
+          "accepted": [
+            -126
+          ],
+          "tolerance": 0,
+          "explanation": "数学结果130越过int8上限，按该固定宽度数组加法回绕为-126。"
+        },
+        {
+          "id": "dtype",
+          "kind": "choice",
+          "prompt": "若真实计数及中间结果都在0到1000，以下哪种类型能容纳它们？",
+          "options": [
+            {
+              "value": "int8",
+              "label": "int8"
+            },
+            {
+              "value": "uint8",
+              "label": "uint8"
+            },
+            {
+              "value": "int16",
+              "label": "int16"
+            },
+            {
+              "value": "unknown",
+              "label": "暂时无法判断"
+            }
+          ],
+          "accepted": [
+            "int16"
+          ],
+          "explanation": "int8最大127、uint8最大255；int16足以覆盖这里已知的0到1000。"
+        },
+        {
+          "id": "float",
+          "kind": "choice",
+          "prompt": "怎样按题设检查第二个测量结果？",
+          "options": [
+            {
+              "value": "equal",
+              "label": "仅用 ==，不相等就判测量失败"
+            },
+            {
+              "value": "tolerance",
+              "label": "按绝对误差0.01比较，例如 abs(x-3.0) <= 0.01"
+            },
+            {
+              "value": "round-all",
+              "label": "把所有数字都转整数后比较"
+            },
+            {
+              "value": "unknown",
+              "label": "暂时无法判断"
+            }
+          ],
+          "accepted": [
+            "tolerance"
+          ],
+          "explanation": "二进制浮点近似不宜代替题设测量容差；任意取整会改动问题。"
+        },
+        {
+          "id": "reason",
+          "kind": "explain_self",
+          "prompt": "说明你会怎样验证这两项计算是否符合各自的业务要求，并解释前面回答的依据。",
+          "rubric": [
+            "说明固定宽度可产生与数学结果不同的回绕。",
+            "检查计数及中间值范围。",
+            "把浮点容差与测量要求关联，而不是声称任何场景都不能用相等比较。"
+          ],
+          "explanation": "固定宽度运算可以正常返回错误的业务计数；测量则应按允许误差验收。两者需要不同的正确性检查。"
+        }
+      ],
+      "error_routes": [
+        {
+          "item_id": "wrap",
+          "source_ref": "lecture_pdf",
+          "page": 37,
+          "note_heading": "六、整数能装多大，取决于表示方式",
+          "repair_prompt": "回看固定宽度回绕图，分别写数学结果和8位表示结果。"
+        },
+        {
+          "item_id": "dtype",
+          "source_ref": "lecture_pdf",
+          "page": 35,
+          "note_heading": "六、整数能装多大，取决于表示方式",
+          "repair_prompt": "先写范围再选类型；同时检查中间结果，而非只看输入120。"
+        },
+        {
+          "item_id": "float",
+          "source_ref": "lecture_pdf",
+          "page": 39,
+          "note_heading": "七、小数计算有误差，比较时要考虑它",
+          "repair_prompt": "回看浮点例子，区分精确相等与满足本次测量精度。"
+        },
+        {
+          "item_id": "reason",
+          "source_ref": "lecture_pdf",
+          "page": 38,
+          "note_heading": "六、整数能装多大，取决于表示方式",
+          "repair_prompt": "对照可变/固定宽度，再补一句测量误差标准；合上资料重新说明。"
+        }
+      ],
+      "title": "核对传感器的数值结果"
+    },
+    {
+      "id": "representation-retest",
+      "family_id": "representation",
+      "phase": "retest",
+      "scenario": "你核对一个字节协议。字段 text 是字符串 \"éA\"（其中é为U+00E9），按 UTF-8 编码。另一个字段用 NumPy uint8 数组存储：np.array([250], dtype=np.uint8) + np.array([10], dtype=np.uint8)。",
+      "prompt": "预测长度与数组运算结果，并说明依据；先不运行例子。",
+      "objective_ids": [
+        "representation"
+      ],
+      "items": [
+        {
+          "id": "characters",
+          "kind": "number",
+          "prompt": "len(\"éA\") 是多少？",
+          "accepted": [
+            2
+          ],
+          "tolerance": 0,
+          "explanation": "这里的字符串含é和A两个码点。"
+        },
+        {
+          "id": "bytes",
+          "kind": "number",
+          "prompt": "len(\"éA\".encode(\"utf-8\")) 是多少？",
+          "accepted": [
+            3
+          ],
+          "tolerance": 0,
+          "explanation": "é使用2个UTF-8字节，A使用1个，共3字节。"
+        },
+        {
+          "id": "wrap",
+          "kind": "number",
+          "prompt": "上述 uint8 数组加法的结果值是多少？",
+          "accepted": [
+            4
+          ],
+          "tolerance": 0,
+          "explanation": "250+10=260，超出0到255；此数组操作回绕为4。"
+        },
+        {
+          "id": "reason",
+          "kind": "explain_self",
+          "prompt": "分别说明三个预测的依据，并给这两个协议字段各写一项验收检查。",
+          "rubric": [
+            "分清Python字符串长度与UTF-8编码长度。",
+            "指出字节预算/截断需依据编码，不凭字符数。",
+            "分清计数数学结果260与uint8表示结果4，并提出适合范围的表示。"
+          ],
+          "explanation": "éA有两个码点却占三个UTF-8字节；260则超出uint8范围。协议必须同时满足编码长度与数值容量。"
+        }
+      ],
+      "error_routes": [
+        {
+          "item_id": "characters",
+          "source_ref": "lecture_pdf",
+          "page": 40,
+          "note_heading": "八、文字、码点和字节是不同的东西",
+          "repair_prompt": "对照字符、码点、编码字节三列；本题没有组合附加符号。"
+        },
+        {
+          "item_id": "bytes",
+          "source_ref": "lecture_pdf",
+          "page": 40,
+          "note_heading": "八、文字、码点和字节是不同的东西",
+          "repair_prompt": "按字符分别数UTF-8字节，再与Python字符串长度比较。"
+        },
+        {
+          "item_id": "wrap",
+          "source_ref": "lecture_pdf",
+          "page": 37,
+          "note_heading": "六、整数能装多大，取决于表示方式",
+          "repair_prompt": "先算260，再按256种编码取回绕值；不要照搬有符号int8结果。"
+        },
+        {
+          "item_id": "reason",
+          "source_ref": "lecture_pdf",
+          "page": 40,
+          "note_heading": "八、文字、码点和字节是不同的东西",
+          "repair_prompt": "画出éA的两个字符对应三个字节，再画出计数超出类型范围的位置。"
+        }
+      ],
+      "title": "检查一个字节协议"
+    },
+    {
+      "id": "representation-delayed1",
+      "family_id": "representation",
+      "phase": "delayed",
+      "scenario": "数据交换报告显示 \"café\" 变成了 \"cafÃ©\"；发送方确认原始字节是 UTF-8。另一个字段要容纳 \"€A\"。计数输入最大200，但目标输出可能达到400，开发者打算把输出写回 uint8。",
+      "prompt": "评价报告中的现象与存储方案，说明你的判断和后续检查。",
+      "objective_ids": [
+        "representation"
+      ],
+      "items": [
+        {
+          "id": "decoder",
+          "kind": "choice",
+          "prompt": "针对收到的文本，首先应核对哪一层？",
+          "options": [
+            {
+              "value": "font",
+              "label": "只换显示字体"
+            },
+            {
+              "value": "decode",
+              "label": "读取原始字节时使用的解码方式"
+            },
+            {
+              "value": "drop",
+              "label": "删除所有非ASCII字符"
+            },
+            {
+              "value": "unknown",
+              "label": "暂时无法判断"
+            }
+          ],
+          "accepted": [
+            "decode"
+          ],
+          "explanation": "UTF-8字节被错误解码会产生该类乱码；删除字符会丢信息。"
+        },
+        {
+          "id": "budget",
+          "kind": "number",
+          "prompt": "\"€A\" 的 UTF-8 字节数是多少？",
+          "accepted": [
+            4
+          ],
+          "tolerance": 0,
+          "explanation": "€使用3字节，A使用1字节，共4。"
+        },
+        {
+          "id": "capacity",
+          "kind": "choice",
+          "prompt": "uint8 能否表示最大400的目标输出？",
+          "options": [
+            {
+              "value": "yes",
+              "label": "能，输入都不超过200"
+            },
+            {
+              "value": "no",
+              "label": "不能，输出超过255，需要足够宽的类型"
+            },
+            {
+              "value": "depends-text",
+              "label": "只要转为UTF-8就能表示"
+            },
+            {
+              "value": "unknown",
+              "label": "暂时无法判断"
+            }
+          ],
+          "accepted": [
+            "no"
+          ],
+          "explanation": "输出和中间值也必须装得下，输入范围安全不保证输出安全。"
+        },
+        {
+          "id": "reason",
+          "kind": "explain_self",
+          "prompt": "说明你的判断依据，以及接下来会保存和检查哪些资料或结果。",
+          "rubric": [
+            "保留原始字节/声明的编码，确认正确解码后文本含义未变。",
+            "用含多字节字符的样例检查字节长度。",
+            "用接近输出上界的计数检查类型容量，而不只测小输入。"
+          ],
+          "explanation": "原始字节与编码声明能定位解码问题；多字节字符和接近400的输出能分别暴露字符预算与类型容量错误。"
+        }
+      ],
+      "error_routes": [
+        {
+          "item_id": "decoder",
+          "source_ref": "lecture_pdf",
+          "page": 50,
+          "note_heading": "八、文字、码点和字节是不同的东西",
+          "repair_prompt": "回看UTF-8被按Latin-1解码的例子，区分字节本身与解释字节的方式。"
+        },
+        {
+          "item_id": "budget",
+          "source_ref": "lecture_pdf",
+          "page": 40,
+          "note_heading": "八、文字、码点和字节是不同的东西",
+          "repair_prompt": "先按编码表逐个计数；不要按两个字符直接分配两个字节。"
+        },
+        {
+          "item_id": "capacity",
+          "source_ref": "lecture_pdf",
+          "page": 35,
+          "note_heading": "六、整数能装多大，取决于表示方式",
+          "repair_prompt": "分别写输入上界与输出上界，再和类型上限比较。"
+        },
+        {
+          "item_id": "reason",
+          "source_ref": "lecture_pdf",
+          "page": 50,
+          "note_heading": "八、文字、码点和字节是不同的东西",
+          "repair_prompt": "把乱码排查与整数范围检查分开列为两步，各附一个能暴露原错误的样例。"
+        }
+      ],
+      "delay_index": 1,
+      "title": "审查跨系统交换报告"
+    },
+    {
+      "id": "representation-delayed2",
+      "family_id": "representation",
+      "phase": "delayed",
+      "scenario": "一次计算的日志记载：输入100与40存成int8数组并逐元素相加，输出-116。另一项测量记录为2.01，参考值2.00，验收标准是绝对误差不超过0.02。",
+      "prompt": "根据日志和验收要求，判断这两项结果并解释依据。",
+      "objective_ids": [
+        "representation"
+      ],
+      "items": [
+        {
+          "id": "expected",
+          "kind": "number",
+          "prompt": "计数加法在数学上的正确结果是多少？",
+          "accepted": [
+            140
+          ],
+          "tolerance": 0,
+          "explanation": "100+40=140；实际负数不是合理的真实计数。"
+        },
+        {
+          "id": "cause",
+          "kind": "choice",
+          "prompt": "哪种解释与给定日志相符？",
+          "options": [
+            {
+              "value": "missing",
+              "label": "负数必然表示缺失"
+            },
+            {
+              "value": "overflow",
+              "label": "该int8数组运算超过127而回绕"
+            },
+            {
+              "value": "rounding",
+              "label": "小数四舍五入产生负数"
+            },
+            {
+              "value": "unknown",
+              "label": "暂时无法判断"
+            }
+          ],
+          "accepted": [
+            "overflow"
+          ],
+          "explanation": "140超过int8上限；固定宽度回绕得到-116。这里没有来源规则将它定义为缺失。"
+        },
+        {
+          "id": "measurement",
+          "kind": "choice",
+          "prompt": "2.01对参考2.00是否满足题设的绝对误差标准？",
+          "options": [
+            {
+              "value": "pass",
+              "label": "满足"
+            },
+            {
+              "value": "fail",
+              "label": "不满足，只要不精确相等就失败"
+            },
+            {
+              "value": "integer",
+              "label": "必须先把两者截成整数才能判断"
+            },
+            {
+              "value": "unknown",
+              "label": "暂时无法判断"
+            }
+          ],
+          "accepted": [
+            "pass"
+          ],
+          "explanation": "绝对误差约0.01，小于0.02；判断依据是给定容差。"
+        },
+        {
+          "id": "reason",
+          "kind": "explain_self",
+          "prompt": "说明两项结果各应如何验证，并各给一个能检验你的判断的样例。",
+          "rubric": [
+            "计数需要与数学结果/允许范围比对。",
+            "测量需要与有依据的容差比对。",
+            "提出能跨越边界的计数样例和接近容差边界的测量样例。"
+          ],
+          "explanation": "计数应和数学结果及类型范围核对，测量应和明确容差核对。边界附近的样例更容易暴露错误规则。"
+        }
+      ],
+      "error_routes": [
+        {
+          "item_id": "expected",
+          "source_ref": "lecture_pdf",
+          "page": 37,
+          "note_heading": "六、整数能装多大，取决于表示方式",
+          "repair_prompt": "先独立计算，再比较int8允许范围。"
+        },
+        {
+          "item_id": "cause",
+          "source_ref": "lecture_pdf",
+          "page": 35,
+          "note_heading": "六、整数能装多大，取决于表示方式",
+          "repair_prompt": "用类型范围解释输出，不从负号猜业务语义。"
+        },
+        {
+          "item_id": "measurement",
+          "source_ref": "lecture_pdf",
+          "page": 39,
+          "note_heading": "七、小数计算有误差，比较时要考虑它",
+          "repair_prompt": "把题设写成不等式，区分数学误差量和存储近似。"
+        },
+        {
+          "item_id": "reason",
+          "source_ref": "lecture_pdf",
+          "page": 38,
+          "note_heading": "六、整数能装多大，取决于表示方式",
+          "repair_prompt": "把两项的“正确”分别写出来，再选会让错误规则失败的样例。"
+        }
+      ],
+      "delay_index": 2,
+      "title": "核对两项计算的日志"
+    },
+    {
+      "id": "preserve-records-diagnostic",
+      "family_id": "preserve-records",
+      "phase": "diagnostic",
+      "scenario": "四次到站的 delay_min 为 [0, 0, 9, None]。来源明确：0表示准点，None表示该次未记录。你要计算已记录到站的平均延误，并保留每次到站及原顺序。另有代码 delays=[9,0,0]; result=delays.sort()。",
+      "prompt": "根据统计目标和记录要求，回答下面的表示、计算和代码问题。",
+      "objective_ids": [
+        "preserve-records"
+      ],
+      "items": [
+        {
+          "id": "container",
+          "kind": "choice",
+          "prompt": "哪一种容器最直接保留这些到站记录的顺序与重复？",
+          "options": [
+            {
+              "value": "set",
+              "label": "set"
+            },
+            {
+              "value": "list",
+              "label": "list"
+            },
+            {
+              "value": "unique",
+              "label": "先去重再存储"
+            },
+            {
+              "value": "unknown",
+              "label": "暂时无法判断"
+            }
+          ],
+          "accepted": [
+            "list"
+          ],
+          "explanation": "每个0都代表一条真实观测；set去重会改变观察次数。"
+        },
+        {
+          "id": "mean",
+          "kind": "number",
+          "prompt": "按题设的统计目标，平均延误是多少分钟？",
+          "accepted": [
+            3
+          ],
+          "tolerance": 0,
+          "explanation": "(0+0+9)/3=3；None不增加一个虚构的零观测。"
+        },
+        {
+          "id": "sort-return",
+          "kind": "text_exact",
+          "prompt": "上述代码执行后 result 是什么？",
+          "accepted": [
+            "None",
+            "none"
+          ],
+          "explanation": "list.sort修改原列表，返回None；赋值接收的是返回值。"
+        },
+        {
+          "id": "reason",
+          "kind": "explain_self",
+          "prompt": "说明统计结果如何得到、记录要求怎样满足，以及代码执行后应检查哪些对象。",
+          "rubric": [
+            "set会丢重复观测次数。",
+            "填0引入“未知到站恰好准点”的额外假设，改变分母。",
+            "原地排序会改变原记录顺序；若需另一份排序结果，应保留原件并使用合适的新对象。"
+          ],
+          "explanation": "去重会改变观测次数，补零会改变缺失语义，原地排序会改变记录顺序；每一步都要符合当前统计问题。"
+        }
+      ],
+      "error_routes": [
+        {
+          "item_id": "container",
+          "source_ref": "lecture_pdf",
+          "page": 41,
+          "note_heading": "九、容器的选择会改变保留下来的信息",
+          "repair_prompt": "回看容器表，逐项检查顺序、重复、可修改性与本题需求。"
+        },
+        {
+          "item_id": "mean",
+          "source_ref": "lecture_pdf",
+          "page": 46,
+          "note_heading": "十一、没有记录，不能直接当成零",
+          "repair_prompt": "写出分子与分母，并标出未记录的那一次为什么不在该统计量中。"
+        },
+        {
+          "item_id": "sort-return",
+          "source_ref": "lecture_pdf",
+          "page": 44,
+          "note_heading": "十、排序的易错点：改了列表，不等于返回列表",
+          "repair_prompt": "把右侧调用的副作用与返回值拆成两行说明。"
+        },
+        {
+          "item_id": "reason",
+          "source_ref": "lecture_pdf",
+          "page": 41,
+          "note_heading": "九、容器的选择会改变保留下来的信息",
+          "repair_prompt": "按“次数、缺失含义、顺序”三列重看处理步骤，找每一步丢掉的信息。"
+        }
+      ],
+      "title": "检查到站记录与平均延误"
+    },
+    {
+      "id": "preserve-records-retest",
+      "family_id": "preserve-records",
+      "phase": "retest",
+      "scenario": "公交运营商每天重复使用 journey_id=J7；同一行程会多次经过同一站，每次到访有 stop_sequence=1,2,…，且该序号在一个行程内唯一。你还需另存 [4,1,4] 的排序结果，同时保留原到站顺序。",
+      "prompt": "根据记录生成规则和保存要求，作出选择并解释依据。",
+      "objective_ids": [
+        "preserve-records"
+      ],
+      "items": [
+        {
+          "id": "key",
+          "kind": "choice",
+          "prompt": "给定这些约定，哪个组合足以标识一次到访？",
+          "options": [
+            {
+              "value": "journey",
+              "label": "journey_id"
+            },
+            {
+              "value": "stop",
+              "label": "journey_id + stop_name"
+            },
+            {
+              "value": "complete",
+              "label": "date + journey_id + stop_sequence"
+            },
+            {
+              "value": "unknown",
+              "label": "暂时无法判断"
+            }
+          ],
+          "accepted": [
+            "complete"
+          ],
+          "explanation": "日期区分每日复用，行程号区分当日行程，序号区分同一行程的多次到访。"
+        },
+        {
+          "id": "method",
+          "kind": "choice",
+          "prompt": "哪种写法直接满足保留原列表的需求？",
+          "options": [
+            {
+              "value": "sort",
+              "label": "ordered = readings.sort()"
+            },
+            {
+              "value": "sorted",
+              "label": "ordered = sorted(readings)"
+            },
+            {
+              "value": "set",
+              "label": "ordered = set(readings)"
+            },
+            {
+              "value": "unknown",
+              "label": "暂时无法判断"
+            }
+          ],
+          "accepted": [
+            "sorted"
+          ],
+          "explanation": "sorted返回新的排序列表；原地sort改变原顺序并返回None，set又会去重。"
+        },
+        {
+          "id": "original",
+          "kind": "choice",
+          "prompt": "另一个独立检查：执行 readings=[4,1,4]; ordered=[4,1,4]; ordered.sort() 后，readings是什么？",
+          "options": [
+            {
+              "value": "original",
+              "label": "[4,1,4]"
+            },
+            {
+              "value": "sorted",
+              "label": "[1,4,4]"
+            },
+            {
+              "value": "unique",
+              "label": "[1,4]"
+            },
+            {
+              "value": "unknown",
+              "label": "暂时无法判断"
+            }
+          ],
+          "accepted": [
+            "original"
+          ],
+          "explanation": "两次列表构造创建两个对象；ordered.sort()修改ordered，readings的顺序和重复值保持不变。"
+        },
+        {
+          "id": "reason",
+          "kind": "explain_self",
+          "prompt": "说明你选择标识方式与排序写法的依据，并解释独立代码检查中各对象的状态。",
+          "rubric": [
+            "键应符合记录生成规则，考虑跨日期复用和重复到访。",
+            "解释选中组合中每一部分防止哪种冲突。",
+            "说明排序副本保留重复及原顺序，不以简单去重替代标识。"
+          ],
+          "explanation": "日期、行程号和到访序号共同对应一次到访；sorted创建排序结果，同时保留原列表的顺序与重复值。"
+        }
+      ],
+      "error_routes": [
+        {
+          "item_id": "key",
+          "source_ref": "lecture_pdf",
+          "page": 53,
+          "note_heading": "十三、先说清一行是什么，再整理成表格",
+          "repair_prompt": "回看键取决于记录单位的说明。为每天重复及同站重访各构造一次冲突。"
+        },
+        {
+          "item_id": "method",
+          "source_ref": "lecture_pdf",
+          "page": 44,
+          "note_heading": "十、排序的易错点：改了列表，不等于返回列表",
+          "repair_prompt": "列出三种写法的返回值和对原对象的影响。"
+        },
+        {
+          "item_id": "original",
+          "source_ref": "lecture_pdf",
+          "page": 44,
+          "note_heading": "十、排序的易错点：改了列表，不等于返回列表",
+          "repair_prompt": "分别追踪readings与ordered两个名字，不把输出绑定到原列表。"
+        },
+        {
+          "item_id": "reason",
+          "source_ref": "lecture_pdf",
+          "page": 53,
+          "note_heading": "十三、先说清一行是什么，再整理成表格",
+          "repair_prompt": "按照“同一天另一行程、另一日期同编号、同程同站再访”逐个检查候选键。"
+        }
+      ],
+      "title": "检查公交到访的标识与排序"
+    },
+    {
+      "id": "preserve-records-delayed1",
+      "family_id": "preserve-records",
+      "phase": "delayed",
+      "scenario": "一份表把年份放在列上：Camden在2023年10次、2024年20次；Hackney在2023年4次、2024年6次。你要整理为每行一个 borough-year 观测，以便按年份比较。",
+      "prompt": "完成这一表格变换的结构判断与数量核验，并说明依据。",
+      "objective_ids": [
+        "preserve-records"
+      ],
+      "items": [
+        {
+          "id": "rows",
+          "kind": "number",
+          "prompt": "整理后的 borough-year 表应有几行？",
+          "accepted": [
+            4
+          ],
+          "tolerance": 0,
+          "explanation": "2个borough×2个年份，共4个观测。"
+        },
+        {
+          "id": "key",
+          "kind": "choice",
+          "prompt": "在题设中哪一个键对应新表的观测单位？",
+          "options": [
+            {
+              "value": "borough",
+              "label": "borough"
+            },
+            {
+              "value": "year",
+              "label": "year"
+            },
+            {
+              "value": "pair",
+              "label": "borough + year"
+            },
+            {
+              "value": "unknown",
+              "label": "暂时无法判断"
+            }
+          ],
+          "accepted": [
+            "pair"
+          ],
+          "explanation": "同一borough有多个年份，同一年有多个borough，组合才对应一行。"
+        },
+        {
+          "id": "total",
+          "kind": "number",
+          "prompt": "整理前后总次数都应为多少？",
+          "accepted": [
+            40
+          ],
+          "tolerance": 0,
+          "explanation": "10+20+4+6=40；总数一致是检查之一，仍需核对每个键对应的数值。"
+        },
+        {
+          "id": "reason",
+          "kind": "explain_self",
+          "prompt": "描述你整理后的表格结构，并说明如何检查它是否满足题设目标。",
+          "rubric": [
+            "列至少包含borough、year、count；每行为一个borough-year。",
+            "保留4个原始对应关系，而不是只转置表面布局。",
+            "核对键唯一性及逐键数值；不以总数相同作为唯一正确性证据。"
+          ],
+          "explanation": "每行是一个borough-year，因此组合键、逐键数值和总量都应保留。总量相同仍可能掩盖键和值的错配。"
+        }
+      ],
+      "error_routes": [
+        {
+          "item_id": "rows",
+          "source_ref": "lecture_pdf",
+          "page": 54,
+          "note_heading": "十三、先说清一行是什么，再整理成表格",
+          "repair_prompt": "将每个borough与每个年份组合写成一行，再数观测。"
+        },
+        {
+          "item_id": "key",
+          "source_ref": "lecture_pdf",
+          "page": 53,
+          "note_heading": "十三、先说清一行是什么，再整理成表格",
+          "repair_prompt": "分别尝试仅用borough、仅用year定位一行，指出歧义。"
+        },
+        {
+          "item_id": "total",
+          "source_ref": "lecture_pdf",
+          "page": 54,
+          "note_heading": "十三、先说清一行是什么，再整理成表格",
+          "repair_prompt": "核对各borough-year数值和总量；总量相同本身不能证明键没有错配。"
+        },
+        {
+          "item_id": "reason",
+          "source_ref": "lecture_pdf",
+          "page": 54,
+          "note_heading": "十三、先说清一行是什么，再整理成表格",
+          "repair_prompt": "合上材料画出四行新表，然后逐行回到原表确认。"
+        }
+      ],
+      "delay_index": 1,
+      "title": "把年度宽表整理为观测记录"
+    },
+    {
+      "id": "preserve-records-delayed2",
+      "family_id": "preserve-records",
+      "phase": "delayed",
+      "scenario": "调试代码是 readings=[5,5,8]; output=readings.append(0)。每个数表示一次观测，0是有效观测值。开发者提出后续处理方案：删除新增的0，再把readings转成集合。你负责检查代码执行结果和这个方案。",
+      "prompt": "预测代码执行后的状态，再评价后续处理方案。",
+      "objective_ids": [
+        "preserve-records"
+      ],
+      "items": [
+        {
+          "id": "return",
+          "kind": "text_exact",
+          "prompt": "append 调用赋给 output 的值是什么？",
+          "accepted": [
+            "None",
+            "none"
+          ],
+          "explanation": "append修改列表并返回None；这里的None不是一次测量的缺失标记。"
+        },
+        {
+          "id": "length",
+          "kind": "number",
+          "prompt": "调用结束后 readings 的长度是多少？",
+          "accepted": [
+            4
+          ],
+          "tolerance": 0,
+          "explanation": "原3条加上有效0记录，共4条，两个5仍是两个观测。"
+        },
+        {
+          "id": "repair",
+          "kind": "choice",
+          "prompt": "哪一个后续处理方案符合这段代码和记录含义？",
+          "options": [
+            {
+              "value": "delete",
+              "label": "删除0并对剩余值去重"
+            },
+            {
+              "value": "keep",
+              "label": "保留readings中的全部观测，检查时读取列表本身"
+            },
+            {
+              "value": "none-list",
+              "label": "把readings也设成None"
+            },
+            {
+              "value": "unknown",
+              "label": "暂时无法判断"
+            }
+          ],
+          "accepted": [
+            "keep"
+          ],
+          "explanation": "返回None不等于追加失败；去重和删除真实零都会破坏记录。"
+        },
+        {
+          "id": "reason",
+          "kind": "explain_self",
+          "prompt": "说明你对代码结果与后续处理方案的判断依据，并指出应查看哪些对象。",
+          "rubric": [
+            "这里的None是方法返回约定，不表示列表中的测量缺失。",
+            "0已成功追加且题目没有把它定义为缺失。",
+            "两个5是重复值而非重复证据；set会丢次数，无法保留全部观测。"
+          ],
+          "explanation": "append的返回None只描述方法的返回约定；列表已经增加了0。两个5仍对应两次观测，转成set会丢掉次数。"
+        }
+      ],
+      "error_routes": [
+        {
+          "item_id": "return",
+          "source_ref": "lecture_pdf",
+          "page": 44,
+          "note_heading": "十、排序的易错点：改了列表，不等于返回列表",
+          "repair_prompt": "回看原地方法的返回值说明，分别写函数返回与列表内容。"
+        },
+        {
+          "item_id": "length",
+          "source_ref": "lecture_pdf",
+          "page": 41,
+          "note_heading": "九、容器的选择会改变保留下来的信息",
+          "repair_prompt": "按执行顺序列出readings，保留重复及追加的0。"
+        },
+        {
+          "item_id": "repair",
+          "source_ref": "lecture_pdf",
+          "page": 44,
+          "note_heading": "十、排序的易错点：改了列表，不等于返回列表",
+          "repair_prompt": "对照返回值/副作用表，找出该读取哪一个对象。"
+        },
+        {
+          "item_id": "reason",
+          "source_ref": "lecture_pdf",
+          "page": 46,
+          "note_heading": "十一、没有记录，不能直接当成零",
+          "repair_prompt": "分别给“操作没有返回新对象”和“观测未知”写一句解释，再回到日志重述。"
+        }
+      ],
+      "delay_index": 2,
+      "title": "审查追加记录的处理方案"
+    },
+    {
+      "id": "workflow-diagnostic",
+      "family_id": "workflow",
+      "phase": "diagnostic",
+      "scenario": "你收到两条公交线路的准点次数：A为90次，B为60次；同时收到表格、JSON位置消息与乘客录音。另有事件时刻2026-10-05T10:30+01:00。数据来自可公开打开的网页，许可与采集过程尚未核实。",
+      "prompt": "目标是公平比较准点表现。请判断现有资料并处理给定的格式信息。",
+      "objective_ids": [
+        "workflow"
+      ],
+      "items": [
+        {
+          "id": "denominator",
+          "kind": "choice",
+          "prompt": "目前能否断言A的准点率更高？",
+          "options": [
+            {
+              "value": "yes",
+              "label": "能，90大于60"
+            },
+            {
+              "value": "no",
+              "label": "不能，还缺各线路总到站次数及可比范围"
+            },
+            {
+              "value": "equal",
+              "label": "能断言两者相同"
+            },
+            {
+              "value": "unknown",
+              "label": "暂时无法判断"
+            }
+          ],
+          "accepted": [
+            "no"
+          ],
+          "explanation": "次数与比率不同；需要分母与可比时间/观测定义。"
+        },
+        {
+          "id": "v",
+          "kind": "choice",
+          "prompt": "同时处理表格、JSON和录音，主要体现三个V中的哪一项？",
+          "options": [
+            {
+              "value": "volume",
+              "label": "Volume：数量"
+            },
+            {
+              "value": "variety",
+              "label": "Variety：形式与来源多样性"
+            },
+            {
+              "value": "velocity",
+              "label": "Velocity：到达速度"
+            },
+            {
+              "value": "unknown",
+              "label": "暂时无法判断"
+            }
+          ],
+          "accepted": [
+            "variety"
+          ],
+          "explanation": "不同数据表示带来的读取与解释差异属于variety；同一项目也可能同时有另两个V。"
+        },
+        {
+          "id": "utc",
+          "kind": "text_exact",
+          "prompt": "将这个时刻写为UTC的HH:MM（只写时分）。",
+          "accepted": [
+            "09:30",
+            "9:30"
+          ],
+          "explanation": "+01:00比UTC快一小时，所以10:30对应09:30 UTC。"
+        },
+        {
+          "id": "reason",
+          "kind": "explain_self",
+          "prompt": "写出你开展这次比较的简短方案，并解释各项决定的依据。",
+          "rubric": [
+            "先定义比较问题、观测单位、时间范围及所需分母。",
+            "读取不同来源时确认结构、时间标准和来源变化。",
+            "核对provenance、许可和可识别性；不把公开可见当作自由复用或法律合规结论。"
+          ],
+          "explanation": "公平比较需要定义一致的观测单位、时间范围与分母；不同来源还需核对结构、标准及允许的使用条件。"
+        }
+      ],
+      "error_routes": [
+        {
+          "item_id": "denominator",
+          "source_ref": "lecture_pdf",
+          "page": 17,
+          "note_heading": "二、数字有了背景，才知道能回答什么",
+          "repair_prompt": "给两条线路设两个不同分母，检查90次是否总意味着更高准点率。"
+        },
+        {
+          "item_id": "v",
+          "source_ref": "lecture_pdf",
+          "page": 25,
+          "note_heading": "三、大数据的难点不只有数量",
+          "repair_prompt": "把资料形态、数量、到达频率分别列出来，只用给定证据归类。"
+        },
+        {
+          "item_id": "utc",
+          "source_ref": "lecture_pdf",
+          "page": 49,
+          "note_heading": "十二、标准让不同来源的数据能对得上",
+          "repair_prompt": "写出本地时刻与UTC的偏移关系，再转换，不丢时区后直接比较。"
+        },
+        {
+          "item_id": "reason",
+          "source_ref": "lecture_pdf",
+          "page": 55,
+          "note_heading": "十四、使用数据前，还要问来源和使用条件",
+          "repair_prompt": "沿讲义三问核对：哪里来、允许怎样用、能否识别个人；未知之处保持未知。"
+        }
+      ],
+      "title": "准备一次公平的准点表现比较"
+    },
+    {
+      "id": "workflow-retest",
+      "family_id": "workflow",
+      "phase": "retest",
+      "scenario": "同一时段、相同定义下，服务点A有10次服务，其中2次超时；B有100次服务，其中8次超时。负责人只按超时次数宣布A更好。你负责解释并制定下一步核查。",
+      "prompt": "根据给定记录计算指标，评价比较结论与后续处理。",
+      "objective_ids": [
+        "workflow"
+      ],
+      "items": [
+        {
+          "id": "rate-a",
+          "kind": "number",
+          "prompt": "A的超时率是多少百分比？只填数值。",
+          "accepted": [
+            20
+          ],
+          "tolerance": 0,
+          "explanation": "2/10×100=20%。"
+        },
+        {
+          "id": "rate-b",
+          "kind": "number",
+          "prompt": "B的超时率是多少百分比？只填数值。",
+          "accepted": [
+            8
+          ],
+          "tolerance": 0,
+          "explanation": "8/100×100=8%；次数较多不代表比率较高。"
+        },
+        {
+          "id": "next",
+          "kind": "choice",
+          "prompt": "随后新增信息表明，两个数据源对“超时”的定义其实不同。首先应怎样处理？",
+          "options": [
+            {
+              "value": "plot",
+              "label": "继续画图，统一颜色即可"
+            },
+            {
+              "value": "clarify",
+              "label": "返回问题与准备阶段，核对定义并建立可比规则"
+            },
+            {
+              "value": "remove",
+              "label": "删除较差的服务点"
+            },
+            {
+              "value": "unknown",
+              "label": "暂时无法判断"
+            }
+          ],
+          "accepted": [
+            "clarify"
+          ],
+          "explanation": "分析流程可以回到问题、采集或准备环节；不可比的定义不能靠绘图修正。"
+        },
+        {
+          "id": "reason",
+          "kind": "explain_self",
+          "prompt": "评价负责人的结论，说明你会怎样表述当前结果，以及这些结果允许作出怎样的解释。",
+          "rubric": [
+            "解释次数与比率及两个分母。",
+            "指出不同超时定义会破坏可比性，需要回到来源核对。",
+            "不把描述性比率直接说成服务点造成超时的因果证据。"
+          ],
+          "explanation": "2/10高于8/100，因此只看超时次数会误导比较；定义不一致需要先核对来源，而描述性比率本身不能解释成因。"
+        }
+      ],
+      "error_routes": [
+        {
+          "item_id": "rate-a",
+          "source_ref": "lecture_pdf",
+          "page": 17,
+          "note_heading": "二、数字有了背景，才知道能回答什么",
+          "repair_prompt": "把次数、总次数、比率写成三个不同量。"
+        },
+        {
+          "item_id": "rate-b",
+          "source_ref": "lecture_pdf",
+          "page": 17,
+          "note_heading": "二、数字有了背景，才知道能回答什么",
+          "repair_prompt": "使用B自己的分母；不要复用A的总次数。"
+        },
+        {
+          "item_id": "next",
+          "source_ref": "lecture_pdf",
+          "page": 10,
+          "note_heading": "一、这节课在整个分析流程中的位置",
+          "repair_prompt": "在项目流程图上指出发现问题后应返回哪一步，并说明要补什么信息。"
+        },
+        {
+          "item_id": "reason",
+          "source_ref": "lecture_pdf",
+          "page": 18,
+          "note_heading": "二、数字有了背景，才知道能回答什么",
+          "repair_prompt": "分别写“数据当前显示什么”和“还需要什么才能解释原因”，避免把两句合并。"
+        }
+      ],
+      "title": "检查服务超时的比较依据"
+    },
+    {
+      "id": "workflow-delayed1",
+      "family_id": "workflow",
+      "phase": "delayed",
+      "scenario": "网上可下载的出行数据包含持续使用的个人标识符，网页未说明复用许可，采集方式也不清楚。日期字段是05/10/2026，提供方随后明确说明使用日/月/年；另一个记录只有日期，没有时间。",
+      "prompt": "记录你的接收与处理决定，说明每项决定的依据。",
+      "objective_ids": [
+        "workflow"
+      ],
+      "items": [
+        {
+          "id": "permission",
+          "kind": "choice",
+          "prompt": "使用条件尚不明时，最合理的下一步是什么？",
+          "options": [
+            {
+              "value": "publish",
+              "label": "可下载就直接公开衍生数据"
+            },
+            {
+              "value": "check",
+              "label": "核对来源、许可和可识别性，再按用途判断条件"
+            },
+            {
+              "value": "hash",
+              "label": "只把文件名哈希就算完成核验"
+            },
+            {
+              "value": "unknown",
+              "label": "暂时无法判断"
+            }
+          ],
+          "accepted": [
+            "check"
+          ],
+          "explanation": "公开可见不等于可任意复用；讲义要求分别检查provenance、licensing和identifiability。"
+        },
+        {
+          "id": "date",
+          "kind": "text_exact",
+          "prompt": "在已确认日/月/年后，把05/10/2026写成YYYY-MM-DD。",
+          "accepted": [
+            "2026-10-05"
+          ],
+          "explanation": "在来源约定明确后，它是2026年10月5日。"
+        },
+        {
+          "id": "missing-time",
+          "kind": "choice",
+          "prompt": "另一条仅有日期的记录，是否应自动补一个准确到站时刻？",
+          "options": [
+            {
+              "value": "midnight",
+              "label": "应补00:00并当作实际到站时刻"
+            },
+            {
+              "value": "no",
+              "label": "不应；保留只有日期的精度与未知时间"
+            },
+            {
+              "value": "noon",
+              "label": "应补12:00更中立"
+            },
+            {
+              "value": "unknown",
+              "label": "暂时无法判断"
+            }
+          ],
+          "accepted": [
+            "no"
+          ],
+          "explanation": "补时刻会创造来源没有记录的信息；格式统一不应抹去精度边界。"
+        },
+        {
+          "id": "reason",
+          "kind": "explain_self",
+          "prompt": "写一个简短的实施记录，说明你的决定、依据和需要记录或核查的事项。",
+          "rubric": [
+            "日期可按新确认的约定转换，并保留约定出处。",
+            "只有日期的记录不伪造到站时刻。",
+            "来源、许可、可识别性仍待核实；不把本题选择当成实际法律许可。"
+          ],
+          "explanation": "有来源支持的日期约定可以用于转换；缺失时刻不能补成事实。来源、许可与可识别性要分别核实并记录。"
+        }
+      ],
+      "error_routes": [
+        {
+          "item_id": "permission",
+          "source_ref": "lecture_pdf",
+          "page": 55,
+          "note_heading": "十四、使用数据前，还要问来源和使用条件",
+          "repair_prompt": "按三问写出缺失的事实；不要用技术处理代替许可与来源核对。"
+        },
+        {
+          "item_id": "date",
+          "source_ref": "lecture_pdf",
+          "page": 49,
+          "note_heading": "十二、标准让不同来源的数据能对得上",
+          "repair_prompt": "先明确约定，再按年-月-日重排；区分此题与约定未知的情形。"
+        },
+        {
+          "item_id": "missing-time",
+          "source_ref": "lecture_pdf",
+          "page": 49,
+          "note_heading": "十二、标准让不同来源的数据能对得上",
+          "repair_prompt": "分别标注已知的日期与未知的时刻；若工具需要占位，不能让占位冒充观测。"
+        },
+        {
+          "item_id": "reason",
+          "source_ref": "lecture_pdf",
+          "page": 55,
+          "note_heading": "十四、使用数据前，还要问来源和使用条件",
+          "repair_prompt": "把记录分为“已确认事实、执行转换、待核实条件”，每项附原因。"
+        }
+      ],
+      "delay_index": 1,
+      "title": "记录一份公开数据的接收决定"
+    },
+    {
+      "id": "workflow-delayed2",
+      "family_id": "workflow",
+      "phase": "delayed",
+      "scenario": "监测项目原先每天收到一份文件，现在每秒收到同样结构的一批位置记录。负责人要比较每小时变化；新记录只有 station_id、latitude、longitude 三列。国家与货币字段分别使用GB和GBP编码；另外两份汇总表总行数相同，站点名称却不同。",
+      "prompt": "根据分析目标，评价收到的资料并给出后续处理决定。",
+      "objective_ids": [
+        "workflow"
+      ],
+      "items": [
+        {
+          "id": "v",
+          "kind": "choice",
+          "prompt": "仅根据“每天一份变成每秒一批”，最直接发生变化的V是什么？",
+          "options": [
+            {
+              "value": "variety",
+              "label": "Variety"
+            },
+            {
+              "value": "velocity",
+              "label": "Velocity"
+            },
+            {
+              "value": "none",
+              "label": "三个V都无法描述"
+            },
+            {
+              "value": "unknown",
+              "label": "暂时无法判断"
+            }
+          ],
+          "accepted": [
+            "velocity"
+          ],
+          "explanation": "给定变化是到达频率/速度；不能仅凭它断言结构多样性变化。"
+        },
+        {
+          "id": "time",
+          "kind": "choice",
+          "prompt": "为比较每小时变化，哪一个缺口应先处理？",
+          "options": [
+            {
+              "value": "color",
+              "label": "配色没有统一"
+            },
+            {
+              "value": "timestamp",
+              "label": "核实并取得可解释的事件时间及时间标准"
+            },
+            {
+              "value": "sort",
+              "label": "只把记录按文件名排序"
+            },
+            {
+              "value": "unknown",
+              "label": "暂时无法判断"
+            }
+          ],
+          "accepted": [
+            "timestamp"
+          ],
+          "explanation": "没有事件时间就不能可靠划分小时；采集/准备必须服务于分析问题。"
+        },
+        {
+          "id": "join",
+          "kind": "choice",
+          "prompt": "两表总行数相同，能否据此认定站点可一一匹配？",
+          "options": [
+            {
+              "value": "yes",
+              "label": "能，数量对上即可"
+            },
+            {
+              "value": "no",
+              "label": "不能，需要核对实际站点键及表示约定"
+            },
+            {
+              "value": "currency",
+              "label": "只要有GBP列就能匹配"
+            },
+            {
+              "value": "unknown",
+              "label": "暂时无法判断"
+            }
+          ],
+          "accepted": [
+            "no"
+          ],
+          "explanation": "数量相同不证明键集合相同；标准代码有语义角色，不能互相替代。"
+        },
+        {
+          "id": "reason",
+          "kind": "explain_self",
+          "prompt": "解释各项判断的依据，给出后续检查步骤，并说明GB和GBP在处理中各起什么作用。",
+          "rubric": [
+            "从每小时比较目标提出事件时间及可比范围需求。",
+            "在采集/准备阶段补时间来源、标准与键匹配检查。",
+            "GB表示国家、GBP表示货币；代码虽相似，但对应实体与连接语义不同。"
+          ],
+          "explanation": "每小时比较依赖可解释的事件时间；连接依赖实际键。GB与GBP分别表示国家和货币，相似的字符形式不能代替语义。"
+        }
+      ],
+      "error_routes": [
+        {
+          "item_id": "v",
+          "source_ref": "lecture_pdf",
+          "page": 25,
+          "note_heading": "三、大数据的难点不只有数量",
+          "repair_prompt": "把到达速度与数据形态区分，使用题目真正给出的变化。"
+        },
+        {
+          "item_id": "time",
+          "source_ref": "lecture_pdf",
+          "page": 10,
+          "note_heading": "一、这节课在整个分析流程中的位置",
+          "repair_prompt": "从“每小时”这个目标写出最低所需字段，再回到采集阶段找它。"
+        },
+        {
+          "item_id": "join",
+          "source_ref": "lecture_pdf",
+          "page": 51,
+          "note_heading": "十二、标准让不同来源的数据能对得上",
+          "repair_prompt": "分别列出两表的站点键集合，检查缺失/多余与名称编码；不要只数行。"
+        },
+        {
+          "item_id": "reason",
+          "source_ref": "lecture_pdf",
+          "page": 51,
+          "note_heading": "十二、标准让不同来源的数据能对得上",
+          "repair_prompt": "对照国家/货币代码页，给每个键写实体含义，再画出最短核查顺序。"
+        }
+      ],
+      "delay_index": 2,
+      "title": "核查一批监测记录"
+    }
+  ],
+  "coverage_limits": [
+    "本题包以ST445 Lecture 1的LO1/LO4为主线，不是整门ST445的掌握认证，也不将一次通过解释成整讲所有细节已掌握。",
+    "题目是按课程来源新写的练习情境；不是教师原题或正式考核。课堂范围依据正式笔记；Git/GitHub操作属于seminar，不在本讲试点内。",
+    "选择、数值和确定输出只提供对应小题的机器检查证据；explain_self的原话和自评单列，不自动验证解释正确、独立推导或迁移。",
+    "已给提示或看过补救材料后的通过属于修补后表现；延迟新题提供另一次证据，仍需保留是否借助材料的记录。",
+    "本版本不执行学习者自由代码，因此未验证从空白独立写完整清理程序、调试任意notebook或完成真实数据项目。",
+    "四个目标下的具体情境各覆盖部分内容；没有被本次题目实际检验的目标细节保持未测，不从同族通过自动补齐。",
+    "未考核全部课程介绍、生成式AI案例史、标准编号记忆、外部法律判断或真实许可状态；原始讲义和完整正式笔记仍保留这些内容。",
+    "补救链接按当前75页PDF定位；正式笔记含相应章节与近似录像时间，但题包未验证录像自动跳转。来源改变后应重新核验题包。"
+  ],
+  "calibration": {
+    "basis": "design_estimate_not_observed",
+    "initial_diagnostic_minutes": [
+      12,
+      20
+    ],
+    "per_family_retest_minutes": [
+      3,
+      6
+    ],
+    "meaning": "仅为本轮设计估算，未测得用户实际耗时；不是固定每日配额或必须用满的时长。补救阅读另计，实际表现和时间记录用于后续调整。",
+    "delay_policy": "delay_index只标记第一/第二套延迟新情境；此内容文件不宣称某一固定间隔最优，具体日期由试点调度器记录。"
+  }
+}

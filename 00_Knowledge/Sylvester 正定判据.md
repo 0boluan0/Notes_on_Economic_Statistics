@@ -70,7 +70,7 @@ The symmetric or Hermitian assumption, every order $k$, and strict positivity ar
 ## 来源与核验
 
 - [[01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.3sum.pdf|MIT 18.06SC Session 3.3 summary]]：核对二阶、三阶顺序主子式判据。
-- [[01_Math/02_linear algebra/03_Positive Definite Matrices and Applications.md#主元判据为何成立|课程主元—主子式推导]]：核对 $\Delta_k=d_1\cdots d_k$ 与完整前提。
+- [[03_Positive Definite Matrices and Applications#主元判据为何成立|课程主元—主子式推导]]：核对 $\Delta_k=d_1\cdots d_k$ 与完整前提。
 - [Brown University, *Linear Algebra Done Wrong*, §7.4](https://www.math.brown.edu/streil/papers/LADW/HTML_2026_04-30/Ch7.html)：核对 Hermitian 版 Sylvester 判据与非严格号不能平移到 PSD 的边界。
 <!-- bilingual-en:start -->
 - The MIT Session 3.3 summary was checked for the leading-minor tests in two and three dimensions.

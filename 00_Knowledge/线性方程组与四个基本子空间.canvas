@@ -1,6 +1,24 @@
 {
   "nodes": [
     {
+      "id": "f2c002aabbcc0001",
+      "type": "group",
+      "x": 1400,
+      "y": 2110,
+      "width": 2200,
+      "height": 650,
+      "label": "Boundary values and information loss · 边界值与信息丢失"
+    },
+    {
+      "id": "f1c001aabbcc0001",
+      "type": "group",
+      "x": 1400,
+      "y": 1320,
+      "width": 2200,
+      "height": 650,
+      "label": "Geometry of constraints · 约束的几何"
+    },
+    {
       "id": "1000000000000001",
       "type": "group",
       "x": 0,
@@ -116,8 +134,8 @@
       "x": 250,
       "y": 750,
       "width": 320,
-      "height": 190,
-      "text": "## [[线性无关与张成]]\n\n线性无关保证表示唯一，张成保证目标可达；两者回答不同问题。",
+      "height": 270,
+      "text": "<!-- bilingual-en:start -->\n## [[线性无关与张成|Independence and spanning]]\n\nIndependence gives at most one coefficient representation; spanning gives at least one for every target in the specified space.\n<!-- bilingual-en:end -->\n\n线性无关保证至多一种系数表示；张成保证指定空间的每个目标至少有一种表示。",
       "color": "5"
     },
     {
@@ -126,8 +144,8 @@
       "x": 820,
       "y": 750,
       "width": 320,
-      "height": 190,
-      "text": "## [[子空间并集判据]]\n\n两个子空间的并仍是子空间，当且仅当其中一个包含于另一个。",
+      "height": 270,
+      "text": "<!-- bilingual-en:start -->\n## [[子空间并集判据|When a union is a subspace]]\n\nFor two subspaces of the same vector space, the union is a subspace exactly when one contains the other.\n<!-- bilingual-en:end -->\n\n同一向量空间内两个子空间的并仍为子空间，恰要求一方包含另一方。",
       "color": "5"
     },
     {
@@ -559,6 +577,414 @@
       "height": 220,
       "text": "## 接下来往哪里走\n\n没有精确解时，用 [[正交投影与最小二乘.canvas|正交投影与最小二乘]] 找最接近的可达输出；研究方阵的可逆性与体积变化时进入 [[行列式.canvas|行列式]]；研究同一线性变换在不同坐标中的表示时进入 [[线性变换与换基.canvas|线性变换与换基]]；秩亏系统需要规范解时进入 [[广义逆与最小范数解.canvas|广义逆与最小范数解]]。",
       "color": "4"
+    },
+    {
+      "id": "f1c001aabbcc0002",
+      "type": "text",
+      "x": 1480,
+      "y": 1420,
+      "width": 520,
+      "height": 210,
+      "text": "## [[方程组的行图像|Row picture · 行图像]]\n\n<!-- bilingual-en:start -->\nThe solution set is the intersection of the equation solution sets.\n<!-- bilingual-en:end -->\n解集是各行方程解集的交。"
+    },
+    {
+      "id": "f1c001aabbcc0003",
+      "type": "text",
+      "x": 2240,
+      "y": 1680,
+      "width": 620,
+      "height": 210,
+      "text": "## [[独立约束与自由度|Independent constraints · 独立约束]]\n\n<!-- bilingual-en:start -->\nAn independent new row removes one degree of freedom from a consistent system.\n<!-- bilingual-en:end -->\n对相容系统，新增独立行使解集维数减少一。"
+    },
+    {
+      "id": "f2c002aabbcc0002",
+      "type": "text",
+      "x": 1480,
+      "y": 2210,
+      "width": 850,
+      "height": 230,
+      "text": "## [[固定初值的差分反演|Cumulative sums with an initial value · 固定初值的差分反演]]\n\n<!-- bilingual-en:start -->\nA known initial value makes cumulative sums recover every original level.\n<!-- bilingual-en:end -->\n已知初值后，累加差值可唯一恢复原水平。"
+    },
+    {
+      "id": "f2c002aabbcc0003",
+      "type": "text",
+      "x": 2590,
+      "y": 2470,
+      "width": 850,
+      "height": 230,
+      "text": "## [[非零齐次解与不可逆|Nonzero homogeneous solutions rule out an inverse · 非零齐次解与不可逆]]\n\n<!-- bilingual-en:start -->\nA nonzero vector mapped to zero reveals lost information and prevents unique recovery.\n<!-- bilingual-en:end -->\n非零向量被映到零说明信息丢失，无法唯一恢复输入。"
+    },
+    {
+      "id": "f4c004aabbcc0001",
+      "type": "group",
+      "x": 3800,
+      "y": 1850,
+      "width": 2500,
+      "height": 1050,
+      "label": "Multiplication rules · 矩阵乘法规则"
+    },
+    {
+      "id": "f4c004aabbcc0002",
+      "type": "text",
+      "x": 4700,
+      "y": 1970,
+      "width": 600,
+      "height": 210,
+      "text": "<!-- bilingual-en:start -->\n## [[矩阵乘法|Matrix multiplication]]\n\nFor $A:m\\times n$ and $B:n\\times p$, $AB:m\\times p$. In $A(Bx)$, $B$ acts first.\n<!-- bilingual-en:end -->\n\n内侧尺寸匹配，逐行乘列求和；复合作用先右后左。"
+    },
+    {
+      "id": "f4c004aabbcc0003",
+      "type": "text",
+      "x": 4000,
+      "y": 2520,
+      "width": 600,
+      "height": 210,
+      "text": "## [[矩阵乘法分配律|Distributive laws]]\n\n<!-- bilingual-en:start -->\nDistribute sums while preserving factor order.\n<!-- bilingual-en:end -->\n对加法展开，同时保留因子次序。"
+    },
+    {
+      "id": "f4c004aabbcc0004",
+      "type": "text",
+      "x": 5450,
+      "y": 2520,
+      "width": 600,
+      "height": 210,
+      "text": "## [[分块矩阵乘法|Block multiplication]]\n\n<!-- bilingual-en:start -->\nMatch the inner partitions before multiplying blocks.\n<!-- bilingual-en:end -->\n内部分割匹配后，按块行乘块列。"
+    },
+    {
+      "id": "f5c005aabbcc0001",
+      "type": "group",
+      "x": 9900,
+      "y": 0,
+      "width": 2900,
+      "height": 2600,
+      "label": "Inverse rules and reusable factors · 求逆规则与分解复用"
+    },
+    {
+      "id": "f5c005aabbcc0002",
+      "type": "text",
+      "x": 10000,
+      "y": 160,
+      "width": 1100,
+      "height": 250,
+      "text": "## [[乘积的逆矩阵|Inverse of a product]]\n\n<!-- bilingual-en:start -->\nUndo the factors in reverse order.\n<!-- bilingual-en:end -->\n各因子按相反次序撤销。"
+    },
+    {
+      "id": "f5c005aabbcc0003",
+      "type": "text",
+      "x": 11500,
+      "y": 160,
+      "width": 1100,
+      "height": 250,
+      "text": "## [[下三角乘积封闭性|Lower triangular products]]\n\n<!-- bilingual-en:start -->\nProducts preserve lower triangular form and unit diagonals.\n<!-- bilingual-en:end -->\n乘积保持下三角形状；单位对角也保持。"
+    },
+    {
+      "id": "f5c005aabbcc0004",
+      "type": "text",
+      "x": 10000,
+      "y": 760,
+      "width": 1100,
+      "height": 250,
+      "text": "## [[LDU分解|Separate the pivots]]\n\n<!-- bilingual-en:start -->\nExtract nonzero pivots into a diagonal factor.\n<!-- bilingual-en:end -->\n把非零主元提取为对角因子。"
+    },
+    {
+      "id": "f5c005aabbcc0005",
+      "type": "text",
+      "x": 11500,
+      "y": 760,
+      "width": 1100,
+      "height": 250,
+      "text": "## [[LU分解复用成本|Reuse LU factors]]\n\n<!-- bilingual-en:start -->\nFactor once in cubic work; solve each new right-hand side in quadratic work.\n<!-- bilingual-en:end -->\n分解一次需立方量级，每个新右端需平方量级。"
+    },
+    {
+      "id": "f5c005aabbcc0006",
+      "type": "text",
+      "x": 10000,
+      "y": 1390,
+      "width": 1100,
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n## [[矩阵转置|Matrix transpose]]\n\nAn $m\\times n$ matrix becomes $n\\times m$ by exchanging row and column indices; ordinary transpose does not conjugate.\n<!-- bilingual-en:end -->\n\n交换行列位置和尺寸；普通转置不取复共轭。"
+    },
+    {
+      "id": "f5c005aabbcc0007",
+      "type": "text",
+      "x": 11500,
+      "y": 1390,
+      "width": 1100,
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n## [[乘积的转置|Transpose of a product]]\n\nFor compatible matrices, $(AB)^T=B^TA^T$: reverse the factor order as well as transposing each factor.\n<!-- bilingual-en:end -->\n\n乘积转置必须同时交换因子次序；无需方阵或可逆条件。"
+    },
+    {
+      "id": "f5c005aabbcc0008",
+      "type": "text",
+      "x": 10750,
+      "y": 2100,
+      "width": 1100,
+      "height": 250,
+      "text": "## [[转置与求逆可交换|Transpose and inverse]]\n\n<!-- bilingual-en:start -->\nFor an invertible matrix, the two operations commute.\n<!-- bilingual-en:end -->\n对可逆矩阵，两种操作可以交换次序。"
+    },
+    {
+      "id": "f6c006aabbcc0001",
+      "type": "group",
+      "x": 9900,
+      "y": 2900,
+      "width": 2900,
+      "height": 2500,
+      "label": "Permutations, symmetry and spaces · 置换、对称与空间"
+    },
+    {
+      "id": "f6c006aabbcc0002",
+      "type": "text",
+      "x": 10000,
+      "y": 3040,
+      "width": 1100,
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n## [[循环置换的周期|Cycle length and return]]\n\nA single cycle returns after its length, even with extra fixed rows.\n<!-- bilingual-en:end -->\n单个循环的周期等于循环长度；额外固定行不改变它。"
+    },
+    {
+      "id": "f6c006aabbcc0003",
+      "type": "text",
+      "x": 11500,
+      "y": 3040,
+      "width": 1100,
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n## [[转置乘积的对称性|Symmetric transpose products]]\n\nFor real $A:m\\times n$, $A^TA$ is symmetric $n\\times n$ and $AA^T$ is symmetric $m\\times m$. Neither is automatically invertible.\n<!-- bilingual-en:end -->\n\n实矩阵与自身转置相乘得到对称矩阵，两种次序尺寸可能不同，也不保证可逆。"
+    },
+    {
+      "id": "f6c006aabbcc0004",
+      "type": "text",
+      "x": 10000,
+      "y": 3640,
+      "width": 1100,
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n## [[实反对称矩阵|Real skew-symmetric matrices]]\n\nFor a real square matrix, $A^T=-A$: mirrored entries have opposite signs and every diagonal entry is zero.\n<!-- bilingual-en:end -->\n\n实方阵的转置等于其负矩阵：镜像元素互为相反数，对角元全部为零。"
+    },
+    {
+      "id": "f6c006aabbcc0005",
+      "type": "text",
+      "x": 11500,
+      "y": 3640,
+      "width": 1100,
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n## [[对称矩阵的自由参数|Dimension of the symmetric matrix space]]\n\nFor real symmetric $n\\times n$ matrices, the diagonal and one strict triangle give $n(n+1)/2$ independent coordinates.\n<!-- bilingual-en:end -->\n\n实 n 阶对称矩阵的对角线和一个严格三角区域给出 n(n+1)/2 个独立坐标。"
+    },
+    {
+      "id": "f6c006aabbcc0006",
+      "type": "text",
+      "x": 10000,
+      "y": 4240,
+      "width": 1100,
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n## [[反对称矩阵的自由参数|Dimension of the skew-symmetric matrix space]]\n\nFor real skew-symmetric $n\\times n$ matrices, one strict triangle gives $n(n-1)/2$ coordinates; the diagonal is forced to zero.\n<!-- bilingual-en:end -->\n\n实 n 阶反对称矩阵只有一个严格三角区域可自由选择，对角线固定为零，维数为 n(n−1)/2。"
+    },
+    {
+      "id": "f6c006aabbcc0007",
+      "type": "text",
+      "x": 11500,
+      "y": 4240,
+      "width": 1100,
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n## [[转置等式定义的矩阵子空间|Transpose constraints and subspaces]]\n\nFix either $A^T=A$ for the whole family or $A^T=-A$ for the whole family. Transpose linearity preserves that condition under linear combinations.\n<!-- bilingual-en:end -->\n\n整个矩阵族固定同一种正号或负号转置条件；转置的线性性使线性组合保留该条件。"
+    },
+    {
+      "id": "f6c006aabbcc0008",
+      "type": "text",
+      "x": 10000,
+      "y": 4840,
+      "width": 1100,
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n## [[低维欧氏空间的子空间|Low-dimensional real subspaces]]\n\nOver the real scalars: $\\{0\\}$, lines through zero, planes through zero where available, and the full ambient space.\n<!-- bilingual-en:end -->\n\n实数域上：零子空间、过原点的整条直线、维数允许时过原点的整片平面，以及整个环境空间。"
+    },
+    {
+      "id": "f6c006aabbcc0009",
+      "type": "text",
+      "x": 11500,
+      "y": 4840,
+      "width": 1100,
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n## [[列图像与列空间|Column picture and column space]]\n\nInterpret one column combination; collect all possible output vectors.\n<!-- bilingual-en:end -->\n解释列组合的视角；收集所有输出的集合。"
+    },
+    {
+      "id": "f7c007aabbcc0001",
+      "type": "group",
+      "x": 0,
+      "y": 3500,
+      "width": 2500,
+      "height": 1100,
+      "label": "Operations on subspaces · 子空间的集合运算"
+    },
+    {
+      "id": "f7c007aabbcc0002",
+      "type": "text",
+      "x": 100,
+      "y": 3630,
+      "width": 900,
+      "height": 230,
+      "text": "## [[子空间的交集|Intersection of subspaces]]\n\nA vector must satisfy both membership conditions.\n向量必须同时属于两边。"
+    },
+    {
+      "id": "f7c007aabbcc0003",
+      "type": "text",
+      "x": 1250,
+      "y": 3630,
+      "width": 1100,
+      "height": 230,
+      "text": "## [[子空间之和|Sum of subspaces]]\n\nAdd one vector from each subspace.\n从两边各取一个向量相加。"
+    },
+    {
+      "id": "f7c007aabbcc0004",
+      "type": "text",
+      "x": 1250,
+      "y": 4100,
+      "width": 1100,
+      "height": 230,
+      "text": "## [[子空间和与并集的张成|The sum is the span of the union]]\n\nClose the union under all linear combinations.\n将并集扩充到对任意线性组合封闭。"
+    },
+    {
+      "id": "f7c007aabbcc0005",
+      "type": "text",
+      "x": 100,
+      "y": 4100,
+      "width": 900,
+      "height": 230,
+      "text": "## [[纵向拼接的零空间|Nullspace of a vertical stack]]\n\nStacking imposes both homogeneous systems on the same input.\n上下拼接对同一输入同时施加两组齐次约束。"
+    },
+    {
+      "id": "f8c008aabbcc0001",
+      "type": "group",
+      "x": 2800,
+      "y": 3500,
+      "width": 3300,
+      "height": 650,
+      "label": "Homogeneous solutions and coordinate order · 齐次解与坐标顺序"
+    },
+    {
+      "id": "f8c008aabbcc0002",
+      "type": "text",
+      "x": 2900,
+      "y": 3640,
+      "width": 920,
+      "height": 350,
+      "text": "[[零空间矩阵|Nullspace matrix]]\n零空间矩阵\n\nCollect a basis as columns; all solutions are x = Nc.\n把基并排组成列，任意系数给出全部齐次解。"
+    },
+    {
+      "id": "f8c008aabbcc0003",
+      "type": "text",
+      "x": 3980,
+      "y": 3640,
+      "width": 920,
+      "height": 350,
+      "text": "[[列置换后的解向量|Restore coordinates after column permutation]]\n列置换后的解坐标\n\n(AQ)z = b corresponds to Ax = b with x = Qz.\n变量重排后，必须恢复原来的分量标签。"
+    },
+    {
+      "id": "f8c008aabbcc0004",
+      "type": "text",
+      "x": 5060,
+      "y": 3640,
+      "width": 920,
+      "height": 350,
+      "text": "[[矩阵乘积为零|Zero product and nullspace]]\n零乘积与零空间\n\nAB = 0 iff C(B) is contained in N(A).\n右因子的每个输出，都被左因子映成零。"
+    },
+    {
+      "id": "f9c009aabbcc0001",
+      "type": "text",
+      "x": 6600,
+      "y": 3500,
+      "width": 1000,
+      "height": 350,
+      "text": "[[全部右端的解集确定矩阵|Equal solution sets for every identical right-hand side]]\n全部右端的解集确定矩阵\n\nHolding each b fixed forces equality of the two matrices.\n对每个固定的 b 要求解集相同，就确定了矩阵。"
+    },
+    {
+      "id": "fac010aabbcc0001",
+      "type": "text",
+      "x": 8520,
+      "y": 1570,
+      "width": 950,
+      "height": 200,
+      "text": "## [[按生成向量检验正交|Test a spanning set · 检验生成向量]]\n\n<!-- bilingual-en:start -->\nZero dot products with every generator extend to every vector in its span.\n<!-- bilingual-en:end -->\n对所有生成向量检验点积为零，即可覆盖整个张成空间。",
+      "color": "6"
+    },
+    {
+      "id": "fbc011aabbcc0001",
+      "type": "text",
+      "x": 100,
+      "y": 4800,
+      "width": 900,
+      "height": 240,
+      "text": "<!-- bilingual-en:start -->\n## [[上三角与对称矩阵的交集|Upper triangular and symmetric]]\n\nFor real $n\\times n$ matrices, these two constraints together give exactly the diagonal matrices, a space of dimension $n$.\n<!-- bilingual-en:end -->\n\n实 n 阶矩阵同时上三角且对称，当且仅当它为对角矩阵；这个空间维数为 n。"
+    },
+    {
+      "id": "fbc012aabbcc0001",
+      "type": "text",
+      "x": 100,
+      "y": 5800,
+      "width": 900,
+      "height": 220,
+      "text": "<!-- bilingual-en:start -->\n## [[矩阵空间|Matrix space]]\n\nAn entire matrix is one vector.\n<!-- bilingual-en:end -->\n\n整个矩阵是一个向量。"
+    },
+    {
+      "id": "fbc012aabbcc0002",
+      "type": "text",
+      "x": 1250,
+      "y": 5800,
+      "width": 900,
+      "height": 220,
+      "text": "<!-- bilingual-en:start -->\n## [[子空间维数公式|Dimension of a subspace sum]]\n\nCount shared directions once.\n<!-- bilingual-en:end -->\n\n共同方向只计数一次。"
+    },
+    {
+      "id": "fbc012aabbcc0003",
+      "type": "text",
+      "x": 2400,
+      "y": 5800,
+      "width": 900,
+      "height": 220,
+      "text": "<!-- bilingual-en:start -->\n## [[矩阵左乘映射的秩与零度|Rank and nullity of left multiplication]]\n\nEach input column can vary freely; matrix-space dimensions count the choices across all columns.\n<!-- bilingual-en:end -->\n\n各输入列可分别自由变化；矩阵空间的维数要合计所有列的自由度。"
+    },
+    {
+      "id": "fbc012aabbcc0004",
+      "type": "text",
+      "x": 1250,
+      "y": 6220,
+      "width": 900,
+      "height": 220,
+      "text": "<!-- bilingual-en:start -->\n## [[固定秩矩阵集合|Fixed-rank matrix sets]]\n\nCheck zero and closure under addition.\n<!-- bilingual-en:end -->\n\n检查零矩阵与加法封闭性。"
+    },
+    {
+      "id": "fbc012aabbcc0005",
+      "type": "text",
+      "x": 2400,
+      "y": 6220,
+      "width": 900,
+      "height": 220,
+      "text": "<!-- bilingual-en:start -->\n## [[秩分解与秩一展开|Minimal rank-one decomposition]]\n\nRank is the minimum number of rank-one terms; a rank factorization constructs them.\n<!-- bilingual-en:end -->\n\n秩等于秩一展开的最少项数；秩分解提供达到这个数的构造。"
+    },
+    {
+      "id": "p0010-direct-sum",
+      "type": "text",
+      "x": 100,
+      "y": 6220,
+      "width": 900,
+      "height": 220,
+      "text": "<!-- bilingual-en:start -->\n## [[直和|Direct sum]]\n\nEach vector in the sum has a unique decomposition into one component from each subspace; perpendicularity is not required.\n<!-- bilingual-en:end -->\n\n和空间中每个向量的各子空间分量都唯一；不要求垂直。"
+    },
+    {
+      "id": "p0012-triangular",
+      "type": "text",
+      "x": 1250,
+      "y": 4800,
+      "width": 900,
+      "height": 260,
+      "color": "4",
+      "text": "<!-- bilingual-en:start -->\n## [[三角矩阵|Triangular matrix]]\n\nA square matrix is upper triangular when entries below the diagonal vanish, and lower triangular when those above vanish.\n<!-- bilingual-en:end -->\n\n上三角在主对角线下方全零，下三角在上方全零；对角元允许为零。"
+    },
+    {
+      "id": "p0012-diagonal",
+      "type": "text",
+      "x": 2400,
+      "y": 4800,
+      "width": 900,
+      "height": 260,
+      "color": "4",
+      "text": "<!-- bilingual-en:start -->\n## [[对角矩阵|Diagonal matrix]]\n\nOnly diagonal positions may be nonzero. A square diagonal matrix scales each coordinate separately.\n<!-- bilingual-en:end -->\n\n非对角位置全零；对角方阵逐个缩放坐标。矩形扩展须保留尺寸。"
     }
   ],
   "edges": [
@@ -568,7 +994,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000018",
       "toSide": "top",
-      "label": "前置"
+      "label": "用系数关系检验冗余"
     },
     {
       "id": "3000000000000002",
@@ -576,7 +1002,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000019",
       "toSide": "top",
-      "label": "前置"
+      "label": "收集全部线性组合"
     },
     {
       "id": "3000000000000003",
@@ -584,7 +1010,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000002",
       "toSide": "top",
-      "label": "前置"
+      "label": "继承运算并检验封闭"
     },
     {
       "id": "3000000000000004",
@@ -592,7 +1018,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000008",
       "toSide": "top",
-      "label": "比较"
+      "label": "At most one coefficient representation · 系数表示至多一种"
     },
     {
       "id": "3000000000000005",
@@ -600,7 +1026,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000008",
       "toSide": "top",
-      "label": "比较"
+      "label": "Every target has a representation · 每个目标都有表示"
     },
     {
       "id": "3000000000000006",
@@ -608,7 +1034,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000009",
       "toSide": "top",
-      "label": "二者合成"
+      "label": "同时满足无关与张成"
     },
     {
       "id": "3000000000000007",
@@ -616,7 +1042,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000020",
       "toSide": "top",
-      "label": "定义"
+      "label": "所有基的共同长度"
     },
     {
       "id": "3000000000000009",
@@ -936,7 +1362,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000044",
       "toSide": "top",
-      "label": "并集的边界"
+      "label": "Union stays closed only when one contains the other · 并集封闭恰要求一方包含另一方"
     },
     {
       "id": "3000000000000032",
@@ -993,6 +1419,354 @@
       "toNode": "2000000000000014",
       "toSide": "left",
       "label": "为各空间求基"
+    },
+    {
+      "id": "f1c001aabbcc0011",
+      "fromNode": "f1c001aabbcc0002",
+      "fromSide": "right",
+      "toNode": "f1c001aabbcc0003",
+      "toSide": "left",
+      "label": "Independent extra row removes one free direction · 独立新增行减少一个自由方向"
+    },
+    {
+      "id": "f1c001aabbcc0012",
+      "fromNode": "2000000000000010",
+      "fromSide": "bottom",
+      "toNode": "f1c001aabbcc0003",
+      "toSide": "right",
+      "label": "Consistent solution set has dimension n−r · 相容解集维数"
+    },
+    {
+      "id": "f1c001aabbcc0013",
+      "fromNode": "f1c001aabbcc0002",
+      "fromSide": "bottom",
+      "toNode": "2000000000000001",
+      "toSide": "left",
+      "label": "Same Ax=b: input intersection and output combination · 输入交集与输出组合"
+    },
+    {
+      "id": "f2c002aabbcc0011",
+      "fromNode": "2000000000000039",
+      "fromSide": "left",
+      "toNode": "f2c002aabbcc0002",
+      "toSide": "left",
+      "label": "Example: sums undo anchored differences · 累加撤销固定起点的差分"
+    },
+    {
+      "id": "f2c002aabbcc0012",
+      "fromNode": "2000000000000005",
+      "fromSide": "bottom",
+      "toNode": "f2c002aabbcc0003",
+      "toSide": "right",
+      "label": "A nonzero member rules out an inverse · 非零成员排除逆矩阵"
+    },
+    {
+      "id": "f4c004eeaabb0001",
+      "fromNode": "f4c004aabbcc0002",
+      "fromSide": "bottom",
+      "toNode": "f4c004aabbcc0003",
+      "toSide": "top",
+      "label": "Distribute entry sums · 元素求和对加法展开"
+    },
+    {
+      "id": "f4c004eeaabb0002",
+      "fromNode": "f4c004aabbcc0002",
+      "fromSide": "bottom",
+      "toNode": "f4c004aabbcc0004",
+      "toSide": "top",
+      "label": "Group the shared index · 按共同指标分组"
+    },
+    {
+      "id": "f4c004eeaabb0003",
+      "fromNode": "f4c004aabbcc0002",
+      "fromSide": "right",
+      "toNode": "2000000000000016",
+      "toSide": "left",
+      "label": "Collect entries into columns · 按结果列重组"
+    },
+    {
+      "id": "f5c005aabbcc0101",
+      "fromNode": "f5c005aabbcc0002",
+      "fromSide": "bottom",
+      "toNode": "2000000000000015",
+      "toSide": "top",
+      "label": "Reverses the elimination factors · 反序撤销消元"
+    },
+    {
+      "id": "f5c005aabbcc0102",
+      "fromNode": "f5c005aabbcc0003",
+      "fromSide": "bottom",
+      "toNode": "2000000000000015",
+      "toSide": "top",
+      "label": "Explains the shape of L · 解释 L 的下三角形状"
+    },
+    {
+      "id": "f5c005aabbcc0103",
+      "fromNode": "2000000000000015",
+      "fromSide": "bottom",
+      "toNode": "f5c005aabbcc0004",
+      "toSide": "top",
+      "label": "Extracts pivots from U · 从 U 提取主元"
+    },
+    {
+      "id": "f5c005aabbcc0104",
+      "fromNode": "2000000000000015",
+      "fromSide": "bottom",
+      "toNode": "f5c005aabbcc0005",
+      "toSide": "top",
+      "label": "Stored factors solve new right-hand sides · 复用因子求解新右端"
+    },
+    {
+      "id": "f5c005aabbcc0105",
+      "fromNode": "f5c005aabbcc0006",
+      "fromSide": "bottom",
+      "toNode": "f5c005aabbcc0007",
+      "toSide": "top",
+      "label": "Index definition proves the product rule · 指标定义证明乘积规则"
+    },
+    {
+      "id": "f5c005aabbcc0106",
+      "fromNode": "f5c005aabbcc0007",
+      "fromSide": "bottom",
+      "toNode": "f5c005aabbcc0008",
+      "toSide": "top",
+      "label": "Transpose both inverse identities · 转置双侧逆恒等式"
+    },
+    {
+      "id": "f5c005aabbcc0107",
+      "fromNode": "f5c005aabbcc0006",
+      "fromSide": "bottom",
+      "toNode": "2000000000000038",
+      "toSide": "top",
+      "label": "For P, transpose reverses the row permutation · 转置恢复行排列"
+    },
+    {
+      "id": "f6c006aabbcc0101",
+      "fromNode": "2000000000000038",
+      "fromSide": "bottom",
+      "toNode": "f6c006aabbcc0002",
+      "toSide": "top",
+      "label": "Repeat the row permutation · 重复同一行排列"
+    },
+    {
+      "id": "f6c006aabbcc0102",
+      "fromNode": "f5c005aabbcc0007",
+      "fromSide": "bottom",
+      "toNode": "f6c006aabbcc0003",
+      "toSide": "top",
+      "label": "Pair a factor with its transpose · 将因子与其转置配对"
+    },
+    {
+      "id": "f6c006aabbcc0103",
+      "fromNode": "f6c006aabbcc0004",
+      "fromSide": "bottom",
+      "toNode": "f6c006aabbcc0006",
+      "toSide": "top",
+      "label": "Zero diagonal leaves only paired entries · 零对角线排除对角自由度"
+    },
+    {
+      "id": "f6c006aabbcc0104",
+      "fromNode": "f6c006aabbcc0004",
+      "fromSide": "bottom",
+      "toNode": "f6c006aabbcc0007",
+      "toSide": "top",
+      "label": "Linearity preserves the minus-sign equality · 线性性保持负号等式"
+    },
+    {
+      "id": "f6c006aabbcc0105",
+      "fromNode": "f6c006aabbcc0005",
+      "fromSide": "bottom",
+      "toNode": "f6c006aabbcc0007",
+      "toSide": "top",
+      "label": "Free parameters describe the symmetric subspace · 自由参数描述对称矩阵子空间"
+    },
+    {
+      "id": "f6c006aabbcc0106",
+      "fromNode": "2000000000000002",
+      "fromSide": "bottom",
+      "toNode": "f6c006aabbcc0008",
+      "toSide": "top",
+      "label": "Closure forces whole lines and planes · 封闭性要求完整直线和平面"
+    },
+    {
+      "id": "f6c006aabbcc0107",
+      "fromNode": "2000000000000033",
+      "fromSide": "bottom",
+      "toNode": "f6c006aabbcc0009",
+      "toSide": "top",
+      "label": "Vary coefficients to collect every output · 变化系数收集全部输出"
+    },
+    {
+      "id": "f6c006aabbcc0108",
+      "fromNode": "2000000000000001",
+      "fromSide": "bottom",
+      "toNode": "f6c006aabbcc0009",
+      "toSide": "top",
+      "label": "Interpret a specified column combination · 解释给定的列组合"
+    },
+    {
+      "id": "f7e007aabbcc0001",
+      "fromNode": "2000000000000002",
+      "fromSide": "bottom",
+      "toNode": "f7c007aabbcc0002",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "closure holds in both sets · 两边都封闭"
+    },
+    {
+      "id": "f7e007aabbcc0002",
+      "fromNode": "f7c007aabbcc0002",
+      "fromSide": "bottom",
+      "toNode": "f7c007aabbcc0005",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "apply to two nullspaces · 对两个零空间取交"
+    },
+    {
+      "id": "f7e007aabbcc0003",
+      "fromNode": "f7c007aabbcc0003",
+      "fromSide": "bottom",
+      "toNode": "f7c007aabbcc0004",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "regroup any linear combination · 将任意线性组合分组"
+    },
+    {
+      "id": "f7e007aabbcc0004",
+      "fromNode": "2000000000000044",
+      "fromSide": "bottom",
+      "toNode": "f7c007aabbcc0003",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "allow cross-set sums · 允许跨集合相加"
+    },
+    {
+      "id": "f8c008aabbcc0011",
+      "fromNode": "2000000000000027",
+      "fromSide": "bottom",
+      "toNode": "f8c008aabbcc0002",
+      "toSide": "top",
+      "label": "collect basis vectors as columns · 基向量并排成列"
+    },
+    {
+      "id": "f8c008aabbcc0012",
+      "fromNode": "f8c008aabbcc0003",
+      "fromSide": "left",
+      "toNode": "f8c008aabbcc0002",
+      "toSide": "right",
+      "label": "restore original variable order · 恢复原变量顺序"
+    },
+    {
+      "id": "f8c008aabbcc0013",
+      "fromNode": "2000000000000016",
+      "fromSide": "bottom",
+      "toNode": "f8c008aabbcc0004",
+      "toSide": "top",
+      "label": "every output column vanishes · 各输出列为零"
+    },
+    {
+      "id": "f9e009aabbcc0001",
+      "fromNode": "2000000000000003",
+      "fromSide": "bottom",
+      "toNode": "f9c009aabbcc0001",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "Transform b vs hold every b fixed · 同步变换右端与固定每个右端的区别"
+    },
+    {
+      "id": "fac010ee00000001",
+      "fromNode": "20000000000000a1",
+      "fromSide": "bottom",
+      "toNode": "fac010aabbcc0001",
+      "toSide": "top",
+      "label": "Reduce orthogonality to finitely many tests · 将全空间条件化为有限检验"
+    },
+    {
+      "id": "fbc011aabbcc1001",
+      "fromNode": "f7c007aabbcc0002",
+      "fromSide": "bottom",
+      "toNode": "fbc011aabbcc0001",
+      "toSide": "top",
+      "label": "Matrix-space example · 矩阵空间实例"
+    },
+    {
+      "id": "fac012aabbcc0001",
+      "fromNode": "fbc012aabbcc0001",
+      "fromSide": "right",
+      "toNode": "fbc012aabbcc0003",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "Left multiplication maps whole matrices · 左乘作用于整个矩阵"
+    },
+    {
+      "id": "fac012aabbcc0002",
+      "fromNode": "f7c007aabbcc0003",
+      "fromSide": "bottom",
+      "toNode": "fbc012aabbcc0002",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "Subtract the shared dimension · 减去共同维数"
+    },
+    {
+      "id": "fac012aabbcc0003",
+      "fromNode": "2000000000000017",
+      "fromSide": "bottom",
+      "toNode": "fbc012aabbcc0005",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "Combine a minimum of r pieces · 最少组合 r 项"
+    },
+    {
+      "id": "fac012aabbcc0004",
+      "fromNode": "2000000000000017",
+      "fromSide": "bottom",
+      "toNode": "fbc012aabbcc0004",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "Addition can increase rank · 相加可能提高秩"
+    },
+    {
+      "id": "fac012aabbcc0005",
+      "fromNode": "fbc012aabbcc0001",
+      "fromSide": "right",
+      "toNode": "fbc012aabbcc0004",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "Rank restricts allowed elements · 秩限制集合成员"
+    },
+    {
+      "id": "p0010-sum-direct",
+      "fromNode": "f7c007aabbcc0003",
+      "fromSide": "left",
+      "toNode": "p0010-direct-sum",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "Require a unique decomposition · 额外要求分解唯一"
+    },
+    {
+      "id": "p0010-direct-dimension",
+      "fromNode": "p0010-direct-sum",
+      "fromSide": "right",
+      "toNode": "fbc012aabbcc0002",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "For two subspaces, intersection is zero · 两个子空间时交为零"
+    },
+    {
+      "id": "p0012-triangular-intersection",
+      "fromNode": "p0012-triangular",
+      "fromSide": "left",
+      "toNode": "fbc011aabbcc0001",
+      "toSide": "right",
+      "label": "Add real symmetry to the upper zero pattern · 上三角零结构加实对称条件"
+    },
+    {
+      "id": "p0012-intersection-diagonal",
+      "fromNode": "fbc011aabbcc0001",
+      "fromSide": "bottom",
+      "toNode": "p0012-diagonal",
+      "toSide": "bottom",
+      "label": "The intersection is exactly the real diagonal space · 交集恰为实对角矩阵空间"
     }
   ]
 }

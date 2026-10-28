@@ -239,8 +239,12 @@ def overview(vault, state, progress, current, resumptions=None):
         courses.append(item)
     plan = weekly.project(courses, state["tasks"], state.get("obligations", []), progress,
                           table.get("term_starts", {}).get(term), table.get("term_ends", {}).get(term), current, specifications)
+    for course in courses:
+        if course.get("milestones"):
+            course["milestone_plan"] = weekly.project_milestones(fact(vault, course["milestones"], day),
+                [task for task in plan["tasks"] if task["course_id"] == course["id"]])
     scope_paths = list(dict.fromkeys(ref["path"].split("#", 1)[0] for course in courses
-                                    for scope in [*course["week_scopes"].values(), *course["task_details"].values()] for ref in scope.get("sources", [])))
+                                    for scope in [*course["week_scopes"].values(), *course["task_details"].values(), course.get("milestone_plan", {})] for ref in scope.get("sources", [])))
     return {"stage": stage, "term": term, "week": week, "term_weeks": term_weeks, "as_of": day, "courses": courses, "weekly": plan,
             "reconciled_at": dossier.get("reconciled_at"), "issues": issues, "source_paths": [POSITION, TIMETABLE, EVENTS, *scope_paths],
             "note_path": PRIVATE + "/课程总览.md", "dossier_path": POSITION,
@@ -262,6 +266,16 @@ def markdown(data):
             school = ("上次核验，待更新：" if c["school"].get("historical") or c["school"].get("needs_review") else "") + c["school"]["summary"]
             personal = ("来源有更新，待对账：" if c["personal"].get("needs_review") else "") + c["personal"]["summary"]
             lines.append("| " + " | ".join(cell(x) for x in (c["id"] + " · " + c["title"], school, personal, c["next_step"])) + " |")
+        lines.append("")
+    for course in data["courses"]:
+        milestone_plan = course.get("milestone_plan")
+        if not milestone_plan:
+            continue
+        count = milestone_plan["counts"]
+        lines.extend([f"## {course['id']} · 项目阶段", "", f"已完成 {count['done']} / {count['total']} 个节点", ""])
+        for item in milestone_plan["items"]:
+            status = {"done": "已完成", "recorded": "进行中", "unknown": "待完成", "planned": "后续阶段"}[item["state"]]
+            lines.append(f"- {status}：[[{item['ref']}|{item['title']}]] · {item.get('when', '')}")
         lines.append("")
     lines.extend(["## 每周收尾", "", "核心事项与推荐内容分别计数。完成只读取原任务；没有记录不等于没有做过。", ""])
     tasks = {t["id"]: t for t in data.get("weekly", {}).get("tasks", [])}

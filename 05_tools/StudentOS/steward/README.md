@@ -1,192 +1,128 @@
 # Student OS steward
 
-A fixed Obsidian home for planning, classroom preparation and durable learning
-handoffs. The existing Learning Progress Dashboard plugin hosts the home and its
-chat; Claudian hosts separate teaching conversations. Python runs bounded local
-operations behind the interface, with no additional Python packages.
+## Course review pilot
 
-## Entry and daily use
+The course review pilot is paused; its interface is not registered in the dashboard.
+Its source, attempts and reports are retained. The ST445 Lecture 1
+pilot is a finite course-level question pack, independent of classroom chats and
+canonical task completion. `review.py` supplies the `review` JSON CLI command;
+`review-view.js` is retained as pilot source outside the deployed bundle. No online model is used
+while answering, checking structured responses, reading material or scheduling.
 
-Deploy the dashboard through its normal `deploy.sh`, then reload the plugin.
-Open **Student OS 管家** from the ribbon or the command **打开 Student OS 管家**.
-The existing `open-today-note` command now opens the steward home; the Today note
-remains available in the home navigation and continues to own the daily plan.
+The learner completes four scenario tasks before feedback. Explanations retain
+the original response and require explicit rubric self-assessment. Incorrect
+families lead to specific local PDF pages, followed by an unseen retest. A failed
+retest or explicit deferral remains a learning gap. The report distinguishes
+script checks, self-assessment, repair and delayed attempts; no checkbox or mastery
+record is silently changed. Scope limitations remain visible in the entry/report.
 
-The Today page shows the day's schedule. The overview starts with the selected
-learning task in a compact continuation card: its recorded stopping point, first
-action and classroom entry. Stopping conditions and recording controls expand
-only when needed. School and self-directed course summaries follow together;
-the weekly task list comes afterwards. The assistant opens through **询问 AI** or a
-contextual question; it is collapsed during ordinary dashboard use. Existing
-records refresh automatically, with no additional planning or data-entry layer.
-Course cards summarize canonical task records, with completed, observed, unknown,
-and future states. The weekly view lists original tasks and supports course,
-week, and state filters. Its completed-count control opens completed learning
-records across all weeks. Expanding a task shows its steps and stopping condition.
-Numbered weeks default to the current degree courses. Self-directed courses have
-their own collapsible unit lists, so their progress is not confused with
-school teaching weeks. Selecting an individual course also shows its latest
-school position and personal stopping point.
+Review the entire visible task together before publishing: its title, scenario,
+instructions, options and later subquestions must not supply another item's answer
+or declare an option wrong. Keep necessary problem constraints, but move diagnosis,
+solution mechanisms and explanations to post-submission feedback. This requires
+semantic review; stripping answer-key fields alone cannot detect prose hints.
+When an existing attempt has documented prompt exposure, preserve its answers and
+mark that evidence separately. A correct cued attempt needs an unseen check; it
+is not a knowledge error. Deferring that check stays pending verification.
 
-Self-directed courses open at their saved next unit, followed by adjacent named
-topics. The full route and history remain collapsed until requested. A bundle of
-exercises is labelled as a task group; partial learning stays visible ahead of
-its whole-task count. Open-ended practice has no course percentage. Course,
-unit and route expansion survive workspace restoration.
+Sessions, drafts, seen questions, timing checkpoints and the single next due date
+are stored in the existing private SQLite database. Finished reports use the
+ignored `99_学习情况记录/管家/复习/` directory. Source hashes bind each session to
+its material version. A resumed attempt keeps its original question pack. Changes
+to the source block further answers while retaining old reports and attempts.
+Explicit question corrections preserve submitted/seen task history and record
+the old version and revised task snapshots in private `question_revisions`.
 
-The school task's **学这一项** and **开始学习 / 继续学习** share the same
-entry: persist the canonical focus, reuse its existing classroom, or prepare and
-open it. Future classroom preparations receive the selected unit's scope and
-durable handoff. They start from that handoff when sufficient, ask a positioning
-question only when needed, and produce a brief handoff for the learner to correct
-and save through the existing progress form. Existing teaching chats are retained.
+The first delayed set opens at 07:00 London time on the next calendar date; after
+a successful delayed set, the second opens six calendar days later. Remaining
+gaps use the next day. These are pilot parameters and in-app eligibility windows,
+not a universal memory schedule or a new notification service. Missed days do
+not generate catch-up copies. Used questions do not count as unseen transfer
+checks; exhausted inventory is explicit and needs another authored pack.
 
-Deadlines uses dated cards grouped into the next 14 days, later dates, elapsed
-dates awaiting confirmation, and completed records. The existing optional and
-unresolved-date callout is projected separately. All dates and canonical task
-identities remain in their existing source notes; opening a card never completes
-it, and a date without a time is not assigned a fabricated midnight deadline.
+Time is recorded by phase while the review or its dedicated source pane is active
+and the application is visible/focused. The learner can pause. Sleep gaps are
+discarded, drafts and time flush every ten seconds and on transitions. This is
+an estimate of visible time on the task, not a measure of cognitive attention.
+An abrupt process kill can lose the most recent unsaved interval. The report also
+shows wall-clock session span, including pauses. The final report-save latency
+is outside the report's recorded interval.
 
-Weekly bundles separate Lecture, Seminar/post-class work, preparation and other
-requirements, and recommendations. Recommendations have their own counts. A week
-can be labelled closed only when its current core task set matches the reviewed
-scope, all core tasks are complete, and the cited teacher sources are unchanged.
-Missing Seminar requirements stay visible instead of becoming an empty completed
-week. Private `week_scopes`, `task_layout` and `task_details` belong to the existing
-course dossier. Task checkpoints describe steps and outputs, never extra canonical
-checkboxes. Changes to task meaning or source files hide outdated checkpoints.
+`test_review.py` exercises durable transitions, replay/rollback, source changes,
+finite inventory, self-assessment and London-date scheduling in temporary vaults.
+`review-check.js` checks timing and lost-response recovery. `verify-review.js`
+uses an isolated temporary vault/runtime through a per-view transport hook for
+live Obsidian acceptance; only source-page navigation uses the real course file.
+Synthetic attempts must never be created in the learner's runtime.
 
-Course details expand inside the board. Task steps, stopping conditions and the
-progress/completion forms open in a collapsible inline panel; refresh retains the
-panel and unsaved input. Recording a checkpoint uses the existing durable progress
-operation without completing its parent task. Completion and cancellation retain
-their original evidence and recovery rules.
-The board exposes learning position, completed/remaining work, the next action,
-and stopping conditions. Source hashes, original-record paths and audit links stay
-in the backend and private exports for the steward to inspect, not as extra
-learner-facing navigation. Inactive tracks stay in a collapsed later-learning list.
+## Dashboard and background reconciliation
 
-Finite courses read their type and completion from the live plan. A current replay
-is displayed separately from the historical course checklist. Live completions
-supersede older personal descriptions; a stale dossier cannot keep an active course
-labelled not started. The manager receives the same weekly closure projection.
+The Obsidian plugin is a local learning dashboard for course position, weekly tasks,
+materials, Workbench and Deadlines. Open **Student OS 看板** from the ribbon or
+**打开 Student OS 看板** from the command palette. Teaching takes place in Codex or DSH.
+The local `dsh-student-os` plugin reads these canonical records and uses the existing
+`record_progress` operation for explicitly matched teaching checkpoints; it never
+closes tasks or declares independent mastery.
+The existing Today/Shutdown, Telegram, Calendar and Computer History workflows
+keep their owners and schedules.
 
-**继续 Lecture …** uses deterministic Python course sequencing. It reads the next
-lecture from the original ordered list and keeps the plan's completion criterion.
-Already-completed history gets one private replay task; an unfinished original is
-reused. The selected unit and the return to the original sequence survive restart.
-Repeated clicks and recovery reuse the same task, and closed replay tasks stay closed.
-The old built-in next-replay chat request can recover through this same path while
-retaining its original failed model decision for audit. Navigation, progress writes,
-projection and recovery do not ask a planning model. Preparing a new independent
-teaching chat still uses the teaching model; an existing prepared chat is reused.
+The view reads canonical task/deadline Markdown, the private curriculum dossier
+and saved learning reports. File-change refresh and the minute timer use Python
+without model calls. No embedded chat or automatic classroom preparation is invoked
+by opening the dashboard. The bridge permits only deterministic view, progress,
+focus, course-continuation, cancellation and manual-status operations.
 
-Click a weekly task's circle, a native Workbench/Today checkbox, a Deadline card's
-**核验完成**, or
-**核验完成** beside the classroom to open the same completion form. Describe the
-actual scope, optionally choose an actual completion date, and attach evidence.
-Unknown dates remain blank. **核验并记录完成** reads the evidence and checks it
-against that one task; sufficient evidence updates the original checkbox, while
-insufficient evidence stays **待核验** with a specific missing item. **记录停点**
-continues to save partial progress without claiming completion.
+Task checkboxes mark completion directly and can be unchecked. The optional
+inline form adds a report, actual completion date and related files. These are
+user confirmations, distinct from independent artifact or platform verification.
+Native Tasks checkboxes retain their normal direct editing behavior. A task's
+steps and stopping point expand inline; partial progress remains separate from
+whole-task completion. Completed and cancelled tasks retain their source anchors.
 
-**不再需要，关闭任务** records the user's decision immediately without a model
-or completion evidence. Clear cancellation intent in the form or steward chat
-uses the same path. Closure preserves the original checkbox, dates and anchor,
-replaces the active task/deadline tag with `#student-os/archived`, and saves a
-private `closed` receipt. It removes the task from active views without counting
-it as completed or submitted. Elapsed deadlines alone never authorize closure.
+`completion-record` stores manual complete/reopen/close decisions in the existing
+completion ledger, exports private receipts under `管家/状态记录/`, and uses the
+same guarded, recoverable canonical write. Retried operation IDs are idempotent.
+Pending older checks for the same task are cancelled when a manual decision is
+applied. A closed task keeps its original checkbox and replaces its active tag
+with `#student-os/archived`; closure never asserts completion.
 
-`completion.py` stores the original claim, task version, bounded evidence content,
-file hashes, native check turn and result. Citations must occur in the supplied
-evidence; submission receipts must identify the matching course/assignment and
-successful state. Ordinary self-reports are labelled separately from artifact
-or receipt checks. PDF text, saved notebook outputs and image OCR can be read;
-unreadable or incomplete evidence remains uncertain. The check does not log in
-to external platforms. The model judges meaning; deterministic code controls
-scope, citations, privacy, deduplication, cancellation and canonical writes.
+Background `completion-check` remains available for evidence-based reconciliation.
+It checks real task scope, actual artifact contents and matching external receipts.
+Computer History helps find relevant work and stopping points; browsing alone
+cannot establish understanding or submission. A subsequent user correction takes
+precedence over an older automated verdict. Removing Obsidian chat does not remove
+existing native sessions, progress, evidence or automation state.
 
-`weekly.py` derives weeks from explicit Week labels, lesson dates, or original
-scheduled/due dates. Undated tasks and dates outside the current term stay in
-separate buckets. It never reschedules tasks or changes checkboxes. Progress bars
-count task records, not mastery or weighted course completion. Learning evidence
-is a separate state and never increments the completed count.
+**打开学习材料** selects the canonical task and opens its exact linked lesson file,
+unchanged material binding or explicitly numbered/week-labelled lecture handout.
+Existing tabs retain their page and edit state. Ambiguous material is reported;
+opening a file never records completion. **继续 Lecture …** uses the existing
+Python sequence and reuses or creates the appropriate private replay task.
 
-`curriculum.py` projects the saved timetable and private `管家/课程定位.json`
-observations. Positions carry evidence hashes and dates. A `file.md#Heading`
-reference fingerprints that section, so unrelated edits do not invalidate it.
-Expired or changed evidence retains its dated last-known description. New learning
-handoffs update their matching course, while earlier observations stay associated
-with their original tasks. The generated private `管家/课程总览.md` also remains
-readable without the plugin.
+`weekly.py` groups Lecture, Seminar/exercises, other requirements and recommendations.
+Counts use canonical tasks, not elapsed time or mastery estimates. A sourced weekly
+scope may override a timetable's generic event types (for example, a project
+briefing instead of a standard Lecture). Missing or stale scope remains visible.
+`curriculum.py` projects live completion and saved stopping points. A course may
+define a sourced milestone sequence by canonical task references: the project card
+counts those stage nodes, keeps auxiliary preparation separate, and expands the
+whole route inline. Missing references stay visible and never reduce the denominator;
+manual ticks and deadline changes feed the same projection.
+ the private
+`管家/课程总览.md` remains readable independently of Obsidian. Source hashes and audit
+records stay in the backend rather than cluttering learner navigation.
 
-Record changes trigger a debounced refresh; the minute timer handles time and day
-changes. Refresh, weekly grouping, source checks, counts and direct progress-form
-writes do not call a model. The last valid course projection is retained in SQLite:
-a temporarily missing or corrupt input keeps that snapshot visible with a warning,
-including across process restarts. A later successful read replaces it. Failed
-bridge reads retain the in-memory view. Generated exports do not watch themselves.
-Semantic changes in school materials still require explicit evidence; the code
-does not infer knowledge from browsing or silently advance teaching boundaries.
-
-On startup and once per minute while Obsidian is running, the bridge refreshes
-records. It prepares a newly selected Today task when no prior classroom or
-unfinished manager request exists. It does not automatically restart cancelled
-classrooms or create another lesson after a handoff. **进入已准备课堂** opens the
-saved native conversation; **记录进度** saves the user's actual range and next step.
-The classroom entry shows an opening state, activates the selected conversation,
-scrolls to its latest exchange and focuses its composer. Success identifies the
-opened pane beside the button; errors remain there for a retry. Opening the same
-classroom again reuses its conversation and preserves any unsent composer draft.
-The same entry opens the lesson's local handout in the main area alongside the
-classroom. It follows the exact task link to that lesson's slides, or an unchanged
-task-material binding; numbered lecture records and explicitly week-labelled
-school lecture files can also resolve existing classrooms. Course indexes,
-solutions and transcripts are not chosen as the main handout. A school week is
-never treated as a chapter number. Missing or ambiguous handouts are reported;
-an exact lesson note remains usable as a fallback. Existing material tabs retain
-their reading position. Navigation uses local records and does not call a model
-or record learning completion.
-
-## Runtime and boundaries
-
-- Requires macOS, Python 3.9+, the installed Codex CLI and its existing login in
-  the separate `~/Library/Application Support/StudentOSLearning/codex/` home.
-  Obsidian CLI and enabled Claudian are required for classroom registration.
-- Private SQLite state lives in
-  `~/Library/Application Support/StudentOSLearning/steward/`, outside the iCloud
-  vault. Immutable requests, native IDs, stages, receipts and cancellation state
-  survive process exits. The fixed chat is a database-backed transcript; internal
-  planning turns use separate native contexts, so a long chat is not the memory
-  store.
-- Existing task and deadline Markdown files remain their canonical originals.
-  Only an explicit completion request passing its evidence check may tick one
-  original. Direct Markdown edits remain user-owned. An unchecked task is
-  completion-unknown, not proven unfinished. Check receipts are exported under
-  the private `管家/完成核验/` folder; resumed requests reuse their original turn.
-- Learning handoffs are stored in SQLite and exported as immutable Markdown under
-  the Git-ignored `99_学习情况记录/管家/学习交接/` folder. They record user reports,
-  source versions, optional artifact hashes and the next step. They do not verify
-  mastery or formal submission. External edits to an export are preserved.
-- The current week's factual report is refreshed under the private
-  `管家/事实周报/` folder. It states source coverage and distinguishes recorded
-  completion, user reports and activity observations. Computer History is a
-  recent cache, not a full-week archive or learning/submission proof.
-- Daily commitments have explicit start/end boundaries and London wall-clock
-  times. Acknowledgements are deduplicated by commitment and local date. Expired
-  or cancelled commitments cannot revive on request replay. Missed days are not
-  accumulated. These are **in-app prompts while Obsidian is open**, not OS or
-  Telegram notifications.
-- The existing Today/Shutdown, Telegram, Calendar and Computer History automation
-  owners are unchanged. No new LaunchAgent, network listener or morning schedule
-  is installed. Closing or sleeping the Mac suspends this entry's work.
+Private SQLite state remains in `~/Library/Application Support/StudentOSLearning/steward/`.
+Existing teaching sessions remain in the sibling `codex/` directory. The former
+Claudian plugin is removed using Obsidian's plugin manager, after a private backup.
+No Codex account, desktop conversation or Computer History exporter is removed.
 
 ## Execution and recovery
 
 `service.py` is the interface backend. It accepts one JSON object on stdin where
 needed and emits JSON lines with `status`, `result` or `error` events on stdout.
 It supports `view`, `chat`, `resume`, `act`, `cancel-request`, `prepare-focus`,
-`acknowledge`, `completion-context`, `completion-check` and `completion-cancel`.
+`acknowledge`, `completion-context`, `completion-check`, `completion-record` and `completion-cancel`.
 `--state` and `--codex-home` allow isolated acceptance environments.
 
 ```sh
@@ -209,7 +145,7 @@ restriction does not change a classroom's existing Claudian permission settings.
 The manager can execute `refresh_dashboard` when reported progress and the board
 disagree: reread canonical tasks and checks, rebuild the course projection and
 verify its private export. This never changes learning facts. `check_completion`
-uses the same evidence checks as the inline task form, with a stable request ID,
+uses the background evidence-check path, with a stable request ID,
 the user's actual report, and an explicitly known date only. Chat cancellation
 also stops its active check. Submission still requires a matching receipt.
 Structured action receipts appear separately from the conversational explanation,

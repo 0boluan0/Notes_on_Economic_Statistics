@@ -1,9 +1,9 @@
 {
   "id": "learning-progress-dashboard",
   "name": "Learning Progress Dashboard",
-  "version": "0.9.3",
+  "version": "0.18.0",
   "minAppVersion": "1.4.0",
-  "description": "Student OS home, durable steward chat, prepared classrooms and learning records.",
+  "description": "Student OS learning dashboard, materials, tasks and deadlines.",
   "author": "fengyihang",
   "isDesktopOnly": false
 }

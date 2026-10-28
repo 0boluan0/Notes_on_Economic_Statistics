@@ -189,7 +189,8 @@ def serve(args, state, vault, config):
                             inbox.reply(row['id'], fallback)
                         receipt = SendOnce(api, state / 'sends.sqlite3', config['owner_chat_id']).send(
                             f"reply:{row['id']}", fallback, json.loads(row['payload'])['message_id'])
-                        inbox.finish(row['id'], 'processing_failed_' + receipt.status)
+                        if receipt.status != 'rejected' or receipt.error_code != 429:
+                            inbox.finish(row['id'], 'processing_failed_' + receipt.status)
                     # Hold this item for the next loop; its durable receipt prevents duplicate writes.
                     break
             inbox.receive(api.get_updates(inbox.offset(), timeout=25), config)

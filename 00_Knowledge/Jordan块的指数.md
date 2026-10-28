@@ -57,5 +57,5 @@ Negative real part dominates the polynomial factor, whereas a nontrivial block o
 
 ## 来源与核验
 
-- [[01_Math/02_linear algebra/03_Positive Definite Matrices and Applications.md#Jordan块的幂与Jordan块的指数|课程 Jordan 块计算]]：核对幂零部分的有限指数展开与连续时间边界。
+- [[03_Positive Definite Matrices and Applications#Jordan块的幂与Jordan块的指数|课程 Jordan 块计算]]：核对幂零部分的有限指数展开与连续时间边界。
 - [[01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U2_S10_Lecture_Lecture_23_Differential_Equations_and_expAt.pdf|MIT Lecture 23 transcript]]：核对矩阵指数与常系数线性系统模式。

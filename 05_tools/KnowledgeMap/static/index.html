@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><title>知识与课程 · Academic</title><link rel="stylesheet" href="/styles.css"><script src="/app.js" defer></script></head>
+<body>
+<div class="app">
+<aside class="sidebar">
+<a class="brand" href="/" aria-label="知识与课程首页"><span class="brand-mark">A<span>↗</span></span><span>ACADEMIC<small>知识与课程</small></span></a>
+<div class="sidebar-label">你的学习空间</div>
+<nav aria-label="主导航"><button class="nav-item active" data-view="map"><span>⌘</span>知识地图 <small id="topic-count"></small></button><button class="nav-item" data-view="courses"><span>▤</span>课程对照 <small id="course-count"></small></button><button class="nav-item" data-view="notes"><span>▧</span>Obsidian 笔记 <small id="note-count"></small></button></nav>
+<div class="sidebar-line"></div>
+<div class="sidebar-label">选择课程，高亮覆盖知识</div>
+<div id="course-filters" class="course-filters"></div>
+<button class="text-button add-course" id="add-course">＋ 添加公开课</button>
+<div class="sidebar-bottom"><div class="connection"><i></i> 连接 Academic</div><p id="connection-summary">正在读取知识库…</p><button id="refresh" class="text-button">↻ 刷新知识库</button><div class="private-label">本地保存 · 个人空间</div></div>
+</aside>
+<main>
+<header class="topbar"><div class="breadcrumb">Academic <span>/</span> <strong id="view-crumb">知识地图</strong></div><div class="search-wrap"><span>⌕</span><input id="global-search" type="search" aria-label="搜索知识、课程或笔记" placeholder="搜索知识、课程或笔记…"><kbd>/</kbd><div id="search-results" class="search-results" hidden></div></div></header>
+<section class="page-intro"><div><div class="eyebrow">KNOWLEDGE × OPEN COURSES</div><h1 id="page-title">让课程，落在你的知识上。</h1><p id="page-subtitle">从知识点找到讲解，也从一门课看见它能补足什么。</p></div><div class="scope-pill"><span></span> 线性代数 → 统计学习</div></section>
+<div id="alert" role="alert" hidden></div>
+<section id="map-view" class="view">
+<div class="map-toolbar"><div class="segmented"><button id="all-relations" class="chosen">全部关系</button><button id="prereq-only">只看前置</button></div><label class="focus-toggle"><input id="focus-path" type="checkbox"> 聚焦所选知识</label><div class="zoom-controls"><button id="zoom-out" aria-label="缩小地图">−</button><span id="zoom-label">100%</span><button id="zoom-in" aria-label="放大地图">＋</button><button id="fit-map">适应宽度</button></div></div>
+<div class="map-shell"><div id="map-scroller" class="map-scroller" tabindex="0" aria-label="知识关系图，可横向和纵向滚动"><div id="map-space"><div id="map-world"></div></div></div><div class="map-footer"><span><i class="legend-line"></i>知识前置 <i class="legend-line dashed"></i>应用 / 计算方式</span><span>点击知识或连线查看依据</span></div></div>
+<div class="context-strip"><div><span class="context-icon">↗</span><strong>同一知识，多个讲法</strong><p>选一个节点，比较课程章节；你的原笔记始终在 Obsidian。</p></div><div id="progress-summary" class="progress-summary"></div></div>
+<p class="scope-note">当前展示首个专题的已整理关系。未连线不代表没有先修；本图不判断你是否已掌握。</p>
+</section>
+<section id="courses-view" class="view" hidden><div class="section-heading"><h2>从课程回到知识</h2><span>课程版本与章节分别保留</span></div><div id="course-cards" class="course-cards"></div><div id="course-comparison"></div></section>
+<section id="notes-view" class="view" hidden><div class="section-heading"><h2>你的知识原子</h2><span id="notes-caption">实时读取现有笔记</span></div><div class="library-tools"><input id="notes-search" type="search" placeholder="按标题、英文别名或 atom ID 搜索" aria-label="搜索 Obsidian 笔记"><span>来源核验与个人掌握分开显示</span></div><div id="notes-list" class="notes-list"></div></section>
+</main>
+</div>
+<aside id="detail" class="detail" aria-label="知识详情" hidden><div class="detail-top"><span id="detail-kicker"></span><button id="close-detail" aria-label="关闭详情">×</button></div><div id="detail-content"></div></aside>
+<dialog id="editor"><form id="editor-form"><div class="dialog-heading"><div><span class="eyebrow">BUILD YOUR CONNECTIONS</span><h2 id="editor-title"></h2></div><button type="button" id="cancel-editor" aria-label="关闭编辑窗口">×</button></div><div id="editor-fields"></div><p id="editor-error" role="alert"></p><div class="dialog-actions"><span>仅保存到你的本地地图</span><button type="submit" class="primary" id="save-editor">保存关联</button></div></form></dialog>
+<div id="toast" role="status" aria-live="polite" hidden></div>
+</body></html>

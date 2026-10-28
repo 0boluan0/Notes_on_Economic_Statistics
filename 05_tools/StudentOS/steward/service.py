@@ -22,6 +22,7 @@ from state import snapshot, rules, digest
 from steward import Store, DEFAULT_BINARY, DEFAULT_ROOT, attach, completed_turn, now, packed, prepare
 import curriculum
 from completion import CompletionChecks
+from review import Review
 
 ZONE = ZoneInfo("Europe/London")
 PRIVATE = "99_学习情况记录/管家"
@@ -104,6 +105,7 @@ class Service:
             CREATE TABLE IF NOT EXISTS acknowledgements (id TEXT PRIMARY KEY, at TEXT NOT NULL);
         """)
         self.completion = CompletionChecks(self)
+        self.review = Review(store, clock=self.clock, write_private=self.write_private)
 
     def get_value(self, key, default=None):
         row = self.db.execute("SELECT value FROM kv WHERE key=?", (key,)).fetchone()
@@ -313,6 +315,7 @@ class Service:
                 "source_issues": state["issues"], "source_status": state["status"], "today": state["today"],
                 "activity": state["activity"], "jobs": self.classroom_jobs(), "progress": records, "curriculum": courses,
                 "commitments": self.commitment_state(), "chat": requests, "completion_checks": checks, "weekly_report": self.weekly_report(state),
+                "reviews": self.review.catalog(),
                 "deadline_notes": self.read_note("99_学习情况记录/deadlines.md"),
                 "runtime": {"mode": "随 Obsidian 运行", "calendar": "沿用已有 Today，未实时重查日历", "notifications": "管家内提示；不接管既有 Telegram"}}
 
@@ -800,7 +803,7 @@ def main():
     parser.add_argument("--state", type=Path, default=DEFAULT_ROOT / "steward")
     parser.add_argument("--codex-home", type=Path, default=DEFAULT_ROOT / "codex")
     parser.add_argument("--codex", type=Path, default=DEFAULT_BINARY)
-    parser.add_argument("command", choices=("view", "chat", "resume", "act", "cancel-request", "prepare-focus", "acknowledge", "completion-context", "completion-check", "completion-cancel"))
+    parser.add_argument("command", choices=("view", "chat", "resume", "act", "cancel-request", "prepare-focus", "acknowledge", "completion-context", "completion-check", "completion-record", "completion-cancel", "review"))
     args = parser.parse_args()
     store = None
     def emit(kind, data):
@@ -814,6 +817,8 @@ def main():
         value = {} if args.command in ("view", "prepare-focus") else json.load(sys.stdin)
         if args.command == "view":
             result = service.view()
+        elif args.command == "review":
+            result = service.review.handle(value)
         elif args.command in ("chat", "resume"):
             result = service.chat(value["key"], value.get("body"))
         elif args.command == "act":
@@ -822,6 +827,8 @@ def main():
             result = service.completion.context(value["path"], value["raw"])
         elif args.command == "completion-check":
             result = service.completion.run(value["key"], value.get("request"))
+        elif args.command == "completion-record":
+            result = service.completion.record(value["key"], value.get("request"))
         elif args.command == "completion-cancel":
             result = service.completion.cancel(value["key"])
         elif args.command == "cancel-request":

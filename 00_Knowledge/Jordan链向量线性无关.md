@@ -63,8 +63,8 @@ The proof isolates coefficients from the tail of the chain by applying descendin
 ## 来源与核验
 
 - [[01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.4sum.pdf|MIT 18.06SC Session 3.4 summary]]：核对 Jordan 链递推结构与一条链对应一个 Jordan 块；线性无关性由正文对递推式逐次施加 $A-\lambda I$ 直接验证。
-- [[01_Math/02_linear algebra/03_Positive Definite Matrices and Applications.md#3.4.4 Jordan链与Jordan标准形|课程 3.4.4]]：核对链方程与链向量在 Jordan 块基中的排列。
+- [[03_Positive Definite Matrices and Applications#3.4.4 Jordan链与Jordan标准形|课程 3.4.4]]：核对链方程与链向量在 Jordan 块基中的排列。
 <!-- bilingual-en:start -->
 - [[01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.4sum.pdf|MIT 18.06SC Session 3.4 summary]] was checked for the Jordan-chain recurrence and the correspondence between one chain and one Jordan block; linear independence is then verified directly by applying successive powers of $A-\lambda I$.
-- [[01_Math/02_linear algebra/03_Positive Definite Matrices and Applications.md#3.4.4 Jordan链与Jordan标准形|Course Section 3.4.4]] was checked for the chain equations and the ordering of chain vectors in a Jordan-block basis.
+- [[03_Positive Definite Matrices and Applications#3.4.4 Jordan链与Jordan标准形|Course Section 3.4.4]] was checked for the chain equations and the ordering of chain vectors in a Jordan-block basis.
 <!-- bilingual-en:end -->

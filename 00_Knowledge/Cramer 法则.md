@@ -79,8 +79,8 @@ For the displayed $2\times2$ system, $\det A=5$. Replacing the first and second 
 ## 来源与核验
 
 - [[01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses2.7sum.pdf|MIT 18.06SC Session 2.7 summary]]：核对 Cramer 法则与伴随矩阵公式的联系。
-- [[01_Math/02_linear algebra/02_Least Squares, Determinants and Eigenvalues.md#Cramer 法则|课程 Cramer 法则推导]]：核对换列公式、适用条件与奇异系统边界。
+- [[02_Least Squares, Determinants and Eigenvalues#Cramer 法则|课程 Cramer 法则推导]]：核对换列公式、适用条件与奇异系统边界。
 <!-- bilingual-en:start -->
 - [[01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses2.7sum.pdf|MIT 18.06SC Session 2.7 summary]] was checked for Cramer's rule and its relation to the adjugate formula.
-- [[01_Math/02_linear algebra/02_Least Squares, Determinants and Eigenvalues.md#Cramer 法则|The course derivation of Cramer's rule]] was checked for the replacement formula, assumptions, and singular-system boundary.
+- [[02_Least Squares, Determinants and Eigenvalues#Cramer 法则|The course derivation of Cramer's rule]] was checked for the replacement formula, assumptions, and singular-system boundary.
 <!-- bilingual-en:end -->

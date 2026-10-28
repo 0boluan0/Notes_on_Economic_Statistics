@@ -130,6 +130,13 @@ assert.equal(deadlineBoard({ obligations: [dated("winter", "2026-10-26", "13:00"
 assert.equal(deadlineBoard({ obligations: [dated("rollover", "2026-10-15")] }, new Date("2026-10-14T23:30:00Z")).upcoming[0].timing, "今天");
 const finalProject = { ...dated("final", "2027-08-06", "17:00"), raw: "- [ ] 2027-08-06 17:00｜ST498｜提交小组报告（80%）＋个人贡献报告（20%）" };
 assert.equal(deadlineBoard({ obligations: [finalProject] }, fridayMorning).later[0].title, "小组报告（80%）＋个人贡献报告（20%）", "Short titles retain both required deliverables");
+const optionalSubmission = { ...dated("optional", "2026-10-24", "23:59"), optional: true,
+  raw: "- [ ] 2026-10-24 23:59｜ST445｜提交 Formative PS1（可选、不计分） #student-os/submission-window 📅 2026-10-24 ^optional" };
+const optionalBoard = deadlineBoard({ obligations: [optionalSubmission] }, new Date("2026-10-22T12:00:00Z"));
+assert.equal(optionalBoard.upcoming[0].kind, "可选提交");
+assert.equal(optionalBoard.upcoming[0].detail, "可选、不计分");
+assert.equal(optionalBoard.upcoming[0].task.status, "completion_unknown");
+assert.equal(deadlineNotices({ obligations: [optionalSubmission] }, new Date("2026-10-22T12:00:00Z"))[0].optional, true, "Optional submissions appear in the same near-deadline radar");
 const supplemental = deadlineSupplements(`> [!info]+ 其他已公布提交节点与待定日期
 > - **10 月 23 日 17:00｜ST447 Exercise 2｜可选提交**，以实际完成部分为准。[[截止事项记录#ST447|详情]]
 > - **10 月 23 日｜ST445 formative PS1｜形成性反馈节点**，时刻待确认。[[截止事项记录#ST445|详情]]
@@ -351,56 +358,14 @@ async function checkArchivedPlans() {
 
 async function checkStewardLifecycle() {
   const bridge = new StewardBridge({});
-  const task = { id: "learning-task" };
-  let data = { focus: { task }, chat: [], jobs: [], commitments: [], obligations: [] };
-  const calls = [];
-  bridge.refresh = async () => data;
-  bridge.run = async (command) => calls.push(command);
-  await bridge.start();
-  assert.deepEqual(calls, ["prepare-focus"]);
-  calls.length = 0;
-  data.jobs = [{ key: "original", state: "cancelled", request: { task } }];
-  await bridge.start();
-  assert.equal(calls.length, 0, "Periodic checks must not revive a cancelled classroom");
-  data.jobs[0] = { key: "original", state: "registered", handed_off: true, request: { task } };
-  await bridge.start();
-  assert.equal(calls.length, 0, "A saved handoff needs an explicit next-class request");
-  bridge.busy = true;
-  bridge.activeTask = task.id;
-  data.jobs[0] = { key: "original", state: "preparing", request: { task } };
-  bridge.call = async (command, input) => { calls.push({ command, input }); };
-  await bridge.cancelActive();
-  assert.equal(calls[0].input.action.kind, "cancel_classroom");
-  assert.equal(calls[0].input.action.job_key, "original", "Stop must cancel the running job, even while the bridge is busy");
-
-  let metadataLoaded = false;
-  let opened = null;
-  const nativeId = "original-native-thread";
-  const host = {
-    ensureConversationMetadataLoaded: async ids => { assert.deepEqual(ids, [nativeId]); metadataLoaded = true; },
-    getConversationById: async id => metadataLoaded ? { id, sessionId: id, messages: [{}, {}] } : null,
-  };
-  let stateDelivered = false;
-  const savedState = { tabWorkspace: { existing: "preserve" } };
-  const leaf = { getRoot: () => null, view: {
-    tabWorkspace: { isReady: false },
-    getState: () => savedState,
-    setState: async state => { assert.equal(state, savedState); stateDelivered = true; },
-    getTabManager: () => ({ openConversation: async id => { opened = id; } }),
-    getActiveTab: () => ({ state: { currentConversationId: opened, messages: [{}, {}] } }),
-    focusActiveInput: () => {},
-  } };
-  const view = { app: {
-    plugins: { plugins: { realclaudian: { chatHost: host } } },
-    commands: { executeCommandById: async () => true },
-    workspace: { getLeavesOfType: () => [leaf], revealLeaf: async () => {}, setActiveLeaf: () => {} },
-  } };
-  view.loadClassroom = StewardView.prototype.loadClassroom;
-  view.openClassroomMaterial = async () => ({ message: "讲义待匹配" });
-  view.updateClassroomEntry = () => {};
-  await StewardView.prototype.openClassroom.call(view, { key: "saved-job", conversation_id: nativeId, thread_id: nativeId });
-  assert.equal(opened, nativeId, "After application restart, load saved metadata before reading and opening the original classroom");
-  assert.equal(stateDelivered, true, "A cold pane must finish restoring its exact saved workspace state before navigation");
+  let refreshes = 0;
+  bridge.refresh = async () => { refreshes++; return { focus: { task: { id: "new" } }, chat: [], jobs: [] }; };
+  bridge.run = async () => { throw new Error("Opening the dashboard must not start an AI job"); };
+  await bridge.start(); await bridge.start();
+  assert.equal(refreshes, 2);
+  await assert.rejects(() => bridge.call("chat", { body: "hello" }), /Codex/);
+  await assert.rejects(() => bridge.call("prepare-focus"), /Codex/);
+  await assert.rejects(() => bridge.call("act", { action: { kind: "check_completion" } }), /Codex/);
 }
 
 async function checkAutomaticRefresh() {
@@ -440,7 +405,7 @@ async function checkAutomaticRefresh() {
 }
 
 async function checkWorkspaceContext() {
-  const view = { draft: "", input: { value: "What remains?" }, selectedCourse: "ST445", selectedWeek: "2", taskFilter: "recorded", section: "workbench",
+  const view = { draft: "", input: { value: "What remains?" }, selectedCourse: "ST445", selectedWeek: "2", taskFilter: "recorded", section: "workbench", learningArea: "external",
     studyUnits: { "MIT 18.01": "unit-9" }, studyOpen: ["MIT 18.01"], studyRoutes: { "MIT 18.01": true },
     chatContext: { title: "ST445 preparation", ref: due.ref }, app: { workspace: { requestSaveLayout() {} } }, saveWorkspace() {}, render() {}, renderChatContext() {},
     bridge: { busy: false, lastState: { chat: [] }, run: async (command, request) => {
@@ -452,8 +417,149 @@ async function checkWorkspaceContext() {
   assert.equal(view.input.value, "What remains?"); assert.equal(view.section, "workbench"); assert.equal(view.chatContext.ref, due.ref);
   assert.equal(view.studyUnits["MIT 18.01"], "unit-9"); assert.deepEqual(view.studyOpen, ["MIT 18.01"], "Course expansion and selected unit survive workspace restoration");
   assert.equal(view.studyRoutes["MIT 18.01"], true, "Expanded historical routes survive workspace restoration");
-  await StewardView.prototype.send.call(view);
-  assert.equal(view.input.value, ""); assert.equal(view.chatContext, null);
+  assert.equal(view.learningArea, "external", "The selected learning area survives workspace restoration");
+  assert.equal(view.draft, "What remains?", "Historical chat drafts remain saved after removing the chat UI");
+}
+
+async function checkLearningNavigation() {
+  const counts = { done: 0, total: 1, recorded: 0, unknown: 1, planned: 0 };
+  const curriculum = { week: 4, courses: [
+    { id: "ST443", title: "Machine Learning", group: "degree", task_progress: counts },
+    { id: "ST447", title: "Data Science", group: "degree", task_progress: counts },
+    { id: "MIT 18.06", title: "Linear Algebra", group: "foundation", active: true, task_progress: counts },
+  ], weekly: { tasks: [], weeks: [{ key: "4", number: 4, start: "2026-10-19", end: "2026-10-25" }], bundles: [] }, issues: [] };
+  const focus = { task: { id: "saved-focus" } }, visited = [];
+  const view = { selectedCourse: "ST443", selectedWeek: "2", learningArea: "school", section: "overview",
+    contentEl: { scrollTop: 900 },
+    bridge: { lastState: { curriculum, focus } }, saveWorkspace() {}, render() {},
+    board: { querySelector: selector => ({ scrollIntoView() { visited.push(selector); } }) } };
+  StewardView.prototype.selectTasks.call(view, "ST447", "2");
+  assert.equal(view.selectedWeek, null, "A different school course opens its current week instead of inheriting another course's old week");
+  assert.equal(view.learningArea, "school");
+  StewardView.prototype.selectTasks.call(view, "ST447", "3");
+  assert.equal(view.selectedWeek, "3", "Selecting a historical week within the same course remains possible");
+  StewardView.prototype.selectTasks.call(view, "MIT 18.06", "all");
+  assert.equal(view.learningArea, "external", "Task entry selects the task's actual learning area");
+  assert.equal(view.selectedWeek, "all");
+  StewardView.prototype.selectLearningArea.call(view, "school");
+  assert.equal(view.learningArea, "school");
+  assert.equal(view.selectedCourse, "MIT 18.06", "Switching areas does not overwrite the remembered course or learning focus");
+  assert.equal(view.bridge.lastState.focus, focus);
+  assert.equal(view.contentEl.scrollTop, 0, "Switching areas starts at the top rather than retaining a long page's old scroll position");
+  view.contentEl.scrollTop = 700;
+  StewardView.prototype.returnToCourses.call(view);
+  assert.equal(view.contentEl.scrollTop, 0, "Returning to courses reveals the first course cards below the fixed navigation");
+  assert.equal(view.selectedCourse, null);
+  const restored = { render() {} };
+  await StewardView.prototype.setState.call(restored, { learningArea: "invalid" });
+  assert.equal(restored.learningArea, "school", "Older or invalid workspace state starts in the school area");
+
+  // Exercise the real area's visibility and control callbacks with only the DOM methods it uses.
+  const nodes = [], actions = [];
+  const node = (tag = "div", options = {}) => {
+    const value = { tagName: tag.toUpperCase(), cls: options.cls || "", text: options.text || "", attrs: { ...options.attr }, dataset: {}, children: [],
+      setAttribute(key, item) { this.attrs[key] = item; }, addEventListener() {},
+      classList: {
+        toggle(name, enabled) { const classes = new Set(value.cls.split(/\s+/).filter(Boolean)); if (enabled) classes.add(name); else classes.delete(name); value.cls = [...classes].join(" "); },
+        contains(name) { return value.cls.split(/\s+/).includes(name); },
+      },
+      querySelectorAll(selector) { return this.children.flatMap(child => [...(selector.startsWith(".") && child.cls.split(/\s+/).includes(selector.slice(1)) ? [child] : []), ...child.querySelectorAll(selector)]); },
+      appendChild(child) { this.children.push(child); child.parentElement = this; },
+      createEl(childTag, childOptions) { const child = node(childTag, childOptions); this.appendChild(child); return child; },
+      createDiv(childOptions) { return this.createEl("div", childOptions); }, createSpan(childOptions) { return this.createEl("span", childOptions); } };
+    nodes.push(value); return value;
+  };
+  const rendered = { ...view, learningArea: "external", contentEl: node(), board: node(), classroom: node(),
+    button(parent, label, action, cls) { const result = parent.createEl("button", { text: label, cls }); actions.push({ label, action, node: result }); return result; },
+    renderSelfStudy() {}, renderWeekly() {}, selectTasks: (...args) => { rendered.selected = args; },
+    selectLearningArea: area => { rendered.chosenArea = area; }, selectSection: section => { rendered.chosenSection = section; }, returnToCourses() {},
+    updateNavigation() { StewardView.prototype.updateNavigation.call(this); },
+  };
+  StewardView.prototype.renderAppbar.call(rendered);
+  const tabs = rendered.contentEl.querySelectorAll(".sos-appbar-primary-tab");
+  assert.deepEqual(tabs.map(tab => tab.text), ["学校课程", "校外学习"]);
+  assert.equal(tabs[0].attrs["aria-pressed"], "false"); assert.equal(tabs[1].attrs["aria-current"], "page");
+  assert.equal(rendered.contentEl.classList.contains("is-learning-overview"), true);
+  assert.equal(rendered.contentEl.classList.contains("is-external-area"), true);
+  actions.find(a => a.label === "学校课程").action(); assert.equal(rendered.chosenArea, "school");
+  actions.find(a => a.label === "校外学习").action(); assert.equal(rendered.chosenArea, "external");
+  for (const [label, section] of [["工作台", "workbench"], ["期限", "deadlines"], ["今日", "today"]]) {
+    actions.find(a => a.label === label).action(); assert.equal(rendered.chosenSection, section);
+    rendered.section = section; rendered.updateNavigation();
+    assert.equal(tabs.every(tab => tab.attrs["aria-current"] === "false"), true, "Management views must not leave a learning area visibly selected");
+    assert.equal(rendered.contentEl.querySelectorAll(".sos-section-tab").filter(tab => tab.attrs["aria-current"] === "page")[0].dataset.section, section);
+    assert.equal(rendered.contentEl.classList.contains("is-external-area"), false, "Management views must not inherit the bounded external workspace layout");
+  }
+  rendered.section = "overview"; rendered.updateNavigation();
+  assert.equal(rendered.learningArea, "external", "Visiting management views preserves the remembered learning area");
+  assert.equal(tabs[1].attrs["aria-current"], "page");
+  StewardView.prototype.renderCurriculum.call(rendered, { curriculum }, {});
+  assert.equal(nodes.find(n => n.cls === "sos-school").hidden, true);
+  assert.equal(nodes.find(n => n.cls === "sos-external").hidden, false);
+  assert.deepEqual(nodes.find(n => n.cls === "sos-learning-breadcrumb").children.map(n => n.text),
+    ["学校学习", "›", "全部学校课程", "›", "第 4 周"], "The all-courses context still identifies the current week");
+  assert.equal(nodes.some(n => n.cls === "sos-learning-nav"), false, "The curriculum must not add a duplicate area navigation row");
+  rendered.selectedCourse = "ST443"; rendered.selectedWeek = "2";
+  actions.find(a => a.node.dataset.course === "ST443").action();
+  assert.deepEqual(rendered.selected, ["ST443", "2", "all"], "Clicking the selected course again does not toggle silently to all courses");
+  actions.length = 0;
+  StewardView.prototype.renderWeekly.call(rendered, node(), curriculum, "school");
+  actions.find(a => a.label === "回到本周").action();
+  assert.deepEqual(rendered.selected, ["ST443", null], "Back to this week preserves the currently selected school course");
+
+  const todayDate = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/London", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+  const dueTitle = "ST445｜Formative PS1提交窗口关闭（可选、不计分）：完成并核对习题后提交";
+  const compactDue = { obligations: [
+    { ...dated("compact", todayDate, "23:59"), raw: `- [ ] ${todayDate} 23:59｜${dueTitle}` },
+    { ...dated("second", todayDate, "13:30"), raw: `- [ ] ${todayDate} 13:30｜ST443｜准备课堂材料` },
+  ] };
+  const originalDue = JSON.stringify(compactDue);
+  const noticeView = { ...rendered, board: node() };
+  StewardView.prototype.renderDueToday.call(noticeView, compactDue);
+  const dueButtons = noticeView.board.querySelectorAll(".sos-due-item");
+  assert.equal(dueButtons.length, 2, "Compact deadline headlines retain every item due today");
+  assert.deepEqual(noticeView.board.querySelectorAll(".sos-due-time").map(n => n.text), ["13:30", "23:59"]);
+  assert.deepEqual(noticeView.board.querySelectorAll(".sos-due-label").map(n => n.text), ["ST443｜准备课堂材料", dueTitle.split("：")[0]]);
+  assert.equal(dueButtons[1].attrs.title, dueTitle, "The tooltip retains the full original instruction");
+  assert.equal(dueButtons[1].attrs["aria-label"], `23:59 ${dueTitle}`, "The accessible deadline retains its time and full instruction");
+  actions.find(a => a.node === dueButtons[1]).action(); assert.equal(rendered.chosenSection, "deadlines");
+  assert.equal(JSON.stringify(compactDue), originalDue, "Compact rendering must not change the original deadline");
+
+  const externalEdit = "记录含有外部修改，已保留原文：99_学习情况记录/week-review/example.md";
+  for (const error of [externalEdit, "周报读取失败：文件不可用"]) {
+    const detailView = { ...rendered, board: node() };
+    StewardView.prototype.renderDetails.call(detailView, { progress: [], commitments: [], weekly_report: { error } });
+    const warning = detailView.board.querySelectorAll(".sos-record-warning")[0];
+    assert.equal(warning.tagName, error === externalEdit ? "DETAILS" : "P");
+    if (error === externalEdit) {
+      assert.equal(warning.children[0].text, "同步提醒：周报有外部修改，原文已保留");
+      assert.equal(warning.children[1].text, error, "The expandable reminder preserves the original diagnostic and path");
+      assert.equal(warning.classList.contains("sos-error"), false);
+    } else assert.equal(warning.text, error, "Other errors remain visible in full");
+  }
+
+  const mount = { empty() {}, appendChild(child) { this.child = child; } };
+  const row = { tagName: "DIV", dataset: { key: "map-unit", taskId: "mapped-task" }, querySelector: () => mount, parentElement: { tagName: "DETAILS", open: false } };
+  const unitBody = { tagName: "DETAILS", open: false, parentElement: row };
+  mount.parentElement = unitBody;
+  Object.defineProperty(row, "open", { set() { throw new Error("A map unit is not a details element"); } });
+  const taskView = { section: "overview", board: { querySelectorAll: () => [row] }, taskDock: { appendChild(child) { this.child = child; } },
+    taskDetail: { rowKey: "map-unit", controller: { task: { id: "mapped-task" } }, host: { draft: "Unfinished note" } } };
+  StewardView.prototype.placeTaskDetail.call(taskView);
+  assert.equal(mount.child, taskView.taskDetail.host); assert.equal(row.parentElement.open, true);
+  assert.equal(unitBody.open, true, "Opening a map record expands the unit-body details inside its row");
+  assert.equal(taskView.taskDock.hidden, true, "Mapped course records stay inline rather than appearing at the dashboard's top");
+  const otherProjection = { ...row, dataset: { key: "weekly-same-task", taskId: "mapped-task" }, querySelector() { throw new Error("A map record must not jump into another projection"); } };
+  taskView.board.querySelectorAll = () => [otherProjection];
+  StewardView.prototype.placeTaskDetail.call(taskView);
+  assert.equal(taskView.taskDock.hidden, true, "Browsing away from the map unit parks its record without exposing a top-level form");
+  assert.equal(taskView.taskDock.child.draft, "Unfinished note", "The parked record retains its existing form and draft");
+  assert.equal(taskView.taskDetail.rowKey, "map-unit", "Returning can still identify the original map unit");
+  taskView.board.querySelectorAll = () => [row];
+  unitBody.open = false;
+  StewardView.prototype.placeTaskDetail.call(taskView);
+  assert.equal(mount.child, taskView.taskDetail.host); assert.equal(unitBody.open, true);
+  assert.equal(mount.child.draft, "Unfinished note", "Returning to the mapped unit reuses the unfinished form");
 }
 
 async function checkWorkspacePersistence() {
@@ -492,14 +598,12 @@ async function checkLearningEntry() {
   const view = { bridge: { lastState: data, act: async action => {
     calls.push(action.kind); assert.equal(action.task_id, routeTask.id); assert.equal(action.next_step, handoffTask.record_next);
     data.focus = { task: routeTask }; return {};
-  } }, openClassroom: async job => { calls.push("open"); assert.equal(job.key, "ready"); }, prepareTask: async task => {
-    calls.push("prepare"); assert.equal(task.id, routeTask.id); data.jobs = [ready]; return { job_key: ready.key };
-  } };
+  } }, openStudyMaterial: async task => { calls.push("open"); assert.equal(task.id, routeTask.id); } };
   await StewardView.prototype.beginTask.call(view, handoffTask);
-  assert.deepEqual(calls, ["set_focus", "prepare", "open"], "Both course types save the selected task before entering its prepared classroom");
+  assert.deepEqual(calls, ["set_focus", "open"], "Both course types save the selected task and open its material without AI");
   calls.length = 0;
   await StewardView.prototype.beginTask.call(view, handoffTask);
-  assert.deepEqual(calls, ["open"], "A ready classroom is reused without preparing another one");
+  assert.deepEqual(calls, ["open"], "Repeated entry uses the existing focus");
   view.taskDetail = { controller: { task: { id: "another" } } };
   await assert.rejects(() => StewardView.prototype.beginTask.call(view, handoffTask), /正在填写/);
   view.taskDetail = null; data.tasks[0].status = "recorded_complete";
@@ -532,39 +636,6 @@ async function checkCourseContinuation() {
   view.bridge.act = async () => ({ error: "Sequence changed" });
   await assert.rejects(() => StewardView.prototype.continueCourse.call(view, course), /Sequence changed/);
   assert.equal(calls.length, 3, "A failed continuation cannot enter a historical completed task");
-}
-
-async function checkClassroomPresentation() {
-  const order = [], right = {}, tab = { state: { currentConversationId: "previous", messages: [] }, renderer: { scrollToBottom: () => order.push("scroll") } };
-  const job = { key: "ready", conversation_id: "lesson", thread_id: "native" };
-  const leaf = { getRoot: () => right, view: {
-    tabWorkspace: { isReady: true }, getActiveTab: () => tab,
-    getTabManager: () => ({ openConversation: async id => { order.push("load"); tab.state = { currentConversationId: id, messages: ["teacher"] }; } }),
-    focusActiveInput: () => { assert.equal(tab.state.currentConversationId, "lesson"); order.push("focus"); }
-  } };
-  const view = { plugin: {}, app: { plugins: { plugins: { realclaudian: {
-    chatHost: { getConversationById: async () => ({ id: "lesson", sessionId: "native", messages: ["teacher"] }) },
-    views: { activateView: async () => order.push("activate") }
-  } } }, workspace: { rightSplit: right, getLeavesOfType: () => [leaf], revealLeaf: async () => order.push("reveal"), setActiveLeaf: () => order.push("active") } } };
-  view.openClassroomMaterial = async () => { order.push("material"); return { file: { path: "Lecture 02.pdf" } }; };
-  await StewardView.prototype.loadClassroom.call(view, job);
-  assert.ok(order.indexOf("focus") > order.indexOf("load"), "An existing conversation must receive composer focus after its own tab loads");
-  assert.ok(order.includes("scroll"), "Entering class must reveal the latest exchange, not leave the long preparation prompt in view");
-  assert.ok(order.indexOf("material") > order.indexOf("load") && order.indexOf("material") < order.indexOf("focus"), "Open the material alongside the selected classroom before returning focus to its composer");
-  view.openClassroomMaterial = async () => { throw new Error("PDF unavailable"); };
-  assert.match(await StewardView.prototype.loadClassroom.call(view, job), /PDF unavailable/, "A missing material must not prevent the saved classroom from opening");
-  let release, loads = 0;
-  const entry = { loadClassroom: () => { loads++; return new Promise(resolve => { release = resolve; }); }, updateClassroomEntry() {} };
-  const one = StewardView.prototype.openClassroom.call(entry, job);
-  const two = StewardView.prototype.openClassroom.call(entry, job);
-  assert.equal(entry.classroomEntry?.phase, "opening", "Entry feedback must exist while opening is in progress");
-  await Promise.resolve();
-  assert.equal(loads, 1, "Repeated clicks reuse the same opening operation");
-  release("课堂已在右侧打开"); await Promise.all([one, two]);
-  assert.equal(entry.classroomEntry.phase, "opened");
-  entry.loadClassroom = async () => { throw new Error("Missing classroom history"); };
-  await assert.rejects(() => StewardView.prototype.openClassroom.call(entry, job), /Missing classroom history/);
-  assert.equal(entry.classroomEntry.phase, "error", "An opening error stays visible beside the entry instead of disappearing with a toast");
 }
 
 async function checkClassroomMaterials() {
@@ -614,12 +685,11 @@ async function checkClassroomMaterials() {
     events.push(kind);
     const leaf = { getRoot: () => main, view: {}, openFile: async file => { leaf.view.file = file; events.push("open"); } };
     leaves.push(leaf); return leaf;
-  }, revealLeaf: async leaf => { assert.equal(leaf.view.file, slides); events.push("reveal"); } };
-  const view = { app };
-  const classroom = { getRoot: () => right };
-  await StewardView.prototype.openClassroomMaterial.call(view, job, classroom);
+  }, revealLeaf: async leaf => { assert.equal(leaf.view.file, slides); events.push("reveal"); }, setActiveLeaf() {} };
+  const view = { app, plugin: {}, bridge: { lastState: { jobs: [job], curriculum: { weekly: { tasks: [] } } } } };
+  await StewardView.prototype.openStudyMaterial.call(view, task);
   leaves[0].view.page = 7;
-  await StewardView.prototype.openClassroomMaterial.call(view, job, classroom);
+  await StewardView.prototype.openStudyMaterial.call(view, task);
   assert.deepEqual(events, ["tab", "open", "reveal", "reveal"], "Repeated entry reuses the material tab without reopening or resetting its file");
   assert.equal(leaves[0].view.page, 7);
   assert.equal(leaves.length, 1);
@@ -627,26 +697,20 @@ async function checkClassroomMaterials() {
 
 async function checkTaskClosure() {
   const control = value => ({ value, setText(text) { this.text = text; } });
-  const modal = { task: boundTask, resumeKey: "old-incomplete-check", reportInput: control(""), dateInput: control("2026-10-09"),
-    closeReason: control("This preparation is no longer needed"),
-    files: ["unused-evidence.md"], submit: control(), closeTask: control(), stop: control(), restartButton: control(), resultEl: control(),
-    lockForm() {}, showResult() {}, plugin: { refreshViews: async () => {}, steward: { run: async (command, input) => {
-      assert.equal(command, "completion-check");
-      assert.notEqual(input.key, "old-incomplete-check", "Closing must not resume the previous completion argument");
-      assert.equal(input.request.intent, "close");
-      assert.equal(input.request.date, "");
-      assert.deepEqual(input.request.evidence, []);
-      assert.ok(input.request.report);
-      return { phase: "closed", message: "Closed" };
-    } } } };
+  let closed = false, saved;
+  const modal = { task: boundTask, reportInput: control(""), dateInput: control("2026-10-09"),
+    closeReason: control("This preparation is no longer needed"), files: ["unused-evidence.md"], resultEl: control(),
+    close() { closed = true; }, plugin: { setTaskCompletion: async (task, completed, details) => { saved = details; } } };
   await CompletionModal.prototype.check.call(modal, "close");
-  assert.equal(modal.terminalPhase, "closed");
-  assert.equal(modal.submit.disabled, true);
-  assert.equal(modal.closeTask.disabled, true);
-  assert.equal(modal.stop.hidden, true);
+  assert.equal(closed, true);
+  assert.equal(saved.intent, "close"); assert.equal(saved.date, ""); assert.deepEqual(saved.evidence, []);
+  closed = false;
+  await CompletionModal.prototype.check.call(modal, "complete");
+  assert.equal(closed, true, "An empty optional report must not block manual completion");
+  assert.equal(saved.report, "");
 }
 
-Promise.all([checkArchivedPlans(), checkStewardLifecycle(), checkAutomaticRefresh(), checkWorkspaceContext(), checkTaskClosure(), checkLearningEntry(), checkWorkspacePersistence(), checkCourseContinuation(), checkClassroomPresentation(), checkClassroomMaterials()]).then(() => {
+Promise.all([checkArchivedPlans(), checkStewardLifecycle(), checkAutomaticRefresh(), checkWorkspaceContext(), checkLearningNavigation(), checkTaskClosure(), checkLearningEntry(), checkWorkspacePersistence(), checkCourseContinuation(), checkClassroomMaterials()]).then(() => {
   console.log("learning-progress-dashboard self-check: ok");
 }).catch((error) => {
   console.error(error);

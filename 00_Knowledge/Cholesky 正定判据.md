@@ -60,7 +60,7 @@ Every real symmetric positive-semidefinite matrix admits a factorization $A=BB^T
 
 - [MIT 18.06 Spring 2010 Problem Set 9 solutions](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/58e62cc93e3e8b6cb52e72fa5830fc4e_MIT18_06S10_pset9_s10_soln.pdf)：核对由 $LDL^T$ 的正主元构造 Cholesky 因子。
 - [Stanford EE263, *Cholesky Factorization*](https://ee263.stanford.edu/lectures/cholesky.pdf)：直接核对 SPD 与正对角 Cholesky 分解的存在性、反向性与唯一性。
-- [[01_Math/02_linear algebra/03_Positive Definite Matrices and Applications.md#3.3.2 配方就是 $LDL^T$|课程 3.3.2]]：核对本地 $LDL^T$ 结构与主元前提。
+- [[03_Positive Definite Matrices and Applications#3.3.2 配方就是 $LDL^T$|课程 3.3.2]]：核对本地 $LDL^T$ 结构与主元前提。
 <!-- bilingual-en:start -->
 - MIT 18.06 Spring 2010 Problem Set 9 solutions were checked for constructing Cholesky from positive $LDL^T$ pivots.
 - Stanford EE263 notes directly support existence, converse, and uniqueness of the positive-diagonal Cholesky factor for SPD matrices.

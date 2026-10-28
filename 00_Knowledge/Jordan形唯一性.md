@@ -60,4 +60,4 @@ Successive nullities are similarity invariants. Their first differences count bl
 
 - [[01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.4sum.pdf|MIT 18.06SC Session 3.4 summary]]：核对不同块尺寸给出不同相似类。
 - [[01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U3_S04_Recitation_Problem_Solving_Similar_Matrices.pdf|MIT Session 3.4 recitation]]：核对相似性判断与 Jordan 块资料。
-- [[01_Math/02_linear algebra/03_Positive Definite Matrices and Applications.md#3.4.5 课件与 Recitation 例子|课程 3.4.5]]：核对连续零空间维数恢复块尺寸的思路。
+- [[03_Positive Definite Matrices and Applications#3.4.5 课件与 Recitation 例子|课程 3.4.5]]：核对连续零空间维数恢复块尺寸的思路。

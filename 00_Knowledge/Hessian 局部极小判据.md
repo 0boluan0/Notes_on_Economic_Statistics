@@ -64,7 +64,7 @@ This criterion controls only a neighbourhood of $x_*$. A global conclusion requi
 - [[01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.3sum.pdf|MIT 18.06SC Session 3.3 summary]]：核对正定二次型与极小值的联系。
 - [MIT 18.S096, *Second Derivatives, Bilinear Maps, and Hessian Matrices*](https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/mit18_s096iap23_lec12.pdf#page=2)：直接核对多元 Taylor 展开与 Hessian 二次项。
 - [Boyd and Vandenberghe, *Convex Optimization*, §3.1.3–3.1.4](https://www.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf#page=82)：核对凸域上处处 PSD Hessian 的全局凸性结论及凸函数驻点的全局最优性。
-- [[01_Math/02_linear algebra/03_Positive Definite Matrices and Applications.md#3.3.3 Hessian 与极小值|课程 3.3.3]]：核对局部/全局边界与二次函数特例。
+- [[03_Positive Definite Matrices and Applications#3.3.3 Hessian 与极小值|课程 3.3.3]]：核对局部/全局边界与二次函数特例。
 <!-- bilingual-en:start -->
 - The MIT Session 3.3 summary was checked for the relation between positive-definite quadratic forms and minima.
 - MIT 18.S096 notes directly support the multivariable Taylor expansion and its Hessian quadratic term.

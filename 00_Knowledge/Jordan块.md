@@ -67,4 +67,4 @@ A block of size one is already diagonal; a larger block records the failure to o
 ## 来源与核验
 
 - [[01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.4sum.pdf|MIT 18.06SC Session 3.4 summary]]：核对 Jordan 块的矩阵结构。
-- [[01_Math/02_linear algebra/03_Positive Definite Matrices and Applications.md#3.4.4 Jordan链与Jordan标准形|课程 3.4.4]]：核对 $J_r(\lambda)=\lambda I+N$ 与链基作用。
+- [[03_Positive Definite Matrices and Applications#3.4.4 Jordan链与Jordan标准形|课程 3.4.4]]：核对 $J_r(\lambda)=\lambda I+N$ 与链基作用。

@@ -2730,9 +2730,4 @@ The next unit moves from the language of proof to computable structures: [[02_St
 *Course-note backlinks*
 <!-- bilingual-en:end -->
 
-```dataview
-LIST
-FROM "01_Math/07-Mathematics for Computer Science"
-WHERE contains(file.outlinks, this.file.link)
-SORT file.name ASC
-```
+- [[00_MIT OCW 6.042J course map|MIT OCW 6.042J course map · 课程地图]]

@@ -58,6 +58,13 @@ class CompletionTests(unittest.TestCase):
         self.store.close()
         self.tmp.cleanup()
 
+    def test_optional_submission_can_be_closed_without_marking_it_submitted(self):
+        original = self.deadline.replace("#student-os/deadline", "#student-os/submission-window")
+        closed = closed_line(original)
+        self.assertIn("[ ]", closed)
+        self.assertIn("#student-os/archived", closed)
+        self.assertNotIn("#student-os/submission-window", closed)
+
     def test_self_report_receipt_restart_and_unknown_date(self):
         first = self.checks.run("complete", self.request())
         self.assertEqual(first["phase"], "complete")

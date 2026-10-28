@@ -3,6 +3,8 @@ const { spawn } = require("child_process");
 const { existsSync } = require("fs");
 const { join } = require("path");
 const { randomUUID } = require("crypto");
+const { CourseMap } = require("./course-map");
+const { PRIVATE_RECORD, BINDINGS, isSchoolCourse } = require("./course-model");
 
 const STEWARD_VIEW = "student-os-steward-view";
 const WORKBENCH = "99_学习情况记录/workbench.md";
@@ -10,14 +12,12 @@ const DEADLINES = "99_学习情况记录/deadlines.md";
 const OBLIGATIONS = "99_学习情况记录/截止事项记录.md";
 const SECTIONS = { overview: "学习总览", workbench: "Workbench · 任务", deadlines: "Deadlines · 期限", today: "今日安排" };
 const id = () => `request-${randomUUID()}`;
-const labels = { queued: "等待备课", creating: "建立课堂", preparing: "正在备课", result_saved: "保存开场",
-  prepared: "等待接入", linking: "正在接入", registered: "课堂已准备", uncertain: "需要恢复", cancelled: "已取消" };
 
 function homeModel(data) {
   const task = data.focus?.task;
   const job = (data.jobs || []).find(j => j.request?.task?.id === task?.id && !j.handed_off && j.state !== "cancelled");
   return { task, job, phase: displayText(data.focus?.stage || "读取当前安排"),
-    next: data.focus?.next_step || "从实际停点继续；课堂会先核对你已经做到哪里。",
+    next: data.focus?.next_step || "从最近记录的停点继续。",
     obligations: (data.obligations || []).filter(t => t.status === "completion_unknown" && t.days_until !== null && t.days_until <= 14),
     notices: (data.commitments || []).filter(c => c.due) };
 }
@@ -152,7 +152,7 @@ function deadlineNotices(data, now = new Date()) {
   const canonical = originals.filter(t => t.status === "completion_unknown").map(t => {
     const days = t.date ? Math.round((Date.parse(t.date) - Date.parse(date)) / 86400000) : NaN;
     return { days, time: `${days === 0 ? "今天" : t.date?.slice(5).replace("-", "/")} ${deadlineTime(t)}`.trim(),
-      title: titleForDeadline(t.raw), ref: t.ref || t.path, task: t };
+      title: titleForDeadline(t.raw), ref: t.ref || t.path, optional: !!t.optional, task: t };
   }).filter(t => t.days >= 0 && (t.days <= 14 || scheduled.some(s => sameRef(s.ref, t.ref))));
   // Today contributes optional events and appointments; dated obligations always come from their originals.
   const extra = todayNotices(data, now).filter(t => {
@@ -186,7 +186,7 @@ function deadlineBoard(data, now = new Date()) {
     const title = (compound ? body : body.replace(/[（(][^）)]+[）)]/g, "")).split(/[，；：]/)[0].replace(/^参加/, "").replace(/^提交/, "").trim();
     const detail = compound ? "" : [...body.matchAll(/[（(]([^）)]+)[）)]/g)].map(m => m[1]).join(" · ");
     groups[group].push({ task, course, title, detail, days, time,
-      kind: /参加|出席|说明会/.test(body) ? "到场" : /登记|注册|报名/.test(body) ? "登记" : /提交|上传/.test(body) ? "提交" : "事项",
+      kind: task.optional ? "可选提交" : /参加|出席|说明会/.test(body) ? "到场" : /登记|注册|报名/.test(body) ? "登记" : /提交|上传/.test(body) ? "提交" : "事项",
       timing: group === "done" ? "已完成" : group === "past" ? "时间已过 · 待核对" : days === null ? "日期待确认" : days === 0 ? "今天" : days === 1 ? "明天" : `${days} 天后` });
   }
   for (const items of Object.values(groups)) items.sort((a, b) => `${a.task.date || "9999"} ${a.time}`.localeCompare(`${b.task.date || "9999"} ${b.time}`));
@@ -279,7 +279,7 @@ class StewardBridge {
   notify() { for (const fn of this.listeners) fn(); }
   isSource(path) {
     if (!path) return false;
-    if ([WORKBENCH, DEADLINES, OBLIGATIONS, "99_学习情况记录/Overview & Study Record.md", "99_学习情况记录/Student OS 规则.md"].includes(path)) return true;
+    if ([WORKBENCH, DEADLINES, OBLIGATIONS, PRIVATE_RECORD, "99_学习情况记录/Overview & Study Record.md", "99_学习情况记录/Student OS 规则.md"].includes(path)) return true;
     if (/^99_学习情况记录\/\d{4}-\d{2}-\d{2}——\w+\.md$/.test(path)) return true;
     const data = this.lastState;
     if (!data) return false;
@@ -294,6 +294,11 @@ class StewardBridge {
     this.refreshTimer = setTimeout(() => { void this.refresh(true).catch(() => {}); }, 700);
   }
   call(command, input = {}, onStatus = null) {
+    const local = ["view", "act", "completion-record"];
+    const actions = ["set_focus", "record_progress", "continue_course", "cancel_commitment", "refresh_dashboard"];
+    if (!local.includes(command) || (command === "act" && !actions.includes(input.action?.kind))) {
+      return Promise.reject(new Error("此操作请在 Codex 中进行。"));
+    }
     const vault = this.plugin.app.vault.adapter.getBasePath();
     const script = join(vault, "05_tools", "StudentOS", "steward", "service.py");
     const python = ["/opt/homebrew/bin/python3", "/usr/bin/python3"].find(existsSync);
@@ -350,10 +355,6 @@ class StewardBridge {
   async run(command, input) {
     if (this.busy) throw new Error("当前请求正在处理，可以停止它或稍后继续。");
     this.busy = true;
-    this.activeRequest = ["chat", "resume"].includes(command) ? input?.key : null;
-    this.activeCompletion = command === "completion-check" ? input?.key : null;
-    this.activeTask = command === "prepare-focus" ? this.lastState?.focus?.task?.id
-      : input?.action?.kind === "prepare_classroom" ? input.action.task_id : null;
     this.status = "正在处理…"; this.notify();
     try {
       const result = await this.call(command, input, value => {
@@ -371,32 +372,7 @@ class StewardBridge {
   async act(action, userText, key = id()) {
     return this.run("act", { key, action: { ...action, source_quote: userText }, user_text: userText });
   }
-  async cancelClassroom(job) {
-    const userText = "取消这次课堂派工";
-    const result = await this.call("act", { key: id(), action: { kind: "cancel_classroom", job_key: job.key, source_quote: userText }, user_text: userText });
-    await this.refresh(); return result;
-  }
-  async cancelActive() {
-    if (this.activeCompletion) await this.call("completion-cancel", { key: this.activeCompletion });
-    else if (this.activeRequest) await this.call("cancel-request", { key: this.activeRequest });
-    else if (this.activeTask) {
-      const data = await this.refresh();
-      const job = data.jobs.find(j => j.request?.task?.id === this.activeTask && !j.handed_off && j.state !== "cancelled");
-      if (job) await this.cancelClassroom(job);
-    }
-    await this.refresh();
-  }
-  async start() {
-    const data = await this.refresh();
-    if (this.stopped || !data) return;
-    const model = homeModel(data);
-    const pending = data.chat.some(r => !["done", "cancelled"].includes(r.phase));
-    const known = data.jobs.some(j => j.request?.task?.id === model.task?.id);
-    if (model.task && !known && !pending && !this.busy) {
-      // New Today tasks may be prepared; a handoff or cancellation needs an explicit next request.
-      await this.run("prepare-focus").catch(error => { this.status = error.message; this.notify(); });
-    }
-  }
+  async start() { return this.refresh(); }
   stop() {
     this.stopped = true; this.refreshQueued = false;
     clearTimeout(this.refreshTimer);
@@ -437,7 +413,7 @@ class CompletionModal extends Modal {
     header.createDiv({ cls: "sos-detail-eyebrow", text: [task.course_id, /^\d+$/.test(task.week || "") ? `Week ${task.week}` : "", group].filter(Boolean).join("  /  ") });
     header.createEl("h2", { text: taskCaption(task) });
     const meta = header.createDiv({ cls: "sos-detail-meta" });
-    meta.createSpan({ cls: "sos-detail-status", text: task.state === "done" ? "✓ 已记录完成" : task.record ? "已有停点 · 整项待核验" : "完成状态待核验" });
+    meta.createSpan({ cls: "sos-detail-status", text: task.state === "done" || task.status === "recorded_complete" ? "✓ 已完成" : task.record ? "进行中 · 已有停点" : "待完成" });
     if (points.length) meta.createSpan({ text: `${points.length} 个检查点` });
     if (task.group === "recommended") meta.createSpan({ text: "不影响本周核心收工" });
     if (task.record) {
@@ -470,135 +446,75 @@ class CompletionModal extends Modal {
     finish.createEl("small", { text: "收工条件" });
     finish.createEl("p", { text: /^MIT\s*\d/.test(task.course_id || task.title || "")
       ? studyUnitFor(task).condition : displayText(task.done_when || task.title || task.raw) });
-    finish.createDiv({ cls: "sos-detail-boundary", text: "达到整项要求后申请核验，核验通过才会同步完成状态。" });
-    if (task.detail_needs_review) finish.createEl("p", { cls: "sos-evidence-warning", text: "要求有更新，分步路线待管家重新整理。" });
+    finish.createDiv({ cls: "sos-detail-boundary", text: "完成后直接勾选；需要时可以取消勾选。" });
+    if (task.detail_needs_review) finish.createEl("p", { cls: "sos-evidence-warning", text: "要求有更新，当前分步说明待更新。" });
     const modes = this.contentEl.createDiv({ cls: "sos-detail-actions" }); this.modeButtons = {};
     if (this.canRecord) {
-      modes.createEl("button", { text: "学这一项", cls: "sos-primary" }).addEventListener("click", () => {
+      modes.createEl("button", { text: "打开学习材料", cls: "sos-primary" }).addEventListener("click", () => {
         const view = this.app.workspace.getLeavesOfType(STEWARD_VIEW)[0]?.view;
         if (view) void view.beginTask(task).catch(error => new Notice(error.message));
       });
     }
-    for (const [mode, label] of [["progress", "记录进度"], ["complete", "申请完成核验"], ["close", "不再需要…"]]) {
-      if (mode === "progress" && !this.canRecord) continue;
-      if (mode === "close") modes.createEl("button", { text: "问管家", cls: "sos-quiet" }).addEventListener("click", () => this.app.workspace.getLeavesOfType(STEWARD_VIEW)[0]?.view.discussTask(task));
-      const button = modes.createEl("button", { text: label, cls: mode === "progress" ? "sos-primary" : mode === "close" ? "sos-quiet sos-close-option" : "" });
+    this.done = task.state === "done" || task.status === "recorded_complete";
+    const complete = modes.createEl("button", { text: this.done ? "取消完成" : "标记完成", cls: "sos-primary" });
+    complete.addEventListener("click", () => this.check(this.done ? "reopen" : "complete"));
+    for (const [mode, label] of [["progress", "记录进度"], ["complete", "补充说明"], ["close", "不再需要…"]]) {
+      if ((mode === "progress" && !this.canRecord) || (mode === "close" && this.done)) continue;
+      const button = modes.createEl("button", { text: label, cls: "sos-quiet" });
       button.addEventListener("click", () => this.showMode(mode)); this.modeButtons[mode] = button;
     }
     this.progressPanel = this.contentEl.createDiv({ cls: "sos-detail-editor" }); this.progressPanel.hidden = true;
     if (this.canRecord) this.progressForm = progressForm(this.progressPanel, this.plugin, task, null, () => this.close());
     this.completionPanel = this.contentEl.createDiv({ cls: "sos-detail-editor" }); this.completionPanel.hidden = true;
-    const intro = this.completionPanel.createEl("p", { cls: "sos-muted", text: "说明完成的范围，并关联可核对的产物。" });
-    const reportLabel = this.completionPanel.createEl("label", { cls: "sos-field", text: "这一整项实际完成了什么" });
-    this.reportInput = reportLabel.createEl("textarea", { attr: { rows: "2", placeholder: "写具体完成范围、结果，以及仍需说明的情况。" } });
-    this.reportInput.value = this.report;
-    const dateLabel = this.completionPanel.createEl("label", { cls: "sos-field sos-detail-date", text: "完成日期（可留空）" });
+    const reportLabel = this.completionPanel.createEl("label", { cls: "sos-field", text: "完成说明（可选）" });
+    this.reportInput = reportLabel.createEl("textarea", { attr: { rows: "2", placeholder: "想保留的说明，留空也可以完成。" } });
+    const latest = (this.plugin.steward.lastState?.completion_checks || []).find(r => r.path === task.path && (r.raw === task.raw || r.after === task.raw));
+    this.reportInput.value = this.report || latest?.request?.report || "";
+    const dateLabel = this.completionPanel.createEl("label", { cls: "sos-field sos-detail-date", text: "完成日期（未知可留空）" });
     this.dateInput = dateLabel.createEl("input", { attr: { type: "date", max: londonClock().date } });
-    const today = this.todayButton = dateLabel.createEl("button", { text: "今天", cls: "sos-quiet", attr: { type: "button" } });
-    today.addEventListener("click", () => { this.dateInput.value = londonClock().date; });
+    this.dateInput.value = latest?.request?.date ?? londonClock().date;
     this.fileList = this.completionPanel.createDiv({ cls: "sos-evidence-files" });
-    const add = this.addFile = this.completionPanel.createEl("button", { text: "＋ 关联笔记、代码或凭证" });
-    add.addEventListener("click", () => new EvidencePicker(this.app, path => {
+    this.files = [...(latest?.request?.evidence || [])];
+    this.addFile = this.completionPanel.createEl("button", { text: "＋ 关联记录（可选）" });
+    this.addFile.addEventListener("click", () => new EvidencePicker(this.app, path => {
       if (!this.files.includes(path) && this.files.length < 6) this.files.push(path);
       this.renderFiles();
     }).open());
-    this.completionPanel.createEl("p", { cls: "sos-muted", text: "读取文件内容核验；正式提交还需提交成功凭证。" });
-    const actions = this.completionPanel.createDiv({ cls: "sos-actions" });
-    this.submit = actions.createEl("button", { cls: "sos-primary", text: "开始核验" });
-    this.submit.disabled = true;
+    this.renderFiles();
+    this.submit = this.completionPanel.createEl("button", { cls: "sos-primary", text: this.done ? "取消完成" : "保存并标记完成" });
+    this.submit.addEventListener("click", () => this.check(this.done ? "reopen" : "complete"));
     this.closePanel = this.contentEl.createDiv({ cls: "sos-detail-editor" }); this.closePanel.hidden = true;
     this.closePanel.createEl("p", { cls: "sos-muted", text: "关闭后退出待办，保留原因，不计入学习完成。" });
     this.closeReason = this.closePanel.createEl("textarea", { attr: { rows: "2", placeholder: "这项任务为什么不再需要？" } });
-    this.closeTask = this.closePanel.createEl("button", { text: "确认关闭任务" }); this.closeTask.disabled = true;
+    this.closeTask = this.closePanel.createEl("button", { text: "确认关闭任务" });
     this.closeTask.addEventListener("click", () => this.check("close"));
     this.resultEl = this.contentEl.createDiv({ cls: "sos-check-result", attr: { role: "status", "aria-live": "polite" } });
-    this.stop = this.contentEl.createEl("button", { text: "停止核验" }); this.stop.hidden = true;
-    this.stop.addEventListener("click", () => this.plugin.steward.cancelActive().catch(e => new Notice(e.message)));
-    this.restartButton = actions.createEl("button", { text: "补充后另开核验", cls: "sos-quiet" }); this.restartButton.hidden = true;
-    this.restartButton.addEventListener("click", async () => {
-      try {
-        const result = await this.plugin.steward.call("completion-cancel", { key: this.resumeKey });
-        if (result.phase !== "cancelled") { new Notice(result.message); return; }
-        this.resumeKey = null; this.restartButton.hidden = true; this.lockForm(false); this.renderFiles(); this.submit.setText("核验并记录完成");
-      } catch (error) { new Notice(error.message); }
-    });
-    this.submit.addEventListener("click", () => this.check());
+    this.resultEl.hidden = true;
     if (this.report) this.showMode("complete", false);
-    try {
-      const context = await this.plugin.steward.call("completion-context", { path: this.task.path, raw: this.task.raw });
-      if (!this.contentEl.isConnected) return;
-      if (context.required_external) intro.setText("这项任务包含正式提交，请关联匹配的提交成功凭证。");
-      const latest = context.latest;
-      this.files = latest?.request.evidence || context.suggested_evidence;
-      if (latest && !this.report) this.reportInput.value = latest.request.report;
-      this.dateInput.value = latest?.request.date || "";
-      if (latest) this.showResult({ ...latest, path: latest.export_path });
-      if (latest && !["complete", "closed", "insufficient", "cancelled"].includes(latest.phase)) {
-        this.showMode("complete", false);
-        this.resumeKey = latest.key; this.submit.setText("继续原核验");
-        this.restartButton.hidden = false;
-        this.reportInput.disabled = this.dateInput.disabled = add.disabled = today.disabled = true;
-      }
-      this.renderFiles();
-      const finished = ["recorded_complete", "cancelled"].includes(task.status);
-      this.submit.disabled = this.closeTask.disabled = finished;
-      if (finished) for (const button of Object.values(this.modeButtons)) button.hidden = true;
-    } catch (error) { this.resultEl.setText(error.message); }
   }
   showMode(mode, scroll = true) {
     this.progressPanel.hidden = mode !== "progress"; this.completionPanel.hidden = mode !== "complete"; this.closePanel.hidden = mode !== "close";
     for (const [key, button] of Object.entries(this.modeButtons)) button.setAttribute("aria-pressed", String(key === mode));
-    if (scroll) ({ progress: this.progressPanel, complete: this.completionPanel, close: this.closePanel })[mode].scrollIntoView({ block: "nearest" });
+    if (scroll) (mode === "progress" ? this.progressPanel : mode === "close" ? this.closePanel : this.completionPanel).scrollIntoView({ block: "nearest" });
   }
   renderFiles() {
     this.fileList.empty();
-    for (const path of this.files) {
+    this.files.forEach((path, index) => {
       const row = this.fileList.createDiv(); row.createSpan({ text: path.split("/").pop(), attr: { title: path } });
-      if (!this.resumeKey) {
-        const remove = row.createEl("button", { text: "移除", cls: "sos-quiet" });
-        remove.addEventListener("click", () => { this.files = this.files.filter(p => p !== path); this.renderFiles(); });
-      }
-    }
-  }
-  showResult(result) {
-    this.resultEl.empty();
-    const labels = { complete: "✓ 完成已记录", closed: "已关闭 · 不再需要", insufficient: "待核验 · 需要补充", cancelled: "核验已停止" };
-    this.resultEl.createEl("strong", { text: labels[result.phase] || "核验尚未完成，可继续原请求" });
-    const verdict = result.verdict;
-    if (verdict) {
-      this.resultEl.createEl("p", { text: verdict.reason });
-      if (verdict.missing) this.resultEl.createEl("p", { text: "还缺：" + verdict.missing });
-      this.resultEl.createEl("small", { text: result.phase === "closed" ? "依据：本人决定。已退出待办，未计为完成。" : { user_report: "依据：本人明确报告", artifact: "依据：已读取的产物内容", external: "依据：已读取的外部结果凭证" }[verdict.basis] });
-    }
-    if (result.error) this.resultEl.createEl("p", { text: result.error });
+      row.createEl("button", { text: "移除", cls: "sos-quiet" }).addEventListener("click", () => { this.files.splice(index, 1); this.renderFiles(); });
+    });
   }
   async check(intent = "complete") {
-    const resumeKey = intent === "close" ? null : this.resumeKey;
-    if (intent !== "close" && !resumeKey && !this.reportInput.value.trim()) { new Notice("请说明这项任务实际完成的范围。"); this.reportInput.focus(); return; }
-    this.submit.disabled = this.closeTask.disabled = true; this.stop.hidden = false; this.lockForm(true);
-    this.restartButton.hidden = true;
-    const key = resumeKey || id();
-    const request = intent === "close"
-      ? { path: this.task.path, raw: this.task.raw, report: this.closeReason.value.trim() || "不再需要，关闭这项任务。", date: "", evidence: [], intent: "close" }
-      : { path: this.task.path, raw: this.task.raw, report: this.reportInput.value.trim(), date: this.dateInput.value, evidence: this.files };
-    this.resultEl.setText(intent === "close" ? "正在保存关闭决定…" : "正在核对任务意图与证据内容…可关闭面板，结果会保存在任务中。");
+    if (this.saving) return;
+    const report = intent === "close" ? this.closeReason.value.trim() : this.reportInput.value.trim();
+    if (intent === "close" && !report) { new Notice("请留下关闭原因。"); return; }
+    this.saving = true;
     try {
-      const result = await this.plugin.steward.run("completion-check", resumeKey ? { key } : { key, request });
-      await this.plugin.refreshViews(); this.showResult(result);
-      if (["complete", "closed"].includes(result.phase)) { this.terminalPhase = result.phase; this.submit.setText(result.phase === "closed" ? "已关闭" : "已记录完成"); new Notice(result.message); }
-      else { this.resumeKey = null; this.submit.disabled = false; this.submit.setText("补充后重新核验"); this.lockForm(false); this.renderFiles(); }
-    } catch (error) {
-      this.resultEl.setText(error.message + "；请刷新查看原任务或继续原请求。");
-      const current = (this.plugin.steward.lastState?.completion_checks || []).find(c => c.key === key);
-      const resumable = current && !["complete", "closed", "insufficient", "cancelled"].includes(current.phase);
-      this.resumeKey = resumable ? key : null;
-      this.restartButton.hidden = !resumable;
-      this.submit.disabled = false; this.submit.setText(resumable ? "继续原核验" : "重新核验");
-      this.lockForm(!!resumable);
-    } finally { this.stop.hidden = true; this.closeTask.disabled = !!this.terminalPhase; }
-  }
-  lockForm(locked) {
-    for (const control of [this.reportInput, this.dateInput, this.addFile, this.todayButton, this.closeReason, ...Object.values(this.modeButtons), ...this.fileList.querySelectorAll("button")]) control.disabled = locked;
+      await this.plugin.setTaskCompletion(this.task, intent !== "reopen", {
+        intent, report, date: intent === "complete" ? this.dateInput.value : "", evidence: intent === "complete" ? [...this.files] : [] });
+      this.close();
+    } catch (error) { this.resultEl.hidden = false; this.resultEl.setText(error.message); }
+    finally { this.saving = false; }
   }
   onClose() { this.contentEl.empty(); }
 }
@@ -608,31 +524,45 @@ function renderedTask(node, data) {
   if (!source) return null;
   const tasks = [...(data?.tasks || []), ...(data?.obligations || [])].filter(t => t.path === source);
   const anchor = node.querySelector(".task-block-link")?.textContent.trim();
-  const plain = value => displayText(value).replace(/#student-os\/(?:task|deadline)/g, "").replace(/\s+/g, " ").trim();
+  const plain = value => displayText(value).replace(/#student-os\/(?:task|deadline|submission-window)/g, "").replace(/\s+/g, " ").trim();
   const description = plain(node.querySelector(".task-description")?.textContent || "");
   const matches = anchor ? tasks.filter(t => t.ref?.endsWith("#" + anchor)) : tasks.filter(t => plain(t.title) === description);
   return matches.length === 1 ? matches[0] : null;
 }
 
-function installCompletionGuard(plugin) {
+function installTaskControls(plugin) {
   plugin.openCompletion = async (task, report = "", mode = null) => {
     await plugin.openSteward();
-    const view = plugin.app.workspace.getLeavesOfType(STEWARD_VIEW)[0]?.view;
-    view?.openTask(task, report, mode);
+    plugin.app.workspace.getLeavesOfType(STEWARD_VIEW)[0]?.view.openTask(task, report, mode);
   };
-  const guard = event => {
-    if (!event.target?.matches?.("input.task-list-item-checkbox")) return;
-    const row = event.target.closest(".plugin-tasks-list-item");
-    if (!row || row.dataset.taskStatusType === "DONE" || row.dataset.taskStatusType === "CANCELLED") return;
-    const isStudentTask = row.querySelector('[data-tag-name="#student-os/task"], [data-tag-name="#student-os/deadline"]') || row.closest(".sos-management-note");
-    if (!isStudentTask) return;
-    event.preventDefault(); event.stopImmediatePropagation();
-    const task = renderedTask(row, plugin.steward.lastState);
-    if (task?.status === "completion_unknown") plugin.openCompletion(task);
-    else new Notice("尚未唯一定位任务原件，请刷新后从每周任务发起核验。");
+  plugin.setTaskCompletion = async (task, completed, details = {}) => {
+    const request = { path: task.path, raw: task.raw, report: details.report || "",
+      date: completed ? (details.date ?? londonClock().date) : "", evidence: details.evidence || [],
+      intent: details.intent || (completed ? "complete" : "reopen") };
+    // Keep an operation key for retries after a process or transport interruption.
+    const signature = JSON.stringify(request);
+    plugin.pendingTaskChanges ||= new Map();
+    const key = plugin.pendingTaskChanges.get(signature) || id();
+    plugin.pendingTaskChanges.set(signature, key);
+    const result = await plugin.steward.run("completion-record", { key, request });
+    plugin.pendingTaskChanges.delete(signature);
+    await plugin.refreshViews(); new Notice(result.message);
+    return result;
   };
-  plugin.registerDomEvent(document, "click", guard, true);
-  plugin.registerDomEvent(document, "contextmenu", guard, true);
+}
+
+function taskCheckbox(parent, plugin, task) {
+  const done = task.state === "done" || task.status === "recorded_complete";
+  const control = parent.createEl("input", { cls: "sos-check-task", attr: { type: "checkbox", "aria-label": (done ? "取消完成：" : "标记完成：") + taskCaption(task) } });
+  control.checked = done;
+  control.addEventListener("click", event => event.stopPropagation());
+  control.addEventListener("change", async () => {
+    const next = control.checked; control.disabled = true;
+    try { await plugin.setTaskCompletion(task, next); }
+    catch (error) { control.checked = done; new Notice(error.message); }
+    finally { control.disabled = false; }
+  });
+  return control;
 }
 
 function taskPresentation(plugin, task) {
@@ -657,7 +587,7 @@ function progressForm(parent, plugin, task, job, saved) {
       });
     };
     add.addEventListener("click", () => new EvidencePicker(plugin.app, path => { if (!files.includes(path) && files.length < 6) files.push(path); render(); }).open());
-    parent.createEl("p", { cls: "sos-muted", text: "保存停点后可接着学；整项完成另行核验。" });
+    parent.createEl("p", { cls: "sos-muted", text: "保存停点后可接着学，整项做完后直接勾选。" });
     const save = parent.createEl("button", { cls: "sos-primary", text: "保存这次进度" });
     const operationId = id();
     save.addEventListener("click", async () => {
@@ -677,16 +607,21 @@ class StewardView extends ItemView {
   constructor(leaf, plugin) { super(leaf); this.plugin = plugin; this.bridge = plugin.steward; this.draft = ""; }
   getViewType() { return STEWARD_VIEW; }
   getDisplayText() { return "Student OS · 我的学习"; }
-  getIcon() { return "bot"; }
+  getIcon() { return "layout-dashboard"; }
   getState() { return { draft: this.input?.value ?? this.draft, course: this.selectedCourse || null, week: this.selectedWeek || null,
+    learningArea: this.learningArea || "school",
+    courseMap: this.courseMap?.getState() || this.courseMapState || {},
     filter: this.taskFilter || "all", section: this.section || "overview", context: this.chatContext || null, manager: !!this.managerOpen,
     study: { units: { ...this.studyUnits }, routes: { ...this.studyRoutes }, open: this.board?.querySelector(".sos-self-study")
       ? [...this.board.querySelectorAll(".sos-learning-track[open]")].map(row => row.dataset.courseDetails) : this.studyOpen || [] } }; }
   async setState(state) {
     this.draft = state?.draft || ""; this.selectedCourse = state?.course || null; this.selectedWeek = state?.week || null;
-    this.taskFilter = state?.filter || "all"; this.section = SECTIONS[state?.section] ? state.section : "overview";
+    this.learningArea = state?.learningArea === "external" ? "external" : "school";
+    this.taskFilter = ["all", "done", "recorded", "unknown", "planned"].includes(state?.filter) ? state.filter : "all"; this.section = SECTIONS[state?.section] ? state.section : "overview";
     this.chatContext = state?.context || null;
     this.managerOpen = !!state?.manager;
+    this.courseMapState = state?.courseMap || {};
+    if (this.courseMap) Object.assign(this.courseMap.state, this.courseMapState);
     this.studyUnits = { ...state?.study?.units }; this.studyRoutes = { ...state?.study?.routes }; this.studyOpen = state?.study?.open || [];
     if (this.input) this.input.value = this.draft; this.render();
     this.board?.querySelectorAll(".sos-learning-track").forEach(row => { row.open = this.studyOpen.includes(row.dataset.courseDetails); });
@@ -703,42 +638,12 @@ class StewardView extends ItemView {
   }
   async onOpen() {
     this.contentEl.empty(); this.contentEl.addClass("sos-home");
-    const header = this.contentEl.createDiv({ cls: "sos-header" });
-    const heading = header.createDiv();
-    heading.createEl("h1", { text: "我的学习" });
-    this.termEl = heading.createEl("p", { cls: "sos-header-context" });
-    const nav = header.createDiv({ cls: "sos-nav" });
-    this.managerButton = this.button(nav, "询问 AI", () => { this.managerOpen = !this.managerOpen; this.saveWorkspace(); this.render(); if (this.managerOpen) this.input.focus(); });
-    this.button(nav, "刷新", () => this.bridge.refresh(), "sos-quiet");
-    this.statusEl = nav.createDiv({ cls: "sos-status", attr: { role: "status", "aria-live": "polite" } });
-    const tabs = this.contentEl.createEl("nav", { cls: "sos-workspace-nav", attr: { "aria-label": "Student OS 工作区" } });
-    for (const [key, label] of Object.entries(SECTIONS)) {
-      const button = this.button(tabs, label, () => this.selectSection(key), "sos-section-tab");
-      button.dataset.section = key;
-    }
+    this.renderAppbar();
     this.taskDock = this.contentEl.createDiv({ cls: "sos-inline-task-slot" }); this.taskDock.hidden = true;
     const grid = this.contentEl.createDiv({ cls: "sos-grid" });
     this.board = grid.createDiv({ cls: "sos-board" });
-    const side = this.side = grid.createDiv({ cls: "sos-side" });
+    const side = this.side = grid.createDiv({ cls: "sos-side" }); side.hidden = true;
     this.classroom = side.createDiv({ cls: "sos-classroom" });
-    const chat = side.createDiv({ cls: "sos-chat" });
-    const chatHeading = chat.createDiv({ cls: "sos-chat-heading" });
-    setIcon(chatHeading.createSpan({ cls: "sos-icon" }), "bot");
-    chatHeading.createEl("h2", { text: "学习助理" });
-    chat.createEl("p", { cls: "sos-muted", text: "讨论学习安排，或说明需要调整的地方。" });
-    const composer = chat.createDiv({ cls: "sos-composer" });
-    this.contextEl = composer.createDiv({ cls: "sos-chat-context" });
-    this.input = composer.createEl("textarea", { attr: { rows: "3", placeholder: "告诉管家你的安排、进度或变更…", "aria-label": "给 Student OS 管家的消息" } });
-    this.input.value = this.draft;
-    this.input.addEventListener("input", () => this.saveWorkspace());
-    this.input.addEventListener("keydown", event => {
-      if (event.key === "Enter" && (event.metaKey || event.ctrlKey)) { event.preventDefault(); event.stopPropagation(); void this.send(); }
-    });
-    const row = composer.createDiv({ cls: "sos-actions" });
-    this.sendButton = this.button(row, "发送", () => this.send(), "mod-cta");
-    this.stopButton = this.button(row, "停止处理", () => this.bridge.cancelActive());
-    this.messages = chat.createDiv({ cls: "sos-messages", attr: { role: "log", "aria-label": "管家对话记录" } });
-    this.radar = side.createDiv({ cls: "sos-radar" });
     this.renderCallback = () => this.render();
     this.bridge.listeners.add(this.renderCallback);
     // Native Tasks queries render asynchronously; translate their labels without touching source text or links.
@@ -752,7 +657,38 @@ class StewardView extends ItemView {
     this.render();
     await this.bridge.refresh().catch(() => {});
   }
-  async onClose() { this.termsObserver?.disconnect(); this.bridge.listeners.delete(this.renderCallback); this.clearManagement(); await this.saveWorkspaceNow().catch(error => new Notice("界面位置尚未保存：" + error.message)); }
+  renderAppbar() {
+    const bar = this.contentEl.createEl("header", { cls: "sos-appbar" });
+    const brand = bar.createDiv({ cls: "sos-appbar-brand" });
+    brand.createEl("h1", { text: "我的学习" });
+    this.termEl = brand.createSpan({ cls: "sos-appbar-context" });
+    const primary = bar.createEl("nav", { cls: "sos-appbar-primary", attr: { "aria-label": "学习分区" } });
+    for (const [key, label] of [["school", "学校课程"], ["external", "校外学习"]]) {
+      const tab = this.button(primary, label, () => this.selectLearningArea(key), "sos-learning-tab sos-appbar-primary-tab");
+      tab.dataset.learningArea = key;
+    }
+    const secondary = bar.createEl("nav", { cls: "sos-appbar-secondary", attr: { "aria-label": "学习管理" } });
+    for (const [key, label] of [["workbench", "工作台"], ["deadlines", "期限"], ["today", "今日"]]) {
+      const tab = this.button(secondary, label, () => this.selectSection(key), "sos-section-tab sos-appbar-secondary-tab");
+      tab.dataset.section = key;
+    }
+    const tools = bar.createDiv({ cls: "sos-appbar-tools" });
+    this.statusEl = tools.createDiv({ cls: "sos-status", attr: { role: "status", "aria-live": "polite" } });
+    this.button(tools, "刷新", () => this.bridge.refresh(), "sos-quiet sos-appbar-refresh");
+    this.updateNavigation();
+  }
+  updateNavigation() {
+    const section = this.section || "overview", area = this.learningArea || "school";
+    this.contentEl.classList.toggle("is-learning-overview", section === "overview");
+    this.contentEl.classList.toggle("is-external-area", section === "overview" && area === "external");
+    this.contentEl.querySelectorAll(".sos-appbar-primary-tab").forEach(tab => {
+      const selected = section === "overview" && tab.dataset.learningArea === area;
+      tab.setAttribute("aria-current", selected ? "page" : "false");
+      tab.setAttribute("aria-pressed", String(selected));
+    });
+    this.contentEl.querySelectorAll(".sos-section-tab").forEach(tab => tab.setAttribute("aria-current", tab.dataset.section === section ? "page" : "false"));
+  }
+  async onClose() { clearTimeout(this.courseMap?.searchTimer); this.termsObserver?.disconnect(); this.bridge.listeners.delete(this.renderCallback); this.clearManagement(); await this.saveWorkspaceNow().catch(error => new Notice("界面位置尚未保存：" + error.message)); }
   button(parent, label, action, cls = "") {
     const button = parent.createEl("button", { text: label, cls });
     button.addEventListener("click", () => Promise.resolve().then(action).catch(error => new Notice(error.message)));
@@ -778,14 +714,16 @@ class StewardView extends ItemView {
   placeTaskDetail() {
     if (!this.taskDetail) return;
     const matches = [...this.board.querySelectorAll("[data-task-id]")].filter(node => node.dataset.taskId === this.taskDetail.controller.task.id);
-    const row = matches.find(node => node.dataset.key === this.taskDetail.rowKey) || matches[0];
+    const fromMap = this.taskDetail.rowKey?.startsWith("map-");
+    const row = matches.find(node => node.dataset.key === this.taskDetail.rowKey) || (!fromMap ? matches[0] : null);
     const target = row?.querySelector(".sos-task-detail") || this.taskDock;
     if (row) {
       this.taskDetail.rowKey = row.dataset.key;
-      target.empty(); row.open = true;
-      for (let parent = row.parentElement; parent; parent = parent.parentElement) if (parent.tagName === "DETAILS") parent.open = true;
+      target.empty(); if (row.tagName === "DETAILS") row.open = true;
+      for (let parent = target.parentElement; parent; parent = parent.parentElement) if (parent.tagName === "DETAILS") parent.open = true;
     }
-    target.appendChild(this.taskDetail.host); this.taskDock.hidden = target !== this.taskDock;
+    target.appendChild(this.taskDetail.host);
+    this.taskDock.hidden = target !== this.taskDock || !!(fromMap && (this.section || "overview") === "overview" && !row);
   }
   async openNote(path) {
     if (!path) return;
@@ -814,8 +752,21 @@ class StewardView extends ItemView {
     if (this.managementComponent) this.removeChild(this.managementComponent);
     this.managementComponent = null; this.managementSource = null;
   }
+  selectLearningArea(area) {
+    if (!["school", "external"].includes(area)) return;
+    this.learningArea = area; this.section = "overview";
+    this.saveWorkspace(); this.render();
+    if (this.contentEl) this.contentEl.scrollTop = 0;
+  }
+  returnToCourses() {
+    this.learningArea = "school"; this.selectedCourse = null; this.selectedWeek = null; this.taskFilter = "all";
+    this.saveWorkspace(); this.render();
+    if (this.contentEl) this.contentEl.scrollTop = 0;
+  }
   renderDeadlines(data) {
-    const groups = deadlineBoard(data), extras = deadlineSupplements(data.deadline_notes?.text);
+    const groups = deadlineBoard(data), extras = deadlineSupplements(data.deadline_notes?.text)
+      .map(item => ({ ...item, task: data.tasks?.find(task => sameRef(task.ref, item.ref)) }))
+      .filter(item => !item.task || item.task.status === "completion_unknown");
     const incomplete = (data.source_issues || []).some(issue => issue.path === OBLIGATIONS || /deadline/.test(issue.code || ""));
     const page = this.board.createEl("section", { cls: "sos-deadline-board", attr: { "aria-label": "截止日期与待核对事项" } });
     const heading = page.createDiv({ cls: "sos-section-heading" });
@@ -843,6 +794,11 @@ class StewardView extends ItemView {
       head.createEl("strong", { text: "可选与待确认" }); head.createSpan({ text: `${extras.length + groups.undated.length} 项` });
       const list = wrap.createDiv({ cls: "sos-deadline-list" });
       for (const item of extras) {
+        if (item.task) {
+          this.renderDeadlineTask(list, { ...item, title: taskPresentation(this.plugin, item.task).short_title || item.title,
+            course: item.task.title.split("｜")[0], timing: "", detail: item.text.replace(/^[^。]*。/, "") }, "undated");
+          continue;
+        }
         const row = list.createEl("details", { cls: "sos-deadline-note", attr: { "data-key": item.key } });
         const summary = row.createEl("summary");
         const date = summary.createDiv({ cls: "sos-deadline-date" });
@@ -850,7 +806,6 @@ class StewardView extends ItemView {
         const title = summary.createDiv({ cls: "sos-deadline-description" });
         title.createEl("small", { text: item.kind }); title.createEl("strong", { text: item.title });
         const body = row.createDiv({ cls: "sos-deadline-note-body" }); body.createEl("p", { text: item.text });
-        this.button(body, "问管家", () => this.discussTask({ ref: item.ref, title: item.title }), "sos-quiet");
       }
       for (const item of groups.undated) this.renderDeadlineTask(list, item, "undated");
     }
@@ -864,7 +819,7 @@ class StewardView extends ItemView {
     const row = parent.createEl("details", { cls: `sos-deadline-task is-${group}`, attr: { "data-key": "deadline-" + task.id, "data-task-id": task.id } });
     const summary = row.createEl("summary");
     summary.addEventListener("click", event => {
-      if (event.target.closest("button")) return;
+      if (event.target.closest("button,input")) return;
       event.preventDefault();
       if (this.taskDetail?.controller.task.id === task.id) this.taskDetail.controller.close();
       else this.openTask(task, "", null, row.dataset.key);
@@ -880,8 +835,7 @@ class StewardView extends ItemView {
     if (item.detail) description.createEl("small", { text: item.detail });
     const state = summary.createDiv({ cls: "sos-deadline-state" });
     state.createSpan({ text: item.timing });
-    if (group === "done") state.createSpan({ cls: "sos-recorded-evidence", text: "✓" });
-    else this.button(state, "核验完成", () => this.openTask(task, "", "complete", row.dataset.key), "sos-quiet sos-deadline-check");
+    taskCheckbox(state, this.plugin, task);
     row.createDiv({ cls: "sos-task-detail" });
   }
   async renderManagement(data) {
@@ -897,7 +851,7 @@ class StewardView extends ItemView {
         generation = this.managementGeneration;
         this.managementSource = path + text;
         const actions = this.board.createDiv({ cls: "sos-management-actions" });
-        actions.createSpan({ text: "点击勾选发起完成核验；通过后自动同步原任务与总览。" });
+        actions.createSpan({ text: "直接勾选完成，取消勾选即可恢复待办。" });
         this.button(actions, "打开原笔记 ↗", () => this.openOriginal(path), "sos-quiet");
         const note = this.board.createDiv({ cls: "sos-management-note markdown-rendered student-os-task-view" });
         note.dataset.source = path;
@@ -927,130 +881,38 @@ class StewardView extends ItemView {
       this.board.createEl("p", { cls: "sos-error sos-management-error", text: `当前页面未更新：${error.message}` });
     }
   }
-  discussTask(task) {
-    this.managerOpen = true;
-    this.chatContext = { ref: task.ref || task.path, title: taskCaption(task) };
-    this.render(); this.saveWorkspace();
-    this.input.scrollIntoView({ block: "nearest" }); this.input.focus();
-  }
-  renderChatContext() {
-    this.contextEl.empty(); this.contextEl.hidden = !this.chatContext;
-    if (!this.chatContext) return;
-    this.contextEl.createSpan({ text: "正在讨论：" + this.chatContext.title });
-    this.button(this.contextEl, "移除", () => { this.chatContext = null; this.renderChatContext(); this.saveWorkspace(); }, "sos-quiet");
-  }
-  async send(body = null) {
-    body = (body || this.input.value).trim();
-    if (!body || this.bridge.busy) return;
-    this.managerOpen = true;
-    const draftBody = body, context = this.chatContext;
-    if (context) body += `\n\n讨论的原任务：${context.title}\n原记录：[[${context.ref}]]`;
-    const unfinished = this.bridge.lastState?.chat.find(r => r.body === body && !["done", "cancelled"].includes(r.phase));
-    const key = unfinished?.key || id();
-    const result = await this.bridge.run("chat", { key, body });
-    if (result.phase === "done" && this.input.value.trim() === draftBody) {
-      this.input.value = ""; this.draft = ""; this.saveWorkspace();
-    }
-    if (result.phase === "done" && this.chatContext === context) { this.chatContext = null; this.renderChatContext(); this.saveWorkspace(); }
-  }
-  async openClassroom(job) {
-    let entry = this.openingClassroom;
-    if (entry && entry.key !== job.key) throw new Error("正在打开另一间课堂，请稍后继续。");
-    this.classroomEntry = { key: job.key, phase: "opening" };
-    this.updateClassroomEntry();
-    if (!entry) {
-      entry = { key: job.key, work: Promise.resolve().then(() => this.loadClassroom(job)).then(message => {
-        this.classroomEntry = { key: job.key, phase: "opened", message };
-        this.updateClassroomEntry();
-        return message;
-      }) };
-      this.openingClassroom = entry;
-      entry.work.finally(() => { if (this.openingClassroom === entry) this.openingClassroom = null; }).catch(() => {});
-    }
-    let timer;
-    try {
-      await Promise.race([entry.work, new Promise((_, reject) => { timer = setTimeout(() => reject(new Error("课堂仍在加载，原对话已保留。可以点击重新进入。")), 15000); })]);
-    } catch (error) {
-      this.classroomEntry = { key: job.key, phase: "error", message: error.message };
-      this.updateClassroomEntry();
-      throw error;
-    } finally { clearTimeout(timer); }
-  }
-  updateClassroomEntry() {
-    const button = this.classroom?.querySelector(".sos-enter"), feedback = this.classroom?.querySelector(".sos-entry-feedback");
-    if (!button || !feedback) return;
-    const entry = this.classroomEntry?.key === this.classroom.dataset.jobKey ? this.classroomEntry : null;
-    button.disabled = entry?.phase === "opening";
-    button.setAttribute("aria-busy", String(button.disabled));
-    if (entry) button.setText(entry.phase === "opening" ? "正在打开课堂…" : entry.phase === "opened" ? "回到课堂" : "重新进入课堂");
-    feedback.hidden = !entry || entry.phase === "opening";
-    feedback.dataset.phase = entry?.phase || "";
-    feedback.setText(entry?.message || "");
-  }
-  async loadClassroom(job) {
-    const plugin = this.app.plugins.plugins.realclaudian;
-    if (!plugin?.chatHost) throw new Error("请先启用 Claudian，原课堂已保留。");
-    await plugin.chatHost.ensureConversationMetadataLoaded?.([job.conversation_id]);
-    const conversation = await plugin.chatHost.getConversationById(job.conversation_id);
-    if (conversation?.sessionId !== job.thread_id || !conversation.messages?.length) throw new Error("课堂历史尚未读回，未创建替代对话。");
-    if (plugin.views?.activateView) await plugin.views.activateView();
-    else await this.app.commands.executeCommandById("realclaudian:open-view");
-    const leaf = this.app.workspace.getLeavesOfType("claudian-view")[0];
-    if (!leaf) throw new Error("Claudian 视图尚不可用，课堂已保存在会话列表。");
-    await this.app.workspace.revealLeaf(leaf);
-    // A restored, hidden pane may have delivered its state before layout was ready.
-    // Re-deliver that exact state through the view API; do not replace its tabs.
-    if (leaf.view.tabWorkspace?.isReady === false) await leaf.view.setState(leaf.view.getState(), {});
-    await leaf.view.getTabManager().openConversation(conversation.id, { activate: true, preferNewTab: true });
-    const tab = leaf.view.getActiveTab();
-    if (tab?.state.currentConversationId !== conversation.id || !tab.state.messages?.length) throw new Error("课堂打开尚未确认；原会话保持不变。");
-    let material;
-    try { material = await this.openClassroomMaterial(job, leaf); }
-    catch (error) { material = { message: `讲义打开失败：${error.message}` }; }
-    this.app.workspace.setActiveLeaf(leaf, { focus: true });
-    tab.renderer?.scrollToBottom();
-    leaf.view.focusActiveInput();
-    this.plugin?.addStewardReturn?.(leaf);
-    const place = leaf.getRoot() === this.app.workspace.rightSplit ? "右侧" : "旁边";
-    if (material.message) new Notice(`课堂已打开。${material.message}`, 8000);
-    return material.file && !material.message ? `讲义已打开，${place}是对应课堂，可以开始学习。` : `课堂已打开。${material.message}`;
-  }
-  async openClassroomMaterial(job, classroom) {
-    const material = classroomMaterial(this.app, job, this.bridge?.lastState?.curriculum?.weekly?.tasks);
-    if (!material.file) return material;
+  async openStudyMaterial(task) {
+    const data = this.bridge.lastState;
+    const saved = data.jobs?.find(j => j.request?.task?.id === task.id);
+    const material = classroomMaterial(this.app, { request: { task, materials: saved?.request?.materials || [] } }, data.curriculum?.weekly?.tasks);
+    if (!material.file) throw new Error(material.message || "这项任务尚未关联学习材料。");
     const workspace = this.app.workspace;
     const existing = workspace.getLeavesOfType(material.file.extension === "pdf" ? "pdf" : "markdown")
-      .find(l => l.getRoot() === workspace.rootSplit && (l.view.file?.path || l.getViewState?.().state?.file) === material.file.path
-        && (classroom.getRoot() !== workspace.rootSplit || l.parent !== classroom.parent));
-    const leaf = existing || workspace.getLeaf(classroom.getRoot() === workspace.rootSplit ? "split" : "tab", "vertical");
-    // Revealing an existing leaf preserves its PDF page, scroll position and unsaved note edits.
+      .find(l => (l.view.file?.path || l.getViewState?.().state?.file) === material.file.path);
+    const leaf = existing || workspace.getLeaf("tab");
     if (!existing) await leaf.openFile(material.file, { active: false });
     await workspace.revealLeaf(leaf);
-    this.plugin?.addStewardReturn?.(leaf);
+    workspace.setActiveLeaf(leaf, { focus: true });
+    this.plugin.addStewardReturn?.(leaf);
     return material;
   }
   render() {
     if (!this.board) return;
+    this.courseMap?.captureViewPosition();
+    this.updateNavigation();
     if (this.taskDetail) this.taskDock.appendChild(this.taskDetail.host);
     this.statusEl.setText(this.bridge.status === "记录已同步" ? "自动同步" : this.bridge.status);
     this.statusEl.setAttribute("title", "记录变化时自动刷新；每分钟检查换日和更新。读取与校验不调用大模型。" + (this.bridge.lastState?.at ? ` 上次读取：${this.bridge.lastState.at}` : ""));
-    this.sendButton.disabled = this.bridge.busy;
-    this.stopButton.hidden = !this.bridge.activeRequest && !this.bridge.activeTask;
     const data = this.bridge.lastState;
     if (!data) { this.board.setText("正在读取已有的 Student OS 记录…"); return; }
     const home = homeModel(data), agenda = agendaFor(data);
     const section = this.section || "overview";
-    this.side.hidden = !this.managerOpen;
-    this.side.parentElement.classList.toggle("has-steward", !!this.managerOpen);
-    this.managerButton.setText(this.managerOpen ? "收起助理" : "询问 AI");
-    this.managerButton.setAttribute("aria-expanded", String(!!this.managerOpen));
-    this.contentEl.querySelectorAll(".sos-section-tab").forEach(button => button.setAttribute("aria-current", button.dataset.section === section ? "page" : "false"));
+    this.side.hidden = true;
     this.termEl.setText(`${data.curriculum?.stage || "课程与学习位置"}  ·  ${agenda.date.slice(5).replace("-", "月")}日`);
     const expanded = new Map(Array.from(this.contentEl.querySelectorAll("details[data-key]")).map(d => [d.dataset.key, d.open]));
     if (section === "overview") {
       this.clearManagement(); this.board.empty();
       this.renderDueToday(data);
-      this.board.appendChild(this.classroom);
       this.renderCurriculum(data, home);
       this.renderDetails(data);
     } else if (section === "deadlines") {
@@ -1063,15 +925,11 @@ class StewardView extends ItemView {
     if (section !== "overview") this.side.prepend(this.classroom);
     this.classroom.classList.toggle("is-launch", section === "overview");
     this.renderClassroom(data, home, agenda);
-    this.renderRadar(data, home);
     this.classroom.hidden = section !== "overview";
-    this.radar.hidden = section === "deadlines";
     this.contentEl.querySelectorAll("details[data-key]").forEach(d => { if (expanded.has(d.dataset.key)) d.open = expanded.get(d.dataset.key); });
     this.placeTaskDetail();
-    this.renderChat(data);
-    this.renderChatContext();
     this.lastRender = { taskId: home.task?.id || null, classroomId: home.job?.thread_id || null,
-      classroomReady: home.job?.state === "registered", chatCount: data.chat.length,
+
       progressCount: data.progress.length, sourceStatus: data.source_status,
       courseCount: data.curriculum?.courses.length || 0,
       visibleCourseIds: (data.curriculum?.courses || []).filter(c => ["degree", "foundation"].includes(c.group)).map(c => c.id),
@@ -1085,8 +943,11 @@ class StewardView extends ItemView {
     banner.createEl("strong", { text: today.length ? "今天到期" : "最近事项" });
     for (const item of items) {
       const button = this.button(banner, "", () => this.selectSection("deadlines"), "sos-due-item");
-      button.createSpan({ cls: "sos-due-time", text: today.length ? deadlineTime(item.task) || "今天" : item.time });
-      button.createSpan({ text: item.title });
+      const time = today.length ? deadlineTime(item.task) || "今天" : item.time;
+      button.setAttribute("title", item.title);
+      button.setAttribute("aria-label", `${time} ${item.title}`);
+      button.createSpan({ cls: "sos-due-time", text: time });
+      button.createSpan({ cls: "sos-due-label", text: item.title.split("：")[0].trim() || item.title });
     }
   }
   renderAgenda(data, agenda) {
@@ -1111,10 +972,9 @@ class StewardView extends ItemView {
     const expanded = this.classroom.querySelector("details")?.open;
     this.classroom.empty();
     this.classroom.dataset.jobKey = home.job?.key || "";
-    const ready = home.job?.state === "registered";
     const head = this.classroom.createDiv({ cls: "sos-classroom-heading" });
     setIcon(head.createSpan({ cls: "sos-icon" }), "book-open");
-    head.createEl("h2", { text: "接着学" });
+    head.createEl("h2", { text: "接着学 · 最近学习停点" });
     if (!home.task) {
       this.classroom.createEl("p", { text: "选择下面的一门课，就能从已有进度接着学。" });
       return;
@@ -1125,10 +985,7 @@ class StewardView extends ItemView {
     const body = main.createDiv();
     body.createEl("h3", { text: taskCaption(task) });
     body.createEl("p", { cls: "sos-launch-position", text: `${context.stopLabel}：${context.stop}`, attr: { title: context.stop } });
-    const enter = this.button(main, ready ? "进入课堂" : "开始学习", () => ready ? this.openClassroom(home.job) : this.beginTask(home.task), "mod-cta sos-enter");
-    enter.setAttribute("title", "一起打开本课讲义和学习对话");
-    this.classroom.createDiv({ cls: "sos-entry-feedback", attr: { role: "status", "aria-live": "polite", "aria-atomic": "true" } });
-    this.updateClassroomEntry();
+    this.button(main, "打开学习材料", () => this.beginTask(home.task), "mod-cta sos-enter");
     const next = this.classroom.createDiv({ cls: "sos-launch-next" });
     next.createEl("small", { text: "下一步" }); next.createEl("span", { text: context.next });
     const more = this.classroom.createEl("details", { cls: "sos-current-more", attr: { "data-key": "classroom-details" } });
@@ -1144,44 +1001,67 @@ class StewardView extends ItemView {
     if (slot) more.createDiv({ cls: "sos-classroom-time", text: `今日安排 ${slot.start}–${slot.end}${slot.end <= londonClock().time ? " · 时段已过，完成情况以实际记录为准" : ""}` });
     const actions = more.createDiv({ cls: "sos-classroom-actions" });
     this.button(actions, "记录进度", () => this.openTask(home.task, "", "progress"), "sos-quiet");
-    this.button(actions, "核验完成", () => this.plugin.openCompletion(home.task), "sos-quiet");
-    if (home.job) this.button(actions, "取消这次派工", () => this.bridge.cancelClassroom(home.job), "sos-quiet");
-    if (home.job?.error) this.classroom.createEl("p", { cls: "sos-error", text: "课堂暂未接通，点击开始学习继续恢复。" });
+    this.button(actions, "标记完成", () => this.plugin.setTaskCompletion(home.task, true), "sos-quiet");
   }
   renderCurriculum(data, home) {
     const curriculum = data.curriculum;
-    const section = this.board.createEl("section", { cls: "sos-curriculum" });
-    const heading = section.createDiv({ cls: "sos-section-heading" });
-    heading.createEl("h2", { text: "学习全景" });
-    if (!curriculum?.courses.length) { section.createEl("p", { text: "课程记录暂未读到，刷新后再查看。" }); return; }
+    const area = this.learningArea || "school";
+    const overview = this.board.createEl("section", { cls: "sos-curriculum" });
+    if (!curriculum?.courses.length) { overview.createEl("p", { text: "课程记录暂未读到，刷新后再查看。" }); return; }
     const weekly = curriculum.weekly;
-    if (!weekly) { section.createEl("p", { text: "正在整理原计划的每周任务…" }); return; }
+    if (!weekly) { overview.createEl("p", { text: "正在整理原计划的每周任务…" }); return; }
+    const section = overview.createEl("section", { cls: "sos-school", attr: { "aria-label": "学校学习" } });
+    section.hidden = area !== "school";
+    const selectedSchool = curriculum.courses.find(c => c.id === this.selectedCourse && isSchoolCourse(c));
+    const context = section.createEl("nav", { cls: "sos-learning-context", attr: { "aria-label": "当前学校学习位置" } });
+    const trail = context.createDiv({ cls: "sos-learning-breadcrumb" });
+    trail.createSpan({ text: "学校学习" });
+    if (selectedSchool) {
+      trail.createSpan({ text: "›" }); trail.createEl("strong", { text: selectedSchool.id, attr: { title: selectedSchool.title } });
+      this.button(context, "返回课程", () => this.returnToCourses(), "sos-quiet");
+    } else { trail.createSpan({ text: "›" }); trail.createSpan({ text: "全部学校课程" }); }
+    const week = ((!this.selectedCourse || selectedSchool) && this.selectedWeek) || String(curriculum.week || "unassigned");
+    trail.createSpan({ text: "›" }); trail.createSpan({ text: selectedSchool?.milestone_plan ? "项目阶段" : /^\d+$/.test(week) ? `第 ${week} 周` : week === "all" ? "全部周次" : week === "unassigned" ? "未分周" : "其他日期" });
+    const heading = section.createDiv({ cls: "sos-section-heading" });
+    heading.createEl("h2", { text: "学校学习 · LSE" });
     const overall = heading.createDiv({ cls: "sos-progress-totals" });
-    this.button(overall, `✓ 已完成 ${weekly.counts.done} 项`, () => this.selectTasks(null, "all", "done"), "sos-total-done");
-    this.button(overall, `◐ 有学习记录 ${weekly.counts.recorded} 项`, () => this.selectTasks(null, "all", "recorded"), "sos-quiet");
-    section.createDiv({ cls: "sos-course-group-label", text: "学校课程 · 跟随学期推进" });
+    const schoolIds = new Set(curriculum.courses.filter(isSchoolCourse).map(c => c.id));
+    const schoolTasks = weekly.tasks.filter(t => schoolIds.has(t.course_id));
+    this.button(overall, `✓ 已完成 ${schoolTasks.filter(t => t.state === "done").length} 项`, () => this.selectTasks(null, "all", "done"), "sos-total-done");
+    this.button(overall, `◐ 有学习记录 ${schoolTasks.filter(t => t.state === "recorded").length} 项`, () => this.selectTasks(null, "all", "recorded"), "sos-quiet");
+    const focusCourse = learningContext(data, home.task)?.course;
+    const externalFocus = focusCourse && !isSchoolCourse(focusCourse);
+    if (!externalFocus) section.appendChild(this.classroom);
+    section.createDiv({ cls: "sos-course-group-label", text: "本学期课程" });
     const cards = section.createDiv({ cls: "sos-progress-cards" });
     for (const course of curriculum.courses.filter(c => c.group === "degree")) {
-      const count = course.core_progress || course.task_progress, personal = positionFor(course.personal);
-      const card = this.button(cards, "", () => this.selectTasks(this.selectedCourse === course.id ? null : course.id, this.selectedWeek, "all"), "sos-progress-card");
+      const project = course.milestone_plan;
+      const count = project?.counts || course.core_progress || course.task_progress, personal = positionFor(course.personal);
+      const card = this.button(cards, "", () => this.selectTasks(course.id, project ? "all" : this.selectedCourse === course.id ? this.selectedWeek : null, "all"), "sos-progress-card");
       card.dataset.course = course.id;
       card.setAttribute("aria-pressed", String(this.selectedCourse === course.id));
       const top = card.createDiv({ cls: "sos-progress-card-top" });
       top.createSpan({ text: course.id });
-      top.createSpan({ text: `本周 ${weekly.tasks.filter(t => t.course_id === course.id && t.week === String(curriculum.week) && t.state !== "cancelled").length} 项` });
+      top.createSpan({ text: project ? "项目阶段" : `本周 ${weekly.tasks.filter(t => t.course_id === course.id && t.week === String(curriculum.week) && t.state !== "cancelled").length} 项` });
       card.createEl("h3", { text: course.title });
       const number = card.createDiv({ cls: "sos-progress-number" });
       number.createEl("strong", { text: String(count.done) });
-      number.createSpan({ text: ` / ${count.total} 项核心已记录完成` });
+      number.createSpan({ text: project ? ` / ${count.total} 个阶段节点完成` : ` / ${count.total} 项核心已记录完成` });
       const bar = card.createDiv({ cls: "sos-completion-bar", attr: { role: "img", "aria-label": `原计划 ${count.total} 项：已完成 ${count.done}，有学习记录 ${count.recorded}，待确认 ${count.unknown}，后续计划 ${count.planned}` } });
       for (const key of ["done", "recorded", "unknown", "planned"]) {
         if (count[key]) bar.createSpan({ cls: `is-${key}`, attr: { style: `flex:${count[key]}` } });
       }
       const states = card.createDiv({ cls: "sos-progress-states" });
-      if (count.recorded) states.createSpan({ cls: "is-recorded", text: `${count.recorded} 项有记录` });
+      if (count.recorded) states.createSpan({ cls: "is-recorded", text: project ? `${count.recorded} 个节点进行中` : `${count.recorded} 项有记录` });
       if (count.unknown) states.createSpan({ text: `${count.unknown} 项待确认` });
       if (count.planned) states.createSpan({ text: `${count.planned} 项后续计划` });
       if (course.recommended_progress?.total) states.createSpan({ text: `另有 ${course.recommended_progress.total} 项推荐` });
+      if (project) {
+        const next = card.createDiv({ cls: "sos-course-positions" });
+        const line = next.createDiv(); line.createEl("small", { text: "当前阶段" });
+        line.createEl("span", { text: project.next?.title || "已登记阶段全部完成" });
+        continue;
+      }
       const positions = card.createDiv({ cls: "sos-course-positions" });
       for (const [key, label] of [["school", "学校"], ["personal", "我学到"]]) {
         const fact = positionFor(course[key]);
@@ -1191,78 +1071,86 @@ class StewardView extends ItemView {
         line.createEl("span", { text: taskCaption({ title: fact.topic.replace(/^最近完成：/, "") }), attr: { title: fact.topic } });
       }
     }
-    this.renderSelfStudy(section, curriculum);
-    this.renderWeekly(section, curriculum);
-    const queued = curriculum.courses.filter(c => c.group === "future" || ["foundation", "other", "queued"].includes(c.group) && !c.active);
+    const project = curriculum.courses.find(c => c.id === this.selectedCourse && c.milestone_plan);
+    if (project) this.renderProject(section, project, weekly);
+    const skills = curriculum.courses.filter(c => isSchoolCourse(c) && !["degree", "future"].includes(c.group));
+    if (skills.length) {
+      const training = section.createDiv({ cls: "sos-school-skills" });
+      training.createEl("strong", { text: "校内技能训练" });
+      for (const c of skills) this.button(training, `${c.id} · ${c.title}`, () => this.selectTasks(c.id, "all"), "sos-quiet");
+    }
+    this.renderWeekly(section, curriculum, "school");
+    const future = curriculum.courses.filter(c => c.group === "future");
+    if (future.length) {
+      const later = section.createEl("details", { cls: "sos-details", attr: { "data-key": "school-future-courses" } });
+      later.createEl("summary", { text: `后续学校课程 · ${future.length} 门` });
+      for (const c of future) later.createDiv({ cls: "sos-course-meta", text: `${c.id} · ${c.title}${c.group === "future" ? " · 冬季学期" : ""}` });
+    }
+    const external = overview.createEl("section", { cls: "sos-external", attr: { "aria-label": "校外学习" } });
+    external.hidden = area !== "external";
+    external.createEl("h2", { text: "校外学习" });
+    if (externalFocus) external.appendChild(this.classroom);
+    this.renderSelfStudy(external, curriculum);
+    if (curriculum.courses.some(c => c.id === this.selectedCourse && !isSchoolCourse(c))) this.renderWeekly(external, curriculum, "external");
+    const queued = curriculum.courses.filter(c => !isSchoolCourse(c) && !c.active && !Object.values(BINDINGS).includes(c.id));
     if (queued.length) {
-      const later = section.createEl("details", { cls: "sos-details", attr: { "data-key": "queued-courses" } });
-      later.createEl("summary", { text: `后续课程 · ${queued.length} 门` });
-      for (const c of queued) later.createDiv({ cls: "sos-course-meta", text: `${c.id} · ${c.title}${c.group === "future" ? " · 冬季学期" : ""}` });
+      const later = external.createEl("details", { cls: "sos-details", attr: { "data-key": "external-queued-courses" } });
+      later.createEl("summary", { text: `校外待选方向 · ${queued.length} 项` });
+      for (const c of queued) later.createDiv({ cls: "sos-course-meta", text: `${c.id} · ${c.title}` });
     }
     if (curriculum.issues.length) section.createEl("p", { cls: "sos-error", text: curriculum.cached_at
       ? `进度暂未同步，正在显示 ${curriculum.cached_at.slice(5, 10).replace("-", "/")} 的记录。`
       : "部分进度暂未同步。" });
   }
-  renderSelfStudy(section, curriculum) {
-    const courses = curriculum.courses.filter(c => ["foundation", "other", "queued"].includes(c.group) && c.active);
-    if (!courses.length) return;
-    const details = section.createEl("section", { cls: "sos-self-study" });
-    const heading = details.createDiv({ cls: "sos-section-heading" });
-    heading.createEl("h2", { text: "自主学习" });
-    heading.createSpan({ cls: "sos-muted", text: "按学习单元推进" });
-    const cards = details.createDiv({ cls: "sos-learning-tracks" });
-    for (const c of [...courses.filter(c => c.mode === "finite"), ...courses.filter(c => c.mode !== "finite")]) {
-      const model = selfStudyFor(c, curriculum.weekly);
-      const row = cards.createEl("details", { cls: `sos-learning-track${model.finite ? "" : " is-practice"}${c.replay_progress ? " is-replay" : ""}`, attr: { "data-key": "course-" + c.id, "data-course-details": c.id } });
-      row.open = (this.studyOpen || []).includes(c.id);
-      const summary = row.createEl("summary");
-      summary.addEventListener("click", event => {
-        event.preventDefault(); row.open = !row.open;
-        this.studyOpen = [...cards.querySelectorAll(".sos-learning-track[open]")].map(node => node.dataset.courseDetails);
-        this.saveWorkspace();
-      });
-      const top = summary.createDiv({ cls: "sos-track-top" });
-      top.createSpan({ cls: "sos-track-code", text: c.id });
-      top.createSpan({ cls: `sos-track-badge${model.recorded ? " has-record" : ""}`, text: c.replay_progress ? "本轮重看" : model.recorded ? "已有学习记录" : model.finite ? "按单元接续" : "持续实践" });
-      summary.createEl("h3", { text: c.title });
-      const position = summary.createDiv({ cls: "sos-track-position" });
-      position.createEl("small", { text: "我学到" });
-      position.createEl("p", { text: model.position });
-      if (model.finite) {
-        const units = c.replay_progress ? model.replay : model.units;
-        const done = c.replay_progress ? c.replay_progress.completed : c.unit_progress.completed;
-        const grain = units.every(t => studyUnitFor(t).lecture) ? "讲" : "组任务";
-        const progress = summary.createDiv({ cls: "sos-track-progress" });
-        const count = progress.createDiv({ cls: "sos-track-count" });
-        count.createEl("strong", { text: String(done) });
-        count.createSpan({ text: c.replay_progress ? " 项本轮已完成" : ` / ${units.length} ${grain}已记录完成` });
-        if (c.replay_progress) summary.createEl("p", { cls: "sos-study-map-hint", text: `历史课程记录：${c.unit_progress.completed} / ${c.unit_progress.total} 讲已完成` });
-        else {
-          const bar = summary.createDiv({ cls: "sos-track-segments", attr: { role: "img", "aria-label": `${c.id}：已登记 ${units.length} 项，完成 ${done} 项` } });
-          for (const unit of units) bar.createSpan({ cls: `is-${unit.state}`, attr: { title: taskCaption(unit), "aria-hidden": "true" } });
-        }
-      }
-      const next = summary.createDiv({ cls: "sos-track-next" });
-      next.createEl("small", { text: "接下来" }); next.createEl("span", { text: model.next });
-      const footer = summary.createDiv({ cls: "sos-track-footer" });
-      footer.createSpan({ cls: "sos-expand-label", text: "展开单元与收工条件" });
-      setIcon(footer.createSpan({ cls: "sos-track-chevron", attr: { "aria-hidden": "true" } }), "chevron-down");
-      this.renderCourseDetail(row.createDiv({ cls: "sos-inline-course" }), c, model);
+  renderProject(parent, course, weekly) {
+    const plan = course.milestone_plan;
+    const panel = parent.createEl("section", { cls: "sos-project-route sos-weekly", attr: { "aria-label": course.id + " 项目阶段" } });
+    const head = panel.createDiv({ cls: "sos-section-heading" });
+    head.createEl("h2", { text: course.id + " · 项目阶段" });
+    this.button(head, "收起", () => this.selectTasks(null, null), "sos-quiet");
+    if (plan.next) panel.createEl("p", { cls: "sos-launch-position", text: "现在：" + plan.next.title + (plan.next.task?.record ? " · " + plan.next.task.record : "") });
+    if (plan.needs_review || plan.missing.length) panel.createEl("p", { cls: "sos-error", text: "项目材料或任务有变动，部分节点待更新。" });
+    const list = panel.createDiv({ cls: "sos-week-task-list" });
+    plan.items.forEach((item, index) => {
+      if (!item.task) { list.createEl("p", { text: `${index + 1}. ${item.title} · 任务待同步` }); return; }
+      this.renderWeeklyTask(list, { ...item.task, state: item.state, short_title: `${index + 1}. ${item.title}`, milestone_time: item.task.kind === "obligation" ? [item.task.date, deadlineTime(item.task)].filter(Boolean).join(" · ") : item.when }, course, "project");
+    });
+    panel.createEl("p", { cls: "sos-muted", text: "按已完成节点计数；各阶段工作量不同。暂定日期以课程后续通知为准。" });
+    const refs = new Set(plan.items.map(item => item.ref));
+    const extra = weekly.tasks.filter(task => task.course_id === course.id && task.state !== "cancelled" && !refs.has(task.ref));
+    if (extra.length) {
+      const details = panel.createEl("details", { cls: "sos-details", attr: { "data-key": "project-preparation-" + course.id } });
+      details.createEl("summary", { text: `补充准备 · ${extra.length} 项` });
+      for (const task of extra) this.renderWeeklyTask(details, task, course, "project-extra");
     }
   }
+  renderSelfStudy(section, curriculum) {
+    if (!this.courseMap) this.courseMap = new CourseMap(this);
+    this.courseMap.render(section, curriculum);
+  }
   selectTasks(course, week, filter = "all") {
+    const selected = this.bridge.lastState?.curriculum?.courses.find(c => c.id === course);
+    this.learningArea = selected && !isSchoolCourse(selected) ? "external" : "school";
+    // A different school course starts at the current week; week selection within it remains explicit.
+    if (selected?.group === "degree" && !selected.milestone_plan && course !== this.selectedCourse) week = null;
+    this.section = "overview";
     this.selectedCourse = course; this.selectedWeek = week; this.taskFilter = filter;
     this.saveWorkspace(); this.render();
-    this.board.querySelector(".sos-weekly")?.scrollIntoView({ block: "start", behavior: "smooth" });
+    const region = selected && !isSchoolCourse(selected) ? ".sos-external" : ".sos-school";
+    this.board.querySelector(`${region} .sos-project-route, ${region} .sos-weekly`)?.scrollIntoView({ block: "start", behavior: "smooth" });
   }
-  renderWeekly(parent, curriculum) {
+  renderWeekly(parent, curriculum, scope = "school") {
+    const courses = curriculum.courses.filter(c => isSchoolCourse(c) === (scope === "school"));
+    if (courses.some(c => c.id === this.selectedCourse && c.milestone_plan)) return;
     const plan = curriculum.weekly;
-    const key = this.selectedWeek || String(curriculum.week || "unassigned");
-    const course = this.selectedCourse, filter = this.taskFilter || "all";
+    const selected = curriculum.courses.find(c => c.id === this.selectedCourse);
+    const ownSelection = !selected || courses.includes(selected);
+    const key = (ownSelection && this.selectedWeek) || String(curriculum.week || "unassigned");
+    const course = ownSelection ? this.selectedCourse : null, filter = (ownSelection && this.taskFilter) || "all";
     const panel = parent.createEl("section", { cls: "sos-weekly", attr: { "aria-label": "每周具体任务与完成记录" } });
     const heading = panel.createDiv({ cls: "sos-section-heading" });
-    heading.createEl("h2", { text: "每周学习与收尾" });
-    this.button(heading, "回到本周", () => this.selectTasks(null, null), "sos-quiet");
+    heading.createEl("h2", { text: scope === "school" ? "学校 · 每周学习与收尾" : "校外 · 任务与记录" });
+    this.button(heading, "回到本周", () => this.selectTasks(course, null), "sos-quiet");
     const weeks = panel.createDiv({ cls: "sos-week-selector", attr: { "aria-label": "选择周次" } });
     for (const week of plan.weeks) {
       const button = this.button(weeks, "", () => this.selectTasks(course, week.key), "sos-week-button");
@@ -1273,12 +1161,12 @@ class StewardView extends ItemView {
     }
     const filters = panel.createDiv({ cls: "sos-week-filters" });
     const courseSelect = filters.createEl("select", { attr: { "aria-label": "筛选课程" } });
-    courseSelect.createEl("option", { value: "", text: /^\d+$/.test(key) ? "本学期课程" : "所有学习课程" });
-    for (const c of curriculum.courses.filter(c => c.task_progress?.total)) courseSelect.createEl("option", { value: c.id, text: `${c.id} ${c.title}` });
+    if (scope === "school") courseSelect.createEl("option", { value: "", text: "学校课程与训练" });
+    for (const c of courses.filter(c => c.task_progress?.total)) courseSelect.createEl("option", { value: c.id, text: `${c.id} ${c.title}` });
     courseSelect.value = course || "";
-    courseSelect.addEventListener("change", () => this.selectTasks(courseSelect.value || null, this.selectedWeek, filter));
-    for (const [value, label] of [["all", "全部状态"], ["verification", "待核验"], ["done", "已完成"], ["recorded", "有学习记录"], ["unknown", "待确认"]]) {
-      const button = this.button(filters, label, () => this.selectTasks(course, this.selectedWeek, value), "sos-filter-button");
+    courseSelect.addEventListener("change", () => this.selectTasks(courseSelect.value || null, key, filter));
+    for (const [value, label] of [["all", "全部状态"], ["done", "已完成"], ["recorded", "有学习记录"], ["unknown", "待确认"]]) {
+      const button = this.button(filters, label, () => this.selectTasks(course, key, value), "sos-filter-button");
       button.setAttribute("aria-pressed", String(filter === value));
     }
     const extra = panel.createEl("details", { cls: "sos-week-record-tools", attr: { "data-key": "week-record-tools" } });
@@ -1288,12 +1176,12 @@ class StewardView extends ItemView {
       const button = this.button(more, label, () => this.selectTasks(course, value, filter), "sos-quiet");
       button.setAttribute("aria-pressed", String(key === value));
     }
-    const included = id => course ? id === course : !/^\d+$/.test(key) || curriculum.courses.some(c => c.id === id && c.group === "degree");
+    const included = id => courses.some(c => c.id === id) && (!course || id === course);
     const inWeek = plan.tasks.filter(t => included(t.course_id) && (key === "all" || t.week === key) && t.state !== "cancelled");
-    const tasks = inWeek.filter(t => filter === "all" || (filter === "verification" ? t.completion_check && !["complete", "closed", "cancelled"].includes(t.completion_check.phase) && t.state !== "done" : t.state === filter));
-    const selected = plan.weeks.find(w => w.key === key);
+    const tasks = inWeek.filter(t => filter === "all" || t.state === filter);
+    const selectedWeek = plan.weeks.find(w => w.key === key);
     const caption = panel.createDiv({ cls: "sos-week-caption" });
-    caption.createEl("strong", { text: selected ? `第 ${selected.number} 周 · ${selected.start.slice(5).replace("-", "/")}–${selected.end.slice(5).replace("-", "/")}` : key === "all" ? "全部周次" : key === "unassigned" ? "未分周的任务" : "其他日期的记录" });
+    caption.createEl("strong", { text: selectedWeek ? `第 ${selectedWeek.number} 周 · ${selectedWeek.start.slice(5).replace("-", "/")}–${selectedWeek.end.slice(5).replace("-", "/")}` : key === "all" ? "全部周次" : key === "unassigned" ? "未分周的任务" : "其他日期的记录" });
     const core = inWeek.filter(t => t.group !== "recommended"), recommended = inWeek.filter(t => t.group === "recommended");
     caption.createSpan({ text: `核心 ${core.filter(t => t.state === "done").length}/${core.length} · 推荐 ${recommended.filter(t => t.state === "done").length}/${recommended.length}${filter !== "all" ? ` · 筛选显示 ${tasks.length} 项` : ""}` });
     const bundles = (plan.bundles || []).filter(b => included(b.course_id) && (key === "all" || b.week === key));
@@ -1352,57 +1240,23 @@ class StewardView extends ItemView {
     const states = { done: ["✓", "已完成"], recorded: ["◐", "有学习记录"], unknown: ["○", "待确认"], planned: ["·", "后续计划"] };
         const row = group.createEl("details", { cls: `sos-task-row ${prefix === "unit" ? "sos-unit-task" : "sos-week-task"} is-${task.state}`, attr: { "data-key": prefix + "-" + task.id, "data-task-id": task.id } });
         const summary = row.createEl("summary");
-        const check = task.completion_check;
         summary.addEventListener("click", event => {
-          if (event.target.closest("button")) return;
+          if (event.target.closest("button,input")) return;
           event.preventDefault();
           if (this.taskDetail?.controller.task.id === task.id) { row.open = false; this.taskDetail.controller.close(); }
           else this.openTask(task, "", null, row.dataset.key);
         });
-        if (task.state === "done") summary.createSpan({ cls: "sos-task-indicator", text: "✓", attr: { "aria-hidden": "true" } });
-        else {
-          const control = summary.createEl("button", { cls: "sos-task-indicator sos-check-task", text: "○", attr: { "aria-label": "核验完成：" + taskCaption(task), title: "核验完成" } });
-          control.addEventListener("click", event => { event.preventDefault(); event.stopPropagation(); this.openTask(task, "", null, row.dataset.key); });
-        }
+        taskCheckbox(summary, this.plugin, task);
         const text = summary.createDiv({ cls: "sos-task-caption" });
         text.createSpan({ text: taskCaption(task) });
-        const meta = task.kind === "obligation" ? [task.date, deadlineTime(task)].filter(Boolean).join(" · ") : "";
+        const meta = task.milestone_time || (task.kind === "obligation" ? [task.date, deadlineTime(task)].filter(Boolean).join(" · ") : "");
         if (meta) text.createEl("small", { text: meta });
-        summary.createSpan({ cls: "sos-task-state", text: task.state !== "done" && check && !["complete", "closed", "cancelled"].includes(check.phase) ? "待核验" : states[task.state][1] });
+        summary.createSpan({ cls: "sos-task-state", text: task.milestone_time && task.state === "recorded" ? "进行中" : states[task.state][1] });
         row.createDiv({ cls: "sos-week-task-detail sos-task-detail" });
   }
-  renderRadar(data, home) {
-    this.radar.empty();
-    const header = this.radar.createDiv({ cls: "sos-course-heading" });
-    header.createEl("h2", { text: "需要留意" });
-    this.button(header, "Deadlines →", () => this.selectSection("deadlines"), "sos-quiet");
-    const near = deadlineNotices(data);
-    let more;
-    for (const [index, t] of near.entries()) {
-      if (index === 3) {
-        more = this.radar.createEl("details", { cls: "sos-radar-more", attr: { "data-key": "radar-more" } });
-        more.createEl("summary", { text: `还有 ${near.length - 3} 项近期安排` });
-      }
-      const row = (index >= 3 ? more : this.radar).createDiv({ cls: `sos-event${t.days === 0 ? " is-today" : ""}` });
-      const date = row.createDiv({ cls: "sos-event-date" });
-      date.createEl("strong", { text: t.time });
-      if (t.optional) date.createSpan({ cls: "sos-event-optional", text: "可选" });
-      const title = this.button(row, t.title, () => {
-        if (t.task) return this.openTask(t.task);
-        return this.app.workspace.openLinkText(t.ref || data.today.path + "#临近 Deadline", data.today.path, "tab");
-      }, "sos-event-title");
-      if (t.detail) title.setAttribute("title", t.detail);
-    }
-    const past = home.obligations.filter(t => t.days_until < 0);
-    if (past.length) this.button(this.radar, `${past.length} 项历史记录待确认 ↗`, () => this.openNote("99_学习情况记录/deadlines.md"), "sos-past-link");
-    for (const n of home.notices) {
-      const row = this.radar.createDiv({ cls: "sos-notice" }); row.createEl("p", { text: n.summary });
-      this.button(row, "今天知道了", async () => { await this.bridge.call("acknowledge", { id: n.notice_id }); await this.bridge.refresh(); });
-    }
-    if (!near.length && !past.length && !home.notices.length) this.radar.createEl("p", { cls: "sos-muted", text: "已读取记录中暂无近期事项。" });
-    if (data.source_issues.length) this.radar.createEl("p", { cls: "sos-error", text: `${data.source_issues.length} 处来源需要核对。` });
-  }
   openCourse(course) {
+    const mapped = Object.entries(BINDINGS).find(([, id]) => id === course.id);
+    if (mapped && this.courseMap) { this.courseMap.openCourse(mapped[0]); return; }
     const target = [...this.contentEl.querySelectorAll("[data-course-details]")].find(node => node.dataset.courseDetails === course.id);
     if (target) {
       target.open = !target.open;
@@ -1527,13 +1381,13 @@ class StewardView extends ItemView {
       if (course.continuation?.after_task_id === task.id) {
         const number = course.continuation.title.match(/Lecture\s+(\d+)/)?.[1];
         this.button(actions, number ? `继续 Lecture ${number}` : "继续下一讲", () => this.continueCourse(course), "mod-cta sos-study-continue");
-      } else if (model.nextTask) this.button(actions, "继续学习", () => this.beginTask(model.nextTask), "mod-cta sos-study-start");
+      } else if (model.nextTask) this.button(actions, "打开学习材料", () => this.beginTask(model.nextTask), "mod-cta sos-study-start");
     } else {
       const canonical = this.bridge.lastState.tasks.find(t => t.path === task.path && t.raw === task.raw) || task;
       const job = this.bridge.lastState.jobs.find(j => j.request?.task?.id === canonical.id && !j.handed_off && j.state !== "cancelled");
-      this.button(actions, job?.state === "registered" ? "继续学习" : "开始学习", () => this.beginTask(canonical), "mod-cta sos-study-start");
+      this.button(actions, "打开学习材料", () => this.beginTask(canonical), "mod-cta sos-study-start");
       this.button(actions, "记录进度", () => this.openTask(task, "", "progress", "study-" + task.id));
-      this.button(actions, "核验完成", () => this.openTask(task, "", "complete", "study-" + task.id), "sos-quiet");
+      this.button(actions, "标记完成", () => this.plugin.setTaskCompletion(task, true), "sos-quiet");
     }
     if (course.continuation?.after_task_id === task.id) preview.createEl("p", { cls: "sos-study-map-hint", text: "下一讲：" + displayText(course.continuation.title).replace(course.id + "｜", "") });
   }
@@ -1565,20 +1419,12 @@ class StewardView extends ItemView {
           summary: "从课程中选择当前学习项", next_step: context.next }, "我现在学习这项任务，从已有停点继续。");
         if (result?.error || this.bridge.lastState.focus?.task?.id !== canonical.id) throw new Error(result?.error || "当前学习项尚未保存，请刷新后重试。");
       }
-      const job = this.bridge.lastState.jobs.find(j => j.request?.task?.id === canonical.id && !j.handed_off && j.state !== "cancelled");
-      if (job?.state === "registered") return await this.openClassroom(job);
-      const result = await this.prepareTask(canonical);
-      const prepared = this.bridge.lastState.jobs.find(j => j.key === result?.job_key && j.state === "registered" && !j.handed_off);
-      if (prepared) await this.openClassroom(prepared);
-      return result;
+      return await this.openStudyMaterial(canonical);
     } finally { this.startingLesson = false; }
   }
-  async prepareTask(task) {
-    const cancelled = this.bridge.lastState.jobs.find(j => j.state === "cancelled" && j.request?.task?.id === task.id);
-    return this.bridge.act({ kind: "prepare_classroom", task_id: task.id, job_key: cancelled?.key || "" }, cancelled ? "重新准备这个任务的课堂" : "准备这个任务的课堂");
-  }
   renderDetails(data) {
-    const details = (label) => { const d = this.board.createEl("details", { cls: "sos-details", attr: { "data-key": label.split(" · ")[0] } }); d.createEl("summary", { text: label }); return d; };
+    const records = this.board.createEl("section", { cls: "sos-overview-records", attr: { "aria-label": "学习历史与约定" } });
+    const details = (label) => { const d = records.createEl("details", { cls: "sos-details", attr: { "data-key": label.split(" · ")[0] } }); d.createEl("summary", { text: label }); return d; };
     if (data.progress.length) {
       const history = details(`学习记录 · ${data.progress.length} 条`);
       for (const record of data.progress) {
@@ -1592,72 +1438,14 @@ class StewardView extends ItemView {
       if (item.status === "active") this.button(row, "取消约定", () => this.bridge.act({ kind: "cancel_commitment", commitment_id: item.id }, "取消这项约定"));
     }
     if (commitments) commitments.createEl("p", { cls: "sos-muted", text: "到期自动停止；提示在 Obsidian 打开时可用。" });
-    if (data.weekly_report.error) this.board.createEl("p", { cls: "sos-error", text: data.weekly_report.error });
+    const warning = data.weekly_report.error;
+    if (warning?.startsWith("记录含有外部修改，已保留原文：")) {
+      const details = this.board.createEl("details", { cls: "sos-record-warning", attr: { "data-key": "weekly-report-sync-warning" } });
+      details.createEl("summary", { text: "同步提醒：周报有外部修改，原文已保留" });
+      details.createEl("p", { cls: "sos-muted", text: warning });
+    } else if (warning) this.board.createEl("p", { cls: "sos-error sos-record-warning", text: warning });
   }
-  renderChat(data) {
-    const day = londonClock().date;
-    const signature = JSON.stringify([day, data.chat, data.jobs.map(j => [j.key, j.state]), this.bridge.busy ? this.bridge.status : ""]);
-    if (signature === this.chatSignature) return;
-    this.chatSignature = signature;
-    this.messages.empty();
-    
-    const latest = data.chat[data.chat.length - 1];
-    const previous = data.chat.filter(item => ["done", "cancelled"].includes(item.phase)
-      && (item !== latest || !item.updated_at || londonClock(new Date(item.updated_at)).date !== day));
-    let history;
-    if (previous.length) {
-      history = this.messages.createEl("details", { cls: "sos-chat-history" });
-      history.createEl("summary", { text: `查看历史对话 · ${previous.length} 条` });
-    }
-    for (const item of data.chat) {
-      const parent = previous.includes(item) ? history : this.messages;
-      parent.createDiv({ cls: "sos-message sos-user", text: item.body });
-      const receipts = item.receipts || [];
-      if (receipts.length) {
-        const outcome = parent.createDiv({ cls: "sos-message sos-outcome", attr: { role: "status" } });
-        outcome.createEl("small", { text: item.phase === "done" ? "处理结果" : "已完成的处理" });
-        for (const receipt of receipts) {
-          const result = receipt.result;
-          const row = outcome.createDiv({ cls: "sos-outcome-row" });
-          row.createEl("p", { text: (result.phase === "insufficient" ? "待补充 · " : "✓ ") + result.message });
-          if (result.job_key && result.state === "registered") {
-            const job = data.jobs.find(j => j.key === result.job_key && j.state === "registered");
-            if (job) this.button(row, "进入课堂", () => this.openClassroom(job), "sos-primary");
-          }
-          if (receipt.kind === "set_focus") {
-            const task = data.tasks.find(t => t.id === receipt.task_id);
-            if (task) this.button(row, "展开任务", () => this.openTask(task), "sos-quiet");
-          }
-          if (receipt.kind === "check_completion" && result.phase === "insufficient") {
-            const task = [...data.tasks, ...data.obligations].find(t => t.id === receipt.task_id);
-            if (task) this.button(row, "补充核验", () => this.openTask(task, "", "complete"), "sos-quiet");
-          }
-        }
-      }
-      const reply = receipts.length ? item.explanation : item.reply;
-      if (reply) {
-        const bubble = parent.createDiv({ cls: "sos-message sos-assistant" });
-        let target = bubble;
-        if (reply.length > 480) {
-          const preview = reply.split("\n").filter(line => line.trim() && !/^\s*[|#>-]/.test(line)).slice(0, 2).join(" ");
-          bubble.createEl("p", { text: displayText(preview).slice(0, 180) + (preview.length > 180 ? "…" : "") || "课程位置和依据已整理。" });
-          const full = bubble.createEl("details", { cls: "sos-chat-full" });
-          full.createEl("summary", { text: "展开完整回复" });
-          target = full.createDiv();
-        }
-        MarkdownRenderer.render(this.app, reply, target, "", this).catch(() => target.setText(reply));
-      }
-      if (item.error) parent.createDiv({ cls: "sos-message sos-error", text: "尚未全部完成：" + item.error });
-      if (!["done", "cancelled"].includes(item.phase)) {
-        if (!item.error) parent.createDiv({ cls: "sos-chat-working", text: this.bridge.activeRequest === item.key ? this.bridge.status : "处理尚未结束，可以从原停点继续。", attr: { role: "status" } });
-        const row = parent.createDiv({ cls: "sos-actions" });
-        this.button(row, "继续原请求", () => this.bridge.run("resume", { key: item.key }));
-        this.button(row, "停止这条请求", async () => { await this.bridge.call("cancel-request", { key: item.key }); await this.bridge.refresh(); });
-      }
-      if (item.phase === "cancelled") parent.createDiv({ cls: "sos-muted", text: "这条请求已停止。" });
-    }
-    this.messages.scrollTop = this.messages.scrollHeight;
-  }
+
 }
 
 function taskCaption(task) {
@@ -1698,4 +1486,4 @@ function renderCourseTerms(root) {
 
 function displayText(value) { return courseTerms(value.replace(/\[\[([^\]|]+)\|([^\]]+)\]\]/g, "$2").replace(/\[\[([^\]]+)\]\]/g, "$1").replace(/\*\*/g, "")); }
 
-module.exports = { STEWARD_VIEW, StewardBridge, StewardView, CompletionModal, installCompletionGuard, renderedTask, homeModel, classroomMaterial, positionFor, agendaFor, todayNotices, deadlineNotices, deadlineBoard, deadlineSupplements, selfStudyFor, studyUnitFor, learningContext, nearbyUnits, sameRef, sectionForPath, titleForDeadline, deadlineTime };
+module.exports = { STEWARD_VIEW, StewardBridge, StewardView, CompletionModal, installTaskControls, taskCheckbox, renderedTask, homeModel, classroomMaterial, positionFor, agendaFor, todayNotices, deadlineNotices, deadlineBoard, deadlineSupplements, selfStudyFor, studyUnitFor, learningContext, nearbyUnits, sameRef, sectionForPath, titleForDeadline, deadlineTime };

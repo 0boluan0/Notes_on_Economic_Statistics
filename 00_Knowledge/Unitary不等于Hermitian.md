@@ -67,7 +67,7 @@ If a matrix is both Hermitian and unitary, then $U^*=U$ and $U^*U=I$ imply $U^2=
 ## 来源与核验
 
 - [[01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.2sum.pdf|MIT 18.06SC Session 3.2 summary]]：核对 Hermitian 与 unitary 的定义。
-- [[01_Math/02_linear algebra/03_Positive Definite Matrices and Applications.md#3.2.1 复向量的长度与 Hermitian 内积|课程 3.2.1]]：核对 $A^*=A$、$U^*U=I$ 与共轭转置记号；两个标量反例由定义直接计算。
+- [[03_Positive Definite Matrices and Applications#3.2.1 复向量的长度与 Hermitian 内积|课程 3.2.1]]：核对 $A^*=A$、$U^*U=I$ 与共轭转置记号；两个标量反例由定义直接计算。
 <!-- bilingual-en:start -->
 - The MIT 18.06SC Session 3.2 summary was checked for the definitions of Hermitian and unitary matrices.
 - Course Section 3.2.1 was checked for $A^*=A$, $U^*U=I$, and conjugate-transpose notation. Both scalar counterexamples are verified directly from those definitions.
