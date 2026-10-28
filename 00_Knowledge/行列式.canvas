@@ -74,8 +74,8 @@
       "x": 100,
       "y": 1250,
       "width": 430,
-      "height": 160,
-      "text": "## 跨主题前置：[[逆矩阵]]\n\n先知道“存在双侧逆”意味着什么，再把它与非零行列式对应起来。"
+      "height": 230,
+      "text": "<!-- bilingual-en:start -->\n## [[逆矩阵|Inverse matrix]]\n\nA square matrix is invertible when it has a two-sided inverse. The determinant criterion tests this property.\n<!-- bilingual-en:end -->\n\n先明确双侧逆，再使用非零行列式判据。"
     },
     {
       "id": "det-invertible",
@@ -299,8 +299,8 @@
       "x": 5000,
       "y": 1660,
       "width": 430,
-      "height": 160,
-      "text": "## 跨主题前置：[[逆矩阵]]\n\n把矩阵乘积等于单位矩阵读成逆矩阵。"
+      "height": 230,
+      "text": "<!-- bilingual-en:start -->\n## [[逆矩阵|Reading an inverse identity]]\n\nCheck that the proposed matrix composes with the square matrix to give the identity on both sides.\n<!-- bilingual-en:end -->\n\n把两侧乘积恒等式读成方阵双侧逆；先确认候选矩阵与尺寸。"
     },
     {
       "id": "det-adjugate-inverse",

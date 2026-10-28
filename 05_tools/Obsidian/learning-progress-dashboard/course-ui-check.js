@@ -9,6 +9,19 @@ const { CourseMap } = require("./course-map");
 Module._load = originalLoad;
 const catalog = require("./course-catalog");
 
+// The registered probability plan supports direct session continuation like 18.06.
+{
+  const course = catalog.courses.find(c => c.id === "mit-6041sc");
+  const map = Object.create(CourseMap.prototype);
+  map.records = new Map();
+  map.curriculum = {courses:[{id:"MIT 6.041SC", unit_progress:{completed:0,total:28}}], weekly:{tasks:[
+    {course_id:"MIT 6.041SC", title:"MIT 6.041SC｜Lecture 01 Probability Models and Axioms", state:"done"},
+  ]}};
+  assert.equal(map.progress(course).original, undefined, "Mapped sessions must use direct continuation, not the legacy plan fallback");
+  assert.equal(map.progress(course).done, 1, "Completion comes from the canonical session task");
+  assert.equal(map.progress(course).total, 28);
+}
+
 class Element {
   constructor(tag = "section", options = {}) {
     this.tag = tag; this.tagName = tag.toUpperCase(); this.text = options.text || "";

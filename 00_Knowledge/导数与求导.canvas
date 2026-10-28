@@ -96,8 +96,8 @@
       "x": 900,
       "y": 730,
       "width": 380,
-      "height": 230,
-      "text": "## [[正弦基本极限]]\n\n弧度制下 $\\sin h/h\\to1$；度数会多出比例因子。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[正弦基本极限|The basic sine limit]]\n\nIn radians, $\\sin h/h\\to1$ by geometric squeezing; the degree-based limit includes $\\pi/180$.\n<!-- bilingual-en:end -->\n\n先用弧度制面积夹逼，再处理负侧；角度单位会改变比例因子。",
       "color": "5"
     },
     {
@@ -106,8 +106,8 @@
       "x": 1350,
       "y": 730,
       "width": 380,
-      "height": 230,
-      "text": "## [[正弦余弦求导]]\n\n和角公式与小角极限给 $D\\sin=\\cos$、$D\\cos=-\\sin$。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[正弦余弦求导|Sine and cosine derivatives]]\n\nAngle addition and two-sided small-angle limits give $(\\sin x)^\\prime=\\cos x$ and $(\\cos x)^\\prime=-\\sin x$ in radians.\n<!-- bilingual-en:end -->\n\n和角公式配合双侧小角极限；弧度制决定标准斜率。",
       "color": "3"
     },
     {
@@ -176,8 +176,8 @@
       "x": 1000,
       "y": 1430,
       "width": 420,
-      "height": 230,
-      "text": "## [[隐式求导]]\n\n沿已有解支对关系求导；每个 $y(x)$ 项都由链式法则带出 $y'$。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[隐式求导|Implicit differentiation]]\n\nAlong a differentiable solution branch, apply the chain rule to dependent variables and the product rule to mixed products.\n<!-- bilingual-en:end -->\n\n沿可导解支求导；复合项使用链式法则，混合乘积还需使用乘积法则。",
       "color": "4"
     },
     {
@@ -186,8 +186,8 @@
       "x": 1500,
       "y": 1430,
       "width": 420,
-      "height": 230,
-      "text": "## [[隐函数导数公式]]\n\n定理确认解支后，$Dg=-(D_vF)^{-1}D_uF$；奇异块只使公式失效。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[隐函数导数公式|The implicit derivative]]\n\nUnder the local $C^1$ theorem and an invertible dependent-variable block, $Dg=-(D_vF)^{-1}D_uF$.\n<!-- bilingual-en:end -->\n\n先核对解支存在条件与矩阵尺寸，再从左侧求逆；奇异块不能直接使用此公式。",
       "color": "5"
     },
     {
@@ -206,8 +206,8 @@
       "x": 2500,
       "y": 1430,
       "width": 420,
-      "height": 230,
-      "text": "## [[反三角函数求导]]\n\n主值分支决定 $\\arcsin$、$\\arccos$、$\\arctan$ 的符号与定义域。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[反三角函数求导|Inverse trigonometric derivatives]]\n\nPrincipal ranges fix signs; arcsine and arccosine have finite derivatives only inside (-1,1). Arctangent is differentiable on the real line.\n<!-- bilingual-en:end -->\n\n主值范围决定符号；反正弦/反余弦端点没有有限导数，反正切在实轴可导。",
       "color": "6"
     },
     {
@@ -424,7 +424,7 @@
       "toNode": "implicit",
       "fromSide": "bottom",
       "toSide": "top",
-      "label": "沿解支求导"
+      "label": "Differentiate along a differentiable branch · 沿可导解支应用链式法则"
     },
     {
       "id": "e14",
@@ -432,7 +432,7 @@
       "toNode": "implicit-formula",
       "fromSide": "right",
       "toSide": "left",
-      "label": "定理条件下解出导数"
+      "label": "Invert the dependent-variable derivative block · 求逆因变量导数块"
     },
     {
       "id": "e15",

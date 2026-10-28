@@ -177,6 +177,24 @@
       "height": 220,
       "color": "6",
       "text": "<!-- bilingual-en:start -->\n## [[Portmanteau定理|Portmanteau theorem]]\n\nFixed closed sets give upper-limit bounds; sets with zero limiting boundary mass have converging probabilities.\n<!-- bilingual-en:end -->\n\n固定闭集给出上极限界；极限分布在集合边界无质量时，事件概率收敛。"
+    },
+    {
+      "id": "p0013-l1",
+      "type": "text",
+      "x": 0,
+      "y": 2070,
+      "width": 720,
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n## [[L1收敛|Convergence in L1]]\n\nMean absolute error tends to zero; Markov then controls every fixed-tolerance error probability.\n<!-- bilingual-en:end -->\n\n逐个结果比较后平均绝对误差，进而得到依概率收敛。"
+    },
+    {
+      "id": "p0013-ui",
+      "type": "text",
+      "x": 800,
+      "y": 2070,
+      "width": 720,
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n## [[一致可积与L1收敛|The uniform-integrability criterion]]\n\nConvergence in probability plus UI is exactly what upgrades to L1 convergence with an integrable limit.\n<!-- bilingual-en:end -->\n\nUI统一控制罕见大值的贡献，补足依概率收敛缺少的尾部条件。"
     }
   ],
   "edges": [
@@ -330,6 +348,30 @@
       "toNode": "constant-limit-converse",
       "toSide": "right",
       "label": "Closed tails excluding c have zero limiting mass · 不含c的闭尾部极限质量为零"
+    },
+    {
+      "id": "p0013-l1-prob",
+      "fromNode": "p0013-l1",
+      "fromSide": "top",
+      "toNode": "in-probability",
+      "toSide": "left",
+      "label": "Markov applied to absolute error · 对绝对误差应用Markov"
+    },
+    {
+      "id": "p0013-prob-ui",
+      "fromNode": "in-probability",
+      "fromSide": "bottom",
+      "toNode": "p0013-ui",
+      "toSide": "top",
+      "label": "Add uniform tail control · 另加一致尾部控制"
+    },
+    {
+      "id": "p0013-ui-l1",
+      "fromNode": "p0013-ui",
+      "fromSide": "left",
+      "toNode": "p0013-l1",
+      "toSide": "right",
+      "label": "Equivalent upgrade criterion · 升级至L1的等价判据"
     }
   ]
 }

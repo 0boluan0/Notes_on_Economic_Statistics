@@ -262,9 +262,9 @@
       "x": 500,
       "y": 2440,
       "width": 320,
-      "height": 180,
+      "height": 250,
       "color": "5",
-      "text": "## [[隐函数导数公式]]\nCALC-MV-024 · 公式\n\n定理给出的解支满足 $Dg=-(D_vF)^{-1}D_uF$。"
+      "text": "<!-- bilingual-en:start -->\n## [[隐函数导数公式|The implicit derivative]]\n\nWith the theorem’s $C^1$ and invertibility conditions, $Dg=-(D_vF)^{-1}D_uF$; multiplication order matters.\n<!-- bilingual-en:end -->\n\n局部可导解支成立后，从左侧求逆；先匹配矩阵尺寸与次序。"
     },
     {
       "id": "c300000000000003",
@@ -561,7 +561,7 @@
       "toNode": "c200000000000024",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "在已建立的局部解支上求导"
+      "label": "A local C1 branch permits the chain rule · 局部C1解支允许应用链式法则"
     },
     {
       "id": "d100000000000020",

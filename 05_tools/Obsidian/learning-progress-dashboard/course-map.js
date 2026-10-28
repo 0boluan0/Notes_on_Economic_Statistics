@@ -265,7 +265,7 @@ class CourseMap {
   }
   progress(course) {
     const registered = this.curriculum?.courses?.find(c => c.id === BINDINGS[course.id]);
-    if (course.id !== "mit-1806sc" && registered?.unit_progress?.total) return { done: registered.unit_progress.completed, total: registered.unit_progress.total, original: true, registered };
+    if (!["mit-1806sc", "mit-6041sc"].includes(course.id) && registered?.unit_progress?.total) return { done: registered.unit_progress.completed, total: registered.unit_progress.total, original: true, registered };
     return { done: (course.units || []).filter(u => completionFor(course, u, this.curriculum, this.records).done).length, total: (course.units || []).length, registered };
   }
   renderResume() {

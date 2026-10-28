@@ -424,8 +424,8 @@
       "x": 1800,
       "y": 500,
       "width": 460,
-      "height": 190,
-      "text": "## [[逆矩阵]]\n\n方阵 $A$ 的逆矩阵 $B$ 同时满足 $BA=AB=I$；它在两个方向撤销 $A$ 的作用。",
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n## [[逆矩阵|Inverse matrix]]\n\nA square matrix has an inverse $B$ when $BA=AB=I$: either composition undoes the original action.\n<!-- bilingual-en:end -->\n\n方阵的双侧逆在两个复合方向都撤销原作用；信息丢失时不存在逆。",
       "color": "4"
     },
     {
@@ -434,8 +434,8 @@
       "x": 1800,
       "y": 850,
       "width": 460,
-      "height": 180,
-      "text": "## [[逆矩阵唯一性]]\n\n方阵的双侧逆若存在就只有一个，因此 $A^{-1}$ 的记号没有歧义。",
+      "height": 240,
+      "text": "<!-- bilingual-en:start -->\n## [[逆矩阵唯一性|Uniqueness of an inverse]]\n\nIf $B$ and $C$ are two-sided inverses, $B=B(AC)=(BA)C=C$.\n<!-- bilingual-en:end -->\n\n结合律把两个候选逆连接起来；矩形矩阵的单侧逆不自动唯一。",
       "color": "4"
     },
     {
@@ -638,8 +638,8 @@
       "x": 4000,
       "y": 2520,
       "width": 600,
-      "height": 210,
-      "text": "## [[矩阵乘法分配律|Distributive laws]]\n\n<!-- bilingual-en:start -->\nDistribute sums while preserving factor order.\n<!-- bilingual-en:end -->\n对加法展开，同时保留因子次序。"
+      "height": 230,
+      "text": "<!-- bilingual-en:start -->\n## [[矩阵乘法分配律|Distributive laws]]\n\nFor compatible sizes, $A(B+C)=AB+AC$ and $(A+B)C=AC+BC$, preserving factor order.\n<!-- bilingual-en:end -->\n\n尺寸匹配后展开加法；不能交换矩阵因子次序。"
     },
     {
       "id": "f4c004aabbcc0004",
@@ -647,8 +647,8 @@
       "x": 5450,
       "y": 2520,
       "width": 600,
-      "height": 210,
-      "text": "## [[分块矩阵乘法|Block multiplication]]\n\n<!-- bilingual-en:start -->\nMatch the inner partitions before multiplying blocks.\n<!-- bilingual-en:end -->\n内部分割匹配后，按块行乘块列。"
+      "height": 230,
+      "text": "<!-- bilingual-en:start -->\n## [[分块矩阵乘法|Block multiplication]]\n\nAlign the inner partition boundaries, then sum compatible block products across the shared block index.\n<!-- bilingual-en:end -->\n\n内部分割边界必须一致；分块后仍沿共同指标求和。"
     },
     {
       "id": "f5c005aabbcc0001",
@@ -675,7 +675,7 @@
       "y": 160,
       "width": 1100,
       "height": 250,
-      "text": "## [[下三角乘积封闭性|Lower triangular products]]\n\n<!-- bilingual-en:start -->\nProducts preserve lower triangular form and unit diagonals.\n<!-- bilingual-en:end -->\n乘积保持下三角形状；单位对角也保持。"
+      "text": "<!-- bilingual-en:start -->\n## [[下三角乘积封闭性|Lower triangular products]]\n\nSame-size lower triangular matrices have a lower triangular product. If both have unit diagonals, their product does too.\n<!-- bilingual-en:end -->\n\n同尺寸下三角矩阵的乘积仍下三角；两个因子均为单位对角时，乘积也如此。"
     },
     {
       "id": "f5c005aabbcc0004",
@@ -1322,7 +1322,7 @@
       "fromSide": "right",
       "toNode": "2000000000000041",
       "toSide": "left",
-      "label": "概念前置"
+      "label": "[A|I] records operations that undo A · 增广矩阵记录撤销A的操作"
     },
     {
       "id": "300000000000002d",

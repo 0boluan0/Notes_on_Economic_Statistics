@@ -286,8 +286,8 @@
       "x": 3100,
       "y": 910,
       "width": 520,
-      "height": 220,
-      "text": "## [[几何和]]\nMCS-COUNT-014 · 定义\n\n固定公比的有限项相加；r = 1 时直接数项数。\n\n项数趋于无穷 → [[几何级数]] 的收敛问题。",
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[几何和|Finite geometric sum]]\n\nAdd $n+1$ terms from index 0 through $n$; at ratio 1 count copies directly. Infinite summation requires [[几何级数|series convergence]].\n<!-- bilingual-en:end -->\n\n有限和不要求公比绝对值小于1；项数与最后索引要分开。",
       "color": "3"
     },
     {
@@ -296,8 +296,8 @@
       "x": 3100,
       "y": 1240,
       "width": 520,
-      "height": 220,
-      "text": "## [[调和数]]\nMCS-COUNT-015 · 定义入口\n\n第 n 个调和数是前 n 个正整数倒数之和。",
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[调和数|Harmonic numbers]]\n\n$H_n=\\sum_{k=1}^n1/k$, with $H_0=0$. Each is a finite sum; its growth is a separate question.\n<!-- bilingual-en:end -->\n\n前n个正整数的倒数之和；不含1/0。",
       "color": "5"
     },
     {
@@ -306,8 +306,8 @@
       "x": 3720,
       "y": 910,
       "width": 520,
-      "height": 220,
-      "text": "## [[加权几何和]]\nMCS-COUNT-025 · 求和恒等式\n\n有限几何和逐项求导后得到带位置权重的闭式。",
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[加权几何和|Weighted geometric sum]]\n\nFor $\\sum_{i=1}^n ir^i$, differentiate the finite geometric polynomial, then multiply by $r$.\n<!-- bilingual-en:end -->\n\n先求导产生位置权重，再乘回变量恢复指数；公比1时直接等差求和。",
       "color": "3"
     },
     {
@@ -316,8 +316,8 @@
       "x": 3100,
       "y": 1570,
       "width": 520,
-      "height": 220,
-      "text": "## [[调和数对数增长]]\nMCS-COUNT-022 · 定理\n\n它与 ln n 渐近等价，却仍趋于无穷。",
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[调和数对数增长|Logarithmic harmonic growth]]\n\nFor $n\\ge1$, integral comparison gives $\\ln(n+1)\\le H_n\\le1+\\ln n$: $H_n\\sim\\ln n$ and grows without bound.\n<!-- bilingual-en:end -->\n\nn≥1时适用上述界；比值趋于1仍然可以发散；与对数之差不趋于零。",
       "color": "3"
     },
     {
