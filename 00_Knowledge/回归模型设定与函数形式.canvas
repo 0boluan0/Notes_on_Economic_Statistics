@@ -7,7 +7,7 @@
       "y": -420,
       "width": 3520,
       "height": 250,
-      "text": "# 回归模型设定与函数形式\n\n从左到右读：**先固定目标与总体对象 → 决定变量和函数形式 → 分清失败层 → 用有方向的诊断形成可解释修复**。图中复用 OLS 原子而不复制第二套知识；点击卡片标题可打开 Markdown 原子。\n\n颜色只区分本图中的语义角色，不表示掌握度。14 张卡均为 source-checked，学习证据仍是 unassessed。"
+      "text": "<!-- bilingual-en:start -->\n# Regression specification and functional form\nRead from left to right: define the population and target, choose predictors and functional form, distinguish the specification layers, then use targeted diagnostics to investigate a repair. Open each linked title for the full explanation. Colours distinguish roles in this map.\n<!-- bilingual-en:end -->\n\n# 回归模型设定与函数形式\n\n从左到右读：**先固定目标与总体对象 → 决定变量和函数形式 → 分清失败层 → 用有方向的诊断形成可解释修复**。图中复用 OLS 原子而不复制第二套知识；点击卡片标题可打开 Markdown 原子。\n\n颜色只区分本图中的语义角色，不表示掌握度。"
     },
     {
       "id": "0520000000000001",
@@ -15,8 +15,8 @@
       "x": 0,
       "y": 0,
       "width": 440,
-      "height": 220,
-      "text": "## [[回归设定起点|先固定目标与用途]]\n*Target before columns*\n\n先写总体、目标量、时间顺序、焦点比较和用途，再决定哪些变量及变换有资格进入模型。",
+      "height": 290,
+      "text": "<!-- bilingual-en:start -->\n## [[回归设定起点|Start with the question]]\nState the population, outcome, comparison, timing and use. Description, prediction and causal effects require different evidence. Available columns and significance do not choose the target.\n<!-- bilingual-en:end -->\n\n## [[回归设定起点]]\n先写总体、结果、比较、时点和用途。描述、预测与因果效应需要不同证据；可用列和显著性不能替你选择目标。",
       "color": "5"
     },
     {
@@ -35,8 +35,8 @@
       "x": 0,
       "y": 600,
       "width": 440,
-      "height": 220,
-      "text": "## [[参数线性|参数线性]]\n*Linear in parameters*\n\n原变量可取 log、平方、样条或交互；只要未知参数仍以一次、可加形式进入，就仍属线性参数模型。",
+      "height": 290,
+      "text": "<!-- bilingual-en:start -->\n## [[参数线性|Linearity in parameters]]\nFixed feature functions can include powers, logs, interactions and spline terms. Their coefficients enter linearly. If feature-shape parameters are estimated too, check the enlarged parameterization and its constraints.\n<!-- bilingual-en:end -->\n\n## [[参数线性]]\n固定特征函数可含幂、对数、交互和样条项，系数以线性形式进入；若同时估计特征形状，要检查扩大的参数化及其约束。",
       "color": "5"
     },
     {
@@ -45,8 +45,8 @@
       "x": 580,
       "y": 300,
       "width": 440,
-      "height": 220,
-      "text": "## [[多元回归系数|控制后系数读法]]\n*Partial coefficient interpretation*\n\n“控制其他变量”只覆盖实际按指定形式进入模型的项；未纳入因素没有被控制。",
+      "height": 290,
+      "text": "<!-- bilingual-en:start -->\n## [[多元回归系数|Interpret the included columns]]\nHolding other columns fixed describes the fitted equation. It adjusts only the controls and functional forms actually included. A raw-variable change can move several columns; a causal interpretation requires separate identification.\n<!-- bilingual-en:end -->\n\n## [[多元回归系数]]\n保持其他列不变，首先描述拟合方程，只调整实际纳入的控制项和形式。原始变量变化可同时移动多列；因果解释另需识别。",
       "color": "5"
     },
     {
@@ -55,8 +55,8 @@
       "x": 580,
       "y": 600,
       "width": 440,
-      "height": 220,
-      "text": "## [[遗漏变量偏差|遗漏变量偏差]]\n*Omitted-variable bias*\n\n遗漏项影响结果且与已含解释变量相关时，焦点斜率会吸收一部分遗漏作用；偏差方向由两个符号共同决定。",
+      "height": 290,
+      "text": "<!-- bilingual-en:start -->\n## [[遗漏变量偏差|Omitted-variable bias]]\nRelative to a specified long-model coefficient, omitting one contributing, correlated term shifts the short projection’s slope. Other controls require partial association; several omitted contributions can cancel. This is not automatically finite-sample expectation bias.\n<!-- bilingual-en:end -->\n\n## [[遗漏变量偏差]]\n相对指定长模型系数，省略一个有贡献且相关的项会移动短投影斜率。其他控制项要求看偏关联，多遗漏项可抵消；不能自动等同于有限样本期望偏差。",
       "color": "1"
     },
     {
@@ -65,8 +65,8 @@
       "x": 1160,
       "y": 900,
       "width": 440,
-      "height": 220,
-      "text": "## [[无关变量代价|无关变量的代价]]\n*Cost of irrelevant regressors*\n\n真正无关项通常不制造系统偏差；它会消耗自由度，并可能因共享变异而损失精度。完全共线另行破坏系数唯一性。",
+      "height": 290,
+      "text": "<!-- bilingual-en:start -->\n## [[无关变量代价|Irrelevant regressors and precision]]\nWith full column rank, full-design exogeneity and zero added contribution, both OLS fits remain unbiased. Spherical error covariance gives weakly larger true focal variance, possibly equal. Reported standard errors can move either way. Exact redundancy instead destroys coefficient uniqueness.\n<!-- bilingual-en:end -->\n\n## [[无关变量代价]]\n满列秩、完整设计外生且新增贡献为零时，两次 OLS 仍无偏。球形误差下，焦点真实方差弱增且可相等；报告标准误可升可降。精确冗余则破坏系数唯一性。",
       "color": "2"
     },
     {
@@ -95,8 +95,8 @@
       "x": 1160,
       "y": 1200,
       "width": 440,
-      "height": 240,
-      "text": "## [[设定问题分层|先分清失败层]]\n*Separate failure layers*\n\n均值表示、误差协方差和识别失败会产生重叠症状，却不能用变换、稳健标准误或 IV 相互替代修复。",
+      "height": 360,
+      "text": "<!-- bilingual-en:start -->\n## [[设定问题分层|Layers of specification]]\nName the target first: a projection, conditional mean or causal effect. A curved mean can still have a valid linear summary. Mean changes, covariance corrections and identification assumptions address different questions; clean residuals do not prove causality.\n<!-- bilingual-en:end -->\n\n## [[设定问题分层]]\n先说明目标：投影、条件均值还是因果效应。曲线均值仍可有有效的线性概括。修改均值、修正协方差和论证识别各答不同问题；残差规整不证明因果。",
       "color": "2"
     },
     {
@@ -105,8 +105,8 @@
       "x": 1740,
       "y": 0,
       "width": 440,
-      "height": 220,
-      "text": "## [[样本正交与总体外生性|样本正交不等于外生性]]\n*Sample orthogonality is not exogeneity*\n\n残差与已含设计列正交是 OLS 构造的样本恒等式，不能验证总体误差与解释变量无关。",
+      "height": 290,
+      "text": "<!-- bilingual-en:start -->\n## [[样本正交与总体外生性|Orthogonality is a fitted identity]]\nResiduals are forced orthogonal to included columns by unrestricted OLS. This cannot establish zero conditional mean of the target model’s unobserved error. Compare fitted residuals with model errors before interpreting a diagnostic.\n<!-- bilingual-en:end -->\n\n## [[样本正交与总体外生性]]\n无约束 OLS 强制残差与已含列正交，不能证明目标模型未观察误差的零条件均值。解释诊断前，先分清拟合残差与模型误差。",
       "color": "3"
     },
     {
@@ -115,8 +115,8 @@
       "x": 1740,
       "y": 300,
       "width": 440,
-      "height": 240,
-      "text": "## [[残差图边界|残差图的诊断边界]]\n*Residual-plot boundary*\n\n不同投影提示曲率、异方差、时间依赖或异常观测；没有明显模式只表示该图未发现问题，不证明模型正确。",
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[残差图边界|Limits of residual plots]]\nThe horizontal axis determines what is visible. No pattern in one view does not exclude structure in another. Sample residual orthogonality is built into OLS; neither a clean plot nor zero correlation proves exogeneity.\n<!-- bilingual-en:end -->\n\n## [[残差图边界]]\n横轴决定可见方向。一张图没有模式，不排除另一方向有结构。样本残差正交由 OLS 强制；图形规整或零相关都不证明外生性。",
       "color": "3"
     },
     {
@@ -125,8 +125,8 @@
       "x": 1740,
       "y": 600,
       "width": 440,
-      "height": 220,
-      "text": "## [[LM设定检验|LM：指定遗漏方向]]\n*LM for specified directions*\n\n从受限模型残差检查预先提出的候选遗漏项；结论只针对被检验方向和相应协方差假设。",
+      "height": 350,
+      "text": "<!-- bilingual-en:start -->\n## [[LM设定检验|LM: specified mean directions]]\nRegress restricted residuals on retained regressors and prespecified additions. Count new independent directions. The usual nR² reference is asymptotic and needs valid sampling and moment conditions; a fixed-design Gaussian F test is a different calibration.\n<!-- bilingual-en:end -->\n\n## [[LM设定检验]]\n受限残差对原回归量及预定新增项回归，数真正独立的新方向。常用 nR² 参考是渐近的，需要抽样与矩条件；固定设计正态 F 检验使用另一种校准。",
       "color": "6"
     },
     {
@@ -135,8 +135,8 @@
       "x": 2320,
       "y": 300,
       "width": 440,
-      "height": 220,
-      "text": "## [[RESET检验边界|RESET：通用非线性探针]]\n*RESET as a generic probe*\n\n拒绝说明所选拟合值幂发现设定不足，却不定位唯一遗漏变量；不拒绝也不等于证明规格正确。",
+      "height": 350,
+      "text": "<!-- bilingual-en:start -->\n## [[RESET检验边界|Ramsey RESET]]\nAdd prespecified powers of original fitted values, retaining the original regressors. Use effective added rank and a justified reference law. Rejection does not locate a unique omitted cause; zero added rank is no test, not a pass.\n<!-- bilingual-en:end -->\n\n## [[RESET检验边界]]\n保留原回归量，加入原拟合值的预定幂。采用有效新增秩及有依据的参考分布。拒绝不定位唯一遗漏原因；新增秩为零是无法检验，不是通过。",
       "color": "6"
     },
     {
@@ -145,9 +145,29 @@
       "x": 2900,
       "y": 600,
       "width": 440,
-      "height": 260,
-      "text": "## [[设定修复循环|可追踪的修复循环]]\n*Traceable repair loop*\n\n核对数据 → 固定目标 → 提出少量有机制的候选 → 估计 → 诊断与验证 → 重新检查其他失败层。每一步都说明改变了什么。",
+      "height": 350,
+      "text": "<!-- bilingual-en:start -->\n## [[设定修复循环|Revising a regression]]\nTie each change to a target and a diagnosed problem; preserve an interpretable comparison and recheck the result. Better training fit is not future validation. If validation chooses a model, final evaluation needs evidence outside that selection.\n<!-- bilingual-en:end -->\n\n## [[设定修复循环]]\n每次修改都对应目标和具体问题，保留可解释比较，并重新诊断。训练拟合改善不代表未来验证；验证数据参与选模后，最终评价需要选择过程之外的证据。",
       "color": "4"
+    },
+    {
+      "id": "052000000000000f",
+      "type": "text",
+      "x": 1740,
+      "y": 1050,
+      "width": 440,
+      "height": 350,
+      "text": "<!-- bilingual-en:start -->\n## [[偏残差图|Partial-residual plot]]\nAdd one fitted predictor contribution back to the residual, then plot against that predictor. This reveals remaining shape under the other terms’ specification; it does not remove every association with the controls.\n<!-- bilingual-en:end -->\n\n## [[偏残差图]]\n把一个变量的拟合贡献加回残差，再对该变量作图。解释形状仍取决于其他项的设定，并非清除了与控制变量的一切关联。",
+      "color": "3"
+    },
+    {
+      "id": "0520000000000010",
+      "type": "text",
+      "x": 2320,
+      "y": 1050,
+      "width": 440,
+      "height": 350,
+      "text": "<!-- bilingual-en:start -->\n## [[附加变量图|Added-variable plot]]\nRemove the controls’ linear contributions from both the outcome and the chosen predictor. Under the OLS rank conditions, the residual-on-residual slope equals its partial coefficient. This view is not a general nonlinear-shape test.\n<!-- bilingual-en:end -->\n\n## [[附加变量图]]\n从结果和所关注变量中分别扣除控制项的线性贡献。在 OLS 秩条件下，双残差回归斜率等于控制后系数；这不是一般的非线性形状检验。",
+      "color": "3"
     }
   ],
   "edges": [
@@ -157,7 +177,7 @@
       "fromSide": "bottom",
       "toNode": "0520000000000002",
       "toSide": "top",
-      "label": "先界定模型声称逼近的总体对象"
+      "label": "Specify the population object to approximate · 先说明拟合针对的总体对象"
     },
     {
       "id": "e520000000000002",
@@ -165,7 +185,7 @@
       "fromSide": "right",
       "toNode": "0520000000000004",
       "toSide": "left",
-      "label": "线性条件均值下给出控制后斜率读法"
+      "label": "Mean and projection interpretations differ · 区分条件均值与投影系数的解释"
     },
     {
       "id": "e520000000000003",
@@ -173,7 +193,7 @@
       "fromSide": "bottom",
       "toNode": "0520000000000003",
       "toSide": "top",
-      "label": "条件均值可以扩展为变换后的基函数"
+      "label": "Chosen fixed features define a linear approximation class · 固定特征规定线性近似类"
     },
     {
       "id": "e520000000000004",
@@ -181,7 +201,7 @@
       "fromSide": "bottom",
       "toNode": "0520000000000007",
       "toSide": "top",
-      "label": "对数列仍可保持参数线性"
+      "label": "A known log feature can enter linearly · 已知对数特征可线性进入"
     },
     {
       "id": "e520000000000005",
@@ -189,7 +209,7 @@
       "fromSide": "right",
       "toNode": "0520000000000008",
       "toSide": "left",
-      "label": "平方和交互列使效应成为系数组合"
+      "label": "Raw changes can move squared and interaction columns · 原变量变化可同时移动平方及交互列"
     },
     {
       "id": "e520000000000006",
@@ -197,7 +217,7 @@
       "fromSide": "bottom",
       "toNode": "0520000000000005",
       "toSide": "top",
-      "label": "遗漏因素未被控制时可能污染焦点系数"
+      "label": "Omission may change the specified coefficient target · 遗漏可能改变指定系数目标"
     },
     {
       "id": "e520000000000007",
@@ -205,7 +225,7 @@
       "fromSide": "right",
       "toNode": "0520000000000006",
       "toSide": "left",
-      "label": "额外列无效时可能损失精度"
+      "label": "Zero added contribution can still affect precision · 零新增贡献仍可能影响精度"
     },
     {
       "id": "e520000000000008",
@@ -213,7 +233,7 @@
       "fromSide": "right",
       "toNode": "0520000000000009",
       "toSide": "left",
-      "label": "先判断是均值遗漏还是识别失败"
+      "label": "Distinguish descriptive and causal targets · 区分描述与因果目标"
     },
     {
       "id": "e520000000000009",
@@ -221,7 +241,7 @@
       "fromSide": "bottom",
       "toNode": "0520000000000009",
       "toSide": "top",
-      "label": "再区分精度损失与秩亏"
+      "label": "Separate precision, rank and mean specification · 区分精度、秩与均值设定"
     },
     {
       "id": "e52000000000000a",
@@ -237,7 +257,7 @@
       "fromSide": "bottom",
       "toNode": "052000000000000b",
       "toSide": "top",
-      "label": "样本正交限制诊断的可见方向"
+      "label": "OLS forces included-column orthogonality · OLS 强制已含列正交"
     },
     {
       "id": "e52000000000000c",
@@ -245,7 +265,7 @@
       "fromSide": "right",
       "toNode": "052000000000000b",
       "toSide": "left",
-      "label": "按失败层解释图形模式"
+      "label": "Interpret patterns relative to the stated target · 结合目标解释图案"
     },
     {
       "id": "e52000000000000d",
@@ -253,7 +273,7 @@
       "fromSide": "bottom",
       "toNode": "052000000000000c",
       "toSide": "top",
-      "label": "有明确候选遗漏项时检验指定方向"
+      "label": "Test specified added directions under a valid calibration · 在有效校准下检验指定新增方向"
     },
     {
       "id": "e52000000000000e",
@@ -261,7 +281,7 @@
       "fromSide": "right",
       "toNode": "052000000000000d",
       "toSide": "left",
-      "label": "无唯一候选项时使用通用非线性探针"
+      "label": "Probe powers of the original fitted values · 以原拟合值幂作探针"
     },
     {
       "id": "e52000000000000f",
@@ -269,7 +289,7 @@
       "fromSide": "right",
       "toNode": "052000000000000e",
       "toSide": "left",
-      "label": "拒绝后修订明确备择并重新诊断"
+      "label": "Assess tested directions, then justify a revision · 评估受检方向，再论证修改"
     },
     {
       "id": "e520000000000010",
@@ -277,7 +297,39 @@
       "fromSide": "right",
       "toNode": "052000000000000e",
       "toSide": "left",
-      "label": "拒绝不定位所以返回机制提出候选"
+      "label": "Return from a generic signal to interpretable candidates · 从汇总信号回到可解释候选"
+    },
+    {
+      "id": "e520000000000011",
+      "fromNode": "052000000000000b",
+      "fromSide": "bottom",
+      "toNode": "052000000000000f",
+      "toSide": "top",
+      "label": "Inspect one predictor’s shape · 查看单个变量的形状"
+    },
+    {
+      "id": "e520000000000012",
+      "fromNode": "052000000000000b",
+      "fromSide": "bottom",
+      "toNode": "0520000000000010",
+      "toSide": "top",
+      "label": "Isolate a partial linear relationship · 分离控制后的线性关系"
+    },
+    {
+      "id": "e520000000000013",
+      "fromNode": "052000000000000f",
+      "fromSide": "right",
+      "toNode": "052000000000000e",
+      "toSide": "left",
+      "label": "A shape clue motivates a candidate revision · 形状线索启发候选修改"
+    },
+    {
+      "id": "e520000000000014",
+      "fromNode": "0520000000000010",
+      "fromSide": "right",
+      "toNode": "052000000000000c",
+      "toSide": "left",
+      "label": "Residualize added directions against retained terms · 对保留项残差化新增方向"
     }
   ]
 }

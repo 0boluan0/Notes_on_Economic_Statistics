@@ -7,7 +7,7 @@
       "y": -700,
       "width": 5180,
       "height": 240,
-      "text": "# 鞅与停时 · 语义地图\n\n先分清信息结构，再讨论条件均值，最后处理随机停止。每个节点只承担一个定义、定理或边界；箭头表示数学依赖或推导方向，不表示掌握度。点击节点可打开完整原子。"
+      "text": "<!-- bilingual-en:start -->\n# Martingales and stopping times\n\nStart with what is known, then conditional means, then decisions to stop. Open a linked card for the complete definition, proof and assumptions. Arrows state a mathematical relationship.\n<!-- bilingual-en:end -->\n\n鞅与停时：先分清已知信息，再讨论条件均值，最后处理停止规则。点击双链阅读完整定义、证明与条件；箭头说明数学关系。"
     },
     {
       "id": "a100000000000002",
@@ -16,7 +16,7 @@
       "y": -340,
       "width": 5180,
       "height": 140,
-      "text": "## 1 · 信息结构\n\n先问每个时刻知道什么，再问过程值是在当时可见，还是必须提前一期确定。",
+      "text": "<!-- bilingual-en:start -->\n## 1 · Information\n\nWhat is known now, and what must be known before the next step?\n<!-- bilingual-en:end -->\n\n1 · 信息结构：当前知道什么？哪些量必须提前一期确定？",
       "color": "4"
     },
     {
@@ -26,7 +26,7 @@
       "y": 0,
       "width": 680,
       "height": 320,
-      "text": "## [[滤过定义]]\n\n随时间单调增加的一族 σ-代数，表示逐步累积的信息。\n\n**只规定：** 信息包含关系。",
+      "text": "<!-- bilingual-en:start -->\n## [[滤过定义|Filtration]]\n\nAn increasing family $(\\mathcal F_t)$ of sigma-algebras on the same outcomes records which events are known by time $t$. Information is retained; independence is not required.\n<!-- bilingual-en:end -->\n\n同一结果空间上递增的σ代数族，记录到时刻 $t$ 已知的事件。信息不会丢失；不要求独立。",
       "color": "4"
     },
     {
@@ -36,7 +36,7 @@
       "y": 0,
       "width": 680,
       "height": 320,
-      "text": "## [[自然滤过]]\n\n由过程截至当前的完整历史生成。\n\n**最小性：** 是使该过程适应的最小滤过。",
+      "text": "<!-- bilingual-en:start -->\n## [[自然滤过|Natural filtration]]\n\nThe raw history $\\mathcal F_t^X=\\sigma(X_s:s\\le t)$ is the smallest filtration making $X$ adapted. The present value alone may forget earlier observations.\n<!-- bilingual-en:end -->\n\n原始自然滤过由截至当前的完整历史生成，是使过程适应的最小滤过。仅看当前值可能遗忘过去。",
       "color": "4"
     },
     {
@@ -46,7 +46,7 @@
       "y": 0,
       "width": 680,
       "height": 320,
-      "text": "## [[适应过程]]\n\n每个时刻的过程值都对当时的信息可测。\n\n**只回答：** 当前值能否被当前信息确定。",
+      "text": "<!-- bilingual-en:start -->\n## [[适应过程|Adapted process]]\n\nEach $X_t$ is measurable with respect to the information $\\mathcal F_t$ available then. Adaptation imposes neither finite expectations nor a conditional-mean restriction.\n<!-- bilingual-en:end -->\n\n每个当前值 $X_t$ 都对当时信息 $\\mathcal F_t$ 可测。适应性本身不保证可积，也不规定条件均值。",
       "color": "4"
     },
     {
@@ -56,7 +56,7 @@
       "y": 1260,
       "width": 680,
       "height": 320,
-      "text": "## [[适应不推鞅]]\n\n适应只保证当前可见，不保证未来增量的条件均值为零。\n\n**反例：** 提前知道下一步会破坏鞅性。",
+      "text": "<!-- bilingual-en:start -->\n## [[适应不推鞅|Adaptation and the martingale property]]\n\nBeing observable now does not make the next conditional change mean-zero. Enlarging the filtration preserves adaptation but can change the martingale property.\n<!-- bilingual-en:end -->\n\n当前可观测不保证下一步条件增量均值为零。扩大滤过仍保持适应，却可能改变鞅性质。",
       "color": "1"
     },
     {
@@ -66,7 +66,7 @@
       "y": 0,
       "width": 680,
       "height": 320,
-      "text": "## [[离散可预测过程]]\n\n第 n 期的量必须对上一期信息可测。\n\n**比适应更强：** 决策不能偷看本期结果。",
+      "text": "<!-- bilingual-en:start -->\n## [[离散可预测过程|Discrete predictable process]]\n\nFor integer $n\\ge1$, $H_n$ is $\\mathcal F_{n-1}$-measurable: its value is determined before step $n$. This is stronger than adaptation; the initial value is specified separately.\n<!-- bilingual-en:end -->\n\n整数 $n\\ge1$ 时，$H_n$ 对上一期信息可测，即本步之前已能确定。它比适应更强，初值另行规定。",
       "color": "4"
     },
     {
@@ -75,8 +75,8 @@
       "x": 0,
       "y": 560,
       "width": 680,
-      "height": 140,
-      "text": "## 2 · 条件均值结构\n\n鞅、次鞅和超鞅约束的是给定当前信息后的平均方向，不是单条样本路径的走势。",
+      "height": 180,
+      "text": "<!-- bilingual-en:start -->\n## 2 · Conditional means\n\nThe restriction concerns the mean given current information, not the direction of every path.\n<!-- bilingual-en:end -->\n\n2 · 条件均值：约束给定当前信息的平均方向，不要求每条路径沿该方向移动。",
       "color": "3"
     },
     {
@@ -86,7 +86,7 @@
       "y": 800,
       "width": 680,
       "height": 320,
-      "text": "## [[鞅差序列]]\n\n定义入口：每个增量给定上一期信息的条件均值为零。",
+      "text": "<!-- bilingual-en:start -->\n## [[鞅差序列|Martingale differences]]\n\nReal, adapted, integrable differences $D_n$, $n\\ge1$, satisfy $E[D_n\\mid\\mathcal F_{n-1}]=0$ a.s. They need not be independent.\n<!-- bilingual-en:end -->\n\n实值、适应、可积的增量 $D_n$，给定上一期信息的条件均值为零。各增量不必独立。",
       "color": "3"
     },
     {
@@ -96,7 +96,7 @@
       "y": 1260,
       "width": 680,
       "height": 320,
-      "text": "## [[鞅差部分和]]\n\n鞅差序列的部分和是鞅；证明使用条件零均值，不只是无条件零均值。",
+      "text": "<!-- bilingual-en:start -->\n## [[鞅差部分和|Partial sums of martingale differences]]\n\nWith integrable, $\\mathcal F_0$-measurable $M_0$, set $M_n=M_0+\\sum_{k=1}^nD_k$. These finite sums form a martingale for the same filtration.\n<!-- bilingual-en:end -->\n\n加上可积且在初始信息下已知的 $M_0$，再累积鞅差，所得有限部分和相对于同一滤过为鞅。",
       "color": "2"
     },
     {
@@ -106,7 +106,7 @@
       "y": 800,
       "width": 680,
       "height": 320,
-      "text": "## [[鞅定义]]\n\n适应、可积，并满足未来值的条件均值等于当前值。\n\n**相对性：** 必须连同滤过一起陈述。",
+      "text": "<!-- bilingual-en:start -->\n## [[鞅定义|Martingales]]\n\nReal, adapted to the specified filtration, and $E|X_t|<\\infty$ at each time. For every fixed $s\\le t$, $E[X_t\\mid\\mathcal F_s]=X_s$ a.s.\n<!-- bilingual-en:end -->\n\n未来的条件均值等于当前值；必须连同给定滤过一起陈述。",
       "color": "3"
     },
     {
@@ -116,7 +116,7 @@
       "y": 800,
       "width": 680,
       "height": 320,
-      "text": "## [[次鞅]]\n\n未来条件均值不小于当前值。\n\n**边界：** 不要求路径逐步上升。",
+      "text": "<!-- bilingual-en:start -->\n## [[次鞅|Submartingales]]\n\nReal, adapted to the specified filtration, and $E|X_t|<\\infty$ at each time. For every fixed $s\\le t$, $E[X_t\\mid\\mathcal F_s]\\ge X_s$ a.s.\n<!-- bilingual-en:end -->\n\n未来的条件均值不小于当前值；不要求路径单调上升。",
       "color": "3"
     },
     {
@@ -126,7 +126,7 @@
       "y": 800,
       "width": 680,
       "height": 320,
-      "text": "## [[超鞅]]\n\n未来条件均值不大于当前值。\n\n**边界：** 不要求路径逐步下降。",
+      "text": "<!-- bilingual-en:start -->\n## [[超鞅|Supermartingales]]\n\nReal, adapted to the specified filtration, and $E|X_t|<\\infty$ at each time. For every fixed $s\\le t$, $E[X_t\\mid\\mathcal F_s]\\le X_s$ a.s.\n<!-- bilingual-en:end -->\n\n未来的条件均值不大于当前值；不要求路径单调下降。",
       "color": "3"
     },
     {
@@ -136,7 +136,7 @@
       "y": 800,
       "width": 680,
       "height": 320,
-      "text": "## [[Doob分解]]\n\n离散时间次鞅唯一分解为鞅与从零开始的可预测递增过程。",
+      "text": "<!-- bilingual-en:start -->\n## [[Doob分解|Discrete Doob decomposition]]\n\nA real discrete-time submartingale splits as $X_n=M_n+A_n$: $M$ is a martingale and $A$ is integrable, predictable and nondecreasing. Setting $A_0=0$ makes the decomposition unique.\n<!-- bilingual-en:end -->\n\n实值离散次鞅分为鞅与可积、可预测、非递减过程之和。固定 $A_0=0$ 才有唯一性，无需二阶矩。",
       "color": "2"
     },
     {
@@ -146,7 +146,7 @@
       "y": 1260,
       "width": 680,
       "height": 320,
-      "text": "## [[恒定均值不推鞅]]\n\n无条件均值相同，仍可能掩盖不同信息状态下的条件偏移。",
+      "text": "<!-- bilingual-en:start -->\n## [[恒定均值不推鞅|Constant means and conditional fairness]]\n\nA martingale has constant unconditional means. The converse fails: opposing drifts in different information states can cancel in the overall average.\n<!-- bilingual-en:end -->\n\n鞅的无条件均值保持不变，反向推理不成立：不同信息状态下的相反漂移可能在总体平均中抵消。",
       "color": "1"
     },
     {
@@ -156,7 +156,7 @@
       "y": 1260,
       "width": 680,
       "height": 320,
-      "text": "## [[凸变换产生次鞅]]\n\n鞅经过可积的凸变换后，由条件 Jensen 不等式得到次鞅。",
+      "text": "<!-- bilingual-en:start -->\n## [[凸变换产生次鞅|Convex transforms of martingales]]\n\nFor a real martingale $M$, finite convex $\\varphi:\\mathbb R\\to\\mathbb R$ gives a submartingale with respect to the same filtration if $E|\\varphi(M_t)|<\\infty$ at every time.\n<!-- bilingual-en:end -->\n\n条件Jensen给出方向；逐时点可积性不可省略，结论相对于同一滤过。",
       "color": "2"
     },
     {
@@ -166,7 +166,7 @@
       "y": 1260,
       "width": 680,
       "height": 320,
-      "text": "## [[恒均值次鞅即鞅]]\n\n次鞅的单边条件偏移若总体均值始终不变，只能几乎处处为零。",
+      "text": "<!-- bilingual-en:start -->\n## [[恒均值次鞅即鞅|Constant-mean submartingales]]\n\nA submartingale with constant finite means is a martingale for the same filtration. Its nonnegative conditional expected gains have mean zero, so they vanish almost surely.\n<!-- bilingual-en:end -->\n\n同一滤过下，次鞅若各期有限均值恒定，就是鞅：非负条件期望增益的均值为零，只能几乎必然消失。",
       "color": "2"
     },
     {
@@ -175,8 +175,8 @@
       "x": 0,
       "y": 1660,
       "width": 680,
-      "height": 140,
-      "text": "## 3 · 随机时间与停止\n\n先证明随机时间确实是停时；再区分确定截断保持鞅，与把结论传到随机终值所需的额外控制。",
+      "height": 180,
+      "text": "<!-- bilingual-en:start -->\n## 3 · Random stopping\n\nCheck the stopping rule, then distinguish a fixed finite cutoff from a random terminal value.\n<!-- bilingual-en:end -->\n\n3 · 随机停止：先检验规则，再分清固定有限截断与随机终值。",
       "color": "5"
     },
     {
@@ -185,8 +185,8 @@
       "x": 4290,
       "y": 640,
       "width": 200,
-      "height": 120,
-      "text": "**鞅条件进入停止过程**\n\n条件均值约束仍需与停时信息配合。",
+      "height": 220,
+      "text": "<!-- bilingual-en:start -->\n**Stopping a martingale**\n\nConditional fairness + observable stopping.\n<!-- bilingual-en:end -->\n\n**停止鞅**\n\n条件公平性与可观测停止规则结合。",
       "color": "6"
     },
     {
@@ -196,7 +196,7 @@
       "y": 1900,
       "width": 680,
       "height": 320,
-      "text": "## [[停时定义]]\n\n对每个时刻，是否已经停止都必须能由当时信息判断。\n\n**允许：** T=∞。",
+      "text": "<!-- bilingual-en:start -->\n## [[停时定义|Stopping time]]\n\nFor every finite time $t$, $\\{T\\le t\\}\\in\\mathcal F_t$: whether stopping has occurred is decidable then. Discrete and continuous time allow $0$ and $\\infty$; finiteness is not automatic.\n<!-- bilingual-en:end -->\n\n每个有限时刻，都能用当时信息判断是否已停。离散与连续时间均允许 $0$ 和 $\\infty$；定义不保证最终必停。",
       "color": "5"
     },
     {
@@ -206,7 +206,7 @@
       "y": 1900,
       "width": 680,
       "height": 320,
-      "text": "## [[离散首次到达停时]]\n\n离散适应过程进入可测集合的首次到达时间是停时。",
+      "text": "<!-- bilingual-en:start -->\n## [[离散首次到达停时|Discrete first entrance]]\n\nFor an adapted discrete process and a fixed measurable target $A$, $T=\\inf\\{n\\ge0:X_n\\in A\\}$ is a stopping time by a finite union of past events. No hit gives $\\infty$.\n<!-- bilingual-en:end -->\n\n离散适应过程首次进入固定可测目标的时刻是停时，证明用有限个过去事件的并集。起点在目标内则为 $0$，不命中则为 $\\infty$。",
       "color": "2"
     },
     {
@@ -216,7 +216,7 @@
       "y": 1900,
       "width": 680,
       "height": 320,
-      "text": "## [[末次到达通常非停时]]\n\n判断当前到达是否为最后一次，通常需要查看尚未发生的未来。",
+      "text": "<!-- bilingual-en:start -->\n## [[末次到达通常非停时|Last visits and future information]]\n\nA last-visit rule can distinguish paths with identical observations so far, even with a fixed finite horizon. Its status depends on the model and filtration; special cases can be stopping times.\n<!-- bilingual-en:end -->\n\n即使固定有限期限，末访规则仍可能区分当前历史相同的路径。是否为停时取决于模型与滤过，特殊情形可以成立。",
       "color": "1"
     },
     {
@@ -226,7 +226,7 @@
       "y": 1900,
       "width": 680,
       "height": 320,
-      "text": "## [[停时信息集]]\n\n把各个可能停止时刻上的可用信息按事件分支拼接为 F_T。",
+      "text": "<!-- bilingual-en:start -->\n## [[停时信息集|Information at a stopping time]]\n\nIn discrete or continuous time, $A\\in\\mathcal F_T$ means $A\\in\\mathcal F$ and $A\\cap\\{T\\le t\\}\\in\\mathcal F_t$ at every time t.\n<!-- bilingual-en:end -->\n\n到停止时已知的事件形成同一个 σ 代数。离散时间可按 {T=n} 分支检验；连续时间保留 {T≤t} 条件。",
       "color": "5"
     },
     {
@@ -236,7 +236,7 @@
       "y": 1900,
       "width": 680,
       "height": 320,
-      "text": "## [[停时信息单调性]]\n\n若离散停时 S≤T，则 F_S⊆F_T；较晚停止不会丢失较早已知的事件。",
+      "text": "<!-- bilingual-en:start -->\n## [[停时信息单调性|Ordered stopping-time information]]\n\nFor stopping times of the same filtration, pointwise $S\\le T$ gives $\\mathcal F_S\\subseteq\\mathcal F_T$. The event proof works in discrete and continuous time; it says nothing by itself about expectations.\n<!-- bilingual-en:end -->\n\n同一滤过下逐路径 $S\\le T$，便有较早信息包含于较晚信息。事件证明适用于离散和连续时间，本身不保证期望等式。",
       "color": "2"
     },
     {
@@ -246,7 +246,7 @@
       "y": 1900,
       "width": 680,
       "height": 320,
-      "text": "## [[停止过程保持鞅]]\n\n对任意停时 $T$，随 $n$ 变化的停止过程 $(M_{n∧T})_{n≥0}$ 仍是鞅。\n\n**尚未推出：** $E(M_T)=E(M_0)$。",
+      "text": "<!-- bilingual-en:start -->\n## [[停止过程保持鞅|Stopped discrete-time martingale]]\n\nFor a real discrete-time martingale, $(M_{n\\wedge T})_{n\\ge0}$ is a martingale for every stopping time $T$, even if $T=\\infty$ is possible. Each fixed $n$ is finite.\n<!-- bilingual-en:end -->\n\n实值离散鞅在任意停时下的停止过程仍为鞅，即使停时可能无穷。这里每个固定 $n$ 有限；尚未取随机终值。",
       "color": "2"
     },
     {
@@ -296,7 +296,7 @@
       "y": 2860,
       "width": 680,
       "height": 320,
-      "text": "## [[可选停止条件]]\n\n有界停时可直接抽样；无界停时必须再核验一致可积或其他充分控制。",
+      "text": "<!-- bilingual-en:start -->\n## [[可选停止条件|Optional stopping conditions]]\n\nDiscrete time: bounded $T$ preserves the mean. For a.s.-finite unbounded $T$, UI of $(M_{n\\wedge T})$ or one integrable envelope suffices. Finite $E[T]$ alone does not suffice.\n<!-- bilingual-en:end -->\n\n离散时间：有界停时保持期望。几乎必然有限但无界时，停止族一致可积或可积包络均是充分路线；仅 $E[T]<\\infty$ 不够。",
       "color": "2"
     },
     {
@@ -306,7 +306,7 @@
       "y": 2860,
       "width": 680,
       "height": 320,
-      "text": "## [[无限翻倍破坏可选停止]]\n\n即使 E(T)=2 且 M_T=1，停止族不一致可积仍会使可选停止等式失效。",
+      "text": "<!-- bilingual-en:start -->\n## [[无限翻倍破坏可选停止|Doubling and optional stopping]]\n\nFair signs, unlimited stakes: $E[T]=2$ and $M_T=1$ a.s., but every finite stopped gain has mean zero. Rare large losses keep the stopped family from being UI.\n<!-- bilingual-en:end -->\n\n公平符号、无限下注模型中，$E[T]=2$ 且终值几乎必然为1，有限截断的期望却都是0。罕见大亏损使停止族不一致可积。",
       "color": "1"
     },
     {
@@ -317,6 +317,15 @@
       "width": 680,
       "height": 260,
       "text": "<!-- bilingual-en:start -->\n## [[L1收敛|Convergence in L1]]\n\n$E|X_n-X|\\to0$ compares same-outcome errors and allows expectations to pass to the limit.\n<!-- bilingual-en:end -->\n\n平均绝对误差趋零；不能用正负误差相互抵消代替。"
+    },
+    {
+      "id": "p0015-cond-jensen",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[条件Jensen不等式|Conditional Jensen's inequality]]\n\nWith the same information $\\mathcal G$, integrable $X,\\varphi(X)$ and finite convex $\\varphi$ give $\\varphi(E[X\\mid\\mathcal G])\\le E[\\varphi(X)\\mid\\mathcal G]$ a.s.\n<!-- bilingual-en:end -->\n\n比较同一信息下的“均值的变换”与“变换的均值”。",
+      "x": 4500,
+      "y": 1260,
+      "width": 680,
+      "height": 320
     }
   ],
   "edges": [
@@ -326,7 +335,7 @@
       "fromSide": "right",
       "toNode": "a101000000000003",
       "toSide": "left",
-      "label": "用当时信息定义可测性"
+      "label": "Current information determines measurability · 用当时信息检验可测性"
     },
     {
       "id": "ae00000000000002",
@@ -334,7 +343,7 @@
       "fromSide": "right",
       "toNode": "a101000000000002",
       "toSide": "left",
-      "label": "寻找最小适应滤过"
+      "label": "Raw history gives the minimal adapted filtration · 原始历史给出最小适应滤过"
     },
     {
       "id": "ae00000000000004",
@@ -342,7 +351,7 @@
       "fromSide": "top",
       "toNode": "a101000000000005",
       "toSide": "top",
-      "label": "提前一期组织信息"
+      "label": "At step n ≥ 1, use information from n − 1 · 第 n 步使用上一期信息"
     },
     {
       "id": "ae00000000000005",
@@ -350,7 +359,7 @@
       "fromSide": "bottom",
       "toNode": "a102000000000009",
       "toSide": "top",
-      "label": "累积条件零均值增量"
+      "label": "Add an integrable initial value known at time 0 · 累积增量并保留初始可积已知量"
     },
     {
       "id": "ae00000000000006",
@@ -358,7 +367,7 @@
       "fromSide": "bottom",
       "toNode": "a102000000000002",
       "toSide": "top",
-      "label": "再加可积与条件均值"
+      "label": "Add per-time integrability and conditional equality · 再加逐时可积与条件均值等式"
     },
     {
       "id": "ae00000000000007",
@@ -366,7 +375,7 @@
       "fromSide": "right",
       "toNode": "a102000000000003",
       "toSide": "left",
-      "label": "把等式放宽为 ≥"
+      "label": "Equality implies future conditional mean ≥ current value · 等式蕴含次鞅不等式"
     },
     {
       "id": "ae00000000000008",
@@ -374,7 +383,7 @@
       "fromSide": "top",
       "toNode": "a102000000000004",
       "toSide": "top",
-      "label": "把等式放宽为 ≤"
+      "label": "Equality implies future conditional mean ≤ current value · 等式蕴含超鞅不等式"
     },
     {
       "id": "ae00000000000009",
@@ -382,7 +391,7 @@
       "fromSide": "bottom",
       "toNode": "a102000000000006",
       "toSide": "top",
-      "label": "正向保均值，反向不成立"
+      "label": "Constant means are necessary, not sufficient · 恒定均值必要但不充分"
     },
     {
       "id": "ae00000000000010",
@@ -390,7 +399,7 @@
       "fromSide": "bottom",
       "toNode": "a102000000000007",
       "toSide": "top",
-      "label": "条件 Jensen"
+      "label": "Convex transformation plus per-time integrability · 凸变换并逐时点检查可积性"
     },
     {
       "id": "ae00000000000011",
@@ -406,7 +415,7 @@
       "fromSide": "bottom",
       "toNode": "a102000000000008",
       "toSide": "top",
-      "label": "再加恒定均值"
+      "label": "Constant means force each nonnegative conditional gain to vanish · 恒均值使非负条件增益消失"
     },
     {
       "id": "ae00000000000014",
@@ -414,7 +423,7 @@
       "fromSide": "bottom",
       "toNode": "a102000000000005",
       "toSide": "bottom",
-      "label": "分离随机波动与可预测漂移"
+      "label": "In discrete time, accumulate predicted gains starting at zero · 离散时间从零累积条件预期增益"
     },
     {
       "id": "ae00000000000016",
@@ -422,7 +431,7 @@
       "fromSide": "left",
       "toNode": "a103000000000001",
       "toSide": "left",
-      "label": "用当时信息判断是否已停止"
+      "label": "Decide whether T ≤ t at each finite time · 逐有限时刻判断是否已停"
     },
     {
       "id": "ae00000000000017",
@@ -430,7 +439,7 @@
       "fromSide": "right",
       "toNode": "a103000000000002",
       "toSide": "left",
-      "label": "首次进入满足停时条件"
+      "label": "Discrete adapted first entrance to a fixed measurable set · 离散适应过程首次进入固定可测集合"
     },
     {
       "id": "ae00000000000018",
@@ -438,7 +447,7 @@
       "fromSide": "right",
       "toNode": "a103000000000003",
       "toSide": "left",
-      "label": "对照未来依赖"
+      "label": "A last visit can require unseen future observations · 末访可能需要尚未观察的未来"
     },
     {
       "id": "ae00000000000019",
@@ -446,7 +455,7 @@
       "fromSide": "bottom",
       "toNode": "a103000000000004",
       "toSide": "bottom",
-      "label": "拼接停止分支信息"
+      "label": "Test stopped events at every time · 逐时检验已经停止的事件"
     },
     {
       "id": "ae00000000000020",
@@ -454,7 +463,7 @@
       "fromSide": "top",
       "toNode": "a100000000000005",
       "toSide": "left",
-      "label": "提供条件均值约束"
+      "label": "Supply conditional fairness · 提供条件公平性"
     },
     {
       "id": "ae00000000000020b",
@@ -462,7 +471,7 @@
       "fromSide": "bottom",
       "toNode": "a103000000000005",
       "toSide": "right",
-      "label": "与停时信息共同确定"
+      "label": "Combine with a stopping rule at finite clock times · 在有限时刻结合停时规则"
     },
     {
       "id": "ae00000000000021",
@@ -470,7 +479,7 @@
       "fromSide": "top",
       "toNode": "a103000000000005",
       "toSide": "top",
-      "label": "确定停前指示"
+      "label": "For k ≥ 1, the indicator of T ≥ k is known at k − 1 · 停前指示在上一步已知"
     },
     {
       "id": "ae00000000000022",
@@ -478,7 +487,7 @@
       "fromSide": "right",
       "toNode": "a103000000000007",
       "toSide": "right",
-      "label": "先固定每个确定截断"
+      "label": "Passing to a random terminal value needs limit control · 传至随机终值须控制极限"
     },
     {
       "id": "ae00000000000023",
@@ -486,7 +495,7 @@
       "fromSide": "left",
       "toNode": "a103000000000007",
       "toSide": "right",
-      "label": "S≤T 保证较早信息可用"
+      "label": "Ordered information alone does not preserve means · 信息包含本身不保证期望等式"
     },
     {
       "id": "ae00000000000024",
@@ -502,7 +511,7 @@
       "fromSide": "right",
       "toNode": "a103000000000008",
       "toSide": "left",
-      "label": "缺少控制时可能失效"
+      "label": "Uncontrolled stopped tails can break the terminal identity · 停止族尾部失控可能破坏终值等式"
     },
     {
       "id": "ae00000000000029",
@@ -518,7 +527,7 @@
       "fromSide": "top",
       "toNode": "a102000000000002",
       "toSide": "bottom",
-      "label": "部分和满足鞅条件"
+      "label": "Conditional-zero increments give the martingale identity · 条件零均值增量给出鞅等式"
     },
     {
       "id": "ae00000000000027",
@@ -542,7 +551,7 @@
       "fromSide": "bottom",
       "toNode": "a101000000000004",
       "toSide": "top",
-      "label": "适应仍不足以满足鞅条件"
+      "label": "Observability alone does not give conditional fairness · 当前可见不保证条件公平性"
     },
     {
       "id": "p0013-ui-l1",
@@ -551,6 +560,15 @@
       "toNode": "p0013-l1",
       "toSide": "top",
       "label": "Conclusion under probability convergence and UI · 概率收敛与UI共同给出的结论"
+    },
+    {
+      "id": "p0015-jensen-transform",
+      "fromNode": "p0015-cond-jensen",
+      "fromSide": "left",
+      "toNode": "a102000000000007",
+      "toSide": "right",
+      "toEnd": "arrow",
+      "label": "Use the current value as the future conditional mean · 鞅性质把未来条件均值换成当前值"
     }
   ]
 }

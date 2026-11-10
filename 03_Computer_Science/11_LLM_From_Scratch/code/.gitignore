@@ -1,0 +1,4 @@
+# Reference and learner repositories are tracked independently of this vault.
+/official/
+/practice/
+/.venv/

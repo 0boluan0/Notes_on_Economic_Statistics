@@ -2772,10 +2772,10 @@ For $A\in\mathbb R^{m\times n}$ with rank $r$:
 <!-- bilingual-en:start -->
 | Space | Definition | Ambient space | Dimension |
 | --- | --- | ---: | ---: |
-| [[列空间|Column space]] $C(A)$ | span of the columns of $A$ | $\mathbb R^m$ | $r$ |
-| [[零空间|Nullspace]] $N(A)$ | solution set of $Ax=0$ | $\mathbb R^n$ | $n-r$ |
-| [[行空间|Row space]] $C(A^T)$ | span of the rows of $A$ | $\mathbb R^n$ | $r$ |
-| [[左零空间|Left nullspace]] $N(A^T)$ | solution set of $A^Ty=0$ | $\mathbb R^m$ | $m-r$ |
+| [[列空间\|Column space]] $C(A)$ | span of the columns of $A$ | $\mathbb R^m$ | $r$ |
+| [[零空间\|Nullspace]] $N(A)$ | solution set of $Ax=0$ | $\mathbb R^n$ | $n-r$ |
+| [[行空间\|Row space]] $C(A^T)$ | span of the rows of $A$ | $\mathbb R^n$ | $r$ |
+| [[左零空间\|Left nullspace]] $N(A^T)$ | solution set of $A^Ty=0$ | $\mathbb R^m$ | $m-r$ |
 <!-- bilingual-en:end -->
 
 行空间与列空间维数相同，都是 rank；这就是[[行秩等于列秩|“行秩 = 列秩”定理]]。实践中，RREF 的非零行给行空间基，原矩阵的主元列给列空间基。
@@ -3219,6 +3219,8 @@ Matrices can themselves be elements of a vector space → rank-one outer product
 
 ## Session 1.13 Graphs, networks, and incidence matrices
 
+[[01_Math/02_linear algebra/01.13_Graphs, Networks, Incidence Matrices|Formal note · 正式笔记]]
+
 ### 本节问题与前置知识
 <!-- bilingual-en:start -->
 *Questions and Prerequisites for This Section*
@@ -3363,6 +3365,17 @@ $$
 <!-- bilingual-en:start -->
 For a connected graph, $L_G\mathbf1=0$. Potentials are therefore determined only up to an additive constant; grounding one vertex selects a unique representative. A feasible injection must satisfy $\mathbf1^Tf=0$, meaning that total inflow equals total outflow.
 <!-- bilingual-en:end -->
+
+> [!note] Conductance and grounding conditions · 电导与接地的条件
+> <!-- bilingual-en:start -->
+> The energy inequality above assumes finite **nonnegative** conductances. If every edge has strictly positive conductance, connectivity of the original graph gives the stated one-constant freedom. If zero-weight edges are allowed, retain all vertices but only edges with positive weight when finding the relevant components: a zero-conductance edge carries no current and does not constrain its endpoint potentials. The kernel then contains one independently chosen constant per such component.
+>
+> For $L_Gx=f$ to be solvable, the sum of the entries of $f$ must be zero **within every such component**; one global zero sum is insufficient when there are several components. Once this holds, fixing one vertex potential in each component, for example to zero, selects a unique solution. These independent shifts preserve differences on positive-weight edges; they may change differences across zero-weight edges between components, while leaving every edge current unchanged. See [[加权图 Laplacian|Weighted graph Laplacian]] for the energy argument, a zero-edge example, and the positive-definiteness proof for the reduced system. [Spielman's Lecture 2, §2.2](https://cs.yale.edu/homes/spielman/561/lect02-15.pdf) supplies the weighted Laplacian construction; the linked card derives the kernel and compatibility statements from that energy identity.
+> <!-- bilingual-en:end -->
+>
+> 上面的能量非负式要求电导有限且**非负**。若所有边的电导严格为正，原图连通就得到上述只有一个常数自由度的结论。允许零权边时，应保留所有顶点、只用正权边划分相关分量：零电导边不传电流，也不约束两端电势相等。此时核中每个这样的分量都有一个可独立选取的常数。
+>
+> $L_Gx=f$ 可解要求**每个这样的分量内**，$f$ 的各项之和都为零；分量多于一个时，仅全局总和为零不够。满足条件后，每个分量固定一个顶点电势（例如设为零），即可选定唯一解。分别平移各分量的电势保留正权边差值；跨不同分量的零权边差值可能改变，但各边电流不变。能量论证、零权例子及约化系统正定性的证明见 [[加权图 Laplacian]]。[Spielman 讲义第 2 讲 §2.2](https://cs.yale.edu/homes/spielman/561/lect02-15.pdf) 支持加权拉普拉斯的构造，所链卡片从其能量恒等式推导核与相容条件。
 
 ![[98_attachment/linear_algebra/mit18_06sc/mit18.06sc-unit1-incidence-network.png|760]]
 
@@ -3522,6 +3535,8 @@ The incidence matrix maps vertex potentials to edge differences → $N(A)$ consi
 <!-- bilingual-en:end -->
 
 ## Session 1.14 Exam 1 review
+
+[[01_Math/02_linear algebra/01.14_Exam 1 Review and Unit 1 Exam|Review and exam formal note · 复习与考试正式笔记]]
 
 ### 本节问题与前置知识
 <!-- bilingual-en:start -->

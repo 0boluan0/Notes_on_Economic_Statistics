@@ -7,7 +7,7 @@
       "y": -720,
       "width": 6000,
       "height": 260,
-      "text": "# 多元数据与协方差 · 原子图\n\n先分清观察到的数据与概率模型，再沿“总体定义 → 独立性质 → 样本统计量 → 秩、距离与尺度边界”展开。概念入口只回答它是什么；定理和边界各有自己的节点。25 张卡当前均为 \u0060source-checked / unassessed\u0060。",
+      "text": "<!-- bilingual-en:start -->\n# Multivariate data and covariance\n\nRead from data representation and sampling assumptions to population moments, sample statistics and the conditions for using ranks, distances and scales.\n<!-- bilingual-en:end -->\n\n# 多元数据与协方差\n\n先分清数据表示与抽样假设，再进入总体矩、样本统计量，以及秩、距离与尺度的使用条件。",
       "color": "5"
     },
     {
@@ -16,8 +16,8 @@
       "x": -2100,
       "y": 0,
       "width": 430,
-      "height": 280,
-      "text": "## [[多元数据矩阵]]\n\n一行是观察单位，一列是变量。\n\n**定义：** \u006e × \u0070 只描述数据怎样摆放。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[多元数据矩阵|Multivariate data matrix]]\n\nAn $n\\times p$ table records $n$ observational units in rows and $p$ variables in columns. Entry $x_{ij}$ is variable $j$ for unit $i$.\n<!-- bilingual-en:end -->\n\n行记录观察单位，列记录变量；矩阵形状不自带抽样假设。",
       "color": "5"
     },
     {
@@ -27,7 +27,7 @@
       "y": 0,
       "width": 430,
       "height": 300,
-      "text": "## [[数据矩阵不推出抽样模型]]\n\n矩阵形状不能推出各行 iid，也不能确定共同总体或行间依赖。",
+      "text": "<!-- bilingual-en:start -->\n## [[数据矩阵不推出抽样模型|Data tables and sampling models]]\n\nThe same table layout can describe independent samples, repeated measurements or time series. Row structure alone establishes none of these laws.\n<!-- bilingual-en:end -->\n\n相同行列结构可以对应不同生成机制；独立与同分布须由抽样模型支持。",
       "color": "1"
     },
     {
@@ -37,7 +37,7 @@
       "y": 0,
       "width": 430,
       "height": 300,
-      "text": "## [[随机向量]]\n\n同一概率空间上的多个随机变量组成一个向量。\n\n\u0058 是随机对象，\u0078 是一次实现。",
+      "text": "<!-- bilingual-en:start -->\n## [[随机向量|Random vector]]\n\nA vector records several random variables at the same outcome on one probability space. $X$ is random; $x=X(\\omega)$ is one realization.\n<!-- bilingual-en:end -->\n\n同一基本结果同时产生全部坐标；坐标数p与观测数n含义不同，联合输出不表示坐标相互独立。",
       "color": "5"
     },
     {
@@ -66,8 +66,8 @@
       "x": -1150,
       "y": 620,
       "width": 430,
-      "height": 290,
-      "text": "## [[均值向量]]\n\n\u03bc = \u0045[\u0058] 由各分量期望组成，只描述总体中心。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[均值向量|Mean vector]]\n\nWhen $E|X_j|<\\infty$ for each real coordinate, $\\mu=E[X]$ collects their expectations. It describes the population center.\n<!-- bilingual-en:end -->\n\n各坐标绝对可积时逐项取期望；不要求坐标独立，也不描述全部联合分布。",
       "color": "5"
     },
     {
@@ -76,8 +76,8 @@
       "x": -650,
       "y": 620,
       "width": 430,
-      "height": 260,
-      "text": "## [[均值向量仿射变换]]\n\n\u0045[\u0041\u0058+\u0062] = \u0041\u03bc+\u0062；不要求独立或 Gaussian。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[均值向量仿射变换|Affine transformation of the mean]]\n\nFor coordinatewise integrable real $X$ and fixed compatible $A,b$, $E[AX+b]=AE[X]+b$. $A$ may be rectangular.\n<!-- bilingual-en:end -->\n\n固定矩阵和偏移可提出期望；无需独立或Gaussian。",
       "color": "6"
     },
     {
@@ -87,7 +87,7 @@
       "y": 620,
       "width": 460,
       "height": 320,
-      "text": "## [[协方差矩阵]]\n\n\u03a3 = \u0045[(\u0058\u2212\u03bc)(\u0058\u2212\u03bc)\u1d40]。\n\n对角是分量方差，非对角是两两协方差。",
+      "text": "<!-- bilingual-en:start -->\n## [[协方差矩阵|Covariance matrix]]\n\nFor a real random vector $X$ with $p$ coordinates, finite second moments and mean $\\mu=E[X]$, $\\Sigma=E[(X-\\mu)(X-\\mu)^T]$ is a fixed $p\\times p$ population matrix.\n<!-- bilingual-en:end -->\n\n对角是分量方差，非对角是两两协方差；总体期望与数据估计分别处理。",
       "color": "5"
     },
     {
@@ -96,8 +96,8 @@
       "x": -500,
       "y": 1080,
       "width": 430,
-      "height": 260,
-      "text": "## [[线性投影方差]]\n\nVar(\u0061\u1d40\u0058) = \u0061\u1d40\u03a3\u0061。\n\n把多元协方差转成任意一维方向的方差。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[线性投影方差|Variance of a linear combination]]\n\nFor a real random vector with finite second moments and fixed real weights $a$, $\\operatorname{Var}(a^TX)=a^T\\Sigma a$.\n<!-- bilingual-en:end -->\n\n固定权重组合的方差来自全部两两协方差；权重不必和为一。",
       "color": "6"
     },
     {
@@ -106,8 +106,8 @@
       "x": 50,
       "y": 1080,
       "width": 430,
-      "height": 260,
-      "text": "## [[协方差仿射变换]]\n\nCov(\u0041\u0058+\u0062) = \u0041\u03a3\u0041\u1d40；平移不改变协方差。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[协方差仿射变换|Covariance under affine maps]]\n\nFor real $X$ with finite second moments and fixed $A,b$, $\\operatorname{Cov}(AX+b)=A\\Sigma A^T$. $A$ may be rectangular.\n<!-- bilingual-en:end -->\n\n左乘混合各行，右乘混合各列；固定平移不改变协方差。",
       "color": "6"
     },
     {
@@ -116,8 +116,8 @@
       "x": 600,
       "y": 1080,
       "width": 430,
-      "height": 300,
-      "text": "## [[相关矩阵]]\n\n在各分量方差为正时，用标准差把协方差归一化为无量纲矩阵。",
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[相关矩阵|Correlation matrix]]\n\nWith positive finite coordinate variances, $R_{jk}=\\Sigma_{jk}/(\\sigma_j\\sigma_k)$, where $\\sigma_j$ is coordinate $j$’s standard deviation.\n<!-- bilingual-en:end -->\n\n每项除以两个标准差，得到无量纲相关性；常数坐标的相关系数未定义。",
       "color": "5"
     },
     {
@@ -136,8 +136,8 @@
       "x": -1050,
       "y": 1360,
       "width": 430,
-      "height": 300,
-      "text": "## [[样本均值向量]]\n\n\u0058\u0304 是重复抽样中的随机统计量；\u0078\u0304 是当前数据算出的观察值。",
+      "height": 310,
+      "text": "<!-- bilingual-en:start -->\n## [[样本均值向量|Sample mean vector]]\n\nAverage across $n$ observations separately in each of $p$ coordinates: $\\bar X=n^{-1}\\sum_iX_i$. The observed result is $\\bar x$.\n<!-- bilingual-en:end -->\n\n跨观测逐坐标平均；统计量随抽样而变，当前算出的值固定。",
       "color": "5"
     },
     {
@@ -146,8 +146,8 @@
       "x": -1050,
       "y": 1840,
       "width": 430,
-      "height": 280,
-      "text": "## [[样本均值无偏性]]\n\n各行具有共同有限均值即可推出 \u0045[\u0058\u0304]=\u03bc；独立性不是必要条件。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[样本均值无偏性|Unbiasedness of the sample mean]]\n\nIf each observation has integrable coordinates and the same mean $\\mu$, then $E[\\bar X]=\\mu$. Independence is unnecessary.\n<!-- bilingual-en:end -->\n\n共同有限均值已经足够；无偏不表示某次估计必然等于总体值。",
       "color": "6"
     },
     {
@@ -156,8 +156,8 @@
       "x": -500,
       "y": 1840,
       "width": 430,
-      "height": 310,
-      "text": "## [[样本均值协方差]]\n\nCov(\u0058\u0304) 保留全部交叉协方差；各行同协方差且行间不相关时化为 \u03a3/\u006e，iid 是常用充分条件。",
+      "height": 350,
+      "text": "<!-- bilingual-en:start -->\n## [[样本均值协方差|Covariance of the sample mean]]\n\nWith finite second moments, $\\operatorname{Cov}(\\bar X)=n^{-2}\\sum_{i,k}\\operatorname{Cov}(X_i,X_k)$. Uncorrelated observations with common covariance $\\Sigma$ give $\\Sigma/n$.\n<!-- bilingual-en:end -->\n\n保留全部交叉协方差；iid是常用充分条件，复制行不会增加独立信息。",
       "color": "1"
     },
     {
@@ -166,8 +166,8 @@
       "x": -2100,
       "y": 1360,
       "width": 460,
-      "height": 330,
-      "text": "## [[样本协方差矩阵]]\n\n\u0053 是随机统计量，\u0073 是观察值；二者都以样本均值中心化并采用 \u006e\u22121 分母。",
+      "height": 340,
+      "text": "<!-- bilingual-en:start -->\n## [[样本协方差矩阵|Sample covariance matrix]]\n\nFor complete real data with $n\\ge2$, $s=X_c^TX_c/(n-1)$, where $X_c$ subtracts each column mean. $S$ denotes the random statistic.\n<!-- bilingual-en:end -->\n\n中心化后汇总两两偏差乘积；总体协方差、随机统计量和实现值各有含义。",
       "color": "5"
     },
     {
@@ -176,8 +176,8 @@
       "x": -2300,
       "y": 2300,
       "width": 430,
-      "height": 300,
-      "text": "## [[样本协方差无偏分母]]\n\n iid 有限二阶矩下，\u006e\u22121 分母无偏；\u006e 分母一般向下有偏。",
+      "height": 330,
+      "text": "<!-- bilingual-en:start -->\n## [[样本协方差无偏分母|The unbiased covariance divisor]]\n\nFor $n\\ge2$ iid observations with finite second moments and covariance $\\Sigma$, the centered sum has expectation $(n-1)\\Sigma$. Thus $E[S]=\\Sigma$.\n<!-- bilingual-en:end -->\n\nn−1修正估计中心后的方差缩小；依赖数据须重查样本均值协方差。",
       "color": "6"
     },
     {
@@ -187,7 +187,7 @@
       "y": 2300,
       "width": 450,
       "height": 330,
-      "text": "## [[Gaussian协方差MLE边界]]\n\n中心化散布满秩时，\u0043/\u006e 才是正定协方差空间中的有限 Gaussian MLE。",
+      "text": "<!-- bilingual-en:start -->\n## [[Gaussian协方差MLE边界|Gaussian covariance MLE]]\n\nWith unknown mean and unrestricted $\\Sigma\\succ0$, centered scatter $C$ gives the unique MLE $C/n$ exactly when $C\\succ0$. Singular $C$ makes the likelihood unbounded.\n<!-- bilingual-en:end -->\n\n均值未知且协方差正定、不加约束时，中心化散布满秩才有有限极大值；奇异时似然无界。",
       "color": "1"
     },
     {
@@ -196,8 +196,8 @@
       "x": -1200,
       "y": 2300,
       "width": 460,
-      "height": 330,
-      "text": "## [[样本协方差秩边界]]\n\nrank(\u0053) \u2264 min(\u0070,\u006e\u22121)。\n\n\u0070 \u2265 \u006e 时必奇异；\u0070 < \u006e 仍不保证可逆。",
+      "height": 350,
+      "text": "<!-- bilingual-en:start -->\n## [[样本协方差秩边界|Sample covariance rank]]\n\nFor complete real $n\\times p$ data, $n\\ge2$, $\\operatorname{rank}(s)=\\operatorname{rank}(X_c)\\le\\min(p,n-1)$. Invertibility requires full column rank of $X_c$.\n<!-- bilingual-en:end -->\n\np≥n必奇异；p<n仍可能有精确仿射冗余。该上界无需抽样分布假设。",
       "color": "1"
     },
     {
@@ -207,7 +207,7 @@
       "y": 1080,
       "width": 460,
       "height": 330,
-      "text": "## [[马氏距离]]\n\n\u0064 = \u221a[(\u0078\u2212\u0079)\u1d40\u03a3\u207b\u00b9(\u0078\u2212\u0079)]。\n\n不开根号的是平方距离。",
+      "text": "<!-- bilingual-en:start -->\n## [[马氏距离|Mahalanobis distance]]\n\nFor a fixed real symmetric positive-definite scale $\\Sigma$, $d_\\Sigma(x,y)=\\sqrt{(x-y)^T\\Sigma^{-1}(x-y)}$. It is Euclidean distance after an invertible whitening map.\n<!-- bilingual-en:end -->\n\n按方向尺度衡量两点位移；平方根属于距离定义，平方距离是另一个量。",
       "color": "5"
     },
     {
@@ -217,7 +217,7 @@
       "y": 1600,
       "width": 430,
       "height": 300,
-      "text": "## [[马氏距离不要求正态]]\n\n正定尺度足以定义几何；Gaussian 只提供平方距离的概率校准。",
+      "text": "<!-- bilingual-en:start -->\n## [[马氏距离不要求正态|Does distance require normality?]]\n\nPositive-definite scaling defines geometry without a probability model. A chi-square tail probability needs a separate distributional justification.\n<!-- bilingual-en:end -->\n\n真实均值、正定协方差与联合Gaussian给出精确卡方校准；拟合参数须另行推导。",
       "color": "1"
     },
     {
@@ -227,7 +227,7 @@
       "y": 1600,
       "width": 430,
       "height": 310,
-      "text": "## [[奇异尺度马氏伪距离]]\n\n伪逆忽略零空间方向，因此不同点可能得到距离 0。",
+      "text": "<!-- bilingual-en:start -->\n## [[奇异尺度马氏伪距离|Singular-scale pseudodistance]]\n\nFor a fixed real symmetric singular positive-semidefinite scale, $\\Sigma^+$ discards nullspace directions. Distinct points can receive zero pseudodistance.\n<!-- bilingual-en:end -->\n\n限制在保留的子空间或其固定平移上，可恢复真度量；空间外的点须另查支撑。",
       "color": "1"
     },
     {
@@ -237,7 +237,7 @@
       "y": 1080,
       "width": 430,
       "height": 300,
-      "text": "## [[广义方差]]\n\n广义方差是 det(\u03a3)，即所有特征方向方差的乘积。",
+      "text": "<!-- bilingual-en:start -->\n## [[广义方差|Generalized variance]]\n\nFor finite second moments, $\\det\\Sigma$ multiplies all principal-direction variances. One zero direction makes the product zero.\n<!-- bilingual-en:end -->\n\n协方差行列式概括联合散布；为零不表示其他方向没有变化。",
       "color": "5"
     },
     {
@@ -245,9 +245,9 @@
       "type": "text",
       "x": 2100,
       "y": 1600,
-      "width": 430,
-      "height": 300,
-      "text": "## [[广义方差与椭球体积]]\n\n正定协方差椭球体积与 \u221adet(\u03a3) 成正比。",
+      "width": 470,
+      "height": 420,
+      "text": "<!-- bilingual-en:start -->\n## [[广义方差与椭球体积|Covariance ellipsoid volume]]\n\nFor $\\Sigma\\succ0$ and finite $r\\ge0$, the filled region $(x-\\mu)^T\\Sigma^{-1}(x-\\mu)\\le r^2$ has volume $\\kappa_p r^p\\sqrt{\\det\\Sigma}$, where $\\kappa_p$ is the volume of the $p$-dimensional unit ball. This geometry needs no Gaussian model.\n<!-- bilingual-en:end -->\n\n$r\\ge0$为半径，$\\kappa_p$为$p$维单位球体积。固定维度与半径，体积随广义方差的平方根变化；几何公式本身不要求正态。",
       "color": "6"
     },
     {
@@ -255,10 +255,20 @@
       "type": "text",
       "x": 2630,
       "y": 1600,
-      "width": 430,
-      "height": 310,
-      "text": "## [[广义方差尺度敏感性]]\n\n单位重标度按 det(\u0041)\u00b2 改变广义方差。",
+      "width": 470,
+      "height": 350,
+      "text": "<!-- bilingual-en:start -->\n## [[广义方差尺度敏感性|Units and coordinate changes]]\n\nFor fixed real square $A$ and fixed $b$, $\\det\\operatorname{Cov}(AX+b)=\\det(A)^2\\det\\Sigma$. A determinant-one shear preserves this number while changing shape.\n<!-- bilingual-en:end -->\n\n固定实方阵A与固定平移b下，单位换算按平方因子进入乘积；行列式为一的剪切也保持广义方差。",
       "color": "1"
+    },
+    {
+      "id": "p0018-centering",
+      "type": "text",
+      "x": -2950,
+      "y": 1360,
+      "width": 580,
+      "height": 320,
+      "color": "5",
+      "text": "<!-- bilingual-en:start -->\n## [[中心化矩阵|Centering matrix]]\n\nFor an integer $n\\ge1$, $H=I_n-\\mathbf1_n\\mathbf1_n^T/n$ subtracts each column mean. It projects observation columns onto the sum-zero subspace and has rank $n-1$.\n<!-- bilingual-en:end -->\n\nH作用在观测轴；中心化不等于除以标准差，也不创造独立性。"
     }
   ],
   "edges": [
@@ -316,7 +326,7 @@
       "fromSide": "right",
       "toNode": "e3f405162738495a",
       "toSide": "left",
-      "label": "仿射变换规则"
+      "label": "Fixed compatible A,b preserve affine expectations · 固定相容A,b给仿射期望"
     },
     {
       "id": "3445566778899aab",
@@ -324,7 +334,7 @@
       "fromSide": "bottom",
       "toNode": "f405162738495a6b",
       "toSide": "top",
-      "label": "读取任意线性方向的方差"
+      "label": "Read the variance for fixed real weights · 读取固定实权重组合的方差"
     },
     {
       "id": "45566778899aabbc",
@@ -332,7 +342,7 @@
       "fromSide": "bottom",
       "toNode": "05162738495a6b7c",
       "toSide": "top",
-      "label": "协方差随线性部分传递"
+      "label": "Fixed linear maps transform both covariance indices · 固定线性映射作用于两个指标"
     },
     {
       "id": "566778899aabbccd",
@@ -340,7 +350,7 @@
       "fromSide": "bottom",
       "toNode": "8293a4b5c6d7e8f9",
       "toSide": "top",
-      "label": "按边际标准差归一化"
+      "label": "Divide by both standard deviations when they are positive · 正标准差下作双边归一化"
     },
     {
       "id": "6778899aabbccdde",
@@ -348,7 +358,7 @@
       "fromSide": "bottom",
       "toNode": "162738495a6b7c8d",
       "toSide": "top",
-      "label": "得到逐坐标尺度不变量"
+      "label": "Positive rescaling preserves correlations; sign reversal may flip them · 正缩放不变，反向缩放可能翻号"
     },
     {
       "id": "78899aabbccddeef",
@@ -356,7 +366,7 @@
       "fromSide": "bottom",
       "toNode": "60718293a4b5c6d7",
       "toSide": "top",
-      "label": "逐行平均"
+      "label": "Average across observations, coordinate by coordinate · 跨观测逐坐标平均"
     },
     {
       "id": "899aabbccddeef01",
@@ -380,7 +390,7 @@
       "fromSide": "bottom",
       "toNode": "38495a6b7c8d9eaf",
       "toSide": "top",
-      "label": "行间依赖决定精度"
+      "label": "Cross-observation covariance contributes to sampling variability · 跨观测协方差参与抽样波动"
     },
     {
       "id": "bccddeef01234567",
@@ -404,7 +414,7 @@
       "fromSide": "bottom",
       "toNode": "495a6b7c8d9eaf01",
       "toSide": "top",
-      "label": "n−1 分母的无偏理由"
+      "label": "Under iid finite-second-moment sampling · iid且二阶矩有限时无偏"
     },
     {
       "id": "ddeef0123456789a",
@@ -412,7 +422,7 @@
       "fromSide": "bottom",
       "toNode": "5a6b7c8d9eaf0123",
       "toSide": "top",
-      "label": "Gaussian likelihood 另有存在性条件"
+      "label": "Full-rank centered scatter gives the unrestricted Gaussian MLE · 中心化散布满秩才有无约束Gaussian极大值"
     },
     {
       "id": "eef0123456789abc",
@@ -420,7 +430,7 @@
       "fromSide": "bottom",
       "toNode": "b5c6d7e8f9011223",
       "toSide": "top",
-      "label": "中心化限制可达到的秩"
+      "label": "Centering leaves at most n−1 independent directions · 中心化留下至多n−1个独立方向"
     },
     {
       "id": "ef0123456789abcd",
@@ -428,7 +438,7 @@
       "fromSide": "right",
       "toNode": "93a4b5c6d7e8f901",
       "toSide": "top",
-      "label": "正定逆尺度定义白化距离"
+      "label": "Use a positive-definite covariance as the scale · 正定协方差可作为尺度"
     },
     {
       "id": "f0123456789abcde",
@@ -436,7 +446,7 @@
       "fromSide": "bottom",
       "toNode": "6b7c8d9eaf012345",
       "toSide": "top",
-      "label": "几何与概率校准分开"
+      "label": "Geometry alone does not give a reference distribution · 几何本身不给参考分布"
     },
     {
       "id": "0123456789abcdef",
@@ -444,7 +454,7 @@
       "fromSide": "bottom",
       "toNode": "7c8d9eaf01234567",
       "toSide": "top",
-      "label": "奇异尺度只给伪度量"
+      "label": "With singular PSD scale, the pseudoinverse collapses nullspace directions · 奇异半正定尺度的伪逆压掉零空间"
     },
     {
       "id": "123456789abcdef0",
@@ -452,7 +462,7 @@
       "fromSide": "right",
       "toNode": "7c8d9eaf01234567",
       "toSide": "bottom",
-      "label": "样本奇异性产生零空间"
+      "label": "Singular sample covariance prevents an ordinary inverse · 样本协方差奇异时无普通逆"
     },
     {
       "id": "23456789abcdef01",
@@ -460,7 +470,7 @@
       "fromSide": "right",
       "toNode": "a4b5c6d7e8f90112",
       "toSide": "top",
-      "label": "行列式汇总所有特征方向"
+      "label": "Multiply the principal variances · 将各主方向方差相乘"
     },
     {
       "id": "3456789abcdef012",
@@ -468,7 +478,7 @@
       "fromSide": "bottom",
       "toNode": "8d9eaf0123456789",
       "toSide": "top",
-      "label": "体积使用平方根尺度"
+      "label": "Fix dimension and radius, then take the square root · 固定维度与半径后取平方根"
     },
     {
       "id": "456789abcdef0123",
@@ -476,7 +486,25 @@
       "fromSide": "bottom",
       "toNode": "9eaf0123456789ab",
       "toSide": "top",
-      "label": "单位重标度改变行列式"
+      "label": "A square coordinate map contributes its determinant squared · 方阵坐标变换贡献行列式的平方"
+    },
+    {
+      "id": "p0018-data-centering",
+      "fromNode": "1b2c3d4e5f607182",
+      "toNode": "p0018-centering",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "Subtract the mean of each variable · 每个变量减去自身样本均值"
+    },
+    {
+      "id": "p0018-centering-cov",
+      "fromNode": "p0018-centering",
+      "toNode": "718293a4b5c6d7e8",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "For n≥2, divide the centered Gram by n−1 · n≥2时将中心化Gram除以n−1"
     }
   ]
 }

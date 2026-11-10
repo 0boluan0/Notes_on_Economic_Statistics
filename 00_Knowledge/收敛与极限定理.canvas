@@ -112,31 +112,31 @@
     {
       "id": "strong-law",
       "type": "text",
-      "text": "## [[强大数定律]]\n\n独立同分布且绝对可积时，样本均值几乎必然收敛到共同期望。",
+      "text": "<!-- bilingual-en:start -->\n## [[强大数定律|Strong law of large numbers]]\n\nFor iid integrable real inputs, the sample mean converges almost surely to their common mean.\n<!-- bilingual-en:end -->\n\n同一概率一事件上的整条路径收敛；不要求方差有限。",
       "x": 40,
       "y": 1450,
       "width": 340,
-      "height": 200,
+      "height": 260,
       "color": "6"
     },
     {
       "id": "weak-law",
       "type": "text",
-      "text": "## [[弱大数定律]]\n\n概念入口：样本均值依概率收敛到目标均值的大数结论类型。",
+      "text": "<!-- bilingual-en:start -->\n## [[弱大数定律|Weak law of large numbers]]\n\nThe sample mean approaches a target mean in probability: every fixed-tolerance error probability tends to zero.\n<!-- bilingual-en:end -->\n\n这是依概率收敛的结论；具体定理另给保证它成立的条件。",
       "x": 420,
       "y": 1150,
       "width": 340,
-      "height": 200,
+      "height": 260,
       "color": "4"
     },
     {
       "id": "bounded-variance-weak-law",
       "type": "text",
-      "text": "## [[有界方差弱大数定律]]\n\n两两独立、共同均值且方差一致有界时，样本均值均方收敛，因而依概率收敛。",
+      "text": "<!-- bilingual-en:start -->\n## [[有界方差弱大数定律|Bounded-variance weak law]]\n\nPairwise uncorrelated inputs, a common mean and one finite variance bound give mean-square, hence probability, convergence.\n<!-- bilingual-en:end -->\n\n两两独立已足够，但不相关就能完成方差证明。",
       "x": 40,
       "y": 1150,
       "width": 340,
-      "height": 200,
+      "height": 260,
       "color": "6"
     },
     {
@@ -195,6 +195,42 @@
       "width": 720,
       "height": 250,
       "text": "<!-- bilingual-en:start -->\n## [[一致可积与L1收敛|The uniform-integrability criterion]]\n\nConvergence in probability plus UI is exactly what upgrades to L1 convergence with an integrable limit.\n<!-- bilingual-en:end -->\n\nUI统一控制罕见大值的贡献，补足依概率收敛缺少的尾部条件。"
+    },
+    {
+      "id": "p0014-expect-cs",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[期望的Cauchy–Schwarz不等式|Cauchy–Schwarz for expectations]]\n\nFor square-integrable errors, $E|Z|\\le\\sqrt{E[Z^2]}$; dependence is allowed.\n<!-- bilingual-en:end -->\n\n有限二阶矩控制平均绝对大小；无需独立。",
+      "x": 1600,
+      "y": 2070,
+      "width": 700,
+      "height": 250
+    },
+    {
+      "id": "p0014-mct",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[单调收敛定理|Monotone convergence]]\n\nIf $0\\le X_n\\uparrow X$ almost surely, then $E[X_n]\\uparrow E[X]$; $+\\infty$ is allowed.\n<!-- bilingual-en:end -->\n\n非负递增序列可以把极限移入期望，允许结果无穷大。",
+      "x": 0,
+      "y": 2450,
+      "width": 600,
+      "height": 290
+    },
+    {
+      "id": "p0014-fatou",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[Fatou引理|Fatou's lemma]]\n\nFor nonnegative variables, $E[\\liminf X_n]\\le\\liminf E[X_n]$. Equality need not hold.\n<!-- bilingual-en:end -->\n\n非负条件给出下界方向；逃向罕见大值的质量可能使不等式严格。",
+      "x": 680,
+      "y": 2450,
+      "width": 600,
+      "height": 290
+    },
+    {
+      "id": "p0014-dct",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[控制收敛定理|Dominated convergence]]\n\nAlmost-sure convergence and one integrable envelope $|X_n|\\le Y$ give L1 convergence and convergence of expectations.\n<!-- bilingual-en:end -->\n\n几乎必然收敛加上同一个可积包络，可控制极限中的平均绝对误差。",
+      "x": 1360,
+      "y": 2450,
+      "width": 650,
+      "height": 290
     }
   ],
   "edges": [
@@ -295,7 +331,7 @@
       "toNode": "mean-square",
       "toSide": "bottom",
       "toEnd": "arrow",
-      "label": "同一方差计算给出"
+      "label": "The variance bound gives mean-square convergence · 方差界给出均方收敛"
     },
     {
       "id": "e07b",
@@ -304,7 +340,7 @@
       "toNode": "bounded-variance-weak-law",
       "toSide": "right",
       "toEnd": "arrow",
-      "label": "一组明确充分条件"
+      "label": "One sufficient set of assumptions · 一组充分条件"
     },
     {
       "id": "e08",
@@ -372,6 +408,51 @@
       "toNode": "p0013-l1",
       "toSide": "right",
       "label": "Equivalent upgrade criterion · 升级至L1的等价判据"
+    },
+    {
+      "id": "p0014-l2-cs",
+      "fromNode": "mean-square",
+      "fromSide": "bottom",
+      "toNode": "p0014-expect-cs",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "Apply the bound to approximation error · 对近似误差应用不等式"
+    },
+    {
+      "id": "p0014-cs-l1",
+      "fromNode": "p0014-expect-cs",
+      "fromSide": "left",
+      "toNode": "p0013-l1",
+      "toSide": "right",
+      "toEnd": "arrow",
+      "label": "Mean-square convergence implies L1 convergence · 均方收敛推出L1收敛"
+    },
+    {
+      "id": "p0014-mct-fatou",
+      "fromNode": "p0014-mct",
+      "fromSide": "right",
+      "toNode": "p0014-fatou",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "Increasing tail infima prove the inequality · 用递增尾下确界证明"
+    },
+    {
+      "id": "p0014-fatou-dct",
+      "fromNode": "p0014-fatou",
+      "fromSide": "right",
+      "toNode": "p0014-dct",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "Apply Fatou to nonnegative envelope gaps · 对非负包络差应用Fatou"
+    },
+    {
+      "id": "p0014-dct-l1",
+      "fromNode": "p0014-dct",
+      "fromSide": "top",
+      "toNode": "p0013-l1",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "The envelope controls absolute error · 包络控制绝对误差"
     }
   ]
 }

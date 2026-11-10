@@ -1059,6 +1059,12 @@ $$
 The original improper integral converges only if both one-sided integrals converge separately. Divergences on the two sides may not be cancelled; doing so defines a Cauchy principal value, not an ordinary improper integral.
 <!-- bilingual-en:end -->
 
+<!-- bilingual-en:start -->
+Here the [[Cauchy 主值与反常积分|Cauchy principal value]] means equal-distance symmetric cutoffs around the interior singularity, followed by a finite limit of the combined truncated integrals. The preceding reference to cancellation uses this specific convention: other coordinated cutoff rules require their own definition and are not automatically the standard principal value. The ordinary improper integral still requires each one-sided limit to be finite independently.
+<!-- bilingual-en:end -->
+
+这里的 [[Cauchy 主值与反常积分|柯西主值]] 指在内部奇点两侧等距离对称截断，再对截断积分之和取有限极限。前文所说的抵消采用这一特定约定：其他协调截断规则须另作定义，并不自动属于标准主值。普通反常积分仍要求每个单侧极限独立且有限。
+
 ### 93a–93d：先找所有坏点，再逐个处理
 <!-- bilingual-en:start -->
 *93a–93d: Locate every singular point, then handle each one separately*

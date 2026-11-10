@@ -73,7 +73,7 @@
       "y": 1680,
       "width": 420,
       "height": 320,
-      "text": "## 本板块的知识单元\n\n1. [[Hotelling T² 与多元均值推断.canvas|Hotelling T² 与多元均值推断]]\n2. [[MANOVA 多元方差分析.canvas|MANOVA 多元方差分析]]"
+      "text": "## Reading entries · 阅读入口\n\n[[F分布|F distribution · F 分布]]\n\n[[Hotelling T² 与多元均值推断.canvas|Hotelling mean inference · Hotelling 均值推断]]\n\n[[MANOVA 多元方差分析.canvas|MANOVA · 多元方差分析]]"
     },
     {
       "id": "bc0c6655a70d31c8",
@@ -90,8 +90,8 @@
       "x": 170,
       "y": 1480,
       "width": 720,
-      "height": 120,
-      "text": "有了多元正态和 Wishart 抽样理论，才能构造均值向量的置信区域、Hotelling 检验和 MANOVA。",
+      "height": 150,
+      "text": "<!-- bilingual-en:start -->\nGaussian and Wishart sampling results give exact classical mean-inference calibration under their assumptions.\n<!-- bilingual-en:end -->\n\nGaussian 与 Wishart 抽样理论在相应假设下提供经典均值推断的精确校准。",
       "color": "3"
     },
     {

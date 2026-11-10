@@ -1,6 +1,5 @@
 ---
 aliases:
-  - "Cramer 法则用换列后的行列式给出可逆方阵方程的解分量"
   - Cramer's rule
   - Determinant formula for a linear-system component
 student_os: knowledge-atom
@@ -8,7 +7,6 @@ atom_id: LA-DET-011
 atom_set: determinants
 atom_type: theorem
 status: source-checked
-mastery_state: unassessed
 requires:
   - "[[伴随矩阵求逆]]"
 related:
@@ -18,69 +16,174 @@ part_of:
   - "[[行列式.canvas]]"
 ---
 
-# Cramer 法则用换列后的行列式给出可逆方阵方程的解分量
 <!-- bilingual-en:start -->
-*Cramer's rule expresses each component of a uniquely solvable square system by replacing one column*
+# Cramer's rule
+<!-- bilingual-en:end -->
+*Cramer 法则*
+
+<!-- bilingual-en:start -->
+**Cramer's rule** finds one unknown in a square linear system by comparing two [[行列式|determinants]]. Keep the coefficient matrix, except that the column belonging to the chosen unknown is replaced by the right-hand side. Divide this new determinant by the original one. The rule applies when the original determinant is nonzero, so that the system has a unique solution.
 <!-- bilingual-en:end -->
 
-> [!summary] 核心定理
-> 设 $A=[a_1\ \cdots\ a_n]$ 为 $n\times n$ 方阵，$Ax=b$，且 $\det A\ne0$。令 $A_j(b)$ 表示把 $A$ 的第 $j$ 列换成 $b$ 后所得矩阵，则唯一解满足
-> $$
-> x_j=\frac{\det A_j(b)}{\det A},\qquad j=1,\ldots,n.
-> $$
-> <!-- bilingual-en:start -->
-> Let $A=[a_1\ \cdots\ a_n]$ be an invertible square matrix and let $A_j(b)$ replace its $j$th column by $b$. The unique solution of $Ax=b$ satisfies $x_j=\det A_j(b)/\det A$.
-> <!-- bilingual-en:end -->
+**Cramer 法则**通过两个[[行列式]]的比值，求方形线性方程组中的一个未知量：保留系数矩阵，只把所求未知量对应的那一列换成右端向量，再用新行列式除以原行列式。它要求原行列式非零，此时方程组有唯一解。
 
-把[[伴随矩阵求逆|伴随矩阵求逆公式]]代入 $x=A^{-1}b$，便可直接得到上式。若要看清分子为什么恰好是“换第 $j$ 列后的行列式”，还可以从行列式对单列的线性作第二条推导。这里的逐列线性由[[行列式转置不变性|逐行多线性转置到列]]得到。由
-$$
-b=Ax=x_1a_1+\cdots+x_na_n
-$$
-可得
-$$
-\det A_j(b)
-=\sum_{k=1}^n x_k\det[a_1\ \cdots\ a_{j-1}\ a_k\ a_{j+1}\ \cdots\ a_n].
-$$
-当 $k\ne j$ 时，新矩阵有两列相同，行列式为零；只剩 $k=j$ 的 $x_j\det A$。因此 Cramer 法则不是一套脱离结构的换列口诀；伴随公式与逐列线性给出的是同一个结构。
 <!-- bilingual-en:start -->
-Substituting the adjugate inverse formula into $x=A^{-1}b$ gives Cramer's rule directly. A second derivation explains the replaced column: since $b=\sum_k x_ka_k$, column linearity expands $\det A_j(b)$ into a sum. Every term with $k\ne j$ has two equal columns and vanishes; the remaining term is $x_j\det A$. The adjugate formula and column linearity expose the same structure rather than an isolated replacement trick.
+## Read the replacement in a two-variable system
 <!-- bilingual-en:end -->
-
 ## 二阶例子
 
-对
-$$
-\begin{bmatrix}2&1\\1&3\end{bmatrix}
-\begin{bmatrix}x_1\\x_2\end{bmatrix}
-=
-\begin{bmatrix}5\\7\end{bmatrix},
-$$
-$\det A=5$。换第一列得 $\det\begin{bmatrix}5&1\\7&3\end{bmatrix}=8$；换第二列得 $\det\begin{bmatrix}2&5\\1&7\end{bmatrix}=9$。所以 $x_1=8/5$、$x_2=9/5$，代回两条方程都成立。
 <!-- bilingual-en:start -->
-For the displayed $2\times2$ system, $\det A=5$. Replacing the first and second columns gives determinants $8$ and $9$, so $x_1=8/5$ and $x_2=9/5$; substitution verifies both equations.
+Consider the real equations $2x_1+x_2=5$ and $x_1+3x_2=7$. Collect their coefficients into $A$, their right sides into $b$, and the unknowns into the column $x$:
 <!-- bilingual-en:end -->
 
+考虑实数方程 $2x_1+x_2=5$ 与 $x_1+3x_2=7$。把系数放入 $A$，右端放入 $b$，未知量排成列向量 $x$：
+
+$$
+A=\begin{pmatrix}2&1\\1&3\end{pmatrix},\qquad
+b=\begin{pmatrix}5\\7\end{pmatrix},\qquad
+x=\begin{pmatrix}x_1\\x_2\end{pmatrix},\qquad Ax=b.
+$$
+
+<!-- bilingual-en:start -->
+Column $1$ contains the coefficients of $x_1$, and column $2$ those of $x_2$. The original determinant is $\det A=2\cdot3-1\cdot1=5$. Replace the appropriate column, leaving the other column in place:
+<!-- bilingual-en:end -->
+
+第 $1$ 列装着 $x_1$ 的系数，第 $2$ 列装着 $x_2$ 的系数。原行列式为 $\det A=2\cdot3-1\cdot1=5$。只替换相应的一列，另一列保持原位置：
+
+$$
+A_1(b)=\begin{pmatrix}5&1\\7&3\end{pmatrix},\qquad
+\det A_1(b)=15-7=8,
+$$
+$$
+A_2(b)=\begin{pmatrix}2&5\\1&7\end{pmatrix},\qquad
+\det A_2(b)=14-5=9.
+$$
+
+<!-- bilingual-en:start -->
+The resulting values are $x_1=8/5$ and $x_2=9/5$. Substitution checks both original equations: $2(8/5)+9/5=5$ and $8/5+3(9/5)=7$.
+<!-- bilingual-en:end -->
+
+因此 $x_1=8/5$、$x_2=9/5$。代回原方程可核验：$2(8/5)+9/5=5$，$8/5+3(9/5)=7$。
+
+<!-- bilingual-en:start -->
+## The general formula
+<!-- bilingual-en:end -->
+*一般公式*
+
+> [!important] Replace column $j$ to recover component $j$ · 换第 $j$ 列，求第 $j$ 个分量
+> <!-- bilingual-en:start -->
+> Let $A=[a_1\ \cdots\ a_n]\in\mathbb F^{n\times n}$ and $b\in\mathbb F^n$, with integer $n\ge1$ and a field $\mathbb F$ such as $\mathbb R$ or $\mathbb C$. Here $a_j$ is column $j$, not a single entry. If $\det A\ne0$, then $Ax=b$ has the unique solution
+> <!-- bilingual-en:end -->
+>
+> 设 $A=[a_1\ \cdots\ a_n]\in\mathbb F^{n\times n}$、$b\in\mathbb F^n$，其中整数 $n\ge1$，$\mathbb F$ 是一个域，例如 $\mathbb R$ 或 $\mathbb C$。这里 $a_j$ 是完整的第 $j$ 列，不是单个元素。若 $\det A\ne0$，则 $Ax=b$ 有唯一解，且
+>
+> $$x_j=\frac{\det A_j(b)}{\det A},\qquad
+> A_j(b)=[a_1\ \cdots\ a_{j-1}\ b\ a_{j+1}\ \cdots\ a_n],
+> \quad j=1,\ldots,n.$$
+>
+> <!-- bilingual-en:start -->
+> The denominator is the same for every component. At $n=1$, the equation $ax=b$ simply gives $x=b/a$ for $a\ne0$.
+> <!-- bilingual-en:end -->
+>
+> 每个分量的分母相同。$n=1$ 时，方程 $ax=b$ 就给出 $a\ne0$ 时的 $x=b/a$。
+
+<!-- bilingual-en:start -->
+## Why the inverse formula produces a replaced column
+<!-- bilingual-en:end -->
+*为什么逆矩阵公式会产生换列行列式*
+
+<!-- bilingual-en:start -->
+The [[伴随矩阵求逆|adjugate inverse formula]] first guarantees the unique solution $x=A^{-1}b=(\det A)^{-1}\operatorname{adj}(A)b$. Let $C_{ij}$ denote the [[余子式与代数余子式|cofactor]] of the entry in row $i$, column $j$ of $A$. The [[伴随矩阵|adjugate]] transposes the cofactor matrix, so its entry in row $j$, column $i$ is $C_{ij}$. The row–column rule for [[矩阵乘法|matrix multiplication]] therefore gives
+<!-- bilingual-en:end -->
+
+[[伴随矩阵求逆|伴随求逆公式]]先保证唯一解 $x=A^{-1}b=(\det A)^{-1}\operatorname{adj}(A)b$。用 $C_{ij}$ 表示 $A$ 的第 $i$ 行、第 $j$ 列元素的[[余子式与代数余子式|代数余子式]]。[[伴随矩阵]]把代数余子式矩阵转置，因此其第 $j$ 行、第 $i$ 列元素是 $C_{ij}$。由[[矩阵乘法]]的行列相乘规则，
+
+$$x_j=\frac{1}{\det A}\sum_{i=1}^n C_{ij}b_i.$$
+
+<!-- bilingual-en:start -->
+Here $b_i$ is entry $i$ of the right-hand side. Now expand $\det A_j(b)$ along its replaced column $j$ using [[余子式展开|cofactor expansion]]. Each cofactor in that column is still $C_{ij}$ from $A$: computing it deletes column $j$, so every changed entry disappears, and the smaller matrix is unchanged. Its checkerboard multiplier also keeps the same indices. Consequently,
+<!-- bilingual-en:end -->
+
+$b_i$ 是右端向量的第 $i$ 个元素。现在沿 $A_j(b)$ 被替换的第 $j$ 列做[[余子式展开]]。这一列的各代数余子式仍是原来的 $C_{ij}$：计算它时会删去第 $j$ 列，所有被替换的元素随之消失，删剩的小矩阵完全不变；棋盘乘数的指标也没变。因此，
+
+$$\det A_j(b)=\sum_{i=1}^n b_iC_{ij}.$$
+
+<!-- bilingual-en:start -->
+Scalar multiplication commutes in a field, so this is exactly the numerator in $x_j$. The transposition in the adjugate is what matches row $j$ of the inverse with the cofactors of column $j$ of the original matrix.
+<!-- bilingual-en:end -->
+
+域中标量乘法可交换，所以这恰好是 $x_j$ 的分子。伴随矩阵中的转置，使逆矩阵的第 $j$ 行恰好与原矩阵第 $j$ 列的代数余子式相匹配。
+
+<!-- bilingual-en:start -->
+## A second proof from column combinations
+<!-- bilingual-en:end -->
+*从列组合再证明一次*
+
+<!-- bilingual-en:start -->
+The [[Ax的列组合解释|column-combination interpretation]] of $Ax=b$ says $b=\sum_{k=1}^n x_ka_k$. A determinant is linear in one column while the others are fixed; this follows from its row definition and [[行列式转置不变性|transpose invariance]]. Insert that combination into column $j$:
+<!-- bilingual-en:end -->
+
+$Ax=b$ 的[[Ax的列组合解释|列组合解释]]给出 $b=\sum_{k=1}^n x_ka_k$。行列式在其他列固定时对单列线性，这由逐行定义和[[行列式转置不变性]]得到。把这个组合放入第 $j$ 列：
+
+$$
+\det A_j(b)=\sum_{k=1}^n x_k
+\det[a_1\ \cdots\ a_{j-1}\ a_k\ a_{j+1}\ \cdots\ a_n].
+$$
+
+<!-- bilingual-en:start -->
+For $k\ne j$, column $k$ is still present and another copy has been placed in position $j$. The determinant has two equal columns and is zero. Only $k=j$ remains, restoring the original matrix. Thus $\det A_j(b)=x_j\det A$, and division by the nonzero determinant proves the formula. This proof uses the alternating property directly and works over any field, including characteristic two.
+<!-- bilingual-en:end -->
+
+当 $k\ne j$ 时，第 $k$ 列仍在原位置，第 $j$ 列又放入它的一个副本，形成两列相同，行列式为零。只剩 $k=j$，此时恢复原矩阵。因此 $\det A_j(b)=x_j\det A$；再除以非零行列式就得到公式。证明直接使用交替性，适用于任意域，包括特征二。
+
+<!-- bilingual-en:start -->
+## Singular systems and computational use
+<!-- bilingual-en:end -->
 ## 边界与用途
 
-- 必须是方阵且 $\det A\ne0$。若 $\det A=0$，Cramer 的比值公式整体失效；即使某个分量形式上出现 $0/0$，也不能据此区分无解与无穷多解，应回到秩或消元。
-- Cramer 法则适合证明、参数敏感性和很小的符号系统。对大型稠密数值系统，逐列计算 determinant 代价高且会重复工作，通常直接用 LU、QR 等分解。
-- 公式一次给一个分量；如果只关心一个 $x_j$，它在理论推导中可能比写出整个逆矩阵更干净。
 <!-- bilingual-en:start -->
-- The rule requires a square matrix with nonzero determinant. When the determinant vanishes, Cramer's ratio formula is unavailable. Even if one component formally gives $0/0$, that expression does not distinguish inconsistency from infinitely many solutions; use elimination or rank instead.
-- It is useful for proofs, parameter sensitivity, and very small symbolic systems. Large dense numerical systems should normally be solved by factorization.
-- The formula isolates one component, which can be useful when the full inverse is unnecessary.
+The last identity has a useful logical boundary: **if a solution exists**, it holds even when $\det A=0$, because no division was used to derive it. Hence, for a singular square matrix, one nonzero replacement determinant proves that no solution exists. The converse fails: all replacement determinants being zero does not establish consistency.
 <!-- bilingual-en:end -->
 
-> [!question]- 自检
-> 为什么把第 $j$ 列换成 $b=\sum_kx_ka_k$ 后，展开式中只有 $x_j$ 对应的项保留下来？
->
-> **答案：** 其他项把某个已有列 $a_k$ 再放到第 $j$ 列，造成两列相同，行列式为零；$k=j$ 时恢复原矩阵。
+最后那个恒等式有一条有用的逻辑边界：**若解已经存在**，即使 $\det A=0$，它仍然成立，因为推导未做除法。因此，对奇异方阵，只要有一个换列行列式非零，就能断定无解；反过来却不成立，所有换列行列式都为零不能保证有解。
 
+> [!warning] Zero numerators do not settle consistency · 分子全零不能判断是否有解
+> <!-- bilingual-en:start -->
+> Let $A$ be the $2\times2$ zero matrix and $b=(1,0)^T$, where $T$ denotes [[矩阵转置|transpose]]. Each replaced matrix retains a zero column, so $\det A_1(b)=\det A_2(b)=0$. But $Ax=0$ for every $x$, and it can never equal this nonzero $b$. With the same $A$ and $b=0$, every $x$ is a solution instead. Over $\mathbb R$ or $\mathbb C$ this gives infinitely many solutions; over a finite field there are finitely many.
+> <!-- bilingual-en:end -->
+>
+> 令 $A$ 为 $2\times2$ 零矩阵，$b=(1,0)^T$，其中 $T$ 表示[[矩阵转置|转置]]。每张换列矩阵仍保留一列零，所以 $\det A_1(b)=\det A_2(b)=0$；但任何 $x$ 都满足 $Ax=0$，不可能等于这个非零 $b$。若同一个 $A$ 配上 $b=0$，则每个 $x$ 都是解。在 $\mathbb R$ 或 $\mathbb C$ 上，这给出无穷多解；有限域上则只有有限多个。
+
+<!-- bilingual-en:start -->
+Thus an apparent $0/0$ is not a solution or a consistency test. Use [[高斯消元|elimination]] to decide a singular system. Cramer's ratio applies to square matrices with nonzero determinant; it is not a formula for a general rectangular system.
+<!-- bilingual-en:end -->
+
+所以，形式上的 $0/0$ 既不是一个解，也不是相容性检验；奇异系统应使用[[高斯消元|消元]]判断。Cramer 比值公式适用于行列式非零的方阵，并非一般矩形系统的求解公式。
+
+<!-- bilingual-en:start -->
+The rule is useful for proofs, small symbolic systems, and studying how one component depends on parameters while $\det A$ stays nonzero. Computing many replacement determinants for a large dense numerical system repeats work; [[消元与LU分解|LU]] or [[QR分解|QR]] can solve the system directly. For example, LAPACK's `DGESV` solves real square systems using a pivoted LU factorization. Neither Cramer's rule nor that task requires first writing out every entry of the inverse.
+<!-- bilingual-en:end -->
+
+这条规则适合证明、小型符号系统，以及在 $\det A$ 保持非零时研究某个分量如何依赖参数。对大型稠密数值系统，反复计算换列行列式会重复工作；[[消元与LU分解|LU]]或[[QR分解|QR]]可以直接求解。例如 LAPACK 的 `DGESV` 用带换行的 LU 分解解实方阵系统。Cramer 法则和这个求解任务都不要求先写出逆矩阵的全部元素。
+
+> [!question]- Why does only one term survive? · 为什么只剩一项？
+> <!-- bilingual-en:start -->
+> After replacing column $j$ by $b=\sum_kx_ka_k$, every term with $k\ne j$ contains two copies of column $k$. Alternation makes those terms zero; the $k=j$ term is $x_j\det A$.
+> <!-- bilingual-en:end -->
+>
+> 把第 $j$ 列换为 $b=\sum_kx_ka_k$ 后，每个 $k\ne j$ 的项都含两份第 $k$ 列，交替性使它们为零；$k=j$ 的项是 $x_j\det A$。
+
+<!-- bilingual-en:start -->
+## Sources and verification
+<!-- bilingual-en:end -->
 ## 来源与核验
 
-- [[01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses2.7sum.pdf|MIT 18.06SC Session 2.7 summary]]：核对 Cramer 法则与伴随矩阵公式的联系。
-- [[02_Least Squares, Determinants and Eigenvalues#Cramer 法则|课程 Cramer 法则推导]]：核对换列公式、适用条件与奇异系统边界。
 <!-- bilingual-en:start -->
-- [[01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses2.7sum.pdf|MIT 18.06SC Session 2.7 summary]] was checked for Cramer's rule and its relation to the adjugate formula.
-- [[02_Least Squares, Determinants and Eigenvalues#Cramer 法则|The course derivation of Cramer's rule]] was checked for the replacement formula, assumptions, and singular-system boundary.
+- [[01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses2.7sum.pdf#page=2|MIT 18.06SC Session 2.7, pp.1–2]] and [[02_Least Squares, Determinants and Eigenvalues#Cramer 法则|the permanent course derivation]]: inverse/cofactor connection, replaced-column determinants, and the nonzero denominator. Both proofs above state the indices and hypotheses explicitly.
+- [Mathlib, Matrix.Adjugate](https://leanprover-community.github.io/mathlib4_docs/Mathlib/LinearAlgebra/Matrix/Adjugate.html), `cramer_apply`, `cramer_eq_adjugate_mulVec`, and `mulVec_cramer`: the vector of replacement determinants and its adjugate identity without division. The ratio formula separately requires an invertible determinant.
+- [LAPACK, DGESV source](https://netlib.org/lapack/double/dgesv.f), Purpose and `DGETRF`/`DGETRS` calls: solving by factorization. The two-variable example, order-one case, and singular zero-matrix counterexample are checked directly.
 <!-- bilingual-en:end -->
+
+- MIT Session 2.7，第1–2页及永久课程推导：核对逆矩阵与代数余子式的联系、换列行列式及非零分母；正文两条证明明确指标与假设。
+- Mathlib 所列正式声明：核对换列行列式组成的向量及其不含除法的伴随恒等式；比值公式另需行列式可逆。
+- LAPACK `DGESV` 原程序：核对利用分解求解的算法路线；二元例子、一阶情形和奇异零矩阵反例另行直接核算。

@@ -6,9 +6,9 @@
       "x": 0,
       "y": 0,
       "width": 440,
-      "height": 190,
+      "height": 300,
       "color": "5",
-      "text": "## [[总体与样本|总体与样本]]\n\n<!-- bilingual-en:start -->\n*Population and sample*\n<!-- bilingual-en:end -->"
+      "text": "<!-- bilingual-en:start -->\n## [[总体与样本|Population and sample]]\nDefine the target units and how the observed sample was selected. The target mean and the sample mean need not match. Sampling and treatment assignment are separate mechanisms.\n<!-- bilingual-en:end -->\n\n## [[总体与样本]]\n先明确想研究谁，以及观察怎样进入样本。总体均值与本次样本均值不必相等；随机抽样与处理分配是两个机制。"
     },
     {
       "id": "stat",
@@ -16,9 +16,9 @@
       "x": 600,
       "y": 0,
       "width": 440,
-      "height": 190,
+      "height": 300,
       "color": "5",
-      "text": "## [[统计量|统计量]]\n\n<!-- bilingual-en:start -->\n*Statistic*\n<!-- bilingual-en:end -->"
+      "text": "<!-- bilingual-en:start -->\n## [[统计量|Statistic]]\nA known rule turns data into a result: for (2,5,8), the mean is 5. The rule uses no unknown parameter, although its sampling distribution can depend on one.\n<!-- bilingual-en:end -->\n\n## [[统计量]]\n已知规则把数据变成结果；(2,5,8) 的均值为 5。计算不需要未知参数，但规则的抽样分布可以依赖未知参数。"
     },
     {
       "id": "mean",
@@ -26,9 +26,9 @@
       "x": 1200,
       "y": -320,
       "width": 440,
-      "height": 190,
+      "height": 270,
       "color": "5",
-      "text": "## [[样本均值向量|样本均值]]\n\n<!-- bilingual-en:start -->\n*Sample mean*\n<!-- bilingual-en:end -->"
+      "text": "<!-- bilingual-en:start -->\n## [[样本均值向量|Sample mean]]\n\nFor one variable ($p=1$), $\\bar X=n^{-1}\\sum_iX_i$. The vector definition averages each coordinate separately.\n<!-- bilingual-en:end -->\n\n样本进入前是随机统计量，代入当前数据后得到固定的样本均值。"
     },
     {
       "id": "variance",
@@ -36,9 +36,9 @@
       "x": 1800,
       "y": -320,
       "width": 440,
-      "height": 190,
+      "height": 270,
       "color": "6",
-      "text": "## [[样本协方差无偏分母|样本方差与 n−1]]\n\n<!-- bilingual-en:start -->\n*Unbiased covariance divisor*\n<!-- bilingual-en:end -->"
+      "text": "<!-- bilingual-en:start -->\n## [[样本协方差无偏分母|Sample variance and n−1]]\n\nFor iid scalar observations with finite variance $\\sigma^2$ and $n\\ge2$, $s^2=\\sum_i(X_i-\\bar X)^2/(n-1)$ is unbiased for $\\sigma^2$.\n<!-- bilingual-en:end -->\n\n以样本均值中心化时，n−1给无偏方差；有限矩和抽样条件须满足。"
     },
     {
       "id": "order",
@@ -106,9 +106,9 @@
       "x": 1200,
       "y": 640,
       "width": 440,
-      "height": 190,
+      "height": 300,
       "color": "5",
-      "text": "## [[抽样分布|抽样分布]]\n\n<!-- bilingual-en:start -->\n*Sampling distribution*\n<!-- bilingual-en:end -->"
+      "text": "<!-- bilingual-en:start -->\n## [[抽样分布|Sampling distribution]]\nHold the population model, sampling mechanism, sample size and rule fixed. New samples yield a probability distribution of results. It may be discrete; repeated sampling is a conceptual definition, not a data-collection requirement.\n<!-- bilingual-en:end -->\n\n## [[抽样分布]]\n固定总体模型、抽样机制、样本量和规则，观察新样本会产生怎样的结果分布。分布可以离散；不需要真的采集多份样本才存在。"
     },
     {
       "id": "rn",
@@ -126,9 +126,19 @@
       "x": 2400,
       "y": 640,
       "width": 440,
-      "height": 190,
+      "height": 280,
       "color": "6",
-      "text": "## [[样本均值协方差|样本均值方差]]\n\n<!-- bilingual-en:start -->\n*Variance of the sample mean*\n<!-- bilingual-en:end -->"
+      "text": "<!-- bilingual-en:start -->\n## [[样本均值协方差|Variance of the sample mean]]\n\nIn the scalar iid case with finite variance $\\sigma^2$, $\\operatorname{Var}(\\bar X)=\\sigma^2/n$. Dependent observations add cross-covariances.\n<!-- bilingual-en:end -->\n\nn为每份样本中的观测数；增加模拟重复次数R不改变该抽样方差。"
+    },
+    {
+      "id": "p27standarderror",
+      "type": "text",
+      "x": 1200,
+      "y": 1050,
+      "width": 440,
+      "height": 320,
+      "color": "6",
+      "text": "<!-- bilingual-en:start -->\n## [[标准误含义|Standard error]]\nFor a statistic T with finite variance, SE(T)=√Var(T). This is the spread of its sampling distribution. Software usually estimates it from data. It does not measure bias or the spread of individual observations.\n<!-- bilingual-en:end -->\n\n## [[标准误含义|标准误]]\n方差有限时，标准误是统计量抽样方差的平方根。软件通常报告它的估计值；它不衡量偏差，也不是单次观察的标准差。"
     }
   ],
   "edges": [
@@ -157,7 +167,7 @@
       "fromSide": "right",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "估计中心带来 n−1 修正"
+      "label": "iid and finite variance justify the n−1 correction · iid有限方差下的无偏修正"
     },
     {
       "id": "662c58fb922046cd",
@@ -229,7 +239,16 @@
       "fromSide": "right",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "iid 均值：方差 σ²/n，与 R 无关"
+      "label": "iid with finite variance: σ²/n, independent of simulation count R · 有限方差下，R不改变抽样方差"
+    },
+    {
+      "id": "p27disttose",
+      "fromNode": "dist",
+      "fromSide": "bottom",
+      "toNode": "p27standarderror",
+      "toSide": "top",
+      "label": "Finite variance: summarize its spread · 方差有限时概括抽样波动",
+      "toEnd": "arrow"
     }
   ]
 }

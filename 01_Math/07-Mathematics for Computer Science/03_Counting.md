@@ -1674,9 +1674,9 @@ Original paper: [[MIT_OCW_6.042J_Materials/07_Exams/MIT6_042JS15_midterm3.pdf#pa
 *Problem 1 — Scheduling (15 points)*
 <!-- bilingual-en:end -->
 
-题图见 [[MIT_OCW_6.042J_Materials/07_Exams/MIT6_042JS15_midterm3.pdf#page=2|Midterm 3 p. 2]]。[[DAG 与拓扑序等价|DAG]] 的边为
+题图见 [[MIT_OCW_6.042J_Materials/07_Exams/MIT6_042JS15_midterm3.pdf#page=2|Midterm 3 p. 2]]。[[有向无环图|DAG]] 的边为
 <!-- bilingual-en:start -->
-The [[DAG 与拓扑序等价|DAG]] has edges
+The [[有向无环图|DAG]] has edges
 <!-- bilingual-en:end -->
 
 $$

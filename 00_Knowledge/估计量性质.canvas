@@ -6,9 +6,9 @@
       "x": 0,
       "y": 0,
       "width": 440,
-      "height": 190,
+      "height": 300,
       "color": "5",
-      "text": "## [[抽样分布|抽样分布]]\n\n<!-- bilingual-en:start -->\n*Sampling distribution*\n<!-- bilingual-en:end -->"
+      "text": "<!-- bilingual-en:start -->\n## [[抽样分布|Sampling distribution]]\nA rule and a sampling model determine the possible estimates and their probabilities at a fixed sample size. Repeated simulations approximate features of that law.\n<!-- bilingual-en:end -->\n\n## [[抽样分布]]\n给定规则、抽样模型与样本量，便确定可能估计值及其概率；模拟是在近似了解这个分布。"
     },
     {
       "id": "bias",
@@ -16,9 +16,9 @@
       "x": 600,
       "y": -320,
       "width": 440,
-      "height": 190,
+      "height": 300,
       "color": "5",
-      "text": "## [[估计量偏差|偏差：中心减目标]]\n\n<!-- bilingual-en:start -->\n*Bias: centre minus target*\n<!-- bilingual-en:end -->"
+      "text": "<!-- bilingual-en:start -->\n## [[估计量偏差|Estimator bias]]\nWith finite expectation, bias is the sampling mean minus the target. It is fixed at a stated model value and sample size; a single realized error is different.\n<!-- bilingual-en:end -->\n\n## [[估计量偏差|估计量偏差]]\n期望有限时，偏差是抽样均值减目标；给定模型值与样本量后是固定数，不是单次误差。"
     },
     {
       "id": "unbiased",
@@ -26,9 +26,9 @@
       "x": 1200,
       "y": -320,
       "width": 440,
-      "height": 190,
+      "height": 300,
       "color": "5",
-      "text": "## [[估计量无偏性|无偏性]]\n\n<!-- bilingual-en:start -->\n*Unbiasedness*\n<!-- bilingual-en:end -->"
+      "text": "<!-- bilingual-en:start -->\n## [[估计量无偏性|Unbiasedness]]\nFor every allowed parameter value, the estimator has finite expectation equal to its target. Signed errors balance on average; individual answers can still be far away.\n<!-- bilingual-en:end -->\n\n## [[估计量无偏性]]\n每个允许的参数值都要有有限期望且等于目标；平均正确不保证次次估得近。"
     },
     {
       "id": "efficient",
@@ -36,9 +36,9 @@
       "x": 600,
       "y": 0,
       "width": 440,
-      "height": 190,
+      "height": 300,
       "color": "5",
-      "text": "## [[估计量有效性|有效性：限定比较类别]]\n\n<!-- bilingual-en:start -->\n*Efficiency within a stated class*\n<!-- bilingual-en:end -->"
+      "text": "<!-- bilingual-en:start -->\n## [[估计量有效性|Estimator efficiency]]\nCompare variances at the same model, target and sample size, within a stated candidate class. Minimum variance among unbiased rules does not rank all biased alternatives.\n<!-- bilingual-en:end -->\n\n## [[估计量有效性]]\n固定模型、目标和样本量，在指定类别中比较方差；无偏类最优不能替所有有偏方法排序。"
     },
     {
       "id": "consistent",
@@ -46,9 +46,9 @@
       "x": 600,
       "y": 320,
       "width": 440,
-      "height": 190,
+      "height": 300,
       "color": "5",
-      "text": "## [[估计量一致性|一致性]]\n\n<!-- bilingual-en:start -->\n*Consistency*\n<!-- bilingual-en:end -->"
+      "text": "<!-- bilingual-en:start -->\n## [[估计量一致性|Consistency]]\nAs sample size grows, the probability of exceeding any fixed positive error tolerance tends to zero, at each fixed parameter value. This is not a promise of monotone realized errors.\n<!-- bilingual-en:end -->\n\n## [[估计量一致性]]\n每个固定参数值下，超过任意固定正容忍值的概率趋零；实现误差不必逐次下降。"
     },
     {
       "id": "mse",
@@ -56,9 +56,9 @@
       "x": 0,
       "y": 640,
       "width": 440,
-      "height": 190,
+      "height": 300,
       "color": "5",
-      "text": "## [[均方误差|均方误差]]\n\n<!-- bilingual-en:start -->\n*Mean squared error*\n<!-- bilingual-en:end -->"
+      "text": "<!-- bilingual-en:start -->\n## [[均方误差|Mean squared error]]\nAverage the squared distance between an estimator and its fixed target over possible samples. MSE includes both spread and systematic displacement; its units are squared.\n<!-- bilingual-en:end -->\n\n## [[均方误差]]\n在可能样本间平均“估计量减固定目标”的平方；同时计入分散和系统偏移，单位是目标单位的平方。"
     },
     {
       "id": "decomp",
@@ -66,9 +66,9 @@
       "x": 600,
       "y": 640,
       "width": 440,
-      "height": 190,
+      "height": 300,
       "color": "6",
-      "text": "## [[MSE偏差方差分解|MSE = Bias² + Var]]\n\n<!-- bilingual-en:start -->\n*Bias–variance decomposition*\n<!-- bilingual-en:end -->"
+      "text": "<!-- bilingual-en:start -->\n## [[MSE偏差方差分解|Bias–variance decomposition]]\nFor a fixed scalar target and finite second moment, MSE equals variance plus squared bias. This identity requires neither independence nor normality.\n<!-- bilingual-en:end -->\n\n## [[MSE偏差方差分解]]\n固定标量目标、二阶矩有限时，MSE等于方差加偏差平方；恒等式不需要独立性或正态性。"
     },
     {
       "id": "counter1",
@@ -76,9 +76,9 @@
       "x": 1800,
       "y": -320,
       "width": 440,
-      "height": 190,
+      "height": 300,
       "color": "1",
-      "text": "## [[无偏不推出一致|只用 X₁：无偏但不一致]]\n\n<!-- bilingual-en:start -->\n*First observation: unbiased, inconsistent*\n<!-- bilingual-en:end -->"
+      "text": "<!-- bilingual-en:start -->\n## [[无偏不推出一致|Unbiased, yet inconsistent]]\nFor iid normal observations with mean θ and variance 1, using only the first observation stays unbiased. Its nondegenerate error law never changes with n.\n<!-- bilingual-en:end -->\n\n## [[无偏不推出一致]]\n独立同分布正态、均值θ方差1时，永远只用第一个观察仍无偏，但误差分布不随样本量改变。"
     },
     {
       "id": "counter2",
@@ -86,9 +86,9 @@
       "x": 1800,
       "y": 320,
       "width": 440,
-      "height": 190,
+      "height": 300,
       "color": "1",
-      "text": "## [[一致不推出无偏|均值 + 1/n：有偏但一致]]\n\n<!-- bilingual-en:start -->\n*Mean plus 1/n: biased, consistent*\n<!-- bilingual-en:end -->"
+      "text": "<!-- bilingual-en:start -->\n## [[一致不推出无偏|Consistent, yet biased]]\nWhen estimating the population mean θ under the iid normal model with variance 1, the sample mean plus 1/n has bias 1/n and variance 1/n. Both vanish, giving consistency despite finite-sample bias.\n<!-- bilingual-en:end -->\n\n## [[一致不推出无偏]]\n同一单位方差iid正态模型下估计总体均值 θ 时，均值加1/n的偏差和方差均为1/n；二者趋零，但有限样本仍有偏。"
     },
     {
       "id": "shift",
@@ -96,9 +96,9 @@
       "x": 1800,
       "y": 640,
       "width": 440,
-      "height": 190,
+      "height": 300,
       "color": "1",
-      "text": "## [[固定偏移破坏一致性|均值 + 5：集中到错误中心]]\n\n<!-- bilingual-en:start -->\n*Fixed shift: the wrong limit*\n<!-- bilingual-en:end -->"
+      "text": "<!-- bilingual-en:start -->\n## [[固定偏移破坏一致性|A fixed shift gives the wrong limit]]\nAdding a nonzero constant to a consistent estimator shifts its probability limit by that constant. Concentration alone does not ensure concentration on the intended target.\n<!-- bilingual-en:end -->\n\n## [[固定偏移破坏一致性]]\n给一致估计量加非零常数，会把概率极限平移；越来越集中仍可能集中到错误目标。"
     },
     {
       "id": "blue",
@@ -106,9 +106,9 @@
       "x": 1200,
       "y": 0,
       "width": 440,
-      "height": 190,
+      "height": 300,
       "color": "6",
-      "text": "## [[经典 Gauss–Markov 定理|Gauss–Markov：BLUE]]\n\n<!-- bilingual-en:start -->\n*Best linear unbiased estimator*\n<!-- bilingual-en:end -->"
+      "text": "<!-- bilingual-en:start -->\n## [[经典 Gauss–Markov 定理|Classical Gauss–Markov]]\nWith fixed full-column-rank design, zero-mean errors and covariance σ²I, OLS has minimum covariance among linear unbiased rules. Normality is not required.\n<!-- bilingual-en:end -->\n\n## [[经典 Gauss–Markov 定理]]\n固定满列秩设计、误差均值零且协方差σ²I时，OLS在线性无偏规则中协方差最小；不要求正态性。"
     },
     {
       "id": "cr",
@@ -116,9 +116,9 @@
       "x": 1800,
       "y": 0,
       "width": 440,
-      "height": 190,
+      "height": 300,
       "color": "6",
-      "text": "## [[Cramér–Rao下界|Cramér–Rao 下界]]\n\n<!-- bilingual-en:start -->\n*Unbiased variance bound*\n<!-- bilingual-en:end -->"
+      "text": "<!-- bilingual-en:start -->\n## [[Cramér–Rao下界|Cramér–Rao bound]]\nIn a regular scalar model, an unbiased estimator of θ has variance at least 1/I(θ), using full-sample information. Check the differentiation conditions; the bound need not be attained.\n<!-- bilingual-en:end -->\n\n## [[Cramér–Rao下界]]\n正则标量模型中，θ的无偏估计量方差至少为1/I(θ)，I指全样本信息。须核对求导交换条件，下界不保证可达。"
     },
     {
       "id": "conv",
@@ -129,6 +129,46 @@
       "height": 260,
       "color": "5",
       "text": "<!-- bilingual-en:start -->\n## [[依概率收敛|Convergence in probability]]\n\nAt every fixed positive error tolerance, the probability of exceeding it tends to zero.\n<!-- bilingual-en:end -->\n\n对每个固定的正误差容忍值，超差概率趋于零。"
+    },
+    {
+      "id": "p28estimand",
+      "type": "text",
+      "x": -620,
+      "y": 0,
+      "width": 440,
+      "height": 300,
+      "color": "5",
+      "text": "<!-- bilingual-en:start -->\n## [[估计对象三分|Target, rule and realized estimate]]\nFix what is being estimated before judging a rule. Its repeated-sample behavior depends on the target and the data model.\n<!-- bilingual-en:end -->\n\n## [[估计对象三分|目标、规则与估计值]]\n评价规则之前先确定目标；重复样本中的性质取决于目标和数据模型。"
+    },
+    {
+      "id": "p29samplecount",
+      "type": "text",
+      "x": 0,
+      "y": 320,
+      "width": 440,
+      "height": 300,
+      "color": "5",
+      "text": "<!-- bilingual-en:start -->\n## [[样本量与模拟重复次数|Sample size and repetitions]]\nn counts observations used for one estimate; R counts repeated samples. More runs approximate the sampling law without changing the law of a single fixed-n estimate.\n<!-- bilingual-en:end -->\n\n## [[样本量与模拟重复次数]]\nn是一次估计用的观察数，R是重复实验数；固定n时，增加R不改变单个估计量的抽样分布。"
+    },
+    {
+      "id": "p32score",
+      "type": "text",
+      "x": 2400,
+      "y": -320,
+      "width": 440,
+      "height": 300,
+      "color": "5",
+      "text": "<!-- bilingual-en:start -->\n## [[得分函数|Score function]]\nHold the observed data fixed and differentiate log likelihood with respect to the parameter. A regular model gives mean zero when the score and sampling distribution use the same parameter.\n<!-- bilingual-en:end -->\n\n## [[得分函数]]\n固定数据，对参数求对数似然导数。在正则模型中，得分与抽样分布采用同一参数时，其期望为零。"
+    },
+    {
+      "id": "p32fisher",
+      "type": "text",
+      "x": 2400,
+      "y": 0,
+      "width": 440,
+      "height": 300,
+      "color": "5",
+      "text": "<!-- bilingual-en:start -->\n## [[Fisher信息|Fisher information]]\nAverage the squared score over possible data. Specify the parameter scale and full sample; independent regular observations add information. Observed curvature is a separate quantity.\n<!-- bilingual-en:end -->\n\n## [[Fisher信息]]\n在可能数据上平均得分的平方，注明参数尺度与全样本口径。独立正则观测的信息相加；观测曲率另有定义。"
     }
   ],
   "edges": [
@@ -157,7 +197,7 @@
       "fromSide": "right",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "比较同目标、同 n 的方差"
+      "label": "Fix model, target, n and class · 固定模型、目标、n与类别"
     },
     {
       "id": "9ace7e80688b44d6",
@@ -238,7 +278,43 @@
       "fromSide": "right",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "另一个模型与比较范围"
+      "label": "Different assumptions and comparison class · 条件与比较类别不同"
+    },
+    {
+      "id": "p28targetdist",
+      "fromNode": "p28estimand",
+      "fromSide": "right",
+      "toNode": "dist",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "Rule and sampling model induce a law · 规则与抽样模型确定分布"
+    },
+    {
+      "id": "p29distcounts",
+      "fromNode": "dist",
+      "fromSide": "bottom",
+      "toNode": "p29samplecount",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "Repetitions approximate a fixed law · 重复近似既定分布"
+    },
+    {
+      "id": "p32scoreinfo",
+      "fromNode": "p32score",
+      "fromSide": "bottom",
+      "toNode": "p32fisher",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "Expected square · 平方后求期望"
+    },
+    {
+      "id": "p32infocr",
+      "fromNode": "p32fisher",
+      "fromSide": "left",
+      "toNode": "cr",
+      "toSide": "right",
+      "toEnd": "arrow",
+      "label": "Positive finite information + regularity · 正有限信息与正则条件"
     }
   ]
 }

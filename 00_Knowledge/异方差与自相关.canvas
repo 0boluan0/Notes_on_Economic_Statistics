@@ -1,58 +1,498 @@
 {
-	"nodes":[
-		{"id":"err0000000000001","type":"text","text":"# 异方差与自相关 · 学习总图\n\n先把条件均值与误差协方差分开，再区分 $\\Omega$ 的对角线异方差与非对角线依赖；诊断只定位问题，最终按推断、效率或动态建模目标选择方法。\n\n**课程入口：** [[02_Economy/01_Econometrics/07_异方差.md|异方差正文]] → [[02_Economy/01_Econometrics/08_自相关.md|误差自相关正文]]\n\n**本图：** 15 张本主题原子 + 6 张共享原子 + 1 个相邻专题出口；均保留 YAML，但卡片只显示学习语义。","x":0,"y":0,"width":5480,"height":260,"color":"4"},
-		{"id":"err0000000000002","type":"text","text":"## [[零条件均值无偏性]]\n\n$E(u\\mid X)=0$ 控制 OLS 估计误差的中心；它与方差是否恒定是不同假设。","x":0,"y":360,"width":500,"height":220,"color":"6"},
-		{"id":"err0000000000003","type":"text","text":"## [[经典 Gauss–Markov 定理]]\n\n球形误差 $\\Omega=\\sigma^2I$ 支持经典 BLUE；异方差或相关会撤销这部分效率结论。","x":620,"y":360,"width":500,"height":220,"color":"6"},
-		{"id":"err0000000000004","type":"text","text":"## [[标准误口径匹配]]\n\nHC、HAC 与 cluster 允许不同依赖结构；口径来自设计和索引，不来自哪个结果更显著。","x":1240,"y":360,"width":540,"height":220,"color":"6"},
-		{"id":"err0000000000005","type":"text","text":"## [[自协方差与ACF]]\n\nACF 描述序列的滞后相关；回归诊断只关心均值方程之后剩余的误差结构。","x":3700,"y":360,"width":500,"height":220,"color":"6"},
-		{"id":"err0000000000006","type":"text","text":"## [[Ljung-Box检验]]\n\n联合检验选定窗口内多个残差自相关；拟合模型后要按实现调整自由度。","x":4320,"y":360,"width":500,"height":220,"color":"6"},
-		{"id":"err0000000000007","type":"text","text":"## [[聚类标准误边界]]\n\n重复个体或机构内允许相关、组间近似独立；独立信息量主要由 cluster 数决定。","x":4940,"y":360,"width":500,"height":220,"color":"6"},
-		{"id":"err0000000000008","type":"text","text":"## [[异方差]]\n\n$\\Omega$ 的对角元随观测信息改变：给定 $X$ 后误差尺度不恒定。\n\n**不是：** 条件均值非零。","x":0,"y":740,"width":540,"height":240,"color":"3"},
-		{"id":"err0000000000009","type":"text","text":"## [[协方差失效下的OLS]]\n\n零条件均值可保住 OLS 的中心；非球形 $\\Omega$ 会改变协方差、效率和经典检验。\n\n**边界：** 标准误错误没有固定方向。","x":1240,"y":740,"width":900,"height":250,"color":"1"},
-		{"id":"err000000000000a","type":"text","text":"## [[误差序列相关]]\n\n$\\Omega$ 的非对角元非零：不同时点的未解释冲击仍共同变化。\n\n**不是：** $Y_t$ 本身有惯性。","x":3080,"y":740,"width":540,"height":240,"color":"3"},
-		{"id":"err000000000000b","type":"text","text":"## [[残差协方差诊断]]\n\n按时间、拟合值与关键 $X$ 看残差，再看 ACF/PACF；先排除均值错设、趋势、季节、断点与影响点。\n\n**边界：** 残差是生成量，不是真实误差。","x":2180,"y":1080,"width":900,"height":280,"color":"2"},
-		{"id":"err000000000000c","type":"text","text":"## [[Breusch-Pagan检验]]\n\n用预先指定的方差变量解释平方残差；未拒绝表示未发现指定方向的证据，不能证明同方差或排除该方向。","x":0,"y":1450,"width":500,"height":220,"color":"2"},
-		{"id":"err000000000000d","type":"text","text":"## [[White异方差检验]]\n\n加入 $X$、平方与交叉项做广泛检验；维度增长快，拒绝也可能暴露均值错设。","x":620,"y":1450,"width":500,"height":220,"color":"2"},
-		{"id":"err000000000000e","type":"text","text":"## [[Durbin-Watson检验]]\n\n受限静态回归中的一阶误差相关诊断；有滞后因变量或高阶相关时不能机械查表。","x":3700,"y":1450,"width":500,"height":220,"color":"2"},
-		{"id":"err000000000000f","type":"text","text":"## [[Breusch-Godfrey检验]]\n\n保留原回归量并联合检验预设的多个残差滞后；适用于许多动态回归。","x":4320,"y":1450,"width":500,"height":220,"color":"2"},
-		{"id":"err0000000000010","type":"text","text":"### 检验只缩小候选解释\n\n拒绝不识别经济来源，也不自动选择 HC、HAC 或 GLS；先判断相关来自均值遗漏还是剩余协方差。","x":2180,"y":1480,"width":900,"height":220,"color":"1"},
-		{"id":"err0000000000011","type":"text","text":"## [[异方差稳健协方差|HC 协方差]]\n\n独立行下保留 OLS 系数，用平方残差修正异方差推断；报告具体 HC 版本。","x":0,"y":1900,"width":500,"height":230,"color":"5"},
-		{"id":"err0000000000012","type":"text","text":"## [[加权最小二乘|WLS]]\n\n已知独立观测的相对方差时按逆方差加权；它改变各行对系数的影响。","x":620,"y":1900,"width":500,"height":230,"color":"5"},
-		{"id":"err0000000000013","type":"text","text":"## [[广义最小二乘|GLS]]\n\n已知完整 $\\Omega$ 时白化模型；WLS 是 $\\Omega$ 为对角矩阵的特例。","x":1240,"y":1900,"width":500,"height":230,"color":"5"},
-		{"id":"err0000000000014","type":"text","text":"## [[可行GLS|FGLS]]\n\n先估计受限 $\\Omega(\\theta)$ 再做 GLS；效率收益取决于协方差模型是否可信。","x":1860,"y":1900,"width":500,"height":230,"color":"5"},
-		{"id":"err0000000000015","type":"text","text":"## [[AR1准差分|AR(1) 准差分]]\n\n消去 AR(1) 相邻误差相关；CO 丢首期，Prais–Winsten 在平稳设定下保留首期。","x":2480,"y":1900,"width":500,"height":230,"color":"5"},
-		{"id":"err0000000000016","type":"text","text":"## [[HAC协方差|HAC / Newey–West]]\n\n单一等间隔序列中保留 OLS 系数，用核与带宽估计弱依赖下的长期协方差。","x":3700,"y":1900,"width":500,"height":230,"color":"5"},
-		{"id":"err0000000000017","type":"text","text":"## [[误差协方差决策]]\n\n先修均值并确定独立信息单位，再按目标选择：\n\n- 推断：HC / HAC / cluster\n- 效率或预测：WLS / GLS / FGLS\n- 动态本身：重设均值或方差模型","x":1240,"y":2390,"width":1740,"height":300,"color":"4"},
-		{"id":"err0000000000018","type":"text","text":"## 邻接出口：[[条件异方差：ARCH 与 GARCH.canvas|ARCH / GARCH]]\n\n误差水平可以不相关，而平方冲击仍可预测。条件波动是独立专题，不是普通序列相关的通用补救。","x":3700,"y":2390,"width":1120,"height":240,"color":"4"}
-	],
-	"edges":[
-		{"id":"erre000000000001","fromNode":"err0000000000008","fromSide":"right","toNode":"err0000000000009","toSide":"left","label":"对角线失去常数方差","toEnd":"arrow"},
-		{"id":"erre000000000002","fromNode":"err000000000000a","fromSide":"left","toNode":"err0000000000009","toSide":"right","label":"非对角线出现依赖","toEnd":"arrow"},
-		{"id":"erre000000000003","fromNode":"err0000000000002","fromSide":"bottom","toNode":"err0000000000009","toSide":"top","label":"零条件均值另管系数中心","toEnd":"arrow"},
-		{"id":"erre000000000004","fromNode":"err0000000000003","fromSide":"bottom","toNode":"err0000000000009","toSide":"top","label":"球形误差另管 BLUE 与经典方差","toEnd":"arrow"},
-		{"id":"erre000000000005","fromNode":"err0000000000008","fromSide":"bottom","toNode":"err000000000000b","toSide":"left","label":"用残差尺度寻找证据","toEnd":"arrow"},
-		{"id":"erre000000000006","fromNode":"err000000000000a","fromSide":"bottom","toNode":"err000000000000b","toSide":"right","label":"用时间路径与相关图寻找证据","toEnd":"arrow"},
-		{"id":"erre000000000007","fromNode":"err0000000000005","fromSide":"bottom","toNode":"err000000000000b","toSide":"top","label":"ACF 进入残差而非原序列诊断","toEnd":"arrow"},
-		{"id":"erre000000000008","fromNode":"err000000000000b","fromSide":"left","toNode":"err000000000000c","toSide":"right","label":"检验指定方差方向","toEnd":"arrow"},
-		{"id":"erre000000000009","fromNode":"err000000000000b","fromSide":"left","toNode":"err000000000000d","toSide":"right","label":"检验广泛平方残差模式","toEnd":"arrow"},
-		{"id":"erre00000000000a","fromNode":"err000000000000b","fromSide":"right","toNode":"err000000000000e","toSide":"left","label":"受限地检验一阶相关","toEnd":"arrow"},
-		{"id":"erre00000000000b","fromNode":"err000000000000b","fromSide":"right","toNode":"err000000000000f","toSide":"left","label":"联合检验多个残差滞后","toEnd":"arrow"},
-		{"id":"erre00000000000c","fromNode":"err0000000000006","fromSide":"bottom","toNode":"err000000000000f","toSide":"top","label":"区分回归 BG 与序列联合 Q 检验","toEnd":"arrow"},
-		{"id":"erre00000000000d","fromNode":"err000000000000c","fromSide":"right","toNode":"err0000000000010","toSide":"left","label":"拒绝不直接指定补救","toEnd":"arrow"},
-		{"id":"erre00000000000e","fromNode":"err000000000000d","fromSide":"right","toNode":"err0000000000010","toSide":"left","label":"拒绝还需排查均值错设","toEnd":"arrow"},
-		{"id":"erre00000000000f","fromNode":"err000000000000e","fromSide":"left","toNode":"err0000000000010","toSide":"right","label":"一阶证据不等于 AR(1) 模型成立","toEnd":"arrow"},
-		{"id":"erre000000000010","fromNode":"err000000000000f","fromSide":"left","toNode":"err0000000000010","toSide":"right","label":"高阶拒绝也不识别遗漏动态","toEnd":"arrow"},
-		{"id":"erre000000000011","fromNode":"err0000000000010","fromSide":"bottom","toNode":"err0000000000017","toSide":"top","label":"先解释机制，再按目标选方法","toEnd":"arrow"},
-		{"id":"erre000000000012","fromNode":"err0000000000004","fromSide":"bottom","toNode":"err0000000000011","toSide":"top","label":"独立行异方差使用 HC","toEnd":"arrow"},
-		{"id":"erre000000000013","fromNode":"err0000000000004","fromSide":"bottom","toNode":"err0000000000016","toSide":"top","label":"单序列弱依赖使用 HAC","toEnd":"arrow"},
-		{"id":"erre000000000014","fromNode":"err0000000000007","fromSide":"bottom","toNode":"err0000000000017","toSide":"right","label":"重复单位按 cluster 结构推断","toEnd":"arrow"},
-		{"id":"erre000000000015","fromNode":"err0000000000008","fromSide":"bottom","toNode":"err0000000000012","toSide":"top","label":"可信方差形状允许逆方差加权","toEnd":"arrow"},
-		{"id":"erre000000000016","fromNode":"err0000000000012","fromSide":"right","toNode":"err0000000000013","toSide":"left","label":"从对角权重推广到完整协方差","toEnd":"arrow"},
-		{"id":"erre000000000017","fromNode":"err0000000000013","fromSide":"right","toNode":"err0000000000014","toSide":"left","label":"未知 Ω 先估计再代入","toEnd":"arrow"},
-		{"id":"erre000000000018","fromNode":"err0000000000014","fromSide":"right","toNode":"err0000000000015","toSide":"left","label":"AR(1) FGLS 采用准差分","toEnd":"arrow"},
-		{"id":"erre000000000019","fromNode":"err0000000000011","fromSide":"bottom","toNode":"err0000000000017","toSide":"left","label":"只修横截面推断","toEnd":"arrow"},
-		{"id":"erre00000000001a","fromNode":"err0000000000016","fromSide":"bottom","toNode":"err0000000000017","toSide":"right","label":"只修时间序列推断","toEnd":"arrow"},
-		{"id":"erre00000000001b","fromNode":"err0000000000013","fromSide":"bottom","toNode":"err0000000000017","toSide":"top","label":"可信 Ω 可追求效率","toEnd":"arrow"},
-		{"id":"erre00000000001c","fromNode":"err0000000000017","fromSide":"right","toNode":"err0000000000018","toSide":"left","label":"平方冲击动态进入条件波动专题","toEnd":"arrow"}
-	]
+  "nodes": [
+    {
+      "id": "err0000000000001",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n# Heteroskedasticity and serial correlation\nStart with the regression target and the information being conditioned on. Unequal conditional variances and nonzero cross-period covariances are separate features. Diagnostics provide evidence; inference, efficient estimation and dynamic modelling have different requirements.\n<!-- bilingual-en:end -->\n\n# 异方差与自相关 · 学习总图\n先明确回归目标与条件信息，再区分条件方差不等和跨期协方差非零。诊断提供线索；推断、有效估计与动态建模各有条件。\n\n**课程入口：** [[02_Economy/01_Econometrics/07_异方差.md|异方差正文]] → [[02_Economy/01_Econometrics/08_自相关.md|误差自相关正文]]",
+      "x": 0,
+      "y": 0,
+      "width": 5480,
+      "height": 260,
+      "color": "4"
+    },
+    {
+      "id": "err0000000000002",
+      "type": "text",
+      "text": "## [[零条件均值无偏性]]\n\n$E(u\\mid X)=0$ 控制 OLS 估计误差的中心；它与方差是否恒定是不同假设。",
+      "x": 0,
+      "y": 360,
+      "width": 500,
+      "height": 220,
+      "color": "6"
+    },
+    {
+      "id": "err0000000000003",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[经典 Gauss–Markov 定理|The spherical-error guarantee]]\n\nWith finite second moments, a full-column-rank fixed design and zero error mean, $\\Omega=\\sigma^2I$ gives the classical covariance and BLUE guarantee. A particular nonspherical model can also have BLUE OLS.\n<!-- bilingual-en:end -->\n\n有限二阶矩、固定满列秩设计与零误差均值下，球形协方差给出经典方差与 BLUE 保证。这是充分条件；特定非球形模型中的 OLS 也可能仍是 BLUE。",
+      "x": 620,
+      "y": 360,
+      "width": 500,
+      "height": 310,
+      "color": "6"
+    },
+    {
+      "id": "err0000000000004",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[标准误口径匹配|Matching the covariance estimator]]\nChoose HC, HAC or clustering from the design and dependence structure, with the required sample-size regime and reference law. A larger robust standard error is not guaranteed, and an apparently more significant result is not a selection rule.\n<!-- bilingual-en:end -->\n\n## [[标准误口径匹配]]\n按设计与依赖结构选择 HC、HAC 或聚类，并核对相应样本增长条件及参考分布。稳健标准误未必更大，也不能按哪个结果更显著来挑选。",
+      "x": 1240,
+      "y": 360,
+      "width": 540,
+      "height": 350,
+      "color": "6"
+    },
+    {
+      "id": "err0000000000005",
+      "type": "text",
+      "text": "## [[自协方差与ACF]]\n\nACF 描述序列的滞后相关；回归诊断只关心均值方程之后剩余的误差结构。",
+      "x": 3700,
+      "y": 360,
+      "width": 500,
+      "height": 220,
+      "color": "6"
+    },
+    {
+      "id": "err0000000000006",
+      "type": "text",
+      "text": "## [[Ljung-Box检验]]\n\n联合检验选定窗口内多个残差自相关；拟合模型后要按实现调整自由度。",
+      "x": 4320,
+      "y": 360,
+      "width": 500,
+      "height": 220,
+      "color": "6"
+    },
+    {
+      "id": "err0000000000007",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[聚类标准误边界|Cluster-robust inference]]\n\nChoose clusters from the design and dependence mechanism. Standard one-way theory needs many conditionally independent clusters plus regularity; few clusters or dominance by a few clusters can invalidate its approximation. Arbitrary cross-cluster dependence is outside that model.\n<!-- bilingual-en:end -->\n\n按设计与依赖机制选簇。常规单向聚类理论需要大量条件独立簇及正则条件；簇少或少数簇主导时近似可能失效。不能允许任意跨簇依赖。",
+      "x": 4940,
+      "y": 360,
+      "width": 500,
+      "height": 320,
+      "color": "6"
+    },
+    {
+      "id": "err0000000000008",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[异方差|Heteroskedasticity]]\nConditional error variance changes with the stated information. A correct mean and iid sampling of complete observations can coexist with it. Unequal diagonal variances do not by themselves imply cross-observation dependence.\n<!-- bilingual-en:end -->\n\n## [[异方差]]\n给定信息后的误差方差随信息改变。均值正确、完整观测 iid 抽样，都可以与异方差并存；对角方差不等本身不说明观测间依赖。",
+      "x": 0,
+      "y": 740,
+      "width": 540,
+      "height": 310,
+      "color": "3"
+    },
+    {
+      "id": "err0000000000009",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[协方差失效下的OLS|OLS with nonspherical errors]]\n\nFor a fixed full-column-rank design and finite second moments, zero conditional error mean preserves OLS unbiasedness, not automatically consistency. Nonspherical covariance generally removes the classical variance and BLUE guarantees; particular designs may retain them. A familiar covariance formula does not itself validate the residual variance estimate.\n<!-- bilingual-en:end -->\n\n固定满列秩设计与有限二阶矩下，零条件误差均值保留 OLS 无偏性，不自动推出一致性。非球形协方差一般使经典方差与 BLUE 失去保证，特定设计仍可能保留；公式恰巧相同也不保证残差方差估计有效。",
+      "x": 1240,
+      "y": 740,
+      "width": 900,
+      "height": 280,
+      "color": "1"
+    },
+    {
+      "id": "err000000000000a",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[误差序列相关|Serial correlation in errors]]\nErrors at different dates have nonzero covariance relative to the stated information. Equal variances do not rule it out. Fitting can correlate residuals even when errors are independent; a persistent outcome alone is not a diagnosis.\n<!-- bilingual-en:end -->\n\n## [[误差序列相关]]\n在指定条件信息下，不同时点误差的协方差非零。同方差不排除序列相关；误差独立时拟合也可能使残差相关，结果变量有持续性也不能单独诊断误差。",
+      "x": 3080,
+      "y": 740,
+      "width": 540,
+      "height": 310,
+      "color": "3"
+    },
+    {
+      "id": "err000000000000b",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[残差协方差诊断|Residual scale and dependence]]\nFitting transforms the errors: residual variances and correlations can differ even under spherical errors. Inspect actual order, predictors, leverage and sampling units. Curvature, scale changes and dependence have competing explanations; a pattern is a clue, not a unique diagnosis.\n<!-- bilingual-en:end -->\n\n## [[残差协方差诊断]]\n拟合会变换误差：误差球形时，残差也可能方差不等且相关。结合真实顺序、解释变量、杠杆与抽样单位检查；曲率、尺度变化和依赖各有竞争解释，图案是线索，不是唯一诊断。",
+      "x": 2180,
+      "y": 1080,
+      "width": 900,
+      "height": 300,
+      "color": "2"
+    },
+    {
+      "id": "err000000000000c",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[Breusch-Pagan检验|Breusch–Pagan / Koenker]]\nRegress squared residuals on prespecified variance predictors. Normal-theory BP and studentized Koenker use different scales; report the version and effective rank. The chi-squared comparison needs sampling, moment and design conditions.\n<!-- bilingual-en:end -->\n\n## [[Breusch-Pagan检验]]\n平方残差对预定方差变量回归。正态 BP 与学生化 Koenker 使用不同尺度；报告版本和有效秩。卡方比较还需抽样、矩与设计条件。",
+      "x": 0,
+      "y": 1450,
+      "width": 500,
+      "height": 330,
+      "color": "2"
+    },
+    {
+      "id": "err000000000000d",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[White异方差检验|White test]]\nUse nonredundant predictors, squares and products. Degrees of freedom follow actual rank. The usual nR² calibration needs more than equal variances; a wrong mean can also make squared residuals predictable. Testing and HC covariance estimation are different operations.\n<!-- bilingual-en:end -->\n\n## [[White异方差检验]]\n使用去重后的解释变量、平方和乘积，自由度按实际秩确定。常见 nR² 校准不只要求方差相等；错误均值也能使平方残差可预测。检验与 HC 协方差估计各有职责。",
+      "x": 620,
+      "y": 1450,
+      "width": 500,
+      "height": 350,
+      "color": "2"
+    },
+    {
+      "id": "err000000000000e",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[Durbin-Watson检验|Durbin–Watson]]\nCompare successive residual differences with total residual size. The exact identity includes endpoints; near two does not prove zero error correlation. Classical calibration depends on the design and Gaussian spherical-null conditions; ordinary tables generally fail with lagged outcomes.\n<!-- bilingual-en:end -->\n\n## [[Durbin-Watson检验]]\n比较相邻残差变化与总残差大小。精确恒等式含首尾修正，接近二不证明误差零相关。经典校准依赖设计及正态球形零假设；含滞后因变量时普通表一般失效。",
+      "x": 3700,
+      "y": 1450,
+      "width": 500,
+      "height": 350,
+      "color": "2"
+    },
+    {
+      "id": "err000000000000f",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[Breusch-Godfrey检验|Breusch–Godfrey]]\nRetain original regressors and test a prechosen lag window. Record actual auxiliary rows, initialization and rank. The nR² law is asymptotic, requires valid model and moment conditions, and is not generally robust to conditional heteroskedasticity.\n<!-- bilingual-en:end -->\n\n## [[Breusch-Godfrey检验]]\n保留原回归量，检验预定滞后窗口。记录实际辅助样本、初始处理和秩。nR² 依赖有效模型与矩条件下的渐近参考，一般不抵抗条件异方差。",
+      "x": 4320,
+      "y": 1450,
+      "width": 500,
+      "height": 350,
+      "color": "2"
+    },
+    {
+      "id": "err0000000000010",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n### Interpret the tested restrictions\nRejection challenges a null together with its maintained assumptions; it does not identify an economic cause or automatically choose HC, HAC or GLS. Nonrejection does not verify the model. Return to the target and the proposed generating mechanism.\n<!-- bilingual-en:end -->\n\n### 解释被检验的限制\n拒绝针对零假设连同维持假设，不能识别经济原因，也不自动选出 HC、HAC 或 GLS。未拒绝不验证模型；应回到估计对象与生成机制。",
+      "x": 2180,
+      "y": 1480,
+      "width": 900,
+      "height": 270,
+      "color": "1"
+    },
+    {
+      "id": "err0000000000011",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[异方差稳健协方差|Heteroskedasticity-robust covariance]]\nIn the independent-observation setting, HC uses squared residual contributions while retaining OLS coefficients. HC0–HC3 differ in finite-sample adjustments; HC alone does not cover serial or within-cluster dependence. Report the variant and calibration.\n<!-- bilingual-en:end -->\n\n## [[异方差稳健协方差|HC 协方差]]\n在观测独立的设定下，HC 用平方残差贡献估计协方差，保留 OLS 系数。HC0–HC3 的有限样本修正不同；仅用 HC 不涵盖时间或组内依赖，应报告版本与校准。",
+      "x": 0,
+      "y": 1900,
+      "width": 500,
+      "height": 350,
+      "color": "5"
+    },
+    {
+      "id": "err0000000000012",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[加权最小二乘|Weighted least squares]]\nWeight squared residuals by positive row weights. With full column rank and finite second moments, known inverse relative variances give BLUE for a correct linear mean and uncorrelated errors. Transform every column, including the intercept. Arbitrary weights do not inherit that efficiency guarantee.\n<!-- bilingual-en:end -->\n\n## [[加权最小二乘|WLS]]\n用正权重衡量残差平方。满列秩与有限二阶矩下，线性均值正确且误差不相关时，已知相对方差的倒数支持 BLUE 比较；整行变换包含截距。任意权重不自动继承该效率保证。",
+      "x": 620,
+      "y": 1900,
+      "width": 500,
+      "height": 350,
+      "color": "5"
+    },
+    {
+      "id": "err0000000000013",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[广义最小二乘|Generalized least squares]]\nUse a known positive definite covariance shape, including cross-covariances. Whitening gives equal variances and zero covariances; independence needs an extra distributional argument. GLS is BLUE under full column rank and the stated mean and moment conditions, with possible ties.\n<!-- bilingual-en:end -->\n\n## [[广义最小二乘|GLS]]\n使用已知正定协方差形状及交叉协方差。白化得到等方差与零协方差；独立还需分布论证。满列秩及给定均值与矩条件下 GLS 为 BLUE，允许并列最优。",
+      "x": 1240,
+      "y": 1900,
+      "width": 500,
+      "height": 350,
+      "color": "5"
+    },
+    {
+      "id": "err0000000000014",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[可行GLS|Feasible GLS]]\nEstimate a structured positive definite covariance model, then refit. Same-sample estimated weights need a new statistical argument: consistency and first-order GLS equivalence have additional conditions. Misspecification may lose efficiency or invalidate model-based standard errors.\n<!-- bilingual-en:end -->\n\n## [[可行GLS|FGLS]]\n估计有结构的正定协方差模型，再重拟合。同样本估计权重需另作统计论证；一致性与一阶 GLS 等价各有额外条件。错设可能损失效率或使模型标准误失效。",
+      "x": 1860,
+      "y": 1900,
+      "width": 500,
+      "height": 350,
+      "color": "5"
+    },
+    {
+      "id": "err0000000000015",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[AR1准差分|AR(1) quasi-differencing]]\nTransform the entire equation, including its intercept. With known |ρ|<1 and the specified stationary initial covariance, Prais–Winsten rescales the first row; Cochrane–Orcutt drops only the first transformed equation. Estimated ρ needs separate FGLS justification.\n<!-- bilingual-en:end -->\n\n## [[AR1准差分]]\n整条方程连同截距一起变换。已知 |ρ|<1 且满足指定平稳初始协方差时，Prais–Winsten 缩放首行；Cochrane–Orcutt 只丢第一条变换方程。估计 ρ 还需另作 FGLS 论证。",
+      "x": 2480,
+      "y": 1900,
+      "width": 500,
+      "height": 380,
+      "color": "5"
+    },
+    {
+      "id": "err0000000000016",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[HAC协方差|HAC / Newey–West]]\nKeep OLS coefficients and estimate long-run uncertainty from lagged residual contributions in one ordered series. Consistency needs moment, dependence and bandwidth conditions. A fixed bandwidth can miss the target; ordinary HAC is not justified by stacking panel rows.\n<!-- bilingual-en:end -->\n\n## [[HAC协方差|HAC / Newey–West]]\n保留 OLS 系数，用一条有序序列中滞后残差贡献估计长期不确定性。一致性需要矩、依赖和带宽条件；固定带宽可能漏掉目标，把面板串行也不能为普通 HAC 辩护。",
+      "x": 3700,
+      "y": 1900,
+      "width": 500,
+      "height": 350,
+      "color": "5"
+    },
+    {
+      "id": "err0000000000017",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[误差协方差决策|Choosing a covariance method]]\nState the target and information units first: a descriptive projection, a conditional mean and a causal effect make different claims. HC/HAC/clustering change uncertainty; WLS/GLS change the fit and can change a projection target. Match the covariance model and reference law to the design.\n<!-- bilingual-en:end -->\n\n## [[误差协方差决策]]\n先明确目标和信息单位：描述性投影、条件均值和因果效应承担不同主张。HC/HAC/聚类改变不确定性；WLS/GLS 改变拟合，也可能改变投影目标。协方差模型与参考分布都须匹配设计。",
+      "x": 1240,
+      "y": 2390,
+      "width": 1740,
+      "height": 320,
+      "color": "4"
+    },
+    {
+      "id": "err0000000000018",
+      "type": "text",
+      "text": "## 邻接出口：[[条件异方差：ARCH 与 GARCH.canvas|ARCH / GARCH]]\n\n误差水平可以不相关，而平方冲击仍可预测。条件波动是独立专题，不是普通序列相关的通用补救。",
+      "x": 3700,
+      "y": 2390,
+      "width": 1120,
+      "height": 240,
+      "color": "4"
+    }
+  ],
+  "edges": [
+    {
+      "id": "erre000000000001",
+      "fromNode": "err0000000000008",
+      "fromSide": "right",
+      "toNode": "err0000000000009",
+      "toSide": "left",
+      "label": "Unequal conditional diagonal variances · 条件对角方差不等",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "erre000000000002",
+      "fromNode": "err000000000000a",
+      "fromSide": "left",
+      "toNode": "err0000000000009",
+      "toSide": "right",
+      "label": "Nonzero cross-period covariance · 跨期协方差非零",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "erre000000000003",
+      "fromNode": "err0000000000002",
+      "fromSide": "bottom",
+      "toNode": "err0000000000009",
+      "toSide": "top",
+      "label": "零条件均值另管系数中心",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "erre000000000004",
+      "fromNode": "err0000000000003",
+      "fromSide": "bottom",
+      "toNode": "err0000000000009",
+      "toSide": "top",
+      "label": "Spherical covariance is sufficient · 球形协方差为充分保证",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "erre000000000005",
+      "fromNode": "err0000000000008",
+      "fromSide": "bottom",
+      "toNode": "err000000000000b",
+      "toSide": "left",
+      "label": "Scale clues also reflect mean and leverage · 尺度线索也受均值与杠杆影响",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "erre000000000006",
+      "fromNode": "err000000000000a",
+      "fromSide": "bottom",
+      "toNode": "err000000000000b",
+      "toSide": "right",
+      "label": "Ordered patterns require fitting and mean checks · 时序图案须结合拟合与均值检查",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "erre000000000007",
+      "fromNode": "err0000000000005",
+      "fromSide": "bottom",
+      "toNode": "err000000000000b",
+      "toSide": "top",
+      "label": "ACF 进入残差而非原序列诊断",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "erre000000000008",
+      "fromNode": "err000000000000b",
+      "fromSide": "left",
+      "toNode": "err000000000000c",
+      "toSide": "right",
+      "label": "检验指定方差方向",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "erre000000000009",
+      "fromNode": "err000000000000b",
+      "fromSide": "left",
+      "toNode": "err000000000000d",
+      "toSide": "right",
+      "label": "检验广泛平方残差模式",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "erre00000000000a",
+      "fromNode": "err000000000000b",
+      "fromSide": "right",
+      "toNode": "err000000000000e",
+      "toSide": "left",
+      "label": "Lag-one comparison with design-specific calibration · 一阶比较须按设计校准",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "erre00000000000b",
+      "fromNode": "err000000000000b",
+      "fromSide": "right",
+      "toNode": "err000000000000f",
+      "toSide": "left",
+      "label": "Test chosen residual lags while retaining X · 保留 X 检验选定残差滞后",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "erre00000000000c",
+      "fromNode": "err0000000000006",
+      "fromSide": "bottom",
+      "toNode": "err000000000000f",
+      "toSide": "top",
+      "label": "Regression auxiliary fit versus residual-series Q test · 区分回归辅助拟合与残差序列 Q 检验",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "erre00000000000d",
+      "fromNode": "err000000000000c",
+      "fromSide": "right",
+      "toNode": "err0000000000010",
+      "toSide": "left",
+      "label": "拒绝不直接指定补救",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "erre00000000000e",
+      "fromNode": "err000000000000d",
+      "fromSide": "right",
+      "toNode": "err0000000000010",
+      "toSide": "left",
+      "label": "拒绝还需排查均值错设",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "erre00000000000f",
+      "fromNode": "err000000000000e",
+      "fromSide": "left",
+      "toNode": "err0000000000010",
+      "toSide": "right",
+      "label": "A rejection does not identify an AR(1) law · 拒绝不识别 AR(1) 定律",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "erre000000000010",
+      "fromNode": "err000000000000f",
+      "fromSide": "left",
+      "toNode": "err0000000000010",
+      "toSide": "right",
+      "label": "Rejection does not identify the omitted dynamics · 拒绝不识别遗漏的动态机制",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "erre000000000011",
+      "fromNode": "err0000000000010",
+      "fromSide": "bottom",
+      "toNode": "err0000000000017",
+      "toSide": "top",
+      "label": "Return to the estimand, design and mechanism · 回到目标、设计与机制",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "erre000000000012",
+      "fromNode": "err0000000000004",
+      "fromSide": "bottom",
+      "toNode": "err0000000000011",
+      "toSide": "top",
+      "label": "Independent-observation HC needs its regularity conditions · 独立观测下 HC 仍须正则条件",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "erre000000000013",
+      "fromNode": "err0000000000004",
+      "fromSide": "bottom",
+      "toNode": "err0000000000016",
+      "toSide": "top",
+      "label": "Time-series HAC needs moments, dependence and bandwidth conditions · 时间序列 HAC 须矩、依赖与带宽条件",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "erre000000000014",
+      "fromNode": "err0000000000007",
+      "fromSide": "bottom",
+      "toNode": "err0000000000017",
+      "toSide": "right",
+      "label": "Match clustering to design and asymptotics · 按设计及大样本条件选择聚类",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "erre000000000015",
+      "fromNode": "err0000000000008",
+      "fromSide": "bottom",
+      "toNode": "err0000000000012",
+      "toSide": "top",
+      "label": "可信方差形状允许逆方差加权",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "erre000000000016",
+      "fromNode": "err0000000000012",
+      "fromSide": "right",
+      "toNode": "err0000000000013",
+      "toSide": "left",
+      "label": "从对角权重推广到完整协方差",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "erre000000000017",
+      "fromNode": "err0000000000013",
+      "fromSide": "right",
+      "toNode": "err0000000000014",
+      "toSide": "left",
+      "label": "未知 Ω 先估计再代入",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "erre000000000018",
+      "fromNode": "err0000000000014",
+      "fromSide": "right",
+      "toNode": "err0000000000015",
+      "toSide": "left",
+      "label": "Estimated AR(1) correlation gives a plug-in transformation · 估计 AR(1) 相关参数后代入变换",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "erre000000000019",
+      "fromNode": "err0000000000011",
+      "fromSide": "bottom",
+      "toNode": "err0000000000017",
+      "toSide": "left",
+      "label": "Change covariance while retaining coefficients · 保留系数，改变协方差估计",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "erre00000000001a",
+      "fromNode": "err0000000000016",
+      "fromSide": "bottom",
+      "toNode": "err0000000000017",
+      "toSide": "right",
+      "label": "Keep coefficients; justify long-run covariance and calibration · 保留系数，论证长期协方差与校准",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "erre00000000001b",
+      "fromNode": "err0000000000013",
+      "fromSide": "bottom",
+      "toNode": "err0000000000017",
+      "toSide": "top",
+      "label": "可信 Ω 可追求效率",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "erre00000000001c",
+      "fromNode": "err0000000000017",
+      "fromSide": "right",
+      "toNode": "err0000000000018",
+      "toSide": "left",
+      "label": "平方冲击动态进入条件波动专题",
+      "toEnd": "arrow"
+    }
+  ]
 }

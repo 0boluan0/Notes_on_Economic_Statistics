@@ -1,14 +1,12 @@
 ---
 aliases:
-  - "$C^2$ 函数驻点处的奇异半定 Hessian 不能单独判断局部极值类型"
-  - "驻点处的奇异半定 Hessian 不能单独判断局部极值类型"
-  - A singular semidefinite Hessian at a stationary point is generally inconclusive
+  - "Singular semidefinite Hessian test"
+  - "Inconclusive semidefinite Hessian test"
 student_os: knowledge-atom
 atom_id: LA-SPD-029
 atom_set: symmetric-positive-definite
 atom_type: diagnostic-boundary
 status: source-checked
-mastery_state: unassessed
 requires:
   - "[[半正定矩阵]]"
   - "[[多元Taylor近似]]"
@@ -23,67 +21,140 @@ part_of:
   - "[[多元优化.canvas]]"
 ---
 
-# $C^2$ 函数驻点处的奇异半定 Hessian 不能单独判断局部极值类型
 <!-- bilingual-en:start -->
-*A singular semidefinite Hessian at a stationary point is not enough to determine the local-extremum type*
+# When the semidefinite Hessian test is inconclusive
 <!-- bilingual-en:end -->
 
-> [!summary] 二阶检验的边界
-> 设 $f$ 在驻点 $x_*$ 附近为 $C^2$。若 $\nabla^2f(x_*)$ 半正定但非正定，或半负定但非负定，二阶检验一般没有结论：Hessian 的零方向会让二次项消失，而未显示的高阶项可能把该方向弯向上、弯向下，或造成鞍点。
+*奇异半定 Hessian 的判别边界*
+
+<!-- bilingual-en:start -->
+A Hessian can capture upward curvature in some directions while saying nothing decisive about others. At a stationary point, a **singular semidefinite Hessian** leaves at least one direction with zero quadratic change. Terms beyond that quadratic approximation can determine what happens there. Consequently the Hessian alone may not distinguish a minimum from a saddle, or a strict minimum from a non-strict one.
+<!-- bilingual-en:end -->
+
+Hessian 可能抓住某些方向向上的二阶弯曲，却无法决定其他方向的行为。在驻点处，**奇异半定 Hessian** 至少留下一个二次变化为零的方向；二次近似以外的项可能决定那里发生什么。因此，仅凭 Hessian 未必能区分极小点与鞍点，也未必能区分严格和非严格极小。
+
+<!-- bilingual-en:start -->
+The simplest comparison keeps almost everything the same:
+<!-- bilingual-en:end -->
+
+最直接的比较，是只改变一个二次近似看不到的项：
+
+$$f_+(x,y)=x^2+y^4,\qquad f_-(x,y)=x^2-y^4.$$
+
+<!-- bilingual-en:start -->
+At the origin both functions have value $0$, gradient $0$, and the same [[Hessian矩阵|Hessian]]:
+<!-- bilingual-en:end -->
+
+在原点，两函数的值和梯度都为 $0$，而且具有相同的[[Hessian矩阵]]：
+
+$$H_{f_+}(0,0)=H_{f_-}(0,0)=\begin{pmatrix}2&0\\0&0\end{pmatrix}.$$
+
+> [!example] Same matrix, different answer · 同一矩阵，两种结论
 > <!-- bilingual-en:start -->
-> At a $C^2$ stationary point, a singular positive- or negative-semidefinite Hessian is generally inconclusive. The quadratic term vanishes along its null directions, leaving higher-order terms free to create a minimum, a maximum, or a saddle.
+> For $f_+$, both terms are nonnegative and their sum is zero only at the origin, so the origin is a strict minimum. For $f_-$, values are positive at $(t,0)$ and negative at $(0,t)$ for every $t\ne0$, so the origin is a saddle. The Hessian misses the sign of $y^4$ because its second derivative is zero at $y=0$.
 > <!-- bilingual-en:end -->
-
-两个函数
-$$
-f_+(x,y)=x^2+y^4,
-\qquad
-f_-(x,y)=x^2-y^4
-$$
-在原点都有
-$$
-\nabla f_\pm(0,0)=0,
-\qquad
-\nabla^2f_\pm(0,0)=\begin{bmatrix}2&0\\0&0\end{bmatrix}\succeq0.
-$$
-但 $f_+$ 在原点有严格局部极小，而 $f_-$ 沿 $x$ 轴为正、沿 $y$ 轴为负，所以原点是鞍点。同一个半正定 Hessian 对应两种不同局部行为，已经足以证明二阶信息不完备。
-<!-- bilingual-en:start -->
-The two displayed functions have the same positive-semidefinite Hessian $\operatorname{diag}(2,0)$ at the origin. The first has a strict local minimum; the second is positive along the $x$ axis and negative along the $y$ axis, so it has a saddle. Identical second-order data can therefore lead to different local behaviour.
-<!-- bilingual-en:end -->
-
-严格定号时情况不同：正定 Hessian 推出严格局部极小，负定推出严格局部极大，不定推出鞍点。奇异半定不是“几乎通过”的弱结论，而是明确告诉你：必须继续检查高阶项、函数的特殊结构，或邻域内的直接符号。
-<!-- bilingual-en:start -->
-Strict signs are decisive: positive definiteness gives a strict local minimum, negative definiteness a strict local maximum, and indefiniteness a saddle. A singular semidefinite Hessian is not an almost-complete verdict; it is a signal to inspect higher-order terms, special structure, or direct signs in a neighbourhood.
-<!-- bilingual-en:end -->
-
-> [!question]- 自检
-> 为什么 $f_-(x,y)=x^2-y^4$ 的半正定 Hessian 没有排除鞍点？
 >
-> **答案：** Hessian 在 $y$ 方向为零，负变化直到四阶项 $-y^4$ 才出现；二阶检验看不到它。
+> 对 $f_+$，两项非负且只在原点同时为零，所以原点是严格极小。对 $f_-$，任意 $t\ne0$ 时，$(t,0)$ 处为正、$(0,t)$ 处为负，所以原点是鞍点。Hessian 看不到 $y^4$ 的正负号，因为它在 $y=0$ 处的二阶导为零。
+
+<!-- bilingual-en:start -->
+## Why the word singular matters
+<!-- bilingual-en:end -->
+
+*为什么要明确“奇异半定”*
+
+<!-- bilingual-en:start -->
+Work with a real-valued $f$ that is $C^2$ near an interior point $a$ of an [[开集|open subset]] of $\mathbb R^n$, for finite integer $n\ge1$. Thus the partial derivatives through order two are continuous nearby and $H=H_f(a)$ is symmetric. Assume $a$ is a [[驻点|stationary point]], meaning $\nabla f(a)=0$.
+<!-- bilingual-en:end -->
+
+设 $f$ 为实值函数，在 $\mathbb R^n$ 的某个[[开集]]中、内点 $a$ 附近为 $C^2$，$n\ge1$ 为有限整数。也就是说，直到二阶的偏导都在附近连续，因此 $H=H_f(a)$ 对称。还要求 $a$ 是[[驻点]]，即 $\nabla f(a)=0$。
+
+<!-- bilingual-en:start -->
+A [[半正定矩阵|positive-semidefinite matrix]] has $h^THh\ge0$ for every real column vector $h$; here $T$ is [[矩阵转置|transpose]]. This inclusive definition also contains [[正定矩阵|positive-definite matrices]], whose quadratic form is strictly positive for every $h\ne0$. The undecided case is positive semidefinite **but not positive definite**, equivalently singular positive semidefinite. For a real symmetric semidefinite matrix, a nonzero zero-quadratic direction lies in its [[零空间|nullspace]], so $Hu=0$. The [[半负定矩阵|negative-semidefinite]] case reverses all signs.
+<!-- bilingual-en:end -->
+
+[[半正定矩阵]]要求对每个实列向量 $h$ 都有 $h^THh\ge0$，其中 $T$ 是[[矩阵转置|转置]]。这个宽义定义包含[[正定矩阵]]；正定要求每个 $h\ne0$ 的二次型值都严格为正。无定论的情形是半正定**但非正定**，等价地说，是奇异半正定。对实对称半定矩阵，非零的零二次型方向属于[[零空间]]，即满足 $Hu=0$。[[半负定矩阵]]对应把所有符号反转。
+
+<!-- bilingual-en:start -->
+## The quadratic term disappears on a null direction
+<!-- bilingual-en:end -->
+
+*零方向为什么留下缺口*
+
+<!-- bilingual-en:start -->
+At a stationary point, the [[多元Taylor近似|Taylor expansion]] is
+<!-- bilingual-en:end -->
+
+在驻点处，[[多元Taylor近似|Taylor 展开]]为
+
+$$f(a+h)-f(a)=\frac12h^THh+r(h),\qquad \frac{r(h)}{\|h\|_2^2}\to0.$$
+
+<!-- bilingual-en:start -->
+Here $\|h\|_2$ is [[欧氏范数|Euclidean length]], and the ratio condition applies as nonzero $h$ tends to zero from all directions. Along a fixed null direction $u\ne0$, set $h=tu$. Then the quadratic term is zero and only $r(tu)$ remains. Being small relative to $t^2$ does not specify its sign: $t^4$, $-t^4$, and $0$ all satisfy that smallness condition. This explanation requires no assumption that third or higher derivatives exist.
+<!-- bilingual-en:end -->
+
+这里 $\|h\|_2$ 是[[欧氏范数|欧氏长度]]，比值条件要求非零 $h$ 从各种方向趋近零时都成立。沿固定零空间方向 $u\ne0$ 取 $h=tu$，二次项为零，只剩 $r(tu)$。相对 $t^2$ 很小并不能决定正负号：$t^4$、$-t^4$ 与 $0$ 都满足这个小量条件。这套解释并不要求三阶或更高阶导数存在。
+
+<!-- bilingual-en:start -->
+The function $f_0(x,y)=x^2$ has the same gradient and Hessian at the origin as $f_+$ and $f_-$. It has a minimum there, but not a strict one: every nearby point $(0,y)$ has the same value. Thus the same nonzero singular Hessian allows a strict minimum, a non-strict minimum, or a saddle.
+<!-- bilingual-en:end -->
+
+$f_0(x,y)=x^2$ 在原点也具有与 $f_+,f_-$ 相同的梯度和 Hessian。原点是极小点，却不是严格极小，因为附近每个 $(0,y)$ 都有相同的值。因此，同一个非零奇异 Hessian 可以对应严格极小、非严格极小或者鞍点。
+
+<!-- bilingual-en:start -->
+## Inconclusive does not mean no information at all
+<!-- bilingual-en:end -->
+
+*无定论不等于完全没有信息*
+
+<!-- bilingual-en:start -->
+The particular Hessian $\operatorname{diag}(2,0)$ cannot occur at a $C^2$ interior local maximum. Along its positive direction, the Taylor argument still guarantees nearby larger values. More generally, a nonzero positive-semidefinite Hessian at a stationary point rules out a local maximum, although it need not decide minimum versus saddle. A nonzero negative-semidefinite Hessian similarly rules out a local minimum.
+<!-- bilingual-en:end -->
+
+特定的 Hessian $\operatorname{diag}(2,0)$ 不可能出现在 $C^2$ 内点局部极大处：沿正号方向，Taylor 论证仍保证附近有更大的值。一般地，驻点处非零半正定 Hessian 可以排除局部极大，但未必区分极小与鞍点；非零半负定 Hessian 则可以排除局部极小。
+
+<!-- bilingual-en:start -->
+If the Hessian is the zero matrix, even that exclusion disappears. At the origin, $x^4+y^4$ has a strict minimum, $-x^4-y^4$ a strict maximum, and $x^4-y^4$ a saddle. All three have zero gradient and zero Hessian. Negating the earlier $f_+,f_-,f_0$ examples gives the corresponding nonzero negative-semidefinite cases.
+<!-- bilingual-en:end -->
+
+若 Hessian 是零矩阵，连这种排除能力也会消失。在原点，$x^4+y^4$ 有严格极小，$-x^4-y^4$ 有严格极大，$x^4-y^4$ 则是鞍点；三者的梯度与 Hessian 全为零。把先前的 $f_+,f_-,f_0$ 整体取负，则得到非零半负定的对应情形。
+
+<!-- bilingual-en:start -->
+## Return to the original function
+<!-- bilingual-en:end -->
+
+*回到原函数继续判断*
+
+<!-- bilingual-en:start -->
+The decisive tests have strict signs: [[Hessian 局部极小判据|positive definite gives a strict local minimum]], [[Hessian 局部极大判据|negative definite gives a strict local maximum]], and [[Hessian 鞍点判据|indefinite gives a saddle]], under their stationary $C^2$ interior assumptions. A singular semidefinite matrix does not complete that classification.
+<!-- bilingual-en:end -->
+
+能完成分类的判据具有严格符号：在相应的 $C^2$ 内点驻点假设下，[[Hessian 局部极小判据|正定给出严格局部极小]]，[[Hessian 局部极大判据|负定给出严格局部极大]]，[[Hessian 鞍点判据|不定给出鞍点]]。奇异半定矩阵不能完成这一分类。
+
+<!-- bilingual-en:start -->
+Once the whole Hessian is known to be singular semidefinite, calculating more of its minors cannot recover information absent from that matrix. Inspect the original function, factor it, bound its sign on a whole neighborhood, or obtain additional remainder information. To prove a minimum, a bound must cover all nearby points, not only a few chosen directions. To disprove one, a single sequence of nearby points with smaller values is enough. The [[01_SOFP Lecture 1 - 二次型、Taylor 展开与凹凸性#6.3 半定无结论不是“主子式算得还不够多”|course discussion of the same-Hessian examples]] provides the classroom context.
+<!-- bilingual-en:end -->
+
+一旦整张 Hessian 已确认是奇异半定，再计算它的其他主子式也无法补回矩阵没有记录的信息。应查看原函数，尝试因式分解、在整个邻域上控制符号，或取得更多余项信息。证明极小需要覆盖所有附近点，不能只检查几条选定方向；否定极小，只需找到一列趋近该点且函数值更低的点。[[01_SOFP Lecture 1 - 二次型、Taylor 展开与凹凸性#6.3 半定无结论不是“主子式算得还不够多”|课程中关于同 Hessian 例子的讨论]]保留课堂背景。
+
+> [!question]- What did the matrix miss? · 矩阵漏掉了什么？
 > <!-- bilingual-en:start -->
-> Why does the positive-semidefinite Hessian of $f_-(x,y)=x^2-y^4$ fail to rule out a saddle point?
->
-> **Answer:** The Hessian vanishes in the $y$ direction, while the negative change appears only in the fourth-order term $-y^4$. A second-order test cannot detect it.
+> Why does the positive-semidefinite Hessian of $x^2-y^4$ not prevent a saddle? Its $y$ direction has zero quadratic change. The negative term first appears at order four, while the positive $x$ direction is already visible at order two.
 > <!-- bilingual-en:end -->
+>
+> 为什么 $x^2-y^4$ 的半正定 Hessian 没有排除鞍点？因为 $y$ 方向的二次变化为零，负项到四阶才出现；正号的 $x$ 方向则在二阶已经可见。
 
-这里采用宽义半定定义，所以必须明确“非定”或“奇异”：[[正定矩阵|正定]]本来也属于[[半正定矩阵|半正定]]，不在无结论的退化情况内。已完整识别一个奇异半定 Hessian 后，再计算它的其他主子式不能补回高阶信息；应该回到原函数。
 <!-- bilingual-en:start -->
-The inclusive definition of semidefiniteness requires the qualifier “singular” or “not definite”: [[正定矩阵|positive-definite matrices]] are also [[半正定矩阵|positive semidefinite]] and do not belong to the inconclusive case. Once a singular semidefinite Hessian is fully known, additional minors cannot recover higher-order terms; return to the original function.
+## Sources and verification
 <!-- bilingual-en:end -->
 
 ## 来源与核验
 
-- [[多元Taylor近似]]：核对驻点处 Hessian 二次型与 $o(\|h\|^2)$ 余项的分工。
-- [MIT 18.S096, *Second Derivatives, Bilinear Maps, and Hessian Matrices*](https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/mit18_s096iap23_lec12.pdf#page=2)：核对二阶 Taylor 展开与 Hessian 判别的适用条件。
-- LSE EC400，*SOFP Slides Lecture 2*（课程讲义）：核对课程中的正定、负定、不定与半定分类边界。
 <!-- bilingual-en:start -->
-- [[多元Taylor近似|The multivariable Taylor approximation]] was checked for the division of responsibility between the Hessian quadratic term and the higher-order remainder.
-- MIT 18.S096 notes were checked for the second-order Taylor expansion and the scope of Hessian tests.
-- EC400 SOFP Slides Lecture 2 were checked for the course classification of definite, indefinite, and semidefinite Hessians.
+- [[01_Math/08_EC400_MathsCamp/2026_Course_Materials/02_SOFP/Lectures/EC400 Slides Lecture 2.pdf#page=10|LSE EC400 SOFP Lecture 2, slides 10–14]], and [[01_Math/08_EC400_MathsCamp/2026_Course_Materials/02_SOFP/Lectures/EC400 Lecture Notes SOFP.pdf#page=21|SOFP lecture notes, pp.21–22]]: interior stationarity, definite and semidefinite conditions, the indefinite example, and local versus global conclusions. The sign proofs here keep the Taylor remainder explicitly.
+- [MIT 18.S096, Second Derivatives, §12.1, PDF pp.1–2 / print pp.87–88](https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/mit18_s096iap23_lec12.pdf#page=2): Hessian quadratic term and the second-order remainder. The linked [[多元Taylor近似|Taylor card]] gives the stated $C^2$ assumptions and the remainder argument.
+- [OpenStax, Calculus Volume 3, §4.7, saddle definition and theorem 4.17](https://openstax.org/books/calculus-volume-3/pages/4-7-maxima-minima-problems): the two-variable meaning of a stationary saddle and the inconclusive degenerate second-derivative test. The examples and inequalities in this card are verified directly.
 <!-- bilingual-en:end -->
 
-- [[EC400 Lecture Notes SOFP.pdf#page=21|SOFP 讲义 p.21]]：核对半定不充分与正负定充分的区别；[[01_SOFP Lecture 1 - 二次型、Taylor 展开与凹凸性#6.3 半定无结论不是“主子式算得还不够多”|本课两种同 Hessian 的例子]]直接展示缺少的高阶信息。
-
-<!-- bilingual-en:start -->
-The linked SOFP notes distinguish semidefinite necessity from definite sufficiency. The course examples share the same Hessian but have different higher-order behaviour.
-<!-- bilingual-en:end -->
+- LSE EC400 SOFP Lecture 2，第10–14张幻灯片，以及 SOFP 讲义第21–22页：内点驻点、定号与半定条件、不定例子，以及局部和全局结论的区别。正文保留 Taylor 余项，完整证明符号判断。
+- MIT 18.S096《Second Derivatives》§12.1，PDF 第1–2页／印本87–88页：Hessian 二次项及二阶余项；所链接的 Taylor 卡给出本文使用的 $C^2$ 假设和余项论证。
+- OpenStax《Calculus Volume 3》§4.7 的鞍点定义与定理4.17：二元驻点鞍点的含义及退化二阶检验的无定论边界。本文例子与不等式均直接核验。

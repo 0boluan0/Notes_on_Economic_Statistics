@@ -1477,6 +1477,13 @@ $$
 For the Leontief function, the minimum of two coordinates exceeds a threshold precisely when both coordinates do. The resulting upper set is an intersection of two half-spaces and is convex. Nondifferentiability on the diagonal does not affect the definition. The function is in fact also concave, though the contour-set argument already proves the required quasiconcavity.
 <!-- bilingual-en:end -->
 
+> [!note] Include the threshold · 包含门槛等号
+> <!-- bilingual-en:start -->
+> The upper contour set in this example uses $f\ge k$: “meets or exceeds” is the precise comparison. For $f=\min\{x_1,x_2\}$ on the whole plane, the set is $\{x_1\ge k,x_2\ge k\}$ and includes $(k,k)$. With a restricted consumption domain, intersect this set with that domain. The equalities are retained in the [[上轮廓集|definition]].
+> <!-- bilingual-en:end -->
+>
+> 本例的上轮廓集使用 $f\ge k$，准确含义是“达到或超过”，包含等号。对整个平面上的 $f=\min\{x_1,x_2\}$，集合为 $\{x_1\ge k,x_2\ge k\}$，因此包含 $(k,k)$；若另有限定的消费域，则再与该域取交。[[上轮廓集|定义]]中的等号始终保留。
+
 ### 8.8 线段判据：最后把几何定义变成可算的不等式
 
 <!-- bilingual-en:start -->

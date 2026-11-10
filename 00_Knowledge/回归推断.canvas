@@ -3,141 +3,141 @@
     {
       "id": "a710000000000001",
       "type": "text",
-      "text": "# 回归推断 · 学习总图\n\n先区分观测噪声与估计不确定性，再为单个限制选择 t、p 值和置信区间；多个限制先写成线性组合，再进入 F 或 Wald。Chow 单独表示已知分组或断点下的系数稳定检验；最后检查实质重要性与模型选择后的有效性。箭头写的是成立条件或推断关系，不表示掌握度。\n\n**来源状态：** 15 张知识原子与 1 个相邻综合页均已核验；**掌握状态：** 15 张原子均为 unassessed。",
+      "text": "<!-- bilingual-en:start -->\n# Regression inference\nStart with the uncertainty of an estimator, then choose a covariance model and a reference distribution for tests and intervals. Joint restrictions, model selection and causal interpretation need their own checks. Links lead to the relevant explanations.\n<!-- bilingual-en:end -->\n\n# 回归推断 · 学习总图\n先看估计量的不确定性，再为检验与区间选择协方差口径和参考分布。联合限制、模型选择与因果解释各需核对；打开节点阅读具体条件。",
       "x": 0,
       "y": 0,
       "width": 2760,
-      "height": 190,
+      "height": 220,
       "color": "6"
     },
     {
       "id": "a710000000000002",
       "type": "text",
-      "text": "## [[OLS经典协方差估计]]\n\n球形误差下，系数协方差是 σ²(X'X)⁻¹，并用 RSS/(n-p) 估计。\n\n**边界：** 经典公式依赖误差结构，不是 OLS 代数恒等式。",
+      "text": "<!-- bilingual-en:start -->\n## [[OLS经典协方差估计|Classical OLS covariance]]\nUnder full rank, n > k, zero conditional error mean and covariance σ²I, s² = RSS/(n−k) estimates σ². The coefficient covariance estimate is s²(XᵀX)⁻¹. Here k counts all fitted coefficients.\n<!-- bilingual-en:end -->\n\n## [[OLS经典协方差估计]]\n满秩、n > k、条件误差均值零且协方差 σ²I 时，s² = RSS/(n−k) 估计噪声方差；系数协方差估计是 s²(XᵀX)⁻¹。k 包括全部拟合系数。",
       "x": 0,
       "y": 300,
       "width": 400,
-      "height": 240,
+      "height": 350,
       "color": "6"
     },
     {
       "id": "a710000000000003",
       "type": "text",
-      "text": "## [[标准误含义]]\n\n标准误描述统计量的重复抽样波动；残差标准差描述观测噪声。\n\n**边界：** residual SD 只是经典 coefficient SE 的一个输入。",
+      "text": "<!-- bilingual-en:start -->\n## [[标准误含义|Standard error]]\nThe standard error is the sampling standard deviation of a statistic; the reported value is often an estimate. Residual standard deviation estimates model-error scale. A coefficient SE also depends on the design.\n<!-- bilingual-en:end -->\n\n## [[标准误含义]]\n标准误是统计量的抽样标准差，报告值常是它的估计。残差标准差估计模型误差尺度；系数标准误还取决于设计。",
       "x": 460,
       "y": 300,
       "width": 400,
-      "height": 240,
+      "height": 310,
       "color": "6"
     },
     {
       "id": "a710000000000004",
       "type": "text",
-      "text": "## [[标准误口径匹配]]\n\nWhite、HAC、cluster 与经典公式允许不同的依赖结构。\n\n**边界：** 稳健标准误不能修复内生性或错误 estimand。",
+      "text": "<!-- bilingual-en:start -->\n## [[标准误口径匹配|Matching the covariance estimator]]\nChoose covariance and reference-law calibration to match the sampling or assignment design and dependence. HC, HAC and cluster methods have different conditions. Retaining the OLS coefficients does not repair endogeneity or redefine the target.\n<!-- bilingual-en:end -->\n\n## [[标准误口径匹配]]\n协方差与参考分布校准须匹配抽样或分配设计、依赖结构。HC、HAC 和聚类方法各有条件；保留 OLS 系数并不能修复内生性或改变目标。",
       "x": 920,
       "y": 300,
       "width": 400,
-      "height": 240,
+      "height": 350,
       "color": "2"
     },
     {
       "id": "a710000000000005",
       "type": "text",
-      "text": "## [[设定问题分层]]\n\n先判断问题属于识别、条件均值、条件方差还是数值层。\n\n**外部边界：** 只有协方差层失败时，换标准误才直接对症。",
+      "text": "<!-- bilingual-en:start -->\n## [[设定问题分层|Identify the regression target]]\nFirst name the target: a linear projection, a conditional mean or a causal effect. A [[条件均值与线性投影|projection]] need not equal the full conditional mean. Match uncertainty to the design; changing covariance cannot repair an estimator aimed at the wrong target.\n<!-- bilingual-en:end -->\n\n## [[设定问题分层]]\n先明确目标：线性投影、条件均值还是因果效应。[[条件均值与线性投影|投影]]不一定等于完整条件均值。推断须匹配设计；换协方差不能修复估计量与目标的错配。",
       "x": 1380,
       "y": 300,
       "width": 400,
-      "height": 240,
+      "height": 350,
       "color": "1"
     },
     {
       "id": "a710000000000006",
       "type": "text",
-      "text": "## [[BLUE正态性边界]]\n\n正态性不是 OLS 成为 BLUE 的条件，但会提供经典小样本 t/F 的精确分布。\n\n**外部边界：** 不要把估计性质与检验校准混在一起。",
+      "text": "<!-- bilingual-en:start -->\n## [[BLUE正态性边界|Normality and exact inference]]\nClassical BLUE does not require normality. Adding conditional joint Gaussian errors to its model, with n > k and σ² > 0, gives exact t/F laws using the classical residual variance estimate. Other covariance estimates need their own calibration.\n<!-- bilingual-en:end -->\n\n## [[BLUE正态性边界]]\n经典 BLUE 不要求正态。在其模型上加入条件联合 Gaussian 误差且 n > k、σ² > 0，配合经典残差方差估计得到精确 t/F 分布；其他协方差口径需另核参考分布。",
       "x": 0,
       "y": 680,
       "width": 400,
-      "height": 240,
+      "height": 330,
       "color": "1"
     },
     {
       "id": "a710000000000007",
       "type": "text",
-      "text": "## [[回归t检验]]\n\n用相匹配的标准误把一个线性限制换成标准误单位。\n\n**边界：** 统计量还须匹配精确或渐近参考分布。",
+      "text": "<!-- bilingual-en:start -->\n## [[回归t检验|Regression t test]]\nCompare one specified coefficient contrast with its null value, using the positive standard error of that same contrast. The complete covariance matrix matters. Match the reference law to the error model and covariance estimate.\n<!-- bilingual-en:end -->\n\n## [[回归t检验]]\n将一个预定系数组合与零假设值比较，用同一组合的正标准误作尺度，计算须考虑完整协方差矩阵。参考分布要与误差模型和协方差估计相匹配。",
       "x": 460,
       "y": 680,
       "width": 400,
-      "height": 240,
+      "height": 340,
       "color": "3"
     },
     {
       "id": "a710000000000008",
       "type": "text",
-      "text": "## [[p值条件解释]]\n\np 值是在 H₀ 与模型条件下，至少同样极端统计量的尾概率。\n\n**边界：** 不是 H₀ 为真的概率，也不报告效应大小。",
+      "text": "<!-- bilingual-en:start -->\n## [[p值条件解释|Interpreting a p-value]]\nCalculate a tail probability under the stated null model and extremeness rule. Composite nulls and approximate reference laws need justified calibration. This number does not give the null’s posterior probability or the effect size.\n<!-- bilingual-en:end -->\n\n## [[p值条件解释]]\n按声明的零假设模型和极端程度规则计算尾概率。复合零假设、近似参考分布须另核校准。这个数不给零假设的后验概率，也不报告效应大小。",
       "x": 920,
       "y": 680,
       "width": 400,
-      "height": 240,
+      "height": 340,
       "color": "4"
     },
     {
       "id": "a710000000000009",
       "type": "text",
-      "text": "## [[置信区间覆盖率]]\n\n置信水平属于重复抽样下的区间构造程序。\n\n**边界：** 当前参数落入已实现区间的后验概率不是 95%。",
+      "text": "<!-- bilingual-en:start -->\n## [[置信区间覆盖率|Confidence interval coverage]]\nCoverage concerns how a random interval captures a fixed parameter across repeated samples. A nominal 95% label needs actual calibration. The coverage guarantee alone assigns no 95% posterior probability to the realised interval.\n<!-- bilingual-en:end -->\n\n## [[置信区间覆盖率]]\n覆盖率描述随机区间在重复抽样中罩住固定参数的比例。名义 95% 需要实际校准；覆盖保证本身不为当前区间赋予 95% 的参数后验概率。",
       "x": 1380,
       "y": 680,
       "width": 400,
-      "height": 240,
+      "height": 340,
       "color": "4"
     },
     {
       "id": "a71000000000000a",
       "type": "text",
-      "text": "## [[显著性解释边界]]\n\n拒绝或未拒绝零假设都不能单独判断实际重要性。\n\n**边界：** 回到 estimate、interval、单位、功效和预设阈值。",
+      "text": "<!-- bilingual-en:start -->\n## [[显著性解释边界|Significance and practical importance]]\nSignificance does not measure effect size. Read the estimate, interval, units and prespecified meaningful bounds together. Failure to reject zero does not establish a negligible effect; an equivalence procedure addresses that separate question.\n<!-- bilingual-en:end -->\n\n## [[显著性解释边界]]\n显著性不衡量效应大小。应合看估计值、区间、单位与事先指定的实质界限。不拒绝零不证明效应可忽略；等效检验另行回答这个问题。",
       "x": 1840,
       "y": 680,
       "width": 400,
-      "height": 240,
+      "height": 350,
       "color": "2"
     },
     {
       "id": "a71000000000000b",
       "type": "text",
-      "text": "## [[嵌套模型F检验]]\n\n同一样本与响应下，用受限/无约束 RSS 增量检验预设限制。\n\n**边界：** 非嵌套模型、不同样本或不同响应不能套公式。",
+      "text": "<!-- bilingual-en:start -->\n## [[嵌套模型F检验|Nested-model F test]]\nUse the same response and rows with unweighted OLS. Divide the RSS increase by the number of independent restrictions, then by the unrestricted noise estimate. The stated joint-Gaussian model with full rank, positive noise variance and n > k gives exact F calibration (n rows, k coefficients).\n<!-- bilingual-en:end -->\n\n## [[嵌套模型F检验]]\n同一响应、同一观测行做无权重 OLS。RSS 增量先除以独立限制数，再除以无约束噪声方差估计。在规定的联合 Gaussian 模型、满秩、正噪声方差及 n > k 下，得到精确 F 校准（n 行、k 个系数）。",
       "x": 0,
       "y": 1080,
       "width": 400,
-      "height": 240,
+      "height": 350,
       "color": "3"
     },
     {
       "id": "a71000000000000c",
       "type": "text",
-      "text": "## [[线性组合推断]]\n\na'β 与 Rβ=r 都必须通过完整系数协方差矩阵传播不确定性。\n\n**边界：** 逐项标准误或区间不能机械相加。",
+      "text": "<!-- bilingual-en:start -->\n## [[线性组合推断|Inference for linear combinations]]\nFor fixed weights a or R, propagate the complete coefficient covariance to a′β or Rβ. Covariances can increase or decrease uncertainty. An interval additionally needs a valid reference law; separate standard errors cannot simply be added.\n<!-- bilingual-en:end -->\n\n## [[线性组合推断]]\n给定固定权重 a 或 R，将完整系数协方差传播到 a′β 或 Rβ。协方差可增大或减小不确定性；区间还须有效参考分布，不能直接相加各项标准误。",
       "x": 460,
       "y": 1080,
       "width": 400,
-      "height": 240,
+      "height": 340,
       "color": "6"
     },
     {
       "id": "a71000000000000d",
       "type": "text",
-      "text": "## [[Wald联合检验]]\n\n用 R V̂ R' 标准化无约束估计离联合限制的距离。\n\n**边界：** 统计量必须随协方差口径与自由度校准一起报告。",
+      "text": "<!-- bilingual-en:start -->\n## [[Wald联合检验|Wald joint tests]]\nFor fixed linear restrictions, measure joint departure using a positive definite restriction covariance. Covariance scaling and reference law must match. A robust Wald statistic divided by the number of restrictions is not automatically an exact F statistic.\n<!-- bilingual-en:end -->\n\n## [[Wald联合检验]]\n对预先固定的线性限制，用正定的限制协方差衡量联合偏离。协方差尺度须与参考分布匹配；稳健 Wald 除以限制数，并不自动得到精确 F 分布。",
       "x": 920,
       "y": 1080,
       "width": 400,
-      "height": 240,
+      "height": 340,
       "color": "3"
     },
     {
       "id": "a71000000000000e",
       "type": "text",
-      "text": "## [[回归联合显著边界]]\n\n联合拒绝不表示每个系数显著；逐项未拒绝也不决定联合结果。\n\n**边界：** 协方差决定联合方向上的精度。",
+      "text": "<!-- bilingual-en:start -->\n## [[回归联合显著边界|Joint and individual significance]]\nJoint Wald inference uses the complete covariance of coefficient estimation errors. Joint rejection need not make every coefficient significant; separate non-rejections do not decide the joint result. State the restrictions and calibration.\n<!-- bilingual-en:end -->\n\n## [[回归联合显著边界]]\n联合 Wald 推断使用系数估计误差的完整协方差。联合拒绝不表示每项都显著；逐项未拒绝也不决定联合结果。应声明被检验限制与校准方式。",
       "x": 460,
       "y": 1440,
       "width": 400,
-      "height": 240,
+      "height": 340,
       "color": "4"
     },
     {
@@ -169,6 +169,16 @@
       "width": 400,
       "height": 240,
       "color": "3"
+    },
+    {
+      "id": "a710000000000012",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[检验功效|Statistical power]]\nFor a fixed design and test rule, power is the probability of rejection at a specified true alternative. Level α bounds false rejection under the null. Neither is a posterior probability that a hypothesis is true.\n<!-- bilingual-en:end -->\n\n## [[检验功效]]\n固定设计与检验规则后，功效是在指定真实备择下拒绝的概率。水平 α 约束零假设下的误拒绝；两者都不是假设为真的后验概率。",
+      "x": 1840,
+      "y": 1440,
+      "width": 400,
+      "height": 350,
+      "color": "4"
     }
   ],
   "edges": [
@@ -187,7 +197,7 @@
       "fromSide": "right",
       "toNode": "a710000000000004",
       "toSide": "left",
-      "label": "再按依赖结构选择协方差口径",
+      "label": "Match design, dependence and covariance · 匹配设计、依赖与协方差",
       "toEnd": "arrow"
     },
     {
@@ -196,7 +206,7 @@
       "fromSide": "left",
       "toNode": "a710000000000004",
       "toSide": "right",
-      "label": "只有协方差层失败时直接换 SE",
+      "label": "Recheck the target before changing covariance · 换协方差前复核估计目标",
       "toEnd": "arrow"
     },
     {
@@ -205,7 +215,7 @@
       "fromSide": "right",
       "toNode": "a710000000000007",
       "toSide": "left",
-      "label": "正态条件决定经典有限样本精确校准",
+      "label": "Gaussian model supplies exact classical laws · Gaussian 模型提供经典精确分布",
       "toEnd": "arrow"
     },
     {
@@ -214,7 +224,7 @@
       "fromSide": "bottom",
       "toNode": "a710000000000007",
       "toSide": "top",
-      "label": "用相匹配的标准误作分母",
+      "label": "Match the SE and reference law · 标准误与参考分布须匹配",
       "toEnd": "arrow"
     },
     {
@@ -232,7 +242,7 @@
       "fromSide": "right",
       "toNode": "a710000000000009",
       "toSide": "left",
-      "label": "同模型同校准时双侧检验与区间可反演",
+      "label": "Invert the same tests and boundary rule · 同一族检验与边界约定的反演",
       "toEnd": "arrow"
     },
     {
@@ -241,7 +251,7 @@
       "fromSide": "right",
       "toNode": "a71000000000000a",
       "toSide": "left",
-      "label": "区间显示仍与哪些实质量级相容",
+      "label": "Interpret intervals in units and prespecified bounds · 按单位与预设界解释区间",
       "toEnd": "arrow"
     },
     {
@@ -250,7 +260,7 @@
       "fromSide": "left",
       "toNode": "a71000000000000b",
       "toSide": "right",
-      "label": "经典同样本 RSS 实现",
+      "label": "Wald/q with the same classical covariance · 同一经典协方差下 Wald/q",
       "toEnd": "arrow"
     },
     {
@@ -259,7 +269,7 @@
       "fromSide": "right",
       "toNode": "a71000000000000d",
       "toSide": "left",
-      "label": "一般协方差二次型实现",
+      "label": "Use a positive definite restriction covariance · 用正定的限制协方差构成二次型",
       "toEnd": "arrow"
     },
     {
@@ -268,7 +278,7 @@
       "fromSide": "bottom",
       "toNode": "a71000000000000e",
       "toSide": "left",
-      "label": "联合拒绝仍需定位由哪个方向驱动",
+      "label": "Localise with prespecified contrasts · 用预先有意义的对比定位",
       "toEnd": "arrow"
     },
     {
@@ -277,7 +287,7 @@
       "fromSide": "bottom",
       "toNode": "a71000000000000e",
       "toSide": "right",
-      "label": "完整协方差决定联合方向",
+      "label": "Sampling covariance determines joint distance · 抽样协方差决定联合距离",
       "toEnd": "arrow"
     },
     {
@@ -286,7 +296,7 @@
       "fromSide": "top",
       "toNode": "a710000000000007",
       "toSide": "bottom",
-      "label": "q=1、同一经典模型与自由度时 F=t²",
+      "label": "Same fit and classical covariance, one restriction: F=t²; upper F matches two-sided t · 同一拟合与经典协方差、单限制：F=t²；F 上尾对应双侧 t",
       "toEnd": "arrow"
     },
     {
@@ -313,7 +323,16 @@
       "fromSide": "top",
       "toNode": "a71000000000000e",
       "toSide": "bottom",
-      "label": "拒绝仍只说明至少一个被检验系数改变",
+      "label": "Joint evidence does not label each coefficient · 整体证据不为每个系数贴显著标签",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "b710000000000011",
+      "fromNode": "a710000000000012",
+      "fromSide": "left",
+      "toNode": "a71000000000000a",
+      "toSide": "left",
+      "label": "Non-rejection may reflect low power · 不拒绝可能源于低功效",
       "toEnd": "arrow"
     }
   ]

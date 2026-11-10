@@ -136,8 +136,8 @@
       "x": 620,
       "y": 910,
       "width": 520,
-      "height": 220,
-      "text": "## [[斯特林公式]]\nMCS-COUNT-016 · 渐近定理\n\n以相对误差趋零的主式近似阶乘。",
+      "height": 260,
+      "text": "<!-- bilingual-en:start -->\n## [[斯特林公式|Stirling’s formula]]\n\nFor positive integers, $n!/A_n\\to1$, where $A_n=\\sqrt{2\\pi n}(n/e)^n$.\n<!-- bilingual-en:end -->\n\n以相对误差趋零的主式近似阶乘。",
       "color": "3"
     },
     {
@@ -146,8 +146,8 @@
       "x": 620,
       "y": 1240,
       "width": 520,
-      "height": 220,
-      "text": "## [[Robbins阶乘界]]\nMCS-COUNT-024 · 有限界\n\n为每个正整数 n 给出显式 Stirling 余项范围。",
+      "height": 260,
+      "text": "<!-- bilingual-en:start -->\n## [[Robbins阶乘界|Robbins’ factorial bounds]]\n\nFor every integer $n\\ge1$, $1/(12n+1)<\\ln(n!/A_n)<1/(12n)$.\n<!-- bilingual-en:end -->\n\n为每个正整数 n 给出显式 Stirling 余项范围。",
       "color": "1"
     },
     {
@@ -403,7 +403,7 @@
       "toNode": "count-stirling",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "阶乘规模进入渐近"
+      "label": "Factorial scale / 阶乘的增长规模"
     },
     {
       "id": "count-e008",
@@ -412,7 +412,7 @@
       "toNode": "count-robbins",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "需要有限 n 的显式误差时"
+      "label": "Explicit finite error / 显式有限误差"
     },
     {
       "id": "count-e009",

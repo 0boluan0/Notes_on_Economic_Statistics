@@ -1,96 +1,828 @@
 {
   "nodes": [
-    {"id":"defint-title","type":"text","x":0,"y":0,"width":1800,"height":180,"text":"# 定积分与应用\n\n[[01_Math/01_calculus/03_定积分与应用|连续阅读：从累积到计算与建模]] · [[01_Math/01_calculus/03_Definite_Integrals|完整课堂记录与练习]]\n\n每张卡打开一个共享原子；沿有文字的箭头读推导或用途。颜色区分本图的语义角色，不表示掌握度。","color":"4"},
-    {"id":"defint-guide","type":"text","x":2050,"y":0,"width":1800,"height":180,"text":"## 先辨清两种基本定理\n\nMIT 的 FTC I 是 [[Newton-Leibniz公式|原函数端点评价]]；FTC II 是 [[积分求导定理|累积后求导]]。课程先使用 I，再借助 II 证明它。\n\n复用：[[原函数]] · [[原函数相差常数]] · [[链式法则]] · [[极值定理]] · [[介值定理]]"},
-    {"id":"g-accum","type":"group","x":0,"y":260,"width":1800,"height":900,"label":"1 · 从有限和到累积规则"},
-    {"id":"a001","type":"text","x":40,"y":350,"width":440,"height":140,"text":"## [[黎曼和]]\n采样高度 × 小段宽度，再相加。","color":"4"},
-    {"id":"a002","type":"text","x":660,"y":350,"width":440,"height":140,"text":"## [[定积分]]\n所有充分细采样和的共同极限。","color":"4"},
-    {"id":"a003","type":"text","x":1280,"y":350,"width":440,"height":140,"text":"## [[连续函数可积]]\n有限闭区间上的连续性保证极限存在。","color":"5"},
-    {"id":"a009","type":"text","x":40,"y":640,"width":440,"height":140,"text":"## [[和式识别为积分]]\n找出宽度、采样点与区间；保留缩放。","color":"3"},
-    {"id":"a004","type":"text","x":660,"y":640,"width":440,"height":140,"text":"## [[定积分线性性]]\n常系数的和可以逐项积分。","color":"5"},
-    {"id":"a005","type":"text","x":1280,"y":640,"width":440,"height":140,"text":"## [[定积分区间可加性]]\n同起点的累积相减得到 [[变限积分求导|双变限表达式]]。","color":"5"},
-    {"id":"a008","type":"text","x":40,"y":930,"width":440,"height":140,"text":"## [[净变化与总变化]]\n位移允许抵消；路程先取速度绝对值。","color":"1"},
-    {"id":"a006","type":"text","x":660,"y":930,"width":440,"height":140,"text":"## [[积分保序性]]\n正向区间保留两函数的逐点高低。","color":"5"},
-    {"id":"a007","type":"text","x":1280,"y":930,"width":440,"height":140,"text":"## [[积分绝对值界]]\n净累积的大小不超过无抵消的累积。","color":"5"},
-    {"id":"g-ftc","type":"group","x":2050,"y":260,"width":1800,"height":900,"label":"2 · 两个基本定理与积分定义的函数"},
-    {"id":"a011","type":"text","x":2090,"y":350,"width":440,"height":140,"text":"## [[累积函数]]\n固定起点，终点变动；初值为零。","color":"4"},
-    {"id":"a012","type":"text","x":2710,"y":350,"width":440,"height":140,"text":"## [[积分求导定理]]\n连续被积函数的末端高度给累积变化率。","color":"5"},
-    {"id":"a013","type":"text","x":3330,"y":350,"width":440,"height":140,"text":"## [[Newton-Leibniz公式]]\n同导数只差常数，因此积分由端点相减。","color":"5"},
-    {"id":"a014","type":"text","x":2090,"y":640,"width":440,"height":140,"text":"## [[变限积分求导]]\n上端贡献减下端贡献，各带链式因子。","color":"3"},
-    {"id":"a015","type":"text","x":2710,"y":640,"width":440,"height":140,"text":"## [[积分上下界估计]]\n先确定可积性，再找全区间比较函数。","color":"3"},
-    {"id":"a016","type":"text","x":3330,"y":640,"width":440,"height":140,"text":"## [[积分中值定理]]\n连续性让积分平均高度被实际取到。","color":"5"},
-    {"id":"a017","type":"text","x":2090,"y":930,"width":440,"height":140,"text":"## [[自然对数积分表示]]\n1/t 的累积与 [[自然对数|已有 ln]] 同导数、同初值。","color":"5"},
-    {"id":"a018","type":"text","x":2710,"y":930,"width":440,"height":140,"text":"## [[累积函数图像]]\n被积函数的符号定增减，增减定凹凸。","color":"3"},
-    {"id":"a019","type":"text","x":3330,"y":930,"width":440,"height":140,"text":"## [[无初等原函数的积分]]\n表达式受限，不妨碍存在、求导或近似。","color":"1"},
-    {"id":"g-geo","type":"group","x":0,"y":1340,"width":1800,"height":690,"label":"3 · 几何积分先认清实际微元"},
-    {"id":"a020","type":"text","x":40,"y":1430,"width":440,"height":150,"text":"## [[曲线间面积]]\n同一切片上，上减下或右减左。","color":"3"},
-    {"id":"a021","type":"text","x":660,"y":1430,"width":440,"height":150,"text":"## [[切片体积]]\n实际截面积 × 厚度，再累积。","color":"3"},
-    {"id":"a022","type":"text","x":1280,"y":1430,"width":440,"height":150,"text":"## [[圆盘垫圈法]]\n垂直旋转轴切片，外圆减内孔。","color":"3"},
-    {"id":"a030","type":"text","x":40,"y":1790,"width":440,"height":150,"text":"## [[Pappus体积定理]]\n区域在轴一侧：面积 × 形心一周路程。","color":"5"},
-    {"id":"a023","type":"text","x":660,"y":1790,"width":440,"height":150,"text":"## [[圆柱壳法]]\n平行旋转轴切条，按非负半径分层。","color":"3"},
-    {"id":"a024","type":"text","x":1280,"y":1790,"width":440,"height":150,"text":"## [[旋转体重复覆盖]]\n相同半径的轴向交叠只能计一次。","color":"1"},
-    {"id":"g-weight","type":"group","x":2050,"y":1340,"width":1800,"height":690,"label":"4 · 平均、质量和力各自决定微元"},
-    {"id":"a025","type":"text","x":2090,"y":1430,"width":440,"height":150,"text":"## [[积分平均值]]\n总累积除以区间长度，是平均高度。","color":"4"},
-    {"id":"a026","type":"text","x":2710,"y":1430,"width":440,"height":150,"text":"## [[加权平均]]\n非负权重下，总加权量除以总权重。","color":"4"},
-    {"id":"a027","type":"text","x":3330,"y":1430,"width":440,"height":150,"text":"## [[质心]]\n位置按质量加权；均匀薄片时等于形心。","color":"4"},
-    {"id":"arc-reuse","type":"text","x":2090,"y":1790,"width":440,"height":150,"text":"## [[参数曲线弧长与重复描画|弧长微元]]\n曲线平均使用 ds；沿 x 均匀不等于沿弧长均匀。"},
-    {"id":"a029","type":"text","x":2710,"y":1790,"width":440,"height":150,"text":"## [[功的积分]]\n力分量 × 有向位移；沿行程按 [[定积分区间可加性|分段相加]] 累积。","color":"3"},
-    {"id":"a028","type":"text","x":3330,"y":1790,"width":440,"height":150,"text":"## [[质心积分计算]]\n切片先算总质量，再算两个一阶矩。","color":"3"},
-    {"id":"g-num","type":"group","x":0,"y":2210,"width":1800,"height":900,"label":"5 · 数值近似与可保证的误差"},
-    {"id":"a031","type":"text","x":40,"y":2300,"width":440,"height":140,"text":"## [[左右端点矩形法]]\n同一网格，选择左端或右端高度。","color":"3"},
-    {"id":"a033","type":"text","x":660,"y":2300,"width":440,"height":140,"text":"## [[梯形法]]\n用相邻样本之间的直线近似。","color":"3"},
-    {"id":"a036","type":"text","x":1280,"y":2300,"width":440,"height":140,"text":"## [[梯形积分误差界]]\nC² 与全区间二阶导数界给二阶控制。","color":"5"},
-    {"id":"a032","type":"text","x":40,"y":2590,"width":440,"height":140,"text":"## [[中点法]]\n每一小段使用中点高度。","color":"3"},
-    {"id":"a035","type":"text","x":660,"y":2590,"width":440,"height":140,"text":"## [[Simpson组合恒等式]]\n粗网格梯形与中点组合生成细网格 Simpson。","color":"5"},
-    {"id":"a037","type":"text","x":1280,"y":2590,"width":440,"height":140,"text":"## [[中点积分误差界]]\nC² 下常数为 1/24；仍需整个区间的界。","color":"5"},
-    {"id":"num-guide","type":"text","x":40,"y":2880,"width":440,"height":140,"text":"## 网格与证书\nN 是小区间数，h=(b−a)/N；步数翻倍改变误差界，不保证实际误差严格同比。"},
-    {"id":"a034","type":"text","x":660,"y":2880,"width":440,"height":140,"text":"## [[Simpson法]]\n偶数段、1–4–2–…–4–1 权重。","color":"3"},
-    {"id":"a038","type":"text","x":1280,"y":2880,"width":440,"height":140,"text":"## [[Simpson误差界]]\nC⁴ 与四阶导数界给四阶控制。","color":"5"},
-    {"id":"g-gauss","type":"group","x":2050,"y":2210,"width":1800,"height":900,"label":"6 · 高斯积分把几何与概率接起来"},
-    {"id":"a010","type":"text","x":2090,"y":2300,"width":440,"height":140,"text":"## [[奇偶函数积分]]\n可积性先成立，对称区间再抵消或加倍。","color":"3"},
-    {"id":"a039","type":"text","x":2710,"y":2300,"width":440,"height":140,"text":"## [[高斯积分]]\n有限方形与圆盘夹逼，得到 √π 并证明收敛。","color":"5"},
-    {"id":"density","type":"text","x":3330,"y":2300,"width":440,"height":140,"text":"## [[概率密度函数]]\n非负与总积分为一共同决定概率解释。","color":"4"},
-    {"id":"improper","type":"text","x":2090,"y":2590,"width":440,"height":140,"text":"## [[反常积分]]\n无限区间先截断，两侧尾积分分别取极限。","color":"4"},
-    {"id":"cdf","type":"text","x":2710,"y":2590,"width":440,"height":140,"text":"## [[累积分布函数]]\n一般定义是 P(X≤x)；有密度时才由密度累积。","color":"4"},
-    {"id":"expect","type":"text","x":3330,"y":2590,"width":440,"height":140,"text":"## [[期望]]\n按概率权重平均；有限值需一阶绝对矩。","color":"4"},
-    {"id":"substitution","type":"text","x":2090,"y":2880,"width":440,"height":140,"text":"## [[定积分换元]]\n[[高斯积分|缩放高斯指数得到一般系数]]；需逆映射时另查 [[非单调换元需分支]]。"},
-    {"id":"finish","type":"text","x":2710,"y":2880,"width":440,"height":140,"text":"## 回到课程问题\n[[01_Math/01_calculus/03_定积分与应用|完整阅读与自检]]\n未归一化的曲线下面积不能直接称概率。"},
-    {"id":"variance","type":"text","x":3330,"y":2880,"width":440,"height":140,"text":"## [[方差]]\n按概率权重累积偏离均值的平方。","color":"4"}
+    {
+      "id": "defint-title",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 1800,
+      "height": 180,
+      "text": "# 定积分与应用\n\n[[01_Math/01_calculus/03_定积分与应用|连续阅读：从累积到计算与建模]] · [[01_Math/01_calculus/03_Definite_Integrals|完整课堂记录与练习]]\n\n每张卡打开一个共享原子；沿有文字的箭头读推导或用途。颜色区分本图的语义角色，不表示掌握度。",
+      "color": "4"
+    },
+    {
+      "id": "defint-guide",
+      "type": "text",
+      "x": 2050,
+      "y": 0,
+      "width": 1800,
+      "height": 220,
+      "text": "<!-- bilingual-en:start -->\n## Two forms of the fundamental theorem\n\nFor continuous integrands, MIT’s FTC I uses [[Newton-Leibniz公式|antiderivative endpoint evaluation]]; FTC II [[积分求导定理|differentiates accumulation]]. Equal derivatives on one interval leave one additive constant, which cancels in endpoint differences. The course uses I before proving it through II.\n<!-- bilingual-en:end -->\n\n对连续被积函数，MIT 的 FTC I 用原函数端点差计算，FTC II 对累积函数求导。同一区间上相同导数留下的加法常数，在端点相减时消去。课程先用 I，再借 II 证明。\n\nReuse / 复用：[[原函数|Antiderivative]] · [[原函数相差常数|Constant-difference theorem]] · [[链式法则|Chain rule]] · [[极值定理|Extreme value theorem]] · [[介值定理|Intermediate value theorem]]"
+    },
+    {
+      "id": "g-accum",
+      "type": "group",
+      "x": 0,
+      "y": 260,
+      "width": 1800,
+      "height": 1000,
+      "label": "1 · 从有限和到累积规则"
+    },
+    {
+      "id": "a001",
+      "type": "text",
+      "x": 40,
+      "y": 350,
+      "width": 440,
+      "height": 260,
+      "text": "<!-- bilingual-en:start -->\n## [[黎曼和|Riemann sum]]\n\nOn finite $[a,b]$, $a<b$, add sampled heights times positive piece widths: $\\sum_i f(\\xi_i)\\Delta x_i$. The tag $\\xi_i$ lies in piece $i$. Forming this finite sum does not establish integrability.\n<!-- bilingual-en:end -->\n\n有限正向区间上，把每段内的取样高度乘该段宽度后相加。各段可以不等宽；有限采样和本身还不保证可积。",
+      "color": "4"
+    },
+    {
+      "id": "a002",
+      "type": "text",
+      "x": 660,
+      "y": 350,
+      "width": 440,
+      "height": 140,
+      "text": "## [[定积分]]\n所有充分细采样和的共同极限。",
+      "color": "4"
+    },
+    {
+      "id": "a003",
+      "type": "text",
+      "x": 1280,
+      "y": 350,
+      "width": 440,
+      "height": 260,
+      "text": "<!-- bilingual-en:start -->\n## [[连续函数可积|Continuous functions are integrable]]\nA real continuous function on finite $[a,b]$, $a<b$, has a finite Riemann integral. Continuity is sufficient, not necessary; merely being continuous on an open or infinite interval does not give this conclusion.\n<!-- bilingual-en:end -->\n\n实函数在有限闭区间 $[a,b]$ 上连续、$a<b$，就有有限的黎曼积分。连续是充分条件，不是必要条件；仅有开区间或无限区间上的连续性还不够。",
+      "color": "5"
+    },
+    {
+      "id": "a009",
+      "type": "text",
+      "x": 40,
+      "y": 640,
+      "width": 440,
+      "height": 260,
+      "text": "<!-- bilingual-en:start -->\n## [[和式识别为积分|Recognising a sum as an integral]]\n\nMatch a fixed Riemann-integrable function on a fixed finite interval with its widths and sample points. As the largest width tends to zero, the sums converge to its integral. Retain every scaling factor.\n<!-- bilingual-en:end -->\n\n在固定有限区间上，先确认固定函数黎曼可积，再匹配宽度和取样点。最大段宽趋零时才用此极限转换；区间缩放因子必须保留。",
+      "color": "3"
+    },
+    {
+      "id": "a004",
+      "type": "text",
+      "x": 660,
+      "y": 640,
+      "width": 440,
+      "height": 270,
+      "text": "<!-- bilingual-en:start -->\n## [[定积分线性性|Linearity]]\nFor Riemann-integrable $f,g$ on finite $[a,b]$, $a<b$, and fixed real $\\alpha,\\beta$,\n$$\\int_a^b(\\alpha f+\\beta g)=\\alpha\\int_a^bf+\\beta\\int_a^bg.$$\nThe coefficients do not vary with the integration variable.\n<!-- bilingual-en:end -->\n\n**定积分线性性**：同一有限区间上的黎曼可积函数，可以按固定实系数相加、缩放后逐项积分。",
+      "color": "5"
+    },
+    {
+      "id": "a005",
+      "type": "text",
+      "x": 1280,
+      "y": 640,
+      "width": 440,
+      "height": 270,
+      "text": "<!-- bilingual-en:start -->\n## [[定积分区间可加性|Interval additivity]]\nIf $f$ is Riemann integrable on one finite interval containing $a,b,c$,\n$$\\int_a^c f=\\int_a^b f+\\int_b^c f.$$\nThis holds in every endpoint order.\n<!-- bilingual-en:end -->\n\n**区间可加性**：同一函数、整段可积时，有向区间可以拆分；中间端点不必在另外两点之间。",
+      "color": "5"
+    },
+    {
+      "id": "a008",
+      "type": "text",
+      "x": 40,
+      "y": 930,
+      "width": 440,
+      "height": 260,
+      "text": "<!-- bilingual-en:start -->\n## [[净变化与总变化|Net and total change]]\nOn finite $[a,b]$, $a<b$, let $s$ have continuous velocity $v=s'$. Displacement is $\\int_a^bv$; distance is $\\int_a^b|v|$. Taking the absolute value only after integration cannot undo cancellation.\n<!-- bilingual-en:end -->\n\n有限正向时间区间上，位置 $s$ 的速度 $v=s'$ 连续时，位移为 $\\int_a^bv$，路程为 $\\int_a^b|v|$。积分后才取绝对值，无法补回已抵消的运动。",
+      "color": "1"
+    },
+    {
+      "id": "a006",
+      "type": "text",
+      "x": 660,
+      "y": 930,
+      "width": 440,
+      "height": 220,
+      "text": "<!-- bilingual-en:start -->\n## [[积分保序性|Order preservation]]\nFor Riemann-integrable $f\\le g$ on finite $[a,b]$ with $a<b$, $\\int_a^bf\\le\\int_a^bg$. Reversing the bounds reverses the inequality.\n<!-- bilingual-en:end -->\n\n**积分保序性**：正向有限区间上，可积函数逐点的大小关系保留到积分中；反向积分则不等号反向。",
+      "color": "5"
+    },
+    {
+      "id": "a007",
+      "type": "text",
+      "x": 1280,
+      "y": 930,
+      "width": 440,
+      "height": 220,
+      "text": "<!-- bilingual-en:start -->\n## [[积分绝对值界|Absolute-value bound]]\n\nFor real Riemann-integrable $f$ on finite $[a,b]$, $a<b$, $|f|$ is also integrable and $\\left|\\int_a^b f\\right|\\le\\int_a^b|f|$.\n<!-- bilingual-en:end -->\n\n实函数在有限正向区间黎曼可积时，其绝对值也可积；净累积的大小不超过先去掉正负抵消的累积。",
+      "color": "5"
+    },
+    {
+      "id": "g-ftc",
+      "type": "group",
+      "x": 2050,
+      "y": 260,
+      "width": 1800,
+      "height": 1000,
+      "label": "2 · 两个基本定理与积分定义的函数"
+    },
+    {
+      "id": "a011",
+      "type": "text",
+      "x": 2090,
+      "y": 350,
+      "width": 440,
+      "height": 270,
+      "text": "<!-- bilingual-en:start -->\n## [[累积函数|Accumulation function]]\nFor Riemann-integrable $f$ on finite $[L,R]$, $L<R$, fix $a\\in[L,R]$ and vary $x\\in[L,R]$:\n$$G(x)=\\int_a^x f(t)\\,dt,\\qquad G(a)=0.$$\nThe endpoint varies; $t$ is a dummy variable.\n<!-- bilingual-en:end -->\n\n**累积函数**：固定起点 $a$，改变终点 $x$；整个所用区间可积时，每个 $x$ 对应一个累积量。",
+      "color": "4"
+    },
+    {
+      "id": "a012",
+      "type": "text",
+      "x": 2710,
+      "y": 350,
+      "width": 440,
+      "height": 270,
+      "text": "<!-- bilingual-en:start -->\n## [[积分求导定理|Differentiating accumulation]]\nLet $G(x)=\\int_a^x f(t)\\,dt$, where $f$ is Riemann integrable on finite $[L,R]$, $L<R$, and $a\\in[L,R]$. At an interior continuity point $c$, $G'(c)=f(c)$. Relative continuity at an endpoint gives its one-sided derivative.\n<!-- bilingual-en:end -->\n\n**积分求导**：整段黎曼可积，在内点 $c$ 连续，则 $G'(c)=f(c)$；端点相对连续时取区间内侧导数。",
+      "color": "5"
+    },
+    {
+      "id": "a013",
+      "type": "text",
+      "x": 3330,
+      "y": 350,
+      "width": 440,
+      "height": 270,
+      "text": "<!-- bilingual-en:start -->\n## [[Newton-Leibniz公式|Newton–Leibniz formula]]\nOn finite $[a,b]$, $a<b$, let $f$ be Riemann integrable and $F$ continuous, with $F'=f$ on $(a,b)$. Then\n$$\\int_a^bf(x)\\,dx=F(b)-F(a).$$\n<!-- bilingual-en:end -->\n\n**端点评价**：$f$ 整段可积，$F$ 闭区间连续且内部导数为 $f$，即可用原函数上限值减下限值。",
+      "color": "5"
+    },
+    {
+      "id": "a014",
+      "type": "text",
+      "x": 2090,
+      "y": 640,
+      "width": 440,
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[变限积分求导|Moving integration bounds]]\nFor fixed continuous $f$ on an open interval $I$, and differentiable $u,v$ taking values in $I$, let $H(x)=\\int_{u(x)}^{v(x)}f(t)\\,dt$. Then\n$$H'=f(v)v'-f(u)u'.$$\nThe written bound order is retained.\n<!-- bilingual-en:end -->\n\n固定的 $f$ 在开区间 $I$ 连续，上下限 $u,v$ 可导且取值在 $I$ 内：上端贡献减下端贡献，两个链式因子都要保留，不必有 $u\\le v$。",
+      "color": "3"
+    },
+    {
+      "id": "a015",
+      "type": "text",
+      "x": 2710,
+      "y": 640,
+      "width": 440,
+      "height": 270,
+      "text": "<!-- bilingual-en:start -->\n## [[积分上下界估计|Bounding an integral]]\n\nFor real Riemann-integrable $f$ on finite $[a,b]$, $a<b$, constant bounds $m\\le f\\le M$ give $m(b-a)\\le\\int_a^bf\\le M(b-a)$. Valid bounds on separate pieces can be added.\n<!-- bilingual-en:end -->\n\n实函数在有限正向区间黎曼可积时，整段常数下界、上界分别乘区间长度就夹住积分；各段有效的局部界可相加。",
+      "color": "3"
+    },
+    {
+      "id": "a016",
+      "type": "text",
+      "x": 3330,
+      "y": 640,
+      "width": 440,
+      "height": 260,
+      "text": "<!-- bilingual-en:start -->\n## [[积分中值定理|Integral mean-value theorem]]\n\nA real continuous $f$ on finite $[a,b]$, $a<b$, attains its [[积分平均值|integral average]] at some $c\\in(a,b)$. The point need not be unique or the midpoint.\n<!-- bilingual-en:end -->\n\n实函数在有限闭区间 $[a,b]$ 连续、$a<b$ 时，某个内点的函数值等于积分平均值。这个点不一定唯一，也不一定是中点。",
+      "color": "5"
+    },
+    {
+      "id": "a017",
+      "type": "text",
+      "x": 2090,
+      "y": 930,
+      "width": 440,
+      "height": 260,
+      "text": "<!-- bilingual-en:start -->\n## [[自然对数积分表示|The logarithm as an integral]]\nThe existing [[自然对数|natural logarithm]] satisfies $\\ln x=\\int_1^xdt/t$ for $x>0$: both sides have derivative $1/x$ and value $0$ at $1$. Inputs $0<x<1$ give a negative oriented integral; this formula never crosses zero.\n<!-- bilingual-en:end -->\n\n对 $x>0$，倒数函数从 $1$ 到 $x$ 的有向积分，与自然对数同导数、同初值。$0<x<1$ 时积分为负；不能把区间跨过零点。",
+      "color": "5"
+    },
+    {
+      "id": "a018",
+      "type": "text",
+      "x": 2710,
+      "y": 930,
+      "width": 440,
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[累积函数图像|Graphing accumulation]]\nFor continuous $f$ on an interval containing $a$, let $G(x)=\\int_a^xf(t)\\,dt$. Inside the interval, $G'=f$: $f\\ge0$ makes $G$ nondecreasing; nondecreasing $f$ makes $G$ convex. A zero of $f$ alone does not identify an extremum.\n<!-- bilingual-en:end -->\n\n连续被积函数的值是累积曲线的斜率：$f\\ge0$ 给出 $G$ 不减，$f$ 不减给出 $G$ 凸。一个零点本身不能判定极值。",
+      "color": "3"
+    },
+    {
+      "id": "a019",
+      "type": "text",
+      "x": 3330,
+      "y": 930,
+      "width": 440,
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[无初等原函数的积分|Non-elementary antiderivatives]]\nFor continuous $f$ on an interval and a base $a$ in it, $G(x)=\\int_a^x f(t)\\,dt$ gives $G'=f$ at interior points, even without an elementary formula. Particular definite values may still be exact; infinite tails need separate convergence checks.\n<!-- bilingual-en:end -->\n\n连续函数可由积分构造原函数，即使没有初等表达式。某个定积分仍可能有精确值；无穷尾部是否收敛须另查。",
+      "color": "1"
+    },
+    {
+      "id": "g-geo",
+      "type": "group",
+      "x": 0,
+      "y": 1340,
+      "width": 1800,
+      "height": 800,
+      "label": "3 · 几何积分先认清实际微元"
+    },
+    {
+      "id": "a020",
+      "type": "text",
+      "x": 40,
+      "y": 1430,
+      "width": 440,
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[曲线间面积|Area between curves]]\nFor integrable graphs over finite $[a,b]$, $a<b$, the region between them has area $\\int_a^b|f-g|\\,dx$. A vertical strip measures upper minus lower; a horizontal strip measures right minus left. Exclude actual gaps.\n<!-- bilingual-en:end -->\n\n有限正向区间上，对可积边界先求实际切片长度：竖条上减下、横条右减左，交叉时用绝对差。空隙不计入面积。",
+      "color": "3"
+    },
+    {
+      "id": "a021",
+      "type": "text",
+      "x": 660,
+      "y": 1430,
+      "width": 440,
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[切片体积|Volume by slicing]]\nFor a bounded regular solid, let $A(s)\\ge0$ be its complete cross-sectional area, Riemann integrable on finite $[a,b]$, $a<b$. Then $V=\\int_a^bA(s)\\,ds$: area times perpendicular thickness.\n<!-- bilingual-en:end -->\n\n规则有界立体的完整截面积 $A$ 非负且可积时，沿有限区间累加截面积乘垂直厚度。包括所有实有部分，扣除孔洞。",
+      "color": "3"
+    },
+    {
+      "id": "a022",
+      "type": "text",
+      "x": 1280,
+      "y": 1430,
+      "width": 440,
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[圆盘垫圈法|Disks and washers]]\nCut perpendicular to the rotation axis. If each actual section is an annulus with radii $R\\ge r\\ge0$, integrate $\\pi(R^2-r^2)$ along the axis over its finite range. Continuous radii suffice; a disk has $r=0$.\n<!-- bilingual-en:end -->\n\n垂直旋转轴切片，先确定实际外半径 $R$ 和内半径 $r$，再积分圆环面积。半径连续是充分条件；圆盘的内半径为零。",
+      "color": "3"
+    },
+    {
+      "id": "a030",
+      "type": "text",
+      "x": 40,
+      "y": 1790,
+      "width": 440,
+      "height": 330,
+      "text": "<!-- bilingual-en:start -->\n## [[Pappus体积定理|Pappus's volume theorem]]\nTake a bounded plane region with piecewise-smooth boundary and area $A>0$, on one side of a coplanar axis; boundary contact is allowed. If $d$ is the area centroid's perpendicular distance to the axis, one full revolution gives $V=2\\pi dA$.\n<!-- bilingual-en:end -->\n\n有界正面积区域的边界分段光滑，整个区域位于共面轴一侧，可触边。体积等于面积乘面积形心的一周路程；$d$ 是垂直轴距，应使用面积形心。",
+      "color": "5"
+    },
+    {
+      "id": "a023",
+      "type": "text",
+      "x": 660,
+      "y": 1790,
+      "width": 440,
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[圆柱壳法|Cylindrical shells]]\nFor a regular solid of revolution, integrate $2\\pi r h(r)$ over its finite nonnegative radial range. Here $h(r)$ is the total axial length actually present at radius $r$; bounded piecewise continuity suffices. Count each radial layer once.\n<!-- bilingual-en:end -->\n\n按非负半径 $r$ 分层，实际轴向总长度为 $h(r)$。有界分段连续时累加 $2\\pi r h(r)\\,dr$；同半径的重叠部分取并集，只计一次。",
+      "color": "3"
+    },
+    {
+      "id": "a024",
+      "type": "text",
+      "x": 1280,
+      "y": 1790,
+      "width": 440,
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[旋转体重复覆盖|Overlapping rotational coverage]]\nFor shells, fix a radius and merge the occupied axial intervals. For perpendicular sections, merge the occupied radial intervals before finding their area. Count shared material once and preserve gaps. Pieces on opposite sides of the axis need not overlap.\n<!-- bilingual-en:end -->\n\n壳法在同一半径处合并沿轴区间；垂直截面先合并径向区间，再求面积。重叠只计一次，空隙仍保留。区域在轴两侧并不意味着一定重叠。",
+      "color": "1"
+    },
+    {
+      "id": "g-weight",
+      "type": "group",
+      "x": 2050,
+      "y": 1340,
+      "width": 1800,
+      "height": 820,
+      "label": "4 · 平均、质量和力各自决定微元"
+    },
+    {
+      "id": "a025",
+      "type": "text",
+      "x": 2090,
+      "y": 1430,
+      "width": 440,
+      "height": 260,
+      "text": "<!-- bilingual-en:start -->\n## [[积分平均值|Integral average]]\n\nFor real Riemann-integrable $f$ on finite $[a,b]$, $a<b$, the average is accumulated value per unit interval length. The function need not attain it.\n<!-- bilingual-en:end -->\n\n实函数在有限正向区间黎曼可积时，平均值是总累积除以区间长度；仅可积并不保证该数被函数取到。\n\n$$f_{\\mathrm{avg}}=\\frac{1}{b-a}\\int_a^bf(x)\\,dx.$$",
+      "color": "4"
+    },
+    {
+      "id": "a026",
+      "type": "text",
+      "x": 2710,
+      "y": 1430,
+      "width": 440,
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[加权平均|Weighted average]]\nOn finite $[a,b]$, $a<b$, require $w\\ge0$, Riemann integrability of $w$ and $fw$, and $W=\\int_a^bw>0$. Then\n$$\\bar f_w=\\frac{\\int_a^bfw}{W}.$$\nChoose what the weights represent before computing.\n<!-- bilingual-en:end -->\n\n有限正向区间上，非负权重 $w$ 与乘积 $fw$ 可积，且总权重 $W$ 为正，才用总加权量除以总权重。先确定按长度、体积还是质量平均。",
+      "color": "4"
+    },
+    {
+      "id": "a027",
+      "type": "text",
+      "x": 3330,
+      "y": 1430,
+      "width": 440,
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[质心|Centre of mass]]\nAverage position using nonnegative mass. With total mass $0<M<\\infty$ and finite absolute first moments, each coordinate is $\\bar x=M^{-1}\\int x\\,dm$, where $dm$ is a mass element. Uniform positive area density gives the area centroid.\n<!-- bilingual-en:end -->\n\n位置按非负质量加权；总质量有限且正、绝对一阶矩有限，才这样平均。$dm$ 是质量微元。正的均匀面积密度下，质心等于面积形心。",
+      "color": "4"
+    },
+    {
+      "id": "arc-reuse",
+      "type": "text",
+      "x": 2090,
+      "y": 1790,
+      "width": 440,
+      "height": 150,
+      "text": "## [[参数曲线弧长与重复描画|弧长微元]]\n曲线平均使用 ds；沿 x 均匀不等于沿弧长均匀。"
+    },
+    {
+      "id": "a029",
+      "type": "text",
+      "x": 2710,
+      "y": 1790,
+      "width": 440,
+      "height": 360,
+      "text": "<!-- bilingual-en:start -->\n## [[功的积分|Work by integration]]\nChoose the force and keep its sign. For Riemann-integrable position-only $F$ on the finite interval traversed, $W=\\int_a^bF(x)\\,dx$; [[定积分区间可加性|add finitely many oriented legs]]. Ideal pumping instead adds each layer's weight times its own lift.\n<!-- bilingual-en:end -->\n\n先确定是哪股力；当它仅依赖位置且在所经有限区间黎曼可积时，按带符号位移积分，有限次往返按有向各段相加。理想抽水则逐层以重量乘各自提升距离，再累加。",
+      "color": "3"
+    },
+    {
+      "id": "a028",
+      "type": "text",
+      "x": 3330,
+      "y": 1790,
+      "width": 440,
+      "height": 330,
+      "text": "<!-- bilingual-en:start -->\n## [[质心积分计算|Centres of mass by integration]]\nDescribe each piece's mass and signed coordinate moments, then divide by the positive total mass. For a bounded plate of uniform positive density $\\rho$ between continuous boundaries $g\\le f$, a vertical strip has mass $\\rho(f-g)\\,dx$ and centre height $(f+g)/2$.\n<!-- bilingual-en:end -->\n\n先累加同一区域的质量及带符号坐标矩，再除以正的总质量。均匀有界薄片在连续上、下边界间时，竖条质量为密度乘条长乘宽度，条内中心高度是两边界的平均。",
+      "color": "3"
+    },
+    {
+      "id": "g-num",
+      "type": "group",
+      "x": 0,
+      "y": 2210,
+      "width": 1800,
+      "height": 960,
+      "label": "5 · 数值近似与可保证的误差"
+    },
+    {
+      "id": "a031",
+      "type": "text",
+      "x": 40,
+      "y": 2300,
+      "width": 440,
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n## [[左右端点矩形法|Endpoint rectangle rules]]\nFor real $f$ on finite $[a,b]$, $a<b$, split into $N$ equal pieces ($N\\ge1$ an integer). Multiply each width by its left or right height, then add. Monotonicity brackets the integral; agreement alone does not.\n<!-- bilingual-en:end -->\n\n有限正向区间等分为正整数 $N$ 段，逐段取左端或右端高度。单调性给出夹界；两种值接近本身不保证准确。",
+      "color": "3"
+    },
+    {
+      "id": "a033",
+      "type": "text",
+      "x": 660,
+      "y": 2300,
+      "width": 440,
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n## [[梯形法|Trapezoidal rule]]\nJoin adjacent heights by straight lines and integrate the signed strips. On finite $[a,b]$, $a<b$, split into $N$ equal pieces ($N\\ge1$ an integer). The $N+1$ endpoint samples give $T_N=(L_N+R_N)/2$ on that same grid.\n<!-- bilingual-en:end -->\n\n连接相邻端点，累加各条带的有向积分。同一等宽网格上，梯形值等于左右端点和的平均；$N$ 段用 $N+1$ 个端点。",
+      "color": "3"
+    },
+    {
+      "id": "a036",
+      "type": "text",
+      "x": 1280,
+      "y": 2300,
+      "width": 440,
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n## [[梯形积分误差界|Trapezoidal error bound]]\nFor real $f\\in C^2[a,b]$ on finite $a<b$, use $N$ equal pieces ($N\\ge1$ an integer) and require $|f''|\\le K_2$ everywhere. With $I=\\int_a^b f(x)\\,dx$:\n$|I-T_N|\\le K_2(b-a)^3/(12N^2)$.\n<!-- bilingual-en:end -->\n\n$N$ 为正整数。实值 $C^2$ 函数的全区间二阶导数界给出此绝对误差保证；$I$ 是有限正向区间上的真积分。",
+      "color": "5"
+    },
+    {
+      "id": "a032",
+      "type": "text",
+      "x": 40,
+      "y": 2590,
+      "width": 440,
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n## [[中点法|Midpoint rule]]\nSplit finite $[a,b]$, $a<b$, into $N$ equal pieces ($N\\ge1$ an integer). Multiply each centre height by $h=(b-a)/N$ and add. This uses $N$ samples; $N$ need not be even. Affine functions are integrated exactly.\n<!-- bilingual-en:end -->\n\n有限正向区间等分为正整数 $N$ 段，每段取中心高度乘段宽，再相加。使用 $N$ 个采样值，不要求偶数；一次或常函数恰好算准。",
+      "color": "3"
+    },
+    {
+      "id": "a035",
+      "type": "text",
+      "x": 660,
+      "y": 2590,
+      "width": 440,
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n## [[Simpson组合恒等式|Simpson combination identity]]\nOn the same equal partition with $n$ coarse pieces ($n\\ge1$ an integer), combine endpoint-based $T_n$ and midpoint-based $M_n$:\n$S_{2n}=(T_n+2M_n)/3$.\nThis is exact algebra between approximations, not an error guarantee.\n<!-- bilingual-en:end -->\n\n同一粗网格的梯形值与中点值，组合为 $2n$ 段细网格的 Simpson 值。近似值之间精确相等，不代表积分真值已算准。",
+      "color": "5"
+    },
+    {
+      "id": "a037",
+      "type": "text",
+      "x": 1280,
+      "y": 2590,
+      "width": 440,
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n## [[中点积分误差界|Midpoint error bound]]\nFor real $f\\in C^2[a,b]$ on finite $a<b$, use $N$ equal pieces ($N\\ge1$ an integer) and require $|f''|\\le K_2$ everywhere. With $I=\\int_a^b f(x)\\,dx$:\n$|I-M_N|\\le K_2(b-a)^3/(24N^2)$.\n<!-- bilingual-en:end -->\n\n$N$ 为正整数。实值 $C^2$ 函数的二阶导数界须覆盖整段；$I$ 是有限正向区间上的真积分，中点界的常数为 $1/24$。",
+      "color": "5"
+    },
+    {
+      "id": "num-guide",
+      "type": "text",
+      "x": 40,
+      "y": 2880,
+      "width": 440,
+      "height": 140,
+      "text": "## 网格与证书\nN 是小区间数，h=(b−a)/N；步数翻倍改变误差界，不保证实际误差严格同比。"
+    },
+    {
+      "id": "a034",
+      "type": "text",
+      "x": 660,
+      "y": 2880,
+      "width": 440,
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n## [[Simpson法|Simpson's rule]]\nOn finite $[a,b]$, $a<b$, take even $N\\ge2$ equal pieces. Integrate a degree-at-most-two fit over each pair: $N+1$ samples have weights $1,4,2,\\ldots,4,1$, multiplied by $h/3$, $h=(b-a)/N$. Exact through degree three.\n<!-- bilingual-en:end -->\n\n每两段拟合次数不超过二的多项式再积分。小区间数须为正偶数；三次及以下多项式也恰好精确，一般函数仍有误差。",
+      "color": "3"
+    },
+    {
+      "id": "a038",
+      "type": "text",
+      "x": 1280,
+      "y": 2880,
+      "width": 440,
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n## [[Simpson误差界|Simpson error bound]]\nFor finite $a<b$, even $N\\ge2$ equal pieces and real $f\\in C^4[a,b]$, require $|f^{(4)}|\\le K_4$ everywhere. With $I=\\int_a^b f(x)\\,dx$:\n$|I-S_N|\\le K_4(b-a)^5/(180N^4)$.\n<!-- bilingual-en:end -->\n\n有限正向区间等分为正偶数 $N$ 段；实值 $C^4$ 函数的全区间四阶导数界，给出此积分近似误差上界。",
+      "color": "5"
+    },
+    {
+      "id": "g-gauss",
+      "type": "group",
+      "x": 2050,
+      "y": 2210,
+      "width": 1800,
+      "height": 980,
+      "label": "6 · 高斯积分把几何与概率接起来"
+    },
+    {
+      "id": "a010",
+      "type": "text",
+      "x": 2090,
+      "y": 2300,
+      "width": 440,
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[奇偶函数积分|Odd and even integrals]]\n\nOn finite $[-a,a]$ ($a>0$), Riemann-integrable odd functions integrate to zero; even functions give twice the half-interval integral. Singular tails need separate checks.\n<!-- bilingual-en:end -->\n\n有限对称区间上黎曼可积时，奇函数积分为零，偶函数积分为半区间的两倍；奇点两侧须另核收敛。",
+      "color": "3"
+    },
+    {
+      "id": "a039",
+      "type": "text",
+      "x": 2710,
+      "y": 2300,
+      "width": 440,
+      "height": 270,
+      "text": "<!-- bilingual-en:start -->\n## [[高斯积分|The Gaussian integral]]\nBoth tails of $e^{-x^2}$ converge:\n$$\\int_{-\\infty}^{\\infty}e^{-x^2}\\,dx=\\sqrt\\pi.$$\nThe half-line value is $\\sqrt\\pi/2$. Finite square and disk volumes prove the value and convergence together.\n<!-- bilingual-en:end -->\n\n两侧尾积分分别收敛，全线总量为 $\\sqrt\\pi$，半线为 $\\sqrt\\pi/2$。有限方形与圆盘的体积夹逼同时证明收敛与积分值。",
+      "color": "5"
+    },
+    {
+      "id": "density",
+      "type": "text",
+      "x": 3330,
+      "y": 2300,
+      "width": 440,
+      "height": 140,
+      "text": "## [[概率密度函数]]\n非负与总积分为一共同决定概率解释。",
+      "color": "4"
+    },
+    {
+      "id": "improper",
+      "type": "text",
+      "x": 2090,
+      "y": 2590,
+      "width": 440,
+      "height": 260,
+      "text": "<!-- bilingual-en:start -->\n## [[反常积分|Improper integrals]]\nStart with proper finite truncations and require finite limits at every problematic end. For the whole real line, both tails must converge separately; a symmetric cutoff alone does not establish this.\n<!-- bilingual-en:end -->\n\n先有正常的有限截断，再要求每个问题端得到有限极限。全实线的两侧尾部须分别收敛，仅对称截断不够。",
+      "color": "4"
+    },
+    {
+      "id": "cdf",
+      "type": "text",
+      "x": 2710,
+      "y": 2590,
+      "width": 440,
+      "height": 140,
+      "text": "## [[累积分布函数]]\n一般定义是 P(X≤x)；有密度时才由密度累积。",
+      "color": "4"
+    },
+    {
+      "id": "expect",
+      "type": "text",
+      "x": 3330,
+      "y": 2590,
+      "width": 440,
+      "height": 140,
+      "text": "## [[期望]]\n按概率权重平均；有限值需一阶绝对矩。",
+      "color": "4"
+    },
+    {
+      "id": "substitution",
+      "type": "text",
+      "x": 2090,
+      "y": 2880,
+      "width": 440,
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[定积分换元|Definite substitution]]\n\nOn a finite interval, with a continuously differentiable inner map and continuous outer function over its full image, change the differential and ordered bounds together.\n<!-- bilingual-en:end -->\n\n有限区间上，内函数连续可微、外函数在完整像域连续时，同步换微分及有向上下限。\n\nUse / 应用：[[高斯积分|Gaussian scaling / 高斯缩放]] · [[非单调换元需分支|Inverse branches / 反解分支]]"
+    },
+    {
+      "id": "finish",
+      "type": "text",
+      "x": 2710,
+      "y": 2880,
+      "width": 440,
+      "height": 140,
+      "text": "## 回到课程问题\n[[01_Math/01_calculus/03_定积分与应用|完整阅读与自检]]\n未归一化的曲线下面积不能直接称概率。"
+    },
+    {
+      "id": "variance",
+      "type": "text",
+      "x": 3330,
+      "y": 2880,
+      "width": 440,
+      "height": 140,
+      "text": "## [[方差]]\n按概率权重累积偏离均值的平方。",
+      "color": "4"
+    }
   ],
   "edges": [
-    {"id":"e01","fromNode":"a001","fromSide":"right","toNode":"a002","toSide":"left","label":"共同细网格极限"},
-    {"id":"e02","fromNode":"a003","fromSide":"left","toNode":"a002","toSide":"right","label":"保证存在"},
-    {"id":"e03","fromNode":"a001","fromSide":"bottom","toNode":"a009","toSide":"top","label":"反向识别宽度与采样"},
-    {"id":"e04","fromNode":"a002","fromSide":"bottom","toNode":"a004","toSide":"top","label":"分配律保留到极限"},
-    {"id":"e06","fromNode":"a006","fromSide":"right","toNode":"a007","toSide":"left","label":"积分 −|f|≤f≤|f|"},
-    {"id":"e07","fromNode":"a007","fromSide":"bottom","toNode":"a008","toSide":"bottom","label":"路程不小于位移大小"},
-    {"id":"e08","fromNode":"a011","fromSide":"right","toNode":"a012","toSide":"left","label":"连续性控制差商误差"},
-    {"id":"e09","fromNode":"a012","fromSide":"right","toNode":"a013","toSide":"left","label":"同导数差常数"},
-    {"id":"e10","fromNode":"a011","fromSide":"bottom","toNode":"a014","toSide":"top","label":"先累积求导，再乘链式因子"},
-    {"id":"e11","fromNode":"a015","fromSide":"right","toNode":"a016","toSide":"left","label":"界内平均值由连续性取到"},
-    {"id":"e14","fromNode":"a019","fromSide":"left","toNode":"a018","toSide":"right","label":"仍可求导研究图像"},
-    {"id":"e15","fromNode":"a020","fromSide":"right","toNode":"a021","toSide":"left","label":"高度换成截面积"},
-    {"id":"e16","fromNode":"a021","fromSide":"right","toNode":"a022","toSide":"left","label":"旋转截面是圆或圆环"},
-    {"id":"e17","fromNode":"a021","fromSide":"bottom","toNode":"a023","toSide":"top","label":"改按半径分层"},
-    {"id":"e18","fromNode":"a023","fromSide":"right","toNode":"a024","toSide":"left","label":"每个实际壳层只计一次"},
-    {"id":"e19","fromNode":"a024","fromSide":"top","toNode":"a022","toSide":"bottom","label":"可改算实际截面并集"},
-    {"id":"e20","fromNode":"a023","fromSide":"left","toNode":"a030","toSide":"right","label":"一阶面积矩写成 A × 轴距"},
-    {"id":"e21","fromNode":"a025","fromSide":"right","toNode":"a026","toSide":"left","label":"常权重推广到非负权重"},
-    {"id":"e22","fromNode":"a026","fromSide":"right","toNode":"a027","toSide":"left","label":"位置以质量加权"},
-    {"id":"e23","fromNode":"a027","fromSide":"bottom","toNode":"a028","toSide":"top","label":"坐标矩转成切片积分"},
-    {"id":"e24","fromNode":"arc-reuse","fromSide":"top","toNode":"a025","toSide":"bottom","label":"沿曲线平均用 ds / L"},
-    {"id":"e25","fromNode":"a031","fromSide":"right","toNode":"a033","toSide":"left","label":"左右规则取平均"},
-    {"id":"e26","fromNode":"a033","fromSide":"right","toNode":"a036","toSide":"left","label":"补 C² 和导数界"},
-    {"id":"e27","fromNode":"a032","fromSide":"right","toNode":"a035","toSide":"left","label":"中点权重为 2"},
-    {"id":"e28","fromNode":"a033","fromSide":"bottom","toNode":"a035","toSide":"top","label":"粗网格梯形权重为 1"},
-    {"id":"e29","fromNode":"a035","fromSide":"bottom","toNode":"a034","toSide":"top","label":"S₂ₙ=(Tₙ+2Mₙ)/3"},
-    {"id":"e30","fromNode":"a037","fromSide":"top","toNode":"a036","toSide":"bottom","toEnd":"none","label":"同阶二阶界，常数不同"},
-    {"id":"e31","fromNode":"a034","fromSide":"right","toNode":"a038","toSide":"left","label":"补 C⁴ 和偶数段条件"},
-    {"id":"e32","fromNode":"a010","fromSide":"right","toNode":"a039","toSide":"left","label":"偶性连接全线与半线"},
-    {"id":"e33","fromNode":"improper","fromSide":"top","toNode":"a039","toSide":"bottom","label":"全线积分须分别检查两侧尾部"},
-    {"id":"e34","fromNode":"a039","fromSide":"right","toNode":"density","toSide":"left","label":"积分值确定归一化常数"},
-    {"id":"e35","fromNode":"density","fromSide":"bottom","toNode":"cdf","toSide":"top","label":"有密度时积分到 x"},
-    {"id":"e36","fromNode":"density","fromSide":"bottom","toNode":"expect","toSide":"top","label":"乘取值并检查可积性"},
-    {"id":"e37","fromNode":"expect","fromSide":"bottom","toNode":"variance","toSide":"top","label":"对中心化平方取期望"}
+    {
+      "id": "e01",
+      "fromNode": "a001",
+      "fromSide": "right",
+      "toNode": "a002",
+      "toSide": "left",
+      "label": "Integrability: a common limit for all fine tagged sums / 可积性：所有充分细的取样和有共同极限"
+    },
+    {
+      "id": "e02",
+      "fromNode": "a003",
+      "fromSide": "left",
+      "toNode": "a002",
+      "toSide": "right",
+      "label": "Continuity on a finite closed interval is sufficient / 有限闭区间上的连续性是充分条件"
+    },
+    {
+      "id": "e03",
+      "fromNode": "a001",
+      "fromSide": "bottom",
+      "toNode": "a009",
+      "toSide": "top",
+      "label": "Identify interval, widths, tags and scaling / 识别区间、段宽、取样点和缩放因子"
+    },
+    {
+      "id": "e04",
+      "fromNode": "a002",
+      "fromSide": "bottom",
+      "toNode": "a004",
+      "toSide": "top",
+      "label": "Fixed coefficients pass to the common limit / 常系数随共同极限保留"
+    },
+    {
+      "id": "e06",
+      "fromNode": "a006",
+      "fromSide": "right",
+      "toNode": "a007",
+      "toSide": "left",
+      "label": "Integrate −|f| ≤ f ≤ |f| with forward bounds / 正向积分两侧绝对值界"
+    },
+    {
+      "id": "e07",
+      "fromNode": "a007",
+      "fromSide": "bottom",
+      "toNode": "a008",
+      "toSide": "bottom",
+      "label": "Integrating speed bounds displacement magnitude / 积分速率得到的路程不小于位移大小"
+    },
+    {
+      "id": "e08",
+      "fromNode": "a011",
+      "fromSide": "right",
+      "toNode": "a012",
+      "toSide": "left",
+      "label": "Continuity at the point controls the quotient / 该点连续控制差商"
+    },
+    {
+      "id": "e09",
+      "fromNode": "a012",
+      "fromSide": "right",
+      "toNode": "a013",
+      "toSide": "left",
+      "label": "For continuous f, compare antiderivatives / 连续 f 时比较原函数"
+    },
+    {
+      "id": "e10",
+      "fromNode": "a011",
+      "fromSide": "bottom",
+      "toNode": "a014",
+      "toSide": "top",
+      "label": "Continuous f and differentiable bounds: chain rule / f 连续、端点可导，再用链式法则"
+    },
+    {
+      "id": "e11",
+      "fromNode": "a015",
+      "fromSide": "right",
+      "toNode": "a016",
+      "toSide": "left",
+      "label": "Continuity makes a bounded integral average attainable / 连续性使界内的积分平均值被取到"
+    },
+    {
+      "id": "e14",
+      "fromNode": "a019",
+      "fromSide": "left",
+      "toNode": "a018",
+      "toSide": "right",
+      "label": "Continuous f gives G′=f without an elementary formula / 连续 f 无须初等表达式也给出 G′=f"
+    },
+    {
+      "id": "e15",
+      "fromNode": "a020",
+      "fromSide": "right",
+      "toNode": "a021",
+      "toSide": "left",
+      "label": "Strip length becomes complete cross-sectional area / 条长推广为完整截面积"
+    },
+    {
+      "id": "e16",
+      "fromNode": "a021",
+      "fromSide": "right",
+      "toNode": "a022",
+      "toSide": "left",
+      "label": "When perpendicular sections are actual disks or annuli / 垂直截面确为圆盘或圆环时"
+    },
+    {
+      "id": "e17",
+      "fromNode": "a021",
+      "fromSide": "bottom",
+      "toNode": "a023",
+      "toSide": "top",
+      "label": "Regroup a solid of revolution into radial layers / 将旋转体改按半径分层"
+    },
+    {
+      "id": "e18",
+      "fromNode": "a023",
+      "fromSide": "right",
+      "toNode": "a024",
+      "toSide": "left",
+      "label": "At the same radius, use the union of axial segments / 同半径轴向区段取并集"
+    },
+    {
+      "id": "e19",
+      "fromNode": "a024",
+      "fromSide": "top",
+      "toNode": "a022",
+      "toSide": "bottom",
+      "label": "Alternatively integrate the area of each actual section / 也可积分每个实际截面的面积"
+    },
+    {
+      "id": "e20",
+      "fromNode": "a023",
+      "fromSide": "left",
+      "toNode": "a030",
+      "toSide": "right",
+      "label": "For a one-sided bounded region of positive area, radial area moment = area × area-centroid axis distance / 单侧有界正面积区域：径向面积矩 = 面积 × 面积形心轴距"
+    },
+    {
+      "id": "e21",
+      "fromNode": "a025",
+      "fromSide": "right",
+      "toNode": "a026",
+      "toSide": "left",
+      "label": "Unit weights are the uniform-average case / 单位权重对应均匀区间平均"
+    },
+    {
+      "id": "e22",
+      "fromNode": "a026",
+      "fromSide": "right",
+      "toNode": "a027",
+      "toSide": "left",
+      "label": "Position weighted by mass, with finite positive total and finite absolute first moments / 以质量平均位置，须总质量有限且正、绝对一阶矩有限"
+    },
+    {
+      "id": "e23",
+      "fromNode": "a027",
+      "fromSide": "bottom",
+      "toNode": "a028",
+      "toSide": "top",
+      "label": "Integrate the same piece masses and signed coordinate moments / 对同一微元累加质量与带符号坐标矩"
+    },
+    {
+      "id": "e24",
+      "fromNode": "arc-reuse",
+      "fromSide": "top",
+      "toNode": "a025",
+      "toSide": "bottom",
+      "label": "For positive finite length L, average with ds/L / 曲线长度 L 有限且正时按 ds/L 平均"
+    },
+    {
+      "id": "e25",
+      "fromNode": "a031",
+      "fromSide": "right",
+      "toNode": "a033",
+      "toSide": "left",
+      "label": "Same grid: T = (L + R)/2 / 同一网格：左右和取平均"
+    },
+    {
+      "id": "e26",
+      "fromNode": "a033",
+      "fromSide": "right",
+      "toNode": "a036",
+      "toSide": "left",
+      "label": "Add C² and a whole-interval second-derivative bound / 补全段二阶导数界与 C²"
+    },
+    {
+      "id": "e27",
+      "fromNode": "a032",
+      "fromSide": "right",
+      "toNode": "a035",
+      "toSide": "left",
+      "label": "Same coarse grid: midpoint weight 2/3 / 同一粗网格：中点权重 2/3"
+    },
+    {
+      "id": "e28",
+      "fromNode": "a033",
+      "fromSide": "bottom",
+      "toNode": "a035",
+      "toSide": "top",
+      "label": "Same coarse grid: trapezoidal weight 1/3 / 同一粗网格：梯形权重 1/3"
+    },
+    {
+      "id": "e29",
+      "fromNode": "a035",
+      "fromSide": "bottom",
+      "toNode": "a034",
+      "toSide": "top",
+      "label": "n coarse pieces → 2n fine pieces / n 段粗网格 → 2n 段细网格"
+    },
+    {
+      "id": "e30",
+      "fromNode": "a037",
+      "fromSide": "top",
+      "toNode": "a036",
+      "toSide": "bottom",
+      "toEnd": "none",
+      "label": "Same interval, N, K₂: midpoint bound = ½ trapezoidal bound / 同区间、N、K₂：中点界为梯形界一半"
+    },
+    {
+      "id": "e31",
+      "fromNode": "a034",
+      "fromSide": "right",
+      "toNode": "a038",
+      "toSide": "left",
+      "label": "Add C⁴ and a whole-interval fourth-derivative bound / 补全段四阶导数界与 C⁴"
+    },
+    {
+      "id": "e32",
+      "fromNode": "a010",
+      "fromSide": "right",
+      "toNode": "a039",
+      "toSide": "left",
+      "label": "Use evenness at finite cutoffs, then check both tails / 先在有限截断用偶性，再核两侧尾积分"
+    },
+    {
+      "id": "e33",
+      "fromNode": "improper",
+      "fromSide": "top",
+      "toNode": "a039",
+      "toSide": "bottom",
+      "label": "Check the two one-sided limits separately / 分别检查两个单侧极限"
+    },
+    {
+      "id": "e34",
+      "fromNode": "a039",
+      "fromSide": "right",
+      "toNode": "density",
+      "toSide": "left",
+      "label": "The finite positive total normalises the nonnegative bell / 有限正总量归一化非负钟形曲线"
+    },
+    {
+      "id": "e35",
+      "fromNode": "density",
+      "fromSide": "bottom",
+      "toNode": "cdf",
+      "toSide": "top",
+      "label": "有密度时积分到 x"
+    },
+    {
+      "id": "e36",
+      "fromNode": "density",
+      "fromSide": "bottom",
+      "toNode": "expect",
+      "toSide": "top",
+      "label": "乘取值并检查可积性"
+    },
+    {
+      "id": "e37",
+      "fromNode": "expect",
+      "fromSide": "bottom",
+      "toNode": "variance",
+      "toSide": "top",
+      "label": "对中心化平方取期望"
+    }
   ]
 }

@@ -19,6 +19,9 @@
 /01_Math/08_EC400_MathsCamp/00_General/EC400_Timetable_2026.pdf
 /01_Math/08_EC400_MathsCamp/01_Revision_Mathematics/Notes/
 
+# Purchased books stay local
+*MEAP*.pdf
+
 # Local application state and personal workflow configuration
 /.obsidian/
 /.claude/settings.local.json

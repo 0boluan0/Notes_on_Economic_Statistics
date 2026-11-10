@@ -15,6 +15,7 @@
 - Course notes are permanent source records even when atoms or Canvases cover the same material. Deleting one requires explicit, file-specific authorization.
 - Course-material updates keep only the latest teacher-issued version; move superseded files to Trash instead of archiving previous versions.
 - Preserve unrelated edits and all user-written daily-note text. Do not hand-edit `.obsidian/`, commit secrets, or break links when moving notes.
+- Keep disposable AI scratch files outside the vault; retain necessary resume state and verification evidence, and remove superseded intermediates after acceptance.
 - Store actual learning progress, mastery, review schedules, and personal evidence only in ignored private records; shared atoms and public course notes/Canvases contain general learning content rather than personal state.
 - Original papers remain in Zotero; the vault stores notes, relationships, navigation, and learning state.
 - Keep private quant notes, strategies, code, data, and outputs in root `08_quant/`, excluded from Git and public exports. General reusable atoms may live in `00_Knowledge/`, without private strategy details, results, or links into `08_quant/`.

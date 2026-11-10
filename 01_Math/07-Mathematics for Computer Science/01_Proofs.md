@@ -188,14 +188,19 @@ A [[数学证明的有效推理|proof]] is a finite sequence of valid inferences
 - **Many examples do not establish a universal statement.** Checking a million inputs still does not prove a claim about all inputs, but one valid counterexample is enough to refute it.
 <!-- bilingual-en:end -->
 
+<!-- bilingual-en:start -->
+With several inputs, the [[命题与谓词|proposition–predicate distinction]] requires fixing the interpretation and supplying or binding every remaining free input. The examples-versus-proof warning above concerns nonexhaustive checking: a finite domain can be checked exhaustively if every allowed case and every calculation is covered. See [[全称命题与反例|universal claims and counterexamples]] and [[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session1.pdf#page=1|Session 1, PDF1–4]].
+<!-- bilingual-en:end -->
+输入不止一个时，[[命题与谓词]]要求固定解释，并指定或约束每个剩余自由输入。上文“例子多不等于证明”的提醒针对未穷尽的核查；若论域有限，且已覆盖每个允许情形并核实计算，穷尽检查也能建立结论。详见[[全称命题与反例]]及 Session 1 PDF1–4。
+
 ### 1.2 蕴含与 Modus Ponens
 <!-- bilingual-en:start -->
 *1.2 Implication and modus ponens*
 <!-- bilingual-en:end -->
 
-蕴含 $P\Rightarrow Q$ 声明：只要前件（antecedent）$P$ 成立，后件（consequent）$Q$ 必须成立。它唯一为假的情形是 $P$ 真而 $Q$ 假。
+[[蕴含真值条件|蕴含]] $P\Rightarrow Q$ 声明：只要前件（antecedent）$P$ 成立，后件（consequent）$Q$ 必须成立。它唯一为假的情形是 $P$ 真而 $Q$ 假。
 <!-- bilingual-en:start -->
-The implication $P\Rightarrow Q$ states that whenever the antecedent $P$ is true, the consequent $Q$ must also be true. It is false only when $P$ is true and $Q$ is false.
+The [[蕴含真值条件|implication]] $P\Rightarrow Q$ states that whenever the antecedent $P$ is true, the consequent $Q$ must also be true. It is false only when $P$ is true and $Q$ is false.
 <!-- bilingual-en:end -->
 
 ![[98_attachment/mathematics_for_computer_science/mit6_042j/unit01-proof-implication.png|900]]
@@ -433,6 +438,11 @@ $$
 C_1\lor\cdots\lor C_k\quad\text{必须恒真。}
 $$
 
+<!-- bilingual-en:start -->
+Coverage is relative to the original hypotheses. If their conjunction is $H$, [[分类证明的完备性|proof by cases]] requires $H\Rightarrow(C_1\lor\cdots\lor C_k)$ and $(H\land C_i)\Rightarrow T$ for every branch. Cases may overlap; each proof retains $H$. The condition need not cover inputs excluded by $H$. See [[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session2.pdf#page=1|Session 2, PDF1–2]].
+<!-- bilingual-en:end -->
+覆盖范围相对于原前提。若共同前提合记为 $H$，[[分类证明的完备性|分类证明]]要求 $H\Rightarrow(C_1\lor\cdots\lor C_k)$，并在每个分支证明 $(H\land C_i)\Rightarrow T$。情形可以重叠，各分支都保留 $H$；不必覆盖已被 $H$ 排除的输入。参见 Session 2 PDF1–2。
+
 **朋友或陌生人。** 任取六人中的一人 $v$。其余五人与 $v$ 的关系只有 friend/stranger 两类，鸽巢原理保证至少三人与 $v$ 同类。若这三人中有一对朋友，则与 $v$（当该类是朋友）组成三朋友；否则三人两两陌生。另一类同理，因此六人中必有三人两两朋友或两两陌生，即 Ramsey 数满足 $R(3,3)\le6$。
 <!-- bilingual-en:start -->
 **Friends or strangers.** Choose one of the six people and call that person $v$. Each of the other five is either a friend or a stranger to $v$, so the pigeonhole principle guarantees that at least three fall in the same category. If those three are friends of $v$ and some pair among them are friends, that pair together with $v$ forms a mutually acquainted triple; if no such pair exists, the three are mutually strangers. The stranger-to-$v$ case is analogous. Hence among any six people there are three mutual friends or three mutual strangers, so $R(3,3)\le6$.
@@ -559,6 +569,13 @@ A template for proving $\forall n\in\mathbb N,P(n)$:
 <!-- bilingual-en:start -->
 The inequality $m'<m$ is not enough by itself. There is no contradiction if $m'$ is negative, lies outside the problem's domain, or is not actually a counterexample.
 <!-- bilingual-en:end -->
+
+> [!note] Two routes from the least failure · 从最小失败出发的两条路线
+> <!-- bilingual-en:start -->
+> The preceding diagram and numbered argument show the descent route of the [[最小反例递降|minimal-counterexample method]]. One may instead use all smaller allowed cases to prove that the selected case $m$ also satisfies $P$, contradicting $m\in C$ directly. Both routes require a nonempty failure set with a justified least member; check the [[良序原理适用域|well-ordering domain]] and the smallest cases before using $m-1$. [Session3 §2.2, PDF2–4](MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session3.pdf#page=2) explicitly permits both routes and gives a sum proof of the second kind.
+> <!-- bilingual-en:end -->
+>
+> 前面的图与编号论证展示的是[[最小反例递降|最小反例法]]中的递降路线。也可以利用全部较小合法情形，直接证明选定的 $m$ 也满足 $P$，从而与 $m\in C$ 矛盾。两条路线都须先保证失败集合非空且确有最小元；调用 $m-1$ 前，要核对[[良序原理适用域|良序原理的论域]]与最小情形。Session3 §2.2、PDF2–4 明确允许这两条路线，并给出第二种路线的求和证明。
 
 ### 3.2 每个大于 1 的整数都是素数乘积
 <!-- bilingual-en:start -->
@@ -1049,9 +1066,9 @@ $$
 \exists x\,P(x):\text{至少存在一个见证 }x\text{ 满足 }P.
 $$
 
-同类量词可交换：$\forall x\forall yP\equiv\forall y\forall xP$，$\exists x\exists yP\equiv\exists y\exists xP$。异类通常不可交换：
+[[量词次序|同类量词]]可交换：$\forall x\forall yP\equiv\forall y\forall xP$，$\exists x\exists yP\equiv\exists y\exists xP$。异类通常不可交换：
 <!-- bilingual-en:start -->
-Quantifiers of the same kind commute: $\forall x\forall yP\equiv\forall y\forall xP$ and $\exists x\exists yP\equiv\exists y\exists xP$. Quantifiers of different kinds generally do not:
+[[量词次序|Quantifiers of the same kind]] commute: $\forall x\forall yP\equiv\forall y\forall xP$ and $\exists x\exists yP\equiv\exists y\exists xP$. Quantifiers of different kinds generally do not:
 <!-- bilingual-en:end -->
 
 $$
@@ -1062,6 +1079,11 @@ $$
 <!-- bilingual-en:start -->
 The first formula allows $y$ to depend on $x$; the second requires a single $y$ greater than every $x$. Over $\mathbb N$, the former is true and the latter is false.
 <!-- bilingual-en:end -->
+
+<!-- bilingual-en:start -->
+The same-kind exchanges above use fixed domains and unchanged scopes. For the natural-number example, $y=x+1$ proves the first statement. Any proposed common $y$ in the reversed statement fails at $x=y$. It would have to be a strict upper bound for every natural number; this is not a claim that a largest element has been found. See [[量词次序|quantifier order and permitted dependencies]] and [[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session5.pdf#page=3|Session 5, PDF3–5]].
+<!-- bilingual-en:end -->
+上面的同类交换使用固定论域与不变的作用域。自然数例中，选 $y=x+1$ 即证明前一陈述；反向陈述提出的任何共同 $y$，都会在 $x=y$ 处失败。它要求的是严格大于全部自然数的上界，上文“最大上界”应按这个要求理解，而不是已经找到了最大元素。详见[[量词次序]]及 Session 5 PDF3–5。
 
 ### 5.3 否定穿过量词
 <!-- bilingual-en:start -->
@@ -1079,9 +1101,9 @@ $$
 \neg\exists xP(x)\equiv\forall x\neg P(x).
 $$
 
-因此，“并非每个算法都终止”是“存在一个算法不终止”，不是“每个算法都不终止”。否定多层量词时逐层交换 $\forall\leftrightarrow\exists$ 并否定最内层谓词。
+因此，“并非每个算法都终止”是“存在一个算法不终止”，不是“每个算法都不终止”。[[量词否定规则|否定多层量词]]时逐层交换 $\forall\leftrightarrow\exists$ 并否定最内层谓词。
 <!-- bilingual-en:start -->
-Therefore, “not every algorithm terminates” means “there exists an algorithm that does not terminate,” not “every algorithm fails to terminate.” To negate several nested quantifiers, swap $\forall\leftrightarrow\exists$ one layer at a time and negate the innermost predicate.
+Therefore, “not every algorithm terminates” means “there exists an algorithm that does not terminate,” not “every algorithm fails to terminate.” To [[量词否定规则|negate several nested quantifiers]], swap $\forall\leftrightarrow\exists$ one layer at a time and negate the innermost predicate.
 <!-- bilingual-en:end -->
 
 ### 5.4 可满足性与见证
@@ -1789,9 +1811,9 @@ The bogus proof divides the $n+1$ horses into the first $n$ and the last $n$, cl
 *8.5 Relationship with WOP*
 <!-- bilingual-en:end -->
 
-若归纳结论失败，WOP 可取最小反例；它之前所有整数都成立，归纳步会推出最小反例也成立。反向也可用归纳证明非空自然数集合有最小元。因此三种方法在课程范围内等价，但表达便利不同。
+若归纳结论失败，WOP 可取最小反例；它之前所有整数都成立，归纳步会推出最小反例也成立。反向也可用归纳证明非空自然数集合有最小元。因此[[归纳与良序法的等价|三种方法]]在课程范围内等价，但表达便利不同。
 <!-- bilingual-en:start -->
-If an inductive claim fails, WOP supplies a least counterexample. Every smaller integer satisfies the claim, so the inductive step forces the least counterexample to satisfy it as well, a contradiction. Conversely, induction can prove that every nonempty set of natural numbers has a least element. Thus ordinary induction, strong induction, and WOP are equivalent within this course, though different problems are easier to express with different forms.
+If an inductive claim fails, WOP supplies a least counterexample. Every smaller integer satisfies the claim, so the inductive step forces the least counterexample to satisfy it as well, a contradiction. Conversely, induction can prove that every nonempty set of natural numbers has a least element. Thus [[归纳与良序法的等价|ordinary induction, strong induction, and WOP]] are equivalent within this course, though different problems are easier to express with different forms.
 <!-- bilingual-en:end -->
 
 > [!question]- 官方在线 feedback exercises（13 prompts）
@@ -2046,9 +2068,9 @@ Modelling requires deciding which information is sufficient to determine the nex
 *9.2 Preserved invariants and invariants*
 <!-- bilingual-en:end -->
 
-谓词 $P$ 是 **preserved invariant**，若每条转移 $q\to q'$ 都满足
+谓词 $P$ 是 **[[不变量原理|preserved invariant]]**，若每条转移 $q\to q'$ 都满足
 <!-- bilingual-en:start -->
-A predicate $P$ is a **preserved invariant** if every transition $q\to q'$ satisfies
+A predicate $P$ is a **[[不变量原理|preserved invariant]]** if every transition $q\to q'$ satisfies
 <!-- bilingual-en:end -->
 
 $$
@@ -2098,10 +2120,24 @@ If a state is a vector $(x_1,\dots,x_k)$, first list the changes $\Delta x_i$ fo
 If a [[秩函数与终止证明|rank function or derived variable]] $V:Q\to W$ decreases strictly at every step and $W$ is well ordered, then no infinite transition chain exists. Weak decrease alone is insufficient: a process can remain constant forever.
 <!-- bilingual-en:end -->
 
+> [!note] Scope of the correctness proof · 正确性证明的范围
+> <!-- bilingual-en:start -->
+> A derived variable is any state-dependent quantity; it becomes a termination certificate only after the range and strict-descent conditions are proved. For output correctness, an initialized and preserved invariant must also imply the postcondition together with each exit condition. Combine that partial-correctness proof with termination over the same inputs and allowed executions. [Session9, §5.4.5–6, PDF10–14](MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session9.pdf#page=10) supplies the two proof obligations and the rank conditions.
+> <!-- bilingual-en:end -->
+>
+> derived variable 是依赖状态的量；只有证明了值域与严格下降条件，才成为终止证书。要保证输出正确，已初始化且保持的不变量还须与每个退出条件共同推出后置条件；再把这份部分正确性证明与覆盖相同输入、相同允许执行的终止证明结合。Session9 §5.4.5–6、PDF10–14 给出了这两个证明义务与秩的条件。
+
 ### 9.5 俄式整数乘法
 <!-- bilingual-en:start -->
 *9.5 Russian integer multiplication*
 <!-- bilingual-en:end -->
+
+> [!note] Inputs and the zero case · 输入与零的边界
+> <!-- bilingual-en:start -->
+> In [CP9 Problem1, PDF1](MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp9.pdf#page=1), $x,y$ and all three state coordinates are nonnegative integers. Both transition rules below require $s>0$. If $y=0$, the starting state already has $s=0$ and returns $a=0=xy$ with no transition; do not apply the even rule at $s=0$. The later bound $\lfloor\log_2y\rfloor+1$ applies to $y>0$; the zero case has zero transitions. The asymptotic $O(\log(y+1))$ statement concerns step counts in this arithmetic model, not the bit cost of all operations.
+> <!-- bilingual-en:end -->
+>
+> CP9 Problem1、PDF1 的 $x,y$ 及三个状态坐标均为非负整数，下列两条转移都要求 $s>0$。若 $y=0$，初态已满足 $s=0$，零次转移就返回 $a=0=xy$，不能在 $s=0$ 时继续套偶数转移。后文的 $\lfloor\log_2y\rfloor+1$ 上界适用于 $y>0$；零的情形为零步。$O(\log(y+1))$ 的渐近结论数的是该运算模型中的步骤，不是全部运算的位成本。
 
 状态 $(r,s,a)$ 从 $(x,y,0)$ 开始；$s$ 偶时转到 $(2r,s/2,a)$，$s$ 奇时转到 $(2r,(s-1)/2,a+r)$。不变量为
 <!-- bilingual-en:start -->

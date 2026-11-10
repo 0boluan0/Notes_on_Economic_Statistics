@@ -1,308 +1,39 @@
 {
-  "nodes": [
-    {
-      "id": "6d00000000000001",
-      "type": "text",
-      "x": 0,
-      "y": -380,
-      "width": 2050,
-      "height": 250,
-      "text": "# 二分图匹配与 Hall 定理\n\n**它解决什么：** 在只允许某些左右配对、端点不可重复使用时，判断能否完成指定覆盖，并找到或否定这种分配。\n**具体锚点：** 学生—项目图中，边表示资格；增广路负责连锁改配，Hall 缺额集合负责证明无论怎样改配都不够。\n**为什么重要：** assignment、resource allocation、scheduling feasibility 和 matching algorithms 共用这套结构。\n\n从左到右读对象与判据；第二行读增广机制；第三行读 Hall 证书；底行读模型边界。点击标题进入原子。颜色：青=模型/定义，黄=区别/诊断，绿=定理/保证，紫=过程，红=边界。"
-    },
-    {
-      "id": "6d00000000000002",
-      "type": "text",
-      "x": 0,
-      "y": 0,
-      "width": 430,
-      "height": 180,
-      "text": "## [[二分图配对关系|允许边模型]]\n*Allowed-edge model*\n\n左右两侧表示不同角色；边只表示这对组合可行。",
-      "color": "5"
-    },
-    {
-      "id": "6d00000000000003",
-      "type": "text",
-      "x": 520,
-      "y": 0,
-      "width": 430,
-      "height": 180,
-      "text": "## [[匹配定义|matching]]\n*Matching*\n\n从允许边中选出互不共享端点的一组边。",
-      "color": "5"
-    },
-    {
-      "id": "6d00000000000004",
-      "type": "text",
-      "x": 1040,
-      "y": 0,
-      "width": 430,
-      "height": 180,
-      "text": "## [[左侧覆盖与完美匹配|覆盖与 perfect]]\n*Coverage vs. perfect*\n\n覆盖指定一侧给出单射；只有覆盖全图才是 perfect。",
-      "color": "3"
-    },
-    {
-      "id": "6d00000000000005",
-      "type": "text",
-      "x": 1560,
-      "y": 0,
-      "width": 490,
-      "height": 180,
-      "text": "## [[Hall 定理|Hall 定理]]\n*Hall's theorem*\n\n覆盖 $L$ 当且仅当每个 $S\\subseteq L$ 都有 $|N(S)|\\ge |S|$。",
-      "color": "4"
-    },
-    {
-      "id": "6d00000000000006",
-      "type": "text",
-      "x": 0,
-      "y": 360,
-      "width": 430,
-      "height": 180,
-      "text": "## [[极大与最大匹配|maximal ≠ maximum]]\n*Maximal is not maximum*\n\n不能直接加边，只是局部停住；不保证边数全局最大。",
-      "color": "3"
-    },
-    {
-      "id": "6d00000000000007",
-      "type": "text",
-      "x": 520,
-      "y": 360,
-      "width": 430,
-      "height": 180,
-      "text": "## [[增广路定义|增广路]]\n*Augmenting path*\n\n边型交替，而且两个端点都尚未匹配。",
-      "color": "5"
-    },
-    {
-      "id": "6d00000000000008",
-      "type": "text",
-      "x": 1040,
-      "y": 360,
-      "width": 430,
-      "height": 180,
-      "text": "## [[增广路对称差|增广路翻转]]\n*Augmenting-path flip*\n\n删旧匹配边、加旧非匹配边，净增加一条。",
-      "color": "4"
-    },
-    {
-      "id": "6d00000000000009",
-      "type": "text",
-      "x": 1560,
-      "y": 360,
-      "width": 490,
-      "height": 180,
-      "text": "## [[Berge最大匹配定理|Berge 定理]]\n*Berge's theorem*\n\nmatching 为 maximum，当且仅当不存在增广路。",
-      "color": "4"
-    },
-    {
-      "id": "6d0000000000000a",
-      "type": "text",
-      "x": 1040,
-      "y": 720,
-      "width": 430,
-      "height": 190,
-      "text": "## [[交替搜索的增广与缺额证书|交替搜索二选一]]\n*Alternating-search dichotomy*\n\n从未匹配左点按“非匹配边向右、匹配边向左”搜完：到未匹配右点就增广，否则前沿给出证书。",
-      "color": "6"
-    },
-    {
-      "id": "6d0000000000000b",
-      "type": "text",
-      "x": 1560,
-      "y": 720,
-      "width": 490,
-      "height": 190,
-      "text": "## [[Hall 缺额证书|Hall 缺额证书]]\n*Hall-deficient certificate*\n\n只要一个 $S\\subseteq L$ 满足 $|N(S)|<|S|$，覆盖全部 $L$ 便不可能。",
-      "color": "1"
-    },
-    {
-      "id": "6d0000000000000c",
-      "type": "text",
-      "x": 0,
-      "y": 1080,
-      "width": 430,
-      "height": 210,
-      "text": "## [[匹配建模要素|建模五问]]\n*Five modelling questions*\n\n先定角色、边语义、覆盖对象、容量和成功标准。",
-      "color": "6"
-    },
-    {
-      "id": "6d0000000000000d",
-      "type": "text",
-      "x": 520,
-      "y": 1080,
-      "width": 430,
-      "height": 210,
-      "text": "## [[整数容量的槽化与网络流|容量：slots / flow]]\n*Capacitated assignment*\n\n单位需求与整数容量可拆槽，或写成整数网络流。",
-      "color": "4"
-    },
-    {
-      "id": "6d0000000000000e",
-      "type": "text",
-      "x": 1040,
-      "y": 1080,
-      "width": 430,
-      "height": 210,
-      "text": "## [[Hall 条件与带权最优|权重：可行 ≠ 最优]]\n*Feasible is not weight-optimal*\n\nHall 只看边是否存在，不会比较可行 matchings 的权重。",
-      "color": "1"
-    },
-    {
-      "id": "6d0000000000000f",
-      "type": "text",
-      "x": 1560,
-      "y": 1080,
-      "width": 490,
-      "height": 210,
-      "text": "## [[稳定匹配与普通匹配|偏好：stable matching]]\n*Preference stability*\n\n普通 matching 只用允许边；stable matching 还排除 blocking pair。",
-      "color": "1"
-    }
-  ],
-  "edges": [
-    {
-      "id": "6de0000000000001",
-      "fromNode": "6d00000000000002",
-      "fromSide": "right",
-      "toNode": "6d00000000000003",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "允许边给出候选；matching 选择端点互斥子集"
-    },
-    {
-      "id": "6de0000000000002",
-      "fromNode": "6d00000000000003",
-      "fromSide": "right",
-      "toNode": "6d00000000000004",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "再指定必须覆盖谁"
-    },
-    {
-      "id": "6de0000000000003",
-      "fromNode": "6d00000000000004",
-      "fromSide": "right",
-      "toNode": "6d00000000000005",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "覆盖 L 的存在性由全部邻居集合刻画"
-    },
-    {
-      "id": "6de0000000000004",
-      "fromNode": "6d00000000000003",
-      "fromSide": "bottom",
-      "toNode": "6d00000000000006",
-      "toSide": "top",
-      "toEnd": "arrow",
-      "label": "局部不能加边仍可能需要重配"
-    },
-    {
-      "id": "6de0000000000005",
-      "fromNode": "6d00000000000006",
-      "fromSide": "right",
-      "toNode": "6d00000000000007",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "若 maximal 仍非 maximum，Berge 保证存在增广路"
-    },
-    {
-      "id": "6de0000000000006",
-      "fromNode": "6d00000000000007",
-      "fromSide": "right",
-      "toNode": "6d00000000000008",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "两端未匹配使翻转净增一边"
-    },
-    {
-      "id": "6de0000000000007",
-      "fromNode": "6d00000000000008",
-      "fromSide": "right",
-      "toNode": "6d00000000000009",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "能增广则当前不可能 maximum"
-    },
-    {
-      "id": "6de0000000000008",
-      "fromNode": "6d00000000000009",
-      "fromSide": "bottom",
-      "toNode": "6d0000000000000a",
-      "toSide": "top",
-      "toEnd": "arrow",
-      "label": "若 maximum 仍未覆盖 L，从未匹配左点出发不能到达未匹配右点"
-    },
-    {
-      "id": "6de0000000000009",
-      "fromNode": "6d0000000000000a",
-      "fromSide": "right",
-      "toNode": "6d0000000000000b",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "搜索失败时 reached sets 满足邻居缺额"
-    },
-    {
-      "id": "6de000000000000a",
-      "fromNode": "6d0000000000000b",
-      "fromSide": "top",
-      "toNode": "6d00000000000005",
-      "toSide": "bottom",
-      "toEnd": "arrow",
-      "label": "任一缺额集合立即否定 Hall condition"
-    },
-    {
-      "id": "6de000000000000b",
-      "fromNode": "6d00000000000005",
-      "fromSide": "bottom",
-      "toNode": "6d0000000000000a",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "Hall condition 成立时，反复增广最终覆盖 L"
-    },
-    {
-      "id": "6de000000000000c",
-      "fromNode": "6d0000000000000c",
-      "fromSide": "top",
-      "toNode": "6d00000000000002",
-      "toSide": "bottom",
-      "toEnd": "arrow",
-      "label": "第一步先固定两侧与边的资格语义"
-    },
-    {
-      "id": "6de000000000000d",
-      "fromNode": "6d0000000000000c",
-      "fromSide": "right",
-      "toNode": "6d0000000000000d",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "容量大于一时先改写约束"
-    },
-    {
-      "id": "6de000000000000e",
-      "fromNode": "6d0000000000000d",
-      "fromSide": "right",
-      "toNode": "6d0000000000000e",
-      "toSide": "left",
-      "toEnd": "none",
-      "label": "容量与权重是两种不同扩展"
-    },
-    {
-      "id": "6de000000000000f",
-      "fromNode": "6d0000000000000e",
-      "fromSide": "right",
-      "toNode": "6d0000000000000f",
-      "toSide": "left",
-      "toEnd": "none",
-      "label": "权重总和与阻挡对稳定性不是同一目标"
-    },
-    {
-      "id": "6de0000000000010",
-      "fromNode": "6d0000000000000c",
-      "fromSide": "right",
-      "toNode": "6d0000000000000e",
-      "toSide": "bottom",
-      "toEnd": "arrow",
-      "label": "有成本或收益时必须另定优化顺序"
-    },
-    {
-      "id": "6de0000000000011",
-      "fromNode": "6d00000000000002",
-      "fromSide": "bottom",
-      "toNode": "6d0000000000000f",
-      "toSide": "top",
-      "toEnd": "arrow",
-      "label": "在允许边上加入双方偏好，并另检查 blocking pairs"
-    }
-  ]
+	"nodes":[
+		{"id":"6d00000000000001","type":"text","x":0,"y":-380,"width":3130,"height":250,"text":"<!-- bilingual-en:start -->\n## Bipartite matching and Hall’s theorem\nFor finite simple graphs, first distinguish allowed pairs, selected pairs and required coverage. Read the first two rows for existence and improvement; the third connects search certificates with modelling choices. The lower rows introduce flow capacities and preference stability. Click a title for its full explanation.\n<!-- bilingual-en:end -->\n\n二分图匹配与 Hall 定理：先区分允许配对、选中配对与覆盖要求。前两行读存在性与增广机制；第三行读搜索证书与建模选择；下方两行分别补网络流容量与偏好稳定性的定义。普通匹配以有限简单图为范围；流模型与稳定模型的附加条件见各卡。点击标题阅读完整讲解。"},
+		{"id":"6d00000000000002","type":"text","x":0,"y":0,"width":520,"height":270,"text":"<!-- bilingual-en:start -->\n## [[二分图配对关系|Allowed pairings]]\nGive the two sides of a [[二分图|bipartite graph]] their roles. An edge records eligibility, before any assignment is chosen.\n<!-- bilingual-en:end -->\n\n为[[二分图]]两侧指定角色。边先记录资格，尚未决定最终分配。","color":"5"},
+		{"id":"6d00000000000003","type":"text","x":870,"y":0,"width":520,"height":270,"text":"<!-- bilingual-en:start -->\n## [[匹配定义|Matching]]\nSelect a set of allowed edges with no shared endpoint. Each object is used at most once.\n<!-- bilingual-en:end -->\n\n从允许边中选择端点互不重复的边集；每个对象至多用一次。","color":"5"},
+		{"id":"6d00000000000004","type":"text","x":1740,"y":0,"width":520,"height":270,"text":"<!-- bilingual-en:start -->\n## [[左侧覆盖与完美匹配|Coverage and perfectness]]\nLeft coverage includes every left vertex. A perfect matching covers both sides; equal finite side sizes make left coverage perfect.\n<!-- bilingual-en:end -->\n\n左侧覆盖包含全部左点；完美匹配覆盖两侧。有限等大两侧中，左覆盖即完美。","color":"3"},
+		{"id":"6d00000000000005","type":"text","x":2610,"y":0,"width":520,"height":270,"text":"<!-- bilingual-en:start -->\n## [[Hall 定理|Hall’s theorem]]\nLeft coverage exists exactly when every left subset has at least as many distinct neighbors as members. Neighbors form a union of options.\n<!-- bilingual-en:end -->\n\n覆盖左侧当且仅当每个左侧子集的不同邻居数不少于自身人数；邻居集是选项的并集。","color":"4"},
+		{"id":"6d00000000000006","type":"text","x":0,"y":460,"width":520,"height":270,"text":"<!-- bilingual-en:start -->\n## [[极大与最大匹配|Maximal and maximum]]\nMaximal: no single edge can be added. Maximum: no matching has more edges. A maximal matching may still improve by replacing edges.\n<!-- bilingual-en:end -->\n\n极大：不能直接加边。最大：不存在边数更多的匹配。极大匹配仍可能通过换边改进。","color":"3"},
+		{"id":"6d00000000000007","type":"text","x":870,"y":460,"width":520,"height":270,"text":"<!-- bilingual-en:start -->\n## [[增广路定义|Augmenting paths]]\nFor a fixed matching, take a simple path between two distinct unmatched vertices, alternating unselected and selected edges.\n<!-- bilingual-en:end -->\n\n相对固定匹配，简单路径两端为不同的未匹配点，沿路未选边与已选边交替。","color":"5"},
+		{"id":"6d00000000000008","type":"text","x":1740,"y":460,"width":520,"height":270,"text":"<!-- bilingual-en:start -->\n## [[增广路对称差|Flipping an augmenting path]]\nRemove the path’s selected edges and add its unselected edges. Edges outside the path stay. The result is a matching larger by one.\n<!-- bilingual-en:end -->\n\n撤去路上已选边、加入未选边，路外保持不变；结果仍是匹配，边数恰增一。","color":"4"},
+		{"id":"6d00000000000009","type":"text","x":2610,"y":460,"width":520,"height":270,"text":"<!-- bilingual-en:start -->\n## [[Berge最大匹配定理|Berge’s theorem]]\nA matching in a finite graph is maximum exactly when no augmenting path exists. The criterion also applies beyond bipartite graphs.\n<!-- bilingual-en:end -->\n\n有限图的匹配最大，当且仅当不存在增广路。判据也适用于非二分图。","color":"4"},
+		{"id":"6d0000000000000a","type":"text","x":870,"y":920,"width":520,"height":270,"text":"<!-- bilingual-en:start -->\n## [[交替搜索的增广与缺额证书|Alternating search]]\nFix the matching and start at all unmatched left vertices. Find an augmenting path, or exhaust the search to obtain a deficient set. No roots means left coverage.\n<!-- bilingual-en:end -->\n\n固定匹配，从全部未匹配左点出发。找到增广路，或穷尽搜索后得到缺额集合；没有起点表示已覆盖左侧。","color":"6"},
+		{"id":"6d0000000000000b","type":"text","x":0,"y":920,"width":520,"height":270,"text":"<!-- bilingual-en:start -->\n## [[Hall 缺额证书|Hall deficiency certificates]]\nA left set with fewer neighbors than members proves that full left coverage is impossible. Count its entire neighbor union.\n<!-- bilingual-en:end -->\n\n找到邻居数少于自身人数的左侧集合，即证明无法覆盖左侧；必须数完整邻居并集。","color":"1"},
+		{"id":"6d0000000000000c","type":"text","x":2610,"y":920,"width":520,"height":270,"text":"<!-- bilingual-en:start -->\n## [[匹配建模要素|Modelling an assignment]]\nState both roles, allowed pairs, required coverage, capacities and the objective. One student–project example connects all five choices.\n<!-- bilingual-en:end -->\n\n写清双方角色、允许配对、覆盖对象、容量和目标；用同一学生—项目例贯穿五项选择。","color":"6"},
+		{"id":"6d0000000000000d","type":"text","x":1740,"y":1380,"width":520,"height":270,"text":"<!-- bilingual-en:start -->\n## [[整数容量的槽化与网络流|Capacity: slots and flow]]\nWith unit demand and interchangeable integer places, cloning slots or using integral flow preserves valid assignments and their sizes.\n<!-- bilingual-en:end -->\n\n单位需求、可互换整数名额下，拆槽或整数流保留合法分配及已分配人数。","color":"4"},
+		{"id":"6d0000000000000e","type":"text","x":1740,"y":920,"width":520,"height":270,"text":"<!-- bilingual-en:start -->\n## [[Hall 条件与带权最优|Feasibility and weighted cost]]\nHall tests whether left coverage exists. To compare costs, specify an objective over those feasible assignments. Changing costs can change the best choice.\n<!-- bilingual-en:end -->\n\nHall 判断覆盖是否存在；比较成本须在可行分配上另定目标。改成本可能改变最优选择。","color":"3"},
+		{"id":"6d0000000000000f","type":"text","x":1740,"y":1840,"width":520,"height":270,"text":"<!-- bilingual-en:start -->\n## [[稳定匹配与普通匹配|Feasibility and stability]]\nAllowed edges determine feasibility; two-sided rankings determine blocking pairs. A perfect minimum-cost matching may still be unstable.\n<!-- bilingual-en:end -->\n\n允许边决定可行性；双边排序决定阻挡对。最低成本完美匹配仍可能不稳定。","color":"3"},
+		{"id":"matching-network-flow","type":"text","x":0,"y":1380,"width":520,"height":270,"text":"<!-- bilingual-en:start -->\n## [[网络流|Network flow]]\nNonnegative arc amounts obey capacities and conservation at intermediate vertices. Flow value is net transfer from source to sink.\n<!-- bilingual-en:end -->\n\n弧上非负数量遵守容量与中间点守恒；流值计算从源点到汇点的净运输量。","color":"5"},
+		{"id":"matching-flow-integrality","type":"text","x":870,"y":1380,"width":520,"height":270,"text":"<!-- bilingual-en:start -->\n## [[最大流整数性|Maximum-flow integrality]]\nFinite networks with nonnegative integer capacities have an integral maximum flow. Some other optimal flows can still be fractional.\n<!-- bilingual-en:end -->\n\n有限网络若容量为非负整数，就存在整数最大流；其他最优流仍可能含分数。","color":"4"},
+		{"id":"matching-blocking-pair","type":"text","x":0,"y":1840,"width":520,"height":270,"text":"<!-- bilingual-en:start -->\n## [[阻挡对|Blocking pairs]]\nIn the complete strict one-to-one model, an unselected pair blocks when both prefer each other to their current partners.\n<!-- bilingual-en:end -->\n\n完整严格一对一模型中，未彼此配对的两人都更喜欢对方而非现任伙伴，就形成阻挡对。","color":"5"},
+		{"id":"matching-stable-definition","type":"text","x":870,"y":1840,"width":520,"height":270,"text":"<!-- bilingual-en:start -->\n## [[稳定匹配|Stable matching]]\nIn this finite equal-size complete strict model, a stable outcome is a perfect matching with no blocking pair.\n<!-- bilingual-en:end -->\n\n在有限等大、完整严格偏好模型中，稳定结果是没有阻挡对的完美匹配。","color":"5"}
+	],
+	"edges":[
+		{"id":"match-route-01","fromNode":"6d00000000000002","fromSide":"right","toNode":"6d00000000000003","toSide":"left","toEnd":"arrow","label":"Select edges\n选取边"},
+		{"id":"match-route-02","fromNode":"6d00000000000003","fromSide":"right","toNode":"6d00000000000004","toSide":"left","toEnd":"arrow","label":"Require coverage\n指定覆盖"},
+		{"id":"match-route-03","fromNode":"6d00000000000004","fromSide":"right","toNode":"6d00000000000005","toSide":"left","toEnd":"arrow","label":"Existence\ncriterion\n存在判据"},
+		{"id":"match-route-04","fromNode":"6d00000000000006","fromSide":"right","toNode":"6d00000000000007","toSide":"left","toEnd":"arrow","label":"If not maximum\n若非最大"},
+		{"id":"match-route-05","fromNode":"6d00000000000007","fromSide":"right","toNode":"6d00000000000008","toSide":"left","toEnd":"arrow","label":"Flip the path\n翻转路径"},
+		{"id":"match-route-06","fromNode":"6d00000000000008","fromSide":"right","toNode":"6d00000000000009","toSide":"left","toEnd":"arrow","label":"Improvement\ncriterion\n改进判据"},
+		{"id":"match-route-07","fromNode":"6d0000000000000a","fromSide":"left","toNode":"6d0000000000000b","toSide":"right","toEnd":"arrow","label":"Nonempty roots;\nexhaustive failure\n非空左根，\n穷尽失败"},
+		{"id":"match-route-08","fromNode":"6d0000000000000c","fromSide":"left","toNode":"6d0000000000000e","toSide":"right","toEnd":"arrow","label":"Specify cost\nobjective\n指定成本目标"},
+		{"id":"match-route-09","fromNode":"matching-network-flow","fromSide":"right","toNode":"matching-flow-integrality","toSide":"left","toEnd":"arrow","label":"Integer capacities\n整数容量"},
+		{"id":"match-route-10","fromNode":"matching-flow-integrality","fromSide":"right","toNode":"6d0000000000000d","toSide":"left","toEnd":"arrow","label":"Extract\nassignments\n提取分配"},
+		{"id":"match-route-11","fromNode":"matching-blocking-pair","fromSide":"right","toNode":"matching-stable-definition","toSide":"left","toEnd":"arrow","label":"Exclude all\nsuch pairs\n排除全部阻挡对"},
+		{"id":"match-route-12","fromNode":"matching-stable-definition","fromSide":"right","toNode":"6d0000000000000f","toSide":"left","toEnd":"arrow","label":"Compare\nrequirements\n比较要求"},
+		{"id":"match-route-13","fromNode":"6d00000000000003","fromSide":"bottom","toNode":"6d00000000000007","toSide":"top","toEnd":"arrow","label":"Fix current matching\n固定当前匹配"},
+		{"id":"match-route-14","fromNode":"6d00000000000007","fromSide":"bottom","toNode":"6d0000000000000a","toSide":"top","toEnd":"arrow","label":"Search for a path\n搜索路径"}
+	]
 }

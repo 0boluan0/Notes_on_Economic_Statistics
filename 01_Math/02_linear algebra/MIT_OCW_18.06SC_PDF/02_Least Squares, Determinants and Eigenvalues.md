@@ -1770,6 +1770,13 @@ M_{ij}=\det A_{\widehat i,\widehat j},
 C_{ij}=(-1)^{i+j}M_{ij}.
 $$
 
+> [!note] Reading the notation / 记号说明
+> <!-- bilingual-en:start -->
+> Here $A_{\widehat i,\widehat j}$ is the deleted submatrix and $M_{ij}=\det A_{\widehat i,\widehat j}$ is a scalar. In later expressions written as $\det M_{ij}$, the symbol $M_{ij}$ instead denotes that submatrix; read the whole expression as $\det A_{\widehat i,\widehat j}$. The checkerboard below specifies only the factor $(-1)^{i+j}$. Thus position $(2,3)$ gives $C_{23}=-M_{23}$ in the scalar convention, while the sign of the actual value also depends on $M_{23}$. See [[余子式与代数余子式|minors and cofactors]] for a worked example.
+> <!-- bilingual-en:end -->
+>
+> 这里 $A_{\widehat i,\widehat j}$ 是删剩的子矩阵，$M_{ij}=\det A_{\widehat i,\widehat j}$ 是标量。后文写成 $\det M_{ij}$ 的地方，$M_{ij}$ 改为指这个子矩阵，整个式子应读作 $\det A_{\widehat i,\widehat j}$。下面的棋盘格只指定乘数 $(-1)^{i+j}$。因此位置 $(2,3)$ 在标量记法下给出 $C_{23}=-M_{23}$，最终数值的正负还取决于 $M_{23}$。具体算例见[[余子式与代数余子式]]。
+
 符号棋盘为
 <!-- bilingual-en:start -->
 The signs follow the checkerboard pattern
@@ -2514,9 +2521,9 @@ This is the advantage of eigenvector coordinates: along each eigendirection, a m
 *Knowledge chain*
 <!-- bilingual-en:end -->
 
-[[特征对]] → $\det(A-\lambda I)=0$ → [[特征多项式|用特征多项式找候选特征值]] → [[特征空间|求对应特征方向]] → [[互异特征值向量独立|独立特征方向]] → 下一节的[[对角化]]。
+[[特征对]] → $\det(A-\lambda I)=0$ → [[特征多项式|用特征多项式找候选特征值]] → [[特征空间|求对应特征方向]] → [[互异特征值向量独立|互异特征值提供独立方向]] → 下一节的[[对角化]]。
 <!-- bilingual-en:start -->
-[[特征对|Eigenpairs]] → $\det(A-\lambda I)=0$ → the [[特征多项式|characteristic polynomial identifies candidate eigenvalues]] → [[特征空间|solve for the corresponding eigendirections]] → [[互异特征值向量独立|independent eigendirections]] → [[对角化|diagonalization]] in the next section.
+[[特征对|Eigenpairs]] → $\det(A-\lambda I)=0$ → the [[特征多项式|characteristic polynomial identifies candidate eigenvalues]] → [[特征空间|solve for the corresponding eigendirections]] → [[互异特征值向量独立|distinct eigenvalues give independent directions]] → [[对角化|diagonalization]] in the next section.
 <!-- bilingual-en:end -->
 
 ---
@@ -3231,9 +3238,9 @@ A^k\longrightarrow p_*\mathbf1^T
 \quad\Longleftrightarrow\quad
 1\text{ 是代数单根，且其余特征值都满足 }|\lambda|<1.
 $$
-严格在单位圆内的 Jordan 块所带多项式因子仍会衰减，所以不需要额外假设可对角化。每个有限随机矩阵至少有一个稳态，概率论中的存在结构见[[有限链平稳分解]]；[[Markov稳态唯一判据|稳态唯一当且仅当 $\dim\operatorname{null}(A-I)=1$]]。若固定点空间维数大于 $1$，稳态就不唯一；[[稳态唯一不推收敛|即使稳态唯一，$\lambda=-1$ 或其他单位圆特征值仍可造成周期振荡]]。因此“Markov”本身并不自动保证收敛到唯一稳态；完整的谱条件见[[Markov幂的秩一稳态极限|Markov矩阵幂收敛判据]]。有限状态的严格正矩阵满足更强的 Perron--Frobenius 条件，本节图中的具体矩阵正是这一情形。
+严格在单位圆内的 Jordan 块所带多项式因子仍会衰减，所以不需要额外假设可对角化。每个有限随机矩阵至少有一个稳态，概率论中的存在结构见[[有限Markov链稳态存在|有限状态下的存在性证明]]；[[Markov稳态唯一判据|稳态唯一当且仅当 $\dim\operatorname{null}(A-I)=1$]]。若固定点空间维数大于 $1$，稳态就不唯一；[[稳态唯一不推收敛|即使稳态唯一，$\lambda=-1$ 或其他单位圆特征值仍可造成周期振荡]]。因此“Markov”本身并不自动保证收敛到唯一稳态；完整的谱条件见[[Markov矩阵幂收敛判据|Markov矩阵幂收敛判据]]。有限状态的严格正矩阵满足更强的 Perron--Frobenius 条件，本节图中的具体矩阵正是这一情形。
 <!-- bilingual-en:start -->
-For every eigenvector with $\lambda_i\ne1$, $\mathbf1^Tx_i=0$, so a probability vector has coefficient one on the normalized stationary direction. More generally, a finite column-stochastic matrix need not be diagonalizable: $A^k\to p_*\mathbf1^T$ exactly when one is an algebraically simple eigenvalue and every other eigenvalue lies strictly inside the unit circle. Jordan polynomial factors attached to eigenvalues strictly inside the disk still decay. Every finite stochastic matrix has at least one stationary distribution; its probabilistic existence structure is recorded in [[有限链平稳分解]]. The [[Markov稳态唯一判据|stationary distribution is unique exactly when $\dim\operatorname{null}(A-I)=1$]]. A larger fixed-point space means nonuniqueness, while [[稳态唯一不推收敛|uniqueness still does not preclude periodic oscillation]] from another unit-circle eigenvalue such as $-1$. Thus stochasticity alone does not guarantee convergence; the complete spectral condition is in [[Markov幂的秩一稳态极限|the matrix-power convergence criterion]]. Finite-state matrices with every entry strictly positive satisfy the stronger Perron–Frobenius conditions, as do the specific matrices illustrated here.
+For every eigenvector with $\lambda_i\ne1$, $\mathbf1^Tx_i=0$, so a probability vector has coefficient one on the normalized stationary direction. More generally, a finite column-stochastic matrix need not be diagonalizable: $A^k\to p_*\mathbf1^T$ exactly when one is an algebraically simple eigenvalue and every other eigenvalue lies strictly inside the unit circle. Jordan polynomial factors attached to eigenvalues strictly inside the disk still decay. Every finite stochastic matrix has at least one stationary distribution; its probabilistic existence structure is recorded in [[有限Markov链稳态存在|the finite-state existence proof]]. The [[Markov稳态唯一判据|stationary distribution is unique exactly when $\dim\operatorname{null}(A-I)=1$]]. A larger fixed-point space means nonuniqueness, while [[稳态唯一不推收敛|uniqueness still does not preclude periodic oscillation]] from another unit-circle eigenvalue such as $-1$. Thus stochasticity alone does not guarantee convergence; the complete spectral condition is in [[Markov矩阵幂收敛判据|the matrix-power convergence criterion]]. Finite-state matrices with every entry strictly positive satisfy the stronger Perron–Frobenius conditions, as do the specific matrices illustrated here.
 <!-- bilingual-en:end -->
 
 ![[98_attachment/linear_algebra/mit18_06sc/mit18.06sc-unit2-markov-steady-state.png|760]]

@@ -390,8 +390,8 @@
       "x": 40,
       "y": 2500,
       "width": 400,
-      "height": 180,
-      "text": "## [[斯特林公式]]\n*Stirling's formula*\n\n阶乘主近似的相对误差趋于零。"
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n## [[斯特林公式|Stirling’s formula]]\n\nA ratio tending to one specifies the relative approximation to the factorial.\n<!-- bilingual-en:end -->\n\n阶乘主近似的相对误差趋于零。"
     },
     {
       "id": "count024",
@@ -399,8 +399,8 @@
       "x": 560,
       "y": 2500,
       "width": 400,
-      "height": 180,
-      "text": "## [[Robbins阶乘界]]\n*Robbins' bounds*\n\n每个正整数上的显式余项界，提供有限规模保证。"
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n## [[Robbins阶乘界|Robbins’ bounds]]\n\nStrict error bounds hold at every positive integer, including $n=1$.\n<!-- bilingual-en:end -->\n\n每个正整数上的显式余项界，提供有限规模保证。"
     },
     {
       "id": "next",
@@ -621,7 +621,7 @@
       "fromSide": "right",
       "toNode": "count024",
       "toSide": "left",
-      "label": "有限 n 界"
+      "label": "Finite error / 有限误差"
     },
     {
       "id": "e28",
@@ -637,7 +637,7 @@
       "fromSide": "bottom",
       "toNode": "next",
       "toSide": "top",
-      "label": "有限规模界与渐近判断分别使用"
+      "label": "Finite bounds and limits / 有限界与极限"
     }
   ]
 }

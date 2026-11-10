@@ -4496,6 +4496,12 @@ For a typical initial condition with $0<y_0<s$, we have $A>0$ and $y\to s$ as $x
 - After deriving a formula, identify the [[微分方程最大区间|maximal interval]] connected to the initial condition; it cannot cross a zero of the denominator.
 <!-- bilingual-en:end -->
 
+<!-- bilingual-en:start -->
+A zero denominator is a boundary to investigate, not by itself proof of a [[微分方程最大区间|maximal endpoint]]. For $y'=1$, the formula $x^2/x$ on $x>0$ extends as $y=x$ through zero. Blow-up of the solution, or a point where the [[方程未定义处分支独立|original equation is undefined along the trajectory]], blocks extension through that point. Check the original equation and the limiting solution.
+<!-- bilingual-en:end -->
+
+分母为零是需要调查的边界，本身并不证明已经到达[[微分方程最大区间|最大区间端点]]。例如 $y'=1$ 的表达式 $x^2/x$ 在 $x>0$ 上可以化成 $y=x$ 并延拓穿过零。解本身爆破，或轨迹到达[[方程未定义处分支独立|原方程无定义的点]]，都会阻止从该点继续延拓；须检查原方程及解的极限。
+
 > [!question]- 三道自检题与答案
 > 1. $y'=ky$ 的零解是否包含在 $Ae^{kx}$ 中？
 > 包含，取 $A=0$。

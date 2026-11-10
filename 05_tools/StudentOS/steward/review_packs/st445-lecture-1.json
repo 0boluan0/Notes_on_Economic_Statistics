@@ -1,7 +1,7 @@
 {
   "lesson_id": "st445-lecture-1",
   "title": "ST445 Lecture 1 · 数据表示与分析前的判断",
-  "version": 2,
+  "version": 3,
   "source_refs": [
     {
       "id": "lecture_pdf",
@@ -10,8 +10,8 @@
     },
     {
       "id": "formal_note",
-      "path": "03_Computer_Science/06_ST445_Managing_and_Visualising_Data/01_数据、数据类型与结构.md",
-      "sha256": "173800a6399f7697e585754fb65585da392de06660e0fc521f80be5863f8e6ae"
+      "path": "03_Computer_Science/06_ST445_Managing_and_Visualising_Data/L01 - Data, Data Types and Structures.md",
+      "sha256": "498319ae9076f127a8c31a3133bbb62d4bb1254d64b327aae0f4efdb1e389ab7"
     }
   ],
   "objectives": [

@@ -1,6 +1,5 @@
 ---
 aliases:
-  - "同一粗网格的梯形值与中点值按一比二加权等于二倍细分后的Simpson值"
   - Simpson's trapezoidal-midpoint identity
 student_os: knowledge-atom
 atom_id: CALC-DEFINT-035
@@ -14,30 +13,47 @@ part_of:
   - "[[定积分与应用.canvas]]"
 ---
 
-# 同一粗网格的梯形值与中点值按一比二加权等于二倍细分后的Simpson值
 <!-- bilingual-en:start -->
-*One third of a coarse-grid trapezoidal value plus two thirds of its midpoint value equals Simpson's value on the grid with twice as many subintervals*
+# Simpson's trapezoidal–midpoint identity
+<!-- bilingual-en:end -->
+*Simpson组合恒等式*
+
+<!-- bilingual-en:start -->
+If you have estimated the same integral using the [[梯形法|trapezoidal rule]] and the [[中点法|midpoint rule]] on the **same equal partition**, you already have every sampled value needed for a finer [[Simpson法|Simpson rule]]. Giving the midpoint estimate twice the weight of the trapezoidal estimate produces that Simpson value exactly. The equality concerns the computed approximations; it does not say that the integral itself is known exactly.
 <!-- bilingual-en:end -->
 
-设粗网格将 $[a,b]$ 等分为 $n$ 段。$T_n$ 与 $M_n$ 分别是在该粗网格上计算的 [[梯形法]] 与 [[中点法]]；将每段二等分后，共有 $N=2n$ 个小区间，细步长 $h=(b-a)/(2n)$。在这个细网格上的 [[Simpson法]] 满足 $S_{2n}=(T_n+2M_n)/3$。恒等式只需相关节点处的函数值存在，不需要导数或误差近似。
+如果你已经在**同一个等宽分割**上用 [[梯形法]] 和 [[中点法]] 估计了一个积分，那么计算更细网格的 [[Simpson法]] 所需要的取样值其实已经齐了。把中点法的权重设为梯形法的两倍，得到的数恰好就是该 Simpson 近似值。这是几种近似值之间的精确相等，不代表积分真值已经精确算出。
+
+> [!tip] Keep the grid counts visible · 先分清粗细网格
+> <!-- bilingual-en:start -->
+> With $n\ge1$ coarse intervals, $T_n$ uses their $n+1$ endpoints and $M_n$ uses their $n$ midpoints. Together these are the $2n+1$ endpoints of a fine grid with **$2n$ intervals**. Hence
+> <!-- bilingual-en:end -->
+>
+> 粗网格有 $n\ge1$ 段时，$T_n$ 使用 $n+1$ 个端点，$M_n$ 使用 $n$ 个中点。合起来正好是细网格的 $2n+1$ 个端点，而细网格有 **$2n$ 段**。因此
+> $$\boxed{S_{2n}=\frac{T_n+2M_n}{3}.}$$
+
 <!-- bilingual-en:start -->
-Split $[a,b]$ into $n$ equal coarse subintervals and compute the [[梯形法|trapezoidal value]] $T_n$ and [[中点法|midpoint value]] $M_n$ on that partition. Halving each interval creates $N=2n$ fine subintervals with $h=(b-a)/(2n)$. The [[Simpson法|Simpson value]] on this fine grid satisfies $S_{2n}=(T_n+2M_n)/3$. This algebraic identity requires only defined function values at the nodes, without derivatives or an error approximation.
+## Where the coefficients come from
+<!-- bilingual-en:end -->
+*系数从哪里来*
+
+<!-- bilingual-en:start -->
+Take finite real $a<b$ and a positive integer $n$. Let the fine width be $h=(b-a)/(2n)$, with nodes $x_i=a+ih$ and sampled values $f_i=f(x_i)$, for $i=0,\ldots,2n$. Assume these values are finite real numbers. The coarse width is $2h$: its endpoints are the even-indexed nodes, and its midpoints are the odd-indexed nodes.
 <!-- bilingual-en:end -->
 
-令细网格节点 $x_i=a+ih$、$f_i=f(x_i)$。粗网格端点是偶数节点，粗网格中点是奇数节点；粗步长是 $2h$，因而
-<!-- bilingual-en:start -->
-Let $x_i=a+ih$ and $f_i=f(x_i)$ on the fine grid. Coarse endpoints have even indices and coarse midpoints have odd indices. Since the coarse step is $2h$,
-<!-- bilingual-en:end -->
+取有限实数 $a<b$ 和正整数 $n$。细步长为 $h=(b-a)/(2n)$，节点是 $x_i=a+ih$，取样值记作 $f_i=f(x_i)$，其中 $i=0,\ldots,2n$；要求这些值是有限实数。粗步长为 $2h$：粗端点对应偶数下标，粗中点对应奇数下标。
 
 $$
 T_n=h\left[f_0+2\sum_{j=1}^{n-1}f_{2j}+f_{2n}\right],
-\qquad M_n=2h\sum_{j=1}^{n}f_{2j-1}.
+\qquad
+M_n=2h\sum_{j=1}^{n}f_{2j-1}.
 $$
 
-代入并合并权重，便得到细网格的 Simpson 公式：
 <!-- bilingual-en:start -->
-Substituting and collecting the weights gives the fine-grid Simpson formula:
+A coarse trapezoid contributes its width $2h$ times the average of its endpoint values. This explains the leading $h$ in $T_n$ and why internal coarse endpoints count twice. Each midpoint rectangle contributes $2h$ times its middle value. Multiplying $M_n$ by two, adding $T_n$, and dividing by three gives
 <!-- bilingual-en:end -->
+
+一个粗梯形的贡献是宽度 $2h$ 乘两端高度的平均，因此 $T_n$ 前面是 $h$，内部粗端点因被相邻两段共用而出现两次。每个中点矩形则贡献 $2h$ 乘中间高度。把 $M_n$ 乘二，加上 $T_n$，再除以三：
 
 $$
 \frac{T_n+2M_n}{3}
@@ -46,25 +62,51 @@ $$
 =S_{2n}.
 $$
 
-例如 $f(x)=x^2$、$[a,b]=[0,1]$，用一段粗网格得 $T_1=1/2$、$M_1=1/4$，所以 $(T_1+2M_1)/3=1/3=S_2$。这个组合使用粗网格端点和中点的并集，共 $2n+1$ 个节点；不能把两边下标直接都写成 $n$。
 <!-- bilingual-en:start -->
-For $f(x)=x^2$ on $[0,1]$ with one coarse subinterval, $T_1=1/2$ and $M_1=1/4$, so $(T_1+2M_1)/3=1/3=S_2$. The combination uses the union of coarse endpoints and midpoints, containing $2n+1$ nodes. The two sides must not all be labelled with subscript $n$.
+The resulting weights are $1,4,2,4,\ldots,2,4,1$, precisely the composite Simpson weights. When $n=1$, the internal-even-node sum is empty and contributes zero. This derivation is algebra on sampled values: continuity, derivatives and even integrability are unnecessary for the identity itself. Conditions that justify approximation or control error belong to the [[Simpson误差界|Simpson error theorem]].
 <!-- bilingual-en:end -->
 
-> [!question]- 自检
-> 若已经在四个等宽小区间上算出 $T_4$ 与 $M_4$，组合得到 $S_4$ 还是 $S_8$？总共使用多少个不同节点？
->
-> **答案：** 得到 $S_8$；五个粗端点加四个粗中点，共九个不同节点。
+结果中的权重正是复合 Simpson 公式的 $1,4,2,4,\ldots,2,4,1$。当 $n=1$ 时，内部偶数节点的求和为空，取零即可。整个推导只对采样值做代数运算；恒等式本身不要求连续、可导，甚至不要求函数可积。保证近似质量或控制误差的条件，另见 [[Simpson误差界]]。
+
+<!-- bilingual-en:start -->
+## An identity need not be the true integral
+<!-- bilingual-en:end -->
+*近似之间相等，不等于积分精确*
+
+> [!example] One coarse interval · 一段粗网格
 > <!-- bilingual-en:start -->
-> If $T_4$ and $M_4$ use four equal subintervals, does their weighted combination give $S_4$ or $S_8$, and how many distinct nodes are used? **Answer:** It gives $S_8$, using five coarse endpoints plus four coarse midpoints: nine nodes.
+> For $f(x)=x^2$ on $[0,1]$, $T_1=1/2$ and $M_1=1/4$, so $S_2=(1/2+2\cdot1/4)/3=1/3$. This happens to equal the integral because Simpson's rule integrates quadratics exactly.
 > <!-- bilingual-en:end -->
+>
+> 对 $[0,1]$ 上的 $f(x)=x^2$，$T_1=1/2$，$M_1=1/4$，所以 $S_2=(1/2+2\cdot1/4)/3=1/3$。它在这里恰好等于积分，因为 Simpson 法对二次多项式精确。
+>
+> <!-- bilingual-en:start -->
+> For $f(x)=x^4$ on the same interval, $T_1=1/2$ and $M_1=1/16$. The identity still holds, but now $S_2=5/24$, while the exact integral is $1/5$. The error $S_2-I=1/120$ remains.
+> <!-- bilingual-en:end -->
+>
+> 换成同一区间的 $f(x)=x^4$，$T_1=1/2$，$M_1=1/16$。恒等式仍成立，但 $S_2=5/24$，积分真值却是 $1/5$，仍有 $S_2-I=1/120$ 的误差。
+
+<!-- bilingual-en:start -->
+The matching partition is essential. Combining a trapezoidal estimate on four intervals with a midpoint estimate on a different partition is not covered by the formula. Also, $T_n$ and $M_n$ do not combine into $S_n$: the extra midpoint samples halve each coarse interval. In floating-point arithmetic, independently evaluating equivalent sums can introduce small rounding differences; the stated equality is an exact-arithmetic identity.
+<!-- bilingual-en:end -->
+
+两种方法的分割必须对应。在四段上算出的梯形值，不能直接和另一种分割的中点值套用此式。$T_n$ 与 $M_n$ 组合后也不是 $S_n$：新增的中点把每个粗区间分成了两段。浮点运算中，分别计算等价的求和式可能出现微小舍入差异；这里说的是精确算术下的恒等式。
+
+> [!question]- Count the intervals · 数一数区间
+> <!-- bilingual-en:start -->
+> If you have $T_4$ and $M_4$ on the same equal partition, do you obtain $S_4$ or $S_8$? **Answer:** $S_8$, using five coarse endpoints and four midpoints: nine distinct nodes.
+> <!-- bilingual-en:end -->
+>
+> 已经在同一等宽分割上得到 $T_4$ 与 $M_4$，组合得到的是 $S_4$ 还是 $S_8$？**答案：** $S_8$；五个粗端点加四个中点，共九个不同节点。
 
 ## 来源与核验
+
 <!-- bilingual-en:start -->
 *Sources and verification*
 <!-- bilingual-en:end -->
 
-- [[01_Math/01_calculus/MIT18.01SC_Single_Variable_Calculus/07_Exams/Exam3_Problems.pdf#page=5|MIT 18.01SC Exam 3 题目，PDF 第 5 页，第 5 题]]与 [[01_Math/01_calculus/MIT18.01SC_Single_Variable_Calculus/07_Exams/Exam3_Solutions.pdf#page=6|解答，PDF 第 6–7 页]]：核对 $T_n,M_n,S_{2n}$ 的网格定义及系数证明。解答第 7 页首个 $S_{2n}$ 展开末项印为 $x_{2n}$，下一行正确写作 $f(x_{2n})$；本卡按下一行并逐项代数核验。
 <!-- bilingual-en:start -->
-- [[01_Math/01_calculus/MIT18.01SC_Single_Variable_Calculus/07_Exams/Exam3_Problems.pdf#page=5|MIT 18.01SC Exam 3 problems, PDF p. 5, Problem 5]] and [[01_Math/01_calculus/MIT18.01SC_Single_Variable_Calculus/07_Exams/Exam3_Solutions.pdf#page=6|solutions, PDF pp. 6–7]] support the three grid definitions and coefficient proof. In the first $S_{2n}$ expansion on p. 7, the last term is printed as $x_{2n}$; the next line correctly has $f(x_{2n})$. This card follows that line and checks every coefficient algebraically.
+- [[01_Math/01_calculus/MIT18.01SC_Single_Variable_Calculus/07_Exams/Exam3_Problems.pdf#page=5|MIT 18.01SC Exam 3, PDF p. 5, Problem 5]] and [[01_Math/01_calculus/MIT18.01SC_Single_Variable_Calculus/07_Exams/Exam3_Solutions.pdf#page=6|solutions, PDF pp. 6–7]]: matching coarse/fine grids and the exact weighted identity. The coefficient proof was checked term by term; the quadratic and fourth-power examples were calculated directly.
 <!-- bilingual-en:end -->
+
+- [[01_Math/01_calculus/MIT18.01SC_Single_Variable_Calculus/07_Exams/Exam3_Problems.pdf#page=5|MIT 18.01SC Exam 3，PDF 第5页第5题]]与 [[01_Math/01_calculus/MIT18.01SC_Single_Variable_Calculus/07_Exams/Exam3_Solutions.pdf#page=6|解答，PDF 第6–7页]]：对应的粗细网格及精确加权恒等式。系数证明逐项核对，二次与四次函数的例子直接重算。

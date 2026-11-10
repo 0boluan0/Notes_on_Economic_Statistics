@@ -6,9 +6,9 @@
       "x": 0,
       "y": 0,
       "width": 440,
-      "height": 190,
+      "height": 300,
       "color": "5",
-      "text": "## [[估计对象三分|目标、规则、数值]]\n\n<!-- bilingual-en:start -->\n*Estimand, estimator, estimate*\n<!-- bilingual-en:end -->"
+      "text": "<!-- bilingual-en:start -->\n## [[估计对象三分|Estimand, estimator and estimate]]\nFirst state whose effect and which outcome are targeted. Then choose a justified computation rule. The number obtained from the current sample is its realized estimate.\n<!-- bilingual-en:end -->\n\n## [[估计对象三分|目标、规则、数值]]\n先说清估计谁的什么效果，再选择有依据的计算规则；这份样本算出的数是估计值。"
     },
     {
       "id": "po",

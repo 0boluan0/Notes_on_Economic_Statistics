@@ -26,8 +26,8 @@
       "x": -2100,
       "y": 20,
       "width": 360,
-      "height": 140,
-      "text": "### [[极值定理|极值定理]]\n\n连续目标在非空紧集上取得最大与最小；它回答存在，不负责求解。"
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n### [[极值定理|Extreme value theorem]]\n\nA continuous real-valued function on a nonempty compact domain attains a maximum and a minimum. This guarantees existence, not their locations.\n<!-- bilingual-en:end -->\n\n非空紧集上的连续实值函数取得最大值与最小值；定理保证存在，不负责定位。"
     },
     {
       "id": "a100000000000004",
@@ -35,9 +35,9 @@
       "x": -1300,
       "y": 20,
       "width": 360,
-      "height": 140,
+      "height": 250,
       "color": "5",
-      "text": "### [[无约束一阶条件|无约束一阶条件]]\n\n可微函数在开域内的局部极值必有零梯度；边界与不可微点另查。"
+      "text": "<!-- bilingual-en:start -->\n## [[无约束一阶条件|Interior first-order condition]]\nAt a local extremum in the ambient interior, differentiability at that point forces $Df=0$. This necessary condition identifies candidates; it does not establish an extremum.\n<!-- bilingual-en:end -->\n\n**无约束一阶条件**：环境空间内点的局部极值，若在该点可微，必有 $Df=0$。这是必要的候选条件，不保证极值。"
     },
     {
       "id": "a100000000000005",
@@ -45,9 +45,9 @@
       "x": -700,
       "y": 20,
       "width": 360,
-      "height": 140,
+      "height": 270,
       "color": "4",
-      "text": "### [[Hessian 局部极大判据|Hessian 局部极大判据]]\n\n驻点处负定 Hessian 给严格局部极大，不自动给全局最大。"
+      "text": "<!-- bilingual-en:start -->\n## [[Hessian 局部极大判据|Hessian maximum test]]\nFor real scalar $f\\in C^2$ near an interior stationary point $a$, negative-definite $H_f(a)$ guarantees a strict local maximum; global maximality needs a separate argument.\n<!-- bilingual-en:end -->\n\n**Hessian 局部极大判据**：实值函数在内点驻点附近为 $C^2$，且 Hessian 负定，便有严格局部极大；并不自动成为全局最大。"
     },
     {
       "id": "a100000000000006",
@@ -55,29 +55,29 @@
       "x": -100,
       "y": 20,
       "width": 360,
-      "height": 140,
+      "height": 270,
       "color": "1",
-      "text": "### [[半定Hessian无结论|半定 Hessian 无结论]]\n\n存在平坦方向时，二阶项通常无结论；严格极值也可能有奇异 Hessian。"
+      "text": "<!-- bilingual-en:start -->\n## [[半定Hessian无结论|Singular semidefinite Hessians]]\nAt an interior stationary point of a real $C^2$ function, singular semidefiniteness leaves classification incomplete. A nonzero positive-semidefinite Hessian still rules out a local maximum.\n<!-- bilingual-en:end -->\n\n**半定Hessian无结论**：实值 $C^2$ 函数在内点驻点的奇异半定 Hessian 不能完成分类；但非零半正定仍排除局部极大。"
     },
     {
       "id": "a100000000000007",
       "type": "text",
       "x": 1100,
       "y": 20,
-      "width": 380,
-      "height": 140,
+      "width": 520,
+      "height": 200,
       "color": "4",
-      "text": "### [[凸优化全局性|凸优化全局性]]\n\n在凸可行集上，凹目标的每个局部最大点都是全局最大点。"
+      "text": "<!-- bilingual-en:start -->\n## [[凸优化全局性|Local and global optima]]\n\nOn a convex feasible set, a local maximum of a concave objective is global.\n<!-- bilingual-en:end -->\n\n在凸可行集上，凹目标的每个局部最大点都是全局最大点。"
     },
     {
       "id": "c100000000000001",
       "type": "text",
       "x": 1100,
-      "y": 250,
-      "width": 420,
-      "height": 140,
+      "y": 300,
+      "width": 520,
+      "height": 200,
       "color": "1",
-      "text": "### [[严格凹不保证解存在|严格凹不保证存在]]\n\n严格凹只给“若取得，则至多一个”；非空与取得性必须另证。"
+      "text": "<!-- bilingual-en:start -->\n## [[严格凹不保证解存在|Uniqueness and attainment]]\n\nOn a convex feasible set, strict concavity gives at most one maximizer; nonemptiness and attainment remain separate.\n<!-- bilingual-en:end -->\n\n凸可行集上，严格凹只给“若取得，则至多一个”；非空与取得性必须另证。"
     },
     {
       "id": "a100000000000008",
@@ -173,11 +173,11 @@
       "id": "a10000000000000d",
       "type": "text",
       "x": 100,
-      "y": 1300,
+      "y": 1230,
       "width": 380,
-      "height": 140,
+      "height": 240,
       "color": "5",
-      "text": "### [[LICQ条件|LICQ 条件]]\n\n等式与所有活动不等式的梯度在候选点线性无关。它给出一条 KKT 必要性路线并使已存在的乘子唯一；失败不等于 KKT 失败。"
+      "text": "<!-- bilingual-en:start -->\n## [[LICQ条件|LICQ]]\n\nAt a feasible point, LICQ requires the indexed gradients of all equalities and active inequalities to be linearly independent. Repeated or zero gradients must remain in the test.\n<!-- bilingual-en:end -->\n\n可行点处，全部等式与活动不等式梯度按约束索引检查线性无关；重复或零梯度都保留。"
     },
     {
       "id": "c100000000000004",
@@ -203,11 +203,11 @@
       "id": "c100000000000007",
       "type": "text",
       "x": -350,
-      "y": 1500,
+      "y": 1470,
       "width": 400,
-      "height": 140,
+      "height": 210,
       "color": "2",
-      "text": "### [[LICQ保证乘子唯一|LICQ 保证乘子唯一]]\n\n在 KKT 乘子存在时，线性无关的法向量使系数表示唯一。"
+      "text": "<!-- bilingual-en:start -->\n## [[LICQ保证乘子唯一|Multiplier uniqueness]]\n\nAt one fixed KKT point with the same constraint functions, LICQ makes the existing multiplier vector unique.\n<!-- bilingual-en:end -->\n\n同一 KKT 点、同一约束表示下，LICQ 使已有的乘子向量唯一。"
     },
     {
       "id": "c100000000000008",
@@ -225,9 +225,9 @@
       "x": -350,
       "y": 1050,
       "width": 400,
-      "height": 140,
+      "height": 240,
       "color": "5",
-      "text": "### [[KKT必要性|KKT 必要性]]\n\n可微局部最优在适当约束资格下存在乘子满足 KKT。"
+      "text": "<!-- bilingual-en:start -->\n## [[KKT必要性|KKT necessity]]\n\nA local optimum of a C¹ problem admits KKT multipliers under a suitable constraint qualification. LICQ is one sufficient qualification.\n<!-- bilingual-en:end -->\n\nC¹ 问题的局部最优，在适当约束资格下存在 KKT 乘子；LICQ 是一种充分资格。"
     },
     {
       "id": "c100000000000009",
@@ -355,9 +355,9 @@
       "x": 2400,
       "y": 480,
       "width": 520,
-      "height": 130,
+      "height": 300,
       "color": "3",
-      "text": "**KKT 充分性的结构前提**\n\n凹目标 + 凸不等式 + 仿射等式，才能把 KKT 候选升级为全局最优证书。"
+      "text": "<!-- bilingual-en:start -->\n## [[KKT充分性|Sufficient structure for KKT]]\n\nFor differentiable maximization on an open convex domain: a concave objective, convex inequalities $g_i\\le0$ and affine equalities make feasible KKT points globally optimal.\n<!-- bilingual-en:end -->\n\n开凸域上可微的最大化问题：凹目标、凸不等式 $g_i\\le0$ 与仿射等式构成充分结构，使可行 KKT 点全局最优。"
     },
     {
       "id": "sofp-stationary",
@@ -365,8 +365,8 @@
       "x": 0,
       "y": 3060,
       "width": 350,
-      "height": 125,
-      "text": "## [[驻点]]"
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n## [[驻点|Stationary points]]\nAt a differentiable interior point of a real scalar function, $Df=0$ defines stationarity. It means zero first-order change in every direction, not a zero function value or an optimum.\n<!-- bilingual-en:end -->\n\n**驻点**：实值函数在可微内点满足 $Df=0$，就称为驻点：各方向一阶变化为零；并非函数值为零，也不自动是极值。"
     },
     {
       "id": "sofp-global",
@@ -374,8 +374,8 @@
       "x": 470,
       "y": 3060,
       "width": 350,
-      "height": 125,
-      "text": "## [[凹函数驻点全局最优]]"
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[凹函数驻点全局最优|Stationary points and global maxima]]\n\nFor a differentiable concave function on an open convex domain, zero gradient gives a global maximum.\n<!-- bilingual-en:end -->\n\n开凸域上的可微凹函数：零梯度代入切平面上界，得到全局最大。"
     },
     {
       "id": "sofp-quasi",
@@ -383,8 +383,8 @@
       "x": 940,
       "y": 3060,
       "width": 350,
-      "height": 125,
-      "text": "## [[拟凹驻点不保证最优]]"
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[拟凹驻点不保证最优|Quasiconcavity and stationary points]]\n\nOn the real line, x³ is quasiconcave and stationary at zero, but has no extremum there. Quasiconcavity alone cannot replace concavity in the stationary-point theorem.\n<!-- bilingual-en:end -->\n\nx³ 拟凹且在零点驻定，却无极值；驻点定理中的凹性不能直接改成拟凹性。"
     }
   ],
   "edges": [
@@ -394,7 +394,7 @@
       "fromSide": "right",
       "toNode": "a100000000000005",
       "toSide": "left",
-      "label": "零梯度之后才用二阶曲率分类"
+      "label": "At an interior stationary point, add C² and a Hessian sign test · 在内点驻点再检查 C² 与 Hessian 定号"
     },
     {
       "id": "f100000000000002",
@@ -402,7 +402,7 @@
       "fromSide": "right",
       "toNode": "a100000000000006",
       "toSide": "left",
-      "label": "从严格定号进入二阶无结论边界"
+      "label": "Singular semidefinite curvature needs further analysis · 奇异半定曲率仍需进一步分析"
     },
     {
       "id": "f100000000000003",
@@ -410,7 +410,7 @@
       "fromSide": "bottom",
       "toNode": "c100000000000001",
       "toSide": "top",
-      "label": "严格凹再给唯一性，仍不给取得性"
+      "label": "Strictness adds uniqueness / 严格性增加唯一性"
     },
     {
       "id": "f100000000000004",
@@ -458,7 +458,7 @@
       "fromSide": "left",
       "toNode": "c100000000000007",
       "toSide": "top",
-      "label": "法向量线性无关使乘子系数唯一"
+      "label": "Existing multipliers at the same point / 同一点已有乘子的唯一性"
     },
     {
       "id": "f10000000000000a",
@@ -466,7 +466,7 @@
       "fromSide": "left",
       "toNode": "c100000000000008",
       "toSide": "top",
-      "label": "充分资格失败不能逆推 KKT 失败"
+      "label": "Failure still allows KKT / 失败仍可能有 KKT"
     },
     {
       "id": "f10000000000000b",
@@ -474,7 +474,7 @@
       "fromSide": "left",
       "toNode": "c100000000000005",
       "toSide": "right",
-      "label": "LICQ 是一条局部必要性路线"
+      "label": "C¹ local optimum + LICQ / C¹ 局部最优与 LICQ"
     },
     {
       "id": "f10000000000000c",
@@ -482,7 +482,7 @@
       "fromSide": "right",
       "toNode": "c100000000000004",
       "toSide": "left",
-      "label": "局部活动梯度检查"
+      "label": "Given-point gradient test / 指定可行点的梯度检查"
     },
     {
       "id": "f10000000000000d",
@@ -506,7 +506,7 @@
       "fromSide": "left",
       "toNode": "c100000000000005",
       "toSide": "right",
-      "label": "凸问题中强对偶与乘子存在补上最优 → KKT"
+      "label": "Slater route at an attained optimum / 已取得最优点的 Slater 路线"
     },
     {
       "id": "f100000000000010",
@@ -584,7 +584,7 @@
       "fromSide": "right",
       "toNode": "a100000000000004",
       "toSide": "left",
-      "label": "取得性先回答有没有，一阶条件再找内部候选"
+      "label": "Attainment first; differentiable interior candidates next · 先问取得性，再查可微内点候选"
     },
     {
       "id": "f100000000000019",
@@ -592,7 +592,7 @@
       "fromSide": "bottom",
       "toNode": "c100000000000005",
       "toSide": "top",
-      "label": "必要性回答：局部最优在合适约束资格下为何必须进入 KKT"
+      "label": "Necessity under the stated qualification / 给定资格下的必要性"
     },
     {
       "id": "f10000000000001b",
@@ -615,7 +615,8 @@
       "fromNode": "a100000000000007",
       "fromSide": "right",
       "toNode": "b100000000000004",
-      "toSide": "left"
+      "toSide": "left",
+      "label": "Sufficient structure / 充分结构"
     },
     {
       "id": "f10000000000001e",
@@ -630,7 +631,7 @@
       "fromSide": "bottom",
       "toNode": "sofp-stationary",
       "toSide": "top",
-      "label": "内点可微极值必驻定"
+      "label": "A differentiable interior extremum is stationary · 可微内点极值必为驻点"
     },
     {
       "id": "sofp-stationary-sofp-global",
@@ -638,7 +639,7 @@
       "fromSide": "bottom",
       "toNode": "sofp-global",
       "toSide": "top",
-      "label": "凹时可推出全局最大"
+      "label": "On an open convex domain, differentiable concavity makes stationarity sufficient · 开凸域上，可微凹性使驻点条件充分"
     },
     {
       "id": "sofp-global-sofp-quasi",
@@ -646,7 +647,7 @@
       "fromSide": "bottom",
       "toNode": "sofp-quasi",
       "toSide": "top",
-      "label": "凹性不能仅换成拟凹性"
+      "label": "Quasiconcavity alone is insufficient / 仅拟凹不够"
     }
   ]
 }

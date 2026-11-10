@@ -15,8 +15,8 @@
       "x": 0,
       "y": 0,
       "width": 450,
-      "height": 230,
-      "text": "## [[反常积分|截断积分的极限]]\n*Limit of proper truncations*\n\n先在合法有限区间积分，再让边界逼近无穷或奇点。",
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[反常积分|Improper integrals]]\nEach finite truncation must be Riemann integrable. Convergence means a finite real limit as a cutoff approaches an infinite end or a singular point. Multiple problematic ends need separate limits; bounded oscillation can still diverge.\n<!-- bilingual-en:end -->\n\n先保证每个有限截断黎曼可积，再检查逼近无穷端或奇点时是否有有限实数极限。多个问题端须分别检查；有界振荡仍可能发散。",
       "color": "5"
     },
     {
@@ -25,8 +25,8 @@
       "x": 0,
       "y": 360,
       "width": 450,
-      "height": 230,
-      "text": "## [[无穷不是积分端点|无穷不是可代入端点]]\n*Infinity is a direction*\n\n原函数只先计算有限截断；收敛仍要另证极限。",
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[无穷不是积分端点|Infinity is a limiting direction]]\nOn each proper finite truncation, check the endpoint theorem before using $F(R)-F(a)$. Then test its finite limit as $R\\to\\infty$. Writing $F(\\infty)$ can only abbreviate a specified limit, not evaluation at a real input.\n<!-- bilingual-en:end -->\n\n先在正常的有限截断上核对端点公式，再检查端点差的极限是否有限。$F(\\infty)$ 只能是已明确约定的极限缩写，不是向原函数代入一个实数。",
       "color": "1"
     },
     {
@@ -35,8 +35,8 @@
       "x": 0,
       "y": 720,
       "width": 450,
-      "height": 230,
-      "text": "## [[反常积分逐坏点拆分|每个坏点独立收敛]]\n*Split every problematic point*\n\n有限多个端点或孤立奇点要分别取极限；一段发散便整体发散。",
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[反常积分逐坏点拆分|Split every problematic approach]]\nFor finitely many singular points or infinite ends, isolate each approach into proper finite truncations. Add contributions only after every independent limit is finite. If both ends of a piece are problematic, split it at an ordinary point too.\n<!-- bilingual-en:end -->\n\n对有限多个奇点或无穷端，隔离每个逼近方向；各侧独立得到有限极限后才能相加。一段若两端都有问题，还须在中间选普通分点。",
       "color": "1"
     },
     {
@@ -45,8 +45,8 @@
       "x": 530,
       "y": 720,
       "width": 450,
-      "height": 230,
-      "text": "## [[Cauchy 主值与反常积分|普通反常积分不等于 Cauchy 主值]]\n*Improper integral versus principal value*\n\n主值按规定协调两侧截断；普通反常积分要求各侧自己收敛。",
+      "height": 340,
+      "text": "<!-- bilingual-en:start -->\n## [[Cauchy 主值与反常积分|Cauchy principal value]]\nThe standard PV uses equal-distance cutoffs around one interior singularity, or symmetric $[-R,R]$ truncation at infinity, with proper truncated integrals. It takes the finite limit of their combined value. Ordinary convergence implies the same PV; the converse fails.\n<!-- bilingual-en:end -->\n\n标准主值在单个内部奇点两侧等距离截断，或在无穷远用 $[-R,R]$ 对称截断；截断积分先有普通意义，再对合并值取有限极限。普通收敛推出同值主值，反向不成立。",
       "color": "6"
     },
     {
@@ -55,8 +55,8 @@
       "x": 1060,
       "y": 0,
       "width": 450,
-      "height": 230,
-      "text": "## [[无穷远 p 积分判别|无穷远的 p 积分]]\n*$p$-integral at infinity*\n\n$\\int_1^\\infty x^{-p}dx$ 当且仅当 $p>1$ 收敛。",
+      "height": 330,
+      "text": "<!-- bilingual-en:start -->\n## [[无穷远 p 积分判别|The p-integral at infinity]]\nFor real $p$ and finite $a>0$:\n$$\\int_a^\\infty x^{-p}\\,dx<\\infty\\iff p>1.$$\nIts value is $a^{1-p}/(p-1)$ when convergent. At $p=1$, logarithmic growth diverges; tending to zero alone is insufficient.\n<!-- bilingual-en:end -->\n\n固定实指数与正起点，尾积分恰在 $p>1$ 收敛；$p=1$ 为对数发散。函数趋零本身不够。",
       "color": "4"
     },
     {
@@ -65,8 +65,8 @@
       "x": 1060,
       "y": 360,
       "width": 450,
-      "height": 230,
-      "text": "## [[趋零不推尾积分收敛|趋零不保证尾面积有限]]\n*Tending to zero is insufficient*\n\n$1/x$ 趋零，倍增区间却不断贡献固定面积。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[趋零不推尾积分收敛|Vanishing height is insufficient]]\nOn $[1,\\infty)$, $1/x\\to0$, but its truncated integral is $\\ln R\\to\\infty$. Every doubling interval contributes $\\ln2$. Pointwise height and accumulated area are different quantities.\n<!-- bilingual-en:end -->\n\n$1/x$ 趋零，截断积分却为 $\\ln R\\to\\infty$；每个倍增区间仍贡献 $\\ln2$。逐点高度变小，不保证总累积有限。",
       "color": "1"
     },
     {
@@ -75,8 +75,8 @@
       "x": 1060,
       "y": 720,
       "width": 450,
-      "height": 230,
-      "text": "## [[反常积分直接比较判别|直接比较的正确方向]]\n*Direct comparison*\n\n对同一坏点附近局部可积的非负函数：小于收敛上界可证收敛；大于发散下界可证发散。",
+      "height": 330,
+      "text": "<!-- bilingual-en:start -->\n## [[反常积分直接比较判别|Direct comparison]]\nNear the same problematic end, require proper finite truncations and $0\\le f\\le g$. A convergent $\\int g$ forces convergence of $\\int f$; a divergent $\\int f$ forces divergence of $\\int g$. A divergent upper bound alone is inconclusive.\n<!-- bilingual-en:end -->\n\n在同一问题端附近，先有正常有限截断且 $0\\le f\\le g$。收敛上界证明收敛，发散下界证明发散；只有发散上界，不能判定。",
       "color": "3"
     },
     {
@@ -85,8 +85,8 @@
       "x": 1060,
       "y": 1080,
       "width": 450,
-      "height": 230,
-      "text": "## [[反常积分极限比较判别|极限比较]]\n*Limit comparison*\n\n对同一坏点附近局部可积的正函数：比值趋于正有限常数时，两者被正常数倍互相夹住。",
+      "height": 330,
+      "text": "<!-- bilingual-en:start -->\n## [[反常积分极限比较判别|Limit comparison]]\nFor properly integrable finite truncations and functions positive near the same end, $f/g\\to c$ with $0<c<\\infty$ gives the same convergence behaviour, not equal integral values. Ratios tending to $0$ or $\\infty$ give only the applicable one-way comparisons.\n<!-- bilingual-en:end -->\n\n同一问题端附近为正，且正常有限截断存在时，$f/g\\to c$、$0<c<\\infty$ 保证同敛散，不保证积分值相同。比值为零或无穷只保留对应单向比较。",
       "color": "3"
     },
     {
@@ -95,8 +95,8 @@
       "x": 1590,
       "y": 0,
       "width": 450,
-      "height": 230,
-      "text": "## [[零附近 p 积分判别|零附近的 p 积分]]\n*$p$-integral near zero*\n\n$\\int_0^1 x^{-p}dx$ 当且仅当 $p<1$ 收敛，方向与无穷远相反。",
+      "height": 330,
+      "text": "<!-- bilingual-en:start -->\n## [[零附近 p 积分判别|The p-integral near zero]]\nFor real $p$ and finite $b>0$:\n$$\\int_0^b x^{-p}\\,dx<\\infty\\iff p<1.$$\nIts value is $b^{1-p}/(1-p)$ when convergent. For $p\\le0$, a continuous extension gives an ordinary integral too.\n<!-- bilingual-en:end -->\n\n零端点恰在 $p<1$ 收敛，与尾部方向相反。$p\\le0$ 时可连续补上端点，并无无界奇点。",
       "color": "4"
     },
     {
@@ -105,8 +105,8 @@
       "x": 1590,
       "y": 360,
       "width": 450,
-      "height": 230,
-      "text": "## [[尾积分收敛不推函数趋零|尾积分有限也不保证函数趋零]]\n*Integrability need not force a zero limit*\n\n越来越窄但保持高度的连续尖峰可以让总面积有限，却使函数值不趋零。",
+      "height": 310,
+      "text": "<!-- bilingual-en:start -->\n## [[尾积分收敛不推函数趋零|Finite area need not force vanishing height]]\nContinuous, nonnegative triangles can have height $1$ at every integer $n\\ge2$ and full width $2^{-n}$. Their total area is $1/4$, while the peaks stay at $1$ and the gaps at $0$. Continuity alone does not prevent narrowing spikes.\n<!-- bilingual-en:end -->\n\n连续非负三角尖峰在整数 $n\\ge2$ 处高为 $1$、全底宽为 $2^{-n}$，总面积为 $1/4$；峰顶仍为 $1$，间隙为零。普通连续不能排除越来越窄的尖峰。",
       "color": "1"
     },
     {
@@ -115,8 +115,8 @@
       "x": 1590,
       "y": 720,
       "width": 450,
-      "height": 230,
-      "text": "## [[反常积分敛散的局部性|敛散只看问题点附近]]\n*Locality of convergence*\n\n有限正常区间只加一个有限数；藏着奇点时则必须另拆。",
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[反常积分敛散的局部性|Locality of convergence]]\nAdding or removing a piece whose integral is already finite does not change convergence at the remaining problematic end. When convergent, values can change by that finite amount. Finite interval length alone does not rule out a singularity.\n<!-- bilingual-en:end -->\n\n增减一段已知积分有限的部分，不改变剩余问题端的敛散；收敛时数值可相差这段有限量。区间长度有限，并不保证其中没有发散奇点。",
       "color": "5"
     },
     {
@@ -125,8 +125,8 @@
       "x": 0,
       "y": 1080,
       "width": 450,
-      "height": 230,
-      "text": "## [[跨奇点积分拆分|原函数不能跨奇点]]\n*Do not cross a singularity*\n\n先求定义域和坏点，再逐段使用基本定理。",
+      "height": 350,
+      "text": "<!-- bilingual-en:start -->\n## [[跨奇点积分拆分|Endpoint evaluation across a singularity]]\nPrimitives on separate components do not justify one outer subtraction. Evaluate on proper truncations and test each inner limit. Finite matching primitive limits can then join; divergent limits cannot be repaired by constants.\n<!-- bilingual-en:end -->\n\n两侧各有原函数，不自动允许只减外端点。先在正常截断上计算并检查内侧极限；有限且对齐后可连接，发散不能靠加常数修复。",
       "color": "1"
     }
   ],
@@ -138,7 +138,7 @@
       "toNode": "ca10000000000003",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "极限定义排除了把无穷直接代入的写法"
+      "label": "Finite evaluation first; then justify the limit / 先有限求值，再证明极限"
     },
     {
       "id": "cae0000000000002",
@@ -147,7 +147,7 @@
       "toNode": "ca10000000000004",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "列出每个极限方向后逐一拆分"
+      "label": "Isolate every infinite end and singular approach / 隔离每个无穷端与奇点逼近方向"
     },
     {
       "id": "cae0000000000003",
@@ -156,7 +156,7 @@
       "toNode": "ca10000000000005",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "独立收敛与协调截断定义的是不同对象"
+      "label": "Separate convergence implies the symmetric PV, not conversely / 各侧收敛推出对称主值，反向不成立"
     },
     {
       "id": "cae0000000000004",
@@ -165,7 +165,7 @@
       "toNode": "ca10000000000007",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "临界例说明只知道函数趋零远远不够"
+      "label": "At p=1, the integrand tends to zero but its tail diverges / p=1 时函数趋零而尾积分发散"
     },
     {
       "id": "cae0000000000005",
@@ -174,7 +174,7 @@
       "toNode": "ca10000000000008",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "需要用已知基准控制真正的衰减速度"
+      "label": "A justified comparison can decide what a zero height limit cannot / 有效比较可补足趋零本身不能判定的累积问题"
     },
     {
       "id": "cae0000000000006",
@@ -183,7 +183,7 @@
       "toNode": "ca10000000000009",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "正函数比值趋于正有限常数时转成双向直接比较"
+      "label": "A finite positive ratio limit supplies two eventual positive comparison multiples / 比值趋于有限正常数，最终给出双向正常数倍比较"
     },
     {
       "id": "cae0000000000007",
@@ -192,7 +192,7 @@
       "toNode": "ca1000000000000a",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "同一幂函数在无穷远与零附近的临界方向相反"
+      "label": "Tail p>1 versus near-zero p<1; check both if present / 尾部 p>1、零端 p<1；两端都有就分别查"
     },
     {
       "id": "cae0000000000008",
@@ -201,7 +201,7 @@
       "toNode": "ca1000000000000b",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "比较不等式只需在相关问题点附近成立"
+      "label": "Local comparison suffices when every omitted contribution is finite / 略去部分均积分有限时，只需在问题端附近比较"
     },
     {
       "id": "cae000000000000a",
@@ -209,7 +209,7 @@
       "fromSide": "right",
       "toNode": "ca1000000000000d",
       "toSide": "left",
-      "label": "两个方向都需要各自的反例"
+      "label": "Neither implication holds in general; each direction has its own counterexample / 两个方向一般都不成立，各有自己的反例"
     },
     {
       "id": "cae000000000000b",
@@ -218,7 +218,7 @@
       "toNode": "ca1000000000000c",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "先按坏点拆分，才能逐段使用原函数"
+      "label": "Evaluate on proper pieces, then check finite inner limits / 正常片段上求值，再核内侧有限极限"
     }
   ]
 }

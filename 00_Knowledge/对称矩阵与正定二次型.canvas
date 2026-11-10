@@ -74,9 +74,9 @@
       "x": 650,
       "y": 100,
       "width": 400,
-      "height": 190,
+      "height": 280,
       "color": "5",
-      "text": "## [[正交矩阵]]\n\n满足 $Q^TQ=I$ 的实方阵；它保持内积与长度。"
+      "text": "<!-- bilingual-en:start -->\n## [[正交矩阵|Orthogonal matrix]]\n\nA real square $Q$ satisfies $Q^TQ=I$. Its transpose is its inverse; it preserves inner products and lengths.\n<!-- bilingual-en:end -->\n\n实方阵各列标准正交，转置即逆。一般不要求 $Q$ 自身对称。"
     },
     {
       "id": "n003",
@@ -84,9 +84,9 @@
       "x": 1300,
       "y": 100,
       "width": 400,
-      "height": 190,
+      "height": 240,
       "color": "5",
-      "text": "## [[Hermitian 矩阵]]\n\n复方阵满足 $A=A^*$；实对称矩阵是它在实数域中的特例。"
+      "text": "<!-- bilingual-en:start -->\n## [[Hermitian 矩阵|Hermitian matrices]]\nA complex square matrix is Hermitian when $A=A^*$, where $*$ is conjugate transpose. Reflected entries are conjugate pairs; diagonal entries are real. With real entries this is ordinary symmetry.\n<!-- bilingual-en:end -->\n\n**Hermitian 矩阵**：复方阵等于自身共轭转置：镜像元素互为共轭，对角元为实数。全部元素为实时，就是通常的对称矩阵。"
     },
     {
       "id": "n004",
@@ -94,9 +94,9 @@
       "x": 1950,
       "y": 100,
       "width": 400,
-      "height": 190,
+      "height": 250,
       "color": "5",
-      "text": "## [[Unitary 矩阵]]\n\n满足 $U^*U=I$ 的复方阵；它是正交矩阵的复数推广。"
+      "text": "<!-- bilingual-en:start -->\n## [[Unitary 矩阵|Unitary matrices]]\nA finite complex square matrix $U$ is unitary when $U^*U=I$. Here $*$ is conjugate transpose. Then $U^{-1}=U^*$, and standard lengths and inner products are preserved.\n<!-- bilingual-en:end -->\n\n**Unitary 矩阵**：有限复方阵满足 $U^*U=I$ 即为酉矩阵，$*$ 是共轭转置。此时 $U^{-1}=U^*$，保持标准长度和内积。"
     },
     {
       "id": "n007",
@@ -104,9 +104,9 @@
       "x": 325,
       "y": 420,
       "width": 400,
-      "height": 190,
+      "height": 250,
       "color": "6",
-      "text": "## [[实对称矩阵谱定理]]\n\n实对称矩阵有实特征值，并有一组标准正交特征基。"
+      "text": "<!-- bilingual-en:start -->\n## [[实对称矩阵谱定理|Real spectral theorem]]\nEvery finite real symmetric matrix has real eigenvalues and an orthonormal eigenbasis: $A=Q\\Lambda Q^T$. Such a basis can also be chosen when eigenvalues repeat.\n<!-- bilingual-en:end -->\n\n**实对称矩阵谱定理**：有限阶实对称矩阵有实特征值和标准正交特征基，可写成 $A=Q\\Lambda Q^T$。特征值重复时仍可选出这样的基。"
     },
     {
       "id": "n008",
@@ -114,9 +114,9 @@
       "x": 1625,
       "y": 420,
       "width": 400,
-      "height": 190,
+      "height": 260,
       "color": "6",
-      "text": "## [[Hermitian 谱定理]]\n\nHermitian 矩阵有实特征值，并可由 unitary 特征基对角化。"
+      "text": "<!-- bilingual-en:start -->\n## [[Hermitian 谱定理|Hermitian spectral theorem]]\nFor finite complex Hermitian $A$, $A=U\\Lambda U^*$ with real diagonal $\\Lambda$ and unitary $U$. Its columns are an orthonormal eigenbasis; $*$ denotes conjugate transpose.\n<!-- bilingual-en:end -->\n\n**Hermitian 谱定理**：有限阶复 Hermitian 矩阵可写成 $A=U\\Lambda U^*$，其中 $\\Lambda$ 为实对角矩阵、$U$ 为 unitary。$U$ 的列构成标准正交特征基；$*$ 是共轭转置。"
     },
     {
       "id": "n005",
@@ -124,9 +124,9 @@
       "x": 650,
       "y": 740,
       "width": 400,
-      "height": 190,
+      "height": 250,
       "color": "5",
-      "text": "## [[Normal 矩阵]]\n\n复方阵满足 $A^*A=AA^*$；Hermitian 与 unitary 都是它的子类。"
+      "text": "<!-- bilingual-en:start -->\n## [[Normal 矩阵|Normal matrices]]\nA finite complex square matrix is normal when $A^*A=AA^*$: it commutes with its conjugate transpose. Hermitian and unitary matrices are subclasses. Normality does not guarantee length preservation.\n<!-- bilingual-en:end -->\n\n**Normal 矩阵**：有限复方阵与共轭转置可交换，即 $A^*A=AA^*$，称为正规。Hermitian 与酉矩阵都是其子类；正规性本身不保证保持长度。"
     },
     {
       "id": "n006",
@@ -134,9 +134,9 @@
       "x": 1300,
       "y": 740,
       "width": 400,
-      "height": 190,
+      "height": 260,
       "color": "6",
-      "text": "## [[Normal 矩阵谱定理]]\n\n复矩阵可 unitary 对角化，当且仅当它是 normal 矩阵。"
+      "text": "<!-- bilingual-en:start -->\n## [[Normal 矩阵谱定理|Normal spectral theorem]]\nA finite complex square $A$ has a full orthonormal eigenbasis exactly when it is normal. Then $A=U\\Lambda U^*$ with unitary $U$ and diagonal $\\Lambda$. Eigenvalues may be complex or repeated.\n<!-- bilingual-en:end -->\n\n**Normal 矩阵谱定理**：有限复方阵正规，当且仅当有完整标准正交特征基；此时 $A=U\\Lambda U^*$，$U$ 为酉矩阵、$\\Lambda$ 为对角矩阵。特征值可为复数或重复。"
     },
     {
       "id": "n030",
@@ -144,9 +144,9 @@
       "x": 1950,
       "y": 740,
       "width": 400,
-      "height": 190,
+      "height": 260,
       "color": "1",
-      "text": "## [[Unitary不等于Hermitian|Unitary 与 Hermitian 互不推出]]\n\n前者说共轭转置是逆，后者说矩阵等于共轭转置。"
+      "text": "<!-- bilingual-en:start -->\n## [[Unitary不等于Hermitian|Unitary versus Hermitian]]\nUnitary means $A^*=A^{-1}$; Hermitian means $A^*=A$. Neither implies the other: $[i]$ is only unitary, $[2]$ only Hermitian. A unitary eigenbasis matrix does not make the original matrix unitary.\n<!-- bilingual-en:end -->\n\n**Unitary不等于Hermitian**：酉要求 $A^*=A^{-1}$，Hermitian 要求 $A^*=A$，互不推出：$[i]$ 仅有前者，$[2]$ 仅有后者。特征基矩阵为酉，不代表原矩阵为酉。"
     },
     {
       "id": "n025",
@@ -154,9 +154,9 @@
       "x": 2800,
       "y": 100,
       "width": 400,
-      "height": 190,
+      "height": 250,
       "color": "5",
-      "text": "## [[二次型]]\n\n$q(x)=x^TAx$ 是实向量上的二次齐次标量函数。"
+      "text": "<!-- bilingual-en:start -->\n## [[二次型|Quadratic forms]]\nA real quadratic form is a homogeneous quadratic polynomial $q(x)=x^TAx$. Paired off-diagonal entries combine into cross terms; replacing $x$ by $tx$ multiplies $q$ by $t^2$.\n<!-- bilingual-en:end -->\n\n**二次型**：实二次型是 $q(x)=x^TAx$ 这样的二次齐次多项式。成对的非对角元合成交叉项；输入乘 $t$，输出乘 $t^2$。"
     },
     {
       "id": "n009",
@@ -164,9 +164,9 @@
       "x": 3450,
       "y": 100,
       "width": 400,
-      "height": 190,
+      "height": 260,
       "color": "6",
-      "text": "## [[二次型对称化]]\n\n实二次型只由 $(A+A^T)/2$ 决定。"
+      "text": "<!-- bilingual-en:start -->\n## [[二次型对称化|Symmetrizing a form]]\nFor real $x$, $x^TAx=x^TSx$ with $S=(A+A^T)/2$. In fixed coordinates, $S$ is the unique symmetric representative; the matrix spectrum need not be preserved.\n<!-- bilingual-en:end -->\n\n**二次型对称化**：对实 $x$，取 $S=(A+A^T)/2$ 得同一二次型。固定坐标下，$S$ 是唯一对称代表，但不一定保持原矩阵的谱。"
     },
     {
       "id": "n028",
@@ -174,9 +174,9 @@
       "x": 4100,
       "y": 100,
       "width": 400,
-      "height": 190,
+      "height": 250,
       "color": "6",
-      "text": "## [[复二次型实部]]\n\n$\\operatorname{Re}(x^*Ax)$ 只由 $A$ 的 Hermitian 部分决定。"
+      "text": "<!-- bilingual-en:start -->\n## [[复二次型实部|Real part of a complex form]]\nFor any complex square $A$, set $H=(A+A^*)/2$. Then $\\operatorname{Re}(z^*Az)=z^*Hz$ for every $z$. Taking real parts of the entries of $A$ is a different operation.\n<!-- bilingual-en:end -->\n\n**复二次型实部**：任意复方阵取 $H=(A+A^*)/2$，都有 $\\operatorname{Re}(z^*Az)=z^*Hz$。这里是 Hermitian 部分，不是逐个矩阵元素取实部。"
     },
     {
       "id": "n034",
@@ -184,9 +184,9 @@
       "x": 4750,
       "y": 100,
       "width": 400,
-      "height": 190,
+      "height": 250,
       "color": "6",
-      "text": "## [[Hermitian二次型实值判据]]\n\n$x^*Ax$ 对每个复向量都为实数，当且仅当 $A$ 是 Hermitian。"
+      "text": "<!-- bilingual-en:start -->\n## [[Hermitian二次型实值判据|Real-valued quadratic forms]]\nFor a complex $n\\times n$ matrix, $n\\ge1$, $z^*Az$ is real for every $z\\in\\mathbb C^n$ iff $A=A^*$. Here $*$ means conjugate transpose. Real inputs alone are insufficient.\n<!-- bilingual-en:end -->\n\n**Hermitian二次型实值判据**：复方阵满足 $A=A^*$，当且仅当对全部复向量 $z$，$z^*Az$ 都为实数。$*$ 为共轭转置；只检查实向量不够。"
     },
     {
       "id": "n010",
@@ -194,9 +194,9 @@
       "x": 2800,
       "y": 420,
       "width": 400,
-      "height": 190,
+      "height": 260,
       "color": "5",
-      "text": "## [[正定矩阵]]\n\n实对称或复 Hermitian 矩阵在每个非零方向的二次型都严格为正。"
+      "text": "<!-- bilingual-en:start -->\n## [[正定矩阵|Positive definite]]\nReal symmetric $A$ is positive definite when $x^TAx>0$ for every $x\\ne0$. For complex Hermitian $A$, use $x^*Ax$, with $*$ the conjugate transpose.\n<!-- bilingual-en:end -->\n\n**正定矩阵**：实对称 $A$ 要求每个 $x\\ne0$ 都有 $x^TAx>0$；复 Hermitian 情形改用 $x^*Ax$，$*$ 为共轭转置。"
     },
     {
       "id": "n011",
@@ -204,9 +204,9 @@
       "x": 3450,
       "y": 420,
       "width": 400,
-      "height": 190,
+      "height": 270,
       "color": "5",
-      "text": "## [[半正定矩阵]]\n\n实对称或复 Hermitian 矩阵在每个方向的二次型都非负。"
+      "text": "<!-- bilingual-en:start -->\n## [[半正定矩阵|Positive semidefinite]]\nReal symmetric $A$ has $x^TAx\\ge0$ for every $x$; complex Hermitian $A$ uses $x^*Ax$. Positive definite matrices are included. A nonzero zero-value direction is allowed, not required.\n<!-- bilingual-en:end -->\n\n**半正定矩阵**：实对称情形要求所有 $x$ 的二次型非负；复 Hermitian 情形用共轭转置。这包括正定矩阵，允许但不要求存在非零零值方向。"
     },
     {
       "id": "n012",
@@ -214,9 +214,9 @@
       "x": 4100,
       "y": 420,
       "width": 400,
-      "height": 190,
+      "height": 260,
       "color": "6",
-      "text": "## [[正定与半正定的谱判据]]\n\n正定对应特征值全正；半正定对应特征值全非负。"
+      "text": "<!-- bilingual-en:start -->\n## [[正定与半正定的谱判据|Eigenvalue sign tests]]\nFor real symmetric or complex Hermitian $A$, positive definiteness means all eigenvalues are positive; positive semidefiniteness means all are nonnegative. The latter permits, but does not require, zero.\n<!-- bilingual-en:end -->\n\n**正定与半正定的谱判据**：实对称或复 Hermitian 矩阵：正定等价于特征值全正，半正定等价于特征值全非负。后者允许但不要求零特征值。"
     },
     {
       "id": "n031",
@@ -224,9 +224,9 @@
       "x": 4750,
       "y": 420,
       "width": 400,
-      "height": 190,
+      "height": 270,
       "color": "6",
-      "text": "## [[正定谱下界]]\n\n正定等价于二次型统一压住 $c\\lVert x\\rVert_2^2$，最优 $c$ 是最小特征值。"
+      "text": "<!-- bilingual-en:start -->\n## [[正定谱下界|Uniform spectral bound]]\nFor fixed finite real symmetric or Hermitian $A$, positive definiteness is equivalent to $x^*Ax\\ge c\\|x\\|_2^2$ for all $x$, with one $c>0$ independent of $x$. The largest such $c$ is the smallest eigenvalue.\n<!-- bilingual-en:end -->\n\n**正定谱下界**：对固定的有限阶实对称或 Hermitian 矩阵，正定等价于用同一个 $c>0$ 对全部 $x$ 保证上述下界；$c$ 不随 $x$ 变。最优值是最小特征值。"
     },
     {
       "id": "n032",
@@ -234,9 +234,9 @@
       "x": 2800,
       "y": 740,
       "width": 400,
-      "height": 190,
+      "height": 260,
       "color": "6",
-      "text": "## [[半正定零方向]]\n\n对半正定矩阵，二次型为零当且仅当向量属于零空间。"
+      "text": "<!-- bilingual-en:start -->\n## [[半正定零方向|Zero directions and the kernel]]\nFor real symmetric $A\\succeq0$, $x^TAx=0$ iff $Ax=0$. For complex Hermitian $A\\succeq0$, use $x^*$, the conjugate transpose. An indefinite form can have zero values outside its kernel.\n<!-- bilingual-en:end -->\n\n**半正定零方向**：实对称半正定时，二次型为零恰好等价于矩阵把该向量映为零。复 Hermitian 情形用共轭转置；不定二次型可在核以外取零。"
     },
     {
       "id": "n017",
@@ -244,9 +244,9 @@
       "x": 3450,
       "y": 740,
       "width": 400,
-      "height": 190,
+      "height": 260,
       "color": "6",
-      "text": "## [[半正定主平方根]]\n\n半正定矩阵有唯一的半正定主平方根，允许零特征值。"
+      "text": "<!-- bilingual-en:start -->\n## [[半正定主平方根|Principal square root]]\nA finite real symmetric or Hermitian positive-semidefinite $A$ has exactly one positive-semidefinite $B$ with $B^2=A$. It takes nonnegative square roots of eigenvalues; zero is allowed. This is not entrywise square rooting.\n<!-- bilingual-en:end -->\n\n**半正定主平方根**：有限阶实对称或 Hermitian 半正定矩阵 $A$，有唯一半正定平方根 $B$ 满足 $B^2=A$。对特征值取非负平方根，允许零；并非逐个矩阵元素开方。"
     },
     {
       "id": "n036",
@@ -254,9 +254,9 @@
       "x": 4100,
       "y": 1040,
       "width": 400,
-      "height": 190,
+      "height": 220,
       "color": "5",
-      "text": "## [[正定逆平方根]]\n\n正定矩阵的逆平方根是主平方根的逆；奇异半正定矩阵没有普通逆平方根。"
+      "text": "<!-- bilingual-en:start -->\n## [[正定逆平方根|Inverse square root]]\nFor finite positive-definite real symmetric/Hermitian $A$, $W=(A^{1/2})^{-1}$ satisfies $WAW=I$. A singular semidefinite $A$ has a principal root but no ordinary inverse root.\n<!-- bilingual-en:end -->\n\n**正定逆平方根**：有限阶实对称或 Hermitian 正定矩阵的 $W=(A^{1/2})^{-1}$ 满足 $WAW=I$。奇异半正定矩阵有主平方根，却无普通逆平方根。"
     },
     {
       "id": "n020",
@@ -264,9 +264,9 @@
       "x": 4100,
       "y": 740,
       "width": 400,
-      "height": 190,
+      "height": 260,
       "color": "1",
-      "text": "## [[正定与半正定可逆性]]\n\n正定必可逆；半正定允许零特征值，因而可能奇异。"
+      "text": "<!-- bilingual-en:start -->\n## [[正定与半正定可逆性|When PSD is invertible]]\nFor real symmetric or Hermitian $A$, positive definiteness is equivalent to positive semidefiniteness plus invertibility. Semidefiniteness alone allows either outcome; invertibility alone gives no positive sign.\n<!-- bilingual-en:end -->\n\n**正定与半正定可逆性**：实对称或 Hermitian 矩阵正定，当且仅当它半正定且可逆。仅半正定可以奇异，也可以可逆；仅可逆不保证正性。"
     },
     {
       "id": "n033",
@@ -274,9 +274,9 @@
       "x": 4750,
       "y": 740,
       "width": 400,
-      "height": 190,
+      "height": 250,
       "color": "6",
-      "text": "## [[正定逆仍正定]]\n\n正定矩阵的正特征值取倒数后仍为正，所以逆矩阵仍正定。"
+      "text": "<!-- bilingual-en:start -->\n## [[正定逆仍正定|Positive-definite inverse]]\nA finite real symmetric or Hermitian positive-definite matrix has a positive-definite inverse. Its eigenvalues are the positive reciprocals of the original eigenvalues; taking reciprocals reverses their order.\n<!-- bilingual-en:end -->\n\n**正定逆仍正定**：有限阶实对称或 Hermitian 正定矩阵的逆仍正定。逆矩阵的特征值是原正特征值的倒数，大小顺序随之反转。"
     },
     {
       "id": "n013",
@@ -284,9 +284,9 @@
       "x": 0,
       "y": 1420,
       "width": 400,
-      "height": 190,
+      "height": 270,
       "color": "6",
-      "text": "## [[LDL正定判别]]\n\n无行交换的 $LDL^T$ 分解中，正定等价于所有主元严格为正。"
+      "text": "<!-- bilingual-en:start -->\n## [[LDL正定判别|Positive LDL pivots]]\nFor finite real symmetric or Hermitian $A$, positive definiteness is equivalent to $A=LDL^*$ with unit lower triangular $L$ and positive diagonal $D$. Here $*$ is conjugate transpose; over the reals it is transpose.\n<!-- bilingual-en:end -->\n\n**LDL正定判别**：有限阶实对称或 Hermitian 矩阵正定，等价于上述分解存在，且 $L$ 为单位下三角、$D$ 对角元全正。$*$ 表示共轭转置，实数时就是转置。"
     },
     {
       "id": "n014",
@@ -294,9 +294,9 @@
       "x": 650,
       "y": 1420,
       "width": 400,
-      "height": 190,
+      "height": 260,
       "color": "6",
-      "text": "## [[Sylvester 正定判据]]\n\n实对称或 Hermitian 矩阵正定，当且仅当全部顺序主子式严格为正。"
+      "text": "<!-- bilingual-en:start -->\n## [[Sylvester 正定判据|Sylvester’s criterion]]\nA real symmetric or Hermitian matrix is positive definite iff all its [[顺序主子式|leading principal minors]] are strictly positive. Replacing $>0$ by $\\ge0$ does not give a semidefinite test.\n<!-- bilingual-en:end -->\n\n**Sylvester 正定判据**：实对称或 Hermitian 矩阵正定，当且仅当全部[[顺序主子式]]严格为正。不能只把严格号换成非严格号来判半正定。"
     },
     {
       "id": "n016",
@@ -304,9 +304,9 @@
       "x": 1300,
       "y": 1420,
       "width": 400,
-      "height": 190,
+      "height": 260,
       "color": "6",
-      "text": "## [[Cholesky 正定判据]]\n\n实对称矩阵正定，当且仅当它有唯一的正对角 Cholesky 因子。"
+      "text": "<!-- bilingual-en:start -->\n## [[Cholesky 正定判据|Cholesky criterion]]\nA finite real symmetric or Hermitian matrix is positive definite exactly when $A=LL^*$ with lower triangular $L$ and positive real diagonal. For a fixed coordinate order this normalized factor is unique.\n<!-- bilingual-en:end -->\n\n**Cholesky 正定判据**：有限阶实对称或 Hermitian 矩阵正定，等价于存在正实数对角的下三角因子 $L$，使 $A=LL^*$。坐标顺序固定后，这个规范化因子唯一。"
     },
     {
       "id": "n015",
@@ -314,9 +314,9 @@
       "x": 1950,
       "y": 1420,
       "width": 400,
-      "height": 190,
+      "height": 260,
       "color": "6",
-      "text": "## [[半正定主子式判别]]\n\n半正定要求全部主子式非负，而不是只看左上角的一串。"
+      "text": "<!-- bilingual-en:start -->\n## [[半正定主子式判别|PSD minor test]]\nFor a finite real symmetric or complex Hermitian matrix, positive semidefiniteness is equivalent to every principal minor being nonnegative. Check every nonempty same-index row/column selection; zero is allowed.\n<!-- bilingual-en:end -->\n\n**半正定主子式判别**：有限阶实对称或复 Hermitian 矩阵半正定，等价于全部主子式非负。须检查每个非空的同组行列下标选择；允许零。"
     },
     {
       "id": "n027",
@@ -324,9 +324,9 @@
       "x": 0,
       "y": 1760,
       "width": 400,
-      "height": 190,
+      "height": 260,
       "color": "1",
-      "text": "## [[LDL零主元边界]]\n\n奇异半正定矩阵的零主元会破坏标准递推与唯一性。"
+      "text": "<!-- bilingual-en:start -->\n## [[LDL零主元边界|Zero-pivot boundary]]\nA zero scalar pivot may block the usual division-based recurrence; it does not by itself imply that the whole matrix is singular. For singular semidefinite matrices, zero pivots can also leave a triangular factor nonunique.\n<!-- bilingual-en:end -->\n\n**LDL零主元边界**：零标量主元可能阻断通常的除法递推，但本身不说明整个矩阵奇异。对奇异半正定矩阵，零主元也可能使三角因子不唯一。"
     },
     {
       "id": "n018",
@@ -334,9 +334,9 @@
       "x": 650,
       "y": 1760,
       "width": 400,
-      "height": 190,
+      "height": 250,
       "color": "1",
-      "text": "## [[正对角元的正定边界]]\n\n正对角元只检查坐标轴，不能排除交叉项制造的负方向。"
+      "text": "<!-- bilingual-en:start -->\n## [[正对角元的正定边界|Positive diagonal]]\nFor real symmetric matrices, positive definiteness forces every diagonal entry to be positive. In dimension at least two, those axis checks can still miss a negative mixed direction.\n<!-- bilingual-en:end -->\n\n**正对角元的正定边界**：实对称矩阵正定必有正对角元。但至少二维时，坐标轴检查仍可能漏掉混合方向上的负二次值。"
     },
     {
       "id": "n019",
@@ -344,9 +344,9 @@
       "x": 1950,
       "y": 1760,
       "width": 400,
-      "height": 190,
+      "height": 250,
       "color": "1",
-      "text": "## [[正行列式的正定边界]]\n\n正行列式不能排除偶数个负特征方向。"
+      "text": "<!-- bilingual-en:start -->\n## [[正行列式的正定边界|Positive determinant]]\nFor a real symmetric matrix, a positive determinant allows an even number of negative eigenvalues. From dimension two onward it does not by itself imply positive definiteness; dimension one is different.\n<!-- bilingual-en:end -->\n\n**正行列式的正定边界**：实对称矩阵的正行列式仍允许偶数个负特征值。从二维起，仅凭正行列式不能推出正定；一维是例外。"
     },
     {
       "id": "n026",
@@ -354,9 +354,9 @@
       "x": 2600,
       "y": 1760,
       "width": 400,
-      "height": 190,
+      "height": 260,
       "color": "1",
-      "text": "## [[顺序主子式不推半正定]]\n\n把 Sylvester 判据中的 $>0$ 改成 $\\ge0$，不能得到半正定判据。"
+      "text": "<!-- bilingual-en:start -->\n## [[顺序主子式不推半正定|Weak leading signs fail]]\nThe diagonal matrix with entries $0,-1$ has both leading minors zero, but its second coordinate gives a negative quadratic value. For dimension at least two, nonnegative leading minors alone cannot certify semidefiniteness.\n<!-- bilingual-en:end -->\n\n**顺序主子式不推半正定**：对角元为 $0,-1$ 的矩阵，两个顺序主子式都为零，第二坐标方向却取负。至少二维时，仅顺序主子式非负不足以保证半正定。"
     },
     {
       "id": "n024",
@@ -364,19 +364,19 @@
       "x": 1300,
       "y": 2100,
       "width": 400,
-      "height": 190,
+      "height": 260,
       "color": "4",
-      "text": "## [[正定判据的选择]]\n\n先确认对称或 Hermitian，再按现有信息选一个完整判据。"
+      "text": "<!-- bilingual-en:start -->\n## [[正定判据的选择|Choosing a positivity test]]\nFirst confirm real symmetry or Hermitian symmetry. Then use one complete certificate: all eigenvalues positive, all positive leading minors, or a scalar $LDL^*$ factorization with positive diagonal $D$. A positive determinant alone is insufficient.\n<!-- bilingual-en:end -->\n\n**正定判据的选择**：先确认实对称或 Hermitian，再选一个完整证书：特征值全正、顺序主子式全正，或 $D$ 对角元全正的标量 $LDL^*$ 分解。仅行列式为正还不够。"
     },
     {
       "id": "n021",
       "type": "text",
       "x": 3350,
       "y": 1420,
-      "width": 400,
-      "height": 190,
+      "width": 500,
+      "height": 320,
       "color": "3",
-      "text": "## [[正定二次型的椭球]]\n\n$x^TAx=1$ 的主轴是特征向量，半轴长度为 $1/\\sqrt{\\lambda_i}$。"
+      "text": "<!-- bilingual-en:start -->\n## [[正定二次型的椭球|Ellipsoids from quadratic forms]]\n\nFor real symmetric $A\\succ0$, $x^TAx=1$ is an ellipsoid boundary. Unit eigenvectors give its axis directions; eigenvalues $\\lambda_i>0$ give semiaxes $1/\\sqrt{\\lambda_i}$.\n<!-- bilingual-en:end -->\n\n等号给出边界，$x^TAx\\le1$ 包含内部。代价越大的方向，半轴越短；半正定含零方向时可能变成无界圆柱。"
     },
     {
       "id": "n022",
@@ -384,9 +384,9 @@
       "x": 4000,
       "y": 1420,
       "width": 400,
-      "height": 190,
+      "height": 270,
       "color": "3",
-      "text": "## [[Hessian 局部极小判据]]\n\n驻点处 Hessian 正定推出严格局部极小，但不自动推出全局极小。"
+      "text": "<!-- bilingual-en:start -->\n## [[Hessian 局部极小判据|Hessian minimum test]]\nFor real scalar $f\\in C^2$ near an interior stationary point $a$, positive-definite $H_f(a)$ guarantees a strict local minimum. This is sufficient, not necessary.\n<!-- bilingual-en:end -->\n\n**Hessian 局部极小判据**：实值函数在内点驻点附近为 $C^2$，且 Hessian 正定，便有严格局部极小。这是充分条件，不是必要条件。"
     },
     {
       "id": "n029",
@@ -394,9 +394,9 @@
       "x": 4650,
       "y": 1420,
       "width": 400,
-      "height": 190,
+      "height": 290,
       "color": "1",
-      "text": "## [[半定Hessian无结论]]\n\nHessian 有零方向时，高阶项仍可形成极小、极大或鞍点。"
+      "text": "<!-- bilingual-en:start -->\n## [[半定Hessian无结论|Singular semidefinite Hessians]]\nAt an interior stationary point of a real $C^2$ function, singular semidefiniteness leaves classification incomplete. A nonzero positive-semidefinite Hessian still rules out a local maximum.\n<!-- bilingual-en:end -->\n\n**半定Hessian无结论**：实值 $C^2$ 函数在内点驻点的奇异半定 Hessian 不能完成分类；但非零半正定仍排除局部极大。"
     },
     {
       "id": "n023",
@@ -404,9 +404,9 @@
       "x": 3675,
       "y": 1760,
       "width": 400,
-      "height": 190,
+      "height": 280,
       "color": "3",
-      "text": "## [[协方差矩阵半正定性]]\n\n协方差二次型就是线性投影的方差，因此始终非负。"
+      "text": "<!-- bilingual-en:start -->\n## [[协方差矩阵半正定性|Covariance is PSD]]\n\nFor a real random vector with finite second moments, $a^T\\Sigma a=\\operatorname{Var}(a^TX)\\ge0$.\n<!-- bilingual-en:end -->\n\n每个固定线性组合的方差非负，协方差又对称。"
     },
     {
       "id": "n035",
@@ -414,9 +414,9 @@
       "x": 4325,
       "y": 1760,
       "width": 400,
-      "height": 190,
+      "height": 280,
       "color": "3",
-      "text": "## [[协方差奇异性]]\n\n协方差奇异，当且仅当某个非零线性组合几乎处处为常数。"
+      "text": "<!-- bilingual-en:start -->\n## [[协方差奇异性|Singular covariance]]\n\nWith finite second moments, singularity means some fixed $a\\ne0$ has $a^TX=E[a^TX]$ almost surely.\n<!-- bilingual-en:end -->\n\n非零零空间方向对应确定的线性组合；常数可非零。"
     },
     {
       "id": "sofp-nd",
@@ -424,8 +424,8 @@
       "x": 0,
       "y": 2900,
       "width": 350,
-      "height": 125,
-      "text": "## [[负定矩阵]]"
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n## [[负定矩阵|Negative definite]]\nFor real symmetric $A$, $x^TAx<0$ for every $x\\ne0$; equivalently, $-A$ is positive definite. For complex Hermitian $A$, test $z^*Az$ instead.\n<!-- bilingual-en:end -->\n\n**负定矩阵**：实对称 $A$ 在每个非零向量上二次型严格负，等价于 $-A$ 正定。复 Hermitian 情形改检验 $z^*Az$。"
     },
     {
       "id": "sofp-nsd",
@@ -433,8 +433,8 @@
       "x": 470,
       "y": 2900,
       "width": 350,
-      "height": 125,
-      "text": "## [[半负定矩阵]]"
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n## [[半负定矩阵|Negative semidefinite]]\nFor real symmetric $A$, $x^TAx\\le0$ for all $x$. This includes negative-definite matrices and zero; a nonzero zero-value direction is allowed, not required.\n<!-- bilingual-en:end -->\n\n**半负定矩阵**：实对称 $A$ 在所有向量上二次型非正。这包括负定与零矩阵；允许但不要求存在非零零值方向。"
     },
     {
       "id": "sofp-indef",
@@ -442,8 +442,8 @@
       "x": 940,
       "y": 2900,
       "width": 350,
-      "height": 125,
-      "text": "## [[不定二次型]]"
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n## [[不定二次型|Indefinite forms]]\nA real quadratic form $q$ is indefinite when $q(u)>0$ and $q(v)<0$ for some vectors $u,v$. A zero value alone proves neither indefiniteness nor a nonzero nullspace.\n<!-- bilingual-en:end -->\n\n**不定二次型**：实二次型须有实际正值方向和负值方向才称不定。单个零值既不能证明不定，也不能证明矩阵有非零零空间。"
     },
     {
       "id": "sofp-complete",
@@ -451,8 +451,8 @@
       "x": 1410,
       "y": 2900,
       "width": 350,
-      "height": 125,
-      "text": "## [[二维二次型配方]]"
+      "height": 260,
+      "text": "<!-- bilingual-en:start -->\n## [[二维二次型配方|Completing two squares]]\nFor real $q=ax^2+2bxy+cy^2$ and $a\\ne0$, completing the square gives $q=a(x+by/a)^2+(c-b^2/a)y^2$. The invertible coordinate change exposes the signs. Treat $a=0$ separately.\n<!-- bilingual-en:end -->\n\n**二维二次型配方**：实二次型在 $a\\ne0$ 时按上式配方，可逆换坐标后直接检查平方项的系数。$a=0$ 时须另行判断，不能除以零。"
     },
     {
       "id": "sofp-ndtest",
@@ -460,8 +460,8 @@
       "x": 0,
       "y": 3170,
       "width": 350,
-      "height": 125,
-      "text": "## [[负定顺序主子式判据]]"
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n## [[负定顺序主子式判据|Negative-definite test]]\nFor real symmetric or complex Hermitian $A$, negative definiteness is equivalent to every leading minor having a strict alternating sign: odd order negative, even order positive.\n<!-- bilingual-en:end -->\n\n**负定顺序主子式判据**：实对称或复 Hermitian 矩阵负定，等价于全部顺序主子式严格交替：奇数阶负，偶数阶正。每阶都须检查。"
     },
     {
       "id": "sofp-nsdtest",
@@ -469,8 +469,8 @@
       "x": 470,
       "y": 3170,
       "width": 350,
-      "height": 125,
-      "text": "## [[半负定主子式判据]]"
+      "height": 270,
+      "text": "<!-- bilingual-en:start -->\n## [[半负定主子式判据|Negative-semidefinite test]]\nFor real symmetric or complex Hermitian $A$, negative semidefiniteness is equivalent to all principal minors having weak signs by order: odd nonpositive, even nonnegative. Zero is permitted, not required.\n<!-- bilingual-en:end -->\n\n**半负定主子式判据**：实对称或复 Hermitian 矩阵半负定，等价于全部主子式按阶数取弱符号：奇数阶非正，偶数阶非负。允许零，不要求零。"
     },
     {
       "id": "sofp-qhessian",
@@ -478,8 +478,18 @@
       "x": 1410,
       "y": 3170,
       "width": 350,
-      "height": 125,
-      "text": "## [[二次型的Hessian]]"
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n## [[二次型的Hessian|Quadratic Hessians]]\nFor fixed real $A$ and $q(x)=x^TAx$, $H_q=A+A^T$. If $A$ is symmetric this is $2A$; the Hessian of $\\tfrac12x^TAx$ is then $A$.\n<!-- bilingual-en:end -->\n\n**二次型的Hessian**：固定实矩阵 $A$ 给出 $H_q=A+A^T$；对称时为 $2A$。若函数前有 $\\tfrac12$，对称情形的 Hessian 就是 $A$。"
+    },
+    {
+      "id": "p0016-outer-psd",
+      "type": "text",
+      "x": 3350,
+      "y": 2100,
+      "width": 650,
+      "height": 260,
+      "color": "6",
+      "text": "<!-- bilingual-en:start -->\n## [[外积和的半正定性|Finite outer-product sums]]\n\nFor real or complex columns and fixed $w_i\\ge0$, $\\sum_iw_iv_iv_i^*$ is PSD: each quadratic value is a sum of absolute squares.\n<!-- bilingual-en:end -->\n\n有限非负加权和保留半正定；复数必须用共轭转置，半正定不保证可逆。"
     }
   ],
   "edges": [
@@ -489,7 +499,7 @@
       "fromSide": "bottom",
       "toNode": "n007",
       "toSide": "top",
-      "label": "对称结构推出实谱与正交特征基"
+      "label": "Real symmetry gives a full orthonormal eigenbasis · 实对称给出完整标准正交特征基"
     },
     {
       "id": "e-a02",
@@ -497,7 +507,7 @@
       "fromSide": "bottom",
       "toNode": "n007",
       "toSide": "top",
-      "label": "正交换基"
+      "label": "Use an orthonormal change of coordinates · 用标准正交基换坐标"
     },
     {
       "id": "e-a03",
@@ -505,7 +515,7 @@
       "fromSide": "bottom",
       "toNode": "n008",
       "toSide": "top",
-      "label": "Hermitian 结构推出实谱与 unitary 特征基"
+      "label": "Hermitian gives real eigenvalues and an orthonormal eigenbasis · Hermitian 给出实谱及标准正交特征基"
     },
     {
       "id": "e-a04",
@@ -513,7 +523,7 @@
       "fromSide": "bottom",
       "toNode": "n008",
       "toSide": "top",
-      "label": "unitary 换基"
+      "label": "Unitary basis change has inverse U* · unitary 换基以 U* 为逆"
     },
     {
       "id": "e-a05",
@@ -521,7 +531,7 @@
       "fromSide": "right",
       "toNode": "n006",
       "toSide": "left",
-      "label": "等价于 unitary 对角化"
+      "label": "Over C: normal iff a full orthonormal eigenbasis exists · 复数域：正规等价于有完整标准正交特征基"
     },
     {
       "id": "e-a06",
@@ -529,7 +539,7 @@
       "fromSide": "bottom",
       "toNode": "n006",
       "toSide": "top",
-      "label": "Hermitian 是 normal 的实谱特例"
+      "label": "Hermitian: normal with real spectrum · Hermitian：实谱的 normal 特例"
     },
     {
       "id": "e-a07",
@@ -537,7 +547,7 @@
       "fromSide": "bottom",
       "toNode": "n030",
       "toSide": "top",
-      "label": "与 Unitary 分开辨析"
+      "label": "In A=UΛU*, U is unitary; A need not be · 分解中 U 为酉，A 未必为酉"
     },
     {
       "id": "e-b01",
@@ -545,7 +555,7 @@
       "fromSide": "right",
       "toNode": "n009",
       "toSide": "left",
-      "label": "取唯一对称代表"
+      "label": "Unique symmetric representative in fixed coordinates · 固定坐标下取唯一对称代表"
     },
     {
       "id": "e-b02",
@@ -553,7 +563,7 @@
       "fromSide": "right",
       "toNode": "n028",
       "toSide": "left",
-      "label": "复数域的实部类比"
+      "label": "For x*Ax, the Hermitian part preserves its real part · 对 x*Ax，Hermitian 部分保持其实部"
     },
     {
       "id": "e-b03",
@@ -561,7 +571,7 @@
       "fromSide": "right",
       "toNode": "n034",
       "toSide": "left",
-      "label": "由实部到全部取实值"
+      "label": "All complex inputs give real values iff A is Hermitian · 全部复输入取实值当且仅当 A 为 Hermitian"
     },
     {
       "id": "e-b04",
@@ -569,7 +579,7 @@
       "fromSide": "right",
       "toNode": "n011",
       "toSide": "left",
-      "label": "放宽严格正"
+      "label": "Positive definite implies positive semidefinite · 正定必为半正定"
     },
     {
       "id": "e-b05",
@@ -577,7 +587,7 @@
       "fromSide": "right",
       "toNode": "n012",
       "toSide": "left",
-      "label": "用谱坐标逐向判号"
+      "label": "Symmetric/Hermitian: nonnegative eigenvalues · 实对称／Hermitian：特征值全非负"
     },
     {
       "id": "e-b06",
@@ -585,7 +595,7 @@
       "fromSide": "right",
       "toNode": "n031",
       "toSide": "left",
-      "label": "最小特征值给统一下界"
+      "label": "Smallest eigenvalue bounds the form relative to squared length · 最小特征值给相对长度平方的下界"
     },
     {
       "id": "e-b07",
@@ -593,7 +603,7 @@
       "fromSide": "bottom",
       "toNode": "n032",
       "toSide": "top",
-      "label": "零值只能来自零空间"
+      "label": "Under PSD, zero quadratic value iff nullspace · 半正定时，零二次值等价于属于零空间"
     },
     {
       "id": "e-b08",
@@ -601,7 +611,7 @@
       "fromSide": "bottom",
       "toNode": "n017",
       "toSide": "top",
-      "label": "非负谱逐项开方"
+      "label": "Take nonnegative square roots in spectral coordinates · 在谱坐标中取非负平方根"
     },
     {
       "id": "e-b11",
@@ -609,7 +619,7 @@
       "fromSide": "right",
       "toNode": "n036",
       "toSide": "left",
-      "label": "主平方根可逆时再取逆"
+      "label": "Invert the principal root when every eigenvalue is positive · 全部特征值为正时，对主平方根取逆"
     },
     {
       "id": "e-b12",
@@ -617,7 +627,7 @@
       "fromSide": "bottom",
       "toNode": "n036",
       "toSide": "top",
-      "label": "正定排除零特征值"
+      "label": "Positive spectrum makes the principal square root invertible · 正谱使主平方根可逆"
     },
     {
       "id": "e-b09",
@@ -625,7 +635,7 @@
       "fromSide": "bottom",
       "toNode": "n020",
       "toSide": "top",
-      "label": "零特征值决定可逆边界"
+      "label": "Within PSD: no zero eigenvalue ⇔ invertible ⇔ positive definite · 半正定内：无零特征值 ⇔ 可逆 ⇔ 正定"
     },
     {
       "id": "e-b10",
@@ -633,7 +643,7 @@
       "fromSide": "right",
       "toNode": "n033",
       "toSide": "left",
-      "label": "正谱取倒数仍为正"
+      "label": "Positive-definite inverse: reciprocal eigenvalues stay positive · 正定矩阵取逆：特征值倒数仍正"
     },
     {
       "id": "e-c01",
@@ -641,7 +651,7 @@
       "fromSide": "right",
       "toNode": "n014",
       "toSide": "left",
-      "label": "顺序主子式是主元累积乘积"
+      "label": "Scalar LDL*: leading minors are cumulative diagonal products · 标量 LDL*：顺序主子式为对角主元累积乘积"
     },
     {
       "id": "e-c02",
@@ -649,7 +659,7 @@
       "fromSide": "right",
       "toNode": "n016",
       "toSide": "left",
-      "label": "同属完整正定判据"
+      "label": "Real symmetric A: both characterize positive definiteness · 实对称 A：两者均刻画正定性"
     },
     {
       "id": "e-c03",
@@ -657,7 +667,7 @@
       "fromSide": "bottom",
       "toNode": "n027",
       "toSide": "top",
-      "label": "零主元进入奇异边界"
+      "label": "Zero pivot may block recurrence without matrix singularity · 零主元可能阻断递推，矩阵却未必奇异"
     },
     {
       "id": "e-c04",
@@ -665,7 +675,7 @@
       "fromSide": "bottom",
       "toNode": "n026",
       "toSide": "top",
-      "label": "只查顺序主子式不够"
+      "label": "Weak leading signs can miss a negative direction · 非负顺序主子式可能漏掉负方向"
     },
     {
       "id": "e-c05",
@@ -673,7 +683,7 @@
       "fromSide": "bottom",
       "toNode": "n024",
       "toSide": "top",
-      "label": "按已有结构选判据"
+      "label": "A positive-diagonal triangular factor certifies positivity · 正对角三角因子提供正定判据"
     },
     {
       "id": "e-c06",
@@ -681,7 +691,7 @@
       "fromSide": "bottom",
       "toNode": "n024",
       "toSide": "left",
-      "label": "不能据此判正定"
+      "label": "Positive coordinate-axis values alone do not establish positive definiteness · 坐标轴值全正仍不足以判正定"
     },
     {
       "id": "e-c07",
@@ -689,7 +699,7 @@
       "fromSide": "bottom",
       "toNode": "n024",
       "toSide": "right",
-      "label": "不能据此判正定"
+      "label": "A positive eigenvalue product does not fix every sign · 特征值乘积为正不决定每个因子的符号"
     },
     {
       "id": "e-d01",
@@ -697,7 +707,7 @@
       "fromSide": "right",
       "toNode": "n022",
       "toSide": "left",
-      "label": "二次几何成为局部曲率"
+      "label": "At a stationary point, the Hessian supplies the local quadratic term · 驻点处由Hessian给出局部二次项"
     },
     {
       "id": "e-d02",
@@ -705,7 +715,7 @@
       "fromSide": "right",
       "toNode": "n029",
       "toSide": "left",
-      "label": "失去严格定号后无结论"
+      "label": "Singular semidefiniteness leaves classification incomplete · 奇异半定尚不能完成极值分类"
     },
     {
       "id": "e-d03",
@@ -713,7 +723,7 @@
       "fromSide": "right",
       "toNode": "n035",
       "toSide": "left",
-      "label": "零投影方差刻画奇异性"
+      "label": "Zero variance in a nonzero direction · 非零方向的零方差刻画奇异性"
     },
     {
       "id": "e-x01",
@@ -721,7 +731,7 @@
       "fromSide": "right",
       "toNode": "n008",
       "toSide": "left",
-      "label": "实对称谱定理是 Hermitian 谱定理的实数情形"
+      "label": "Real symmetric case of the Hermitian theorem · Hermitian 谱定理的实对称特例"
     },
     {
       "id": "e-x02",
@@ -729,7 +739,7 @@
       "fromSide": "right",
       "toNode": "n010",
       "toSide": "left",
-      "label": "谱坐标把二次型符号化为特征值符号"
+      "label": "Hermitian positivity is positivity of every eigenvalue · Hermitian 正定等价于全部特征值为正"
     },
     {
       "id": "e-x03",
@@ -737,7 +747,7 @@
       "fromSide": "bottom",
       "toNode": "n010",
       "toSide": "top",
-      "label": "每个非零方向严格为正定义正定"
+      "label": "For real symmetric A: positive on every nonzero vector · 实对称 A：所有非零向量上严格正"
     },
     {
       "id": "e-x04",
@@ -745,7 +755,7 @@
       "fromSide": "bottom",
       "toNode": "n015",
       "toSide": "right",
-      "label": "零方向是半正定的几何边界；全部主子式非负是完整代数判据"
+      "label": "Symmetric/Hermitian: all principal minors nonnegative iff PSD · 实对称／Hermitian：全部主子式非负等价于半正定"
     },
     {
       "id": "e-x05",
@@ -753,7 +763,7 @@
       "fromSide": "right",
       "toNode": "n015",
       "toSide": "left",
-      "label": "从严格正放宽到非负时不能照搬正定判据"
+      "label": "For a minor test allowing zero, check all index sets · 用允许零的主子式判据时须查全部下标集"
     },
     {
       "id": "e-x06",
@@ -761,7 +771,7 @@
       "fromSide": "bottom",
       "toNode": "n021",
       "toSide": "top",
-      "label": "当 $A\\succ0$ 时，$A^{1/2}$ 把椭球变为单位球；零谱会使等值面退化"
+      "label": "For A≻0, y=A½x maps xᵀAx≤1 onto the unit ball · 正定平方根把实心椭球映到单位球"
     },
     {
       "id": "e-x07",
@@ -769,7 +779,9 @@
       "fromSide": "bottom",
       "toNode": "n035",
       "toSide": "top",
-      "label": "零曲率方向使二阶检验退化；零方差方向使协方差奇异"
+      "label": "Zero curvature alone is inconclusive; zero variance is a.s. constancy · 零曲率不能分类极值；零方差给几乎必然常数",
+      "fromEnd": "none",
+      "toEnd": "none"
     },
     {
       "id": "n010-sofp-nd",
@@ -777,7 +789,7 @@
       "fromSide": "bottom",
       "toNode": "sofp-nd",
       "toSide": "top",
-      "label": "对矩阵取负号"
+      "label": "Negating a positive-definite matrix gives a negative-definite one · 正定矩阵取负号得到负定矩阵"
     },
     {
       "id": "n011-sofp-nsd",
@@ -785,7 +797,7 @@
       "fromSide": "bottom",
       "toNode": "sofp-nsd",
       "toSide": "top",
-      "label": "对矩阵取负号"
+      "label": "Negating a positive-semidefinite matrix gives a negative-semidefinite one · 半正定矩阵取负号得到半负定矩阵"
     },
     {
       "id": "n025-sofp-indef",
@@ -793,7 +805,7 @@
       "fromSide": "bottom",
       "toNode": "sofp-indef",
       "toSide": "top",
-      "label": "存在两个相反符号方向"
+      "label": "Indefinite iff the quadratic form takes both signs · 二次型不定等价于能取正值和负值"
     },
     {
       "id": "n025-sofp-complete",
@@ -801,7 +813,7 @@
       "fromSide": "bottom",
       "toNode": "sofp-complete",
       "toSide": "top",
-      "label": "二维可逆坐标变换"
+      "label": "For a nonzero first coefficient, use an invertible shear · 首系数非零时作可逆剪切换元"
     },
     {
       "id": "sofp-nd-sofp-ndtest",
@@ -809,7 +821,7 @@
       "fromSide": "bottom",
       "toNode": "sofp-ndtest",
       "toSide": "top",
-      "label": "对 -A 用 Sylvester"
+      "label": "Order-k negation multiplies the minor by (−1)^k · k 阶块取负，主子式乘 (−1)^k"
     },
     {
       "id": "sofp-nsd-sofp-nsdtest",
@@ -817,7 +829,7 @@
       "fromSide": "bottom",
       "toNode": "sofp-nsdtest",
       "toSide": "top",
-      "label": "对 -A 检查全部主子式"
+      "label": "Apply the all-principal PSD test to −A · 对 −A 使用全部主子式半正定判据"
     },
     {
       "id": "sofp-complete-n014",
@@ -825,7 +837,7 @@
       "fromSide": "bottom",
       "toNode": "n014",
       "toSide": "top",
-      "label": "给出二维充分必要条件"
+      "label": "Completing squares gives the 2×2 Sylvester test · 配方得到二维 Sylvester 判据"
     },
     {
       "id": "n025-sofp-qhessian",
@@ -833,7 +845,16 @@
       "fromSide": "bottom",
       "toNode": "sofp-qhessian",
       "toSide": "top",
-      "label": "对称代表连续求导得到 2A"
+      "label": "For fixed real A, the Hessian is A + Aᵀ · 固定实 A 的二次型 Hessian 为 A + Aᵀ"
+    },
+    {
+      "id": "p0016-psd-outer",
+      "fromNode": "n011",
+      "fromSide": "bottom",
+      "toNode": "p0016-outer-psd",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "Nonnegative finite sums preserve the quadratic-form condition · 非负有限和保留二次型条件"
     }
   ]
 }

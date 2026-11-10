@@ -1510,6 +1510,24 @@ Therefore:
 - Nonnegative leading principal minors alone are not sufficient for positive semidefiniteness. The case $c=0$ can be verified directly from the structure, but in general one must check all principal minors or the eigenvalues.
 <!-- bilingual-en:end -->
 
+<!-- bilingual-en:start -->
+**Clarification of the local and global conditions above.** For a real $C^2$ function near an interior point, a positive-definite Hessian gives a strict local minimum **when the point is stationary**, as in the [[Hessian 局部极小判据|local Hessian test]]. Positive curvature alone does not suffice: $f(x)=x+x^2$ has $f^{\prime\prime}(0)=2$ but takes values below $f(0)$ at small negative $x$.
+<!-- bilingual-en:end -->
+
+**上面局部与全局条件的澄清。** 实值函数在内点附近为 $C^2$ 时，还须该点是驻点，正定 Hessian 才由 [[Hessian 局部极小判据]] 给出严格局部极小。仅有正曲率不足够：$f(x)=x+x^2$ 满足 $f^{\prime\prime}(0)=2$，却在小负 $x$ 处比零点更低。
+
+<!-- bilingual-en:start -->
+Positive semidefiniteness includes positive definiteness. The undecided second-order case is [[半定Hessian无结论|singular semidefiniteness]] at a stationary point. Higher derivatives are one possible tool, not a requirement: they need not exist under $C^2$, and direct sign bounds can settle a case. For example, $f(x,y)=x^2$ has a singular Hessian yet is visibly minimized wherever $x=0$.
+<!-- bilingual-en:end -->
+
+半正定包括正定。二阶信息未能完成分类的情形，是驻点处的[[半定Hessian无结论|奇异半定]]。高阶导数只是可能的工具，不是必须条件；$C^2$ 本来也不保证它们存在，直接控制函数符号同样可能完成判断。例如 $f(x,y)=x^2$ 的 Hessian 奇异，却直接可见所有 $x=0$ 的点都取得最小值。
+
+<!-- bilingual-en:start -->
+Global convexity is a separate statement: on an open convex domain, a real $C^2$ function is convex when its Hessian is positive semidefinite everywhere, by the [[Hessian凹凸性判据|Hessian convexity criterion]]. A quadratic function has a constant Hessian, but is convex only when its symmetric quadratic coefficient is positive semidefinite. One positive-definite Hessian at one point does not establish global convexity.
+<!-- bilingual-en:end -->
+
+全局凸性是另一条结论：在开凸域上，实值 $C^2$ 函数若 Hessian 处处半正定，就由[[Hessian凹凸性判据]]得到凸性。二次函数虽然 Hessian 为常矩阵，也只有对称二次系数半正定时才是凸函数。一点的 Hessian 正定不能证明全域凸性。
+
 ### 3.3.7 三道自检题
 <!-- bilingual-en:start -->
 *3.3.7 Three self-check questions*
@@ -2000,6 +2018,13 @@ The recitation emphasizes three structural tests:
 - Jordan form is extremely unstable in floating-point computation. It is chiefly a theoretical classification and is not the preferred tool for large-scale numerical algorithms.
 - For a real matrix with nonreal eigenvalues, either work over $\mathbb C$ with ordinary Jordan form or use real $2\times2$ blocks over $\mathbb R$.
 <!-- bilingual-en:end -->
+
+> [!note] A sufficient condition allowing repeated roots · 允许重根的充分条件
+> <!-- bilingual-en:start -->
+> In the preceding boundary statement, distinct eigenvalues are one sufficient way to guarantee diagonalizability. More generally, two matrices diagonalizable over the same field are similar whenever their characteristic polynomials agree, even with repeated roots. Order their eigenvector bases to obtain the same diagonal matrix; the composition of the two basis changes gives a similarity. See [[同谱不必相似|equal spectra and similarity]] for the proof and the counterexample when diagonalizability is absent.
+> <!-- bilingual-en:end -->
+>
+> 上述边界条目中的互异特征值，是保证可对角化的一种充分情形。更一般地，若两矩阵在同一域都可对角化，且特征多项式相同，那么即使有重根也相似。将特征向量基排序为相同的对角形，两次换基的复合就给出相似变换。证明与缺少可对角化条件时的反例见[[同谱不必相似]]。
 
 ### 3.4.8 三道自检题
 <!-- bilingual-en:start -->
@@ -3021,6 +3046,13 @@ This also reveals that $M_{2\times2}$ decomposes into symmetric and skew-symmetr
 - The affine map $x\mapsto Ax+b$ is not linear when $b\ne0$, but can be represented in augmented coordinates.
 <!-- bilingual-en:end -->
 
+> [!note] Basis dependence · 换基与矩阵表示
+> <!-- bilingual-en:start -->
+> Changing bases **can** change a representing matrix, but need not. For the identity map $\mathrm{id}_V$ on a finite-dimensional space, using the same ordered basis $\mathcal B$ for input and output gives $[\mathrm{id}_V]_{\mathcal B\leftarrow\mathcal B}=I$ for every $\mathcal B$: each basis vector is fixed. Different input and output bases instead give a coordinate-conversion matrix. See [[线性映射与矩阵表示|the map–matrix distinction]].
+> <!-- bilingual-en:end -->
+>
+> 换基**可能**改变表示矩阵，并非必然改变。对有限维空间上的恒等映射 $\mathrm{id}_V$，只要输入、输出使用同一有序基 $\mathcal B$，每个基向量都保持不变，所以每一组这样的基都给出 $[\mathrm{id}_V]_{\mathcal B\leftarrow\mathcal B}=I$。两端使用不同基时，恒等映射则表示为坐标转换矩阵。详见[[线性映射与矩阵表示]]。
+
 ### 3.6.8 三道自检题
 <!-- bilingual-en:start -->
 *3.6.8 Three self-check questions*
@@ -3210,6 +3242,13 @@ $$
 <!-- bilingual-en:start -->
 This is the coordinate meaning of a similarity transformation. If the columns of $W$ are eigenvectors of $A$, then $B=\Lambda$; if they form a basis of generalized eigenvectors, then $B=J$.
 <!-- bilingual-en:end -->
+
+> [!note] A Jordan basis needs ordered chains · Jordan 基还须按链排列
+> <!-- bilingual-en:start -->
+> The generalized-eigenvector statement above needs a precise qualification: the columns must form a full basis arranged chain by chain, with $(A-\lambda I)v_1=0$ and $(A-\lambda I)v_{j+1}=v_j$ within each [[Jordan链|Jordan chain]]. These relations give the ones above the diagonal in [[Jordan标准形|Jordan canonical form]]. An arbitrary basis of generalized eigenvectors need not have those unit links or that order.
+> <!-- bilingual-en:end -->
+>
+> 上面的广义特征向量表述须补充：各列要共同构成全空间的基，并按链分组排列；每条 [[Jordan链]] 满足 $(A-\lambda I)v_1=0$、$(A-\lambda I)v_{j+1}=v_j$。这些关系才给出 [[Jordan标准形]]中紧邻主对角线上方的一。任意广义特征向量基不自动满足这种单位连接和排列顺序。
 
 ### 3.7.3 图像为什么是向量，压缩为什么是换基
 <!-- bilingual-en:start -->

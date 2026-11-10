@@ -6,8 +6,8 @@
       "x": 0,
       "y": 0,
       "width": 2620,
-      "height": 190,
-      "text": "# 多元线性回归 · 多响应模型\n\n从真正的概念定义开始，再分开预设假设、误差模型、点估计、残差抽样律和解释边界。这里的 multivariate regression 指多个响应共享一组预测变量，不是单响应的 multiple regression。\n\n颜色只区分本图中的语义角色，不表示掌握程度。",
+      "height": 210,
+      "text": "<!-- bilingual-en:start -->\n# Multivariate regression · Several responses\n\nFollow the mean model, error assumptions, estimation, residual sampling laws, and interpretation. Here several responses share predictors. Colours identify roles in this map.\n<!-- bilingual-en:end -->\n\n# 多元线性回归 · 多响应模型\n\n从真正的概念定义开始，再分开预设假设、误差模型、点估计、残差抽样律和解释边界。这里的 multivariate regression 指多个响应共享一组预测变量，不是单响应的 multiple regression。\n\n颜色只区分本图中的语义角色，不表示掌握程度。",
       "color": "4"
     },
     {
@@ -16,8 +16,8 @@
       "x": 990,
       "y": 260,
       "width": 360,
-      "height": 270,
-      "text": "## [[多响应线性回归]]\n*定义入口*\n\n同一设计矩阵同时建模多个响应的条件均值：$Y_{n\\times q}=X_{n\\times k}B_{k\\times q}+U_{n\\times q}$。先认清行、列和系数矩阵各自代表什么。",
+      "height": 540,
+      "text": "<!-- bilingual-en:start -->\n## [[多响应线性回归|Multivariate linear regression]]\n$Y_{n\\times q}=X_{n\\times k}B_{k\\times q}+U$.\nThere are $n$ observations, $q$ responses, and $k$ design columns. With $\\mathbb E[U\\mid X]=0$, $XB$ is the conditional mean; $U$ is the model error, not a fitted residual.\n<!-- bilingual-en:end -->\n\n## [[多响应线性回归]]\n同一设计矩阵建模多个响应的条件均值。$n$ 是观测数，$q$ 是响应数，$k$ 是设计列数；零条件均值使 $XB$ 表示均值。$U$ 是模型误差，不是拟合残差。",
       "color": "5"
     },
     {
@@ -26,148 +26,158 @@
       "x": 1410,
       "y": 260,
       "width": 360,
-      "height": 270,
-      "text": "## [[多响应与多解释变量回归]]\n*术语辨析*\n\n多个预测变量不等于多个响应。先看 $Y$ 是 $n\\times1$ 还是 $n\\times q$，不要被中文“多元回归”的同名用法带偏。",
+      "height": 480,
+      "text": "<!-- bilingual-en:start -->\n## [[多响应与多解释变量回归|Several responses or several predictors?]]\nSeveral predictors do not imply several responses. Check whether $Y$ has one response column or $q>1$ columns; the two models can share a Chinese name.\n<!-- bilingual-en:end -->\n\n## [[多响应与多解释变量回归]]\n多个预测变量不等于多个响应。先看 $Y$ 是 $n\\times1$ 还是 $n\\times q$，不要被中文“多元回归”的同名用法带偏。",
       "color": "5"
     },
     {
       "id": "c63ab29d5e4180f7",
       "type": "text",
       "x": 0,
-      "y": 680,
+      "y": 840,
       "width": 360,
-      "height": 280,
-      "text": "## [[多响应一般线性假设]]\n*先定义检验问题*\n\n$H_0:CBA=D$：$C$ 选系数方向，$A$ 选响应组合。检验时误差也要进入同一空间：$E_A=A^TE_{SSP}A$。",
+      "height": 480,
+      "text": "<!-- bilingual-en:start -->\n## [[多响应一般线性假设|State the joint hypothesis]]\nIn $H_0:CBA=D$, $C$ selects coefficient directions, $A$ response combinations, and $D$ the null values. Use estimable restrictions. Hypothesis and error SSPs must refer to the same response space: $E_A=A^TE_{SSP}A$.\n<!-- bilingual-en:end -->\n\n## [[多响应一般线性假设]]\n$C$ 选系数方向，$A$ 选响应组合，$D$ 给出假设值。限制必须可估，假设与误差 SSP 必须位于同一响应空间：$E_A=A^TE_{SSP}A$。",
       "color": "6"
     },
     {
       "id": "d74bc3ae6f529108",
       "type": "text",
       "x": 1620,
-      "y": 1080,
+      "y": 1420,
       "width": 370,
-      "height": 280,
-      "text": "## [[矩阵正态误差结构]]\n*分布模型定义*\n\n$MN(XB,\\Omega,\\Sigma)$ 用 $\\Omega$ 描述观测行方向，用 $\\Sigma$ 描述响应方向；按列 vec 后协方差为 $\\Sigma\\otimes\\Omega$。",
+      "height": 480,
+      "text": "<!-- bilingual-en:start -->\n## [[矩阵正态误差结构|Matrix-normal errors]]\nFor fixed $X$, $Y\\sim MN(XB,\\Omega,\\Sigma)$ is a joint Gaussian model. $\\Omega$ is the row factor and $\\Sigma$ the response factor. Stacking columns gives $\\operatorname{Cov}(\\operatorname{vec}U)=\\Sigma\\otimes\\Omega$.\n<!-- bilingual-en:end -->\n\n## [[矩阵正态误差结构]]\n固定 $X$ 后，矩阵正态模型同时规定 Gaussian 分布和可分协方差。$\\Omega$ 管观测行方向，$\\Sigma$ 管响应方向；按列堆叠后为 $\\Sigma\\otimes\\Omega$。",
       "color": "3"
     },
     {
       "id": "e85cd4bf7053a219",
       "type": "text",
       "x": 1830,
-      "y": 680,
+      "y": 840,
       "width": 360,
-      "height": 280,
-      "text": "## [[观测行协方差]]\n*概念入口*\n\n$\\Omega_{ij}$ 描述第 $i$、$j$ 个观测行误差怎样共同变化。$I_n$、异方差对角矩阵和带非零非对角元的相关行模型是不同假设。",
+      "height": 540,
+      "text": "<!-- bilingual-en:start -->\n## [[观测行协方差|Covariance across rows]]\nFor zero-mean error rows written as columns $u_i$, the separable model is $\\operatorname{Cov}(u_i,u_j)=\\Omega_{ij}\\Sigma$. Thus $\\Omega_{ij}$ is a factor, not the whole covariance block. $\\Omega=I_n$ gives uncorrelated rows; joint Gaussianity also gives independence.\n<!-- bilingual-en:end -->\n\n## [[观测行协方差]]\n$\\Omega_{ij}$ 要乘响应因子 $\\Sigma$ 才得到行间协方差块。单位阵、异方差对角阵、带非零非对角元的矩阵是不同假设；单凭不相关不能保证独立；联合 Gaussian 条件下可以。",
       "color": "3"
     },
     {
       "id": "f96de5c08164b32a",
       "type": "text",
       "x": 2040,
-      "y": 1080,
+      "y": 1420,
       "width": 360,
-      "height": 280,
-      "text": "## [[相关行不容独立推断]]\n*独立行失效*\n\n相关行未必破坏零条件均值，却会使独立行标准误、误差 SSP 的 Wishart 律和相应精确校准失效。",
+      "height": 480,
+      "text": "<!-- bilingual-en:start -->\n## [[相关行不容独立推断|Inference with dependent rows]]\nA zero conditional error mean preserves conditional OLS unbiasedness under a full-column-rank fixed design; it does not imply consistency. Dependent errors need their own standard-error and residual-law justification.\n<!-- bilingual-en:end -->\n\n## [[相关行不容独立推断]]\n固定满列秩设计下，零条件误差均值保留 OLS 条件无偏性，却不自动给出一致性。误差依赖时，标准误与残差参考分布需要分别核对。",
       "color": "1"
     },
     {
       "id": "0a7ef6d19275c43b",
       "type": "text",
       "x": 990,
-      "y": 680,
+      "y": 840,
       "width": 360,
-      "height": 280,
-      "text": "## [[共享设计的逐响应OLS]]\n*普通平方损失*\n\n同一行、同一 $X$、普通平方损失且无跨响应约束时，目标按响应列分解；满列秩时 $\\hat B=(X^TX)^{-1}X^TY$。",
+      "height": 480,
+      "text": "<!-- bilingual-en:start -->\n## [[共享设计的逐响应OLS|OLS one response at a time]]\nCommon rows and $X$, unweighted squared loss, and unconstrained coefficient columns let the objective split by response. If $X$ has full column rank, $\\hat B=(X^TX)^{-1}X^TY$. Response correlation still matters for joint inference.\n<!-- bilingual-en:end -->\n\n## [[共享设计的逐响应OLS]]\n共享行与设计、普通平方损失、无跨响应系数约束时，按列求 OLS 即可；满列秩保证上述系数唯一。响应相关性仍影响联合不确定性。",
       "color": "2"
     },
     {
       "id": "1b8f07e2a386d54c",
       "type": "text",
       "x": 2250,
-      "y": 680,
+      "y": 840,
       "width": 370,
-      "height": 280,
-      "text": "## [[相关行下的多响应GLS]]\n*模型化加权估计*\n\n已知 $\\Omega\\succ0$ 时，每个响应使用同一个 $\\Omega^{-1}$ 加权投影；$\\Omega\\propto I_n$ 时才退化为逐响应 OLS。",
+      "height": 540,
+      "text": "<!-- bilingual-en:start -->\n## [[相关行下的多响应GLS|GLS with a known row factor]]\nUnder separable covariance, known $\\Omega\\succ0$, $\\Sigma\\succ0$, and full-column-rank $X$, GLS uses the same $\\Omega^{-1}$ weighting for every response. $\\Omega=cI_n$ ($c>0$) suffices for OLS equality; it is not necessary for every design.\n<!-- bilingual-en:end -->\n\n## [[相关行下的多响应GLS]]\n在上述可分协方差与满列秩条件下，各响应共用行加权。$\\Omega$ 为正数乘单位阵足以得到 OLS；某些其他 $\\Omega$ 与设计搭配也会相同。",
       "color": "2"
     },
     {
       "id": "2c9018f3b497e65d",
       "type": "text",
       "x": 990,
-      "y": 1080,
+      "y": 1420,
       "width": 360,
-      "height": 280,
-      "text": "## [[多响应残差与误差SSP]]\n*两个残差对象*\n\n$R=Y-X\\hat B$ 是 $n\\times q$，保留观测身份；$E_{SSP}=R^TR$ 是 $q\\times q$，压缩为响应方向的平方和与交叉乘积。",
+      "height": 480,
+      "text": "<!-- bilingual-en:start -->\n## [[多响应残差与误差SSP|Residuals and their SSP]]\n$R=Y-X\\hat B$ is $n\\times q$ and retains observations. $E_{SSP}=R^TR$ is $q\\times q$ and retains response cross-products. These are computed after fitting; $U$ is the error relative to the model mean. Both fitted objects come from the same residual space.\n<!-- bilingual-en:end -->\n\n## [[多响应残差与误差SSP]]\n$R$ 保留逐观测拟合偏差，$E_{SSP}$ 压缩成响应方向平方和与交叉乘积。二者共享残差空间；不是因为矩阵尺寸不同就各有另一套残差自由度。",
       "color": "2"
     },
     {
       "id": "3da12904c5a8f76e",
       "type": "text",
       "x": 780,
-      "y": 1480,
+      "y": 2000,
       "width": 360,
-      "height": 290,
-      "text": "## [[误差SSP抽样律]]\n*加入抽样假设之后*\n\n独立 Gaussian 行下，$E_{SSP}\\sim W_q(\\Sigma,n-\\operatorname{rank}X)$。无偏估计除以残差自由度；内部 Gaussian MLE 存在时除以 $n$。",
+      "height": 540,
+      "text": "<!-- bilingual-en:start -->\n## [[误差SSP抽样律|The residual Wishart law]]\nFor fixed $X$ and correct mean $XB$, iid model-error rows $N_q(0,\\Sigma)$ with $\\Sigma\\succ0$ give $E_{SSP}\\sim W_q(\\Sigma,\\nu)$, $\\nu=n-\\operatorname{rank}X>0$. Fitted residual rows need not be independent. If $\\nu=0$, $E_{SSP}=0$. For $\\nu>0$, divide by $\\nu$ for an unbiased covariance estimate; the internal Gaussian covariance MLE divides by $n$ only if $E_{SSP}\\succ0$.\n<!-- bilingual-en:end -->\n\n## [[误差SSP抽样律]]\n独立 Gaussian 的是零均值模型误差行；拟合残差行一般不独立。$\\nu>0$ 时无偏估计为 $E_{SSP}/\\nu$；内部 Gaussian 协方差 MLE 要求 $E_{SSP}$ 正定，才取 $E_{SSP}/n$。",
       "color": "3"
     },
     {
       "id": "4eb23a15d6b9087f",
       "type": "text",
       "x": 1200,
-      "y": 1480,
+      "y": 2000,
       "width": 360,
-      "height": 280,
-      "text": "## [[误差SSP秩边界]]\n*高维小样本*\n\n$\\operatorname{rank}(E_{SSP})\\le\\min(q,n-\\operatorname{rank}X)$。$q>n-r$ 时必奇异；能够求逆也不等于估计稳定。",
+      "height": 480,
+      "text": "<!-- bilingual-en:start -->\n## [[误差SSP秩边界|Residual rank limits]]\nLet $r=\\operatorname{rank}X$, $\\nu=n-r$, and $q$ be the response count. For ordinary least squares,\n$\\operatorname{rank}(E_{SSP})=\\operatorname{rank}(R)\\le\\min(q,\\nu)$.\n$q>\\nu$ forces singularity; $q\\le\\nu$ only permits full rank.\n<!-- bilingual-en:end -->\n\n## [[误差SSP秩边界]]\n$r$ 是设计秩，$\\nu$ 是残差自由度。响应数超过 $\\nu$ 必奇异；不超过也可能奇异。即使能求逆，估计也可能不稳定。",
       "color": "1"
     },
     {
       "id": "5fc34b26e7ca1980",
       "type": "text",
       "x": 2040,
-      "y": 1480,
+      "y": 2000,
       "width": 370,
-      "height": 290,
-      "text": "## [[聚类标准误边界]]\n*稳健推断分支*\n\n聚类层级必须覆盖共同冲击或共同处理分配。有效簇数很少时，默认 cluster-robust 大样本 $p$ 值不可靠。",
+      "height": 480,
+      "text": "<!-- bilingual-en:start -->\n## [[聚类标准误边界|Cluster-robust inference]]\n\nChoose the level from sampling, assignment and dependence. Standard one-way theory allows within-cluster dependence but relies on many conditionally independent clusters and regularity conditions. Few or dominant clusters need special care; arbitrary cross-cluster dependence is not covered.\n<!-- bilingual-en:end -->\n\n## [[聚类标准误边界]]\n按抽样、分配与依赖机制选层级。常规单向聚类理论允许簇内依赖，但需大量在给定设计后独立的簇及正则条件。少簇或主导簇要另查；它不允许任意跨簇依赖。",
       "color": "1"
     },
     {
       "id": "60d45c37f8db2a91",
       "type": "text",
       "x": 0,
-      "y": 1080,
+      "y": 1420,
       "width": 360,
-      "height": 280,
-      "text": "## [[多响应联合显著边界]]\n*逐响应定位边界*\n\n总体拒绝只说明至少一个预设组合偏离零假设；它不推出每个原始响应都显著，后续定位要控制多重性。",
+      "height": 480,
+      "text": "<!-- bilingual-en:start -->\n## [[多响应联合显著边界|What a joint rejection means]]\n\nA valid rejection gives evidence against the prespecified joint null. It neither proves a particular response differs nor establishes significance for every response. Defined follow-up comparisons need appropriate multiplicity control.\n<!-- bilingual-en:end -->\n\n## [[多响应联合显著边界]]\n总体拒绝是反对预设联合零假设的证据，不证明某个响应必然不同，也不能推出每个响应显著。明确后续比较对象，再采用合适的多重性控制。",
       "color": "1"
     },
     {
       "id": "71e56d4809ec3ba2",
       "type": "text",
       "x": 0,
-      "y": 1480,
+      "y": 2000,
       "width": 360,
-      "height": 280,
-      "text": "## [[多响应因果边界]]\n*识别边界*\n\n多响应形式改变联合协方差和检验对象，却不会自动提供随机分配、无混杂、有效工具变量或其他因果识别依据。",
+      "height": 480,
+      "text": "<!-- bilingual-en:start -->\n## [[多响应因果边界|Causal interpretation]]\n\nAssociation coefficients may differ from intervention effects. Define the intervention and population, justify causal identification, and check the test calibration. A multivariate model or a small joint p-value supplies no automatic identification.\n<!-- bilingual-en:end -->\n\n## [[多响应因果边界]]\n关联的系数可能不同于干预效应。先定义干预和总体，说明因果识别依据，再检查检验校准；多响应形式或很小的联合 p 值都不会自动识别因果。",
       "color": "1"
     },
     {
       "id": "82f67e591afd4cb3",
       "type": "text",
       "x": 420,
-      "y": 1080,
+      "y": 1420,
       "width": 420,
-      "height": 280,
-      "text": "## [[响应尺度与线性变换]]\n*坐标与单位*\n\n$Y^*=YT$ 会把 $B$ 变为 $BT$。完整响应空间检验在同步可逆变换下可不变；具体对比、降维和正则化会受尺度选择影响。",
+      "height": 480,
+      "text": "<!-- bilingual-en:start -->\n## [[响应尺度与线性变换|Response units and coordinates]]\nFor invertible $T$, $Y^*=YT$ and $B^*=BT$. Keep the same $CBA=D$ question by using $A^*=T^{-1}A$. Estimable contrasts retain their SSPs; full-space criteria agree when defined. Reduction and penalties need separate checks.\n<!-- bilingual-en:end -->\n\n## [[响应尺度与线性变换]]\n可逆换坐标后，用 $A^*=T^{-1}A$ 保留原问题。可估对比的 SSP 不变；完整空间统计量在有定义时一致。降维与惩罚另查。",
       "color": "3"
     },
     {
       "id": "93a78f6a2b0e5dc4",
       "type": "text",
       "x": 710,
-      "y": 1870,
+      "y": 2600,
       "width": 780,
-      "height": 260,
+      "height": 280,
       "text": "## 相邻体系\n\n- 单响应估计与系数解释：[[OLS 线性回归.canvas|OLS 线性回归]]\n- 多响应联合检验：[[MANOVA 多元方差分析.canvas|MANOVA]]\n- 均值向量检验：[[Hotelling T² 与多元均值推断.canvas|Hotelling T²]]\n- 误差 SSP 的抽样律与秩：[[Wishart 分布与样本协方差推断.canvas|Wishart]]\n- 重复测量与面板依赖：[[面板数据：Pooled OLS、固定效应与随机效应.canvas|面板数据]]\n- 响应降维与尺度：[[主成分分析.canvas|PCA]]"
+    },
+    {
+      "id": "b0084nullhyp0001",
+      "type": "text",
+      "x": 0,
+      "y": 260,
+      "width": 360,
+      "height": 480,
+      "color": "5",
+      "text": "<!-- bilingual-en:start -->\n## [[零假设与备择假设|Null and alternative hypotheses]]\n$H_0$ states a reference claim about the population; $H_1$ states the departure of interest. “Both coefficients are zero” has alternative “at least one is nonzero.” A decision is evidence under the model, not a proof.\n<!-- bilingual-en:end -->\n\n## [[零假设与备择假设]]\n先明确总体问题。两个系数都为零的备择是至少一个非零；拒绝或不拒绝都不是逻辑证明。"
     }
   ],
   "edges": [
@@ -177,7 +187,7 @@
       "fromSide": "bottom",
       "toNode": "a41e9c73d25b680f",
       "toSide": "top",
-      "label": "先进入定义"
+      "label": "Start with the mean model · 先读均值模型"
     },
     {
       "id": "b5c9a18c4d207fe6",
@@ -185,7 +195,7 @@
       "fromSide": "right",
       "toNode": "b52fa18c4d3079e6",
       "toSide": "left",
-      "label": "与单响应 multiple regression 区分"
+      "label": "Count responses separately · 区分响应数与预测项数"
     },
     {
       "id": "c6dab29d5e3180f7",
@@ -193,7 +203,7 @@
       "fromSide": "bottom",
       "toNode": "c63ab29d5e4180f7",
       "toSide": "top",
-      "label": "预先写明 CBA=D"
+      "label": "Specify CBA=D before testing · 先写明检验问题"
     },
     {
       "id": "d7ebc3ae6f429108",
@@ -201,7 +211,7 @@
       "fromSide": "bottom",
       "toNode": "e85cd4bf7053a219",
       "toSide": "top",
-      "label": "加入观测行依赖结构"
+      "label": "Add a separable error covariance · 加入可分误差协方差"
     },
     {
       "id": "e8fcd4bf7052a319",
@@ -209,7 +219,7 @@
       "fromSide": "bottom",
       "toNode": "d74bc3ae6f529108",
       "toSide": "top",
-      "label": "再加入 Gaussian 分布"
+      "label": "Add joint Gaussianity · 再加联合 Gaussian 分布"
     },
     {
       "id": "f90de5c08163b42a",
@@ -217,7 +227,7 @@
       "fromSide": "bottom",
       "toNode": "f96de5c08164b32a",
       "toSide": "top",
-      "label": "Ω 出现非零非对角元"
+      "label": "Nonzero error cross-covariance · 误差行间协方差非零"
     },
     {
       "id": "0a1ef6d19274c53b",
@@ -225,7 +235,7 @@
       "fromSide": "right",
       "toNode": "1b8f07e2a386d54c",
       "toSide": "left",
-      "label": "已知 Ω 时加权估计"
+      "label": "Known positive-definite row factor · 已知正定行因子"
     },
     {
       "id": "1b2f07e2a385d64c",
@@ -233,7 +243,7 @@
       "fromSide": "bottom",
       "toNode": "0a7ef6d19275c43b",
       "toSide": "top",
-      "label": "普通平方损失估计 B"
+      "label": "Fit by ordinary squared loss · 普通平方损失拟合"
     },
     {
       "id": "2c3018f3b496e75d",
@@ -241,7 +251,7 @@
       "fromSide": "bottom",
       "toNode": "2c9018f3b497e65d",
       "toSide": "top",
-      "label": "形成 R 与 E_SSP"
+      "label": "Form fitted residuals and SSP · 构造拟合残差及 SSP"
     },
     {
       "id": "4e523a15d6b8097f",
@@ -249,7 +259,7 @@
       "fromSide": "bottom",
       "toNode": "3da12904c5a8f76e",
       "toSide": "top",
-      "label": "加入独立 Gaussian 行"
+      "label": "Correct mean + iid Gaussian model errors · 正确均值与独立同分布 Gaussian 模型误差"
     },
     {
       "id": "5f634b26e7c9180a",
@@ -257,7 +267,7 @@
       "fromSide": "bottom",
       "toNode": "4eb23a15d6b9087f",
       "toSide": "top",
-      "label": "残差自由度限制秩"
+      "label": "Residual-space dimension bounds rank · 残差空间维数限制秩"
     },
     {
       "id": "60745c37f8da2b91",
@@ -265,7 +275,7 @@
       "fromSide": "bottom",
       "toNode": "5fc34b26e7ca1980",
       "toSide": "top",
-      "label": "若采用 cluster-robust 推断"
+      "label": "If cluster inference fits the design · 设计适合时用聚类推断"
     },
     {
       "id": "71856d4809eb3ca2",
@@ -273,7 +283,7 @@
       "fromSide": "bottom",
       "toNode": "60d45c37f8db2a91",
       "toSide": "top",
-      "label": "总体拒绝后再定位"
+      "label": "Interpret rejection as joint evidence · 总体拒绝的证据边界"
     },
     {
       "id": "82967e591afc4db3",
@@ -281,7 +291,7 @@
       "fromSide": "bottom",
       "toNode": "71e56d4809ec3ba2",
       "toSide": "top",
-      "label": "总体显著仍不提供因果识别"
+      "label": "Causal identification still required · 仍须因果识别"
     },
     {
       "id": "93a78f6a2b0d5ec4",
@@ -289,7 +299,7 @@
       "fromSide": "bottom",
       "toNode": "82f67e591afd4cb3",
       "toSide": "top",
-      "label": "变换响应时同步改写 A"
+      "label": "Transform the hypothesis consistently · 同步改写响应对比"
     },
     {
       "id": "a4b8907b3c2f6de5",
@@ -297,7 +307,7 @@
       "fromSide": "bottom",
       "toNode": "93a78f6a2b0e5dc4",
       "toSide": "top",
-      "label": "连接 Wishart 与 MANOVA 秩条件"
+      "label": "Wishart and MANOVA rank conditions · 衔接秩条件"
     },
     {
       "id": "b5c9a18c4d3f70e6",
@@ -305,7 +315,15 @@
       "fromSide": "bottom",
       "toNode": "93a78f6a2b0e5dc4",
       "toSide": "top",
-      "label": "连接面板依赖结构"
+      "label": "Panel dependence and clustering · 衔接面板依赖"
+    },
+    {
+      "id": "p25nulltohyp0001",
+      "fromNode": "b0084nullhyp0001",
+      "fromSide": "bottom",
+      "toNode": "c63ab29d5e4180f7",
+      "toSide": "top",
+      "label": "Encode the population question as CBA=D · 将总体问题写成矩阵限制"
     }
   ]
 }

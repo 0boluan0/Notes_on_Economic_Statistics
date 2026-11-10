@@ -1,67 +1,670 @@
 {
   "nodes": [
-    {"id":"topo-header","type":"text","x":-1670,"y":-2200,"width":3340,"height":170,"text":"# 拓扑基础：从定义到可用定理\n\n从上到下读四条主线：基础语言 → 集合局部结构 → 序列与连续 → 紧致、连通及其应用。每个通用概念节点都直达定义；等价判别、边界和应用定理各自独立。\n\n**先确认环境：一般拓扑、度量空间，还是有限维欧氏空间。**","color":"4"},
-    {"id":"topo-metric","type":"text","x":-4395,"y":1915,"width":390,"height":170,"text":"## [[度量空间|度量空间]]\n\nTOPO-MET-001 · 距离函数满足分离性、对称性和三角不等式。","color":"2"},
-    {"id":"topo-open","type":"text","x":-3395,"y":415,"width":390,"height":170,"text":"## [[开集|开集]]\n\nTOPO-MET-003 · 每个点都有一个仍留在集合内的开球。","color":"4"},
-    {"id":"topo-topology","type":"text","x":-195,"y":-85,"width":390,"height":170,"text":"## [[拓扑|拓扑]]\n\nTOPO-MET-017 · 空集、全空间、任意并和有限交公理定义开集族。","color":"4"},
-    {"id":"topo-closed","type":"text","x":2205,"y":615,"width":390,"height":170,"text":"## [[闭集|闭集]]\n\nTOPO-MET-004 · 补集为开集的集合就是闭集。","color":"4"},
-    {"id":"topo-closed-ops","type":"text","x":2205,"y":-685,"width":390,"height":170,"text":"## [[闭集运算|闭集运算]]\n\nTOPO-MET-018 · 任意交、有限并保持闭；无限并未必闭。","color":"1"},
-    {"id":"topo-subspace","type":"text","x":-1695,"y":415,"width":390,"height":170,"text":"## [[子空间拓扑|子空间拓扑]]\n\nTOPO-MET-005 · 子集中的开集来自环境开集与该子集的交。","color":"4"},
-    {"id":"topo-interior","type":"text","x":-195,"y":-1085,"width":390,"height":170,"text":"## [[集合内部|内部]]\n\nTOPO-MET-006 · 集合内部是集合所含的最大开集。","color":"4"},
-    {"id":"topo-closure","type":"text","x":3405,"y":115,"width":390,"height":170,"text":"## [[集合闭包|闭包]]\n\nTOPO-MET-007 · 闭包是包含原集合的最小闭集。","color":"4"},
-    {"id":"topo-boundary","type":"text","x":3405,"y":-1085,"width":390,"height":170,"text":"## [[集合边界|边界]]\n\nTOPO-MET-008 · 每个邻域都同时碰到集合与其补集。","color":"4"},
-    {"id":"topo-closure-seq","type":"text","x":4405,"y":4115,"width":390,"height":170,"text":"## [[闭包的序列判别|闭包的序列判别]]\n\nTOPO-MET-019 · 度量空间中，闭包点可由集内序列逼近。","color":"5"},
-    {"id":"topo-closed-seq","type":"text","x":3005,"y":2915,"width":390,"height":170,"text":"## [[闭集的序列判别|闭集的序列判别]]\n\nTOPO-MET-010 · 度量空间中，闭集包含其序列的全部极限。","color":"5"},
-    {"id":"topo-equivalent-metrics","type":"text","x":-5395,"y":1910,"width":390,"height":180,"text":"## [[拓扑等价度量|拓扑等价度量]]\n\nTOPO-MET-002 · 可诱导同一开集族与同一收敛，却保留不同数值距离。","color":"1"},
-    {"id":"topo-sequence","type":"text","x":-195,"y":4910,"width":390,"height":180,"text":"## [[序列收敛|序列收敛]]\n\nTOPO-MET-009 · 序列最终进入极限点的每个邻域。","color":"2"},
-    {"id":"topo-limit-unique","type":"text","x":-1195,"y":5710,"width":390,"height":180,"text":"## [[序列极限唯一|序列极限唯一]]\n\nTOPO-MET-020 · 度量空间中的收敛序列至多有一个极限。","color":"5"},
-    {"id":"topo-cluster-not-limit","type":"text","x":805,"y":5710,"width":390,"height":180,"text":"## [[聚点不等于收敛|聚点不等于收敛]]\n\nTOPO-MET-021 · 有收敛子序列不等于原序列收敛。","color":"1"},
-    {"id":"topo-continuity","type":"text","x":-995,"y":1310,"width":390,"height":180,"text":"## [[连续性|连续性]]\n\nTOPO-MET-022 · 值域开集的原像在定义域中开。","color":"4"},
-    {"id":"topo-continuity-tests","type":"text","x":-1195,"y":2910,"width":390,"height":180,"text":"## [[连续性的等价判别|连续性的等价判别]]\n\nTOPO-MET-011 · 度量空间中，ε–δ、开集原像与序列判别等价。","color":"5"},
-    {"id":"topo-compact","type":"text","x":605,"y":1310,"width":390,"height":180,"text":"## [[紧致性|紧致性]]\n\nTOPO-MET-012 · 每个开覆盖都能缩成有限子覆盖。","color":"4"},
-    {"id":"topo-seq-compact","type":"text","x":1005,"y":3110,"width":390,"height":180,"text":"## [[紧致性的序列判别|紧致性的序列判别]]\n\nTOPO-MET-023 · 度量空间中，紧致等价于序列紧致。","color":"5"},
-    {"id":"topo-heine","type":"text","x":1605,"y":1610,"width":390,"height":180,"text":"## [[Heine–Borel 定理的边界|Heine–Borel 的边界]]\n\nTOPO-MET-013 · 闭且有界 ⇔ 紧致只可在有限维欧氏等适用语境直接用。","color":"1"},
-    {"id":"topo-compact-image","type":"text","x":-195,"y":2110,"width":390,"height":180,"text":"## [[连续像保持紧致|连续像保持紧致]]\n\nTOPO-MET-024 · 连续映射不会破坏紧致性。","color":"5"},
-    {"id":"topo-extreme","type":"text","x":-195,"y":3010,"width":390,"height":180,"text":"## [[极值定理|极值定理]]\n\nTOPO-MET-014 · 非空紧集上的连续实函数取得最大值和最小值。","color":"3"},
-    {"id":"topo-connected","type":"text","x":-1895,"y":1110,"width":390,"height":180,"text":"## [[连通性|连通性]]\n\nTOPO-MET-015 · 空间不能被两个不交非空开集分割。","color":"4"},
-    {"id":"topo-connected-image","type":"text","x":-1695,"y":2110,"width":390,"height":180,"text":"## [[连续像保持连通|连续像保持连通]]\n\nTOPO-MET-016 · 连续映射不会破坏连通性。","color":"5"},
-    {"id":"topo-real-interval","type":"text","x":-2695,"y":1310,"width":390,"height":180,"text":"## [[实线连通集是区间|实线连通集是区间]]\n\nTOPO-MET-025 · 实线非空子集连通当且仅当它是区间。","color":"5"},
-    {"id":"topo-ivt","type":"text","x":-2595,"y":2500,"width":390,"height":200,"text":"## [[介值定理|介值定理（复用）]]\n\nCALC-CONT-006 · 连续实函数在区间上不会跳过中间值。\n\n边界：[[介值定理只保证存在性|不保证唯一性或算法]]。","color":"6"}
+    {
+      "id": "topo-header",
+      "type": "text",
+      "x": -1670,
+      "y": -2200,
+      "width": 3340,
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n# Topological foundations: from definitions to usable theorems\n\nRead four routes: basic language, local set structure, sequences and continuity, then compactness and connectedness. Concept cards link to definitions; separate cards explain criteria and limits. First fix the setting: a topological space, a metric space, or finite-dimensional Euclidean space.\n<!-- bilingual-en:end -->\n\n# 拓扑基础：从定义到可用定理\n\n从上到下读四条主线：基础语言 → 集合局部结构 → 序列与连续 → 紧致、连通及其应用。每个通用概念节点都直达定义；等价判别、边界和应用定理各自独立。\n\n**先确认环境：一般拓扑、度量空间，还是有限维欧氏空间。**",
+      "color": "4"
+    },
+    {
+      "id": "topo-metric",
+      "type": "text",
+      "x": -4395,
+      "y": 1915,
+      "width": 390,
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[度量空间|Metric space]]\n\nA finite, nonnegative distance separates points, is symmetric and obeys the triangle inequality. Open balls impose a strict distance threshold.\n<!-- bilingual-en:end -->\n\n距离有限、非负，区分不同点，对称且满足三角不等式。开球收集距离严格小于半径的点。",
+      "color": "2"
+    },
+    {
+      "id": "topo-open",
+      "type": "text",
+      "x": -3395,
+      "y": 415,
+      "width": 390,
+      "height": 310,
+      "text": "<!-- bilingual-en:start -->\n## [[开集|Open set]]\n\nIn a metric space, each member has a ball staying inside the set; radii may vary by point. In a general topology, open sets belong to the specified family.\n<!-- bilingual-en:end -->\n\n度量空间中每个成员都有留在集合内的球，半径可随点变化；一般拓扑中，开集是指定开集族的成员。",
+      "color": "4"
+    },
+    {
+      "id": "topo-topology",
+      "type": "text",
+      "x": -195,
+      "y": -85,
+      "width": 390,
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[拓扑|Topology]]\n\nA family of subsets containing the empty and whole space, closed under arbitrary unions and finite intersections. A metric is one way to generate it.\n<!-- bilingual-en:end -->\n\n包含空集与全空间、对任意并和有限交封闭的子集族；度量是生成拓扑的一种方式。",
+      "color": "4"
+    },
+    {
+      "id": "topo-closed",
+      "type": "text",
+      "x": 2205,
+      "y": 615,
+      "width": 390,
+      "height": 260,
+      "text": "<!-- bilingual-en:start -->\n## [[闭集|Closed set]]\n\n$F$ is closed in $X$ when $X\\setminus F$ is open in $X$. A set can be both open and closed, or neither.\n<!-- bilingual-en:end -->\n\n闭性由同一环境空间中的开补集定义。集合可以既开又闭，也可以既不开也不闭。",
+      "color": "4"
+    },
+    {
+      "id": "topo-closed-ops",
+      "type": "text",
+      "x": 2205,
+      "y": -685,
+      "width": 390,
+      "height": 260,
+      "text": "<!-- bilingual-en:start -->\n## [[闭集运算|Operations on closed sets]]\n\nWithin one fixed space, arbitrary intersections and finite unions of closed sets are closed. An infinite union need not be closed.\n<!-- bilingual-en:end -->\n\n同一环境中，闭集的任意交和有限并仍闭；无限并不保证闭。",
+      "color": "1"
+    },
+    {
+      "id": "topo-subspace",
+      "type": "text",
+      "x": -1695,
+      "y": 415,
+      "width": 390,
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[子空间拓扑|Subspace topology]]\n\nFor $Y\\subseteq X$, its open sets are $Y\\cap U$ with $U$ open in $X$. In a metric subspace, balls are also restricted by intersecting with $Y$.\n<!-- bilingual-en:end -->\n\n子空间的开集由环境开集与子空间取交得到；度量子空间的球也要取交，开闭判断随环境改变。",
+      "color": "4"
+    },
+    {
+      "id": "topo-interior",
+      "type": "text",
+      "x": -195,
+      "y": -1085,
+      "width": 390,
+      "height": 260,
+      "text": "<!-- bilingual-en:start -->\n## [[集合内部|Interior of a set]]\n\nThe largest open subset contained in the set. A point is interior if some open neighbourhood around it stays inside the set.\n<!-- bilingual-en:end -->\n\n集合所含的最大开集。内点周围存在一个完全留在集合内的开邻域；须指明环境。",
+      "color": "4"
+    },
+    {
+      "id": "topo-closure",
+      "type": "text",
+      "x": 3405,
+      "y": 115,
+      "width": 390,
+      "height": 260,
+      "text": "<!-- bilingual-en:start -->\n## [[集合闭包|Closure of a set]]\n\nThe smallest closed superset. Every open neighbourhood of a closure point meets the set, possibly at that point itself.\n<!-- bilingual-en:end -->\n\n包含原集合的最小闭集。闭包点的每个开邻域都碰到集合，可以只碰到该点自身。",
+      "color": "4"
+    },
+    {
+      "id": "topo-boundary",
+      "type": "text",
+      "x": 3405,
+      "y": -1085,
+      "width": 390,
+      "height": 260,
+      "text": "<!-- bilingual-en:start -->\n## [[集合边界|Boundary of a set]]\n\nEvery open neighbourhood meets both the set and its complement. Equivalently, take the closure and remove the interior in the same space.\n<!-- bilingual-en:end -->\n\n每个开邻域都碰到集合及其补集；等价于在同一环境中用闭包减去内部。",
+      "color": "4"
+    },
+    {
+      "id": "topo-closure-seq",
+      "type": "text",
+      "x": 4405,
+      "y": 4115,
+      "width": 390,
+      "height": 340,
+      "text": "<!-- bilingual-en:start -->\n## [[闭包的序列判别|Sequential test for closure]]\n\nFor $A\\subseteq X$ in a metric space, $x\\in X$ lies in the closure of $A$ exactly when some sequence in $A$ converges to $x$. Repeated terms are allowed.\n<!-- bilingual-en:end -->\n\n度量空间中，$x$ 属于 $A$ 的闭包，当且仅当存在各项都在 $A$ 中且收敛到 $x$ 的序列；允许重复取值。",
+      "color": "5"
+    },
+    {
+      "id": "topo-closed-seq",
+      "type": "text",
+      "x": 3005,
+      "y": 2915,
+      "width": 390,
+      "height": 350,
+      "text": "<!-- bilingual-en:start -->\n## [[闭集的序列判别|Sequential test for closed sets]]\n\nIn a metric space $X$, a subset $F$ is closed exactly when every sequence in $F$ that converges in $X$ has its limit in $F$. Not every sequence must converge.\n<!-- bilingual-en:end -->\n\n度量空间 $X$ 中，$F$ 闭，当且仅当每条来自 $F$ 且在 $X$ 中收敛的序列，其极限仍在 $F$ 内；不要求每条序列都收敛。",
+      "color": "5"
+    },
+    {
+      "id": "topo-equivalent-metrics",
+      "type": "text",
+      "x": -5395,
+      "y": 1910,
+      "width": 390,
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[拓扑等价度量|Topologically equivalent metrics]]\n\nTwo metrics on the same set give exactly the same open sets. They preserve sequence limits and continuous maps, but need not preserve numerical distances or boundedness.\n<!-- bilingual-en:end -->\n\n同一集合上的两个度量产生完全相同的开集，因而保持序列极限与连续映射，却未必保持数值距离或有界性。",
+      "color": "1"
+    },
+    {
+      "id": "topo-sequence",
+      "type": "text",
+      "x": -195,
+      "y": 4910,
+      "width": 390,
+      "height": 330,
+      "text": "<!-- bilingual-en:start -->\n## [[序列收敛|Sequence convergence]]\n\nFor every tolerance $\\varepsilon>0$, one cutoff makes every later term less than $\\varepsilon$ from the limit. The limit must belong to the specified metric space.\n<!-- bilingual-en:end -->\n\n每个容许误差 $\\varepsilon>0$ 都对应一个门槛，之后所有项距极限都小于 $\\varepsilon$。极限必须属于所指定的度量空间。",
+      "color": "2"
+    },
+    {
+      "id": "topo-limit-unique",
+      "type": "text",
+      "x": -1195,
+      "y": 5710,
+      "width": 390,
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[序列极限唯一|Uniqueness of sequence limits]]\n\nIn a metric space, a convergent sequence has at most one limit. The triangle inequality separates distinct candidates. This theorem does not guarantee that a sequence converges.\n<!-- bilingual-en:end -->\n\n度量空间中，收敛序列至多有一个极限；三角不等式排除两个不同候选。定理不保证序列一定收敛。",
+      "color": "5"
+    },
+    {
+      "id": "topo-cluster-not-limit",
+      "type": "text",
+      "x": 805,
+      "y": 5710,
+      "width": 390,
+      "height": 350,
+      "text": "<!-- bilingual-en:start -->\n## [[聚点不等于收敛|Cluster points versus convergence]]\n\nIn a metric space, every ball about a sequence cluster point contains arbitrarily late terms. Convergence requires the entire tail in each ball; a convergent subsequence does not ensure this.\n<!-- bilingual-en:end -->\n\n度量空间中，序列聚点的每个球都含索引任意大的项；整列收敛却要求每个球都含整个充分靠后的尾部。有收敛子列并不足够。",
+      "color": "1"
+    },
+    {
+      "id": "topo-continuity",
+      "type": "text",
+      "x": -995,
+      "y": 1310,
+      "width": 390,
+      "height": 350,
+      "text": "<!-- bilingual-en:start -->\n## [[连续性|Continuity]]\n\nA map $f:X\\to Y$ between topological spaces is continuous when preimages of open sets in the codomain $Y$ are open in the domain $X$. Forward images need not be open.\n<!-- bilingual-en:end -->\n\n拓扑空间之间的映射 $f:X\\to Y$ 连续，是指陪域 $Y$ 中开集的原像在定义域 $X$ 中开；正向像不必开。",
+      "color": "4"
+    },
+    {
+      "id": "topo-continuity-tests",
+      "type": "text",
+      "x": -1195,
+      "y": 2910,
+      "width": 390,
+      "height": 360,
+      "text": "<!-- bilingual-en:start -->\n## [[连续性的等价判别|Equivalent continuity tests]]\n\nBetween metric spaces, $\\varepsilon$–$\\delta$ control, open-set preimages, closed-set preimages and preservation of all sequence limits are equivalent. The sequential converse is not guaranteed in arbitrary topology.\n<!-- bilingual-en:end -->\n\n度量空间之间，$\\varepsilon$–$\\delta$、开集原像、闭集原像及保持所有序列极限四种判据等价。一般拓扑中不能无条件反用序列判据。",
+      "color": "5"
+    },
+    {
+      "id": "topo-compact",
+      "type": "text",
+      "x": 605,
+      "y": 1310,
+      "width": 390,
+      "height": 310,
+      "text": "<!-- bilingual-en:start -->\n## [[紧致性|Compactness]]\n\nA space is compact when every open cover contains a finite subcover. The quantifier ranges over all open covers, not just one convenient cover.\n<!-- bilingual-en:end -->\n\n每个开覆盖都含有限子覆盖才叫紧致；必须检验所有开覆盖，不能只找一个方便的覆盖。",
+      "color": "4"
+    },
+    {
+      "id": "topo-seq-compact",
+      "type": "text",
+      "x": 1005,
+      "y": 3110,
+      "width": 390,
+      "height": 350,
+      "text": "<!-- bilingual-en:start -->\n## [[紧致性的序列判别|Sequential compactness]]\n\nIn metric spaces, compactness is equivalent to every sequence having a convergent subsequence whose limit stays in the set. This equivalence does not hold in arbitrary topology.\n<!-- bilingual-en:end -->\n\n度量空间中，紧致等价于每条序列都有极限仍在集合内的收敛子列；任意拓扑中不能直接使用此等价。",
+      "color": "5"
+    },
+    {
+      "id": "topo-heine",
+      "type": "text",
+      "x": 1605,
+      "y": 1610,
+      "width": 390,
+      "height": 350,
+      "text": "<!-- bilingual-en:start -->\n## [[Heine–Borel 定理的边界|Heine–Borel theorem]]\n\nFor $K\\subseteq\\mathbb R^n$ with the usual Euclidean metric and finite $n\\ge1$, compactness is equivalent to closedness and boundedness. General metric spaces retain only the forward implication.\n<!-- bilingual-en:end -->\n\n有限维欧氏空间中，紧致等价于闭且有界；一般度量空间只保证紧致推出闭且有界。",
+      "color": "1"
+    },
+    {
+      "id": "topo-compact-image",
+      "type": "text",
+      "x": -195,
+      "y": 2110,
+      "width": 390,
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[连续像保持紧致|Compact continuous images]]\n\nA continuous map sends a compact domain to a compact image with the codomain's subspace topology. The codomain itself need not be compact.\n<!-- bilingual-en:end -->\n\n连续映射的紧致定义域具有紧致像，像取陪域的子空间拓扑；不保证整个陪域紧致。",
+      "color": "5"
+    },
+    {
+      "id": "topo-extreme",
+      "type": "text",
+      "x": -195,
+      "y": 3010,
+      "width": 390,
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[极值定理|Extreme value theorem]]\n\nA continuous real-valued function on a nonempty compact domain attains both global extreme values. Maximizing or minimizing points need not be unique.\n<!-- bilingual-en:end -->\n\n非空紧致定义域上的连续实值函数取得全局最大值和最小值；取得极值的点未必唯一。",
+      "color": "3"
+    },
+    {
+      "id": "topo-connected",
+      "type": "text",
+      "x": -1895,
+      "y": 1110,
+      "width": 390,
+      "height": 310,
+      "text": "<!-- bilingual-en:start -->\n## [[连通性|Connectedness]]\n\nA space is connected when no two disjoint, nonempty sets open in that space cover it. For a subset, use its relative topology.\n<!-- bilingual-en:end -->\n\n不能由两个不交、非空的开集覆盖全空间，才叫连通；对子集使用相对拓扑。",
+      "color": "4"
+    },
+    {
+      "id": "topo-connected-image",
+      "type": "text",
+      "x": -1695,
+      "y": 2110,
+      "width": 390,
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[连续像保持连通|Connected continuous images]]\n\nA continuous map sends a connected domain to a connected image. This concerns attained outputs; unused parts of the codomain need not be connected.\n<!-- bilingual-en:end -->\n\n连续映射把连通定义域映成连通像；结论针对实际输出，不保证整个陪域连通。",
+      "color": "5"
+    },
+    {
+      "id": "topo-real-interval",
+      "type": "text",
+      "x": -2695,
+      "y": 1310,
+      "width": 390,
+      "height": 350,
+      "text": "<!-- bilingual-en:start -->\n## [[实线连通集是区间|Connected subsets of the real line]]\n\nIn the usual real line, a nonempty subset is connected exactly when it contains every point between any two members. Singleton sets count as intervals here.\n<!-- bilingual-en:end -->\n\n通常实线中，非空子集连通当且仅当包含任意两点之间的全部点；这里把单点也计作区间。",
+      "color": "5"
+    },
+    {
+      "id": "topo-ivt",
+      "type": "text",
+      "x": -2595,
+      "y": 2500,
+      "width": 390,
+      "height": 310,
+      "text": "<!-- bilingual-en:start -->\n## [[介值定理|Intermediate values]]\n\nA continuous real-valued map on a connected domain attains every value between two attained outputs. This [[介值定理只保证存在性|existence conclusion]] alone supplies neither uniqueness nor an algorithm.\n<!-- bilingual-en:end -->\n\n连通定义域上的连续实值映射，不会跳过两个已取输出之间的值。[[介值定理只保证存在性|存在性不自动给出唯一性或算法]]。",
+      "color": "6"
+    },
+    {
+      "id": "topo-total-bounded",
+      "type": "text",
+      "x": 605,
+      "y": 2210,
+      "width": 390,
+      "height": 350,
+      "color": "4",
+      "text": "<!-- bilingual-en:start -->\n## [[全有界性|Total boundedness]]\n\nFor each $\\varepsilon>0$, finitely many radius-$\\varepsilon$ balls centred in the set cover it. Compact metric sets satisfy this; bounded sets need not.\n<!-- bilingual-en:end -->\n\n对每个正半径，都能用有限多个以集内点为中心的球覆盖集合；度量紧集满足它，有界集未必满足。"
+    },
+    {
+      "id": "topo-supremum",
+      "type": "text",
+      "x": 2205,
+      "y": 2210,
+      "width": 390,
+      "height": 320,
+      "color": "2",
+      "text": "<!-- bilingual-en:start -->\n## [[上确界|Supremum]]\n\nThe least upper bound bounds every member and is no larger than any other upper bound. It need not belong to the set; a maximum must.\n<!-- bilingual-en:end -->\n\n最小上界既界住全部成员，又不高于任何其他上界。它未必属于集合，而最大值必须属于集合。"
+    },
+    {
+      "id": "topo-real-completeness",
+      "type": "text",
+      "x": 2805,
+      "y": 2210,
+      "width": 390,
+      "height": 330,
+      "color": "5",
+      "text": "<!-- bilingual-en:start -->\n## [[实数的确界性质|Real least-upper-bound property]]\n\nEvery nonempty set of real numbers bounded above has a real supremum. This is an existence guarantee; it does not guarantee a maximum.\n<!-- bilingual-en:end -->\n\n非空且有上界的实数集合必有实数上确界。这保证存在最小上界，不保证最大值存在。"
+    },
+    {
+      "id": "topo-uniform-continuity",
+      "type": "text",
+      "x": -1195,
+      "y": 3710,
+      "width": 420,
+      "height": 360,
+      "color": "4",
+      "text": "<!-- bilingual-en:start -->\n## [[一致连续|Uniform continuity]]\n\nBetween metric spaces, each output tolerance $\\varepsilon>0$ admits one input tolerance $\\delta>0$ that works for every input pair. The threshold may depend on $\\varepsilon$, but not on the pair.\n<!-- bilingual-en:end -->\n\n度量空间之间，对每个输出容限 $\\varepsilon>0$，存在适用于所有输入对的共同输入门槛 $\\delta>0$。门槛可依赖 $\\varepsilon$，不能依赖具体输入对。"
+    },
+    {
+      "id": "topo-compact-uniform",
+      "type": "text",
+      "x": -195,
+      "y": 3710,
+      "width": 420,
+      "height": 360,
+      "color": "5",
+      "text": "<!-- bilingual-en:start -->\n## [[连续函数在紧致集上一致连续|Uniformity from compactness]]\n\nA continuous map from a compact metric domain into any metric space is uniformly continuous. Finite closed real intervals are compact; the output space need not be compact.\n<!-- bilingual-en:end -->\n\n紧致度量定义域上的连续映射，若陪域为任意度量空间，就一致连续。有限闭实区间是紧致定义域；不要求整个输出空间紧致。"
+    }
   ],
   "edges": [
-    {"id":"topo-edge-metric-open","fromNode":"topo-metric","fromSide":"top","toNode":"topo-open","toSide":"bottom","label":"开球定义度量开集"},
-    {"id":"topo-edge-open-topology","fromNode":"topo-open","fromSide":"right","toNode":"topo-topology","toSide":"left","label":"抽象出开集公理"},
-    {"id":"topo-edge-topology-closed","fromNode":"topo-topology","fromSide":"right","toNode":"topo-closed","toSide":"left","label":"取补集"},
-    {"id":"topo-edge-closed-ops","fromNode":"topo-closed","fromSide":"top","toNode":"topo-closed-ops","toSide":"bottom","label":"推出运算规律"},
-    {"id":"topo-edge-topology-subspace","fromNode":"topo-topology","fromSide":"left","toNode":"topo-subspace","toSide":"right","label":"限制到子集"},
-    {"id":"topo-edge-topology-interior","fromNode":"topo-topology","fromSide":"top","toNode":"topo-interior","toSide":"bottom","label":"最大开部分"},
-    {"id":"topo-edge-closed-closure","fromNode":"topo-closed","fromSide":"right","toNode":"topo-closure","toSide":"left","label":"最小闭超集"},
-    {"id":"topo-edge-interior-boundary","fromNode":"topo-interior","fromSide":"right","toNode":"topo-boundary","toSide":"left","label":"与闭包共同定位边界"},
-    {"id":"topo-edge-closure-boundary","fromNode":"topo-closure","fromSide":"top","toNode":"topo-boundary","toSide":"bottom","label":"从闭包扣除内部"},
-    {"id":"topo-edge-closure-closure-seq","fromNode":"topo-closure","fromSide":"bottom","toNode":"topo-closure-seq","toSide":"top","label":"度量空间中的序列判别"},
-    {"id":"topo-edge-closed-closed-seq","fromNode":"topo-closed","fromSide":"bottom","toNode":"topo-closed-seq","toSide":"top","label":"度量空间中的序列判别"},
-    {"id":"topo-edge-metric-equivalent","fromNode":"topo-metric","fromSide":"left","toNode":"topo-equivalent-metrics","toSide":"right","label":"比较诱导结构"},
-    {"id":"topo-edge-metric-sequence","fromNode":"topo-metric","fromSide":"bottom","toNode":"topo-sequence","toSide":"top","label":"距离趋零定义收敛"},
-    {"id":"topo-edge-sequence-limit-unique","fromNode":"topo-sequence","fromSide":"bottom","toNode":"topo-limit-unique","toSide":"top","label":"度量分离极限"},
-    {"id":"topo-edge-sequence-cluster","fromNode":"topo-sequence","fromSide":"bottom","toNode":"topo-cluster-not-limit","toSide":"top","label":"区分原序列与子序列"},
-    {"id":"topo-edge-sequence-closure-seq","fromNode":"topo-sequence","fromSide":"right","toNode":"topo-closure-seq","toSide":"left","label":"序列逼近闭包点"},
-    {"id":"topo-edge-sequence-closed-seq","fromNode":"topo-sequence","fromSide":"top","toNode":"topo-closed-seq","toSide":"bottom","label":"序列极限检查闭性"},
-    {"id":"topo-edge-topology-continuity","fromNode":"topo-topology","fromSide":"bottom","toNode":"topo-continuity","toSide":"top","label":"开集原像定义"},
-    {"id":"topo-edge-continuity-tests","fromNode":"topo-continuity","fromSide":"bottom","toNode":"topo-continuity-tests","toSide":"top","label":"度量空间中展开为三种判别"},
-    {"id":"topo-edge-sequence-continuity-tests","fromNode":"topo-sequence","fromSide":"top","toNode":"topo-continuity-tests","toSide":"bottom","label":"保持序列极限"},
-    {"id":"topo-edge-topology-compact","fromNode":"topo-topology","fromSide":"bottom","toNode":"topo-compact","toSide":"top","label":"用开覆盖定义全局有限性"},
-    {"id":"topo-edge-compact-seq-compact","fromNode":"topo-compact","fromSide":"bottom","toNode":"topo-seq-compact","toSide":"top","label":"度量空间中等价"},
-    {"id":"topo-edge-sequence-seq-compact","fromNode":"topo-sequence","fromSide":"top","toNode":"topo-seq-compact","toSide":"bottom","label":"每条序列取收敛子序列"},
-    {"id":"topo-edge-compact-heine","fromNode":"topo-compact","fromSide":"right","toNode":"topo-heine","toSide":"left","label":"有限维欧氏空间中化为闭且有界"},
-    {"id":"topo-edge-compact-image","fromNode":"topo-compact","fromSide":"bottom","toNode":"topo-compact-image","toSide":"top","label":"连续像继承紧致"},
-    {"id":"topo-edge-continuity-compact-image","fromNode":"topo-continuity","fromSide":"bottom","toNode":"topo-compact-image","toSide":"top","label":"提供连续映射条件"},
-    {"id":"topo-edge-compact-image-extreme","fromNode":"topo-compact-image","fromSide":"bottom","toNode":"topo-extreme","toSide":"top","label":"实值紧致像取得上下界"},
-    {"id":"topo-edge-topology-connected","fromNode":"topo-topology","fromSide":"bottom","toNode":"topo-connected","toSide":"top","label":"用开集分割定义"},
-    {"id":"topo-edge-subspace-connected","fromNode":"topo-subspace","fromSide":"bottom","toNode":"topo-connected","toSide":"top","label":"对子集使用相对拓扑"},
-    {"id":"topo-edge-connected-image","fromNode":"topo-connected","fromSide":"bottom","toNode":"topo-connected-image","toSide":"top","label":"连续像继承连通"},
-    {"id":"topo-edge-continuity-connected-image","fromNode":"topo-continuity","fromSide":"bottom","toNode":"topo-connected-image","toSide":"top","label":"提供连续映射条件"},
-    {"id":"topo-edge-connected-real-interval","fromNode":"topo-connected","fromSide":"left","toNode":"topo-real-interval","toSide":"right","label":"在实线中等价于区间"},
-    {"id":"topo-edge-connected-image-ivt","fromNode":"topo-connected-image","fromSide":"left","toNode":"topo-ivt","toSide":"right","label":"连续像仍连通"},
-    {"id":"topo-edge-real-interval-ivt","fromNode":"topo-real-interval","fromSide":"bottom","toNode":"topo-ivt","toSide":"top","label":"连通像是区间"}
+    {
+      "id": "topo-edge-metric-open",
+      "fromNode": "topo-metric",
+      "fromSide": "top",
+      "toNode": "topo-open",
+      "toSide": "bottom",
+      "label": "Pointwise balls define metric openness · 逐点开球定义度量开性"
+    },
+    {
+      "id": "topo-edge-open-topology",
+      "fromNode": "topo-open",
+      "fromSide": "right",
+      "toNode": "topo-topology",
+      "toSide": "left",
+      "label": "Metric open sets satisfy the topology axioms · 度量开集族满足拓扑公理"
+    },
+    {
+      "id": "topo-edge-topology-closed",
+      "fromNode": "topo-topology",
+      "fromSide": "right",
+      "toNode": "topo-closed",
+      "toSide": "left",
+      "label": "An open complement defines closedness · 开补集定义闭性"
+    },
+    {
+      "id": "topo-edge-closed-ops",
+      "fromNode": "topo-closed",
+      "fromSide": "top",
+      "toNode": "topo-closed-ops",
+      "toSide": "bottom",
+      "label": "Complement identities give arbitrary intersections and finite unions · 补集恒等式推出任意交与有限并"
+    },
+    {
+      "id": "topo-edge-topology-subspace",
+      "fromNode": "topo-topology",
+      "fromSide": "left",
+      "toNode": "topo-subspace",
+      "toSide": "right",
+      "label": "Intersect ambient open sets with the subset · 环境开集与子集取交"
+    },
+    {
+      "id": "topo-edge-topology-interior",
+      "fromNode": "topo-topology",
+      "fromSide": "top",
+      "toNode": "topo-interior",
+      "toSide": "bottom",
+      "label": "Unite all open subsets contained in the set · 合并集合中的所有开子集"
+    },
+    {
+      "id": "topo-edge-closed-closure",
+      "fromNode": "topo-closed",
+      "fromSide": "right",
+      "toNode": "topo-closure",
+      "toSide": "left",
+      "label": "Intersect all closed supersets · 相交所有闭超集"
+    },
+    {
+      "id": "topo-edge-interior-boundary",
+      "fromNode": "topo-interior",
+      "fromSide": "right",
+      "toNode": "topo-boundary",
+      "toSide": "left",
+      "label": "Remove the interior from the closure · 从闭包中去掉内部"
+    },
+    {
+      "id": "topo-edge-closure-boundary",
+      "fromNode": "topo-closure",
+      "fromSide": "top",
+      "toNode": "topo-boundary",
+      "toSide": "bottom",
+      "label": "Closure minus interior gives the boundary · 闭包减内部得到边界"
+    },
+    {
+      "id": "topo-edge-closure-closure-seq",
+      "fromNode": "topo-closure",
+      "fromSide": "bottom",
+      "toNode": "topo-closure-seq",
+      "toSide": "top",
+      "label": "Metric spaces: approach closure points by sequences in the set · 度量空间中用集内序列逼近闭包点"
+    },
+    {
+      "id": "topo-edge-closed-closed-seq",
+      "fromNode": "topo-closed",
+      "fromSide": "bottom",
+      "toNode": "topo-closed-seq",
+      "toSide": "top",
+      "label": "Metric spaces: keep every ambient limit of sequences in the set · 度量空间中保留集内序列的全部环境极限"
+    },
+    {
+      "id": "topo-edge-metric-equivalent",
+      "fromNode": "topo-metric",
+      "fromSide": "left",
+      "toNode": "topo-equivalent-metrics",
+      "toSide": "right",
+      "label": "Compare the open sets induced by two metrics · 比较两个度量诱导的开集族"
+    },
+    {
+      "id": "topo-edge-metric-sequence",
+      "fromNode": "topo-metric",
+      "fromSide": "bottom",
+      "toNode": "topo-sequence",
+      "toSide": "top",
+      "label": "A distance bound must hold for every sufficiently late term · 距离界须对所有充分靠后的项成立"
+    },
+    {
+      "id": "topo-edge-sequence-limit-unique",
+      "fromNode": "topo-sequence",
+      "fromSide": "bottom",
+      "toNode": "topo-limit-unique",
+      "toSide": "top",
+      "label": "Metric separation rules out two distinct limits · 度量分离性排除两个不同极限"
+    },
+    {
+      "id": "topo-edge-sequence-cluster",
+      "fromNode": "topo-sequence",
+      "fromSide": "bottom",
+      "toNode": "topo-cluster-not-limit",
+      "toSide": "top",
+      "label": "Distinguish arbitrarily late visits from an entire tail · 区分任意晚的访问与整个尾部"
+    },
+    {
+      "id": "topo-edge-sequence-closure-seq",
+      "fromNode": "topo-sequence",
+      "fromSide": "right",
+      "toNode": "topo-closure-seq",
+      "toSide": "left",
+      "label": "In metric spaces, select points within distance 1/n · 度量空间中从距离小于1/n处逐项选点"
+    },
+    {
+      "id": "topo-edge-sequence-closed-seq",
+      "fromNode": "topo-sequence",
+      "fromSide": "top",
+      "toNode": "topo-closed-seq",
+      "toSide": "bottom",
+      "label": "Test every sequence with a limit in the ambient space · 检查每条在环境空间中有极限的序列"
+    },
+    {
+      "id": "topo-edge-topology-continuity",
+      "fromNode": "topo-topology",
+      "fromSide": "bottom",
+      "toNode": "topo-continuity",
+      "toSide": "top",
+      "label": "Pull codomain open sets back to domain open sets · 将陪域开集拉回为定义域开集"
+    },
+    {
+      "id": "topo-edge-continuity-tests",
+      "fromNode": "topo-continuity",
+      "fromSide": "bottom",
+      "toNode": "topo-continuity-tests",
+      "toSide": "top",
+      "label": "Between metric spaces, four equivalent tests · 度量空间之间的四种等价判据"
+    },
+    {
+      "id": "topo-edge-sequence-continuity-tests",
+      "fromNode": "topo-sequence",
+      "fromSide": "top",
+      "toNode": "topo-continuity-tests",
+      "toSide": "bottom",
+      "label": "Require preservation of every convergent sequence and its limit · 要求保持每条收敛序列及其极限"
+    },
+    {
+      "id": "topo-edge-topology-compact",
+      "fromNode": "topo-topology",
+      "fromSide": "bottom",
+      "toNode": "topo-compact",
+      "toSide": "top",
+      "label": "Every open cover must admit a finite subcover · 每个开覆盖都须含有限子覆盖"
+    },
+    {
+      "id": "topo-edge-compact-seq-compact",
+      "fromNode": "topo-compact",
+      "fromSide": "bottom",
+      "toNode": "topo-seq-compact",
+      "toSide": "top",
+      "label": "Equivalent in metric spaces · 在度量空间中等价"
+    },
+    {
+      "id": "topo-edge-sequence-seq-compact",
+      "fromNode": "topo-sequence",
+      "fromSide": "top",
+      "toNode": "topo-seq-compact",
+      "toSide": "bottom",
+      "label": "Every sequence needs a subsequence with limit inside the set · 每条序列都须有极限留在集内的子列"
+    },
+    {
+      "id": "topo-edge-compact-heine",
+      "fromNode": "topo-compact",
+      "fromSide": "right",
+      "toNode": "topo-heine",
+      "toSide": "left",
+      "label": "Usual finite-dimensional Euclidean space: compact iff closed and bounded · 通常有限维欧氏空间中紧致等价于闭且有界"
+    },
+    {
+      "id": "topo-edge-compact-image",
+      "fromNode": "topo-compact",
+      "fromSide": "bottom",
+      "toNode": "topo-compact-image",
+      "toSide": "top",
+      "label": "Continuous maps preserve compactness of the image · 连续映射保持像的紧致性"
+    },
+    {
+      "id": "topo-edge-continuity-compact-image",
+      "fromNode": "topo-continuity",
+      "fromSide": "bottom",
+      "toNode": "topo-compact-image",
+      "toSide": "top",
+      "label": "Supplies the continuous-map hypothesis · 提供连续映射这一假设"
+    },
+    {
+      "id": "topo-edge-compact-image-extreme",
+      "fromNode": "topo-compact-image",
+      "fromSide": "bottom",
+      "toNode": "topo-extreme",
+      "toSide": "top",
+      "label": "Nonempty domain and real-valued continuous map: compact image attains both extremes · 非空定义域且映射连续实值时，紧致像取得两端极值"
+    },
+    {
+      "id": "topo-edge-topology-connected",
+      "fromNode": "topo-topology",
+      "fromSide": "bottom",
+      "toNode": "topo-connected",
+      "toSide": "top",
+      "label": "Rule out a disjoint nonempty open cover by two sets · 排除两个不交非空开集覆盖全空间"
+    },
+    {
+      "id": "topo-edge-subspace-connected",
+      "fromNode": "topo-subspace",
+      "fromSide": "bottom",
+      "toNode": "topo-connected",
+      "toSide": "top",
+      "label": "Test a subset using its relative open sets · 用相对开集检验子集的连通性"
+    },
+    {
+      "id": "topo-edge-connected-image",
+      "fromNode": "topo-connected",
+      "fromSide": "bottom",
+      "toNode": "topo-connected-image",
+      "toSide": "top",
+      "label": "Continuous maps preserve connectedness of the image · 连续映射保持像的连通性"
+    },
+    {
+      "id": "topo-edge-continuity-connected-image",
+      "fromNode": "topo-continuity",
+      "fromSide": "bottom",
+      "toNode": "topo-connected-image",
+      "toSide": "top",
+      "label": "Supplies the continuous-map hypothesis · 提供连续映射这一假设"
+    },
+    {
+      "id": "topo-edge-connected-real-interval",
+      "fromNode": "topo-connected",
+      "fromSide": "left",
+      "toNode": "topo-real-interval",
+      "toSide": "right",
+      "label": "Usual real line, nonempty subset: connected iff interval · 通常实线中，非空子集连通当且仅当为区间"
+    },
+    {
+      "id": "topo-edge-connected-image-ivt",
+      "fromNode": "topo-connected-image",
+      "fromSide": "left",
+      "toNode": "topo-ivt",
+      "toSide": "right",
+      "label": "Continuous real-valued maps on a connected domain have connected image · 连通定义域上的连续实值映射具有连通像"
+    },
+    {
+      "id": "topo-edge-real-interval-ivt",
+      "fromNode": "topo-real-interval",
+      "fromSide": "bottom",
+      "toNode": "topo-ivt",
+      "toSide": "top",
+      "label": "A connected real image contains every value between two attained values · 连通实像包含两个已取值之间的全部数值"
+    },
+    {
+      "id": "topo-edge-compact-total-bounded",
+      "fromNode": "topo-compact",
+      "fromSide": "bottom",
+      "toNode": "topo-total-bounded",
+      "toSide": "top",
+      "label": "Metric compactness gives a finite ball cover at every radius · 度量紧致性给出每个半径的有限球覆盖"
+    },
+    {
+      "id": "topo-edge-total-bounded-seq-proof",
+      "fromNode": "topo-total-bounded",
+      "fromSide": "bottom",
+      "toNode": "topo-seq-compact",
+      "toSide": "top",
+      "label": "Finite ball covers enter the metric proof; alone they do not give compactness · 有限球覆盖用于度量证明，本身不足以推出紧致"
+    },
+    {
+      "id": "topo-edge-supremum-completeness",
+      "fromNode": "topo-supremum",
+      "fromSide": "right",
+      "toNode": "topo-real-completeness",
+      "toSide": "left",
+      "label": "Separate the definition from existence in the real numbers · 区分最小上界的定义与实数中的存在保证"
+    },
+    {
+      "id": "topo-edge-completeness-heine",
+      "fromNode": "topo-real-completeness",
+      "fromSide": "top",
+      "toNode": "topo-heine",
+      "toSide": "bottom",
+      "label": "Real completeness supplies points in nested closed coordinate intervals · 实数完备性给出嵌套闭坐标区间的公共点"
+    },
+    {
+      "id": "topo-edge-completeness-real-interval",
+      "fromNode": "topo-real-completeness",
+      "fromSide": "left",
+      "toNode": "topo-real-interval",
+      "toSide": "bottom",
+      "label": "A supremum rules out a separation of an interval in the usual real line · 上确界排除通常实线区间的分离"
+    },
+    {
+      "id": "topo-edge-completeness-extreme",
+      "fromNode": "topo-real-completeness",
+      "fromSide": "bottom",
+      "toNode": "topo-extreme",
+      "toSide": "right",
+      "label": "Bounded nonempty real image has a supremum; closedness retains it · 非空有界实像有上确界，闭性保留该值"
+    },
+    {
+      "id": "topo-edge-continuity-compact-uniform",
+      "fromNode": "topo-continuity",
+      "fromSide": "bottom",
+      "toNode": "topo-compact-uniform",
+      "toSide": "top",
+      "label": "Add a compact metric domain and a metric codomain · 再要求紧致度量定义域与度量陪域"
+    },
+    {
+      "id": "topo-edge-compact-uniform-domain",
+      "fromNode": "topo-compact",
+      "fromSide": "bottom",
+      "toNode": "topo-compact-uniform",
+      "toSide": "right",
+      "label": "With metrics on both spaces and a continuous map · 两端为度量空间且映射连续"
+    },
+    {
+      "id": "topo-edge-compact-uniform-result",
+      "fromNode": "topo-compact-uniform",
+      "fromSide": "left",
+      "toNode": "topo-uniform-continuity",
+      "toSide": "right",
+      "label": "Guarantees one tolerance for all input pairs · 保证所有输入对共用一个门槛"
+    }
   ]
 }

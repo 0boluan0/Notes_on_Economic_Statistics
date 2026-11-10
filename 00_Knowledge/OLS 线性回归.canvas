@@ -6,8 +6,8 @@
       "x": 0,
       "y": -420,
       "width": 2940,
-      "height": 250,
-      "text": "# OLS 线性回归\n\n主线是：**先界定 OLS 在逼近什么 → 再看样本平方损失产生哪些代数性质 → 最后逐项加入总体假设，判断无偏、一致、效率与推断分别能否成立**。函数形式改变系数单位和边际效应，但不改变“对参数线性”的核心。\n\n青色表示对象与解释，紫色表示样本估计代数，黄色表示统计假设与保证。颜色只帮助阅读，不表示掌握程度；来源与掌握情况可在 [[知识原子.base|知识原子 Base]] 中查看。"
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n# OLS linear regression\nIdentify the population target, define the sample fitting rule, then add the assumptions needed for statistical guarantees. A curved predictor feature can remain linear in its coefficients. Cyan marks objects and interpretation, purple sample fitting algebra, and yellow statistical assumptions and guarantees; use [[知识原子.base|the knowledge index]] for navigation.\n<!-- bilingual-en:end -->\n\n# OLS 线性回归\n先界定总体目标，再定义样本拟合规则，最后补充统计结论所需的假设。原变量上的曲线也可以对系数线性。青色表示对象与解释，紫色表示样本拟合代数，黄色表示统计假设与保证；[[知识原子.base|知识索引]]用于导航。"
     },
     {
       "id": "0150000000000001",
@@ -15,8 +15,8 @@
       "x": 0,
       "y": 0,
       "width": 440,
-      "height": 200,
-      "text": "## [[条件均值与线性投影|条件均值与线性投影]]\n*Conditional mean vs. best linear projection*\n\n条件均值是完整的总体回归函数；最佳线性投影是在当前联合分布下，用平方损失选出的最佳线性近似。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[条件均值与线性投影|Conditional mean or linear projection]]\nA conditional mean averages the outcome at given information. A best linear predictor minimizes expected squared error within chosen features; it need not reproduce the complete mean.\n<!-- bilingual-en:end -->\n\n## [[条件均值与线性投影]]\n条件均值是在给定信息下平均结果；最佳线性预测在选定特征中最小化期望平方误差，不必等于完整均值。",
       "color": "5"
     },
     {
@@ -25,8 +25,8 @@
       "x": 0,
       "y": 340,
       "width": 440,
-      "height": 200,
-      "text": "## [[参数线性|什么叫线性]]\n*Linearity in the parameters*\n\n原变量可取 log、平方或交互；只要未知参数仍以一次、可加形式进入，模型就对参数线性。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[参数线性|Linearity in coefficients]]\nKnown features may be squared, logged or interacted. Their unknown weights must enter additively and linearly. Estimating the feature shape or changing the parameter domain requires a separate check.\n<!-- bilingual-en:end -->\n\n## [[参数线性]]\n已知特征可以平方、取对数或交互，未知权重以线性可加方式进入。若还估计特征形状或改变参数域，需要另行检查。",
       "color": "5"
     },
     {
@@ -55,8 +55,8 @@
       "x": 650,
       "y": 0,
       "width": 440,
-      "height": 200,
-      "text": "## [[普通最小二乘|OLS 的估计准则]]\n*The OLS criterion*\n\nOLS 系数是残差平方和的任一最小化解；系数是否唯一要另看秩条件。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[普通最小二乘|Ordinary least squares]]\nChoose unrestricted coefficients minimizing the equally weighted sum of squared observed-minus-fitted gaps. The observed fitted vector is unique; coefficient uniqueness is a separate rank question.\n<!-- bilingual-en:end -->\n\n## [[普通最小二乘]]\n在无约束系数中，选择使等权重的观测减拟合平方和最小的解。原设计上的拟合向量唯一；系数唯一性另看秩。",
       "color": "6"
     },
     {
@@ -65,8 +65,8 @@
       "x": 1150,
       "y": 0,
       "width": 440,
-      "height": 200,
-      "text": "## [[回归残差|回归残差]]\n*Regression residual*\n\n样本残差是观测值与拟合值之差；它由估计结果构造，不等于不可观测的总体误差。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[回归残差|Regression residuals]]\n$\\hat u=y-X\\hat\\beta$ is observed minus fitted. It uses estimated coefficients and need not equal the unobserved model error $u$. Its definition does not require a correct probability model.\n<!-- bilingual-en:end -->\n\n## [[回归残差]]\n$\\hat u=y-X\\hat\\beta$ 是观测减拟合；它使用估计系数，不必等于未观察的模型误差 $u$。残差定义本身不要求概率模型正确。",
       "color": "6"
     },
     {
@@ -75,8 +75,8 @@
       "x": 650,
       "y": 340,
       "width": 440,
-      "height": 200,
-      "text": "## [[满列秩与OLS唯一性|唯一系数的秩条件]]\n*Full rank and uniqueness*\n\n满列秩让 $X'X$ 可逆；秩亏时拟合投影仍唯一，但系数表示可能不唯一。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[满列秩与OLS唯一性|Unique OLS coefficients]]\nFor unrestricted finite-real OLS, full column rank is equivalent to a unique coefficient vector. Rank deficiency leaves infinitely many representations of the same unique observed fitted vector.\n<!-- bilingual-en:end -->\n\n## [[满列秩与OLS唯一性]]\n对无约束、有限实数数据的 OLS，满列秩等价于系数向量唯一。秩亏留下无穷多种系数表示，但原设计上的拟合向量仍唯一。",
       "color": "6"
     },
     {
@@ -85,8 +85,8 @@
       "x": 1150,
       "y": 340,
       "width": 440,
-      "height": 200,
-      "text": "## [[OLS正规方程|正规方程与样本正交]]\n*Normal equations and sample orthogonality*\n\n一阶条件 $X'\\hat u=0$ 让样本残差与实际放入设计矩阵的每一列正交。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[OLS正规方程|Normal equations]]\n$X'\\hat u=0$ characterizes unrestricted OLS minima, including rank-deficient designs. An intercept makes residuals sum to zero. These are properties of the actual fitted rows and columns.\n<!-- bilingual-en:end -->\n\n## [[OLS正规方程]]\n$X'\\hat u=0$ 刻画无约束 OLS 最小值，秩亏时也成立。含截距则残差和为零。这些性质针对实际拟合的行与列。",
       "color": "6"
     },
     {
@@ -95,8 +95,8 @@
       "x": 650,
       "y": 1030,
       "width": 440,
-      "height": 200,
-      "text": "## [[一元 OLS 斜率|一元斜率公式]]\n*Simple-regression slope*\n\n含截距且解释变量有样本变异时，斜率等于 $X,Y$ 的样本协方差除以 $X$ 的样本方差。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[一元 OLS 斜率|Simple-regression slope]]\nWith an intercept and positive sample variation in $x$, the slope is $S_{xy}/S_{xx}$. Use matching covariance/variance divisors. Without an intercept or with constant $x$, reconsider the formula.\n<!-- bilingual-en:end -->\n\n## [[一元 OLS 斜率]]\n含截距且 $x$ 有样本变动时，斜率为 $S_{xy}/S_{xx}$；协方差和方差要用同一分母。无截距或 $x$ 恒定时须重新判断公式。",
       "color": "6"
     },
     {
@@ -105,8 +105,8 @@
       "x": 1150,
       "y": 680,
       "width": 440,
-      "height": 220,
-      "text": "## [[FWL残差化定理|FWL 残差化]]\n*Frisch–Waugh–Lovell residualisation*\n\n把结果和焦点变量都对同一组控制变量残差化，可恢复原多元回归中的焦点系数。",
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[FWL残差化定理|FWL residualization]]\nWith a full-column-rank design, remove the same controls from outcome and focal column on the same rows. Regress the residual vectors through the origin to recover the full model’s focal coefficient and residuals. Match the full model’s degrees of freedom and covariance rule for standard errors.\n<!-- bilingual-en:end -->\n\n## [[FWL残差化定理]]\n完整设计满列秩时，在相同行上从结果和焦点列扣除同一控制项，再将残差向量不另加截距地回归，恢复完整模型的焦点系数与残差。标准误须匹配完整模型的自由度与协方差规则。",
       "color": "6"
     },
     {
@@ -115,8 +115,8 @@
       "x": 1150,
       "y": 1030,
       "width": 440,
-      "height": 230,
-      "text": "## [[多元回归系数|多元系数的读法]]\n*Interpreting a multiple-regression coefficient*\n\n在线性条件均值模型中，它是控制已含变量后的条件均值斜率；仅作最佳线性投影时，它是偏线性关联，不自动具有因果含义。",
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[多元回归系数|Multiple-regression coefficients]]\nA coefficient changes a fitted value when its column changes and other included columns stay fixed. A raw-variable change may move several transformed columns. Population-mean and causal interpretations require additional justification.\n<!-- bilingual-en:end -->\n\n## [[多元回归系数]]\n某列变化、其他已含列固定时，系数描述拟合值变化。原始变量变化可能同时移动多列变换项；总体均值与因果解释仍需另行论证。",
       "color": "5"
     },
     {
@@ -125,8 +125,8 @@
       "x": 1800,
       "y": 0,
       "width": 440,
-      "height": 210,
-      "text": "## [[样本正交与总体外生性|样本正交不等于外生性]]\n*Sample orthogonality is not exogeneity*\n\n$X'\\hat u=0$ 是估计制造的样本恒等式，不能验证不可观测总体误差的条件均值。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[样本正交与总体外生性|Sample orthogonality and exogeneity]]\nOLS forces $X'\\hat u=0$. It does not verify the population condition $E(u\\mid X)=0$ for the target model. A coefficient can absorb systematic error while residual orthogonality holds.\n<!-- bilingual-en:end -->\n\n## [[样本正交与总体外生性]]\nOLS 强制 $X'\\hat u=0$，却不验证目标模型的总体条件 $E(u\\mid X)=0$。系数吸收系统误差时，残差正交仍会成立。",
       "color": "2"
     },
     {
@@ -145,8 +145,8 @@
       "x": 1750,
       "y": 680,
       "width": 440,
-      "height": 220,
-      "text": "## [[OLS一致性条件|OLS 一致性]]\n*Consistency of OLS*\n\n总体正交、参数识别与样本矩的大样本稳定性共同让 $\\hat\\beta$ 收敛到目标；它不要求有限样本无偏。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[OLS一致性条件|OLS consistency]]\nFor a fixed number of regressors, the standard argument needs the normalized Gram matrix XᵀX/n to have a nonsingular limit and the regressor–error average Xᵀu/n to vanish. Finite-sample unbiasedness alone does not provide these limits. Nonshrinking variance alone does not disprove probability convergence.\n<!-- bilingual-en:end -->\n\n## [[OLS一致性条件|OLS一致性]]\n解释变量个数固定时，常用论证需要归一化 Gram 矩阵 XᵀX/n 趋于非奇异极限、乘积平均 Xᵀu/n 趋零。有限样本无偏不提供这些极限；方差不收缩也不能单独推断不一致。",
       "color": "2"
     },
     {
@@ -155,8 +155,8 @@
       "x": 2300,
       "y": 680,
       "width": 440,
-      "height": 230,
-      "text": "## [[经典 Gauss–Markov 定理|经典 Gauss–Markov 的范围]]\n*Scope of the classical Gauss–Markov theorem*\n\n经典 BLUE 表述在线性无偏估计量类别中比较方差；现代结果可在重新表述后覆盖更宽的无偏估计量类别。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[经典 Gauss–Markov 定理|Classical Gauss–Markov]]\nWith fixed full-column-rank design, zero-mean errors and covariance σ²I, OLS has minimum covariance among linear unbiased rules. Normality is not required.\n<!-- bilingual-en:end -->\n\n## [[经典 Gauss–Markov 定理]]\n固定满列秩设计、误差均值零且协方差σ²I时，OLS在线性无偏规则中协方差最小；不要求正态性。",
       "color": "2"
     },
     {
@@ -165,8 +165,8 @@
       "x": 2300,
       "y": 1030,
       "width": 440,
-      "height": 210,
-      "text": "## [[BLUE正态性边界|正态性的真正作用]]\n*What normality actually adds*\n\n正态性不参与经典 BLUE 结论；在经典正态模型中，它提供精确的小样本 $t/F$ 分布。",
+      "height": 340,
+      "text": "<!-- bilingual-en:start -->\n## [[BLUE正态性边界|Normality and OLS inference]]\nBLUE compares variances within a class; it does not imply a normal sampling law. With full column rank, n > k and conditional errors N(0, σ²I) with σ² > 0, the classical residual variance estimate gives exact t/F inference.\n<!-- bilingual-en:end -->\n\n## [[BLUE正态性边界|正态性与 OLS 推断]]\nBLUE 比较指定类内的方差，不确定抽样分布形状。满列秩、n > k、给定 X 的误差服从 N(0, σ²I) 且 σ² > 0 时，经典残差方差估计支持精确 t/F 推断。",
       "color": "2"
     },
     {
@@ -187,7 +187,7 @@
       "fromSide": "right",
       "toNode": "0150000000000003",
       "toSide": "left",
-      "label": "样本中采用对应的平方损失"
+      "label": "Replace expected loss by observed squared loss · 用样本平方损失近似总体目标"
     },
     {
       "id": "e150000000000002",
@@ -195,7 +195,7 @@
       "fromSide": "right",
       "toNode": "0150000000000003",
       "toSide": "left",
-      "label": "变换项仍可作为设计矩阵列"
+      "label": "Known transformed features become design columns · 已知变换项组成设计列"
     },
     {
       "id": "e150000000000003",
@@ -203,7 +203,7 @@
       "fromSide": "bottom",
       "toNode": "015000000000000e",
       "toSide": "top",
-      "label": "变换位置决定系数单位"
+      "label": "Transformation location changes coefficient units · 变换位置改变系数单位"
     },
     {
       "id": "e150000000000004",
@@ -211,7 +211,7 @@
       "fromSide": "right",
       "toNode": "015000000000000f",
       "toSide": "top",
-      "label": "参数线性不等于边际效应恒定"
+      "label": "Linear coefficients can give varying raw-variable slopes · 参数线性仍可有变动的原变量斜率"
     },
     {
       "id": "e150000000000005",
@@ -219,7 +219,7 @@
       "fromSide": "bottom",
       "toNode": "0150000000000004",
       "toSide": "top",
-      "label": "唯一系数还需满列秩"
+      "label": "Full rank decides uniqueness of coefficients · 满列秩决定系数唯一性"
     },
     {
       "id": "e150000000000006",
@@ -227,7 +227,7 @@
       "fromSide": "left",
       "toNode": "0150000000000003",
       "toSide": "right",
-      "label": "残差平方和定义 OLS 的估计准则"
+      "label": "Sum squared gaps to define the fitting criterion · 残差平方和定义拟合准则"
     },
     {
       "id": "e150000000000010",
@@ -235,7 +235,7 @@
       "fromSide": "bottom",
       "toNode": "0150000000000005",
       "toSide": "top",
-      "label": "一阶条件使残差与设计矩阵列正交"
+      "label": "Minimization forces included-column orthogonality · 最小化强制已含列正交"
     },
     {
       "id": "e150000000000007",
@@ -243,7 +243,7 @@
       "fromSide": "left",
       "toNode": "0150000000000007",
       "toSide": "right",
-      "label": "含截距一元情形化为 cov/var"
+      "label": "Intercept and nonconstant predictor give the ratio · 截距和非恒定变量给出比值"
     },
     {
       "id": "e150000000000008",
@@ -251,7 +251,7 @@
       "fromSide": "bottom",
       "toNode": "0150000000000009",
       "toSide": "top",
-      "label": "从 X 与 Y 中剔除同一控制空间"
+      "label": "Eliminate the common control directions · 消去共同控制方向"
     },
     {
       "id": "e150000000000009",
@@ -259,7 +259,7 @@
       "fromSide": "bottom",
       "toNode": "0150000000000008",
       "toSide": "top",
-      "label": "给出偏线性系数的读法"
+      "label": "Residual slope recovers the partial coefficient · 残差斜率恢复偏系数"
     },
     {
       "id": "e15000000000000a",
@@ -267,7 +267,7 @@
       "fromSide": "right",
       "toNode": "0150000000000006",
       "toSide": "left",
-      "label": "样本恒等式不是总体外生性"
+      "label": "A fitted identity does not test population exogeneity · 拟合恒等式不检验总体外生性"
     },
     {
       "id": "e15000000000000b",
@@ -275,7 +275,7 @@
       "fromSide": "bottom",
       "toNode": "015000000000000a",
       "toSide": "top",
-      "label": "条件无偏必须另加总体假设"
+      "label": "Unbiasedness needs a separate full-design condition · 无偏另需给定完整设计的条件"
     },
     {
       "id": "e15000000000000c",

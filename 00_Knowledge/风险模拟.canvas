@@ -16,7 +16,7 @@
 		{"id":"rm-var-062","type":"text","text":"## [[路径模拟离散化误差]]\n\n有序路径仍可能因网格过粗漏掉穿越；需用网格加密、桥修正或基准核验。","x":2300,"y":1080,"width":460,"height":190,"color":"5"},
 		{"id":"rm-var-064","type":"text","text":"## [[风险模拟估值层]]\n\n把每个模拟状态或有序路径映射为同一口径下的组合价值与损失。","x":1400,"y":1320,"width":460,"height":170,"color":"5"},
 		{"id":"rm-var-035","type":"text","text":"## [[估值近似验证]]\n\n代理误差必须在覆盖目标尾部的验证情景上与全重估比较。","x":2300,"y":1320,"width":460,"height":170,"color":"5"},
-		{"id":"rm-var-036","type":"text","text":"## [[路径数不修模型]]\n\n增加路径只缩小 Monte Carlo 数值误差，不能修复分布、依赖或估值模型误设。","x":2300,"y":600,"width":460,"height":170,"color":"5"}
+		{"id":"rm-var-036","type":"text","text":"<!-- bilingual-en:start -->\n## [[路径数不修模型|More paths and model error]]\nFor a fixed iid output law with positive finite variance, mean standard error decreases as the prespecified sample size grows. VaR quantiles need separate sampling conditions. Repetition alone leaves model, discretisation and valuation choices unchanged.\n<!-- bilingual-en:end -->\n\n## [[路径数不修模型]]\n固定 iid 输出分布、方差正且有限时，增大预定样本量会降低均值的标准误；VaR 分位数须另核抽样条件。单纯重复不会改变模型、离散化与估值选择。","x":2300,"y":600,"width":460,"height":360,"color":"5"}
 	],
 	"edges":[
 		{"id":"edge-sim-001","fromNode":"rm-var-017","fromSide":"bottom","toNode":"rm-var-029","toSide":"top","label":"变体：改变日期权重"},
@@ -30,7 +30,7 @@
 		{"id":"edge-sim-010","fromNode":"rm-var-034","fromSide":"right","toNode":"rm-var-062","toSide":"left","label":"网格误差"},
 		{"id":"edge-sim-011","fromNode":"rm-var-032","fromSide":"bottom","toNode":"rm-var-064","toSide":"top","label":"条件定价进入估值层"},
 		{"id":"edge-sim-012","fromNode":"rm-var-017","fromSide":"right","toNode":"rm-var-018","toSide":"left","fromEnd":"none","toEnd":"none","label":"经验重放与模型生成是两条替代路线"},
-		{"id":"edge-sim-013","fromNode":"rm-var-018","fromSide":"right","toNode":"rm-var-036","toSide":"right","label":"路径增加只缩小数值误差"},
+		{"id":"edge-sim-013","fromNode":"rm-var-018","fromSide":"right","toNode":"rm-var-036","toSide":"right","label":"More paths address sampling fluctuation under the estimator’s conditions · 增加路径仅在估计量条件下处理抽样波动"},
 		{"id":"edge-sim-014","fromNode":"rm-var-064","fromSide":"right","toNode":"rm-var-035","toSide":"left","label":"采用近似时验证目标尾部"}
 	]
 }

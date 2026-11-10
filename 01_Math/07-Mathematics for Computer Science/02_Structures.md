@@ -102,6 +102,12 @@ The last property says that **every common divisor divides every integer linear 
 > For integers $a,b$ that are not both zero, the [[最大公因数|greatest common divisor]] $\gcd(a,b)$ is the greatest positive integer that divides both $a$ and $b$. By convention, $\gcd(0,0)=0$, and $\gcd(a,b)=\gcd(|a|,|b|)$.
 > <!-- bilingual-en:end -->
 
+<!-- bilingual-en:start -->
+The convention at (0,0) extends the gcd notation; it does not give the unbounded set of positive common divisors a maximum. The [[最大公因数|definition card]] explains this separately from the positive-divisor condition in [[带余除法|division with remainder]].
+<!-- bilingual-en:end -->
+
+(0,0) 处的约定延拓 gcd 记号，并没有让无界的正公因数集合出现最大元。[[最大公因数|定义卡]]把它与[[带余除法]]的正除数条件分别说明。
+
 ### 12.2 Division Algorithm 与 Euclidean Algorithm
 <!-- bilingual-en:start -->
 *12.2 Division Algorithm and Euclidean Algorithm*
@@ -216,6 +222,12 @@ $$
 2=8-6=3\cdot8-22=3\cdot30-4\cdot22.
 $$
 
+<!-- bilingual-en:start -->
+The [[扩展欧几里得算法|extended-algorithm card]] also handles immediate exits and signed inputs. When the second input is initially zero, the gcd row is already present. When working with absolute values, restore the input signs in the returned coefficients before substituting them into the original identity.
+<!-- bilingual-en:end -->
+
+[[扩展欧几里得算法|扩展算法卡]]还处理立即退出与负输入：初始第二输入为零时，gcd 行已经存在；若先用绝对值计算，应恢复系数对应的输入符号，再代回原等式核验。
+
 ### 12.4 素数分解为什么唯一
 <!-- bilingual-en:start -->
 *12.4 Why prime factorization is unique*
@@ -249,6 +261,12 @@ $$
 <!-- bilingual-en:start -->
 Both products are prime factorizations. Since $p_1$ divides $q_1\cdots q_s$, Euclid's lemma implies $p_1=q_j$ for some $j$. Reorder the $q$'s and cancel this common positive prime. Repeating the argument matches the prime factors one by one. Neither side can run out first, because the remaining product of primes would have to equal $1$. Hence the multiset of prime factors is unique.
 <!-- bilingual-en:end -->
+
+<!-- bilingual-en:start -->
+The existence part has another consequence, [[素数无穷性|infinitely many primes]]. The product of a finite list of primes, plus one, has a prime factor outside that list. This uses existence of a prime factor, not uniqueness, and does not claim that the product plus one must itself be prime.
+<!-- bilingual-en:end -->
+
+分解存在性还推出[[素数无穷性]]：有限素数清单乘积加一的数，必有清单之外的素因子。它依赖素因子存在，不依赖分解唯一，也没有断言乘积加一的数本身必为素数。
 
 ### 官方 block 与视频顺序
 
@@ -508,6 +526,12 @@ A [[模逆元|modular inverse]] $k^{-1}$ is an integer representative satisfying
 This also provides the route to solving a [[线性同余方程|linear congruence]] $ax\equiv b\pmod n$. For $g=\gcd(a,n)$, a solution exists exactly when $g\mid b$. Necessity follows because $ax-b$ is a multiple of $n$; sufficiency follows by multiplying the Bézout identity $ua+vn=g$ by $b/g$. Once one solution is known, all integer solutions are $x=x_0+t(n/g)$ for $t\in\mathbb Z$; see [[线性同余求解|solving linear congruences]].
 <!-- bilingual-en:end -->
 
+<!-- bilingual-en:start -->
+The [[线性同余求解|complete-solution card]] separates the number of classes from the number of integers: when g divides b, the family x₀ + t(n/g) gives g classes modulo n and infinitely many integers. When solvable with g = n, it is all integers; this includes a = 0 when n divides b. No inverse modulo one is used.
+<!-- bilingual-en:end -->
+
+[[线性同余求解|完整求解卡]]区分类的个数与整数的个数：g 整除 b 时，x₀ + t(n/g) 在模 n 下给出 g 个类，却含无穷多个整数。可解且 g = n 时就是全体整数，也包含 a = 0 且 n 整除 b 的情形；不使用模一逆元。
+
 ### 13.4 Chinese Remainder Theorem
 
 [[中国剩余定理|Chinese Remainder Theorem]]：若整数 $a,b>1$ 且 $\gcd(a,b)=1$，对任意整数 $m,n$，方程
@@ -543,6 +567,12 @@ So $x=me_a+ne_b$ satisfies both.
 <!-- bilingual-en:start -->
 **Uniqueness.** If both $x$ and $x'$ satisfy the system, then $a\mid(x-x')$ and $b\mid(x-x')$. Write $x-x'=ak$. Since $b\mid ak$ and $\gcd(a,b)=1$, the coprime form of Euclid's lemma gives $b\mid k$, so $ab\mid(x-x')$.
 <!-- bilingual-en:end -->
+
+<!-- bilingual-en:start -->
+The [[中国剩余定理|shared theorem card]] extends the two-modulus construction to any finite family of at least two pairwise coprime integer moduli greater than one. Uniqueness remains uniqueness of a class modulo the product M; the integer solutions are x₀ + tM for all integers t. Checking only the gcd of the whole family does not establish pairwise coprimality.
+<!-- bilingual-en:end -->
+
+[[中国剩余定理|共享定理卡]]把两模数构造推广到至少两个、有限且两两互素的大于一的整数模数。唯一性仍是模乘积 M 的类唯一；整数解是 x₀ + tM，其中 t 遍历全体整数。只检查整组模数的 gcd，不能保证两两互素。
 
 ### 官方顺序、资源与在线题
 <!-- bilingual-en:start -->
@@ -694,6 +724,12 @@ If integers $a,b>1$ satisfy $\gcd(a,b)=1$, the CRT gives a bijection $\mathbb Z_
 $$
 \varphi(n)=n\prod_{p\mid n}\left(1-\frac1p\right).
 $$
+
+<!-- bilingual-en:start -->
+The [[欧拉函数互素乘法性|expanded proof]] first uses CRT to combine the chosen residues and uses it again to combine their inverses. Both directions are needed before counting the permitted pairs. The [[欧拉函数乘积公式|product-formula proof]] also checks that each new prime-power block is coprime to the product already accumulated.
+<!-- bilingual-en:end -->
+
+[[欧拉函数互素乘法性|展开证明]]先用 CRT 合并选定余数，再用一次 CRT 合并它们的逆元。两个方向都证明后，才能数允许的配对。[[欧拉函数乘积公式|乘积公式证明]]还检查每个新素数幂块与此前积累的乘积互素。
 
 ### 14.2 Euler's Theorem 的完整证明
 <!-- bilingual-en:start -->
@@ -1014,6 +1050,12 @@ $$
 This argument explicitly covers $m=0$, $p\mid m$, and $q\mid m$. Moreover, $c^d\equiv(m^e)^d=m^{ed}\pmod n$; selecting the unique representative in $\{0,\ldots,n-1\}$ recovers $m$ exactly. This establishes [[RSA全消息正确性|RSA correctness for every message]].
 <!-- bilingual-en:end -->
 
+<!-- bilingual-en:start -->
+The [[RSA全消息正确性|shared correctness theorem]] states the weaker sufficient inverse condition modulo lcm(p−1,q−1), explains why the classroom φ(n) condition implies it, and separates the mathematical case p = 2 from RFC 8017’s distinct-odd-prime key convention. [[RSA安全边界|The security distinction]] explains deterministic candidate comparison and why factoring as a sufficient attack is not an equivalence proof.
+<!-- bilingual-en:end -->
+
+[[RSA全消息正确性|共享正确性定理]]陈述模 lcm(p−1,q−1) 的较弱充分逆元条件，解释课堂 φ(n) 条件为何蕴含它，并区分数学上允许 p = 2 与 RFC 8017 的互异奇素数密钥约定。[[RSA安全边界|安全区分卡]]解释确定性候选比对，以及为什么分解是充分攻击方法并不构成等价证明。
+
 ### 15.3 可行性与安全假设
 <!-- bilingual-en:start -->
 *15.3 Feasibility and security assumptions*
@@ -1256,6 +1298,13 @@ $$
 > <!-- bilingual-en:start -->
 > The entries of $A^k$ count walks, which may repeat vertices; they do not directly count simple paths, a substantially harder problem in general.
 > <!-- bilingual-en:end -->
+
+> [!note] What the matrix counts · 矩阵究竟计数什么
+> <!-- bilingual-en:start -->
+> The [[邻接矩阵幂计数游走|walk-counting theorem]] includes $k=0$: $A^0=I$, one empty walk at each vertex. If distinguishable parallel edges are admitted, use their count in $A_{ij}$; each loop contributes one possible step. This differs from counting two ends of an undirected loop for degree. If entries sum real weights instead, powers sum products of weights along walks, and a zero entry may result from cancellation even when walks exist.
+> <!-- bilingual-en:end -->
+>
+> [[邻接矩阵幂计数游走|游走计数定理]]包含 $k=0$：$A^0=I$，每个顶点有一条空游走。若允许可区分的平行边，$A_{ij}$ 应记录边数；每条自环贡献一个可走步骤。这与无向自环按两个端点计入度数不同。若元素改为实权之和，矩阵幂求的是沿游走的权重乘积之和；即使存在游走，也可能因抵消得到零。
 
 ### 16.4 Reachability 与 strongly connected
 <!-- bilingual-en:start -->
@@ -1516,15 +1565,22 @@ The positive-walk relation $E^+$ records reachability by a walk of positive leng
 *17.1 DAGs and topological ordering*
 <!-- bilingual-en:end -->
 
-[[DAG 与拓扑序等价|directed acyclic graph, DAG]] 是没有有向 cycle 的 digraph。课程先用 prerequisites 建模：边 $u\to v$ 表示 $u$ 必须先完成；正 walk 关系给出间接先修关系。
+[[有向无环图|directed acyclic graph, DAG]] 是没有有向 cycle 的 digraph。课程先用 prerequisites 建模：边 $u\to v$ 表示 $u$ 必须先完成；正 walk 关系给出间接先修关系。
 <!-- bilingual-en:start -->
-A [[DAG 与拓扑序等价|directed acyclic graph, or DAG]] is a digraph with no directed cycle. The course first models prerequisites: an edge $u\to v$ means that $u$ must be completed before $v$, and the positive-walk relation records indirect prerequisites.
+A [[有向无环图|directed acyclic graph, or DAG]] is a digraph with no directed cycle. The course first models prerequisites: an edge $u\to v$ means that $u$ must be completed before $v$, and the positive-walk relation records indirect prerequisites.
 <!-- bilingual-en:end -->
 
 **有限 DAG 必有入度为 $0$ 的顶点。** 反证：若每点都有入边，从任一点不断沿入边逆行。有限性保证某顶点重复，重复段形成有向 cycle，矛盾。对出度为 $0$ 的顶点同理。
 <!-- bilingual-en:start -->
 **Every finite DAG has a vertex of indegree $0$.** Suppose instead that every vertex had an incoming edge. Starting from any vertex, repeatedly follow incoming edges backwards. Because the graph is finite, some vertex must repeat, and the repeated segment forms a directed cycle—a contradiction. The same argument, with directions reversed, gives a vertex of outdegree $0$.
 <!-- bilingual-en:end -->
+
+> [!note] Nonempty finite graphs · 非空有限图
+> <!-- bilingual-en:start -->
+> The source/sink existence statement above assumes at least one vertex, as in the textbook's graph convention. With the empty graph allowed, there is no vertex to select; its topological order is the empty list. The [[DAG 与拓扑序等价|precise theorem]] requires a source or sink in every **nonempty** induced subgraph (MIT MCS, PDF431 and439–443).
+> <!-- bilingual-en:end -->
+>
+> 上面的源点/汇点存在性沿用教材的非空顶点约定。若允许空图，就没有顶点可选，但空列表仍是它的拓扑序。[[DAG 与拓扑序等价|准确的定理]]要求每个**非空**诱导子图都有源点或汇点（MIT MCS，PDF431及439–443）。
 
 [[Kahn 拓扑排序与环证书|拓扑排序]]可由此递归构造：反复删除一个入度为 $0$ 的点并输出。每条边的起点必在终点之前。反过来，若图存在拓扑顺序，就不可能有 cycle，因为沿 cycle 每一步都要求位置严格增加，最后却回到起点。
 <!-- bilingual-en:start -->
@@ -1554,6 +1610,13 @@ How to read the diagram: a topological order lays out every arrow of the DAG fro
 If each task takes a unit of time, the dependencies form a DAG:
 <!-- bilingual-en:end -->
 
+> [!note] The dependency model · 依赖模型
+> <!-- bilingual-en:start -->
+> The discussion assumes a [[有向无环图|DAG]] of dependencies. Equal task durations do not themselves rule out a directed cycle. The chain-size statements count unit tasks, including the endpoints; the [[DAG 关键路径与最短工期|critical-path theorem]] below also handles specified unequal durations.
+> <!-- bilingual-en:end -->
+>
+> 本节假设依赖关系是[[有向无环图|DAG]]；任务等时长本身并不能排除有向环。下面按链大小计数时，数的是单位任务，包括端点；[[DAG 关键路径与最短工期|关键路径定理]]也处理指定的不等时长。
+
 - 一条 [[02_Structures#Session 18 — Partial Orders and Equivalence|chain]] 中的任务必须分期执行，所以最长 chain 长度是工期下界；
 - 一个 [[02_Structures#Session 18 — Partial Orders and Equivalence|antichain]] 中任务两两不可比，可以并行；
 - 处理器数为 $P$ 时，总工作量还给下界 $\lceil n/P\rceil$。
@@ -1572,6 +1635,13 @@ If each task takes a unit of time, the dependencies form a DAG:
 <!-- bilingual-en:start -->
 When tasks have durations $w(v)$, the total weight of a critical path remains a lower bound, but one must also check total work divided by the number of processors. Both are only lower bounds; a nonpreemptive schedule may be longer because of unavoidable idle gaps.
 <!-- bilingual-en:end -->
+
+> [!note] Duration and capacity are separate assumptions · 时长与容量是两项条件
+> <!-- bilingual-en:start -->
+> The preceding warning concerns constrained processor capacity. With enough identical processors, nonnegative specified durations and only finish-before-start dependencies, the [[DAG 关键路径与最短工期|weighted critical-path theorem]] gives an exact minimum: start every task as soon as all predecessors finish. Unequal durations alone do not create an extra gap. MIT MCS §10.5.2 (PDF443–446) proves the unit-task case; [Princeton Algorithms, Critical path method](https://algs4.cs.princeton.edu/44sp/) gives the specified-duration version. The card explains both and the finite-capacity boundary.
+> <!-- bilingual-en:end -->
+>
+> 上一段警示针对处理器容量受限。若相同处理器足够、时长非负且已给定，并且只有“完成后才能开始”的依赖，[[DAG 关键路径与最短工期|加权关键路径定理]]给出精确最短工期：前驱全完成就开始该任务。不等时长本身不会另造差距。MIT MCS §10.5.2（PDF443–446）证明单位任务情形；[Princeton Algorithms 的 Critical path method](https://algs4.cs.princeton.edu/44sp/) 给出指定时长版本。卡片解释两种情形及有限容量的边界。
 
 ### 17.3 覆盖边与 transitive reduction
 <!-- bilingual-en:start -->
@@ -1687,6 +1757,13 @@ If $a\to b$ and every path from $a$ to $b$ must use this edge, it is a covering 
 > (b) The workload lower bound requires at least $\lceil n/t\rceil$ Ringwraiths. To show that this number can suffice, construct $\lceil n/t\rceil$ vertex-disjoint chains with no edges between them, distributing the $n$ tasks as evenly as possible. Every chain then has length at most $t$. Assign one Ringwraith to each chain and have it perform the next task in that chain each week; all tasks finish within $t$ weeks. Thus $\lceil n/t\rceil$ is indeed the smallest workforce that the most favorable DAG may require.
 > (c) The required workforce is always at most $n-t+1$. Schedule tasks in $t$ layers according to the length of the longest chain ending at each task. Fix a longest chain of $t$ vertices: it contributes exactly one task to every layer. Besides that task, a layer can contain at most the $n-t$ tasks outside the chain, so every layer has size at most $n-t+1$. Therefore that many people always suffice. The bound is tight. If $t=1$, take $n$ unrelated tasks. If $t\ge2$, take a chain $c_1<\cdots<c_t$ and impose $x<c_2$ for every extra task $x$. To finish in exactly $t$ weeks, $c_i$ must run in week $i$, while every extra task and $c_1$ must run in week 1, requiring exactly $n-t+1$ people.
 > <!-- bilingual-en:end -->
+
+> [!note] Keep the longest chain exactly $t$ · 构造须保留最长链恰为 $t$
+> <!-- bilingual-en:start -->
+> In [[01_Math/07-Mathematics for Computer Science/MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp17.pdf#page=3|CP17 Problem3(b)]], $n,t$ are positive integers with $1\le t\le n$, and the longest chain contains exactly $t$ tasks. The balanced construction above can have a shorter longest chain: $n=10,t=6$ gives two chains of length $5$. To preserve the given condition, put $k=\lceil n/t\rceil$, make $k-1$ disjoint chains of length $t$ and one of length $r=n-(k-1)t$, with no edges between chains. Since $1\le r\le t$, there are $n$ tasks and longest chain $t$; if $k=1$, then $n=t=r$. One worker per chain finishes in $t$ weeks. The workload bound $kt\ge n$ shows that fewer than $k$ workers cannot suffice, so the claimed minimum remains correct with this construction.
+> <!-- bilingual-en:end -->
+>
+> [[01_Math/07-Mathematics for Computer Science/MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp17.pdf#page=3|CP17题3(b)]]的 $n,t$ 是满足 $1\le t\le n$ 的正整数，最长链含恰好 $t$ 个任务。上面的平均分配可能得到更短的最长链，例如 $n=10,t=6$ 会分成两条长 $5$ 的链。应取 $k=\lceil n/t\rceil$，构造 $k-1$ 条长 $t$ 的链，以及一条长 $r=n-(k-1)t$ 的链，链间无边。由 $1\le r\le t$，总任务数为 $n$，最长链为 $t$；若 $k=1$，则 $n=t=r$。每链分配一人便能在 $t$ 周完成；工作量下界 $kt\ge n$ 又说明少于 $k$ 人不够。因此人数结论仍正确，但要使用满足原条件的构造。
 
 > [!example]- CP17 Problem 4：covering edges
 > (a) 图的边为 $1\to2,1\to3,1\to4,1\to5,1\to6,2\to4,2\to6,3\to6$。其中 $1\to4$ 可由 $1\to2\to4$ 代替，$1\to6$ 可由 $1\to2\to6$ 或 $1\to3\to6$ 代替；其余六条都是 covering edges。因此答案为 $1\to2,1\to3,1\to5,2\to4,2\to6,3\to6$。
@@ -2017,9 +2094,9 @@ Every finite partial order can be represented by set inclusion via $x\mapsto D(x
 *19.1 simple graph and degree*
 <!-- bilingual-en:end -->
 
-[[图类型的建模边界|简单图]] $G=(V,E)$ 的边是二元无序集合 $\{u,v\}$，无自环、无平行边。顶点 $v$ 的 degree $\deg(v)$ 是以它为端点的边数。
+[[图类型的建模边界|简单图]] $G=(V,E)$ 的边是二元无序集合 $\{u,v\}$，无自环、无平行边。顶点 $v$ 的 [[度数、入度与出度|degree]] $\deg(v)$ 是以它为端点的边数。
 <!-- bilingual-en:start -->
-An edge of a [[图类型的建模边界|simple graph]] $G=(V,E)$ is a two-element unordered set $\{u,v\}$. There are no self-loops or parallel edges. The degree $\deg(v)$ is the number of edges incident to vertex $v$.
+An edge of a [[图类型的建模边界|simple graph]] $G=(V,E)$ is a two-element unordered set $\{u,v\}$. There are no self-loops or parallel edges. The [[度数、入度与出度|degree]] $\deg(v)$ is the number of edges incident to vertex $v$.
 <!-- bilingual-en:end -->
 
 [[无向图握手定理|Handshaking lemma]]：
@@ -2045,6 +2122,13 @@ How to read the diagram: counting the same vertex–edge incidence pairs by vert
 Corollary: the number of odd-degree vertices is even. The total degree sum is even, and even-degree vertices contribute an even amount. If there were an odd number of odd-degree vertices, their degrees would have an odd sum, a contradiction.
 <!-- bilingual-en:end -->
 
+> [!note] Extending the endpoint count · 扩展端点计数时
+> <!-- bilingual-en:start -->
+> The proof above counts pairs $(v,e)$ in a simple graph. To extend the [[无向图握手定理|handshaking lemma]] to undirected loops, count the two endpoint occurrences of each loop separately; one set pair $(v,e)$ would lose that multiplicity. For directed graphs, summing in-degrees gives $|E|$, and summing out-degrees separately gives $|E|$. The odd-degree parity conclusion applies to the undirected endpoint convention.
+> <!-- bilingual-en:end -->
+>
+> 上面的证明在简单图中计数 $(v,e)$ 配对。若把[[无向图握手定理]]扩展到含无向自环的图，必须分别计每条自环的两个端点出现次数；只用集合中的一对 $(v,e)$ 会丢掉重数。有向图的入度之和为 $|E|$，出度之和也另为 $|E|$。奇度顶点偶数个的结论适用于无向端点计数约定。
+
 ### 19.2 图同构
 <!-- bilingual-en:start -->
 *19.2 Graph isomorphism*
@@ -2064,9 +2148,9 @@ $$
 An isomorphism preserves every property determined solely by adjacency: the numbers of vertices and edges, the degree multiset, counts of walks and cycles, connectivity, and chromatic number. Coordinates, drawn edge lengths, and vertex labels are not part of the graph's structure.
 <!-- bilingual-en:end -->
 
-**degree 被保留的证明。** $f$ 将 $u$ 的邻居集合双射到 $f(u)$ 的邻居集合；取基数得 $\deg_G(u)=\deg_H(f(u))$。因此 degree sequence 不同足以证明不同构，但相同 degree sequence 不保证同构。
+**degree 被保留的证明。** $f$ 将 $u$ 的邻居集合双射到 $f(u)$ 的邻居集合；取基数得 $\deg_G(u)=\deg_H(f(u))$。因此 [[图同构不变量的判别边界|degree sequence 不同足以证明不同构，但相同 degree sequence 不保证同构]]。
 <!-- bilingual-en:start -->
-**Why degree is preserved.** The map $f$ restricts to a bijection from the neighbor set of $u$ to that of $f(u)$. Taking cardinalities gives $\deg_G(u)=\deg_H(f(u))$. Different degree sequences therefore prove non-isomorphism, but identical degree sequences do not guarantee isomorphism.
+**Why degree is preserved.** The map $f$ restricts to a bijection from the neighbor set of $u$ to that of $f(u)$. Taking cardinalities gives $\deg_G(u)=\deg_H(f(u))$. [[图同构不变量的判别边界|Different degree sequences therefore prove non-isomorphism, but identical degree sequences do not guarantee isomorphism]].
 <!-- bilingual-en:end -->
 
 ### 官方顺序、资源与在线题（8 prompts）
@@ -2288,9 +2372,9 @@ $$
 c:V\to\{1,2,\ldots,k\},
 $$
 
-满足每条边 $\{u,v\}\in E$ 的两端颜色不同，即 $c(u)\ne c(v)$。图的 [[Proper 着色与独立集划分|着色数]]
+满足每条边 $\{u,v\}\in E$ 的两端颜色不同，即 $c(u)\ne c(v)$。图的 [[色数|着色数]]
 <!-- bilingual-en:start -->
-such that the endpoints of every edge $\{u,v\}\in E$ receive different colors: $c(u)\ne c(v)$. The [[Proper 着色与独立集划分|chromatic number]] of the graph
+such that the endpoints of every edge $\{u,v\}\in E$ receive different colors: $c(u)\ne c(v)$. The [[色数|chromatic number]] of the graph
 <!-- bilingual-en:end -->
 
 $$
@@ -2331,6 +2415,13 @@ Three immediately useful bounds:
 > $\Delta(G)+1$ is a universal upper bound, not a lower bound. A star graph has maximum degree $n-1$ but still needs only $2$ colors. One vertex having many neighbors does not imply that those neighbors conflict with one another.
 > <!-- bilingual-en:end -->
 
+> [!note] Scope of the numerical bounds · 数值界的适用范围
+> <!-- bilingual-en:start -->
+> The bounds above concern finite nonempty simple graphs; the star example has at least one edge. A greedy output using $q$ colors gives $\chi(G)\le q\le\Delta(G)+1$, not a proof that $q$ is minimal. The [[色数|chromatic-number definition]] separately assigns $0$ to an empty vertex set; its positive-integer minimum and the usual maximum degree are not used for that case. Each nonempty color class is an [[图的独立集|independent set]].
+> <!-- bilingual-en:end -->
+>
+> 上面的数值界针对有限非空简单图；星图例子还要求至少有一条边。贪心输出用了 $q$ 色，只证明 $\chi(G)\le q\le\Delta(G)+1$，没有证明 $q$ 最小。[[色数]]定义另把空顶点集的值约定为 $0$，该情形不套用正整数最小值或通常的最大度。每个非空颜色类都是[[图的独立集]]。
+
 #### 从寄存器分配看建模
 <!-- bilingual-en:start -->
 *Modeling register allocation*
@@ -2341,11 +2432,18 @@ Three immediately useful bounds:
 In a compiler, each variable is a vertex. If two variables' **live ranges** overlap, they must be stored simultaneously at some point, so connect their vertices by an edge. A color represents a register. Vertices of the same color have nonoverlapping live ranges and may safely reuse that register. Thus the minimum number of registers is exactly $\chi(G)$ for the interference graph.
 <!-- bilingual-en:end -->
 
+> [!note] What the allocation model assumes · 分配模型的假设
+> <!-- bilingual-en:start -->
+> The register interpretation is exact when registers are interchangeable and the recorded pairwise conflicts are the only restrictions on sharing one register. Fixed-register requirements, register classes or other machine constraints need additional data. Likewise, a conflict-free exam slot need not satisfy room capacity or duration requirements. See [[顶点着色的建模边界|the modeling boundary]] before interpreting a color count as a complete schedule or allocation.
+> <!-- bilingual-en:end -->
+>
+> 当寄存器可互换、且是否能共享一个寄存器只受已记录的成对冲突限制时，上面的寄存器解释才是精确模型。固定寄存器要求、寄存器类别或其他机器约束需要额外数据。同样，无冲突的考试时段未必满足教室容量或时长要求。把颜色数解释为完整排程或分配前，先检查[[顶点着色的建模边界]]。
+
 ### 20.2 bipartite iff no odd cycle
 
-图 $G$ 是 [[二着色与奇环|二分图]]，若 $V$ 可分成不交集 $L,R$，且每条边都一端在 $L$、一端在 $R$。这等价于 $G$ 可 $2$-color。
+图 $G$ 是 [[二分图|二分图]]，若 $V$ 可分成不交集 $L,R$，且每条边都一端在 $L$、一端在 $R$。这等价于 $G$ 可 $2$-color。
 <!-- bilingual-en:start -->
-A graph $G$ is [[二着色与奇环|bipartite]] if $V$ can be partitioned into disjoint sets $L,R$ such that every edge has one endpoint in each set. This is equivalent to $G$ being $2$-colorable.
+A graph $G$ is [[二分图|bipartite]] if $V$ can be partitioned into disjoint sets $L,R$ such that every edge has one endpoint in each set. This is equivalent to $G$ being $2$-colorable.
 <!-- bilingual-en:end -->
 
 > [!theorem] Odd-cycle characterization
@@ -2377,6 +2475,13 @@ The first two terms have an even sum, so the cycle has odd length, contradicting
 <!-- bilingual-en:start -->
 This proof also yields a linear-time algorithm. With BFS, color directly by the parity of shortest-path distance. With DFS, alternate colors by search-tree depth, without interpreting DFS depth as shortest distance. If an edge joins two vertices of the same color, the two tree paths plus that edge provide an odd-cycle certificate.
 <!-- bilingual-en:end -->
+
+> [!note] At most two colors, with a checkable certificate · 至多两色与可核验证书
+> <!-- bilingual-en:start -->
+> Bipartite means that at most two labels suffice, allowing an empty side. Under the stated convention, $\chi(G)=2$ additionally requires an edge; a nonempty edgeless graph has value $1$, and an empty vertex set has value $0$. In [[二着色与奇环证书|the search algorithm]], trim the two parent paths at their last common ancestor before adding the conflicting edge: keeping a nonempty shared prefix would give a closed walk with repetitions rather than the required simple odd cycle. Search every component, including isolated vertices; with adjacency lists the total work is $O(1+|V|+|E|)$.
+> <!-- bilingual-en:end -->
+>
+> 二分图表示至多两种标签足够，允许一侧为空。按这里的约定，$\chi(G)=2$ 还要求有边；非空无边图为 $1$，空顶点集为 $0$。[[二着色与奇环证书|搜索算法]]须在最后公共祖先处裁掉两条父链的共同前缀，再加冲突边；若保留非空的共同前缀，得到的只是带重复的闭游走，而不是所需的简单奇环。必须搜索全部分量，包括孤立顶点；使用邻接表时总工作量为 $O(1+|V|+|E|)$。
 
 ### 20.3 connectivity、components 与 cut
 <!-- bilingual-en:start -->
@@ -2679,9 +2784,9 @@ This section combines connectivity and acyclicity into a minimal skeleton: a tre
 *21.1 Equivalent characterizations of trees*
 <!-- bilingual-en:end -->
 
-一张 finite simple graph $T=(V,E)$ 是 [[有限树的等价刻画|树]]，若它 **connected 且 acyclic**。不要把这两个形容词当成互不相干的条件：它们联合后迫使 tree 恰好处在“保持全部顶点连通”的边数下界。
+一张 finite simple graph $T=(V,E)$ 是 [[无向树|树]]，若它 **connected 且 acyclic**。不要把这两个形容词当成互不相干的条件：它们联合后迫使 tree 恰好处在“保持全部顶点连通”的边数下界。
 <!-- bilingual-en:start -->
-A finite simple graph $T=(V,E)$ is a [[有限树的等价刻画|tree]] if it is **connected and acyclic**. These conditions are not independent accidents: together they force a tree to use the minimum number of edges needed to keep all vertices connected.
+A finite simple graph $T=(V,E)$ is a [[无向树|tree]] if it is **connected and acyclic**. These conditions are not independent accidents: together they force a tree to use the minimum number of edges needed to keep all vertices connected.
 <!-- bilingual-en:end -->
 
 > [!theorem] Tree 的常用等价定义
@@ -2774,9 +2879,9 @@ Conversely, start from any finite connected graph and delete one edge from a cyc
 *21.2 Forests, leaves, and two-coloring*
 <!-- bilingual-en:end -->
 
-[[Forest 的边数公式|森林]]是 acyclic graph，每个 connected component 都是 tree。若 forest 有 $n$ 个顶点、$c$ 个 components，则
+[[森林|森林]]是 acyclic graph，每个 connected component 都是 tree。若 forest 有 $n$ 个顶点、$c$ 个 components，则
 <!-- bilingual-en:start -->
-A [[Forest 的边数公式|forest]] is an acyclic graph; every connected component is a tree. If a forest has $n$ vertices and $c$ components, then
+A [[森林|forest]] is an acyclic graph; every connected component is a tree. If a forest has $n$ vertices and $c$ components, then
 <!-- bilingual-en:end -->
 
 $$
@@ -2803,9 +2908,9 @@ The 2015 Session 21 reading defines a leaf to have degree $1$. Under that conven
 *21.3 Spanning trees and minimum spanning trees*
 <!-- bilingual-en:end -->
 
-图 $G$ 的 **spanning subgraph** 保留 $G$ 的全部顶点，只可能删边。若该子图还是 tree，就是 [[生成树的存在条件|生成树]]。一张 finite graph 有 spanning tree 当且仅当它 connected：
+图 $G$ 的 **spanning subgraph** 保留 $G$ 的全部顶点，只可能删边。若该子图还是 tree，就是 [[生成树|生成树]]。一张 finite graph 有 spanning tree 当且仅当它 connected：
 <!-- bilingual-en:start -->
-A **spanning subgraph** of $G$ retains every vertex of $G$ and may delete only edges. If that subgraph is a tree, it is a [[生成树的存在条件|spanning tree]]. A finite graph has a spanning tree if and only if it is connected:
+A **spanning subgraph** of $G$ retains every vertex of $G$ and may delete only edges. If that subgraph is a tree, it is a [[生成树|spanning tree]]. A finite graph has a spanning tree if and only if it is connected:
 <!-- bilingual-en:end -->
 
 - 有 spanning tree 则其中的 path 也是原图 path，原图 connected；
@@ -2836,11 +2941,18 @@ $$
 A [[最小生成树的定义与唯一性|minimum spanning tree]] (MST) is a spanning tree of minimum total weight. A finite connected weighted graph has only finitely many spanning trees, so an MST exists. It need not be unique when edge weights tie.
 <!-- bilingual-en:end -->
 
+> [!note] Existence and uniqueness · 存在与唯一
+> <!-- bilingual-en:start -->
+> In the finite nonempty undirected setting, [[生成树的存在条件|connectedness guarantees a spanning tree]]. With finite real weights, a minimum then exists. The [[最小生成树的唯一性|distinct-weight uniqueness theorem]] adds a sufficient condition for exactly one optimum. Tied weights may still give a unique MST, as the $1,1,2$ triangle shows.
+> <!-- bilingual-en:end -->
+>
+> 在有限非空无向图的范围内，[[生成树的存在条件|连通性保证生成树存在]]；加上有限实权后便存在最小值。[[最小生成树的唯一性|互异权重唯一性定理]]进一步给出恰好一个最优解的充分条件。有等权时仍可能唯一，例如 $1,1,2$ 三角形。
+
 ### 21.4 cut/gray-edge lemma
 
-将顶点分成两个非空部分 $S$ 与 $V\setminus S$称为 cut；一端在 $S$、一端在补集的边称为 crossing/gray edge。
+将顶点分成两个非空部分 $S$ 与 $V\setminus S$称为 [[图割|cut]]；一端在 $S$、一端在补集的边称为 crossing/gray edge。
 <!-- bilingual-en:start -->
-A partition of the vertices into two nonempty sets $S$ and $V\setminus S$ is a cut. An edge with one endpoint in each part is a crossing, or gray, edge.
+A partition of the vertices into two nonempty sets $S$ and $V\setminus S$ is a [[图割|cut]]. An edge with one endpoint in each part is a crossing, or gray, edge.
 <!-- bilingual-en:end -->
 
 > [!theorem] [[MST 割性质|Cut property（gray-edge lemma）]]
@@ -2872,6 +2984,13 @@ $T$ 已最小，所以必取等，$T'$ 也是包含 $e$ 的 MST。若 $e$ 唯一
 <!-- bilingual-en:start -->
 Because $T$ is already minimum, equality must hold and $T'$ is also an MST containing $e$. If $e$ is the unique lightest edge across the cut, then $w(e)<w(f)$ would strictly improve any tree $T$ that omitted $e$, a contradiction. Hence every MST contains $e$.
 <!-- bilingual-en:end -->
+
+> [!note] Keep the selected edges compatible · 保留已选边的共同兼容性
+> <!-- bilingual-en:start -->
+> To use the [[MST 割性质|safe-edge form of the cut property]], assume the whole selected set $A$ lies in one MST. Choose a cut crossed by none of $A$, then add a light crossing edge. The exchange removes an edge outside $A$, preserving every earlier choice. This is the common invariant behind the two algorithms below; separate membership of each edge in some MST would not suffice.
+> <!-- bilingual-en:end -->
+>
+> 使用[[MST 割性质|割性质的安全边形式]]时，假设整个已选集 $A$ 共同包含于某棵 MST。选择一个没有 $A$ 中边跨越的割，再加入最轻跨割边。换边时删掉的边在 $A$ 外，因此保留全部既有选择。这是下面两种算法共同的不变量；每条边分别属于某棵 MST，并不足够。
 
 ### 21.5 Kruskal、Prim 与并行合并
 <!-- bilingual-en:start -->
@@ -3101,14 +3220,14 @@ A two-sided allocation problem with strict preferences is usually not about maxi
 *22.1 Matchings, rogue pairs, and stability*
 <!-- bilingual-en:end -->
 
-令两侧集合 $B$ 与 $G$ 各有 $n$ 人，每人对另侧所有人给出一个严格全序偏好。一个 **perfect matching** 是双射 $M:B\to G$；记 $M(b)$ 为 $b$ 的配偶，$M^{-1}(g)$ 为 $g$ 的配偶。
+令两侧集合 $B$ 与 $G$ 各有 $n$ 人，每人对另侧所有人给出一个严格全序偏好。一个 **[[左侧覆盖与完美匹配|perfect matching]]** 是双射 $M:B\to G$；记 $M(b)$ 为 $b$ 的配偶，$M^{-1}(g)$ 为 $g$ 的配偶。
 <!-- bilingual-en:start -->
-The two sets $B$ and $G$ each contain $n$ people, and each person has a strict total order over everyone on the other side. A **perfect matching** is a bijection $M:B\to G$; $M(b)$ denotes $b$'s partner, and $M^{-1}(g)$ denotes $g$'s partner.
+The two sets $B$ and $G$ each contain $n$ people, and each person has a strict total order over everyone on the other side. A **[[左侧覆盖与完美匹配|perfect matching]]** is a bijection $M:B\to G$; $M(b)$ denotes $b$'s partner, and $M^{-1}(g)$ denotes $g$'s partner.
 <!-- bilingual-en:end -->
 
-一对未在当前 matching 中的 $(b,g)$ 是 **rogue pair/blocking pair**，若
+一对未在当前 matching 中的 $(b,g)$ 是 **[[阻挡对|rogue pair/blocking pair]]**，若
 <!-- bilingual-en:start -->
-An unmatched pair $(b,g)$ is a **rogue pair**, or **blocking pair**, if
+An unmatched pair $(b,g)$ is a **[[阻挡对|rogue pair]]**, or **[[阻挡对|blocking pair]]**, if
 <!-- bilingual-en:end -->
 
 $$
@@ -3117,9 +3236,9 @@ g\succ_b M(b)
 b\succ_g M^{-1}(g),
 $$
 
-即 $b$ 更喜欢 $g$ 而不是当前配偶，$g$ 也更喜欢 $b$ 而不是当前配偶。一个 matching [[02_Structures#Session 22 — Stable Matching and Hall's Theorem|稳定]]，当且仅当它没有 rogue pair。
+即 $b$ 更喜欢 $g$ 而不是当前配偶，$g$ 也更喜欢 $b$ 而不是当前配偶。一个 matching [[稳定匹配|稳定]]，当且仅当它没有 rogue pair。
 <!-- bilingual-en:start -->
-That is, $b$ prefers $g$ to their current partner, and $g$ prefers $b$ to their current partner. A matching is [[02_Structures#Session 22 — Stable Matching and Hall's Theorem|stable]] if and only if it has no blocking pair.
+That is, $b$ prefers $g$ to their current partner, and $g$ prefers $b$ to their current partner. A matching is [[稳定匹配|stable]] if and only if it has no blocking pair.
 <!-- bilingual-en:end -->
 
 ![[98_attachment/mathematics_for_computer_science/mit6_042j/unit02-stable-matching.png|900]]
@@ -3250,9 +3369,14 @@ Thus the choice of proposer and receiver sides affects which stable matching the
 *22.5 bipartite matching and Hall's condition*
 <!-- bilingual-en:end -->
 
-现在忘掉偏好，只保留一张 bipartite graph $G=(L\cup R,E)$；边表示“允许配对”。一个 [[匹配定义|匹配]] 是顶点互不重复的边集。若它覆盖 $L$ 的每个顶点，就给出一个从 $L$ 到 $R$ 的 total injection；若 $|L|=|R|$，则这也是 perfect matching。
 <!-- bilingual-en:start -->
-Now discard the preferences and retain only a bipartite graph $G=(L\cup R,E)$, where an edge means that a pair is allowed. A [[匹配定义|matching]] is a set of pairwise vertex-disjoint edges. If it covers every vertex of $L$, it defines a total injection from $L$ to $R$; if $|L|=|R|$, it is also a perfect matching.
+Scope for this section: a finite simple bipartite graph, with each vertex usable at most once. In particular, the conclusion that left coverage is perfect when the sides have equal size uses finiteness. See [[左侧覆盖与完美匹配|coverage and perfect matching]] for the exact distinction.
+<!-- bilingual-en:end -->
+本节范围为有限简单二分图，每个顶点至多使用一次。特别地，两侧等大时由左覆盖推出完美匹配，使用了有限性。确切区别见[[左侧覆盖与完美匹配]]。
+
+现在忘掉偏好，只保留一张 [[二分图|bipartite graph]] $G=(L\cup R,E)$；边表示“允许配对”。一个 [[匹配定义|匹配]] 是顶点互不重复的边集。若它覆盖 $L$ 的每个顶点，就给出一个从 $L$ 到 $R$ 的 total injection；若 $|L|=|R|$，则这也是 perfect matching。
+<!-- bilingual-en:start -->
+Now discard the preferences and retain only a [[二分图|bipartite graph]] $G=(L\cup R,E)$, where an edge means that a pair is allowed. A [[匹配定义|matching]] is a set of pairwise vertex-disjoint edges. If it covers every vertex of $L$, it defines a total injection from $L$ to $R$; if $|L|=|R|$, it is also a perfect matching.
 <!-- bilingual-en:end -->
 
 对 $S\subseteq L$，定义邻居集
@@ -3316,6 +3440,11 @@ $$
 <!-- bilingual-en:start -->
 On the other hand, the alternating search reaches every neighbor of $S$, so $N(S)=T$. Hence $|N(S)|=|T|<|S|$, violating Hall's condition. The supposition was false, and $M$ must cover all of $L$.
 <!-- bilingual-en:end -->
+
+<!-- bilingual-en:start -->
+To justify the neighbor equality, take a neighbor of a reached left vertex. An unselected edge is an allowed forward search step, so its right endpoint is reached when search is exhausted. A selected edge is the unique matched predecessor through which that left vertex was reached; unmatched roots have no such edge. Conversely, every reached right vertex was reached from a left vertex in the set. These two inclusions prove the equality. [[交替搜索的增广与缺额证书|The search card]] expands the parent-chain and exhausted-search details.
+<!-- bilingual-en:end -->
+邻居相等还需展开两种边：可达左点的未选边是允许的向右搜索步骤，穷尽后其右端必已到达；已选边则是到达这个左点时经过的唯一匹配前驱，未匹配起点没有这种边。反过来，每个可达右点都从集合内的左点到达。两方向包含共同证明邻居集相等。[[交替搜索的增广与缺额证书|搜索卡片]]展开父链与穷尽搜索的细节。
 
 ### 官方顺序、资源与在线题（11 prompts）
 <!-- bilingual-en:start -->
@@ -3644,6 +3773,11 @@ This unit moves from integer structure to relations and graphs, then to verifiab
 **3.** **Undirected structure:** degree sums and the handshaking lemma come from double counting; isomorphism distinguishes structure from a particular drawing or labeling; coloring models conflicts, while connectivity measures a network's resilience.<br>
 **4.** **Minimal skeletons and allocation:** a tree is the minimal skeleton of connectivity; the cut property justifies greedy edge choices for an MST; deferred acceptance guarantees stability through the rejection invariant; and Hall's theorem characterizes the existence of a perfect matching through bottlenecks and augmenting paths.<br>
 <!-- bilingual-en:end -->
+
+<!-- bilingual-en:start -->
+In the last summary sentence, the perfect-matching conclusion assumes finite bipartite sides of equal size. In its general designated-side form, [[Hall 定理|Hall’s theorem]] characterizes left coverage; the two sides need not have equal size.
+<!-- bilingual-en:end -->
+上一句的完美匹配结论以有限二分图两侧等大为条件。一般的指定侧版本中，[[Hall 定理]]刻画左侧覆盖，不要求两侧等大。
 
 ### 单元级综合自检
 <!-- bilingual-en:start -->

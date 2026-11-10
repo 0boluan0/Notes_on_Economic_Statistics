@@ -1,35 +1,303 @@
 {
   "nodes": [
-    {"id":"bm00000000000001","type":"text","text":"# 布朗运动 · 语义原子地图\n\n从定义出发，分别进入有限维分布、尺度不变性、带漂移模型、路径粗糙性与越界问题。颜色只区分语义角色，不表示掌握度；点击节点可打开对应 Markdown 原子。\n\n**当前结构：** 11 张原子卡，分别表示概念定义、正向定理、反向刻画和边界辨析。","x":0,"y":-420,"width":4060,"height":260},
-    {"id":"bm00000000000002","type":"text","text":"[[标准布朗运动|标准布朗运动]]\n\n**PROB-BM-001 · 定义**\n从零出发；不交区间增量相互独立且为 N(0,时长)；整条样本路径几乎必然连续。","x":0,"y":0,"width":4060,"height":230,"color":"4"},
-
-    {"id":"bm00000000000003","type":"text","text":"[[布朗有限维分布|有限维分布]]\n\n**PROB-BM-002 · 定理**\n有限时点向量联合 Gaussian，均值为 0，协方差为 s∧t。","x":0,"y":360,"width":560,"height":230,"color":"5"},
-    {"id":"bm00000000000004","type":"text","text":"[[布朗尺度变换|尺度变换]]\n\n**PROB-BM-003 · 不变性**\n(c⁻¹ᐟ²Wct) 仍是标准布朗运动；这是过程律相同，不是逐路径等式。","x":700,"y":360,"width":560,"height":230,"color":"5"},
-    {"id":"bm00000000000005","type":"text","text":"[[带漂移布朗运动|带漂移布朗运动]]\n\n**PROB-BM-004 · 模型定义**\nXₜ=x+μt+σWₜ；x、μ、σ 分别控制起点、中心轨道与波动尺度。","x":1400,"y":360,"width":560,"height":230,"color":"2"},
-    {"id":"bm00000000000006","type":"text","text":"[[布朗路径处处不可导|路径处处不可导]]\n\n**PROB-BM-005 · 定理**\n同一个概率 1 事件上，每条路径在所有时点都不可导。","x":2100,"y":360,"width":560,"height":230,"color":"3"},
-    {"id":"bm00000000000007","type":"text","text":"[[布朗反射原理|反射原理]]\n\n**PROB-BM-007 · 定理**\n首次触及后反射路径，把途中越界概率化为终点 Gaussian 尾概率。","x":3500,"y":360,"width":560,"height":230,"color":"1"},
-
-    {"id":"bm00000000000008","type":"text","text":"[[协方差核刻画布朗运动|协方差核反向刻画]]\n\n**PROB-BM-008 · 定理**\n中心 Gaussian + 协方差 s∧t 给出 Brownian 有限维律；连续版本才满足完整定义。","x":0,"y":700,"width":560,"height":240,"color":"5"},
-    {"id":"bm00000000000009","type":"text","text":"[[带漂移布朗增量|带漂移布朗增量]]\n\n**PROB-BM-010 · 定理**\n长度 h 的增量为 N(μh,σ²h)，并具有平稳独立增量。","x":1400,"y":700,"width":560,"height":230,"color":"5"},
-    {"id":"bm0000000000000a","type":"text","text":"[[布朗路径无限总变差|路径无限总变差]]\n\n**PROB-BM-011 · 定理**\n典型路径在每个非退化有限区间上的绝对增量总和无界。","x":2100,"y":700,"width":560,"height":230,"color":"3"},
-    {"id":"bm0000000000000b","type":"text","text":"[[鞅与停时.canvas|鞅与停时]]\n\n反射原理使用首次到达时刻与强 Markov 结构；下一主题把信息流和停时条件单独展开。","x":3500,"y":700,"width":560,"height":230},
-
-    {"id":"bm0000000000000c","type":"text","text":"[[布朗运动不平稳|水平不平稳，增量平稳]]\n\n**PROB-BM-009 · 辨析**\nWₜ 的方差随 t 增长；固定长度增量的分布却不随起点改变。","x":0,"y":1060,"width":560,"height":230,"color":"6"},
-    {"id":"bm0000000000000d","type":"text","text":"[[布朗二次变差|二次变差]]\n\n**PROB-BM-006 · 定理**\n确定性分割网格趋零时，平方增量和在 L² 中收敛到区间长度。","x":2100,"y":1060,"width":560,"height":240,"color":"3"},
-    {"id":"bm0000000000000e","type":"text","text":"# 下一层：随机积分\n\n有限且非零的二次变差解释了普通链式法则为何需要二阶修正。Itô 积分与 Itô 公式属于后续随机积分主题。","x":2800,"y":1060,"width":560,"height":240,"color":"6"}
+    {
+      "id": "bm00000000000001",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n# Brownian motion\n\nStart with the definition, then distinguish laws and rescaling, drifted models, path roughness, and crossing questions. Each compact node links to its complete explanation.\n<!-- bilingual-en:end -->\n\n布朗运动：从定义出发，依次区分分布与尺度、带漂移模型、路径粗糙性和越界问题。紧凑节点链接到完整讲解。",
+      "x": 0,
+      "y": -420,
+      "width": 4060,
+      "height": 260
+    },
+    {
+      "id": "bm00000000000002",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[标准布朗运动|Standard Brownian motion]]\n\nA real process starts at $W_0=0$ a.s.; disjoint-interval increments are mutually independent, and $W_{t+h}-W_t\\sim N(0,h)$ for $t\\ge0,h>0$. Its entire path is continuous on one probability-one event.\n<!-- bilingual-en:end -->\n\n实值过程从零出发，不交区间的零均值 Gaussian 增量相互独立，方差等于时长；同一个概率一事件上整条路径连续。增量平稳，水平分布不平稳。",
+      "x": 0,
+      "y": 0,
+      "width": 4060,
+      "height": 230,
+      "color": "4"
+    },
+    {
+      "id": "bm00000000000003",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[布朗有限维分布|Brownian finite-dimensional laws]]\n\nEvery finite observation vector is jointly Gaussian with mean zero and covariance $\\Sigma_{ij}=\\min(t_i,t_j)$. Repeated times or time zero can make $\\Sigma$ singular; a full-dimensional density then does not apply.\n<!-- bilingual-en:end -->\n\n任意有限时刻向量联合 Gaussian，均值零、协方差为两时刻的较小者。零时刻或重复时刻可导致退化，不能套非退化密度。",
+      "x": 0,
+      "y": 360,
+      "width": 560,
+      "height": 290,
+      "color": "5"
+    },
+    {
+      "id": "bm00000000000004",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[布朗尺度变换|Brownian scaling]]\n\nFor a fixed finite $c>0$, $Y_t=W_{ct}/\\sqrt c$ is standard Brownian motion. This preserves the law of continuous paths; it does not identify the original and rescaled curves.\n<!-- bilingual-en:end -->\n\n预先固定有限 $c>0$，时间加快 $c$ 倍、空间除以 $\\sqrt c$ 后仍为标准布朗运动。这是连续路径的律相同，不是同一路径上的相等。",
+      "x": 700,
+      "y": 360,
+      "width": 560,
+      "height": 300,
+      "color": "5"
+    },
+    {
+      "id": "bm00000000000005",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[带漂移布朗运动|Brownian motion with drift]]\n\n$X_t=x+\\mu t+\\sigma W_t$, with fixed real $x,\\mu$ and $\\sigma>0$. The mean is $x+\\mu t$ and variance is $\\sigma^2t$. Setting $\\sigma=0$ is a separate deterministic extension.\n<!-- bilingual-en:end -->\n\n$x,\\mu$ 为固定实数，$\\sigma>0$。起点、平均漂移与随机尺度分开；方差为 $\\sigma^2t$，$\\sigma=0$ 时另退化为确定直线。",
+      "x": 1400,
+      "y": 360,
+      "width": 560,
+      "height": 300,
+      "color": "2"
+    },
+    {
+      "id": "bm00000000000006",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[布朗路径处处不可导|Nowhere differentiable paths]]\n\nOn one probability-one event, no time has a finite derivative. At zero use the right-hand limit. A fixed-time statement alone does not establish this simultaneous claim.\n<!-- bilingual-en:end -->\n\n同一个概率一事件上，每个时刻都没有有限导数；零时刻采用右侧极限。逐个固定时刻的概率一陈述不能直接替代此同时结论。",
+      "x": 2100,
+      "y": 360,
+      "width": 560,
+      "height": 300,
+      "color": "3"
+    },
+    {
+      "id": "bm00000000000007",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[布朗反射原理|Reflection principle]]\n\nFor standard Brownian motion, fixed $t>0,a>0$ and $M_t=\\sup_{0\\le s\\le t}W_s$,\n$$P(M_t\\ge a)=2P(W_t\\ge a).$$\nReflect after the first hit; crossing before $t$ is different from ending above $a$. The formula does not generally apply with drift.\n<!-- bilingual-en:end -->\n\n对标准布朗运动、固定 $t>0,a>0$，途中越过 $a$ 的概率是终点超过它的两倍。首次触及时反射余下路径；有漂移时不能直接照用此式。",
+      "x": 3500,
+      "y": 360,
+      "width": 560,
+      "height": 300,
+      "color": "1"
+    },
+    {
+      "id": "bm00000000000008",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[协方差核刻画布朗运动|Gaussian characterization]]\n\nA centered real Gaussian process on $t\\ge0$ with covariance $\\min(s,t)$ has Brownian finite-dimensional laws and a continuous modification. The current version is Brownian only when its own paths are a.s. continuous.\n<!-- bilingual-en:end -->\n\n中心实 Gaussian 过程的该核给出布朗有限维律，且存在连续修正版本；当前版本仍须自身路径几乎必然连续。只给均值与核不能替代 Gaussian 假设。",
+      "x": 0,
+      "y": 700,
+      "width": 560,
+      "height": 300,
+      "color": "5"
+    },
+    {
+      "id": "bm00000000000009",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[带漂移布朗增量|Drifted increment law]]\n\nFor fixed $s\\ge0,h>0$, $X_{s+h}-X_s\\sim N(\\mu h,\\sigma^2h)$. Fixed disjoint intervals give mutually independent increments; overlapping windows need not. The standard deviation is $\\sigma\\sqrt h$.\n<!-- bilingual-en:end -->\n\n固定起点与长度的增量均值为 $\\mu h$、方差为 $\\sigma^2h$；标准差为 $\\sigma\\sqrt h$。预先固定的不交区间增量相互独立，重叠窗口未必独立。",
+      "x": 1400,
+      "y": 700,
+      "width": 560,
+      "height": 300,
+      "color": "5"
+    },
+    {
+      "id": "bm0000000000000a",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[布朗路径无限总变差|Infinite total variation]]\n\nOn one probability-one event, every interval $0\\le a<b<\\infty$ has infinite total variation. This concerns absolute changes over all finite partitions, not a quadratic-variation limit.\n<!-- bilingual-en:end -->\n\n同一个概率一事件覆盖全部 $0\\le a<b<\\infty$ 区间。这里对所有有限分割的绝对增量和取上确界，与二次变差的分割极限不同。",
+      "x": 2100,
+      "y": 700,
+      "width": 560,
+      "height": 300,
+      "color": "3"
+    },
+    {
+      "id": "bm0000000000000b",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[鞅与停时.canvas|Information and stopping times]]\n\nCap the first hit at a fixed deadline to get a bounded stopping time. The [[布朗强Markov性|Brownian strong Markov theorem]] supplies independent restarted motion; deterministic-time independence alone does not.\n<!-- bilingual-en:end -->\n\n把首次触及时刻截断在固定期限，得到布朗自然信息下的有界停时。[[布朗强Markov性]]提供独立重启依据，不能只引用固定时刻的独立增量。",
+      "x": 3500,
+      "y": 700,
+      "width": 560,
+      "height": 300
+    },
+    {
+      "id": "bm0000000000000c",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[布朗运动不平稳|Levels versus increments]]\n\n$\\operatorname{Var}(W_t)=t$ rules out strict and weak stationarity of the levels. Fixed-length increments have shift-invariant joint laws; overlapping increments can still be dependent.\n<!-- bilingual-en:end -->\n\n水平方差随时间增长，既不严平稳也不宽平稳。固定长度增量的联合律可随起点平移保持不变，但重叠增量仍可能依赖。",
+      "x": 0,
+      "y": 1060,
+      "width": 560,
+      "height": 300,
+      "color": "6"
+    },
+    {
+      "id": "bm0000000000000d",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[布朗二次变差|Quadratic variation]]\n\nFor fixed $T>0$ and deterministic partitions of $[0,T]$ with vanishing mesh, the squared-increment sum tends to $T$ in $L^2$. Almost-sure convergence holds for dyadic refinements, and more generally nested such partitions. Arbitrary path-chosen grids are not included.\n<!-- bilingual-en:end -->\n\n固定区间上，确定性分割网格趋零时，增量平方和均方趋于 $T$。二进细分及更一般的嵌套分割给出几乎必然收敛；不声称所有看过路径再选的网格都适用。",
+      "x": 2100,
+      "y": 1060,
+      "width": 560,
+      "height": 330,
+      "color": "3"
+    },
+    {
+      "id": "bm0000000000000e",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## Next: stochastic integration\n\nThe nonzero Brownian quadratic-variation limit motivates a second-order term in stochastic change-of-variable formulas. The precise Itô integral and formula belong to the next topic.\n<!-- bilingual-en:end -->\n\n布朗二次变差的非零极限说明随机换元公式为何会出现二阶项；Itô 积分与公式的准确条件属于后续主题。",
+      "x": 2800,
+      "y": 1060,
+      "width": 560,
+      "height": 240,
+      "color": "6"
+    },
+    {
+      "id": "p0067-total-variation",
+      "type": "text",
+      "x": 2800,
+      "y": 360,
+      "width": 560,
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[函数总变差|Total variation of a function]]\n\nFor a real function on a finite interval $[a,b]$, $a<b$, add absolute increments on a finite partition, then take the supremum over all such partitions. BV means this supremum is finite. A rise from 0 to 1 and back has net change 0 but variation 2.\n<!-- bilingual-en:end -->\n\n有限区间上实值函数的有限分割，先累加绝对增量，再对全部分割取上确界。上确界有限才是有界变差；上升一单位再下降一单位，净变化零、变差为二。"
+    },
+    {
+      "id": "p0067-bv-derivative",
+      "type": "text",
+      "x": 2800,
+      "y": 700,
+      "width": 560,
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[有界变差函数几乎处处可导|BV and almost-everywhere derivatives]]\n\nA real BV function on $[a,b]$, $a<b$, has a finite derivative at Lebesgue-almost every interior time. Nowhere differentiability therefore rules out BV. Infinite variation does not give the converse.\n<!-- bilingual-en:end -->\n\n实值有界变差函数在区间内部几乎处处有有限导数；这里是时间的勒贝格零测集。因此处处不可导排除有界变差，反向推断不成立。"
+    },
+    {
+      "id": "p0067-brownian-strong-markov",
+      "type": "text",
+      "x": 3500,
+      "y": 1060,
+      "width": 560,
+      "height": 350,
+      "text": "<!-- bilingual-en:start -->\n## [[布朗强Markov性|Brownian strong Markov property]]\n\nFor standard Brownian motion and an a.s.-finite stopping time $\\tau$ for its natural filtration, $(W_{\\tau+s}-W_\\tau)_{s\\ge0}$ is standard Brownian motion independent of the information available at $\\tau$. For reflection, cap the first-hit time at the fixed deadline.\n<!-- bilingual-en:end -->\n\n标准布朗运动在自然滤过的几乎必然有限停时后，减去当前位置得到新的标准布朗运动，且独立于停时已知信息。反射证明可用有界停时 $\\tau_a\\wedge t$。"
+    }
   ],
   "edges": [
-    {"id":"bme0000000000001","fromNode":"bm00000000000002","fromSide":"bottom","toNode":"bm00000000000003","toSide":"top","label":"推出有限维 Gaussian 律"},
-    {"id":"bme0000000000002","fromNode":"bm00000000000003","fromSide":"bottom","toNode":"bm00000000000008","toSide":"top","label":"加入连续版本可反向识别"},
-    {"id":"bme0000000000003","fromNode":"bm00000000000008","fromSide":"bottom","toNode":"bm0000000000000c","toSide":"top","label":"s∧t 核也显示水平不平稳"},
-    {"id":"bme0000000000004","fromNode":"bm00000000000002","fromSide":"bottom","toNode":"bm00000000000004","toSide":"top","label":"完整定义在缩放下保持"},
-    {"id":"bme0000000000005","fromNode":"bm00000000000002","fromSide":"bottom","toNode":"bm00000000000005","toSide":"top","label":"加入线性漂移与波动率"},
-    {"id":"bme0000000000006","fromNode":"bm00000000000005","fromSide":"bottom","toNode":"bm00000000000009","toSide":"top","label":"定义推出增量律"},
-    {"id":"bme0000000000007","fromNode":"bm00000000000002","fromSide":"bottom","toNode":"bm00000000000006","toSide":"top","label":"连续路径仍可无处有切线"},
-    {"id":"bme0000000000008","fromNode":"bm00000000000006","fromSide":"bottom","toNode":"bm0000000000000a","toSide":"top","label":"由 BV 几乎处处可导推出"},
-    {"id":"bme0000000000009","fromNode":"bm0000000000000a","fromSide":"bottom","toNode":"bm0000000000000d","toSide":"top","label":"与有限二次变差对照"},
-    {"id":"bme000000000000a","fromNode":"bm0000000000000d","fromSide":"right","toNode":"bm0000000000000e","toSide":"left","label":"解释二阶修正来源"},
-    {"id":"bme000000000000b","fromNode":"bm00000000000002","fromSide":"bottom","toNode":"bm00000000000007","toSide":"top","label":"研究首次越界"},
-    {"id":"bme000000000000c","fromNode":"bm00000000000007","fromSide":"bottom","toNode":"bm0000000000000b","toSide":"top","label":"首达时间进入停时框架"}
+    {
+      "id": "bme0000000000001",
+      "fromNode": "bm00000000000002",
+      "fromSide": "bottom",
+      "toNode": "bm00000000000003",
+      "toSide": "top",
+      "label": "Independent increments give the joint Gaussian law · 独立增量给出联合 Gaussian 律"
+    },
+    {
+      "id": "bme0000000000002",
+      "fromNode": "bm00000000000003",
+      "fromSide": "bottom",
+      "toNode": "bm00000000000008",
+      "toSide": "top",
+      "label": "For the converse, check continuity of the chosen version · 反向识别须核所选版本连续性"
+    },
+    {
+      "id": "bme0000000000003",
+      "fromNode": "bm00000000000008",
+      "fromSide": "bottom",
+      "toNode": "bm0000000000000c",
+      "toSide": "top",
+      "label": "At s=t, variance t rules out stationary levels · 令s=t得方差t，排除水平平稳"
+    },
+    {
+      "id": "bme0000000000004",
+      "fromNode": "bm00000000000002",
+      "fromSide": "bottom",
+      "toNode": "bm00000000000004",
+      "toSide": "top",
+      "label": "Fixed positive time rescaling preserves the definition · 固定正时钟缩放保留完整定义"
+    },
+    {
+      "id": "bme0000000000005",
+      "fromNode": "bm00000000000002",
+      "fromSide": "bottom",
+      "toNode": "bm00000000000005",
+      "toSide": "top",
+      "label": "Add fixed drift and diffusion scale · 加入固定漂移与扩散尺度"
+    },
+    {
+      "id": "bme0000000000006",
+      "fromNode": "bm00000000000005",
+      "fromSide": "bottom",
+      "toNode": "bm00000000000009",
+      "toSide": "top",
+      "label": "Subtract two levels to obtain the increment law · 两水平相减得到增量律"
+    },
+    {
+      "id": "bme0000000000007",
+      "fromNode": "bm00000000000002",
+      "fromSide": "bottom",
+      "toNode": "bm00000000000006",
+      "toSide": "top",
+      "label": "Continuity does not supply a finite derivative · 连续性不保证有限导数"
+    },
+    {
+      "id": "bme0000000000008",
+      "fromNode": "bm00000000000006",
+      "fromSide": "bottom",
+      "toNode": "bm0000000000000a",
+      "toSide": "top",
+      "label": "Use the BV differentiability theorem contrapositively · 用BV几乎处处可导的逆否命题"
+    },
+    {
+      "id": "bme0000000000009",
+      "fromNode": "bm0000000000000a",
+      "fromSide": "bottom",
+      "toNode": "bm0000000000000d",
+      "toSide": "top",
+      "label": "Contrast absolute sums with squared sums on a chosen grid · 对照绝对和与选定网格的平方和"
+    },
+    {
+      "id": "bme000000000000a",
+      "fromNode": "bm0000000000000d",
+      "fromSide": "right",
+      "toNode": "bm0000000000000e",
+      "toSide": "left",
+      "label": "The nonzero limit motivates a second-order term · 非零极限引出二阶项"
+    },
+    {
+      "id": "bme000000000000b",
+      "fromNode": "bm00000000000002",
+      "fromSide": "bottom",
+      "toNode": "bm00000000000007",
+      "toSide": "top",
+      "label": "Ask about crossing before a fixed horizon · 研究固定期限内越界"
+    },
+    {
+      "id": "bme000000000000c",
+      "fromNode": "bm00000000000007",
+      "fromSide": "bottom",
+      "toNode": "bm0000000000000b",
+      "toSide": "top",
+      "label": "First hitting uses stopping-time information · 首次触及进入停时信息框架"
+    },
+    {
+      "id": "p0067-tv-bv",
+      "fromNode": "p0067-total-variation",
+      "fromSide": "bottom",
+      "toNode": "p0067-bv-derivative",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "Finite total movement yields a.e. slopes · 总变化有限推出几乎处处斜率"
+    },
+    {
+      "id": "p0067-bv-roughness",
+      "fromNode": "p0067-bv-derivative",
+      "fromSide": "left",
+      "toNode": "bm0000000000000a",
+      "toSide": "right",
+      "toEnd": "arrow",
+      "label": "Together with nowhere differentiability, infer infinite TV · 结合处处不可导推出无限总变差"
+    },
+    {
+      "id": "p0067-stopping-strong",
+      "fromNode": "bm0000000000000b",
+      "fromSide": "bottom",
+      "toNode": "p0067-brownian-strong-markov",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "Specify the Brownian restart theorem · 明确布朗随机时刻重启定理"
+    },
+    {
+      "id": "p0067-strong-reflection",
+      "fromNode": "p0067-brownian-strong-markov",
+      "fromSide": "right",
+      "toNode": "bm00000000000007",
+      "toSide": "right",
+      "toEnd": "arrow",
+      "label": "Restart at the bounded first-hit truncation, then reflect · 在有界首达截断后重启并反射"
+    }
   ]
 }

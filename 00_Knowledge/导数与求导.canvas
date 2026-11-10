@@ -46,8 +46,8 @@
       "x": 960,
       "y": 100,
       "width": 400,
-      "height": 220,
-      "text": "## [[可导必连续]]\n\n有限差商极限迫使函数增量趋零；这是必要条件。",
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[可导必连续|Differentiability implies continuity]]\n\nA finite derivative at a point makes the output increment tend to zero there. Continuity is a necessary condition for differentiability.\n<!-- bilingual-en:end -->\n\n一点的有限导数使该处输出增量趋零；连续是可导的必要条件。",
       "color": "5"
     },
     {
@@ -56,8 +56,8 @@
       "x": 1440,
       "y": 100,
       "width": 400,
-      "height": 220,
-      "text": "## [[连续不必可导]]\n\n$|x|$ 在零点连续，但左右差商不同；必要条件不能反向。",
+      "height": 290,
+      "text": "<!-- bilingual-en:start -->\n## [[连续不必可导|The converse fails]]\n\nAbsolute value is continuous at zero, but its left and right difference quotients differ. An infinite limiting slope also fails the finite-derivative requirement.\n<!-- bilingual-en:end -->\n\n绝对值在零点连续，左右差商却不同；斜率趋于无穷同样不满足有限导数要求。",
       "color": "1"
     },
     {
@@ -296,8 +296,8 @@
       "x": 480,
       "y": 2630,
       "width": 400,
-      "height": 230,
-      "text": "## [[自然常数极限]]\n\n取对数把 $(1+1/n)^n$ 化成 $\\ln$ 在 $1$ 处的差商。",
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[自然常数极限|A limit for e]]\n\nFor positive integers $n$, $(1+1/n)^n\\to e$. Taking logarithms gives the difference quotient of $\\ln$ at $1$; continuity of $\\exp$ then recovers the limit.\n<!-- bilingual-en:end -->\n\n正整数 $n$ 趋于无穷时，$(1+1/n)^n\\to e$。先取对数识别输入 $1$ 处的差商，再由指数连续性返回；不能只看底数趋一。",
       "color": "6"
     },
     {
@@ -306,8 +306,8 @@
       "x": 960,
       "y": 2630,
       "width": 400,
-      "height": 230,
-      "text": "## [[双曲函数]]\n\n$\\sinh$ 与 $\\cosh$ 是 $e^x$、$e^{-x}$ 的奇偶组合。",
+      "height": 330,
+      "text": "<!-- bilingual-en:start -->\n## [[双曲函数|Hyperbolic functions]]\n\nFor real $x$, $\\sinh x=(e^x-e^{-x})/2$ and $\\cosh x=(e^x+e^{-x})/2$. They are respectively odd and even, with $\\cosh^2x-\\sinh^2x=1$.\n<!-- bilingual-en:end -->\n\n对实数 $x$，指数之差的一半是双曲正弦，和的一半是双曲余弦；分别为奇、偶函数，并满足平方差为一。",
       "color": "4"
     },
     {
@@ -316,8 +316,8 @@
       "x": 1440,
       "y": 2630,
       "width": 400,
-      "height": 230,
-      "text": "## [[双曲函数求导]]\n\n逐项求导得 $D\\sinh=\\cosh$、$D\\cosh=\\sinh$。",
+      "height": 330,
+      "text": "<!-- bilingual-en:start -->\n## [[双曲函数求导|Hyperbolic derivatives]]\n\nFor every real $x$, $(\\sinh x)^{\\prime}=\\cosh x$ and $(\\cosh x)^{\\prime}=\\sinh x$. Differentiate the exponential definitions; a differentiable inner input $g(x)$ contributes $g^{\\prime}(x)$.\n<!-- bilingual-en:end -->\n\n实轴上两种基本双曲函数求导后互换，余弦这一条没有负号。对可导内层 $g(x)$，复合求导还须乘 $g^{\\prime}(x)$。",
       "color": "5"
     }
   ],
@@ -336,7 +336,7 @@
       "toNode": "diff-cont",
       "fromSide": "right",
       "toSide": "left",
-      "label": "有限导数迫使连续"
+      "label": "A finite limiting slope forces continuity · 有限极限斜率保证连续"
     },
     {
       "id": "e03",
@@ -344,7 +344,7 @@
       "toNode": "cont-not-diff",
       "fromSide": "right",
       "toSide": "left",
-      "label": "逆命题由尖角否定"
+      "label": "The absolute-value corner disproves the converse · 绝对值尖角否定逆命题"
     },
     {
       "id": "e04",
@@ -536,7 +536,7 @@
       "toNode": "e-limit",
       "fromSide": "bottom",
       "toSide": "top",
-      "label": "同一常数的序列刻画"
+      "label": "A sequence characterization of the same e · 同一常数的数列刻画"
     },
     {
       "id": "e28",
@@ -544,7 +544,7 @@
       "toNode": "e-limit",
       "fromSide": "bottom",
       "toSide": "top",
-      "label": "识别 $\\ln$ 在一处差商"
+      "label": "Use the derivative of ln at input 1 · 用对数在输入 1 处的导数"
     },
     {
       "id": "e29",
@@ -552,7 +552,7 @@
       "toNode": "hyperbolic",
       "fromSide": "bottom",
       "toSide": "top",
-      "label": "增长与衰减配对"
+      "label": "Half-difference and half-sum of reflected exponentials · 反射指数的半差与半和"
     },
     {
       "id": "e30",
@@ -560,7 +560,7 @@
       "toNode": "hyperbolic-derivative",
       "fromSide": "right",
       "toSide": "left",
-      "label": "按指数定义逐项求导"
+      "label": "Differentiate the two exponential definitions · 对两条指数定义求导"
     },
     {
       "id": "e31",
@@ -568,7 +568,7 @@
       "toNode": "hyperbolic-derivative",
       "fromSide": "bottom",
       "toSide": "top",
-      "label": "指数与链式法则"
+      "label": "Exponential rule plus the inner minus sign · 指数求导并计入内层负号"
     }
   ]
 }

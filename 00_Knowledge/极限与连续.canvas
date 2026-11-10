@@ -25,8 +25,8 @@
       "x": 0,
       "y": 340,
       "width": 430,
-      "height": 170,
-      "text": "## [[点值不决定极限|点值不决定极限]]\n*Point values do not determine limits*\n\n极限只看去心邻域；改单点不会改变附近趋势。",
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n## [[点值不决定极限|Limits and point values]]\n\nKeeping every nearby allowed input and output unchanged preserves the limit, even if the target value is added, removed or changed.\n<!-- bilingual-en:end -->\n\n保持去心邻域内的合法输入与输出不变，只增删或修改目标点的值，不改变该处极限。",
       "color": "5"
     },
     {
@@ -35,8 +35,8 @@
       "x": 1040,
       "y": 340,
       "width": 430,
-      "height": 170,
-      "text": "## [[双侧极限判定|双侧极限判定]]\n*Two-sided limit criterion*\n\n左右极限都存在且相等，有限双侧极限才存在。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[双侧极限判定|Two-sided limits]]\n\nWhen the domain approaches the target from both sides, a finite limit exists exactly when both one-sided limits exist and agree. At endpoints, use the available side.\n<!-- bilingual-en:end -->\n\n定义域两侧都有任意近的输入时，有限双侧极限存在当且仅当两侧极限存在且相等；端点只沿合法一侧趋近。",
       "color": "5"
     },
     {
@@ -45,8 +45,8 @@
       "x": 1560,
       "y": 340,
       "width": 450,
-      "height": 190,
-      "text": "## [[无穷极限与无穷远极限|两类“无穷”]]\n*Infinite limits vs. limits at infinity*\n\n一个描述输出发散，一个描述输入方向；无穷都不是可代入的实数。",
+      "height": 270,
+      "text": "<!-- bilingual-en:start -->\n## [[无穷极限与无穷远极限|Input and output infinity]]\n\nA limit at infinity concerns the input direction. An infinite limit requires every fixed output threshold to be passed eventually; unbounded values alone do not suffice.\n<!-- bilingual-en:end -->\n\n无穷远描述输入方向；无穷极限要求输出最终通过每个固定门槛，仅有无界输出还不够。",
       "color": "3"
     },
     {
@@ -55,8 +55,8 @@
       "x": 2080,
       "y": 0,
       "width": 430,
-      "height": 170,
-      "text": "## [[零比零未定式|0/0 未定式]]\n*Zero over zero*\n\n它只说明直接代入失效，不说明极限值或存在性。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[零比零未定式|The 0/0 indeterminate form]]\n\nBoth numerator and denominator tend to zero along the chosen approach. Their quotient still needs analysis where the denominator is nonzero. Point values alone do not establish this form.\n<!-- bilingual-en:end -->\n\n分子与分母沿所选方向都趋于零；仍需在分母非零的输入上分析商。代入得到的点值不能代替这两个极限条件。",
       "color": "2"
     },
     {
@@ -65,8 +65,8 @@
       "x": 2600,
       "y": 0,
       "width": 430,
-      "height": 170,
-      "text": "## [[极限定律适用条件|极限定律的条件]]\n*Hypotheses of the limit laws*\n\n先确认各部分极限存在；商法则还要求分母极限非零。",
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n## [[极限定律适用条件|Conditions for limit laws]]\n\nUse finite component limits along the same allowed approach. The quotient rule additionally requires a nonzero denominator limit.\n<!-- bilingual-en:end -->\n\n沿同一合法趋近方向，各部分极限须为有限实数；商法则还要求分母极限非零。",
       "color": "3"
     },
     {
@@ -75,8 +75,8 @@
       "x": 2340,
       "y": 340,
       "width": 490,
-      "height": 180,
-      "text": "## [[极限计算流程|极限计算判断顺序]]\n*Diagnostic workflow*\n\n先代入辨认形式，再化简或改写；最后才调用满足条件的定理。",
+      "height": 270,
+      "text": "<!-- bilingual-en:start -->\n## [[极限计算流程|Choosing a limit method]]\n\nSpecify the domain and approach, then choose a justified method: substitution, algebra, bounds or one-sided analysis. There is no compulsory tool order.\n<!-- bilingual-en:end -->\n\n先明确定义域与趋近方向，再按条件选用代入、代数改写、估界或分侧分析；工具没有强制试用顺序。",
       "color": "3"
     },
     {
@@ -85,8 +85,8 @@
       "x": 1820,
       "y": 680,
       "width": 430,
-      "height": 180,
-      "text": "## [[夹逼定理|夹逼定理]]\n*Squeeze theorem*\n\n同一邻域内上下夹住，而且两个界趋向同一个值。",
+      "height": 285,
+      "text": "<!-- bilingual-en:start -->\n## [[夹逼定理|Squeeze theorem]]\n\nAlong the same allowed approach, local lower and upper bounds with a common finite limit force the middle function to that limit. No continuity of the middle function is assumed.\n<!-- bilingual-en:end -->\n\n沿同一合法趋近方式，局部上下界若有共同有限极限，中间函数也趋于它；不预设中间函数连续。",
       "color": "4"
     },
     {
@@ -95,8 +95,8 @@
       "x": 2340,
       "y": 680,
       "width": 430,
-      "height": 190,
-      "text": "## [[洛必达法则|洛必达法则]]\n*L'Hôpital's rule*\n\n满足定理假设时，原函数比与导数比具有同一有限或无穷极限。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[洛必达法则|L’Hôpital’s rule]]\n\nOn a one-sided interval or tail, check differentiability, a nonzero denominator derivative and the original limiting form. A derivative-ratio limit then transfers under the theorem’s hypotheses.\n<!-- bilingual-en:end -->\n\n在单侧区间或尾部，检查可导性、分母导数非零与原极限形式；满足定理条件后，才能传递导数比的极限。",
       "color": "4"
     },
     {
@@ -105,8 +105,8 @@
       "x": 2860,
       "y": 680,
       "width": 430,
-      "height": 200,
-      "text": "## [[洛必达适用边界|洛必达适用边界]]\n*Applicability boundary*\n\n只处理满足条件的 $0/0$ 或 $\\infty/\\infty$；每次使用都要重新检查。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[洛必达适用边界|When the rule applies]]\n\nThe familiar 0/0 and infinity/infinity cases are sufficient versions. Check each repeated application. An oscillating derivative ratio does not rule out convergence of the original quotient.\n<!-- bilingual-en:end -->\n\n常见的零比零与无穷比无穷是充分版本；重复使用须逐次检查。导数比振荡，不能据此判原比值不收敛。",
       "color": "1"
     },
     {
@@ -115,8 +115,8 @@
       "x": 0,
       "y": 680,
       "width": 430,
-      "height": 180,
-      "text": "## [[可导必连续|可导必连续]]\n*Differentiability implies continuity*\n\n有限差商极限存在，会强迫函数值接上附近趋势。",
+      "height": 270,
+      "text": "<!-- bilingual-en:start -->\n## [[可导必连续|Differentiability implies continuity]]\n\nA finite difference-quotient limit controls output change through quotient times input increment. This gives continuity at the same point, using the same allowed sides.\n<!-- bilingual-en:end -->\n\n有限差商极限通过“差商乘输入增量”控制输出变化，推出同一点、同一合法方向上的连续性。",
       "color": "4"
     },
     {
@@ -125,8 +125,8 @@
       "x": 520,
       "y": 680,
       "width": 430,
-      "height": 190,
-      "text": "## [[一点连续|一点连续]]\n*Continuity at a point*\n\n沿定义域趋近该点时，函数值趋于已经定义好的点值。",
+      "height": 270,
+      "text": "<!-- bilingual-en:start -->\n## [[一点连续|Continuity at a point]]\n\nNearby domain inputs must give outputs close to the assigned point value. Endpoints use allowed inputs; isolated domain points are automatically continuous.\n<!-- bilingual-en:end -->\n\n附近的定义域输入须使输出接近已定义的点值。端点沿域内趋近；孤立定义域点自动连续。",
       "color": "2"
     },
     {
@@ -135,8 +135,8 @@
       "x": 1040,
       "y": 680,
       "width": 430,
-      "height": 190,
-      "text": "## [[间断类型判别|四类间断]]\n*Four types of discontinuity*\n\n按连续条件怎样失败，分为跳跃、可去、无穷与振荡。",
+      "height": 290,
+      "text": "<!-- bilingual-en:start -->\n## [[间断类型判别|Classifying discontinuities]]\n\nFirst identify the domain and available approach sides. Compare finite limits and the point value; infinite and oscillatory behaviour can differ between sides, and labels can overlap.\n<!-- bilingual-en:end -->\n\n先明确定义域与可趋近的侧，再比较有限极限和点值。无穷、振荡行为可能分属两侧；分类标签不总互斥。",
       "color": "6"
     },
     {
@@ -145,8 +145,8 @@
       "x": 0,
       "y": 1020,
       "width": 430,
-      "height": 180,
-      "text": "## [[连续不必可导|连续不必可导]]\n*Continuity need not imply differentiability*\n\n连续没有排除尖角；$|x|$ 在 $0$ 就没有共同差商极限。",
+      "height": 270,
+      "text": "<!-- bilingual-en:start -->\n## [[连续不必可导|Continuity without differentiability]]\n\nFor absolute value at zero, outputs approach zero from both sides, but the difference quotients are −1 and 1. Continuity does not guarantee a finite derivative.\n<!-- bilingual-en:end -->\n\n绝对值函数在零点两侧的输出都趋于零，差商却分别为−1与1；连续不能保证有限导数。",
       "color": "1"
     },
     {
@@ -155,8 +155,8 @@
       "x": 520,
       "y": 1020,
       "width": 430,
-      "height": 190,
-      "text": "## [[介值定理|介值定理]]\n*Intermediate Value Theorem*\n\n闭区间上的连续函数会取遍两个端点值之间的每个值。",
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[介值定理|Intermediate value theorem]]\n\nFor $a<b$, a real function continuous on $[a,b]$ attains every value between $f(a)$ and $f(b)$. A strictly intermediate value is attained inside $(a,b)$.\n<!-- bilingual-en:end -->\n\n设 $a<b$，实函数在 $[a,b]$ 上连续，就取到端点输出之间的每个值；严格居中的输出在 $(a,b)$ 内取到。",
       "color": "4"
     },
     {
@@ -165,8 +165,8 @@
       "x": 1040,
       "y": 1020,
       "width": 430,
-      "height": 190,
-      "text": "## [[可去间断的唯一补值|可去间断的唯一补值]]\n*Unique continuous extension*\n\n有限极限为 $L$ 时，只有把点值设为 $L$ 才能连续。",
+      "height": 290,
+      "text": "<!-- bilingual-en:start -->\n## [[可去间断的唯一补值|Unique continuous filling]]\n\nAt a domain cluster point, a finite domain-relative limit $L$ gives exactly one continuous filling: assign the value $L$. An isolated point has no such uniqueness.\n<!-- bilingual-en:end -->\n\n在定义域聚点处，若沿域内的有限极限为 $L$，唯一连续补值就是 $L$。孤立点不适用这一唯一性结论。",
       "color": "4"
     },
     {
@@ -175,8 +175,8 @@
       "x": 1560,
       "y": 1020,
       "width": 450,
-      "height": 190,
-      "text": "## [[跳跃间断不可补值|跳跃间断不可补值]]\n*A jump cannot be repaired at one point*\n\n左右极限不相等时，任何点值都无法制造双侧极限。",
+      "height": 255,
+      "text": "<!-- bilingual-en:start -->\n## [[跳跃间断不可补值|A jump cannot be filled]]\n\nIf both sides supply arbitrarily close inputs and their finite limits differ, changing only the point value cannot make the extension continuous.\n<!-- bilingual-en:end -->\n\n两侧都有任意近的输入而有限极限不同时，只改目标点的值无法使扩展函数连续。",
       "color": "1"
     },
     {
@@ -185,9 +185,19 @@
       "x": 520,
       "y": 1360,
       "width": 430,
-      "height": 200,
-      "text": "## [[介值定理只保证存在性|介值定理只保证存在性]]\n*Existence, not uniqueness or an algorithm*\n\n至少有一个，不等于只有一个；定理也没有给出计算步骤。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[介值定理只保证存在性|What the IVT guarantees]]\n\nThe theorem guarantees at least one solution. Uniqueness needs further reasoning; numerical approximation needs an algorithm and an error criterion. Constructive proofs can motivate bisection.\n<!-- bilingual-en:end -->\n\n定理保证至少一个解；唯一性另需论证，数值近似还需算法与误差标准。构造性证明可以启发二分法。",
       "color": "1"
+    },
+    {
+      "id": "lc-cauchy-mvt",
+      "type": "text",
+      "x": 2340,
+      "y": 1020,
+      "width": 430,
+      "height": 320,
+      "color": "5",
+      "text": "<!-- bilingual-en:start -->\n## [[柯西中值定理|Cauchy’s mean value theorem]]\n\nFor functions continuous on $[a,b]$ with $a<b$ and differentiable inside, two endpoint changes satisfy a derivative relation at one common interior point. Nonzero denominators justify the ratio used in the 0/0 proof.\n<!-- bilingual-en:end -->\n\n在 $a<b$ 的闭区间连续且内部可导时，两个端点变化量与同一内部点的导数满足关系。分母非零才可得到零比零证明所用的比值。"
     }
   ],
   "edges": [
@@ -198,7 +208,7 @@
       "toNode": "lc-point-value",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "去心条件排除目标点"
+      "label": "The target input is omitted · 去心条件排除目标点"
     },
     {
       "id": "le-limit-two-sided",
@@ -207,7 +217,7 @@
       "toNode": "lc-two-sided",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "内点的双侧趋近分成左右"
+      "label": "Check both sides when both approach the target · 两侧均能任意趋近时分侧检查"
     },
     {
       "id": "le-point-continuity",
@@ -216,7 +226,7 @@
       "toNode": "lc-continuity",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "连续还要求趋势接上点值"
+      "label": "At a domain cluster point, match the limit to the point value · 在定义域聚点处，还须极限等于点值"
     },
     {
       "id": "le-two-sided-continuity",
@@ -225,7 +235,7 @@
       "toNode": "lc-continuity",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "左右一致才通过内点极限条件"
+      "label": "At an interior point, compare both limits with the point value · 内点处比较两侧极限与点值"
     },
     {
       "id": "le-differentiable-continuity",
@@ -234,7 +244,7 @@
       "toNode": "lc-continuity",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "有限差商极限强迫连续"
+      "label": "A finite derivative forces continuity at the same point · 有限导数保证同点连续"
     },
     {
       "id": "le-continuity-classification",
@@ -243,7 +253,7 @@
       "toNode": "lc-discontinuity",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "哪项失败决定间断类型"
+      "label": "Inspect domain, available limits and point value · 检查定义域、可用方向的极限与点值"
     },
     {
       "id": "le-continuity-converse",
@@ -252,7 +262,7 @@
       "toNode": "lc-continuity-boundary",
       "toSide": "top",
       "toEnd": "none",
-      "label": "连续仍不足以控制差商"
+      "label": "Continuity alone does not control the quotient · 仅连续不能控制差商"
     },
     {
       "id": "le-continuity-ivt",
@@ -261,7 +271,7 @@
       "toNode": "lc-ivt",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "区间连续使中间值不能被跳过"
+      "label": "Continuity throughout the interval gives intermediate outputs · 整段区间连续保证取到中间输出"
     },
     {
       "id": "le-classification-removable",
@@ -270,7 +280,7 @@
       "toNode": "lc-removable",
       "toSide": "top",
       "toEnd": "none",
-      "label": "可去间断能补点修复"
+      "label": "A finite local limit gives the filling · 有限局部极限决定补值"
     },
     {
       "id": "le-classification-jump",
@@ -279,7 +289,7 @@
       "toNode": "lc-jump",
       "toSide": "top",
       "toEnd": "none",
-      "label": "跳跃需要改变附近行为"
+      "label": "Unequal finite side limits defeat any point filling · 有限侧极限不等时，补点不能修复"
     },
     {
       "id": "le-infinity-classification",
@@ -288,7 +298,7 @@
       "toNode": "lc-discontinuity",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "输出无界形成无穷间断"
+      "label": "An infinite one-sided limit supplies this behaviour; unboundedness alone does not · 单侧无穷极限支持无穷型，无界本身不够"
     },
     {
       "id": "le-ivt-boundary",
@@ -297,7 +307,7 @@
       "toNode": "lc-ivt-boundary",
       "toSide": "top",
       "toEnd": "none",
-      "label": "存在性结论不能自动加强"
+      "label": "Existence alone supplies neither uniqueness nor a computation · 单凭存在结论得不到唯一性或计算步骤"
     },
     {
       "id": "le-zero-workflow",
@@ -306,7 +316,7 @@
       "toNode": "lc-workflow",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "代入未定后必须改写"
+      "label": "The indeterminate form needs further argument · 未定形式需要进一步论证"
     },
     {
       "id": "le-laws-workflow",
@@ -315,7 +325,7 @@
       "toNode": "lc-workflow",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "拆分前先核对运算条件"
+      "label": "Check hypotheses before splitting the limit · 拆分极限前核对运算条件"
     },
     {
       "id": "le-workflow-squeeze",
@@ -324,7 +334,7 @@
       "toNode": "lc-squeeze",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "上下界同趋一值时选用"
+      "label": "Use matching upper and lower limits when available · 有同极限的上下界时可用"
     },
     {
       "id": "le-workflow-lhopital",
@@ -333,7 +343,7 @@
       "toNode": "lc-lhopital",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "满足定理假设时选用"
+      "label": "Use only under its differentiability and limit hypotheses · 仅在可导性与极限条件成立时使用"
     },
     {
       "id": "le-tools-contrast",
@@ -342,7 +352,7 @@
       "toNode": "lc-lhopital",
       "toSide": "left",
       "toEnd": "none",
-      "label": "结构不同，不能互相替代"
+      "label": "Bounds control outputs; derivative ratios compare rates · 夹逼控制输出，导数比比较变化率"
     },
     {
       "id": "le-lhopital-boundary",
@@ -351,7 +361,7 @@
       "toNode": "lc-lhopital-boundary",
       "toSide": "left",
       "toEnd": "none",
-      "label": "使用前逐项检查"
+      "label": "Check every hypothesis at each application · 每次应用均核对全部假设"
     },
     {
       "id": "le-repair-contrast",
@@ -360,7 +370,16 @@
       "toNode": "lc-jump",
       "toSide": "left",
       "toEnd": "none",
-      "label": "共同极限存在与否决定能否补值"
+      "label": "Finite local limits allow filling; unequal finite side limits obstruct it · 有限局部极限允许补值，有限侧极限不等阻止补值"
+    },
+    {
+      "id": "le-cauchy-lhopital",
+      "fromNode": "lc-cauchy-mvt",
+      "fromSide": "top",
+      "toNode": "lc-lhopital",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "Intermediate derivative ratio proves the 0/0 case · 中间点导数比证明零比零情形"
     }
   ]
 }

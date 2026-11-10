@@ -89,7 +89,7 @@ $$
 \det\!\left(I_K-A_1z-\cdots-A_pz^p\right)\ne0
 \ \text{对所有 }|z|\le1.
 $$
-前者说伴随矩阵特征值在单位圆内；后者说滞后多项式的根在单位圆外。软件若报告 inverse roots，必须先确认输出对象再判断“内”还是“外”。这一条件复用了[[离散系统谱稳定性|离散线性系统的谱稳定性]]，但 [[非正规矩阵瞬态|非正规矩阵]] 仍可能在最终衰减前出现较大的有限期响应。
+前者说伴随矩阵特征值在单位圆内；后者说滞后多项式的根在单位圆外。软件若报告 inverse roots，必须先确认输出对象再判断“内”还是“外”。这一条件复用了[[离散系统谱稳定性|离散线性系统的谱稳定性]]，但 [[非正规矩阵瞬态|非正规矩阵的瞬态]] 仍可能在最终衰减前出现较大的有限期响应。
 <!-- bilingual-en:start -->
 Stability can be stated as companion eigenvalues inside the unit circle or lag-polynomial roots outside it. The objects are reciprocals, so software output must be identified before interpreting “inside” and “outside.” Asymptotic spectral stability also does not preclude large finite-horizon transients from nonnormal dynamics.
 <!-- bilingual-en:end -->

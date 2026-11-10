@@ -5,19 +5,19 @@
       "type": "text",
       "x": 0,
       "y": 0,
-      "width": 1320,
-      "height": 180,
-      "text": "# Wishart 分布与样本协方差推断\n\n从 Gaussian 外积和的整数生成式与实数自由度延拓，走到样本协方差的精确抽样律、均值—协方差独立性与秩边界。\n\n本主题六张原子，另引入两张线性代数边界。先核对假设与参数化，再使用求逆、检验或尾概率公式。",
+      "width": 1690,
+      "height": 200,
+      "text": "<!-- bilingual-en:start -->\n## Wishart distributions and sample covariance\n\nStart with Gaussian outer products, distinguish integer construction from real degrees of freedom, and then follow the sample-covariance law, independence and rank conditions.\n<!-- bilingual-en:end -->\n\n从生成对象与参数含义进入精确抽样推断；求逆与概率校准都需要各自的条件。",
       "color": "4"
     },
     {
       "id": "wishart-definition",
       "type": "text",
-      "x": 450,
-      "y": 280,
-      "width": 420,
-      "height": 210,
-      "text": "## [[Wishart分布|Wishart 分布]]\n\n整数自由度时由独立 Gaussian 外积和生成；正定密度把分布族延拓到实数 $\\nu>p-1$。",
+      "x": 460,
+      "y": 300,
+      "width": 540,
+      "height": 360,
+      "text": "<!-- bilingual-en:start -->\n## [[Wishart分布|Wishart distribution]]\n\nFor integer $\\nu\\ge1$, sum $\\nu$ iid centered $p$-dimensional Gaussian outer products with common positive-semidefinite scale $\\Sigma$ to form a $p\\times p$ matrix. A positive-definite scale also gives a density for real $\\nu>p-1$.\n<!-- bilingual-en:end -->\n\n整数自由度数生成向量；实数延拓由密度定义。尺度在前，均值矩阵为自由度乘尺度。",
       "color": "5"
     },
     {
@@ -26,67 +26,67 @@
       "x": -40,
       "y": 280,
       "width": 360,
-      "height": 190,
-      "text": "## [[协方差矩阵半正定性|半正定结构]]\n\n对任意 $a$，$a^TWa=\\sum_i(a^TZ_i)^2\\ge0$；Wishart 矩阵天然半正定。"
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[外积和的半正定性|Outer-product sums are PSD]]\n\nFor a finite real outer-product sum $W=\\sum_i Z_iZ_i^T$, $a^TWa=\\sum_i(a^TZ_i)^2\\ge0$.\n<!-- bilingual-en:end -->\n\n整数生成式的半正定性来自平方和；这一代数保证本身无需独立或正态。"
     },
     {
       "id": "wishart-convention",
       "type": "text",
-      "x": 1000,
-      "y": 280,
-      "width": 420,
-      "height": 210,
-      "text": "## [[Wishart参数化|参数化边界]]\n\n矩阵可写成 covariance scale 或其逆，参数顺序也不统一；用生成式、密度或期望确认。",
+      "x": 1150,
+      "y": 300,
+      "width": 540,
+      "height": 330,
+      "text": "<!-- bilingual-en:start -->\n## [[Wishart参数化|Scale and precision conventions]]\n\nCovariance scale $V$ and precision $V^{-1}$ are different inputs for the same law. In the scale convention, $E[W]=\\nu V$; argument order alone does not identify the convention.\n<!-- bilingual-en:end -->\n\n先核对生成式或密度，再校准符号和接口；换参数不等于把随机矩阵取逆。",
       "color": "6"
     },
     {
       "id": "wishart-sample",
       "type": "text",
-      "x": 450,
-      "y": 620,
-      "width": 420,
-      "height": 210,
-      "text": "## [[样本协方差Wishart律|样本协方差律]]\n\n若 $X_i\\overset{iid}{\\sim}N_p(\\mu,\\Sigma)$，则 $(n-1)S\\sim W_p(\\Sigma,n-1)$；中心化消耗一个样本方向。",
+      "x": 460,
+      "y": 770,
+      "width": 540,
+      "height": 330,
+      "text": "<!-- bilingual-en:start -->\n## [[样本协方差Wishart律|Wishart law of sample covariance]]\n\nFor $n\\ge2$ iid $N_p(\\mu,\\Sigma)$ observations with $\\Sigma$ positive definite, $(n-1)S\\sim W_p(\\Sigma,n-1)$, where $S$ uses divisor $n-1$.\n<!-- bilingual-en:end -->\n\n中心化后可选出n−1个独立Gaussian对比；原始残差本身通常相关。外积构造也覆盖奇异的样本协方差。",
       "color": "3"
     },
     {
       "id": "wishart-assumption",
       "type": "text",
-      "x": -40,
-      "y": 620,
-      "width": 360,
-      "height": 220,
-      "text": "## [[Wishart抽样假设|抽样假设边界]]\n\nIID 多元正态给出标准精确律；相同二阶矩并不够，其他抽样结构一般需要另行校准。",
+      "x": -120,
+      "y": 770,
+      "width": 450,
+      "height": 310,
+      "text": "<!-- bilingual-en:start -->\n## [[Wishart抽样假设|Sampling assumptions]]\n\nIndependent, identically distributed joint-Gaussian observations give the standard exact covariance law. Unbiasedness or a shared covariance alone does not determine that law.\n<!-- bilingual-en:end -->\n\n非正态、相关行或不同分布，需要重新建立抽样校准；n−1分母本身不能补齐这些条件。",
       "color": "1"
     },
     {
       "id": "wishart-independence",
       "type": "text",
-      "x": 80,
-      "y": 980,
-      "width": 390,
-      "height": 210,
-      "text": "## [[正态均值协方差独立|均值—协方差独立]]\n\nGaussian 正交分解把样本均值方向与 $n-1$ 个残差方向分开；一般总体中零协方差不足以推出独立。",
+      "x": -120,
+      "y": 1260,
+      "width": 450,
+      "height": 330,
+      "text": "<!-- bilingual-en:start -->\n## [[正态均值协方差独立|Mean–covariance independence]]\n\nFor $n\\ge2$ iid Gaussian vectors, the sample mean is independent of the sample covariance. The mean and whole linear residual block have zero cross-covariance and are jointly Gaussian.\n<!-- bilingual-en:end -->\n\n协方差统计量是残差块的函数；该独立性允许总体协方差奇异，也允许样本协方差不可逆。",
       "color": "3"
     },
     {
       "id": "wishart-rank",
       "type": "text",
-      "x": 600,
-      "y": 980,
-      "width": 430,
-      "height": 220,
-      "text": "## [[Wishart秩与可逆性|整数自由度下的秩与可逆性]]\n\n当 $\\Sigma\\succ0$ 且 $\\nu$ 为整数时，$\\operatorname{rank}(W)=\\min(p,\\nu)$ 几乎必然；样本协方差可逆需 $n\\ge p+1$，但不保证稳定。",
+      "x": 460,
+      "y": 1260,
+      "width": 540,
+      "height": 350,
+      "text": "<!-- bilingual-en:start -->\n## [[Wishart秩与可逆性|Rank and invertibility]]\n\nFor integer $\\nu\\ge1$ and positive-definite scale, $\\operatorname{rank}(W)=\\min(p,\\nu)$ almost surely. Under the stated iid Gaussian sample model, $S^{-1}$ exists almost surely iff $n\\ge p+1$.\n<!-- bilingual-en:end -->\n\n非整数正定密度的条件是ν>p−1；不能把整数计数门槛直接套过去。可逆也不保证数值稳定。",
       "color": "1"
     },
     {
       "id": "wishart-pd",
       "type": "text",
-      "x": 1160,
-      "y": 980,
-      "width": 360,
-      "height": 190,
-      "text": "## [[正定与半正定可逆性|正定与可逆]]\n\n半正定只保证非负二次型；只有正定才保证普通逆存在。"
+      "x": 1150,
+      "y": 1260,
+      "width": 540,
+      "height": 260,
+      "text": "<!-- bilingual-en:start -->\n## [[正定与半正定可逆性|From semidefinite to invertible]]\n\nFor a real symmetric positive-semidefinite matrix, full rank, positive definiteness and existence of an ordinary inverse are equivalent.\n<!-- bilingual-en:end -->\n\n半正定允许零方向；满秩才排除这些方向。"
     }
   ],
   "edges": [
@@ -96,7 +96,7 @@
       "fromSide": "bottom",
       "toNode": "wishart-definition",
       "toSide": "top",
-      "label": "先固定生成定义"
+      "label": "Define the matrix and the degree domain · 先说明随机矩阵与自由度域"
     },
     {
       "id": "wishart-edge-definition-psd",
@@ -104,7 +104,7 @@
       "fromSide": "left",
       "toNode": "wishart-psd",
       "toSide": "right",
-      "label": "外积和保持半正定"
+      "label": "The finite integer construction is a sum of squares · 整数生成式给有限平方和"
     },
     {
       "id": "wishart-edge-definition-convention",
@@ -112,7 +112,7 @@
       "fromSide": "right",
       "toNode": "wishart-convention",
       "toSide": "left",
-      "label": "用生成式校准符号"
+      "label": "The generating covariance fixes the scale convention · 生成向量的协方差固定尺度含义"
     },
     {
       "id": "wishart-edge-definition-sample",
@@ -120,7 +120,7 @@
       "fromSide": "bottom",
       "toNode": "wishart-sample",
       "toSide": "top",
-      "label": "中心化残差形成外积和"
+      "label": "n−1 independent Gaussian contrasts produce the scatter · n−1个独立Gaussian对比产生散布"
     },
     {
       "id": "wishart-edge-sample-assumption",
@@ -128,7 +128,7 @@
       "fromSide": "left",
       "toNode": "wishart-assumption",
       "toSide": "right",
-      "label": "iid Gaussian 给出标准精确律"
+      "label": "The exact law uses the stated sampling model · 精确分布依赖所述抽样模型"
     },
     {
       "id": "wishart-edge-sample-independence",
@@ -136,7 +136,7 @@
       "fromSide": "bottom",
       "toNode": "wishart-independence",
       "toSide": "top",
-      "label": "同一正交分解还给出独立性"
+      "label": "Mean and residual blocks are independent under Gaussian sampling · Gaussian抽样分离均值与残差块"
     },
     {
       "id": "wishart-edge-sample-rank",
@@ -144,7 +144,7 @@
       "fromSide": "bottom",
       "toNode": "wishart-rank",
       "toSide": "top",
-      "label": "自由度限制残差方向数"
+      "label": "Integer n−1 contrasts determine the almost-sure rank · n−1个对比决定几乎必然秩"
     },
     {
       "id": "wishart-edge-assumption-independence",
@@ -152,7 +152,7 @@
       "fromSide": "bottom",
       "toNode": "wishart-independence",
       "toSide": "left",
-      "label": "非 Gaussian 时通常失去精确独立性"
+      "label": "Common moments alone do not imply independent statistics · 相同矩不能保证统计量独立"
     },
     {
       "id": "wishart-edge-rank-pd",
@@ -160,7 +160,7 @@
       "fromSide": "right",
       "toNode": "wishart-pd",
       "toSide": "left",
-      "label": "满秩时才由半正定升级为正定"
+      "label": "Full rank removes zero directions from a PSD matrix · 满秩排除半正定矩阵的零方向"
     }
   ]
 }

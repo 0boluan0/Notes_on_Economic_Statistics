@@ -69,8 +69,8 @@
       "x": 2750,
       "y": 1100,
       "width": 650,
-      "height": 300,
-      "text": "## [[置信区间覆盖率]]\n\n频率学置信区间的 95% 指重复抽样程序的长期覆盖率。\n\n**边界：** 不能把一次实现后的区间解释成参数有 95% 概率落在其中。"
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[置信区间覆盖率|Confidence interval coverage]]\nA confidence level describes the repeated interval rule under its assumptions. Check actual coverage before reading a narrow interval as precision. Coverage alone supplies no posterior probability for the fixed reported interval.\n<!-- bilingual-en:end -->\n\n## [[置信区间覆盖率]]\n置信水平描述假设下反复使用区间规则的覆盖表现。读窄区间为高精度前，要先检查实际覆盖；覆盖性质本身不给当前固定区间的参数后验概率。"
     },
     {
       "id": "7f81000000000009",

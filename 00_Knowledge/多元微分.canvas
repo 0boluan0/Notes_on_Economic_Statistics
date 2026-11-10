@@ -42,9 +42,9 @@
       "x": 120,
       "y": 360,
       "width": 320,
-      "height": 180,
+      "height": 250,
       "color": "4",
-      "text": "## [[偏导数]]\nCALC-MV-001 · 定义入口\n\n固定其余坐标，沿一个坐标轴方向取差商极限。"
+      "text": "<!-- bilingual-en:start -->\n## [[偏导数|Partial derivative]]\nHold other inputs fixed. The finite two-sided limit of the coordinate quotient gives this coordinate rate.\n<!-- bilingual-en:end -->\n\n**偏导数**：固定其余输入；坐标差商的有限双侧极限给出该坐标变化率。"
     },
     {
       "id": "c200000000000013",
@@ -52,9 +52,9 @@
       "x": 500,
       "y": 360,
       "width": 320,
-      "height": 180,
+      "height": 250,
       "color": "1",
-      "text": "## [[偏导不可推可微]]\nCALC-MV-013 · 边界\n\n所有偏导存在仍可能不连续，更不能推出一个统一的多元导数。"
+      "text": "<!-- bilingual-en:start -->\n## [[偏导不可推可微|Partial-derivative boundary]]\nAll coordinate rates may exist while the function is discontinuous. The candidate linear map need not give a uniform small remainder.\n<!-- bilingual-en:end -->\n\n**偏导不可推可微**：各坐标偏导都存在，函数仍可能不连续；候选线性映射未必满足统一小余项条件。"
     },
     {
       "id": "c200000000000002",
@@ -62,9 +62,9 @@
       "x": 880,
       "y": 360,
       "width": 320,
-      "height": 180,
+      "height": 250,
       "color": "4",
-      "text": "## [[全微分]]\nCALC-MV-002 · 定义入口\n\n一个线性映射同时控制所有小扰动，余项相对扰动长度更小。"
+      "text": "<!-- bilingual-en:start -->\n## [[全微分|Total differential]]\nOne linear map $L$ satisfies $f(a+h)-f(a)=Lh+r(h)$, with $\\|r(h)\\|/\\|h\\|\\to0$ over all nonzero small displacements.\n<!-- bilingual-en:end -->\n\n**全微分**：同一个线性映射 $L$ 近似所有小位移的输出变化；余项相对位移的比值趋于零。"
     },
     {
       "id": "c200000000000003",
@@ -72,9 +72,9 @@
       "x": 1260,
       "y": 360,
       "width": 320,
-      "height": 180,
+      "height": 250,
       "color": "4",
-      "text": "## [[Jacobian矩阵]]\nCALC-MV-003 · 定义入口\n\nJacobian 是导数线性映射在标准基下的矩阵表示。"
+      "text": "<!-- bilingual-en:start -->\n## [[Jacobian矩阵|Jacobian matrix]]\nFor $f:\\mathbb R^n\\to\\mathbb R^m$, the partial-derivative array is $m\\times n$. Under differentiability it represents $Df$; only a square array has a determinant.\n<!-- bilingual-en:end -->\n\n**Jacobian矩阵**：$n$ 个输入、$m$ 个输出给出 $m\\times n$ 偏导矩阵；可微时它表示全微分，只有方阵才有行列式。"
     },
     {
       "id": "c200000000000004",
@@ -82,9 +82,9 @@
       "x": 1640,
       "y": 360,
       "width": 320,
-      "height": 180,
+      "height": 250,
       "color": "6",
-      "text": "## [[多元链式法则]]\nCALC-MV-004 · 定理\n\n复合映射的 Jacobian 按作用顺序相乘，内层导数写在右边。"
+      "text": "<!-- bilingual-en:start -->\n## [[多元链式法则|Multivariable chain rule]]\nIf $g$ is differentiable at $a$ and $f$ at $g(a)$, then $J_{f\\circ g}(a)=J_f(g(a))J_g(a)$. The outer map multiplies on the left.\n<!-- bilingual-en:end -->\n\n**多元链式法则**：$g$ 在 $a$、$f$ 在 $g(a)$ 可微时，复合的 Jacobian 按“外乘内”的顺序相乘。"
     },
     {
       "id": "c200000000000005",
@@ -92,9 +92,9 @@
       "x": 120,
       "y": 680,
       "width": 320,
-      "height": 180,
+      "height": 250,
       "color": "4",
-      "text": "## [[方向导数]]\nCALC-MV-005 · 定义入口\n\n把函数限制在 $a+tv$ 上，再对直线参数 $t$ 求一元导数。"
+      "text": "<!-- bilingual-en:start -->\n## [[方向导数|Directional derivative]]\nFix $v$ and differentiate $t\\mapsto f(a+tv)$ at $0$. This finite two-sided rate is per unit parameter; unit $v$ gives a per-distance rate.\n<!-- bilingual-en:end -->\n\n**方向导数**：固定 $v$，对直线路径参数求零点处有限双侧导数；向量不必单位化，单位向量才给每距离变化率。"
     },
     {
       "id": "c200000000000014",
@@ -102,9 +102,9 @@
       "x": 500,
       "y": 680,
       "width": 320,
-      "height": 180,
+      "height": 250,
       "color": "5",
-      "text": "## [[方向导数梯度公式]]\nCALC-MV-014 · 恒等式\n\n函数可微时，$D_vf(a)=\\nabla f(a)^Tv$。"
+      "text": "<!-- bilingual-en:start -->\n## [[方向导数梯度公式|Gradient formula]]\nFor scalar $f$ differentiable at $a$, $D_vf(a)=\\nabla f(a)^Tv$ for every fixed vector $v$. The zero vector gives rate $0$.\n<!-- bilingual-en:end -->\n\n**方向导数梯度公式**：实值函数在该点可微时，各固定向量的变化率等于梯度点积；向量可非单位，零向量给零。"
     },
     {
       "id": "c200000000000020",
@@ -112,9 +112,9 @@
       "x": 880,
       "y": 680,
       "width": 320,
-      "height": 180,
+      "height": 250,
       "color": "1",
-      "text": "## [[方向导数尺度]]\nCALC-MV-020 · 尺度边界\n\n方向向量缩放会等比例缩放方向导数；比较几何方向前必须统一长度。"
+      "text": "<!-- bilingual-en:start -->\n## [[方向导数尺度|Scaling a direction]]\nIf the finite two-sided $D_vf(a)$ exists, $D_{cv}f(a)=cD_vf(a)$ for real $c$. Unit length removes speed; it does not supply differentiability.\n<!-- bilingual-en:end -->\n\n**方向导数尺度**：有限双侧方向导数按实数倍缩放；单位化排除参数速度差异，不会提供可微假设。"
     },
     {
       "id": "c200000000000006",
@@ -122,9 +122,9 @@
       "x": 1260,
       "y": 680,
       "width": 320,
-      "height": 180,
+      "height": 250,
       "color": "6",
-      "text": "## [[梯度最陡方向]]\nCALC-MV-006 · 极值刻画\n\n在 Euclidean 单位方向中，非零梯度方向唯一实现最大一阶上升率。"
+      "text": "<!-- bilingual-en:start -->\n## [[梯度最陡方向|Euclidean steepest ascent]]\nAt a differentiable point with $g=\\nabla f(a)\\ne0$, $g/\\|g\\|_2$ maximizes first-order change over Euclidean unit vectors. For $g=0$, all tie.\n<!-- bilingual-en:end -->\n\n**梯度最陡方向**：可微且梯度非零时，归一化梯度在欧氏单位向量中使一阶上升最快；梯度为零时全部并列。"
     },
     {
       "id": "c200000000000021",
@@ -132,9 +132,9 @@
       "x": 1640,
       "y": 680,
       "width": 320,
-      "height": 180,
+      "height": 290,
       "color": "1",
-      "text": "## [[最陡方向依赖度量]]\nCALC-MV-021 · 度量边界\n\n改变单位扰动所用的度量会改变最陡方向；$M$-度量下方向与 $M^{-1}\\nabla f$ 同向。"
+      "text": "<!-- bilingual-en:start -->\n## [[最陡方向依赖度量|Metric steepness]]\nFor differentiable $f$, let $g=\\nabla f(a)\\ne0$. If $M$ is real symmetric positive-definite, steepest ascent is along $M^{-1}g$, normalized by $v^TMv=1$.\n<!-- bilingual-en:end -->\n\n**度量与最陡方向**：可微且梯度非零时，实对称正定 $M$ 下的最陡上升沿 $M^{-1}g$，以 $v^TMv=1$ 归一化。"
     },
     {
       "id": "c200000000000007",
@@ -142,9 +142,9 @@
       "x": 2020,
       "y": 680,
       "width": 320,
-      "height": 180,
+      "height": 270,
       "color": "4",
-      "text": "## [[梯度与水平集]]\nCALC-MV-007 · 几何刻画\n\n在正则点，梯度是水平集切空间的法向量。"
+      "text": "<!-- bilingual-en:start -->\n## [[梯度与水平集|Gradients and level sets]]\nFor scalar $f\\in C^1$ near $a$ with $\\nabla f(a)\\ne0$, the level set is locally regular and its tangent space is $\\ker Df(a)$. The gradient is normal.\n<!-- bilingual-en:end -->\n\n**梯度与水平集**：实值 $f$ 在 $a$ 附近为 $C^1$ 且梯度非零时，水平集局部正则，切空间等于导数的核；梯度给出法向量。"
     },
     {
       "id": "c200000000000022",
@@ -152,9 +152,9 @@
       "x": 2400,
       "y": 680,
       "width": 320,
-      "height": 180,
+      "height": 270,
       "color": "1",
-      "text": "## [[零梯度不定切空间]]\nCALC-MV-022 · 边界\n\n梯度为零时，方程 $\\nabla f(a)^Tv=0$ 不再决定水平集的实际切空间。"
+      "text": "<!-- bilingual-en:start -->\n## [[零梯度不定切空间|When the gradient is zero]]\nAt a differentiable point with zero gradient, the linear equation accepts every velocity. The level set may still be a point, crossing branches or a smooth line; inspect its geometry.\n<!-- bilingual-en:end -->\n\n**零梯度不定切空间**：可微点的梯度为零时，线性方程接受所有速度；实际水平集却可能是一点、交叉分支或光滑直线，需另看几何。"
     },
     {
       "id": "c200000000000015",
@@ -162,9 +162,9 @@
       "x": 120,
       "y": 960,
       "width": 320,
-      "height": 180,
+      "height": 250,
       "color": "1",
-      "text": "## [[方向导数不可推可微]]\nCALC-MV-015 · 边界\n\n逐方向极限即使全部存在，也未必组成同一个线性映射。"
+      "text": "<!-- bilingual-en:start -->\n## [[方向导数不可推可微|Directional-derivative boundary]]\nRates on all fixed lines need not be linear. Even if every rate is $0$, curved approaches can defeat the uniform small-remainder requirement.\n<!-- bilingual-en:end -->\n\n**方向导数不可推可微**：各固定直线的变化率未必线性；即使全部为零，曲线趋近仍可能使统一小余项条件失败。"
     },
     {
       "id": "c200000000000008",
@@ -172,9 +172,9 @@
       "x": 500,
       "y": 1420,
       "width": 320,
-      "height": 180,
+      "height": 270,
       "color": "4",
-      "text": "## [[Hessian矩阵]]\nCALC-MV-008 · 定义入口\n\nHessian 是实值函数全部二阶偏导排成的方阵。"
+      "text": "<!-- bilingual-en:start -->\n## [[Hessian矩阵|Hessian matrix]]\nFor scalar $f$, entry $(i,j)$ is $\\partial_j(\\partial_i f)$ when these partials exist. This array represents the derivative of $\\nabla f$ when the gradient map is differentiable.\n<!-- bilingual-en:end -->\n\n**Hessian矩阵**：实值函数的二阶偏导组成方阵，第 $(i,j)$ 项先对 $i$ 再对 $j$ 求导；梯度映射可微时，它表示梯度的全导数。"
     },
     {
       "id": "c200000000000023",
@@ -182,9 +182,9 @@
       "x": 880,
       "y": 1420,
       "width": 320,
-      "height": 180,
+      "height": 270,
       "color": "5",
-      "text": "## [[Hessian方向二阶导数]]\nCALC-MV-023 · 恒等式\n\n沿 $v$ 的二阶导数是 $v^T\\nabla^2f(a)v$。"
+      "text": "<!-- bilingual-en:start -->\n## [[Hessian方向二阶导数|Line second derivative]]\nFor scalar $f\\in C^2$ near $a$ and fixed $v$, set $\\phi(t)=f(a+tv)$. Then $\\phi^{\\prime\\prime}(0)=v^TH_f(a)v$; replacing $v$ by $cv$ multiplies this by $c^2$.\n<!-- bilingual-en:end -->\n\n**Hessian方向二阶导数**：实值 $f$ 在 $a$ 附近为 $C^2$ 时，沿固定向量 $v$ 的直线二阶导数为 Hessian 二次型；向量放大 $c$ 倍，结果乘 $c^2$。"
     },
     {
       "id": "c200000000000009",
@@ -192,9 +192,9 @@
       "x": 1260,
       "y": 1420,
       "width": 320,
-      "height": 180,
+      "height": 270,
       "color": "6",
-      "text": "## [[多元Taylor近似]]\nCALC-MV-009 · 近似定理\n\n局部变化由梯度线性项、Hessian 二次项与更小余项组成。"
+      "text": "<!-- bilingual-en:start -->\n## [[多元Taylor近似|Second-order Taylor]]\nFor scalar $f\\in C^2$ near $a$, displacement $h$ gives a gradient linear term and quadratic term $h^TH_f(a)h/2$, with remainder $o(\\|h\\|^2)$.\n<!-- bilingual-en:end -->\n\n**多元Taylor近似**：实值 $f$ 在 $a$ 附近为 $C^2$ 时，小位移带来梯度线性项、Hessian 二次项的一半，以及相对位移平方趋零的余项。"
     },
     {
       "id": "c200000000000016",
@@ -202,9 +202,9 @@
       "x": 120,
       "y": 1720,
       "width": 320,
-      "height": 180,
+      "height": 250,
       "color": "1",
-      "text": "## [[Hessian对称条件]]\nCALC-MV-016 · 定理边界\n\n邻域内二阶偏导连续可推出混合偏导相等；一点处存在并不足够。"
+      "text": "<!-- bilingual-en:start -->\n## [[Hessian对称条件|Hessian symmetry]]\nContinuous second partials near a point guarantee a symmetric Hessian. Their existence only at that point does not; this continuity test is sufficient, not necessary.\n<!-- bilingual-en:end -->\n\n**Hessian对称条件**：邻域内二阶偏导连续保证 Hessian 对称；仅在一点存在不够。这是充分检验，不是对称性的必要条件。"
     },
     {
       "id": "c300000000000001",
@@ -212,9 +212,9 @@
       "x": 500,
       "y": 1720,
       "width": 320,
-      "height": 180,
+      "height": 270,
       "color": "6",
-      "text": "## [[Hessian 局部极小判据]]\n外部后续 · 正定\n\n在二阶连续可微的驻点处，正定 Hessian 推出严格局部极小。"
+      "text": "<!-- bilingual-en:start -->\n## [[Hessian 局部极小判据|Hessian minimum test]]\nFor real scalar $f\\in C^2$ near an interior stationary point $a$, positive-definite $H_f(a)$ guarantees a strict local minimum. This is sufficient, not necessary.\n<!-- bilingual-en:end -->\n\n**Hessian 局部极小判据**：实值函数在内点驻点附近为 $C^2$，且 Hessian 正定，便有严格局部极小。这是充分条件，不是必要条件。"
     },
     {
       "id": "c200000000000010",
@@ -222,9 +222,9 @@
       "x": 880,
       "y": 1720,
       "width": 320,
-      "height": 180,
+      "height": 270,
       "color": "1",
-      "text": "## [[Hessian 局部极大判据]]\nCALC-MV-010 · 充分条件\n\n在二阶连续可微的驻点处，负定 Hessian 推出严格局部极大。"
+      "text": "<!-- bilingual-en:start -->\n## [[Hessian 局部极大判据|Hessian maximum test]]\nFor real scalar $f\\in C^2$ near an interior stationary point $a$, negative-definite $H_f(a)$ guarantees a strict local maximum; global maximality needs a separate argument.\n<!-- bilingual-en:end -->\n\n**Hessian 局部极大判据**：实值函数在内点驻点附近为 $C^2$，且 Hessian 负定，便有严格局部极大；并不自动成为全局最大。"
     },
     {
       "id": "c200000000000011",
@@ -232,9 +232,9 @@
       "x": 1260,
       "y": 1720,
       "width": 320,
-      "height": 180,
+      "height": 270,
       "color": "2",
-      "text": "## [[Hessian 鞍点判据]]\nCALC-MV-011 · 诊断规则\n\n在二阶连续可微的驻点处，不定 Hessian 推出鞍点。"
+      "text": "<!-- bilingual-en:start -->\n## [[Hessian 鞍点判据|Hessian saddle test]]\nFor real scalar $f\\in C^2$ near an interior stationary point, an indefinite Hessian gives higher and lower values arbitrarily nearby. This sufficient test requires at least two dimensions.\n<!-- bilingual-en:end -->\n\n**Hessian 鞍点判据**：实值函数在内点驻点附近为 $C^2$，且 Hessian 不定，便在任意近处都有更高与更低值。这个充分检验适用于至少二维。"
     },
     {
       "id": "c300000000000002",
@@ -242,9 +242,9 @@
       "x": 1640,
       "y": 1720,
       "width": 320,
-      "height": 180,
+      "height": 270,
       "color": "1",
-      "text": "## [[半定Hessian无结论]]\n外部边界 · 半定\n\n二次项沿某些方向消失时，二阶检验通常没有结论。"
+      "text": "<!-- bilingual-en:start -->\n## [[半定Hessian无结论|Singular semidefinite Hessians]]\nAt an interior stationary point of a real $C^2$ function, singular semidefiniteness leaves classification incomplete. A nonzero positive-semidefinite Hessian still rules out a local maximum.\n<!-- bilingual-en:end -->\n\n**半定Hessian无结论**：实值 $C^2$ 函数在内点驻点的奇异半定 Hessian 不能完成分类；但非零半正定仍排除局部极大。"
     },
     {
       "id": "c200000000000012",
@@ -252,9 +252,9 @@
       "x": 120,
       "y": 2440,
       "width": 320,
-      "height": 180,
+      "height": 270,
       "color": "6",
-      "text": "## [[隐函数定理]]\nCALC-MV-012 · 定理\n\n待解变量 Jacobian 块可逆时，零点附近存在唯一的 $C^1$ 局部解支。"
+      "text": "<!-- bilingual-en:start -->\n## [[隐函数定理|Implicit functions]]\nFor a $C^1$ system $F(u,v)=0$ near a solution, an invertible square block $D_vF$ at that solution gives exactly one $C^1$ local graph $v=g(u)$.\n<!-- bilingual-en:end -->\n\n**隐函数定理**：方程组在已知零点附近为 $C^1$，且该点待解变量块 $D_vF$ 是可逆方阵，就得到唯一的局部 $C^1$ 图像 $v=g(u)$。"
     },
     {
       "id": "c200000000000024",
@@ -282,9 +282,9 @@
       "x": 120,
       "y": 2740,
       "width": 320,
-      "height": 180,
+      "height": 270,
       "color": "1",
-      "text": "## [[隐函数奇异块不推无解支]]\nCALC-MV-025 · 边界\n\n待解变量块奇异只使标准定理失效，不推出局部解支不存在。"
+      "text": "<!-- bilingual-en:start -->\n## [[隐函数奇异块不推无解支|Singular implicit blocks]]\nA singular solved-variable block removes this theorem’s guarantee and inverse formula. A unique smooth branch can still exist: $v^3-u^3=0$ gives $v=u$.\n<!-- bilingual-en:end -->\n\n**隐函数奇异块不推无解支**：待解变量块奇异时，定理保证及块求逆公式不再适用；仍可能有唯一光滑解支，例如 $v^3-u^3=0$ 的 $v=u$。"
     },
     {
       "id": "c300000000000004",
@@ -292,9 +292,9 @@
       "x": 1500,
       "y": 2440,
       "width": 320,
-      "height": 180,
+      "height": 270,
       "color": "4",
-      "text": "## [[Jacobian行列式]]\n外部定义 · 方阵 Jacobian\n\n方阵导数的 determinant 记录一阶有向体积，并判别导数是否可逆。"
+      "text": "<!-- bilingual-en:start -->\n## [[Jacobian行列式|Jacobian determinant]]\nFor a differentiable real map $\\mathbb R^n\\to\\mathbb R^n$, $\\det J$ scales the derivative’s signed volume; $|\\det J|$ scales ordinary volume. This is local linear geometry.\n<!-- bilingual-en:end -->\n\n**Jacobian行列式**：实映射同维且可微时，$\\det J$ 缩放导数的有向体积，$|\\det J|$ 缩放普通体积；这是局部线性几何。"
     },
     {
       "id": "c200000000000017",
@@ -302,9 +302,9 @@
       "x": 1900,
       "y": 2340,
       "width": 320,
-      "height": 180,
+      "height": 250,
       "color": "6",
-      "text": "## [[多元换元公式]]\nCALC-MV-017 · 定理\n\n开集间微分同胚的积分换元用 $|\\det DT|$ 校正普通体积。"
+      "text": "<!-- bilingual-en:start -->\n## [[多元换元公式|Change of variables]]\nBetween same-dimensional open sets, a $C^1$ diffeomorphism uses $|\\det DT|$ to transform integrals of continuous, absolutely integrable functions.\n<!-- bilingual-en:end -->\n\n**多元换元公式**：同维开集间的 $C^1$ 微分同胚，用 $|\\det DT|$ 换算连续且绝对可积函数的积分。"
     },
     {
       "id": "c200000000000018",
@@ -312,9 +312,9 @@
       "x": 1900,
       "y": 2640,
       "width": 320,
-      "height": 180,
+      "height": 270,
       "color": "6",
-      "text": "## [[逆函数定理]]\nCALC-MV-018 · 定理\n\n一点处导数可逆时，映射在该点附近存在同阶光滑的局部逆。"
+      "text": "<!-- bilingual-en:start -->\n## [[逆函数定理|Inverse function theorem]]\nFor a $C^1$ map between open subsets of $\\mathbb R^n$, an invertible derivative at $a$ gives a $C^1$ local inverse near its output.\n<!-- bilingual-en:end -->\n\n**逆函数定理**：实数同维开域间的 $C^1$ 映射，若在 $a$ 的导数可逆，则在相应局部开邻域间有 $C^1$ 逆。"
     },
     {
       "id": "c200000000000019",
@@ -322,9 +322,9 @@
       "x": 2280,
       "y": 2640,
       "width": 320,
-      "height": 180,
+      "height": 270,
       "color": "1",
-      "text": "## [[Jacobian奇异不推局部非单射]]\nCALC-MV-019 · 边界\n\nJacobian 奇异只使逆函数定理失效，不推出映射局部非单射。"
+      "text": "<!-- bilingual-en:start -->\n## [[Jacobian奇异不推局部非单射|Singular derivatives]]\nSingular $DF(a)$ for a differentiable square map excludes a differentiable local inverse. Injectivity and a continuous inverse can remain: $x^3$ at $0$.\n<!-- bilingual-en:end -->\n\n**Jacobian奇异不推局部非单射**：同维映射可微而导数奇异，便排除相应点处可微的局部逆；仍可能单射且有连续逆，如零点附近的 $x^3$。"
     },
     {
       "id": "c300000000000005",
@@ -332,9 +332,9 @@
       "x": 1500,
       "y": 2940,
       "width": 360,
-      "height": 180,
+      "height": 270,
       "color": "4",
-      "text": "## [[矩形Jacobian体积因子]]\n外部定义 · 矩形 Jacobian\n\n低维参数化进入高维空间时，用 $\\sqrt{\\det(J^TJ)}$ 计算局部低维体积缩放。"
+      "text": "<!-- bilingual-en:start -->\n## [[矩形Jacobian体积因子|Rectangular volume factor]]\nFor a real derivative $J\\in\\mathbb R^{m\\times k}$, $1\\le k\\le m$, $\\sqrt{\\det(J^TJ)}$ scales $k$-volume. It is positive exactly at full column rank; global coverage needs a separate check.\n<!-- bilingual-en:end -->\n\n**矩形Jacobian体积因子**：实导数为 $m\\times k$ 且 $1\\le k\\le m$ 时，Gram 因子缩放 $k$ 维体积；满列秩时才为正，全局覆盖须另查。"
     },
     {
       "id": "c100000000000005",
@@ -351,8 +351,8 @@
       "x": 0,
       "y": 3670,
       "width": 350,
-      "height": 125,
-      "text": "## [[坐标二阶导数不确定Hessian]]"
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n## [[坐标二阶导数不确定Hessian|Recovering mixed entries]]\nFor real $C^2$ scalar functions in $n\\ge2$, axis second derivatives give only the Hessian diagonal. Measurements along $e_i+e_j$, together with the axes, recover the mixed entries.\n<!-- bilingual-en:end -->\n\n**坐标二阶导数不确定Hessian**：实值 $C^2$ 函数在至少二维时，坐标轴二阶导数只给对角项；再测 $e_i+e_j$，可结合轴向值恢复混合项。"
     },
     {
       "id": "sofp-linebound",
@@ -360,8 +360,8 @@
       "x": 470,
       "y": 3670,
       "width": 350,
-      "height": 125,
-      "text": "## [[逐条直线极小不推局部极小]]"
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n## [[逐条直线极小不推局部极小|Linewise minima]]\nEach fixed line may have its own small interval of minimality. A local minimum needs one ball for every approach; a curved path can still decrease the value.\n<!-- bilingual-en:end -->\n\n**逐条直线极小不推局部极小**：每条固定直线可以各自有一个极小区间；局部极小却要求所有趋近共享同一个球。弯曲路径仍可能使函数下降。"
     },
     {
       "id": "sofp-qhessian",
@@ -369,17 +369,17 @@
       "x": 940,
       "y": 3670,
       "width": 350,
-      "height": 125,
-      "text": "## [[二次型的Hessian]]"
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n## [[二次型的Hessian|Quadratic Hessians]]\nFor fixed real $A$ and $q(x)=x^TAx$, $H_q=A+A^T$. If $A$ is symmetric this is $2A$; the Hessian of $\\tfrac12x^TAx$ is then $A$.\n<!-- bilingual-en:end -->\n\n**二次型的Hessian**：固定实矩阵 $A$ 给出 $H_q=A+A^T$；对称时为 $2A$。若函数前有 $\\tfrac12$，对称情形的 Hessian 就是 $A$。"
     },
     {
       "id": "sofp-inner-bound",
       "type": "text",
       "x": 1410,
       "y": 3670,
-      "width": 350,
-      "height": 125,
-      "text": "## [[Cauchy–Schwarz不等式]]"
+      "width": 550,
+      "height": 260,
+      "text": "<!-- bilingual-en:start -->\n## [[Cauchy–Schwarz不等式|Cauchy–Schwarz inequality]]\n\nReal vectors satisfy $|u^Tv|\\le\\|u\\|_2\\|v\\|_2$. Applied to $h,Bh$, this bounds a quadratic remainder.\n<!-- bilingual-en:end -->\n\n用于$h$与$Bh$，再结合谱范数，即可控制二次余项。"
     }
   ],
   "edges": [
@@ -390,7 +390,7 @@
       "toNode": "c200000000000013",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "坐标方向极限不足以控制所有趋近"
+      "label": "Coordinate checks omit other approaches · 坐标检查漏掉其他趋近"
     },
     {
       "id": "d100000000000002",
@@ -399,7 +399,7 @@
       "toNode": "c200000000000002",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "缺失的是统一线性近似"
+      "label": "One linear map needs a uniform small remainder · 同一线性映射还需统一小余项"
     },
     {
       "id": "d100000000000003",
@@ -408,7 +408,7 @@
       "toNode": "c200000000000003",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "在标准基下写成矩阵"
+      "label": "Under differentiability: its standard-basis matrix · 可微时写成标准基矩阵"
     },
     {
       "id": "d100000000000004",
@@ -417,7 +417,7 @@
       "toNode": "c200000000000004",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "导数线性映射按复合顺序相乘"
+      "label": "Differentiate both maps; multiply outer by inner · 两映射在相应点可微后外乘内"
     },
     {
       "id": "d100000000000005",
@@ -426,7 +426,7 @@
       "toNode": "c200000000000014",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "可微时由同一个全微分给出"
+      "label": "Under differentiability, one differential gives every rate · 可微时同一微分给出各方向变化率"
     },
     {
       "id": "d100000000000006",
@@ -435,7 +435,7 @@
       "toNode": "c200000000000015",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "逐方向存在仍可能不线性"
+      "label": "Line rates need not give a uniform linear approximation · 逐线变化率未必给出统一线性近似"
     },
     {
       "id": "d100000000000007",
@@ -444,7 +444,7 @@
       "toNode": "c200000000000014",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "让统一线性映射作用于方向向量"
+      "label": "Apply the differential to a fixed vector · 将全微分作用于固定向量"
     },
     {
       "id": "d100000000000008",
@@ -453,7 +453,7 @@
       "toNode": "c200000000000020",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "缩放向量会缩放内积值"
+      "label": "The dot-product formula respects vector scaling · 点积公式保持向量缩放"
     },
     {
       "id": "d100000000000009",
@@ -462,7 +462,7 @@
       "toNode": "c200000000000006",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "先单位化，才能比较几何方向"
+      "label": "With differentiability, compare Euclidean unit steps · 可微时比较欧氏单位步向量"
     },
     {
       "id": "d100000000000010",
@@ -471,7 +471,7 @@
       "toNode": "c200000000000021",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "Euclidean 结论依赖单位球的度量"
+      "label": "Change the unit geometry; the optimum can change · 单位几何改变，最优方向可能改变"
     },
     {
       "id": "d100000000000011",
@@ -480,7 +480,7 @@
       "toNode": "c200000000000022",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "正则点条件失败时切空间需另判"
+      "label": "Zero gradient: inspect the actual set · 零梯度时另查实际集合"
     },
     {
       "id": "d100000000000026",
@@ -489,7 +489,7 @@
       "toNode": "c200000000000007",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "微分核给出零变化方向，正则性将其识别为切空间"
+      "label": "C¹ and nonzero gradient identify the kernel with tangents · C¹ 且梯度非零时，核恰为切空间"
     },
     {
       "id": "d100000000000012",
@@ -498,7 +498,7 @@
       "toNode": "c200000000000023",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "二次型组合沿线的二阶响应"
+      "label": "Under C², combine entries along a fixed line · C² 下组合固定直线的二阶响应"
     },
     {
       "id": "d100000000000013",
@@ -507,7 +507,7 @@
       "toNode": "c200000000000009",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "方向二阶响应组成 Taylor 二次项"
+      "label": "C² gives the half-quadratic term and a uniform remainder · C² 给出二次项的一半与统一余项"
     },
     {
       "id": "d100000000000014",
@@ -516,7 +516,7 @@
       "toNode": "c200000000000016",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "对称性还需要邻域正则条件"
+      "label": "Continuous second partials suffice for symmetry · 二阶偏导连续足以保证对称"
     },
     {
       "id": "d100000000000015",
@@ -525,7 +525,7 @@
       "toNode": "c300000000000001",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "驻点处正定二次项"
+      "label": "At a C² stationary point, positive definiteness dominates the remainder · C² 驻点处正定项压过余项"
     },
     {
       "id": "d100000000000016",
@@ -534,7 +534,7 @@
       "toNode": "c200000000000010",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "驻点处负定二次项"
+      "label": "Apply the positive-definite argument to −f · 对 −f 应用正定论证"
     },
     {
       "id": "d100000000000017",
@@ -543,7 +543,7 @@
       "toNode": "c200000000000011",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "驻点处不定二次项"
+      "label": "Opposite quadratic signs give opposite nearby changes · 二次型的异号方向给出附近异号变化"
     },
     {
       "id": "d100000000000018",
@@ -552,7 +552,7 @@
       "toNode": "c300000000000002",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "半定时二次项可能不足"
+      "label": "Singular semidefiniteness leaves signs beyond the quadratic term · 奇异半定时还需判断二次项以外的符号"
     },
     {
       "id": "d100000000000019",
@@ -579,7 +579,7 @@
       "toNode": "c200000000000025",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "可逆块条件失败只使定理失去保证"
+      "label": "A singular block can still admit a smooth branch · 奇异块仍可能有光滑解支"
     },
     {
       "id": "d100000000000022",
@@ -588,7 +588,7 @@
       "toNode": "c200000000000017",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "积分换元使用绝对值体积因子"
+      "label": "With change-of-variables hypotheses, use |det J| · 满足换元条件时使用绝对值"
     },
     {
       "id": "d100000000000023",
@@ -597,7 +597,7 @@
       "toNode": "c200000000000018",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "非零 determinant 等价于导数可逆"
+      "label": "For a square derivative, nonzero determinant means invertible · 方阵导数的行列式非零等价于可逆"
     },
     {
       "id": "d100000000000024",
@@ -606,7 +606,7 @@
       "toNode": "c200000000000019",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "奇异时只能撤销定理保证"
+      "label": "Singularity excludes a differentiable inverse, not injectivity · 奇异排除可微逆，不排除单射"
     },
     {
       "id": "d100000000000025",
@@ -615,7 +615,7 @@
       "toNode": "c300000000000005",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "矩形时改用 Gram 体积因子"
+      "label": "For m ≥ k, measure k-volume by the Gram factor · m ≥ k 时用 Gram 因子测 k 维体积"
     },
     {
       "id": "c200000000000023-sofp-cross",
@@ -623,7 +623,7 @@
       "fromSide": "bottom",
       "toNode": "sofp-cross",
       "toSide": "top",
-      "label": "坐标轴只测到对角项"
+      "label": "Axis second derivatives give only diagonal entries · 坐标轴二阶导数只给对角项"
     },
     {
       "id": "c300000000000002-sofp-linebound",
@@ -631,7 +631,7 @@
       "fromSide": "bottom",
       "toNode": "sofp-linebound",
       "toSide": "top",
-      "label": "零方向允许弯曲路径改号"
+      "label": "Linewise minima still need a common neighborhood · 逐线极小仍需共同邻域"
     },
     {
       "id": "c200000000000008-sofp-qhessian",
@@ -639,7 +639,7 @@
       "fromSide": "bottom",
       "toNode": "sofp-qhessian",
       "toSide": "top",
-      "label": "纯二次型的具体计算"
+      "label": "Apply the Hessian definition to a quadratic form · 将 Hessian 定义用于二次型"
     },
     {
       "id": "sofp-taylor-bound",
@@ -647,7 +647,7 @@
       "fromSide": "top",
       "toNode": "c200000000000009",
       "toSide": "bottom",
-      "label": "结合谱范数控制二次余项"
+      "label": "Combine with the spectral stretch bound · 结合谱范数的长度伸缩界"
     }
   ]
 }

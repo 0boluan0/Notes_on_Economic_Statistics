@@ -1,21 +1,25 @@
 {
-  "nodes": [
-    {"id":"7c00000000000001","type":"text","x":0,"y":-390,"width":2420,"height":250,"text":"# 图着色与色数\n\n**它解决什么：** 把成对冲突的对象分进若干无冲突组，并判断最少需要多少组。\n**具体锚点：** 考试是顶点，共同学生形成冲突边，颜色是时段。\n**证明主线：** 先构造可行着色给上界，再用 clique、odd cycle 等障碍给下界；二者相遇才得到精确色数。\n\n第一行读定义、精确色数与 greedy 上界；第二行读二色判据、证书、matching 与模型边界。点击标题进入原子。颜色：青=定义，绿=定理/证明，紫=算法，红=边界，黄=相邻模型。"},
-    {"id":"7c00000000000002","type":"text","x":0,"y":0,"width":470,"height":200,"text":"## [[Proper 着色与独立集划分|proper coloring]]\n*Conflict-free partition*\n\n边表示不能共享资源；每个 color class 是一个 independent set。","color":"5"},
-    {"id":"7c00000000000003","type":"text","x":650,"y":0,"width":470,"height":200,"text":"## [[精确色数的上下界|精确色数]]\n*Exact chromatic number*\n\n具体着色给上界；结构障碍给下界；两者相遇才是等号。","color":"4"},
-    {"id":"7c00000000000004","type":"text","x":1300,"y":0,"width":470,"height":200,"text":"## [[贪心着色的 Δ+1 上界|greedy 上界]]\n*Order-dependent upper bound*\n\n任意顺序至多用 $\\Delta+1$ 色；合法结果未必最少。","color":"6"},
-    {"id":"7c00000000000005","type":"text","x":1950,"y":400,"width":470,"height":200,"text":"## [[顶点着色的建模边界|模型边界]]\n*Pairwise-conflict boundary*\n\n容量、时长、成本与偏好不会由普通 coloring 自动出现。","color":"1"},
-    {"id":"7c00000000000006","type":"text","x":0,"y":400,"width":470,"height":200,"text":"## [[二着色与奇环|二着色判据]]\n*Bipartite iff no odd cycle*\n\nbipartite、可二着色与不含 odd cycle 是同一条件。","color":"4"},
-    {"id":"7c00000000000007","type":"text","x":650,"y":400,"width":470,"height":200,"text":"## [[二着色与奇环证书|奇偶搜索]]\n*Coloring or certificate*\n\n搜索成功给二着色；同色边与 parent chains 给 odd cycle。","color":"6"},
-    {"id":"7c00000000000008","type":"text","x":1300,"y":400,"width":470,"height":200,"text":"## [[二分图配对关系|进入 matching]]\n*From two sides to assignment*\n\n二着色识别左右两侧；matching 才从允许边中选择配对。","color":"3"}
-  ],
-  "edges": [
-    {"id":"7ce0000000000001","fromNode":"7c00000000000002","fromSide":"right","toNode":"7c00000000000003","toSide":"left","toEnd":"arrow","label":"最少组数"},
-    {"id":"7ce0000000000002","fromNode":"7c00000000000004","fromSide":"left","toNode":"7c00000000000003","toSide":"right","toEnd":"arrow","label":"给上界"},
-    {"id":"7ce0000000000003","fromNode":"7c00000000000002","fromSide":"bottom","toNode":"7c00000000000006","toSide":"top","toEnd":"arrow","label":"限制为两色"},
-    {"id":"7ce0000000000004","fromNode":"7c00000000000006","fromSide":"right","toNode":"7c00000000000007","toSide":"left","toEnd":"arrow","label":"转为搜索"},
-    {"id":"7ce0000000000005","fromNode":"7c00000000000007","fromSide":"right","toNode":"7c00000000000008","toSide":"left","toEnd":"arrow","label":"进入配对"},
-    {"id":"7ce0000000000006","fromNode":"7c00000000000002","fromSide":"bottom","toNode":"7c00000000000005","toSide":"top","toEnd":"arrow","label":"检查承诺边界"},
-    {"id":"7ce0000000000007","fromNode":"7c00000000000005","fromSide":"left","toNode":"7c00000000000008","toSide":"right","toEnd":"arrow","label":"允许边改做匹配"}
-  ]
+	"nodes":[
+		{"id":"7c00000000000001","type":"text","x":0,"y":-390,"width":2420,"height":250,"text":"<!-- bilingual-en:start -->\n## Graph coloring and chromatic number\nFor finite simple undirected graphs, a color groups vertices. An edge separates its endpoints. Start with independent sets and proper colorings, then ask for the minimum. Below, connect bipartitions, odd cycles and search certificates; check what the application actually encodes.\n<!-- bilingual-en:end -->\n\n图着色与色数：以有限简单无向图为范围。颜色把顶点分组，边要求两端分开。先读独立集与合法着色，再求最少颜色；接着读二分划分、奇环与搜索证书，最后检查现实模型。"},
+		{"id":"7c00000000000002","type":"text","x":650,"y":0,"width":470,"height":270,"text":"<!-- bilingual-en:start -->\n## [[Proper 着色与独立集划分|Proper coloring]]\nLabel every vertex; each edge must have different labels at its ends. Each color class is an independent set. Unused palette labels are allowed.\n<!-- bilingual-en:end -->\n\n给每个顶点标签，每条边两端异色。每个颜色类是独立集，调色板不必用满。","color":"5"},
+		{"id":"7c00000000000003","type":"text","x":1950,"y":0,"width":470,"height":270,"text":"<!-- bilingual-en:start -->\n## [[精确色数的上下界|Proving the minimum]]\nA proper coloring gives an upper bound. A smaller palette must be ruled out for a lower bound. Matching bounds prove the exact chromatic number.\n<!-- bilingual-en:end -->\n\n合法方案给上界；排除全部更少颜色的方案给下界。两边相遇才证明精确色数。","color":"4"},
+		{"id":"7c00000000000004","type":"text","x":1950,"y":420,"width":470,"height":270,"text":"<!-- bilingual-en:start -->\n## [[贪心着色的 Δ+1 上界|Greedy coloring]]\nFor finite nonempty simple graphs, first-fit uses at most $\\Delta+1$ colors. Vertex order may change the result; the output need not be optimal.\n<!-- bilingual-en:end -->\n\n有限非空简单图的首次可用色算法至多用 $\\Delta+1$ 色。顺序会影响结果，一次输出未必最优。","color":"6"},
+		{"id":"7c00000000000005","type":"text","x":650,"y":840,"width":470,"height":270,"text":"<!-- bilingual-en:start -->\n## [[顶点着色的建模边界|Model boundaries]]\n[[Proper 着色与独立集划分|Proper coloring]] encodes pairwise conflicts. Capacity, duration and eligibility need extra constraints when present. State what every vertex, edge and color means.\n<!-- bilingual-en:end -->\n\n[[Proper 着色与独立集划分|合法着色]]表达成对冲突；容量、时长与资格若有要求，须另加约束。先说明点、边和颜色各代表什么。","color":"1"},
+		{"id":"7c00000000000006","type":"text","x":650,"y":420,"width":470,"height":270,"text":"<!-- bilingual-en:start -->\n## [[二着色与奇环|Two colors and odd cycles]]\nA finite simple graph is bipartite exactly when it has no odd cycle. Two colors may suffice even when only one is needed.\n<!-- bilingual-en:end -->\n\n有限简单图为二分图，当且仅当没有奇环。可用两色不等于恰好需要两色。","color":"4"},
+		{"id":"7c00000000000007","type":"text","x":1300,"y":420,"width":470,"height":270,"text":"<!-- bilingual-en:start -->\n## [[二着色与奇环证书|Search certificates]]\nSearch every component. Success gives a two-coloring. A same-color edge and the trimmed parent branches give a concrete odd cycle.\n<!-- bilingual-en:end -->\n\n搜索全部分量。成功得到二着色；同色边加上裁去共同前缀的父链，给出具体奇环。","color":"6"},
+		{"id":"7c00000000000008","type":"text","x":1300,"y":840,"width":470,"height":270,"text":"<!-- bilingual-en:start -->\n## [[二分图配对关系|Allowed pairings]]\nIn the matching model, choose roles for the two sides of a [[二分图|bipartite graph]]. Edges mean allowed assignments; matching selects edges without reusing endpoints.\n<!-- bilingual-en:end -->\n\n匹配模型先给[[二分图]]两侧指定角色，边表示允许的分配；匹配再选取端点不重复的边。","color":"3"},
+		{"id":"color-independent-set","type":"text","x":0,"y":0,"width":470,"height":270,"color":"5","text":"<!-- bilingual-en:start -->\n## [[图的独立集|Independent sets]]\nA set of vertices is independent if no edge joins two members. Outside neighbors are allowed; independent does not mean isolated.\n<!-- bilingual-en:end -->\n\n独立集内任意两点不相邻；可以连向集合外部。独立不等于孤立。"},
+		{"id":"color-chromatic-number","type":"text","x":1300,"y":0,"width":470,"height":270,"color":"5","text":"<!-- bilingual-en:start -->\n## [[色数|Chromatic number]]\nThe minimum number of labels in any proper coloring. One displayed coloring only supplies a candidate; an edgeless nonempty graph needs one color.\n<!-- bilingual-en:end -->\n\n全部合法着色中最少的标签数。一幅着色图只是候选方案；非空无边图只需一色。"},
+		{"id":"color-bipartite-definition","type":"text","x":0,"y":420,"width":470,"height":270,"color":"5","text":"<!-- bilingual-en:start -->\n## [[二分图|Bipartite graphs]]\nSplit all vertices into two disjoint sides so every edge crosses sides. Empty sides are allowed; a drawing need not already show the split.\n<!-- bilingual-en:end -->\n\n把全部顶点分成不交的两侧，每条边跨侧。允许空侧，图画不必已经左右摆好。"}
+	],
+	"edges":[
+		{"id":"7ce0000000000001","fromNode":"7c00000000000002","fromSide":"right","toNode":"color-chromatic-number","toSide":"left","toEnd":"arrow","label":"Minimum\n最少颜色"},
+		{"id":"7ce0000000000002","fromNode":"7c00000000000004","fromSide":"top","toNode":"7c00000000000003","toSide":"bottom","toEnd":"arrow","label":"Upper bound\n上界"},
+		{"id":"7ce0000000000003","fromNode":"7c00000000000002","fromSide":"bottom","toNode":"7c00000000000006","toSide":"top","toEnd":"arrow","label":"Two labels\n两种标签"},
+		{"id":"7ce0000000000004","fromNode":"7c00000000000006","fromSide":"right","toNode":"7c00000000000007","toSide":"left","toEnd":"arrow","label":"Certificate\n证书"},
+		{"id":"7ce0000000000007","fromNode":"7c00000000000005","fromSide":"right","toNode":"7c00000000000008","toSide":"left","toEnd":"arrow","label":"Allowed edges\n允许关系"},
+		{"id":"color-independent-classes","fromNode":"color-independent-set","fromSide":"right","toNode":"7c00000000000002","toSide":"left","toEnd":"arrow","label":"Color classes\n颜色类"},
+		{"id":"color-minimum-proof","fromNode":"color-chromatic-number","fromSide":"right","toNode":"7c00000000000003","toSide":"left","toEnd":"arrow","label":"Prove value\n证明最小值"},
+		{"id":"color-bipartite-equivalence","fromNode":"color-bipartite-definition","fromSide":"right","toNode":"7c00000000000006","toSide":"left","toEnd":"arrow","label":"Equivalent\n等价"}
+	]
 }

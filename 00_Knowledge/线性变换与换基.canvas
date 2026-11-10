@@ -12,111 +12,111 @@
     {
       "id": "linear-map",
       "type": "text",
-      "text": "## [[线性映射]]\n\n定义入口：同时保持向量加法和标量乘法的函数。",
+      "text": "<!-- bilingual-en:start -->\n## [[线性映射|Linear maps]]\nOver one scalar field, $T:V\\to W$ is linear when $T(au+bv)=aT(u)+bT(v)$ for all inputs and scalars. Combining inputs before the map gives the same result as combining their outputs.\n<!-- bilingual-en:end -->\n\n**线性映射**：在同一标量域上，对任意输入和标量保持 $T(au+bv)=aT(u)+bT(v)$：先组合再映射，等于先映射再组合。",
       "x": 40,
       "y": 300,
       "width": 340,
-      "height": 190,
+      "height": 280,
       "color": "4"
     },
     {
       "id": "map-vs-matrix",
       "type": "text",
-      "text": "## [[线性映射与矩阵表示]]\n\n映射是抽象对象；矩阵是选定两组基之后的坐标表示。",
+      "text": "<!-- bilingual-en:start -->\n## [[线性映射与矩阵表示|Maps and matrices]]\nFor a finite-dimensional linear map, choose ordered input and output bases $\\mathcal B,\\mathcal C$. Then $[T(x)]_{\\mathcal C}=A[x]_{\\mathcal B}$. The map exists before this choice; changing bases can change $A$, while $T$ stays fixed.\n<!-- bilingual-en:end -->\n\n**线性映射与矩阵表示**：对有限维线性映射，指定输入、输出有序基 $\\mathcal B,\\mathcal C$，才确定坐标矩阵 $A$。映射先已存在；换基可能改变 $A$，但不改变 $T$。",
       "x": 420,
       "y": 300,
       "width": 340,
-      "height": 190,
+      "height": 280,
       "color": "2"
     },
     {
       "id": "basis-images",
       "type": "text",
-      "text": "## [[线性映射的基向量像]]\n\n任意指定一组基向量的像，都会唯一决定一个线性映射。",
+      "text": "<!-- bilingual-en:start -->\n## [[线性映射的基向量像|Prescribing basis images]]\nGiven a finite basis $v_1,\\ldots,v_n$ of $V$ and arbitrary $w_1,\\ldots,w_n$ in $W$ over the same field, exactly one linear map satisfies $T(v_j)=w_j$. Images may be zero or dependent.\n<!-- bilingual-en:end -->\n\n**线性映射的基向量像**：给定 $V$ 的有限基和同域 $W$ 中任意一组像，存在且仅存在一个满足这些指定像的线性映射。基向量的像可以为零或线性相关。",
       "x": 800,
       "y": 300,
       "width": 340,
-      "height": 190,
+      "height": 290,
       "color": "6"
     },
     {
       "id": "matrix-columns",
       "type": "text",
-      "text": "## [[表示矩阵的列]]\n\n第 j 列就是第 j 个定义域基向量之像的陪域坐标。",
+      "text": "<!-- bilingual-en:start -->\n## [[表示矩阵的列|Matrix columns]]\nFor a linear map with input basis $(v_1,\\ldots,v_n)$ and output basis $\\mathcal C$ of size $m$, column $j$ is $[T(v_j)]_{\\mathcal C}$. Thus the matrix is $m\\times n$: each column records one image in output coordinates.\n<!-- bilingual-en:end -->\n\n**表示矩阵的列**：线性映射的输入基有 $n$ 个向量，输出基 $\\mathcal C$ 有 $m$ 个。第 $j$ 列是像 $T(v_j)$ 在输出基中的坐标，所以矩阵为 $m\\times n$；不能忽略输出基。",
       "x": 1180,
       "y": 300,
       "width": 340,
-      "height": 190,
+      "height": 280,
       "color": "4"
     },
     {
       "id": "basis-direction",
       "type": "text",
-      "text": "## [[换基矩阵的方向]]\n\n若列是新基向量的旧坐标，则 P 把新坐标变成旧坐标，P⁻¹ 反向转换。",
+      "text": "<!-- bilingual-en:start -->\n## [[换基矩阵的方向|Coordinate direction]]\nPut the new basis vectors in columns, expressed in the old basis. Then $[x]_{\\rm old}=P[x]_{\\rm new}$ for the same vector $x$. The inverse converts old coordinates back to new.\n<!-- bilingual-en:end -->\n\n**换基矩阵的方向**：把新基向量的旧坐标逐列放入 $P$，便有 $[x]_{\\rm old}=P[x]_{\\rm new}$。向量本身不变；$P^{-1}$ 才把旧坐标转回新坐标。",
       "x": 1560,
       "y": 300,
       "width": 340,
-      "height": 190,
+      "height": 280,
       "color": "5"
     },
     {
       "id": "general-basis-change",
       "type": "text",
-      "text": "## [[一般线性映射的换基]]\n\n定义域与陪域分别换基时，表示矩阵变为 Q⁻¹AP。",
+      "text": "<!-- bilingual-en:start -->\n## [[一般线性映射的换基|Two-sided basis change]]\nFor a fixed finite-dimensional linear map, let $P,Q$ convert new input/output coordinates to old ones. Its new matrix is $A^{\\prime}=Q^{-1}AP$. The original $A$ may be rectangular or singular.\n<!-- bilingual-en:end -->\n\n**一般线性映射的换基**：固定有限维线性映射；$P,Q$ 分别将新输入、新输出坐标转为旧坐标，则新矩阵为 $Q^{-1}AP$。原矩阵 $A$ 可以是矩形或奇异矩阵。",
       "x": 1940,
       "y": 300,
       "width": 340,
-      "height": 190,
+      "height": 280,
       "color": "5"
     },
     {
       "id": "similarity",
       "type": "text",
-      "text": "## [[相似矩阵]]\n\n同一算子在同一空间的两组基下表示为 P⁻¹AP；它分别保持[[相似保持特征多项式|特征多项式]]和[[相似保持特征空间维数|特征空间维数]]。",
+      "text": "<!-- bilingual-en:start -->\n## [[相似矩阵|Similarity]]\n\nWith new basis columns in $M$, $B=M^{-1}AM$ converts input to old coordinates, applies $A$, then converts output back. It preserves the [[相似保持特征多项式|characteristic polynomial]] and [[相似保持特征空间维数|eigenspace dimensions]].\n<!-- bilingual-en:end -->\n\n**相似矩阵**\n\n$M$ 的列放新基的旧坐标：先换入，再施加原作用，最后换回。特征多项式与特征空间维数各自保持不变。",
       "x": 2320,
       "y": 300,
       "width": 340,
-      "height": 190,
+      "height": 320,
       "color": "2"
     },
     {
       "id": "composition",
       "type": "text",
-      "text": "## [[复合映射的表示矩阵]]\n\n中间空间使用同一组坐标基时，复合对应按作用顺序相乘。",
+      "text": "<!-- bilingual-en:start -->\n## [[复合映射的表示矩阵|Composition matrices]]\nFor successive finite-dimensional linear maps, let $B$ act first and $A$ second. Matching middle bases give $AB$. If the middle coordinates need conversion by $R$, the full product is $ARB$.\n<!-- bilingual-en:end -->\n\n**复合映射的表示矩阵**：连续施加有限维线性映射，先作用 $B$，再作用 $A$。中间基一致时用 $AB$；若中间坐标须由 $R$ 转换，完整乘积就是 $ARB$。",
       "x": 1180,
       "y": 700,
       "width": 340,
-      "height": 190,
+      "height": 290,
       "color": "6"
     },
     {
       "id": "dependent-images",
       "type": "text",
-      "text": "## [[相关向量像需保持关系]]\n\n若输入向量相关，它们的指定像必须保持同一线性关系。",
+      "text": "<!-- bilingual-en:start -->\n## [[相关向量像需保持关系|Consistent images]]\nPrescribed images $w_j$ of inputs $u_j$ must preserve every relation: $\\sum c_ju_j=0$ implies $\\sum c_jw_j=0$. This makes the linear rule well-defined on their span; spanning the domain also gives uniqueness.\n<!-- bilingual-en:end -->\n\n**相关向量像需保持关系**：指定 $u_j$ 的像为 $w_j$ 时，每条 $\\sum c_ju_j=0$ 都须对应 $\\sum c_jw_j=0$。这保证张成空间上的线性规则定义一致；若张成整个定义域，还得到唯一性。",
       "x": 800,
       "y": 700,
       "width": 340,
-      "height": 190,
+      "height": 310,
       "color": "1"
     },
     {
       "id": "nonspanning-images",
       "type": "text",
-      "text": "## [[非张成集像不定全映射]]\n\n若输入集合不张成定义域且陪域含非零向量，其像不能唯一决定全映射。",
+      "text": "<!-- bilingual-en:start -->\n## [[非张成集像不定全映射|Unspecified directions]]\nIn finite-dimensional $V$, independent inputs that do not span $V$ have freely choosable images on the missing basis directions. Any prescribed images extend nonuniquely if the codomain $W\\ne\\{0\\}$. For $W=\\{0\\}$, only the zero map exists.\n<!-- bilingual-en:end -->\n\n**非张成集像不定全映射**：有限维 $V$ 中，输入无关但不张成 $V$，补基方向的像仍可自由选。若陪域 $W\\ne\\{0\\}$，任意指定像都可延拓且不唯一；零陪域只有零映射。",
       "x": 400,
       "y": 700,
       "width": 340,
-      "height": 190,
+      "height": 310,
       "color": "1"
     },
     {
       "id": "orthonormal-change",
       "type": "text",
-      "text": "## [[正交基换基矩阵]]\n\n两组标准正交基之间，换基矩阵在实数域上正交，在复数域上酉。",
+      "text": "<!-- bilingual-en:start -->\n## [[正交基换基矩阵|Orthonormal bases]]\nTwo bases orthonormal for the same inner product give an orthogonal coordinate matrix over $\\mathbb R$, or a unitary one over $\\mathbb C$. Its inverse is the transpose or conjugate transpose. This is sufficient, not necessary.\n<!-- bilingual-en:end -->\n\n**正交基换基矩阵**：同一内积下两组标准正交基，保证坐标矩阵在实数域正交、复数域酉；逆可用转置或共轭转置。这是充分条件，不能反推原基必标准正交。",
       "x": 1560,
       "y": 700,
       "width": 340,
-      "height": 190,
+      "height": 300,
       "color": "6"
     },
     {
@@ -137,7 +137,7 @@
       "toNode": "map-vs-matrix",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "选基后才有矩阵"
+      "label": "In finite dimensions, choose input and output bases · 有限维时分别选输入基与输出基"
     },
     {
       "id": "e02",
@@ -146,7 +146,7 @@
       "toNode": "basis-images",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "用基像刻画映射"
+      "label": "Basis images determine the whole linear map · 基像确定整个线性映射"
     },
     {
       "id": "e03",
@@ -155,7 +155,7 @@
       "toNode": "matrix-columns",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "把基像写成列"
+      "label": "Write each image in output coordinates · 把每个像写成输出基坐标"
     },
     {
       "id": "e04",
@@ -164,7 +164,7 @@
       "toNode": "basis-direction",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "读列判断坐标方向"
+      "label": "Identity map: columns convert between bases · 恒等映射的列完成基间坐标转换"
     },
     {
       "id": "e05",
@@ -173,7 +173,7 @@
       "toNode": "general-basis-change",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "两端分别换基"
+      "label": "Convert input with P and output with Q⁻¹ · 输入乘 P，输出乘 Q⁻¹"
     },
     {
       "id": "e06",
@@ -182,7 +182,7 @@
       "toNode": "similarity",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "同一空间同一换基时化为相似"
+      "label": "Same input and output conversion gives similarity · 输入输出采用同一转换，得到相似"
     },
     {
       "id": "e07",
@@ -191,7 +191,7 @@
       "toNode": "composition",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "复合仍可用矩阵表示"
+      "label": "Composition multiplies matrices when the middle basis agrees · 中间基一致时复合对应矩阵相乘"
     },
     {
       "id": "e08",
@@ -200,7 +200,7 @@
       "toNode": "dependent-images",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "换成相关集时先保关系"
+      "label": "Every input relation must be preserved · 每条输入线性关系都须保留"
     },
     {
       "id": "e09",
@@ -209,7 +209,7 @@
       "toNode": "nonspanning-images",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "不张成时失去唯一性"
+      "label": "Independent, non-spanning inputs and W≠{0}: nonunique · 输入无关但不张成且 W≠{0}：延拓不唯一"
     },
     {
       "id": "e10",
@@ -218,7 +218,7 @@
       "toNode": "orthonormal-change",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "标准正交基使逆等于转置或共轭转置"
+      "label": "Two orthonormal bases, one inner product ⇒ P⁻¹=P* · 同一内积下两基标准正交 ⇒ P⁻¹=P*"
     }
   ]
 }

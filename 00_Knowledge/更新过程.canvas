@@ -46,8 +46,8 @@
       "x": 2050,
       "y": 320,
       "width": 470,
-      "height": 230,
-      "text": "### [[CTMC指数停留时间]]\n\n**复用既有边界：** 齐次纯跳 CTMC 的状态停留是指数的；非指数停留常要求扩充状态或改用 semi-Markov 模型。",
+      "height": 350,
+      "text": "<!-- bilingual-en:start -->\n### [[CTMC指数停留时间|CTMC holding times]]\n\nIn a standard homogeneous pure-jump CTMC, positive finite exit rate gives an exponential wait; zero exit rate gives infinite absorption. Nonexponential waits can require additional state information or a semi-Markov model.\n<!-- bilingual-en:end -->\n\n齐次纯跳 CTMC 中，正有限出口率的非吸收状态具有指数停留；零率吸收态则无限等待。非指数停留可能需要补充状态信息或采用 semi-Markov 模型。",
       "color": "3"
     },
     {

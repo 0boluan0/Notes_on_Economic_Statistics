@@ -208,6 +208,24 @@
       "width": 500,
       "height": 280,
       "text": "<!-- bilingual-en:start -->\n## [[条件期望取出已知量|Taking out a known factor]]\n<!-- bilingual-en:end -->\n\n*条件期望取出已知量*\n\n<!-- bilingual-en:start -->\nIf W is known from the information and Y and WY are integrable, W can be taken outside the conditional expectation.\n<!-- bilingual-en:end -->\n\n若 W 能由已知信息确定，且 Y 与 WY 可积，就可以将 W 提出条件期望。"
+    },
+    {
+      "id": "p0015-jensen",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[期望的Jensen不等式|Jensen's inequality]]\n\nFor finite convex $\\varphi$ and integrable $X,\\varphi(X)$, $\\varphi(E[X])\\le E[\\varphi(X)]$. Curvature orders the two averages.\n<!-- bilingual-en:end -->\n\n凸函数下，先平均再变换不大于先变换再平均；两项可积性均须检查。",
+      "x": 0,
+      "y": 3150,
+      "width": 800,
+      "height": 300
+    },
+    {
+      "id": "p0015-cond-jensen",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[条件Jensen不等式|Conditional Jensen's inequality]]\n\nFor integrable $X,\\varphi(X)$ and finite convex $\\varphi:\\mathbb R\\to\\mathbb R$, the Jensen comparison holds almost surely using the same information $\\mathcal G$ on both sides.\n<!-- bilingual-en:end -->\n\n保留原变量与变换的可积条件，在同一信息下比较两个随机变量。",
+      "x": 900,
+      "y": 3150,
+      "width": 800,
+      "height": 300
     }
   ],
   "edges": [
@@ -378,6 +396,42 @@
       "toNode": "ce00000000000009",
       "toSide": "top",
       "label": "全方差交叉项为零"
+    },
+    {
+      "id": "p0015-expect-jensen",
+      "fromNode": "ce00000000000002",
+      "fromSide": "left",
+      "toNode": "p0015-jensen",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "Compare an average before and after a convex transform · 比较凸变换与平均的两种顺序"
+    },
+    {
+      "id": "p0015-jensen-conditional",
+      "fromNode": "p0015-jensen",
+      "fromSide": "right",
+      "toNode": "p0015-cond-jensen",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "Use the same conditional information on both sides · 两边使用相同条件信息"
+    },
+    {
+      "id": "p0015-ce-jensen",
+      "fromNode": "ce00000000000003",
+      "fromSide": "bottom",
+      "toNode": "p0015-cond-jensen",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "Conditional order and linearity carry the proof · 条件保序与线性性支持证明"
+    },
+    {
+      "id": "p0015-jensen-projection",
+      "fromNode": "p0015-cond-jensen",
+      "fromSide": "top",
+      "toNode": "ce00000000000007",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "The square case bounds the conditional mean second moment · 平方特例控制条件均值的二阶矩"
     }
   ]
 }

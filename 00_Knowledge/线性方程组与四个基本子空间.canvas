@@ -44,7 +44,7 @@
       "x": 7900,
       "y": 1800,
       "width": 1700,
-      "height": 1110,
+      "height": 1210,
       "label": "矩阵乘积与秩",
       "color": "1"
     },
@@ -174,8 +174,8 @@
       "x": 7140,
       "y": 1040,
       "width": 400,
-      "height": 190,
-      "text": "## [[零空间]]\n\n$N(A)=\\{x:Ax=0\\}$ 收集所有被 $A$ 映成零的输入方向。",
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[零空间|Nullspace]]\n$N(A)=\\{x:Ax=0\\}$ is the input subspace erased by $A$, including zero. If $N(A)=\\{0\\}$, each attainable output has exactly one input.\n<!-- bilingual-en:end -->\n\n**零空间**：$N(A)$ 是被映成零的全部输入，包含零向量。零空间只有零向量时，每个可达输出才有唯一输入。",
       "color": "6"
     },
     {
@@ -184,8 +184,8 @@
       "x": 7240,
       "y": 1950,
       "width": 430,
-      "height": 180,
-      "text": "## [[Ax的列组合解释]]\n\n$Ax$ 是 $A$ 的列按 $x$ 的坐标加权后的线性组合；列空间就是全部可达输出。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[Ax的列组合解释|Column combination]]\nFor an $m\\times n$ matrix $A=[a_1\\cdots a_n]$, $Ax=\\sum_{j=1}^n x_ja_j$. Input coordinate $x_j$ scales column $a_j$; adding gives one output with $m$ coordinates.\n<!-- bilingual-en:end -->\n\n**Ax的列组合解释**：输入坐标 $x_j$ 缩放第 $j$ 列，再相加得到一个含 $m$ 个坐标的输出。",
       "color": "2"
     },
     {
@@ -194,8 +194,8 @@
       "x": 6660,
       "y": 1950,
       "width": 430,
-      "height": 190,
-      "text": "## [[方程组解分类]]\n\n$b\\in C(A)$ 决定是否有解，$N(A)=\\{0\\}$ 决定相容时是否唯一。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[方程组解分类|Classify solutions]]\nIf $b\\notin C(A)$, there is no solution. If $b$ is attainable, a trivial kernel gives one solution and a nontrivial kernel gives multiple solutions, infinitely many over $\\mathbb R$ or $\\mathbb C$.\n<!-- bilingual-en:end -->\n\n**方程组解分类**：先判断目标是否可达，再判断零空间是否只有零向量。有解且零空间非平凡时有多个解；实数或复数域上为无穷多个。",
       "color": "2"
     },
     {
@@ -204,8 +204,8 @@
       "x": 6915,
       "y": 2300,
       "width": 430,
-      "height": 190,
-      "text": "## [[特解加零空间]]\n\n相容系统的完整解集是 $x_p+N(A)$：一个特解加上全部齐次方向。",
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[特解加零空间|Particular solution + nullspace]]\nIf $Ax_p=b$, every solution is exactly $x=x_p+z$ with $z\\in N(A)$. Subtract two solutions to get a zero-output difference; add any such difference to get another solution.\n<!-- bilingual-en:end -->\n\n**特解加零空间**：有特解 $x_p$ 后，全部解就是 $x_p+N(A)$。当 $b\\ne0$ 时，这是平移的零空间，不是向量子空间。",
       "color": "2"
     },
     {
@@ -214,8 +214,8 @@
       "x": 8000,
       "y": 1950,
       "width": 400,
-      "height": 180,
-      "text": "## [[矩阵乘积逐列作用]]\n\n$AB$ 的每一列都是 $A$ 作用于 $B$ 的对应列，因此 $C(AB)\\subseteq C(A)$。",
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[矩阵乘积逐列作用|Reading a product by columns]]\nFor compatible real or complex matrices, column $j$ of $AB$ is $Ab_j$, where $b_j$ is column $j$ of $B$. Entries of $b_j$ combine columns of $A$, so $C(AB)\\subseteq C(A)$. Containment can be strict.\n<!-- bilingual-en:end -->\n\n**矩阵乘积逐列作用**：对尺寸匹配的实或复矩阵，$AB$ 第 $j$ 列是 $Ab_j$，$b_j$ 为 $B$ 第 $j$ 列。$b_j$ 的分量组合 $A$ 的各列，故 $C(AB)\\subseteq C(A)$；包含可能严格。",
       "color": "1"
     },
     {
@@ -224,8 +224,8 @@
       "x": 8500,
       "y": 1950,
       "width": 400,
-      "height": 180,
-      "text": "## [[矩阵乘积逐行作用]]\n\n$AB$ 的每一行都是 $B$ 的各行按 $A$ 对应行的系数形成的线性组合。",
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[矩阵乘积逐行作用|Reading a product by rows]]\nFor compatible real or complex matrices, row $i$ of $A$ supplies coefficients combining the rows of $B$ into row $i$ of $AB$. Hence $\\operatorname{Row}(AB)\\subseteq\\operatorname{Row}(B)$. This algebraic row span uses no conjugation.\n<!-- bilingual-en:end -->\n\n**矩阵乘积逐行作用**：对尺寸匹配的实或复矩阵，$A$ 第 $i$ 行提供系数，组合 $B$ 的各行，得到 $AB$ 第 $i$ 行。因此 $\\operatorname{Row}(AB)\\subseteq\\operatorname{Row}(B)$；这里采用不取共轭的代数行张成。",
       "color": "1"
     },
     {
@@ -234,8 +234,8 @@
       "x": 8250,
       "y": 2280,
       "width": 440,
-      "height": 190,
-      "text": "## [[矩阵乘积秩上界]]\n\n$\\operatorname{rank}(AB)$ 不超过 $A$ 与 $B$ 的秩中较小的一个。",
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[矩阵乘积秩上界|Rank of a product]]\nFor compatible matrices over the same field, $\\operatorname{rank}(AB)\\le\\min\\{\\operatorname{rank}(A),\\operatorname{rank}(B)\\}$. Column and row containments give the two bounds. Equality can fail even when both factors are nonzero.\n<!-- bilingual-en:end -->\n\n**矩阵乘积秩上界**：同一数域上尺寸匹配时，乘积的秩不超过任一因子的秩。列、行空间包含分别给出两侧上界；两因子都非零，等号也可能不成立。",
       "color": "1"
     },
     {
@@ -244,8 +244,8 @@
       "x": 8000,
       "y": 2620,
       "width": 400,
-      "height": 190,
-      "text": "## [[矩阵乘积外积展开]]\n\n矩阵乘积可以按共同的中间指标，写成左矩阵各列与右矩阵对应各行的外积之和。",
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[矩阵乘积外积展开|Outer-product expansion]]\nFor $A:m\\times n$ and $B:n\\times p$, pair column $k$ of $A$ with row $k$ of $B$ and sum the $n$ full $m\\times p$ contributions. Ordinary transpose does not conjugate. Nonzero terms can repeat directions or cancel.\n<!-- bilingual-en:end -->\n\n**矩阵乘积外积展开**：将 $A$ 第 $k$ 列与 $B$ 第 $k$ 行配对，把 $n$ 个完整的 $m\\times p$ 贡献相加。普通转置不取共轭；非零项可重复方向或相互抵消。",
       "color": "1"
     },
     {
@@ -254,8 +254,8 @@
       "x": 8500,
       "y": 2620,
       "width": 400,
-      "height": 190,
-      "text": "## [[秩一矩阵外积刻画]]\n\n非零矩阵秩为一，当且仅当它能写成两个非零向量的一个外积。",
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[秩一矩阵外积刻画|Rank-one matrices and outer products]]\nA matrix has rank one exactly when it is $uv^T$ with both vectors nonzero. Every column is a multiple of $u$; conversely, a nonzero column and the coefficients of all columns construct the factors. Zero factors give rank zero.\n<!-- bilingual-en:end -->\n\n**秩一矩阵外积刻画**：矩阵秩为一，当且仅当它是两个非零向量的外积 $uv^T$。每列都是 $u$ 的倍数；反过来，选一条非零列并收集各列系数，即可构造因子。零因子给出秩零。",
       "color": "1"
     },
     {
@@ -264,8 +264,8 @@
       "x": 3860,
       "y": 140,
       "width": 360,
-      "height": 180,
-      "text": "## [[初等矩阵]]\n\n对单位矩阵做一次初等行操作得到 $E$；左乘 $E$ 会对目标矩阵执行同一行操作。",
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[初等矩阵|Elementary matrix]]\nOne reversible row operation on the identity $I_m$ gives an $m\\times m$ matrix $E$. For every $m\\times n$ matrix $A$, $EA$ performs that operation; $E^{-1}$ undoes it. A sequence is a product of elementary matrices.\n<!-- bilingual-en:end -->\n\n**初等矩阵**：对单位矩阵 $I_m$ 作一次可逆行操作，得到 $m\\times m$ 初等矩阵 $E$。对任意 $m\\times n$ 矩阵 $A$，$EA$ 执行同一操作，$E^{-1}$ 撤销它；操作序列由初等矩阵的乘积记录。",
       "color": "3"
     },
     {
@@ -274,8 +274,8 @@
       "x": 4820,
       "y": 140,
       "width": 400,
-      "height": 180,
-      "text": "## [[行操作的解集不变性]]\n\n对增广矩阵 $[A\\mid b]$ 同步施行可逆行操作，所得方程组与原方程组具有相同解集。",
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[行操作的解集不变性|Solution preservation]]\nAn invertible row-operation record $E$ gives $Ax=b\\iff(EA)x=Eb$ for every candidate $x$. Transform both blocks of $[A\\mid b]$. The result also covers rectangular $A$, no solutions and many solutions.\n<!-- bilingual-en:end -->\n\n**行操作的解集不变性**：可逆行操作记录 $E$ 对每个候选 $x$ 都给出 $Ax=b\\iff(EA)x=Eb$。应同步变换 $[A\\mid b]$ 两块；矩形 $A$、无解和多解同样适用。",
       "color": "3"
     },
     {
@@ -284,8 +284,8 @@
       "x": 4320,
       "y": 140,
       "width": 400,
-      "height": 180,
-      "text": "## [[行等价]]\n\n若一个矩阵能由另一个矩阵经过有限次初等行操作得到，两者就行等价。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[行等价|Row equivalence]]\nTwo same-sized matrices over the same field are row equivalent if finitely many reversible row operations connect them. If their combined record is $E$ and $R=EA$, then $Ax=b$ becomes $Rx=Eb$, with the same solutions.\n<!-- bilingual-en:end -->\n\n**行等价**：同一数域上的同型矩阵能经有限次可逆行操作互相得到，就行等价。若合成记录为 $E$、$R=EA$，则 $Ax=b$ 应变为 $Rx=Eb$，解集保持不变。",
       "color": "3"
     },
     {
@@ -294,8 +294,8 @@
       "x": 5320,
       "y": 140,
       "width": 360,
-      "height": 180,
-      "text": "## [[高斯消元]]\n\n用可逆行操作建立主元、得到阶梯形，再通过回代求解。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[高斯消元|Gaussian elimination]]\nReversible operations on $[A\\mid b]$ produce echelon form. Swap in a nonzero pivot, or skip a column with no available pivot. Check consistency, then choose free coordinates and back-substitute.\n<!-- bilingual-en:end -->\n\n**高斯消元**：对 $[A\\mid b]$ 作可逆操作得到阶梯形。必要时换入非零主元；没有可用主元的列就跳过。先检查相容性，再任取自由坐标并回代。",
       "color": "3"
     },
     {
@@ -304,8 +304,8 @@
       "x": 5360,
       "y": 500,
       "width": 800,
-      "height": 180,
-      "text": "## [[消元与LU分解]]\n\n无换行消元把乘子保存为 $L$、结果保存为 $U$；换行时用 $P$ 记录置换，得到 $PA=LU$。",
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[消元与LU分解|Elimination and LU]]\nFor square $A$, record row permutations in $PA=LU$: $L$ is unit lower triangular and $U$ is upper triangular. Without exchanges, $P=I$. Later swaps must also move the previously stored multiplier prefixes in $L$. Invertible $A$ allows triangular solves $Ly=Pb$, then $Ux=y$.\n<!-- bilingual-en:end -->\n\n**消元与LU分解**：对方阵 $A$，用 $PA=LU$ 记录换行：$L$ 为单位下三角，$U$ 为上三角。不换行时 $P=I$；后续换行还须移动 $L$ 已保存的乘子前缀。$A$ 可逆时，先解 $Ly=Pb$，再解 $Ux=y$。",
       "color": "3"
     },
     {
@@ -314,8 +314,8 @@
       "x": 3860,
       "y": 500,
       "width": 400,
-      "height": 180,
-      "text": "## [[行最简形]]\n\nRREF 要求每个主元为一、主元列其余元素为零，并且各主元从上到下严格右移。",
+      "height": 260,
+      "text": "<!-- bilingual-en:start -->\n## [[行最简形|Reduced row echelon form]]\nZero rows are last. Each nonzero row has first nonzero entry $1$; these leading positions move strictly right down the rows, and every other entry in a leading column is zero.\n<!-- bilingual-en:end -->\n\n**行最简形**：零行位于末尾；各非零行首个非零元为 $1$，位置逐行严格右移，且所在列其余元素全为零。",
       "color": "3"
     },
     {
@@ -324,8 +324,8 @@
       "x": 3860,
       "y": 820,
       "width": 500,
-      "height": 220,
-      "text": "## [[RREF存在唯一性]]\n\n每个矩阵都行等价于一个行最简形，而且这个行最简形由原矩阵唯一确定。",
+      "height": 260,
+      "text": "<!-- bilingual-en:start -->\n## [[RREF存在唯一性|Existence and uniqueness of RREF]]\nEvery finite matrix over a fixed field is row equivalent to exactly one RREF. Exact legal row operations may follow different paths, but their final reduced matrix is the same. Ordinary echelon forms need not be unique.\n<!-- bilingual-en:end -->\n\n**RREF存在唯一性**：固定数域上的每个有限矩阵，都行等价于唯一的 RREF。精确合法行操作的路径可以不同，最终最简矩阵相同；普通阶梯形则未必唯一。",
       "color": "3"
     },
     {
@@ -334,8 +334,8 @@
       "x": 4510,
       "y": 820,
       "width": 420,
-      "height": 190,
-      "text": "## [[主元与自由变量]]\n\n主元数等于秩；非主元变量是自由变量，给出 $n-r$ 个自由度。",
+      "height": 270,
+      "text": "<!-- bilingual-en:start -->\n## [[主元与自由变量|Pivots and free coordinates]]\nWith $n$ coefficient columns and $r$ pivots, rank is $r$. If $Ax=b$ is consistent, its $n-r$ free coordinates determine all pivot coordinates. An augmented-column pivot signals inconsistency.\n<!-- bilingual-en:end -->\n\n**主元与自由变量**：$n$ 个系数列中有 $r$ 个主元，秩即 $r$。系统相容时，$n-r$ 个自由坐标确定全部主元坐标；增广列出现主元则无解。",
       "color": "3"
     },
     {
@@ -344,8 +344,8 @@
       "x": 4510,
       "y": 1130,
       "width": 420,
-      "height": 200,
-      "text": "## [[RREF读取子空间基]]\n\nRREF 对四个基本子空间提供的证据不同，因此每个空间要采用相应的读取规则。",
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[RREF读取子空间基|Choose the basis route]]\nFor real $A$, invertible row operations give RREF $R=EA$: use original pivot columns for $C(A)$, nonzero rows of $R$ for the row space, solutions of $Rx=0$ for $N(A)$, and transpose rows of $E$ corresponding to zero rows of $R$ for the left nullspace.\n<!-- bilingual-en:end -->\n\n**RREF读取子空间基**：实矩阵 $A$ 经可逆行操作化为 $R=EA$：列基取原主元列，行基取 $R$ 非零行，零空间基解 $Rx=0$，左零基取 $E$ 中对应 $R$ 零行的记录行并转置。",
       "color": "3"
     },
     {
@@ -354,8 +354,8 @@
       "x": 3860,
       "y": 1500,
       "width": 570,
-      "height": 190,
-      "text": "## [[RREF读取列空间基]]\n\n用 RREF 找主元列的位置，再回到原矩阵取对应列。",
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[RREF读取列空间基|Column bases from pivot indices]]\nCompute the RREF $R$ of $A$ using invertible row operations. Find its pivot column indices, then take those columns from $A$. The reduced columns can span a different output space.\n<!-- bilingual-en:end -->\n\n**RREF读取列空间基**：可逆行操作把 $A$ 化为行最简形 $R$。用 $R$ 找主元列编号，再回到原矩阵 $A$ 取这些列作为基；不能一般地直接抄化简后的列，它们张成的输出空间可能已改变。",
       "color": "3"
     },
     {
@@ -364,8 +364,8 @@
       "x": 4480,
       "y": 1500,
       "width": 570,
-      "height": 190,
-      "text": "## [[RREF读取行空间基]]\n\nRREF 的非零行直接构成原矩阵行空间的一组基。",
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[RREF读取行空间基|Row bases from nonzero rows]]\nInvertible row operations preserve the span of the rows. The nonzero rows of the RREF are independent and form a basis for that same row space. For a zero matrix, the basis is empty.\n<!-- bilingual-en:end -->\n\n**RREF读取行空间基**：可逆行操作保持行的张成；行最简形的非零行又线性无关，所以直接构成原行空间的一组基。零矩阵使用空基，行空间仍为 $\\{0\\}$。",
       "color": "3"
     },
     {
@@ -374,8 +374,8 @@
       "x": 5100,
       "y": 1500,
       "width": 570,
-      "height": 190,
-      "text": "## [[RREF读取零空间基]]\n\n解 $Rx=0$，逐个激活自由变量，所得特殊解构成 $N(A)$ 的一组基。",
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[RREF读取零空间基|Build a nullspace basis]]\nInvertible row operations give $N(A)=N(R)$. In $Rx=0$, set each free coordinate in turn to $1$, the others to $0$, and solve for every pivot coordinate. The full vectors form a basis; with no free coordinates, use the empty basis.\n<!-- bilingual-en:end -->\n\n**RREF读取零空间基**：可逆行操作保持零空间。解 $Rx=0$ 时，逐个自由坐标取 $1$、其余取 $0$，再求全部主元坐标；这些完整向量构成基。没有自由坐标时，基为空。",
       "color": "3"
     },
     {
@@ -384,8 +384,8 @@
       "x": 5720,
       "y": 1500,
       "width": 600,
-      "height": 190,
-      "text": "## [[消元追踪左零空间基]]\n\n同步化简 $[A\\mid I]$ 到 $[R\\mid E]$；与 $R$ 零行对应的 $E$ 行转置构成 $N(A^T)$ 的一组基。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[消元追踪左零空间基|Track a left-nullspace basis]]\nFor real $m\\times n$ $A$, record $[A\\mid I_m]\\to[R\\mid E]$, with $EA=R$. Transpose the rows of $E$ matching zero rows of $R$ to obtain a basis of $N(A^T)$. For the complex space $N(A^*)$, use conjugate transpose instead.\n<!-- bilingual-en:end -->\n\n**消元追踪左零空间基**：实矩阵 $A$ 为 $m\\times n$ 时，用 $m\\times m$ 单位块记录消元。取 $R$ 零行对应的 $E$ 行并转置，得到原左零空间基；复数 $N(A^*)$ 则须共轭转置。",
       "color": "3"
     },
     {
@@ -394,8 +394,8 @@
       "x": 4360,
       "y": 500,
       "width": 400,
-      "height": 180,
-      "text": "## [[主元]]\n\n阶梯形中每个非零行最左边的非零元是主元；它标出一条独立约束。",
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[主元|Pivot]]\nA pivot is the first nonzero entry of a nonzero row in echelon form. Its value need not be $1$; RREF normalizes it to $1$. Count coefficient pivots, not an augmented-column pivot, when identifying unknowns.\n<!-- bilingual-en:end -->\n\n**主元**：阶梯形中，非零行的首个非零元是主元。其值不必为 $1$，RREF 才把它归一。识别未知量时应看系数列主元，不能把增广列主元当成一个未知量。",
       "color": "3"
     },
     {
@@ -404,8 +404,8 @@
       "x": 4860,
       "y": 500,
       "width": 400,
-      "height": 180,
-      "text": "## [[自由变量]]\n\n非主元列对应自由变量；系统相容时，它们可以作为解的参数自由选取。",
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[自由变量|Free variable]]\nIn a consistent system, unknowns in nonpivot coefficient columns may be chosen arbitrarily; back-substitution determines the pivot unknowns. A nonpivot column need not be zero. The right-hand side is not an unknown.\n<!-- bilingual-en:end -->\n\n**自由变量**：系统相容时，非主元系数列对应的未知量可任取，主元未知量由回代确定。非主元列不必是零列；右端列不对应未知量。",
       "color": "3"
     },
     {
@@ -414,8 +414,8 @@
       "x": 5800,
       "y": 140,
       "width": 440,
-      "height": 180,
-      "text": "## [[置换矩阵]]\n\n置换矩阵由单位矩阵重新排列各行得到；左乘它会重排目标矩阵的行。",
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[置换矩阵|Permutation matrix]]\nRearranging the rows of $I_n$ gives $P$: one $1$ in each row and column, zeros elsewhere. $PA$ reorders rows and $AP$ reorders columns. The transpose reverses the permutation: $P^{-1}=P^T$, which need not equal $P$.\n<!-- bilingual-en:end -->\n\n**置换矩阵**：重排 $I_n$ 的各行得到 $P$：每行每列恰有一个 $1$，其余为零。$PA$ 重排行，$AP$ 重排列；转置撤销重排，$P^{-1}=P^T$，但不必等于 $P$。",
       "color": "3"
     },
     {
@@ -444,8 +444,8 @@
       "x": 3000,
       "y": 500,
       "width": 520,
-      "height": 190,
-      "text": "## [[Gauss-Jordan求逆]]\n\n同步化简 $[A\\mid I]$；若左块成为 $I$，右块就是 $A^{-1}$，否则 $A$ 不可逆。",
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[Gauss-Jordan求逆|Gauss–Jordan inversion]]\nFor an $n\\times n$ matrix $A$, apply every row operation to both blocks of $[A\\mid I_n]$. An identity left block makes the right block $A^{-1}$. A different completed left RREF certifies singularity; a zero pivot candidate alone does not.\n<!-- bilingual-en:end -->\n\n**Gauss-Jordan求逆**：对 $n\\times n$ 方阵 $A$，每次操作同步作用于 $[A\\mid I_n]$ 两块。左块为单位阵时右块为 $A^{-1}$；左块完整 RREF 若不是单位阵，才证实奇异。单个零候选主元不足以判定。",
       "color": "4"
     },
     {
@@ -454,8 +454,8 @@
       "x": 6660,
       "y": 1040,
       "width": 400,
-      "height": 190,
-      "text": "## [[列空间]]\n\n$C(A)$ 是全部列线性组合，也就是所有 $Ax$；它位于输出空间。",
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[列空间|Column space]]\n$C(A)=\\{Ax:x\\in\\mathbb F^n\\}$ is the span of all columns over the field $\\mathbb F$: every attainable output in $\\mathbb F^m$, not just the listed columns.\n<!-- bilingual-en:end -->\n\n**列空间**：$C(A)$ 收集同一数域下各列的全部线性组合，是输出空间中的子空间，并非只含原列。",
       "color": "6"
     },
     {
@@ -464,8 +464,8 @@
       "x": 8100,
       "y": 1040,
       "width": 400,
-      "height": 190,
-      "text": "## [[左零空间]]\n\n对实矩阵，$N(A^T)$ 收集满足 $A^Ty=0$ 的输出侧约束方向。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[左零空间|Left nullspace]]\nFor real $A\\in\\mathbb R^{m\\times n}$, $N(A^T)=\\{y:y^TA=0\\}$ contains row-combination weights that cancel and has dimension $m-\\operatorname{rank}(A)$. Every attainable $b$ obeys $y^Tb=0$ for every such $y$.\n<!-- bilingual-en:end -->\n\n**左零空间**：这些含 $m$ 个坐标的权重把各行抵消为零，维数为 $m-\\operatorname{rank}(A)$。每个可达输出 $b$ 对所有这样的 $y$ 都满足 $y^Tb=0$。",
       "color": "6"
     },
     {
@@ -474,8 +474,8 @@
       "x": 7620,
       "y": 1040,
       "width": 400,
-      "height": 190,
-      "text": "## [[行空间]]\n\n行空间是全部行向量的线性组合，位于输入空间。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[行空间|Row space]]\nFor real $A$, the span of its coefficient rows is $C(A^T)$ when written as columns. It lies on the input side and has dimension $r=\\operatorname{rank}(A)$. The row picture instead draws equation solution sets.\n<!-- bilingual-en:end -->\n\n**行空间**：实矩阵各系数行的全部组合形成行空间，按列写为 $C(A^T)$，位于输入侧，维数为 $r=\\operatorname{rank}(A)$。它不同于画方程解集的行图像。",
       "color": "6"
     },
     {
@@ -484,8 +484,8 @@
       "x": 6660,
       "y": 140,
       "width": 440,
-      "height": 180,
-      "text": "## [[矩阵秩]]\n\n矩阵的秩是列空间的维数，表示能够产生多少个独立输出方向。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[矩阵秩|Matrix rank]]\nFor $A\\in\\mathbb F^{m\\times n}$, $r=\\dim C(A)$ counts independent output directions. Full column rank means $r=n$; full row rank means $r=m$. These differ for rectangular matrices.\n<!-- bilingual-en:end -->\n\n**矩阵秩**：$r$ 是列空间维数。满列秩 $r=n$ 表示各列无关；满行秩 $r=m$ 表示所有输出都可达，二者不可混同。",
       "color": "6"
     },
     {
@@ -494,8 +494,8 @@
       "x": 7160,
       "y": 140,
       "width": 440,
-      "height": 180,
-      "text": "## [[零度]]\n\n零度是零空间的维数，表示有多少个独立输入方向被映成零。",
+      "height": 260,
+      "text": "<!-- bilingual-en:start -->\n## [[零度|Nullity]]\nNullity is $\\dim N(A)$: the number of independent input directions erased by $A$. It counts basis directions, not all solutions or zero entries.\n<!-- bilingual-en:end -->\n\n**零度**：零度是零空间的维数，计数独立的零输出方向，不是解的个数或零元素个数。",
       "color": "6"
     },
     {
@@ -504,8 +504,8 @@
       "x": 6660,
       "y": 480,
       "width": 500,
-      "height": 180,
-      "text": "## [[行秩等于列秩]]\n\n任意矩阵的行空间与列空间维数相同，但不能据此认定二者是同一空间。",
+      "height": 260,
+      "text": "<!-- bilingual-en:start -->\n## [[行秩等于列秩|Row rank equals column rank]]\nFor any $m\\times n$ matrix over a field, the row and column spans have equal dimension $r$. Equal dimensions do not make these two spaces equal.\n<!-- bilingual-en:end -->\n\n**行秩等于列秩**：对同一数域上的 $m\\times n$ 矩阵，行空间和列空间的维数同为 $r$。维数相等不意味着两个空间相同。",
       "color": "6"
     },
     {
@@ -514,8 +514,8 @@
       "x": 7380,
       "y": 480,
       "width": 440,
-      "height": 180,
-      "text": "## [[秩零度定理]]\n\n对 $m\\times n$ 矩阵，秩加零度等于定义域维数 $n$。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[秩零度定理|Rank–nullity]]\nFor a linear map with finite-dimensional domain $V$, kernel dimension plus range dimension equals $\\dim V$. For an $m\\times n$ matrix of rank $r$, nullity is $n-r$. Counting alone specifies no orthogonal split.\n<!-- bilingual-en:end -->\n\n**秩零度定理**：有限维输入中，零输出方向数与可达输出方向数之和等于输入维数。这给出零度 $n-r$，本身不指定正交分解。",
       "color": "6"
     },
     {
@@ -524,8 +524,8 @@
       "x": 7950,
       "y": 480,
       "width": 520,
-      "height": 220,
-      "text": "## [[四个基本子空间]]\n\n列空间与左零空间位于输出侧，行空间与零空间位于输入侧；每一侧各由一对互补的方向构成。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[四个基本子空间|Four fundamental subspaces]]\nFor real $m\\times n$ $A$ of rank $r$: row space and nullspace lie in the input space $\\mathbb R^n$, with dimensions $r,n-r$; column space and left nullspace lie in the output space $\\mathbb R^m$, with dimensions $r,m-r$.\n<!-- bilingual-en:end -->\n\n**四个基本子空间**：实矩阵 $A$ 为 $m\\times n$、秩为 $r$：输入侧是行空间与零空间，维数 $r,n-r$；输出侧是列空间与左零空间，维数 $r,m-r$。环境分别为 $\\mathbb R^n$ 与 $\\mathbb R^m$。",
       "color": "6"
     },
     {
@@ -534,8 +534,8 @@
       "x": 8700,
       "y": 480,
       "width": 520,
-      "height": 200,
-      "text": "## [[基本子空间正交补]]\n\n对实矩阵，行空间与零空间、列空间与左零空间分别互为正交补。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[基本子空间正交补|Orthogonal-complement pairs]]\nWith the standard real inner product, $N(A)=C(A^T)^\\perp$ and $N(A^T)=C(A)^\\perp$. Taking complements also gives the reverse pairs. Complex Hermitian geometry uses $A^*$, the conjugate transpose.\n<!-- bilingual-en:end -->\n\n**基本子空间正交补**：标准实内积下，零空间是行空间的正交补，左零空间是列空间的正交补；反向取补也成立，包含全部垂直方向。复数 Hermitian 几何须用共轭转置 $A^*$。",
       "color": "6"
     },
     {
@@ -544,8 +544,8 @@
       "x": 9040,
       "y": 820,
       "width": 520,
-      "height": 190,
-      "text": "## [[左零空间相容性]]\n\n对实矩阵，$Ax=b$ 可解，当且仅当 $b$ 与左零空间中的每个方向都正交。",
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[左零空间相容性|Left-nullspace compatibility]]\nFor real $A$, $Ax=b$ is solvable iff $y^Tb=0$ for every $y\\in N(A^T)$. Testing a basis suffices; one failed test proves that no solution exists.\n<!-- bilingual-en:end -->\n\n**左零空间相容性**：实矩阵下，$Ax=b$ 有解当且仅当 $b$ 与每个左零向量正交。检查左零空间的一组基就够；一次失败即可证无解，只通过一个方向通常不够。",
       "color": "6"
     },
     {
@@ -554,8 +554,8 @@
       "x": 8580,
       "y": 1120,
       "width": 700,
-      "height": 250,
-      "text": "## [[行操作与四个子空间]]\n\n若 $R=EA$ 且 $E$ 可逆，零空间与行空间不变；列空间和左零空间则分别随 $E$ 与 $E^{-T}$ 变换。",
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[行操作与四个子空间|Row operations and subspaces]]\nFor real $A$ and invertible $E$, let $R=EA$. Row space and nullspace stay equal as sets, while $C(R)=E\\,C(A)$ and $N(R^T)=E^{-T}N(A^T)$, where $E^{-T}=(E^{-1})^T$. All four dimensions are preserved.\n<!-- bilingual-en:end -->\n\n**行操作与四个子空间**：实矩阵满足 $R=EA$、$E$ 可逆时，行空间与零空间作为集合不变；列空间与左零空间按上述公式变换，可能改变但并非必然。四个维数都保持。",
       "color": "6"
     },
     {
@@ -564,8 +564,8 @@
       "x": 8500,
       "y": 140,
       "width": 800,
-      "height": 200,
-      "text": "## 正交补前置\n\n[[正交]] → [[正交补]]\n\n先定义正交与正交补，才能把两对基本子空间提升为正交补关系。",
+      "height": 260,
+      "text": "<!-- bilingual-en:start -->\n## [[正交|Orthogonality]] → [[正交补|Orthogonal complement]]\n\nZero inner product compares two vectors. A complement collects all vectors perpendicular to the whole subspace, within a fixed ambient space.\n<!-- bilingual-en:end -->\n\n**从正交到正交补**\n\n先比较两个向量，再固定外部空间、收集垂直于整个子空间的全部向量，才能判断四子空间的配对。",
       "color": "6"
     },
     {
@@ -666,7 +666,7 @@
       "y": 160,
       "width": 1100,
       "height": 250,
-      "text": "## [[乘积的逆矩阵|Inverse of a product]]\n\n<!-- bilingual-en:start -->\nUndo the factors in reverse order.\n<!-- bilingual-en:end -->\n各因子按相反次序撤销。"
+      "text": "<!-- bilingual-en:start -->\n## [[乘积的逆矩阵|Inverse of a product]]\n\nFor invertible square matrices $A,B$ of the same size, $(AB)^{-1}=B^{-1}A^{-1}$: undo the last action first.\n<!-- bilingual-en:end -->\n\n同阶可逆方阵满足$(AB)^{-1}=B^{-1}A^{-1}$；先撤销最后执行的操作。"
     },
     {
       "id": "f5c005aabbcc0003",
@@ -720,7 +720,7 @@
       "y": 2100,
       "width": 1100,
       "height": 250,
-      "text": "## [[转置与求逆可交换|Transpose and inverse]]\n\n<!-- bilingual-en:start -->\nFor an invertible matrix, the two operations commute.\n<!-- bilingual-en:end -->\n对可逆矩阵，两种操作可以交换次序。"
+      "text": "<!-- bilingual-en:start -->\n## [[转置与求逆可交换|Transpose and inverse]]\n\nFor an invertible square matrix, $(A^T)^{-1}=(A^{-1})^T$. Transposing both inverse identities verifies both sides.\n<!-- bilingual-en:end -->\n\n可逆方阵满足$(A^T)^{-1}=(A^{-1})^T$；转置两条逆恒等式即可验证。"
     },
     {
       "id": "f6c006aabbcc0001",
@@ -985,6 +985,51 @@
       "height": 260,
       "color": "4",
       "text": "<!-- bilingual-en:start -->\n## [[对角矩阵|Diagonal matrix]]\n\nOnly diagonal positions may be nonzero. A square diagonal matrix scales each coordinate separately.\n<!-- bilingual-en:end -->\n\n非对角位置全零；对角方阵逐个缩放坐标。矩形扩展须保留尺寸。"
+    },
+    {
+      "id": "u1-close-same-four",
+      "type": "text",
+      "x": 100,
+      "y": 6660,
+      "width": 900,
+      "height": 310,
+      "text": "<!-- bilingual-en:start -->\n## [[同四空间矩阵的非唯一性|Same four spaces, different maps]]\nEven in fixed coordinates, equal row, column and null spaces do not determine the map. For example, $\\operatorname{diag}(2,3)$ and $I_2$ have the same four spaces but are not scalar multiples.\n<!-- bilingual-en:end -->\n\n固定坐标下，四个对应子空间完全相同，也不能确定具体作用；对角矩阵 $\\operatorname{diag}(2,3)$ 与 $I_2$ 就有相同四空间，却不是标量倍数。"
+    },
+    {
+      "id": "u1-close-rref-span",
+      "type": "text",
+      "x": 1250,
+      "y": 6660,
+      "width": 900,
+      "height": 310,
+      "text": "<!-- bilingual-en:start -->\n## [[RREF矩阵的张成空间|Span of square RREF matrices]]\nFor positive integer $n$, the span of all real $n\\times n$ RREF matrices is the upper triangular matrix space. We combine whole matrices; the RREF set itself is not a vector space.\n<!-- bilingual-en:end -->\n\n正整数 $n$ 下，全部实 $n\\times n$ RREF 矩阵张成上三角矩阵空间；这里组合完整矩阵，RREF 集合本身不是向量空间。"
+    },
+    {
+      "id": "u1-close-incidence",
+      "type": "text",
+      "x": 2400,
+      "y": 6660,
+      "width": 900,
+      "height": 310,
+      "text": "<!-- bilingual-en:start -->\n## [[关联矩阵势差映射|Incidence matrix: nodes to edges]]\nFor a finite loopless undirected graph, choose reference edge directions. In $A\\in\\mathbb R^{m\\times n}$, each edge row has $-1$ at its tail and $+1$ at its head. Then $Ax$ gives head-minus-tail node values.\n<!-- bilingual-en:end -->\n\n有限无向无自环图任选边参考方向；$A$ 每边一行、每节点一列，起点 $-1$、终点 $+1$。$Ax$ 给出终点减起点的节点值差。"
+    },
+    {
+      "id": "u1-close-forest",
+      "type": "text",
+      "x": 1250,
+      "y": 7080,
+      "width": 900,
+      "height": 310,
+      "text": "<!-- bilingual-en:start -->\n## [[关联矩阵与生成森林|Independent edges and spanning forests]]\nWith edges as real incidence rows, independence is equivalent to having no undirected cycle. A maximal independent edge set spans every connected component. If there are $n$ nodes and $c$ components, its $n-c$ rows form a basis of the row space.\n<!-- bilingual-en:end -->\n\n实关联矩阵每边一行：独立行对应无环边集；极大独立边集才形成覆盖各分量的生成森林。$n$ 个节点、$c$ 个分量时，这 $n-c$ 行构成行空间的一组基。"
+    },
+    {
+      "id": "u1-close-circulation",
+      "type": "text",
+      "x": 2400,
+      "y": 7080,
+      "width": 900,
+      "height": 310,
+      "text": "<!-- bilingual-en:start -->\n## [[回路空间与守恒流|Cycle space and conserved flows]]\nWith $-1$ at each tail and $+1$ at each head, $A^Ty$ gives net inflow at every node. Without external injection, signed real flows with no accumulation satisfy $A^Ty=0$. For $m$ edges, $n$ nodes and $c$ components, this space has dimension $m-n+c$.\n<!-- bilingual-en:end -->\n\n沿参考方向为正的实流量 $y$，经 $A^T$ 得到各节点净流入；无外部注入且无积累时 $A^Ty=0$。$m$ 条边、$n$ 个节点、$c$ 个分量时，回路空间维数为 $m-n+c$。"
     }
   ],
   "edges": [
@@ -1050,7 +1095,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000006",
       "toSide": "top",
-      "label": "决定存在"
+      "label": "Solvable iff b lies in C(A) · b 属于 C(A) 当且仅当有解"
     },
     {
       "id": "300000000000000a",
@@ -1058,7 +1103,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000006",
       "toSide": "top",
-      "label": "决定唯一"
+      "label": "Trivial kernel gives uniqueness when consistent · 零空间平凡时相容解唯一"
     },
     {
       "id": "300000000000000b",
@@ -1066,7 +1111,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000007",
       "toSide": "top",
-      "label": "前置"
+      "label": "Once consistent, translate the nullspace · 相容后平移零空间"
     },
     {
       "id": "300000000000000c",
@@ -1074,7 +1119,7 @@
       "fromSide": "right",
       "toNode": "2000000000000016",
       "toSide": "left",
-      "label": "推广到多列"
+      "label": "Apply the rule to each column of B · 对 B 的每列应用同一规则"
     },
     {
       "id": "300000000000000d",
@@ -1082,7 +1127,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000029",
       "toSide": "top",
-      "label": "展开为"
+      "label": "Regroup by the shared index into outer products · 按共同中间指标重组为外积和"
     },
     {
       "id": "300000000000000e",
@@ -1090,7 +1135,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000017",
       "toSide": "top",
-      "label": "非零单项恰为秩一"
+      "label": "Each nonzero outer-product term has rank one · 每个非零外积项的秩为一"
     },
     {
       "id": "300000000000000f",
@@ -1098,7 +1143,7 @@
       "fromSide": "right",
       "toNode": "2000000000000042",
       "toSide": "left",
-      "label": "产生"
+      "label": "Finite products record row equivalence · 有限乘积记录行等价"
     },
     {
       "id": "3000000000000010",
@@ -1106,7 +1151,7 @@
       "fromSide": "right",
       "toNode": "2000000000000030",
       "toSide": "left",
-      "label": "保证等价"
+      "label": "Synchronized operations preserve solutions · 同步操作保持解集"
     },
     {
       "id": "3000000000000011",
@@ -1114,7 +1159,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000015",
       "toSide": "top",
-      "label": "形成分解"
+      "label": "For square LU, record row swaps in PA=LU · 方阵 LU 须用 PA=LU 记录换行"
     },
     {
       "id": "3000000000000012",
@@ -1122,7 +1167,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000024",
       "toSide": "top",
-      "label": "继续化简"
+      "label": "Normalize pivots and clear above them · 主元归一并清除上方"
     },
     {
       "id": "3000000000000013",
@@ -1130,7 +1175,7 @@
       "fromSide": "left",
       "toNode": "2000000000000024",
       "toSide": "right",
-      "label": "前置"
+      "label": "Leading entries become ones in cleared columns · 首非零元归一，所在列其余清零"
     },
     {
       "id": "3000000000000014",
@@ -1138,7 +1183,7 @@
       "fromSide": "right",
       "toNode": "2000000000000037",
       "toSide": "left",
-      "label": "识别余列"
+      "label": "If consistent, nonpivot unknowns are free · 相容时非主元未知量可任取"
     },
     {
       "id": "3000000000000015",
@@ -1146,7 +1191,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000014",
       "toSide": "top",
-      "label": "前置"
+      "label": "Rank checks basis sizes, not membership · 秩检验基的数量，不能代替成员核验"
     },
     {
       "id": "3000000000000016",
@@ -1154,7 +1199,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000025",
       "toSide": "top",
-      "label": "取原列"
+      "label": "Find pivot indices in R, select original columns of A · 在 R 找主元编号，回 A 取原列"
     },
     {
       "id": "3000000000000017",
@@ -1162,7 +1207,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000026",
       "toSide": "top",
-      "label": "取非零行"
+      "label": "Nonzero RREF rows form the original row-space basis · RREF 非零行构成原行空间基"
     },
     {
       "id": "3000000000000018",
@@ -1170,7 +1215,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000027",
       "toSide": "top",
-      "label": "解齐次式"
+      "label": "Solve Rx=0, activate one free coordinate at a time · 解 Rx=0，逐一激活自由坐标"
     },
     {
       "id": "3000000000000019",
@@ -1178,7 +1223,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000028",
       "toSide": "top",
-      "label": "追踪行操作"
+      "label": "Record E in $[A\\mid I_m]\\to[R\\mid E]$ · 保留同步行操作记录 E"
     },
     {
       "id": "300000000000001a",
@@ -1186,7 +1231,7 @@
       "fromSide": "left",
       "toNode": "2000000000000014",
       "toSide": "right",
-      "label": "用 RREF 求基"
+      "label": "Find pivot indices, then select original columns · 找主元列号，再取原矩阵列"
     },
     {
       "id": "300000000000001b",
@@ -1194,7 +1239,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000023",
       "toSide": "top",
-      "label": "也等于行维数"
+      "label": "Column rank equals row rank · 列维数等于行维数"
     },
     {
       "id": "300000000000001c",
@@ -1202,7 +1247,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000010",
       "toSide": "top",
-      "label": "前置"
+      "label": "Rank + nullity counts input dimensions · 秩与零度合计输入维数"
     },
     {
       "id": "300000000000001d",
@@ -1210,7 +1255,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000010",
       "toSide": "top",
-      "label": "前置"
+      "label": "Count erased directions: n minus rank · 零输出方向数为 n 减秩"
     },
     {
       "id": "300000000000001f",
@@ -1218,7 +1263,7 @@
       "fromSide": "right",
       "toNode": "2000000000000010",
       "toSide": "left",
-      "label": "合并零度"
+      "label": "On A^T: left nullity m−r · 对 A^T 计数得左零度 m−r"
     },
     {
       "id": "3000000000000020",
@@ -1226,7 +1271,7 @@
       "fromSide": "right",
       "toNode": "2000000000000012",
       "toSide": "left",
-      "label": "确定两对空间"
+      "label": "Real standard inner product: complete input/output pairs · 标准实内积下的完整输入/输出配对"
     },
     {
       "id": "3000000000000021",
@@ -1234,7 +1279,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000013",
       "toSide": "top",
-      "label": "推出判据"
+      "label": "$C(A)=N(A^T)^\\perp$: all left-null tests are sufficient · 全部左核检验也足以保证有解"
     },
     {
       "id": "3000000000000022",
@@ -1242,7 +1287,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000004",
       "toSide": "top",
-      "label": "共同说明"
+      "label": "Coefficient pivots count rank · 系数主元计数得到秩"
     },
     {
       "id": "3000000000000023",
@@ -1250,7 +1295,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000004",
       "toSide": "top",
-      "label": "共同说明"
+      "label": "Consistency permits arbitrary free coordinates · 相容时自由坐标可任取"
     },
     {
       "id": "3000000000000024",
@@ -1258,7 +1303,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000015",
       "toSide": "top",
-      "label": "记录换行"
+      "label": "P records original row order in PA = LU · P 在 PA = LU 中记录原行重排"
     },
     {
       "id": "3000000000000025",
@@ -1266,7 +1311,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000033",
       "toSide": "top",
-      "label": "输出侧"
+      "label": "All attainable outputs · 全部可达输出"
     },
     {
       "id": "3000000000000026",
@@ -1274,7 +1319,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000035",
       "toSide": "top",
-      "label": "输出侧"
+      "label": "Real case: constraints on attainable outputs · 实数情形：可达输出的约束"
     },
     {
       "id": "3000000000000027",
@@ -1282,7 +1327,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000034",
       "toSide": "top",
-      "label": "输入侧"
+      "label": "Real case: span of coefficient rows · 实数情形：系数行的张成"
     },
     {
       "id": "3000000000000028",
@@ -1290,7 +1335,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000005",
       "toSide": "top",
-      "label": "输入侧"
+      "label": "Inputs sent to zero · 被送到零的输入"
     },
     {
       "id": "3000000000000029",
@@ -1298,7 +1343,7 @@
       "fromSide": "right",
       "toNode": "2000000000000014",
       "toSide": "left",
-      "label": "使结果规范"
+      "label": "Unique RREF does not make every basis unique · RREF 唯一不代表各组基唯一"
     },
     {
       "id": "300000000000002a",
@@ -1306,7 +1351,7 @@
       "fromSide": "right",
       "toNode": "2000000000000011",
       "toSide": "left",
-      "label": "组织四空间"
+      "label": "Input nullity n−r; output left nullity m−r · 输入零度 n−r，输出左零度 m−r"
     },
     {
       "id": "300000000000002b",
@@ -1330,7 +1375,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000041",
       "toSide": "top",
-      "label": "行操作工具"
+      "label": "Apply each operation to both blocks of [A|I] · 每一步同步作用于 [A|I] 两块"
     },
     {
       "id": "300000000000002e",
@@ -1338,7 +1383,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000041",
       "toSide": "top",
-      "label": "算法前置"
+      "label": "For square A, continue reduction of [A|I] · 方阵 A 可继续化简 [A|I]"
     },
     {
       "id": "300000000000002f",
@@ -1346,7 +1391,7 @@
       "fromSide": "left",
       "toNode": "2000000000000041",
       "toSide": "right",
-      "label": "目标形"
+      "label": "An identity left block certifies the inverse · 左块化为单位阵即可读出逆"
     },
     {
       "id": "3000000000000030",
@@ -1354,7 +1399,7 @@
       "fromSide": "right",
       "toNode": "2000000000000003",
       "toSide": "left",
-      "label": "同步右端"
+      "label": "R=EA sends Ax=b to Rx=Eb · R=EA 时右端同步变为 Eb"
     },
     {
       "id": "3000000000000031",
@@ -1370,7 +1415,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000047",
       "toSide": "top",
-      "label": "存在且唯一"
+      "label": "Unique reduced matrix, not unique steps · 最简矩阵唯一，步骤不唯一"
     },
     {
       "id": "3000000000000033",
@@ -1378,7 +1423,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000043",
       "toSide": "top",
-      "label": "行操作下的变化"
+      "label": "Row operations preserve row space and nullspace · 行操作保持行空间与零空间"
     },
     {
       "id": "3000000000000034",
@@ -1386,7 +1431,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000046",
       "toSide": "top",
-      "label": "限制列空间"
+      "label": "Column containment bounds rank by rank(A) · 列空间包含给出 rank(A) 上界"
     },
     {
       "id": "3000000000000035",
@@ -1394,7 +1439,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000046",
       "toSide": "top",
-      "label": "限制行空间"
+      "label": "Row containment and row = column rank bound rank by rank(B) · 行包含结合行秩等于列秩给出 rank(B) 上界"
     },
     {
       "id": "3000000000000036",
@@ -1402,7 +1447,7 @@
       "fromSide": "left",
       "toNode": "2000000000000006",
       "toSide": "right",
-      "label": "解释可达"
+      "label": "Reach b by a column combination · 用列组合达到目标 b"
     },
     {
       "id": "3000000000000037",
@@ -1410,7 +1455,7 @@
       "fromSide": "bottom",
       "toNode": "2000000000000012",
       "toSide": "top",
-      "label": "概念前置"
+      "label": "Check all perpendicular directions, not just pairwise orthogonality · 核对全部正交方向才构成正交补"
     },
     {
       "id": "3000000000000039",
@@ -1418,7 +1463,7 @@
       "fromSide": "right",
       "toNode": "2000000000000014",
       "toSide": "left",
-      "label": "为各空间求基"
+      "label": "Verify spanning and independence in the requested space · 对所求空间核验张成与无关"
     },
     {
       "id": "f1c001aabbcc0011",
@@ -1506,7 +1551,7 @@
       "fromSide": "bottom",
       "toNode": "f5c005aabbcc0004",
       "toSide": "top",
-      "label": "Extracts pivots from U · 从 U 提取主元"
+      "label": "When every diagonal entry of U is nonzero, separate them into D · U 的所有对角元非零时可分离为 D"
     },
     {
       "id": "f5c005aabbcc0104",
@@ -1514,7 +1559,7 @@
       "fromSide": "bottom",
       "toNode": "f5c005aabbcc0005",
       "toSide": "top",
-      "label": "Stored factors solve new right-hand sides · 复用因子求解新右端"
+      "label": "For invertible A, reuse factors for new right-hand sides · 可逆 A 的因子可复用于新右端"
     },
     {
       "id": "f5c005aabbcc0105",
@@ -1767,6 +1812,60 @@
       "toNode": "p0012-diagonal",
       "toSide": "bottom",
       "label": "The intersection is exactly the real diagonal space · 交集恰为实对角矩阵空间"
+    },
+    {
+      "id": "u1-close-four-edge",
+      "fromNode": "2000000000000011",
+      "fromSide": "bottom",
+      "toNode": "u1-close-same-four",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "Same spaces leave the map undetermined · 相同子空间未指定具体映射"
+    },
+    {
+      "id": "u1-close-rref-edge",
+      "fromNode": "2000000000000024",
+      "fromSide": "bottom",
+      "toNode": "u1-close-rref-span",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "Take linear combinations of all square RREFs · 对全部方形 RREF 取线性组合"
+    },
+    {
+      "id": "u1-close-graph-edge",
+      "fromNode": "2000000000000011",
+      "fromSide": "bottom",
+      "toNode": "u1-close-incidence",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "Apply the four spaces to node and edge coordinates · 四空间作用于节点与边坐标"
+    },
+    {
+      "id": "u1-close-forest-edge",
+      "fromNode": "u1-close-incidence",
+      "fromSide": "bottom",
+      "toNode": "u1-close-forest",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "Select independent edge rows · 选择独立的边对应行"
+    },
+    {
+      "id": "u1-close-cycle-edge",
+      "fromNode": "u1-close-incidence",
+      "fromSide": "bottom",
+      "toNode": "u1-close-circulation",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "Solve the transposed homogeneous system · 解转置齐次方程"
+    },
+    {
+      "id": "u1-close-dimension-edge",
+      "fromNode": "u1-close-forest",
+      "fromSide": "bottom",
+      "toNode": "u1-close-circulation",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "Each edge outside a spanning forest gives a basis cycle\n生成森林外每条边给一个基环"
     }
   ]
 }

@@ -35,9 +35,9 @@
       "x": 500,
       "y": 100,
       "width": 360,
-      "height": 190,
+      "height": 300,
       "color": "4",
-      "text": "## [[线性近似]]\n\n切线匹配函数值与一阶导数；余项相对位移趋零。"
+      "text": "<!-- bilingual-en:start -->\n## [[线性近似|Linear approximation]]\n\nAt a differentiable base point $a$, $L_a(a+h)=f(a)+f'(a)h$. Its remainder is $o(h)$ as $h\\to0$; a fixed-step error bound needs a separate estimate.\n<!-- bilingual-en:end -->\n\n可导基点处用函数值与斜率构成切线模型。余项相对输入增量趋零；指定步长的误差须另作估计。"
     },
     {
       "id": "error",
@@ -55,9 +55,9 @@
       "x": 0,
       "y": 440,
       "width": 360,
-      "height": 190,
+      "height": 280,
       "color": "4",
-      "text": "## [[二次近似]]\n\n再匹配二阶导数，把基点处曲率纳入局部模型。"
+      "text": "<!-- bilingual-en:start -->\n## [[二次近似|Quadratic approximation]]\n\nWith $f$ differentiable near $a$ and $f'$ differentiable at $a$, match value and first two derivatives. Degree $\\le2$; remainder $o(h^2)$, $h=x-a$.\n<!-- bilingual-en:end -->\n\n在基点附近可导且导函数在基点可导时，匹配函数值及前两阶导数。次数不超过二，余项为输入增量平方的小 o。"
     },
     {
       "id": "taylor-poly",
@@ -65,9 +65,9 @@
       "x": 500,
       "y": 440,
       "width": 360,
-      "height": 190,
+      "height": 290,
       "color": "4",
-      "text": "## [[Taylor多项式]]\n\n用 $1/k!$ 配置系数，在中心逐阶匹配导数。"
+      "text": "<!-- bilingual-en:start -->\n## [[Taylor多项式|Taylor polynomial]]\n\nFor finite $n\\ge0$, when the required derivatives exist, match the value and derivatives through order $n$ at a centre. The coefficients use $1/k!$; the degree may be below $n$.\n<!-- bilingual-en:end -->\n\n有限阶多项式在中心匹配函数值与所需各阶导数；系数含阶乘，次数可以低于所选阶数。"
     },
     {
       "id": "taylor-rem",
@@ -75,9 +75,9 @@
       "x": 1000,
       "y": 440,
       "width": 300,
-      "height": 230,
+      "height": 310,
       "color": "5",
-      "text": "## [[Taylor余项]]\n\n区间上的高阶导数界把“近似”变成可核验的误差证书。"
+      "text": "<!-- bilingual-en:start -->\n## [[Taylor余项|Taylor remainder]]\n\nUnder the interval derivative hypotheses, a next-derivative value gives the exact error. A bound over the whole segment then controls it.\n<!-- bilingual-en:end -->\n\n满足区间导数条件后，某个中间点的下一阶导数给出精确误差；整段上界再给误差保证。"
     },
     {
       "id": "higher-derivative",
@@ -114,9 +114,9 @@
       "x": 1675,
       "y": 100,
       "width": 350,
-      "height": 180,
+      "height": 320,
       "color": "4",
-      "text": "## [[渐近线]]\n\n先由极限识别有限边界与无穷远行为。"
+      "text": "<!-- bilingual-en:start -->\n## [[渐近线|Asymptotes]]\n\nA signed infinite one-sided limit gives a vertical line. At a chosen infinite end, $f(x)-(mx+b)\\to0$ for real $m,b$ gives an affine asymptote; $m=0$ is horizontal. Intersections are allowed.\n<!-- bilingual-en:end -->\n\n一侧带符号无穷极限即可给出竖直渐近线。固定无穷方向，函数与直线之差趋零给仿射渐近线；斜率为零时为水平线。有限处可相交。"
     },
     {
       "id": "critical",
@@ -124,9 +124,9 @@
       "x": 2160,
       "y": 100,
       "width": 350,
-      "height": 180,
+      "height": 290,
       "color": "4",
-      "text": "## [[临界点]]\n\n定义域内点的导数为零或不存在；端点另列，候选仍需分类。"
+      "text": "<!-- bilingual-en:start -->\n## [[临界点|Critical points]]\n\nAt an interior input in $\\mathbb R$, the finite derivative is zero or does not exist. This gives a candidate; endpoints are checked separately.\n<!-- bilingual-en:end -->\n\n实线内点处，有限导数为零或不存在。临界点只是候选；端点另查，零导数不保证极值。"
     },
     {
       "id": "monotonic",
@@ -134,9 +134,9 @@
       "x": 2645,
       "y": 100,
       "width": 330,
-      "height": 200,
+      "height": 260,
       "color": "5",
-      "text": "## [[导数单调性判据]]\n\n区间上 $f'$ 的符号决定函数增减，而非一个点的斜率。"
+      "text": "<!-- bilingual-en:start -->\n## [[导数单调性判据|Derivative signs and monotonicity]]\n\nAn interval-wide derivative sign controls increase or decrease. A zero derivative at one point does not decide the interval.\n<!-- bilingual-en:end -->\n\n检查整个区间上的导数符号；单点导数为零不能判断区间增减。"
     },
     {
       "id": "concavity",
@@ -144,9 +144,9 @@
       "x": 1675,
       "y": 440,
       "width": 350,
-      "height": 200,
+      "height": 260,
       "color": "4",
-      "text": "## [[凹凸性]]\n\n图像位于弦下方为凸，上方为凹；定义不要求可导。"
+      "text": "<!-- bilingual-en:start -->\n## [[凹凸性|Convexity and concavity]]\n\nOn an interval, a convex graph lies at or below every chord; a concave graph lies at or above. Differentiability is unnecessary.\n<!-- bilingual-en:end -->\n\n区间内比较每一条弦；凸在弦下、凹在弦上。定义不要求可导。"
     },
     {
       "id": "inflection",
@@ -154,9 +154,9 @@
       "x": 2160,
       "y": 440,
       "width": 350,
-      "height": 200,
+      "height": 300,
       "color": "1",
-      "text": "## [[拐点]]\n\n必须发生凹凸改变；$f''=0$ 只给候选。"
+      "text": "<!-- bilingual-en:start -->\n## [[拐点|Inflection points]]\n\nAt an interior point where $f$ is continuous, convexity genuinely changes to concavity, or conversely. $f^{\\prime\\prime}(c)=0$ alone only nominates a candidate; that derivative may also be absent.\n<!-- bilingual-en:end -->\n\n在连续的内点，两侧必须真正发生凸凹转换。仅 $f^{\\prime\\prime}(c)=0$ 只给候选；该点二阶导数也可能不存在。"
     },
     {
       "id": "sketch",
@@ -164,9 +164,9 @@
       "x": 2645,
       "y": 440,
       "width": 330,
-      "height": 230,
+      "height": 330,
       "color": "6",
-      "text": "## [[曲线描绘]]\n\n定义域 → 极限与渐近线 → 临界点 → 两张符号表 → 一致性检查。"
+      "text": "<!-- bilingual-en:start -->\n## [[曲线描绘|Curve sketching]]\n\nStart with the domain and boundary limits. Use derivative signs on whole intervals to justify monotonicity and bending; check that the resulting branches fit all conditions.\n<!-- bilingual-en:end -->\n\n先定定义域和边界极限，再用全区间导数符号说明增减与弯曲；最后核对各分支是否同时符合这些条件。"
     },
     {
       "id": "convex-criterion",
@@ -174,9 +174,9 @@
       "x": 1675,
       "y": 750,
       "width": 350,
-      "height": 230,
+      "height": 310,
       "color": "5",
-      "text": "## [[导数判凹凸]]\n\n在可导开区间上，凸性等价于导数非减；二阶导数存在时可查其全区间符号。"
+      "text": "<!-- bilingual-en:start -->\n## [[导数判凹凸|Derivative criteria for convexity]]\n\nOn a nonempty open interval, differentiable real $f$ is convex iff $f^{\\prime}$ is nondecreasing. If $f^{\\prime\\prime}$ exists everywhere, this is equivalent to $f^{\\prime\\prime}\\ge0$ throughout; reverse inequalities give concavity.\n<!-- bilingual-en:end -->\n\n非空开区间上，可导实函数凸当且仅当导数非减；若二阶导数处处存在，又等价于全区间非负。反向不等号给凹性。"
     },
     {
       "id": "shape-bridge",
@@ -203,9 +203,9 @@
       "x": 3350,
       "y": 90,
       "width": 330,
-      "height": 180,
+      "height": 260,
       "color": "4",
-      "text": "## [[局部极值与绝对极值]]\n\n邻域比较与全域比较是两种问题；点和值也要分开。"
+      "text": "<!-- bilingual-en:start -->\n## [[局部极值与绝对极值|Local and absolute extrema]]\n\nCompare nearby allowed inputs, or the entire domain. Strict extrema exclude ties at distinct inputs; the location and attained value differ.\n<!-- bilingual-en:end -->\n\n局部比较附近合法输入，绝对比较全域。严格极值排除不同输入的并列；取得位置与函数值须分开。"
     },
     {
       "id": "evt",
@@ -213,9 +213,9 @@
       "x": 3785,
       "y": 90,
       "width": 330,
-      "height": 180,
+      "height": 260,
       "color": "3",
-      "text": "## [[极值定理]]\n\n连续函数在非空紧集上确实取得最大与最小。"
+      "text": "<!-- bilingual-en:start -->\n## [[极值定理|Extreme value theorem]]\n\nA continuous real-valued function on a nonempty compact domain attains a maximum and a minimum. This guarantees existence, not their locations.\n<!-- bilingual-en:end -->\n\n非空紧集上的连续实值函数取得最大值与最小值；定理保证存在，不负责定位。"
     },
     {
       "id": "foc",
@@ -223,9 +223,9 @@
       "x": 4220,
       "y": 90,
       "width": 330,
-      "height": 200,
+      "height": 260,
       "color": "3",
-      "text": "## [[无约束一阶条件]]\n\n光滑内点极值必须驻定；边界、不可导点和充分性仍未处理。"
+      "text": "<!-- bilingual-en:start -->\n## [[无约束一阶条件|Interior first-order condition]]\nAt an interior local extremum, a finite derivative at that point must be zero. Endpoints and nondifferentiable points need separate checks; zero derivative alone is insufficient.\n<!-- bilingual-en:end -->\n\n**无约束一阶条件**：内点局部极值若在该点有有限导数，导数必为零。端点与不可导点另行检查；零导数本身不足以保证极值。"
     },
     {
       "id": "closed",
@@ -233,9 +233,9 @@
       "x": 3350,
       "y": 380,
       "width": 330,
-      "height": 210,
+      "height": 320,
       "color": "6",
-      "text": "## [[闭区间极值法]]\n\n比较两端点与全部内部临界值，寻找绝对极值。"
+      "text": "<!-- bilingual-en:start -->\n## [[闭区间极值法|Closed-interval method]]\n\nFor finite $a<b$ and continuous $f$ on $[a,b]$, compare endpoints and all interior zero-or-absent-derivative candidates. The candidate set may be infinite.\n<!-- bilingual-en:end -->\n\n有限闭区间上连续时，比较端点和全部内部导数为零或不存在的候选；候选不保证有限。"
     },
     {
       "id": "first-test",
@@ -243,9 +243,9 @@
       "x": 3785,
       "y": 380,
       "width": 330,
-      "height": 200,
+      "height": 300,
       "color": "6",
-      "text": "## [[一阶导数检验]]\n\n中心连续，两侧导数严格正变负给局部最大；负变正给局部最小。"
+      "text": "<!-- bilingual-en:start -->\n## [[一阶导数检验|First derivative test]]\n\nWith continuity at the centre, a positive-to-negative derivative sign change gives a strict local maximum; reverse signs give a minimum.\n<!-- bilingual-en:end -->\n\n中心连续，左右导数由正变负给严格局部极大；由负变正给严格局部极小。"
     },
     {
       "id": "second-test",
@@ -253,9 +253,9 @@
       "x": 4220,
       "y": 380,
       "width": 330,
-      "height": 210,
+      "height": 320,
       "color": "5",
-      "text": "## [[二阶导数检验]]\n\n驻点处非零曲率可分类；零曲率没有结论。"
+      "text": "<!-- bilingual-en:start -->\n## [[二阶导数检验|Second derivative test]]\n\nAt an interior stationary point, with $f$ differentiable nearby and finite $f^{\\prime\\prime}$ at the point: positive gives a strict local minimum, negative a strict local maximum; zero is inconclusive.\n<!-- bilingual-en:end -->\n\n内点驻点附近可导，且该点二阶导数有限：正给严格局部最小，负给严格局部最大；零时无结论。"
     },
     {
       "id": "constraint-opt",
@@ -263,9 +263,9 @@
       "x": 3480,
       "y": 720,
       "width": 410,
-      "height": 220,
+      "height": 320,
       "color": "6",
-      "text": "## [[单变量约束优化]]\n\n先写目标、约束与可行域；消元后再求候选并查边界。"
+      "text": "<!-- bilingual-en:start -->\n## [[单变量约束优化|One-variable constrained optimization]]\n\nState the objective, constraints and feasible domain before elimination. Preserve all feasible branches, find candidates, then justify the global comparison and attainment. A zero derivative alone proves neither.\n<!-- bilingual-en:end -->\n\n先定目标、约束和可行域；消元保留所有可行分支。求出候选后，还须证明全局比较与取得性，零导数本身不能保证。"
     },
     {
       "id": "convex-global",
@@ -273,9 +273,9 @@
       "x": 4080,
       "y": 720,
       "width": 410,
-      "height": 220,
+      "height": 300,
       "color": "3",
-      "text": "## [[凸优化全局性]]\n\n凸可行域上的凹目标可把局部最大升级为全局最大。"
+      "text": "<!-- bilingual-en:start -->\n## [[凸优化全局性|Local and global optima]]\n\nOn a convex feasible set: local minima of convex objectives, and local maxima of concave objectives, are global. Attainment remains separate.\n<!-- bilingual-en:end -->\n\n凸可行域上，凸目标的局部最小、凹目标的局部最大都是全局最优；取得性仍需另证。"
     },
     {
       "id": "group-rate-root",
@@ -292,9 +292,9 @@
       "x": 0,
       "y": 1360,
       "width": 370,
-      "height": 210,
+      "height": 310,
       "color": "6",
-      "text": "## [[相关变化率]]\n\n先写全过程恒等式，对共同时间求导，再代指定时刻。"
+      "text": "<!-- bilingual-en:start -->\n## [[相关变化率|Related rates]]\n\nAlong quantities differentiable at the time of interest, differentiate an identity valid nearby with respect to their common time. Then insert instantaneous values. Keep fixed parameters, signed velocities and speed distinct.\n<!-- bilingual-en:end -->\n\n各量在所求时刻可导，对附近持续成立的关系按共同时间求导，再代瞬时值。固定参数、带方向速度和非负速率须分清。"
     },
     {
       "id": "newton",
@@ -351,9 +351,9 @@
       "x": 1675,
       "y": 1360,
       "width": 350,
-      "height": 210,
+      "height": 330,
       "color": "5",
-      "text": "## [[罗尔定理]]\n\n端点等高时，连续可导曲线至少有一条内部水平切线。"
+      "text": "<!-- bilingual-en:start -->\n## [[罗尔定理|Rolle’s theorem]]\n\nA real function continuous on [a,b], differentiable on (a,b), with a<b and equal endpoint values, has a zero derivative somewhere inside.\n<!-- bilingual-en:end -->\n\n实函数在闭区间连续、内部可导，且a<b、端点等高，就在某个内部点有零导数。"
     },
     {
       "id": "mvt",
@@ -361,9 +361,9 @@
       "x": 2160,
       "y": 1360,
       "width": 350,
-      "height": 220,
+      "height": 330,
       "color": "5",
-      "text": "## [[拉格朗日中值定理]]\n\n某个内部瞬时斜率精确等于端点平均斜率。"
+      "text": "<!-- bilingual-en:start -->\n## [[拉格朗日中值定理|Mean value theorem]]\n\nFor a<b, continuity on [a,b] and differentiability on (a,b) make one interior derivative equal the secant slope. The point need not be unique or the midpoint.\n<!-- bilingual-en:end -->\n\na<b时，闭区间连续且内部可导，保证某个内部导数等于割线斜率；该点不必唯一，也不必是中点。"
     },
     {
       "id": "increment",
@@ -371,9 +371,9 @@
       "x": 2645,
       "y": 1360,
       "width": 330,
-      "height": 220,
+      "height": 270,
       "color": "5",
-      "text": "## [[导数界控制函数差]]\n\n区间导数上下界给端点差的有限增量界。"
+      "text": "<!-- bilingual-en:start -->\n## [[导数界控制函数差|Derivative bounds on function changes]]\n\nThe mean value theorem turns derivative bounds throughout an interval into bounds on a finite change.\n<!-- bilingual-en:end -->\n\n用区间内处处成立的导数界，夹住中值定理中的未知斜率。"
     },
     {
       "id": "ineq",
@@ -381,9 +381,9 @@
       "x": 1900,
       "y": 1780,
       "width": 400,
-      "height": 210,
+      "height": 240,
       "color": "6",
-      "text": "## [[导数法证明不等式]]\n\n构造差函数、锚定等号点，再以导数符号控制整段。"
+      "text": "<!-- bilingual-en:start -->\n## [[导数法证明不等式|Proving inequalities]]\n\nCompare a difference with its known reference value. Derivative signs control each connecting interval; keep track of which side of the reference input is used.\n<!-- bilingual-en:end -->\n\n构造差函数并锚定已知基准值。导数符号控制每段比较区间；基点左右方向不可互换。"
     },
     {
       "id": "mvt-note",
@@ -410,9 +410,9 @@
       "x": 3350,
       "y": 1360,
       "width": 350,
-      "height": 210,
+      "height": 270,
       "color": "4",
-      "text": "## [[微分]]\n\n$dy=f'(x)dx$ 是一阶线性变化，不等于真实有限变化 $\\Delta y$。"
+      "text": "<!-- bilingual-en:start -->\n## [[微分|Differential]]\n\n$dy=f^\\prime(x)\\,dx$ is the linear predicted change at a differentiable point. The actual finite change also has a remainder.\n<!-- bilingual-en:end -->\n\n微分是可导点处的线性预测变化；实际有限变化还包含余项。"
     },
     {
       "id": "antiderivative",
@@ -420,9 +420,9 @@
       "x": 3840,
       "y": 1360,
       "width": 350,
-      "height": 200,
+      "height": 310,
       "color": "4",
-      "text": "## [[原函数]]\n\n在一个区间上满足 $F'=f$；不定积分表示整族原函数。"
+      "text": "<!-- bilingual-en:start -->\n## [[原函数|Antiderivative]]\n\nOn a nonempty open interval, a differentiable $F$ satisfies $F'=f$ everywhere. An indefinite integral denotes its function family; a fixed-bounds definite integral is a number.\n<!-- bilingual-en:end -->\n\n在非空开区间处处满足 $F′=f$ 的可导函数是原函数。不定积分表示函数族；固定上下限的定积分是一个数。"
     },
     {
       "id": "constant",
@@ -430,9 +430,9 @@
       "x": 4330,
       "y": 1360,
       "width": 320,
-      "height": 220,
+      "height": 320,
       "color": "5",
-      "text": "## [[原函数相差常数]]\n\n同一连通区间上的自由度只剩一个加法常数。"
+      "text": "<!-- bilingual-en:start -->\n## [[原函数相差常数|Antiderivatives differ by a constant]]\n\nEqual derivatives throughout one interval give $F-G=C$ there. The mean value theorem proves this; separate domain intervals may use different constants.\n<!-- bilingual-en:end -->\n\n同一区间上处处导数相等，则两函数只差一个常数；中值定理给出证明。定义域断开时，各区间常数可不同。"
     },
     {
       "id": "substitution",
@@ -440,9 +440,9 @@
       "x": 3740,
       "y": 1790,
       "width": 420,
-      "height": 210,
+      "height": 280,
       "color": "3",
-      "text": "## [[换元积分]]\n\n把链式法则反向识别，内层函数与对应微分必须一起替换。"
+      "text": "<!-- bilingual-en:start -->\n## [[换元积分|Integration by substitution]]\n\nRead the chain rule backwards: replace $u=g(x)$ together with $du=g^{\\prime}(x)\\,dx$. An inverse-based route must also respect its branch.\n<!-- bilingual-en:end -->\n\n反向识别链式法则，内层表达式与微分一起换；采用反解路线时，还须核对所选分支。"
     },
     {
       "id": "bridge-note",
@@ -469,9 +469,9 @@
       "x": 0,
       "y": 2620,
       "width": 360,
-      "height": 210,
+      "height": 330,
       "color": "4",
-      "text": "## [[常微分方程]]\n\n未知对象是函数；解必须在指定区间逐点满足方程。"
+      "text": "<!-- bilingual-en:start -->\n## [[常微分方程|Ordinary differential equations]]\n\nAn ODE relates an unknown function to derivatives with respect to one input. A solution has the required derivatives and satisfies the defined equation at every point of its stated interval.\n<!-- bilingual-en:end -->\n\n常微分方程联系未知函数与对一个自变量的导数。解须具有所需导数，并在指定区间每一点满足有定义的原方程。"
     },
     {
       "id": "general-iv",
@@ -479,9 +479,9 @@
       "x": 500,
       "y": 2620,
       "width": 360,
-      "height": 210,
+      "height": 350,
       "color": "4",
-      "text": "## [[通解与初值]]\n\n通解是一族轨迹；初值在其中选支，但不自动证明唯一。"
+      "text": "<!-- bilingual-en:start -->\n## [[通解与初值|General solutions and initial data]]\n\nA family describes candidate trajectories; initial data select members. Verification, completeness, existence and uniqueness are separate claims. Fitting one constant alone does not prove uniqueness.\n<!-- bilingual-en:end -->\n\n解族描述候选轨迹，初值从中选择成员。代回验证、完整性、存在与唯一各是不同结论；只确定一个常数不能证明唯一。"
     },
     {
       "id": "separate",
@@ -489,9 +489,9 @@
       "x": 1000,
       "y": 2620,
       "width": 360,
-      "height": 230,
+      "height": 360,
       "color": "6",
-      "text": "## [[分离变量]]\n\n对 $y'=f(x)g(y)$，把状态与输入因子分到两侧取原函数。"
+      "text": "<!-- bilingual-en:start -->\n## [[分离变量|Separation of variables]]\n\nFor continuous factors in $y'=f(x)g(y)$, first retain zero states of $g$. On a branch where $g(y)\\ne0$, integrate $y'/g(y)=f(x)$ using the chain rule; check the resulting relation and interval.\n<!-- bilingual-en:end -->\n\n对连续因子的 $y'=f(x)g(y)$，先保留状态因子 $g$ 的零点。在 $g(y)\\ne0$ 的分支上用链式法则积分 $y'/g(y)=f(x)$，再核对所得关系和解区间。"
     },
     {
       "id": "lost-eq",
@@ -499,9 +499,9 @@
       "x": 1500,
       "y": 2620,
       "width": 360,
-      "height": 230,
+      "height": 350,
       "color": "1",
-      "text": "## [[分离变量漏平衡解]]\n\n除以 $g(y)$ 会删去所有满足 $g(y_*)=0$ 的常数解。"
+      "text": "<!-- bilingual-en:start -->\n## [[分离变量漏平衡解|Equilibria lost by division]]\n\nBefore dividing by $g(y)$, check constant states with $g(y_*)=0$ in the original equation. Restoring them does not by itself prove that every solution or possible join has been found.\n<!-- bilingual-en:end -->\n\n除以状态因子前，先把使它为零的常数状态代回原方程。补回平衡解本身，仍不证明已找到所有解或所有可能的拼接。"
     },
     {
       "id": "max-interval",
@@ -509,9 +509,9 @@
       "x": 2000,
       "y": 2620,
       "width": 360,
-      "height": 230,
+      "height": 350,
       "color": "4",
-      "text": "## [[微分方程最大区间]]\n\n该解无法继续延拓的区间。公式失效处要回到原方程检查，不能直接认作解的终点。"
+      "text": "<!-- bilingual-en:start -->\n## [[微分方程最大区间|Maximal solution intervals]]\n\nA maximal solution cannot extend to a larger interval while preserving its trajectory and the same ODE. A formula gap may be removable; test the original equation. Maximality alone is not uniqueness.\n<!-- bilingual-en:end -->\n\n最大解不能保留原轨迹并继续延拓为更大区间上的同一方程之解。公式缺口可能可去，须回查原方程；最大性不等于唯一性。"
     },
     {
       "id": "natural-exp",
@@ -529,9 +529,9 @@
       "x": 400,
       "y": 3120,
       "width": 380,
-      "height": 220,
+      "height": 320,
       "color": "4",
-      "text": "## [[指数增长与衰减]]\n\n非负规模满足 $y'=ry$；正初值时按 $r$ 的符号增长或衰减，零初值保持零。"
+      "text": "<!-- bilingual-en:start -->\n## [[指数增长与衰减|Exponential growth and decay]]\n\nFor constant real $r$ and initial value $y(t_0)=y_0$, $y'=ry$ gives $y(t)=y_0e^{r(t-t_0)}$. With $y_0>0$, the sign of $r$ controls forward growth or decay; $y_0=0$ stays zero.\n<!-- bilingual-en:end -->\n\n固定实比例率 $r$ 与初值 $y(t_0)=y_0$ 给出 $y(t)=y_0e^{r(t-t_0)}$。正初值时，$r$ 的符号决定向前增长或衰减；零初值始终为零。"
     },
     {
       "id": "logistic",
@@ -539,9 +539,9 @@
       "x": 950,
       "y": 3120,
       "width": 380,
-      "height": 230,
+      "height": 350,
       "color": "4",
-      "text": "## [[Logistic增长]]\n\n$r,K>0$ 时人均增长率随规模下降，正轨迹沿正时间方向趋向承载量。"
+      "text": "<!-- bilingual-en:start -->\n## [[Logistic增长|Logistic growth]]\n\nWith $r,K>0$, $y'=ry(1-y/K)$ has equilibria $0,K$. Every solution with a positive initial value tends to $K$ in forward time. This does not guarantee an all-real-time solution or identify a mechanism from an S-shaped plot.\n<!-- bilingual-en:end -->\n\n正参数下有零与承载量两个平衡。正初值的解向前趋于承载量；这不保证全实时间存在，也不能只凭 S 形图像识别机制。"
     },
     {
       "id": "orthogonal",
@@ -549,9 +549,9 @@
       "x": 1500,
       "y": 3120,
       "width": 380,
-      "height": 230,
+      "height": 300,
       "color": "4",
-      "text": "## [[正交轨线]]\n\n在与给定曲线族的交点，双方切线方向互相垂直。"
+      "text": "<!-- bilingual-en:start -->\n## [[正交轨线|Orthogonal trajectories]]\nAt each relevant intersection, nonzero tangent directions have dot product $0$. For two finite slopes this becomes $m_1m_2=-1$; a horizontal tangent pairs with a vertical one.\n<!-- bilingual-en:end -->\n\n**正交轨线**：在各相关交点，非零切向量点积为 $0$。两斜率都有限时才写 $m_1m_2=-1$；水平切线与竖直切线垂直。"
     },
     {
       "id": "orthogonal-solve",
@@ -559,9 +559,9 @@
       "x": 1500,
       "y": 3540,
       "width": 380,
-      "height": 230,
+      "height": 380,
       "color": "6",
-      "text": "## [[正交轨线求解]]\n\n消去族参数，在有限非零斜率区域取负倒数，再解方程并检查分支。"
+      "text": "<!-- bilingual-en:start -->\n## [[正交轨线求解|Solving for orthogonal trajectories]]\nFor $y=ax^2$, the reciprocal ODE is derived where $xy\\ne0$. Ellipses $y^2+x^2/2=C>0$ pass a direct tangent check. The vertical axis is an additional geometric trajectory. Check axes and function branches separately.\n<!-- bilingual-en:end -->\n\n**正交轨线求解**：$y=ax^2$ 的负倒数方程在 $xy\\ne0$ 处导出。椭圆 $y^2+x^2/2=C>0$ 可直接核对切线；竖直轴是另一个几何轨线。坐标轴与函数分支须另查。"
     },
     {
       "id": "singular",
@@ -569,9 +569,9 @@
       "x": 2050,
       "y": 3120,
       "width": 380,
-      "height": 230,
+      "height": 340,
       "color": "1",
-      "text": "## [[方程未定义处分支独立]]\n\n方程未定义处不提供跨点延拓条件，两侧常数可独立。"
+      "text": "<!-- bilingual-en:start -->\n## [[方程未定义处分支独立|Branches across an undefined point]]\n\nA solution cannot pass through an input–state point where the original ODE is undefined. Separate domain components may carry independent constants; a differentiable patch does not supply the missing equation.\n<!-- bilingual-en:end -->\n\n解的轨迹不能经过原方程无定义的输入—状态点。不同定义域分支可有独立常数；即使拼接函数可导，也不能补上原方程缺失的定义。"
     },
     {
       "id": "ode-check",
@@ -581,7 +581,17 @@
       "width": 1750,
       "height": 580,
       "color": "2",
-      "text": "## 一条完整动态解答必须同时回答\n\n1. 方程在哪个区域有定义？\n2. 候选函数在哪个连通区间逐点代回成立？\n3. 分离时是否除掉了平衡解？\n4. 初值选择了哪条轨迹，是否真的有唯一性依据？\n5. 公式的符号与长期方向是否符合原方程？\n\n指数与 Logistic 是模型，不是看到 J 形或 S 形数据就能反推的唯一机制。"
+      "text": "<!-- bilingual-en:start -->\n## Check the solution against the original problem\nFirst test the candidate in the original equation where it is defined. Recover states lost when a factor was divided out, and identify the connected interval on which the same solution exists. An initial value selects a unique solution only when a suitable uniqueness theorem applies.\n\nThen check signs, units, forward behaviour and what the model actually assumes. A matching curve shape alone does not identify the mechanism. For [[正交轨线求解|orthogonal trajectories]], also test tangent directions at axes and distinguish a whole geometric curve from an explicit function branch.\n<!-- bilingual-en:end -->\n\n## 把候选解放回原问题检查\n先在原方程有定义处代回核验，补查除法可能丢掉的状态，并确定同一个解存在的连通区间。初值只有在适用的唯一性定理条件下，才能选出唯一解。\n\n再核对符号、单位、向前行为及模型实际假设；曲线形状相符不能单独识别机制。对[[正交轨线求解]]，还须在坐标轴处直接查切向，并区分整条几何曲线与显式函数分支。"
+    },
+    {
+      "id": "cauchy-mvt",
+      "type": "text",
+      "x": 1675,
+      "y": 2030,
+      "width": 600,
+      "height": 240,
+      "color": "5",
+      "text": "<!-- bilingual-en:start -->\n## [[柯西中值定理|Cauchy’s mean value theorem]]\n\nFor two functions continuous on $[a,b]$ with $a<b$ and differentiable inside, Rolle’s theorem proves a division-free derivative identity. Choosing the second function as x recovers the ordinary mean value theorem.\n<!-- bilingual-en:end -->\n\n两个函数在 $a<b$ 的闭区间连续且内部可导时，罗尔定理给出不含除法的导数关系；第二个函数取x时，得到普通中值定理。"
     }
   ],
   "edges": [
@@ -591,7 +601,7 @@
       "fromSide": "right",
       "toNode": "linear",
       "toSide": "left",
-      "label": "给出一阶局部项"
+      "label": "Differentiability gives the tangent model / 可导给出切线模型"
     },
     {
       "id": "e02",
@@ -599,7 +609,7 @@
       "fromSide": "right",
       "toNode": "error",
       "toSide": "left",
-      "label": "必须量化误差"
+      "label": "For numerical use, verify error / 数值使用须核误差"
     },
     {
       "id": "e03",
@@ -607,7 +617,7 @@
       "fromSide": "bottom",
       "toNode": "quadratic",
       "toSide": "top",
-      "label": "加入曲率"
+      "label": "Also match the second derivative / 再匹配二阶导数"
     },
     {
       "id": "e04",
@@ -615,7 +625,7 @@
       "fromSide": "right",
       "toNode": "taylor-poly",
       "toSide": "left",
-      "label": "推广到 n 阶匹配"
+      "label": "Extend derivative matching to order n / 推广为 n 阶导数匹配"
     },
     {
       "id": "e05",
@@ -623,7 +633,7 @@
       "fromSide": "right",
       "toNode": "taylor-rem",
       "toSide": "left",
-      "label": "遗漏项需要证书"
+      "label": "Add interval hypotheses to certify the error / 补区间条件后给误差保证"
     },
     {
       "id": "e06",
@@ -631,7 +641,7 @@
       "fromSide": "right",
       "toNode": "critical",
       "toSide": "left",
-      "label": "零或失效给候选"
+      "label": "Zero or absent derivative at an interior input / 内点导数为零或不存在"
     },
     {
       "id": "e07",
@@ -639,7 +649,7 @@
       "fromSide": "right",
       "toNode": "sketch",
       "toSide": "left",
-      "label": "先定分支边界"
+      "label": "Record the limit and approach direction for each branch · 为各分支记录极限与趋近方向"
     },
     {
       "id": "e08",
@@ -647,7 +657,7 @@
       "fromSide": "right",
       "toNode": "sketch",
       "toSide": "left",
-      "label": "定位候选"
+      "label": "Locate interior candidates / 定位内部候选"
     },
     {
       "id": "e09",
@@ -655,7 +665,7 @@
       "fromSide": "bottom",
       "toNode": "sketch",
       "toSide": "top",
-      "label": "给增减区间"
+      "label": "Use derivative signs on each entire interval · 用各整段区间的导数符号"
     },
     {
       "id": "e10",
@@ -663,7 +673,7 @@
       "fromSide": "right",
       "toNode": "inflection",
       "toSide": "left",
-      "label": "变向才成拐点"
+      "label": "At a continuous interior point, genuine opposite bending · 连续内点两侧真正反向弯曲"
     },
     {
       "id": "e11",
@@ -671,7 +681,7 @@
       "fromSide": "right",
       "toNode": "sketch",
       "toSide": "left",
-      "label": "补曲率转换"
+      "label": "Mark the verified change of concavity · 标出已核实的凹凸转换"
     },
     {
       "id": "e12",
@@ -679,7 +689,7 @@
       "fromSide": "right",
       "toNode": "first-test",
       "toSide": "left",
-      "label": "两侧符号分类"
+      "label": "With continuity and strict side signs / 配合连续性与两侧严格符号"
     },
     {
       "id": "e13",
@@ -687,7 +697,7 @@
       "fromSide": "right",
       "toNode": "second-test",
       "toSide": "left",
-      "label": "邻域斜率变化解释驻点分类"
+      "label": "A second derivative continuous and nonzero at the point keeps its sign nearby / 连续二阶导数在非零点附近保持符号"
     },
     {
       "id": "e14",
@@ -695,7 +705,7 @@
       "fromSide": "right",
       "toNode": "closed",
       "toSide": "left",
-      "label": "全域问题"
+      "label": "Continuous on [a,b]: compare candidates / 闭区间连续时比较候选"
     },
     {
       "id": "e15",
@@ -703,7 +713,7 @@
       "fromSide": "bottom",
       "toNode": "closed",
       "toSide": "top",
-      "label": "保证取得"
+      "label": "Continuity on a nonempty compact interval gives attainment / 非空紧区间连续保证取得"
     },
     {
       "id": "e16",
@@ -711,7 +721,7 @@
       "fromSide": "bottom",
       "toNode": "closed",
       "toSide": "top",
-      "label": "内点必须列入"
+      "label": "Interior differentiable extrema must be stationary / 内部可导极值点须驻定"
     },
     {
       "id": "e17",
@@ -719,7 +729,7 @@
       "fromSide": "bottom",
       "toNode": "constraint-opt",
       "toSide": "top",
-      "label": "局部分类"
+      "label": "Classify local candidates before global comparison · 先分类局部候选再作全局比较"
     },
     {
       "id": "e18",
@@ -727,7 +737,7 @@
       "fromSide": "bottom",
       "toNode": "constraint-opt",
       "toSide": "top",
-      "label": "比较可行候选"
+      "label": "For a continuous objective on a finite closed feasible interval · 连续目标与有限闭可行区间时"
     },
     {
       "id": "e19",
@@ -735,7 +745,7 @@
       "fromSide": "bottom",
       "toNode": "convex-global",
       "toSide": "top",
-      "label": "局部与全局分开"
+      "label": "Local curvature alone does not prove a global optimum / 局部曲率本身不证明全局最优"
     },
     {
       "id": "e20",
@@ -743,7 +753,7 @@
       "fromSide": "right",
       "toNode": "convex-global",
       "toSide": "left",
-      "label": "曲率可作全局证书"
+      "label": "On a convex feasible set: convex minima, concave maxima · 凸可行域：凸目标最小、凹目标最大"
     },
     {
       "id": "e21",
@@ -751,7 +761,7 @@
       "fromSide": "bottom",
       "toNode": "related-rates",
       "toSide": "top",
-      "label": "同一时间参数"
+      "label": "Differentiate a persistent relation along differentiable motion · 沿可导运动对持续关系求导"
     },
     {
       "id": "e22",
@@ -759,7 +769,7 @@
       "fromSide": "bottom",
       "toNode": "newton",
       "toSide": "top",
-      "label": "令切线模型为零"
+      "label": "Nonzero slope: use the tangent zero / 斜率非零时取切线零点"
     },
     {
       "id": "e23",
@@ -791,7 +801,7 @@
       "fromSide": "bottom",
       "toNode": "rolle",
       "toSide": "top",
-      "label": "先取得极值"
+      "label": "Continuous on a compact interval: extrema are attained · 紧区间上连续，保证取得极值"
     },
     {
       "id": "e27",
@@ -799,7 +809,7 @@
       "fromSide": "bottom",
       "toNode": "rolle",
       "toSide": "top",
-      "label": "内部极值斜率为零"
+      "label": "An interior differentiable extremum has zero derivative · 内部可导极值点导数为零"
     },
     {
       "id": "e28",
@@ -807,7 +817,7 @@
       "fromSide": "right",
       "toNode": "mvt",
       "toSide": "left",
-      "label": "减去割线斜率"
+      "label": "Subtract the secant line to equalize endpoint values · 减去割线，使端点等高"
     },
     {
       "id": "e29",
@@ -815,7 +825,7 @@
       "fromSide": "right",
       "toNode": "increment",
       "toSide": "left",
-      "label": "用导数界夹住未知点"
+      "label": "Bound the interior derivative to control the function change · 用内部导数界控制函数差"
     },
     {
       "id": "e30",
@@ -823,7 +833,7 @@
       "fromSide": "top",
       "toNode": "monotonic",
       "toSide": "bottom",
-      "label": "把局部符号推广到区间"
+      "label": "Apply on each subinterval to compare endpoint values · 对每个子区间应用，比较端点值"
     },
     {
       "id": "e31",
@@ -831,7 +841,7 @@
       "fromSide": "bottom",
       "toNode": "ineq",
       "toSide": "top",
-      "label": "控制差函数"
+      "label": "Bound the difference from a known reference value · 从已知基准值控制差函数"
     },
     {
       "id": "e32",
@@ -839,7 +849,7 @@
       "fromSide": "top",
       "toNode": "taylor-rem",
       "toSide": "bottom",
-      "label": "推广为余项存在式"
+      "label": "Higher-order mean-value arguments require extra smoothness · 更高阶中值论证需要额外光滑条件"
     },
     {
       "id": "e33",
@@ -855,7 +865,7 @@
       "fromSide": "right",
       "toNode": "antiderivative",
       "toSide": "left",
-      "label": "反向恢复函数"
+      "label": "Reverse differentiation / 反向寻找给定导数的函数"
     },
     {
       "id": "e35",
@@ -863,7 +873,7 @@
       "fromSide": "right",
       "toNode": "constant",
       "toSide": "left",
-      "label": "解族自由度"
+      "label": "One additive constant per interval / 每个区间一个加法常数"
     },
     {
       "id": "e36",
@@ -871,7 +881,7 @@
       "fromSide": "bottom",
       "toNode": "substitution",
       "toSide": "top",
-      "label": "链式结构记号"
+      "label": "du = g′(x) dx records the chain factor / 微分记录链式因子"
     },
     {
       "id": "e37",
@@ -879,7 +889,7 @@
       "fromSide": "bottom",
       "toNode": "substitution",
       "toSide": "top",
-      "label": "得到 +C"
+      "label": "Keep +C on each interval / 每段区间保留加法常数"
     },
     {
       "id": "e38",
@@ -887,7 +897,7 @@
       "fromSide": "bottom",
       "toNode": "ode",
       "toSide": "top",
-      "label": "由变化率恢复轨迹"
+      "label": "Solve F′=f for the unknown function / 解给定导数的函数方程"
     },
     {
       "id": "e39",
@@ -895,7 +905,7 @@
       "fromSide": "right",
       "toNode": "general-iv",
       "toSide": "left",
-      "label": "区分解族与轨迹"
+      "label": "Separate the equation, its family and initial data · 区分方程、解族与初值"
     },
     {
       "id": "e40",
@@ -903,7 +913,7 @@
       "fromSide": "right",
       "toNode": "separate",
       "toSide": "left",
-      "label": "一类可解结构"
+      "label": "For a separable product structure, solve branch by branch · 对可分离乘积结构逐分支求解"
     },
     {
       "id": "e41",
@@ -911,7 +921,7 @@
       "fromSide": "bottom",
       "toNode": "separate",
       "toSide": "top",
-      "label": "两侧取原函数"
+      "label": "Reverse the chain rule where the state factor is nonzero · 状态因子非零处反向使用链式法则"
     },
     {
       "id": "e42",
@@ -919,7 +929,7 @@
       "fromSide": "right",
       "toNode": "lost-eq",
       "toSide": "left",
-      "label": "除法会删解"
+      "label": "Division excludes the zero states of its factor · 除法排除因子为零的状态"
     },
     {
       "id": "e43",
@@ -927,7 +937,7 @@
       "fromSide": "right",
       "toNode": "max-interval",
       "toSide": "left",
-      "label": "合并后仍查定义域"
+      "label": "Check continuation of every retained solution · 对保留的每条解检查延拓"
     },
     {
       "id": "e44",
@@ -935,7 +945,7 @@
       "fromSide": "bottom",
       "toNode": "exp-growth",
       "toSide": "top",
-      "label": "固定比例率"
+      "label": "Choose a constant proportional rate · 取固定比例变化率"
     },
     {
       "id": "e45",
@@ -943,7 +953,7 @@
       "fromSide": "right",
       "toNode": "logistic",
       "toSide": "left",
-      "label": "加入容量反馈"
+      "label": "Make the per-capita rate decline linearly with the state · 让人均比例率随状态线性下降"
     },
     {
       "id": "e46",
@@ -951,7 +961,7 @@
       "fromSide": "bottom",
       "toNode": "orthogonal-solve",
       "toSide": "left",
-      "label": "斜率方程可分离时积分"
+      "label": "Apply if the resulting slope equation is separable · 所得斜率方程可分离时应用"
     },
     {
       "id": "e55",
@@ -959,7 +969,7 @@
       "fromSide": "bottom",
       "toNode": "orthogonal-solve",
       "toSide": "top",
-      "label": "把垂直条件写成斜率方程"
+      "label": "Finite nonzero slopes permit the reciprocal ODE / 有限非零斜率时可写负倒数方程"
     },
     {
       "id": "e47",
@@ -967,7 +977,7 @@
       "fromSide": "top",
       "toNode": "max-interval",
       "toSide": "bottom",
-      "label": "限制解的连通区间"
+      "label": "An undefined point on the trajectory blocks extension · 轨迹上的方程无定义处阻止延拓"
     },
     {
       "id": "e48",
@@ -975,7 +985,7 @@
       "fromSide": "right",
       "toNode": "ode-check",
       "toSide": "left",
-      "label": "限制可声明的解"
+      "label": "Report separate domain components · 分别报告定义域各分支"
     },
     {
       "id": "e49",
@@ -983,7 +993,7 @@
       "fromSide": "right",
       "toNode": "ode-check",
       "toSide": "left",
-      "label": "用方向检验公式"
+      "label": "Check the forward direction for positive initial data · 正初值时核对向前变化方向"
     },
     {
       "id": "e50",
@@ -991,7 +1001,7 @@
       "fromSide": "right",
       "toNode": "ode-check",
       "toSide": "bottom",
-      "label": "保留隐式分支"
+      "label": "Check axes, tangent directions and solution branches / 另查坐标轴、切向与解分支"
     },
     {
       "id": "e51",
@@ -999,7 +1009,7 @@
       "fromSide": "top",
       "toNode": "taylor-poly",
       "toSide": "bottom",
-      "label": "提供逐阶系数"
+      "label": "Derivative values at the centre fix coefficients / 基点各阶导数值确定系数"
     },
     {
       "id": "e52",
@@ -1007,7 +1017,7 @@
       "fromSide": "right",
       "toNode": "exp-growth",
       "toSide": "left",
-      "label": "给出比例变化轨迹"
+      "label": "The chain rule gives a constant proportional rate · 链式法则给出固定比例变化率"
     },
     {
       "id": "e53",
@@ -1015,7 +1025,7 @@
       "fromSide": "bottom",
       "toNode": "convex-criterion",
       "toSide": "top",
-      "label": "可导时的等价判据"
+      "label": "Equivalent derivative test on a differentiable open interval · 可导开区间上的等价判据"
     },
     {
       "id": "e54",
@@ -1023,7 +1033,25 @@
       "fromSide": "right",
       "toNode": "sketch",
       "toSide": "bottom",
-      "label": "建立曲率符号表"
+      "label": "Check derivative signs throughout each domain interval · 每个定义域区间全段核导数符号"
+    },
+    {
+      "id": "e-rolle-cauchy",
+      "fromNode": "rolle",
+      "fromSide": "bottom",
+      "toNode": "cauchy-mvt",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "An auxiliary function has equal endpoint values · 辅助函数两端等高"
+    },
+    {
+      "id": "e-cauchy-mvt",
+      "fromNode": "cauchy-mvt",
+      "fromSide": "right",
+      "toNode": "mvt",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "Choose the second function as g(x)=x · 第二函数取g(x)=x"
     }
   ]
 }

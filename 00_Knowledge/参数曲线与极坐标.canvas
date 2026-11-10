@@ -7,7 +7,7 @@
       "y": -360,
       "width": 2900,
       "height": 220,
-      "text": "# 参数曲线与极坐标\n\n左支先定义参数曲线，再区分几何轨迹与具体参数化；右支先定义极坐标，再处理表示不唯一与覆盖。这里画的是精选学习路线，不是全部双链的机械展开。\n\n**长度和面积按参数实际扫过的次数累计，不会自动把重复覆盖去重。**",
+      "text": "<!-- bilingual-en:start -->\n# Parametric curves and polar coordinates\nA [[参数曲线|parametric curve]] is an ordered map; [[极坐标|polar coordinates]] are a way to name points. Keep the interval, direction and repeated coverage when moving from a formula to a drawing. Tangents use velocity; length uses speed; surface and polar areas require their own coverage checks.\n<!-- bilingual-en:end -->\n\n**参数曲线与极坐标**：参数曲线是有序映射，极坐标是点的表示方式。由公式作图时保留区间、方向及重复覆盖；切线看速度，弧长积分速率，曲面面积与极坐标面积各自核查覆盖。",
       "color": "4"
     },
     {
@@ -16,8 +16,8 @@
       "x": 0,
       "y": 0,
       "width": 500,
-      "height": 220,
-      "text": "## [[参数曲线]]\n*Parametric curve*\n\nCALC-PARAM-001 · 从有序参数区间到平面的连续映射。",
+      "height": 290,
+      "text": "<!-- bilingual-en:start -->\n## [[参数曲线|Parametric curves]]\nA continuous map $\\gamma(t)=(x(t),y(t))$ includes its nonempty real interval $I$. Its trace is the set of visited points; the map also records their order. Differentiability is an extra assumption.\n<!-- bilingual-en:end -->\n\n**参数曲线**：连续映射 $\\gamma:I\\to\\mathbb R^2$ 连同非空实区间 $I$ 一起给出。像集记录经过的点，映射还记录顺序；可导是额外条件。",
       "color": "5"
     },
     {
@@ -26,8 +26,8 @@
       "x": 0,
       "y": 350,
       "width": 500,
-      "height": 220,
-      "text": "## [[同轨迹不等于同参数化]]\n*Same trace, different parametrisation*\n\nCALC-PARAM-008 · 方向、速度与覆盖次数仍可能不同。",
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[同轨迹不等于同参数化|Same trace, different journeys]]\nEqual images can have different direction, speed or repeated arcs. A continuous monotone bijection of parameter intervals uses each old stage once. A regular $C^1$ change also requires a nonzero parameter derivative.\n<!-- bilingual-en:end -->\n\n**同轨迹不等于同参数化**：同像仍可异向、异速或重描。区间间连续单调双射把旧阶段各用一次；正则的 $C^1$ 换参数还要求参数导数非零。",
       "color": "1"
     },
     {
@@ -36,8 +36,8 @@
       "x": 600,
       "y": 350,
       "width": 500,
-      "height": 220,
-      "text": "## [[参数曲线切线的速度条件]]\n*Tangent from velocity*\n\nCALC-PARAM-002 · $\\gamma'\\ne0$ 给切向；$y'/x'$ 还要求 $x'\\ne0$。"
+      "height": 330,
+      "text": "<!-- bilingual-en:start -->\n## [[参数曲线切线的速度条件|Tangents from velocity]]\nAt an interior point of a $C^1$ curve, $\\gamma'\\ne0$ supplies a tangent direction. The slope $y'/x'$ needs $x'\\ne0$; $x'=0,y'\\ne0$ gives a vertical tangent. Zero velocity alone decides neither existence nor absence of a tangent.\n<!-- bilingual-en:end -->\n\n**切线的速度条件**：$C^1$ 曲线内点的非零速度给切向。斜率商另需 $x'\\ne0$；$x'=0,y'\\ne0$ 时竖直。零速本身不能决定有无切线。"
     },
     {
       "id": "param-length",
@@ -45,8 +45,8 @@
       "x": 0,
       "y": 700,
       "width": 500,
-      "height": 220,
-      "text": "## [[参数曲线弧长与重复描画]]\n*Arc length integrates speed*\n\nCALC-PARAM-003 · $L=\\int\\sqrt{x'^2+y'^2}\\,dt$，走回头路仍增加长度。",
+      "height": 330,
+      "text": "<!-- bilingual-en:start -->\n## [[参数曲线弧长与重复描画|Arc length and retracing]]\nFor a continuous, piecewise $C^1$ curve on finite $[a,b]$, $a<b$,\n$$L=\\int_a^b\\sqrt{x'(t)^2+y'(t)^2}\\,dt.$$\nZero velocity is allowed. The integral counts travelled distance, including each retraced arc.\n<!-- bilingual-en:end -->\n\n**弧长与重描**：有限 $[a,b]$ 上连续、分段 $C^1$ 即可用速率积分，允许零速度；每次重走一段弧都再次计长。",
       "color": "3"
     },
     {
@@ -55,8 +55,8 @@
       "x": 600,
       "y": 700,
       "width": 500,
-      "height": 220,
-      "text": "## [[旋转曲面面积与重复覆盖]]\n*Surface of revolution*\n\nCALC-PARAM-004 · $dA=2\\pi(\\text{轴距})\\,ds$，半径与覆盖区间都要核对。",
+      "height": 410,
+      "text": "<!-- bilingual-en:start -->\n## [[旋转曲面面积与重复覆盖|Surface area and coverage]]\nFor a continuous, piecewise $C^1$ profile on finite $[a,b]$, $a<b$,\n$$S_{\\rm counted}=\\int_a^b2\\pi\\rho(t)\\sqrt{x'^2+y'^2}\\,dt.$$\nUse $\\rho=|x|$ about the $y$-axis, $|y|$ about the $x$-axis. Geometric area needs each surface patch counted once; tracing the profile once is insufficient.\n<!-- bilingual-en:end -->\n\n**曲面面积与覆盖**：上述正则条件下积分 $2\\pi\\rho\\,ds$。绕 $y$ 轴取 $\\rho=|x|$，绕 $x$ 轴取 $|y|$。几何面积须把表面各块计一次；母线只描一次仍不足。",
       "color": "3"
     },
     {
@@ -65,8 +65,8 @@
       "x": 1800,
       "y": 0,
       "width": 500,
-      "height": 220,
-      "text": "## [[极坐标]]\n*Polar coordinates*\n\nCALC-PARAM-005 · $x=r\\cos\\theta$、$y=r\\sin\\theta$。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[极坐标|Polar coordinates]]\n$$x=r\\cos\\theta,\\qquad y=r\\sin\\theta.$$\nAngles are in radians. The signed radius $r$ gives distance $|r|$; a negative value uses the opposite ray. Recovering an angle requires the quadrant, not just $y/x$.\n<!-- bilingual-en:end -->\n\n**极坐标**：弧度角和有向半径经上述映射给出平面点。距离为 $|r|$，负半径取反向射线；反求角度须核象限，不能只看 $y/x$。",
       "color": "5"
     },
     {
@@ -75,8 +75,8 @@
       "x": 1800,
       "y": 350,
       "width": 500,
-      "height": 220,
-      "text": "## [[极坐标表示不唯一]]\n*Non-unique representation*\n\nCALC-PARAM-009 · 周期角、负半径和原点产生多组表示。",
+      "height": 330,
+      "text": "<!-- bilingual-en:start -->\n## [[极坐标表示不唯一|Non-unique coordinates]]\nFor $r\\ne0$, all equivalent pairs add $2k\\pi$ to the angle, or reverse $r$ and add $(2k+1)\\pi$, with integer $k$. A positive radius and one half-open turn select one label away from the origin; $(0,\\theta)$ always names the origin.\n<!-- bilingual-en:end -->\n\n**表示不唯一**：非原点可转整圈，或半径反号并转奇数个半圈。正半径与一圈半开角区间只在非原点选出唯一代表；原点的角度须另作约定。",
       "color": "1"
     },
     {
@@ -85,8 +85,8 @@
       "x": 2400,
       "y": 350,
       "width": 500,
-      "height": 220,
-      "text": "## [[极坐标曲线的覆盖与重描]]\n*Tracing a polar curve*\n\nCALC-PARAM-006 · 把 $r=f(\\theta)$ 当作参数曲线，追踪符号、周期与覆盖。"
+      "height": 330,
+      "text": "<!-- bilingual-en:start -->\n## [[极坐标曲线的覆盖与重描|Tracing a polar curve]]\nFor continuous $f$ on $I$, trace $(f(\\theta)\\cos\\theta,f(\\theta)\\sin\\theta)$ over that interval. With $a>0$, $r=2a\\cos\\theta$ traces its circle once over any closed interval of length $\\pi$, twice over $2\\pi$. Track the point map, not just the period of $f$.\n<!-- bilingual-en:end -->\n\n**覆盖与重描**：连续 $r=f(\\theta)$ 须连同角区间逐点映回平面。$a>0$ 时，$r=2a\\cos\\theta$ 在长 $\\pi$ 的闭区间描圆一次，长 $2\\pi$ 时两次；半径函数的周期不等于点的周期。"
     },
     {
       "id": "polar-area",
@@ -94,8 +94,8 @@
       "x": 2400,
       "y": 700,
       "width": 500,
-      "height": 220,
-      "text": "## [[极坐标面积与单次覆盖]]\n*Polar area*\n\nCALC-PARAM-007 · $A=\\frac12\\int r^2d\\theta$，前提是目标区域只扫一次。",
+      "height": 400,
+      "text": "<!-- bilingual-en:start -->\n## [[极坐标面积与单次覆盖|Polar area and radial coverage]]\nFor continuous $R\\ge0$ on $[\\alpha,\\beta]$, $0<\\beta-\\alpha\\le2\\pi$, the region $0\\le\\rho\\le R(\\theta)$ has area\n$$A=\\tfrac12\\int_\\alpha^\\beta R(\\theta)^2\\,d\\theta.$$\nSigned or longer sweeps need a separate region check. Non-repeated boundary points do not ensure non-overlapping radial segments.\n<!-- bilingual-en:end -->\n\n**极坐标面积**：连续非负外径、正角宽不超过一圈时，公式计算径向区域 $0\\le\\rho\\le R(\\theta)$。带负半径或更长扫角须另查实际区域；边界不重描，不保证径向线段不重叠。",
       "color": "3"
     }
   ],
@@ -107,7 +107,7 @@
       "toNode": "param-definition",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "先定义一般参数曲线"
+      "label": "First specify the ordered continuous map / 先指定有序连续映射"
     },
     {
       "id": "param-edge-header-polar",
@@ -116,7 +116,7 @@
       "toNode": "polar-definition",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "再定义另一种平面坐标"
+      "label": "Then distinguish a coordinate label from a curve / 再区分点的坐标与整条曲线"
     },
     {
       "id": "param-edge-definition-distinction",
@@ -125,7 +125,7 @@
       "toNode": "param-distinction",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "像集会丢失运动信息"
+      "label": "Taking the image forgets order and multiplicity / 取像集会丢失顺序与重描信息"
     },
     {
       "id": "param-edge-definition-tangent",
@@ -134,7 +134,7 @@
       "toNode": "param-tangent",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "对参数求导"
+      "label": "At a C1 interior point, use nonzero velocity / C1内点以非零速度确定切向"
     },
     {
       "id": "param-edge-distinction-length",
@@ -143,7 +143,7 @@
       "toNode": "param-length",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "覆盖次数会进入路程"
+      "label": "For piecewise C1 paths, each retraced arc adds length / 分段C1路径的每次重走都计长"
     },
     {
       "id": "param-edge-length-surface",
@@ -152,7 +152,7 @@
       "toNode": "param-surface",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "用 ds 形成旋转带"
+      "label": "Multiply ds by 2π times axis distance; check coverage / 弧长微元乘2π倍轴距并查覆盖"
     },
     {
       "id": "param-edge-polar-nonunique",
@@ -161,7 +161,7 @@
       "toNode": "polar-nonunique",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "坐标映射不是一一对应"
+      "label": "The coordinate map sends several pairs to one point / 坐标映射可把多组数送到同一点"
     },
     {
       "id": "param-edge-polar-trace",
@@ -170,7 +170,7 @@
       "toNode": "polar-trace",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "让角度充当参数"
+      "label": "Choose continuous r=f(theta) and its interval / 选连续半径函数及角区间"
     },
     {
       "id": "param-edge-nonunique-trace",
@@ -179,7 +179,7 @@
       "toNode": "polar-trace",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "负半径与周期改变覆盖"
+      "label": "Compare Cartesian points to detect retracing / 比较直角坐标点以判重描"
     },
     {
       "id": "param-edge-trace-area",
@@ -188,7 +188,7 @@
       "toNode": "polar-area",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "确认只扫一次后积分扇形"
+      "label": "Check radial-region coverage in addition to boundary tracing / 描边之外另查径向区域覆盖"
     }
   ]
 }

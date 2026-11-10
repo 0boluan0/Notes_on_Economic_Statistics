@@ -1,172 +1,1529 @@
 {
   "nodes": [
-    {"id":"d7a4c1e8b0392f65","type":"text","x":0,"y":-260,"width":3420,"height":170,"color":"4","text":"# 离散时间 Markov 链 · 学习地图\n\n先把对象与转移写清楚，再依次进入 **类结构、稳态与极限、首达与吸收、可逆性、模型应用**。原子卡负责完整解释；小桥只说明这一步为什么能走到下一步。"},
-    {"id":"aa00000000000001","type":"text","x":0,"y":0,"width":3420,"height":150,"color":"4","text":"## 1 · 对象、状态与转移\n\n上排建立可计算的 DTMC；下排单独处理状态充分性与两个常见边界。"},
-    {"id":"a001f3c5d7e90214","type":"text","x":0,"y":220,"width":300,"height":130,"color":"4","text":"## [[Markov性|Markov 性]]\n\n给定当前状态后，未来与更早过去条件独立。"},
-    {"id":"cc00000000000001","type":"text","x":340,"y":250,"width":140,"height":70,"text":"把无后效性放进离散时间、离散状态"},
-    {"id":"c024f3c5d7e90237","type":"text","x":520,"y":220,"width":300,"height":130,"color":"4","text":"## [[离散时间Markov链|离散时间 Markov 链]]\n\n时间和状态均离散，并满足 Markov 性。"},
-    {"id":"cc00000000000002","type":"text","x":860,"y":250,"width":140,"height":70,"text":"再问转移规律是否随起始时点改变"},
-    {"id":"a003f3c5d7e90216","type":"text","x":1040,"y":220,"width":300,"height":130,"color":"4","text":"## [[DTMC时间齐次转移核|DTMC 时间齐次转移核]]\n\n固定步数的转移只依赖步数，不依赖起始时点。"},
-    {"id":"cc00000000000003","type":"text","x":1380,"y":250,"width":140,"height":70,"text":"固定的一步转移可编码为同一个随机矩阵"},
-    {"id":"b020e4d6f8091233","type":"text","x":1560,"y":220,"width":300,"height":130,"color":"4","text":"## [[Markov矩阵|Markov 矩阵]]\n\n非负且相应方向概率和为一，才表示转移。"},
-    {"id":"cc00000000000004","type":"text","x":1900,"y":250,"width":140,"height":70,"text":"先确定概率向量位于矩阵哪一侧"},
-    {"id":"b021e4d6f8091234","type":"text","x":2080,"y":220,"width":300,"height":130,"color":"4","text":"## [[Markov矩阵左右约定|行随机与列随机]]\n\n向量方向决定稳态方程和乘法次序。"},
-    {"id":"cc00000000000005","type":"text","x":2420,"y":250,"width":140,"height":70,"text":"约定一致后，多步转移才能写成 P 的幂"},
-    {"id":"a004f3c5d7e90217","type":"text","x":2600,"y":220,"width":300,"height":130,"color":"4","text":"## [[DTMC转移复合|Chapman–Kolmogorov]]\n\n按中间状态求和，复合较短的转移区间。"},
-    {"id":"cc00000000000006","type":"text","x":2940,"y":250,"width":140,"height":70,"text":"矩阵幂给占据概率；首达要另设命中时刻"},
-    {"id":"c027f3c5d7e90240","type":"text","x":3120,"y":220,"width":300,"height":130,"color":"1","text":"## [[n步转移非首达|n 步转移不是首达]]\n\n第 n 步在目标内，可能此前已经到过。"},
-    {"id":"cc00000000000007","type":"text","x":80,"y":420,"width":140,"height":70,"text":"Markov 性取决于状态是否保留必要历史"},
-    {"id":"a002f3c5d7e90215","type":"text","x":0,"y":560,"width":300,"height":130,"color":"4","text":"## [[Markov充分状态|Markov 充分状态]]\n\n当前状态保留预测未来所需的全部历史信息。"},
-    {"id":"cc00000000000008","type":"text","x":340,"y":590,"width":140,"height":70,"text":"若只缺有限记忆，就把它并入新状态"},
-    {"id":"c025f3c5d7e90238","type":"text","x":520,"y":560,"width":300,"height":130,"color":"4","text":"## [[状态扩充|状态扩充]]\n\n把相关滞后组成新状态，恢复一阶 Markov 表示。"},
-    {"id":"cc00000000000009","type":"text","x":1120,"y":420,"width":140,"height":70,"text":"转移核不随时间变，边际分布仍可能在变"},
-    {"id":"c026f3c5d7e90239","type":"text","x":1040,"y":560,"width":300,"height":130,"color":"1","text":"## [[齐次不等于平稳|齐次不等于平稳]]\n\n固定转移规则不代表边际分布已经平稳。"},
-    {"id":"aa00000000000002","type":"text","x":0,"y":900,"width":3420,"height":150,"color":"2","text":"## 2 · 状态空间的类结构\n\n多步可达先把状态分成沟通类；随后分别检查出口、全局互通、回返类型和周期。"},
-    {"id":"a005f3c5d7e90218","type":"text","x":1560,"y":1120,"width":300,"height":130,"color":"2","text":"## [[马氏链沟通类|可达、互通与沟通类]]\n\n双向可达形成等价类，是后续分类的共同起点。"},
-    {"id":"cc00000000000010","type":"text","x":80,"y":1350,"width":140,"height":70,"text":"类形成后，再检查是否存在通向类外的出口"},
-    {"id":"cc00000000000011","type":"text","x":860,"y":1350,"width":140,"height":70,"text":"全空间只有一个沟通类，才称不可约"},
-    {"id":"cc00000000000012","type":"text","x":1640,"y":1350,"width":140,"height":70,"text":"回返或逃逸的类型在同一沟通类内一致"},
-    {"id":"cc00000000000013","type":"text","x":2420,"y":1350,"width":140,"height":70,"text":"可能回返时长的公约数刻画周期"},
-    {"id":"a006f3c5d7e90219","type":"text","x":0,"y":1500,"width":300,"height":130,"color":"2","text":"## [[闭沟通类|闭沟通类]]\n\n进入后没有正概率路径离开该类。"},
-    {"id":"c028f3c5d7e90241","type":"text","x":780,"y":1500,"width":300,"height":130,"color":"2","text":"## [[不可约链|不可约链]]\n\n整个状态空间只有一个沟通类。"},
-    {"id":"a008f3c5d7e90221","type":"text","x":1560,"y":1500,"width":300,"height":130,"color":"2","text":"## [[常返与暂态|常返与暂态]]\n\n按最终返回概率为一或小于一区分。"},
-    {"id":"a010f3c5d7e90223","type":"text","x":2340,"y":1500,"width":300,"height":130,"color":"2","text":"## [[状态周期|状态周期]]\n\n所有正回返时长的最大公约数。"},
-    {"id":"cc00000000000014","type":"text","x":80,"y":1680,"width":140,"height":70,"text":"闭类是局部性质，不说明全链只有一个类"},
-    {"id":"c029f3c5d7e90242","type":"text","x":0,"y":1810,"width":300,"height":130,"color":"1","text":"## [[闭类不等于不可约|有闭类不等于不可约]]\n\n多个闭类和类外暂态状态都可能存在。"},
-    {"id":"cc00000000000015","type":"text","x":80,"y":1990,"width":140,"height":70,"text":"有限性排除无限逃逸，最终落入某个闭类"},
-    {"id":"a007f3c5d7e90220","type":"text","x":0,"y":2120,"width":300,"height":130,"color":"2","text":"## [[有限链类分解|有限链类分解]]\n\n闭常返类加类外暂态状态构成全空间。"},
-    {"id":"cc00000000000016","type":"text","x":1640,"y":1680,"width":140,"height":70,"text":"确认必返后，再问平均回返时间是否有限"},
-    {"id":"a009f3c5d7e90222","type":"text","x":1560,"y":1810,"width":300,"height":130,"color":"2","text":"## [[正常返与零常返|正常返与零常返]]\n\n都必然返回；只有正常返的平均回返时间有限。"},
-    {"id":"aa00000000000003","type":"text","x":0,"y":2400,"width":3420,"height":150,"color":"3","text":"## 3 · 稳态与长期极限\n\n先分清“固定分布、唯一性、逐步收敛”三件事；正常返之后还可研究三种不要求非周期的长期平均。"},
-    {"id":"b022e4d6f8091235","type":"text","x":0,"y":2620,"width":300,"height":130,"color":"3","text":"## [[Markov稳态分布|稳态分布]]\n\n一步转移后仍保持同一概率分布。"},
-    {"id":"cc00000000000017","type":"text","x":340,"y":2650,"width":140,"height":70,"text":"有限不可约类把固定点确定为唯一全正分布"},
-    {"id":"a012f3c5d7e90225","type":"text","x":520,"y":2620,"width":300,"height":130,"color":"3","text":"## [[有限不可约链稳态|有限不可约链稳态]]\n\n平稳分布唯一，并给每个状态正质量。"},
-    {"id":"cc00000000000018","type":"text","x":860,"y":2650,"width":140,"height":70,"text":"对每个闭类分别求稳态，再作凸组合"},
-    {"id":"a011f3c5d7e90224","type":"text","x":1040,"y":2620,"width":300,"height":130,"color":"3","text":"## [[有限链平稳分解|有限链平稳分解]]\n\n闭类稳态作凸组合，暂态质量为零。"},
-    {"id":"cc00000000000019","type":"text","x":1380,"y":2650,"width":140,"height":70,"text":"闭类数量决定固定分布能否唯一"},
-    {"id":"b023e4d6f8091236","type":"text","x":1560,"y":2620,"width":300,"height":130,"color":"3","text":"## [[Markov稳态唯一判据|稳态唯一判据]]\n\n固定点空间只能有一个概率方向。"},
-    {"id":"b024e4d6f8091237","type":"text","x":0,"y":3050,"width":300,"height":130,"color":"1","text":"## [[稳态唯一不推收敛|唯一稳态仍可能振荡]]\n\n唯一固定点没有排除周期模式。"},
-    {"id":"cc00000000000020","type":"text","x":340,"y":3080,"width":140,"height":70,"text":"还要检查单位圆上是否有其他谱模式"},
-    {"id":"b025e4d6f8091238","type":"text","x":520,"y":3050,"width":300,"height":130,"color":"3","text":"## [[Markov矩阵幂收敛判据|矩阵幂收敛判据]]\n\n除 1 外的谱模式必须严格衰减。"},
-    {"id":"cc00000000000021","type":"text","x":860,"y":3080,"width":140,"height":70,"text":"有限不可约且非周期时，逐步分布才稳定"},
-    {"id":"a013f3c5d7e90226","type":"text","x":1040,"y":3050,"width":300,"height":130,"color":"3","text":"## [[有限链逐步收敛|有限链逐步收敛]]\n\n有限、不可约、非周期保证从任意初态收敛。"},
-    {"id":"aa00000000000007","type":"text","x":0,"y":3300,"width":1860,"height":100,"color":"3","text":"### 正常返之后的三种长期对象\n转移概率平均、单路径时间平均、平均回返时间回答不同问题；周期不妨碍它们。"},
-    {"id":"a014f3c5d7e90227","type":"text","x":0,"y":3460,"width":300,"height":130,"color":"3","text":"## [[周期链Cesaro平均|Cesàro 转移平均]]\n\n平均一列转移概率，周期也可收敛。"},
-    {"id":"c030f3c5d7e90243","type":"text","x":520,"y":3460,"width":300,"height":130,"color":"3","text":"## [[Markov时间平均收敛|样本路径时间平均]]\n\n一条路径上的经验平均趋向平稳期望。"},
-    {"id":"a015f3c5d7e90228","type":"text","x":1040,"y":3460,"width":300,"height":130,"color":"3","text":"## [[Kac回返公式|Kac 回返公式]]\n\n平稳质量等于平均首次回返时间的倒数。"},
-    {"id":"aa00000000000004","type":"text","x":0,"y":3800,"width":3420,"height":150,"color":"1","text":"## 4 · 首达、命中与吸收\n\n第一步分析先处理一般目标；有限吸收链再把暂态访问次数压缩为矩阵公式。"},
-    {"id":"aa00000000000008","type":"text","x":0,"y":3980,"width":1340,"height":100,"color":"1","text":"### 同一次“先走一步”分成两个问题\n命中概率用调和方程；命中时间多付一步成本。两者都要正确边界与最小非负解。"},
-    {"id":"a016f3c5d7e90229","type":"text","x":0,"y":4120,"width":300,"height":130,"color":"1","text":"## [[命中概率第一步方程|命中概率方程]]\n\n目标上取一，目标外对下一状态求期望。"},
-    {"id":"a017f3c5d7e90230","type":"text","x":520,"y":4120,"width":300,"height":130,"color":"1","text":"## [[期望命中时间方程|期望命中时间方程]]\n\n目标上取零，目标外先加一步成本。"},
-    {"id":"cc00000000000022","type":"text","x":860,"y":4150,"width":140,"height":70,"text":"方程允许 +∞；最终必达仍不控制尾部均值"},
-    {"id":"c033f3c5d7e90246","type":"text","x":1040,"y":4120,"width":300,"height":130,"color":"1","text":"## [[必达不推有限期望|必达不推有限期望]]\n\n命中时间几乎必然有限，均值仍可能无限。"},
-    {"id":"c034f3c5d7e90247","type":"text","x":0,"y":4550,"width":300,"height":130,"color":"1","text":"## [[吸收状态|吸收状态]]\n\npₐₐ=1；进入后永不离开。"},
-    {"id":"cc00000000000023","type":"text","x":340,"y":4580,"width":140,"height":70,"text":"还要让每个非吸收状态可达某个吸收点"},
-    {"id":"a018f3c5d7e90231","type":"text","x":520,"y":4550,"width":300,"height":130,"color":"1","text":"## [[吸收链|吸收链]]\n\n至少一个吸收态，且其余状态都能到达吸收态。"},
-    {"id":"cc00000000000024","type":"text","x":860,"y":4580,"width":140,"height":70,"text":"有限性把存在吸收路径升级为概率一"},
-    {"id":"c035f3c5d7e90248","type":"text","x":1040,"y":4550,"width":300,"height":130,"color":"1","text":"## [[吸收链必然吸收|有限吸收链必然吸收]]\n\n从任意初态最终都进入某个吸收态。"},
-    {"id":"cc00000000000025","type":"text","x":1380,"y":4580,"width":140,"height":70,"text":"确认非吸收状态暂态后，才能取 Q-R 分块"},
-    {"id":"c036f3c5d7e90249","type":"text","x":1560,"y":4550,"width":300,"height":130,"color":"1","text":"## [[吸收链标准形|吸收链标准形]]\n\n暂态在前、吸收态在后，得到 Q、R、0、I。"},
-    {"id":"cc00000000000026","type":"text","x":1900,"y":4580,"width":140,"height":70,"text":"先验证 Q 的质量会离开暂态区"},
-    {"id":"a019f3c5d7e90232","type":"text","x":2080,"y":4550,"width":300,"height":130,"color":"1","text":"## [[基本矩阵存在条件|基本矩阵存在条件]]\n\nQⁿ→0 等价于谱半径小于一。"},
-    {"id":"cc00000000000027","type":"text","x":2420,"y":4580,"width":140,"height":70,"text":"Neumann 级数汇总吸收前的全部暂态访问"},
-    {"id":"c037f3c5d7e90250","type":"text","x":2600,"y":4550,"width":300,"height":130,"color":"1","text":"## [[吸收链基本矩阵|吸收链基本矩阵]]\n\nN=(I−Q)⁻¹ 记录吸收前期望访问次数。"},
-    {"id":"cc00000000000028","type":"text","x":2420,"y":4780,"width":140,"height":70,"text":"再乘 R，得到最终吸收去向"},
-    {"id":"cc00000000000029","type":"text","x":2940,"y":4780,"width":140,"height":70,"text":"按暂态求和，得到吸收前步数"},
-    {"id":"c038f3c5d7e90251","type":"text","x":2340,"y":4950,"width":300,"height":130,"color":"1","text":"## [[吸收概率矩阵为NR|吸收概率矩阵：B=NR]]\n\n基本矩阵乘以暂态到吸收态的转移块，给出各吸收终点的概率。"},
-    {"id":"c039f3c5d7e90252","type":"text","x":2860,"y":4950,"width":300,"height":130,"color":"1","text":"## [[期望吸收时间为N1|期望吸收时间：t=N1]]\n\n基本矩阵每行求和，给出首次吸收前的期望步数。"},
-    {"id":"aa00000000000005","type":"text","x":0,"y":5300,"width":3420,"height":150,"color":"5","text":"## 5 · 详细平衡与时间反演\n\n逐对流量是局部方程；可逆性是整段平稳路径的倒放不变。中间定理说明二者为何等价。"},
-    {"id":"a020f3c5d7e90233","type":"text","x":0,"y":5520,"width":300,"height":130,"color":"5","text":"## [[DTMC详细平衡|详细平衡]]\n\n相对于 π，每对状态的双向概率流相等。"},
-    {"id":"cc00000000000030","type":"text","x":340,"y":5550,"width":140,"height":70,"text":"逐段改写概率，正放路径等于倒放路径"},
-    {"id":"c032f3c5d7e90245","type":"text","x":520,"y":5520,"width":300,"height":130,"color":"5","text":"## [[详细平衡与可逆|详细平衡与可逆]]\n\n相对于同一 π 二者等价，并且都推出平稳。"},
-    {"id":"cc00000000000031","type":"text","x":860,"y":5550,"width":140,"height":70,"text":"把倒放不变缩到一步，就得到逐对流量等式"},
-    {"id":"c031f3c5d7e90244","type":"text","x":1040,"y":5520,"width":300,"height":130,"color":"5","text":"## [[DTMC可逆性|DTMC 可逆性]]\n\n从 π 启动后，有限路径倒放仍同分布。"},
-    {"id":"aa00000000000006","type":"text","x":0,"y":5900,"width":3420,"height":150,"color":"6","text":"## 6 · 两类模型应用\n\n图上随机游走把结构变成转移矩阵；Markov switching 则把 Markov 性放在不可见状态上。"},
-    {"id":"c040f3c5d7e90253","type":"text","x":0,"y":6120,"width":300,"height":130,"color":"6","text":"## [[图上随机游走|图上随机游走]]\n\n顶点是状态，出边规则决定下一步概率。"},
-    {"id":"cc00000000000032","type":"text","x":340,"y":6150,"width":140,"height":70,"text":"零出度使均匀出边公式无定义"},
-    {"id":"a021f3c5d7e90234","type":"text","x":520,"y":6120,"width":300,"height":130,"color":"6","text":"## [[悬空节点转移|悬空节点转移]]\n\n为零出度节点显式补一整行概率。"},
-    {"id":"cc00000000000033","type":"text","x":860,"y":6150,"width":140,"height":70,"text":"先补成合法随机矩阵，再混入传送机制"},
-    {"id":"a022f3c5d7e90235","type":"text","x":1040,"y":6120,"width":300,"height":130,"color":"6","text":"## [[PageRank随机传送|PageRank 随机传送]]\n\n混合链接转移和指定传送分布。"},
-    {"id":"cc00000000000034","type":"text","x":1380,"y":6150,"width":140,"height":70,"text":"全支持传送把矩阵每个条目都变为正数"},
-    {"id":"c041f3c5d7e90254","type":"text","x":1560,"y":6120,"width":300,"height":130,"color":"6","text":"## [[全支持传送收敛|全支持传送保证收敛]]\n\n有限图上得到唯一稳态和收敛幂迭代。"},
-    {"id":"cc00000000000035","type":"text","x":1900,"y":6150,"width":140,"height":70,"text":"收敛只回答给定模型的计算，不回答排名是否客观"},
-    {"id":"c042f3c5d7e90255","type":"text","x":2080,"y":6120,"width":300,"height":130,"color":"6","text":"## [[PageRank模型依赖|PageRank 的模型依赖]]\n\n链接权重、传送分布和悬空修补都会改变排名。"},
-    {"id":"a023f3c5d7e90236","type":"text","x":0,"y":6580,"width":300,"height":130,"color":"6","text":"## [[Markov switching模型|Markov switching]]\n\n潜在 Markov 状态控制状态依赖的观测模型。"},
-    {"id":"cc00000000000036","type":"text","x":340,"y":6610,"width":140,"height":70,"text":"积分掉潜在状态后，更早观测仍可更新当前判断"},
-    {"id":"c043f3c5d7e90256","type":"text","x":520,"y":6580,"width":300,"height":130,"color":"1","text":"## [[观测序列不必Markov|观测序列不必 Markov]]\n\n潜在状态一阶 Markov，不代表边际观测也一阶 Markov。"}
+    {
+      "id": "d7a4c1e8b0392f65",
+      "type": "text",
+      "x": 0,
+      "y": -260,
+      "width": 3420,
+      "height": 170,
+      "color": "4",
+      "text": "# 离散时间 Markov 链 · 学习地图\n\n先把对象与转移写清楚，再依次进入 **类结构、稳态与极限、首达与吸收、可逆性、模型应用**。原子卡负责完整解释；小桥只说明这一步为什么能走到下一步。"
+    },
+    {
+      "id": "aa00000000000001",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 3420,
+      "height": 150,
+      "color": "4",
+      "text": "## 1 · 对象、状态与转移\n\n上排建立可计算的 DTMC；下排单独处理状态充分性与两个常见边界。"
+    },
+    {
+      "id": "a001f3c5d7e90214",
+      "type": "text",
+      "x": 0,
+      "y": 220,
+      "width": 300,
+      "height": 300,
+      "color": "4",
+      "text": "<!-- bilingual-en:start -->\n## [[Markov性|Markov property]]\n\nGiven the present state, the earlier path adds no predictive information about the future. This is conditional independence, not independence of successive states.\n<!-- bilingual-en:end -->\n\n给定当前状态，早期路径不再为未来补充预测信息。这是条件独立，不是相邻状态独立。"
+    },
+    {
+      "id": "cc00000000000001",
+      "type": "text",
+      "x": 340,
+      "y": 250,
+      "width": 140,
+      "height": 200,
+      "text": "<!-- bilingual-en:start -->\nUse discrete steps and countable states.\n<!-- bilingual-en:end -->\n\n选定离散时点和可数状态。"
+    },
+    {
+      "id": "c024f3c5d7e90237",
+      "type": "text",
+      "x": 520,
+      "y": 220,
+      "width": 300,
+      "height": 300,
+      "color": "4",
+      "text": "<!-- bilingual-en:start -->\n## [[离散时间Markov链|Discrete-time Markov chain]]\n\nDiscrete steps, a finite or countable state space in this course, and the Markov property. Time homogeneity is an additional assumption.\n<!-- bilingual-en:end -->\n\n本课程口径：离散步数、有限或可数状态、Markov性；时间齐次另作附加假设。"
+    },
+    {
+      "id": "cc00000000000002",
+      "type": "text",
+      "x": 860,
+      "y": 250,
+      "width": 140,
+      "height": 200,
+      "text": "<!-- bilingual-en:start -->\nAsk separately whether the rule changes with time.\n<!-- bilingual-en:end -->\n\n再问规则是否随时间变化。"
+    },
+    {
+      "id": "a003f3c5d7e90216",
+      "type": "text",
+      "x": 1040,
+      "y": 220,
+      "width": 300,
+      "height": 300,
+      "color": "4",
+      "text": "<!-- bilingual-en:start -->\n## [[DTMC时间齐次转移核|Time-homogeneous kernel]]\n\nThe same transition rule applies at every step. Markov dependence and calendar invariance are separate conditions.\n<!-- bilingual-en:end -->\n\n每一步重复同一转移规则；Markov依赖结构与日历不变性是两个不同条件。"
+    },
+    {
+      "id": "cc00000000000003",
+      "type": "text",
+      "x": 1380,
+      "y": 250,
+      "width": 140,
+      "height": 200,
+      "text": "<!-- bilingual-en:start -->\nFor finitely many states, encode the rule as a matrix.\n<!-- bilingual-en:end -->\n\n有限状态时把规则写成矩阵。"
+    },
+    {
+      "id": "b020e4d6f8091233",
+      "type": "text",
+      "x": 1560,
+      "y": 220,
+      "width": 300,
+      "height": 300,
+      "color": "4",
+      "text": "<!-- bilingual-en:start -->\n## [[Markov矩阵|Markov matrices]]\n\nNonnegative entries and unit column or row sums encode a finite transition rule. A probability vector has nonnegative entries totaling one.\n<!-- bilingual-en:end -->\n\n**Markov矩阵**\n\n非负条目及列和或行和为一，编码有限状态转移；概率向量还须非负且总和一。"
+    },
+    {
+      "id": "cc00000000000004",
+      "type": "text",
+      "x": 1900,
+      "y": 250,
+      "width": 140,
+      "height": 70,
+      "text": "先确定概率向量位于矩阵哪一侧"
+    },
+    {
+      "id": "b021e4d6f8091234",
+      "type": "text",
+      "x": 2080,
+      "y": 220,
+      "width": 300,
+      "height": 300,
+      "color": "4",
+      "text": "<!-- bilingual-en:start -->\n## [[Markov矩阵左右约定|Row and column conventions]]\n\nColumn convention: $x_{k+1}=Px_k$. For the same transitions, $R=P^T$ and probability rows obey $p_{k+1}=p_kR$. Transpose both descriptions together.\n<!-- bilingual-en:end -->\n\n**Markov矩阵左右约定**\n\n列约定左乘概率列；同一转移的行约定使用转置矩阵，概率行从左边乘它。两者须一起转换。"
+    },
+    {
+      "id": "cc00000000000005",
+      "type": "text",
+      "x": 2420,
+      "y": 250,
+      "width": 140,
+      "height": 180,
+      "text": "<!-- bilingual-en:start -->\nCompose intervals using one probability-vector convention.\n<!-- bilingual-en:end -->\n\n统一概率向量约定，再复合区间。"
+    },
+    {
+      "id": "a004f3c5d7e90217",
+      "type": "text",
+      "x": 2600,
+      "y": 220,
+      "width": 300,
+      "height": 300,
+      "color": "4",
+      "text": "<!-- bilingual-en:start -->\n## [[DTMC转移复合|Transition composition]]\n\nSum over intermediate states. Fixed row kernels give powers; time-dependent row kernels multiply in chronological order.\n<!-- bilingual-en:end -->\n\n按中间状态求和。固定行核得到矩阵幂；随时间改变的行核须按先后顺序相乘。"
+    },
+    {
+      "id": "cc00000000000006",
+      "type": "text",
+      "x": 2940,
+      "y": 250,
+      "width": 140,
+      "height": 180,
+      "text": "<!-- bilingual-en:start -->\nA matrix-power entry includes earlier visits.\n<!-- bilingual-en:end -->\n\n矩阵幂条目允许早先已到过。"
+    },
+    {
+      "id": "c027f3c5d7e90240",
+      "type": "text",
+      "x": 3120,
+      "y": 220,
+      "width": 300,
+      "height": 300,
+      "color": "1",
+      "text": "<!-- bilingual-en:start -->\n## [[n步转移非首达|Occupancy and first passage]]\n\nBeing at j at step n permits earlier visits. First passage at n excludes them; an absorbing target makes occupancy cumulative first passage.\n<!-- bilingual-en:end -->\n\n第n步在j允许早先已到过；恰在n首达排除早访。目标吸收时，占据是累计首达概率。"
+    },
+    {
+      "id": "cc00000000000007",
+      "type": "text",
+      "x": 80,
+      "y": 535,
+      "width": 140,
+      "height": 160,
+      "text": "<!-- bilingual-en:start -->\nDoes the state retain the relevant history?\n<!-- bilingual-en:end -->\n\n状态是否保留必要历史？"
+    },
+    {
+      "id": "a002f3c5d7e90215",
+      "type": "text",
+      "x": 0,
+      "y": 740,
+      "width": 300,
+      "height": 300,
+      "color": "4",
+      "text": "<!-- bilingual-en:start -->\n## [[Markov充分状态|Sufficient state]]\n\nA summary preserves the selected future law given the available history. Check both predictive sufficiency and a usable update.\n<!-- bilingual-en:end -->\n\n摘要须保留指定历史对所选未来的预测信息，还要能利用保留的信息继续更新。"
+    },
+    {
+      "id": "cc00000000000008",
+      "type": "text",
+      "x": 340,
+      "y": 770,
+      "width": 140,
+      "height": 180,
+      "text": "<!-- bilingual-en:start -->\nKeep the memory actually required by the next-step law.\n<!-- bilingual-en:end -->\n\n保留下一步规律真正需要的记忆。"
+    },
+    {
+      "id": "c025f3c5d7e90238",
+      "type": "text",
+      "x": 520,
+      "y": 740,
+      "width": 300,
+      "height": 300,
+      "color": "4",
+      "text": "<!-- bilingual-en:start -->\n## [[状态扩充|State augmentation]]\n\nIf the next observation depends only on the latest k values, retain that tuple and shift it at each step. Homogeneity needs a time-invariant rule.\n<!-- bilingual-en:end -->\n\n若下一观测只依赖最近k个值，就保留元组并逐步移位；时间齐次还要求规则不随时间变。"
+    },
+    {
+      "id": "cc00000000000009",
+      "type": "text",
+      "x": 1120,
+      "y": 535,
+      "width": 140,
+      "height": 160,
+      "text": "<!-- bilingual-en:start -->\nA fixed rule can still change the marginal law.\n<!-- bilingual-en:end -->\n\n规则固定，边际分布仍可变化。"
+    },
+    {
+      "id": "c026f3c5d7e90239",
+      "type": "text",
+      "x": 1040,
+      "y": 740,
+      "width": 300,
+      "height": 300,
+      "color": "1",
+      "text": "<!-- bilingual-en:start -->\n## [[齐次不等于平稳|Homogeneity and stationarity]]\n\nA fixed kernel can change the marginal law. For a homogeneous Markov chain, an invariant initial law gives strict stationarity.\n<!-- bilingual-en:end -->\n\n核固定，边际仍可变化；齐次Markov链采用不变初始律时，才从起点起严平稳。"
+    },
+    {
+      "id": "aa00000000000002",
+      "type": "text",
+      "x": 0,
+      "y": 1150,
+      "width": 3420,
+      "height": 150,
+      "color": "2",
+      "text": "## 2 · 状态空间的类结构\n\n多步可达先把状态分成沟通类；随后分别检查出口、全局互通、回返类型和周期。"
+    },
+    {
+      "id": "a005f3c5d7e90218",
+      "type": "text",
+      "x": 1560,
+      "y": 1370,
+      "width": 300,
+      "height": 300,
+      "color": "2",
+      "text": "<!-- bilingual-en:start -->\n## [[马氏链沟通类|Communicating classes]]\n\nFor a homogeneous chain, mutual positive-probability reachability forms maximal classes. Zero steps allow self-accessibility.\n<!-- bilingual-en:end -->\n\n齐次链中，双向正概率可达形成最大沟通类；允许零步自我可达。"
+    },
+    {
+      "id": "cc00000000000010",
+      "type": "text",
+      "x": 80,
+      "y": 1740,
+      "width": 140,
+      "height": 180,
+      "text": "<!-- bilingual-en:start -->\nCheck whether any transition leaves the class.\n<!-- bilingual-en:end -->\n\n检查是否有转移离开该类。"
+    },
+    {
+      "id": "cc00000000000011",
+      "type": "text",
+      "x": 860,
+      "y": 1740,
+      "width": 140,
+      "height": 180,
+      "text": "<!-- bilingual-en:start -->\nOne class across the entire declared state space.\n<!-- bilingual-en:end -->\n\n整个指定状态空间只有一个类。"
+    },
+    {
+      "id": "cc00000000000012",
+      "type": "text",
+      "x": 1640,
+      "y": 1740,
+      "width": 140,
+      "height": 180,
+      "text": "<!-- bilingual-en:start -->\nCommunicating states share their recurrence type.\n<!-- bilingual-en:end -->\n\n互通状态的常返或暂态类型一致。"
+    },
+    {
+      "id": "cc00000000000013",
+      "type": "text",
+      "x": 2420,
+      "y": 1740,
+      "width": 140,
+      "height": 180,
+      "text": "<!-- bilingual-en:start -->\nUse positive return lengths; exclude time zero.\n<!-- bilingual-en:end -->\n\n使用正回返步数，排除时刻零。"
+    },
+    {
+      "id": "a006f3c5d7e90219",
+      "type": "text",
+      "x": 0,
+      "y": 1990,
+      "width": 300,
+      "height": 300,
+      "color": "2",
+      "text": "<!-- bilingual-en:start -->\n## [[闭沟通类|Closed class]]\n\nA communicating class is closed when no positive-probability transition leaves it. Restricting to it preserves row sums and yields an irreducible chain.\n<!-- bilingual-en:end -->\n\n沟通类没有正概率出口时称为闭类。限制到该类后，行和仍为一，得到不可约链。"
+    },
+    {
+      "id": "c028f3c5d7e90241",
+      "type": "text",
+      "x": 780,
+      "y": 1990,
+      "width": 300,
+      "height": 300,
+      "color": "2",
+      "text": "<!-- bilingual-en:start -->\n## [[不可约链|Irreducible chain]]\n\nEvery ordered pair in the declared state space has a positive finite route. The required step count can depend on the pair.\n<!-- bilingual-en:end -->\n\n指定状态空间内，每对有序起终点都有有限正概率路线；所需步数可以不同。"
+    },
+    {
+      "id": "a008f3c5d7e90221",
+      "type": "text",
+      "x": 1560,
+      "y": 1990,
+      "width": 300,
+      "height": 320,
+      "color": "2",
+      "text": "<!-- bilingual-en:start -->\n## [[常返与暂态|Recurrence and transience]]\n\nStarting at a state, the probability of a positive-time return is one or less than one. Many observed visits do not prove recurrence.\n<!-- bilingual-en:end -->\n\n从该状态出发，正时刻回返概率为一或小于一；短期里访问很多次，并不能证明常返。"
+    },
+    {
+      "id": "a010f3c5d7e90223",
+      "type": "text",
+      "x": 2340,
+      "y": 1990,
+      "width": 300,
+      "height": 300,
+      "color": "2",
+      "text": "<!-- bilingual-en:start -->\n## [[状态周期|Period of a state]]\n\nTake the gcd of all positive-probability return lengths. Period one need not involve a self-loop; an empty return set is undefined here.\n<!-- bilingual-en:end -->\n\n全部正概率回返步数的最大公约数。周期一不必有自环；本课程空回返集合记为未定义。"
+    },
+    {
+      "id": "cc00000000000014",
+      "type": "text",
+      "x": 80,
+      "y": 2350,
+      "width": 140,
+      "height": 180,
+      "text": "<!-- bilingual-en:start -->\nNo exit is different from mutual reachability.\n<!-- bilingual-en:end -->\n\n没有出口与内部互达是不同要求。"
+    },
+    {
+      "id": "c029f3c5d7e90242",
+      "type": "text",
+      "x": 0,
+      "y": 2580,
+      "width": 300,
+      "height": 300,
+      "color": "1",
+      "text": "<!-- bilingual-en:start -->\n## [[闭类不等于不可约|Closed sets, classes and irreducibility]]\n\nA closed set can contain several classes. Even exactly one closed class does not make the whole chain irreducible.\n<!-- bilingual-en:end -->\n\n闭集合可以包含多个类；即使恰有一个闭类，也不保证整条链不可约。"
+    },
+    {
+      "id": "cc00000000000015",
+      "type": "text",
+      "x": 80,
+      "y": 2920,
+      "width": 140,
+      "height": 180,
+      "text": "<!-- bilingual-en:start -->\nFinite homogeneous chains reach a closed class almost surely.\n<!-- bilingual-en:end -->\n\n有限齐次链以概率一进入某个闭类。"
+    },
+    {
+      "id": "a007f3c5d7e90220",
+      "type": "text",
+      "x": 0,
+      "y": 3140,
+      "width": 300,
+      "height": 300,
+      "color": "2",
+      "text": "<!-- bilingual-en:start -->\n## [[有限链类分解|Finite-chain classes]]\n\nA finite homogeneous chain enters some closed communicating class almost surely in finite time. Outside states are transient; motion inside may continue.\n<!-- bilingual-en:end -->\n\n有限齐次链以概率一在有限时间进入某个闭沟通类；类外暂态，类内仍可持续运动。"
+    },
+    {
+      "id": "cc00000000000016",
+      "type": "text",
+      "x": 1640,
+      "y": 2350,
+      "width": 140,
+      "height": 180,
+      "text": "<!-- bilingual-en:start -->\nAfter almost-sure return, ask whether its mean is finite.\n<!-- bilingual-en:end -->\n\n确认回返概率一后，再判断平均时间。"
+    },
+    {
+      "id": "a009f3c5d7e90222",
+      "type": "text",
+      "x": 1560,
+      "y": 2580,
+      "width": 300,
+      "height": 320,
+      "color": "2",
+      "text": "<!-- bilingual-en:start -->\n## [[正常返与零常返|Positive and null recurrence]]\n\nBoth return almost surely. Their mean positive return time is finite or infinite. Finite chains have no null recurrent states.\n<!-- bilingual-en:end -->\n\n两者都几乎必然返回，平均正回返时间分别有限或无穷；有限链没有零常返状态。"
+    },
+    {
+      "id": "aa00000000000003",
+      "type": "text",
+      "x": 0,
+      "y": 3520,
+      "width": 3420,
+      "height": 180,
+      "color": "3",
+      "text": "<!-- bilingual-en:start -->\n## 3 · Stationarity and long-run behaviour\nSeparate a fixed distribution, uniqueness and stepwise convergence. Then compare averaged probabilities, sample-path averages and mean returns.\n<!-- bilingual-en:end -->\n\n## 3 · 稳态与长期行为\n先分清固定分布、唯一性与逐步收敛，再比较概率平均、路径平均与平均回返时间。"
+    },
+    {
+      "id": "b022e4d6f8091235",
+      "type": "text",
+      "x": 0,
+      "y": 3740,
+      "width": 300,
+      "height": 300,
+      "color": "3",
+      "text": "<!-- bilingual-en:start -->\n## [[Markov稳态分布|Stationary distributions]]\n\nUnder the column convention, $P\\pi=\\pi$ together with $\\pi_i\\ge0$ and total mass one. The distribution stays fixed while individual states can move.\n<!-- bilingual-en:end -->\n\n**Markov稳态分布**\n\n列约定下同时满足固定点方程、非负性及总和一；概率分布不变，具体状态仍可移动。"
+    },
+    {
+      "id": "cc00000000000017",
+      "type": "text",
+      "x": 340,
+      "y": 3770,
+      "width": 140,
+      "height": 200,
+      "text": "<!-- bilingual-en:start -->\nFinite irreducibility gives one positive class law.\n<!-- bilingual-en:end -->\n\n有限不可约给出唯一正类分布。"
+    },
+    {
+      "id": "a012f3c5d7e90225",
+      "type": "text",
+      "x": 520,
+      "y": 3740,
+      "width": 300,
+      "height": 300,
+      "color": "3",
+      "text": "<!-- bilingual-en:start -->\n## [[有限不可约链稳态|Irreducible stationary law]]\n\nA finite irreducible chain has one stationary distribution, positive at every state. Aperiodicity is not required for this conclusion.\n<!-- bilingual-en:end -->\n\n有限不可约链的平稳分布唯一，且每个状态质量为正；该结论不要求非周期。"
+    },
+    {
+      "id": "cc00000000000018",
+      "type": "text",
+      "x": 860,
+      "y": 3770,
+      "width": 140,
+      "height": 200,
+      "text": "<!-- bilingual-en:start -->\nSolve within each closed class, then mix.\n<!-- bilingual-en:end -->\n\n逐个求闭类分布，再作混合。"
+    },
+    {
+      "id": "a011f3c5d7e90224",
+      "type": "text",
+      "x": 1040,
+      "y": 3740,
+      "width": 300,
+      "height": 300,
+      "color": "3",
+      "text": "<!-- bilingual-en:start -->\n## [[有限链平稳分解|Stationary mixtures]]\n\nFor a finite chain, all stationary probabilities are convex mixtures of the closed-class laws; transient coordinates have zero mass.\n<!-- bilingual-en:end -->\n\n有限链的全部平稳概率是各闭类分布的凸组合，暂态坐标质量为零。"
+    },
+    {
+      "id": "cc00000000000019",
+      "type": "text",
+      "x": 1380,
+      "y": 3770,
+      "width": 140,
+      "height": 200,
+      "text": "<!-- bilingual-en:start -->\nFor a finite chain, one closed class means one stationary law.\n<!-- bilingual-en:end -->\n\n有限链一个闭类对应唯一稳态。"
+    },
+    {
+      "id": "b023e4d6f8091236",
+      "type": "text",
+      "x": 1560,
+      "y": 3740,
+      "width": 300,
+      "height": 300,
+      "color": "3",
+      "text": "<!-- bilingual-en:start -->\n## [[Markov稳态唯一判据|Unique stationary law]]\n\nFor a finite chain, exactly one closed class is equivalent to uniqueness. For column-stochastic $P$, this is $\\dim\\ker(P-I)=1$.\n<!-- bilingual-en:end -->\n\n有限链恰好一个闭类等价于稳态唯一；列随机约定下就是固定空间一维。"
+    },
+    {
+      "id": "b024e4d6f8091237",
+      "type": "text",
+      "x": 0,
+      "y": 4170,
+      "width": 300,
+      "height": 300,
+      "color": "1",
+      "text": "<!-- bilingual-en:start -->\n## [[稳态唯一不推收敛|Uniqueness and oscillation]]\n\nThe two-state flip has one stationary distribution, but a point start alternates forever. Uniqueness does not remove the eigenvalue −1.\n<!-- bilingual-en:end -->\n\n两状态交换只有一个稳态，但单点初态永远交替；唯一性没有排除特征值−1。"
+    },
+    {
+      "id": "cc00000000000020",
+      "type": "text",
+      "x": 340,
+      "y": 4200,
+      "width": 140,
+      "height": 200,
+      "text": "<!-- bilingual-en:start -->\nExclude other unit-circle eigenvalues.\n<!-- bilingual-en:end -->\n\n还须排除其他单位圆特征值。"
+    },
+    {
+      "id": "b025e4d6f8091238",
+      "type": "text",
+      "x": 520,
+      "y": 4170,
+      "width": 300,
+      "height": 300,
+      "color": "3",
+      "text": "<!-- bilingual-en:start -->\n## [[Markov矩阵幂收敛判据|Convergence of Markov powers]]\n\nFinite stochastic $P^k$ converges iff $|\\lambda|<1$ for every $\\lambda\\ne1$. The value 1 may repeat; the limiting projection may have rank greater than one.\n<!-- bilingual-en:end -->\n\n有限随机矩阵：除数值1外全部特征值模小于1，恰好保证幂收敛。1可为重根，极限投影的秩可大于一。"
+    },
+    {
+      "id": "cc00000000000021",
+      "type": "text",
+      "x": 860,
+      "y": 4200,
+      "width": 140,
+      "height": 200,
+      "text": "<!-- bilingual-en:start -->\nFinite, irreducible and aperiodic is a sufficient route.\n<!-- bilingual-en:end -->\n\n有限、不可约且非周期是一条充分路线。"
+    },
+    {
+      "id": "a013f3c5d7e90226",
+      "type": "text",
+      "x": 1040,
+      "y": 4170,
+      "width": 300,
+      "height": 320,
+      "color": "3",
+      "text": "<!-- bilingual-en:start -->\n## [[有限链逐步收敛|Stepwise convergence]]\n\nA finite irreducible aperiodic homogeneous chain converges to its unique stationary distribution from every initial law. Infinite chains also need positive recurrence.\n<!-- bilingual-en:end -->\n\n有限、不可约、非周期齐次链从任意初始律趋向唯一平稳分布；无限链还须正常返。"
+    },
+    {
+      "id": "aa00000000000007",
+      "type": "text",
+      "x": 0,
+      "y": 4530,
+      "width": 1860,
+      "height": 160,
+      "color": "3",
+      "text": "<!-- bilingual-en:start -->\n### Three long-run objects\nUnder irreducible positive recurrence: average transition probabilities, average a bounded observation along a path, or compute a mean return. Periodicity is allowed.\n<!-- bilingual-en:end -->\n\n### 三个长期对象\n在不可约正常返条件下：平均转移概率、沿路径平均有界观测、计算平均回返；它们允许周期。"
+    },
+    {
+      "id": "a014f3c5d7e90227",
+      "type": "text",
+      "x": 0,
+      "y": 4730,
+      "width": 300,
+      "height": 360,
+      "color": "3",
+      "text": "<!-- bilingual-en:start -->\n## [[周期链Cesaro平均|Cesàro probability averages]]\n\nIn a finite or countable irreducible positive recurrent homogeneous chain, averaging $p_{ij}^{(n)}$ over time gives $\\pi_j$, even with a period.\n<!-- bilingual-en:end -->\n\n有限或可数、不可约、正常返齐次链中，把转移概率按时间取算术平均，趋于平稳质量；允许周期。"
+    },
+    {
+      "id": "c030f3c5d7e90243",
+      "type": "text",
+      "x": 520,
+      "y": 4730,
+      "width": 300,
+      "height": 360,
+      "color": "3",
+      "text": "<!-- bilingual-en:start -->\n## [[Markov时间平均收敛|Sample-path averages]]\n\nFor a finite or countable irreducible positive recurrent homogeneous chain, bounded observations averaged along one path converge almost surely to their stationary mean.\n<!-- bilingual-en:end -->\n\n有限或可数、不可约、正常返齐次链上，有界观测沿一条路径的平均几乎必然趋于平稳期望；允许周期。"
+    },
+    {
+      "id": "a015f3c5d7e90228",
+      "type": "text",
+      "x": 1040,
+      "y": 4730,
+      "width": 300,
+      "height": 360,
+      "color": "3",
+      "text": "<!-- bilingual-en:start -->\n## [[Kac回返公式|Kac return formula]]\n\nFor a finite or countable irreducible positive recurrent homogeneous chain, $\\pi_i=1/E_i\\tau_i^+$. No aperiodicity is needed.\n<!-- bilingual-en:end -->\n\n有限或可数、不可约、正常返齐次链中，平稳质量等于平均首次正回返步数的倒数；不要求非周期。"
+    },
+    {
+      "id": "aa00000000000004",
+      "type": "text",
+      "x": 0,
+      "y": 5140,
+      "width": 3420,
+      "height": 150,
+      "color": "1",
+      "text": "## 4 · 首达、命中与吸收\n\n第一步分析先处理一般目标；有限吸收链再把暂态访问次数压缩为矩阵公式。"
+    },
+    {
+      "id": "aa00000000000008",
+      "type": "text",
+      "x": 0,
+      "y": 5320,
+      "width": 1340,
+      "height": 160,
+      "color": "1",
+      "text": "<!-- bilingual-en:start -->\n### First-step analysis\nFor finite or countable homogeneous chains, specify the target and distinguish hitting probability from mean waiting. Each uses its own boundary and minimal nonnegative solution.\n<!-- bilingual-en:end -->\n\n### 第一步分析\n有限或可数齐次链先指定目标；命中概率与平均等待使用不同边界，分别选择最小非负解。"
+    },
+    {
+      "id": "a016f3c5d7e90229",
+      "type": "text",
+      "x": 0,
+      "y": 5520,
+      "width": 300,
+      "height": 340,
+      "color": "1",
+      "text": "<!-- bilingual-en:start -->\n## [[命中概率第一步方程|Hitting probabilities]]\n\nThe boundary is one on the target. Outside, average over the next state. Choose the smallest nonnegative solution; extra solutions occur even in finite chains.\n<!-- bilingual-en:end -->\n\n目标上取一，外部对下一状态加权；真实概率是最小非负解，有限链也可能有多余解。"
+    },
+    {
+      "id": "a017f3c5d7e90230",
+      "type": "text",
+      "x": 520,
+      "y": 5520,
+      "width": 300,
+      "height": 340,
+      "color": "1",
+      "text": "<!-- bilingual-en:start -->\n## [[期望命中时间方程|Expected hitting times]]\n\nThe target costs zero. Outside, pay one step plus the remaining mean. The smallest nonnegative solution can be infinite; capped waits construct it.\n<!-- bilingual-en:end -->\n\n目标上成本为零，外部先加一步再加剩余均值；最小非负解允许无穷，可以用封顶等待递增构造。"
+    },
+    {
+      "id": "cc00000000000022",
+      "type": "text",
+      "x": 860,
+      "y": 5550,
+      "width": 140,
+      "height": 180,
+      "text": "<!-- bilingual-en:start -->\nTail probabilities may tend to zero while their sum diverges.\n<!-- bilingual-en:end -->\n\n尾概率趋零，不保证尾概率之和有限。"
+    },
+    {
+      "id": "c033f3c5d7e90246",
+      "type": "text",
+      "x": 1040,
+      "y": 5520,
+      "width": 300,
+      "height": 340,
+      "color": "1",
+      "text": "<!-- bilingual-en:start -->\n## [[必达不推有限期望|Almost-sure hitting and its mean]]\n\nA fair integer walk hits zero almost surely from one, but its mean waiting time is infinite. In a finite homogeneous chain, almost-sure hitting does imply finite mean.\n<!-- bilingual-en:end -->\n\n整数上的公平游走从一出发必达零，平均等待却无穷；有限齐次链中，几乎必达确实推出均值有限。"
+    },
+    {
+      "id": "c034f3c5d7e90247",
+      "type": "text",
+      "x": 0,
+      "y": 5990,
+      "width": 300,
+      "height": 380,
+      "color": "1",
+      "text": "<!-- bilingual-en:start -->\n## [[吸收状态|Absorbing states]]\n\nUnder a fixed rule, $p_{aa}=1$: entry into $a$ means staying there with probability one. Incoming routes are a separate question.\n<!-- bilingual-en:end -->\n\n固定规则下，进入a以后以概率一留在自身；其他状态能否到达它，是另一问题。"
+    },
+    {
+      "id": "cc00000000000023",
+      "type": "text",
+      "x": 340,
+      "y": 6020,
+      "width": 140,
+      "height": 230,
+      "text": "<!-- bilingual-en:start -->\nEvery other state also needs a route to an absorbing state.\n<!-- bilingual-en:end -->\n\n其余每个状态也须有通往吸收态的路线。"
+    },
+    {
+      "id": "a018f3c5d7e90231",
+      "type": "text",
+      "x": 520,
+      "y": 5990,
+      "width": 300,
+      "height": 380,
+      "color": "1",
+      "text": "<!-- bilingual-en:start -->\n## [[吸收链|Absorbing chains]]\n\nA finite homogeneous chain has at least one absorbing state and a positive finite route to an absorbing state from every other state.\n<!-- bilingual-en:end -->\n\n有限齐次链至少有一个吸收态，其余每个状态都有有限正概率路线通往某个吸收态。"
+    },
+    {
+      "id": "cc00000000000024",
+      "type": "text",
+      "x": 860,
+      "y": 6020,
+      "width": 140,
+      "height": 230,
+      "text": "<!-- bilingual-en:start -->\nFinitely many chosen routes give a uniform blockwise chance of absorption.\n<!-- bilingual-en:end -->\n\n有限条路线给出共同的分段吸收机会。"
+    },
+    {
+      "id": "c035f3c5d7e90248",
+      "type": "text",
+      "x": 1040,
+      "y": 5990,
+      "width": 300,
+      "height": 380,
+      "color": "1",
+      "text": "<!-- bilingual-en:start -->\n## [[吸收链必然吸收|Almost-sure absorption]]\n\nIn a finite absorbing chain, common blockwise success bounds give almost-sure absorption and finite mean waiting. All other states are transient.\n<!-- bilingual-en:end -->\n\n有限吸收链的共同分段成功下界，推出几乎必然吸收和有限平均等待；其他状态都是暂态。"
+    },
+    {
+      "id": "cc00000000000025",
+      "type": "text",
+      "x": 1380,
+      "y": 6020,
+      "width": 140,
+      "height": 230,
+      "text": "<!-- bilingual-en:start -->\nAlmost-sure absorption makes the nonabsorbing states transient.\n<!-- bilingual-en:end -->\n\n几乎必然吸收使非吸收状态成为暂态。"
+    },
+    {
+      "id": "c036f3c5d7e90249",
+      "type": "text",
+      "x": 1560,
+      "y": 5990,
+      "width": 300,
+      "height": 380,
+      "color": "1",
+      "text": "<!-- bilingual-en:start -->\n## [[吸收链标准形|Canonical block form]]\n\nWith transient states first and absorbing states last, the row matrix is $P=\\begin{pmatrix}Q&R\\\\0&I\\end{pmatrix}$. Reorder both rows and columns together.\n<!-- bilingual-en:end -->\n\n暂态在前、吸收态在后；Q记录内部转移，R记录一步出口。状态重排必须同步调整行与列。"
+    },
+    {
+      "id": "cc00000000000026",
+      "type": "text",
+      "x": 1900,
+      "y": 6020,
+      "width": 140,
+      "height": 230,
+      "text": "<!-- bilingual-en:start -->\nCheck that probability eventually leaves the proposed Q block.\n<!-- bilingual-en:end -->\n\n核对概率最终会离开所取的Q块。"
+    },
+    {
+      "id": "a019f3c5d7e90232",
+      "type": "text",
+      "x": 2080,
+      "y": 5990,
+      "width": 300,
+      "height": 380,
+      "color": "1",
+      "text": "<!-- bilingual-en:start -->\n## [[基本矩阵存在条件|Fundamental-matrix existence]]\n\nFor finite $Q$, power decay, $\\rho(Q)<1$ and convergence of $\\sum_{n\\ge0}Q^n$ are equivalent. Invertibility of $I-Q$ is also equivalent when $Q$ is nonnegative substochastic.\n<!-- bilingual-en:end -->\n\n有限Q的幂趋零、谱半径小于一与幂级数收敛等价；非负次随机条件下，I−Q可逆也足够。"
+    },
+    {
+      "id": "cc00000000000027",
+      "type": "text",
+      "x": 2420,
+      "y": 6020,
+      "width": 140,
+      "height": 230,
+      "text": "<!-- bilingual-en:start -->\nThe convergent sum counts visits at every pre-absorption time.\n<!-- bilingual-en:end -->\n\n收敛级数汇总吸收前各时刻的访问。"
+    },
+    {
+      "id": "c037f3c5d7e90250",
+      "type": "text",
+      "x": 2600,
+      "y": 5990,
+      "width": 300,
+      "height": 380,
+      "color": "1",
+      "text": "<!-- bilingual-en:start -->\n## [[吸收链基本矩阵|The fundamental matrix]]\n\nFor a finite absorbing chain, $N=(I-Q)^{-1}$ counts expected transient visits before absorption, including time zero. Entries may exceed one.\n<!-- bilingual-en:end -->\n\n有限吸收链的N记录吸收前期望暂态访问次数，计入时刻零；元素可以大于一。"
+    },
+    {
+      "id": "cc00000000000028",
+      "type": "text",
+      "x": 2420,
+      "y": 6410,
+      "width": 140,
+      "height": 200,
+      "text": "<!-- bilingual-en:start -->\nWeight visits by the chance of the final exit into each destination.\n<!-- bilingual-en:end -->\n\n按每个终点的出口概率给访问次数加权。"
+    },
+    {
+      "id": "cc00000000000029",
+      "type": "text",
+      "x": 2940,
+      "y": 6410,
+      "width": 140,
+      "height": 200,
+      "text": "<!-- bilingual-en:start -->\nAdd visits across all transient states to count waiting steps.\n<!-- bilingual-en:end -->\n\n加总全部暂态访问次数，得到等待步数。"
+    },
+    {
+      "id": "c038f3c5d7e90251",
+      "type": "text",
+      "x": 2340,
+      "y": 6650,
+      "width": 300,
+      "height": 340,
+      "color": "1",
+      "text": "<!-- bilingual-en:start -->\n## [[吸收概率矩阵为NR|Absorption probabilities]]\n\n$B=NR$ gives eventual destinations from transient starts in a finite absorbing chain. Its rows sum to one; $R$ only describes the next-step exits.\n<!-- bilingual-en:end -->\n\n有限吸收链中，B给出暂态起点的最终吸收去向，每行和为一；R只描述下一步出口。"
+    },
+    {
+      "id": "c039f3c5d7e90252",
+      "type": "text",
+      "x": 2860,
+      "y": 6650,
+      "width": 300,
+      "height": 340,
+      "color": "1",
+      "text": "<!-- bilingual-en:start -->\n## [[期望吸收时间为N1|Mean absorption times]]\n\n$t=N\\mathbf1$ sums pre-absorption visits in each row of a finite absorbing chain. It counts transitions until any absorbing state is first reached. Absorbed starts take zero steps.\n<!-- bilingual-en:end -->\n\n有限吸收链中，N每行求和就是首次到任一吸收态的平均步数；已吸收起点的时间为零。"
+    },
+    {
+      "id": "aa00000000000005",
+      "type": "text",
+      "x": 0,
+      "y": 7210,
+      "width": 3420,
+      "height": 180,
+      "color": "5",
+      "text": "<!-- bilingual-en:start -->\n## 5 · Detailed balance and time reversal\nCompare weighted two-state flows with complete stationary recordings. The equivalence theorem connects these two descriptions.\n<!-- bilingual-en:end -->\n\n## 5 · 详细平衡与时间反演\n比较两状态加权流量与整段平稳录像，再用等价定理连接两种描述。"
+    },
+    {
+      "id": "a020f3c5d7e90233",
+      "type": "text",
+      "x": 0,
+      "y": 7470,
+      "width": 300,
+      "height": 380,
+      "color": "5",
+      "text": "<!-- bilingual-en:start -->\n## [[DTMC详细平衡|Detailed balance]]\n\nFor a fixed finite or countable row kernel, $\\pi_ip_{ij}=\\pi_jp_{ji}$ balances every pair relative to probability law $\\pi$. The raw transition probabilities can differ.\n<!-- bilingual-en:end -->\n\n相对于概率π，有限或可数齐次核的每对加权流量相等；两个方向的转移概率本身可以不同。"
+    },
+    {
+      "id": "cc00000000000030",
+      "type": "text",
+      "x": 340,
+      "y": 7510,
+      "width": 140,
+      "height": 230,
+      "text": "<!-- bilingual-en:start -->\nMove the starting mass along the path using pairwise balance.\n<!-- bilingual-en:end -->\n\n利用逐对平衡，沿路径传递起始质量。"
+    },
+    {
+      "id": "c032f3c5d7e90245",
+      "type": "text",
+      "x": 520,
+      "y": 7470,
+      "width": 300,
+      "height": 380,
+      "color": "5",
+      "text": "<!-- bilingual-en:start -->\n## [[详细平衡与可逆|Balance and reversibility]]\n\nFor a fixed finite or countable kernel, detailed balance and reversibility relative to the same probability law are equivalent. Stationarity alone is weaker; zero masses are allowed.\n<!-- bilingual-en:end -->\n\n有限或可数齐次核，相对于同一概率律，详细平衡与可逆等价；平稳本身更弱，允许零质量。"
+    },
+    {
+      "id": "cc00000000000031",
+      "type": "text",
+      "x": 860,
+      "y": 7510,
+      "width": 140,
+      "height": 230,
+      "text": "<!-- bilingual-en:start -->\nReversal of a one-step recording gives the pairwise equations.\n<!-- bilingual-en:end -->\n\n一步录像倒放不变，就得到逐对方程。"
+    },
+    {
+      "id": "c031f3c5d7e90244",
+      "type": "text",
+      "x": 1040,
+      "y": 7470,
+      "width": 300,
+      "height": 380,
+      "color": "5",
+      "text": "<!-- bilingual-en:start -->\n## [[DTMC可逆性|Time reversibility]]\n\nReversibility means that, starting in a stationary probability law, every finite state recording has the same law after reversal. A periodic alternating chain can satisfy this symmetry.\n<!-- bilingual-en:end -->\n\n可逆是指从平稳概率律开始，任意有限状态录像倒放后仍同分布；周期交替链也能具有这种对称性。"
+    },
+    {
+      "id": "aa00000000000006",
+      "type": "text",
+      "x": 0,
+      "y": 8060,
+      "width": 3420,
+      "height": 200,
+      "color": "6",
+      "text": "<!-- bilingual-en:start -->\n## 6 · Walks, rankings and hidden states\n\nGraph rules specify transitions; PageRank adds restarts. In switching models, distinguish the hidden regime from its noisy observations.\n<!-- bilingual-en:end -->\n\n## 6 · 游走、排名与潜在状态\n\n先定义图上转移，再加入 PageRank 重启；区制转换则需分清潜在状态与带噪观测。"
+    },
+    {
+      "id": "c040f3c5d7e90253",
+      "type": "text",
+      "x": 0,
+      "y": 8320,
+      "width": 380,
+      "height": 370,
+      "color": "6",
+      "text": "<!-- bilingual-en:start -->\n## [[图上随机游走|Graph random walks]]\n\nA fixed rule assigns outgoing move probabilities at each vertex. Nonnegative weights are normalized within each row.\n<!-- bilingual-en:end -->\n\n顶点是状态；在各行内把非负出权重归一化，得到下一步的概率。"
+    },
+    {
+      "id": "cc00000000000032",
+      "type": "text",
+      "x": 400,
+      "y": 8380,
+      "width": 180,
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\nZero outgoing total prevents row normalization.\n<!-- bilingual-en:end -->\n\n总出权重为零，无法归一化。"
+    },
+    {
+      "id": "a021f3c5d7e90234",
+      "type": "text",
+      "x": 600,
+      "y": 8320,
+      "width": 380,
+      "height": 370,
+      "color": "6",
+      "text": "<!-- bilingual-en:start -->\n## [[悬空节点转移|Dangling-node transitions]]\n\nA vertex with zero outgoing weight needs an explicit probability row if the walk is to continue.\n<!-- bilingual-en:end -->\n\n总出权重为零时，若要继续游走，就须另定总和为一的去向规则。"
+    },
+    {
+      "id": "cc00000000000033",
+      "type": "text",
+      "x": 1000,
+      "y": 8380,
+      "width": 180,
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\nComplete the missing row before mixing in global restarts.\n<!-- bilingual-en:end -->\n\n先补缺行，再加入全局重启。"
+    },
+    {
+      "id": "a022f3c5d7e90235",
+      "type": "text",
+      "x": 1200,
+      "y": 8320,
+      "width": 380,
+      "height": 420,
+      "color": "6",
+      "text": "<!-- bilingual-en:start -->\n## [[PageRank随机传送|PageRank teleportation]]\n\nFor repaired row-stochastic $P$, mix link moves with restarts: $G=\\alpha P+(1-\\alpha)\\mathbf1v^T$, $0\\le\\alpha<1$. Here $v$ is a probability column and $\\mathbf1$ is the all-ones column.\n<!-- bilingual-en:end -->\n\n先补成合法行随机矩阵，再把跟随链接与按概率向量重新选择页面混合。 $v$ 是概率列，$\\mathbf1$ 是全一列。"
+    },
+    {
+      "id": "cc00000000000034",
+      "type": "text",
+      "x": 1600,
+      "y": 8380,
+      "width": 180,
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\nFor any probability $v$, each step leaves the sum of absolute coordinate differences at most $\\alpha<1$ times its previous value.\n<!-- bilingual-en:end -->\n\n任意概率传送向量均可；每步后的各分量绝对差之和，最多为之前的 $\\alpha$ 倍。"
+    },
+    {
+      "id": "c041f3c5d7e90254",
+      "type": "text",
+      "x": 2400,
+      "y": 8320,
+      "width": 380,
+      "height": 370,
+      "color": "6",
+      "text": "<!-- bilingual-en:start -->\n## [[全支持传送收敛|Full-support teleportation]]\n\nFor $0\\le\\alpha<1$, every $v_j>0$ makes all $G_{ij}>0$: direct communication, period one and positive stationary mass.\n<!-- bilingual-en:end -->\n\n全支持额外保证转移逐项正、全图互通、周期一与稳态各分量正。"
+    },
+    {
+      "id": "cc00000000000035",
+      "type": "text",
+      "x": 2800,
+      "y": 8380,
+      "width": 180,
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\nEven a positive chain answers a question about its specified model.\n<!-- bilingual-en:end -->\n\n即使转移全正，分数也只回答指定模型的问题。"
+    },
+    {
+      "id": "c042f3c5d7e90255",
+      "type": "text",
+      "x": 3000,
+      "y": 8320,
+      "width": 380,
+      "height": 370,
+      "color": "6",
+      "text": "<!-- bilingual-en:start -->\n## [[PageRank模型依赖|PageRank model dependence]]\n\nThe unique score belongs to the chosen graph, weights, damping and restart/repair rules. Changing an input can change the ranking.\n<!-- bilingual-en:end -->\n\n唯一分数仍属于指定的图与规则；更改输入可能改变排名，唯一性不会代选模型。"
+    },
+    {
+      "id": "a023f3c5d7e90236",
+      "type": "text",
+      "x": 0,
+      "y": 8860,
+      "width": 380,
+      "height": 370,
+      "color": "6",
+      "text": "<!-- bilingual-en:start -->\n## [[Markov switching模型|Markov-switching models]]\n\nSpecify an initial hidden-state law, state transitions and the observation mechanism. Conditional independence of readings is a model assumption.\n<!-- bilingual-en:end -->\n\n初始状态分布、状态转移与观测机制共同确定模型；读数的条件独立需要明确假设。"
+    },
+    {
+      "id": "cc00000000000036",
+      "type": "text",
+      "x": 400,
+      "y": 8910,
+      "width": 180,
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\nEarlier readings can update the current hidden-state estimate.\n<!-- bilingual-en:end -->\n\n早先读数仍能更新对当前潜在状态的判断。"
+    },
+    {
+      "id": "c043f3c5d7e90256",
+      "type": "text",
+      "x": 600,
+      "y": 8860,
+      "width": 380,
+      "height": 370,
+      "color": "1",
+      "text": "<!-- bilingual-en:start -->\n## [[观测序列不必Markov|When observations retain memory]]\n\nTwo histories can end in the same reading but give different next-reading probabilities. Filtering retains uncertainty about the hidden state.\n<!-- bilingual-en:end -->\n\n最新读数相同，较早历史仍可改变下一次预测；滤波保留对潜在状态的概率判断。"
+    },
+    {
+      "id": "stationary-existence",
+      "type": "text",
+      "x": 2080,
+      "y": 3740,
+      "width": 300,
+      "height": 300,
+      "color": "6",
+      "text": "<!-- bilingual-en:start -->\n## [[有限Markov链稳态存在|Existence of a stationary distribution]]\n\nEvery finite stochastic matrix has at least one probability fixed point. Averages have a convergent subsequence whose limit is fixed; individual distributions need not converge.\n<!-- bilingual-en:end -->\n\n**有限Markov链稳态存在**\n\n每个有限随机矩阵至少有一个概率固定点；分布平均的收敛子序列给出它，不要求单时刻分布收敛。"
+    },
+    {
+      "id": "rank-one-limit",
+      "type": "text",
+      "x": 1560,
+      "y": 4170,
+      "width": 300,
+      "height": 300,
+      "color": "6",
+      "text": "<!-- bilingual-en:start -->\n## [[Markov幂的秩一稳态极限|A common stationary limit]]\n\nFor a finite column-stochastic matrix, convergent powers plus a unique stationary column $\\pi$ give $P^k\\to\\pi\\mathbf1^T$. Every probability column then has the same limit.\n<!-- bilingual-en:end -->\n\n有限列随机矩阵的幂收敛再加稳态唯一，列约定下才得到每列都是π的秩一极限；全部概率初值趋向同一分布。"
+    },
+    {
+      "id": "communicating-common-period",
+      "type": "text",
+      "x": 2340,
+      "y": 2490,
+      "width": 400,
+      "height": 340,
+      "color": "5",
+      "text": "<!-- bilingual-en:start -->\n## [[沟通状态周期相同|A common period]]\n\nDistinct communicating states have the same period: connecting routes turn a return at either state into one at the other. No closed-class or recurrence assumption is needed.\n<!-- bilingual-en:end -->\n\n不同互通状态周期相同：往返路线把一处回返接到另一处；不要求闭类或常返。"
+    },
+    {
+      "id": "p0062-damping",
+      "type": "text",
+      "x": 1800,
+      "y": 8320,
+      "width": 380,
+      "height": 370,
+      "color": "6",
+      "text": "<!-- bilingual-en:start -->\n## [[PageRank阻尼收敛|Damped PageRank convergence]]\n\nFinite stochastic $P$, any probability $v$, and $0\\le\\alpha<1$ give a unique stationary law and convergence from every initial law.\n<!-- bilingual-en:end -->\n\n有限行随机矩阵与正的重启权重已经保证唯一收敛；传送向量可以含零。"
+    },
+    {
+      "id": "p0062-support-bridge",
+      "type": "text",
+      "x": 2200,
+      "y": 8380,
+      "width": 180,
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\nAdd $v_j>0$ for every page to obtain stronger positivity guarantees.\n<!-- bilingual-en:end -->\n\n额外要求每个页面的传送概率为正，得到更强正性保证。"
+    },
+    {
+      "id": "p0066-countable-equilibrium",
+      "type": "text",
+      "x": 2080,
+      "y": 4170,
+      "width": 400,
+      "height": 340,
+      "text": "<!-- bilingual-en:start -->\n## [[可数Markov链平衡收敛|Countable-chain convergence]]\n\nA finite or countable homogeneous chain that is irreducible and aperiodic, with a stationary probability row $\\pi$, satisfies $\\mu P^n\\to\\pi$ coordinatewise for every initial law $\\mu$.\n<!-- bilingual-en:end -->\n\n有限或可数齐次链，不可约、非周期且已有平稳概率时，从任意初始律逐坐标收敛。这里采用行概率约定。"
+    }
   ],
   "edges": [
-    {"id":"dd00000000000001","fromNode":"a001f3c5d7e90214","fromSide":"right","toNode":"cc00000000000001","toSide":"left"},
-    {"id":"dd00000000000002","fromNode":"cc00000000000001","fromSide":"right","toNode":"c024f3c5d7e90237","toSide":"left"},
-    {"id":"dd00000000000003","fromNode":"c024f3c5d7e90237","fromSide":"right","toNode":"cc00000000000002","toSide":"left"},
-    {"id":"dd00000000000004","fromNode":"cc00000000000002","fromSide":"right","toNode":"a003f3c5d7e90216","toSide":"left"},
-    {"id":"dd00000000000005","fromNode":"a003f3c5d7e90216","fromSide":"right","toNode":"cc00000000000003","toSide":"left"},
-    {"id":"dd00000000000006","fromNode":"cc00000000000003","fromSide":"right","toNode":"b020e4d6f8091233","toSide":"left"},
-    {"id":"dd00000000000007","fromNode":"b020e4d6f8091233","fromSide":"right","toNode":"cc00000000000004","toSide":"left"},
-    {"id":"dd00000000000008","fromNode":"cc00000000000004","fromSide":"right","toNode":"b021e4d6f8091234","toSide":"left"},
-    {"id":"dd00000000000009","fromNode":"b021e4d6f8091234","fromSide":"right","toNode":"cc00000000000005","toSide":"left"},
-    {"id":"dd0000000000000a","fromNode":"cc00000000000005","fromSide":"right","toNode":"a004f3c5d7e90217","toSide":"left"},
-    {"id":"dd0000000000000b","fromNode":"a004f3c5d7e90217","fromSide":"right","toNode":"cc00000000000006","toSide":"left"},
-    {"id":"dd0000000000000c","fromNode":"cc00000000000006","fromSide":"right","toNode":"c027f3c5d7e90240","toSide":"left"},
-    {"id":"dd0000000000000d","fromNode":"a001f3c5d7e90214","fromSide":"bottom","toNode":"cc00000000000007","toSide":"top"},
-    {"id":"dd0000000000000e","fromNode":"cc00000000000007","fromSide":"bottom","toNode":"a002f3c5d7e90215","toSide":"top"},
-    {"id":"dd0000000000000f","fromNode":"a002f3c5d7e90215","fromSide":"right","toNode":"cc00000000000008","toSide":"left"},
-    {"id":"dd00000000000010","fromNode":"cc00000000000008","fromSide":"right","toNode":"c025f3c5d7e90238","toSide":"left"},
-    {"id":"dd00000000000011","fromNode":"a003f3c5d7e90216","fromSide":"bottom","toNode":"cc00000000000009","toSide":"top"},
-    {"id":"dd00000000000012","fromNode":"cc00000000000009","fromSide":"bottom","toNode":"c026f3c5d7e90239","toSide":"top"},
-    {"id":"dd00000000000013","fromNode":"a005f3c5d7e90218","fromSide":"bottom","toNode":"cc00000000000010","toSide":"top"},
-    {"id":"dd00000000000014","fromNode":"cc00000000000010","fromSide":"bottom","toNode":"a006f3c5d7e90219","toSide":"top"},
-    {"id":"dd00000000000015","fromNode":"a005f3c5d7e90218","fromSide":"bottom","toNode":"cc00000000000011","toSide":"top"},
-    {"id":"dd00000000000016","fromNode":"cc00000000000011","fromSide":"bottom","toNode":"c028f3c5d7e90241","toSide":"top"},
-    {"id":"dd00000000000017","fromNode":"a005f3c5d7e90218","fromSide":"bottom","toNode":"cc00000000000012","toSide":"top"},
-    {"id":"dd00000000000018","fromNode":"cc00000000000012","fromSide":"bottom","toNode":"a008f3c5d7e90221","toSide":"top"},
-    {"id":"dd00000000000019","fromNode":"a005f3c5d7e90218","fromSide":"bottom","toNode":"cc00000000000013","toSide":"top"},
-    {"id":"dd0000000000001a","fromNode":"cc00000000000013","fromSide":"bottom","toNode":"a010f3c5d7e90223","toSide":"top"},
-    {"id":"dd0000000000001b","fromNode":"a006f3c5d7e90219","fromSide":"bottom","toNode":"cc00000000000014","toSide":"top"},
-    {"id":"dd0000000000001c","fromNode":"cc00000000000014","fromSide":"bottom","toNode":"c029f3c5d7e90242","toSide":"top"},
-    {"id":"dd0000000000001d","fromNode":"c029f3c5d7e90242","fromSide":"bottom","toNode":"cc00000000000015","toSide":"top"},
-    {"id":"dd0000000000001e","fromNode":"cc00000000000015","fromSide":"bottom","toNode":"a007f3c5d7e90220","toSide":"top"},
-    {"id":"dd0000000000001f","fromNode":"a008f3c5d7e90221","fromSide":"bottom","toNode":"cc00000000000016","toSide":"top"},
-    {"id":"dd00000000000020","fromNode":"cc00000000000016","fromSide":"bottom","toNode":"a009f3c5d7e90222","toSide":"top"},
-    {"id":"dd00000000000021","fromNode":"b022e4d6f8091235","fromSide":"right","toNode":"cc00000000000017","toSide":"left"},
-    {"id":"dd00000000000022","fromNode":"cc00000000000017","fromSide":"right","toNode":"a012f3c5d7e90225","toSide":"left"},
-    {"id":"dd00000000000023","fromNode":"a012f3c5d7e90225","fromSide":"right","toNode":"cc00000000000018","toSide":"left"},
-    {"id":"dd00000000000024","fromNode":"cc00000000000018","fromSide":"right","toNode":"a011f3c5d7e90224","toSide":"left"},
-    {"id":"dd00000000000025","fromNode":"a011f3c5d7e90224","fromSide":"right","toNode":"cc00000000000019","toSide":"left"},
-    {"id":"dd00000000000026","fromNode":"cc00000000000019","fromSide":"right","toNode":"b023e4d6f8091236","toSide":"left"},
-    {"id":"dd00000000000027","fromNode":"b024e4d6f8091237","fromSide":"right","toNode":"cc00000000000020","toSide":"left"},
-    {"id":"dd00000000000028","fromNode":"cc00000000000020","fromSide":"right","toNode":"b025e4d6f8091238","toSide":"left"},
-    {"id":"dd00000000000029","fromNode":"b025e4d6f8091238","fromSide":"right","toNode":"cc00000000000021","toSide":"left"},
-    {"id":"dd0000000000002a","fromNode":"cc00000000000021","fromSide":"right","toNode":"a013f3c5d7e90226","toSide":"left"},
-    {"id":"dd0000000000002b","fromNode":"a017f3c5d7e90230","fromSide":"right","toNode":"cc00000000000022","toSide":"left"},
-    {"id":"dd0000000000002c","fromNode":"cc00000000000022","fromSide":"right","toNode":"c033f3c5d7e90246","toSide":"left"},
-    {"id":"dd0000000000002d","fromNode":"c034f3c5d7e90247","fromSide":"right","toNode":"cc00000000000023","toSide":"left"},
-    {"id":"dd0000000000002e","fromNode":"cc00000000000023","fromSide":"right","toNode":"a018f3c5d7e90231","toSide":"left"},
-    {"id":"dd0000000000002f","fromNode":"a018f3c5d7e90231","fromSide":"right","toNode":"cc00000000000024","toSide":"left"},
-    {"id":"dd00000000000030","fromNode":"cc00000000000024","fromSide":"right","toNode":"c035f3c5d7e90248","toSide":"left"},
-    {"id":"dd00000000000031","fromNode":"c035f3c5d7e90248","fromSide":"right","toNode":"cc00000000000025","toSide":"left"},
-    {"id":"dd00000000000032","fromNode":"cc00000000000025","fromSide":"right","toNode":"c036f3c5d7e90249","toSide":"left"},
-    {"id":"dd00000000000033","fromNode":"c036f3c5d7e90249","fromSide":"right","toNode":"cc00000000000026","toSide":"left"},
-    {"id":"dd00000000000034","fromNode":"cc00000000000026","fromSide":"right","toNode":"a019f3c5d7e90232","toSide":"left"},
-    {"id":"dd00000000000035","fromNode":"a019f3c5d7e90232","fromSide":"right","toNode":"cc00000000000027","toSide":"left"},
-    {"id":"dd00000000000036","fromNode":"cc00000000000027","fromSide":"right","toNode":"c037f3c5d7e90250","toSide":"left"},
-    {"id":"dd00000000000037","fromNode":"c037f3c5d7e90250","fromSide":"bottom","toNode":"cc00000000000028","toSide":"top"},
-    {"id":"dd00000000000038","fromNode":"cc00000000000028","fromSide":"bottom","toNode":"c038f3c5d7e90251","toSide":"top"},
-    {"id":"dd00000000000039","fromNode":"c037f3c5d7e90250","fromSide":"bottom","toNode":"cc00000000000029","toSide":"top"},
-    {"id":"dd0000000000003a","fromNode":"cc00000000000029","fromSide":"bottom","toNode":"c039f3c5d7e90252","toSide":"top"},
-    {"id":"dd0000000000003b","fromNode":"a020f3c5d7e90233","fromSide":"right","toNode":"cc00000000000030","toSide":"left"},
-    {"id":"dd0000000000003c","fromNode":"cc00000000000030","fromSide":"right","toNode":"c032f3c5d7e90245","toSide":"left"},
-    {"id":"dd0000000000003d","fromNode":"c031f3c5d7e90244","fromSide":"left","toNode":"cc00000000000031","toSide":"right"},
-    {"id":"dd0000000000003e","fromNode":"cc00000000000031","fromSide":"left","toNode":"c032f3c5d7e90245","toSide":"right"},
-    {"id":"dd0000000000003f","fromNode":"c040f3c5d7e90253","fromSide":"right","toNode":"cc00000000000032","toSide":"left"},
-    {"id":"dd00000000000040","fromNode":"cc00000000000032","fromSide":"right","toNode":"a021f3c5d7e90234","toSide":"left"},
-    {"id":"dd00000000000041","fromNode":"a021f3c5d7e90234","fromSide":"right","toNode":"cc00000000000033","toSide":"left"},
-    {"id":"dd00000000000042","fromNode":"cc00000000000033","fromSide":"right","toNode":"a022f3c5d7e90235","toSide":"left"},
-    {"id":"dd00000000000043","fromNode":"a022f3c5d7e90235","fromSide":"right","toNode":"cc00000000000034","toSide":"left"},
-    {"id":"dd00000000000044","fromNode":"cc00000000000034","fromSide":"right","toNode":"c041f3c5d7e90254","toSide":"left"},
-    {"id":"dd00000000000045","fromNode":"c041f3c5d7e90254","fromSide":"right","toNode":"cc00000000000035","toSide":"left"},
-    {"id":"dd00000000000046","fromNode":"cc00000000000035","fromSide":"right","toNode":"c042f3c5d7e90255","toSide":"left"},
-    {"id":"dd00000000000047","fromNode":"a023f3c5d7e90236","fromSide":"right","toNode":"cc00000000000036","toSide":"left"},
-    {"id":"dd00000000000048","fromNode":"cc00000000000036","fromSide":"right","toNode":"c043f3c5d7e90256","toSide":"left"}
+    {
+      "id": "dd00000000000001",
+      "fromNode": "a001f3c5d7e90214",
+      "fromSide": "right",
+      "toNode": "cc00000000000001",
+      "toSide": "left"
+    },
+    {
+      "id": "dd00000000000002",
+      "fromNode": "cc00000000000001",
+      "fromSide": "right",
+      "toNode": "c024f3c5d7e90237",
+      "toSide": "left"
+    },
+    {
+      "id": "dd00000000000003",
+      "fromNode": "c024f3c5d7e90237",
+      "fromSide": "right",
+      "toNode": "cc00000000000002",
+      "toSide": "left"
+    },
+    {
+      "id": "dd00000000000004",
+      "fromNode": "cc00000000000002",
+      "fromSide": "right",
+      "toNode": "a003f3c5d7e90216",
+      "toSide": "left"
+    },
+    {
+      "id": "dd00000000000005",
+      "fromNode": "a003f3c5d7e90216",
+      "fromSide": "right",
+      "toNode": "cc00000000000003",
+      "toSide": "left"
+    },
+    {
+      "id": "dd00000000000006",
+      "fromNode": "cc00000000000003",
+      "fromSide": "right",
+      "toNode": "b020e4d6f8091233",
+      "toSide": "left"
+    },
+    {
+      "id": "dd00000000000007",
+      "fromNode": "b020e4d6f8091233",
+      "fromSide": "right",
+      "toNode": "cc00000000000004",
+      "toSide": "left"
+    },
+    {
+      "id": "dd00000000000008",
+      "fromNode": "cc00000000000004",
+      "fromSide": "right",
+      "toNode": "b021e4d6f8091234",
+      "toSide": "left"
+    },
+    {
+      "id": "dd00000000000009",
+      "fromNode": "b021e4d6f8091234",
+      "fromSide": "right",
+      "toNode": "cc00000000000005",
+      "toSide": "left"
+    },
+    {
+      "id": "dd0000000000000a",
+      "fromNode": "cc00000000000005",
+      "fromSide": "right",
+      "toNode": "a004f3c5d7e90217",
+      "toSide": "left"
+    },
+    {
+      "id": "dd0000000000000b",
+      "fromNode": "a004f3c5d7e90217",
+      "fromSide": "right",
+      "toNode": "cc00000000000006",
+      "toSide": "left"
+    },
+    {
+      "id": "dd0000000000000c",
+      "fromNode": "cc00000000000006",
+      "fromSide": "right",
+      "toNode": "c027f3c5d7e90240",
+      "toSide": "left"
+    },
+    {
+      "id": "dd0000000000000d",
+      "fromNode": "a001f3c5d7e90214",
+      "fromSide": "bottom",
+      "toNode": "cc00000000000007",
+      "toSide": "top"
+    },
+    {
+      "id": "dd0000000000000e",
+      "fromNode": "cc00000000000007",
+      "fromSide": "bottom",
+      "toNode": "a002f3c5d7e90215",
+      "toSide": "top"
+    },
+    {
+      "id": "dd0000000000000f",
+      "fromNode": "a002f3c5d7e90215",
+      "fromSide": "right",
+      "toNode": "cc00000000000008",
+      "toSide": "left"
+    },
+    {
+      "id": "dd00000000000010",
+      "fromNode": "cc00000000000008",
+      "fromSide": "right",
+      "toNode": "c025f3c5d7e90238",
+      "toSide": "left"
+    },
+    {
+      "id": "dd00000000000011",
+      "fromNode": "a003f3c5d7e90216",
+      "fromSide": "bottom",
+      "toNode": "cc00000000000009",
+      "toSide": "top"
+    },
+    {
+      "id": "dd00000000000012",
+      "fromNode": "cc00000000000009",
+      "fromSide": "bottom",
+      "toNode": "c026f3c5d7e90239",
+      "toSide": "top"
+    },
+    {
+      "id": "dd00000000000013",
+      "fromNode": "a005f3c5d7e90218",
+      "fromSide": "bottom",
+      "toNode": "cc00000000000010",
+      "toSide": "top"
+    },
+    {
+      "id": "dd00000000000014",
+      "fromNode": "cc00000000000010",
+      "fromSide": "bottom",
+      "toNode": "a006f3c5d7e90219",
+      "toSide": "top"
+    },
+    {
+      "id": "dd00000000000015",
+      "fromNode": "a005f3c5d7e90218",
+      "fromSide": "bottom",
+      "toNode": "cc00000000000011",
+      "toSide": "top"
+    },
+    {
+      "id": "dd00000000000016",
+      "fromNode": "cc00000000000011",
+      "fromSide": "bottom",
+      "toNode": "c028f3c5d7e90241",
+      "toSide": "top"
+    },
+    {
+      "id": "dd00000000000017",
+      "fromNode": "a005f3c5d7e90218",
+      "fromSide": "bottom",
+      "toNode": "cc00000000000012",
+      "toSide": "top"
+    },
+    {
+      "id": "dd00000000000018",
+      "fromNode": "cc00000000000012",
+      "fromSide": "bottom",
+      "toNode": "a008f3c5d7e90221",
+      "toSide": "top"
+    },
+    {
+      "id": "dd00000000000019",
+      "fromNode": "a005f3c5d7e90218",
+      "fromSide": "bottom",
+      "toNode": "cc00000000000013",
+      "toSide": "top"
+    },
+    {
+      "id": "dd0000000000001a",
+      "fromNode": "cc00000000000013",
+      "fromSide": "bottom",
+      "toNode": "a010f3c5d7e90223",
+      "toSide": "top"
+    },
+    {
+      "id": "dd0000000000001b",
+      "fromNode": "a006f3c5d7e90219",
+      "fromSide": "bottom",
+      "toNode": "cc00000000000014",
+      "toSide": "top"
+    },
+    {
+      "id": "dd0000000000001c",
+      "fromNode": "cc00000000000014",
+      "fromSide": "bottom",
+      "toNode": "c029f3c5d7e90242",
+      "toSide": "top"
+    },
+    {
+      "id": "dd0000000000001d",
+      "fromNode": "c029f3c5d7e90242",
+      "fromSide": "bottom",
+      "toNode": "cc00000000000015",
+      "toSide": "top"
+    },
+    {
+      "id": "dd0000000000001e",
+      "fromNode": "cc00000000000015",
+      "fromSide": "bottom",
+      "toNode": "a007f3c5d7e90220",
+      "toSide": "top"
+    },
+    {
+      "id": "dd0000000000001f",
+      "fromNode": "a008f3c5d7e90221",
+      "fromSide": "bottom",
+      "toNode": "cc00000000000016",
+      "toSide": "top"
+    },
+    {
+      "id": "dd00000000000020",
+      "fromNode": "cc00000000000016",
+      "fromSide": "bottom",
+      "toNode": "a009f3c5d7e90222",
+      "toSide": "top"
+    },
+    {
+      "id": "dd00000000000021",
+      "fromNode": "b022e4d6f8091235",
+      "fromSide": "right",
+      "toNode": "cc00000000000017",
+      "toSide": "left"
+    },
+    {
+      "id": "dd00000000000022",
+      "fromNode": "cc00000000000017",
+      "fromSide": "right",
+      "toNode": "a012f3c5d7e90225",
+      "toSide": "left"
+    },
+    {
+      "id": "dd00000000000023",
+      "fromNode": "a012f3c5d7e90225",
+      "fromSide": "right",
+      "toNode": "cc00000000000018",
+      "toSide": "left"
+    },
+    {
+      "id": "dd00000000000024",
+      "fromNode": "cc00000000000018",
+      "fromSide": "right",
+      "toNode": "a011f3c5d7e90224",
+      "toSide": "left"
+    },
+    {
+      "id": "dd00000000000025",
+      "fromNode": "a011f3c5d7e90224",
+      "fromSide": "right",
+      "toNode": "cc00000000000019",
+      "toSide": "left"
+    },
+    {
+      "id": "dd00000000000026",
+      "fromNode": "cc00000000000019",
+      "fromSide": "right",
+      "toNode": "b023e4d6f8091236",
+      "toSide": "left"
+    },
+    {
+      "id": "dd00000000000027",
+      "fromNode": "b024e4d6f8091237",
+      "fromSide": "right",
+      "toNode": "cc00000000000020",
+      "toSide": "left"
+    },
+    {
+      "id": "dd00000000000028",
+      "fromNode": "cc00000000000020",
+      "fromSide": "right",
+      "toNode": "b025e4d6f8091238",
+      "toSide": "left"
+    },
+    {
+      "id": "dd00000000000029",
+      "fromNode": "b025e4d6f8091238",
+      "fromSide": "right",
+      "toNode": "cc00000000000021",
+      "toSide": "left",
+      "label": "A sufficient probabilistic route / 概率论中的充分路线"
+    },
+    {
+      "id": "dd0000000000002a",
+      "fromNode": "cc00000000000021",
+      "fromSide": "right",
+      "toNode": "a013f3c5d7e90226",
+      "toSide": "left"
+    },
+    {
+      "id": "dd0000000000002b",
+      "fromNode": "a017f3c5d7e90230",
+      "fromSide": "right",
+      "toNode": "cc00000000000022",
+      "toSide": "left"
+    },
+    {
+      "id": "dd0000000000002c",
+      "fromNode": "cc00000000000022",
+      "fromSide": "right",
+      "toNode": "c033f3c5d7e90246",
+      "toSide": "left"
+    },
+    {
+      "id": "dd0000000000002d",
+      "fromNode": "c034f3c5d7e90247",
+      "fromSide": "right",
+      "toNode": "cc00000000000023",
+      "toSide": "left"
+    },
+    {
+      "id": "dd0000000000002e",
+      "fromNode": "cc00000000000023",
+      "fromSide": "right",
+      "toNode": "a018f3c5d7e90231",
+      "toSide": "left"
+    },
+    {
+      "id": "dd0000000000002f",
+      "fromNode": "a018f3c5d7e90231",
+      "fromSide": "right",
+      "toNode": "cc00000000000024",
+      "toSide": "left"
+    },
+    {
+      "id": "dd00000000000030",
+      "fromNode": "cc00000000000024",
+      "fromSide": "right",
+      "toNode": "c035f3c5d7e90248",
+      "toSide": "left"
+    },
+    {
+      "id": "dd00000000000031",
+      "fromNode": "c035f3c5d7e90248",
+      "fromSide": "right",
+      "toNode": "cc00000000000025",
+      "toSide": "left"
+    },
+    {
+      "id": "dd00000000000032",
+      "fromNode": "cc00000000000025",
+      "fromSide": "right",
+      "toNode": "c036f3c5d7e90249",
+      "toSide": "left"
+    },
+    {
+      "id": "dd00000000000033",
+      "fromNode": "c036f3c5d7e90249",
+      "fromSide": "right",
+      "toNode": "cc00000000000026",
+      "toSide": "left"
+    },
+    {
+      "id": "dd00000000000034",
+      "fromNode": "cc00000000000026",
+      "fromSide": "right",
+      "toNode": "a019f3c5d7e90232",
+      "toSide": "left"
+    },
+    {
+      "id": "dd00000000000035",
+      "fromNode": "a019f3c5d7e90232",
+      "fromSide": "right",
+      "toNode": "cc00000000000027",
+      "toSide": "left"
+    },
+    {
+      "id": "dd00000000000036",
+      "fromNode": "cc00000000000027",
+      "fromSide": "right",
+      "toNode": "c037f3c5d7e90250",
+      "toSide": "left"
+    },
+    {
+      "id": "dd00000000000037",
+      "fromNode": "c037f3c5d7e90250",
+      "fromSide": "bottom",
+      "toNode": "cc00000000000028",
+      "toSide": "top"
+    },
+    {
+      "id": "dd00000000000038",
+      "fromNode": "cc00000000000028",
+      "fromSide": "bottom",
+      "toNode": "c038f3c5d7e90251",
+      "toSide": "top"
+    },
+    {
+      "id": "dd00000000000039",
+      "fromNode": "c037f3c5d7e90250",
+      "fromSide": "bottom",
+      "toNode": "cc00000000000029",
+      "toSide": "top"
+    },
+    {
+      "id": "dd0000000000003a",
+      "fromNode": "cc00000000000029",
+      "fromSide": "bottom",
+      "toNode": "c039f3c5d7e90252",
+      "toSide": "top"
+    },
+    {
+      "id": "dd0000000000003b",
+      "fromNode": "a020f3c5d7e90233",
+      "fromSide": "right",
+      "toNode": "cc00000000000030",
+      "toSide": "left"
+    },
+    {
+      "id": "dd0000000000003c",
+      "fromNode": "cc00000000000030",
+      "fromSide": "right",
+      "toNode": "c032f3c5d7e90245",
+      "toSide": "left"
+    },
+    {
+      "id": "dd0000000000003d",
+      "fromNode": "c031f3c5d7e90244",
+      "fromSide": "left",
+      "toNode": "cc00000000000031",
+      "toSide": "right"
+    },
+    {
+      "id": "dd0000000000003e",
+      "fromNode": "cc00000000000031",
+      "fromSide": "left",
+      "toNode": "c032f3c5d7e90245",
+      "toSide": "right"
+    },
+    {
+      "id": "dd0000000000003f",
+      "fromNode": "c040f3c5d7e90253",
+      "fromSide": "right",
+      "toNode": "cc00000000000032",
+      "toSide": "left"
+    },
+    {
+      "id": "dd00000000000040",
+      "fromNode": "cc00000000000032",
+      "fromSide": "right",
+      "toNode": "a021f3c5d7e90234",
+      "toSide": "left"
+    },
+    {
+      "id": "dd00000000000041",
+      "fromNode": "a021f3c5d7e90234",
+      "fromSide": "right",
+      "toNode": "cc00000000000033",
+      "toSide": "left"
+    },
+    {
+      "id": "dd00000000000042",
+      "fromNode": "cc00000000000033",
+      "fromSide": "right",
+      "toNode": "a022f3c5d7e90235",
+      "toSide": "left"
+    },
+    {
+      "id": "dd00000000000043",
+      "fromNode": "a022f3c5d7e90235",
+      "fromSide": "right",
+      "toNode": "cc00000000000034",
+      "toSide": "left"
+    },
+    {
+      "id": "dd00000000000044",
+      "fromNode": "cc00000000000034",
+      "fromSide": "right",
+      "toNode": "p0062-damping",
+      "toSide": "left"
+    },
+    {
+      "id": "dd00000000000045",
+      "fromNode": "c041f3c5d7e90254",
+      "fromSide": "right",
+      "toNode": "cc00000000000035",
+      "toSide": "left"
+    },
+    {
+      "id": "dd00000000000046",
+      "fromNode": "cc00000000000035",
+      "fromSide": "right",
+      "toNode": "c042f3c5d7e90255",
+      "toSide": "left"
+    },
+    {
+      "id": "dd00000000000047",
+      "fromNode": "a023f3c5d7e90236",
+      "fromSide": "right",
+      "toNode": "cc00000000000036",
+      "toSide": "left"
+    },
+    {
+      "id": "dd00000000000048",
+      "fromNode": "cc00000000000036",
+      "fromSide": "right",
+      "toNode": "c043f3c5d7e90256",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-finite-existence",
+      "fromNode": "b022e4d6f8091235",
+      "fromSide": "top",
+      "toNode": "stationary-existence",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "Finiteness guarantees at least one stationary distribution · 有限性保证至少一个稳态分布"
+    },
+    {
+      "id": "edge-convergence-rank-one",
+      "fromNode": "b025e4d6f8091238",
+      "fromSide": "bottom",
+      "toNode": "rank-one-limit",
+      "toSide": "bottom",
+      "label": "Add stationary uniqueness / 再加稳态唯一"
+    },
+    {
+      "id": "edge-uniqueness-rank-one",
+      "fromNode": "b023e4d6f8091236",
+      "fromSide": "bottom",
+      "toNode": "rank-one-limit",
+      "toSide": "top",
+      "label": "Also require convergent powers / 还须幂收敛"
+    },
+    {
+      "id": "edge-period-class-property",
+      "fromNode": "a010f3c5d7e90223",
+      "fromSide": "bottom",
+      "toNode": "communicating-common-period",
+      "toSide": "top",
+      "label": "Mutual routes preserve the gcd / 往返路线保持周期"
+    },
+    {
+      "id": "p0062-damping-support",
+      "fromNode": "p0062-damping",
+      "fromSide": "right",
+      "toNode": "p0062-support-bridge",
+      "toSide": "left"
+    },
+    {
+      "id": "p0062-support-property",
+      "fromNode": "p0062-support-bridge",
+      "fromSide": "right",
+      "toNode": "c041f3c5d7e90254",
+      "toSide": "left"
+    },
+    {
+      "id": "p0066-finite-to-countable",
+      "fromNode": "a013f3c5d7e90226",
+      "fromSide": "bottom",
+      "toNode": "p0066-countable-equilibrium",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "Beyond finite state spaces, retain a stationary probability · 扩展至可数空间，须保留平稳概率"
+    }
   ]
 }

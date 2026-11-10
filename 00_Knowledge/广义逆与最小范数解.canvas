@@ -24,9 +24,9 @@
       "x": 120,
       "y": 350,
       "width": 320,
-      "height": 180,
+      "height": 260,
       "color": "4",
-      "text": "## [[左逆]]\nLA-PINV-010 · 定义入口\n\n若 $LA=I_n$，则 $L$ 是 $A$ 的左逆；它恢复输入，但不保证覆盖全部输出。"
+      "text": "<!-- bilingual-en:start -->\n## [[左逆|Left inverse]]\n\nFor $A\\in\\mathbb F^{m\\times n}$, $LA=I_n$ recovers every input from its image. The matrix $A$ need not reach every output.\n<!-- bilingual-en:end -->\n\n$LA=I_n$保证从输出恢复原输入，不保证覆盖全部输出。"
     },
     {
       "id": "pinv-left-rank-0001",
@@ -44,9 +44,9 @@
       "x": 1420,
       "y": 350,
       "width": 320,
-      "height": 180,
+      "height": 280,
       "color": "5",
-      "text": "## [[满列秩伪逆公式]]\nLA-PINV-014 · 公式\n\n满列秩时 $A^+=(A^*A)^{-1}A^*$，它同时是一个左逆。"
+      "text": "<!-- bilingual-en:start -->\n## [[满列秩伪逆公式|Full-column-rank pseudoinverse]]\n\n$A^+=(A^*A)^{-1}A^*$ gives the unique least-squares coefficients and satisfies $A^+A=I_n$.\n<!-- bilingual-en:end -->\n\n满列秩使 $A^*A$ 可逆；规范左逆给出唯一最小二乘系数。"
     },
     {
       "id": "pinv-right-def-0011",
@@ -54,9 +54,9 @@
       "x": 120,
       "y": 640,
       "width": 320,
-      "height": 180,
+      "height": 260,
       "color": "4",
-      "text": "## [[右逆]]\nLA-PINV-011 · 定义入口\n\n若 $AR=I_m$，则 $R$ 是 $A$ 的右逆；它覆盖全部输出，但输入可能不唯一。"
+      "text": "<!-- bilingual-en:start -->\n## [[右逆|Right inverse]]\n\nFor $A\\in\\mathbb F^{m\\times n}$, $AR=I_m$ supplies an input for every output. The input need not be unique.\n<!-- bilingual-en:end -->\n\n$AR=I_m$为每个输出提供一个输入，输入未必唯一。"
     },
     {
       "id": "pinv-right-rank-0002",
@@ -74,9 +74,9 @@
       "x": 1420,
       "y": 640,
       "width": 320,
-      "height": 180,
+      "height": 280,
       "color": "5",
-      "text": "## [[满行秩伪逆公式]]\nLA-PINV-015 · 公式\n\n满行秩时 $A^+=A^*(AA^*)^{-1}$，它同时是一个右逆。"
+      "text": "<!-- bilingual-en:start -->\n## [[满行秩伪逆公式|Full-row-rank pseudoinverse]]\n\n$A^+=A^*(AA^*)^{-1}$ selects the shortest exact input for every target; $AA^+=I_m$.\n<!-- bilingual-en:end -->\n\n满行秩使 $AA^*$ 可逆；规范右逆为每个目标选最短精确输入。"
     },
     {
       "id": "pinv-underdetermined-0028",
@@ -84,9 +84,9 @@
       "x": 880,
       "y": 850,
       "width": 360,
-      "height": 180,
+      "height": 210,
       "color": "2",
-      "text": "## [[欠定不等于秩亏]]\nLA-PROJ-028 · 概念辨析\n\n$m<n$ 且满行秩时已达到形状最大秩；解不唯一不等于矩阵秩亏。"
+      "text": "<!-- bilingual-en:start -->\n## [[欠定不等于秩亏|Underdetermined systems]]\n\n$m<n$ can still have full row rank. Every target is then attainable, with $n-m$ free directions.\n<!-- bilingual-en:end -->\n\n欠定是形状，不等于秩低于 min(m,n)。最短解仍可唯一。"
     },
     {
       "id": "pinv-square-0003",
@@ -94,9 +94,9 @@
       "x": 880,
       "y": 495,
       "width": 360,
-      "height": 190,
+      "height": 290,
       "color": "6",
-      "text": "## [[方阵单侧逆]]\nLA-PINV-003 · 定理\n\n有限维方阵中，任一侧逆都自动成为唯一的双侧逆。"
+      "text": "<!-- bilingual-en:start -->\n## [[方阵单侧逆|One-sided inverses of square matrices]]\n\nFor finite square matrices of the same size, either inverse identity implies the other and a unique inverse.\n<!-- bilingual-en:end -->\n\n同阶有限维方阵中，任一侧逆恒等式都推出另一侧，得到唯一双侧逆。"
     },
     {
       "id": "pinv-group-canonical",
@@ -113,9 +113,9 @@
       "x": 120,
       "y": 1220,
       "width": 320,
-      "height": 180,
+      "height": 270,
       "color": "4",
-      "text": "## [[广义逆]]\nLA-PINV-006 · 定义入口\n\n这里采用 $AGA=A$ 的口径；候选 $G$ 通常不唯一，也不自动给出正交投影。"
+      "text": "<!-- bilingual-en:start -->\n## [[广义逆|Generalized inverse]]\n\nHere $AGA=A$: return an input for every attainable output. Neither least squares nor minimum norm is automatic.\n<!-- bilingual-en:end -->\n\n本图采用单条件口径。可达输出能被恢复，但未必最小二乘，也未必最小范数。"
     },
     {
       "id": "pinv-mp-0004",
@@ -123,9 +123,9 @@
       "x": 500,
       "y": 1220,
       "width": 320,
-      "height": 180,
+      "height": 270,
       "color": "4",
-      "text": "## [[Moore–Penrose 伪逆]]\nLA-PINV-004 · 定义入口\n\n四个 Penrose 方程从广义逆家族中选出唯一、与正交几何相容的 $A^+$。"
+      "text": "<!-- bilingual-en:start -->\n## [[Moore–Penrose 伪逆|Moore–Penrose pseudoinverse]]\n\nFour equations specify an inverse-like map: nearest attainable output, then shortest input.\n<!-- bilingual-en:end -->\n\n任意有限实复矩阵都有唯一伪逆；它不恢复已丢失的信息。"
     },
     {
       "id": "pinv-svd-formula-0016",
@@ -133,9 +133,9 @@
       "x": 880,
       "y": 1220,
       "width": 320,
-      "height": 180,
+      "height": 270,
       "color": "5",
-      "text": "## [[伪逆SVD公式]]\nLA-PINV-016 · 公式\n\n若 $A=U_r\\Sigma_rV_r^*$，则 $A^+=V_r\\Sigma_r^{-1}U_r^*$。"
+      "text": "<!-- bilingual-en:start -->\n## [[伪逆SVD公式|Pseudoinverse from SVD]]\n\nReverse each positive singular stretch and swap input/output directions. Zero directions stay zero.\n<!-- bilingual-en:end -->\n\n紧 SVD 中仅正奇异值取倒数；零矩阵取反向尺寸的零矩阵。"
     },
     {
       "id": "pinv-existence-0007",
@@ -143,9 +143,9 @@
       "x": 880,
       "y": 1510,
       "width": 320,
-      "height": 180,
+      "height": 270,
       "color": "6",
-      "text": "## [[伪逆存在唯一性]]\nLA-PINV-007 · 定理\n\nSVD 公式满足四个 Penrose 方程，并由这些方程唯一确定。"
+      "text": "<!-- bilingual-en:start -->\n## [[伪逆存在唯一性|Existence and uniqueness]]\n\nEvery finite real or complex matrix has exactly one pseudoinverse. SVD constructs it; all four equations remove ambiguity.\n<!-- bilingual-en:end -->\n\n包括零矩阵与长方矩阵。SVD 构造候选，四条件共同排除其余选择。"
     },
     {
       "id": "pinv-project-col",
@@ -153,9 +153,9 @@
       "x": 120,
       "y": 1510,
       "width": 320,
-      "height": 180,
+      "height": 270,
       "color": "5",
-      "text": "## [[AA+列空间投影]]\nLA-PROJ-008 · 输出投影\n\n$AA^+$ 正交投影到列空间，因此最小二乘拟合值唯一。"
+      "text": "<!-- bilingual-en:start -->\n## [[AA+列空间投影|Output-space projection]]\n\n$AA^+$ projects onto $C(A)$ at every rank. The fitted output is unique.\n<!-- bilingual-en:end -->\n\n作用在输出空间；任意秩下，列空间中的最佳拟合唯一。"
     },
     {
       "id": "pinv-project-row",
@@ -163,9 +163,9 @@
       "x": 500,
       "y": 1510,
       "width": 320,
-      "height": 180,
+      "height": 270,
       "color": "5",
-      "text": "## [[A+A行空间投影]]\nLA-PROJ-014 · 输入投影\n\n$A^+A$ 正交投影到行空间，删去不影响 $Ax$ 的零空间分量。"
+      "text": "<!-- bilingual-en:start -->\n## [[A+A行空间投影|Input-space projection]]\n\n$A^+A$ projects onto $C(A^*)=N(A)^\\perp$. It removes inputs invisible to $A$.\n<!-- bilingual-en:end -->\n\n作用在输入空间，删去零空间分量；复数目标空间使用共轭转置 $A^*$。"
     },
     {
       "id": "pinv-minnorm",
@@ -173,9 +173,9 @@
       "x": 310,
       "y": 1800,
       "width": 360,
-      "height": 180,
+      "height": 240,
       "color": "3",
-      "text": "## [[最小范数最小二乘解]]\nLA-PROJ-017 · 定理\n\n$A^+b$ 是全部最小二乘解中唯一的 Euclidean 最小范数解。"
+      "text": "<!-- bilingual-en:start -->\n## [[最小范数最小二乘解|Minimum-norm least squares]]\n\nMinimize the residual first, then coefficient length among tied fits: $x_\\star=A^+b$.\n<!-- bilingual-en:end -->\n\n先保最佳拟合，再去零空间分量；通常欧氏范数下唯一。"
     },
     {
       "id": "pinv-group-numerical",
@@ -192,9 +192,9 @@
       "x": 2160,
       "y": 1220,
       "width": 320,
-      "height": 180,
+      "height": 270,
       "color": "1",
-      "text": "## [[小奇异值放大噪声]]\nLA-PINV-005 · 数值边界\n\n伪逆沿第 $i$ 个正奇异方向按 $1/\\sigma_i$ 放大观测误差。"
+      "text": "<!-- bilingual-en:start -->\n## [[小奇异值放大噪声|Noise amplification]]\n\nKeep $A$ fixed. Each positive singular direction transfers observation error to coefficients with factor $1/\\sigma_i$.\n<!-- bilingual-en:end -->\n\n固定 $A$，伪逆只反转正奇异值。放大取决于误差方向；这是绝对量。"
     },
     {
       "id": "pinv-numrank-0009",
@@ -202,9 +202,9 @@
       "x": 2540,
       "y": 1220,
       "width": 320,
-      "height": 180,
+      "height": 270,
       "color": "4",
-      "text": "## [[数值秩]]\nLA-PINV-009 · 定义入口\n\n只有给定容差后，被判为非零的奇异值个数才是可复核的数值秩。"
+      "text": "<!-- bilingual-en:start -->\n## [[数值秩|Numerical rank]]\n\nUnder an SVD cutoff, count $\\sigma_i>\\tau$. Report the scaling, tolerance and algorithm.\n<!-- bilingual-en:end -->\n\nSVD 阈值口径严格保留大于阈值的值。CPQR 条件估计采用另一判据。"
     },
     {
       "id": "pinv-cpqr-boundary",
@@ -212,9 +212,9 @@
       "x": 2920,
       "y": 1220,
       "width": 360,
-      "height": 180,
+      "height": 270,
       "color": "1",
-      "text": "## [[CPQR秩揭示边界]]\nLA-PROJ-023 · 数值边界\n\nCPQR 对角衰减可作有效秩证据，但普通 CPQR 不自动具有强秩揭示误差界。"
+      "text": "<!-- bilingual-en:start -->\n## [[CPQR秩揭示边界|CPQR rank evidence]]\n\nDiagonal magnitudes record successive residual lengths; these need not equal singular values. Strong RRQR adds quantitative bounds.\n<!-- bilingual-en:end -->\n\n普通 CPQR 的秩证据不自动具有强 RRQR 的最坏情况保证。"
     },
     {
       "id": "pinv-ridge-0013",
@@ -222,9 +222,9 @@
       "x": 2160,
       "y": 1510,
       "width": 320,
-      "height": 180,
+      "height": 280,
       "color": "3",
-      "text": "## [[岭正则化]]\nLA-PINV-013 · 定义入口\n\n在最小二乘目标中加入二范数惩罚，以改变拟合与系数大小的取舍。"
+      "text": "<!-- bilingual-en:start -->\n## [[岭正则化|Ridge regularization]]\n\nMinimize $\\|Ax-b\\|^2+\\lambda\\|x\\|^2$, $\\lambda>0$. Penalizing all coordinates trades fit against coefficient size.\n<!-- bilingual-en:end -->\n\n全部坐标受罚保证唯一解；截距免罚时须单独说明，变量尺度也影响惩罚。"
     },
     {
       "id": "pinv-ridge-filter-0017",
@@ -232,9 +232,9 @@
       "x": 2160,
       "y": 1800,
       "width": 320,
-      "height": 180,
+      "height": 380,
       "color": "5",
-      "text": "## [[岭的SVD滤波公式]]\nLA-PINV-017 · 公式\n\n把 $1/\\sigma_i$ 换成 $\\sigma_i/(\\sigma_i^2+\\lambda)$，连续收缩正奇异方向。"
+      "text": "<!-- bilingual-en:start -->\n## [[岭的SVD滤波公式|Ridge inverse gains]]\n\nFor $\\|Ax-b\\|^2+\\lambda\\|x\\|^2$, $\\lambda>0$, every coordinate is penalized. Gain: $\\sigma_i/(\\sigma_i^2+\\lambda)$.\nRetained fraction: $\\sigma_i^2/(\\sigma_i^2+\\lambda)$.\n<!-- bilingual-en:end -->\n\n全部坐标受罚时成立。相对精确反演的保留比例为 $\\sigma_i^2/(\\sigma_i^2+\\lambda)$。"
     },
     {
       "id": "pinv-tsvd-0012",
@@ -242,9 +242,9 @@
       "x": 2540,
       "y": 1510,
       "width": 320,
-      "height": 180,
+      "height": 270,
       "color": "3",
-      "text": "## [[截断SVD反演]]\nLA-PINV-012 · 过程\n\n只对高于阈值的奇异值取倒数，并删除被判为不可分辨的方向。"
+      "text": "<!-- bilingual-en:start -->\n## [[截断SVD反演|Truncated SVD inversion]]\n\nInvert only $\\sigma_i>\\tau$. The answer solves the retained-subspace problem and can discard signal.\n<!-- bilingual-en:end -->\n\n使用截断矩阵的伪逆；限制恢复方向可能损失信号，不普遍求解原始无限制问题。"
     },
     {
       "id": "pinv-compare-0008",
@@ -252,9 +252,9 @@
       "x": 2540,
       "y": 1800,
       "width": 360,
-      "height": 190,
+      "height": 280,
       "color": "3",
-      "text": "## [[截断SVD与岭正则化]]\nLA-PINV-008 · 方法辨析\n\nTSVD 是硬截断，岭是连续收缩；两者都改变精确伪逆的反演目标。"
+      "text": "<!-- bilingual-en:start -->\n## [[截断SVD与岭正则化|TSVD versus ridge]]\n\nTSVD removes selected positive directions; ridge shrinks every positive direction. If TSVD removes none, its operator is exactly $A^+$.\n<!-- bilingual-en:end -->\n\n硬截断与连续收缩施加不同恢复规则；不能只凭奇异值判定纯噪声方向。"
     },
     {
       "id": "pinv-cpqr-backsolve-0029",
@@ -262,9 +262,9 @@
       "x": 2920,
       "y": 1510,
       "width": 360,
-      "height": 190,
+      "height": 270,
       "color": "1",
-      "text": "## [[CPQR回代不保最小范数]]\nLA-PROJ-029 · 数值边界\n\n主元回代并把其余变量置零只选一个特解，未必删除零空间分量。"
+      "text": "<!-- bilingual-en:start -->\n## [[CPQR回代不保最小范数|Basic versus shortest solution]]\n\nZero nonpivot coordinates select a basic solution; the shortest solution must be orthogonal to the null space.\n<!-- bilingual-en:end -->\n\n即使精确判秩，主元回代也未必给出最短系数。"
     },
     {
       "id": "pinv-rankdef-algorithm",
@@ -272,9 +272,9 @@
       "x": 2920,
       "y": 1800,
       "width": 380,
-      "height": 200,
+      "height": 280,
       "color": "3",
-      "text": "## [[秩亏最小二乘算法]]\nLA-PROJ-012 · 算法决策\n\n要保证最小范数，应使用完整正交分解或 SVD，并明确有效秩口径。"
+      "text": "<!-- bilingual-en:start -->\n## [[秩亏最小二乘算法|Rank-aware least-squares solve]]\n\nComplete orthogonal factorization or SVD removes the free null-space component after fitting.\n<!-- bilingual-en:end -->\n\n报告缩放、范数、容差与秩模型；阈值删除非零方向会改变问题。"
     },
     {
       "id": "pinv-footer",
@@ -284,6 +284,16 @@
       "width": 3480,
       "height": 150,
       "text": "## 阅读路线\n\n判断单侧可逆性：定义 → 秩等价 → 满秩闭式，并分清欠定与秩亏。理解规范反解：一般广义逆 → Moore–Penrose 定义 → SVD 公式 → 存在唯一性与投影几何。做稳定反演：小奇异值放大 → 数值秩 → TSVD 或岭目标 → 岭滤波公式 → 明确算法保证。"
+    },
+    {
+      "id": "p0049-idempotent",
+      "type": "text",
+      "x": 120,
+      "y": 2130,
+      "width": 1720,
+      "height": 260,
+      "color": "5",
+      "text": "<!-- bilingual-en:start -->\n## [[幂等矩阵|Idempotent matrix]]\n\nAn idempotent map satisfies $P^2=P$: its first output is fixed by a second application. Hermitian symmetry makes it an orthogonal projector.\n<!-- bilingual-en:end -->\n\n幂等可能沿斜方向投影。Penrose 条件另外要求两个乘积为 Hermitian，才使保留与丢弃方向垂直。"
     }
   ],
   "edges": [
@@ -303,7 +313,7 @@
       "toNode": "pinv-fullcol-formula-0014",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "满列秩使 Gram 矩阵可逆"
+      "label": "Full column rank makes $A^*A$ invertible · 满列秩使列 Gram 矩阵可逆"
     },
     {
       "id": "pinv-edge-0003",
@@ -321,7 +331,7 @@
       "toNode": "pinv-fullrow-formula-0015",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "满行秩使 $AA^*$ 可逆"
+      "label": "Full row rank makes $AA^*$ invertible · 满行秩使行 Gram 矩阵可逆"
     },
     {
       "id": "pinv-edge-0023",
@@ -330,7 +340,7 @@
       "toNode": "pinv-underdetermined-0028",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "满行秩欠定仍可能有非平凡零空间"
+      "label": "Full-row-rank wide matrices have nullity n−m · 欠定满行秩仍有 n−m 维零空间"
     },
     {
       "id": "pinv-edge-0005",
@@ -357,7 +367,7 @@
       "toNode": "pinv-mp-0004",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "再加三个条件选出唯一规范逆"
+      "label": "Three extra conditions select the Moore–Penrose inverse · 再加三条件选出 Moore–Penrose 伪逆"
     },
     {
       "id": "pinv-edge-0008",
@@ -366,7 +376,7 @@
       "toNode": "pinv-svd-formula-0016",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "SVD 给出可计算闭式"
+      "label": "Reverse positive singular stretches · 撤销正奇异伸缩"
     },
     {
       "id": "pinv-edge-0009",
@@ -375,7 +385,7 @@
       "toNode": "pinv-existence-0007",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "验证四条件并证明唯一性"
+      "label": "Construct a candidate, then establish uniqueness · 先构造候选，再证明唯一性"
     },
     {
       "id": "pinv-edge-0010",
@@ -384,7 +394,7 @@
       "toNode": "pinv-project-col",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "输出侧得到列空间正交投影"
+      "label": "Project the target onto $C(A)$ · 输出侧取最近可达向量"
     },
     {
       "id": "pinv-edge-0011",
@@ -393,7 +403,7 @@
       "toNode": "pinv-project-row",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "输入侧得到行空间正交投影"
+      "label": "Retain the input component in $N(A)^\\perp$ · 输入侧保留零空间正交补"
     },
     {
       "id": "pinv-edge-0012",
@@ -402,7 +412,7 @@
       "toNode": "pinv-minnorm",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "固定唯一拟合值"
+      "label": "Fix the best attainable output · 固定最近可达输出"
     },
     {
       "id": "pinv-edge-0013",
@@ -411,7 +421,7 @@
       "toNode": "pinv-minnorm",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "删除零空间分量"
+      "label": "Remove the invisible input component · 删除不可见的输入分量"
     },
     {
       "id": "pinv-edge-0014",
@@ -420,7 +430,7 @@
       "toNode": "pinv-noise-0005",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "取倒数暴露小奇异方向敏感性"
+      "label": "Reciprocal positive stretches expose sensitivity · 正伸缩取倒数显出敏感性"
     },
     {
       "id": "pinv-edge-0015",
@@ -429,7 +439,7 @@
       "toNode": "pinv-numrank-0009",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "先声明哪些方向可分辨"
+      "label": "Numerical rank needs a scale and tolerance · 数值秩需声明尺度与容差"
     },
     {
       "id": "pinv-edge-0016",
@@ -438,7 +448,7 @@
       "toNode": "pinv-cpqr-boundary",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "CPQR 对角衰减只是秩证据"
+      "label": "CPQR and SVD use different rank tests · CPQR 与 SVD 的判秩规则不同"
     },
     {
       "id": "pinv-edge-0017",
@@ -447,7 +457,7 @@
       "toNode": "pinv-ridge-0013",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "引入二范数惩罚"
+      "label": "A penalty changes the recovery rule · 惩罚项改变恢复规则"
     },
     {
       "id": "pinv-edge-0024",
@@ -456,7 +466,7 @@
       "toNode": "pinv-ridge-filter-0017",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "SVD 坐标给出连续滤波因子"
+      "label": "Separate the penalized objective by singular direction · 按奇异方向分开受罚目标"
     },
     {
       "id": "pinv-edge-0018",
@@ -465,7 +475,7 @@
       "toNode": "pinv-tsvd-0012",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "按容差作硬截断"
+      "label": "Retain only $\\sigma_i>\\tau$ · 按声明阈值硬截断"
     },
     {
       "id": "pinv-edge-0019",
@@ -474,7 +484,7 @@
       "toNode": "pinv-compare-0008",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "连续收缩分支"
+      "label": "Smooth gains shrink each positive direction · 连续增益收缩各正方向"
     },
     {
       "id": "pinv-edge-0020",
@@ -483,7 +493,7 @@
       "toNode": "pinv-compare-0008",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "硬截断分支"
+      "label": "Discard selected directions completely · 把选定方向整体舍去"
     },
     {
       "id": "pinv-edge-0021",
@@ -492,7 +502,7 @@
       "toNode": "pinv-cpqr-backsolve-0029",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "秩证据不等于规范解保证"
+      "label": "Rank evidence does not guarantee minimum norm · 秩证据不保证最小范数"
     },
     {
       "id": "pinv-edge-0025",
@@ -501,7 +511,7 @@
       "toNode": "pinv-rankdef-algorithm",
       "toSide": "top",
       "toEnd": "arrow",
-      "label": "用 COD 或 SVD 删除零空间分量"
+      "label": "Further input rotations enforce minimum norm · 继续旋转输入坐标以实现最小范数"
     },
     {
       "id": "pinv-edge-0022",
@@ -510,7 +520,16 @@
       "toNode": "pinv-rankdef-algorithm",
       "toSide": "left",
       "toEnd": "arrow",
-      "label": "恢复目标决定算法路径"
+      "label": "Choose the recovery objective before the algorithm · 先确定恢复目标，再选算法"
+    },
+    {
+      "id": "p0049-idem-mp",
+      "fromNode": "p0049-idempotent",
+      "fromSide": "top",
+      "toNode": "pinv-mp-0004",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "The products AA⁺ and A⁺A are Hermitian idempotents · 乘积 AA⁺ 与 A⁺A 同时 Hermitian 且幂等"
     }
   ]
 }

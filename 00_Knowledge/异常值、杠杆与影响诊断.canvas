@@ -3,7 +3,7 @@
     {
       "id": "5b91000000000001",
       "type": "text",
-      "text": "# 异常值、杠杆与影响诊断 · 学习总图\n*Outliers, Leverage, and Influence Diagnostics*\n\n先区分 **结果方向异常、解释变量空间位置、删点后结论变化**，再分别读取杠杆、残差和目标特定的影响量。阈值只负责筛查；处理决定还要回到数据来源、目标总体、模型设定和透明敏感性分析。\n\n颜色只区分本图中的语义角色，不表示掌握度。**当前状态：** 10 张原子均为 source-checked，掌握状态均为 unassessed。",
+      "text": "<!-- bilingual-en:start -->\n# Outliers, leverage and influence diagnostics\nRead the observation from three perspectives: outcome departure, predictor position and change in a specified fitted result. Then choose the diagnostic scale and deletion unit. A flag prompts investigation of the record, target and model; it does not choose an exclusion.\n<!-- bilingual-en:end -->\n\n# 异常值、杠杆与影响诊断\n从结果偏离、解释变量位置与指定拟合结果的变化三个角度理解观测，再选择诊断尺度和删除单位。标记引导核查记录、目标与模型，本身不决定排除。",
       "x": 0,
       "y": 0,
       "width": 3580,
@@ -13,161 +13,161 @@
     {
       "id": "5b91000000000002",
       "type": "text",
-      "text": "## [[多重共线性.canvas|多重共线性与设计矩阵诊断]]\n\n检查的是 $X$ 的列是否信息重叠；本图转而检查哪些行在解释变量空间特殊或推动结论。\n\n**边界：** 列依赖与单行高杠杆不是同一个问题。",
+      "text": "<!-- bilingual-en:start -->\n## [[多重共线性.canvas|From columns to observations]]\nCollinearity concerns overlapping information among design columns. This map asks about individual rows and groups of rows. Column dependence and high leverage are distinct questions.\n<!-- bilingual-en:end -->\n\n## [[多重共线性.canvas|从列转向观测]]\n共线性检查设计列之间的信息重叠；这里检查单行及成组观测。列依赖与高杠杆是不同问题。",
       "x": 0,
       "y": 300,
       "width": 460,
-      "height": 220,
+      "height": 300,
       "color": "1"
     },
     {
       "id": "5b91000000000003",
       "type": "text",
-      "text": "## [[满列秩投影公式]]\n\n满列秩设计下，$P_X=X(X'X)^{-1}X'$ 把结果向量投影到 $X$ 的列空间。\n\n**边界：** 投影公式给出杠杆的几何起点，不判断观测是否应被删除。",
+      "text": "<!-- bilingual-en:start -->\n## [[满列秩投影公式|Projection geometry]]\nFor a full-column-rank design, the orthogonal projector maps outcomes into fitted values. Its diagonal gives own-response sensitivity; the geometry does not decide whether a record belongs in the study.\n<!-- bilingual-en:end -->\n\n## [[满列秩投影公式|投影几何]]\n满列秩设计的正交投影把结果变成拟合值，对角元给出自身结果的敏感度；几何性质不决定记录是否应纳入研究。",
       "x": 520,
       "y": 300,
       "width": 460,
-      "height": 220,
+      "height": 300,
       "color": "1"
     },
     {
       "id": "5b91000000000004",
       "type": "text",
-      "text": "## [[残差图边界]]\n\n残差图能提示结果方向异常，却不能只凭一个大残差判断观测是否真正改变结论。\n\n**边界：** 原始残差还受杠杆决定的方差尺度影响。",
+      "text": "<!-- bilingual-en:start -->\n## [[残差图边界|Interpreting residual plots]]\nA vertical gap is a clue about outcome departure. Its scale depends on fitting and leverage; the gap alone does not measure how much a chosen coefficient or prediction changes after deletion.\n<!-- bilingual-en:end -->\n\n## [[残差图边界]]\n竖直缺口提示结果偏离，其尺度受拟合与杠杆影响；缺口大小本身不衡量删点后指定系数或预测的变化。",
       "x": 1040,
       "y": 300,
       "width": 460,
-      "height": 220,
+      "height": 300,
       "color": "1"
     },
     {
       "id": "5b91000000000005",
       "type": "text",
-      "text": "## [[残差协方差诊断]]\n\n经典学生化和删点公式依赖所拟合误差模型；同方差或独立性失效时，应使用与估计量和协方差结构匹配的诊断。\n\n**边界：** 换一个残差刻度不能自动修复依赖结构。",
+      "text": "<!-- bilingual-en:start -->\n## [[残差协方差诊断|Residual scale and dependence]]\nFitting changes residual variances and correlations. Studentizing supports scale comparisons under stated assumptions; it does not repair a wrong mean or eliminate dependence.\n<!-- bilingual-en:end -->\n\n## [[残差协方差诊断]]\n拟合改变残差方差与相关性。学生化在相应假设下便于尺度比较，不修复错误均值，也不消除依赖。",
       "x": 2600,
       "y": 300,
       "width": 460,
-      "height": 220,
+      "height": 300,
       "color": "1"
     },
     {
       "id": "5b91000000000006",
       "type": "text",
-      "text": "## [[观测行协方差]]\n\n同一主体、群组或时段内的观测可能共享冲击，有意义的诊断删除单位不一定是一行。\n\n**边界：** 删除单位应与抽样、相关结构和目标参数匹配；逐行删点可能低估整个群组的影响。",
+      "text": "<!-- bilingual-en:start -->\n## [[观测行协方差|Dependent records]]\nRepeated people, firms or schools may share shocks. Row deletion and group deletion ask different questions. Match the unit to the design, dependence and target; dependence alone does not choose it.\n<!-- bilingual-en:end -->\n\n## [[观测行协方差|有依赖的记录]]\n重复观察的人、公司或学校可能共享冲击。删行与删组问不同问题；单位须匹配设计、依赖与目标，不能只凭依赖层级决定。",
       "x": 3120,
       "y": 300,
       "width": 460,
-      "height": 220,
+      "height": 300,
       "color": "1"
     },
     {
       "id": "5b91000000000007",
       "type": "text",
-      "text": "## [[设定修复循环]]\n\n处理异常观测后，仍要保存样本、函数形式和估计结果怎样一步步改变。\n\n**边界：** 同时删点、变换结果并更换控制项，会让修复来源无法追踪。",
+      "text": "<!-- bilingual-en:start -->\n## [[设定修复循环|Recheck a justified revision]]\nRecord the target, data correction or model change, then diagnose again. An interpretable comparison helps attribute changes. Simultaneously altering several ingredients does not by itself separate their effects.\n<!-- bilingual-en:end -->\n\n## [[设定修复循环]]\n记录目标、数据更正或模型修改，再重新诊断。可解释的比较便于追踪变化；同时调整多个要素的一次比较，本身不能分离各自效果。",
       "x": 3120,
       "y": 1440,
       "width": 460,
-      "height": 220,
+      "height": 300,
       "color": "1"
     },
     {
       "id": "5b91000000000008",
       "type": "text",
-      "text": "## [[异常杠杆影响区分]]\n\n异常值看结果方向残差，高杠杆点看 $X$ 空间位置，影响点看删点后目标结论变化。\n\n**边界：** 任一身份都不自动推出另外两个。",
+      "text": "<!-- bilingual-en:start -->\n## [[异常杠杆影响区分|Three different questions]]\nAn outlier concerns outcome departure, leverage concerns predictor position, and influence concerns a specified result after refitting. A high-leverage point can leave the coefficients unchanged.\n<!-- bilingual-en:end -->\n\n## [[异常杠杆影响区分]]\n异常值关心结果偏离，杠杆关心解释变量位置，影响关心重拟合后的指定结果。高杠杆点也可能完全不改变系数。",
       "x": 0,
       "y": 620,
       "width": 460,
-      "height": 260,
+      "height": 340,
       "color": "2"
     },
     {
       "id": "5b91000000000009",
       "type": "text",
-      "text": "## [[Hat杠杆值]]\n\n$h_{ii}$ 是 Hat 矩阵对角元，只由设计矩阵决定，表示观测对自身拟合值的杠杆。\n\n**边界：** 杠杆是影响潜力，不是已经发生的影响。",
+      "text": "<!-- bilingual-en:start -->\n## [[Hat杠杆值|Hat values and leverage]]\nWith a fixed unweighted OLS design, changing only outcome i by one changes its own fit by hᵢᵢ. The value depends on the design. Actual deletion changes the design too and asks another question.\n<!-- bilingual-en:end -->\n\n## [[Hat杠杆值]]\n固定不加权 OLS 设计，只把结果 i 增加一，其自身拟合值便增加 hᵢᵢ。该值由设计决定；真正删点还会改变设计，属于另一种比较。",
       "x": 520,
       "y": 620,
       "width": 460,
-      "height": 260,
+      "height": 340,
       "color": "2"
     },
     {
       "id": "5b9100000000000a",
       "type": "text",
-      "text": "## [[学生化残差]]\n\n内部学生化按 $s\\sqrt{1-h_{ii}}$ 调整残差；外部学生化再用删去该观测后的误差尺度。\n\n**边界：** 它主要寻找结果方向异常，不直接汇总系数或预测的删点变化。",
+      "text": "<!-- bilingual-en:start -->\n## [[学生化残差|Studentized residuals]]\nInternal scaling uses the full-fit error estimate; external scaling estimates it without the case. A deleted prediction error is another quantity. Rank, degrees of freedom and positive scales matter; an exact t law needs Gaussian model conditions.\n<!-- bilingual-en:end -->\n\n## [[学生化残差]]\n内部尺度用全样本误差估计，外部尺度排除该点再估计；删除预测误差是另一种量。须满足秩、自由度及正尺度条件，精确 t 律还需 Gaussian 模型条件。",
       "x": 1040,
       "y": 620,
       "width": 460,
-      "height": 260,
+      "height": 340,
       "color": "3"
     },
     {
       "id": "5b9100000000000b",
       "type": "text",
-      "text": "## [[删点影响定义]]\n\n影响是目标量在保留与删除一个观测时改变多少；目标可以是整组拟合、单点预测、单个系数或协方差。\n\n**边界：** 不同影响量针对不同目标，不能由一个排名替代。",
+      "text": "<!-- bilingual-en:start -->\n## [[删点影响定义|Delete-one influence]]\nRefit and compare the same named target: coefficients, predictions at fixed positions or estimated uncertainty. One target can change while another stays fixed. An undefined reduced fit is not zero influence.\n<!-- bilingual-en:end -->\n\n## [[删点影响定义]]\n重拟合后比较同一个明确目标：系数、固定位置的预测或估计不确定性。一项目标可能改变，另一项保持不变；删点拟合无法定义，不等于零影响。",
       "x": 1560,
       "y": 620,
       "width": 460,
-      "height": 260,
+      "height": 340,
       "color": "3"
     },
     {
       "id": "5b9100000000000c",
       "type": "text",
-      "text": "## [[删点单位边界]]\n\n成组、面板等依赖数据的诊断，要让删除单位与抽样、处理分配、相关结构和目标参数匹配。\n\n**边界：** 普通逐行 OLS 公式不能无条件推广到整群影响或相关数据模型。",
+      "text": "<!-- bilingual-en:start -->\n## [[删点单位边界|Choose the deletion unit]]\nTwo cases can mask their joint effect when removed one at a time. Choose a row or meaningful group to answer the stated question. Check estimability and convergence; single-case OLS formulas do not define every group diagnostic.\n<!-- bilingual-en:end -->\n\n## [[删点单位边界]]\n两个点逐一删除时，可能掩蔽联合效果。按明确问题选择单行或有意义的组，并检查可估性与收敛；单点 OLS 公式不定义所有删组诊断。",
       "x": 3120,
       "y": 620,
       "width": 460,
-      "height": 260,
+      "height": 340,
       "color": "5"
     },
     {
       "id": "5b9100000000000d",
       "type": "text",
-      "text": "## [[Cook距离]]\n\nCook 距离同时使用残差和杠杆，汇总删除观测对整组拟合值或等价系数向量的总体改变。\n\n**边界：** 它不告诉你具体哪个系数被推动。",
+      "text": "<!-- bilingual-en:start -->\n## [[Cook距离|Cook’s distance]]\nCombine squared fitted-value changes at all original design points, dividing by the coefficient count times the full-fit residual variance estimate. This nonnegative global summary does not identify which coefficient moved.\n<!-- bilingual-en:end -->\n\n## [[Cook距离]]\n汇总所有原设计位置的拟合值平方变化，除以系数个数乘全样本残差方差估计。这个非负全局摘要不指出究竟哪个系数移动。",
       "x": 1040,
       "y": 1060,
       "width": 460,
-      "height": 260,
+      "height": 340,
       "color": "4"
     },
     {
       "id": "5b9100000000000e",
       "type": "text",
-      "text": "## [[DFFITS]]\n\nDFFITS 把删点造成的观测 $i$ 自身拟合值变化按其不确定性缩放。\n\n**边界：** 它回答该设计点的拟合敏感性，不等于所有预测都同样敏感。",
+      "text": "<!-- bilingual-en:start -->\n## [[DFFITS]]\nMeasure the signed fitted-value change at the omitted case’s original predictor position. Scale it with the deleted residual estimate and full-design leverage. This scale is generally not the standard error of that difference.\n<!-- bilingual-en:end -->\n\n## [[DFFITS]]\n衡量被删点原解释变量位置的有符号拟合变化，以删点残差估计和全设计杠杆缩放。该尺度一般不等于这个差值的标准误。",
       "x": 1560,
       "y": 1060,
       "width": 460,
-      "height": 260,
+      "height": 340,
       "color": "4"
     },
     {
       "id": "5b9100000000000f",
       "type": "text",
-      "text": "## [[DFBETAS]]\n\nDFBETAS 分别标准化每个系数的删点变化，用来定位哪一个参数由该观测推动。\n\n**边界：** 某个系数敏感不表示所有系数或整体拟合都同样敏感。",
+      "text": "<!-- bilingual-en:start -->\n## [[DFBETAS]]\nScale each coefficient’s full-minus-deleted change using deleted residual variability and full-design coefficient geometry. Keep the parameterization fixed. Software names alone do not distinguish raw from standardized changes.\n<!-- bilingual-en:end -->\n\n## [[DFBETAS]]\n逐系数比较“全样本减删点”的变化，结合删点残差波动和全设计系数几何缩放。保持参数化一致；软件名称本身不能区分原单位与标准化变化。",
       "x": 2080,
       "y": 1060,
       "width": 460,
-      "height": 260,
+      "height": 340,
       "color": "4"
     },
     {
       "id": "5b91000000000010",
       "type": "text",
-      "text": "## [[影响诊断阈值]]\n\n常见杠杆、学生化残差、Cook、DFFITS 与 DFBETAS 线只用于筛查。\n\n**边界：** 超线不证明数据错误，也不自动授权删除；应回到相对模式与目标敏感性。",
+      "text": "<!-- bilingual-en:start -->\n## [[影响诊断阈值|Screening thresholds]]\nReference lines prioritize investigation; conventions differ with statistic, sample size and parameter count. Check the full pattern and valid definitions. A crossing is neither proof of an error nor a calibrated test by itself.\n<!-- bilingual-en:end -->\n\n## [[影响诊断阈值]]\n参考线安排核查顺序，不同统计量、样本量与参数计数有不同约定。查看整组模式并确认定义有效；越线本身既不证明错误，也不是已经校准的检验。",
       "x": 2600,
       "y": 1060,
       "width": 460,
-      "height": 260,
+      "height": 340,
       "color": "5"
     },
     {
       "id": "5b91000000000011",
       "type": "text",
-      "text": "## [[异常观测处理原则]]\n\n先核实来源、总体归属和模型设定，再按事前理由纠正、保留、排除或采用适合的稳健方法，并报告敏感性。\n\n**边界：** 不能为了得到偏好的显著性而自动清除被标记观测。",
+      "text": "<!-- bilingual-en:start -->\n## [[异常观测处理原则|Handle the evidence]]\nCheck the original record, target population and model. Correct verified errors; justify exclusions independently of a preferred result. For valid unusual observations, compare substantive targets and report sensitivity.\n<!-- bilingual-en:end -->\n\n## [[异常观测处理原则]]\n核查原记录、目标总体与模型；更正确认的错误，排除理由须独立于想要的结果。面对有效特殊观测，比较实质目标并报告敏感性。",
       "x": 3120,
       "y": 1060,
       "width": 460,
-      "height": 260,
+      "height": 340,
       "color": "5"
     }
   ],
@@ -178,7 +178,7 @@
       "fromSide": "bottom",
       "toNode": "5b91000000000008",
       "toSide": "top",
-      "label": "由列信息重叠转向行敏感性"
+      "label": "From column overlap to row sensitivity · 从列重叠转向行敏感性"
     },
     {
       "id": "5b92000000000002",
@@ -186,7 +186,7 @@
       "fromSide": "bottom",
       "toNode": "5b91000000000009",
       "toSide": "top",
-      "label": "投影矩阵对角元给出杠杆"
+      "label": "The projection diagonal measures own-response sensitivity · 投影对角元衡量自身响应敏感度"
     },
     {
       "id": "5b92000000000003",
@@ -194,7 +194,7 @@
       "fromSide": "bottom",
       "toNode": "5b9100000000000a",
       "toSide": "top",
-      "label": "大纵向残差需按杠杆调整尺度"
+      "label": "Compare residual gaps on a model-supported scale · 按模型支持的尺度比较残差"
     },
     {
       "id": "5b92000000000004",
@@ -202,7 +202,7 @@
       "fromSide": "bottom",
       "toNode": "5b9100000000000c",
       "toSide": "top",
-      "label": "依赖层级决定基本删除单位"
+      "label": "Match deletion to design and target · 删除单位须匹配设计与目标"
     },
     {
       "id": "5b92000000000005",
@@ -210,7 +210,7 @@
       "fromSide": "top",
       "toNode": "5b91000000000005",
       "toSide": "bottom",
-      "label": "误差结构变化时经典刻度不再自动适用"
+      "label": "Scaling needs covariance and sampling assumptions · 缩放需要协方差与抽样假设"
     },
     {
       "id": "5b92000000000006",
@@ -218,7 +218,7 @@
       "fromSide": "right",
       "toNode": "5b91000000000009",
       "toSide": "left",
-      "label": "解释变量空间异常由杠杆刻画"
+      "label": "Describe predictor position before using outcomes · 先描述解释变量位置"
     },
     {
       "id": "5b92000000000007",
@@ -226,7 +226,7 @@
       "fromSide": "top",
       "toNode": "5b9100000000000a",
       "toSide": "top",
-      "label": "结果方向异常由学生化残差检查"
+      "label": "Assess outcome departures with appropriate scales · 用合适尺度检查结果偏离"
     },
     {
       "id": "5b92000000000008",
@@ -234,7 +234,7 @@
       "fromSide": "bottom",
       "toNode": "5b9100000000000b",
       "toSide": "bottom",
-      "label": "实际影响必须比较删点后目标"
+      "label": "Name the target before measuring change · 先确定目标再衡量变化"
     },
     {
       "id": "5b92000000000009",
@@ -242,7 +242,7 @@
       "fromSide": "right",
       "toNode": "5b9100000000000a",
       "toSide": "left",
-      "label": "杠杆进入残差方差尺度"
+      "label": "Leverage enters classical residual variance · 杠杆进入经典残差方差"
     },
     {
       "id": "5b9200000000000a",
@@ -250,7 +250,7 @@
       "fromSide": "bottom",
       "toNode": "5b9100000000000d",
       "toSide": "top",
-      "label": "总体拟合变化用 Cook 汇总"
+      "label": "Summarize movement across all original design points · 汇总所有原设计点的拟合移动"
     },
     {
       "id": "5b9200000000000b",
@@ -258,7 +258,7 @@
       "fromSide": "bottom",
       "toNode": "5b9100000000000e",
       "toSide": "top",
-      "label": "自身拟合变化用 DFFITS"
+      "label": "Evaluate movement at the omitted case’s position · 比较被删点位置的拟合移动"
     },
     {
       "id": "5b9200000000000c",
@@ -266,7 +266,7 @@
       "fromSide": "bottom",
       "toNode": "5b9100000000000f",
       "toSide": "top",
-      "label": "单个系数变化用 DFBETAS"
+      "label": "Separate the coefficient changes · 分开各个系数的变化"
     },
     {
       "id": "5b9200000000000d",
@@ -274,7 +274,7 @@
       "fromSide": "bottom",
       "toNode": "5b9100000000000d",
       "toSide": "top",
-      "label": "杠杆与残差共同驱动 Cook 距离"
+      "label": "Residual and leverage enter Cook’s identity · 残差与杠杆进入Cook恒等式"
     },
     {
       "id": "5b9200000000000e",
@@ -282,7 +282,7 @@
       "fromSide": "bottom",
       "toNode": "5b91000000000010",
       "toSide": "bottom",
-      "label": "总体影响量进入筛查"
+      "label": "Screen a global fitted-change summary · 筛查全局拟合变化"
     },
     {
       "id": "5b9200000000000f",
@@ -290,7 +290,7 @@
       "fromSide": "top",
       "toNode": "5b91000000000010",
       "toSide": "top",
-      "label": "拟合敏感性进入筛查"
+      "label": "Screen local fitted-value sensitivity · 筛查局部拟合敏感性"
     },
     {
       "id": "5b92000000000010",
@@ -298,7 +298,7 @@
       "fromSide": "right",
       "toNode": "5b91000000000010",
       "toSide": "left",
-      "label": "系数敏感性进入筛查"
+      "label": "Screen coefficient-specific sensitivity · 筛查逐系数敏感性"
     },
     {
       "id": "5b92000000000011",
@@ -306,7 +306,7 @@
       "fromSide": "right",
       "toNode": "5b9100000000000c",
       "toSide": "left",
-      "label": "普通逐行删点需检查适用单位"
+      "label": "Specify which rows the perturbation removes · 明确扰动移除哪些行"
     },
     {
       "id": "5b92000000000012",
@@ -314,7 +314,7 @@
       "fromSide": "bottom",
       "toNode": "5b91000000000011",
       "toSide": "top",
-      "label": "按依赖结构选择敏感性方案"
+      "label": "Choose a meaningful sensitivity comparison · 选择有意义的敏感性比较"
     },
     {
       "id": "5b92000000000013",
@@ -322,7 +322,7 @@
       "fromSide": "right",
       "toNode": "5b91000000000011",
       "toSide": "left",
-      "label": "筛查后进入来源与设定核实"
+      "label": "Investigate the evidence behind a flag · 核查标记背后的证据"
     },
     {
       "id": "5b92000000000014",
@@ -330,7 +330,7 @@
       "fromSide": "bottom",
       "toNode": "5b91000000000007",
       "toSide": "top",
-      "label": "处理变化纳入可追踪修复循环"
+      "label": "Record and recheck the justified change · 记录并复核有依据的改变"
     }
   ]
 }

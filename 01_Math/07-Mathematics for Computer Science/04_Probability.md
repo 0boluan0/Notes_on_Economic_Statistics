@@ -2591,9 +2591,9 @@ Reading the diagram: the left side propagates the current probability along edge
 > **3.** Teleportation makes the finite chain irreducible and aperiodic, yielding a unique stationary distribution to which the chain converges.<br>
 > <!-- bilingual-en:end -->
 
-**知识链**：[[图上随机游走]] → [[悬空节点转移]] → [[Markov矩阵|转移矩阵]] → [[Markov稳态分布|平稳分布]] → [[PageRank随机传送|PageRank 传送]] → [[全支持传送收敛|唯一与收敛]] / [[PageRank模型依赖|模型依赖边界]]。
+**知识链**：[[图上随机游走]] → [[悬空节点转移]] → [[Markov矩阵|转移矩阵]] → [[Markov稳态分布|平稳分布]] → [[PageRank随机传送|PageRank 传送]] → [[PageRank阻尼收敛|唯一与收敛]] / [[PageRank模型依赖|模型依赖边界]]。
 <!-- bilingual-en:start -->
-**Knowledge chain**: [[图上随机游走|random walk on a graph]] → [[悬空节点转移|dangling-node repair]] → [[Markov矩阵|transition matrix]] → [[Markov稳态分布|stationary distribution]] → [[PageRank随机传送|PageRank teleportation]] → [[全支持传送收敛|uniqueness and convergence]] / [[PageRank模型依赖|model-dependence boundary]].
+**Knowledge chain**: [[图上随机游走|random walk on a graph]] → [[悬空节点转移|dangling-node repair]] → [[Markov矩阵|transition matrix]] → [[Markov稳态分布|stationary distribution]] → [[PageRank随机传送|PageRank teleportation]] → [[PageRank阻尼收敛|uniqueness and convergence]] / [[PageRank模型依赖|model-dependence boundary]].
 <!-- bilingual-en:end -->
 
 ---

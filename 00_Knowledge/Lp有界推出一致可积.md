@@ -82,10 +82,10 @@ At $p=1$, the estimate becomes $C$, which does not decrease with $K$. The [[L1�
 $p=1$时，这个界变成不随$K$下降的$C$；[[L1有界不推一致可积|稀有尖峰反例]]说明这确实是结论的障碍，而不仅是证明不够巧。反过来，高阶矩条件只是充分条件：只含一个可积重尾变量的族仍一致可积，即使它所有大于1阶的矩都无穷。
 
 <!-- bilingual-en:start -->
-For an explicit example of the last point, let $Y$ take $e^k$ with probability $c e^{-k}/k^2$, $k=1,2,\ldots$, where $c$ normalizes the probabilities. Then $EY=c\sum k^{-2}<\infty$, while $EY^p=c\sum e^{(p-1)k}/k^2=\infty$ for every $p>1$. The one-member family $\{Y\}$ is UI because integrability makes its own tail expectation vanish.
+For an explicit example of the last point, let $Y$ take $e^k$ with probability $c e^{-k}/k^2$, $k=1,2,\ldots$, where $c$ normalizes the probabilities. Then $EY=c\sum k^{-2}<\infty$, while $EY^p=c\sum e^{(p-1)k}/k^2=\infty$ for every $p>1$. The first series converges by the [[p级数判别|p-series test]] with exponent two. For any $p>1$, the terms of the second series eventually grow rather than tend to zero. The one-member family $\{Y\}$ is UI because integrability makes its own tail expectation vanish.
 <!-- bilingual-en:end -->
 
-具体地，令$Y$以概率$c e^{-k}/k^2$取$e^k$，$k=1,2,\ldots$，其中$c$使概率和为1。于是$EY=c\sum k^{-2}<\infty$，而任意$p>1$都有$EY^p=c\sum e^{(p-1)k}/k^2=\infty$。单成员族$\{Y\}$仍一致可积，因为可积性保证它自己的尾部期望趋零。
+具体地，令$Y$以概率$c e^{-k}/k^2$取$e^k$，$k=1,2,\ldots$，其中$c$使概率和为1。于是$EY=c\sum k^{-2}<\infty$，而任意$p>1$都有$EY^p=c\sum e^{(p-1)k}/k^2=\infty$。第一个级数由指数为2的[[p级数判别]]收敛；任意$p>1$时，第二个级数的项最终会增长而不趋零。单成员族$\{Y\}$仍一致可积，因为可积性保证它自己的尾部期望趋零。
 
 ## 来源与核验
 

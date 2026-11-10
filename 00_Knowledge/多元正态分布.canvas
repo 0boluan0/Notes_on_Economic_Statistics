@@ -3,91 +3,111 @@
     {
       "id": "a17c09e4b36d5f82",
       "type": "text",
-      "text": "## 多元正态分布 · 原子地图\n\n从定义出发：上支处理变换与条件化，中支标出独立性的 Gaussian 特例，下支处理密度、距离和模型诊断。颜色只区分语义角色，不表示掌握度；本主题七张原子卡均已完成来源核验，另引入一张跨主题独立性边界。",
+      "text": "<!-- bilingual-en:start -->\n## Multivariate Gaussian distributions\n\nStart with the joint definition, then follow fixed transformations, conditional distributions, independence, density and distance calibration.\n<!-- bilingual-en:end -->\n\n从联合定义进入变换、条件化、独立性与距离；诊断用于检查模型和数据是否相容。",
       "x": 0,
       "y": 0,
       "width": 480,
-      "height": 160
+      "height": 220
     },
     {
       "id": "3f18b7c2a9d46e05",
       "type": "text",
-      "text": "### [[联合Gaussian|联合 Gaussian 的定义]]\n\n所有线性组合都是一元 Gaussian；半正定协方差允许退化分布。",
+      "text": "<!-- bilingual-en:start -->\n## [[联合Gaussian|Joint Gaussian distributions]]\n\nEvery fixed real linear combination is univariate Gaussian, including zero-variance constants.\n<!-- bilingual-en:end -->\n\n全部固定实线性组合均为一元正态；允许半正定协方差与退化分布。",
       "x": 0,
       "y": 260,
       "width": 480,
-      "height": 180,
+      "height": 260,
       "color": "4"
     },
     {
       "id": "8c2e51f0d7a4396b",
       "type": "text",
-      "text": "### [[Gaussian仿射闭包|仿射闭包与边际]]\n\n$AX+b$ 仍为 Gaussian；取边际是 selection matrix 的特例。",
+      "text": "<!-- bilingual-en:start -->\n## [[Gaussian仿射闭包|Gaussian affine transformations]]\n\nFor jointly Gaussian $X$, fixed compatible real $A,b$ give Gaussian $AX+b$. Rectangular maps, repeated coordinates and singular covariance are allowed.\n<!-- bilingual-en:end -->\n\n取边际是选择坐标的特例；均值、协方差变换进一步确定完整Gaussian律。",
       "x": 680,
       "y": 0,
       "width": 500,
-      "height": 180,
+      "height": 230,
       "color": "2"
     },
     {
       "id": "e4b9061c2d7f5a83",
       "type": "text",
-      "text": "### [[Gaussian条件分布|条件 Gaussian]]\n\n条件均值作线性调整；条件协方差是 Schur 补。普通公式要求被条件化协方差块可逆。",
+      "text": "<!-- bilingual-en:start -->\n## [[Gaussian条件分布|Conditional Gaussian distributions]]\n\nFor jointly Gaussian blocks $(X_1,X_2)$ with invertible $\\operatorname{Cov}(X_2)$, a Gaussian conditional version has a mean affine in $x_2$ and a fixed positive-semidefinite covariance.\n<!-- bilingual-en:end -->\n\n要求被观测块可逆；整个协方差与条件协方差都可以奇异。",
       "x": 1400,
       "y": 0,
       "width": 520,
-      "height": 200,
+      "height": 300,
       "color": "2"
     },
     {
       "id": "6d3a8f21c0b497e5",
       "type": "text",
-      "text": "### [[联合高斯独立判据|零协方差与独立]]\n\n联合 Gaussian 下零交叉协方差推出独立；只有 Gaussian 边际仍不够。",
+      "text": "<!-- bilingual-en:start -->\n## [[联合高斯独立判据|Gaussian independence criterion]]\n\nFor jointly Gaussian blocks, zero cross-covariance is equivalent to independence, including singular blocks.\n<!-- bilingual-en:end -->\n\n联合Gaussian时，零交叉协方差等价于块独立；仅有正态边际不够。",
       "x": 680,
       "y": 260,
       "width": 500,
-      "height": 180,
+      "height": 260,
       "color": "3"
     },
     {
       "id": "b52f7d90a1c638e4",
       "type": "text",
-      "text": "### [[Gaussian密度与奇异支撑|密度与奇异支撑]]\n\n正定协方差给全维椭球密度；奇异 Gaussian 只落在低维仿射子空间。",
+      "text": "<!-- bilingual-en:start -->\n## [[Gaussian密度与奇异支撑|Gaussian density and support]]\n\nFor Gaussian $X$ with mean $\\mu$ and covariance $\\Sigma$, a density in the ambient space exists iff $\\Sigma$ is positive definite. Otherwise support is $\\mu+\\operatorname{range}(\\Sigma)$.\n<!-- bilingual-en:end -->\n\n正定才有全维密度；奇异时支撑是低维仿射子空间，秩零时为一点。",
       "x": 680,
       "y": 560,
       "width": 500,
-      "height": 200,
+      "height": 280,
       "color": "5"
     },
     {
       "id": "09e6c1b3f8a4725d",
       "type": "text",
-      "text": "### [[Gaussian马氏平方律|Mahalanobis 平方律]]\n\n用真实总体均值与正定协方差白化时，平方距离服从 $\\chi_p^2$；同样本估计参数后不再是这条精确律。",
+      "text": "<!-- bilingual-en:start -->\n## [[Gaussian马氏平方律|Gaussian squared-distance law]]\n\nFor $X\\sim N_p(\\mu,\\Sigma)$ using the true mean and positive-definite covariance, $(X-\\mu)^T\\Sigma^{-1}(X-\\mu)\\sim\\chi_p^2$.\n<!-- bilingual-en:end -->\n\n白化后为p个独立标准正态平方和。奇异协方差须使用伪逆和秩；拟合参数须另行校准。\n\n<!-- bilingual-en:start -->\nThe underlying geometry is [[马氏距离|Mahalanobis distance]].\n<!-- bilingual-en:end -->",
       "x": 1400,
       "y": 560,
       "width": 520,
-      "height": 200,
+      "height": 320,
       "color": "5"
     },
     {
       "id": "f7a320d5c9841e6b",
       "type": "text",
-      "text": "### [[联合Gaussian诊断|联合 Gaussian 诊断流程]]\n\n先核对数据与拟合，再合并边际、投影、Mahalanobis 结构和下游敏感性；异常点必须回到来源判断。",
+      "text": "<!-- bilingual-en:start -->\n## [[联合Gaussian诊断|Assessing a joint Gaussian model]]\n\nCheck the sampling structure, margins, selected projections and fitted distances, then assess consequences for the intended calculation. The fitted-distance chi-square plot is an approximate reference. Investigate unusual observations in their source records.\n<!-- bilingual-en:end -->\n\n先核对观测对象与抽样，再综合图形及实际结论的敏感性。拟合距离的卡方图只是近似参照。",
       "x": 2120,
       "y": 560,
       "width": 520,
-      "height": 220,
+      "height": 290,
       "color": "1"
     },
     {
       "id": "4c81d9a6e2f735b0",
       "type": "text",
-      "text": "### [[边际与马氏图不证联合Gaussian|诊断相容不等于证明]]\n\n边际正态不控制变量的联合依赖；用同一样本拟合均值与协方差后，Mahalanobis 图也不是总体定律的独立证明。",
+      "text": "<!-- bilingual-en:start -->\n## [[边际与马氏图不证联合Gaussian|Limits of diagnostic plots]]\n\nNormal margins do not establish joint Gaussianity. Distances discard directions, and fitting a common mean and covariance changes their reference law.\n<!-- bilingual-en:end -->\n\n边际、有限投影与半径各有信息损失；未检出偏离不能证明整个总体模型。",
       "x": 2120,
       "y": 900,
       "width": 520,
-      "height": 220,
+      "height": 290,
       "color": "1"
+    },
+    {
+      "id": "p0018-cf",
+      "type": "text",
+      "x": 0,
+      "y": 650,
+      "width": 480,
+      "height": 300,
+      "color": "5",
+      "text": "<!-- bilingual-en:start -->\n## [[特征函数|Characteristic functions]]\n\nThe whole function $\\varphi_X(t)=E[e^{it^TX}]$ determines the joint law. For Gaussian vectors, its exponent uses only the mean $\\mu$ and covariance $\\Sigma$.\n<!-- bilingual-en:end -->\n\n不需要密度或协方差可逆，因而也能证明退化Gaussian的分布结论。"
+    },
+    {
+      "id": "p0019-chi",
+      "type": "text",
+      "x": 1400,
+      "y": 1050,
+      "width": 520,
+      "height": 300,
+      "color": "5",
+      "text": "<!-- bilingual-en:start -->\n## [[卡方分布|Chi-square distribution]]\n\nFor a positive integer $k$, the sum of $k$ independent standard-normal squares has law $\\chi_k^2$. Its mean is $k$ and variance is $2k$.\n<!-- bilingual-en:end -->\n\n自由度数独立的标准正态平方项；复制同一个随机变量不能增加独立项。"
     }
   ],
   "edges": [
@@ -97,7 +117,7 @@
       "fromSide": "right",
       "toNode": "8c2e51f0d7a4396b",
       "toSide": "left",
-      "label": "推出仿射闭包"
+      "label": "Fixed affine maps preserve every normal projection · 固定仿射映射保留正态投影"
     },
     {
       "id": "c4e91b2a760d5f83",
@@ -105,7 +125,7 @@
       "fromSide": "right",
       "toNode": "e4b9061c2d7f5a83",
       "toSide": "left",
-      "label": "分块后条件化"
+      "label": "An affine residual remains jointly Gaussian with the observed block · 仿射残差与观测块仍联合Gaussian"
     },
     {
       "id": "7b20e5c193d84fa6",
@@ -113,7 +133,7 @@
       "fromSide": "right",
       "toNode": "6d3a8f21c0b497e5",
       "toSide": "left",
-      "label": "加零互协方差"
+      "label": "Joint Gaussianity plus zero cross-covariance gives independence · 联合Gaussian加零交叉协方差"
     },
     {
       "id": "d58a0f3b9c2176e4",
@@ -121,7 +141,7 @@
       "fromSide": "right",
       "toNode": "e4b9061c2d7f5a83",
       "toSide": "bottom",
-      "label": "独立残差导出条件律"
+      "label": "Zero residual cross-covariance yields independent remaining noise · 残差零交叉协方差给独立剩余噪声"
     },
     {
       "id": "2f7c16a8e493b5d0",
@@ -129,7 +149,7 @@
       "fromSide": "right",
       "toNode": "b52f7d90a1c638e4",
       "toSide": "left",
-      "label": "按协方差秩分流"
+      "label": "Full rank gives full-dimensional density; lower rank gives affine support · 秩决定密度与支撑"
     },
     {
       "id": "93b5e0c47a1d68f2",
@@ -137,7 +157,7 @@
       "fromSide": "right",
       "toNode": "09e6c1b3f8a4725d",
       "toSide": "left",
-      "label": "正定时白化"
+      "label": "Positive-definite true covariance permits invertible whitening · 真实正定协方差允许可逆白化"
     },
     {
       "id": "e61d94a3b7082fc5",
@@ -145,7 +165,7 @@
       "fromSide": "right",
       "toNode": "f7a320d5c9841e6b",
       "toSide": "left",
-      "label": "已知参数律仅作诊断参照"
+      "label": "Fitted distances need their own calibration · 拟合距离需自己的校准"
     },
     {
       "id": "5b92e0c7f3a846d1",
@@ -153,7 +173,34 @@
       "fromSide": "bottom",
       "toNode": "4c81d9a6e2f735b0",
       "toSide": "top",
-      "label": "诊断不等于证明"
+      "label": "Finite diagnostic views leave unexamined directions · 有限诊断未覆盖全部方向"
+    },
+    {
+      "id": "p0018-def-cf",
+      "fromNode": "3f18b7c2a9d46e05",
+      "toNode": "p0018-cf",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "Every Gaussian projection gives the vector transform · 由各投影得到向量特征函数"
+    },
+    {
+      "id": "p0018-cf-independence",
+      "fromNode": "p0018-cf",
+      "toNode": "6d3a8f21c0b497e5",
+      "fromSide": "right",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "Zero cross-covariance factorizes the Gaussian transform · 零交叉协方差使Gaussian特征函数分解"
+    },
+    {
+      "id": "p0019-chi-mahal",
+      "fromNode": "p0019-chi",
+      "toNode": "09e6c1b3f8a4725d",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "Whitening produces exactly this sum of independent squares · 白化得到这类独立平方和"
     }
   ]
 }

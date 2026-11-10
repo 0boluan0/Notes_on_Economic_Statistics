@@ -1,132 +1,1131 @@
 {
   "nodes": [
-    {"id":"eigh00","type":"text","text":"# 特征值、对角化与线性动力系统\n\n阅读顺序：**① 特征对象 → ② 相似与对角化 → ③ Jordan、Schur 与矩阵函数 → ④ 稳定性 → ⑤ Markov 长期行为**。\n\n颜色区分知识角色，不表示掌握程度；箭头只保留真正有助于推理的关系。","x":0,"y":-260,"width":4130,"height":200,"color":"2"},
-
-    {"id":"group01","type":"group","label":"1｜特征对象：从方向到代数信息","x":0,"y":0,"width":1600,"height":1000,"color":"5"},
-    {"id":"group02","type":"group","label":"2｜相似与对角化：什么时候能把作用拆开","x":1700,"y":0,"width":2050,"height":1100,"color":"6"},
-    {"id":"group03","type":"group","label":"3｜Jordan、Schur 与矩阵函数：对角化失败之后","x":0,"y":1200,"width":2050,"height":1200,"color":"4"},
-    {"id":"group04","type":"group","label":"4｜稳定性：谱怎样控制长期演化","x":2150,"y":1200,"width":1600,"height":1000,"color":"1"},
-    {"id":"group05","type":"group","label":"5｜Markov 长期行为：稳态、唯一性与收敛","x":2150,"y":2300,"width":1980,"height":950,"color":"3"},
-
-    {"id":"intro01","type":"text","text":"先分清三件事：特征向量给出不变方向，特征空间收集同一缩放率下的全部方向，特征多项式从代数上找出可能的缩放率。","x":40,"y":50,"width":1520,"height":100,"color":"2"},
-    {"id":"intro02","type":"text","text":"相似表示同一个线性算子换坐标；对角化则问能否选到一整组特征向量基。判据、计算方法和失败边界分别由不同节点承担。","x":1740,"y":50,"width":1970,"height":100,"color":"2"},
-    {"id":"intro03","type":"text","text":"缺少特征向量时，Jordan 链记录缺失方向如何逐层连接；Schur 保留更稳定的数值结构。矩阵幂与矩阵指数把这些结构变成演化公式。","x":40,"y":1250,"width":1970,"height":100,"color":"2"},
-    {"id":"intro04","type":"text","text":"离散系统看特征值的模，连续系统看特征值的实部。渐近稳定、有界和一条观测轨迹是三个不同问题。","x":2190,"y":1250,"width":1520,"height":100,"color":"2"},
-    {"id":"intro05","type":"text","text":"先固定概率向量的行列约定，再区分三个问题：稳态是否存在、是否唯一，以及从任意初始分布出发是否真的收敛。","x":2190,"y":2350,"width":1900,"height":100,"color":"2"},
-
-    {"id":"depSchur","type":"text","text":"### 跨图先修\n\n[[正交矩阵]]（实数）与 [[Unitary 矩阵|酉矩阵]]（复数）说明 Schur 换基为何保持长度。","x":40,"y":2130,"width":310,"height":130,"color":"2"},
-    {"id":"depSVD","type":"text","text":"### 跨图先修\n\n先掌握 [[奇异值分解]] 的定义，再比较 Jordan、Schur 与 SVD。","x":1180,"y":2130,"width":310,"height":130,"color":"2"},
-    {"id":"depNormal","type":"text","text":"### 跨图先修\n\n先用 [[Normal 矩阵|正规矩阵]] 定义结构，再讨论非正规矩阵的瞬态边界。","x":2190,"y":1910,"width":310,"height":130,"color":"2"},
-    {"id":"depFinite","type":"text","text":"### 跨图先修\n\n[[有限链平稳分解]] 把固定点空间的维数接到闭沟通类与稳态个数。","x":3330,"y":2510,"width":310,"height":130,"color":"2"},
-
-    {"id":"eig001","type":"text","text":"## [[特征对]]\n\n$Av=λv$ 且 $v≠0$：矩阵保留 $v$ 张成的方向，并按 $λ$ 缩放。","x":40,"y":300,"width":310,"height":130,"color":"5"},
-    {"id":"eig002","type":"text","text":"## [[特征空间]]\n\n$E_λ=\\ker(A-λI)$ 收集属于同一特征值的全部向量。","x":420,"y":200,"width":310,"height":130,"color":"5"},
-    {"id":"eig024","type":"text","text":"## [[特征多项式]]\n\n$p_A(t)=\\det(tI-A)$；它在当前域中的根就是特征值。","x":420,"y":470,"width":310,"height":130,"color":"5"},
-    {"id":"eig004","type":"text","text":"## [[代数重数与几何重数]]\n\n一个数多项式根的次数，一个数特征空间的维数。","x":800,"y":200,"width":310,"height":130,"color":"6"},
-    {"id":"eig003","type":"text","text":"## [[特征多项式底层域]]\n\n同一多项式换一个域，可能出现不同的根；实矩阵未必有实特征值。","x":800,"y":470,"width":310,"height":130,"color":"1"},
-    {"id":"eig027","type":"text","text":"## [[互异特征值向量独立]]\n\n属于两两互异特征值的特征向量必然线性无关。","x":1180,"y":200,"width":310,"height":130,"color":"6"},
-    {"id":"eig005","type":"text","text":"## [[迹与特征值总和]]\n\n特征多项式分裂时，迹等于按代数重数计数的特征值之和。","x":1180,"y":470,"width":310,"height":130,"color":"6"},
-
-    {"id":"eig006","type":"text","text":"## [[相似矩阵]]\n\n$B=M^{-1}AM$ 表示同一个线性算子在两组基下的矩阵。","x":1740,"y":220,"width":310,"height":130,"color":"5"},
-    {"id":"eig025","type":"text","text":"## [[相似保持特征多项式]]\n\n相似不改变特征多项式，因此保留特征值及其代数重数。","x":2120,"y":170,"width":310,"height":130,"color":"6"},
-    {"id":"eig043","type":"text","text":"## [[相似保持特征空间维数]]\n\n相似变换在对应特征空间之间给出同构，因此保留几何重数。","x":2120,"y":390,"width":310,"height":130,"color":"6"},
-    {"id":"eig026","type":"text","text":"## [[同谱不必相似]]\n\n相同的特征值与重数仍可能对应不同的 Jordan 结构。","x":2500,"y":280,"width":310,"height":130,"color":"1"},
-    {"id":"eig028","type":"text","text":"## [[对角化]]\n\n若 $S^{-1}AS=Λ$ 为对角矩阵，就称 $A$ 可对角化。","x":1740,"y":620,"width":310,"height":130,"color":"5"},
-    {"id":"eig007","type":"text","text":"## [[可对角化判据]]\n\n方阵可对角化，当且仅当它拥有一组特征向量基。","x":2120,"y":620,"width":310,"height":130,"color":"6"},
-    {"id":"eig008","type":"text","text":"## [[重根对角化条件]]\n\n特征多项式分裂后，逐个比较几何重数与代数重数。","x":2500,"y":530,"width":310,"height":130,"color":"6"},
-    {"id":"eig010","type":"text","text":"## [[对角化计算矩阵幂]]\n\n$A^k=SΛ^kS^{-1}$ 把反复作用化成各特征值分别取幂。","x":2500,"y":730,"width":310,"height":130,"color":"4"},
-    {"id":"eig009","type":"text","text":"## [[对角化与行化简]]\n\n对角化是同时更换输入、输出坐标；行化简只做行操作。","x":1740,"y":850,"width":310,"height":130,"color":"1"},
-
-    {"id":"eig030","type":"text","text":"## [[广义特征向量]]\n\n非零 $v$ 若被 $(A-λI)$ 的某个正整数次幂送到零，就是广义特征向量。","x":40,"y":1430,"width":310,"height":130,"color":"5"},
-    {"id":"eig012","type":"text","text":"## [[Jordan链]]\n\n向量逐层满足 $(A-λI)v_1=0$、$(A-λI)v_j=v_{j-1}$。","x":420,"y":1430,"width":310,"height":130,"color":"5"},
-    {"id":"eig045","type":"text","text":"## [[Jordan链向量线性无关]]\n\n对链递推关系施加 $A-λI$ 的降幂，可从链尾逐个证明全部系数为零。","x":420,"y":1650,"width":310,"height":130,"color":"6"},
-    {"id":"eig031","type":"text","text":"## [[Jordan块]]\n\n$J_m(λ)=λI+N$，其中 $N$ 只在超对角线上为一且 $N^m=0$。","x":800,"y":1430,"width":310,"height":130,"color":"5"},
-    {"id":"eig033","type":"text","text":"## [[Jordan标准形]]\n\n与原矩阵相似、并由 Jordan 块组成的块对角矩阵。","x":1180,"y":1430,"width":310,"height":130,"color":"5"},
-    {"id":"eig014","type":"text","text":"## [[Jordan标准形的域条件]]\n\n普通 Jordan 形存在，当且仅当特征多项式在当前域中分裂。","x":1560,"y":1430,"width":310,"height":130,"color":"1"},
-    {"id":"eig013","type":"text","text":"## [[Jordan块的幂]]\n\n有限二项展开揭示离散演化中的多项式因子。","x":800,"y":1650,"width":310,"height":130,"color":"6"},
-    {"id":"eig034","type":"text","text":"## [[Jordan形唯一性]]\n\nJordan 形存在时，各块的大小与数量除排列外由相似类唯一决定。","x":1560,"y":1650,"width":310,"height":130,"color":"6"},
-    {"id":"eig029","type":"text","text":"## [[对角化计算矩阵指数]]\n\n可对角化时，$e^{tA}=Se^{tΛ}S^{-1}$。","x":800,"y":1850,"width":310,"height":130,"color":"4"},
-    {"id":"eig011","type":"text","text":"## [[矩阵指数]]\n\n$e^{tA}$ 由幂级数定义，对每个方阵都存在。","x":1180,"y":1850,"width":310,"height":130,"color":"5"},
-    {"id":"eig032","type":"text","text":"## [[Jordan块的指数]]\n\n$e^{t(λI+N)}=e^{λt}e^{tN}$，幂零性使后一个级数有限截断。","x":1560,"y":1850,"width":310,"height":130,"color":"6"},
-    {"id":"eig035","type":"text","text":"## [[Schur分解]]\n\n用酉矩阵或正交矩阵把方阵化为上三角或准上三角形式。","x":420,"y":2130,"width":310,"height":130,"color":"5"},
-    {"id":"eig044","type":"text","text":"## [[Schur分解存在性]]\n\n复方阵总有酉 Schur 形；实方阵总有正交实 Schur 形。","x":800,"y":2130,"width":310,"height":130,"color":"6"},
-    {"id":"eig015","type":"text","text":"## [[Jordan、Schur与SVD用途边界]]\n\nJordan 做精确分类，Schur 服务数值谱计算，SVD 描述奇异方向。","x":1560,"y":2130,"width":310,"height":130,"color":"1"},
-
-    {"id":"eig036","type":"text","text":"## [[谱半径]]\n\n$ρ(A)$ 是全部特征值模的最大值。","x":2190,"y":1430,"width":310,"height":130,"color":"5"},
-    {"id":"eig016","type":"text","text":"## [[矩阵幂趋零判据]]\n\n有限维方阵满足 $A^k→0$，当且仅当 $ρ(A)<1$。","x":2570,"y":1430,"width":310,"height":130,"color":"6"},
-    {"id":"eig018","type":"text","text":"## [[离散系统谱稳定性]]\n\n$x_{k+1}=Ax_k$ 对所有初值渐近稳定，当且仅当全部特征值模小于一。","x":2950,"y":1430,"width":310,"height":130,"color":"4"},
-    {"id":"eig037","type":"text","text":"## [[离散系统有界判据]]\n\n全部轨迹有界还允许半单的单位圆特征值。","x":3330,"y":1430,"width":310,"height":130,"color":"6"},
-    {"id":"eig047","type":"text","text":"## [[常系数线性系统的矩阵指数解]]\n\n初值问题 $u'=Au$ 的唯一解是 $u(t)=e^{tA}u_0$。","x":2190,"y":1690,"width":310,"height":130,"color":"6"},
-    {"id":"bridge-exp-solution","type":"text","text":"**统一解算子**","x":1880,"y":1850,"width":180,"height":60,"color":"5"},
-    {"id":"eig019","type":"text","text":"## [[连续系统谱稳定性]]\n\n$x'=Ax$ 对所有初值渐近稳定，当且仅当全部特征值实部小于零。","x":2570,"y":1690,"width":310,"height":130,"color":"4"},
-    {"id":"eig038","type":"text","text":"## [[连续系统有界判据]]\n\n全部轨迹有界还允许半单的虚轴特征值。","x":2950,"y":1690,"width":310,"height":130,"color":"6"},
-    {"id":"eig017","type":"text","text":"## [[非正规矩阵瞬态]]\n\n谱控制渐近行为，却不排除有限时间内先出现大幅放大。","x":2570,"y":1910,"width":310,"height":130,"color":"1"},
-    {"id":"eig020","type":"text","text":"## [[单轨迹与系统稳定性]]\n\n一条轨迹可能没有激活不稳定模态，不能证明整个系统稳定。","x":2950,"y":1910,"width":310,"height":130,"color":"1"},
-
-    {"id":"eig039","type":"text","text":"## [[Markov矩阵]]\n\n非负且按约定归一化的矩阵，把概率分布推进一步。","x":2190,"y":2600,"width":310,"height":130,"color":"3"},
-    {"id":"eig021","type":"text","text":"## [[Markov矩阵左右约定]]\n\n概率向量放在行还是列，决定固定点方程写在哪一侧。","x":2570,"y":2510,"width":310,"height":130,"color":"3"},
-    {"id":"eig046","type":"text","text":"## [[Markov矩阵必有特征值一]]\n\n行随机时 $P\\mathbf1=\\mathbf1$；列随机时从 $\\mathbf1^TP=\\mathbf1^T$ 与转置同谱得到同一结论。","x":2190,"y":2840,"width":310,"height":130,"color":"6"},
-    {"id":"eig040","type":"text","text":"## [[Markov矩阵谱边界]]\n\n随机矩阵的全部特征值都位于闭单位圆。","x":2570,"y":2760,"width":310,"height":130,"color":"3"},
-    {"id":"eig049","type":"text","text":"## [[Markov单位圆特征值半单]]\n\n随机矩阵幂有界，因此单位圆上的 Jordan 块只能是一阶。","x":2570,"y":2990,"width":310,"height":130,"color":"6"},
-    {"id":"eig022","type":"text","text":"## [[Markov稳态分布]]\n\n稳态既满足正确一侧的固定点方程，又是合法概率分布。","x":2950,"y":2510,"width":310,"height":130,"color":"3"},
-    {"id":"eig042","type":"text","text":"## [[Markov矩阵幂收敛判据]]\n\n除 $1$ 外的全部特征值严格位于单位圆内时，$P^k$ 才收敛。","x":2950,"y":2760,"width":310,"height":130,"color":"3"},
-    {"id":"eig048","type":"text","text":"## [[Markov幂的秩一稳态极限]]\n\n矩阵幂收敛且稳态唯一时，列随机约定下 $P^k→π\\mathbf1^T$。","x":3330,"y":2760,"width":310,"height":130,"color":"6"},
-    {"id":"eig041","type":"text","text":"## [[Markov稳态唯一判据]]\n\n稳态唯一，当且仅当特征值 $1$ 的固定点空间只有一个概率方向。","x":3710,"y":2510,"width":310,"height":130,"color":"3"},
-    {"id":"eig023","type":"text","text":"## [[稳态唯一不推收敛]]\n\n唯一稳态仍可能伴随周期振荡；唯一性不等于逐步收敛。","x":3710,"y":2760,"width":310,"height":130,"color":"1"}
+    {
+      "id": "eigh00",
+      "type": "text",
+      "text": "# 特征值、对角化与线性动力系统\n\n阅读顺序：**① 特征对象 → ② 相似与对角化 → ③ Jordan、Schur 与矩阵函数 → ④ 稳定性 → ⑤ Markov 长期行为**。\n\n颜色区分知识角色，不表示掌握程度；箭头只保留真正有助于推理的关系。",
+      "x": 0,
+      "y": -260,
+      "width": 4130,
+      "height": 200,
+      "color": "2"
+    },
+    {
+      "id": "group01",
+      "type": "group",
+      "label": "1｜特征对象：从方向到代数信息",
+      "x": 0,
+      "y": 0,
+      "width": 1600,
+      "height": 1000,
+      "color": "5"
+    },
+    {
+      "id": "group02",
+      "type": "group",
+      "label": "2｜相似与对角化：什么时候能把作用拆开",
+      "x": 1700,
+      "y": 0,
+      "width": 2050,
+      "height": 1190,
+      "color": "6"
+    },
+    {
+      "id": "group03",
+      "type": "group",
+      "label": "3｜Jordan、Schur 与矩阵函数：对角化失败之后",
+      "x": 0,
+      "y": 1200,
+      "width": 2100,
+      "height": 1960,
+      "color": "4"
+    },
+    {
+      "id": "group04",
+      "type": "group",
+      "label": "4｜稳定性：谱怎样控制长期演化",
+      "x": 2150,
+      "y": 1200,
+      "width": 1600,
+      "height": 1270,
+      "color": "1"
+    },
+    {
+      "id": "group05",
+      "type": "group",
+      "label": "5｜Markov 长期行为：稳态、唯一性与收敛",
+      "x": 2150,
+      "y": 2550,
+      "width": 1980,
+      "height": 1320,
+      "color": "3"
+    },
+    {
+      "id": "intro01",
+      "type": "text",
+      "text": "先分清三件事：特征向量给出不变方向，特征空间收集同一缩放率下的全部方向，特征多项式从代数上找出可能的缩放率。",
+      "x": 40,
+      "y": 50,
+      "width": 1520,
+      "height": 100,
+      "color": "2"
+    },
+    {
+      "id": "intro02",
+      "type": "text",
+      "text": "相似表示同一个线性算子换坐标；对角化则问能否选到一整组特征向量基。判据、计算方法和失败边界分别由不同节点承担。",
+      "x": 1740,
+      "y": 50,
+      "width": 1970,
+      "height": 100,
+      "color": "2"
+    },
+    {
+      "id": "intro03",
+      "type": "text",
+      "text": "缺少特征向量时，Jordan 链记录缺失方向如何逐层连接；Schur 保留更稳定的数值结构。矩阵幂与矩阵指数把这些结构变成演化公式。",
+      "x": 40,
+      "y": 1250,
+      "width": 1970,
+      "height": 100,
+      "color": "2"
+    },
+    {
+      "id": "intro04",
+      "type": "text",
+      "text": "离散系统看特征值的模，连续系统看特征值的实部。渐近稳定、有界和一条观测轨迹是三个不同问题。",
+      "x": 2190,
+      "y": 1250,
+      "width": 1520,
+      "height": 100,
+      "color": "2"
+    },
+    {
+      "id": "intro05",
+      "type": "text",
+      "text": "先固定概率向量的行列约定，再区分三个问题：稳态是否存在、是否唯一，以及从任意初始分布出发是否真的收敛。",
+      "x": 2190,
+      "y": 2600,
+      "width": 1900,
+      "height": 100,
+      "color": "2"
+    },
+    {
+      "id": "depSchur",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n[[正交矩阵|Orthogonal]] and [[Unitary 矩阵|unitary]] matrices\n\nSquare real or complex isometries preserve lengths during the Schur change of coordinates.\n<!-- bilingual-en:end -->\n\n实正交与复酉矩阵都保持长度；方阵条件使换基可逆。",
+      "x": 40,
+      "y": 2490,
+      "width": 310,
+      "height": 260,
+      "color": "2"
+    },
+    {
+      "id": "depSVD",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n[[奇异值分解|SVD: input and output bases]]\n\nRead the two-basis definition before comparing SVD with Jordan and Schur forms.\n<!-- bilingual-en:end -->\n\n先分清输入、输出两侧基，再比较三种分解各自保留的结构。",
+      "x": 1180,
+      "y": 2490,
+      "width": 310,
+      "height": 260,
+      "color": "2"
+    },
+    {
+      "id": "depNormal",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[Normal 矩阵|Normal matrices]]\n\n$A^*A=AA^*$ gives an orthonormal eigenbasis over $\\mathbb C$. If $\\rho(A)<1$, every step contracts in the standard Euclidean length.\n<!-- bilingual-en:end -->\n\n**Normal 矩阵**\n\n正规性在复数域上提供标准正交特征基；谱半径小于一时，每步在标准欧氏长度下收缩。",
+      "x": 2190,
+      "y": 2110,
+      "width": 310,
+      "height": 300,
+      "color": "2"
+    },
+    {
+      "id": "depFinite",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[有限链平稳分解|Closed-class stationary laws]]\n\nFor a finite chain, one class law per closed class; their convex mixtures give all stationary probabilities. Their linear span is the fixed space.\n<!-- bilingual-en:end -->\n\n有限链的每个闭类有一个类稳态；凸组合给出全部平稳概率，线性张成给出整个固定空间。",
+      "x": 3710,
+      "y": 2780,
+      "width": 310,
+      "height": 300,
+      "color": "2"
+    },
+    {
+      "id": "eig001",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[特征对|Eigenpair]]\n\n$Av=\\lambda v$ with $v\\ne0$: the matrix acts as scalar multiplication along this direction. A zero eigenvalue is allowed; the zero vector is excluded.\n<!-- bilingual-en:end -->\n\n**特征对**\n\n非零向量经矩阵作用后等于自身的标量倍数；特征值可以为零，特征向量不可以为零。",
+      "x": 40,
+      "y": 300,
+      "width": 310,
+      "height": 280,
+      "color": "5"
+    },
+    {
+      "id": "eig002",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[特征空间|Eigenspace]]\n\n$E_\\lambda(A)=\\ker(A-\\lambda I)$ collects the eigenvectors for a fixed scalar together with zero. If the scalar is not an eigenvalue, this space is just $\\{0\\}$.\n<!-- bilingual-en:end -->\n\n**特征空间**\n\n固定一个标量，把对应特征向量与零向量一起收集；若它不是特征值，所得空间只有零。",
+      "x": 420,
+      "y": 200,
+      "width": 310,
+      "height": 280,
+      "color": "5"
+    },
+    {
+      "id": "eig024",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[特征多项式|Characteristic polynomial]]\n\nFor $n\\times n$ matrix $A$, $p_A(t)=\\det(tI-A)$ is monic of degree $n$. Its roots in the chosen field are exactly the eigenvalues. The alternative $\\det(A-tI)$ differs by $(-1)^n$.\n<!-- bilingual-en:end -->\n\n**特征多项式**\n\n对 $n\\times n$ 矩阵，首一约定为 $\\det(tI-A)$；当前域内的根就是特征值。另一行列式约定差 $(-1)^n$，零点不变。",
+      "x": 420,
+      "y": 540,
+      "width": 310,
+      "height": 280,
+      "color": "5"
+    },
+    {
+      "id": "eig004",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[代数重数与几何重数|Algebraic and geometric multiplicity]]\n\nRoot repetitions and eigenspace dimension measure different things. For each eigenvalue, the number of independent directions is at least one and at most its root multiplicity.\n<!-- bilingual-en:end -->\n\n**代数重数与几何重数**\n\n一个数根重复几次，一个数独立特征方向有几个；后者至少为一，至多等于前者。",
+      "x": 800,
+      "y": 200,
+      "width": 310,
+      "height": 300,
+      "color": "6"
+    },
+    {
+      "id": "eig003",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[特征多项式底层域|Characteristic polynomial and field]]\n\nThe chosen field determines which roots and eigenvectors are available. Extending the field keeps the coefficients unchanged; splitting means every linear factor is available.\n<!-- bilingual-en:end -->\n\n**特征多项式的数域**\n\n数域决定可用的根和特征向量。扩域不改系数；完全分裂要求全部一次因子都在当前域中。",
+      "x": 800,
+      "y": 540,
+      "width": 310,
+      "height": 300,
+      "color": "1"
+    },
+    {
+      "id": "eig027",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[互异特征值向量独立|Distinct eigenvalues give independence]]\n\nNonzero eigenvectors of the same matrix, for distinct eigenvalues in the chosen field, form a linearly independent list. Orthogonality is not guaranteed.\n<!-- bilingual-en:end -->\n\n**互异特征值向量独立**\n\n同一矩阵、同一数域，互异特征值对应的非零特征向量整体线性无关；不保证正交。",
+      "x": 1180,
+      "y": 200,
+      "width": 310,
+      "height": 300,
+      "color": "6"
+    },
+    {
+      "id": "eig005",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[迹与特征值总和|Trace and eigenvalue sum]]\n\n$\\operatorname{tr}A=\\sum_i\\lambda_i$, counting algebraic multiplicity. Real matrices may need complex roots; no diagonalizability is required.\n<!-- bilingual-en:end -->\n\n迹等于按代数重数计入的全部根之和。实矩阵也须允许复根，不要求可对角化。",
+      "x": 1180,
+      "y": 540,
+      "width": 310,
+      "height": 290,
+      "color": "6"
+    },
+    {
+      "id": "eig006",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[相似矩阵|Similar matrices]]\n\n$B=M^{-1}AM$ with invertible $M$: convert new coordinates to old, apply $A$, then convert back. The same linear action receives a different matrix.\n<!-- bilingual-en:end -->\n\n**相似矩阵**\n\n可逆换基先把新坐标送到旧坐标，作用后再换回；同一个线性作用获得另一个矩阵表示。",
+      "x": 1740,
+      "y": 220,
+      "width": 310,
+      "height": 280,
+      "color": "5"
+    },
+    {
+      "id": "eig025",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[相似保持特征多项式|Characteristic polynomial under similarity]]\n\n$tI-B=M^{-1}(tI-A)M$. Multiplicativity cancels the determinants of $M$ and its inverse, preserving the whole polynomial.\n<!-- bilingual-en:end -->\n\n**相似保持特征多项式**\n\n对移位后的矩阵使用行列式乘法性，换基矩阵与其逆的行列式消去，整个多项式保持不变。",
+      "x": 2120,
+      "y": 170,
+      "width": 310,
+      "height": 280,
+      "color": "6"
+    },
+    {
+      "id": "eig043",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[相似保持特征空间维数|Eigenspaces under similarity]]\n\nFor $B=M^{-1}AM$, the map $v\\mapsto M^{-1}v$ bijectively carries $E_\\lambda(A)$ onto $E_\\lambda(B)$. Dimensions agree even though coordinates change.\n<!-- bilingual-en:end -->\n\n**相似保持特征空间维数**\n\n$M^{-1}$ 在对应特征空间之间给出可逆的线性对应；坐标会变，维数保持。",
+      "x": 2120,
+      "y": 480,
+      "width": 310,
+      "height": 280,
+      "color": "6"
+    },
+    {
+      "id": "eig026",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[同谱不必相似|Equal spectra and similarity]]\n\nEqual characteristic polynomials can hide different eigenspaces. If both matrices are diagonalizable over the same field, the same polynomial is sufficient for similarity.\n<!-- bilingual-en:end -->\n\n**同谱不必相似**\n\n相同多项式可能掩盖不同特征空间；若两矩阵都在同一域可对角化，相同多项式则足以推出相似。",
+      "x": 2500,
+      "y": 170,
+      "width": 310,
+      "height": 300,
+      "color": "1"
+    },
+    {
+      "id": "eig028",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[对角化|Diagonalization]]\n\nA similarity change makes $S^{-1}AS=\\Lambda$ diagonal. Columns of $S$ are an eigenvector basis; their order matches the eigenvalues on the diagonal.\n<!-- bilingual-en:end -->\n\n**对角化**\n\n选到特征向量基，矩阵作用就变成各坐标独立伸缩；基向量顺序与对角特征值配对。",
+      "x": 1740,
+      "y": 620,
+      "width": 310,
+      "height": 280,
+      "color": "5"
+    },
+    {
+      "id": "eig007",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[可对角化判据|Diagonalizability criterion]]\n\nIn the chosen field, all eigenspaces together must supply a basis: their dimensions sum to the matrix size. Repeated eigenvalues can still supply enough directions.\n<!-- bilingual-en:end -->\n\n**可对角化判据**\n\n在当前域中，全部特征空间的维数总和须达到矩阵尺寸；重复特征值仍可能提供足够独立方向。",
+      "x": 2120,
+      "y": 820,
+      "width": 310,
+      "height": 280,
+      "color": "6"
+    },
+    {
+      "id": "eig008",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[重根对角化条件|Diagonalizability with repeated roots]]\n\nFirst require the characteristic polynomial to split in the chosen field. Then diagonalizability is equivalent to geometric and algebraic multiplicities matching at every root.\n<!-- bilingual-en:end -->\n\n**重根对角化条件**\n\n先确认在当前域完全分裂，再逐个核对几何重数等于代数重数；出现重根本身不妨碍对角化。",
+      "x": 2500,
+      "y": 510,
+      "width": 310,
+      "height": 300,
+      "color": "6"
+    },
+    {
+      "id": "eig010",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[对角化计算矩阵幂|Powers by diagonalization]]\n\nFor $A=S\\Lambda S^{-1}$ and integers $k\\ge0$, $A^k=S\\Lambda^kS^{-1}$. Keep eigenvalues paired with basis columns. The zeroth power is $I$; negative powers require invertibility.\n<!-- bilingual-en:end -->\n\n**对角化计算矩阵幂**\n\n各特征坐标分别取幂，再换回原坐标；列与特征值须配对，零次幂为单位矩阵，负次幂要求可逆。",
+      "x": 2500,
+      "y": 850,
+      "width": 310,
+      "height": 300,
+      "color": "4"
+    },
+    {
+      "id": "eig009",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[对角化与行化简|Diagonalization and row reduction]]\n\nSimilarity changes input and output to the same new basis. Row reduction recombines equations and their right-hand sides, preserving the solution set but not generally the spectrum.\n<!-- bilingual-en:end -->\n\n**对角化与行化简**\n\n前者同时换输入、输出坐标；后者同步改写方程及右端以保留解集，一般不保留特征值。",
+      "x": 2880,
+      "y": 820,
+      "width": 310,
+      "height": 300,
+      "color": "1"
+    },
+    {
+      "id": "eig030",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[广义特征向量|Generalized eigenvector]]\n\nA nonzero $v$ satisfies $(A-\\lambda I)^kv=0$ for some positive integer $k$. The smallest such $k$ records its level.\n<!-- bilingual-en:end -->\n\n**广义特征向量**\n\n非零向量经若干次 $A-\\lambda I$ 作用后归零；最小正整数次数记录它的阶。",
+      "x": 40,
+      "y": 1430,
+      "width": 310,
+      "height": 280,
+      "color": "5"
+    },
+    {
+      "id": "eig012",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[Jordan链|Jordan chain]]\n\nWith $v_1\\ne0$, require $(A-\\lambda I)v_1=0$ and $(A-\\lambda I)v_{j+1}=v_j$. The order fixes each step toward the first vector.\n<!-- bilingual-en:end -->\n\n**Jordan 链**\n\n链首非零，后一个向量作用后恰好得到前一个；排列须符合这组递推关系。",
+      "x": 420,
+      "y": 1430,
+      "width": 310,
+      "height": 280,
+      "color": "5"
+    },
+    {
+      "id": "eig045",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[Jordan链向量线性无关|Independence within a Jordan chain]]\n\nApplying powers of the shifted map isolates the last nonzero coefficient. One chain is independent; several chains still need a joint check.\n<!-- bilingual-en:end -->\n\n**同一条链的线性无关性**\n\n对线性关系施加移位算子的幂，可隔离末尾非零系数。多条链还须检查联合无关。",
+      "x": 420,
+      "y": 1770,
+      "width": 310,
+      "height": 280,
+      "color": "6"
+    },
+    {
+      "id": "eig031",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[Jordan块|Jordan block]]\n\n$J_r(\\lambda)=\\lambda I+N$: diagonal $\\lambda$, superdiagonal 1. One block, one chain; $N^r=0$.\n<!-- bilingual-en:end -->\n\n**Jordan 块**\n\n对角线 $\\lambda$、超对角线1。每块一条链，$N^r=0$。",
+      "x": 800,
+      "y": 1430,
+      "width": 310,
+      "height": 200,
+      "color": "5"
+    },
+    {
+      "id": "eig033",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[Jordan标准形|Jordan canonical form]]\n\nThe chains together must form a basis of the whole space to give a block diagonal matrix. Each block contributes one ordinary eigenvector direction.\n<!-- bilingual-en:end -->\n\n**Jordan 标准形**\n\n全部链须共同组成全空间的基，才能得到块对角表示；每个块贡献一个普通特征方向。",
+      "x": 1180,
+      "y": 1430,
+      "width": 310,
+      "height": 270,
+      "color": "5"
+    },
+    {
+      "id": "eig014",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[Jordan标准形的域条件|Field condition for Jordan form]]\n\nOrdinary Jordan form over a field exists exactly when the whole characteristic polynomial splits into linear factors there. The basis change uses that same field.\n<!-- bilingual-en:end -->\n\n**Jordan 标准形的域条件**\n\n整个特征多项式须在当前域分解成一次因子；换基矩阵也使用同一域。",
+      "x": 1560,
+      "y": 1430,
+      "width": 310,
+      "height": 280,
+      "color": "1"
+    },
+    {
+      "id": "eig013",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[Jordan块的幂|Powers of a Jordan block]]\n\nFor nonnegative integer powers, the commuting scalar and shift parts give an exact finite binomial sum. Treat the zeroth power as the identity.\n<!-- bilingual-en:end -->\n\n**Jordan 块的幂**\n\n非负整数次幂由可交换的标量部分与移位部分作有限二项展开；零次幂是单位矩阵。",
+      "x": 800,
+      "y": 1770,
+      "width": 310,
+      "height": 280,
+      "color": "6"
+    },
+    {
+      "id": "eig034",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[Jordan形唯一性|Uniqueness of Jordan form]]\n\nFor each eigenvalue, successive nullspace dimensions recover every block size and repetition. Whole-block order and the individual chain vectors can vary.\n<!-- bilingual-en:end -->\n\n**Jordan 形的唯一性**\n\n对每个特征值，连续核维数恢复块尺寸和重数；整块排列及链向量本身可变。",
+      "x": 1560,
+      "y": 1770,
+      "width": 310,
+      "height": 280,
+      "color": "6"
+    },
+    {
+      "id": "eig029",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[对角化计算矩阵指数|Computing the exponential by diagonalization]]\n\nIf $A=S\\Lambda S^{-1}$, then $e^{tA}=S e^{t\\Lambda}S^{-1}$. Exponentiate the diagonal eigenvalues, preserving their pairing with the columns of $S$.\n<!-- bilingual-en:end -->\n\n**对角化计算矩阵指数**\n\n先转到特征坐标，各坐标乘对应指数，再换回；列与特征值的配对保持不变。",
+      "x": 800,
+      "y": 2110,
+      "width": 310,
+      "height": 280,
+      "color": "4"
+    },
+    {
+      "id": "eig011",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[矩阵指数|Matrix exponential]]\n\n$e^{tA}=\\sum_{k=0}^{\\infty}t^kA^k/k!$. The series converges for every finite square matrix. Powers use matrix multiplication; diagonalization is unnecessary.\n<!-- bilingual-en:end -->\n\n**矩阵指数**\n\n对所有有限方阵，矩阵幂的指数级数都收敛；幂按矩阵乘法计算，定义不要求可对角化。",
+      "x": 1180,
+      "y": 2110,
+      "width": 310,
+      "height": 280,
+      "color": "5"
+    },
+    {
+      "id": "eig032",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[Jordan块的指数|Exponential of a Jordan block]]\n\n$e^{tJ}=e^{\\lambda t}\\sum_{j=0}^{r-1}t^jN^j/j!$. Nilpotence makes the finite polynomial exact. An unbounded matrix family can still leave some initial trajectories bounded.\n<!-- bilingual-en:end -->\n\n**Jordan 块的矩阵指数**\n\n幂零性使有限多项式精确成立；矩阵族无界也允许某些初始轨迹有界。",
+      "x": 1560,
+      "y": 2110,
+      "width": 310,
+      "height": 300,
+      "color": "6"
+    },
+    {
+      "id": "eig035",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[Schur分解|Schur decomposition]]\n\nA unitary change of basis makes a complex square matrix upper triangular. Over the reals, an orthogonal change may leave 2×2 diagonal blocks. The basis vectors need not all be eigenvectors.\n<!-- bilingual-en:end -->\n\n**Schur 分解**\n\n复数域酉相似为上三角；实数域正交相似可保留2×2对角块。各列不必都是特征向量。",
+      "x": 420,
+      "y": 2490,
+      "width": 310,
+      "height": 300,
+      "color": "5"
+    },
+    {
+      "id": "eig044",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[Schur分解存在性|Existence of Schur form]]\n\nChoose a unit eigenvector, complete an orthonormal basis, and recurse on the smaller compressed block. Real matrices may first need a two-dimensional invariant plane.\n<!-- bilingual-en:end -->\n\n**Schur 分解的存在性**\n\n取单位特征向量、补全标准正交基，再递归处理较小压缩块；实数情形可能先取二维不变平面。",
+      "x": 800,
+      "y": 2490,
+      "width": 310,
+      "height": 300,
+      "color": "6"
+    },
+    {
+      "id": "eig015",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[Jordan、Schur与SVD用途边界|Jordan, Schur and SVD]]\n\nJordan describes exact similarity classes; Schur organizes eigenvalue computation; SVD pairs input/output stretches. Real Schur uses 1×1 or 2×2 blocks; stable algorithms can face sensitive objects.\n<!-- bilingual-en:end -->\n\n**三种分解的用途**\n\nJordan 描述精确相似类，Schur 组织特征值计算，SVD 配对输入输出伸缩。实 Schur 保留1×1或2×2块；不把数值稳定算法等同于对象本身不敏感。",
+      "x": 1560,
+      "y": 2490,
+      "width": 310,
+      "height": 320,
+      "color": "1"
+    },
+    {
+      "id": "eig036",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[谱半径|Spectral radius]]\n\n$\\rho(A)=\\max_{\\lambda\\in\\sigma(A)}|\\lambda|$ uses all complex eigenvalues, even for real $A$. It is not the largest one-step length gain.\n<!-- bilingual-en:end -->\n\n**谱半径**\n\n全部复特征值的模取最大值，实矩阵也要计复根；它不是向量单次长度放大的最大倍数。",
+      "x": 2190,
+      "y": 1430,
+      "width": 310,
+      "height": 300,
+      "color": "5"
+    },
+    {
+      "id": "eig016",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[矩阵幂趋零判据|When powers vanish]]\n\nFor a finite real or complex square matrix, $A^k\\to0$ exactly when $\\rho(A)<1$. Diagonalization is unnecessary: decay also overcomes the polynomial factors in Jordan blocks.\n<!-- bilingual-en:end -->\n\n**矩阵幂趋零判据**\n\n有限实或复方阵的幂趋零，恰好对应谱半径严格小于一；不要求可对角化，指数衰减能压过 Jordan 多项式因子。",
+      "x": 2570,
+      "y": 1430,
+      "width": 310,
+      "height": 300,
+      "color": "6"
+    },
+    {
+      "id": "eig018",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[离散系统谱稳定性|Discrete asymptotic stability]]\n\nFor fixed homogeneous $x_{k+1}=Ax_k$, zero is asymptotically stable exactly when every complex eigenvalue has $|\\lambda|<1$. Every initial state then tends to zero.\n<!-- bilingual-en:end -->\n\n**离散系统渐近稳定**\n\n固定齐次系统要求全部特征值严格在单位圆内；此时每个初值都趋零，并满足小扰动始终保持小。",
+      "x": 2950,
+      "y": 1430,
+      "width": 310,
+      "height": 300,
+      "color": "4"
+    },
+    {
+      "id": "eig037",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[离散系统有界判据|Bounded discrete trajectories]]\n\nFor fixed $x_{k+1}=Ax_k$, all trajectories are bounded iff all $|\\lambda|\\le1$ and unit-circle eigenvalues are semisimple. Bounded motion need not decay.\n<!-- bilingual-en:end -->\n\n**离散系统有界判据**\n\n固定齐次离散系统：全部模不超过一，且单位圆上特征值半单，恰好保证全轨迹有界；有界不必趋零。",
+      "x": 3330,
+      "y": 1430,
+      "width": 310,
+      "height": 300,
+      "color": "6"
+    },
+    {
+      "id": "eig047",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[常系数线性系统的矩阵指数解|Matrix-exponential solution]]\n\nFor constant $A$, $u(t)=e^{tA}u_0$ uniquely solves $u'=Au$, $u(0)=u_0$. Check the equation and initial value, then prove uniqueness using $e^{-tA}$.\n<!-- bilingual-en:end -->\n\n**常系数系统的矩阵指数解**\n\n先验方程与初值，再用 $e^{-tA}$ 证明唯一性；常矩阵与齐次方程是前提。",
+      "x": 2190,
+      "y": 1770,
+      "width": 310,
+      "height": 280,
+      "color": "6"
+    },
+    {
+      "id": "bridge-exp-solution",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n**Solution operator**\n\nDifferentiate the series and apply it to the initial vector.\n<!-- bilingual-en:end -->\n\n**解算子**\n\n对级数求导，再作用于初值。",
+      "x": 1880,
+      "y": 2110,
+      "width": 180,
+      "height": 150,
+      "color": "5"
+    },
+    {
+      "id": "eig019",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[连续系统谱稳定性|Continuous asymptotic stability]]\n\nFor fixed homogeneous $x'=Ax$, zero is asymptotically stable exactly when every eigenvalue has $\\operatorname{Re}\\lambda<0$. Negative real parts permit decaying oscillations.\n<!-- bilingual-en:end -->\n\n**连续系统渐近稳定**\n\n固定齐次系统要求全部特征值实部严格为负；可以伴有衰减振荡，每个初值都趋零。",
+      "x": 2570,
+      "y": 1770,
+      "width": 310,
+      "height": 300,
+      "color": "4"
+    },
+    {
+      "id": "eig038",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[连续系统有界判据|Bounded continuous trajectories]]\n\nFor fixed $x'=Ax$ and $t\\ge0$, all trajectories are bounded iff all real parts are nonpositive and imaginary-axis eigenvalues are semisimple.\n<!-- bilingual-en:end -->\n\n**连续系统有界判据**\n\n固定齐次连续系统，向前时间：全部实部非正，且虚轴特征值半单，恰好保证全轨迹有界。",
+      "x": 2950,
+      "y": 1770,
+      "width": 310,
+      "height": 300,
+      "color": "6"
+    },
+    {
+      "id": "eig017",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[非正规矩阵瞬态|Nonnormal transient growth]]\n\nEven when $\\rho(A)<1$, a nonnormal matrix can amplify a state before it decays. The standard Euclidean norm and initial direction matter; nonnormality alone does not force growth.\n<!-- bilingual-en:end -->\n\n**非正规矩阵瞬态**\n\n最终衰减前可能暂时放大；须明确标准欧氏长度和初始方向。非正规允许放大，但不保证发生。",
+      "x": 2570,
+      "y": 2110,
+      "width": 310,
+      "height": 300,
+      "color": "1"
+    },
+    {
+      "id": "eig020",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[单轨迹与系统稳定性|One path versus the system]]\n\nA growing direction can be absent from the initial state or hidden from the measured output. One decaying trajectory generally cannot certify all initial directions.\n<!-- bilingual-en:end -->\n\n**单轨迹与系统稳定性**\n\n增长方向可能未被初值激活，也可能被测量遗漏；一条衰减轨迹通常不足以认证全部初值。",
+      "x": 2950,
+      "y": 2110,
+      "width": 310,
+      "height": 300,
+      "color": "1"
+    },
+    {
+      "id": "eig039",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[Markov矩阵|Markov matrices]]\n\nNonnegative entries and unit column or row sums encode a finite transition rule. A probability vector has nonnegative entries totaling one.\n<!-- bilingual-en:end -->\n\n**Markov矩阵**\n\n非负条目及列和或行和为一，编码有限状态转移；概率向量还须非负且总和一。",
+      "x": 2190,
+      "y": 2780,
+      "width": 310,
+      "height": 300,
+      "color": "3"
+    },
+    {
+      "id": "eig021",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[Markov矩阵左右约定|Row and column conventions]]\n\nColumn convention: $x_{k+1}=Px_k$. For the same transitions, $R=P^T$ and probability rows obey $p_{k+1}=p_kR$. Transpose both descriptions together.\n<!-- bilingual-en:end -->\n\n**Markov矩阵左右约定**\n\n列约定左乘概率列；同一转移的行约定使用转置矩阵，概率行从左边乘它。两者须一起转换。",
+      "x": 2570,
+      "y": 2780,
+      "width": 310,
+      "height": 300,
+      "color": "3"
+    },
+    {
+      "id": "eig046",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[Markov矩阵必有特征值一|Eigenvalue one]]\n\nUnit row sums directly give $P\\mathbf1=\\mathbf1$. Unit column sums give the left equation; the transpose has the same characteristic polynomial.\n<!-- bilingual-en:end -->\n\n**Markov矩阵必有特征值一**\n\n行和一直接给全一右向量；列和一先给左方程，再借转置同特征多项式证明有根一。",
+      "x": 2190,
+      "y": 3150,
+      "width": 310,
+      "height": 300,
+      "color": "6"
+    },
+    {
+      "id": "eig040",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[Markov矩阵谱边界|The stochastic spectral bound]]\n\nAll complex eigenvalues satisfy $|\\lambda|\\le1$, and $\\rho(P)=1$. Powers remain bounded in the column one-norm or row infinity-norm; boundary oscillations are allowed.\n<!-- bilingual-en:end -->\n\n**Markov矩阵谱边界**\n\n全部复特征值位于闭单位圆，谱半径恰为一；相应范数下幂有界，仍可有边界振荡。",
+      "x": 2570,
+      "y": 3150,
+      "width": 310,
+      "height": 300,
+      "color": "3"
+    },
+    {
+      "id": "eig049",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[Markov单位圆特征值半单|Semisimple boundary modes]]\n\nUniformly bounded powers exclude a Jordan chain longer than one at $|\\lambda|=1$. Repeated boundary roots remain possible; interior Jordan blocks may be larger.\n<!-- bilingual-en:end -->\n\n**Markov单位圆特征值半单**\n\n一致有界的幂排除单位圆上的长链；仍允许边界重根，圆内也可有较大 Jordan 块。",
+      "x": 2950,
+      "y": 3150,
+      "width": 310,
+      "height": 300,
+      "color": "6"
+    },
+    {
+      "id": "eig022",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[Markov稳态分布|Stationary distributions]]\n\nUnder the column convention, $P\\pi=\\pi$ together with $\\pi_i\\ge0$ and total mass one. The distribution stays fixed while individual states can move.\n<!-- bilingual-en:end -->\n\n**Markov稳态分布**\n\n列约定下同时满足固定点方程、非负性及总和一；概率分布不变，具体状态仍可移动。",
+      "x": 2950,
+      "y": 2780,
+      "width": 310,
+      "height": 300,
+      "color": "3"
+    },
+    {
+      "id": "eig042",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[Markov矩阵幂收敛判据|Convergence of Markov powers]]\n\nFinite stochastic $P^k$ converges iff $|\\lambda|<1$ for every $\\lambda\\ne1$. The value 1 may repeat; the limiting projection may have rank greater than one.\n<!-- bilingual-en:end -->\n\n有限随机矩阵：除数值1外全部特征值模小于1，恰好保证幂收敛。1可为重根，极限投影的秩可大于一。",
+      "x": 2950,
+      "y": 3520,
+      "width": 310,
+      "height": 300,
+      "color": "3"
+    },
+    {
+      "id": "eig048",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[Markov幂的秩一稳态极限|A common stationary limit]]\n\nFor a finite column-stochastic matrix, convergent powers plus a unique stationary column $\\pi$ give $P^k\\to\\pi\\mathbf1^T$. Every probability column then has the same limit.\n<!-- bilingual-en:end -->\n\n有限列随机矩阵的幂收敛再加稳态唯一，列约定下才得到每列都是π的秩一极限；全部概率初值趋向同一分布。",
+      "x": 3330,
+      "y": 3520,
+      "width": 310,
+      "height": 300,
+      "color": "6"
+    },
+    {
+      "id": "eig041",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[Markov稳态唯一判据|Stationary uniqueness]]\n\nFor finite column-stochastic $P$, uniqueness is equivalent to $\\dim\\ker(P-I)=1$, or exactly one closed class. Transient states are allowed.\n<!-- bilingual-en:end -->\n\n有限列随机矩阵：稳态唯一等价于固定空间一维，也等价于恰好一个闭类；允许暂态状态。",
+      "x": 3710,
+      "y": 3150,
+      "width": 310,
+      "height": 300,
+      "color": "3"
+    },
+    {
+      "id": "eig023",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[稳态唯一不推收敛|Uniqueness and oscillation]]\n\nThe two-state flip has one stationary distribution, but a point start alternates forever. Uniqueness does not remove the eigenvalue −1.\n<!-- bilingual-en:end -->\n\n两状态交换只有一个稳态，但单点初态永远交替；唯一性没有排除特征值−1。",
+      "x": 3710,
+      "y": 3520,
+      "width": 310,
+      "height": 300,
+      "color": "1"
+    },
+    {
+      "id": "invariant-subspace",
+      "type": "text",
+      "x": 40,
+      "y": 2870,
+      "width": 690,
+      "height": 270,
+      "color": "5",
+      "text": "<!-- bilingual-en:start -->\n## [[不变子空间|Invariant subspace]]\n\n$T(W)\\subseteq W$: every vector in $W$ stays inside $W$ after the linear map. Individual vectors can move. Real Schur leading subspaces must end at complete blocks.\n<!-- bilingual-en:end -->\n\n**不变子空间**\n\n作用后的向量仍留在同一子空间，不要求每个向量不动。实 Schur 的前若干列须取到完整块末尾。"
+    },
+    {
+      "id": "eig050",
+      "type": "text",
+      "x": 3330,
+      "y": 1770,
+      "width": 310,
+      "height": 300,
+      "color": "5",
+      "text": "<!-- bilingual-en:start -->\n## [[半单特征值|Semisimple eigenvalues]]\n\nFor one eigenvalue, algebraic multiplicity equals eigenspace dimension. Equivalently, all its Jordan blocks have size one. Repetition is allowed; the whole matrix need not be diagonalizable.\n<!-- bilingual-en:end -->\n\n**半单特征值**\n\n对单个特征值，两类重数相等；等价于对应块全为一阶。允许重根，不代表整个矩阵可对角化。"
+    },
+    {
+      "id": "eig051",
+      "type": "text",
+      "x": 3330,
+      "y": 2780,
+      "width": 310,
+      "height": 300,
+      "color": "6",
+      "text": "<!-- bilingual-en:start -->\n## [[有限Markov链稳态存在|Existence of a stationary distribution]]\n\nEvery finite stochastic matrix has at least one probability fixed point. Averages have a convergent subsequence whose limit is fixed; individual distributions need not converge.\n<!-- bilingual-en:end -->\n\n**有限Markov链稳态存在**\n\n每个有限随机矩阵至少有一个概率固定点；分布平均的收敛子序列给出它，不要求单时刻分布收敛。"
+    }
   ],
   "edges": [
-    {"id":"edge001","fromNode":"eig001","fromSide":"right","toNode":"eig002","toSide":"left","label":"固定缩放率后收集全部方向"},
-    {"id":"edge002","fromNode":"eig001","fromSide":"right","toNode":"eig024","toSide":"left","label":"非零解要求行列式为零"},
-    {"id":"edge003","fromNode":"eig002","fromSide":"right","toNode":"eig004","toSide":"left","label":"空间维数给几何重数"},
-    {"id":"edge005","fromNode":"eig024","fromSide":"right","toNode":"eig003","toSide":"left","label":"根依赖底层域"},
-    {"id":"edge006","fromNode":"eig004","fromSide":"bottom","toNode":"eig005","toSide":"top","label":"按代数重数计数"},
-
-    {"id":"edge007","fromNode":"eig006","fromSide":"right","toNode":"eig025","toSide":"left","label":"保留代数谱信息"},
-    {"id":"edge008","fromNode":"eig006","fromSide":"right","toNode":"eig043","toSide":"left","label":"搬运特征空间"},
-    {"id":"edge009","fromNode":"eig025","fromSide":"right","toNode":"eig026","toSide":"left","label":"这些信息仍不够"},
-    {"id":"edge010","fromNode":"eig043","fromSide":"right","toNode":"eig026","toSide":"left","label":"用几何重数排除同谱候选"},
-    {"id":"edge011","fromNode":"eig006","fromSide":"bottom","toNode":"eig028","toSide":"top","label":"相似到对角矩阵"},
-    {"id":"edge012","fromNode":"eig028","fromSide":"right","toNode":"eig007","toSide":"left","label":"转化为特征向量基判据"},
-    {"id":"edge013","fromNode":"eig007","fromSide":"right","toNode":"eig008","toSide":"left","label":"重根时逐个比较重数"},
-    {"id":"edge014","fromNode":"eig007","fromSide":"right","toNode":"eig010","toSide":"left","label":"判定成功后计算矩阵幂"},
-    {"id":"edge015","fromNode":"eig028","fromSide":"bottom","toNode":"eig009","toSide":"top","label":"不要混同行操作"},
-
-    {"id":"edge016","fromNode":"eig030","fromSide":"right","toNode":"eig012","toSide":"left","label":"按层级组成链"},
-    {"id":"edge017","fromNode":"eig012","fromSide":"right","toNode":"eig031","toSide":"left","label":"一条链对应一个块"},
-    {"id":"edge042","fromNode":"eig012","fromSide":"bottom","toNode":"eig045","toSide":"top","label":"递推关系保证线性无关"},
-    {"id":"edge018","fromNode":"eig031","fromSide":"right","toNode":"eig033","toSide":"left","label":"各块拼成标准形"},
-    {"id":"edge019","fromNode":"eig014","fromSide":"bottom","toNode":"eig034","toSide":"top","label":"存在后块数据除排列外唯一"},
-    {"id":"edge020","fromNode":"eig031","fromSide":"bottom","toNode":"eig013","toSide":"top","label":"有限二项展开"},
-    {"id":"edge021","fromNode":"eig031","fromSide":"bottom","toNode":"eig032","toSide":"top","label":"幂零部分给出有限项"},
-    {"id":"edge022","fromNode":"eig033","fromSide":"right","toNode":"eig014","toSide":"left","label":"先检查所在的域"},
-    {"id":"edge023","fromNode":"eig011","fromSide":"left","toNode":"eig029","toSide":"right","label":"可对角化时逐项指数化"},
-    {"id":"edge024","fromNode":"eig011","fromSide":"right","toNode":"eig032","toSide":"left","label":"把指数作用到 Jordan 块"},
-    {"id":"edge043a","fromNode":"eig011","fromSide":"top","toNode":"bridge-exp-solution","toSide":"top","label":"幂级数定义"},
-    {"id":"edge043b","fromNode":"bridge-exp-solution","fromSide":"left","toNode":"eig047","toSide":"left","label":"作用于初值"},
-    {"id":"edge025","fromNode":"depSchur","fromSide":"right","toNode":"eig035","toSide":"left","label":"等距换基前提"},
-    {"id":"edge037","fromNode":"eig035","fromSide":"right","toNode":"eig044","toSide":"left","label":"定义之外还需存在定理"},
-    {"id":"edge038","fromNode":"eig044","fromSide":"right","toNode":"depSVD","toSide":"left","label":"比较前再补 SVD 定义"},
-    {"id":"edge039","fromNode":"depSVD","fromSide":"right","toNode":"eig015","toSide":"left","label":"区分三种分解的任务"},
-
-    {"id":"edge026","fromNode":"eig036","fromSide":"right","toNode":"eig016","toSide":"left","label":"全部模态是否衰减"},
-    {"id":"edge027","fromNode":"eig016","fromSide":"right","toNode":"eig018","toSide":"left","label":"得到离散渐近稳定"},
-    {"id":"edge028","fromNode":"eig018","fromSide":"right","toNode":"eig037","toSide":"left","label":"放宽为只要求有界"},
-    {"id":"edge044","fromNode":"eig047","fromSide":"right","toNode":"eig019","toSide":"left","label":"再由谱判断是否衰减"},
-    {"id":"edge029","fromNode":"eig019","fromSide":"right","toNode":"eig038","toSide":"left","label":"放宽为只要求有界"},
-    {"id":"edge030","fromNode":"eig017","fromSide":"right","toNode":"eig020","toSide":"left","label":"有限时间观察可能误导"},
-    {"id":"edge040","fromNode":"depNormal","fromSide":"right","toNode":"eig017","toSide":"left","label":"先定义正规，再看非正规边界"},
-
-    {"id":"edge031","fromNode":"eig039","fromSide":"right","toNode":"eig021","toSide":"left","label":"先固定行列约定"},
-    {"id":"edge032","fromNode":"eig039","fromSide":"right","toNode":"eig040","toSide":"left","label":"概率保持约束谱"},
-    {"id":"edge048","fromNode":"eig039","fromSide":"right","toNode":"eig049","toSide":"left","label":"有界矩阵幂排除高阶边界块"},
-    {"id":"edge045","fromNode":"eig039","fromSide":"bottom","toNode":"eig046","toSide":"top","label":"归一化保证特征值一"},
-    {"id":"edge033","fromNode":"eig021","fromSide":"right","toNode":"eig022","toSide":"left","label":"在正确一侧写固定点"},
-    {"id":"edge034","fromNode":"eig022","fromSide":"right","toNode":"depFinite","toSide":"left","label":"用闭类结构解释稳态个数"},
-    {"id":"edge035","fromNode":"eig040","fromSide":"right","toNode":"eig042","toSide":"left","label":"其余单位圆谱决定收敛"},
-    {"id":"edge049","fromNode":"eig049","fromSide":"right","toNode":"eig042","toSide":"bottom","label":"半单性排除边界 Jordan 增长"},
-    {"id":"edge046","fromNode":"eig042","fromSide":"right","toNode":"eig048","toSide":"left","label":"收敛先留下固定点投影"},
-    {"id":"edge047","fromNode":"eig041","fromSide":"bottom","toNode":"eig048","toSide":"top","label":"一维固定点使投影秩一"},
-    {"id":"edge036","fromNode":"eig041","fromSide":"bottom","toNode":"eig023","toSide":"top","label":"唯一仍不排除周期"},
-    {"id":"edge041","fromNode":"depFinite","fromSide":"right","toNode":"eig041","toSide":"left","label":"固定点空间维数给唯一性"}
+    {
+      "id": "edge001",
+      "fromNode": "eig001",
+      "fromSide": "right",
+      "toNode": "eig002",
+      "toSide": "left",
+      "label": "Fix the eigenvalue and include zero to form a subspace · 固定特征值并补入零向量，构成子空间"
+    },
+    {
+      "id": "edge002",
+      "fromNode": "eig001",
+      "fromSide": "right",
+      "toNode": "eig024",
+      "toSide": "left",
+      "label": "A nonzero shifted-kernel vector requires zero determinant · 移位矩阵有非零核向量，行列式为零"
+    },
+    {
+      "id": "edge003",
+      "fromNode": "eig002",
+      "fromSide": "right",
+      "toNode": "eig004",
+      "toSide": "left",
+      "label": "The eigenspace dimension is geometric multiplicity · 特征空间的维数给出几何重数"
+    },
+    {
+      "id": "edge005",
+      "fromNode": "eig024",
+      "fromSide": "right",
+      "toNode": "eig003",
+      "toSide": "left",
+      "label": "Count roots in the specified scalar field · 在指定标量域中寻找根"
+    },
+    {
+      "id": "edge006",
+      "fromNode": "eig004",
+      "fromSide": "bottom",
+      "toNode": "eig005",
+      "toSide": "top",
+      "label": "Count algebraic multiplicity · 按代数重数计数"
+    },
+    {
+      "id": "edge007",
+      "fromNode": "eig006",
+      "fromSide": "right",
+      "toNode": "eig025",
+      "toSide": "left",
+      "label": "Determinant factors cancel under similarity · 相似变换中的行列式因子相消"
+    },
+    {
+      "id": "edge008",
+      "fromNode": "eig006",
+      "fromSide": "right",
+      "toNode": "eig043",
+      "toSide": "left",
+      "label": "The inverse basis change transports eigenvectors · 逆换基把特征向量送到对应特征空间"
+    },
+    {
+      "id": "edge009",
+      "fromNode": "eig025",
+      "fromSide": "right",
+      "toNode": "eig026",
+      "toSide": "left",
+      "label": "Equal characteristic polynomials do not determine similarity · 相同特征多项式不足以确定相似性"
+    },
+    {
+      "id": "edge010",
+      "fromNode": "eig043",
+      "fromSide": "right",
+      "toNode": "eig026",
+      "toSide": "left",
+      "label": "Unequal eigenspace dimensions rule out similarity · 特征空间维数不同即可排除相似"
+    },
+    {
+      "id": "edge011",
+      "fromNode": "eig006",
+      "fromSide": "bottom",
+      "toNode": "eig028",
+      "toSide": "top",
+      "label": "Choose a basis in which the same action is diagonal · 选择使同一作用成为对角形式的基"
+    },
+    {
+      "id": "edge012",
+      "fromNode": "eig028",
+      "fromSide": "right",
+      "toNode": "eig007",
+      "toSide": "left",
+      "label": "An invertible eigenvector matrix is exactly a full eigenbasis · 可逆特征向量矩阵正好对应完整特征基"
+    },
+    {
+      "id": "edge013",
+      "fromNode": "eig007",
+      "fromSide": "right",
+      "toNode": "eig008",
+      "toSide": "left",
+      "label": "After splitting, match both multiplicities at every root · 分裂后逐根核对两类重数相等"
+    },
+    {
+      "id": "edge014",
+      "fromNode": "eig007",
+      "fromSide": "right",
+      "toNode": "eig010",
+      "toSide": "left",
+      "label": "An eigenbasis reduces repeated action to scalar powers · 特征基把反复作用化成标量幂"
+    },
+    {
+      "id": "edge015",
+      "fromNode": "eig028",
+      "fromSide": "bottom",
+      "toNode": "eig009",
+      "toSide": "top",
+      "label": "Compare basis change with equation row operations · 对照换基与方程行操作"
+    },
+    {
+      "id": "edge016",
+      "fromNode": "eig030",
+      "fromSide": "right",
+      "toNode": "eig012",
+      "toSide": "left",
+      "label": "Reverse the successive nonzero shifted images to obtain a chain · 将连续非零移位像反向排列成链"
+    },
+    {
+      "id": "edge017",
+      "fromNode": "eig012",
+      "fromSide": "right",
+      "toNode": "eig031",
+      "toSide": "left",
+      "label": "The ordered chain basis represents one Jordan block · 有序链基表示一个 Jordan 块"
+    },
+    {
+      "id": "edge042",
+      "fromNode": "eig012",
+      "fromSide": "bottom",
+      "toNode": "eig045",
+      "toSide": "top",
+      "label": "A nonzero chain head forces every coefficient to vanish · 链首非零迫使线性关系全部系数为零"
+    },
+    {
+      "id": "edge018",
+      "fromNode": "eig031",
+      "fromSide": "right",
+      "toNode": "eig033",
+      "toSide": "left",
+      "label": "A full chain basis assembles the block diagonal form · 完整链基拼成块对角形式"
+    },
+    {
+      "id": "edge019",
+      "fromNode": "eig014",
+      "fromSide": "bottom",
+      "toNode": "eig034",
+      "toSide": "top",
+      "label": "After existence, nullity increments determine block sizes · 存在以后用核维数增量确定块尺寸"
+    },
+    {
+      "id": "edge020",
+      "fromNode": "eig031",
+      "fromSide": "bottom",
+      "toNode": "eig013",
+      "toSide": "top",
+      "label": "Commuting scalar and nilpotent parts give finite binomial terms · 可交换的标量与幂零部分给出有限二项式"
+    },
+    {
+      "id": "edge021",
+      "fromNode": "eig031",
+      "fromSide": "bottom",
+      "toNode": "eig032",
+      "toSide": "top",
+      "label": "Nilpotence makes the exponential polynomial exact · 幂零性使指数中的多项式精确有限"
+    },
+    {
+      "id": "edge022",
+      "fromNode": "eig033",
+      "fromSide": "right",
+      "toNode": "eig014",
+      "toSide": "left",
+      "label": "The characteristic polynomial must split over the chosen field · 特征多项式须在所选域完全分裂"
+    },
+    {
+      "id": "edge023",
+      "fromNode": "eig011",
+      "fromSide": "left",
+      "toNode": "eig029",
+      "toSide": "right",
+      "label": "Use similarity to exponentiate the diagonal eigenvalues · 经相似变换对角特征值逐一取指数"
+    },
+    {
+      "id": "edge024",
+      "fromNode": "eig011",
+      "fromSide": "right",
+      "toNode": "eig032",
+      "toSide": "left",
+      "label": "Apply the convergent series to the scalar-plus-shift block · 把收敛级数用于标量加移位的块"
+    },
+    {
+      "id": "edge043a",
+      "fromNode": "eig011",
+      "fromSide": "top",
+      "toNode": "bridge-exp-solution",
+      "toSide": "top",
+      "label": "Differentiate the everywhere-convergent series · 对处处收敛的幂级数求导"
+    },
+    {
+      "id": "edge043b",
+      "fromNode": "bridge-exp-solution",
+      "fromSide": "left",
+      "toNode": "eig047",
+      "toSide": "left",
+      "label": "Check the initial value and exclude other solutions · 检查初值并排除其他解"
+    },
+    {
+      "id": "edge025",
+      "fromNode": "depSchur",
+      "fromSide": "right",
+      "toNode": "eig035",
+      "toSide": "left",
+      "label": "Length-preserving invertible coordinates · 可逆且保持长度的换基"
+    },
+    {
+      "id": "edge037",
+      "fromNode": "eig035",
+      "fromSide": "right",
+      "toNode": "eig044",
+      "toSide": "left",
+      "label": "A recursive construction proves existence for every square matrix · 递归构造证明每个方阵均有相应形式"
+    },
+    {
+      "id": "edge038",
+      "fromNode": "eig044",
+      "fromSide": "right",
+      "toNode": "depSVD",
+      "toSide": "left",
+      "label": "Read the SVD definition before comparison · 比较前补齐 SVD 定义"
+    },
+    {
+      "id": "edge039",
+      "fromNode": "depSVD",
+      "fromSide": "right",
+      "toNode": "eig015",
+      "toSide": "left",
+      "label": "Distinguish the structures retained by three decompositions · 区分三种分解保留的结构"
+    },
+    {
+      "id": "edge026",
+      "fromNode": "eig036",
+      "fromSide": "right",
+      "toNode": "eig016",
+      "toSide": "left",
+      "label": "Strictly below one is equivalent to vanishing powers · 谱半径严格小于一等价于矩阵幂趋零"
+    },
+    {
+      "id": "edge027",
+      "fromNode": "eig016",
+      "fromSide": "right",
+      "toNode": "eig018",
+      "toSide": "left",
+      "label": "Vanishing powers send every initial state to zero · 矩阵幂趋零使全部初值趋零"
+    },
+    {
+      "id": "edge028",
+      "fromNode": "eig018",
+      "fromSide": "right",
+      "toNode": "eig037",
+      "toSide": "left",
+      "label": "Compare decay with mere boundedness on the unit circle · 对照趋零与单位圆边界上的有界性"
+    },
+    {
+      "id": "edge044",
+      "fromNode": "eig047",
+      "fromSide": "right",
+      "toNode": "eig019",
+      "toSide": "left",
+      "label": "Then examine growth of the resulting solution operator · 再检查所得解算子的增长行为"
+    },
+    {
+      "id": "edge029",
+      "fromNode": "eig019",
+      "fromSide": "right",
+      "toNode": "eig038",
+      "toSide": "left",
+      "label": "Compare decay with mere boundedness on the imaginary axis · 对照趋零与虚轴边界上的有界性"
+    },
+    {
+      "id": "edge030",
+      "fromNode": "eig017",
+      "fromSide": "right",
+      "toNode": "eig020",
+      "toSide": "left",
+      "label": "Transient growth and hidden modes are different limits of trajectory evidence · 暂时放大与隐藏模式分别限制轨迹证据"
+    },
+    {
+      "id": "edge040",
+      "fromNode": "depNormal",
+      "fromSide": "right",
+      "toNode": "eig017",
+      "toSide": "left",
+      "label": "For normal A, the spectral norm equals the spectral radius; radius below one gives contraction · 正规矩阵的谱范数等于谱半径；谱半径小于一时每步收缩"
+    },
+    {
+      "id": "edge031",
+      "fromNode": "eig039",
+      "fromSide": "right",
+      "toNode": "eig021",
+      "toSide": "left",
+      "label": "Choose the vector side and transpose the transition rule consistently · 配套选择向量方向与转移矩阵"
+    },
+    {
+      "id": "edge032",
+      "fromNode": "eig039",
+      "fromSide": "right",
+      "toNode": "eig040",
+      "toSide": "left",
+      "label": "Nonnegative redistribution bounds the absolute-sum or maximum norm · 非负重分配约束绝对值和或最大值范数"
+    },
+    {
+      "id": "edge048",
+      "fromNode": "eig039",
+      "fromSide": "right",
+      "toNode": "eig049",
+      "toSide": "left",
+      "label": "Bounded powers forbid growing unit-circle Jordan chains · 有界幂排除增长的单位圆 Jordan 链"
+    },
+    {
+      "id": "edge045",
+      "fromNode": "eig039",
+      "fromSide": "bottom",
+      "toNode": "eig046",
+      "toSide": "top",
+      "label": "Unit sums force a nonzero fixed direction · 和为一保证存在非零固定方向"
+    },
+    {
+      "id": "edge033",
+      "fromNode": "eig021",
+      "fromSide": "right",
+      "toNode": "eig022",
+      "toSide": "left",
+      "label": "Write the fixed-point equation on the chosen side, then normalize nonnegative mass · 按约定写固定点并核对非负与归一化"
+    },
+    {
+      "id": "edge034",
+      "fromNode": "eig022",
+      "fromSide": "right",
+      "toNode": "depFinite",
+      "toSide": "left",
+      "label": "Stationary laws decompose over closed classes / 按闭类分解稳态"
+    },
+    {
+      "id": "edge035",
+      "fromNode": "eig040",
+      "fromSide": "right",
+      "toNode": "eig042",
+      "toSide": "left",
+      "label": "Exclude every unit-circle value except 1 / 排除1之外的单位圆谱"
+    },
+    {
+      "id": "edge049",
+      "fromNode": "eig049",
+      "fromSide": "right",
+      "toNode": "eig042",
+      "toSide": "bottom",
+      "label": "Boundary blocks have size one / 边界块尺寸为一"
+    },
+    {
+      "id": "edge046",
+      "fromNode": "eig042",
+      "fromSide": "right",
+      "toNode": "eig048",
+      "toSide": "left",
+      "label": "Convergent powers retain the fixed-space projection / 幂收敛留下固定空间投影"
+    },
+    {
+      "id": "edge047",
+      "fromNode": "eig041",
+      "fromSide": "bottom",
+      "toNode": "eig048",
+      "toSide": "top",
+      "label": "With convergence, uniqueness gives rank one / 已收敛时唯一性给出秩一"
+    },
+    {
+      "id": "edge036",
+      "fromNode": "eig041",
+      "fromSide": "bottom",
+      "toNode": "eig023",
+      "toSide": "top",
+      "label": "Unique stationarity still allows the flip / 唯一稳态仍允许交换振荡"
+    },
+    {
+      "id": "edge041",
+      "fromNode": "depFinite",
+      "fromSide": "right",
+      "toNode": "eig041",
+      "toSide": "left",
+      "label": "One closed class iff stationary uniqueness / 单闭类等价于稳态唯一"
+    },
+    {
+      "id": "p0052-invariant-schur",
+      "fromNode": "invariant-subspace",
+      "fromSide": "top",
+      "toNode": "eig035",
+      "toSide": "bottom",
+      "label": "Leading Schur basis columns ending at complete blocks span an invariant subspace · 取到完整块末尾的前导 Schur 基列张成不变子空间"
+    },
+    {
+      "id": "edge-distinct-eigenbasis",
+      "fromNode": "eig027",
+      "fromSide": "right",
+      "toNode": "eig007",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "n distinct values in the chosen field supply an eigenbasis · 当前域中 n 个互异值足以提供特征基"
+    },
+    {
+      "id": "edge-half-discrete",
+      "fromNode": "eig050",
+      "fromSide": "top",
+      "toNode": "eig037",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "Use semisimplicity only on the unit circle · 只在单位圆边界检查半单性"
+    },
+    {
+      "id": "edge-half-continuous",
+      "fromNode": "eig050",
+      "fromSide": "left",
+      "toNode": "eig038",
+      "toSide": "right",
+      "toEnd": "arrow",
+      "label": "Use semisimplicity only on the imaginary axis · 只在虚轴边界检查半单性"
+    },
+    {
+      "id": "edge-half-markov",
+      "fromNode": "eig050",
+      "fromSide": "bottom",
+      "toNode": "eig049",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "Stochastic boundedness guarantees this boundary property · 随机矩阵有界性保证边界半单"
+    },
+    {
+      "id": "edge-stationary-exists",
+      "fromNode": "eig022",
+      "fromSide": "right",
+      "toNode": "eig051",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "Finite-state compactness ensures at least one probability fixed point · 有限维紧致性保证至少一个概率固定点"
+    }
   ]
 }

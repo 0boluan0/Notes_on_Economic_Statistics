@@ -26,7 +26,7 @@
       "y": 800,
       "width": 560,
       "height": 300,
-      "text": "## [[随机过程]]\n\n同一概率空间上，按指标集索引的一族随机变量。\n\n**边界：** 时间只是常见指标，不是定义所必需。",
+      "text": "<!-- bilingual-en:start -->\n## [[随机过程|Stochastic process]]\n\nRandom variables at different indices share one probability experiment. Their joint dependence is part of the model; an index need not be time.\n<!-- bilingual-en:end -->\n\n随机变量按指标组成同一实验中的整体；模型还要指定它们怎样共同变化，指标不必是时间。",
       "color": "4"
     },
     {
@@ -36,7 +36,7 @@
       "y": 500,
       "width": 560,
       "height": 300,
-      "text": "## [[有限维分布]]\n\n任取有限多个指标，所得有限坐标组的联合分布。\n\n**边界：** ‘有限维’不表示整个指标集有限。",
+      "text": "<!-- bilingual-en:start -->\n## [[有限维分布|Finite-dimensional law]]\n\nSelect finitely many indices and keep their joint law. All one-time marginals alone leave the dependence unspecified.\n<!-- bilingual-en:end -->\n\n选有限多个指标，保留其联合分布；只知道各时点的边际，仍不知道它们之间的依赖。",
       "color": "4"
     },
     {
@@ -46,7 +46,7 @@
       "y": 1300,
       "width": 560,
       "height": 300,
-      "text": "## [[样本路径]]\n\n固定一个样本结果后，指标到状态的确定性函数。\n\n**边界：** 一条已观察路径不等于完整过程律。",
+      "text": "<!-- bilingual-en:start -->\n## [[样本路径|Sample path]]\n\nFix one outcome and read the whole function of the index. One observed path does not reveal the probabilities of all possible paths.\n<!-- bilingual-en:end -->\n\n固定一个结果，得到指标到状态的整条函数；一条已观察路径没有给出全部可能路径的概率。",
       "color": "4"
     },
     {
@@ -56,7 +56,7 @@
       "y": 300,
       "width": 560,
       "height": 300,
-      "text": "## [[有限维分布决定律]]\n\n实值过程的一致有限维分布族在乘积 σ-代数上确定唯一过程律。\n\n**边界：** 这句话没有自动指定连续路径空间；更一般的状态空间需满足相应正则条件。",
+      "text": "<!-- bilingual-en:start -->\n## [[有限维分布决定律|Kolmogorov extension]]\n\nA consistent family of real finite-dimensional laws gives a unique probability law on the canonical product sigma-algebra. Consistency requires agreement after dropping or reordering coordinates.\n<!-- bilingual-en:end -->\n\n一致的实值有限维分布族，在典范乘积 σ-代数上给出唯一概率律；删去或重排坐标后，描述必须一致。",
       "color": "5"
     },
     {
@@ -66,7 +66,7 @@
       "y": 900,
       "width": 560,
       "height": 300,
-      "text": "## [[边际分布不定时序依赖]]\n\n逐时点边际即使完全相同，也不能区分重复同一随机量与每期独立重抽。\n\n**边界：** 必须检查跨时点联合分布。",
+      "text": "<!-- bilingual-en:start -->\n## [[边际分布不定时序依赖|Marginals and dependence]]\n\nRepeating one normal draw and taking fresh independent draws give identical one-time laws, but different predictions and increments. Compare joint observations.\n<!-- bilingual-en:end -->\n\n重复同一次正态抽值与每次独立重抽，单时点分布相同，预测与增量却不同；需要比较联合观测。",
       "color": "1"
     },
     {
@@ -76,7 +76,7 @@
       "y": 900,
       "width": 560,
       "height": 300,
-      "text": "## [[有限维分布不定路径正则性]]\n\n有限维分布只确定乘积过程律；连续、càdlàg 等路径性质仍需版本或路径空间论证。\n\n**边界：** 增量矩条件可以用来证明存在正则修改。",
+      "text": "<!-- bilingual-en:start -->\n## [[有限维分布不定路径正则性|Laws and path regularity]]\n\nA random spike can evade every fixed finite inspection. A continuous modification needs a proof or construction; it does not make every version continuous.\n<!-- bilingual-en:end -->\n\n随机尖峰能躲过每次固定的有限检查。连续修改需要证明或构造，也不使每个版本都连续。",
       "color": "1"
     },
     {
@@ -152,7 +152,7 @@
       "fromSide": "right",
       "toNode": "sp00000000000002",
       "toSide": "left",
-      "label": "按指标成族"
+      "label": "One shared experiment / 共用同一实验"
     },
     {
       "id": "spe0000000000002",
@@ -160,7 +160,7 @@
       "fromSide": "right",
       "toNode": "sp0000000000000e",
       "toSide": "left",
-      "label": "固定有限指标"
+      "label": "Select coordinates, keep their joint law / 选坐标看联合律"
     },
     {
       "id": "spe0000000000003",
@@ -168,7 +168,7 @@
       "fromSide": "right",
       "toNode": "sp0000000000000f",
       "toSide": "left",
-      "label": "固定一次样本结果"
+      "label": "Fix the outcome / 固定结果"
     },
     {
       "id": "spe0000000000004",
@@ -176,7 +176,7 @@
       "fromSide": "right",
       "toNode": "sp00000000000003",
       "toSide": "left",
-      "label": "实值一致族可扩张"
+      "label": "Consistent real laws extend / 一致实值族可扩张"
     },
     {
       "id": "spe0000000000005",
@@ -184,7 +184,7 @@
       "fromSide": "right",
       "toNode": "sp00000000000004",
       "toSide": "left",
-      "label": "只取 n=1 不够"
+      "label": "One-time laws lose dependence / 单时点律丢失依赖"
     },
     {
       "id": "spe0000000000006",
@@ -200,7 +200,7 @@
       "fromSide": "right",
       "toNode": "sp00000000000005",
       "toSide": "left",
-      "label": "乘积律不选路径版本"
+      "label": "A product law does not select the version / 乘积律不指定路径版本"
     },
     {
       "id": "spe0000000000008",
@@ -208,7 +208,7 @@
       "fromSide": "right",
       "toNode": "sp00000000000005",
       "toSide": "bottom",
-      "label": "正则性是整条路径的性质"
+      "label": "Inspect the whole function / 检查整条函数"
     },
     {
       "id": "spe0000000000009",

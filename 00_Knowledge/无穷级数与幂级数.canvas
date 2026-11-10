@@ -25,8 +25,8 @@
       "x": 40,
       "y": 100,
       "width": 440,
-      "height": 210,
-      "text": "## [[无穷级数]]\n定义 · 先累加前 N 项，再看部分和有没有有限极限。\n\n通项与部分和，是两个不同的序列。",
+      "height": 290,
+      "text": "<!-- bilingual-en:start -->\n## [[无穷级数|Infinite series]]\nFor defined finite real terms, form $S_N=\\sum_{n=1}^N a_n$. The series converges when these partial sums approach a finite number. The term sequence $a_n$ and the total sequence $S_N$ are different; bounded totals alone need not converge.\n<!-- bilingual-en:end -->\n\n各项为已定义的有限实数；先求前 $N$ 项的部分和 $S_N$，再看它是否趋于有限数。通项与累计量是两个数列；部分和仅有界也可能振荡发散。",
       "color": "4"
     },
     {
@@ -35,8 +35,8 @@
       "x": 590,
       "y": 100,
       "width": 440,
-      "height": 210,
-      "text": "## [[级数通项判别]]\n必要条件 · 收敛必使项趋零；项趋零仍可能发散。\n\n调和级数给出反向失败的例子。",
+      "height": 290,
+      "text": "<!-- bilingual-en:start -->\n## [[级数通项判别|The nth-term divergence test]]\nConvergence of a real series forces $a_n\\to0$. Proving that the terms do not tend to zero proves divergence; a zero term limit is inconclusive. Harmonic terms tend to zero while their partial sums grow without bound.\n<!-- bilingual-en:end -->\n\n实数级数收敛必有 $a_n\\to0$；已证明通项不趋零即可判发散，趋零时仍无结论。调和级数的通项趋零，部分和却无界增长。",
       "color": "1"
     },
     {
@@ -55,8 +55,8 @@
       "x": 1690,
       "y": 100,
       "width": 440,
-      "height": 210,
-      "text": "## [[望远镜级数]]\n定义 · 有限部分和里消去中间项，只留下首尾。\n\n先保留末项，再取极限。",
+      "height": 330,
+      "text": "<!-- bilingual-en:start -->\n## [[望远镜级数|Telescoping series]]\nCancel only inside finite partial sums, retaining all boundary terms. For finite real $b_n$, a fixed positive integer $m$, and an integer $N\\ge m$,\n$$\\sum_{n=m}^{N}(b_n-b_{n+1})=b_m-b_{N+1}.$$\nThis series converges exactly when $b_{N+1}$ has a finite limit. Other cancellation patterns may leave several terms at each end.\n<!-- bilingual-en:end -->\n\n先在有限部分和内消项，保留两端完整表达式。上式中 $m$ 为固定正整数、$N\\ge m$；相邻差形式恰在末端 $b_{N+1}$ 有有限极限时收敛。其他错位形式可能每端留下多项。",
       "color": "4"
     },
     {
@@ -85,7 +85,7 @@
       "x": 0,
       "y": 820,
       "width": 2180,
-      "height": 740,
+      "height": 780,
       "label": "2 · 正项与绝对值：找能控制整段尾部的结构",
       "color": "3"
     },
@@ -95,8 +95,8 @@
       "x": 40,
       "y": 920,
       "width": 440,
-      "height": 210,
-      "text": "## [[级数直接比较判别]]\n定理 · 收敛找上界，发散找下界。\n\n比较的尾项必须非负。",
+      "height": 310,
+      "text": "<!-- bilingual-en:start -->\n## [[级数直接比较判别|Direct comparison for series]]\nFor defined finite terms, suppose $0\\le a_n\\le b_n$ eventually. Convergence of $\\sum b_n$ implies convergence of $\\sum a_n$; divergence of $\\sum a_n$ implies divergence of $\\sum b_n$. The reversed comparisons alone are inconclusive.\n<!-- bilingual-en:end -->\n\n各项须有定义且有限，尾部满足 $0\\le a_n\\le b_n$。收敛上界证明收敛，发散下界证明发散；反向比较本身不能判定。",
       "color": "3"
     },
     {
@@ -105,8 +105,8 @@
       "x": 590,
       "y": 920,
       "width": 440,
-      "height": 210,
-      "text": "## [[级数极限比较判别]]\n定理 · 最终正项比值趋于有限正数，则同敛散。\n\n零或无穷比值不能直接读成等价。",
+      "height": 310,
+      "text": "<!-- bilingual-en:start -->\n## [[级数极限比较判别|Limit comparison for series]]\nFor eventually positive terms, $a_n/b_n\\to L$ with $0<L<\\infty$ gives the same convergence behaviour, not the same sum. Limits $0$ and $+\\infty$ retain only the applicable one-way comparison; failure of the ratio to converge does not prove divergence.\n<!-- bilingual-en:end -->\n\n尾部为正且 $a_n/b_n\\to L$、$0<L<\\infty$ 时同敛散，不表示和相等。比值趋零或正无穷只保留相应单向比较；比值无极限本身也不证明发散。",
       "color": "3"
     },
     {
@@ -115,8 +115,8 @@
       "x": 1140,
       "y": 920,
       "width": 440,
-      "height": 210,
-      "text": "## [[级数积分判别]]\n定理 · 正、连续、单调不增的尾部，可与积分同敛散。\n\n不是说和等于积分值。",
+      "height": 310,
+      "text": "<!-- bilingual-en:start -->\n## [[级数积分判别|The integral test]]\nFor a positive integer $N_0$, let $a_n=f(n)$ on the tail. If $f$ is continuous, positive and nonincreasing on $[N_0,\\infty)$, the series tail and its improper integral converge or diverge together. Their finite values need not be equal.\n<!-- bilingual-en:end -->\n\n正整数 $N_0$ 起，令 $a_n=f(n)$；若 $f$ 在整个 $[N_0,\\infty)$ 上连续、为正且单调不增，级数尾部与对应反常积分同敛散，有限数值不必相等。",
       "color": "3"
     },
     {
@@ -125,8 +125,8 @@
       "x": 1690,
       "y": 920,
       "width": 440,
-      "height": 210,
-      "text": "## [[p级数判别]]\n定理 · ∑1/nᵖ 恰在 p > 1 收敛。\n\n复用 [[无穷远 p 积分判别]]；p ≤ 0 由通项直接排除。",
+      "height": 310,
+      "text": "<!-- bilingual-en:start -->\n## [[p级数判别|The p-series test]]\nFor fixed real $p$, $\\sum_{n=1}^{\\infty}n^{-p}$ converges exactly when $p>1$. For $p>0$, use the [[无穷远 p 积分判别|power-tail integral]]; for $p\\le0$, the terms already fail to vanish. At $p=1$ the series diverges despite vanishing terms.\n<!-- bilingual-en:end -->\n\n固定实数 $p$，$\\sum_{n=1}^{\\infty}n^{-p}$ 恰在 $p>1$ 收敛。正 $p$ 用幂函数尾积分；$p\\le0$ 的项已不趋零。$p=1$ 虽通项趋零仍发散。",
       "color": "3"
     },
     {
@@ -135,8 +135,8 @@
       "x": 40,
       "y": 1260,
       "width": 440,
-      "height": 210,
-      "text": "## [[级数比值判别]]\n定理 · 相邻项绝对值比极限：小于 1 保证绝对收敛，大于 1 发散。\n\n最终非零且极限存在；等于 1 无结论。",
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[级数比值判别|The ratio test]]\nFor finite real or complex terms that are eventually nonzero, suppose $L=\\lim_{n\\to\\infty}|a_{n+1}/a_n|$ exists, allowing $+\\infty$. If $L<1$, the series converges absolutely; if $L>1$, it diverges. At $L=1$ the test is inconclusive; a missing ratio limit is also no verdict.\n<!-- bilingual-en:end -->\n\n有限实数项或复数项最终非零，且相邻模比极限 $L$ 存在（允许正无穷）时适用。$L<1$ 保证绝对收敛，$L>1$ 保证发散；$L=1$ 无结论，比值极限不存在也不代表发散。",
       "color": "3"
     },
     {
@@ -145,8 +145,8 @@
       "x": 590,
       "y": 1260,
       "width": 440,
-      "height": 210,
-      "text": "## [[级数根值判别]]\n定理 · n 次根上极限检验指数衰减。\n\n允许零项；临界值 1 无结论。",
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[级数根值判别|The root test]]\nFor finite real or complex terms, set $\\rho=\\limsup_{n\\to\\infty}|a_n|^{1/n}$. If $\\rho<1$, the series converges absolutely; if $\\rho>1$, including $+\\infty$, it diverges. At $\\rho=1$ the test is inconclusive. Zero terms and oscillating root magnitudes are allowed.\n<!-- bilingual-en:end -->\n\n有限实数项或复数项，取模的 $n$ 次根上极限 $\\rho$：小于一得绝对收敛，大于一（含正无穷）得发散，等于一无结论。允许零项，也不要求根值有普通极限。",
       "color": "3"
     },
     {
@@ -155,8 +155,8 @@
       "x": 1140,
       "y": 1260,
       "width": 440,
-      "height": 210,
-      "text": "## [[积分判别余项界]]\n误差 · 从 N+1 积分给下界，从 N 积分给上界。\n\n给前 N 项的近似配一个可信区间。",
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[积分判别余项界|Integral remainder bounds]]\nFor a convergent series satisfying the integral-test conditions from index $N_0$, take $N\\ge N_0$. The remainder after $S_N$, the first $N$ terms, obeys\n$$\\int_{N+1}^{\\infty}f(x)\\,dx\\le S-S_N\\le\\int_N^{\\infty}f(x)\\,dx.$$\nHere $S$ is the finite sum; adding $S_N$ gives an interval containing it.\n<!-- bilingual-en:end -->\n\n先确认级数收敛并从索引 $N_0$ 起满足积分判别条件，取 $N\\ge N_0$。$S_N$ 为前 $N$ 项之和；从 $N+1$ 积分给余项下界，从 $N$ 积分给上界，分别加上 $S_N$ 即夹住有限真值 $S$。",
       "color": "2"
     },
     {
@@ -165,8 +165,8 @@
       "x": 1690,
       "y": 1260,
       "width": 440,
-      "height": 210,
-      "text": "## [[级数判别法选择]]\n方法 · 先检查通项，再按表达式与符号选法。\n\n收敛、和的数值与误差，是不同任务。",
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[级数判别法选择|Choosing a series test]]\nStart with defined finite terms and the requested conclusion: convergence, absolute or conditional classification, an exact sum, or an error bound. Match the expression to a theorem and check its hypotheses. Vanishing terms, a ratio/root value of one, or a failed hypothesis alone settles neither convergence nor divergence.\n<!-- bilingual-en:end -->\n\n先核每项有定义且有限，再分清需要收敛判断、绝对或条件分类、精确和，还是误差界。按结构选定理并逐项核前提；通项趋零、比值或根值为一、某条前提不满足，本身都不能判定敛散。",
       "color": "2"
     },
     {
@@ -175,7 +175,7 @@
       "x": 0,
       "y": 1640,
       "width": 2180,
-      "height": 740,
+      "height": 800,
       "label": "3 · 正负抵消：收敛类型决定怎样估误差与重排",
       "color": "6"
     },
@@ -185,8 +185,8 @@
       "x": 40,
       "y": 1740,
       "width": 440,
-      "height": 210,
-      "text": "## [[绝对收敛]]\n定义 · 各项绝对值组成的级数有有限和。\n\n不依靠正负抵消也能累积有限。",
+      "height": 310,
+      "text": "<!-- bilingual-en:start -->\n## [[绝对收敛|Absolute convergence]]\nFor finite real or complex terms, $\\sum|a_n|<\\infty$ defines absolute convergence: add the magnitude of each term. This guarantees ordinary convergence, but taking the magnitude after summing is a different operation. Cancellation may still occur.\n<!-- bilingual-en:end -->\n\n对有限实数项或复数项，逐项取模后的级数有有限和，才叫绝对收敛。它保证原级数收敛；先求和再取模是另一件事，绝对收敛仍可发生抵消。",
       "color": "4"
     },
     {
@@ -195,8 +195,8 @@
       "x": 590,
       "y": 1740,
       "width": 440,
-      "height": 210,
-      "text": "## [[绝对收敛推出收敛]]\n定理 · 绝对尾和控制原级数的每段尾和。\n\n原级数因此有极限。",
+      "height": 310,
+      "text": "<!-- bilingual-en:start -->\n## [[绝对收敛推出收敛|Absolute convergence implies convergence]]\nFor finite real or complex terms, a finite magnitude sum controls every finite tail of the original partial sums. They are Cauchy: any two sufficiently late totals are close. Completeness then gives a finite sum; merely small individual terms would not suffice.\n<!-- bilingual-en:end -->\n\n有限实数项或复数项的幅度总和有限，就控制原部分和之间的每段有限尾和，使所有足够晚的部分和彼此接近。完备性因此保证有限极限；仅单项趋零不够。",
       "color": "3"
     },
     {
@@ -205,8 +205,8 @@
       "x": 1140,
       "y": 1740,
       "width": 440,
-      "height": 210,
-      "text": "## [[条件收敛]]\n定义 · 原级数收敛，而绝对值级数发散。\n\n两项结论都必须证明。",
+      "height": 310,
+      "text": "<!-- bilingual-en:start -->\n## [[条件收敛|Conditional convergence]]\nThe original real or complex series has a finite sum, while its magnitude series diverges. Both conclusions are required. Alternating signs alone do not establish this classification; nonnegative real terms cannot be conditionally convergent.\n<!-- bilingual-en:end -->\n\n原实数或复数级数收敛到有限值，同时绝对值级数发散，才叫条件收敛。两项都须证明；符号交错本身不足以分类，非负实数项不可能条件收敛。",
       "color": "4"
     },
     {
@@ -215,8 +215,8 @@
       "x": 1690,
       "y": 1740,
       "width": 440,
-      "height": 210,
-      "text": "## [[条件收敛重排]]\n定理 · 条件收敛实数级数可重排到任意指定实数。\n\n无限顺序影响部分和的极限。",
+      "height": 310,
+      "text": "<!-- bilingual-en:start -->\n## [[条件收敛重排|Rearranging a conditional real series]]\nFor any prescribed finite real $r$, a conditionally convergent real series admits a bijective rearrangement with sum $r$. Alternating crossings of $r$ have vanishing overshoots, controlling every late partial sum. This does not say every rearrangement changes the sum.\n<!-- bilingual-en:end -->\n\n条件收敛的实数级数可通过每项恰用一次的重排，收敛到任意指定的有限实数 $r$。交替越过目标时，超出量趋零，从而控制所有后期部分和；并非每种重排都会改和。",
       "color": "1"
     },
     {
@@ -225,8 +225,8 @@
       "x": 40,
       "y": 2080,
       "width": 440,
-      "height": 210,
-      "text": "## [[绝对收敛级数重排]]\n定理 · 每项恰用一次的任意重排，仍有同一个和。\n\n绝对尾部约束使顺序不再影响答案。",
+      "height": 310,
+      "text": "<!-- bilingual-en:start -->\n## [[绝对收敛级数重排|Rearranging an absolute series]]\nFor an absolutely convergent real or complex series, every bijection of the original indices preserves the sum and absolute convergence. Each original index must appear exactly once at a finite position. Every sufficiently late reordered partial sum contains any chosen finite original prefix.\n<!-- bilingual-en:end -->\n\n绝对收敛的实数或复数级数，对原下标作任意双射重排，仍绝对收敛且和不变。每个原下标须在有限位置恰好出现一次；任意选定的原有限前缀，最终会被所有后续新部分和完整包含。",
       "color": "3"
     },
     {
@@ -235,8 +235,8 @@
       "x": 590,
       "y": 2080,
       "width": 440,
-      "height": 210,
-      "text": "## [[交错级数判别]]\n定理 · 非负幅度最终单调趋零，则交错求和收敛。\n\n单靠它不能确定是否条件收敛。",
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[交错级数判别|The alternating series test]]\nFor $\\sum_{n=1}^{\\infty}(-1)^{n-1}b_n$ with finite $b_n\\ge0$, eventual nonincrease and $b_n\\to0$ guarantee convergence. Equal magnitudes and a zero tail are allowed. This test alone does not decide whether convergence is absolute or conditional.\n<!-- bilingual-en:end -->\n\n有限非负幅度 $b_n$ 最终单调不增且趋零，就保证该交错级数收敛，允许相等幅度和零尾部。判别本身尚未区分绝对或条件收敛。",
       "color": "3"
     },
     {
@@ -245,8 +245,8 @@
       "x": 1140,
       "y": 2080,
       "width": 440,
-      "height": 210,
-      "text": "## [[交错级数误差界]]\n误差 · 真值夹在相邻部分和之间，误差至多下一项幅度。\n\n保留原顺序及单调尾部条件。",
+      "height": 340,
+      "text": "<!-- bilingual-en:start -->\n## [[交错级数误差界|Alternating remainder bounds]]\nUnder the alternating-test hypotheses, cut within the nonincreasing tail after $N$ terms. If $S$ is the sum and $S_N$ the partial sum, $|S-S_N|\\le b_{N+1}$, and $S$ lies between $S_N,S_{N+1}$. Equality or zero error is possible; this is truncation error, not a rounding bound.\n<!-- bilingual-en:end -->\n\n先核交错判别条件，再在不增尾部截取前 $N$ 项；真值夹在 $S_N,S_{N+1}$ 之间，误差至多下一项幅度。允许等号及零余项；这控制截断误差，不是舍入误差。",
       "color": "2"
     },
     {
@@ -255,7 +255,7 @@
       "x": 0,
       "y": 2460,
       "width": 2180,
-      "height": 740,
+      "height": 780,
       "label": "4 · 幂级数：先定输入范围，再在严格内部运算",
       "color": "4"
     },
@@ -265,8 +265,8 @@
       "x": 40,
       "y": 2560,
       "width": 440,
-      "height": 210,
-      "text": "## [[幂级数]]\n定义 · 固定中心、固定系数的非负整数幂求和。\n\n每代入一个 x，就得到一条数项级数。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[幂级数|Power series]]\nFixed real centre $a$ and real coefficients $c_n$ give $\\sum_{n\\ge0}c_n(x-a)^n$. Each fixed real $x$ produces a numerical series; at $x=a$, the sum is always $c_0$.\n<!-- bilingual-en:end -->\n\n幂级数：中心 $a$ 和系数 $c_n$ 固定。每个实数输入得到一条数项级数；中心处始终等于常数项 $c_0$。",
       "color": "4"
     },
     {
@@ -275,8 +275,8 @@
       "x": 590,
       "y": 2560,
       "width": 440,
-      "height": 210,
-      "text": "## [[幂级数收敛半径]]\n定义 · 距中心小于 R 时绝对收敛，大于 R 时发散。\n\nR 可以为零或无穷。",
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[幂级数收敛半径|Radius of convergence]]\nAbout centre $a$, convergence is absolute for $|x-a|<R$ and fails for $|x-a|>R$. $R=0$: centre only; $R=\\infty$: all real inputs. Finite endpoints need separate tests.\n<!-- bilingual-en:end -->\n\n收敛半径是距中心的阈值：内部绝对收敛，外部发散。半径零只在中心收敛；半径无穷覆盖全实轴；有限端点另查。",
       "color": "4"
     },
     {
@@ -285,8 +285,8 @@
       "x": 1140,
       "y": 2560,
       "width": 440,
-      "height": 210,
-      "text": "## [[幂级数端点判别]]\n方法 · 有限正半径的左右端点，分别代回原式。\n\n端点收敛还不自动确定函数值。",
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[幂级数端点判别|Endpoint tests]]\nFor $0<R<\\infty$, substitute $a-R$ and $a+R$ separately. Convergence may differ, but their magnitude series are identical. Identifying an endpoint sum with a function value needs another argument.\n<!-- bilingual-en:end -->\n\n有限正半径时，左右端点分别代回。普通敛散可能不同，绝对值级数却相同；端点和是否等于目标函数值还须另证。",
       "color": "2"
     },
     {
@@ -295,8 +295,8 @@
       "x": 1690,
       "y": 2560,
       "width": 440,
-      "height": 210,
-      "text": "## [[幂级数乘法]]\n定理 · 共同内部按次数收集卷积系数。\n\n乘积半径至少为较小半径；抵消可扩大它。",
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[幂级数乘法|Power-series multiplication]]\nFor a common centre, multiply in the common absolute interior. Degree $n$ collects $d_n=\\sum_{k=0}^n a_kb_{n-k}$. The new radius is at least the smaller original radius; cancellation can enlarge it.\n<!-- bilingual-en:end -->\n\n幂级数乘法：同中心、共同绝对收敛内部，按总次数卷积系数。新半径至少为原半径较小者；抵消可使它更大。",
       "color": "3"
     },
     {
@@ -305,8 +305,8 @@
       "x": 590,
       "y": 2900,
       "width": 440,
-      "height": 210,
-      "text": "## [[幂级数逐项求导]]\n定理 · 严格内部可以逐项求导。\n\n半径相同，端点可能丢失。",
+      "height": 310,
+      "text": "<!-- bilingual-en:start -->\n## [[幂级数逐项求导|Termwise differentiation]]\nFor radius $R>0$, differentiate the powers at real inputs with $|x-a|<R$. A common local tail bound justifies the operation. The radius stays $R$; retest endpoints.\n<!-- bilingual-en:end -->\n\n逐项求导：正半径的严格内部成立，共同局部尾界保证合法。半径不变，但原端点的收敛性不能照搬。",
       "color": "3"
     },
     {
@@ -315,8 +315,8 @@
       "x": 1140,
       "y": 2900,
       "width": 440,
-      "height": 210,
-      "text": "## [[幂级数逐项积分]]\n定理 · 严格内部可逐项积分，从中心积分固定常数。\n\n半径相同，端点须重查。",
+      "height": 310,
+      "text": "<!-- bilingual-en:start -->\n## [[幂级数逐项积分|Termwise integration]]\nFor $R>0$, integrate over a finite segment strictly inside $|x-a|<R$. Starting at $a$ defines $F$ with $F(a)=0$; antiderivatives are $F+C$ for constant $C$. The radius stays $R$; endpoints need new arguments.\n<!-- bilingual-en:end -->\n\n逐项积分：有限整段须在正半径的严格内部。从中心起积固定 $F(a)=0$；原函数为 $F+C$（$C$ 为常数）。半径不变，端点另证。",
       "color": "3"
     },
     {
@@ -325,7 +325,7 @@
       "x": 0,
       "y": 3280,
       "width": 2180,
-      "height": 740,
+      "height": 770,
       "label": "5 · Taylor：匹配导数给候选；余项趋零才给表示",
       "color": "3"
     },
@@ -345,8 +345,8 @@
       "x": 590,
       "y": 3380,
       "width": 440,
-      "height": 210,
-      "text": "## [[Taylor级数]]\n定义 · 系数为中心处 n 阶导数除以 n!。\n\n先定义级数，不预设它等于函数。",
+      "height": 310,
+      "text": "<!-- bilingual-en:start -->\n## [[Taylor级数|Taylor series]]\nIf $f$ has derivatives of every order at the centre $a$, its candidate series is $\\sum_{n\\ge0}f^{(n)}(a)(x-a)^n/n!$. Here $f^{(0)}=f$ and $0!=1$. Finite partial sums are Taylor polynomials; equality with $f$ needs proof.\n<!-- bilingual-en:end -->\n\nTaylor 级数：中心 $a$ 的各阶导数决定候选系数，$f^{(0)}=f$、$0!=1$。有限部分和是 Taylor 多项式；构造系数并未证明等于原函数。",
       "color": "4"
     },
     {
@@ -355,8 +355,8 @@
       "x": 1140,
       "y": 3380,
       "width": 440,
-      "height": 210,
-      "text": "## [[Taylor级数等于函数]]\n定理 · 固定输入处，余项随阶数趋零，恰好意味着表示成立。",
+      "height": 310,
+      "text": "<!-- bilingual-en:start -->\n## [[Taylor级数等于函数|When a Taylor series represents its function]]\nFor the Taylor partial sum $P_N$ and remainder $R_N(x)=f(x)-P_N(x)$, equality at a fixed $x$ holds exactly when $R_N(x)\\to0$. Smoothness alone is insufficient; derivative bounds may grow with $N$.\n<!-- bilingual-en:end -->\n\nTaylor 等式：在固定 $x$ 处，部分和 $P_N(x)$ 趋于 $f(x)$，当且仅当余项 $R_N(x)=f(x)-P_N(x)$ 趋零。光滑本身不足；导数上界可能随阶数增长。",
       "color": "3"
     },
     {
@@ -365,8 +365,8 @@
       "x": 1690,
       "y": 3380,
       "width": 440,
-      "height": 210,
-      "text": "## [[光滑不代表解析]]\n反例 · $e^{-1/x^2}$ 在零点补零，所有阶导数为零。\n\n零级数处处收敛，却不等于附近的函数。",
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[光滑不代表解析|Smooth need not mean analytic]]\nSet $f(0)=0$ and $f(x)=e^{-1/x^2}$ for $x\\ne0$. All derivatives at zero vanish. Its Taylor series about zero converges everywhere to zero, yet $f(x)>0$ off zero.\n<!-- bilingual-en:end -->\n\n光滑不代表解析：零点补零的 $e^{-1/x^2}$ 在零点各阶导数皆零。零级数处处收敛，却不等于任何非零输入处的函数值。",
       "color": "1"
     },
     {
@@ -385,8 +385,8 @@
       "x": 590,
       "y": 3720,
       "width": 440,
-      "height": 210,
-      "text": "## [[指数函数幂级数]]\n定理 · eˣ = ∑xⁿ/n!，全实轴成立。\n\n阶乘压住固定输入的幂。",
+      "height": 310,
+      "text": "<!-- bilingual-en:start -->\n## [[指数函数幂级数|Exponential series]]\n$e^x=\\sum_{n\\ge0}x^n/n!$ for every real $x$; at zero the sum is $1$. Finite Taylor remainders vanish at each fixed input. A fixed truncation still needs its error bound.\n<!-- bilingual-en:end -->\n\n指数展开全实轴成立，零点直接为 $1$。有限 Taylor 余项对每个固定输入趋零；固定截断仍须核对误差界。",
       "color": "3"
     },
     {
@@ -395,8 +395,8 @@
       "x": 1140,
       "y": 3720,
       "width": 440,
-      "height": 210,
-      "text": "## [[正弦函数幂级数]]\n定理 · 奇次幂、交错符号、幂次对应阶乘。\n\n弧度制；全实轴成立。",
+      "height": 310,
+      "text": "<!-- bilingual-en:start -->\n## [[正弦函数幂级数|Sine series]]\nIn radians, $\\sin x=\\sum_{n\\ge0}(-1)^n x^{2n+1}/(2n+1)!$ for every real $x$. All derivatives have magnitude at most $1$, so the finite Taylor remainder tends to zero at each fixed input.\n<!-- bilingual-en:end -->\n\n正弦展开：弧度制、交错奇次幂，分母为对应幂次的阶乘。各阶导数绝对值不超过 $1$，余项对每个固定实输入趋零。",
       "color": "3"
     },
     {
@@ -405,8 +405,8 @@
       "x": 1690,
       "y": 3720,
       "width": 440,
-      "height": 210,
-      "text": "## [[余弦函数幂级数]]\n定理 · 从常数 1 开始，交错偶次幂。\n\n可由正弦逐项求导得到。",
+      "height": 310,
+      "text": "<!-- bilingual-en:start -->\n## [[余弦函数幂级数|Cosine series]]\nIn radians, $\\cos x=\\sum_{n\\ge0}(-1)^n x^{2n}/(2n)!$ for every real $x$. It also follows by [[幂级数逐项求导|differentiating the sine series]]: its infinite radius contains every finite input.\n<!-- bilingual-en:end -->\n\n余弦展开：弧度制，从常数 $1$ 开始的交错偶次幂，全实轴成立。也可对正弦级数合法逐项求导；无穷半径的内部包含每个有限输入。",
       "color": "3"
     },
     {
@@ -425,8 +425,8 @@
       "x": 40,
       "y": 4200,
       "width": 440,
-      "height": 210,
-      "text": "## [[对数函数幂级数]]\n定理 · 几何级数积分给 ln(1+x)。\n\n右端点用有限余项证明和为 ln 2。",
+      "height": 330,
+      "text": "<!-- bilingual-en:start -->\n## [[对数函数幂级数|Logarithm series]]\n$\\ln(1+x)=\\sum_{n\\ge1}(-1)^{n+1}x^n/n$ for $-1<x\\le1$. Integrate the geometric series inside $|x|<1$; a separate finite remainder proves the endpoint sum $\\ln2$. At $-1$, the series diverges. The function domain $x>-1$ is larger.\n<!-- bilingual-en:end -->\n\n对数展开的等式区间为 $(-1,1]$。内部由几何级数积分得到；右端点用有限余项证明为 $\\ln2$，左端点发散。函数本身的定义域 $x>-1$ 更大。",
       "color": "3"
     },
     {
@@ -435,8 +435,8 @@
       "x": 590,
       "y": 4200,
       "width": 440,
-      "height": 210,
-      "text": "## [[幂级数代入]]\n方法 · 新输入必须落在原展开的有效范围。\n\n把 u = −x² 代入指数展开。",
+      "height": 330,
+      "text": "<!-- bilingual-en:start -->\n## [[幂级数代入|Substitution in power series]]\nFor $R>0$, if $F(u)=\\sum_{n\\ge0}c_nu^n$ for $|u|<R$, substitute $u=g(x)$ wherever $|g(x)|<R$. In $e^u$, $u=-x^2$ works for every real $x$. General $g$ need not leave a power series in $x$.\n<!-- bilingual-en:end -->\n\n幂级数代入：正半径时，通项与输入范围一起替换。指数展开代入 $u=-x^2$ 对全部实数成立；一般复合式未必已是关于 $x$ 的幂级数。",
       "color": "2"
     },
     {
@@ -445,8 +445,8 @@
       "x": 1140,
       "y": 4200,
       "width": 440,
-      "height": 210,
-      "text": "## [[误差函数幂级数]]\n定理 · 指数代入后逐项积分。\n\n有限截断再用交错尾部控制误差。",
+      "height": 330,
+      "text": "<!-- bilingual-en:start -->\n## [[误差函数幂级数|Error-function series]]\nFor every real $x$, $\\operatorname{erf}(x)=\\frac2{\\sqrt\\pi}\\sum_{n\\ge0}\\frac{(-1)^nx^{2n+1}}{n!(2n+1)}$. Finite Taylor remainders bound truncation at all real inputs; the alternating-series shortcut needs a decreasing tail.\n<!-- bilingual-en:end -->\n\n误差函数级数在全实数成立；分母是 $n!(2n+1)$。有限 Taylor 余项界适用于全部实输入；若用交错界，要另查单调尾部。",
       "color": "3"
     },
     {
@@ -455,8 +455,8 @@
       "x": 1690,
       "y": 4200,
       "width": 440,
-      "height": 210,
-      "text": "## [[误差函数]]\n定义 · erf(x) 是从 0 到 x 的高斯累积乘以 2/√π。\n\n积分定义先于级数计算。",
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[误差函数|The error function]]\nFor real $x$, $\\operatorname{erf}(x)=\\frac2{\\sqrt\\pi}\\int_0^x e^{-t^2}\\,dt$. It is odd and increasing, with range $(-1,1)$ and limits $\\pm1$ at $\\pm\\infty$. This integral defines it; it is not itself a probability distribution function.\n<!-- bilingual-en:end -->\n\n误差函数先由积分定义。它是递增奇函数，值域 $(-1,1)$；两端极限为 $\\pm1$，有限输入不取到。本身不是概率分布函数。",
       "color": "4"
     },
     {
@@ -465,9 +465,19 @@
       "x": 1690,
       "y": 4540,
       "width": 440,
-      "height": 210,
-      "text": "## [[高斯积分]]\n共享定理 · 全轴积分为 √π。\n\n给误差函数的归一化依据。",
+      "height": 270,
+      "text": "<!-- bilingual-en:start -->\n## [[高斯积分|The Gaussian integral]]\nBoth one-sided integrals converge. For $e^{-x^2}$, the full-line integral is $\\sqrt\\pi$ and the positive half-line integral is $\\sqrt\\pi/2$. The latter supplies the error function's factor $2/\\sqrt\\pi$.\n<!-- bilingual-en:end -->\n\n两侧分别收敛：全线为 $\\sqrt\\pi$，正半线为 $\\sqrt\\pi/2$。半线值给出误差函数的归一化倍数 $2/\\sqrt\\pi$。",
       "color": "3"
+    },
+    {
+      "id": "sequence-limsup",
+      "type": "text",
+      "x": 1140,
+      "y": 440,
+      "width": 440,
+      "height": 280,
+      "color": "4",
+      "text": "<!-- bilingual-en:start -->\n## [[数列上极限|Sequence limit superior]]\nFor finite real terms $x_n$, the tail ceilings $M_N=\\sup_{n\\ge N}x_n$ are nonincreasing. Their limit is $\\limsup x_n$, allowing $\\pm\\infty$. It records the limiting upper level of whole tails; the original sequence need not converge.\n<!-- bilingual-en:end -->\n\n对有限实数项，先取整个尾部的上确界 $M_N$，再让起点后移。不增的尾部上界的极限就是上极限，允许正负无穷；原数列不必收敛。"
     }
   ],
   "edges": [
@@ -477,7 +487,7 @@
       "fromSide": "right",
       "toNode": "s002",
       "toSide": "left",
-      "label": "相邻部分和之差"
+      "label": "Adjacent partial sums differ by a_n; finite limits force a_n→0 / 相邻部分和之差为通项，有限极限迫使通项趋零"
     },
     {
       "id": "e02",
@@ -501,7 +511,7 @@
       "fromSide": "bottom",
       "toNode": "finite-geometric",
       "toSide": "top",
-      "label": "先算有限部分和"
+      "label": "Compute finite geometric totals before taking a limit / 几何结构先算有限部分和，再讨论极限"
     },
     {
       "id": "e05",
@@ -509,7 +519,7 @@
       "fromSide": "right",
       "toNode": "s011",
       "toSide": "left",
-      "label": "双侧倍数夹逼"
+      "label": "A finite positive ratio limit gives eventual bounds by two positive multiples / 比值趋于有限正常数，最终给出双向正常数倍比较"
     },
     {
       "id": "e06",
@@ -517,7 +527,7 @@
       "fromSide": "right",
       "toNode": "s013",
       "toSide": "left",
-      "label": "p>0 时取 x⁻ᵖ"
+      "label": "For p>0, apply the integral test to x^(−p) / p>0 时以 x⁻ᵖ 应用积分判别"
     },
     {
       "id": "e07",
@@ -525,7 +535,7 @@
       "fromSide": "bottom",
       "toNode": "s018",
       "toSide": "top",
-      "label": "矩形比较用于尾部"
+      "label": "After convergence, rectangles bound the omitted tail / 确认收敛后，用矩形夹住遗漏尾部"
     },
     {
       "id": "e08",
@@ -533,7 +543,7 @@
       "fromSide": "bottom",
       "toNode": "s019",
       "toSide": "top",
-      "label": "提供常用基准"
+      "label": "Reciprocal powers provide justified comparison benchmarks / 倒数幂提供可核验的比较基准"
     },
     {
       "id": "e09",
@@ -541,7 +551,7 @@
       "fromSide": "right",
       "toNode": "s007",
       "toSide": "left",
-      "label": "整段尾和被控制"
+      "label": "Magnitude tails control every signed or complex tail / 幅度尾和控制每段带符号或复数尾和"
     },
     {
       "id": "e10",
@@ -549,7 +559,7 @@
       "fromSide": "bottom",
       "toNode": "s008",
       "toSide": "top",
-      "label": "可控制遗漏尾部"
+      "label": "Absolute convergence controls omitted terms in any bijective reordering / 绝对收敛控制每项恰用一次重排中的遗漏尾项"
     },
     {
       "id": "e11",
@@ -557,7 +567,7 @@
       "fromSide": "right",
       "toNode": "s009",
       "toSide": "left",
-      "label": "正负分量均无界"
+      "label": "For real conditional series, positive-term and negative-magnitude totals are both unbounded / 实数条件收敛时，正项与负项幅度总量均无界"
     },
     {
       "id": "e12",
@@ -565,7 +575,7 @@
       "fromSide": "right",
       "toNode": "s017",
       "toSide": "left",
-      "label": "相邻部分和夹逼"
+      "label": "Within the controlled tail, consecutive totals enclose the limit / 在受控尾部，相邻部分和夹住极限"
     },
     {
       "id": "e13",
@@ -575,7 +585,7 @@
       "toNode": "s007",
       "toSide": "bottom",
       "toEnd": "none",
-      "label": "两种收敛证明机制"
+      "label": "Distinct sufficient routes: alternating cancellation or summable magnitudes / 两种充分途径：交错抵消或幅度可求和"
     },
     {
       "id": "e14",
@@ -583,7 +593,7 @@
       "fromSide": "right",
       "toNode": "s021",
       "toSide": "left",
-      "label": "几何比较定范围"
+      "label": "Convergence away from the centre gives absolute convergence closer in / 非中心处收敛，几何比较保证更近处绝对收敛"
     },
     {
       "id": "e15",
@@ -591,7 +601,7 @@
       "fromSide": "right",
       "toNode": "s022",
       "toSide": "left",
-      "label": "内部结论不含端点"
+      "label": "A finite positive radius leaves two endpoints undecided / 有限正半径留下两个未判端点"
     },
     {
       "id": "e16",
@@ -599,7 +609,7 @@
       "fromSide": "bottom",
       "toNode": "s029",
       "toSide": "top",
-      "label": "严格内部可求导"
+      "label": "Positive radius permits differentiation in the strict interior / 正半径的严格内部可逐项求导"
     },
     {
       "id": "e17",
@@ -607,7 +617,7 @@
       "fromSide": "top",
       "toNode": "s022",
       "toSide": "bottom",
-      "label": "操作后重查端点"
+      "label": "Same radius after integration; retest the endpoint series and its value / 积分后半径相同，端点级数及其和另证"
     },
     {
       "id": "e18",
@@ -615,7 +625,7 @@
       "fromSide": "right",
       "toNode": "s023",
       "toSide": "left",
-      "label": "依次作部分和"
+      "label": "Taylor polynomials are its partial sums / Taylor 多项式是它的部分和"
     },
     {
       "id": "e19",
@@ -623,7 +633,7 @@
       "fromSide": "right",
       "toNode": "s024",
       "toSide": "left",
-      "label": "还需余项趋零"
+      "label": "At fixed x: equality iff the remainder vanishes / 固定 x：等式成立当且仅当余项趋零"
     },
     {
       "id": "e20",
@@ -631,7 +641,7 @@
       "fromSide": "left",
       "toNode": "s024",
       "toSide": "right",
-      "label": "余项不趋零的反例"
+      "label": "For x≠0: zero series, positive remainder / x≠0：零级数却有正余项"
     },
     {
       "id": "e21",
@@ -647,7 +657,7 @@
       "fromSide": "right",
       "toNode": "s026",
       "toSide": "left",
-      "label": "固定 x 时界趋零"
+      "label": "Exponential remainder bound vanishes for fixed x / 指数余项界对固定 x 趋零"
     },
     {
       "id": "e23",
@@ -655,7 +665,7 @@
       "fromSide": "bottom",
       "toNode": "s027",
       "toSide": "top",
-      "label": "导数界为 1"
+      "label": "Sine derivatives bounded by 1 make the remainder vanish / 正弦导数界 1 使余项趋零"
     },
     {
       "id": "e24",
@@ -663,7 +673,7 @@
       "fromSide": "right",
       "toNode": "s036",
       "toSide": "left",
-      "label": "逐项求导"
+      "label": "Differentiate within infinite radius / 在无穷收敛半径内部逐项求导"
     },
     {
       "id": "e25",
@@ -671,7 +681,7 @@
       "fromSide": "right",
       "toNode": "s035",
       "toSide": "left",
-      "label": "再逐项积分"
+      "label": "Then integrate from 0 to finite x and scale by 2/√π / 再从 0 积到有限 x，并乘 2/√π"
     },
     {
       "id": "e26",
@@ -679,7 +689,7 @@
       "fromSide": "left",
       "toNode": "s035",
       "toSide": "right",
-      "label": "同一函数的展开"
+      "label": "Represent the same integral at each finite real x / 在每个有限实数 x 表示同一积分"
     },
     {
       "id": "e27",
@@ -687,7 +697,7 @@
       "fromSide": "top",
       "toNode": "s034",
       "toSide": "bottom",
-      "label": "确定归一化常数"
+      "label": "Half-line integral gives the limit erf(x)→1 as x→+∞ / 半线积分给出 x→+∞ 时 erf(x)→1"
     },
     {
       "id": "g01",
@@ -728,6 +738,62 @@
       "toNode": "g-application",
       "toSide": "top",
       "label": "从已证表示生成新展开"
+    },
+    {
+      "id": "p91-limsup-root",
+      "fromNode": "sequence-limsup",
+      "fromSide": "bottom",
+      "toNode": "s015",
+      "toSide": "top",
+      "label": "Tail ceilings give eventual and infinitely-often thresholds / 尾部上界给出最终与无穷多次的阈值"
+    },
+    {
+      "id": "p91-ratio-absolute",
+      "fromNode": "s014",
+      "fromSide": "bottom",
+      "toNode": "s007",
+      "toSide": "top",
+      "label": "A ratio limit below one gives summable magnitudes / 比值极限小于一时，幅度可求和"
+    },
+    {
+      "id": "p91-root-absolute",
+      "fromNode": "s015",
+      "fromSide": "bottom",
+      "toNode": "s007",
+      "toSide": "top",
+      "label": "A root limsup below one gives summable magnitudes / 根值上极限小于一时，幅度可求和"
+    },
+    {
+      "id": "p92-radius-integration",
+      "fromNode": "s021",
+      "fromSide": "bottom",
+      "toNode": "s030",
+      "toSide": "left",
+      "label": "For R>0, a finite interior segment has a common tail bound / R>0 时，有限内部区间有共同尾界"
+    },
+    {
+      "id": "p92-radius-product",
+      "fromNode": "s021",
+      "fromSide": "top",
+      "toNode": "s031",
+      "toSide": "top",
+      "label": "For a shared centre, two positive radii give a common absolute interior / 同中心的两个正半径给出共同绝对收敛内部"
+    },
+    {
+      "id": "p93-integrate-log",
+      "fromNode": "s030",
+      "fromSide": "bottom",
+      "toNode": "s028",
+      "toSide": "top",
+      "label": "Integrate the geometric series for |x|<1; x=1 separately / |x|<1 内积分几何级数；x=1 另证"
+    },
+    {
+      "id": "p93-exp-substitute",
+      "fromNode": "s026",
+      "fromSide": "bottom",
+      "toNode": "s032",
+      "toSide": "top",
+      "label": "Substitute u=−t² for every real t / 对任意实数 t 代入 u=−t²"
     }
   ]
 }

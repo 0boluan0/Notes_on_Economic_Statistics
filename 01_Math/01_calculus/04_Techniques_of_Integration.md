@@ -1609,6 +1609,12 @@ $$
 **Summary:** Integration by parts reverses the product rule; a good choice of $u$ and $dv$ makes a clear measure of complexity decrease at each step.
 <!-- bilingual-en:end -->
 
+<!-- bilingual-en:start -->
+The decrease-at-each-step description applies to examples such as polynomial degree reduction. In [[循环分部积分|cyclic integration by parts]], a useful sequence can instead return the same integral with a different coefficient; the resulting solvable equation supplies the progress. Choosing an unknown original primitive merely assumes what is being sought; if that primitive is already available, the step is legal but may add no information.
+<!-- bilingual-en:end -->
+
+“每一步下降”适用于多项式降次等例子。在[[循环分部积分]]中，有用的计算也可能回到同一原积分而改变其系数，进展来自最终可解的等式。若直接选取尚未知的原积分作原函数，就假定了待求结果；若原函数已经可求，这步合法，但可能不增加信息。
+
 ## Session 77：Volume of a wine glass
 
 ### 本节问题与几何模型

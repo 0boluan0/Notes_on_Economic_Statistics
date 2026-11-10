@@ -7,7 +7,7 @@
       "y": 0,
       "width": 6000,
       "height": 220,
-      "text": "# Monte Carlo · 学习总图\n\n从伪随机输入进入基本估计，再把抽样误差与模型、实现和数值误差分开；方差缩减按方法与失败条件展开。箭头表达使用或判断关系，不表示掌握度。"
+      "text": "<!-- bilingual-en:start -->\n# Monte Carlo\nStart with a specified model and recorded output, then distinguish the estimator, its simulation uncertainty and errors outside that calculation. Variance-reduction methods change how the estimate is constructed.\n<!-- bilingual-en:end -->\n\n# Monte Carlo · 学习总图\n先明确模型与记录的输出，再区分估计量、模拟不确定性及其之外的误差；方差缩减方法改变估计量的构造。"
     },
     {
       "id": "mc-prng",
@@ -15,8 +15,8 @@
       "x": 0,
       "y": 350,
       "width": 520,
-      "height": 260,
-      "text": "## [[伪随机数生成器]]\n\n从有限内部状态出发，以确定性递推产生面向模拟的数列。\n\n**结构：** 初始化 · 状态转移 · 输出映射。"
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[伪随机数生成器|Pseudorandom generators]]\nAn algorithm advances a finite internal state to produce simulation inputs. Fixing the state and operation protocol makes the sequence repeatable; statistical suitability and independence need separate justification.\n<!-- bilingual-en:end -->\n\n## [[伪随机数生成器]]\n算法推进有限内部状态，生成模拟输入。固定状态与操作协议可重复序列；统计适用性和独立性须另有依据。"
     },
     {
       "id": "mc-security",
@@ -24,8 +24,8 @@
       "x": 0,
       "y": 650,
       "width": 520,
-      "height": 240,
-      "text": "## [[伪随机与密码安全]]\n\n适合模拟的 PRNG 不因此适合密码用途。\n\n**原因：** 统计性质≠对手模型下不可预测。"
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[伪随机与密码安全|Simulation randomness and security]]\nGood simulation statistics do not establish resistance to prediction. Secret tokens need a security-oriented construction, secret state and sufficient unpredictable input under a stated threat model.\n<!-- bilingual-en:end -->\n\n## [[伪随机与密码安全]]\n良好的模拟统计性质不证明难以预测。秘密令牌需要面向安全的构造、秘密状态及足够不可预测的输入，并明确威胁模型。"
     },
     {
       "id": "mc-replay",
@@ -33,8 +33,8 @@
       "x": 900,
       "y": 350,
       "width": 520,
-      "height": 260,
-      "text": "## [[伪随机复现]]\n\n重放需要固定算法、初始化与调用协议，并验证软件的流兼容条件。\n\n**边界：** seed 不是完整实验记录。"
+      "height": 330,
+      "text": "<!-- bilingual-en:start -->\n## [[伪随机复现|Replaying pseudorandom inputs]]\nReplay requires the same generator, initial state and call protocol under documented software compatibility. Record task-to-stream assignments as well. A seed alone is not a complete experiment record, and replay does not establish a correct model.\n<!-- bilingual-en:end -->\n\n## [[伪随机复现]]\n重放要求在文档兼容条件下保持生成器、初始状态与调用协议，并记录任务到随机流的分配。种子不是完整实验记录；可复现也不证明模型正确。"
     },
     {
       "id": "mc-streams",
@@ -42,8 +42,8 @@
       "x": 1800,
       "y": 350,
       "width": 520,
-      "height": 260,
-      "text": "## [[并行伪随机子流]]\n\n从可记录根状态派生独立性有构造依据的子流。\n\n**边界：** 同算法和调用协议下复制 seed 会复制随机流。"
+      "height": 350,
+      "text": "<!-- bilingual-en:start -->\n## [[并行伪随机子流|Parallel pseudorandom streams]]\nUse documented spawning, separated jump blocks or distinct supported keys, and record stable task identities. Distinct seeds alone do not prove independence; the same algorithm, state and calls duplicate a stream. Reproducible streams remain pseudorandom constructions.\n<!-- bilingual-en:end -->\n\n## [[并行伪随机子流]]\n使用有文档依据的派生、分隔跳跃区段或不同的受支持 key，并记录稳定任务身份。种子不同不单独证明独立；相同算法、状态与调用会复制流。可复现流仍是伪随机构造。"
     },
     {
       "id": "mc-estimator",
@@ -51,8 +51,8 @@
       "x": 0,
       "y": 950,
       "width": 520,
-      "height": 280,
-      "text": "## [[Monte Carlo估计]]\n\n从指定模型重复抽样，用样本平均近似目标期望。\n\n**结构：** 分布 P · 输出 g · 汇总估计量。"
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[Monte Carlo估计|Monte Carlo estimation]]\nGenerate outputs from a specified model and average them to estimate an expectation. Define the distribution, the recorded function and what one run contains.\n<!-- bilingual-en:end -->\n\n## [[Monte Carlo估计]]\n按指定模型生成输出并求平均，以估计期望；先定义分布、记录的函数和一次实验包含什么。"
     },
     {
       "id": "mc-se",
@@ -60,8 +60,8 @@
       "x": 900,
       "y": 950,
       "width": 520,
-      "height": 280,
-      "text": "## [[Monte Carlo均值标准误]]\n\niid 且有限方差时，样本均值无偏，方差为 sigma²/N。\n\n**精确结果：** SE = sigma/sqrt(N)。"
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[Monte Carlo均值标准误|Standard error of the MC mean]]\nFor a fixed positive integer N and iid outputs with finite variance σ², the mean is unbiased and has SE σ/√N. Estimating σ from data is a separate step; N≥2 is needed for the usual sample variance.\n<!-- bilingual-en:end -->\n\n## [[Monte Carlo均值标准误]]\n预先固定正整数N、iid且方差σ²有限时，均值无偏、SE为σ/√N。用数据估计σ是另一步；通常样本方差要求N≥2。"
     },
     {
       "id": "mc-ci",
@@ -69,8 +69,8 @@
       "x": 900,
       "y": 1300,
       "width": 520,
-      "height": 280,
-      "text": "## [[Monte Carlo近似区间]]\n\n用样本标准差学生化，构造均值的大样本正态区间。\n\n**边界：** 近似覆盖率不是小样本保证。"
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[Monte Carlo近似区间|Normal approximation interval]]\nFor a fixed planned N and iid outputs with positive finite variance, studentization gives asymptotic coverage. No universal finite N guarantees accuracy; rare events can yield a zero-width interval.\n<!-- bilingual-en:end -->\n\n## [[Monte Carlo近似区间]]\n预先固定N、iid且方差正而有限时，学生化给出渐近覆盖率；不存在通用有限N保证，罕见事件可使区间退化。"
     },
     {
       "id": "mc-cost",
@@ -78,8 +78,8 @@
       "x": 1800,
       "y": 1300,
       "width": 520,
-      "height": 280,
-      "text": "## [[Monte Carlo平方根律]]\n\n固定单次方差时，标准误缩小 k 倍需要 k² 倍独立样本。\n\n**例：** 四倍路径只把 SE 减半。"
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[Monte Carlo平方根律|Square-root law]]\nWith a fixed iid output law and positive finite variance, dividing SE by k requires about k² times as many outputs in total. Four times as many halves SE, not necessarily the realized error.\n<!-- bilingual-en:end -->\n\n## [[Monte Carlo平方根律]]\n固定iid输出分布、方差正且有限时，SE除以k需要总输出数约乘k²。四倍输出使SE减半，不保证本次误差减半。"
     },
     {
       "id": "mc-errors",
@@ -87,8 +87,8 @@
       "x": 1800,
       "y": 950,
       "width": 520,
-      "height": 280,
-      "text": "## [[Monte Carlo误差分层]]\n\n分开抽样、数值近似、实现与模型误差。\n\n**边界：** 四层不是通用的可加分解。"
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[Monte Carlo误差分层|Diagnosing Monte Carlo error]]\nSeparate sampling variation, numerical approximation, implementation and model adequacy. These are diagnostic questions, not automatically additive independent errors. MCSE covers sampling variation.\n<!-- bilingual-en:end -->\n\n## [[Monte Carlo误差分层]]\n分别检查抽样波动、数值近似、实现与模型是否适用。这是诊断问题，不能自动作为独立误差相加；MCSE只覆盖抽样波动。"
     },
     {
       "id": "mc-paths",
@@ -96,8 +96,8 @@
       "x": 2700,
       "y": 950,
       "width": 520,
-      "height": 280,
-      "text": "## [[路径数不修模型]]\n\n增加路径只收缩给定目标周围的抽样波动。\n\n**边界：** 错误极限仍然是错误。"
+      "height": 350,
+      "text": "<!-- bilingual-en:start -->\n## [[路径数不修模型|More paths and model error]]\nHold the model and output rule fixed. Iid integrable outputs average toward the implemented mean, which may differ from the intended target. With finite variance and prespecified N, mean SE is σ/√N, where σ is one output's standard deviation. More paths do not remove a fixed target discrepancy.\n<!-- bilingual-en:end -->\n\n## [[路径数不修模型]]\n固定模型与输出规则，可积 iid 输出的平均趋向实际均值，它可能不同于原目标。方差有限、N 事先固定时，均值 SE 为 σ/√N，σ 是一次输出的标准差。增加路径不消除固定目标差。"
     },
     {
       "id": "mc-verify",
@@ -105,8 +105,8 @@
       "x": 4500,
       "y": 950,
       "width": 520,
-      "height": 280,
-      "text": "## [[Monte Carlo实现验证]]\n\n解析特例 → 组件测试 → 分别改变随机子流、N 与步长。\n\n**目的：** 让失败能够定位。"
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[Monte Carlo实现验证|Verifying an implementation]]\nUse known inputs and analytic benchmarks. Change sample count, approximation resolution and random streams in controlled comparisons. Passing code checks does not establish real-world model validity.\n<!-- bilingual-en:end -->\n\n## [[Monte Carlo实现验证]]\n用已知输入与解析特例检查程序；在受控对比中分别改变样本数、近似精细度与随机流。程序通过检查仍需另验现实模型是否适用。"
     },
     {
       "id": "mc-viz",
@@ -123,8 +123,8 @@
       "x": 0,
       "y": 1750,
       "width": 520,
-      "height": 280,
-      "text": "## [[方差缩减比较口径]]\n\n固定目标与偏差口径，比较达到同等精度的总成本。\n\n**报告：** SE · 函数评估 · 墙钟成本。"
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[方差缩减比较口径|Comparing efficiency]]\nFix the target and bias criterion. Under independent complete units with positive finite variance and fixed counts, compare cost at a common precision; include rounding and setup costs.\n<!-- bilingual-en:end -->\n\n## [[方差缩减比较口径]]\n固定目标与偏差口径。在完整单位独立、方差有限且为正、次数预先固定的条件下，比较同等精度成本，并计入取整与启动成本。"
     },
     {
       "id": "mc-vr",
@@ -132,8 +132,8 @@
       "x": 900,
       "y": 1750,
       "width": 520,
-      "height": 280,
-      "text": "## [[方差缩减]]\n\n重新设计估计量，提高单位计算成本精度。\n\n**边界：** 不修模型、代码或离散化。"
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[方差缩减|Variance reduction]]\nRedesign an estimator of the same expectation. Identify the complete random unit, such as a pair, and count its cost. A named technique does not guarantee a smaller variance or a cheaper estimate.\n<!-- bilingual-en:end -->\n\n## [[方差缩减]]\n重新设计同一期望的估计量，明确配对等完整随机单位及其成本。采用某种方法，并不保证方差更小或估计更便宜。"
     },
     {
       "id": "mc-risk",
@@ -159,8 +159,8 @@
       "x": 0,
       "y": 2400,
       "width": 520,
-      "height": 280,
-      "text": "## [[共同随机数]]\n\n用同一随机输入成对评估两个方案。\n\n**对象：** 估计两个方案输出的期望差。"
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[共同随机数|Common random numbers]]\nCouple two alternatives while preserving each output law. With finite second moments, positive output covariance reduces the variance of their difference relative to independent outputs with the same marginals. Shared inputs do not guarantee that sign.\n<!-- bilingual-en:end -->\n\n## [[共同随机数]]\n保留各方案的输出分布并构造配对。二阶矩有限时，相对同边际的独立输出，正协方差降低差值方差；共享输入不保证这个符号。"
     },
     {
       "id": "mc-anti",
@@ -168,8 +168,8 @@
       "x": 800,
       "y": 2400,
       "width": 520,
-      "height": 280,
-      "text": "## [[对偶变量]]\n\n把样本与保持同一边际分布的反向样本配对并平均。\n\n**边界：** 反向输入不保证输出负相关。"
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[对偶变量|Antithetic variables]]\nAverage two outputs with the same marginal law. With finite second moments, negative output covariance improves on two independent evaluations; reversing the input alone is insufficient. Treat each complete pair as one replication.\n<!-- bilingual-en:end -->\n\n## [[对偶变量]]\n平均两个同边际输出；二阶矩有限时，输出负协方差才优于两次独立计算，输入反向本身不充分。每个完整配对算一次复制。"
     },
     {
       "id": "mc-control",
@@ -177,8 +177,8 @@
       "x": 1800,
       "y": 2400,
       "width": 520,
-      "height": 280,
-      "text": "## [[控制变量]]\n\n利用已知期望构造零均值修正。\n\n**条件：** control 便宜、相关、均值确知。"
+      "height": 350,
+      "text": "<!-- bilingual-en:start -->\n## [[控制变量|Control variates]]\nSubtract a fixed multiple of a zero-mean control fluctuation from each output. The exact control mean preserves expectation when the terms are integrable. Correlation and computation cost determine usefulness; a fitted coefficient needs its own analysis.\n<!-- bilingual-en:end -->\n\n## [[控制变量]]\n每个输出减去控制量零均值波动的固定倍数。项可积且控制均值准确时保持期望；相关程度和计算成本决定是否值得使用。拟合系数需另作分析。"
     },
     {
       "id": "mc-is",
@@ -186,8 +186,8 @@
       "x": 3600,
       "y": 2400,
       "width": 520,
-      "height": 280,
-      "text": "## [[重要性抽样]]\n\n从 proposal q 抽样，以 p/q 恢复目标积分。\n\n**边界：** 换分布必须补权重。"
+      "height": 350,
+      "text": "<!-- bilingual-en:start -->\n## [[重要性抽样|Importance sampling]]\nDraw from q and average h(X)p(X)/q(X) with a fixed positive sample size N as denominator. An integrable target and adequate coverage recover the target expectation. The samples still follow q; neither a variance reduction nor a justified ratio estimator follows automatically.\n<!-- bilingual-en:end -->\n\n## [[重要性抽样]]\n从 q 抽样，以预先固定的正整数 N 为分母平均 h(X)p(X)/q(X)。目标可积且覆盖充分时恢复目标期望，样本本身仍服从 q。方差缩减及改用比率估计都须另核。"
     },
     {
       "id": "mc-pair-sign",
@@ -195,8 +195,8 @@
       "x": 700,
       "y": 3000,
       "width": 520,
-      "height": 280,
-      "text": "## [[配对方差缩减的协方差方向]]\n\n差值需要正协方差；平均需要负协方差。\n\n**原因：** 协方差项符号相反。"
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[配对方差缩减的协方差方向|Covariance direction]]\nWith fixed marginals and finite second moments, positive covariance reduces difference variance; negative covariance reduces average variance, compared with independence. Runtime efficiency also depends on cost.\n<!-- bilingual-en:end -->\n\n## [[配对方差缩减的协方差方向]]\n固定边际、二阶矩有限时，相对独立配对，正协方差降低差值方差，负协方差降低平均方差；运行效率还要比较成本。"
     },
     {
       "id": "mc-control-beta",
@@ -204,8 +204,8 @@
       "x": 1400,
       "y": 3000,
       "width": 520,
-      "height": 280,
-      "text": "## [[控制变量最优系数]]\n\nbeta* = Cov(Y,C)/Var(C)。\n\n**结果：** 理想方差比例为 1-rho²。"
+      "height": 350,
+      "text": "<!-- bilingual-en:start -->\n## [[控制变量最优系数|Optimal control coefficient]]\nFor finite second moments and positive control variance, the optimal fixed coefficient is Cov(Y,C)/Var(C). The variance ratio is 1−ρ² when output variance is also positive. This population optimum is generally unknown.\n<!-- bilingual-en:end -->\n\n## [[控制变量最优系数]]\n二阶矩有限且控制量方差为正时，最优固定系数为 Cov(Y,C)/Var(C)。输出方差也为正时，方差比例为 1−ρ²。这个总体最优值通常未知。"
     },
     {
       "id": "mc-control-mean",
@@ -213,8 +213,8 @@
       "x": 2100,
       "y": 3000,
       "width": 520,
-      "height": 280,
-      "text": "## [[控制变量均值误设]]\n\n错误 control 均值直接改变估计目标。\n\n**偏差：** -beta(E[C]-m)。"
+      "height": 350,
+      "text": "<!-- bilingual-en:start -->\n## [[控制变量均值误设|Misspecified control mean]]\nUsing m instead of the true mean m₀ adds bias β(m−m₀) for fixed β. More production samples do not remove that shift. An independent estimated mean adds its own uncertainty; reusing the sample mean can cancel the entire correction.\n<!-- bilingual-en:end -->\n\n## [[控制变量均值误设]]\n固定 β 下，用 m 代替真均值 m₀ 会引入 β(m−m₀) 偏差，增加正式样本不能消除这项平移。独立估计均值还带来不确定性；复用同批样本均值可能抵消整个修正。"
     },
     {
       "id": "mc-control-fit",
@@ -222,8 +222,8 @@
       "x": 2800,
       "y": 3000,
       "width": 520,
-      "height": 280,
-      "text": "## [[同样本估计控制系数偏差]]\n\n估计并应用同一 beta-hat 会改变有限样本性质。\n\n**替代：** 独立 pilot 或明确偏差分析。"
+      "height": 355,
+      "text": "<!-- bilingual-en:start -->\n## [[同样本估计控制系数偏差|Fitting the control coefficient on the same sample]]\nThe fitted coefficient and control mean can co-move, producing bias. A probability-order bound alone does not bound expected bias. An independent pilot followed by a fixed-size production sample restores unbiasedness under the stated integrability conditions.\n<!-- bilingual-en:end -->\n\n## [[同样本估计控制系数偏差]]\n拟合系数与控制平均值共同波动，可能产生偏差；概率阶本身不限定期望偏差。独立预备样本加固定大小的正式样本，在声明的可积条件下恢复无偏性。"
     },
     {
       "id": "mc-is-support",
@@ -231,8 +231,8 @@
       "x": 3500,
       "y": 3000,
       "width": 520,
-      "height": 280,
-      "text": "## [[重要性抽样支持条件]]\n\nq 应覆盖 h·p 非零区域。\n\n**精确边界：** 偏差等于遗漏积分的负值。"
+      "height": 350,
+      "text": "<!-- bilingual-en:start -->\n## [[重要性抽样支持条件|Importance-sampling coverage]]\nFor the fixed integrable target h, q>0 wherever hp≠0 almost everywhere is sufficient. Bias is minus the signed integral omitted by q. Accidental cancellation for one h supplies no guarantee for a different target.\n<!-- bilingual-en:end -->\n\n## [[重要性抽样支持条件]]\n对固定可积目标 h，几乎处处在 hp≠0 处有 q>0 是充分条件。偏差等于 q 遗漏的有符号积分的负值。某个 h 的偶然抵消不能保证换目标后仍正确。"
     },
     {
       "id": "mc-is-variance",
@@ -240,8 +240,8 @@
       "x": 4200,
       "y": 3000,
       "width": 520,
-      "height": 280,
-      "text": "## [[重要性抽样权重方差]]\n\n支持正确仍需 h·p/q 平方可积。\n\n**失败：** 极端权重可造成无限方差。"
+      "height": 360,
+      "text": "<!-- bilingual-en:start -->\n## [[重要性抽样权重方差|Variance of weighted outputs]]\nVariance is governed by Z=hp/q, including the quantity h being estimated. For fixed positive N, valid coverage and iid draws, finite E_q[Z²] gives Var(mean)=Var_q(Z)/N. The same weights can yield infinite variance for one h and zero variance for another.\n<!-- bilingual-en:end -->\n\n## [[重要性抽样权重方差]]\n方差取决于 Z=hp/q，包含要估的 h。预先固定正整数 N，覆盖正确、iid 抽样且 E_q[Z²] 有限时，均值方差为 Var_q(Z)/N。同一套权重可对一个 h 给出无限方差，对另一个 h 给出零方差。"
     },
     {
       "id": "mc-snis",
@@ -249,8 +249,8 @@
       "x": 4900,
       "y": 3000,
       "width": 520,
-      "height": 280,
-      "text": "## [[自归一化重要性抽样]]\n\n用加权和之比消去未知归一化常数。\n\n**对象：** 它是随机比率，不是普通加权均值。"
+      "height": 350,
+      "text": "<!-- bilingual-en:start -->\n## [[自归一化重要性抽样|Self-normalised importance sampling]]\nDivide the weighted output sum by the observed weight sum to cancel a common positive scale. The ratio needs a positive denominator. The draws still follow the proposal; full target coverage supports both numerator and denominator.\n<!-- bilingual-en:end -->\n\n## [[自归一化重要性抽样]]\n加权输出和除以实际权重和，消去共同正常数。比率要求分母为正，观测仍来自提议分布；完整目标覆盖同时支持分子与分母。"
     },
     {
       "id": "mc-snis-bias",
@@ -258,8 +258,8 @@
       "x": 4550,
       "y": 3600,
       "width": 520,
-      "height": 280,
-      "text": "## [[自归一抽样有限样本偏差]]\n\n随机比率通常没有有限样本无偏保证。\n\n**边界：** 特殊抵消仍可能精确。"
+      "height": 350,
+      "text": "<!-- bilingual-en:start -->\n## [[自归一抽样有限样本偏差|Finite-sample SNIS bias]]\nThe mean of ratios need not equal the ratio of means. Bias requires a defined, integrable estimator, including a rule for zero total weight. Constant outputs and other special cases can be exact; consistency supplies no finite-sample unbiasedness guarantee.\n<!-- bilingual-en:end -->\n\n## [[自归一抽样有限样本偏差]]\n比率的平均一般不等于平均之比。谈偏差先要求估计量有定义、可积，并说明零权重和规则。常数输出等特例可以精确；一致性不保证有限样本无偏。"
     },
     {
       "id": "mc-snis-consistency",
@@ -267,8 +267,8 @@
       "x": 5250,
       "y": 3600,
       "width": 520,
-      "height": 280,
-      "text": "## [[自归一抽样强一致性]]\n\n支持覆盖与绝对可积使比率几乎必然收敛。\n\n**边界：** 一致不等于无偏或有限方差。"
+      "height": 390,
+      "text": "<!-- bilingual-en:start -->\n## [[自归一抽样强一致性|Strong consistency of SNIS]]\nWith fixed target/proposal, iid draws, full target coverage and an output h with E_p|h(X)|<∞, two strong laws give a finite positive denominator limit and the correct ratio limit. A fixed finite fallback on zero-weight batches changes only an almost surely finite initial segment.\n<!-- bilingual-en:end -->\n\n## [[自归一抽样强一致性]]\n固定目标/提议、iid 抽样、完整目标覆盖，且输出 h 在目标 p 下绝对可积时，两次强大数定律给出有限的正分母极限 和正确的比率极限。零权重批次填固定有限值，只影响几乎必然有限的一段开头。"
     },
     {
       "id": "mc-crn-sync",
@@ -276,8 +276,17 @@
       "x": 0,
       "y": 3000,
       "width": 520,
-      "height": 280,
-      "text": "## [[共同随机数输入同步]]\n\n两个方案必须把共享输入解释为同一冲击。\n\n**边界：** 相同 seed 不等于调用错位后仍是同一场景。"
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[共同随机数输入同步|Synchronising shared inputs]]\nAssign shared inputs stable object and shock identities. An extra branch can shift calls despite matching seeds. Lost alignment may worsen covariance without biasing the difference, if each output law remains correct.\n<!-- bilingual-en:end -->\n\n## [[共同随机数输入同步]]\n按对象与冲击身份分配共享输入。即使 seed 相同，额外分支仍可使调用错位；若各输出分布仍正确，错位可能只损害协方差收益。"
+    },
+    {
+      "id": "p29samplecount",
+      "type": "text",
+      "x": 0,
+      "y": 1300,
+      "width": 520,
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[样本量与模拟重复次数|One experiment versus repeated runs]]\nA run may contain n observations and return one estimate. The R runs then yield R outputs; averaging those outputs is a new estimator with its own standard error.\n<!-- bilingual-en:end -->\n\n## [[样本量与模拟重复次数]]\n一次实验可含n个观察并输出一个估计值。重复R次得到R个输出；再对输出求平均，是有自身标准误的新估计量。"
     }
   ],
   "edges": [
@@ -287,7 +296,7 @@
       "fromSide": "right",
       "toNode": "mc-replay",
       "toSide": "left",
-      "label": "状态→可重放"
+      "label": "Complete state, compatible algorithm and calls enable replay · 完整状态、兼容算法与调用支持重放"
     },
     {
       "id": "mc-e02",
@@ -303,7 +312,7 @@
       "fromSide": "bottom",
       "toNode": "mc-security",
       "toSide": "top",
-      "label": "模拟适用≠安全适用"
+      "label": "Statistical suitability does not certify unpredictability · 统计适用不认证不可预测性"
     },
     {
       "id": "mc-e04",
@@ -311,7 +320,7 @@
       "fromSide": "bottom",
       "toNode": "mc-se",
       "toSide": "top",
-      "label": "复制流破坏有效 N"
+      "label": "Copied batches add no independent replications · 复制批次不新增独立重复"
     },
     {
       "id": "mc-e05",
@@ -319,7 +328,7 @@
       "fromSide": "right",
       "toNode": "mc-se",
       "toSide": "left",
-      "label": "估计量→抽样误差"
+      "label": "iid + finite variance · iid与有限方差"
     },
     {
       "id": "mc-e06",
@@ -327,7 +336,7 @@
       "fromSide": "right",
       "toNode": "mc-errors",
       "toSide": "left",
-      "label": "SE只覆盖一层"
+      "label": "MCSE covers sampling only · MCSE只覆盖抽样波动"
     },
     {
       "id": "mc-e07",
@@ -335,7 +344,7 @@
       "fromSide": "right",
       "toNode": "mc-paths",
       "toSide": "left",
-      "label": "抽样误差≠模型误差"
+      "label": "Separate sampling fluctuation from a fixed target discrepancy · 区分抽样波动与固定目标差"
     },
     {
       "id": "mc-e08",
@@ -343,7 +352,7 @@
       "fromSide": "right",
       "toNode": "mc-verify",
       "toSide": "left",
-      "label": "固定偏离需定位"
+      "label": "Locate persistent discrepancies · 定位持续偏离"
     },
     {
       "id": "mc-e09",
@@ -367,7 +376,7 @@
       "fromSide": "left",
       "toNode": "mc-compare",
       "toSide": "right",
-      "label": "先统一比较口径"
+      "label": "Compare the same target and precision · 统一目标与精度"
     },
     {
       "id": "mc-e12",
@@ -391,7 +400,7 @@
       "fromSide": "bottom",
       "toNode": "mc-control",
       "toSide": "top",
-      "label": "已知期望"
+      "label": "Exact mean gives zero-mean control · 准确均值构造零均值修正"
     },
     {
       "id": "mc-e15",
@@ -407,7 +416,7 @@
       "fromSide": "bottom",
       "toNode": "mc-pair-sign",
       "toSide": "top",
-      "label": "差值需要正协方差"
+      "label": "Difference: positive covariance helps · 差值受益于正协方差"
     },
     {
       "id": "mc-e17",
@@ -415,7 +424,7 @@
       "fromSide": "bottom",
       "toNode": "mc-pair-sign",
       "toSide": "top",
-      "label": "平均需要负协方差"
+      "label": "Average: negative covariance helps · 平均受益于负协方差"
     },
     {
       "id": "mc-e18",
@@ -423,7 +432,7 @@
       "fromSide": "bottom",
       "toNode": "mc-control-beta",
       "toSide": "top",
-      "label": "最优固定系数"
+      "label": "Minimise variance over fixed coefficients · 在固定系数中最小化方差"
     },
     {
       "id": "mc-e19",
@@ -431,7 +440,7 @@
       "fromSide": "bottom",
       "toNode": "mc-control-mean",
       "toSide": "top",
-      "label": "错误均值→偏差"
+      "label": "Fixed β: mean error gives β(m−m₀) bias · 固定 β：均值误差产生 β(m−m₀) 偏差"
     },
     {
       "id": "mc-e20",
@@ -439,7 +448,7 @@
       "fromSide": "bottom",
       "toNode": "mc-control-fit",
       "toSide": "top",
-      "label": "估计系数≠固定系数"
+      "label": "Random fitted coefficient needs its own bias argument · 随机拟合系数须另证偏差"
     },
     {
       "id": "mc-e21",
@@ -447,7 +456,7 @@
       "fromSide": "bottom",
       "toNode": "mc-is-support",
       "toSide": "top",
-      "label": "先保证目标正确"
+      "label": "Check coverage for the actual integrand · 按实际被积目标核对覆盖"
     },
     {
       "id": "mc-e22",
@@ -455,7 +464,7 @@
       "fromSide": "bottom",
       "toNode": "mc-is-variance",
       "toSide": "top",
-      "label": "再检查二阶矩"
+      "label": "Check the weighted output’s second moment · 检查加权输出二阶矩"
     },
     {
       "id": "mc-e23",
@@ -463,7 +472,7 @@
       "fromSide": "bottom",
       "toNode": "mc-snis",
       "toSide": "top",
-      "label": "未知常数→自归一"
+      "label": "Replace N by the weight sum; justify the ratio · 分母改为权重和，另核比率估计"
     },
     {
       "id": "mc-e24",
@@ -487,7 +496,7 @@
       "fromSide": "bottom",
       "toNode": "mc-snis-bias",
       "toSide": "top",
-      "label": "有限 N 的比率偏差"
+      "label": "Defined, integrable ratio before taking its expectation · 比率有定义且可积后再求期望"
     },
     {
       "id": "mc-e27",
@@ -495,7 +504,7 @@
       "fromSide": "bottom",
       "toNode": "mc-snis-consistency",
       "toSide": "top",
-      "label": "大样本收敛条件"
+      "label": "Two strong laws and a positive denominator limit · 两次强大数定律与正分母极限"
     },
     {
       "id": "mc-e28",
@@ -503,7 +512,7 @@
       "fromSide": "bottom",
       "toNode": "mc-ci",
       "toSide": "top",
-      "label": "估计 sigma→近似区间"
+      "label": "Fixed N + positive variance + CLT · 固定N、正方差与CLT"
     },
     {
       "id": "mc-e29",
@@ -511,7 +520,7 @@
       "fromSide": "bottom",
       "toNode": "mc-cost",
       "toSide": "top",
-      "label": "N^{-1/2}→成本律"
+      "label": "Hold the output law fixed · 固定单次输出分布"
     },
     {
       "id": "mc-e30",
@@ -519,7 +528,15 @@
       "fromSide": "bottom",
       "toNode": "mc-crn-sync",
       "toSide": "top",
-      "label": "共享输入必须同义对齐"
+      "label": "Preserve the intended coupling · 维持预定输入配对"
+    },
+    {
+      "id": "p29estcounts",
+      "fromNode": "mc-estimator",
+      "fromSide": "bottom",
+      "toNode": "p29samplecount",
+      "toSide": "top",
+      "label": "Specify what one run returns · 明确一次实验输出什么"
     }
   ]
 }

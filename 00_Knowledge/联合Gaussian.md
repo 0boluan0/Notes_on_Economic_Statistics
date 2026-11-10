@@ -1,68 +1,149 @@
 ---
 aliases:
-  - "随机向量联合 Gaussian 当且仅当每个线性组合都是一元 Gaussian"
-  - "Multivariate Gaussian linear-combination characterisation"
-  - "多元正态的线性组合定义"
-  - "Multivariate Normal Distribution"
-  - "MVN"
-  - "多元正态"
-  - "Gaussian向量刻画"
+- Multivariate normal distribution
+- Multivariate Gaussian distribution
+- Joint Gaussian distribution
+- Jointly Gaussian random vector
+- MVN
+- 多元正态
+- 多元正态分布
+- 联合高斯分布
 student_os: knowledge-atom
 atom_id: STAT-MVN-001
 atom_set: multivariate-normal
 atom_type: definition
 status: source-checked
-mastery_state: unassessed
 requires:
-  - "[[协方差矩阵半正定性]]"
-  - "[[半正定主平方根]]"
+- '[[协方差矩阵半正定性]]'
+- '[[半正定主平方根]]'
 part_of:
-  - "[[多元正态分布.canvas]]"
+- '[[多元正态分布.canvas]]'
 related:
-  - "[[Gaussian仿射闭包]]"
-  - "[[Gaussian密度与奇异支撑]]"
-  - "[[联合高斯独立判据]]"
-  - "[[Gaussian过程均值协方差决定性]]"
+- '[[Gaussian仿射闭包]]'
+- '[[Gaussian密度与奇异支撑]]'
+- '[[联合高斯独立判据]]'
+- '[[Gaussian过程均值协方差决定性]]'
 ---
 
-# 随机向量联合 Gaussian 当且仅当每个线性组合都是一元 Gaussian
 <!-- bilingual-en:start -->
-*A random vector is jointly Gaussian if and only if every linear combination is univariate Gaussian*
+# Multivariate normal distribution
 <!-- bilingual-en:end -->
 
-> [!summary] 原子定义
-> 对实随机向量 $X\in\mathbb R^p$，下列说法等价：
-> 1. 对每个 $a\in\mathbb R^p$，$a^TX$ 都是一元 Gaussian；
-> 2. 存在 $\mu\in\mathbb R^p$、矩阵 $B\in\mathbb R^{p\times r}$ 和独立标准正态向量 $Z\sim N_r(0,I_r)$，使
->    $$X=\mu+BZ.$$
-> 此时 $E[X]=\mu$、$\operatorname{Cov}(X)=BB^T=: \Sigma\succeq0$，记作 $X\sim N_p(\mu,\Sigma)$。
+*多元正态分布（联合 Gaussian）*
+
+<!-- bilingual-en:start -->
+A **multivariate normal distribution** models several measurements together so that every fixed weighted sum of them is normally distributed. A [[正态分布|one-dimensional normal distribution]] describes one bell-shaped measurement. The multivariate model also describes how the measurements move together; checking each measurement separately does not establish that joint model.
+<!-- bilingual-en:end -->
+
+**多元正态分布**同时描述多个测量值，并要求它们的每个固定加权和都服从正态分布。[[正态分布|一元正态分布]]描述一个具有钟形分布的测量值；多元模型还描述这些量怎样共同变化，因此逐个检查每个量，并不能确定整个联合模型。
+
+> [!example] Two measurements built from two noise sources · 用两个噪声源构造两个测量值
 > <!-- bilingual-en:start -->
-> A real random vector is jointly Gaussian exactly when every scalar linear projection is Gaussian; equivalently, it is an affine image of a vector of independent standard normals. Its covariance may be singular.
-> <!-- bilingual-en:end -->
-
-这里把常数也算作方差为 0 的退化 Gaussian，所以 $a=0$ 不会成为定义的例外。反过来，任意对称半正定 $\Sigma$ 都能取 $B=\Sigma^{1/2}$ 构造 $N_p(\mu,\Sigma)$；因此存在条件是 $\Sigma\succeq0$，不是必须 $\Sigma\succ0$。
-<!-- bilingual-en:start -->
-Constants are treated as degenerate Gaussians with variance zero. Every positive-semidefinite covariance is admissible because a square root supplies the constructive representation.
-<!-- bilingual-en:end -->
-
-$\mu$ 与 $\Sigma$ 唯一决定分布，因为特征函数为
-$$
-\varphi_X(t)=\exp\!\left(i t^T\mu-\frac12t^T\Sigma t\right).
-$$
-生成因子 $B$ 却不唯一：只要 $BB^T=\Sigma$，不同 $B$ 构造的是同一个 Gaussian 律。
-
-“每个分量各自正态”只检查了 $a=e_j$ 的少数方向，远弱于“每个 $a$”。例如，[[联合高斯独立判据|Gaussian 边际但非联合 Gaussian 的反例]]中，两分量都标准正态，却有某些线性组合不是正态。
-<!-- bilingual-en:start -->
-Normal coordinates alone are insufficient because they test only the coordinate projections. Joint Gaussianity requires all directions, not merely all marginals.
-<!-- bilingual-en:end -->
-
-> [!question]- 自检
-> 若 $X_1$ 与 $X_2$ 各自都服从正态，能否据此写 $(X_1,X_2)^T\sim N_2(\mu,\Sigma)$？
+> Let $Z_1,Z_2$ be [[随机变量独立|independent]] standard normals: each has mean $0$ and variance $1$. Set $X_1=1+Z_1$ and $X_2=2+Z_1+2Z_2$. Their covariance is $1$, so they are not independent. Their [[均值向量|mean vector]] and [[协方差矩阵|covariance matrix]], which collect the individual averages and all pairwise covariances, are
 >
-> **答案：** 不能。还要确认所有线性组合 $a_1X_1+a_2X_2$ 都正态；边际正态不能排除非 Gaussian 的联合依赖。
+> $$\mu=\begin{bmatrix}1\\2\end{bmatrix},\qquad
+> \Sigma=\begin{bmatrix}1&1\\1&5\end{bmatrix}.$$
+>
+> The shared $Z_1$ contributes covariance $1$; the second variance is $1+2^2=5$. Their difference is $X_2-X_1=1+2Z_2$, a normal variable with mean $1$ and variance $4$. Their sum has mean $3$ and variance $8$.
+> <!-- bilingual-en:end -->
+>
+> 令 $Z_1,Z_2$ 是[[随机变量独立|相互独立]]的标准正态变量，各自均值为 $0$、方差为 $1$。设 $X_1=1+Z_1$、$X_2=2+Z_1+2Z_2$。两者的协方差为 $1$，因此不独立。上面的[[均值向量]]收集各自的平均值，[[协方差矩阵]]收集所有两两协方差：共享的 $Z_1$ 贡献协方差 $1$，第二个量的方差为 $1+2^2=5$。两者之差是 $X_2-X_1=1+2Z_2$，均值为 $1$、方差为 $4$；两者之和的均值为 $3$、方差为 $8$。
+
+<!-- bilingual-en:start -->
+## Every direction, including directions with no variation
+<!-- bilingual-en:end -->
+
+*检查每个方向，也允许没有波动的方向*
+
+<!-- bilingual-en:start -->
+A real [[随机向量|random vector]] $X=(X_1,\ldots,X_p)^T$ records $p\ge1$ numbers from the same outcome; $T$ means transpose, so we write the numbers as a column. For fixed real weights $a=(a_1,\ldots,a_p)^T$, the [[向量点积|dot product]] $a^TX=a_1X_1+\cdots+a_pX_p$ is one weighted measurement. The weights may be negative and need not sum to one.
+<!-- bilingual-en:end -->
+
+实[[随机向量]] $X=(X_1,\ldots,X_p)^T$ 把同一个结果记录成 $p\ge1$ 个数；$T$ 表示转置，这里将它们写成一列。固定实权重 $a=(a_1,\ldots,a_p)^T$ 后，[[向量点积]] $a^TX=a_1X_1+\cdots+a_pX_p$ 就是一个加权测量值。权重可以为负，也不必加起来等于一。
+
+> [!important] Definition and parameters · 定义与参数
+> <!-- bilingual-en:start -->
+> The vector is **jointly Gaussian**, or **multivariate normal**, if $a^TX$ is a univariate Gaussian for **every** $a\in\mathbb R^p$. Here we explicitly include a constant $c$ as the degenerate normal law $N(c,0)$: it equals $c$ with probability one and has no ordinary normal density.
+>
+> Writing $\mu=E[X]$ and $\Sigma=\operatorname{Cov}(X)$, the notation is
+>
+> $$X\sim N_p(\mu,\Sigma),\qquad
+> a^TX\sim N(a^T\mu,\ a^T\Sigma a).$$
+>
+> The subscript $p$ is the number of coordinates. All coordinate moments are finite because the coordinates themselves are normal. The projected variance is supplied by the [[线性投影方差|linear-combination variance identity]].
+> <!-- bilingual-en:end -->
+>
+> 若对**每个** $a\in\mathbb R^p$，$a^TX$ 都是一元 Gaussian，就称这个向量**联合 Gaussian**，或服从**多元正态分布**。这里明确把常数 $c$ 也算作退化正态 $N(c,0)$：它以概率一等于 $c$，没有通常的正态密度。记 $\mu=E[X]$、$\Sigma=\operatorname{Cov}(X)$，就得到上面的记号与投影分布；下标 $p$ 是坐标数。每个坐标自身正态，所以各阶矩有限；投影方差来自[[线性投影方差|线性组合的方差恒等式]]。
+
+<!-- bilingual-en:start -->
+In the opening example, every weighted sum is $a_1+2a_2+(a_1+a_2)Z_1+2a_2Z_2$. Its variance is $(a_1+a_2)^2+4a_2^2$, agreeing with $a^T\Sigma a$. The requirement concerns all real choices of $a$, not a finite checklist of sums.
+<!-- bilingual-en:end -->
+
+开头例子的任意加权和是 $a_1+2a_2+(a_1+a_2)Z_1+2a_2Z_2$，方差为 $(a_1+a_2)^2+4a_2^2$，与 $a^T\Sigma a$ 一致。定义要求所有实权重都成立，并不是只检查有限几种加法。
+
+<!-- bilingual-en:start -->
+Zero weights always give the constant zero. Other nonzero weights can also give a constant: if $X=(Z,2Z+1)^T$ for a standard normal $Z$, then $2X_1-X_2=-1$. This is still jointly Gaussian. Its covariance is $\begin{bmatrix}1&2\\2&4\end{bmatrix}$, and [[协方差奇异性|singularity]] records that exact linear relation.
+<!-- bilingual-en:end -->
+
+全零权重总会给出常数零；非零权重也可能得到常数。若标准正态 $Z$ 生成 $X=(Z,2Z+1)^T$，则 $2X_1-X_2=-1$。它仍然联合 Gaussian，协方差为 $\begin{bmatrix}1&2\\2&4\end{bmatrix}$；[[协方差奇异性]]记录的就是这条精确的线性关系。
+
+<!-- bilingual-en:start -->
+## An equivalent way to generate the model
+<!-- bilingual-en:end -->
+
+*等价的生成方式*
+
+<!-- bilingual-en:start -->
+Equivalently, the distribution can be generated by shifting and mixing independent standard normals:
+
+$$X\overset{d}=\mu+BZ,\qquad Z\sim N_r(0,I_r),\qquad BB^T=\Sigma.$$
+
+Here $r\ge1$ is the number of source variables, $B$ is a fixed $p\times r$ matrix, and $I_r$ is the identity matrix. The notation $\overset{d}=$ means equality of distributions, not that two separately constructed observations must be equal. Multiplication by $B$ chooses the mixture entering each coordinate. In the opening example $B=\begin{bmatrix}1&0\\1&2\end{bmatrix}$.
+<!-- bilingual-en:end -->
+
+等价地，可以把独立标准正态变量混合，再平移，生成同样的分布，如上式所示。这里 $r\ge1$ 是源变量个数，$B$ 是固定的 $p\times r$ 矩阵，$I_r$ 是单位矩阵。$\overset{d}=$ 表示分布相同，不是说分别生成的两次观察值必须相等。乘以 $B$ 决定每个坐标混入哪些噪声；开头例子中 $B=\begin{bmatrix}1&0\\1&2\end{bmatrix}$。
+
+<!-- bilingual-en:start -->
+Every real symmetric [[半正定矩阵|positive-semidefinite]] $\Sigma$ is allowed. This means $a^T\Sigma a\ge0$ for every $a$, as every variance requires. A [[半正定主平方根|matrix square root]] provides $B=\Sigma^{1/2}$ with $r=p$, including singular and zero matrices. Positive definiteness is needed for a [[Gaussian密度与奇异支撑|full-dimensional Gaussian density]], not for the existence of the Gaussian distribution itself.
+<!-- bilingual-en:end -->
+
+每个实对称[[半正定矩阵]] $\Sigma$ 都可以使用，也就是每个 $a$ 都满足 $a^T\Sigma a\ge0$，与方差必须非负相符。[[半正定主平方根|矩阵平方根]]给出 $B=\Sigma^{1/2}$、$r=p$ 的构造，包括奇异矩阵和零矩阵。正定性是[[Gaussian密度与奇异支撑|存在全维 Gaussian 密度]]的条件，不是 Gaussian 分布本身存在的条件。
+
+<!-- bilingual-en:start -->
+## What the parameters do—and do not—establish
+<!-- bilingual-en:end -->
+
+*参数能确定什么，又不能证明什么*
+
+<!-- bilingual-en:start -->
+Within the Gaussian family, $\mu$ and $\Sigma$ determine the entire joint distribution. The generating factor $B$ is not unique: different factors with the same $BB^T$ generate the same law. Outside that family, matching means and covariances does not determine a distribution. Likewise, normal marginals only test the coordinate directions; the [[联合高斯独立判据|random-sign counterexample]] has normal coordinates but fails the all-directions definition.
+<!-- bilingual-en:end -->
+
+在 Gaussian 族内部，$\mu$ 和 $\Sigma$ 决定完整的联合分布。生成因子 $B$ 不唯一：不同因子只要具有相同的 $BB^T$，就生成同一个分布。但在这个族外，仅有相同均值和协方差，不能确定分布。同样，边际正态只检查了坐标方向；[[联合高斯独立判据|随机符号反例]]的各坐标都正态，却不满足所有方向正态的定义。
+
+> [!note]- A transform explains parameter uniqueness · 变换为何能说明参数唯一决定分布
+> <!-- bilingual-en:start -->
+> One way to encode a joint law is its **[[特征函数|characteristic function]]** $\varphi_X(t)=E[e^{it^TX}]$, with a fixed real vector $t$ and the imaginary unit $i$ satisfying $i^2=-1$. It averages a bounded complex exponential, so it exists even without a density. For a Gaussian vector,
+>
+> $$\varphi_X(t)=\exp\!\left(it^T\mu-\tfrac12t^T\Sigma t\right).$$
+>
+> This follows by applying the one-dimensional normal transform to the projection $t^TX$. The uniqueness theorem for characteristic functions says that identical such functions give identical laws. The displayed expression therefore proves parameter determination, including singular cases. This is a statement about the whole transform, not merely equality of a few moments.
+> <!-- bilingual-en:end -->
+>
+> 联合分布的一种编码是**[[特征函数]]** $\varphi_X(t)=E[e^{it^TX}]$，其中 $t$ 是固定实向量，$i$ 是满足 $i^2=-1$ 的虚数单位。它平均一个有界的复指数，所以没有密度也能定义。对 Gaussian 向量，将一元正态的变换公式应用于投影 $t^TX$，就得到上式。特征函数唯一性定理说明：整个特征函数相同，就具有相同分布；因此上式也证明了奇异情形的参数决定性。这使用的是完整变换，而不是只比较少数几个矩。
 
 ## 来源与核验
 
-- [[01_Math/04_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md#1.3. 多元正态分布的性质|多元统计课程 §1.3]]：核对线性组合刻画和参数记号。
-- [MIT OCW 6.436J, Lecture 14, Definitions 2–4 and Theorem 1](https://ocw.mit.edu/courses/6-436j-fundamentals-of-probability-fall-2018/ceb423b6a703abd60429367b733f45bf_MIT6_436JF18_lec14.pdf)：核对密度、仿射生成与全体线性组合三种定义的等价边界，以及退化 Gaussian 约定。
-- [MIT OCW 18.443, Lecture 4](https://ocw.mit.edu/courses/18-443-statistics-for-applications-fall-2006/da928274a46632ce0d35d2012a1c8e74_lecture4.pdf)：核对半正定协方差的平方根构造、参数决定性与奇异情形。
+<!-- bilingual-en:start -->
+- [MIT 6.436J, Lecture 14, Definitions 2–4, pp. 3–4; Theorem 1(a)–(f), pp. 5–7](https://ocw.mit.edu/courses/6-436j-fundamentals-of-probability-fall-2018/ceb423b6a703abd60429367b733f45bf_MIT6_436JF18_lec14.pdf#page=3): constructive and projection definitions, the degenerate convention, covariance and parameter determination.
+- [MIT 18.443, Lecture 4, PDF pp. 1–3 / printed pp. 23–25](https://ocw.mit.edu/courses/18-443-statistics-for-applications-fall-2006/da928274a46632ce0d35d2012a1c8e74_lecture4.pdf#page=1): rectangular generating factors, their nonuniqueness, and the positive-semidefinite square-root construction.
+- [MIT 6.450, Chapter 7, §7.3, PDF pp. 7–8 and 13–14 / printed pp. 205–206 and 211–212](https://ocw.mit.edu/courses/6-450-principles-of-digital-communications-i-fall-2006/49163236e20779bae41639ff9dec1ac4_book_7.pdf#page=7): joint versus marginal normality and the all-projections/transform characterization. The book's Fourier convention is rescaled to $E[e^{it^TX}]$ here.
+- [[01_Math/04_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md#1.3. 多元正态分布的性质|Multivariate Statistics §1.3]]: course notation and the linear-combination characterization. Both numerical constructions are calculated directly above.
+- [MIT 6.436J, Lecture 15, Theorem 1, pp. 2–4; §§4–4.2, pp. 6–9](https://ocw.mit.edu/courses/6-436j-fundamentals-of-probability-fall-2018/87422049e8f05459ee857eb475f3a667_MIT6_436JF18_lec15.pdf#page=2): completes the all-projections equivalence, including singular covariance, and establishes characteristic-function uniqueness and the Gaussian independence criterion.
+<!-- bilingual-en:end -->
+
+- MIT 6.436J 第 14 讲定义 2–4、定理 1(a)–(f)：核对生成与投影定义、退化约定、协方差和参数决定性。
+- MIT 18.443 第 4 讲 PDF 第 1–3 页：核对长方形生成因子、因子不唯一及半正定平方根构造。
+- MIT 6.450 第 7 章第 7.3 节 PDF 第 7–8、13–14 页：核对联合与边际正态的区别、全体投影和变换刻画；此处将教材 Fourier 参数约定改写为 $E[e^{it^TX}]$。
+- 多元统计课程第 1.3 节保留本课符号与线性组合刻画；正文两个构造例子直接计算。
+- MIT 6.436J 第 15 讲定理 1、第 4–4.2 节：补全所有投影刻画在奇异协方差下的等价性，并核对特征函数唯一性与 Gaussian 独立判据。

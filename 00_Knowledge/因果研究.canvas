@@ -24,8 +24,8 @@
       "x": -1800,
       "y": -100,
       "width": 420,
-      "height": 180,
-      "text": "### [[回归设定起点|回归设定起点]]\n\n先写总体、单位、结果、时间顺序和用途。模型形式不能替你决定研究问题。"
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[回归设定起点|Frame the regression question]]\nChoose the population, unit, outcome, comparison and timing before selecting columns. A descriptive association, a usable prediction and an intervention effect require different evidence.\n<!-- bilingual-en:end -->\n\n## [[回归设定起点]]\n选列前先明确总体、单位、结果、比较和时点。描述关联、可执行预测和干预效应需要不同证据。"
     },
     {
       "id": "c200000000000004",
@@ -33,8 +33,8 @@
       "x": -1080,
       "y": -100,
       "width": 450,
-      "height": 180,
-      "text": "### [[估计对象三分|估计对象三分]]\n\nEstimand 是目标量，estimator 是计算规则，estimate 才是当前数据给出的数值。"
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n### [[估计对象三分|Target, rule and observed result]]\nAn estimand specifies the quantity of interest; an estimator maps possible data to answers; an estimate is this sample’s answer. Matching numerical answers need not mean matching targets.\n<!-- bilingual-en:end -->\n\n### [[估计对象三分]]\n目标定义想知道的量，规则处理可能数据，估计值是本次结果。数值相同也可能回答不同问题。"
     },
     {
       "id": "c200000000000005",
@@ -71,9 +71,9 @@
       "x": -1850,
       "y": 1030,
       "width": 430,
-      "height": 210,
+      "height": 300,
       "color": "2",
-      "text": "### [[多元回归系数|多元回归系数]]\n\n“控制其他变量”只表示在指定回归式中的偏线性比较。它是可选描述或估计形式，不是因果识别的前提。\n\n继续：[[OLS 线性回归.canvas|OLS 线性回归]]"
+      "text": "<!-- bilingual-en:start -->\n## [[多元回归系数|What a regression coefficient compares]]\nA fitted coefficient describes a comparison among included feature columns. Conditioning on those columns does not itself identify an intervention. Regression is one possible modelling method, not a prerequisite for every causal design.\n<!-- bilingual-en:end -->\n\n## [[多元回归系数]]\n拟合系数描述已纳入特征列之间的比较，给定这些列不等于识别干预。回归是一种建模方法，并非每种因果设计的前提。\n\n[[OLS 线性回归.canvas|OLS regression · OLS 线性回归]]"
     },
     {
       "id": "c200000000000009",
@@ -111,9 +111,9 @@
       "x": -500,
       "y": 1030,
       "width": 430,
-      "height": 230,
+      "height": 300,
       "color": "4",
-      "text": "### [[条件均值因果边界|条件均值因果边界]]\n\n潜在结果给出反事实目标，观察条件均值给出候选可观察量；一致性、交换性与正值性才把两者连接起来。"
+      "text": "<!-- bilingual-en:start -->\n### [[条件均值因果边界|From observational to causal means]]\nWell-defined interventions, consistency, conditional exchangeability and positivity give one sufficient identification route. Other designs can use other assumptions. A conditional-mean model alone supplies no causal interpretation.\n<!-- bilingual-en:end -->\n\n### [[条件均值因果边界]]\n明确干预、一致性、条件交换性和正值性提供一条充分识别路径；其他设计可以使用其他假设。条件均值模型本身不提供因果解释。"
     },
     {
       "id": "c200000000000012",
@@ -228,7 +228,7 @@
       "fromSide": "right",
       "toNode": "c200000000000004",
       "toSide": "left",
-      "label": "把问题写成目标量"
+      "label": "Turn the research question into a target quantity · 将研究问题写成目标量"
     },
     {
       "id": "d200000000000004",
@@ -276,7 +276,7 @@
       "fromSide": "bottom",
       "toNode": "c200000000000008",
       "toSide": "top",
-      "label": "回归是可选的线性总结"
+      "label": "A linear summary is one modelling choice · 线性总结是一种建模选择"
     },
     {
       "id": "d200000000000010",

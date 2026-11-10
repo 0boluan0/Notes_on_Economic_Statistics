@@ -1,116 +1,1098 @@
 {
   "nodes": [
-    {"id":"c7c1000000000000","type":"text","text":"# 连续时间马尔可夫链 · 学习地图\n\n先用局部速率、真实跳跃路径和有限时长转移三种视角读懂同一个 CTMC，再处理模型、爆炸边界、长期行为与完整路径估计。\n\n颜色只区分语义角色，不表示掌握度；点击标题进入对应原子。","x":0,"y":-420,"width":5000,"height":200,"color":"2"},
-    {"id":"c7a1000000000001","type":"text","text":"## 1 · 同一个过程的三种入口\n\n第一行读局部速率，第二行读一次真实跳跃怎样发生，第三行把瞬时规律推进到任意时长。三行互相补充，不是三套不同模型。","x":0,"y":-150,"width":5000,"height":130,"color":"2"},
-    {"id":"c7c1000000000001","type":"text","text":"[[CTMC定义|连续时间马尔可夫链]]\n\n**PROB-CTMC-001 · 定义**\n连续时间、离散状态、Markov 纯跳过程；时间齐次是额外假设。","x":0,"y":40,"width":480,"height":180,"color":"5"},
-    {"id":"c7b1000000000001","type":"text","text":"再判断同样时长的转移是否与起始时点无关","x":530,"y":80,"width":220,"height":100},
-    {"id":"c7c1000000000026","type":"text","text":"[[CTMC时间齐次转移函数|CTMC 时间齐次转移函数]]\n\n**PROB-CTMC-037 · 定义**\n$P(t)$ 只依赖经过时长；非齐次模型需要两参数转移函数。","x":800,"y":40,"width":480,"height":180,"color":"5"},
-    {"id":"c7b1000000000015","type":"text","text":"齐次且短时可导时，$Q$ 记录瞬时转移速率","x":1330,"y":80,"width":220,"height":100},
-    {"id":"c7c1000000000003","type":"text","text":"[[生成矩阵约束|生成矩阵]]\n\n**PROB-CTMC-003 · 定义**\n非对角元是跳转率，保守生成矩阵的行和为零。","x":1600,"y":40,"width":480,"height":180,"color":"5"},
-    {"id":"c7b1000000000002","type":"text","text":"对 $P(h)$ 在零点求右导数，只保留一阶项","x":2130,"y":80,"width":220,"height":100},
-    {"id":"c7c1000000000004","type":"text","text":"[[CTMC短时概率展开|短时概率展开]]\n\n**PROB-CTMC-004 · 辨析**\n$P(h)=I+hQ+o(h)$ 是短时展开，不是有限时长的一步概率。","x":2400,"y":40,"width":480,"height":180,"color":"1"},
-    {"id":"c7c1000000000002","type":"text","text":"[[CTMC指数停留时间|指数停留时间]]\n\n**PROB-CTMC-002 · 定理**\n非吸收状态的停留时间为 $\\operatorname{Exp}(q_i)$。","x":0,"y":350,"width":480,"height":180,"color":"6"},
-    {"id":"c7b1000000000003","type":"text","text":"指数参数 $q_i$ 正是离开状态的总速度","x":530,"y":390,"width":220,"height":100},
-    {"id":"c7c1000000000019","type":"text","text":"[[出口率|出口率]]\n\n**PROB-CTMC-025 · 定义**\n$q_i=\\sum_{j\\ne i}q_{ij}=-q_{ii}$；它控制等待尺度。","x":800,"y":350,"width":480,"height":180,"color":"5"},
-    {"id":"c7b1000000000004","type":"text","text":"各方向速率除以总率，得到真实跳转的去向概率","x":1330,"y":390,"width":220,"height":100},
-    {"id":"c7c100000000001a","type":"text","text":"[[嵌入跳链|嵌入跳链]]\n\n**PROB-CTMC-026 · 定义**\n只在真实状态改变时记录状态，不保留等待时长。","x":1600,"y":350,"width":480,"height":180,"color":"5"},
-    {"id":"c7c1000000000005","type":"text","text":"[[生成矩阵分解|生成矩阵分解]]\n\n**PROB-CTMC-005 · 恒等关系**\n$q_{ij}=q_i r_{ij}$：出口率管等待，跳链管去向。","x":2400,"y":350,"width":480,"height":180,"color":"6"},
-    {"id":"c7c1000000000006","type":"text","text":"[[竞争指数时钟|竞争指数时钟]]\n\n**PROB-CTMC-006 · 方法**\n最先响的时钟给出等待时间与下一跳方向。","x":3200,"y":350,"width":480,"height":180,"color":"6"},
-    {"id":"c7c1000000000007","type":"text","text":"[[CTMC转移半群|转移半群]]\n\n**PROB-CTMC-007 · 定理**\n$P(s+t)=P(s)P(t)$；按中间时点分解转移。","x":0,"y":660,"width":480,"height":180,"color":"6"},
-    {"id":"c7b1000000000005","type":"text","text":"分别分解最初与最后一个短时间段","x":530,"y":700,"width":220,"height":100},
-    {"id":"c7c1000000000009","type":"text","text":"[[Kolmogorov前后向方程|Kolmogorov 前后向方程]]\n\n**PROB-CTMC-009 · 定理**\n行概率约定下，后向式 $P'=QP$，前向式 $P'=PQ$。","x":800,"y":660,"width":480,"height":180,"color":"6"},
-    {"id":"c7b1000000000006","type":"text","text":"有限状态初值问题的唯一解是矩阵指数","x":1330,"y":700,"width":220,"height":100},
-    {"id":"c7c1000000000008","type":"text","text":"[[CTMC矩阵指数|有限状态矩阵指数]]\n\n**PROB-CTMC-008 · 定理**\n$P(t)=e^{tQ}$；这是矩阵指数，不是逐元素指数。","x":1600,"y":660,"width":480,"height":180,"color":"6"},
-    {"id":"c7a1000000000002","type":"text","text":"## 2 · 模型家族与爆炸边界\n\n纯生链有两个不同特化：逐级结构带来精确爆炸判据，常数出生率成为 Poisson 计数。一般链先辨认爆炸，再决定是否需要墓地状态；全局有界率同时给出非爆炸保证和均匀化算法。","x":0,"y":980,"width":5000,"height":130,"color":"2"},
-    {"id":"c7c100000000001e","type":"text","text":"[[纯生链|纯生链]]\n\n**PROB-CTMC-030 · 定义**\n每次只从 $n$ 跳到 $n+1$；出生率可以依赖当前状态。","x":0,"y":1230,"width":480,"height":180,"color":"5"},
-    {"id":"c7c100000000001d","type":"text","text":"[[纯生链爆炸判据|纯生链爆炸判据]]\n\n**PROB-CTMC-029 · 定理**\n非爆炸当且仅当 $\\sum_n1/\\lambda_n$ 发散。","x":800,"y":1230,"width":480,"height":180,"color":"1"},
-    {"id":"c7c1000000000015","type":"text","text":"[[Poisson是常速纯生链|Poisson 是常速纯生链]]\n\n**PROB-CTMC-021 · 对应关系**\n齐次 Poisson 计数正是出生率恒定的纯生链。","x":1600,"y":1230,"width":480,"height":180,"color":"3"},
-    {"id":"c7c1000000000024","type":"text","text":"[[生灭链|生灭链]]\n\n**PROB-CTMC-036 · 定义**\n只允许相邻状态间的出生与死亡；定义本身不保证平稳。","x":2400,"y":1230,"width":480,"height":180,"color":"5"},
-    {"id":"c7c100000000000a","type":"text","text":"[[CTMC爆炸|爆炸]]\n\n**PROB-CTMC-010 · 定义**\n无限次真实跳跃在有限日历时间内聚积。","x":0,"y":1640,"width":480,"height":180,"color":"1"},
-    {"id":"c7b1000000000007","type":"text","text":"若确会爆炸，最小过程不额外加入重入规则","x":530,"y":1680,"width":220,"height":100},
-    {"id":"c7c100000000001b","type":"text","text":"[[最小CTMC|最小 CTMC]]\n\n**PROB-CTMC-027 · 定义**\n爆炸时进入墓地状态；原空间缺失质量是爆炸概率。","x":800,"y":1640,"width":480,"height":180,"color":"5"},
-    {"id":"c7b1000000000014","type":"text","text":"死亡是最小选择；重入或入口规则必须另行指定","x":1340,"y":1680,"width":200,"height":100},
-    {"id":"c7c100000000001c","type":"text","text":"[[爆炸后延拓|爆炸后延拓]]\n\n**PROB-CTMC-028 · 边界**\n同一生成矩阵不能独自决定爆炸后的过程。","x":1600,"y":1640,"width":480,"height":180,"color":"1"},
-    {"id":"c7c100000000000b","type":"text","text":"[[有界率非爆炸|有界率保证非爆炸]]\n\n**PROB-CTMC-011 · 定理**\n$\\sup_iq_i<\\infty$ 是通用充分条件，但不是必要条件。","x":2400,"y":1640,"width":480,"height":180,"color":"6"},
-    {"id":"c7b1000000000008","type":"text","text":"同一个支配 Poisson 时钟给出精确随机化","x":2930,"y":1680,"width":220,"height":100},
-    {"id":"c7c1000000000014","type":"text","text":"[[CTMC均匀化|均匀化]]\n\n**PROB-CTMC-020 · 方法**\n有界率下的精确 Poisson mixture，不是固定网格近似。","x":3200,"y":1640,"width":480,"height":180,"color":"6"},
-    {"id":"c7a1000000000003","type":"text","text":"## 3 · 类结构、平稳与收敛\n\n先把“会不会回来”与“要花多少日历时间”分开，再讨论可数链的稳态。有限链按闭沟通类分解。详细平衡与可逆是比平稳更强的路径对称性，并可用于生灭链。","x":0,"y":2020,"width":5000,"height":130,"color":"2"},
-    {"id":"c7c1000000000025","type":"text","text":"[[马氏链沟通类|沟通类]]\n\n可达性描述一状态能否以正概率到达另一状态；双向可达把状态空间分成沟通类。","x":0,"y":2250,"width":480,"height":180,"color":"2"},
-    {"id":"c7b1000000000009","type":"text","text":"CTMC 的正率边与跳链正概率边给出同一张图","x":530,"y":2290,"width":220,"height":100},
-    {"id":"c7c100000000000c","type":"text","text":"[[跳链决定CTMC沟通类|跳链决定 CTMC 沟通类]]\n\n**PROB-CTMC-012 · 定理**\n速率大小改变时间尺度，却不改变沟通类。","x":800,"y":2250,"width":480,"height":180,"color":"6"},
-    {"id":"c7c100000000000d","type":"text","text":"[[常返与停留时间|常返与停留时间]]\n\n**PROB-CTMC-013 · 辨析**\n常返随跳链而定；正常返还取决于日历时间。","x":1600,"y":2250,"width":480,"height":180,"color":"1"},
-    {"id":"c7b100000000000a","type":"text","text":"正常返把返回事件进一步约束为有限平均日历时间","x":2130,"y":2290,"width":220,"height":100},
-    {"id":"c7c1000000000011","type":"text","text":"[[可数CTMC稳态存在|可数 CTMC 稳态存在]]\n\n**PROB-CTMC-017 · 定理**\n不可约、非爆炸时，正常返当且仅当存在唯一平稳概率。","x":2400,"y":2250,"width":480,"height":180,"color":"6"},
-    {"id":"c7b100000000000b","type":"text","text":"存在唯一稳态后，连续时间无需再加非周期条件","x":2930,"y":2290,"width":220,"height":100},
-    {"id":"c7c1000000000021","type":"text","text":"[[可数CTMC平衡收敛|可数 CTMC 平衡收敛]]\n\n**PROB-CTMC-033 · 定理**\n不可约、非爆炸且正常返时，$p_{ij}(t)\\to\\pi_j$。","x":3200,"y":2250,"width":480,"height":180,"color":"6"},
-    {"id":"c7c1000000000012","type":"text","text":"[[跳链频率时间加权|跳链频率的时间加权]]\n\n**PROB-CTMC-018 · 方法**\n访问频率需除以出口率，才得到日历时间权重候选。","x":4000,"y":2250,"width":480,"height":180,"color":"3"},
-    {"id":"c7c100000000000e","type":"text","text":"[[CTMC平稳分布|CTMC 平稳分布]]\n\n**PROB-CTMC-014 · 定义**\n从 $\\pi$ 启动后，$\\pi P(t)=\\pi$ 对所有 $t\\ge0$。","x":0,"y":2560,"width":480,"height":180,"color":"5"},
-    {"id":"c7b100000000000c","type":"text","text":"有限状态下可把半群不变性化为左零空间方程","x":530,"y":2600,"width":220,"height":100},
-    {"id":"c7c1000000000027","type":"text","text":"[[有限CTMC平稳生成矩阵判据|有限 CTMC 平稳判据]]\n\n**PROB-CTMC-038 · 定理**\n平稳分布恰是 $Q$ 的归一化非负左零向量。","x":800,"y":2560,"width":480,"height":180,"color":"6"},
-    {"id":"c7b1000000000016","type":"text","text":"有限且不可约时，该概率解唯一并且全支持","x":1330,"y":2600,"width":220,"height":100},
-    {"id":"c7c1000000000020","type":"text","text":"[[有限不可约CTMC稳态|有限不可约类内稳态]]\n\n**PROB-CTMC-032 · 定理**\n有限不可约 CTMC 有唯一且全支持的平稳分布。","x":1600,"y":2560,"width":480,"height":180,"color":"6"},
-    {"id":"c7b100000000000d","type":"text","text":"全链稳态由各闭类的类内稳态按权重拼成","x":2130,"y":2600,"width":220,"height":100},
-    {"id":"c7c100000000000f","type":"text","text":"[[有限CTMC平稳分解|有限 CTMC 平稳分解]]\n\n**PROB-CTMC-015 · 定理**\n全部平稳分布是闭类稳态的凸组合；暂态质量为零。","x":2400,"y":2560,"width":480,"height":180,"color":"6"},
-    {"id":"c7b100000000000e","type":"text","text":"恰有一个闭类时，任意初态都收敛到同一稳态","x":2930,"y":2600,"width":220,"height":100},
-    {"id":"c7c1000000000010","type":"text","text":"[[有限CTMC全局收敛|有限 CTMC 全局收敛]]\n\n**PROB-CTMC-016 · 定理**\n唯一闭类便保证全局收敛，无需非周期条件。","x":3200,"y":2560,"width":480,"height":180,"color":"6"},
-    {"id":"c7c1000000000013","type":"text","text":"[[CTMC详细平衡|CTMC 详细平衡]]\n\n**PROB-CTMC-019 · 定义**\n每对状态的双向加权速率流都相等。","x":0,"y":2870,"width":480,"height":180,"color":"5"},
-    {"id":"c7b100000000000f","type":"text","text":"逐对速率流相等是可计算的局部条件","x":560,"y":2910,"width":220,"height":100},
-    {"id":"c7c1000000000022","type":"text","text":"[[CTMC可逆性|CTMC 可逆性]]\n\n**PROB-CTMC-034 · 定义**\n平稳路径正放与倒放具有相同的有限维分布。","x":0,"y":3170,"width":480,"height":180,"color":"5"},
-    {"id":"c7b1000000000010","type":"text","text":"路径倒放不变是同一对称性的概率表述","x":560,"y":3210,"width":220,"height":100},
-    {"id":"c7c1000000000023","type":"text","text":"[[CTMC详细平衡与可逆|详细平衡与可逆]]\n\n**PROB-CTMC-035 · 定理**\n有限状态下二者等价，并都推出平稳；反向不成立。","x":900,"y":3020,"width":480,"height":180,"color":"6"},
-    {"id":"c7b1000000000011","type":"text","text":"相邻状态的详细平衡给出速率比递推","x":1440,"y":3060,"width":200,"height":100},
-    {"id":"c7c1000000000016","type":"text","text":"[[生灭链平稳递推|生灭链平稳递推]]\n\n**PROB-CTMC-022 · 方法**\n速率比先给候选权重；还要正规化并检查过程条件。","x":1700,"y":3020,"width":480,"height":180,"color":"3"},
-    {"id":"c7b1000000000012","type":"text","text":"常数到达率与服务率给出几何权重","x":2240,"y":3060,"width":200,"height":100},
-    {"id":"c7c1000000000017","type":"text","text":"[[M-M-1稳态人数|M/M/1 稳态系统人数]]\n\n**PROB-CTMC-023 · 应用**\n无限等待空间下，$\\rho=\\lambda/\\mu<1$ 才有几何平稳分布。","x":2500,"y":3020,"width":480,"height":180,"color":"3"},
-    {"id":"c7a1000000000004","type":"text","text":"## 4 · 从完整路径估计生成率\n\n观测到每次真实跳时后，数据同时提供跳转计数与在各状态的暴露时间。若多条边共享一个参数，必须先施加共同率约束，再汇总信息。","x":0,"y":3480,"width":5000,"height":130,"color":"2"},
-    {"id":"c7c1000000000018","type":"text","text":"[[CTMC完整路径估计|完整路径估计]]\n\n**PROB-CTMC-024 · 方法**\n$\\widehat q_{ij}=N_{ij}/S_i$；离散快照不能冒充完整路径。","x":0,"y":3710,"width":480,"height":180,"color":"3"},
-    {"id":"c7b1000000000013","type":"text","text":"共享参数时，先合并相应计数与加权暴露","x":530,"y":3750,"width":220,"height":100},
-    {"id":"c7c100000000001f","type":"text","text":"[[CTMC共同率估计|共同率估计]]\n\n**PROB-CTMC-031 · 方法**\n共同参数的 MLE 是汇总计数除以相应加权暴露。","x":800,"y":3710,"width":480,"height":180,"color":"3"}
+    {
+      "id": "c7c1000000000000",
+      "type": "text",
+      "text": "# 连续时间马尔可夫链 · 学习地图\n\n先用局部速率、真实跳跃路径和有限时长转移三种视角读懂同一个 CTMC，再处理模型、爆炸边界、长期行为与完整路径估计。\n\n颜色只区分语义角色，不表示掌握度；点击标题进入对应原子。",
+      "x": 0,
+      "y": -420,
+      "width": 5000,
+      "height": 200,
+      "color": "2"
+    },
+    {
+      "id": "c7a1000000000001",
+      "type": "text",
+      "text": "## 1 · 同一个过程的三种入口\n\n第一行读局部速率，第二行读一次真实跳跃怎样发生，第三行把瞬时规律推进到任意时长。三行互相补充，不是三套不同模型。",
+      "x": 0,
+      "y": -150,
+      "width": 5000,
+      "height": 130,
+      "color": "2"
+    },
+    {
+      "id": "c7c1000000000001",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[CTMC定义|Continuous-time Markov chain]]\n\nDiscrete states, a continuous clock and jump paths. Given the current state and clock time, earlier history adds no predictive information. Homogeneity is an additional condition.\n<!-- bilingual-en:end -->\n\n连续时钟、离散状态、跳跃路径；当前状态与时点已提供预测所需信息。时间齐次另作假设。",
+      "x": 0,
+      "y": 40,
+      "width": 480,
+      "height": 340,
+      "color": "5"
+    },
+    {
+      "id": "c7b1000000000001",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\nCompare equal durations from the same state at different clock times.\n<!-- bilingual-en:end -->\n\n比较同一起点、等长区间是否与起始时点无关。",
+      "x": 530,
+      "y": 95,
+      "width": 220,
+      "height": 230
+    },
+    {
+      "id": "c7c1000000000026",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[CTMC时间齐次转移函数|Time-homogeneous transitions]]\n\n$P(h)$ depends on elapsed duration $h$, not the starting clock time. A fixed rule can still produce a changing state distribution.\n<!-- bilingual-en:end -->\n\n相同起点、相同时长使用同一转移规律；转移齐次不等于状态分布平稳。",
+      "x": 800,
+      "y": 40,
+      "width": 480,
+      "height": 340,
+      "color": "5"
+    },
+    {
+      "id": "c7b1000000000015",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\nIn the standard homogeneous jump model with finite local exit rates, Q records derivatives at duration zero.\n<!-- bilingual-en:end -->\n\n标准齐次跳模型中，各状态的出口率分别有限，Q 记录零时长右导数。",
+      "x": 1330,
+      "y": 95,
+      "width": 220,
+      "height": 230
+    },
+    {
+      "id": "c7c1000000000003",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[生成矩阵约束|Generator matrix]]\n\nOff-diagonal rates are nonnegative; each exit rate is finite and $q_{ii}=-\\sum_{j\\ne i}q_{ij}$. Zero Q-row sums alone do not rule out explosion on countably many states.\n<!-- bilingual-en:end -->\n\n非对角元记录速率，对角抵消总出口率；Q 行和为零与无限状态过程非爆炸需分开。",
+      "x": 1600,
+      "y": 40,
+      "width": 480,
+      "height": 340,
+      "color": "5"
+    },
+    {
+      "id": "c7b1000000000002",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\nMultiply rates by a short duration; retain only the first-order probability change.\n<!-- bilingual-en:end -->\n\n速率乘短时长，只保留概率变化的一阶项。",
+      "x": 2130,
+      "y": 95,
+      "width": 220,
+      "height": 230
+    },
+    {
+      "id": "c7c1000000000004",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[CTMC短时概率展开|Short-time probabilities]]\n\nFor fixed $i,j$, $p_{ij}(h)=\\delta_{ij}+hq_{ij}+o(h)$; $\\delta_{ij}=1$ when $i=j$ and $0$ otherwise. Finite-state matrix notation is valid; unbounded rates need extra control for uniform errors.\n<!-- bilingual-en:end -->\n\n逐项短时一阶近似；余项也来自单次等待的非线性，不能只归因于多跳。",
+      "x": 2400,
+      "y": 40,
+      "width": 480,
+      "height": 340,
+      "color": "1"
+    },
+    {
+      "id": "c7c1000000000002",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[CTMC指数停留时间|Exponential holding times]]\n\nFor a standard homogeneous pure-jump chain, a positive finite exit rate $q_i$ gives an exponential wait with mean $1/q_i$. Rate zero gives an infinite absorbing wait.\n<!-- bilingual-en:end -->\n\n齐次纯跳链中，正有限出口率决定指数等待；零率吸收另行处理。“未离开”不同于“离开后又返回”。",
+      "x": 0,
+      "y": 480,
+      "width": 480,
+      "height": 340,
+      "color": "6"
+    },
+    {
+      "id": "c7b1000000000003",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\nPositive exit rate is the exponential parameter; zero rate means absorption.\n<!-- bilingual-en:end -->\n\n正出口率是指数参数，零率对应吸收。",
+      "x": 530,
+      "y": 535,
+      "width": 220,
+      "height": 230
+    },
+    {
+      "id": "c7c1000000000019",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[出口率|Exit rate]]\n\n$q_i=\\sum_{j\\ne i}q_{ij}=-q_{ii}$ combines all ways to leave. It has inverse-time units, not probability units; $1/q_i$ is the mean wait when $q_i>0$.\n<!-- bilingual-en:end -->\n\n总出口率合并各离开方向的速率；决定等多久，不独自决定下一站去哪。",
+      "x": 800,
+      "y": 480,
+      "width": 480,
+      "height": 340,
+      "color": "5"
+    },
+    {
+      "id": "c7b1000000000004",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\nAt positive-rate states, divide each outgoing rate by their total.\n<!-- bilingual-en:end -->\n\n正出口率状态中，各方向速率除以总率。",
+      "x": 1330,
+      "y": 535,
+      "width": 220,
+      "height": 230
+    },
+    {
+      "id": "c7c100000000001a",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[嵌入跳链|Embedded jump chain]]\n\nRecord the state at each genuine change. For $q_i>0$, $r_{ij}=q_{ij}/q_i$ for $j\\ne i$, and $r_{ii}=0$. An absorbing self-loop only completes the discrete record.\n<!-- bilingual-en:end -->\n\n跳链保存状态顺序，舍去时长；吸收补全与均匀化虚事件都不计作真实跳跃。",
+      "x": 1600,
+      "y": 480,
+      "width": 480,
+      "height": 340,
+      "color": "5"
+    },
+    {
+      "id": "c7c1000000000005",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[生成矩阵分解|Generator decomposition]]\n\nConditional on a positive-rate entry state, waiting time and next destination are independent. With exit-rate diagonal $D$ and completed jump matrix $R$, $Q=D(R-I)$.\n<!-- bilingual-en:end -->\n\n在给定本次进入状态后，把等待与去向分开；D 左乘按行缩放，零率行单独补全。",
+      "x": 2400,
+      "y": 480,
+      "width": 480,
+      "height": 340,
+      "color": "6"
+    },
+    {
+      "id": "c7c1000000000006",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[竞争指数时钟|Competing exponential clocks]]\n\nA finite or countable family of independent clocks with rates $a_j\\ge0$ and $0<a=\\sum_j a_j<\\infty$ have a unique first ring: wait $\\mathrm{Exp}(a)$, winner probability $a_j/a$. Wait and winner are independent. Total rate zero means no event.\n<!-- bilingual-en:end -->\n\n有限或可数个独立时钟，总率正且有限时最小值取得且唯一；总率为零时无下一次事件。",
+      "x": 3200,
+      "y": 480,
+      "width": 480,
+      "height": 340,
+      "color": "6"
+    },
+    {
+      "id": "c7c1000000000007",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[CTMC转移半群|Transition semigroup]]\n\nFor homogeneous transitions, $P(s+t)=P(s)P(t)$ sums over the state at the intermediate time. It also holds for the minimal process on the original space, with row sums equal to survival probabilities.\n<!-- bilingual-en:end -->\n\n时间齐次下，按中间观测时点拼接，不限制跳时；省略吸收墓地状态后，半群仍成立，行和可能小于一。",
+      "x": 0,
+      "y": 920,
+      "width": 480,
+      "height": 320,
+      "color": "6"
+    },
+    {
+      "id": "c7b1000000000005",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\nFor finite homogeneous chains, split off a short interval at either end.\n<!-- bilingual-en:end -->\n\n有限齐次链中，分别分解最初与最后一小段。",
+      "x": 530,
+      "y": 970,
+      "width": 220,
+      "height": 240
+    },
+    {
+      "id": "c7c1000000000009",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[Kolmogorov前后向方程|Kolmogorov equations]]\n\nFor a finite homogeneous chain in row convention, backward $P'(t)=QP(t)$, forward $P'(t)=P(t)Q$, with $P(0)=I$. Resolve the first or last short interval.\n<!-- bilingual-en:end -->\n\n先分解最初或最后一小段；“后向”不等于把路径倒放。可数无界率需另作分析。",
+      "x": 800,
+      "y": 920,
+      "width": 480,
+      "height": 320,
+      "color": "6"
+    },
+    {
+      "id": "c7b1000000000006",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\nThe finite-state initial-value problem has one matrix-exponential solution.\n<!-- bilingual-en:end -->\n\n有限状态初值问题的唯一解是矩阵指数。",
+      "x": 1330,
+      "y": 970,
+      "width": 220,
+      "height": 240
+    },
+    {
+      "id": "c7c1000000000008",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[CTMC矩阵指数|CTMC matrix exponential]]\n\nFor a finite homogeneous chain, $P(t)=e^{tQ}$ is the unique transition solution. It is a matrix power series, valid without diagonalizability.\n<!-- bilingual-en:end -->\n\n有限生成矩阵的指数把速率转成有限时长概率；不是逐元素指数，无界无限矩阵不能直接照搬。",
+      "x": 1600,
+      "y": 920,
+      "width": 480,
+      "height": 320,
+      "color": "6"
+    },
+    {
+      "id": "c7a1000000000002",
+      "type": "text",
+      "text": "## 2 · 模型家族与爆炸边界\n\n纯生链有两个不同特化：逐级结构带来精确爆炸判据，常数出生率成为 Poisson 计数。一般链先辨认爆炸，再决定是否需要墓地状态；全局有界率同时给出非爆炸保证和均匀化算法。",
+      "x": 0,
+      "y": 1380,
+      "width": 5000,
+      "height": 130,
+      "color": "2"
+    },
+    {
+      "id": "c7c100000000001e",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[纯生链|Pure-birth chains]]\n\nFrom level $n$, the only genuine jump is to $n+1$, at finite rate $\\lambda_n\\ge0$. Positive rates set exponential waits; a zero rate absorbs.\n<!-- bilingual-en:end -->\n\n路径逐级向上，但每层速度可以不同。可达零率会阻断路径；逐层有限率仍可能爆炸。",
+      "x": 0,
+      "y": 1630,
+      "width": 480,
+      "height": 320,
+      "color": "5"
+    },
+    {
+      "id": "c7c100000000001d",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[纯生链爆炸判据|Pure-birth explosion criterion]]\n\nFrom $n_0$, if every reachable rate is positive and finite, nonexplosion is equivalent to $\\sum_{n\\ge n_0}1/\\lambda_n=\\infty$. A finite sum gives explosion a.s.\n<!-- bilingual-en:end -->\n\n沿可达的正率尾部求和；先检查是否遇到零率吸收，不能把任意链的状态率机械排成此级数。",
+      "x": 800,
+      "y": 1630,
+      "width": 480,
+      "height": 340,
+      "color": "1"
+    },
+    {
+      "id": "c7c1000000000015",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[Poisson是常速纯生链|Poisson as constant-rate births]]\n\nFrom count zero, a homogeneous unit-birth chain with constant $\\lambda>0$ is the rate-$\\lambda$ Poisson process: its waits are iid exponential.\n<!-- bilingual-en:end -->\n\n从零开始、单位向上跳、同一正速率共同给出 Poisson 过程律；状态依赖率与日历时变强度需区分。",
+      "x": 1600,
+      "y": 1630,
+      "width": 480,
+      "height": 320,
+      "color": "3"
+    },
+    {
+      "id": "c7c1000000000024",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[生灭链|Birth–death chains]]\n\nA homogeneous count process jumps only from $n$ to $n+1$ at rate $\\lambda_n$, or to $n-1$ at rate $\\mu_n$. Endpoints and zero rates matter; this structure alone guarantees neither nonexplosion nor stationarity.\n<!-- bilingual-en:end -->\n\n齐次数量过程仅相邻增减一，速率下标指出发状态。边界与零率须明确；生灭结构本身不保证非爆炸或平稳。",
+      "x": 2400,
+      "y": 1630,
+      "width": 480,
+      "height": 300,
+      "color": "5"
+    },
+    {
+      "id": "c7c100000000000a",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[CTMC爆炸|Explosion]]\n\nIf genuine jump times $T_n$ accumulate at $\\zeta=\\lim_nT_n<\\infty$, infinitely many state changes occur in finite time. State the initial condition.\n<!-- bilingual-en:end -->\n\n每次等待都可为正且局部率有限，总和仍可能有限；吸收态无限等待不属于爆炸。",
+      "x": 0,
+      "y": 2040,
+      "width": 480,
+      "height": 320,
+      "color": "1"
+    },
+    {
+      "id": "c7b1000000000007",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\nThe minimal construction terminates at explosion instead of adding returning paths.\n<!-- bilingual-en:end -->\n\n最小构造在爆炸时终止，不额外加入返回路径。",
+      "x": 530,
+      "y": 2080,
+      "width": 220,
+      "height": 240
+    },
+    {
+      "id": "c7c100000000001b",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[最小CTMC|Minimal CTMC]]\n\nAt explosion, enter an absorbing cemetery state. On the original state set, row sum $\\sum_jp_{ij}(t)=\\Pr_i(t<\\zeta)$ records survival.\n<!-- bilingual-en:end -->\n\n不把爆炸路径送回原空间；缺额是截至 t 爆炸的概率。Q 零行和不保证原空间的 P(t) 行和为一。",
+      "x": 800,
+      "y": 2040,
+      "width": 480,
+      "height": 340,
+      "color": "5"
+    },
+    {
+      "id": "c7b1000000000014",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\nRe-entry after explosion is additional model information, requiring its own consistency check.\n<!-- bilingual-en:end -->\n\n爆炸后的重入规则是额外模型信息，须另行核验一致性。",
+      "x": 1340,
+      "y": 2080,
+      "width": 200,
+      "height": 240
+    },
+    {
+      "id": "c7c100000000001c",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[爆炸后延拓|Post-explosion extensions]]\n\nThe same local rates can support different later laws. Re-entry needs a specified, consistent rule; an independent restart is one example.\n<!-- bilingual-en:end -->\n\n初始分布与 Q 可能不足以确定爆炸后的过程；返回规则须另行核验 Markov 性与时序一致性。",
+      "x": 1600,
+      "y": 2040,
+      "width": 480,
+      "height": 320,
+      "color": "1"
+    },
+    {
+      "id": "c7c100000000000b",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[有界率非爆炸|Bounded-rate nonexplosion]]\n\nFor a finite or countable stable conservative Q-matrix, a common finite bound $\\sup_iq_i<\\infty$ prevents explosion. It is sufficient, not necessary.\n<!-- bilingual-en:end -->\n\n统一有界不同于每个状态分别有限；全零率链吸收，无界率也可能非爆炸。",
+      "x": 2400,
+      "y": 2040,
+      "width": 480,
+      "height": 320,
+      "color": "6"
+    },
+    {
+      "id": "c7b1000000000008",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\nA finite clock rate $\\nu\\ge\\sup_iq_i$, with $\\nu>0$, gives exact randomization.\n<!-- bilingual-en:end -->\n\n选择支配所有出口率的正有限时钟率，得到精确随机化。",
+      "x": 2930,
+      "y": 2080,
+      "width": 220,
+      "height": 260
+    },
+    {
+      "id": "c7c1000000000014",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[CTMC均匀化|Uniformization]]\n\nChoose finite $\\nu>0$ with $\\nu\\ge\\sup_iq_i$. Let $R=I+Q/\\nu$ and an independent rate-$\\nu$ Poisson clock select how many R-steps occur. Virtual self-loops are allowed; the Poisson mixture gives the exact process law.\n<!-- bilingual-en:end -->\n\n候选事件允许虚自环。以 Poisson 权重混合 R 的各次幂，得到精确过程律，不是固定步长 Euler 近似。",
+      "x": 3200,
+      "y": 2040,
+      "width": 480,
+      "height": 340,
+      "color": "6"
+    },
+    {
+      "id": "c7a1000000000003",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## 3 · Classes, stationarity and convergence\n\nSeparate return events from calendar return times, then study countable-state equilibrium. Finite chains decompose over closed classes. Detailed balance and reversibility impose stronger symmetry than stationarity and lead to birth–death calculations.\n<!-- bilingual-en:end -->\n\n## 3 · 类结构、平稳与收敛\n\n先把“会不会回来”与“要花多少日历时间”分开，再讨论可数链的稳态。有限链按闭沟通类分解。详细平衡与可逆是比平稳更强的路径对称性，并可用于生灭链。",
+      "x": 0,
+      "y": 2420,
+      "width": 5000,
+      "height": 180,
+      "color": "2"
+    },
+    {
+      "id": "c7c1000000000025",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[马氏链沟通类|Communicating classes]]\n\nMutual positive-probability reachability defines the classes. The adjacent bridge explains their use through the CTMC jump chain.\n<!-- bilingual-en:end -->\n\n双向正概率可达定义沟通类；旁边的桥说明怎样通过CTMC跳链使用这个定义。",
+      "x": 0,
+      "y": 2650,
+      "width": 480,
+      "height": 280,
+      "color": "2"
+    },
+    {
+      "id": "c7b1000000000009",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\nFor the minimal CTMC, positive-rate routes give the jump chain's communication graph.\n<!-- bilingual-en:end -->\n\n最小 CTMC 的正率路线给出与跳链相同的沟通图。",
+      "x": 530,
+      "y": 2690,
+      "width": 220,
+      "height": 210
+    },
+    {
+      "id": "c7c100000000000c",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[跳链决定CTMC沟通类|CTMC communicating classes]]\n\nFor a minimal chain with finite exit rates, finite positive-rate routes determine accessibility and classes. Keeping the same zero pattern preserves the classes. A closed infinite class may still explode.\n<!-- bilingual-en:end -->\n\n最小链各状态出口率有限时，有限正率路线决定可达与沟通类；保持零率位置便保持类划分。无限闭类仍可能爆炸。",
+      "x": 800,
+      "y": 2650,
+      "width": 480,
+      "height": 280,
+      "color": "6"
+    },
+    {
+      "id": "c7c100000000000d",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[常返与停留时间|Recurrence and holding times]]\n\nFor a nonabsorbing state of a minimal chain, recurrence agrees with the jump chain. Positive recurrence uses mean calendar return time, including waits. Absorbing states have no genuine departure cycle.\n<!-- bilingual-en:end -->\n\n非吸收态的常返性与跳链一致；正常返还要看包含停留的平均日历回返时间。吸收态没有真实离开周期。",
+      "x": 1600,
+      "y": 2650,
+      "width": 480,
+      "height": 280,
+      "color": "1"
+    },
+    {
+      "id": "c7b100000000000a",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\nFor a nonabsorbing state, positive recurrence requires finite mean calendar return time.\n<!-- bilingual-en:end -->\n\n非吸收态的正常返要求平均日历回返时间有限。",
+      "x": 2130,
+      "y": 2690,
+      "width": 220,
+      "height": 210
+    },
+    {
+      "id": "c7c1000000000011",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[可数CTMC稳态存在|Countable stationary existence]]\n\nOn at least two states, for an irreducible, nonexplosive homogeneous chain with finite exit rates, positive recurrence is equivalent to a unique stationary probability. Mean return cycles include the initial holding time.\n<!-- bilingual-en:end -->\n\n至少两个状态上，不可约、非爆炸且逐状态出口率有限的齐次链，正常返等价于唯一平稳概率存在；平均回返周期包含最初停留。",
+      "x": 2400,
+      "y": 2650,
+      "width": 480,
+      "height": 300,
+      "color": "6"
+    },
+    {
+      "id": "c7b100000000000b",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\nRetain irreducibility and nonexplosion. Use equal-time observations and then fill the time gaps.\n<!-- bilingual-en:end -->\n\n保留不可约与非爆炸；先看等间隔观测，再用局部连续界填补时刻间隙。",
+      "x": 2930,
+      "y": 2690,
+      "width": 220,
+      "height": 240
+    },
+    {
+      "id": "c7c1000000000021",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[可数CTMC平衡收敛|Countable CTMC convergence]]\n\nAn irreducible, nonexplosive homogeneous chain with finite exit rates and a stationary probability $\\pi$ converges to $\\pi$ from every initial law. No extra period condition is needed.\n<!-- bilingual-en:end -->\n\n不可约、非爆炸、逐状态出口率有限的齐次链若有平稳概率，则从任意初始律逐坐标趋于它；无须另加周期条件。",
+      "x": 3200,
+      "y": 2650,
+      "width": 480,
+      "height": 280,
+      "color": "6"
+    },
+    {
+      "id": "c7c1000000000012",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[跳链频率时间加权|Weight visits by duration]]\n\nIn a finite closed irreducible class with at least two states, jump proportions $\\alpha_i$ become time proportions $\\pi_i\\propto\\alpha_i/q_i$. Normalize; zero exit rates and infinite-state candidates need separate checks.\n<!-- bilingual-en:end -->\n\n有限闭不可约类至少有两状态时，访问比例除以正出口率再归一化。零出口率及无限状态候选须另查。",
+      "x": 4000,
+      "y": 2650,
+      "width": 480,
+      "height": 280,
+      "color": "3"
+    },
+    {
+      "id": "c7c100000000000e",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[CTMC平稳分布|Stationary distribution]]\n\nA probability row $\\pi$ is stationary when $\\pi P(t)=\\pi$ for every $t\\ge0$. It preserves the distribution, not each path. Existence, uniqueness and attraction from other starts are separate questions.\n<!-- bilingual-en:end -->\n\n概率行对每个时长都满足 $\\pi P(t)=\\pi$；分布不变，路径仍可跳。存在、唯一和其他初态的收敛须分别判断。",
+      "x": 0,
+      "y": 2960,
+      "width": 480,
+      "height": 280,
+      "color": "5"
+    },
+    {
+      "id": "c7b100000000000c",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\nFinite homogeneous chains: semigroup invariance becomes a normalized nonnegative left null vector.\n<!-- bilingual-en:end -->\n\n有限齐次链：半群不变性化为归一化非负左零向量。",
+      "x": 530,
+      "y": 3000,
+      "width": 220,
+      "height": 210
+    },
+    {
+      "id": "c7c1000000000027",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[有限CTMC平稳生成矩阵判据|Finite stationary criterion]]\n\nFor a finite homogeneous CTMC, stationarity is equivalent to $\\pi Q=0$, $\\pi_i\\ge0$ and $\\sum_i\\pi_i=1$. This is total flow balance; pairwise detailed balance is stronger.\n<!-- bilingual-en:end -->\n\n有限齐次链中，平稳概率恰是归一化非负左零向量。这是总流平衡，不要求逐对详细平衡。",
+      "x": 800,
+      "y": 2960,
+      "width": 480,
+      "height": 280,
+      "color": "6"
+    },
+    {
+      "id": "c7b1000000000016",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\nFinite irreducibility makes the probability solution unique and positive at every state.\n<!-- bilingual-en:end -->\n\n有限且不可约，使概率解唯一并且每项为正。",
+      "x": 1330,
+      "y": 3000,
+      "width": 220,
+      "height": 210
+    },
+    {
+      "id": "c7c1000000000020",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[有限不可约CTMC稳态|Finite irreducible stationary law]]\n\nA finite irreducible homogeneous CTMC has exactly one stationary probability law, positive at every state. Periodicity of its genuine jump chain is irrelevant here. Irreducibility is sufficient, not necessary, for uniqueness.\n<!-- bilingual-en:end -->\n\n有限不可约齐次链有唯一、处处为正的平稳概率。真实跳链可有周期；不可约只是唯一性的充分条件。",
+      "x": 1600,
+      "y": 2960,
+      "width": 480,
+      "height": 280,
+      "color": "6"
+    },
+    {
+      "id": "c7b100000000000d",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\nFor a finite chain, extend each closed-class law by zero and mix the resulting laws.\n<!-- bilingual-en:end -->\n\n有限链中，各闭类稳态在类外补零后取凸组合。",
+      "x": 2130,
+      "y": 3000,
+      "width": 220,
+      "height": 210
+    },
+    {
+      "id": "c7c100000000000f",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[有限CTMC平稳分解|Finite stationary decomposition]]\n\nEvery stationary probability of a finite homogeneous CTMC is a unique mixture of its closed-class laws. Transient states receive zero mass. The set of these probabilities is a simplex, not a vector space.\n<!-- bilingual-en:end -->\n\n有限齐次链的全部平稳概率是闭类稳态的唯一凸组合，暂态质量为零；组成单纯形，并非向量空间。",
+      "x": 2400,
+      "y": 2960,
+      "width": 480,
+      "height": 280,
+      "color": "6"
+    },
+    {
+      "id": "c7b100000000000e",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\nFinite-chain limits use class-entry probabilities; one closed class makes the limit common to all starts.\n<!-- bilingual-en:end -->\n\n有限链极限按入类概率混合；唯一闭类才让全部初态共享同一极限。",
+      "x": 2930,
+      "y": 3000,
+      "width": 220,
+      "height": 230
+    },
+    {
+      "id": "c7c1000000000010",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[有限CTMC全局收敛|Long-time limits of a finite CTMC]]\n\nEvery initial law of a finite homogeneous CTMC converges. The probabilities of entering each closed class select its limiting mixture. All starts share one limit exactly when there is one closed class.\n<!-- bilingual-en:end -->\n\n有限齐次链从每个初态都收敛；进入各闭类的概率决定极限混合。恰有一个闭类时，所有初态才共享同一极限。",
+      "x": 3200,
+      "y": 2960,
+      "width": 480,
+      "height": 280,
+      "color": "6"
+    },
+    {
+      "id": "c7c1000000000013",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[CTMC详细平衡|Detailed balance]]\n\nBalance each pair of weighted rate flows: $w_iq_{ij}=w_jq_{ji}$. Unequal rates can balance unequal occupancy. Nonnegative weights must have positive finite total mass before normalization to probabilities.\n<!-- bilingual-en:end -->\n\n逐对匹配加权速率流 $w_iq_{ij}=w_jq_{ji}$，不要求速率本身相同。非负权重总和正且有限才可归一化。",
+      "x": 0,
+      "y": 3270,
+      "width": 480,
+      "height": 280,
+      "color": "5"
+    },
+    {
+      "id": "c7b100000000000f",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\nPairwise rate flow gives the local side of the finite-state equivalence.\n<!-- bilingual-en:end -->\n\n逐对速率流是有限状态等价定理的局部条件。",
+      "x": 560,
+      "y": 3310,
+      "width": 220,
+      "height": 210
+    },
+    {
+      "id": "c7c1000000000022",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[CTMC可逆性|Reversibility]]\n\nUnder the stationary initial law, reflecting the time axis preserves every finite-dimensional distribution. Reflect unequal observation gaps too. Individual paths need not be palindromes, and arbitrary initial laws need not be reversible.\n<!-- bilingual-en:end -->\n\n在平稳初始律下，时间反射保持所有有限维分布；不等观察间隔也须反射。路径不必是回文，任意初始律也不自动可逆。",
+      "x": 0,
+      "y": 3570,
+      "width": 480,
+      "height": 280,
+      "color": "5"
+    },
+    {
+      "id": "c7b1000000000010",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\nStationary time reflection gives the path-law side of the equivalence.\n<!-- bilingual-en:end -->\n\n平稳时间反射给出等价定理的路径律表述。",
+      "x": 560,
+      "y": 3610,
+      "width": 220,
+      "height": 210
+    },
+    {
+      "id": "c7c1000000000023",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[CTMC详细平衡与可逆|Detailed balance and reversibility]]\n\nFor a finite homogeneous chain and the same probability law, detailed balance is equivalent to reversibility; both imply stationarity. Zero probability weights are allowed. A stationary directed cycle need not be reversible.\n<!-- bilingual-en:end -->\n\n有限齐次链对同一概率律，详细平衡当且仅当可逆，二者推出平稳。允许零权重；平稳环流可以不可逆。",
+      "x": 900,
+      "y": 3420,
+      "width": 480,
+      "height": 280,
+      "color": "6"
+    },
+    {
+      "id": "c7b1000000000011",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\nFor positive neighboring birth/death rates, pairwise balance gives relative weights; normalization and process conditions remain.\n<!-- bilingual-en:end -->\n\n相邻出生／死亡率为正时，逐对平衡给出相对权重；仍须归一化并检查过程条件。",
+      "x": 1440,
+      "y": 3460,
+      "width": 200,
+      "height": 240
+    },
+    {
+      "id": "c7c1000000000016",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[生灭链平稳递推|Birth–death stationary weights]]\n\nPositive adjacent rates give $w_0=1$ and $w_{n+1}/w_n=\\lambda_n/\\mu_{n+1}$. Check that their sum is finite, then normalize. On infinitely many states, also verify nonexplosion of the chosen minimal process.\n<!-- bilingual-en:end -->\n\n相邻正率先递推相对权重，再检查总和有限并归一化。无限状态还须确认所选最小过程非爆炸；零率屏障先按类处理。",
+      "x": 1700,
+      "y": 3420,
+      "width": 480,
+      "height": 300,
+      "color": "3"
+    },
+    {
+      "id": "c7b1000000000012",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\nConstant arrival and single-server service rates produce geometric weights; infinite capacity still requires their sum to converge.\n<!-- bilingual-en:end -->\n\n常数到达率与单服务台服务率给出几何权重；无限容量仍须检查可归一化。",
+      "x": 2240,
+      "y": 3460,
+      "width": 200,
+      "height": 220
+    },
+    {
+      "id": "c7c1000000000017",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[M-M-1稳态人数|M/M/1 system size]]\n\nIndependent Poisson arrivals of rate $\\lambda>0$ and one exponential server of rate $\\mu>0$, with unlimited capacity: stationary total count has $\\pi_n=(1-\\rho)\\rho^n$ exactly when $\\rho=\\lambda/\\mu<1$.\n<!-- bilingual-en:end -->\n\n到达与服务独立、正有限率、单服务台且容量无限时，平稳系统总人数为几何律；系统人数包含服务中的一人。有限容量另论。",
+      "x": 2500,
+      "y": 3420,
+      "width": 480,
+      "height": 300,
+      "color": "3"
+    },
+    {
+      "id": "c7a1000000000004",
+      "type": "text",
+      "text": "## 4 · 从完整路径估计生成率\n\n观测到每次真实跳时后，数据同时提供跳转计数与在各状态的暴露时间。若多条边共享一个参数，必须先施加共同率约束，再汇总信息。",
+      "x": 0,
+      "y": 3880,
+      "width": 5000,
+      "height": 130,
+      "color": "2"
+    },
+    {
+      "id": "c7c1000000000018",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[CTMC完整路径估计|Rates from a complete path]]\n\nFinite homogeneous model, fixed window, every genuine jump observed, conditional on the initial state: free off-diagonal rates have $\\widehat q_{ij}=N_{ij}/S_i$ for positive exposure $S_i$. Include the final unfinished wait.\n<!-- bilingual-en:end -->\n\n有限齐次模型在固定窗内完整观察，并条件于初态；自由速率用跳数除以正暴露。末段等待也计入，零暴露不能写成0/0。",
+      "x": 0,
+      "y": 4110,
+      "width": 480,
+      "height": 320,
+      "color": "3"
+    },
+    {
+      "id": "c7b1000000000013",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\nApply the parameter constraints before maximizing. Each shared outgoing edge contributes its own weighted exposure.\n<!-- bilingual-en:end -->\n\n先代入参数约束再最大化；同一状态的每条共享出口分别贡献加权暴露。",
+      "x": 530,
+      "y": 4150,
+      "width": 220,
+      "height": 220
+    },
+    {
+      "id": "c7c100000000001f",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[CTMC共同率估计|Shared-rate estimation]]\n\nIn the complete-path model, known $q_{ij}=c_{ij}\\theta$ with $c_{ij}>0$ gives the nonnegative-parameter MLE $\\widehat\\theta=\\sum N_{ij}/\\sum c_{ij}S_i$ on those edges when weighted exposure is positive. If zero is excluded, zero counts give a boundary supremum. Other off-diagonal rates do not depend on $\\theta$.\n<!-- bilingual-en:end -->\n\n完整路径下先施加已知比例约束；共享边的跳数除以加权暴露。正暴露零跳数仍进分母；是否允许零参数须按模型判断。",
+      "x": 800,
+      "y": 4110,
+      "width": 480,
+      "height": 350,
+      "color": "3"
+    },
+    {
+      "id": "p0063-exp",
+      "type": "text",
+      "x": -920,
+      "y": 40,
+      "width": 650,
+      "height": 340,
+      "color": "5",
+      "text": "<!-- bilingual-en:start -->\n## [[指数分布|Exponential distribution]]\n\nA continuous waiting-time law with rate $\\lambda>0$: $P(T>t)=e^{-\\lambda t}$ for $t\\ge0$, and mean $1/\\lambda$. Check rate versus scale and time units.\n<!-- bilingual-en:end -->\n\n连续等待的基础分布；速率不是概率，也不是均值。用生存概率先读懂“还要等多久”。"
+    },
+    {
+      "id": "p0063-memoryless",
+      "type": "text",
+      "x": -920,
+      "y": 480,
+      "width": 650,
+      "height": 340,
+      "color": "6",
+      "text": "<!-- bilingual-en:start -->\n## [[指数分布无记忆性|Exponential memorylessness]]\n\nGiven that waiting is still unfinished at time $s$, the remaining wait has the original exponential law. Within positive finite waiting laws, the memoryless property characterizes the exponential distribution.\n<!-- bilingual-en:end -->\n\n给定已等待且仍未结束，剩余等待同分布；逆命题须保留有限等待等条件。"
+    },
+    {
+      "id": "p0064-stopped-information",
+      "type": "text",
+      "x": 2400,
+      "y": 920,
+      "width": 480,
+      "height": 360,
+      "text": "<!-- bilingual-en:start -->\nA [[停时定义|stopping time]] is recognized from observations already made. The [[停时信息集|information at that time]] is the conditioning object for restart; a last-jump time may look ahead.\n<!-- bilingual-en:end -->\n\n停时不偷看未来；停时信息集记录截至停止所知的事件。“截止前最后一次跳跃”通常不能这样重新开始。"
+    },
+    {
+      "id": "p0064-strong-markov",
+      "type": "text",
+      "x": 3200,
+      "y": 920,
+      "width": 650,
+      "height": 360,
+      "color": "6",
+      "text": "<!-- bilingual-en:start -->\n## [[CTMC强Markov性|Strong Markov property]]\n\nFor a standard homogeneous CTMC, restart at a finite stopping time before explosion. Given the reached state, the future has the corresponding fresh law independently of the past.\n<!-- bilingual-en:end -->\n\n给定到达状态后重新开始整个概率律；并非与到达状态无条件独立，也不规定尚未指定的爆炸后延拓。"
+    },
+    {
+      "id": "p0066-countable-dtmc",
+      "type": "text",
+      "x": 4000,
+      "y": 2960,
+      "width": 480,
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[可数Markov链平衡收敛|Discrete theorem for a CTMC skeleton]]\n\nFor a time-homogeneous, irreducible nonexplosive CTMC with finite exit rates and stationary probability, observing $X_{nh}$ at fixed $h>0$ gives transition $P(h)$, which is irreducible, aperiodic and preserves $\\pi$. Apply the countable discrete theorem.\n<!-- bilingual-en:end -->\n\n对时间齐次、不可约非爆炸、出口率逐项有限且有平稳概率的 CTMC，固定间隔观察得到 $P(h)$；它不可约、非周期并保持平稳律。此骨架不同于真实跳链。"
+    }
   ],
   "edges": [
-    {"id":"c7e3000000000001","fromNode":"c7c1000000000001","fromSide":"right","toNode":"c7b1000000000001","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e3000000000002","fromNode":"c7b1000000000001","fromSide":"right","toNode":"c7c1000000000026","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e3000000000003","fromNode":"c7c1000000000026","fromSide":"right","toNode":"c7b1000000000015","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e3000000000004","fromNode":"c7b1000000000015","fromSide":"right","toNode":"c7c1000000000003","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e3000000000029","fromNode":"c7c1000000000003","fromSide":"right","toNode":"c7b1000000000002","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e300000000002a","fromNode":"c7b1000000000002","fromSide":"right","toNode":"c7c1000000000004","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e3000000000005","fromNode":"c7c1000000000002","fromSide":"right","toNode":"c7b1000000000003","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e3000000000006","fromNode":"c7b1000000000003","fromSide":"right","toNode":"c7c1000000000019","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e3000000000007","fromNode":"c7c1000000000019","fromSide":"right","toNode":"c7b1000000000004","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e3000000000008","fromNode":"c7b1000000000004","fromSide":"right","toNode":"c7c100000000001a","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e3000000000009","fromNode":"c7c1000000000007","fromSide":"right","toNode":"c7b1000000000005","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e300000000000a","fromNode":"c7b1000000000005","fromSide":"right","toNode":"c7c1000000000009","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e300000000000b","fromNode":"c7c1000000000009","fromSide":"right","toNode":"c7b1000000000006","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e300000000000c","fromNode":"c7b1000000000006","fromSide":"right","toNode":"c7c1000000000008","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e300000000000d","fromNode":"c7c100000000000a","fromSide":"right","toNode":"c7b1000000000007","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e300000000000e","fromNode":"c7b1000000000007","fromSide":"right","toNode":"c7c100000000001b","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e3000000000027","fromNode":"c7c100000000001b","fromSide":"right","toNode":"c7b1000000000014","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e3000000000028","fromNode":"c7b1000000000014","fromSide":"right","toNode":"c7c100000000001c","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e300000000000f","fromNode":"c7c100000000000b","fromSide":"right","toNode":"c7b1000000000008","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e3000000000010","fromNode":"c7b1000000000008","fromSide":"right","toNode":"c7c1000000000014","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e3000000000011","fromNode":"c7c1000000000025","fromSide":"right","toNode":"c7b1000000000009","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e3000000000012","fromNode":"c7b1000000000009","fromSide":"right","toNode":"c7c100000000000c","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e3000000000013","fromNode":"c7c100000000000d","fromSide":"right","toNode":"c7b100000000000a","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e3000000000014","fromNode":"c7b100000000000a","fromSide":"right","toNode":"c7c1000000000011","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e3000000000015","fromNode":"c7c1000000000011","fromSide":"right","toNode":"c7b100000000000b","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e3000000000016","fromNode":"c7b100000000000b","fromSide":"right","toNode":"c7c1000000000021","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e3000000000017","fromNode":"c7c100000000000e","fromSide":"right","toNode":"c7b100000000000c","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e3000000000018","fromNode":"c7b100000000000c","fromSide":"right","toNode":"c7c1000000000027","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e300000000002b","fromNode":"c7c1000000000027","fromSide":"right","toNode":"c7b1000000000016","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e300000000002c","fromNode":"c7b1000000000016","fromSide":"right","toNode":"c7c1000000000020","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e3000000000019","fromNode":"c7c1000000000020","fromSide":"right","toNode":"c7b100000000000d","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e300000000001a","fromNode":"c7b100000000000d","fromSide":"right","toNode":"c7c100000000000f","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e300000000001b","fromNode":"c7c100000000000f","fromSide":"right","toNode":"c7b100000000000e","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e300000000001c","fromNode":"c7b100000000000e","fromSide":"right","toNode":"c7c1000000000010","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e300000000001d","fromNode":"c7c1000000000013","fromSide":"right","toNode":"c7b100000000000f","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e300000000001e","fromNode":"c7b100000000000f","fromSide":"right","toNode":"c7c1000000000023","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e300000000001f","fromNode":"c7c1000000000022","fromSide":"right","toNode":"c7b1000000000010","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e3000000000020","fromNode":"c7b1000000000010","fromSide":"right","toNode":"c7c1000000000023","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e3000000000021","fromNode":"c7c1000000000023","fromSide":"right","toNode":"c7b1000000000011","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e3000000000022","fromNode":"c7b1000000000011","fromSide":"right","toNode":"c7c1000000000016","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e3000000000023","fromNode":"c7c1000000000016","fromSide":"right","toNode":"c7b1000000000012","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e3000000000024","fromNode":"c7b1000000000012","fromSide":"right","toNode":"c7c1000000000017","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e3000000000025","fromNode":"c7c1000000000018","fromSide":"right","toNode":"c7b1000000000013","toSide":"left","toEnd":"arrow"},
-    {"id":"c7e3000000000026","fromNode":"c7b1000000000013","fromSide":"right","toNode":"c7c100000000001f","toSide":"left","toEnd":"arrow"}
+    {
+      "id": "c7e3000000000001",
+      "fromNode": "c7c1000000000001",
+      "fromSide": "right",
+      "toNode": "c7b1000000000001",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e3000000000002",
+      "fromNode": "c7b1000000000001",
+      "fromSide": "right",
+      "toNode": "c7c1000000000026",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e3000000000003",
+      "fromNode": "c7c1000000000026",
+      "fromSide": "right",
+      "toNode": "c7b1000000000015",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e3000000000004",
+      "fromNode": "c7b1000000000015",
+      "fromSide": "right",
+      "toNode": "c7c1000000000003",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e3000000000029",
+      "fromNode": "c7c1000000000003",
+      "fromSide": "right",
+      "toNode": "c7b1000000000002",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e300000000002a",
+      "fromNode": "c7b1000000000002",
+      "fromSide": "right",
+      "toNode": "c7c1000000000004",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e3000000000005",
+      "fromNode": "c7c1000000000002",
+      "fromSide": "right",
+      "toNode": "c7b1000000000003",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e3000000000006",
+      "fromNode": "c7b1000000000003",
+      "fromSide": "right",
+      "toNode": "c7c1000000000019",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e3000000000007",
+      "fromNode": "c7c1000000000019",
+      "fromSide": "right",
+      "toNode": "c7b1000000000004",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e3000000000008",
+      "fromNode": "c7b1000000000004",
+      "fromSide": "right",
+      "toNode": "c7c100000000001a",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e3000000000009",
+      "fromNode": "c7c1000000000007",
+      "fromSide": "right",
+      "toNode": "c7b1000000000005",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e300000000000a",
+      "fromNode": "c7b1000000000005",
+      "fromSide": "right",
+      "toNode": "c7c1000000000009",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e300000000000b",
+      "fromNode": "c7c1000000000009",
+      "fromSide": "right",
+      "toNode": "c7b1000000000006",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e300000000000c",
+      "fromNode": "c7b1000000000006",
+      "fromSide": "right",
+      "toNode": "c7c1000000000008",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e300000000000d",
+      "fromNode": "c7c100000000000a",
+      "fromSide": "right",
+      "toNode": "c7b1000000000007",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e300000000000e",
+      "fromNode": "c7b1000000000007",
+      "fromSide": "right",
+      "toNode": "c7c100000000001b",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e3000000000027",
+      "fromNode": "c7c100000000001b",
+      "fromSide": "right",
+      "toNode": "c7b1000000000014",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e3000000000028",
+      "fromNode": "c7b1000000000014",
+      "fromSide": "right",
+      "toNode": "c7c100000000001c",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e300000000000f",
+      "fromNode": "c7c100000000000b",
+      "fromSide": "right",
+      "toNode": "c7b1000000000008",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e3000000000010",
+      "fromNode": "c7b1000000000008",
+      "fromSide": "right",
+      "toNode": "c7c1000000000014",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e3000000000011",
+      "fromNode": "c7c1000000000025",
+      "fromSide": "right",
+      "toNode": "c7b1000000000009",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e3000000000012",
+      "fromNode": "c7b1000000000009",
+      "fromSide": "right",
+      "toNode": "c7c100000000000c",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e3000000000013",
+      "fromNode": "c7c100000000000d",
+      "fromSide": "right",
+      "toNode": "c7b100000000000a",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e3000000000014",
+      "fromNode": "c7b100000000000a",
+      "fromSide": "right",
+      "toNode": "c7c1000000000011",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e3000000000015",
+      "fromNode": "c7c1000000000011",
+      "fromSide": "right",
+      "toNode": "c7b100000000000b",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e3000000000016",
+      "fromNode": "c7b100000000000b",
+      "fromSide": "right",
+      "toNode": "c7c1000000000021",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e3000000000017",
+      "fromNode": "c7c100000000000e",
+      "fromSide": "right",
+      "toNode": "c7b100000000000c",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e3000000000018",
+      "fromNode": "c7b100000000000c",
+      "fromSide": "right",
+      "toNode": "c7c1000000000027",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e300000000002b",
+      "fromNode": "c7c1000000000027",
+      "fromSide": "right",
+      "toNode": "c7b1000000000016",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e300000000002c",
+      "fromNode": "c7b1000000000016",
+      "fromSide": "right",
+      "toNode": "c7c1000000000020",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e3000000000019",
+      "fromNode": "c7c1000000000020",
+      "fromSide": "right",
+      "toNode": "c7b100000000000d",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e300000000001a",
+      "fromNode": "c7b100000000000d",
+      "fromSide": "right",
+      "toNode": "c7c100000000000f",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e300000000001b",
+      "fromNode": "c7c100000000000f",
+      "fromSide": "right",
+      "toNode": "c7b100000000000e",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e300000000001c",
+      "fromNode": "c7b100000000000e",
+      "fromSide": "right",
+      "toNode": "c7c1000000000010",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e300000000001d",
+      "fromNode": "c7c1000000000013",
+      "fromSide": "right",
+      "toNode": "c7b100000000000f",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e300000000001e",
+      "fromNode": "c7b100000000000f",
+      "fromSide": "right",
+      "toNode": "c7c1000000000023",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e300000000001f",
+      "fromNode": "c7c1000000000022",
+      "fromSide": "right",
+      "toNode": "c7b1000000000010",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e3000000000020",
+      "fromNode": "c7b1000000000010",
+      "fromSide": "right",
+      "toNode": "c7c1000000000023",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e3000000000021",
+      "fromNode": "c7c1000000000023",
+      "fromSide": "right",
+      "toNode": "c7b1000000000011",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e3000000000022",
+      "fromNode": "c7b1000000000011",
+      "fromSide": "right",
+      "toNode": "c7c1000000000016",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e3000000000023",
+      "fromNode": "c7c1000000000016",
+      "fromSide": "right",
+      "toNode": "c7b1000000000012",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e3000000000024",
+      "fromNode": "c7b1000000000012",
+      "fromSide": "right",
+      "toNode": "c7c1000000000017",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e3000000000025",
+      "fromNode": "c7c1000000000018",
+      "fromSide": "right",
+      "toNode": "c7b1000000000013",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "c7e3000000000026",
+      "fromNode": "c7b1000000000013",
+      "fromSide": "right",
+      "toNode": "c7c100000000001f",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "p0063-exp-memoryless",
+      "fromNode": "p0063-exp",
+      "fromSide": "bottom",
+      "toNode": "p0063-memoryless",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "Divide survival probabilities · 尾概率相除"
+    },
+    {
+      "id": "p0063-memoryless-holding",
+      "fromNode": "p0063-memoryless",
+      "fromSide": "right",
+      "toNode": "c7c1000000000002",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "Homogeneous Markov waiting · 齐次 Markov 等待"
+    },
+    {
+      "id": "p0063-jump-decomposition",
+      "fromNode": "c7c100000000001a",
+      "fromSide": "right",
+      "toNode": "c7c1000000000005",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "Combine destination law with exit rate · 联合去向概率与出口率"
+    },
+    {
+      "id": "p0064-stopped-to-strong",
+      "fromNode": "p0064-stopped-information",
+      "fromSide": "right",
+      "toNode": "p0064-strong-markov",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "Condition on information at the stopping time · 用停时信息条件化"
+    },
+    {
+      "id": "p0064-strong-to-jump",
+      "fromNode": "p0064-strong-markov",
+      "fromSide": "top",
+      "toNode": "c7c100000000001a",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "Restart before explosion at genuine jump times · 爆炸前在真实跳时重新开始"
+    },
+    {
+      "id": "p0066-skeleton-convergence",
+      "fromNode": "p0066-countable-dtmc",
+      "fromSide": "top",
+      "toNode": "c7c1000000000021",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "Equal-time limit plus a local continuity bound · 等间隔极限加局部连续界"
+    }
   ]
 }

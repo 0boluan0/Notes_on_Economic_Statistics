@@ -73,21 +73,21 @@
     {
       "id": "c810000000000008",
       "type": "text",
-      "text": "## [[嵌套模型F检验]]\n\n同响应、同样本的受限与无约束 RSS 检验预设线性限制。\n\n**边界：** 不是非嵌套或自动搜索工具。",
+      "text": "<!-- bilingual-en:start -->\n## [[嵌套模型F检验|Nested-model F test]]\nUse the same response and rows with unweighted OLS. Divide the RSS increase by the number of independent restrictions, then by the unrestricted noise estimate. The stated joint-Gaussian model with full rank, positive noise variance and n > k gives exact F calibration (n rows, k coefficients).\n<!-- bilingual-en:end -->\n\n## [[嵌套模型F检验]]\n同一响应、同一观测行做无权重 OLS。RSS 增量先除以独立限制数，再除以无约束噪声方差估计。在规定的联合 Gaussian 模型、满秩、正噪声方差及 n > k 下，得到精确 F 校准（n 行、k 个系数）。",
       "x": 920,
       "y": 700,
       "width": 400,
-      "height": 240,
+      "height": 350,
       "color": "3"
     },
     {
       "id": "c810000000000009",
       "type": "text",
-      "text": "## [[Wald联合检验]]\n\n用 R V̂ R′ 按选定协方差口径检验联合限制。\n\n**共享边界：** 一般协方差下不能冒充经典 RSS-F。",
+      "text": "<!-- bilingual-en:start -->\n## [[Wald联合检验|Wald joint tests]]\nTest prespecified restrictions using the chosen complete covariance and a positive definite restriction covariance. The usual chi-square calibration is asymptotic. Exact classical F calibration requires the matching classical covariance and Gaussian model.\n<!-- bilingual-en:end -->\n\n## [[Wald联合检验]]\n用选定的完整协方差检验预先指定的限制，限制协方差须正定。通常的卡方校准是渐近结论；经典精确 F 校准须匹配经典协方差与 Gaussian 模型。",
       "x": 1380,
       "y": 700,
       "width": 400,
-      "height": 240,
+      "height": 350,
       "color": "1"
     },
     {
@@ -242,7 +242,7 @@
       "fromSide": "right",
       "toNode": "c810000000000009",
       "toSide": "left",
-      "label": "一般协方差口径改用匹配 Wald",
+      "label": "Change covariance and recalibrate the test · 换协方差后重新校准检验",
       "toEnd": "arrow"
     },
     {

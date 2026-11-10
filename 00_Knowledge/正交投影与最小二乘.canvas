@@ -1,71 +1,764 @@
 {
-	"nodes":[
-		{"id":"a100000000000001","type":"group","x":0,"y":180,"width":1650,"height":900,"label":"正交几何：从内积到最近点","color":"5"},
-		{"id":"a100000000000002","type":"group","x":1800,"y":180,"width":1650,"height":900,"label":"投影公式：从算子到矩阵表达","color":"4"},
-		{"id":"a100000000000003","type":"group","x":1800,"y":1240,"width":1650,"height":520,"label":"线性最小二乘：问题、方程与解","color":"6"},
-		{"id":"a100000000000004","type":"group","x":0,"y":1240,"width":1650,"height":820,"label":"数值算法：QR、条件性与秩亏","color":"3"},
-		{"id":"a100000000000010","type":"text","x":0,"y":0,"width":3450,"height":140,"text":"# 正交投影与最小二乘\n\n从内积几何出发，先得到投影与最近点，再区分精确公式、线性最小二乘结论和数值算法。箭头说明具体的数学依赖或算法选择。","color":"2"},
-		{"id":"b100000000000001","type":"text","x":80,"y":300,"width":300,"height":130,"text":"[[正交|内积为零就是正交]]\n\n先固定内积，垂直、长度与最近点才有确定含义。","color":"5"},
-		{"id":"b100000000000002","type":"text","x":430,"y":300,"width":300,"height":130,"text":"[[正交补|$S^\\perp$ 收集全部正交方向]]\n\n量词是对 $S$ 中每个向量，而不是某一条垂线。","color":"5"},
-		{"id":"b100000000000003","type":"text","x":780,"y":300,"width":300,"height":130,"text":"[[正交分解定理|$V=S\\oplus S^\\perp$]]\n\n有限维中，每个向量都有唯一的子空间分量与正交残差。","color":"5"},
-		{"id":"b10000000000000d","type":"text","x":1130,"y":300,"width":300,"height":130,"text":"[[正交投影|取正交分解中的 $S$ 分量]]\n\n$P_Sb$ 保留子空间分量并删除 $S^\\perp$ 分量。","color":"5"},
-		{"id":"b100000000000016","type":"text","x":80,"y":650,"width":300,"height":130,"text":"[[标准正交组|两两正交且各自单位长度]]\n\n这是一组向量的性质，不要求组成方阵。","color":"5"},
-		{"id":"b100000000000015","type":"text","x":430,"y":650,"width":300,"height":130,"text":"[[双重正交补|$S^{\\perp\\perp}=\\overline S$]]\n\n有限维时子空间自动闭合，因此双重正交补回到 $S$。","color":"5"},
-		{"id":"b100000000000014","type":"text","x":780,"y":650,"width":300,"height":130,"text":"[[正交向量勾股关系|正交分量的平方范数相加]]\n\n内积交叉项为零，距离比较因此化成勾股分解。","color":"5"},
-		{"id":"b10000000000001c","type":"text","x":780,"y":850,"width":300,"height":130,"text":"[[复空间勾股不推正交|复空间中勾股等式不反推正交]]\n\n等式只消掉内积实部，纯虚交叉项仍可存在。","color":"1"},
-		{"id":"b100000000000004","type":"text","x":1130,"y":650,"width":300,"height":130,"text":"[[最佳逼近与正交残差|正交残差刻画唯一最近点]]\n\n投影几何与子空间中的最佳逼近是同一个条件。","color":"5"},
-		{"id":"b100000000000005","type":"text","x":1880,"y":300,"width":300,"height":130,"text":"[[正交投影矩阵判别|正交投影矩阵当且仅当自伴且幂等]]\n\n实数域用对称，复数域用 Hermitian；只幂等可能是斜投影。","color":"4"},
-		{"id":"b100000000000006","type":"text","x":2230,"y":300,"width":300,"height":130,"text":"[[标准正交基投影公式|标准正交列给出 $QQ^*$]]\n\n先取内积坐标，再由同一组列向量合成投影。","color":"4"},
-		{"id":"b100000000000007","type":"text","x":2580,"y":300,"width":300,"height":130,"text":"[[满列秩投影公式|$A(A^*A)^{-1}A^*$ 投影到列空间]]\n\n逆矩阵公式要求 $A$ 满列秩；秩亏时公式本身失效。","color":"4"},
-		{"id":"b100000000000008","type":"text","x":3150,"y":300,"width":300,"height":130,"text":"[[AA+列空间投影|$AA^+$ 投影到列空间]]\n\n它作用在输出空间，任意秩下都保留唯一拟合值。","color":"4"},
-		{"id":"b100000000000013","type":"text","x":2230,"y":650,"width":300,"height":130,"text":"[[Gram矩阵正定判据|$A^*A\\succ0$ 当且仅当 $A$ 满列秩]]\n\n这正是满列秩投影公式中 Gram 逆存在的条件。","color":"4"},
-		{"id":"b10000000000000e","type":"text","x":2580,"y":650,"width":300,"height":130,"text":"[[A+A行空间投影|$A^+A$ 投影到行空间]]\n\n它作用在输入空间，并删除不改变 $Ax$ 的零空间分量。","color":"4"},
-		{"id":"b100000000000012","type":"text","x":1880,"y":1360,"width":300,"height":130,"text":"[[线性最小二乘|使 $\\|Ax-b\\|_2$ 最小]]\n\n它把子空间最近点问题写成关于系数 $x$ 的优化问题。","color":"6"},
-		{"id":"b100000000000018","type":"text","x":2230,"y":1360,"width":300,"height":130,"text":"[[最小二乘正规方程|$A^*(A\\hat x-b)=0$]]\n\n一阶条件说明残差与所有拟合方向正交。","color":"6"},
-		{"id":"b100000000000019","type":"text","x":2580,"y":1360,"width":300,"height":130,"text":"[[最小二乘解唯一性|系数唯一当且仅当 $A$ 满列秩]]\n\n秩亏时最佳拟合仍唯一，但产生它的系数可以不唯一。","color":"6"},
-		{"id":"b100000000000011","type":"text","x":2930,"y":1360,"width":300,"height":130,"text":"[[最小范数最小二乘解|$A^+b$ 是唯一最小范数解]]\n\n它在全部最小二乘解中删除零空间自由度。","color":"6"},
-		{"id":"b100000000000010","type":"text","x":80,"y":1360,"width":300,"height":130,"text":"[[QR分解|完整 QR：方阵正交 Q 乘上梯形 R]]\n\n完整分解保留输出空间的一整组标准正交基。","color":"3"},
-		{"id":"b10000000000001d","type":"text","x":430,"y":1360,"width":300,"height":130,"text":"[[薄QR分解|薄 QR：只保留 n 个正交列]]\n\n$m\\ge n$ 时写成 $A=Q_1R_1$；满列秩使 $R_1$ 可逆。","color":"3"},
-		{"id":"b10000000000000a","type":"text","x":780,"y":1360,"width":300,"height":130,"text":"[[薄QR最小二乘|薄 QR 把问题化为三角系统]]\n\n满列秩时解 $R\\hat x=Q^*b$，不显式形成逆矩阵。","color":"3"},
-		{"id":"b100000000000017","type":"text","x":1130,"y":1360,"width":300,"height":130,"text":"[[CPQR秩揭示边界|CPQR 对角衰减不等于强秩揭示保证]]\n\n普通 CPQR 只提供有效秩证据；强 RRQR 还需要显式误差界。","color":"3"},
-		{"id":"b10000000000001e","type":"text","x":1130,"y":1540,"width":300,"height":130,"text":"[[CPQR回代不保最小范数|主元回代不自动给最小范数]]\n\n把非主元变量置零只选一个特解，未必删除零空间分量。","color":"1"},
-		{"id":"b10000000000000c","type":"text","x":1130,"y":1710,"width":300,"height":130,"text":"[[秩亏最小二乘算法|秩亏时用完整正交分解或 SVD]]\n\n算法必须同时声明有效秩口径与是否保证最小范数。","color":"3"},
-		{"id":"b10000000000000f","type":"text","x":80,"y":1710,"width":300,"height":130,"text":"[[Gram-Schmidt正交化|逐列减投影并归一化]]\n\n精确算术下，它保持逐列张成空间并构造标准正交列。","color":"3"},
-		{"id":"b100000000000009","type":"text","x":430,"y":1710,"width":300,"height":130,"text":"[[Gram-Schmidt数值失稳|经典 Gram-Schmidt 可在浮点下失去正交性]]\n\n分解残差小并不能证明算出的 $Q$ 仍近似正交。","color":"3"},
-		{"id":"b10000000000000b","type":"text","x":780,"y":1710,"width":300,"height":130,"text":"[[正规方程条件数平方|$\\kappa_2(A^*A)=\\kappa_2(A)^2$]]\n\n这解释了为什么病态问题应避免显式形成 Gram 矩阵。","color":"3"},
-		{"id":"b10000000000001f","type":"text","x":1130,"y":1900,"width":300,"height":130,"text":"[[欠定不等于秩亏|欠定满行秩不等于秩亏]]\n\n先用 $\\operatorname{rank}(A)<\\min(m,n)$ 判断是否真正秩亏。","color":"2"},
-		{"id":"a100000000000011","type":"text","x":0,"y":2140,"width":3450,"height":160,"text":"## 继续学习\n\n统计解释进入 [[OLS 线性回归.canvas|OLS 线性回归]]；伪逆与规范解进入 [[广义逆与最小范数解.canvas|广义逆与最小范数解]]；分解的谱结构进入 [[奇异值分解与低秩近似.canvas|SVD 与低秩近似]]。","color":"2"}
-	],
-	"edges":[
-		{"id":"c100000000000001","fromNode":"b100000000000001","fromSide":"right","toNode":"b100000000000002","toSide":"left","toEnd":"arrow","label":"从两个向量推广到整个子空间"},
-		{"id":"c100000000000002","fromNode":"b100000000000002","fromSide":"right","toNode":"b100000000000003","toSide":"left","toEnd":"arrow","label":"正交补给出唯一直和分解"},
-		{"id":"c100000000000003","fromNode":"b100000000000003","fromSide":"right","toNode":"b10000000000000d","toSide":"left","toEnd":"arrow","label":"唯一分解定义子空间分量"},
-		{"id":"c100000000000004","fromNode":"b10000000000000d","fromSide":"bottom","toNode":"b100000000000004","toSide":"top","toEnd":"arrow","label":"投影残差正交且给出最近点"},
-		{"id":"c100000000000005","fromNode":"b100000000000001","fromSide":"bottom","toNode":"b100000000000016","toSide":"top","toEnd":"arrow","label":"加入单位长度得到标准正交组"},
-		{"id":"c100000000000007","fromNode":"b100000000000014","fromSide":"right","toNode":"b100000000000004","toSide":"left","toEnd":"arrow","label":"勾股分解证明距离最小"},
-		{"id":"c10000000000001c","fromNode":"b100000000000014","fromSide":"bottom","toNode":"b10000000000001c","toSide":"top","toEnd":"arrow","label":"反向命题依赖数域"},
-		{"id":"c100000000000008","fromNode":"b100000000000002","fromSide":"bottom","toNode":"b100000000000015","toSide":"top","toEnd":"arrow","label":"再次取正交补得到闭包"},
-		{"id":"c100000000000009","fromNode":"b10000000000000d","fromSide":"right","toNode":"b100000000000005","toSide":"left","toEnd":"arrow","label":"把投影算子写成矩阵"},
-		{"id":"c10000000000000a","fromNode":"b100000000000005","fromSide":"right","toNode":"b100000000000006","toSide":"left","toEnd":"arrow","label":"标准正交列给出显式矩阵"},
-		{"id":"c10000000000000b","fromNode":"b100000000000006","fromSide":"right","toNode":"b100000000000007","toSide":"left","toEnd":"arrow","label":"由标准正交基推广到一般满秩基"},
-		{"id":"c10000000000000c","fromNode":"b100000000000013","fromSide":"top","toNode":"b100000000000007","toSide":"bottom","toEnd":"arrow","label":"满列秩保证 Gram 逆存在"},
-		{"id":"c10000000000000d","fromNode":"b100000000000007","fromSide":"right","toNode":"b100000000000008","toSide":"left","toEnd":"arrow","label":"伪逆把列空间投影推广到任意秩"},
-		{"id":"c10000000000000e","fromNode":"b100000000000008","fromSide":"bottom","toNode":"b100000000000011","toSide":"top","toEnd":"arrow","label":"输出侧唯一拟合支撑最小范数定理"},
-		{"id":"c10000000000001a","fromNode":"b10000000000000e","fromSide":"bottom","toNode":"b100000000000011","toSide":"top","toEnd":"arrow","label":"输入侧删除零空间分量支撑最小范数定理"},
-		{"id":"c10000000000000f","fromNode":"b100000000000004","fromSide":"bottom","toNode":"b100000000000012","toSide":"top","toEnd":"arrow","label":"最近点问题写成残差范数最小化"},
-		{"id":"c100000000000010","fromNode":"b100000000000012","fromSide":"right","toNode":"b100000000000018","toSide":"left","toEnd":"arrow","label":"一阶条件给出残差正交"},
-		{"id":"c100000000000011","fromNode":"b100000000000018","fromSide":"right","toNode":"b100000000000019","toSide":"left","toEnd":"arrow","label":"秩决定系数是否唯一"},
-		{"id":"c100000000000012","fromNode":"b100000000000019","fromSide":"right","toNode":"b100000000000011","toSide":"left","toEnd":"arrow","label":"不唯一时再选择唯一最小范数者"},
-		{"id":"c100000000000013","fromNode":"b10000000000000f","fromSide":"top","toNode":"b10000000000001d","toSide":"bottom","toEnd":"arrow","label":"逐列正交化构造薄因子"},
-		{"id":"c100000000000014","fromNode":"b10000000000000f","fromSide":"right","toNode":"b100000000000009","toSide":"left","toEnd":"arrow","label":"经典实现进入浮点后可能失去正交"},
-		{"id":"c100000000000015","fromNode":"b100000000000010","fromSide":"right","toNode":"b10000000000001d","toSide":"left","toEnd":"arrow","label":"删去乘到零块的补基"},
-		{"id":"c10000000000001d","fromNode":"b10000000000001d","fromSide":"right","toNode":"b10000000000000a","toSide":"left","toEnd":"arrow","label":"满列秩使三角因子可逆"},
-		{"id":"c100000000000016","fromNode":"b10000000000000b","fromSide":"top","toNode":"b10000000000000a","toSide":"bottom","toEnd":"arrow","label":"避免显式形成条件数平方的 Gram 矩阵"},
-		{"id":"c100000000000017","fromNode":"b10000000000000a","fromSide":"right","toNode":"b100000000000017","toSide":"left","toEnd":"arrow","label":"近秩亏时先检查有效秩"},
-		{"id":"c100000000000018","fromNode":"b100000000000017","fromSide":"bottom","toNode":"b10000000000001e","toSide":"top","toEnd":"arrow","label":"秩证据不等于规范解保证"},
-		{"id":"c10000000000001e","fromNode":"b10000000000001e","fromSide":"bottom","toNode":"b10000000000000c","toSide":"top","toEnd":"arrow","label":"用 COD 或 SVD 删除零空间分量"},
-		{"id":"c10000000000001f","fromNode":"b10000000000001f","fromSide":"top","toNode":"b10000000000000c","toSide":"bottom","toEnd":"arrow","label":"只有低于形状最大秩才进入秩亏分支"},
-		{"id":"c100000000000019","fromNode":"b100000000000016","fromSide":"bottom","toNode":"b100000000000010","toSide":"top","toEnd":"arrow","label":"标准正交列构成 QR 分解中的 Q"},
-		{"id":"c10000000000001b","fromNode":"b100000000000011","fromSide":"bottom","toNode":"b10000000000000c","toSide":"right","toEnd":"arrow","label":"算法必须实现并验证最小范数选择"}
-	]
+  "nodes": [
+    {
+      "id": "a100000000000001",
+      "type": "group",
+      "x": 0,
+      "y": 180,
+      "width": 1650,
+      "height": 1040,
+      "label": "正交几何：从内积到最近点",
+      "color": "5"
+    },
+    {
+      "id": "a100000000000002",
+      "type": "group",
+      "x": 1800,
+      "y": 180,
+      "width": 1650,
+      "height": 900,
+      "label": "投影公式：从算子到矩阵表达",
+      "color": "4"
+    },
+    {
+      "id": "a100000000000003",
+      "type": "group",
+      "x": 1800,
+      "y": 1240,
+      "width": 1650,
+      "height": 520,
+      "label": "线性最小二乘：问题、方程与解",
+      "color": "6"
+    },
+    {
+      "id": "a100000000000004",
+      "type": "group",
+      "x": 0,
+      "y": 1240,
+      "width": 1650,
+      "height": 820,
+      "label": "数值算法：QR、条件性与秩亏",
+      "color": "3"
+    },
+    {
+      "id": "a100000000000010",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 3450,
+      "height": 140,
+      "text": "# 正交投影与最小二乘\n\n从内积几何出发，先得到投影与最近点，再区分精确公式、线性最小二乘结论和数值算法。箭头说明具体的数学依赖或算法选择。",
+      "color": "2"
+    },
+    {
+      "id": "b100000000000001",
+      "type": "text",
+      "x": 80,
+      "y": 300,
+      "width": 300,
+      "height": 270,
+      "text": "<!-- bilingual-en:start -->\n## [[正交|Orthogonality]]\n\nFix an inner product. Two vectors are orthogonal when their inner product is zero. Zero is orthogonal to all vectors.\n<!-- bilingual-en:end -->\n\n**正交**\n\n先固定内积，再判断内积是否为零。零向量满足代数条件，却没有夹角。",
+      "color": "5"
+    },
+    {
+      "id": "b100000000000002",
+      "type": "text",
+      "x": 430,
+      "y": 300,
+      "width": 300,
+      "height": 270,
+      "text": "<!-- bilingual-en:start -->\n## [[正交补|Orthogonal complement]]\n\nWithin the stated ambient space, collect every vector orthogonal to every member of the chosen set.\n<!-- bilingual-en:end -->\n\n**正交补**\n\n取全部满足条件的向量；检验对象中的每个方向。外部空间改变，正交补也可能改变。",
+      "color": "5"
+    },
+    {
+      "id": "b100000000000003",
+      "type": "text",
+      "x": 780,
+      "y": 300,
+      "width": 300,
+      "height": 300,
+      "text": "<!-- bilingual-en:start -->\n## [[正交分解定理|Orthogonal decomposition]]\n\nFor a finite-dimensional subspace $S$ of any inner-product space, every $b$ splits uniquely as $b=p+e$, with $p\\in S$ and $e\\in S^\\perp$.\n<!-- bilingual-en:end -->\n\n**正交分解定理**\n\n任意内积空间中，子空间 $S$ 有限维时，$b=p+e$ 唯一，$p\\in S$、$e\\in S^\\perp$。",
+      "color": "5"
+    },
+    {
+      "id": "b10000000000000d",
+      "type": "text",
+      "x": 1130,
+      "y": 300,
+      "width": 300,
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[正交投影|Orthogonal projection]]\n\nFor a finite-dimensional subspace, keep the unique component inside it and discard the perpendicular remainder. Fix the inner product first.\n<!-- bilingual-en:end -->\n\n**正交投影**\n\n先固定内积；对有限维子空间，保留唯一的子空间分量，去掉垂直残差。",
+      "color": "5"
+    },
+    {
+      "id": "b100000000000016",
+      "type": "text",
+      "x": 80,
+      "y": 650,
+      "width": 300,
+      "height": 270,
+      "text": "<!-- bilingual-en:start -->\n## [[标准正交组|Orthonormal family]]\n\nPairwise perpendicular unit vectors are independent. They form a basis of a specified space only if they also span it.\n<!-- bilingual-en:end -->\n\n**标准正交组**\n\n两两正交且各自长度为一。成为所指空间的基，还须张成该空间。",
+      "color": "5"
+    },
+    {
+      "id": "b100000000000015",
+      "type": "text",
+      "x": 430,
+      "y": 650,
+      "width": 300,
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[双重正交补|Double orthogonal complement]]\n\nFor a linear subspace $S$ in a Hilbert space, taking the complement twice gives its closure. In finite dimensions, it returns $S$ itself.\n<!-- bilingual-en:end -->\n\n**双重正交补**\n\nHilbert 空间中，线性子空间取两次正交补得到闭包；有限维情形回到自身。",
+      "color": "5"
+    },
+    {
+      "id": "b100000000000014",
+      "type": "text",
+      "x": 780,
+      "y": 650,
+      "width": 300,
+      "height": 250,
+      "text": "<!-- bilingual-en:start -->\n## [[正交向量勾股关系|Pythagorean identity]]\n\nOrthogonal components have additive squared norms. Use the norm induced by the same inner product.\n<!-- bilingual-en:end -->\n\n**正交向量的勾股关系**\n\n正交分量的长度平方相加；长度与正交须来自同一内积。",
+      "color": "5"
+    },
+    {
+      "id": "b10000000000001c",
+      "type": "text",
+      "x": 780,
+      "y": 950,
+      "width": 300,
+      "height": 260,
+      "text": "<!-- bilingual-en:start -->\n## [[复空间勾股不推正交|Complex converse boundary]]\n\nOne complex Pythagorean equality tests only the real part: $1,i$ are a counterexample. Testing $x+iy$ also detects the imaginary part.\n<!-- bilingual-en:end -->\n\n**复空间中的勾股逆命题**\n\n一次等式只检验实部；$1$ 与 $i$ 就是反例。再检验 $x+iy$ 可检测虚部。",
+      "color": "1"
+    },
+    {
+      "id": "b100000000000004",
+      "type": "text",
+      "x": 1130,
+      "y": 650,
+      "width": 300,
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[最佳逼近与正交残差|Nearest point and orthogonal residual]]\n\nA subspace candidate is nearest exactly when its residual is perpendicular to the subspace. The squared-error identity proves that this point is unique.\n<!-- bilingual-en:end -->\n\n**最近点与正交残差**\n\n子空间中的候选为最近点，当且仅当残差垂直于子空间；平方误差恒等式给出唯一性。",
+      "color": "5"
+    },
+    {
+      "id": "b100000000000005",
+      "type": "text",
+      "x": 1880,
+      "y": 300,
+      "width": 300,
+      "height": 340,
+      "text": "<!-- bilingual-en:start -->\n[[正交投影矩阵判别|Orthogonal projector criterion]]\n\nFor the standard inner product, $P^2=P$ and $P^*=P$ characterize orthogonal projection onto $\\operatorname{range}(P)$. Over $\\mathbb R$, $P^*=P^T$.\n<!-- bilingual-en:end -->\n\n标准内积下，幂等与自伴共同刻画到自身值域的正交投影。实数用对称，复数用 Hermitian；只幂等可为斜投影。",
+      "color": "4"
+    },
+    {
+      "id": "b100000000000006",
+      "type": "text",
+      "x": 2230,
+      "y": 300,
+      "width": 300,
+      "height": 330,
+      "text": "<!-- bilingual-en:start -->\n[[标准正交基投影公式|Projection from an orthonormal basis]]\n\nTake coordinates with $Q^*b$, then rebuild with $Q$: $p=QQ^*b$. Here $^*$ is conjugate transpose.\n<!-- bilingual-en:end -->\n\n标准正交列先读内积坐标，再合成投影；实数时共轭转置就是普通转置。",
+      "color": "4"
+    },
+    {
+      "id": "b100000000000007",
+      "type": "text",
+      "x": 2580,
+      "y": 300,
+      "width": 300,
+      "height": 330,
+      "text": "<!-- bilingual-en:start -->\n[[满列秩投影公式|Projection from independent columns]]\n\n$P=A(A^*A)^{-1}A^*$ requires full column rank; $^*$ is conjugate transpose. The Gram inverse corrects overlap between basis vectors.\n<!-- bilingual-en:end -->\n\n独立列可用 Gram 逆修正基向量的重叠。秩亏时此公式失效，但列空间投影仍存在。",
+      "color": "4"
+    },
+    {
+      "id": "b100000000000008",
+      "type": "text",
+      "x": 3150,
+      "y": 300,
+      "width": 300,
+      "height": 270,
+      "text": "<!-- bilingual-en:start -->\n[[AA+列空间投影|Output projection $AA^+$]]\n\nAt any rank, $AA^+b$ is the unique closest output in $C(A)$. Coefficients may still differ.\n<!-- bilingual-en:end -->\n\n任意秩下都投向列空间 $C(A)$，给出唯一最近输出；系数仍可能不唯一。",
+      "color": "4"
+    },
+    {
+      "id": "b100000000000013",
+      "type": "text",
+      "x": 2230,
+      "y": 650,
+      "width": 300,
+      "height": 280,
+      "text": "<!-- bilingual-en:start -->\n## [[Gram矩阵正定判据|Gram matrix criterion]]\n\n$A^*A$ is positive definite and invertible exactly when $A$ has independent columns: $x^*A^*Ax=\\|Ax\\|_2^2$.\n<!-- bilingual-en:end -->\n\n列独立排除非零系数的抵消，保证投影公式中的Gram逆存在。",
+      "color": "4"
+    },
+    {
+      "id": "b10000000000000e",
+      "type": "text",
+      "x": 2580,
+      "y": 650,
+      "width": 300,
+      "height": 270,
+      "text": "<!-- bilingual-en:start -->\n[[A+A行空间投影|Input projection $A^+A$]]\n\nRetain $C(A^*)=N(A)^\\perp$ and remove invisible inputs. The star is conjugate transpose.\n<!-- bilingual-en:end -->\n\n保留零空间的正交补，去掉不改变输出的分量。复数时须用共轭转置 $A^*$。",
+      "color": "4"
+    },
+    {
+      "id": "b100000000000012",
+      "type": "text",
+      "x": 1880,
+      "y": 1360,
+      "width": 300,
+      "height": 330,
+      "text": "<!-- bilingual-en:start -->\n## [[线性最小二乘|Linear least squares]]\n\nChoose unrestricted $x$ to minimize $\\|Ax-b\\|_2^2$. The nearest vector in the column space always exists and is unique in finite dimensions.\n<!-- bilingual-en:end -->\n\n## [[线性最小二乘]]\n\n选择无约束 $x$，使 $\\|Ax-b\\|_2^2$ 最小。有限维中列空间最近点总存在且唯一。",
+      "color": "6"
+    },
+    {
+      "id": "b100000000000018",
+      "type": "text",
+      "x": 2230,
+      "y": 1360,
+      "width": 300,
+      "height": 330,
+      "text": "<!-- bilingual-en:start -->\n## [[最小二乘正规方程|Normal equations]]\n\n$A^*(b-A\\hat x)=0$ is necessary and sufficient, even with dependent columns. Here $*$ is the conjugate transpose; for real matrices it is the transpose.\n<!-- bilingual-en:end -->\n\n## [[最小二乘正规方程]]\n\n$A^*(b-A\\hat x)=0$ 是充要条件，列依赖时也成立。$*$ 为共轭转置，实矩阵时就是转置。",
+      "color": "6"
+    },
+    {
+      "id": "b100000000000019",
+      "type": "text",
+      "x": 2580,
+      "y": 1360,
+      "width": 300,
+      "height": 330,
+      "text": "<!-- bilingual-en:start -->\n## [[最小二乘解唯一性|Coefficient uniqueness]]\n\nCoefficients are unique exactly when $A$ has independent columns. All minimisers give the same fitted vector; otherwise their differences lie in the null space.\n<!-- bilingual-en:end -->\n\n## [[最小二乘解唯一性]]\n\n系数唯一当且仅当 $A$ 列独立。所有最小化解给出同一拟合向量；不唯一时系数之差位于零空间。",
+      "color": "6"
+    },
+    {
+      "id": "b100000000000011",
+      "type": "text",
+      "x": 2930,
+      "y": 1360,
+      "width": 300,
+      "height": 330,
+      "text": "<!-- bilingual-en:start -->\n[[最小范数最小二乘解|Minimum-norm least squares]]\n\nFirst minimize the residual, then choose the shortest coefficient vector among tied fits. The unique choice is $A^+b$.\n<!-- bilingual-en:end -->\n\n先固定最佳拟合，再删除零空间分量。最小范数依赖既定坐标中的欧氏长度。",
+      "color": "6"
+    },
+    {
+      "id": "b100000000000010",
+      "type": "text",
+      "x": 80,
+      "y": 1360,
+      "width": 300,
+      "height": 330,
+      "text": "<!-- bilingual-en:start -->\n[[QR分解|Full QR factorisation]]\n\n$A=QR$ keeps a full orthonormal basis of output space in square $Q$; $R$ is upper trapezoidal.\n<!-- bilingual-en:end -->\n\n完整 QR 的 $Q$ 覆盖整个输出空间。实数用正交矩阵，复数用酉矩阵；不要求 $A$ 满秩。",
+      "color": "3"
+    },
+    {
+      "id": "b10000000000001d",
+      "type": "text",
+      "x": 430,
+      "y": 1360,
+      "width": 300,
+      "height": 330,
+      "text": "<!-- bilingual-en:start -->\n[[薄QR分解|Thin QR factorisation]]\n\nFor $m\\ge n$, keep $n$ orthonormal columns: $A=Q_1R_1$. Full column rank makes triangular $R_1$ invertible.\n<!-- bilingual-en:end -->\n\n薄 QR 按列数取 $n$ 列，不是按秩截取；秩亏时 $C(Q_1)$ 可以大于 $C(A)$。",
+      "color": "3"
+    },
+    {
+      "id": "b10000000000000a",
+      "type": "text",
+      "x": 780,
+      "y": 1360,
+      "width": 300,
+      "height": 330,
+      "text": "<!-- bilingual-en:start -->\n[[薄QR最小二乘|Least squares through thin QR]]\n\nFor full column rank, solve $R_1\\hat x=Q_1^*b$ by back substitution. This avoids forming the Gram matrix or an explicit inverse.\n<!-- bilingual-en:end -->\n\n满列秩时化为可逆三角系统；采用稳定 QR 实现可减少额外舍入损伤，但不消除数据敏感性。",
+      "color": "3"
+    },
+    {
+      "id": "b100000000000017",
+      "type": "text",
+      "x": 3700,
+      "y": 1340,
+      "width": 660,
+      "height": 270,
+      "text": "<!-- bilingual-en:start -->\n[[CPQR秩揭示边界|What CPQR reveals about rank]]\n\nPivoting prioritizes remaining column lengths. The diagonal magnitudes need not equal singular values; strong RRQR needs additional quantitative bounds.\n<!-- bilingual-en:end -->\n\n对角衰减提供证据；容差与判秩规则须明确，不能据此直接声称已有强秩揭示保证。",
+      "color": "3"
+    },
+    {
+      "id": "b10000000000001e",
+      "type": "text",
+      "x": 3700,
+      "y": 1720,
+      "width": 660,
+      "height": 270,
+      "text": "<!-- bilingual-en:start -->\n[[CPQR回代不保最小范数|Basic and minimum-norm solutions]]\n\nSetting nonpivot coordinates to zero selects a basic solution. Even an exact rank decision does not make it the shortest one.\n<!-- bilingual-en:end -->\n\n[1 1] 的基本解 (1,0) 与最短解 (1/2,1/2) 拟合相同；自由坐标须与零空间正交几何对应。",
+      "color": "1"
+    },
+    {
+      "id": "b10000000000000c",
+      "type": "text",
+      "x": 3700,
+      "y": 2100,
+      "width": 660,
+      "height": 270,
+      "text": "<!-- bilingual-en:start -->\n[[秩亏最小二乘算法|Rank-aware least-squares solvers]]\n\nComplete orthogonal factorization adds input-space rotations; SVD uses singular directions. Both implement minimum norm for the stated rank model.\n<!-- bilingual-en:end -->\n\n声明所用范数、缩放与精确或阈值秩模型。删除非零方向会改变原问题。",
+      "color": "3"
+    },
+    {
+      "id": "b10000000000000f",
+      "type": "text",
+      "x": 80,
+      "y": 1710,
+      "width": 300,
+      "height": 310,
+      "text": "<!-- bilingual-en:start -->\n[[Gram-Schmidt正交化|Gram–Schmidt orthogonalization]]\n\nSubtract known unit-direction projections, then normalize the new remainder. Independent inputs guarantee a nonzero remainder in exact arithmetic.\n<!-- bilingual-en:end -->\n\n逐列保留原来的前缀张成空间。精确零余量表示没有新方向，不能继续相除。",
+      "color": "3"
+    },
+    {
+      "id": "b100000000000009",
+      "type": "text",
+      "x": 430,
+      "y": 1710,
+      "width": 300,
+      "height": 310,
+      "text": "<!-- bilingual-en:start -->\n[[Gram-Schmidt数值失稳|Loss of orthogonality]]\n\nA small reconstruction error does not establish orthonormality. Modified Gram–Schmidt updates the remainder before each new inner product.\n<!-- bilingual-en:end -->\n\n近依赖与消去会放大方向误差。再正交化也有假设；需同时检查重建与正交性。",
+      "color": "3"
+    },
+    {
+      "id": "b10000000000000b",
+      "type": "text",
+      "x": 780,
+      "y": 1710,
+      "width": 300,
+      "height": 310,
+      "text": "<!-- bilingual-en:start -->\n[[正规方程条件数平方|Squared Gram conditioning]]\n\nFor full column rank, $\\kappa_2(A^*A)=\\kappa_2(A)^2$, using conjugate transpose and the matrix 2-norm.\n<!-- bilingual-en:end -->\n\n满列秩时 Gram 的二范数条件数平方。这个精确恒等式要与实际算法的舍入误差分开。",
+      "color": "3"
+    },
+    {
+      "id": "b10000000000001f",
+      "type": "text",
+      "x": 3700,
+      "y": 2480,
+      "width": 660,
+      "height": 270,
+      "text": "<!-- bilingual-en:start -->\n[[欠定不等于秩亏|Underdetermined versus rank deficient]]\n\n$m<n$ describes shape. Rank deficiency means $r<\\min(m,n)$; full-row-rank wide matrices still have nonunique exact solutions.\n<!-- bilingual-en:end -->\n\n欠定满行秩保证每个目标可达，却保留 n−m 个自由方向。可用转置 QR 或 LQ 求最短解。",
+      "color": "2"
+    },
+    {
+      "id": "a100000000000011",
+      "type": "text",
+      "x": 0,
+      "y": 2140,
+      "width": 3450,
+      "height": 160,
+      "text": "## 继续学习\n\n统计解释进入 [[OLS 线性回归.canvas|OLS 线性回归]]；伪逆与规范解进入 [[广义逆与最小范数解.canvas|广义逆与最小范数解]]；分解的谱结构进入 [[奇异值分解与低秩近似.canvas|SVD 与低秩近似]]。",
+      "color": "2"
+    },
+    {
+      "id": "p0014-dot",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[向量点积|Dot product]]\n\nMultiply matching real coordinates and add: $u^Tv$ is one scalar, with sign and size depending on both vectors.\n<!-- bilingual-en:end -->\n\n对应坐标相乘再相加，结果为标量；大小同时含方向与长度。",
+      "x": 0,
+      "y": 2440,
+      "width": 600,
+      "height": 300
+    },
+    {
+      "id": "p0014-norm",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[欧氏范数|Euclidean norm]]\n\nFor real vectors, $\\|u\\|_2=\\sqrt{\\sum_i u_i^2}$ measures length; $\\|u-v\\|_2$ measures distance.\n<!-- bilingual-en:end -->\n\n对实向量，坐标平方和开平方给出长度；先相减再取范数得到距离。",
+      "x": 680,
+      "y": 2440,
+      "width": 600,
+      "height": 300
+    },
+    {
+      "id": "p0014-cs",
+      "type": "text",
+      "text": "<!-- bilingual-en:start -->\n## [[Cauchy–Schwarz不等式|Cauchy–Schwarz inequality]]\n\nFor real vectors, $|u^Tv|\\le\\|u\\|_2\\|v\\|_2$; equality occurs when one vector is a scalar multiple of the other.\n<!-- bilingual-en:end -->\n\n对实向量，点积绝对值不超过长度乘积；其中一个是另一个的标量倍时取等号，包含零向量。",
+      "x": 1360,
+      "y": 2440,
+      "width": 600,
+      "height": 300
+    },
+    {
+      "id": "p0048-identity",
+      "type": "text",
+      "x": 2040,
+      "y": 2440,
+      "width": 600,
+      "height": 300,
+      "color": "5",
+      "text": "<!-- bilingual-en:start -->\n## [[单位矩阵|Identity matrix]]\n\n$I_n$ leaves every $n$-coordinate vector unchanged. Its diagonal entries are one and its other entries zero. Dimensions determine which side it can multiply.\n<!-- bilingual-en:end -->\n\n单位矩阵代表“不改变向量”。$I_n$ 为 $n$ 阶方阵；左乘与右乘所需阶数由被乘矩阵的尺寸决定。"
+    },
+    {
+      "id": "p0048-orthogonal",
+      "type": "text",
+      "x": 2720,
+      "y": 2440,
+      "width": 600,
+      "height": 300,
+      "color": "5",
+      "text": "<!-- bilingual-en:start -->\n## [[正交矩阵|Orthogonal matrix]]\n\nA real square $Q$ with $Q^TQ=I$ preserves lengths and has inverse $Q^T$. Rectangular orthonormal columns preserve input lengths without providing a two-sided inverse.\n<!-- bilingual-en:end -->\n\n正交矩阵是实方阵，转置即逆且保持内积。矩形标准正交列矩阵不是这个方阵定义；它的 $QQ^T$ 可以是非恒等投影。"
+    },
+    {
+      "id": "p0049-rank-decisions",
+      "type": "group",
+      "x": 3620,
+      "y": 1240,
+      "width": 820,
+      "height": 1530,
+      "label": "Rank evidence and solution choice · 判秩证据与选解",
+      "color": "3"
+    },
+    {
+      "id": "p0049-idempotent",
+      "type": "text",
+      "x": 0,
+      "y": 2840,
+      "width": 680,
+      "height": 260,
+      "color": "5",
+      "text": "<!-- bilingual-en:start -->\n## [[幂等矩阵|Idempotent matrix]]\n\n$P^2=P$ means a second application changes nothing. Orthogonal projection additionally requires conjugate-transpose symmetry.\n<!-- bilingual-en:end -->\n\n幂等只说明“做两次等于做一次”，可以是斜投影；实数情形还需对称，才是垂直投影。"
+    },
+    {
+      "id": "p0053-inner-product",
+      "type": "text",
+      "x": 780,
+      "y": 2840,
+      "width": 680,
+      "height": 280,
+      "color": "5",
+      "text": "<!-- bilingual-en:start -->\n## [[内积|Inner product]]\n\nA scalar comparison of two vectors. Self-product gives squared length; zero product defines orthogonality. This course conjugates the first argument over complex coordinates.\n<!-- bilingual-en:end -->\n\n**内积**\n\n比较两个向量得到标量；与自身的内积给出长度平方，内积为零定义正交。复数坐标中，本课程对第一个自变量取共轭。"
+    }
+  ],
+  "edges": [
+    {
+      "id": "c100000000000001",
+      "fromNode": "b100000000000001",
+      "fromSide": "right",
+      "toNode": "b100000000000002",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "Test every member within a fixed ambient space · 固定外部空间并检验每个向量"
+    },
+    {
+      "id": "c100000000000002",
+      "fromNode": "b100000000000002",
+      "fromSide": "right",
+      "toNode": "b100000000000003",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "For subspace S in finite-dimensional V, obtain a unique orthogonal decomposition · 对有限维 V 的子空间 S 得到唯一正交分解"
+    },
+    {
+      "id": "c100000000000003",
+      "fromNode": "b100000000000003",
+      "fromSide": "right",
+      "toNode": "b10000000000000d",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "The unique subspace component defines the projection · 唯一子空间分量定义投影"
+    },
+    {
+      "id": "c100000000000004",
+      "fromNode": "b10000000000000d",
+      "fromSide": "bottom",
+      "toNode": "b100000000000004",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "The orthogonal residual characterizes the unique nearest point · 正交残差刻画唯一最近点"
+    },
+    {
+      "id": "c100000000000005",
+      "fromNode": "b100000000000001",
+      "fromSide": "bottom",
+      "toNode": "b100000000000016",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "Add unit length to pairwise orthogonality · 在两两正交上加入单位长度"
+    },
+    {
+      "id": "c100000000000007",
+      "fromNode": "b100000000000014",
+      "fromSide": "right",
+      "toNode": "b100000000000004",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "Any other candidate adds a nonnegative squared error · 别的候选额外增加非负平方误差"
+    },
+    {
+      "id": "c10000000000001c",
+      "fromNode": "b100000000000014",
+      "fromSide": "bottom",
+      "toNode": "b10000000000001c",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "For two complex vectors, equality only forces real part zero · 两个复向量的等式只迫使实部为零"
+    },
+    {
+      "id": "c100000000000008",
+      "fromNode": "b100000000000002",
+      "fromSide": "bottom",
+      "toNode": "b100000000000015",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "In Hilbert space, a subspace returns as its closure · Hilbert 空间中子空间取双补得到闭包"
+    },
+    {
+      "id": "c100000000000009",
+      "fromNode": "b10000000000000d",
+      "fromSide": "right",
+      "toNode": "b100000000000005",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "In orthonormal real coordinates, the projector is symmetric and idempotent · 实标准正交坐标下投影矩阵对称且幂等"
+    },
+    {
+      "id": "c10000000000000a",
+      "fromNode": "b100000000000005",
+      "fromSide": "right",
+      "toNode": "b100000000000006",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "Orthonormal coordinates give the projector · 标准正交坐标给出投影矩阵"
+    },
+    {
+      "id": "c10000000000000b",
+      "fromNode": "b100000000000006",
+      "fromSide": "right",
+      "toNode": "b100000000000007",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "A Gram correction handles overlapping basis vectors · Gram 修正处理基向量重叠"
+    },
+    {
+      "id": "c10000000000000c",
+      "fromNode": "b100000000000013",
+      "fromSide": "top",
+      "toNode": "b100000000000007",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "Independent columns make the Gram inverse exist · 列独立保证Gram逆存在"
+    },
+    {
+      "id": "c10000000000000d",
+      "fromNode": "b100000000000007",
+      "fromSide": "right",
+      "toNode": "b100000000000008",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "The pseudoinverse extends projection to any rank · 伪逆把投影推广到任意秩"
+    },
+    {
+      "id": "c10000000000000e",
+      "fromNode": "b100000000000008",
+      "fromSide": "bottom",
+      "toNode": "b100000000000011",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "Output projection fixes the unique best fit · 输出投影固定唯一最佳拟合"
+    },
+    {
+      "id": "c10000000000001a",
+      "fromNode": "b10000000000000e",
+      "fromSide": "bottom",
+      "toNode": "b100000000000011",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "Removing null-space components minimizes coefficient length · 删除零空间分量使系数最短"
+    },
+    {
+      "id": "c10000000000000f",
+      "fromNode": "b100000000000004",
+      "fromSide": "bottom",
+      "toNode": "b100000000000012",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "Minimise distance to the column space · 最小化到列空间的距离"
+    },
+    {
+      "id": "c100000000000010",
+      "fromNode": "b100000000000012",
+      "fromSide": "right",
+      "toNode": "b100000000000018",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "Orthogonality exactly characterises minimisers · 正交条件恰好刻画最小化解"
+    },
+    {
+      "id": "c100000000000011",
+      "fromNode": "b100000000000018",
+      "fromSide": "right",
+      "toNode": "b100000000000019",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "A trivial null space gives unique coefficients · 零空间仅含零才有唯一系数"
+    },
+    {
+      "id": "c100000000000012",
+      "fromNode": "b100000000000019",
+      "fromSide": "right",
+      "toNode": "b100000000000011",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "A norm criterion selects among equivalent fits · 再用范数准则选择等价拟合的系数"
+    },
+    {
+      "id": "c100000000000013",
+      "fromNode": "b10000000000000f",
+      "fromSide": "top",
+      "toNode": "b10000000000001d",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "Independent input columns permit the usual GS construction · 独立输入列允许通常 GS 构造"
+    },
+    {
+      "id": "c100000000000014",
+      "fromNode": "b10000000000000f",
+      "fromSide": "right",
+      "toNode": "b100000000000009",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "Rounding can spoil exact orthogonality · 舍入会破坏精确正交性"
+    },
+    {
+      "id": "c100000000000015",
+      "fromNode": "b100000000000010",
+      "fromSide": "right",
+      "toNode": "b10000000000001d",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "For m ≥ n, omit the complementary columns multiplying zero · 行数不少于列数时删去乘零块的补基"
+    },
+    {
+      "id": "c10000000000001d",
+      "fromNode": "b10000000000001d",
+      "fromSide": "right",
+      "toNode": "b10000000000000a",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "Full column rank makes the triangular factor invertible · 满列秩使三角因子可逆"
+    },
+    {
+      "id": "c100000000000016",
+      "fromNode": "b10000000000000b",
+      "fromSide": "top",
+      "toNode": "b10000000000000a",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "Stable QR avoids explicit Gram formation · 稳定 QR 避免显式形成 Gram"
+    },
+    {
+      "id": "c100000000000017",
+      "fromNode": "b10000000000000a",
+      "fromSide": "right",
+      "toNode": "b100000000000017",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "Assess near dependence with a stated rank tolerance · 按声明的秩容差评估近依赖"
+    },
+    {
+      "id": "c100000000000018",
+      "fromNode": "b100000000000017",
+      "fromSide": "bottom",
+      "toNode": "b10000000000001e",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "Rank selection does not select the shortest coefficient · 判秩不等于选最短系数"
+    },
+    {
+      "id": "c10000000000001e",
+      "fromNode": "b10000000000001e",
+      "fromSide": "bottom",
+      "toNode": "b10000000000000c",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "Input-space orthogonal coordinates enforce minimum norm · 输入空间正交坐标实现最小范数"
+    },
+    {
+      "id": "c10000000000001f",
+      "fromNode": "b10000000000001f",
+      "fromSide": "top",
+      "toNode": "b10000000000000c",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "Separate full-row-rank wide systems from rank deficiency · 区分欠定满行秩与真正秩亏"
+    },
+    {
+      "id": "c100000000000019",
+      "fromNode": "b100000000000016",
+      "fromSide": "bottom",
+      "toNode": "b100000000000010",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "A full orthonormal basis supplies square Q · 完整标准正交基组成方阵 Q"
+    },
+    {
+      "id": "c10000000000001b",
+      "fromNode": "b100000000000011",
+      "fromSide": "bottom",
+      "toNode": "b10000000000000c",
+      "toSide": "right",
+      "toEnd": "arrow",
+      "label": "The solver must realize the two-stage objective · 求解器须实现先拟合后最短的目标"
+    },
+    {
+      "id": "p0014-dot-norm",
+      "fromNode": "p0014-dot",
+      "fromSide": "right",
+      "toNode": "p0014-norm",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "Self-product is squared length · 自身点积是长度平方"
+    },
+    {
+      "id": "p0014-norm-cs",
+      "fromNode": "p0014-norm",
+      "fromSide": "right",
+      "toNode": "p0014-cs",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "Lengths bound the dot product · 用长度控制点积"
+    },
+    {
+      "id": "p0014-dot-orth",
+      "fromNode": "p0014-dot",
+      "fromSide": "top",
+      "toNode": "b100000000000001",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "In real Euclidean space, zero dot product defines orthogonality · 实欧氏空间中点积为零定义正交"
+    },
+    {
+      "id": "p0048-e-identity",
+      "fromNode": "p0048-identity",
+      "fromSide": "right",
+      "toNode": "p0048-orthogonal",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "QᵀQ = I expresses orthonormal columns · QᵀQ = I 表示各列标准正交"
+    },
+    {
+      "id": "p0049-idem-proj",
+      "fromNode": "p0049-idempotent",
+      "fromSide": "top",
+      "toNode": "b100000000000005",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "Under the standard inner product, add self-adjointness · 标准内积下再加自伴条件"
+    },
+    {
+      "id": "p0053-inner-orthogonal",
+      "fromNode": "p0053-inner-product",
+      "fromSide": "top",
+      "toNode": "b100000000000001",
+      "toSide": "bottom",
+      "label": "Zero inner product defines orthogonality · 内积为零定义正交"
+    },
+    {
+      "id": "p0053-inner-pythagorean",
+      "fromNode": "p0053-inner-product",
+      "fromSide": "top",
+      "toNode": "b100000000000014",
+      "toSide": "bottom",
+      "label": "Use its induced norm for the squared-length identity · 用其诱导范数表述平方长度恒等式"
+    }
+  ]
 }

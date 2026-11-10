@@ -1,50 +1,421 @@
 {
-	"nodes":[
-		{"id":"6c10000000000001","type":"text","x":0,"y":0,"width":6000,"height":230,"color":"6","text":"# 多重共线性与设计矩阵诊断 · 学习总图\n\n先分清精确秩亏与近似弱方向，再沿两条诊断线读：VIF 看单个系数方向，奇异值与条件数看整个设计。最后按结构来源、样本支持和估计目标选择处理。颜色只表示语义角色，不表示掌握度；图中 12 张本专题原子与 8 张共享原子均为 source-checked / unassessed。"},
-		{"id":"6c10000000000002","type":"text","x":0,"y":310,"width":560,"height":250,"color":"5","text":"## [[满列秩与OLS唯一性]]\n\n满列秩使 OLS 系数唯一；秩亏时拟合投影仍可唯一而系数不唯一。\n\n**作用：** 划清完全共线的代数后果。"},
-		{"id":"6c10000000000003","type":"text","x":1360,"y":310,"width":560,"height":250,"color":"5","text":"## [[FWL残差化定理]]\n\n焦点系数只使用不能被其他设计列解释的剩余变异。\n\n**作用：** 把近似共线的精度机制写出来。"},
-		{"id":"6c10000000000004","type":"text","x":680,"y":310,"width":560,"height":250,"color":"5","text":"## [[零条件均值无偏性]]\n\n外生性控制 OLS 估计误差的中心，不控制设计列彼此重叠多少。\n\n**作用：** 把偏差与精度分层。"},
-		{"id":"6c10000000000005","type":"text","x":2040,"y":310,"width":560,"height":250,"color":"5","text":"## [[回归联合显著边界]]\n\n联合检验读取协方差定义的方向，不能由逐项 t 检验清单替代。\n\n**作用：** 解释“整体强、单项弱”。"},
-		{"id":"6c10000000000006","type":"text","x":4080,"y":310,"width":560,"height":250,"color":"5","text":"## [[奇异值与秩]]\n\n正奇异值个数给代数秩；接近零的方向另属尺度与精度问题。\n\n**作用：** 连接秩与整矩阵诊断。"},
-		{"id":"6c10000000000007","type":"text","x":4760,"y":310,"width":560,"height":250,"color":"5","text":"## [[小奇异值放大噪声]]\n\n反演沿奇异方向按 1/σ 放大观测扰动。\n\n**边界：** 数值敏感性不能替代统计识别判断。"},
-		{"id":"6c10000000000008","type":"text","x":0,"y":700,"width":560,"height":270,"color":"3","text":"## [[多重共线性]]\n\n设计列之间存在精确或近似线性依赖，数据因而难以分别识别相关系数。\n\n**先分：** 精确秩亏，还是仍满秩的弱方向？"},
-		{"id":"6c10000000000009","type":"text","x":680,"y":700,"width":560,"height":270,"color":"1","text":"## [[共线性与内生性]]\n\n共线性发生在 X 列之间；内生性发生在回归量与结构误差之间。\n\n**边界：** 高或低 VIF 都不检验因果识别。"},
-		{"id":"6c1000000000000a","type":"text","x":1360,"y":700,"width":560,"height":270,"color":"1","text":"## [[近似共线性精度]]\n\n满列秩和外生性仍成立时，系数可无偏却因剩余变异很少而不精确。\n\n**边界：** 不是没有唯一解。"},
-		{"id":"6c1000000000000b","type":"text","x":2040,"y":700,"width":560,"height":270,"color":"2","text":"## [[两两相关诊断边界]]\n\n没有一对相关接近 1，也可能有三列以上的线性组合近似为零。\n\n**作用：** 快速筛查之后必须看联合方向。"},
-		{"id":"6c1000000000000c","type":"text","x":2720,"y":700,"width":560,"height":270,"color":"2","text":"## [[方差膨胀因子]]\n\nVIF_j=1/(1-R_j²) 量化其他列使第 j 个系数方差相对正交基准放大多少。\n\n**边界：** 标准误只放大 √VIF。"},
-		{"id":"6c1000000000000d","type":"text","x":3400,"y":700,"width":560,"height":270,"color":"1","text":"## [[VIF阈值边界]]\n\n固定阈值只负责提示调查，不能脱离目标、样本与变量角色授权删列。\n\n**边界：** 诊断数不是模型判决。"},
-		{"id":"6c1000000000000e","type":"text","x":4080,"y":700,"width":560,"height":270,"color":"2","text":"## [[设计矩阵条件数]]\n\nκ₂(X)=σmax/σmin 比较整个设计最强与最弱的联合方向。\n\n**分工：** VIF 逐列；条件数看整矩阵。"},
-		{"id":"6c1000000000000f","type":"text","x":4760,"y":700,"width":560,"height":270,"color":"1","text":"## [[条件数缩放边界]]\n\n原始条件数随计量单位和中心化口径改变。\n\n**要求：** 声明缩放后，再解释最弱奇异方向中的变量组合。"},
-		{"id":"6c10000000000010","type":"text","x":5440,"y":700,"width":560,"height":270,"color":"5","text":"## [[正规方程条件数平方]]\n\n显式形成 X′X 会把 X 的二范数条件数平方。\n\n**边界：** 换稳定算法能减少数值损失，却不能创造样本信息。"},
-		{"id":"6c10000000000011","type":"text","x":0,"y":1300,"width":560,"height":280,"color":"4","text":"## [[结构性与数据性共线]]\n\n构造列造成结构性共线；观察支持狭窄造成数据性共线。\n\n**作用：** 同一个高诊断值可能需要完全不同的处理。"},
-		{"id":"6c10000000000012","type":"text","x":680,"y":1300,"width":560,"height":280,"color":"4","text":"## [[中心化共线性边界]]\n\n中心化可重写完整多项式或交互模型并改变参考点。\n\n**边界：** 它不增加不同变量之间缺失的独立变异。"},
-		{"id":"6c10000000000013","type":"text","x":1360,"y":1300,"width":560,"height":280,"color":"4","text":"## [[新增样本与共线性]]\n\n更多同类观测可降低噪声；只有包含新变量组合的数据才会扩大独立支持。\n\n**边界：** 标准误下降不等于 VIF 下降。"},
-		{"id":"6c10000000000014","type":"text","x":3400,"y":1300,"width":560,"height":280,"color":"4","text":"## [[共线性补救原则]]\n\n先定 estimand，再找弱方向来源，最后选择不悄悄改写问题的处理。\n\n**边界：** 不能按最大 VIF 机械删变量。"},
-		{"id":"6c10000000000015","type":"text","x":4760,"y":1300,"width":560,"height":280,"color":"5","text":"## [[岭正则化]]\n\n预测目标可用惩罚换取稳定性，并在验证数据上评估。\n\n**边界：** 岭改变估计目标，收缩系数不是原结构效应。"},
-		{"id":"6c10000000000016","type":"text","x":3400,"y":1900,"width":560,"height":280,"color":"6","text":"## [[异常值、杠杆与影响诊断.canvas|下一步：异常值、杠杆与影响诊断]]\n\n本图检查 columns 是否重叠；下一图检查哪些 rows 在解释变量空间特殊或推动结论。\n\n**边界：** 列依赖不等于单行高杠杆。"}
-	],
-	"edges":[
-		{"id":"6c20000000000001","fromNode":"6c10000000000008","fromSide":"top","toNode":"6c10000000000002","toSide":"bottom","label":"精确依赖破坏系数唯一性"},
-		{"id":"6c20000000000002","fromNode":"6c10000000000008","fromSide":"right","toNode":"6c10000000000009","toSide":"left","label":"先排除把列依赖误叫成内生性"},
-		{"id":"6c20000000000003","fromNode":"6c10000000000004","fromSide":"bottom","toNode":"6c10000000000009","toSide":"top","label":"外生性条件另管估计中心"},
-		{"id":"6c20000000000004","fromNode":"6c10000000000003","fromSide":"bottom","toNode":"6c1000000000000a","toSide":"top","label":"残差化后剩余变异决定精度"},
-		{"id":"6c20000000000005","fromNode":"6c10000000000009","fromSide":"right","toNode":"6c1000000000000a","toSide":"left","label":"无偏与不精确可以同时成立"},
-		{"id":"6c20000000000006","fromNode":"6c1000000000000a","fromSide":"top","toNode":"6c10000000000005","toSide":"bottom","label":"弱坐标可与精确联合方向并存"},
-		{"id":"6c20000000000007","fromNode":"6c1000000000000a","fromSide":"right","toNode":"6c1000000000000b","toSide":"left","label":"进入逐列与联合诊断"},
-		{"id":"6c20000000000008","fromNode":"6c1000000000000b","fromSide":"right","toNode":"6c1000000000000c","toSide":"left","label":"辅助回归看多列共同解释"},
-		{"id":"6c2000000000000a","fromNode":"6c1000000000000c","fromSide":"right","toNode":"6c1000000000000d","toSide":"left","label":"数值必须回到目标与精度"},
-		{"id":"6c2000000000000b","fromNode":"6c10000000000006","fromSide":"bottom","toNode":"6c1000000000000e","toSide":"top","label":"奇异谱给出最弱联合方向"},
-		{"id":"6c2000000000000c","fromNode":"6c10000000000007","fromSide":"bottom","toNode":"6c1000000000000e","toSide":"top","label":"小奇异方向放大扰动"},
-		{"id":"6c2000000000000d","fromNode":"6c1000000000000e","fromSide":"right","toNode":"6c1000000000000f","toSide":"left","label":"解释前先固定缩放口径"},
-		{"id":"6c2000000000000e","fromNode":"6c1000000000000f","fromSide":"right","toNode":"6c10000000000010","toSide":"left","label":"形成 Gram 矩阵再增加数值代价"},
-		{"id":"6c2000000000000f","fromNode":"6c10000000000008","fromSide":"bottom","toNode":"6c10000000000011","toSide":"top","label":"弱方向还要追查来源"},
-		{"id":"6c20000000000010","fromNode":"6c10000000000011","fromSide":"right","toNode":"6c10000000000012","toSide":"left","label":"构造项可用等价参数化处理"},
-		{"id":"6c20000000000011","fromNode":"6c10000000000011","fromSide":"bottom","toNode":"6c10000000000013","toSide":"bottom","label":"数据性重叠需要新的支持组合"},
-		{"id":"6c20000000000012","fromNode":"6c10000000000012","fromSide":"top","toNode":"6c10000000000014","toSide":"top","label":"中心化不等于增加信息"},
-		{"id":"6c20000000000013","fromNode":"6c10000000000013","fromSide":"right","toNode":"6c10000000000014","toSide":"left","label":"区分样本量与支持扩张"},
-		{"id":"6c20000000000014","fromNode":"6c1000000000000d","fromSide":"bottom","toNode":"6c10000000000014","toSide":"top","label":"阈值只触发有理由的处理"},
-		{"id":"6c20000000000015","fromNode":"6c1000000000000f","fromSide":"bottom","toNode":"6c10000000000014","toSide":"right","label":"矩阵弱方向也需语义判断"},
-		{"id":"6c20000000000016","fromNode":"6c10000000000014","fromSide":"right","toNode":"6c10000000000015","toSide":"left","label":"纯预测目标可选择偏差—方差取舍"},
-		{"id":"6c20000000000017","fromNode":"6c10000000000014","fromSide":"bottom","toNode":"6c10000000000016","toSide":"top","label":"列诊断完成后转向行影响"}
-	]
+  "nodes": [
+    {
+      "id": "6c10000000000001",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 6000,
+      "height": 230,
+      "color": "6",
+      "text": "<!-- bilingual-en:start -->\n# Multicollinearity and design-matrix diagnostics\nStart with the rows and columns of the design. Separate unique coefficients, statistical precision and numerical sensitivity. VIF is a column-specific ratio; singular values compare joint directions, whose identities come from singular vectors. Choose remedies for the target comparison. Colours distinguish reading roles.\n<!-- bilingual-en:end -->\n\n# 多重共线性与设计矩阵诊断 · 学习总图\n先看设计矩阵的行与列，再分清系数唯一、统计精度与数值敏感度。VIF 是逐列比值；奇异值比较联合方向的强弱，方向本身由奇异向量给出。补救围绕目标比较选择；颜色区分阅读角色。"
+    },
+    {
+      "id": "6c10000000000002",
+      "type": "text",
+      "x": 0,
+      "y": 310,
+      "width": 560,
+      "height": 300,
+      "color": "5",
+      "text": "<!-- bilingual-en:start -->\n## [[满列秩与OLS唯一性|Coefficient uniqueness]]\nFull column rank gives unique unrestricted OLS coefficients. With exact dependence, the observed fitted vector remains unique while coefficient representations are nonunique. Counting observations alone does not establish rank.\n<!-- bilingual-en:end -->\n\n## [[满列秩与OLS唯一性]]\n满列秩给出唯一无约束 OLS 系数。精确依赖时，原设计上的拟合向量仍唯一，系数表示不唯一；只数观测数不能保证秩。"
+    },
+    {
+      "id": "6c10000000000003",
+      "type": "text",
+      "x": 1360,
+      "y": 310,
+      "width": 560,
+      "height": 300,
+      "color": "5",
+      "text": "<!-- bilingual-en:start -->\n## [[FWL残差化定理|Variation after removing controls]]\nFWL uses the focal column’s residual after fitting the other columns. Very little remaining variation can impair precision under an appropriate error model; zero remaining variation destroys separate coefficient identification.\n<!-- bilingual-en:end -->\n\n## [[FWL残差化定理]]\nFWL 使用焦点列扣除其他列拟合后的残差。剩余变动很小时，在相应误差模型下精度可能变差；剩余为零则无法单独识别该系数。"
+    },
+    {
+      "id": "6c10000000000004",
+      "type": "text",
+      "x": 680,
+      "y": 310,
+      "width": 560,
+      "height": 250,
+      "color": "5",
+      "text": "## [[零条件均值无偏性]]\n\n外生性控制 OLS 估计误差的中心，不控制设计列彼此重叠多少。\n\n**作用：** 把偏差与精度分层。"
+    },
+    {
+      "id": "6c10000000000005",
+      "type": "text",
+      "x": 2040,
+      "y": 310,
+      "width": 560,
+      "height": 340,
+      "color": "5",
+      "text": "<!-- bilingual-en:start -->\n## [[回归联合显著边界|Joint directions and separate coefficients]]\nA precise coefficient combination can coexist with noisy separate coefficients. Its uncertainty depends on the covariance of estimation errors, not the raw correlation of regressors alone. This pattern does not diagnose collinearity.\n<!-- bilingual-en:end -->\n\n## [[回归联合显著边界]]\n某个系数组合可估得精确，而单项系数仍很不精确。其不确定性取决于估计误差的协方差，不能只读原始解释变量的相关系数；这种结果模式本身不能确诊共线性。"
+    },
+    {
+      "id": "6c10000000000006",
+      "type": "text",
+      "x": 4080,
+      "y": 310,
+      "width": 560,
+      "height": 250,
+      "color": "5",
+      "text": "<!-- bilingual-en:start -->\n## [[奇异值与秩|Singular values and rank]]\n\nStrictly positive values count algebraic rank. Treating a small positive value as zero requires a separate scale and tolerance decision.\n<!-- bilingual-en:end -->\n\n正值数给精确秩；把小正值当零，需要另行说明尺度与阈值。"
+    },
+    {
+      "id": "6c10000000000007",
+      "type": "text",
+      "x": 4760,
+      "y": 310,
+      "width": 560,
+      "height": 330,
+      "color": "5",
+      "text": "<!-- bilingual-en:start -->\n## [[小奇异值放大噪声|Small singular values and noise]]\n\nWith $A$ fixed, noise along a left singular direction changes minimum-norm coefficients by $1/\\sigma_i$ along the corresponding right direction, for $\\sigma_i>0$.\n<!-- bilingual-en:end -->\n\n固定 $A$，正奇异方向上的观测误差按 $1/\\sigma_i$ 传到对应系数方向。这是绝对放大，取决于误差方向。"
+    },
+    {
+      "id": "6c10000000000008",
+      "type": "text",
+      "x": 0,
+      "y": 700,
+      "width": 560,
+      "height": 330,
+      "color": "3",
+      "text": "<!-- bilingual-en:start -->\n## [[多重共线性|Multicollinearity]]\n\nExact dependence lets different coefficients give the same observed fit. Near dependence leaves little variation after removing other columns; its interpretation requires meaningful units and an error model.\n<!-- bilingual-en:end -->\n\n## [[多重共线性]]\n\n精确列依赖使不同系数得到同一原设计拟合。近似依赖表现为扣除其他列后剩余变动很少；须结合有意义的单位和误差模型解释。"
+    },
+    {
+      "id": "6c10000000000009",
+      "type": "text",
+      "x": 680,
+      "y": 700,
+      "width": 560,
+      "height": 330,
+      "color": "1",
+      "text": "<!-- bilingual-en:start -->\n## [[共线性与内生性|Collinearity and endogeneity]]\n\nColumn dependence concerns the design; endogeneity concerns regressors and the target-equation error. Either may occur without the other. A full-rank, nearly orthogonal design does not establish a causal interpretation.\n<!-- bilingual-en:end -->\n\n## [[共线性与内生性]]\n\n列依赖描述设计；内生性涉及回归量与目标方程误差。二者互不推出。满列秩、几乎正交的设计也不自动给出因果解释。"
+    },
+    {
+      "id": "6c1000000000000a",
+      "type": "text",
+      "x": 1360,
+      "y": 700,
+      "width": 560,
+      "height": 350,
+      "color": "1",
+      "text": "<!-- bilingual-en:start -->\n## [[近似共线性精度|Precision under near collinearity]]\n\nGiven the full-rank design, with zero error mean and covariance $\\sigma^2I$, conditional coefficient variance is $\\sigma^2/S$, where $S$ is residual-column squared length. A well-estimated combination may coexist with noisy individual coefficients.\n<!-- bilingual-en:end -->\n\n## [[近似共线性精度]]\n\n给定满列秩设计，误差均值为零且协方差为 $\\sigma^2I$ 时，系数条件方差是 $\\sigma^2/S$；$S$ 为焦点列残差的平方长度。个别系数不精确时，某个组合仍可精确。"
+    },
+    {
+      "id": "6c1000000000000b",
+      "type": "text",
+      "x": 2040,
+      "y": 700,
+      "width": 560,
+      "height": 360,
+      "color": "2",
+      "text": "<!-- bilingual-en:start -->\n## [[两两相关诊断边界|Limits of pairwise screening]]\n\nNo pair need have correlation near $+1$ or $-1$ for several columns to be dependent. For nonconstant columns on the same rows, the full correlation matrix still contains joint rank information.\n<!-- bilingual-en:end -->\n\n逐格检查相关系数可能遗漏多列联合依赖；对同一批行上的非常数列，完整相关矩阵的秩与特征值仍可显示这种依赖。"
+    },
+    {
+      "id": "6c1000000000000c",
+      "type": "text",
+      "x": 2720,
+      "y": 700,
+      "width": 560,
+      "height": 350,
+      "color": "2",
+      "text": "<!-- bilingual-en:start -->\n## [[方差膨胀因子|Variance inflation factor]]\n\nWith an intercept and a nonconstant focal column in a full-rank design, $VIF=1/(1-R^2)$ uses the auxiliary regression on other columns. Under spherical errors it multiplies variance relative to the same-spread, same-noise orthogonal benchmark.\n<!-- bilingual-en:end -->\n\n## [[方差膨胀因子]]\n\n含截距、满列秩且焦点列非恒定时，用该列对其余列的辅助回归求 $VIF=1/(1-R^2)$。球形误差下，它是相同总变动、相同噪声的正交基准上的方差倍数。"
+    },
+    {
+      "id": "6c1000000000000d",
+      "type": "text",
+      "x": 3400,
+      "y": 700,
+      "width": 560,
+      "height": 330,
+      "color": "1",
+      "text": "<!-- bilingual-en:start -->\n## [[VIF阈值边界|Interpreting VIF cutoffs]]\n\nValues such as 4 or 10 are screening conventions. Evaluate the target coefficient, remaining variation, noise and required uncertainty. Outcome-driven model selection also changes the justification for reported inference.\n<!-- bilingual-en:end -->\n\n## [[VIF阈值边界]]\n\n4、10 等数值是筛查惯例。需结合目标系数、剩余变动、噪声与允许的不确定性；若依结果选择模型，还须重新论证推断方法。"
+    },
+    {
+      "id": "6c1000000000000e",
+      "type": "text",
+      "x": 4080,
+      "y": 700,
+      "width": 560,
+      "height": 350,
+      "color": "2",
+      "text": "<!-- bilingual-en:start -->\n## [[设计矩阵条件数|Design-matrix condition number]]\n\nFor a full-column-rank design, $\\kappa_2=\\sigma_{\\max}/\\sigma_{\\min}$ compares strongest and weakest unit directions. Right singular vectors identify the combinations. Absolute response-noise amplification depends on $1/\\sigma_{\\min}$.\n<!-- bilingual-en:end -->\n\n## [[设计矩阵条件数]]\n\n满列秩设计的 $\\kappa_2=\\sigma_{\\max}/\\sigma_{\\min}$ 比较最强、最弱单位方向；右奇异向量指出具体组合。结果噪声的绝对放大看 $1/\\sigma_{\\min}$。"
+    },
+    {
+      "id": "6c1000000000000f",
+      "type": "text",
+      "x": 4760,
+      "y": 700,
+      "width": 560,
+      "height": 330,
+      "color": "1",
+      "text": "<!-- bilingual-en:start -->\n## [[条件数缩放边界|Scaling and condition numbers]]\n\nChanging column units or centring can change the condition number while an invertible reparameterisation preserves fitted values. Report the intercept, centring and scaling convention, then inspect the weak vectors.\n<!-- bilingual-en:end -->\n\n## [[条件数缩放边界]]\n\n换列单位或中心化可改变条件数；可逆重参数化仍保留拟合值。先说明截距、中心化与缩放口径，再查看弱方向对应的向量。"
+    },
+    {
+      "id": "6c10000000000010",
+      "type": "text",
+      "x": 5440,
+      "y": 700,
+      "width": 560,
+      "height": 340,
+      "color": "5",
+      "text": "<!-- bilingual-en:start -->\n## [[正规方程条件数平方|Squared Gram conditioning]]\n\nFor real full-column-rank $X$, $\\kappa_2(X^TX)=\\kappa_2(X)^2$. Stable QR avoids explicit Gram formation; it cannot create missing data information.\n<!-- bilingual-en:end -->\n\n实满列秩设计的 Gram 二范数条件数恰好平方。换稳定算法可减少额外舍入损伤，不能消除问题本身的敏感性。"
+    },
+    {
+      "id": "6c10000000000011",
+      "type": "text",
+      "x": 0,
+      "y": 1300,
+      "width": 560,
+      "height": 330,
+      "color": "4",
+      "text": "<!-- bilingual-en:start -->\n## [[结构性与数据性共线|Where collinearity comes from]]\n\nFeature construction and observed sample patterns can both create dependence. Its origin does not by itself decide whether dependence is exact or approximate.\n<!-- bilingual-en:end -->\n\n先追查编码、构造项和样本模式。平方项不自动冗余；来源分类也不等于“精确／近似”分类。"
+    },
+    {
+      "id": "6c10000000000012",
+      "type": "text",
+      "x": 680,
+      "y": 1300,
+      "width": 560,
+      "height": 350,
+      "color": "4",
+      "text": "<!-- bilingual-en:start -->\n## [[中心化共线性边界|Centring and reparameterisation]]\n\nFor a complete polynomial or interaction hierarchy, shifting origins preserves unconstrained OLS fits and rank. Coefficients change meaning; missing information remains missing.\n<!-- bilingual-en:end -->\n\n保留完整层级并使用同一无约束 OLS 目标时，中心化保持拟合与秩，移动系数的解释基准；不保证所有相关或条件数都降低。"
+    },
+    {
+      "id": "6c10000000000013",
+      "type": "text",
+      "x": 1360,
+      "y": 1300,
+      "width": 560,
+      "height": 350,
+      "color": "4",
+      "text": "<!-- bilingual-en:start -->\n## [[新增样本与共线性|New observations and collinearity]]\n\nIndependent repetitions can improve precision without reducing VIF under the stated error model. Rebalancing frequencies among existing regressor combinations can reduce VIF; previously unseen combinations are not necessary. Repeated outcome records supply no new information.\n<!-- bilingual-en:end -->\n\n## [[新增样本与共线性]]\n\n在相应误差模型下，独立重复观测可改善精度而 VIF 不变。已有变量组合的相对频率改变，也可降低 VIF；未见过的新组合并非必要。复制结果记录不增加信息。"
+    },
+    {
+      "id": "6c10000000000014",
+      "type": "text",
+      "x": 3400,
+      "y": 1300,
+      "width": 560,
+      "height": 350,
+      "color": "4",
+      "text": "<!-- bilingual-en:start -->\n## [[共线性补救原则|Choosing a collinearity remedy]]\n\nIdentify the coefficient, contrast or prediction first. Repair redundant coding; preserve necessary controls. An invertible coordinate change retains information for the same translated target. New data, a different model and regularisation answer different problems.\n<!-- bilingual-en:end -->\n\n## [[共线性补救原则]]\n\n先确定系数、对比量或预测目标。修复冗余编码，保留必要控制。可逆换坐标保留同一换算目标的信息；新增数据、改模型和正则化解决的问题各有区别。"
+    },
+    {
+      "id": "6c10000000000015",
+      "type": "text",
+      "x": 4760,
+      "y": 1300,
+      "width": 560,
+      "height": 330,
+      "color": "5",
+      "text": "<!-- bilingual-en:start -->\n## [[岭正则化|Ridge regularisation]]\n\nA penalty changes the estimator and may improve predictive risk; assess that claim on suitable validation data. It need not change the scientific estimand, but shrunken coefficients do not inherit the original estimator’s inference guarantees.\n<!-- bilingual-en:end -->\n\n## [[岭正则化]]\n\n惩罚改变估计规则，可能改善预测风险，须用适当验证数据评估。科学目标量未必改变；收缩系数也不自动继承原估计方法的推断保证。"
+    },
+    {
+      "id": "6c10000000000016",
+      "type": "text",
+      "x": 3400,
+      "y": 1900,
+      "width": 560,
+      "height": 280,
+      "color": "6",
+      "text": "## [[异常值、杠杆与影响诊断.canvas|下一步：异常值、杠杆与影响诊断]]\n\n本图检查 columns 是否重叠；下一图检查哪些 rows 在解释变量空间特殊或推动结论。\n\n**边界：** 列依赖不等于单行高杠杆。"
+    },
+    {
+      "id": "6c10000000000017",
+      "type": "text",
+      "x": 2720,
+      "y": 310,
+      "width": 560,
+      "height": 300,
+      "color": "4",
+      "text": "<!-- bilingual-en:start -->\n## [[设计矩阵|Design matrix]]\n\nRows represent observations; columns represent the features whose weights are fitted. An intercept is a column of ones. Transformations and category coding determine which columns enter the model.\n<!-- bilingual-en:end -->\n\n## [[设计矩阵]]\n\n行对应观测，列对应待拟合权重的特征。截距是一列1；变换与类别编码决定实际进入模型的列。"
+    }
+  ],
+  "edges": [
+    {
+      "id": "6c20000000000001",
+      "fromNode": "6c10000000000008",
+      "fromSide": "top",
+      "toNode": "6c10000000000002",
+      "toSide": "bottom",
+      "label": "Exact dependence destroys coefficient uniqueness · 精确依赖破坏系数唯一性"
+    },
+    {
+      "id": "6c20000000000002",
+      "fromNode": "6c10000000000008",
+      "fromSide": "right",
+      "toNode": "6c10000000000009",
+      "toSide": "left",
+      "label": "Separate design dependence from error relations · 区分列依赖与误差关系"
+    },
+    {
+      "id": "6c20000000000003",
+      "fromNode": "6c10000000000004",
+      "fromSide": "bottom",
+      "toNode": "6c10000000000009",
+      "toSide": "top",
+      "label": "Conditional mean governs a different assumption · 条件均值是另一项假设"
+    },
+    {
+      "id": "6c20000000000004",
+      "fromNode": "6c10000000000003",
+      "fromSide": "bottom",
+      "toNode": "6c1000000000000a",
+      "toSide": "top",
+      "label": "Remaining variation and error covariance govern precision · 剩余变动与误差协方差共同决定精度"
+    },
+    {
+      "id": "6c20000000000005",
+      "fromNode": "6c10000000000009",
+      "fromSide": "right",
+      "toNode": "6c1000000000000a",
+      "toSide": "left",
+      "label": "Unbiasedness can coexist with imprecision · 无偏与不精确可以并存"
+    },
+    {
+      "id": "6c20000000000006",
+      "fromNode": "6c1000000000000a",
+      "fromSide": "top",
+      "toNode": "6c10000000000005",
+      "toSide": "bottom",
+      "label": "Noisy coordinates can coexist with a precise combination · 弱单项可与精确组合并存"
+    },
+    {
+      "id": "6c20000000000007",
+      "fromNode": "6c1000000000000a",
+      "fromSide": "right",
+      "toNode": "6c1000000000000b",
+      "toSide": "left",
+      "label": "Pairwise screening can miss joint dependence · 两两筛查可能遗漏联合依赖"
+    },
+    {
+      "id": "6c20000000000008",
+      "fromNode": "6c1000000000000b",
+      "fromSide": "right",
+      "toNode": "6c1000000000000c",
+      "toSide": "left",
+      "label": "Fit all other columns in the auxiliary regression · 辅助回归纳入全部其余列"
+    },
+    {
+      "id": "6c2000000000000a",
+      "fromNode": "6c1000000000000c",
+      "fromSide": "right",
+      "toNode": "6c1000000000000d",
+      "toSide": "left",
+      "label": "Interpret the ratio against target uncertainty · 结合目标不确定性解释比值"
+    },
+    {
+      "id": "6c2000000000000b",
+      "fromNode": "6c10000000000006",
+      "fromSide": "bottom",
+      "toNode": "6c1000000000000e",
+      "toSide": "top",
+      "label": "Values measure strength; vectors identify directions · 值衡量强弱，向量指出方向"
+    },
+    {
+      "id": "6c2000000000000c",
+      "fromNode": "6c10000000000007",
+      "fromSide": "bottom",
+      "toNode": "6c1000000000000e",
+      "toSide": "top",
+      "label": "Distinguish inverse smallest value from a ratio · 区分最小值倒数与奇异值之比"
+    },
+    {
+      "id": "6c2000000000000d",
+      "fromNode": "6c1000000000000e",
+      "fromSide": "right",
+      "toNode": "6c1000000000000f",
+      "toSide": "left",
+      "label": "Fix the scaling convention before comparison · 比较前固定缩放口径"
+    },
+    {
+      "id": "6c2000000000000e",
+      "fromNode": "6c1000000000000f",
+      "fromSide": "right",
+      "toNode": "6c10000000000010",
+      "toSide": "left",
+      "label": "For full column rank, the Gram condition number squares · 满列秩时Gram条件数平方"
+    },
+    {
+      "id": "6c2000000000000f",
+      "fromNode": "6c10000000000008",
+      "fromSide": "bottom",
+      "toNode": "6c10000000000011",
+      "toSide": "top",
+      "label": "Trace how the column dependence arose · 追查列依赖的来源"
+    },
+    {
+      "id": "6c20000000000010",
+      "fromNode": "6c10000000000011",
+      "fromSide": "right",
+      "toNode": "6c10000000000012",
+      "toSide": "left",
+      "label": "A complete hierarchy permits an equivalent reference shift · 完整层级允许等价移动参考点"
+    },
+    {
+      "id": "6c20000000000011",
+      "fromNode": "6c10000000000011",
+      "fromSide": "bottom",
+      "toNode": "6c10000000000013",
+      "toSide": "bottom",
+      "label": "New combinations or changed frequencies can alter geometry · 新组合或频率调整可改变几何"
+    },
+    {
+      "id": "6c20000000000012",
+      "fromNode": "6c10000000000012",
+      "fromSide": "top",
+      "toNode": "6c10000000000014",
+      "toSide": "top",
+      "label": "Re-expressing a target supplies no new information · 换算同一目标不增加信息"
+    },
+    {
+      "id": "6c20000000000013",
+      "fromNode": "6c10000000000013",
+      "fromSide": "right",
+      "toNode": "6c10000000000014",
+      "toSide": "left",
+      "label": "Separate information quantity from relative geometry · 区分信息量与相对几何"
+    },
+    {
+      "id": "6c20000000000014",
+      "fromNode": "6c1000000000000d",
+      "fromSide": "bottom",
+      "toNode": "6c10000000000014",
+      "toSide": "top",
+      "label": "A cutoff prompts investigation, not automatic deletion · 阈值触发调查而非自动删列"
+    },
+    {
+      "id": "6c20000000000015",
+      "fromNode": "6c1000000000000f",
+      "fromSide": "bottom",
+      "toNode": "6c10000000000014",
+      "toSide": "right",
+      "label": "Interpret weak combinations in the original variables · 回到原变量解释弱组合"
+    },
+    {
+      "id": "6c20000000000016",
+      "fromNode": "6c10000000000014",
+      "fromSide": "right",
+      "toNode": "6c10000000000015",
+      "toSide": "left",
+      "label": "Evaluate predictive risk of a changed estimator · 评估新估计规则的预测风险"
+    },
+    {
+      "id": "6c20000000000017",
+      "fromNode": "6c10000000000014",
+      "fromSide": "bottom",
+      "toNode": "6c10000000000016",
+      "toSide": "top",
+      "label": "Next examine influential observations · 接着检查有影响的观测"
+    },
+    {
+      "id": "6c20000000000018",
+      "fromNode": "6c10000000000017",
+      "fromSide": "bottom",
+      "toNode": "6c1000000000000c",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "Fix the rows and columns before the auxiliary fit · 辅助回归前固定行与列"
+    }
+  ]
 }
