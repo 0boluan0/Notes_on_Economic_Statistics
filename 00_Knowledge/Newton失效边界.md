@@ -56,6 +56,7 @@ First recall the [[Newton迭代|tangent update]]. Its [[Newton局部收敛|local
 ## 四类机制要分开诊断
 
 <!-- bilingual-en:start -->
+
 &nbsp;
 **1. Zero or near-zero derivative at a nonroot.** If $f(x_k)\ne0$ but $f'(x_k)=0$, the update is undefined. A small derivative may make $-f(x_k)/f'(x_k)$ so large that the local model is no longer useful. If $f(x_k)=0$, return the root before division.<br>
 **2. A different basin of attraction.** Different starting guesses may converge to different roots. Reaching another root is not divergence, but may fail the specified task.<br>
