@@ -93,11 +93,11 @@
       "id": "a100000000000009",
       "type": "text",
       "x": -2100,
-      "y": 800,
+      "y": 730,
       "width": 400,
-      "height": 140,
+      "height": 270,
       "color": "5",
-      "text": "### [[Lagrange必要条件|Lagrange 必要条件]]\n\n等式约束梯度满秩时，目标梯度必须落在约束法向空间。"
+      "text": "<!-- bilingual-en:start -->\n## [[Lagrange必要条件|Lagrange necessity]]\n\nAt a feasible local optimum with C¹ data nearby and full-row-rank equality Jacobian, the objective gradient lies in the span of equality gradients.\n<!-- bilingual-en:end -->\n\n可行局部最优点附近，目标与等式约束为 C¹；等式 Jacobian 满行秩时，目标梯度必落在等式约束梯度张成的空间。"
     },
     {
       "id": "a10000000000000a",
@@ -145,9 +145,9 @@
       "x": -800,
       "y": 800,
       "width": 400,
-      "height": 140,
+      "height": 220,
       "color": "5",
-      "text": "### [[KKT条件|KKT 条件]]\n\n原问题可行、对偶可行、驻点与互补松弛组成一个联立系统。"
+      "text": "<!-- bilingual-en:start -->\n## [[KKT条件|KKT conditions]]\n\nA candidate and its multipliers must jointly satisfy primal feasibility, multiplier signs, stationarity and complementary slackness.\n<!-- bilingual-en:end -->\n\n原问题可行、对偶可行、驻点与互补松弛组成一个联立系统。"
     },
     {
       "id": "a100000000000010",
@@ -155,9 +155,9 @@
       "x": -800,
       "y": 1050,
       "width": 400,
-      "height": 140,
+      "height": 220,
       "color": "5",
-      "text": "### [[互补松弛|互补松弛]]\n\n每条不等式的非负乘子与非负松弛量的乘积为零。"
+      "text": "<!-- bilingual-en:start -->\n## [[互补松弛|Complementary slackness]]\n\nFor each inequality, the nonnegative multiplier times the nonnegative slack is zero. Both may be zero.\n<!-- bilingual-en:end -->\n\n每条不等式的非负乘子与非负松弛量的乘积为零。两者可以同时为零。"
     },
     {
       "id": "c100000000000006",
@@ -165,9 +165,9 @@
       "x": -800,
       "y": 1300,
       "width": 400,
-      "height": 140,
+      "height": 240,
       "color": "1",
-      "text": "### [[绑定不推正乘子|绑定不推正乘子]]\n\n约束取等号时乘子仍可为零；活动集不能按正乘子定义。"
+      "text": "<!-- bilingual-en:start -->\n## [[绑定不推正乘子|Binding with a zero multiplier]]\n\nAn active constraint can have a zero multiplier, even under LICQ. Activity is determined by the constraint value.\n<!-- bilingual-en:end -->\n\n约束取等号时乘子仍可为零；活动集不能按正乘子定义。即使满足 LICQ，也允许这种情况。"
     },
     {
       "id": "a10000000000000d",
@@ -215,9 +215,9 @@
       "x": 100,
       "y": 1500,
       "width": 420,
-      "height": 140,
+      "height": 190,
       "color": "1",
-      "text": "### [[LICQ不是KKT必要条件|LICQ 不是 KKT 必要条件]]\n\nLICQ 失败只让一条保证路线失效；具体问题仍可能有 KKT 乘子。"
+      "text": "<!-- bilingual-en:start -->\n## [[LICQ不是KKT必要条件|LICQ failure]]\n\nWhen LICQ fails, KKT multipliers may exist or may fail to exist; inspect the equations.\n<!-- bilingual-en:end -->\n\nLICQ 失败只让一条保证路线失效；具体问题仍可能有 KKT 乘子。"
     },
     {
       "id": "c100000000000005",
@@ -245,9 +245,9 @@
       "x": 1800,
       "y": 1050,
       "width": 430,
-      "height": 140,
+      "height": 270,
       "color": "4",
-      "text": "### [[KKT充分性|KKT 充分性]]\n\n凹目标 + 凸不等式 + 仿射等式使任何 KKT 点成为全局最大；该方向不需 Slater。"
+      "text": "<!-- bilingual-en:start -->\n## [[KKT充分性|KKT sufficiency]]\n\nFor differentiable data on a common open convex domain: a concave objective, convex inequalities and affine equalities make every KKT candidate globally optimal. This direction needs no Slater condition.\n<!-- bilingual-en:end -->\n\n在共同开凸域及可微前提下：凹目标 + 凸不等式 + 仿射等式使任何 KKT 点成为全局最大；该方向不需 Slater。"
     },
     {
       "id": "c10000000000000a",
@@ -255,9 +255,9 @@
       "x": 2300,
       "y": 1300,
       "width": 430,
-      "height": 140,
+      "height": 280,
       "color": "1",
-      "text": "### [[严格凹不保证乘子唯一|严格凹不保证乘子唯一]]\n\n严格凹可使最优选择唯一；相关活动法向量仍允许多组乘子。"
+      "text": "<!-- bilingual-en:start -->\n## [[严格凹不保证乘子唯一|Primal and multiplier uniqueness]]\n\nStrict concavity on a convex feasible set gives at most one maximizer. Even at a unique optimum, dependent constraint gradients may allow multiple multiplier vectors.\n<!-- bilingual-en:end -->\n\n在凸可行集上且最优点已取得时：严格凹可使最优选择唯一；相关活动法向量仍允许多组乘子。"
     },
     {
       "id": "a100000000000013",
@@ -345,9 +345,9 @@
       "x": -1510,
       "y": 810,
       "width": 420,
-      "height": 120,
+      "height": 210,
       "color": "3",
-      "text": "**从等式约束扩展到不等式约束**\n\nKKT 保留 Lagrange 驻点，并加入原问题可行性、对偶可行性与互补松弛。"
+      "text": "<!-- bilingual-en:start -->\n## From equality to inequality constraints\n\nKKT retains Lagrange stationarity and adds primal feasibility, multiplier signs and complementary slackness.\n<!-- bilingual-en:end -->\n\n**从等式约束扩展到不等式约束**\n\nKKT 保留 Lagrange 驻点，并加入原问题可行性、对偶可行性与互补松弛。"
     },
     {
       "id": "b100000000000004",
@@ -442,7 +442,7 @@
       "fromSide": "bottom",
       "toNode": "a100000000000010",
       "toSide": "top",
-      "label": "四类 KKT 条件中的不等式联结项"
+      "label": "One of the four KKT conditions / 四类 KKT 条件之一"
     },
     {
       "id": "f100000000000008",
@@ -450,7 +450,7 @@
       "fromSide": "bottom",
       "toNode": "c100000000000006",
       "toSide": "top",
-      "label": "乘积为零不提供绑定 → 正乘子"
+      "label": "A zero product allows both factors to vanish / 零乘积允许两项都为零"
     },
     {
       "id": "f100000000000009",
@@ -514,7 +514,7 @@
       "fromSide": "bottom",
       "toNode": "c10000000000000a",
       "toSide": "top",
-      "label": "选择唯一不等于乘子唯一"
+      "label": "Global optimality alone does not identify multipliers / 全局最优不单独确定乘子"
     },
     {
       "id": "f100000000000011",
@@ -576,7 +576,8 @@
       "fromNode": "b100000000000001",
       "fromSide": "right",
       "toNode": "a10000000000000f",
-      "toSide": "left"
+      "toSide": "left",
+      "label": "Add inequality feasibility and signs / 加入不等式可行性与符号"
     },
     {
       "id": "f10000000000001a",
@@ -600,7 +601,7 @@
       "fromSide": "bottom",
       "toNode": "a100000000000011",
       "toSide": "top",
-      "label": "充分性回答：凸结构下 KKT 为何足以认证全局最优"
+      "label": "Global sufficiency under the stated shapes / 给定形状下的全局充分性"
     },
     {
       "id": "f10000000000001c",
@@ -623,7 +624,8 @@
       "fromNode": "b100000000000004",
       "fromSide": "bottom",
       "toNode": "a100000000000011",
-      "toSide": "right"
+      "toSide": "right",
+      "label": "Concavity and complementarity give the certificate / 凹性与互补性给出证书"
     },
     {
       "id": "a100000000000004-sofp-stationary",
