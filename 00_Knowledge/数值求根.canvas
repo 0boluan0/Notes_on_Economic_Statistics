@@ -177,7 +177,7 @@
       "y": 2100,
       "width": 700,
       "height": 620,
-      "text": "<!-- bilingual-en:start -->\n## [[连续函数网格命中|Continuity and eventual grid hits]]\n\nFor a known root and fixed positive residual tolerance, continuity at that root makes every sufficiently fine exact grid hit. The existence of a small enough step does not give its numerical value.\n<!-- bilingual-en:end -->\n\n## [[连续函数网格命中]]\n\n已知根处连续且残差容差固定为正时，足够细的精确网格必能命中；连续性本身不给可直接计算的步长。"
+      "text": "<!-- bilingual-en:start -->\n## [[连续函数网格命中|Continuity and eventual grid hits]]\n\nIf a root exists and the residual tolerance is fixed and positive, continuity at that root makes every sufficiently fine exact grid hit. The existence of a small enough step does not give its numerical value.\n<!-- bilingual-en:end -->\n\n## [[连续函数网格命中]]\n\n已知根处连续且残差容差固定为正时，足够细的精确网格必能命中；连续性本身不给可直接计算的步长。"
     },
     {
       "id": "5100000000000013",
