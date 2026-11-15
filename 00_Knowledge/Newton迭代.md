@@ -8,7 +8,7 @@ student_os: knowledge-atom
 atom_id: CS-NR-004
 atom_set: numerical-root-finding
 atom_type: algorithm-definition
-status: needs-review
+status: source-checked
 requires:
   - "[[导数]]"
 related:
@@ -121,7 +121,7 @@ This card owns only the tangent update. [[Newton局部收敛|Newton local conver
 
 本卡只定义切线更新。它何时具有局部二次速度，由 [[Newton局部收敛]] 给出条件；零导数、巨大步长、循环、其他吸引域和越界等机制，由 [[Newton失效边界]] 单独诊断。实现层面的残差、最大迭代和非有限值出口统一见 [[数值迭代停止条件]]；若还能先找到异号区间，[[混合求根]] 可以在不丢掉括区间的前提下尝试 Newton 候选。
 
-> [!question-] Try the distinction · 检验理解
+> [!question]- Try the distinction · 检验理解
 > <!-- bilingual-en:start -->
 > What does the Newton update answer, and what does it leave open?
 >

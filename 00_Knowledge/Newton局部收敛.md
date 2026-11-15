@@ -7,7 +7,7 @@ student_os: knowledge-atom
 atom_id: CS-NR-008
 atom_set: numerical-root-finding
 atom_type: convergence-theorem
-status: needs-review
+status: source-checked
 requires:
   - "[[Newton迭代]]"
 related:
@@ -50,6 +50,12 @@ Recall the [[Newton迭代|Newton update]] and the [[Taylor余项|Taylor remainde
 <!-- bilingual-en:end -->
 
 ## Taylor 余项给出误差平方界
+
+<!-- bilingual-en:start -->
+The following Taylor intermediate-point argument concerns $x_k\ne\alpha$. If $x_k=\alpha$, the root has already been reached and no further expansion or step is needed.
+<!-- bilingual-en:end -->
+
+下面的 Taylor 中间点论证针对 $x_k\ne\alpha$。若 $x_k=\alpha$，已经命中根，无须再展开或更新。
 
 <!-- bilingual-en:start -->
 Assume $f(\alpha)=0$ and $f'(\alpha)\ne0$, and set $e_k=x_k-\alpha$. Let $I$ be an open interval containing $\alpha$, with $f$ twice continuously differentiable on $I$. For $x_k\in I$ with $f'(x_k)\ne0$, Taylor’s theorem gives a point $\xi_k$ between $x_k$ and $\alpha$ such that
@@ -178,7 +184,7 @@ Therefore $|e_{k+1}|=(2/3)|e_k|$: convergence is only linear. The iterates may s
 
 因此 $|e_{k+1}|=(2/3)|e_k|$，只有线性收敛。迭代仍可能趋近根，但简单根附近的平方误差界不能移植到这个重根。若初值不在局部收敛邻域，序列能否进来还要由 [[Newton失效边界]] 和实际问题结构判断。
 
-> [!question-] Try the distinction · 检验理解
+> [!question]- Try the distinction · 检验理解
 > <!-- bilingual-en:start -->
 > If errors decrease slowly in the first few Newton steps, does that refute the squared-error theorem near a simple root?
 >

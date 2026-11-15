@@ -8,7 +8,7 @@ student_os: knowledge-atom
 atom_id: CS-NR-009
 atom_set: numerical-root-finding
 atom_type: failure-boundary
-status: needs-review
+status: source-checked
 requires:
   - "[[Newton迭代]]"
 related:
@@ -131,7 +131,7 @@ Changing the initial guess, damping or limiting the step may help a particular p
 
 换初值、阻尼或限制步长可能改善某个问题，却不自动提供全局证书。若有连续异号括区间，[[混合求根]] 可以拒绝越界或缺乏进展的 Newton 候选并退回二分；它之所以更稳，是因为括区间不变量一直保留，而不是因为 Newton 的局部定理被扩成了全局定理。
 
-> [!question-] Try the distinction · 检验理解
+> [!question]- Try the distinction · 检验理解
 > <!-- bilingual-en:start -->
 > Newton stably converges to root $r_2$, but the task requested a different root $r_1$ of the same function. Is that success?
 >
