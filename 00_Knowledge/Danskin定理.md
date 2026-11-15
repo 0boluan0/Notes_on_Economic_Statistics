@@ -112,7 +112,8 @@ For the upper comparison, choose a new optimizer $x_t\in S(\theta+td)$. At the o
 
 对上界，取移动后的最优方案 $x_t\in S(\theta+td)$。在旧参数处它满足 $f(x_t,\theta)\le v(\theta)$，所以同一差商不超过 $[f(x_t,\theta+td)-f(x_t,\theta)]/t$。梯度在 $X$ 与一小段闭参数线段的乘积上联合连续，给出对所有 $x$ 一致的展开：
 
-$$\nf(x,\theta+td)-f(x,\theta)=t g(x)^Td+t r_t(x),\qquad\sup_{x\in X}|r_t(x)|\longrightarrow0.
+$$
+f(x,\theta+td)-f(x,\theta)=t g(x)^Td+t r_t(x),\qquad\sup_{x\in X}|r_t(x)|\longrightarrow0.
 $$
 
 <!-- bilingual-en:start -->
