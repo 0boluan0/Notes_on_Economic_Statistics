@@ -207,12 +207,23 @@ This equivalence retains the open-domain gradient convention just stated. Also, 
 ## 来源与核验
 
 <!-- bilingual-en:start -->
-- [Boyd and Vandenberghe, *Convex Optimization*, §§5.1–5.2.3 and 5.5.3](https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf), especially pp. 226–227 and 243–244: weak/strong duality, finite-value dual attainment under basic/refined Slater, and the differentiable KKT directions. The book minimizes a convex objective; negating it gives this card's concave maximization signs. Its open-domain assumption for the ordinary gradient KKT system is retained.
-- [Stanford EE364A, Lecture 9 transcript](https://see.stanford.edu/materials/lsocoee364a/transcripts/ConvexOptimizationI-Lecture09.html): the equality chain proving complementary slackness and the separate necessity/sufficiency directions. Informal speech about optimal points is read with their existence specified, not as a proof of primal attainment.
-- The quadratic, exponential, domain-boundary, and failed-Slater examples are worked out directly above; the stated supremum and multiplier calculations were checked independently of the source summaries.
+- Boyd and Vandenberghe, *Convex Optimization*, §§5.2.3 and 5.5.3 was checked for Slater, strong duality, dual attainment, and the two KKT directions.
+  [Book text](https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf), printed pp. 226–227 and 243–244 / PDF pp. 240–241 and 257–258: Slater's finite-value dual attainment and the open-domain differentiable KKT directions. Section 5.1.2–3, printed p. 216 / PDF p. 230, defines the dual function and bound; negating the minimization objective yields this card's upper-bound signs. The theorem does not supply primal attainment.
 <!-- bilingual-en:end -->
 
-- Boyd 与 Vandenberghe，§§5.1–5.2.3、§5.5.3，特别是书页 226–227、243–244：核对弱/强对偶、基本及精细 Slater 下有限值对应的对偶最优取得，以及可微 KKT 的两个方向。书中采用凸最小化，本卡对目标取负后转为凹最大化，并保留通常梯度 KKT 所需的开域假设。
-- Stanford EE364A 第 9 讲逐字稿：核对推出互补松弛的等号链，以及必要、充分方向的分工；口头提及最优点时，须另有其存在性，不能据此推断原问题一定取得最优值。
-- 二次、指数、定义域边界及 Slater 失败的例子均在正文直接计算，逐项核验上确界与乘子，未将来源摘要代替推导。
+- [Boyd and Vandenberghe, *Convex Optimization*, §§5.2.3 and 5.5.3](https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)：直接核对 Slater、强对偶、对偶最优取得与 KKT 必要/充分方向。
+  精确位置：书页 226–227、243–244／PDF 页 240–241、257–258，核对有限值下的对偶最优取得，以及开域可微 KKT 的必要和充分方向；§5.1.2–3，书页 216／PDF 页 230，给出对偶函数与界。对最小化目标取负得到本卡的上界符号；定理不保证原问题最优值被取得。
 
+<!-- bilingual-en:start -->
+- The Stanford EE364A Lecture 9 transcript was used to cross-check the division of roles between strong duality and KKT certification.
+  [Lecture transcript](https://see.stanford.edu/materials/lsocoee364a/transcripts/ConvexOptimizationI-Lecture09.html): the primal/dual optimum equality chain yields complementary slackness; the later discussion separates convex KKT sufficiency from Slater-based necessity. Informal references to optimal points assume their existence and do not establish primal attainment.
+<!-- bilingual-en:end -->
+
+- [Stanford EE364A, Lecture 9 transcript](https://see.stanford.edu/materials/lsocoee364a/transcripts/ConvexOptimizationI-Lecture09.html)：交叉核对强对偶与 KKT 证书的分工。
+  逐字稿中原问题／对偶最优点的等号链推出互补松弛；随后区分凸 KKT 充分性与 Slater 支持的必要性。口头提及最优点时须另有其存在性，不能据此推出原问题一定取得最优值。
+
+<!-- bilingual-en:start -->
+The quadratic, exponential, domain-boundary, and failed-Slater examples are calculated explicitly in this card; their supremum and multiplier arguments are checked directly, rather than attributed as examples copied from the sources.
+<!-- bilingual-en:end -->
+
+二次、指数、定义域边界及 Slater 失败的例子均在正文直接计算，逐项核验上确界和乘子，没有将自推算例冒充来源中的例子。

@@ -177,10 +177,18 @@ Slater 条件本身只判断严格可行性。[[Slater强对偶]] 给出它保�
 ## 来源与核验
 
 <!-- bilingual-en:start -->
-- [Boyd and Vandenberghe, *Convex Optimization*, §2.1.3, p. 23, and §5.2.3, pp. 226–227](https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf): relative interior, the common domain, basic Slater, and its refined affine-inequality version. The max-concave convention here is obtained by negating the book's convex minimization objective.
-- [[01_Math/08_EC400_MathsCamp/2026_Course_Materials/02_SOFP/Lectures/EC400 Lecture Notes SOFP.pdf|LSE EC400 SOFP notes]], PDF p. 34: course notation and strict feasibility were checked against Boyd. The notes' claim of equivalence with LICQ and their convex-equality wording are not used; equality constraints in this theorem are affine.
+- Boyd and Vandenberghe, *Convex Optimization*, §5.2.3 was checked for Slater's relative-interior strict-feasibility definition and affine equalities.
+  [Book text](https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf), printed pp. 226–227 / PDF pp. 240–241: the common domain and both basic and refined Slater conditions, with affine inequalities allowed to hold weakly. Section 2.1.3, printed p. 23 / PDF p. 37, supplies relative interior inside the affine hull. Negating the book's convex minimization objective gives the concave maximization convention here.
 <!-- bilingual-en:end -->
 
-- Boyd 与 Vandenberghe，§2.1.3（书页 23）与 §5.2.3（书页 226–227，PDF 页 240–241）：核对相对内部、共同域、基本版本及仿射不等式的精细版本；本卡将书中凸最小化的目标取负，改写为凹最大化。
-- LSE EC400 *SOFP Lecture Notes*，PDF 页 34：核对课程记号与严格可行性，并以 Boyd 校正范围。讲义将 Slater 与 LICQ 等同、把一般凸等式纳入凸规划的说法未予采用；这里要求仿射等式。
+- [Boyd and Vandenberghe, *Convex Optimization*, §5.2.3](https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)：直接核对 Slater 的相对内部、严格成立的凸不等式与仿射等式定义。
+  精确位置：书页 226–227／PDF 页 240–241，核对共同域、基本及精细 Slater 条件，精细版本允许仿射不等式以等号成立；§2.1.3，书页 23／PDF 页 37，给出在仿射包中取相对内部的定义。本卡将书中凸最小化目标取负，改为凹最大化。这里要求的是凸不等式严格成立，并不要求函数严格凸。
+
+<!-- bilingual-en:start -->
+- The EC400 SOFP notes were checked for the course scope of strict feasibility and affine equalities.
+  [[01_Math/08_EC400_MathsCamp/2026_Course_Materials/02_SOFP/Lectures/EC400 Lecture Notes SOFP.pdf|Course PDF]], p. 34: the Slater bullet explicitly requires affine equalities, but the subsequent KKT theorem uses broader convex-equality wording and the introductory paragraph calls the two qualifications equivalent. Those latter shortcuts are corrected against Boyd and the explicit distinction in [[Slater不等于LICQ|Slater and LICQ]]; the lecture is used for notation and context, not as support for the erroneous equivalence or general nonlinear equalities.
+<!-- bilingual-en:end -->
+
+- LSE EC400，*SOFP Lecture Notes*（课程讲义）：核对课程中的严格可行点与仿射等式范围。
+  PDF 页 34 的 Slater 条目明确写出仿射等式；但随后 KKT 定理使用更宽泛的凸等式措辞，引言还把两种资格称为等价。本卡保留课程记号与背景，并用 Boyd 及 [[Slater不等于LICQ]] 校正后两处表述，不把它们当作一般非线性等式或资格等价的依据。
 

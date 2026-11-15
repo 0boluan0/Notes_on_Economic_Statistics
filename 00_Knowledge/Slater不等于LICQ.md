@@ -165,14 +165,26 @@ LICQ 必要性定理还要求该点附近连续可微以及该点局部最优，
 ## 来源与核验
 
 <!-- bilingual-en:start -->
-- [Boyd and Vandenberghe, *Convex Optimization*, §5.2.3, pp. 226–227](https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf): Slater's convex-problem scope, common-domain relative interior, and the refined affine-inequality version.
-- [MIT 6.7220, Lecture 7: Lagrange Multipliers and KKT Conditions](https://ocw.mit.edu/courses/6-7220j-nonlinear-optimization-spring-2025/resources/mit6_7220_s25_lec07_pdf/), PDF pp. 2–5: LICQ at a feasible point, retaining equality and active-inequality indices, and the convex-inequality/affine-equality Slater setting.
-- [[01_Math/08_EC400_MathsCamp/2026_Course_Materials/02_SOFP/Lectures/EC400 Lecture Notes SOFP.pdf|LSE EC400 SOFP notes]], PDF p. 34: the course's statement equating the qualifications is checked and corrected by the explicit counterexample and scoped implication above.
-- The full-row-rank direction construction and the two examples are derived explicitly here; they are not attributed as verbatim statements from these sources.
+- Boyd and Vandenberghe, *Convex Optimization*, §5.2.3 was checked for Slater's strict-feasibility definition.
+  [Book text](https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf), printed pp. 226–227 / PDF pp. 240–241: convex-problem scope, common-domain relative interior, and the refined affine-inequality version. These assumptions specify the shared problem class in the LICQ-to-Slater argument above.
 <!-- bilingual-en:end -->
 
-- Boyd 与 Vandenberghe，§5.2.3，书页 226–227：核对 Slater 的凸问题范围、共同域相对内部及仿射不等式精细版本。
-- MIT 6.7220 第 7 讲，PDF 页 2–5：核对指定可行点的 LICQ、全部等式及活动不等式索引，以及凸不等式/仿射等式的 Slater 范围。
-- LSE EC400 *SOFP Lecture Notes*，PDF 页 34：重新核对讲义将二者等同的表述；本卡用明确反例和有范围的推论纠正。
-- 满行秩方向构造及两个例子均在正文直接推导，没有将它们冒充上述来源的逐字陈述。
+- [Boyd and Vandenberghe, *Convex Optimization*, §5.2.3](https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)：核对 Slater 的凸问题严格可行性定义。
+  精确位置：书页 226–227／PDF 页 240–241，核对凸问题范围、共同域相对内部及仿射不等式精细版本；这些假设明确了正文 LICQ 到 Slater 推论所比较的共同问题范围。
+
+<!-- bilingual-en:start -->
+- MIT 6.7220 Lecture 7 was checked for LICQ as a local active-gradient condition.
+  [Lecture PDF](https://ocw.mit.edu/courses/6-7220j-nonlinear-optimization-spring-2025/mit6_7220_s25_lec07.pdf), pp. 2–5: equality and active-inequality indices, the C¹ LICQ necessity theorem and footnote 3 retaining repetitions, followed by the convex-inequality/affine-equality Slater route.
+<!-- bilingual-en:end -->
+
+- [MIT 6.7220, Lecture 7: Lagrange Multipliers and KKT Conditions](https://ocw.mit.edu/courses/6-7220j-nonlinear-optimization-spring-2025/resources/mit6_7220_s25_lec07_pdf/)：核对 LICQ 的局部活动梯度定义。
+  精确位置：PDF 页 2–5，核对等式及活动不等式索引、C¹ 条件下的 LICQ 必要性定理及保留重复梯度的脚注 3，以及其后的凸不等式／仿射等式 Slater 路线。
+
+<!-- bilingual-en:start -->
+- [[01_Math/08_EC400_MathsCamp/2026_Course_Materials/02_SOFP/Lectures/EC400 Lecture Notes SOFP.pdf|LSE EC400 SOFP notes]], PDF p. 34: course context for comparing the qualifications.
+  The source's assertion that the qualifications are equivalent is corrected by the duplicate-constraint example and scoped implication above. The full-row-rank direction construction and circle example are derived explicitly here, not presented as verbatim statements from these sources.
+<!-- bilingual-en:end -->
+
+- LSE EC400 *SOFP Lecture Notes*，PDF 页 34：课程中比较两种约束资格的背景。
+  讲义将两种资格等同的表述，由正文重复约束反例和有范围的正向推论校正。满行秩方向构造与圆周例子均在正文直接推导，不冒充上述来源的逐字陈述。
 
