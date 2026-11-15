@@ -8,7 +8,7 @@
       "width": 8400,
       "height": 260,
       "color": "6",
-      "text": "# 数值求根 · 原子图\n\n先分清候选空间提供什么信息，再沿“异号括区间”或“局部切线”两条路径求近似根；最后用误差证据、失败状态和计算成本选择方法。颜色只表示语义角色，不表示掌握程度；本图的 13 张原子均已通过独立内容审核，学习证据仍为 `unassessed`。"
+      "text": "<!-- bilingual-en:start -->\n# Numerical root-finding\n\nChoose a route from the information available: a sign bracket, a local tangent, or a finite candidate set. Judge the result by error evidence, failure status, and evaluation cost. Colors distinguish semantic roles.\n<!-- bilingual-en:end -->\n\n# 数值求根\n\n先分清候选空间提供什么信息，再沿“异号括区间”或“局部切线”两条路径求近似根；最后用误差证据、失败状态和计算成本选择方法。\n\n颜色只表示语义角色。"
     },
     {
       "id": "5100000000000002",
@@ -56,9 +56,9 @@
       "x": -1450,
       "y": -300,
       "width": 700,
-      "height": 360,
+      "height": 600,
       "color": "4",
-      "text": "## [[二分求根]]\n\n连续函数端点异号时，介值定理保证至少一个根；每轮按符号保留仍有证书的一半。\n\n**边界：** 不要求单调或根唯一；无异号只表示这份证书不能启动。"
+      "text": "<!-- bilingual-en:start -->\n## [[二分求根|Bisection]]\n\nContinuity and opposite endpoint signs certify a root; retain the sign-changing half. Monotonicity and uniqueness are unnecessary. Handle exact endpoint roots first.\n<!-- bilingual-en:end -->\n\n## [[二分求根]]\n\n连续函数端点异号时，介值定理保证至少一个根；每轮按符号保留仍有证书的一半。\n\n**边界：** 不要求单调或根唯一；无异号只表示这份证书不能启动。"
     },
     {
       "id": "5100000000000006",
@@ -66,9 +66,9 @@
       "x": -1450,
       "y": 500,
       "width": 700,
-      "height": 340,
+      "height": 600,
       "color": "4",
-      "text": "## [[二分误差界]]\n\n完成 $n$ 次更新后，括区间宽度为 $L_0/2^n$，中点到某个被括住根的距离至多为 $L_0/2^{n+1}$。\n\n**边界：** 这是位置误差证书，不是残差界。"
+      "text": "<!-- bilingual-en:start -->\n## [[二分误差界|Bisection error bound]]\n\nIn exact arithmetic, after $n$ completed bracket updates, width is $L_0/2^n$ and midpoint error is at most $L_0/2^{n+1}$ for a bracketed root. This is a positional bound.\n<!-- bilingual-en:end -->\n\n## [[二分误差界]]\n\n完成 $n$ 次更新后，括区间宽度为 $L_0/2^n$，中点到某个被括住根的距离至多为 $L_0/2^{n+1}$。\n\n**边界：** 这是位置误差证书，不是残差界。\n\n上面的精确减半等式以精确算术为前提；浮点停滞另行报告。"
     },
     {
       "id": "5100000000000007",
@@ -76,9 +76,9 @@
       "x": 1400,
       "y": -300,
       "width": 700,
-      "height": 340,
+      "height": 600,
       "color": "2",
-      "text": "## [[Newton迭代]]\n\n用当前点的切线零点生成下一候选：$x_{k+1}=x_k-f(x_k)/f'(x_k)$。\n\n**规格：** 当前点是根时先返回；否则这一步要求 $f'(x_k)\\ne0$。"
+      "text": "<!-- bilingual-en:start -->\n## [[Newton迭代|Newton iteration]]\n\nUse the current tangent zero: $x_{k+1}=x_k-f(x_k)/f'(x_k)$. Return first if the point is an exact root; otherwise require a nonzero derivative. A computable update is not a convergence guarantee.\n<!-- bilingual-en:end -->\n\n## [[Newton迭代]]\n\n用当前点的切线零点生成下一候选：$x_{k+1}=x_k-f(x_k)/f'(x_k)$。\n\n**规格：** 当前点是根时先返回；否则这一步要求 $f'(x_k)\\ne0$。"
     },
     {
       "id": "5100000000000008",
@@ -86,9 +86,9 @@
       "x": 550,
       "y": 500,
       "width": 700,
-      "height": 360,
+      "height": 600,
       "color": "2",
-      "text": "## [[Newton局部收敛]]\n\n靠近简单根且导数不消失、二阶导数受控时，误差满足局部二次递推。\n\n**边界：** 这是局部定理；重根、远初值与离开邻域不在承诺内。"
+      "text": "<!-- bilingual-en:start -->\n## [[Newton局部收敛|Newton local convergence]]\n\nNear a simple root, suitable smoothness and derivative bounds control the next error by the square of the current error. These are sufficient local hypotheses, not necessary conditions for every successful run.\n<!-- bilingual-en:end -->\n\n## [[Newton局部收敛]]\n\n靠近简单根且导数不消失、二阶导数受控时，误差满足局部二次递推。\n\n**边界：** 这是局部定理；重根、远初值与离开邻域不在承诺内。"
     },
     {
       "id": "5100000000000009",
@@ -96,9 +96,9 @@
       "x": 2250,
       "y": 500,
       "width": 700,
-      "height": 380,
+      "height": 600,
       "color": "1",
-      "text": "## [[Newton失效边界]]\n\n零导数、越出定义域、进入别的吸引域、循环、NaN 或 overflow 都可能让迭代失败。\n\n**边界：** 小步长也可能只是停滞，必须核验残差或括区间证据。"
+      "text": "<!-- bilingual-en:start -->\n## [[Newton失效边界|Newton failure boundaries]]\n\nZero derivatives, domain escape, other attraction basins, cycles, and nonfinite values can defeat iteration. A small step can mean stagnation; check evidence appropriate to the required error.\n<!-- bilingual-en:end -->\n\n## [[Newton失效边界]]\n\n零导数、越出定义域、进入别的吸引域、循环、NaN 或 overflow 都可能让迭代失败。\n\n**边界：** 小步长也可能只是停滞，必须核验残差或括区间证据。"
     },
     {
       "id": "510000000000000a",
@@ -106,9 +106,9 @@
       "x": -350,
       "y": 1400,
       "width": 700,
-      "height": 360,
+      "height": 640,
       "color": "6",
-      "text": "## [[混合求根]]\n\n始终保留异号括区间；快速候选在区间内且确有进展时才接受，否则退回二分。\n\n**意义：** 把全局安全证书与局部速度组合起来，而不是在两者间二选一。"
+      "text": "<!-- bilingual-en:start -->\n## [[混合求根|Safeguarded hybrid solvers]]\n\nPreserve the sign bracket and enforce progress. A concrete safeguard accepts a candidate only in the central fraction of the interval, otherwise bisects. Preserving opposite signs alone does not force width to zero.\n<!-- bilingual-en:end -->\n\n## [[混合求根]]\n\n始终保留异号括区间；快速候选在区间内且确有进展时才接受，否则退回二分。\n\n**意义：** 把全局安全证书与局部速度组合起来，而不是在两者间二选一。\n\n保根与收缩分别检查；中央比例接受规则同时给出可证明的进展。"
     },
     {
       "id": "510000000000000b",
@@ -116,9 +116,9 @@
       "x": -350,
       "y": 2200,
       "width": 700,
-      "height": 380,
+      "height": 600,
       "color": "6",
-      "text": "## [[求根策略]]\n\n按有限候选、方向信息、连续异号区间、导数质量、误差目标与失败成本选方法。\n\n**原则：** 有可维护的 bracket 先保住证书；有可靠局部信息再加速。"
+      "text": "<!-- bilingual-en:start -->\n## [[求根策略|Choosing a root solver]]\n\nChoose by available certificates, directional information, derivative reliability, error target, and failure cost. Keep a maintainable bracket, accelerate under safeguards, and report the evidence supporting the result.\n<!-- bilingual-en:end -->\n\n## [[求根策略]]\n\n按有限候选、方向信息、连续异号区间、导数质量、误差目标与失败成本选方法。\n\n**原则：** 有可维护的 bracket 先保住证书；有可靠局部信息再加速。"
     },
     {
       "id": "510000000000000c",
@@ -126,9 +126,9 @@
       "x": -3000,
       "y": 3250,
       "width": 700,
-      "height": 360,
+      "height": 600,
       "color": "3",
-      "text": "## [[求根残差]]\n\n对方程 $f(x)=0$，候选点 $\\hat x$ 的残差 $f(\\hat x)$ 是代回方程后仍未消除的函数值缺口；绝对残差 $|f(\\hat x)|$ 只报告缺口大小。\n\n**边界：** 它不是候选到真根的距离；转换条件见下一节点。"
+      "text": "<!-- bilingual-en:start -->\n## [[求根残差|Root-finding residual]]\n\nFor $f(x)=0$, the signed residual $f(\\hat x)$ is the function-value defect at the candidate. Its magnitude is not a distance to a root and depends on how the equation is scaled.\n<!-- bilingual-en:end -->\n\n## [[求根残差]]\n\n对方程 $f(x)=0$，候选点 $\\hat x$ 的残差 $f(\\hat x)$ 是代回方程后仍未消除的函数值缺口；绝对残差 $|f(\\hat x)|$ 只报告缺口大小。\n\n**边界：** 它不是候选到真根的距离；转换条件见下一节点。"
     },
     {
       "id": "5100000000000010",
@@ -136,9 +136,9 @@
       "x": -1000,
       "y": 3250,
       "width": 700,
-      "height": 400,
+      "height": 640,
       "color": "3",
-      "text": "## [[残差控制根误差]]\n\n若候选与目标根之间满足平均值定理，且整段有 $|f'|\\ge m>0$，则 $|\\hat x-r|\\le |f(\\hat x)|/m$。\n\n**边界：** 候选点处导数不够；缩放与重根都会破坏无条件换算。"
+      "text": "<!-- bilingual-en:start -->\n## [[残差控制根误差|Residual to root-error bound]]\n\nIf the Mean Value Theorem applies from $\\hat x$ to a known root $r$ and $|f'|\\ge m>0$ throughout that segment, then $|\\hat x-r|\\le|f(\\hat x)|/m$. A derivative at the candidate alone is insufficient.\n<!-- bilingual-en:end -->\n\n## [[残差控制根误差]]\n\n若候选与目标根之间满足平均值定理，且整段有 $|f'|\\ge m>0$，则 $|\\hat x-r|\\le |f(\\hat x)|/m$。\n\n**边界：** 候选点处导数不够；缩放与重根都会破坏无条件换算。"
     },
     {
       "id": "510000000000000d",
@@ -146,9 +146,9 @@
       "x": -1000,
       "y": 4200,
       "width": 700,
-      "height": 360,
+      "height": 600,
       "color": "3",
-      "text": "## [[数值迭代停止条件]]\n\n把位置、残差、相邻步长、最大迭代、非有限值与定义域失败分别报告。\n\n**边界：** 停止不是一个布尔值，更不自动等于找到目标根。"
+      "text": "<!-- bilingual-en:start -->\n## [[数值迭代停止条件|Stopping and failure]]\n\nReport the error indicator, tolerance, termination reason, and evidence. A position bound, residual test, step-size test, iteration limit, and nonfinite failure answer different questions. Stopping alone does not prove success.\n<!-- bilingual-en:end -->\n\n## [[数值迭代停止条件]]\n\n把位置、残差、相邻步长、最大迭代、非有限值与定义域失败分别报告。\n\n**边界：** 停止不是一个布尔值，更不自动等于找到目标根。"
     },
     {
       "id": "510000000000000e",
@@ -226,7 +226,7 @@
       "fromSide": "right",
       "toNode": "510000000000000a",
       "toSide": "left",
-      "label": "保留异号括区间作为安全证书"
+      "label": "Bracket preservation / 保留异号括区间作为安全证书"
     },
     {
       "id": "5200000000000008",
@@ -234,7 +234,7 @@
       "fromSide": "left",
       "toNode": "510000000000000a",
       "toSide": "right",
-      "label": "用异号括区间约束越界或无进展的 Newton 候选"
+      "label": "Safeguard proposals / 用异号括区间约束越界或无进展的 Newton 候选"
     },
     {
       "id": "5200000000000010",
@@ -258,7 +258,7 @@
       "fromSide": "bottom",
       "toNode": "510000000000000b",
       "toSide": "top",
-      "label": "从组合原则推广到方法选择"
+      "label": "Choose by evidence / 从组合原则推广到方法选择"
     },
     {
       "id": "520000000000000a",
@@ -282,7 +282,7 @@
       "fromSide": "right",
       "toNode": "5100000000000010",
       "toSide": "left",
-      "label": "导数正下界等条件把方程缺口转换为位置界"
+      "label": "Segment-wide derivative bound / 导数正下界等条件把方程缺口转换为位置界"
     },
     {
       "id": "5200000000000013",

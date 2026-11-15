@@ -125,8 +125,8 @@
       "x": 1500,
       "y": 800,
       "width": 480,
-      "height": 220,
-      "text": "## [[数值迭代停止条件|停止与失败出口]]\n*Stopping and failure*\n\n残差、区间或误差界定义成功；迭代上限与非有限值定义失败。",
+      "height": 350,
+      "text": "<!-- bilingual-en:start -->\n## [[数值迭代停止条件|Stopping and failure]]\n\nA stopping indicator needs a tolerance and a stated claim. A small residual or step is not automatically a positional-error certificate.\n<!-- bilingual-en:end -->\n\n## [[数值迭代停止条件|停止与失败出口]]\n*Stopping and failure*\n\n残差、区间或误差界定义成功；迭代上限与非有限值定义失败。\n\n残差阈值只证明相应残差要求；位置误差须有额外证书。",
       "color": "2"
     },
     {

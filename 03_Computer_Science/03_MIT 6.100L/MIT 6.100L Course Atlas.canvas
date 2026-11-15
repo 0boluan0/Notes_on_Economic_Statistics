@@ -30,11 +30,11 @@
     {
       "id": "00eae484b3706f4a",
       "type": "text",
-      "x": 1250,
+      "x": 1150,
       "y": 1000,
-      "width": 900,
-      "height": 780,
-      "text": "## 2 · 浮点数、近似算法与搜索\n\n**主题入口：** [[浮点数与数值误差.canvas|浮点数与数值误差]] · [[数值求根.canvas|数值求根]] · [[算法复杂度]]\n\n**课程主线：** [[枚举验证]] → [[固定步长求根]] → [[固定步长漏根]]；[[二分查找]] / [[二分求根]] → [[Newton迭代]]。\n\n**可靠性扩展：** [[二分误差界]] · [[Newton局部收敛]] · [[Newton失效边界]] · [[求根残差]] · [[残差控制根误差]] · [[混合求根]] · [[求根策略]]。\n\n**核心边界：** 固定网格耗尽不能证明连续区间无根；离散二分靠有序反馈；一般连续二分靠异号括区间；Newton 只有在局部条件满足时才有收敛保证。\n\n**课程范围：** Lecture 4–6 直接支持枚举、固定步长及其漏根边界、离散与平方根/立方根二分、Newton 更新；可靠性扩展由数值分析和官方库文档补齐。"
+      "width": 1100,
+      "height": 950,
+      "text": "<!-- bilingual-en:start -->\n## 2 · Floating point, approximation, and search\n\nLectures 4–6 move from candidate coverage through fixed grids and halving to tangent-based updates. Later reliability extensions distinguish a retained sign bracket, a contracting interval, local convergence, and the error evidence used to stop. Newton’s local hypotheses are sufficient for its local guarantee, not necessary conditions for every successful run.\n<!-- bilingual-en:end -->\n\n## 2 · 浮点数、近似算法与搜索\n\n**主题入口：** [[浮点数与数值误差.canvas|浮点数与数值误差]] · [[数值求根.canvas|数值求根]] · [[算法复杂度]]\n\n**课程主线：** [[枚举验证]] → [[固定步长求根]] → [[固定步长漏根]]；[[二分查找]] / [[二分求根]] → [[Newton迭代]]。\n\n**可靠性扩展：** [[二分误差界]] · [[Newton局部收敛]] · [[Newton失效边界]] · [[求根残差]] · [[残差控制根误差]] · [[混合求根]] · [[求根策略]]。\n\n**核心边界：** 固定网格耗尽不能证明连续区间无根；离散二分靠有序反馈；一般连续二分靠异号括区间；Newton 只有在局部条件满足时才有收敛保证。\n\n**课程范围：** Lecture 4–6 直接支持枚举、固定步长及其漏根边界、离散与平方根/立方根二分、Newton 更新；可靠性扩展由数值分析和官方库文档补齐。\n\n局部定理给的是充分保证，并非每次成功求根都必须满足的必要条件。保留异号与强制收缩需要分别检查。"
     },
     {
       "id": "87db6ec09dc34bf9",
