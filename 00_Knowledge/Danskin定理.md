@@ -7,7 +7,7 @@ student_os: knowledge-atom
 atom_id: OPT-MV-026
 atom_set: multivariable-optimization
 atom_type: theorem
-status: needs-review
+status: source-checked
 requires:
 - '[[值函数]]'
 - '[[最优解对应]]'
