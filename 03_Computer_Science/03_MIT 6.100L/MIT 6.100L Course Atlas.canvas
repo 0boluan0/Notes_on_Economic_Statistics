@@ -87,8 +87,8 @@
       "x": 1250,
       "y": 3000,
       "width": 900,
-      "height": 600,
-      "text": "## 8 · 算法复杂度、排序与哈希\n\n**原子入口：** [[算法复杂度|算法复杂度定义]] · [[渐近记号与算法复杂度.canvas|渐近与成本总图]] · [[排序算法.canvas|排序算法]] · [[哈希表.canvas|哈希表]]\n\n**它解决什么：** 估计输入变大时算法所需时间和空间怎样增长，并在顺序、比较和键查找任务中选择结构。\n\n**具体锚点：** 只代入代表增长函数：n = 1000 时，n² = 1,000,000，n log₂ n ≈ 9,966。这是增长尺度演示，不是由 O 记号推算实际排序比较次数。\n<!-- bilingual-en:start -->\nFor n = 1000, representative growth functions give n² = 1,000,000 and n log₂ n ≈ 9,966. These illustrate scales, not actual comparison counts inferred from Big O.\n<!-- bilingual-en:end -->\n\n**核心边界：** Big O 是上界，Theta 才是紧确阶；期望、摊还和单次最坏复杂度回答不同问题。\n\n**继续：** [[03_Computer_Science/03_MIT 6.100L/21_算法成本与渐近分析|先定义输入规模和基本操作，再分析循环或递归]]；排序还要看稳定性、空间和数据分布。\n\n**依据：** 本地官方课程材料。"
+      "height": 900,
+      "text": "<!-- bilingual-en:start -->\n## 8 · Algorithmic complexity, sorting, and hashing\n\nBegin with [[算法复杂度|complexity]], [[输入规模|input size]] and an explicit [[算法成本模型|cost model]]. Count actual loop and call-tree work, account for copies and live storage, and distinguish worst cases, input averages and amortized sequences. The sorting and hashing maps apply these choices to concrete data structures.\n<!-- bilingual-en:end -->\n\n<!-- bilingual-en:start -->\nFor n = 1000, representative growth functions give n² = 1,000,000 and n log₂ n ≈ 9,966. These illustrate scales, not actual comparison counts inferred from Big O.\n<!-- bilingual-en:end -->\n\n## 8 · 算法复杂度、排序与哈希\n\n**原子入口：** [[算法复杂度|算法复杂度定义]] · [[渐近记号与算法复杂度.canvas|渐近与成本总图]] · [[排序算法.canvas|排序算法]] · [[哈希表.canvas|哈希表]]\n\n**它解决什么：** 估计输入变大时算法所需时间和空间怎样增长，并在顺序、比较和键查找任务中选择结构。\n\n**具体锚点：** 只代入代表增长函数：n = 1000 时，n² = 1,000,000，n log₂ n ≈ 9,966。这是增长尺度演示，不是由 O 记号推算实际排序比较次数。\n\n\n**核心边界：** Big O 是上界，Theta 才是紧确阶；期望、摊还和单次最坏复杂度回答不同问题。\n\n**继续：** [[03_Computer_Science/03_MIT 6.100L/21_算法成本与渐近分析|先定义输入规模和基本操作，再分析循环或递归]]；排序还要看稳定性、空间和数据分布。\n\n**依据：** 本地官方课程材料。"
     },
     {
       "id": "1caffeefc95dd446",

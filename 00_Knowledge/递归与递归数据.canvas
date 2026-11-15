@@ -64,9 +64,9 @@
       "type": "text",
       "x": 560,
       "y": 400,
-      "width": 380,
-      "height": 220,
-      "text": "## 成本对象\n\n[[递归调用树成本]]\n\n时间加总全部节点工作；栈空间还要加总活跃路径上各 frame 保留的数据。",
+      "width": 460,
+      "height": 340,
+      "text": "<!-- bilingual-en:start -->\n## [[递归调用树成本|Recursion-tree costs]]\n\nAdd the local work of all actual calls. Stack frames are simultaneously live along an active path; shared heap objects require separate accounting.\n<!-- bilingual-en:end -->\n\n## [[递归调用树成本]]\n\n时间加总全部调用的局部工作；栈空间看同时存活的调用帧，帧引用的共享堆对象另算且不重复计。",
       "color": "2"
     },
     {
@@ -207,7 +207,7 @@
       "fromSide": "bottom",
       "toNode": "rec-calltree",
       "toSide": "top",
-      "label": "逐边检查"
+      "label": "Justify finite execution / 先证明实际调用执行有限"
     }
   ]
 }

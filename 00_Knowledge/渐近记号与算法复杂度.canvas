@@ -218,27 +218,27 @@
       "type": "text",
       "x": 2540,
       "y": 370,
-      "width": 400,
-      "height": 180,
-      "text": "## [[算法复杂度]]\n*Algorithmic complexity*\n\n固定算法、输入规模、资源单位与情形后，表达资源消耗的增长。"
+      "width": 460,
+      "height": 340,
+      "text": "<!-- bilingual-en:start -->\n## [[算法复杂度|Algorithmic complexity]]\n\nDescribe resource use after choosing input size, operation costs and the input case. Growth notation then summarizes that chosen function.\n<!-- bilingual-en:end -->\n\n## [[算法复杂度]]\n*Algorithmic complexity*\n\n固定算法、输入规模、资源单位与情形后，表达资源消耗的增长。"
     },
     {
       "id": "c001",
       "type": "text",
       "x": 3060,
       "y": 370,
-      "width": 400,
-      "height": 180,
-      "text": "## [[输入规模]]\n*Input size*\n\n列表长度、数值大小与编码位数不是同一个参数。"
+      "width": 460,
+      "height": 340,
+      "text": "<!-- bilingual-en:start -->\n## [[输入规模|Input size]]\n\nName what the size parameter measures: element count, numeric value or encoded bits. Independent dimensions may need separate parameters.\n<!-- bilingual-en:end -->\n\n## [[输入规模]]\n*Input size*\n\n列表长度、数值大小与编码位数不是同一个参数。"
     },
     {
       "id": "c002",
       "type": "text",
       "x": 2540,
       "y": 760,
-      "width": 400,
-      "height": 180,
-      "text": "## [[算法成本模型]]\n*Cost model*\n\n说明哪些操作算一步；大整数与切片不自动是常数成本。"
+      "width": 460,
+      "height": 340,
+      "text": "<!-- bilingual-en:start -->\n## [[算法成本模型|Cost model]]\n\nState which operations are charged and at what cost. One line may copy many references or operate on long integers.\n<!-- bilingual-en:end -->\n\n## [[算法成本模型]]\n*Cost model*\n\n说明哪些操作算一步；大整数与切片不自动是常数成本。"
     },
     {
       "id": "c008",
@@ -254,9 +254,9 @@
       "type": "text",
       "x": 2540,
       "y": 1190,
-      "width": 400,
-      "height": 180,
-      "text": "## [[计时与渐近分析]]\n*Timing and growth*\n\n实测检验具体工作负载；增长阶不是固定输入上的秒数。"
+      "width": 460,
+      "height": 340,
+      "text": "<!-- bilingual-en:start -->\n## [[计时与渐近分析|Timing and growth]]\n\nRepeated timing describes specified workloads and environments. A growth proof states a model and input case beyond those sampled runs.\n<!-- bilingual-en:end -->\n\n## [[计时与渐近分析]]\n*Timing and growth*\n\n实测检验具体工作负载；增长阶不是固定输入上的秒数。"
     },
     {
       "id": "c003",
@@ -317,18 +317,18 @@
       "type": "text",
       "x": 1290,
       "y": 2110,
-      "width": 400,
-      "height": 180,
-      "text": "## [[循环成本求和]]\n*Sum actual work*\n\n按真正执行范围求和；三角形循环仍为平方阶。"
+      "width": 460,
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[循环成本求和|Summing loop costs]]\n\nSum work over iterations that actually execute, including their control costs. Early exits and empty ranges change the count.\n<!-- bilingual-en:end -->\n\n## [[循环成本求和]]\n*Sum actual work*\n\n按真正执行范围求和；三角形循环仍为平方阶。"
     },
     {
       "id": "c010",
       "type": "text",
       "x": 1810,
       "y": 2110,
-      "width": 400,
-      "height": 180,
-      "text": "## [[减半迭代次数]]\n*Repeated halving*\n\n从 m=n≥1 开始，每轮 floor(m/2)，到 0 恰需 floor(log₂ n)+1 轮。"
+      "width": 460,
+      "height": 320,
+      "text": "<!-- bilingual-en:start -->\n## [[减半迭代次数|Integer halving]]\n\nCount updates under the exact stopping rule. Floor-halving a positive integer to zero differs from stopping at one.\n<!-- bilingual-en:end -->\n\n## [[减半迭代次数]]\n*Repeated halving*\n\n从 m=n≥1 开始，每轮 floor(m/2)，到 0 恰需 floor(log₂ n)+1 轮。"
     },
     {
       "id": "nr002",
@@ -344,18 +344,18 @@
       "type": "text",
       "x": 1810,
       "y": 2460,
-      "width": 400,
-      "height": 180,
-      "text": "## [[切片二分成本]]\n*Slicing changes the cost*\n\n单分支逐层复制半个列表：最坏复制总量 Θ(n)，不是 Θ(log n)。"
+      "width": 460,
+      "height": 350,
+      "text": "<!-- bilingual-en:start -->\n## [[切片二分成本|Copying in binary search]]\n\nA search can follow one logarithmic-depth branch while copying a linear total of references. Check the specified implementation and exits.\n<!-- bilingual-en:end -->\n\n## [[切片二分成本]]\n*Slicing changes the cost*\n\n单分支逐层复制半个列表：最坏复制总量 Θ(n)，不是 Θ(log n)。"
     },
     {
       "id": "rec005",
       "type": "text",
       "x": 1290,
       "y": 2870,
-      "width": 400,
-      "height": 180,
-      "text": "## [[递归调用树成本]]\n*Recursion-tree costs*\n\n汇总全部调用的局部工作；最大栈深度是另一项指标。"
+      "width": 460,
+      "height": 340,
+      "text": "<!-- bilingual-en:start -->\n## [[递归调用树成本|Recursion-tree costs]]\n\nAdd each actual call’s local work once. Call depth and simultaneously live storage answer separate questions.\n<!-- bilingual-en:end -->\n\n## [[递归调用树成本]]\n*Recursion-tree costs*\n\n汇总全部调用的局部工作；最大栈深度是另一项指标。"
     },
     {
       "id": "c014",

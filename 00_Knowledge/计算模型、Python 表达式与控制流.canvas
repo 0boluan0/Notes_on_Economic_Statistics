@@ -136,9 +136,9 @@
       "x": 1320,
       "y": 840,
       "width": 500,
-      "height": 260,
+      "height": 340,
       "color": "4",
-      "text": "## [[循环不变量与终止|循环的完全正确性由不变量与终止度量共同证明]]\n*Loop proof method*\n\n复用既有通用原子：初始化、保持、退出推出目标，再独立证明终止；不在 Python 卡内重复造卡。"
+      "text": "<!-- bilingual-en:start -->\n## [[循环不变量与终止|Proving a loop correct]]\n\nUse an [[不变量与部分正确性|invariant]] to justify results at each exit and a [[秩函数与终止证明|termination argument]] to rule out endless execution. Together they establish [[全正确性构成|total correctness]].\n<!-- bilingual-en:end -->\n\n## [[循环不变量与终止|证明循环正确]]\n\n在检查点建立并保持不变量，逐个说明出口结果；再确认每次操作能完成、重复路径沿终止度量推进。"
     },
     {
       "id": "f7682bc0b2b6751a",
@@ -256,7 +256,7 @@
       "fromSide": "bottom",
       "toNode": "e6571abfa1a56409",
       "toSide": "top",
-      "label": "正确性需要另证"
+      "label": "Prove invariance and termination / 证明检查点不变量与终止"
     },
     {
       "id": "357b4e0c1a28617d",

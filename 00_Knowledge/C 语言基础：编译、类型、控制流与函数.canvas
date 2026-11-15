@@ -155,8 +155,8 @@
       "x": 1500,
       "y": 1140,
       "width": 460,
-      "height": 210,
-      "text": "## [[循环不变量与终止|不变量与终止度量]]\n*Invariant and termination*\n\n不变量证明部分正确性；完全正确性还要证明每条重复路径都趋向终止。",
+      "height": 360,
+      "text": "<!-- bilingual-en:start -->\n## [[循环不变量与终止|Proving a loop correct]]\n\nConnect the processed prefix to the result, justify every exit, and prove that each operation and repeated path terminates.\n<!-- bilingual-en:end -->\n\n## [[循环不变量与终止|证明循环正确]]\n\n不变量证明部分正确性；完全正确性还要证明每条重复路径都趋向终止。",
       "color": "3"
     }
   ],
