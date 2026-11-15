@@ -7,7 +7,7 @@ student_os: knowledge-atom
 atom_id: OPT-MV-023
 atom_set: multivariable-optimization
 atom_type: concept-distinction
-status: needs-review
+status: source-checked
 requires:
 - '[[Slater条件]]'
 - '[[LICQ条件]]'

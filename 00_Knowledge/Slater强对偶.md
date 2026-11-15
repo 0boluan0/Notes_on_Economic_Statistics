@@ -7,7 +7,7 @@ student_os: knowledge-atom
 atom_id: OPT-MV-022
 atom_set: multivariable-optimization
 atom_type: duality-theorem
-status: needs-review
+status: source-checked
 requires:
 - '[[Slater条件]]'
 - '[[KKT条件]]'

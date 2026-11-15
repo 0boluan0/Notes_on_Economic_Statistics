@@ -7,7 +7,7 @@ student_os: knowledge-atom
 atom_id: OPT-MV-008
 atom_set: multivariable-optimization
 atom_type: definition
-status: needs-review
+status: source-checked
 related:
 - '[[凸优化全局性]]'
 - '[[LICQ条件]]'
