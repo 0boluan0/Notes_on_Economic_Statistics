@@ -169,6 +169,24 @@
       "height": 360,
       "color": "5",
       "text": "## [[浮点数与数值误差.canvas|浮点数与数值误差]]\n\n浮点表示、容差比较、舍入与非有限值决定数学步骤在机器上怎样失真。\n\n**关系：** 数值求根必须在这套机器算术边界内实现。"
+    },
+    {
+      "id": "5100000000000012",
+      "type": "text",
+      "x": -4000,
+      "y": 2100,
+      "width": 700,
+      "height": 620,
+      "text": "<!-- bilingual-en:start -->\n## [[连续函数网格命中|Continuity and eventual grid hits]]\n\nFor a known root and fixed positive residual tolerance, continuity at that root makes every sufficiently fine exact grid hit. The existence of a small enough step does not give its numerical value.\n<!-- bilingual-en:end -->\n\n## [[连续函数网格命中]]\n\n已知根处连续且残差容差固定为正时，足够细的精确网格必能命中；连续性本身不给可直接计算的步长。"
+    },
+    {
+      "id": "5100000000000013",
+      "type": "text",
+      "x": -2650,
+      "y": 2100,
+      "width": 700,
+      "height": 620,
+      "text": "<!-- bilingual-en:start -->\n## [[导数界控制网格步长|A derivative bound for grid spacing]]\n\nWith a root in a closed interval, continuity there, interior differentiability and a uniform bound |f′| ≤ L, Lh ≤ τ guarantees an exact-grid hit. The floor-truncated right tail prevents an automatic h/2 distance bound.\n<!-- bilingual-en:end -->\n\n## [[导数界控制网格步长]]\n\n闭区间有根且连续、内部可导并满足统一导数上界时，Lh ≤ τ 给出精确网格的命中充分条件；右端截断尾段不能直接用半步长界。"
     }
   ],
   "edges": [
@@ -250,7 +268,7 @@
       "fromSide": "bottom",
       "toNode": "5100000000000011",
       "toSide": "top",
-      "label": "Coverage can miss / 把方法入口与独立漏根边界分开"
+      "label": "Grid hit requires G_h ∩ A_τ ≠ ∅ / 网格命中要求 G_h ∩ A_τ ≠ ∅"
     },
     {
       "id": "5200000000000009",
@@ -315,6 +333,22 @@
       "toNode": "510000000000000e",
       "toSide": "top",
       "label": "区分问题病态与算法失稳"
+    },
+    {
+      "id": "5200000000000015",
+      "fromNode": "5100000000000011",
+      "fromSide": "bottom",
+      "toNode": "5100000000000012",
+      "toSide": "top",
+      "label": "Continuity supplies eventual coverage / 连续性给出充分加密后的覆盖保证"
+    },
+    {
+      "id": "5200000000000016",
+      "fromNode": "5100000000000012",
+      "fromSide": "right",
+      "toNode": "5100000000000013",
+      "toSide": "left",
+      "label": "A rate bound quantifies the step / 导数界把存在保证变成步长条件"
     }
   ]
 }
