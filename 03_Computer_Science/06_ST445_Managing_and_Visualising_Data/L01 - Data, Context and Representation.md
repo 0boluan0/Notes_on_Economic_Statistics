@@ -540,3 +540,22 @@ Recording times are approximate and follow the lecture transcript. The code exam
 - [ST445 Lecture recording, 29 September 2026](https://echo360.org.uk/media/4ce70ea5-3820-4059-8257-0c1dd336c212/public)
 - [Python data structures](https://docs.python.org/3/tutorial/datastructures.html)
 - [Python Unicode HOWTO](https://docs.python.org/3/howto/unicode.html)
+
+<!-- studyroom-ink:bb0cfebe02b673093b4484116aa9f3f20361984a9f7513a0d2e0725a92a3143f -->
+<!-- bilingual-en:start -->
+## Additional explanation
+
+Consistent fields and types usually make data easier to prepare: the same parsing rules can be applied across records.
+
+A tuple permits repeated values: `(2, 2)` has two elements.
+
+In `pd.read_csv`, `keep_default_na=False` does not disable type inference: a numeric-looking identifier can still lose its leading zeros. With missing-value parsing enabled, `keep_default_na=True` recognises both pandas’ default markers and any explicitly supplied `na_values`. The resulting missing value depends on the column type: a nullable `string` column uses `pd.NA`, not floating-point `NaN`.
+<!-- bilingual-en:end -->
+
+### 补充讲解
+
+字段及其类型越一致，数据通常越容易准备，因为不同记录可以共用同一套解析规则。
+
+元组允许重复值：`(2, 2)` 有两个元素。
+
+在 `pd.read_csv` 中，`keep_default_na=False` 不会关闭类型推断：形似数字的编号仍可能丢失前导零。启用缺失值解析时，`keep_default_na=True` 会同时识别 pandas 的默认标记和通过 `na_values` 显式指定的标记。缺失值的表示取决于列类型：可空的 `string` 列使用 `pd.NA`，而非浮点值 `NaN`。
