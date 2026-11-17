@@ -254,7 +254,7 @@ print(math.isclose(1e-12, 0.0, abs_tol=1e-10))        # True
 The tolerance must reflect the required accuracy. Exact comparison remains meaningful when the question is whether two stored values are identical. [Python's `math.isclose` reference](https://docs.python.org/3/library/math.html#math.isclose) specifies the comparison and keyword-only arguments.
 <!-- bilingual-en:end -->
 
-容差比较是在明确允许多大差距；它不会修复已损坏的数据。接近零时，相对比例可能给不出足够的绝对容许误差，所以需要按单位设定 `abs_tol`。这也不是“浮点数一律不能用 `==`”。
+比较计算结果与目标值时，先确定能接受多大的误差。目标值为零时，用 `abs_tol` 按测量单位给出容许差距。若要判断两个存储的数值是否恰好相等，就用 `==`。
 
 <!-- bilingual-en:start -->
 Binary64 has 53 bits of significand precision. All integers with absolute value at most $2^{53}$ are exactly representable, but immediately above this boundary the spacing becomes 2. Therefore `int(float(9007199254740993))` becomes `9007199254740992`. Larger exact integers still exist, such as $2^{53}+2$; the boundary concerns **consecutive** integers, not the maximum magnitude of a float.
@@ -416,7 +416,7 @@ print(records["country"].tolist())                # ['NA', 'GB']
 print(records["temperature_c"].isna().tolist())    # [False, True]
 ```
 
-`keep_default_na=False` disables pandas' default missing-marker list. It does **not** disable `na_values`, stop dtype conversion, or promise that every input is left unchanged. Here `na_values` still applies the explicit rules by column. The reader preserves both rows and does not invent a temperature. The [pandas API reference](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html) distinguishes these settings.
+`keep_default_na=False` turns off pandas' default list of missing markers, so `NA` stays the country code for Namibia. The per-column `na_values` rules mark the second temperature as missing. The string `dtype` keeps both leading zeros in patient ID `00731`. Both rows appear in the result. [pandas read_csv reference](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html)
 <!-- bilingual-en:end -->
 
 关闭默认词表，是为了避免国家代码 `NA` 被误删；随后仍要写出真正适用的缺失规则。字符串 dtype 保护编号，`na_values` 负责识别指定标记，这两件事互不替代。识别缺失后，也还没有决定应删行还是填补。
@@ -520,8 +520,6 @@ For reproduction, retain raw inputs, rerunnable transformation code, source agre
 ### 来源与核验
 
 <!-- bilingual-en:start -->
-The main source is the current 75-page Week 1 deck and its Lecture recording. The hospital examples follow the taught explanation; the timing example and self-tests are supplementary worked examples.
-
 | Coverage | Source location |
 |---|---|
 | Analysis questions, context, data and information | PPT pp. 10–11, 16–18; recording about 00:48:18–00:50:29 and 01:03:36–01:10:26 |
