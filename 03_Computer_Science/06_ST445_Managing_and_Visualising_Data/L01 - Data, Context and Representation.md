@@ -89,10 +89,10 @@ aliases:
 <!-- bilingual-en:start -->
 ## Quick self-test
 
-These are supplementary practice questions, not official Seminar exercises. Allow about 5–10 minutes; attempt each before opening its hint or solution.
+Allow 5–10 minutes for the three questions. Try each one first. Open the hint if you get stuck, then check your answer.
 <!-- bilingual-en:end -->
 
-以下是补充自测，不是教师的 Seminar 题目。约 5–10 分钟；先独立尝试，再展开提示或答案。
+三题约需 5–10 分钟。先自己做，卡住时看提示，做完再对答案。
 
 > [!example] Test 1 · Trace two variables / 跟踪两个变量
 > <!-- bilingual-en:start -->
@@ -297,10 +297,10 @@ for name, function in [("Python loop", python_loop),
     print(name, f"{seconds:.6f} seconds")
 ```
 
-Both first values are 100.22. One local run took about 0.00594 seconds for the list comprehension and 0.000121 seconds for NumPy. The measured ratio varies with hardware, array size and operation. Timing begins after the inputs are constructed, so it compares the calculation rather than import or conversion costs. Faster execution does not remove dtype limits or the need to check meaning.
+Both methods give 100.22 for the first temperature. In one run, the list comprehension took 0.00594 seconds and NumPy took 0.000121 seconds. Timing starts with both inputs already in memory. The speedup depends on the hardware, array size and operation.
 <!-- bilingual-en:end -->
 
-这里把循环交给 NumPy 内部执行，scalar 与 array 的配对由 broadcasting 规则处理。计时从输入已经准备好之后开始；结果先核对，再比较运行时间。倍数只是该次运行结果，不是对所有程序的速度保证。
+NumPy 在内部执行循环，按 broadcasting 规则把标量运算应用到每个元素。先准备好两份输入，再核对结果并计时。这里的加速倍数会随硬件、数组大小和运算方式变化。
 
 [[ST445 - Week 01 - Lecture.pdf#page=38|PPT p. 38]]
 
@@ -529,14 +529,14 @@ The main source is the current 75-page Week 1 deck and its Lecture recording. Th
 | Bits, integer width, floats and text | PPT pp. 34–40, 48, 50; about 01:31:42–01:47:14 |
 | Collections and mutation | PPT pp. 41–44; about 01:47:16–01:52:50 |
 | Missingness and standards | PPT pp. 45–52; about 01:53:01–01:56:30 |
-| Observation units and tidy data | PPT pp. 53–54; slide-based explanation, with no invented recording timestamp |
+| Observation units and tidy data | PPT pp. 53–54 |
 | Data origin and use | PPT p. 55; about 01:56:47–01:57:34 |
 | Reproducibility and Seminar boundary | PPT pp. 59–60, 70–71; the recording assigns GitHub practice to Seminar at about 01:56:32–01:56:46 |
 
-Recording locations come from the retained transcript and are approximate; definitions, numerical examples and code have also been checked against the slides and executed examples. Python snippets use the standard library, with NumPy and pandas where imported. The calculation checks used NumPy 2.1.3 and pandas 2.2.3; benchmark times are illustrative measurements, not guaranteed performance.
+Recording times are approximate and follow the lecture transcript. The code examples were run with NumPy 2.1.3 and pandas 2.2.3.
 <!-- bilingual-en:end -->
 
-页码按当前 75 页课件。录播位置来自字幕，时间仅作近似定位；表格整理按课件补充，不编造逐页录播证据。计时和自测是补充例子，技术结论另外对照原材料、官方文档和实际执行结果。
+页码对应 Week 1 的 75 页课件。录播时间取自课堂字幕，可用来定位相应讲解。代码运行环境使用 NumPy 2.1.3 和 pandas 2.2.3。
 
 - [[03_Computer_Science/06_ST445_Managing_and_Visualising_Data/2026_Course_Materials/02_Lecture_Notes/Week_01/ST445 - Week 01 - Lecture.pdf|ST445 Week 1 lecture slides]]
 - [ST445 Lecture recording, 29 September 2026](https://echo360.org.uk/media/4ce70ea5-3820-4059-8257-0c1dd336c212/public)
