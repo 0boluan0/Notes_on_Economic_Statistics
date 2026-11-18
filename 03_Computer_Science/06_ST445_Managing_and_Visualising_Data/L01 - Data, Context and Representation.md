@@ -357,6 +357,7 @@ The bytes do not change when the wrong decoder is chosen; their interpretation d
 ### 5. 容器保留什么，方法改变什么
 
 <!-- bilingual-en:start -->
+
 | Container | Example | What it is useful for |
 |---|---|---|
 | `dict` | `{"patient_id":"4411", "temperature_c":37.9}` | Look up a field by its unique key |
@@ -520,6 +521,7 @@ For reproduction, retain raw inputs, rerunnable transformation code, source agre
 ### 来源与核验
 
 <!-- bilingual-en:start -->
+
 | Coverage | Source location |
 |---|---|
 | Analysis questions, context, data and information | PPT pp. 10–11, 16–18; recording about 00:48:18–00:50:29 and 01:03:36–01:10:26 |
