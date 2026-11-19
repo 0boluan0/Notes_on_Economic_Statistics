@@ -1,0 +1,9 @@
+{
+  "id": "bilingual-reading",
+  "name": "Bilingual Reading",
+  "version": "1.0.0",
+  "minAppVersion": "1.12.0",
+  "description": "Switch between the Chinese and English passages in bilingual notes.",
+  "author": "Academic",
+  "isDesktopOnly": false
+}

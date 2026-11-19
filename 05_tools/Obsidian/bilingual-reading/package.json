@@ -1,0 +1,12 @@
+{
+  "name": "academic-bilingual-reading",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "esbuild main.js --bundle --platform=browser --format=cjs --external:obsidian --outfile=dist/main.js && cp manifest.json styles.css dist/",
+    "test": "node --test language.test.js"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}

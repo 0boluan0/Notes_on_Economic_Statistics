@@ -1,0 +1,20 @@
+@media screen {
+  [data-br-reading="en"] [data-br-lang="zh"],
+  [data-br-reading="zh"] [data-br-lang="en"],
+  [data-br-reading] [data-br-lang="separator"] {
+    display: none !important;
+  }
+}
+
+.view-actions .bilingual-reading-action {
+  width: auto;
+  padding-inline: var(--size-4-2);
+  font-size: var(--font-ui-small);
+  font-weight: var(--font-medium);
+  color: var(--text-accent);
+  white-space: nowrap;
+}
+
+.view-actions .bilingual-reading-action[hidden] {
+  display: none;
+}
