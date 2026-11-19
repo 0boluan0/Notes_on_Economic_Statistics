@@ -56,9 +56,12 @@ function scan(source) {
           [...body].every(ch => ch === fence.char)) { fence = null; current = null; }
       continue;
     }
+    // A few older notes have a stray display-math delimiter. An explicit HTML
+    // boundary begins a new passage even when the previous equation was malformed.
+    if (math && marker.test(body)) { math = false; current = null; }
     if (math) {
       append(i, 'math', body, depth, true);
-      if (body.endsWith('$$')) { math = false; current = null; }
+      if (body.includes('$$')) { math = false; current = null; }
       continue;
     }
     if (comment) { if (body.includes('-->')) comment = false; continue; }
@@ -84,7 +87,7 @@ function scan(source) {
       append(i, 'code', body, depth, false); continue;
     }
     if (body.startsWith('$$')) {
-      math = body.length === 2 || !body.endsWith('$$');
+      math = !body.includes('$$', 2);
       append(i, 'math', body, depth, false); if (!math) current = null;
       continue;
     }
@@ -102,7 +105,8 @@ function scan(source) {
 
 function isCaption(block) {
   return block.kind === 'prose' && !block.body.includes('\n') &&
-    block.words.length < 170 && !/[。！？.!?]\s*[*_]*$/.test(block.words);
+    (/^([*_])(?!\1).+\1$/.test(block.body) ||
+      (block.words.length < 170 && !/[。！？.!?]\s*[*_]*$/.test(block.words)));
 }
 
 function compatible(a, b) {
@@ -144,17 +148,23 @@ function readingPlan(source) {
     // An English explanation often has several paragraphs and a single Chinese summary.
     // A table, heading, code sample or equation in the same marker can have its own audience.
     const english = group.blocks.filter(b => !b.lang && b.depth === adjacent.depth && b.kind === match.kind);
-    linkPair(english, adjacent);
-    // When an author supplied the same asset in each version, show it once per
-    // language. A code block or display equation supplied only once stays shared.
     const direction = adjacent.start < group.start ? -1 : 1;
     const edge = direction < 0 ? group.blocks[0] : group.blocks.at(-1);
+    const translated = [];
     for (let i = edge.index + direction; i >= 0 && i < blocks.length; i += direction) {
       const other = blocks[i];
       if (other.region || other.depth !== adjacent.depth || ['heading','callout','boundary'].includes(other.kind)) break;
+      if (!other.lang && other.kind === adjacent.kind && han.test(other.words)) translated.push(other);
+      // A duplicated asset is language-specific. Its only copy is always shared.
       if (other.lang || !['code','math','media'].includes(other.kind)) continue;
       const same = group.blocks.find(b => !b.lang && b.kind === other.kind && b.body === other.body);
       if (same) linkPair([same],other);
+    }
+    if (english.length > 1 && english.length === translated.length) {
+      if (direction < 0) translated.reverse();
+      english.forEach((b,i) => linkPair([b], translated[i]));
+    } else {
+      linkPair(english, adjacent);
     }
   }
   // Some course notes leave the English section heading and its short Chinese subtitle unmarked.

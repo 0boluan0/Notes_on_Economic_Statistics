@@ -25,15 +25,22 @@ function localizeTitle(el) {
 }
 
 function decorate(el, ctx, info, plan) {
+  const embed = el.closest('.internal-embed');
+  for (const node of el.querySelectorAll('[data-br-pair]')) {
+    if (node.closest('.internal-embed') === embed || node.parentElement === el) {
+      delete node.dataset.brPair;
+      delete node.dataset.brLang;
+    }
+  }
   const blocks = [...new Set(plan.byLine.slice(info.lineStart,info.lineEnd + 1).filter(Boolean))];
   for (const title of el.querySelectorAll('.callout-title-inner')) {
-    if (!title.closest('.internal-embed')) localizeTitle(title);
+    if (title.closest('.internal-embed') === embed) localizeTitle(title);
   }
   if (!blocks.some(b => b.lang)) return;
   // Leave Obsidian's section wrapper in the document flow for its virtual scroller.
   if (blocks.every(b => b.lang && b.lang === blocks[0].lang && b.pair === blocks[0].pair)) {
     for (const child of el.children) {
-      if (!child.matches('.internal-embed, img') && !child.querySelector('.internal-embed,img')) {
+      if (blocks[0].kind === 'media' || (!child.matches('.internal-embed, img') && !child.querySelector('.internal-embed,img'))) {
         tag(child,blocks[0],ctx.sourcePath);
       }
     }
@@ -41,13 +48,14 @@ function decorate(el, ctx, info, plan) {
   }
   // A complete question with nested answers is often one native Markdown section.
   // Match its rendered blocks to the source, keeping native folding, links and math.
-  const nodes = el.querySelectorAll('p, h1, h2, h3, h4, h5, h6, li, table');
+  const nodes = el.querySelectorAll('p, h1, h2, h3, h4, h5, h6, li, table, pre, .math-block');
   let cursor = 0;
   for (const node of nodes) {
-    if (node.closest('.internal-embed, .callout-title, td, th, pre, [data-br-lang]') ||
+    if (node.closest('.internal-embed') !== embed || node.closest('.callout-title, td, th, [data-br-lang]') ||
         node.querySelector('.internal-embed, img, ul, ol, .callout')) continue;
     const kind = node.matches('h1,h2,h3,h4,h5,h6') ? 'heading'
-      : node.matches('table') ? 'table' : node.matches('li') ? 'list' : 'prose';
+      : node.matches('table') ? 'table' : node.matches('li') ? 'list'
+      : node.matches('pre') ? 'code' : node.matches('.math-block') ? 'math' : 'prose';
     const words = key(node.textContent);
     if (!words) continue;
     const candidates = blocks.filter(b => b.kind === kind);
@@ -103,21 +111,25 @@ module.exports = class BilingualReading extends Plugin {
     const settings = await this.loadData();
     this.language = settings?.language === 'zh' ? 'zh' : 'en';
     this.buttons = new Map();
+    this.observers = new Map();
+    this.decorated = new WeakMap();
     this.cache = new Map();
+    this.original = new WeakMap();
+    this.embedded = new WeakMap();
     this.saves = Promise.resolve();
+    this.active = true;
     this.registerMarkdownPostProcessor((el, ctx) => {
       const info = ctx.getSectionInfo(el);
       if (!info) return;
       const plan = this.plan(ctx.sourcePath,info.text);
-      if (plan) decorate(el,ctx,info,plan);
+      if (plan) this.decorateSection(el,ctx,info,plan);
     });
     const refresh = () => this.refresh();
     this.app.workspace.onLayoutReady(() => {
-      if (!this.buttons) return;
+      if (!this.active) return;
       refresh();
-      // Already open reading views were rendered before this processor registered.
       for (const view of this.buttons.keys()) {
-        if (view.getMode() === 'preview') view.previewMode.rerender(true);
+        if (view.getMode() === 'preview') this.decorateOpenView(view);
       }
     });
     for (const event of ['layout-change', 'active-leaf-change', 'file-open']) {
@@ -135,6 +147,39 @@ module.exports = class BilingualReading extends Plugin {
       if (!checking) void this.toggle(view);
       return true;
     }});
+    this.addCommand({ id: 'show-original', name: '显示双语原文', checkCallback: checking => {
+      const view = this.app.workspace.getActiveViewOfType(MarkdownView);
+      if (!view || view.getMode() !== 'preview' || this.buttons.get(view)?.hidden !== false) return false;
+      if (!checking) {
+        this.original.set(view,view.file.path);
+        this.updateButton(view);
+      }
+      return true;
+    }});
+  }
+
+  decorateSection(el, ctx, info, plan) {
+    const prior = this.decorated.get(el);
+    if (prior?.plan === plan && prior.first === el.firstElementChild) return;
+    decorate(el,ctx,info,plan);
+    this.decorated.set(el,{plan,first:el.firstElementChild});
+  }
+
+  decorateOpenView(view) {
+    if (!view.file) return;
+    const plan = this.plan(view.file.path,view.getViewData());
+    if (!plan) return;
+    // On plugin enable, Obsidian may recycle already-rendered sections without
+    // invoking a newly registered postprocessor. Decorate those original nodes.
+    const preview = view.previewMode, renderer = preview.renderer;
+    if (typeof renderer?.getSectionInfo !== 'function') return;
+    for (const el of preview.containerEl.querySelectorAll(':scope > .markdown-preview-view > .markdown-preview-sizer > div')) {
+      if (!el.childElementCount) continue;
+      const prior = this.decorated.get(el);
+      if (prior?.plan === plan && prior.first === el.firstElementChild) continue;
+      const info = renderer.getSectionInfo(el);
+      if (info) this.decorateSection(el,{sourcePath:view.file.path},info,plan);
+    }
   }
 
   plan(path, text) {
@@ -149,13 +194,25 @@ module.exports = class BilingualReading extends Plugin {
   refresh() {
     const open = new Set(this.app.workspace.getLeavesOfType('markdown').map(l => l.view).filter(v => v instanceof MarkdownView));
     for (const [view,button] of this.buttons) {
-      if (!open.has(view)) { button.remove(); this.buttons.delete(view); }
+      if (!open.has(view)) {
+        this.observers.get(view)?.disconnect(); this.observers.delete(view);
+        button.remove(); this.buttons.delete(view);
+      }
     }
     for (const view of open) {
       if (!this.buttons.has(view)) {
         const button = view.addAction('languages','切换阅读语言',() => this.toggle(view));
         button.classList.add('bilingual-reading-action');
         this.buttons.set(view,button);
+        const observer = new MutationObserver(changes => {
+          if (changes.some(c => c.addedNodes.length && (c.target.matches?.('.markdown-preview-sizer') ||
+              c.target.parentElement?.matches('.markdown-preview-sizer')))) {
+            this.decorateOpenView(view);
+            if (button.hidden) this.updateButton(view);
+          }
+        });
+        observer.observe(view.previewMode.containerEl,{childList:true,subtree:true});
+        this.observers.set(view,observer);
       }
       this.updateButton(view);
     }
@@ -164,13 +221,24 @@ module.exports = class BilingualReading extends Plugin {
   updateButton(view) {
     const button = this.buttons.get(view);
     const preview = view.previewMode.containerEl;
-    preview.dataset.brReading = this.language;
     const file = view.file;
-    button.hidden = !file || !this.plan(file.path,view.getViewData());
+    const source = file && view.getViewData();
+    let bilingual = !!file && !!this.plan(file.path,source);
+    if (!bilingual && file && this.app.metadataCache.getFileCache(file)?.embeds?.length) {
+      const prior = this.embedded.get(view);
+      bilingual = (prior?.file === file && prior.source === source) ||
+        !!preview.querySelector('.markdown-embed [data-br-pair]');
+      if (bilingual) this.embedded.set(view,{file,source});
+    }
+    button.hidden = !bilingual;
+    if (bilingual && this.original.get(view) !== file.path) preview.dataset.brReading = this.language;
+    else delete preview.dataset.brReading;
     const next = this.language === 'en' ? '中文' : 'English';
     // In the editor both versions are present. One click opens the selected reading language.
-    button.textContent = next;
-    setTooltip(button, '切换到' + (next === '中文' ? '中文' : '英文') + '阅读');
+    if (button.textContent !== next) {
+      button.textContent = next;
+      setTooltip(button, '切换到' + (next === '中文' ? '中文' : '英文') + '阅读');
+    }
   }
 
   async toggle(view) {
@@ -178,6 +246,7 @@ module.exports = class BilingualReading extends Plugin {
     const marks = [...this.buttons.keys()].filter(v => v.getMode() === 'preview').map(viewportMark);
     const language = this.language === 'en' ? 'zh' : 'en';
     this.language = language;
+    this.original.delete(view);
     this.refresh();
     for (const mark of marks) restoreMark(mark,language);
     this.saves = this.saves.catch(() => {}).then(() => this.saveData({language}));
@@ -189,6 +258,9 @@ module.exports = class BilingualReading extends Plugin {
   }
 
   onunload() {
+    this.active = false;
+    for (const observer of this.observers.values()) observer.disconnect();
+    this.observers.clear();
     for (const [view,button] of this.buttons) {
       button.remove();
       delete view.previewMode.containerEl.dataset.brReading;

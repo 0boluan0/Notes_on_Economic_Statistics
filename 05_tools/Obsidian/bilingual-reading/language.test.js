@@ -44,3 +44,19 @@ test('an English-only block and a Chinese-only callout are both readable', () =>
   const note = [marked('Read this sentence.'),'> [!tip] 补充','> 这段只有中文。'].join('\n\n');
   assert.deepEqual(languages(note),['shared','shared','shared']);
 });
+
+test('multiple matched paragraphs have separate scroll targets', () => {
+  const source = [marked('First paragraph.', '', 'Second paragraph.'),'第一段。','第二段。'].join('\n\n');
+  const b = readingPlan(source).blocks;
+  assert.deepEqual(b.map(x=>x.lang), ['en','en','zh','zh']);
+  assert.equal(b[0].pair,b[2].pair);
+  assert.equal(b[1].pair,b[3].pair);
+  assert.notEqual(b[0].pair,b[1].pair);
+});
+
+test('legacy math punctuation does not swallow the next translation', () => {
+  for (const equation of ['$$x=2$$，这是公式。', '$$\n公式末尾漏了定界符。']) {
+    const source = [equation, marked('An English sentence.'), '这是译文。'].join('\n\n');
+    assert.deepEqual(languages(source).slice(-2),['en','zh']);
+  }
+});
